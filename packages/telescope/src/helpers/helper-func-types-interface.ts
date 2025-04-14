@@ -47,7 +47,7 @@ export interface ITxArgs<TMsg> {
 export function isISigningClient(client: unknown): client is ISigningClient {
   return client !== null && client !== undefined
     && typeof (client as ISigningClient).signAndBroadcast === 'function'
-    && typeof (client as ISigningClient).addConverters === 'function'
+    && (!(client as ISigningClient).addConverters || typeof (client as ISigningClient).addConverters === 'function')
     && typeof (client as ISigningClient).addEncoders === 'function';
 }
 
@@ -55,16 +55,16 @@ export interface ISigningClient {
   /**
    * register converters
    */
-  addConverters: (converters: AminoConverter[]) => void;
+  addConverters?: (converters: (AminoConverter | TelescopeGeneratedCodec<any, any, any>)[]) => void;
   /**
    * register encoders
    */
-  addEncoders: (encoders: Encoder[]) => void;
+  addEncoders: (encoders: (Encoder | TelescopeGeneratedCodec<any, any, any>)[]) => void;
 
   signAndBroadcast: (
     signerAddress: string,
     message: Message<any>[],
-    fee: StdFee | 'auto',
+    fee: StdFee | "auto",
     memo: string
   ) => Promise<DeliverTxResponse>;
 }
@@ -89,7 +89,7 @@ export function buildTx<TMsg>(opts: TxBuilderOptions) {
 
     //register all related encoders and converters
     client.addEncoders(toEncoders(opts.msg));
-    client.addConverters(toConverters(opts.msg));
+    client.addConverters?.(toConverters(opts.msg));
 
     const data = Array.isArray(message)
       ? message.map(msg => ({

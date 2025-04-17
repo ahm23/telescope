@@ -15,9 +15,9 @@ To enable the generation of tree-shakable hooks, configure the `TelescopeOptions
 
 ```typescript
 TelescopeOptions: {
-  ...,  
+  ...,
   helperFunctions?: {
-    ...,  
+    ...,
     hooks?: {
       react: boolean;
       vue?: boolean;
@@ -38,9 +38,9 @@ Set `TelescopeOptions.helperFunctions.hooks.vue` to `true`.
 
 When enabled, the following files will be generated in the respective directories of each package:
 
-- **React Query File**:  
+- **React Query File**:
   `v-next/outputhelperfunc/cosmos/react-query`
-- **Vue Query File**:  
+- **Vue Query File**:
   `v-next/outputhelperfunc/cosmos/vue-query`
 
 Additionally, subdirectory files will be generated for specific modules, such as:
@@ -57,15 +57,13 @@ Additionally, subdirectory files will be generated for specific modules, such as
 This file contains shared functions that can be used by both React and Vue hooks. For example:
 
 ```typescript
-export const createGetBalance = (clientResolver?: RpcResolver) =>
-  buildQuery<QueryBalanceRequest, QueryBalanceResponse>({
-    encode: QueryBalanceRequest.encode,
-    decode: QueryBalanceResponse.decode,
-    service: "cosmos.bank.v1beta1.Query",
-    method: "Balance",
-    clientResolver,
-    deps: [QueryBalanceRequest, QueryBalanceResponse],
-  });
+export const getBalance = buildQuery<QueryBalanceRequest, QueryBalanceResponse>({
+  encode: QueryBalanceRequest.encode,
+  decode: QueryBalanceResponse.decode,
+  service: "cosmos.bank.v1beta1.Query",
+  method: "Balance",
+  deps: [QueryBalanceRequest, QueryBalanceResponse]
+});
 ```
 
 ---
@@ -75,7 +73,7 @@ This file contains React-specific hooks. Example:
 
 ```typescript
 export const useGetBalance = buildUseQuery<QueryBalanceRequest, QueryBalanceResponse>({
-  builderQueryFn: createGetBalance,
+  builderQueryFn: getBalance,
   queryKeyPrefix: "BalanceQuery",
 });
 ```
@@ -87,7 +85,7 @@ This file contains Vue-specific hooks. Example:
 
 ```typescript
 export const useGetBalance = buildUseVueQuery<QueryBalanceRequest, QueryBalanceResponse>({
-  builderQueryFn: createGetBalance,
+  builderQueryFn: getBalance,
   queryKeyPrefix: "BalanceQuery",
 });
 ```
@@ -105,21 +103,20 @@ By adopting this approach, you can ensure cleaner, more maintainable, and effici
 
 ## Use Example of Shared Functions
 
-Shared functions allow you to create API interaction logic that can be used across both React and Vue without duplicating code. Here's an example of how you might use the shared function `createGetBalance`:
+Shared functions allow you to create API interaction logic that can be used across both React and Vue without duplicating code. Here's an example of how you might use the shared function `getBalance`:
 
 ```typescript
-import { createGetBalance } from "@interchainjs/cosmos-types/cosmos/bank/v1beta1/query.rpc.func";
+import { getBalance } from "@interchainjs/cosmos-types/cosmos/bank/v1beta1/query.rpc.func";
 
 ({ chainInfo, getCoin, getRpcEndpoint, creditFromFaucet } = useChain('osmosis'));
 const rpcEndpoint = await getRpcEndpoint();
-getBalance = createGetBalance(rpcEndpoint);
-const { balance } = await getBalance({
+const { balance } = await getBalance(rpcEndpoint, {
   address: directAddress,
   denom,
 });
 ```
 
-In this example, the createGetBalance function is called with an RPC endpoint and is used to fetch the balance for a specific address and denomination.
+In this example, the getBalance function is called with an RPC endpoint and is used to fetch the balance for a specific address and denomination.
 
 ## Use Example of Tree-Shakable Hooks
 

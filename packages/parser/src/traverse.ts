@@ -414,7 +414,7 @@ const traverseFields = (
     // e.g. akash/deployment/v1beta2/service.proto
     // referencing messages in another file, and so we need access through our imports
     // if we get this issue again, this should be recursive and not just one level...
-    const importRefs = ref.proto.imports.map((imp) => store.findProto(imp));
+    const importRefs = ref?.proto?.imports?.map((imp) => store.findProto(imp)) ?? [];
     // const importRefs = getAllRefs(store, ref);
     for (let importRef of importRefs) {
       const typeNames = lookupSymbolScopes(

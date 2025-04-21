@@ -11,10 +11,9 @@ import {
 } from './helpers${options.restoreImportExtension ?? ""}'
 import {
   ITxArgs,
-  ISigningClient,
-  isISigningClient,
   EndpointOrRpc,
 } from './helper-func-types${options.restoreImportExtension ?? ""}'
+import { ISigningClient, isISigningClient } from "@interchainjs/cosmos/types/signing-client${options.restoreImportExtension ?? ""}";
 import {
   StdFee,
   DeliverTxResponse,

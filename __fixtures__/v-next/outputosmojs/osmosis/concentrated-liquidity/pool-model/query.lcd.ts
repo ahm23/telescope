@@ -40,7 +40,7 @@ export class LCDQueryClient {
     const endpoint = `osmosis/concentratedliquidity/v1beta1/params`;
     return QueryParamsResponse.fromSDKJSON(await this.req.get<QueryParamsResponseSDKType>(endpoint));
   }
-  /* UserPositions returns all concentrated postitions of some address. */
+  /* UserPositions returns all concentrated positions of some address. */
   async userPositions(params: QueryUserPositionsRequest): Promise<QueryUserPositionsResponseSDKType> {
     const options: any = {
       params: {}

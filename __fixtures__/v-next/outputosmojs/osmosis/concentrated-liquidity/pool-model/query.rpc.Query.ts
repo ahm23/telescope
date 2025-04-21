@@ -12,7 +12,7 @@ export interface Query {
   pools(request?: QueryPoolsRequest): Promise<QueryPoolsResponse>;
   /** Params returns concentrated liquidity module params. */
   params(request?: QueryParamsRequest): Promise<QueryParamsResponse>;
-  /** UserPositions returns all concentrated postitions of some address. */
+  /** UserPositions returns all concentrated positions of some address. */
   userPositions(request: QueryUserPositionsRequest): Promise<QueryUserPositionsResponse>;
   /** TotalLiquidityForRange the amount of liquidity existing within given range. */
   totalLiquidityForRange(request: QueryTotalLiquidityForRangeRequest): Promise<QueryTotalLiquidityForRangeResponse>;

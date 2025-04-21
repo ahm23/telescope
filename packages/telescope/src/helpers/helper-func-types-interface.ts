@@ -6,8 +6,9 @@ import { HttpEndpoint } from "@interchainjs/types";
 import { BinaryReader, BinaryWriter } from "./binary${options.restoreImportExtension ?? ""}";
 import { getRpcClient } from "./extern${options.restoreImportExtension ?? ""}";
 import { isRpc, Rpc } from "./helpers${options.restoreImportExtension ?? ""}";
-import { TelescopeGeneratedCodec, DeliverTxResponse, Message, StdFee } from "./types";
+import { TelescopeGeneratedCodec, DeliverTxResponse, Message, StdFee } from "./types${options.restoreImportExtension ?? ""}";
 import { toConverters, toEncoders } from "@interchainjs/cosmos/utils";
+import { ISigningClient } from "@interchainjs/cosmos/types/signing-client${options.restoreImportExtension ?? ""}";
 
 export interface QueryBuilderOptions<TReq, TRes> {
   encode: (request: TReq, writer?: BinaryWriter) => BinaryWriter
@@ -42,31 +43,6 @@ export interface ITxArgs<TMsg> {
   message: TMsg | TMsg[];
   fee: StdFee | 'auto';
   memo: string;
-}
-
-export function isISigningClient(client: unknown): client is ISigningClient {
-  return client !== null && client !== undefined
-    && typeof (client as ISigningClient).signAndBroadcast === 'function'
-    && (!(client as ISigningClient).addConverters || typeof (client as ISigningClient).addConverters === 'function')
-    && typeof (client as ISigningClient).addEncoders === 'function';
-}
-
-export interface ISigningClient {
-  /**
-   * register converters
-   */
-  addConverters?: (converters: (AminoConverter | TelescopeGeneratedCodec<any, any, any>)[]) => void;
-  /**
-   * register encoders
-   */
-  addEncoders: (encoders: (Encoder | TelescopeGeneratedCodec<any, any, any>)[]) => void;
-
-  signAndBroadcast: (
-    signerAddress: string,
-    message: Message<any>[],
-    fee: StdFee | "auto",
-    memo: string
-  ) => Promise<DeliverTxResponse>;
 }
 
 export interface TxBuilderOptions {

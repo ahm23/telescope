@@ -12,15 +12,15 @@ import {
   isRpc,
   Rpc,
 } from './helpers'
-import {
-  ITxArgs,
-  ISigningClient,
+ import {
   StdFee,
   DeliverTxResponse,
-  SigningClientResolver,
-  RpcResolver,
-  isISigningClient
+} from './types'
+import {
+  ITxArgs,
+  EndpointOrRpc,
 } from './helper-func-types'
+import { ISigningClient, isISigningClient } from "@interchainjs/cosmos/types/signing-client";
 import {
     useQuery,
     useQueryClient,
@@ -123,7 +123,7 @@ export const useTendermintClient = ({
 };
 
 export interface UseQueryBuilderOptions<TReq, TRes> {
-  builderQueryFn: (clientResolver?: RpcResolver) => (request: TReq) => Promise<TRes>,
+  builderQueryFn: (clientResolver?: EndpointOrRpc) => (request: TReq) => Promise<TRes>,
   queryKeyPrefix: string,
 }
 
@@ -147,7 +147,7 @@ export function buildUseQuery<TReq, TRes>(opts: UseQueryBuilderOptions<TReq, TRe
       context: options?.context
     });
 
-    let rpcResolver: RpcResolver | undefined;
+    let rpcResolver: EndpointOrRpc | undefined;
 
     if(isRpc(clientResolver)) {
       rpcResolver = clientResolver;
@@ -171,18 +171,18 @@ export function buildUseQuery<TReq, TRes>(opts: UseQueryBuilderOptions<TReq, TRe
 
 export interface UseQueryParams<TReq, TRes, TData = TRes> extends ReactQueryParams<TRes, TData> {
   request: TReq;
-  clientResolver?: CacheResolver | RpcResolver;
+  clientResolver?: CacheResolver | EndpointOrRpc;
   customizedQueryKey?: QueryKey
 }
 
 export interface ReactMutationParams<TData, TError, TVariables, TContext = unknown> {
   options?: UseMutationOptions<TData, TError, TVariables, TContext>;
-  clientResolver?: CacheResolver | SigningClientResolver;
+  clientResolver?: CacheResolver | ISigningClient;
 }
 
 
 export interface UseMutationBuilderOptions<TMsg> {
-  builderMutationFn: (clientResolver?: SigningClientResolver) => (
+  builderMutationFn: (clientResolver?: ISigningClient) => (
     signerAddress: string,
     message: TMsg | TMsg[],
     fee: StdFee | 'auto',
@@ -208,7 +208,7 @@ export function buildUseMutation<TMsg, TError>(opts: UseMutationBuilderOptions<T
       context: options?.context
     });
 
-    let signingClientResolver: SigningClientResolver | undefined;
+    let signingClientResolver: ISigningClient | undefined;
 
     if(isISigningClient(clientResolver)) {
       signingClientResolver = clientResolver;

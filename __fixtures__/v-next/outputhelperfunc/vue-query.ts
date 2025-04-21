@@ -14,10 +14,9 @@ import {
 } from './helpers'
 import {
   ITxArgs,
-  ISigningClient,
-  isISigningClient,
   EndpointOrRpc,
 } from './helper-func-types'
+import { ISigningClient, isISigningClient } from "@interchainjs/cosmos/types/signing-client";
 import {
   StdFee,
   DeliverTxResponse,

@@ -12,10 +12,9 @@ import {
 } from './helpers'
 import {
   ITxArgs,
-  ISigningClient,
-  isISigningClient,
   EndpointOrRpc,
 } from './helper-func-types'
+import { ISigningClient, isISigningClient } from "@interchainjs/cosmos/types/signing-client";
 import {
   StdFee,
   DeliverTxResponse,
@@ -138,7 +137,7 @@ export function buildUseQuery<TReq, TRes>(opts: UseQueryBuilderOptions<TReq, TRe
           (!isCacheResolver(clientResolver) ? clientResolver : undefined));
     }
 
-    return useQuery<TRes, Error, TData>(customizedQueryKey || [opts.queryKeyPrefix, request], () => opts.builderQueryFn(rpcResolver, request), options);
+    return useQuery<TRes, Error, TData>(customizedQueryKey || [opts.queryKeyPrefix, request], () => opts.builderQueryFn(rpcResolver!, request), options);
   };
 }
 
@@ -198,7 +197,7 @@ export function buildUseMutation<TMsg, TError>(opts: UseMutationBuilderOptions<T
     }
 
     return useMutation<DeliverTxResponse, Error, ITxArgs<TMsg>>(
-      (reqData: ITxArgs<TMsg>) => opts.builderMutationFn(signingClientResolver, reqData.signerAddress, reqData.message, reqData.fee, reqData.memo),
+      (reqData: ITxArgs<TMsg>) => opts.builderMutationFn(signingClientResolver!, reqData.signerAddress, reqData.message, reqData.fee, reqData.memo),
       options as Omit<UseMutationOptions<DeliverTxResponse, Error, ITxArgs<TMsg>, unknown>, "mutationFn">
     );
   };

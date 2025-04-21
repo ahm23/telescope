@@ -11,7 +11,12 @@ ${options.useInterchainJs ? '' : `import { OfflineSigner } from "@cosmjs/proto-s
 import { HttpEndpoint } from "${
     options.useInterchainJs ? "@interchainjs/types" : "@cosmjs/tendermint-rpc"
   }";
+${options.useInterchainJs ? `
 
+import { DeliverTxResponse, Event, Attribute } from "@interchainjs/types";
+export type { DeliverTxResponse, Event, Attribute };
+
+` : ''}
 export type ProtoMsg = Omit<Any, "typeUrl"> & { typeUrl: any };
 
 export interface IAminoMsg<Amino> {
@@ -93,15 +98,15 @@ export interface MsgData {
   msgType: string;
   data: Uint8Array;
 }
-
+${options.useInterchainJs ? '' : `
 export interface Attribute {
   key: string;
   value: string;
-  index: boolean;
+  index?: boolean;
 }
 export interface Event {
   type: string;
-  attributes: Attribute[];
+  attributes: readonly Attribute[];
 }
 
 /**
@@ -115,7 +120,7 @@ export interface DeliverTxResponse {
   /** Error code. The transaction suceeded if and only if code is 0. */
   code: number;
   transactionHash: string;
-  events: Event[];
+  events: readonly Event[];
   /**
    * A string-based log document.
    *
@@ -125,7 +130,7 @@ export interface DeliverTxResponse {
    */
   rawLog?: string;
   /** @deprecated Use \`msgResponses\` instead. */
-  data?: MsgData[];
+  data?: readonly MsgData[];
   /**
    * The message responses of the [TxMsgData](https://github.com/cosmos/cosmos-sdk/blob/v0.46.3/proto/cosmos/base/abci/v1beta1/abci.proto#L128-L140)
    * as \`Any\`s.
@@ -137,8 +142,9 @@ export interface DeliverTxResponse {
   }>;
   gasUsed: bigint;
   gasWanted: bigint;
+  origin?: any;
 }
-
+`}
 export interface TxRpc {
   request(
     service: string,

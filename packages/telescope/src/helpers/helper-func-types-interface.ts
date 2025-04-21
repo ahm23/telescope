@@ -64,7 +64,7 @@ export function buildTx<TMsg>(opts: TxBuilderOptions) {
     if (!client) throw new Error("SigningClient is not initialized");
 
     //register all related encoders and converters
-    client.addEncoders(toEncoders(opts.msg));
+    client.addEncoders?.(toEncoders(opts.msg));
     client.addConverters?.(toConverters(opts.msg));
 
     const data = Array.isArray(message)

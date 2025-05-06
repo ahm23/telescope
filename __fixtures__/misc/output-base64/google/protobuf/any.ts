@@ -1,7 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
-import { encodeBase64 as bytesFromBase64 } from "@endo/base64";
-import { decodeBase64 as base64FromBytes } from "@endo/base64";
+import { decodeBase64 as bytesFromBase64 } from "@endo/base64";
+import { encodeBase64 as base64FromBytes } from "@endo/base64";
 import { JsonSafe } from "../../json-safe";
 export const protobufPackage = "google.protobuf";
 /**

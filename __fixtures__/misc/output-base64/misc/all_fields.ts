@@ -5,8 +5,8 @@ import { Timestamp, TimestampAmino, TimestampSDKType } from "../google/protobuf/
 import { BinaryReader, BinaryWriter } from "../binary";
 import { toTimestamp, fromTimestamp, isSet, DeepPartial } from "../helpers";
 import { Decimal } from "@cosmjs/math";
-import { encodeBase64 as bytesFromBase64 } from "@endo/base64";
-import { decodeBase64 as base64FromBytes } from "@endo/base64";
+import { decodeBase64 as bytesFromBase64 } from "@endo/base64";
+import { encodeBase64 as base64FromBytes } from "@endo/base64";
 import { JsonSafe } from "../json-safe";
 import { toUtf8, fromBase64, fromUtf8, toBase64 } from "@cosmjs/encoding";
 import { encodePubkey, decodePubkey } from "@cosmjs/proto-signing";

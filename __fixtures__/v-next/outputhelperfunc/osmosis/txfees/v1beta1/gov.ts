@@ -191,6 +191,9 @@ export const UpdateFeeTokenProposal = {
     };
   },
   registerTypeUrl() {
+    if (GlobalDecoderRegistry.getDecoder(UpdateFeeTokenProposal.typeUrl)) {
+      return;
+    }
     GlobalDecoderRegistry.register(UpdateFeeTokenProposal.typeUrl, UpdateFeeTokenProposal);
     GlobalDecoderRegistry.registerAminoProtoMapping(UpdateFeeTokenProposal.aminoType, UpdateFeeTokenProposal.typeUrl);
     FeeToken.registerTypeUrl();

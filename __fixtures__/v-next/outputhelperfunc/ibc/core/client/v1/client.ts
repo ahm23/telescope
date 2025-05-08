@@ -851,6 +851,9 @@ export const ClientUpdateProposal = {
     };
   },
   registerTypeUrl() {
+    if (GlobalDecoderRegistry.getDecoder(ClientUpdateProposal.typeUrl)) {
+      return;
+    }
     GlobalDecoderRegistry.register(ClientUpdateProposal.typeUrl, ClientUpdateProposal);
     GlobalDecoderRegistry.registerAminoProtoMapping(ClientUpdateProposal.aminoType, ClientUpdateProposal.typeUrl);
   }
@@ -1015,6 +1018,9 @@ export const UpgradeProposal = {
     };
   },
   registerTypeUrl() {
+    if (GlobalDecoderRegistry.getDecoder(UpgradeProposal.typeUrl)) {
+      return;
+    }
     GlobalDecoderRegistry.register(UpgradeProposal.typeUrl, UpgradeProposal);
     GlobalDecoderRegistry.registerAminoProtoMapping(UpgradeProposal.aminoType, UpgradeProposal.typeUrl);
   }

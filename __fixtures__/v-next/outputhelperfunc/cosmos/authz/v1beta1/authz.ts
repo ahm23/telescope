@@ -259,6 +259,9 @@ export const GenericAuthorization = {
     };
   },
   registerTypeUrl() {
+    if (GlobalDecoderRegistry.getDecoder(GenericAuthorization.typeUrl)) {
+      return;
+    }
     GlobalDecoderRegistry.register(GenericAuthorization.typeUrl, GenericAuthorization);
     GlobalDecoderRegistry.registerAminoProtoMapping(GenericAuthorization.aminoType, GenericAuthorization.typeUrl);
   }

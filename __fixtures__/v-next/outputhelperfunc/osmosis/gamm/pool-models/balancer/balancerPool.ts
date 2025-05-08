@@ -942,6 +942,9 @@ export const Pool = {
     };
   },
   registerTypeUrl() {
+    if (GlobalDecoderRegistry.getDecoder(Pool.typeUrl)) {
+      return;
+    }
     GlobalDecoderRegistry.register(Pool.typeUrl, Pool);
     GlobalDecoderRegistry.registerAminoProtoMapping(Pool.aminoType, Pool.typeUrl);
     PoolParams.registerTypeUrl();

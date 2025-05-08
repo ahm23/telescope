@@ -325,6 +325,9 @@ export const BasicAllowance = {
     };
   },
   registerTypeUrl() {
+    if (GlobalDecoderRegistry.getDecoder(BasicAllowance.typeUrl)) {
+      return;
+    }
     GlobalDecoderRegistry.register(BasicAllowance.typeUrl, BasicAllowance);
     GlobalDecoderRegistry.registerAminoProtoMapping(BasicAllowance.aminoType, BasicAllowance.typeUrl);
     Coin.registerTypeUrl();
@@ -527,6 +530,9 @@ export const PeriodicAllowance = {
     };
   },
   registerTypeUrl() {
+    if (GlobalDecoderRegistry.getDecoder(PeriodicAllowance.typeUrl)) {
+      return;
+    }
     GlobalDecoderRegistry.register(PeriodicAllowance.typeUrl, PeriodicAllowance);
     GlobalDecoderRegistry.registerAminoProtoMapping(PeriodicAllowance.aminoType, PeriodicAllowance.typeUrl);
     BasicAllowance.registerTypeUrl();
@@ -667,6 +673,9 @@ export const AllowedMsgAllowance = {
     };
   },
   registerTypeUrl() {
+    if (GlobalDecoderRegistry.getDecoder(AllowedMsgAllowance.typeUrl)) {
+      return;
+    }
     GlobalDecoderRegistry.register(AllowedMsgAllowance.typeUrl, AllowedMsgAllowance);
     GlobalDecoderRegistry.registerAminoProtoMapping(AllowedMsgAllowance.aminoType, AllowedMsgAllowance.typeUrl);
     BasicAllowance.registerTypeUrl();

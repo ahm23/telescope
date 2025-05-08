@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.9](https://github.com/hyperweb-io/telescope/compare/@cosmology/telescope@1.12.8...@cosmology/telescope@1.12.9) (2025-05-08)
+
+### Bug Fixes
+
+- named of Endo base64 imports ([977d598](https://github.com/hyperweb-io/telescope/commit/977d5987364eb473cf76922e96a9e940f353ac31))
+
 ## [1.12.8](https://github.com/hyperweb-io/telescope/compare/@cosmology/telescope@1.12.7...@cosmology/telescope@1.12.8) (2025-04-23)
 
 **Note:** Version bump only for package @cosmology/telescope

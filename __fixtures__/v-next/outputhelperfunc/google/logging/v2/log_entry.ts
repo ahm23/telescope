@@ -639,7 +639,11 @@ export const LogEntry_LabelsEntry = {
   toProto(message: LogEntry_LabelsEntry): Uint8Array {
     return LogEntry_LabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogEntry_LabelsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseLogEntry(): LogEntry {
   return {
@@ -1072,6 +1076,9 @@ export const LogEntry = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogEntry.typeUrl)) {
+      return;
+    }
     Struct.registerTypeUrl();
     HttpRequest.registerTypeUrl();
     LogEntryOperation.registerTypeUrl();
@@ -1226,7 +1233,11 @@ export const LogEntryOperation = {
       value: LogEntryOperation.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogEntryOperation.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseLogEntrySourceLocation(): LogEntrySourceLocation {
   return {
@@ -1360,7 +1371,11 @@ export const LogEntrySourceLocation = {
       value: LogEntrySourceLocation.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogEntrySourceLocation.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseLogSplit(): LogSplit {
   return {
@@ -1492,5 +1507,9 @@ export const LogSplit = {
       value: LogSplit.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogSplit.typeUrl)) {
+      return;
+    }
+  }
 };

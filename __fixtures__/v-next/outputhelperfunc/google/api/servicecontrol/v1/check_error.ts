@@ -411,6 +411,9 @@ export const CheckError = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckError.typeUrl)) {
+      return;
+    }
     Status.registerTypeUrl();
   }
 };

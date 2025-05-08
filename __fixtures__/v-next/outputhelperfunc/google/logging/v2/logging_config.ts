@@ -3280,6 +3280,9 @@ export const LogBucket = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogBucket.typeUrl)) {
+      return;
+    }
     CmekSettings.registerTypeUrl();
   }
 };
@@ -3447,7 +3450,11 @@ export const LogView = {
       value: LogView.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogView.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseLogSink(): LogSink {
   return {
@@ -3745,6 +3752,9 @@ export const LogSink = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogSink.typeUrl)) {
+      return;
+    }
     LogExclusion.registerTypeUrl();
     BigQueryOptions.registerTypeUrl();
   }
@@ -3862,7 +3872,11 @@ export const BigQueryOptions = {
       value: BigQueryOptions.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BigQueryOptions.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListBucketsRequest(): ListBucketsRequest {
   return {
@@ -3994,7 +4008,11 @@ export const ListBucketsRequest = {
       value: ListBucketsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListBucketsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListBucketsResponse(): ListBucketsResponse {
   return {
@@ -4120,6 +4138,9 @@ export const ListBucketsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListBucketsResponse.typeUrl)) {
+      return;
+    }
     LogBucket.registerTypeUrl();
   }
 };
@@ -4256,6 +4277,9 @@ export const CreateBucketRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateBucketRequest.typeUrl)) {
+      return;
+    }
     LogBucket.registerTypeUrl();
   }
 };
@@ -4394,6 +4418,9 @@ export const UpdateBucketRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateBucketRequest.typeUrl)) {
+      return;
+    }
     LogBucket.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -4494,7 +4521,11 @@ export const GetBucketRequest = {
       value: GetBucketRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetBucketRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDeleteBucketRequest(): DeleteBucketRequest {
   return {
@@ -4592,7 +4623,11 @@ export const DeleteBucketRequest = {
       value: DeleteBucketRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteBucketRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseUndeleteBucketRequest(): UndeleteBucketRequest {
   return {
@@ -4690,7 +4725,11 @@ export const UndeleteBucketRequest = {
       value: UndeleteBucketRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UndeleteBucketRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListViewsRequest(): ListViewsRequest {
   return {
@@ -4822,7 +4861,11 @@ export const ListViewsRequest = {
       value: ListViewsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListViewsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListViewsResponse(): ListViewsResponse {
   return {
@@ -4948,6 +4991,9 @@ export const ListViewsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListViewsResponse.typeUrl)) {
+      return;
+    }
     LogView.registerTypeUrl();
   }
 };
@@ -5084,6 +5130,9 @@ export const CreateViewRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateViewRequest.typeUrl)) {
+      return;
+    }
     LogView.registerTypeUrl();
   }
 };
@@ -5222,6 +5271,9 @@ export const UpdateViewRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateViewRequest.typeUrl)) {
+      return;
+    }
     LogView.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -5322,7 +5374,11 @@ export const GetViewRequest = {
       value: GetViewRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetViewRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDeleteViewRequest(): DeleteViewRequest {
   return {
@@ -5420,7 +5476,11 @@ export const DeleteViewRequest = {
       value: DeleteViewRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteViewRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListSinksRequest(): ListSinksRequest {
   return {
@@ -5552,7 +5612,11 @@ export const ListSinksRequest = {
       value: ListSinksRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListSinksRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListSinksResponse(): ListSinksResponse {
   return {
@@ -5678,6 +5742,9 @@ export const ListSinksResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListSinksResponse.typeUrl)) {
+      return;
+    }
     LogSink.registerTypeUrl();
   }
 };
@@ -5777,7 +5844,11 @@ export const GetSinkRequest = {
       value: GetSinkRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetSinkRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCreateSinkRequest(): CreateSinkRequest {
   return {
@@ -5912,6 +5983,9 @@ export const CreateSinkRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateSinkRequest.typeUrl)) {
+      return;
+    }
     LogSink.registerTypeUrl();
   }
 };
@@ -6067,6 +6141,9 @@ export const UpdateSinkRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateSinkRequest.typeUrl)) {
+      return;
+    }
     LogSink.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -6167,7 +6244,11 @@ export const DeleteSinkRequest = {
       value: DeleteSinkRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteSinkRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseLogExclusion(): LogExclusion {
   return {
@@ -6350,7 +6431,11 @@ export const LogExclusion = {
       value: LogExclusion.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogExclusion.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListExclusionsRequest(): ListExclusionsRequest {
   return {
@@ -6482,7 +6567,11 @@ export const ListExclusionsRequest = {
       value: ListExclusionsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListExclusionsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListExclusionsResponse(): ListExclusionsResponse {
   return {
@@ -6608,6 +6697,9 @@ export const ListExclusionsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListExclusionsResponse.typeUrl)) {
+      return;
+    }
     LogExclusion.registerTypeUrl();
   }
 };
@@ -6707,7 +6799,11 @@ export const GetExclusionRequest = {
       value: GetExclusionRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetExclusionRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCreateExclusionRequest(): CreateExclusionRequest {
   return {
@@ -6825,6 +6921,9 @@ export const CreateExclusionRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateExclusionRequest.typeUrl)) {
+      return;
+    }
     LogExclusion.registerTypeUrl();
   }
 };
@@ -6963,6 +7062,9 @@ export const UpdateExclusionRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateExclusionRequest.typeUrl)) {
+      return;
+    }
     LogExclusion.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -7063,7 +7165,11 @@ export const DeleteExclusionRequest = {
       value: DeleteExclusionRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteExclusionRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGetCmekSettingsRequest(): GetCmekSettingsRequest {
   return {
@@ -7161,7 +7267,11 @@ export const GetCmekSettingsRequest = {
       value: GetCmekSettingsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetCmekSettingsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseUpdateCmekSettingsRequest(): UpdateCmekSettingsRequest {
   return {
@@ -7298,6 +7408,9 @@ export const UpdateCmekSettingsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateCmekSettingsRequest.typeUrl)) {
+      return;
+    }
     CmekSettings.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -7432,7 +7545,11 @@ export const CmekSettings = {
       value: CmekSettings.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CmekSettings.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGetSettingsRequest(): GetSettingsRequest {
   return {
@@ -7530,7 +7647,11 @@ export const GetSettingsRequest = {
       value: GetSettingsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetSettingsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseUpdateSettingsRequest(): UpdateSettingsRequest {
   return {
@@ -7667,6 +7788,9 @@ export const UpdateSettingsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateSettingsRequest.typeUrl)) {
+      return;
+    }
     Settings.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -7835,7 +7959,11 @@ export const Settings = {
       value: Settings.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Settings.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCopyLogEntriesRequest(): CopyLogEntriesRequest {
   return {
@@ -7967,7 +8095,11 @@ export const CopyLogEntriesRequest = {
       value: CopyLogEntriesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CopyLogEntriesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCopyLogEntriesMetadata(): CopyLogEntriesMetadata {
   return {
@@ -8170,6 +8302,9 @@ export const CopyLogEntriesMetadata = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CopyLogEntriesMetadata.typeUrl)) {
+      return;
+    }
     CopyLogEntriesRequest.registerTypeUrl();
   }
 };
@@ -8271,5 +8406,9 @@ export const CopyLogEntriesResponse = {
       value: CopyLogEntriesResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CopyLogEntriesResponse.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -188,6 +188,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     GenesisState1.registerTypeUrl();
     GenesisState2.registerTypeUrl();
     GenesisState3.registerTypeUrl();

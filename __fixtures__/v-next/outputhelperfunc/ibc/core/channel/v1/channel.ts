@@ -616,6 +616,9 @@ export const Channel = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Channel.typeUrl)) {
+      return;
+    }
     Counterparty.registerTypeUrl();
   }
 };
@@ -837,6 +840,9 @@ export const IdentifiedChannel = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(IdentifiedChannel.typeUrl)) {
+      return;
+    }
     Counterparty.registerTypeUrl();
   }
 };
@@ -960,7 +966,11 @@ export const Counterparty = {
       value: Counterparty.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Counterparty.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBasePacket(): Packet {
   return {
@@ -1191,6 +1201,9 @@ export const Packet = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Packet.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -1350,7 +1363,11 @@ export const PacketState = {
       value: PacketState.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PacketState.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAcknowledgement(): Acknowledgement {
   return {
@@ -1472,5 +1489,9 @@ export const Acknowledgement = {
       value: Acknowledgement.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Acknowledgement.typeUrl)) {
+      return;
+    }
+  }
 };

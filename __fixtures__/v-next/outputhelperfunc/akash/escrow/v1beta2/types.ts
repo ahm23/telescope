@@ -354,7 +354,11 @@ export const AccountID = {
       value: AccountID.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountID.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccount(): Account {
   return {
@@ -589,6 +593,9 @@ export const Account = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Account.typeUrl)) {
+      return;
+    }
     AccountID.registerTypeUrl();
     DecCoin.registerTypeUrl();
   }
@@ -807,6 +814,9 @@ export const FractionalPayment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(FractionalPayment.typeUrl)) {
+      return;
+    }
     AccountID.registerTypeUrl();
     DecCoin.registerTypeUrl();
     Coin.registerTypeUrl();

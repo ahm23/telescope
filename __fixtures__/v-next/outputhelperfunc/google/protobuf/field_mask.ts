@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.protobuf";
 /**
  * `FieldMask` represents a set of symbolic field paths, for example:
@@ -730,5 +731,9 @@ export const FieldMask = {
       value: FieldMask.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(FieldMask.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -278,7 +278,11 @@ export const QueryAllowanceRequest = {
       value: QueryAllowanceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllowanceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryAllowanceResponse(): QueryAllowanceResponse {
   return {
@@ -386,6 +390,9 @@ export const QueryAllowanceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllowanceResponse.typeUrl)) {
+      return;
+    }
     Grant.registerTypeUrl();
   }
 };
@@ -512,6 +519,9 @@ export const QueryAllowancesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllowancesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -648,6 +658,9 @@ export const QueryAllowancesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllowancesResponse.typeUrl)) {
+      return;
+    }
     Grant.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -775,6 +788,9 @@ export const QueryAllowancesByGranterRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllowancesByGranterRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -911,6 +927,9 @@ export const QueryAllowancesByGranterResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllowancesByGranterResponse.typeUrl)) {
+      return;
+    }
     Grant.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }

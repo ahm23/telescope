@@ -270,6 +270,9 @@ export const QueryTokenPairsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTokenPairsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -399,6 +402,9 @@ export const QueryTokenPairsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTokenPairsResponse.typeUrl)) {
+      return;
+    }
     TokenPair.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -499,7 +505,11 @@ export const QueryTokenPairRequest = {
       value: QueryTokenPairRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTokenPairRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryTokenPairResponse(): QueryTokenPairResponse {
   return {
@@ -600,6 +610,9 @@ export const QueryTokenPairResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTokenPairResponse.typeUrl)) {
+      return;
+    }
     TokenPair.registerTypeUrl();
   }
 };
@@ -679,7 +692,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -780,6 +797,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };

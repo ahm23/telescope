@@ -215,7 +215,11 @@ export const Attribute = {
       value: Attribute.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Attribute.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSignedBy(): SignedBy {
   return {
@@ -357,7 +361,11 @@ export const SignedBy = {
       value: SignedBy.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignedBy.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBasePlacementRequirements(): PlacementRequirements {
   return {
@@ -492,6 +500,9 @@ export const PlacementRequirements = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PlacementRequirements.typeUrl)) {
+      return;
+    }
     SignedBy.registerTypeUrl();
     Attribute.registerTypeUrl();
   }

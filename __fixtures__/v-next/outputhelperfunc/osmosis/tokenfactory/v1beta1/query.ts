@@ -240,7 +240,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -348,6 +352,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -454,7 +461,11 @@ export const QueryDenomAuthorityMetadataRequest = {
       value: QueryDenomAuthorityMetadataRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomAuthorityMetadataRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryDenomAuthorityMetadataResponse(): QueryDenomAuthorityMetadataResponse {
   return {
@@ -562,6 +573,9 @@ export const QueryDenomAuthorityMetadataResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomAuthorityMetadataResponse.typeUrl)) {
+      return;
+    }
     DenomAuthorityMetadata.registerTypeUrl();
   }
 };
@@ -668,7 +682,11 @@ export const QueryDenomsFromCreatorRequest = {
       value: QueryDenomsFromCreatorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomsFromCreatorRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryDenomsFromCreatorResponse(): QueryDenomsFromCreatorResponse {
   return {
@@ -783,5 +801,9 @@ export const QueryDenomsFromCreatorResponse = {
       value: QueryDenomsFromCreatorResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomsFromCreatorResponse.typeUrl)) {
+      return;
+    }
+  }
 };

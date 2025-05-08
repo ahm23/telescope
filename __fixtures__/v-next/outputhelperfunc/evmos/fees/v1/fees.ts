@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "evmos.fees.v1";
 /**
  * DevFeeInfo defines an instance that organizes fee distribution conditions
@@ -179,5 +180,9 @@ export const DevFeeInfo = {
       value: DevFeeInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DevFeeInfo.typeUrl)) {
+      return;
+    }
+  }
 };

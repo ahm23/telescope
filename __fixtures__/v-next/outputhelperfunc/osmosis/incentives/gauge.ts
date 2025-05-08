@@ -382,6 +382,9 @@ export const Gauge = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Gauge.typeUrl)) {
+      return;
+    }
     QueryCondition.registerTypeUrl();
     Coin.registerTypeUrl();
   }
@@ -499,5 +502,9 @@ export const LockableDurationsInfo = {
       value: LockableDurationsInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LockableDurationsInfo.typeUrl)) {
+      return;
+    }
+  }
 };

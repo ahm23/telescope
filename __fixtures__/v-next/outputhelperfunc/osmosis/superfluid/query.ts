@@ -668,7 +668,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -776,6 +780,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -882,7 +889,11 @@ export const AssetTypeRequest = {
       value: AssetTypeRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AssetTypeRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAssetTypeResponse(): AssetTypeResponse {
   return {
@@ -987,7 +998,11 @@ export const AssetTypeResponse = {
       value: AssetTypeResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AssetTypeResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAllAssetsRequest(): AllAssetsRequest {
   return {};
@@ -1072,7 +1087,11 @@ export const AllAssetsRequest = {
       value: AllAssetsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AllAssetsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAllAssetsResponse(): AllAssetsResponse {
   return {
@@ -1188,6 +1207,9 @@ export const AllAssetsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AllAssetsResponse.typeUrl)) {
+      return;
+    }
     SuperfluidAsset.registerTypeUrl();
   }
 };
@@ -1294,7 +1316,11 @@ export const AssetMultiplierRequest = {
       value: AssetMultiplierRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AssetMultiplierRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAssetMultiplierResponse(): AssetMultiplierResponse {
   return {
@@ -1402,6 +1428,9 @@ export const AssetMultiplierResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AssetMultiplierResponse.typeUrl)) {
+      return;
+    }
     OsmoEquivalentMultiplierRecord.registerTypeUrl();
   }
 };
@@ -1561,7 +1590,11 @@ export const SuperfluidIntermediaryAccountInfo = {
       value: SuperfluidIntermediaryAccountInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidIntermediaryAccountInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAllIntermediaryAccountsRequest(): AllIntermediaryAccountsRequest {
   return {
@@ -1669,6 +1702,9 @@ export const AllIntermediaryAccountsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AllIntermediaryAccountsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1805,6 +1841,9 @@ export const AllIntermediaryAccountsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AllIntermediaryAccountsResponse.typeUrl)) {
+      return;
+    }
     SuperfluidIntermediaryAccountInfo.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1914,7 +1953,11 @@ export const ConnectedIntermediaryAccountRequest = {
       value: ConnectedIntermediaryAccountRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConnectedIntermediaryAccountRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseConnectedIntermediaryAccountResponse(): ConnectedIntermediaryAccountResponse {
   return {
@@ -2022,6 +2065,9 @@ export const ConnectedIntermediaryAccountResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConnectedIntermediaryAccountResponse.typeUrl)) {
+      return;
+    }
     SuperfluidIntermediaryAccountInfo.registerTypeUrl();
   }
 };
@@ -2128,7 +2174,11 @@ export const QueryTotalDelegationByValidatorForDenomRequest = {
       value: QueryTotalDelegationByValidatorForDenomRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalDelegationByValidatorForDenomRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryTotalDelegationByValidatorForDenomResponse(): QueryTotalDelegationByValidatorForDenomResponse {
   return {
@@ -2244,6 +2294,9 @@ export const QueryTotalDelegationByValidatorForDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalDelegationByValidatorForDenomResponse.typeUrl)) {
+      return;
+    }
     Delegations.registerTypeUrl();
   }
 };
@@ -2384,7 +2437,11 @@ export const Delegations = {
       value: Delegations.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Delegations.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseTotalSuperfluidDelegationsRequest(): TotalSuperfluidDelegationsRequest {
   return {};
@@ -2469,7 +2526,11 @@ export const TotalSuperfluidDelegationsRequest = {
       value: TotalSuperfluidDelegationsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TotalSuperfluidDelegationsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseTotalSuperfluidDelegationsResponse(): TotalSuperfluidDelegationsResponse {
   return {
@@ -2574,7 +2635,11 @@ export const TotalSuperfluidDelegationsResponse = {
       value: TotalSuperfluidDelegationsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TotalSuperfluidDelegationsResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSuperfluidDelegationAmountRequest(): SuperfluidDelegationAmountRequest {
   return {
@@ -2713,7 +2778,11 @@ export const SuperfluidDelegationAmountRequest = {
       value: SuperfluidDelegationAmountRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidDelegationAmountRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSuperfluidDelegationAmountResponse(): SuperfluidDelegationAmountResponse {
   return {
@@ -2829,6 +2898,9 @@ export const SuperfluidDelegationAmountResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidDelegationAmountResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2935,7 +3007,11 @@ export const SuperfluidDelegationsByDelegatorRequest = {
       value: SuperfluidDelegationsByDelegatorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidDelegationsByDelegatorRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSuperfluidDelegationsByDelegatorResponse(): SuperfluidDelegationsByDelegatorResponse {
   return {
@@ -3097,6 +3173,9 @@ export const SuperfluidDelegationsByDelegatorResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidDelegationsByDelegatorResponse.typeUrl)) {
+      return;
+    }
     SuperfluidDelegationRecord.registerTypeUrl();
     Coin.registerTypeUrl();
   }
@@ -3221,7 +3300,11 @@ export const SuperfluidUndelegationsByDelegatorRequest = {
       value: SuperfluidUndelegationsByDelegatorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidUndelegationsByDelegatorRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSuperfluidUndelegationsByDelegatorResponse(): SuperfluidUndelegationsByDelegatorResponse {
   return {
@@ -3391,6 +3474,9 @@ export const SuperfluidUndelegationsByDelegatorResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidUndelegationsByDelegatorResponse.typeUrl)) {
+      return;
+    }
     SuperfluidDelegationRecord.registerTypeUrl();
     Coin.registerTypeUrl();
     SyntheticLock.registerTypeUrl();
@@ -3516,7 +3602,11 @@ export const SuperfluidDelegationsByValidatorDenomRequest = {
       value: SuperfluidDelegationsByValidatorDenomRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidDelegationsByValidatorDenomRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSuperfluidDelegationsByValidatorDenomResponse(): SuperfluidDelegationsByValidatorDenomResponse {
   return {
@@ -3632,6 +3722,9 @@ export const SuperfluidDelegationsByValidatorDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidDelegationsByValidatorDenomResponse.typeUrl)) {
+      return;
+    }
     SuperfluidDelegationRecord.registerTypeUrl();
   }
 };
@@ -3755,7 +3848,11 @@ export const EstimateSuperfluidDelegatedAmountByValidatorDenomRequest = {
       value: EstimateSuperfluidDelegatedAmountByValidatorDenomRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EstimateSuperfluidDelegatedAmountByValidatorDenomRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseEstimateSuperfluidDelegatedAmountByValidatorDenomResponse(): EstimateSuperfluidDelegatedAmountByValidatorDenomResponse {
   return {
@@ -3871,6 +3968,9 @@ export const EstimateSuperfluidDelegatedAmountByValidatorDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EstimateSuperfluidDelegatedAmountByValidatorDenomResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -3977,7 +4077,11 @@ export const QueryTotalDelegationByDelegatorRequest = {
       value: QueryTotalDelegationByDelegatorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalDelegationByDelegatorRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryTotalDelegationByDelegatorResponse(): QueryTotalDelegationByDelegatorResponse {
   return {
@@ -4166,6 +4270,9 @@ export const QueryTotalDelegationByDelegatorResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalDelegationByDelegatorResponse.typeUrl)) {
+      return;
+    }
     SuperfluidDelegationRecord.registerTypeUrl();
     DelegationResponse.registerTypeUrl();
     Coin.registerTypeUrl();
@@ -4254,7 +4361,11 @@ export const QueryUnpoolWhitelistRequest = {
       value: QueryUnpoolWhitelistRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUnpoolWhitelistRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryUnpoolWhitelistResponse(): QueryUnpoolWhitelistResponse {
   return {
@@ -4378,5 +4489,9 @@ export const QueryUnpoolWhitelistResponse = {
       value: QueryUnpoolWhitelistResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUnpoolWhitelistResponse.typeUrl)) {
+      return;
+    }
+  }
 };

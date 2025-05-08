@@ -222,7 +222,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -330,6 +334,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -416,7 +423,11 @@ export const QueryInflationRequest = {
       value: QueryInflationRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryInflationRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryInflationResponse(): QueryInflationResponse {
   return {
@@ -521,7 +532,11 @@ export const QueryInflationResponse = {
       value: QueryInflationResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryInflationResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryAnnualProvisionsRequest(): QueryAnnualProvisionsRequest {
   return {};
@@ -606,7 +621,11 @@ export const QueryAnnualProvisionsRequest = {
       value: QueryAnnualProvisionsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAnnualProvisionsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryAnnualProvisionsResponse(): QueryAnnualProvisionsResponse {
   return {
@@ -711,5 +730,9 @@ export const QueryAnnualProvisionsResponse = {
       value: QueryAnnualProvisionsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAnnualProvisionsResponse.typeUrl)) {
+      return;
+    }
+  }
 };

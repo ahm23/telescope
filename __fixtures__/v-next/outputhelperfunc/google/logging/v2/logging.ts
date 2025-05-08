@@ -1049,7 +1049,11 @@ export const DeleteLogRequest = {
       value: DeleteLogRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteLogRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseWriteLogEntriesRequest_LabelsEntry(): WriteLogEntriesRequest_LabelsEntry {
   return {
@@ -1148,7 +1152,11 @@ export const WriteLogEntriesRequest_LabelsEntry = {
   toProto(message: WriteLogEntriesRequest_LabelsEntry): Uint8Array {
     return WriteLogEntriesRequest_LabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WriteLogEntriesRequest_LabelsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseWriteLogEntriesRequest(): WriteLogEntriesRequest {
   return {
@@ -1392,6 +1400,9 @@ export const WriteLogEntriesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WriteLogEntriesRequest.typeUrl)) {
+      return;
+    }
     MonitoredResource.registerTypeUrl();
     LogEntry.registerTypeUrl();
   }
@@ -1472,7 +1483,11 @@ export const WriteLogEntriesResponse = {
       value: WriteLogEntriesResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WriteLogEntriesResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseWriteLogEntriesPartialErrors_LogEntryErrorsEntry(): WriteLogEntriesPartialErrors_LogEntryErrorsEntry {
   return {
@@ -1574,6 +1589,9 @@ export const WriteLogEntriesPartialErrors_LogEntryErrorsEntry = {
     return WriteLogEntriesPartialErrors_LogEntryErrorsEntry.encode(message).finish();
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WriteLogEntriesPartialErrors_LogEntryErrorsEntry.typeUrl)) {
+      return;
+    }
     Status.registerTypeUrl();
   }
 };
@@ -1722,6 +1740,9 @@ export const WriteLogEntriesPartialErrors = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WriteLogEntriesPartialErrors.typeUrl)) {
+      return;
+    }
     Status.registerTypeUrl();
   }
 };
@@ -1899,7 +1920,11 @@ export const ListLogEntriesRequest = {
       value: ListLogEntriesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListLogEntriesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListLogEntriesResponse(): ListLogEntriesResponse {
   return {
@@ -2025,6 +2050,9 @@ export const ListLogEntriesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListLogEntriesResponse.typeUrl)) {
+      return;
+    }
     LogEntry.registerTypeUrl();
   }
 };
@@ -2141,7 +2169,11 @@ export const ListMonitoredResourceDescriptorsRequest = {
       value: ListMonitoredResourceDescriptorsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListMonitoredResourceDescriptorsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListMonitoredResourceDescriptorsResponse(): ListMonitoredResourceDescriptorsResponse {
   return {
@@ -2267,6 +2299,9 @@ export const ListMonitoredResourceDescriptorsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListMonitoredResourceDescriptorsResponse.typeUrl)) {
+      return;
+    }
     MonitoredResourceDescriptor.registerTypeUrl();
   }
 };
@@ -2427,7 +2462,11 @@ export const ListLogsRequest = {
       value: ListLogsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListLogsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListLogsResponse(): ListLogsResponse {
   return {
@@ -2552,7 +2591,11 @@ export const ListLogsResponse = {
       value: ListLogsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListLogsResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseTailLogEntriesRequest(): TailLogEntriesRequest {
   return {
@@ -2696,7 +2739,11 @@ export const TailLogEntriesRequest = {
       value: TailLogEntriesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TailLogEntriesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseTailLogEntriesResponse(): TailLogEntriesResponse {
   return {
@@ -2832,6 +2879,9 @@ export const TailLogEntriesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TailLogEntriesResponse.typeUrl)) {
+      return;
+    }
     LogEntry.registerTypeUrl();
     TailLogEntriesResponse_SuppressionInfo.registerTypeUrl();
   }
@@ -2949,5 +2999,9 @@ export const TailLogEntriesResponse_SuppressionInfo = {
       value: TailLogEntriesResponse_SuppressionInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TailLogEntriesResponse_SuppressionInfo.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -545,6 +545,9 @@ export const Value = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Value.typeUrl)) {
+      return;
+    }
     MapValue.registerTypeUrl();
     ListValue.registerTypeUrl();
   }
@@ -662,7 +665,11 @@ export const EnumValue = {
       value: EnumValue.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EnumValue.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListValue(): ListValue {
   return {
@@ -771,6 +778,9 @@ export const ListValue = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListValue.typeUrl)) {
+      return;
+    }
     Value.registerTypeUrl();
   }
 };
@@ -881,6 +891,9 @@ export const MapValue = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MapValue.typeUrl)) {
+      return;
+    }
     MapValue_Entry.registerTypeUrl();
   }
 };
@@ -1002,6 +1015,9 @@ export const MapValue_Entry = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MapValue_Entry.typeUrl)) {
+      return;
+    }
     Value.registerTypeUrl();
   }
 };

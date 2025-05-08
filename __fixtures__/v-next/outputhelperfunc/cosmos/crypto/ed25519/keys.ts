@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, bytesFromBase64, base64FromBytes, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.crypto.ed25519";
 /**
  * PubKey is an ed25519 public key for handling Tendermint keys in SDK.
@@ -172,7 +173,11 @@ export const PubKey = {
       value: PubKey.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PubKey.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBasePrivKey(): PrivKey {
   return {
@@ -277,5 +282,9 @@ export const PrivKey = {
       value: PrivKey.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PrivKey.typeUrl)) {
+      return;
+    }
+  }
 };

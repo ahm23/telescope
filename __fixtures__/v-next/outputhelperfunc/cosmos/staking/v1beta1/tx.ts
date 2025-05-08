@@ -495,6 +495,9 @@ export const MsgCreateValidator = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateValidator.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -581,7 +584,11 @@ export const MsgCreateValidatorResponse = {
       value: MsgCreateValidatorResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateValidatorResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgEditValidator(): MsgEditValidator {
   return {
@@ -740,6 +747,9 @@ export const MsgEditValidator = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgEditValidator.typeUrl)) {
+      return;
+    }
     Description.registerTypeUrl();
   }
 };
@@ -826,7 +836,11 @@ export const MsgEditValidatorResponse = {
       value: MsgEditValidatorResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgEditValidatorResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgDelegate(): MsgDelegate {
   return {
@@ -968,6 +982,9 @@ export const MsgDelegate = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDelegate.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1054,7 +1071,11 @@ export const MsgDelegateResponse = {
       value: MsgDelegateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDelegateResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgBeginRedelegate(): MsgBeginRedelegate {
   return {
@@ -1213,6 +1234,9 @@ export const MsgBeginRedelegate = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBeginRedelegate.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1319,7 +1343,11 @@ export const MsgBeginRedelegateResponse = {
       value: MsgBeginRedelegateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBeginRedelegateResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUndelegate(): MsgUndelegate {
   return {
@@ -1461,6 +1489,9 @@ export const MsgUndelegate = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUndelegate.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1567,5 +1598,9 @@ export const MsgUndelegateResponse = {
       value: MsgUndelegateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUndelegateResponse.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -330,7 +330,11 @@ export const AccountID = {
       value: AccountID.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountID.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccount(): Account {
   return {
@@ -529,6 +533,9 @@ export const Account = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Account.typeUrl)) {
+      return;
+    }
     AccountID.registerTypeUrl();
     Coin.registerTypeUrl();
   }
@@ -747,6 +754,9 @@ export const Payment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Payment.typeUrl)) {
+      return;
+    }
     AccountID.registerTypeUrl();
     Coin.registerTypeUrl();
   }

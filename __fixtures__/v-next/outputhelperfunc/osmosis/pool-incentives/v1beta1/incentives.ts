@@ -233,7 +233,11 @@ export const Params = {
       value: Params.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseLockableDurationsInfo(): LockableDurationsInfo {
   return {
@@ -348,7 +352,11 @@ export const LockableDurationsInfo = {
       value: LockableDurationsInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LockableDurationsInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDistrInfo(): DistrInfo {
   return {
@@ -481,6 +489,9 @@ export const DistrInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DistrInfo.typeUrl)) {
+      return;
+    }
     DistrRecord.registerTypeUrl();
   }
 };
@@ -606,7 +617,11 @@ export const DistrRecord = {
       value: DistrRecord.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DistrRecord.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBasePoolToGauge(): PoolToGauge {
   return {
@@ -751,7 +766,11 @@ export const PoolToGauge = {
       value: PoolToGauge.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PoolToGauge.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBasePoolToGauges(): PoolToGauges {
   return {
@@ -867,6 +886,9 @@ export const PoolToGauges = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PoolToGauges.typeUrl)) {
+      return;
+    }
     PoolToGauge.registerTypeUrl();
   }
 };

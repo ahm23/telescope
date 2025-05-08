@@ -316,6 +316,9 @@ export const MsgGrant = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgGrant.typeUrl)) {
+      return;
+    }
     Grant.registerTypeUrl();
   }
 };
@@ -432,7 +435,11 @@ export const MsgExecResponse = {
       value: MsgExecResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExecResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgExec(): MsgExec {
   return {
@@ -564,7 +571,11 @@ export const MsgExec = {
       value: MsgExec.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExec.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgGrantResponse(): MsgGrantResponse {
   return {};
@@ -649,7 +660,11 @@ export const MsgGrantResponse = {
       value: MsgGrantResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgGrantResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgRevoke(): MsgRevoke {
   return {
@@ -788,7 +803,11 @@ export const MsgRevoke = {
       value: MsgRevoke.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRevoke.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgRevokeResponse(): MsgRevokeResponse {
   return {};
@@ -873,5 +892,9 @@ export const MsgRevokeResponse = {
       value: MsgRevokeResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRevokeResponse.typeUrl)) {
+      return;
+    }
+  }
 };

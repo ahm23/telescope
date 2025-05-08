@@ -2,6 +2,7 @@ import { Any, AnyProtoMsg, AnyAmino, AnySDKType } from "../protobuf/any";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, bytesFromBase64, base64FromBytes, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * Message that represents an arbitrary HTTP body. It should only be used for
@@ -313,5 +314,9 @@ export const HttpBody = {
       value: HttpBody.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(HttpBody.typeUrl)) {
+      return;
+    }
+  }
 };

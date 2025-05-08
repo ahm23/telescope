@@ -482,7 +482,11 @@ export const QueryConnectionRequest = {
       value: QueryConnectionRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryConnectionResponse(): QueryConnectionResponse {
   return {
@@ -626,6 +630,9 @@ export const QueryConnectionResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionResponse.typeUrl)) {
+      return;
+    }
     ConnectionEnd.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -736,6 +743,9 @@ export const QueryConnectionsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -891,6 +901,9 @@ export const QueryConnectionsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionsResponse.typeUrl)) {
+      return;
+    }
     IdentifiedConnection.registerTypeUrl();
     PageResponse.registerTypeUrl();
     Height.registerTypeUrl();
@@ -999,7 +1012,11 @@ export const QueryClientConnectionsRequest = {
       value: QueryClientConnectionsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClientConnectionsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryClientConnectionsResponse(): QueryClientConnectionsResponse {
   return {
@@ -1151,6 +1168,9 @@ export const QueryClientConnectionsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClientConnectionsResponse.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -1257,7 +1277,11 @@ export const QueryConnectionClientStateRequest = {
       value: QueryConnectionClientStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionClientStateRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryConnectionClientStateResponse(): QueryConnectionClientStateResponse {
   return {
@@ -1401,6 +1425,9 @@ export const QueryConnectionClientStateResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionClientStateResponse.typeUrl)) {
+      return;
+    }
     IdentifiedClientState.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -1546,7 +1573,11 @@ export const QueryConnectionConsensusStateRequest = {
       value: QueryConnectionConsensusStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionConsensusStateRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryConnectionConsensusStateResponse(): QueryConnectionConsensusStateResponse {
   return {
@@ -1707,6 +1738,9 @@ export const QueryConnectionConsensusStateResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionConsensusStateResponse.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };

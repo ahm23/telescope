@@ -912,6 +912,9 @@ export const Tx = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Tx.typeUrl)) {
+      return;
+    }
     TxBody.registerTypeUrl();
     AuthInfo.registerTypeUrl();
   }
@@ -1063,7 +1066,11 @@ export const TxRaw = {
       value: TxRaw.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TxRaw.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSignDoc(): SignDoc {
   return {
@@ -1221,7 +1228,11 @@ export const SignDoc = {
       value: SignDoc.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignDoc.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSignDocDirectAux(): SignDocDirectAux {
   return {
@@ -1420,6 +1431,9 @@ export const SignDocDirectAux = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignDocDirectAux.typeUrl)) {
+      return;
+    }
     Tip.registerTypeUrl();
   }
 };
@@ -1626,7 +1640,11 @@ export const TxBody = {
       value: TxBody.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TxBody.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAuthInfo(): AuthInfo {
   return {
@@ -1780,6 +1798,9 @@ export const AuthInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AuthInfo.typeUrl)) {
+      return;
+    }
     SignerInfo.registerTypeUrl();
     Fee.registerTypeUrl();
     Tip.registerTypeUrl();
@@ -1929,6 +1950,9 @@ export const SignerInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignerInfo.typeUrl)) {
+      return;
+    }
     ModeInfo.registerTypeUrl();
   }
 };
@@ -2057,6 +2081,9 @@ export const ModeInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModeInfo.typeUrl)) {
+      return;
+    }
     ModeInfo_Single.registerTypeUrl();
     ModeInfo_Multi.registerTypeUrl();
   }
@@ -2164,7 +2191,11 @@ export const ModeInfo_Single = {
       value: ModeInfo_Single.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModeInfo_Single.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseModeInfo_Multi(): ModeInfo_Multi {
   return {
@@ -2299,6 +2330,9 @@ export const ModeInfo_Multi = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModeInfo_Multi.typeUrl)) {
+      return;
+    }
     CompactBitArray.registerTypeUrl();
     ModeInfo.registerTypeUrl();
   }
@@ -2470,6 +2504,9 @@ export const Fee = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Fee.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2604,6 +2641,9 @@ export const Tip = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Tip.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2764,6 +2804,9 @@ export const AuxSignerData = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AuxSignerData.typeUrl)) {
+      return;
+    }
     SignDocDirectAux.registerTypeUrl();
   }
 };

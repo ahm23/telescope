@@ -255,6 +255,9 @@ export const ClawbackVestingAccount = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClawbackVestingAccount.typeUrl)) {
+      return;
+    }
     BaseVestingAccount.registerTypeUrl();
     Period.registerTypeUrl();
   }

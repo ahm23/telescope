@@ -457,6 +457,9 @@ export const PeriodLock = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PeriodLock.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -616,7 +619,11 @@ export const QueryCondition = {
       value: QueryCondition.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCondition.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSyntheticLock(): SyntheticLock {
   return {
@@ -776,5 +783,9 @@ export const SyntheticLock = {
       value: SyntheticLock.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SyntheticLock.typeUrl)) {
+      return;
+    }
+  }
 };

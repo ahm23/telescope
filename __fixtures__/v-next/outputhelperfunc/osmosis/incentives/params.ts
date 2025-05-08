@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "osmosis.incentives";
 /** Params holds parameters for the incentives module */
 export interface Params {
@@ -133,5 +134,9 @@ export const Params = {
       value: Params.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
+      return;
+    }
+  }
 };

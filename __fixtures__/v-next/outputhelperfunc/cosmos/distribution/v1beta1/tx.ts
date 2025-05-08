@@ -2,6 +2,7 @@ import { Coin, CoinAmino, CoinSDKType } from "../../base/v1beta1/coin";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.distribution.v1beta1";
 /**
  * MsgSetWithdrawAddress sets the withdraw address for
@@ -316,7 +317,11 @@ export const MsgSetWithdrawAddress = {
       value: MsgSetWithdrawAddress.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSetWithdrawAddress.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgSetWithdrawAddressResponse(): MsgSetWithdrawAddressResponse {
   return {};
@@ -401,7 +406,11 @@ export const MsgSetWithdrawAddressResponse = {
       value: MsgSetWithdrawAddressResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSetWithdrawAddressResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgWithdrawDelegatorReward(): MsgWithdrawDelegatorReward {
   return {
@@ -523,7 +532,11 @@ export const MsgWithdrawDelegatorReward = {
       value: MsgWithdrawDelegatorReward.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgWithdrawDelegatorReward.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgWithdrawDelegatorRewardResponse(): MsgWithdrawDelegatorRewardResponse {
   return {
@@ -639,6 +652,9 @@ export const MsgWithdrawDelegatorRewardResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgWithdrawDelegatorRewardResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -745,7 +761,11 @@ export const MsgWithdrawValidatorCommission = {
       value: MsgWithdrawValidatorCommission.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgWithdrawValidatorCommission.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgWithdrawValidatorCommissionResponse(): MsgWithdrawValidatorCommissionResponse {
   return {
@@ -861,6 +881,9 @@ export const MsgWithdrawValidatorCommissionResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgWithdrawValidatorCommissionResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -995,6 +1018,9 @@ export const MsgFundCommunityPool = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgFundCommunityPool.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1081,5 +1107,9 @@ export const MsgFundCommunityPoolResponse = {
       value: MsgFundCommunityPoolResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgFundCommunityPoolResponse.typeUrl)) {
+      return;
+    }
+  }
 };

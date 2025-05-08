@@ -307,6 +307,9 @@ export const MsgTransfer = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgTransfer.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -394,5 +397,9 @@ export const MsgTransferResponse = {
       value: MsgTransferResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgTransferResponse.typeUrl)) {
+      return;
+    }
+  }
 };

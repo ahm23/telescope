@@ -220,6 +220,9 @@ export const MsgCreateBalancerPool = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateBalancerPool.typeUrl)) {
+      return;
+    }
     PoolParams.registerTypeUrl();
     PoolAsset.registerTypeUrl();
   }
@@ -329,5 +332,9 @@ export const MsgCreateBalancerPoolResponse = {
       value: MsgCreateBalancerPoolResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateBalancerPoolResponse.typeUrl)) {
+      return;
+    }
+  }
 };

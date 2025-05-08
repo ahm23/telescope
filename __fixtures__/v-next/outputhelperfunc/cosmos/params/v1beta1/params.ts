@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.params.v1beta1";
 /** ParameterChangeProposal defines a proposal to change one or more parameters. */
 export interface ParameterChangeProposal {
@@ -211,6 +212,9 @@ export const ParameterChangeProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ParameterChangeProposal.typeUrl)) {
+      return;
+    }
     ParamChange.registerTypeUrl();
   }
 };
@@ -351,5 +355,9 @@ export const ParamChange = {
       value: ParamChange.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ParamChange.typeUrl)) {
+      return;
+    }
+  }
 };

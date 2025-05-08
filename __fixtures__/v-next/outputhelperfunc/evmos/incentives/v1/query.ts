@@ -516,6 +516,9 @@ export const QueryIncentivesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryIncentivesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -645,6 +648,9 @@ export const QueryIncentivesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryIncentivesResponse.typeUrl)) {
+      return;
+    }
     Incentive.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -745,7 +751,11 @@ export const QueryIncentiveRequest = {
       value: QueryIncentiveRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryIncentiveRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryIncentiveResponse(): QueryIncentiveResponse {
   return {
@@ -846,6 +856,9 @@ export const QueryIncentiveResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryIncentiveResponse.typeUrl)) {
+      return;
+    }
     Incentive.registerTypeUrl();
   }
 };
@@ -965,6 +978,9 @@ export const QueryGasMetersRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGasMetersRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1094,6 +1110,9 @@ export const QueryGasMetersResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGasMetersResponse.typeUrl)) {
+      return;
+    }
     GasMeter.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1211,7 +1230,11 @@ export const QueryGasMeterRequest = {
       value: QueryGasMeterRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGasMeterRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryGasMeterResponse(): QueryGasMeterResponse {
   return {
@@ -1311,7 +1334,11 @@ export const QueryGasMeterResponse = {
       value: QueryGasMeterResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGasMeterResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryAllocationMetersRequest(): QueryAllocationMetersRequest {
   return {
@@ -1412,6 +1439,9 @@ export const QueryAllocationMetersRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllocationMetersRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1541,6 +1571,9 @@ export const QueryAllocationMetersResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllocationMetersResponse.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1641,7 +1674,11 @@ export const QueryAllocationMeterRequest = {
       value: QueryAllocationMeterRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllocationMeterRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryAllocationMeterResponse(): QueryAllocationMeterResponse {
   return {
@@ -1742,6 +1779,9 @@ export const QueryAllocationMeterResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllocationMeterResponse.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };
@@ -1821,7 +1861,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -1922,6 +1966,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };

@@ -398,6 +398,9 @@ export const ConsensusParams = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsensusParams.typeUrl)) {
+      return;
+    }
     BlockParams.registerTypeUrl();
     EvidenceParams.registerTypeUrl();
     ValidatorParams.registerTypeUrl();
@@ -540,7 +543,11 @@ export const BlockParams = {
       value: BlockParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BlockParams.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseEvidenceParams(): EvidenceParams {
   return {
@@ -678,7 +685,11 @@ export const EvidenceParams = {
       value: EvidenceParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EvidenceParams.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseValidatorParams(): ValidatorParams {
   return {
@@ -786,7 +797,11 @@ export const ValidatorParams = {
       value: ValidatorParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorParams.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseVersionParams(): VersionParams {
   return {
@@ -886,7 +901,11 @@ export const VersionParams = {
       value: VersionParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(VersionParams.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseHashedParams(): HashedParams {
   return {
@@ -1005,5 +1024,9 @@ export const HashedParams = {
       value: HashedParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(HashedParams.typeUrl)) {
+      return;
+    }
+  }
 };

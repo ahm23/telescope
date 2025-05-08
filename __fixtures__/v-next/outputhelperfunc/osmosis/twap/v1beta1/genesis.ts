@@ -177,7 +177,11 @@ export const Params = {
       value: Params.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGenesisState(): GenesisState {
   return {
@@ -312,6 +316,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     TwapRecord.registerTypeUrl();
     Params.registerTypeUrl();
   }

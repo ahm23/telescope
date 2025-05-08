@@ -270,7 +270,11 @@ export const ProtocolVersion = {
       value: ProtocolVersion.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ProtocolVersion.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseNodeInfo(): NodeInfo {
   return {
@@ -492,6 +496,9 @@ export const NodeInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(NodeInfo.typeUrl)) {
+      return;
+    }
     ProtocolVersion.registerTypeUrl();
     NodeInfoOther.registerTypeUrl();
   }
@@ -609,7 +616,11 @@ export const NodeInfoOther = {
       value: NodeInfoOther.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(NodeInfoOther.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBasePeerInfo(): PeerInfo {
   return {
@@ -752,6 +763,9 @@ export const PeerInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PeerInfo.typeUrl)) {
+      return;
+    }
     PeerAddressInfo.registerTypeUrl();
   }
 };
@@ -902,5 +916,9 @@ export const PeerAddressInfo = {
       value: PeerAddressInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PeerAddressInfo.typeUrl)) {
+      return;
+    }
+  }
 };

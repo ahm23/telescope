@@ -245,7 +245,11 @@ export const DeploymentID = {
       value: DeploymentID.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeploymentID.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDeployment(): Deployment {
   return {
@@ -406,6 +410,9 @@ export const Deployment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Deployment.typeUrl)) {
+      return;
+    }
     DeploymentID.registerTypeUrl();
   }
 };
@@ -548,5 +555,9 @@ export const DeploymentFilters = {
       value: DeploymentFilters.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeploymentFilters.typeUrl)) {
+      return;
+    }
+  }
 };

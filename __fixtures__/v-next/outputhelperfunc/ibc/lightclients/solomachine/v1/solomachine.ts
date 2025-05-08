@@ -810,6 +810,9 @@ export const ClientState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClientState.typeUrl)) {
+      return;
+    }
     ConsensusState.registerTypeUrl();
   }
 };
@@ -954,7 +957,11 @@ export const ConsensusState = {
       value: ConsensusState.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsensusState.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseHeader(): Header {
   return {
@@ -1133,7 +1140,11 @@ export const Header = {
       value: Header.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Header.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMisbehaviour(): Misbehaviour {
   return {
@@ -1296,6 +1307,9 @@ export const Misbehaviour = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Misbehaviour.typeUrl)) {
+      return;
+    }
     SignatureAndData.registerTypeUrl();
   }
 };
@@ -1455,7 +1469,11 @@ export const SignatureAndData = {
       value: SignatureAndData.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignatureAndData.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseTimestampedSignatureData(): TimestampedSignatureData {
   return {
@@ -1579,7 +1597,11 @@ export const TimestampedSignatureData = {
       value: TimestampedSignatureData.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TimestampedSignatureData.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSignBytes(): SignBytes {
   return {
@@ -1756,7 +1778,11 @@ export const SignBytes = {
       value: SignBytes.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignBytes.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseHeaderData(): HeaderData {
   return {
@@ -1880,7 +1906,11 @@ export const HeaderData = {
       value: HeaderData.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(HeaderData.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseClientStateData(): ClientStateData {
   return {
@@ -2004,7 +2034,11 @@ export const ClientStateData = {
       value: ClientStateData.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClientStateData.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseConsensusStateData(): ConsensusStateData {
   return {
@@ -2128,7 +2162,11 @@ export const ConsensusStateData = {
       value: ConsensusStateData.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsensusStateData.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseConnectionStateData(): ConnectionStateData {
   return {
@@ -2253,6 +2291,9 @@ export const ConnectionStateData = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConnectionStateData.typeUrl)) {
+      return;
+    }
     ConnectionEnd.registerTypeUrl();
   }
 };
@@ -2379,6 +2420,9 @@ export const ChannelStateData = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ChannelStateData.typeUrl)) {
+      return;
+    }
     Channel.registerTypeUrl();
   }
 };
@@ -2502,7 +2546,11 @@ export const PacketCommitmentData = {
       value: PacketCommitmentData.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PacketCommitmentData.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBasePacketAcknowledgementData(): PacketAcknowledgementData {
   return {
@@ -2624,7 +2672,11 @@ export const PacketAcknowledgementData = {
       value: PacketAcknowledgementData.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PacketAcknowledgementData.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBasePacketReceiptAbsenceData(): PacketReceiptAbsenceData {
   return {
@@ -2729,7 +2781,11 @@ export const PacketReceiptAbsenceData = {
       value: PacketReceiptAbsenceData.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PacketReceiptAbsenceData.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseNextSequenceRecvData(): NextSequenceRecvData {
   return {
@@ -2853,5 +2909,9 @@ export const NextSequenceRecvData = {
       value: NextSequenceRecvData.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(NextSequenceRecvData.typeUrl)) {
+      return;
+    }
+  }
 };

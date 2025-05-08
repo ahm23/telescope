@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, DeepPartial } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../../registry";
 export const protobufPackage = "ibc.applications.transfer.v2";
 /**
  * FungibleTokenPacketData defines a struct for the packet payload
@@ -205,5 +206,9 @@ export const FungibleTokenPacketData = {
       value: FungibleTokenPacketData.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(FungibleTokenPacketData.typeUrl)) {
+      return;
+    }
+  }
 };

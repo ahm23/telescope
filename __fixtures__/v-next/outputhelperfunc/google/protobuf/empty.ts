@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.protobuf";
 /**
  * A generic empty message that you can re-use to avoid defining duplicated
@@ -122,5 +123,9 @@ export const Empty = {
       value: Empty.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Empty.typeUrl)) {
+      return;
+    }
+  }
 };

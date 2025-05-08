@@ -386,6 +386,9 @@ export const MsgLockTokens = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgLockTokens.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -494,7 +497,11 @@ export const MsgLockTokensResponse = {
       value: MsgLockTokensResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgLockTokensResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgBeginUnlockingAll(): MsgBeginUnlockingAll {
   return {
@@ -599,7 +606,11 @@ export const MsgBeginUnlockingAll = {
       value: MsgBeginUnlockingAll.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBeginUnlockingAll.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgBeginUnlockingAllResponse(): MsgBeginUnlockingAllResponse {
   return {
@@ -715,6 +726,9 @@ export const MsgBeginUnlockingAllResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBeginUnlockingAllResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -868,6 +882,9 @@ export const MsgBeginUnlocking = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBeginUnlocking.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -974,7 +991,11 @@ export const MsgBeginUnlockingResponse = {
       value: MsgBeginUnlockingResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBeginUnlockingResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgExtendLockup(): MsgExtendLockup {
   return {
@@ -1117,7 +1138,11 @@ export const MsgExtendLockup = {
       value: MsgExtendLockup.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExtendLockup.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgExtendLockupResponse(): MsgExtendLockupResponse {
   return {
@@ -1222,7 +1247,11 @@ export const MsgExtendLockupResponse = {
       value: MsgExtendLockupResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExtendLockupResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgForceUnlock(): MsgForceUnlock {
   return {
@@ -1374,6 +1403,9 @@ export const MsgForceUnlock = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgForceUnlock.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1480,5 +1512,9 @@ export const MsgForceUnlockResponse = {
       value: MsgForceUnlockResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgForceUnlockResponse.typeUrl)) {
+      return;
+    }
+  }
 };

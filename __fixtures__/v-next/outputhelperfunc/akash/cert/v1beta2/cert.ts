@@ -314,7 +314,11 @@ export const CertificateID = {
       value: CertificateID.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CertificateID.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCertificate(): Certificate {
   return {
@@ -453,7 +457,11 @@ export const Certificate = {
       value: Certificate.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Certificate.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCertificateFilter(): CertificateFilter {
   return {
@@ -592,7 +600,11 @@ export const CertificateFilter = {
       value: CertificateFilter.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CertificateFilter.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgCreateCertificate(): MsgCreateCertificate {
   return {
@@ -731,7 +743,11 @@ export const MsgCreateCertificate = {
       value: MsgCreateCertificate.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateCertificate.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgCreateCertificateResponse(): MsgCreateCertificateResponse {
   return {};
@@ -816,7 +832,11 @@ export const MsgCreateCertificateResponse = {
       value: MsgCreateCertificateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateCertificateResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgRevokeCertificate(): MsgRevokeCertificate {
   return {
@@ -924,6 +944,9 @@ export const MsgRevokeCertificate = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRevokeCertificate.typeUrl)) {
+      return;
+    }
     CertificateID.registerTypeUrl();
   }
 };
@@ -1010,5 +1033,9 @@ export const MsgRevokeCertificateResponse = {
       value: MsgRevokeCertificateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRevokeCertificateResponse.typeUrl)) {
+      return;
+    }
+  }
 };

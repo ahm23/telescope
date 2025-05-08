@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /** Configuration controlling usage of a service. */
 export interface Usage {
@@ -367,6 +368,9 @@ export const Usage = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Usage.typeUrl)) {
+      return;
+    }
     UsageRule.registerTypeUrl();
   }
 };
@@ -500,5 +504,9 @@ export const UsageRule = {
       value: UsageRule.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UsageRule.typeUrl)) {
+      return;
+    }
+  }
 };

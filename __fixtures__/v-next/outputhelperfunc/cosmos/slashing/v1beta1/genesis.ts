@@ -298,6 +298,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
     SigningInfo.registerTypeUrl();
     ValidatorMissedBlocks.registerTypeUrl();
@@ -426,6 +429,9 @@ export const SigningInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SigningInfo.typeUrl)) {
+      return;
+    }
     ValidatorSigningInfo.registerTypeUrl();
   }
 };
@@ -560,6 +566,9 @@ export const ValidatorMissedBlocks = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorMissedBlocks.typeUrl)) {
+      return;
+    }
     MissedBlock.registerTypeUrl();
   }
 };
@@ -685,5 +694,9 @@ export const MissedBlock = {
       value: MissedBlock.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MissedBlock.typeUrl)) {
+      return;
+    }
+  }
 };

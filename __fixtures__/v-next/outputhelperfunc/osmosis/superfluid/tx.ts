@@ -2,6 +2,7 @@ import { Coin, CoinAmino, CoinSDKType } from "../../cosmos/base/v1beta1/coin";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "osmosis.superfluid";
 export interface MsgSuperfluidDelegate {
   sender: string;
@@ -360,7 +361,11 @@ export const MsgSuperfluidDelegate = {
       value: MsgSuperfluidDelegate.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSuperfluidDelegate.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgSuperfluidDelegateResponse(): MsgSuperfluidDelegateResponse {
   return {};
@@ -445,7 +450,11 @@ export const MsgSuperfluidDelegateResponse = {
       value: MsgSuperfluidDelegateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSuperfluidDelegateResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgSuperfluidUndelegate(): MsgSuperfluidUndelegate {
   return {
@@ -569,7 +578,11 @@ export const MsgSuperfluidUndelegate = {
       value: MsgSuperfluidUndelegate.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSuperfluidUndelegate.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgSuperfluidUndelegateResponse(): MsgSuperfluidUndelegateResponse {
   return {};
@@ -654,7 +667,11 @@ export const MsgSuperfluidUndelegateResponse = {
       value: MsgSuperfluidUndelegateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSuperfluidUndelegateResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgSuperfluidUnbondLock(): MsgSuperfluidUnbondLock {
   return {
@@ -778,7 +795,11 @@ export const MsgSuperfluidUnbondLock = {
       value: MsgSuperfluidUnbondLock.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSuperfluidUnbondLock.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgSuperfluidUnbondLockResponse(): MsgSuperfluidUnbondLockResponse {
   return {};
@@ -863,7 +884,11 @@ export const MsgSuperfluidUnbondLockResponse = {
       value: MsgSuperfluidUnbondLockResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSuperfluidUnbondLockResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgLockAndSuperfluidDelegate(): MsgLockAndSuperfluidDelegate {
   return {
@@ -1013,6 +1038,9 @@ export const MsgLockAndSuperfluidDelegate = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgLockAndSuperfluidDelegate.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1121,7 +1149,11 @@ export const MsgLockAndSuperfluidDelegateResponse = {
       value: MsgLockAndSuperfluidDelegateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgLockAndSuperfluidDelegateResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUnPoolWhitelistedPool(): MsgUnPoolWhitelistedPool {
   return {
@@ -1245,7 +1277,11 @@ export const MsgUnPoolWhitelistedPool = {
       value: MsgUnPoolWhitelistedPool.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUnPoolWhitelistedPool.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUnPoolWhitelistedPoolResponse(): MsgUnPoolWhitelistedPoolResponse {
   return {
@@ -1369,5 +1405,9 @@ export const MsgUnPoolWhitelistedPoolResponse = {
       value: MsgUnPoolWhitelistedPoolResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUnPoolWhitelistedPoolResponse.typeUrl)) {
+      return;
+    }
+  }
 };

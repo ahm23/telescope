@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * Specifies the routing information that should be sent along with the request
@@ -1362,6 +1363,9 @@ export const RoutingRule = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RoutingRule.typeUrl)) {
+      return;
+    }
     RoutingParameter.registerTypeUrl();
   }
 };
@@ -1478,5 +1482,9 @@ export const RoutingParameter = {
       value: RoutingParameter.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RoutingParameter.typeUrl)) {
+      return;
+    }
+  }
 };

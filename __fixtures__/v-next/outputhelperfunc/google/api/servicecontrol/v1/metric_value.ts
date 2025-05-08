@@ -254,7 +254,11 @@ export const MetricValue_LabelsEntry = {
   toProto(message: MetricValue_LabelsEntry): Uint8Array {
     return MetricValue_LabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricValue_LabelsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMetricValue(): MetricValue {
   return {
@@ -526,6 +530,9 @@ export const MetricValue = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricValue.typeUrl)) {
+      return;
+    }
     Distribution.registerTypeUrl();
   }
 };
@@ -653,6 +660,9 @@ export const MetricValueSet = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricValueSet.typeUrl)) {
+      return;
+    }
     MetricValue.registerTypeUrl();
   }
 };

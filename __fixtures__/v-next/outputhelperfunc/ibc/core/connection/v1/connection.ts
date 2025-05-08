@@ -537,6 +537,9 @@ export const ConnectionEnd = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConnectionEnd.typeUrl)) {
+      return;
+    }
     Version.registerTypeUrl();
     Counterparty.registerTypeUrl();
   }
@@ -744,6 +747,9 @@ export const IdentifiedConnection = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(IdentifiedConnection.typeUrl)) {
+      return;
+    }
     Version.registerTypeUrl();
     Counterparty.registerTypeUrl();
   }
@@ -888,6 +894,9 @@ export const Counterparty = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Counterparty.typeUrl)) {
+      return;
+    }
     MerklePrefix.registerTypeUrl();
   }
 };
@@ -1004,7 +1013,11 @@ export const ClientPaths = {
       value: ClientPaths.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClientPaths.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseConnectionPaths(): ConnectionPaths {
   return {
@@ -1136,7 +1149,11 @@ export const ConnectionPaths = {
       value: ConnectionPaths.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConnectionPaths.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseVersion(): Version {
   return {
@@ -1268,7 +1285,11 @@ export const Version = {
       value: Version.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Version.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseParams(): Params {
   return {
@@ -1375,5 +1396,9 @@ export const Params = {
       value: Params.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
+      return;
+    }
+  }
 };

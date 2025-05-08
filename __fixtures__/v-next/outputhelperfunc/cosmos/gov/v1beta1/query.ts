@@ -531,7 +531,11 @@ export const QueryProposalRequest = {
       value: QueryProposalRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProposalRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryProposalResponse(): QueryProposalResponse {
   return {
@@ -639,6 +643,9 @@ export const QueryProposalResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProposalResponse.typeUrl)) {
+      return;
+    }
     Proposal.registerTypeUrl();
   }
 };
@@ -799,6 +806,9 @@ export const QueryProposalsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProposalsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -935,6 +945,9 @@ export const QueryProposalsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProposalsResponse.typeUrl)) {
+      return;
+    }
     Proposal.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1061,7 +1074,11 @@ export const QueryVoteRequest = {
       value: QueryVoteRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryVoteRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryVoteResponse(): QueryVoteResponse {
   return {
@@ -1169,6 +1186,9 @@ export const QueryVoteResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryVoteResponse.typeUrl)) {
+      return;
+    }
     Vote.registerTypeUrl();
   }
 };
@@ -1297,6 +1317,9 @@ export const QueryVotesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryVotesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1433,6 +1456,9 @@ export const QueryVotesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryVotesResponse.typeUrl)) {
+      return;
+    }
     Vote.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1540,7 +1566,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -1686,6 +1716,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     VotingParams.registerTypeUrl();
     DepositParams.registerTypeUrl();
     TallyParams.registerTypeUrl();
@@ -1813,7 +1846,11 @@ export const QueryDepositRequest = {
       value: QueryDepositRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDepositRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryDepositResponse(): QueryDepositResponse {
   return {
@@ -1921,6 +1958,9 @@ export const QueryDepositResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDepositResponse.typeUrl)) {
+      return;
+    }
     Deposit.registerTypeUrl();
   }
 };
@@ -2049,6 +2089,9 @@ export const QueryDepositsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDepositsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -2185,6 +2228,9 @@ export const QueryDepositsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDepositsResponse.typeUrl)) {
+      return;
+    }
     Deposit.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -2294,7 +2340,11 @@ export const QueryTallyResultRequest = {
       value: QueryTallyResultRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTallyResultRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryTallyResultResponse(): QueryTallyResultResponse {
   return {
@@ -2402,6 +2452,9 @@ export const QueryTallyResultResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTallyResultResponse.typeUrl)) {
+      return;
+    }
     TallyResult.registerTypeUrl();
   }
 };

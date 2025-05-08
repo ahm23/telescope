@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, bytesFromBase64, base64FromBytes, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmwasm.wasm.v1";
 /** MsgIBCSend */
 export interface MsgIBCSend {
@@ -235,7 +236,11 @@ export const MsgIBCSend = {
       value: MsgIBCSend.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgIBCSend.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgIBCCloseChannel(): MsgIBCCloseChannel {
   return {
@@ -340,5 +345,9 @@ export const MsgIBCCloseChannel = {
       value: MsgIBCCloseChannel.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgIBCCloseChannel.typeUrl)) {
+      return;
+    }
+  }
 };

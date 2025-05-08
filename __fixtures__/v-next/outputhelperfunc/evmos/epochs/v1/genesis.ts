@@ -264,7 +264,11 @@ export const EpochInfo = {
       value: EpochInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EpochInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGenesisState(): GenesisState {
   return {
@@ -373,6 +377,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     EpochInfo.registerTypeUrl();
   }
 };

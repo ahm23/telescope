@@ -194,6 +194,9 @@ export const QueryProvidersRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProvidersRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -330,6 +333,9 @@ export const QueryProvidersResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProvidersResponse.typeUrl)) {
+      return;
+    }
     Provider.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -437,7 +443,11 @@ export const QueryProviderRequest = {
       value: QueryProviderRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProviderRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryProviderResponse(): QueryProviderResponse {
   return {
@@ -545,6 +555,9 @@ export const QueryProviderResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProviderResponse.typeUrl)) {
+      return;
+    }
     Provider.registerTypeUrl();
   }
 };

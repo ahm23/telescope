@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * `Endpoint` describes a network endpoint of a service that serves a set of
@@ -292,5 +293,9 @@ export const Endpoint = {
       value: Endpoint.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Endpoint.typeUrl)) {
+      return;
+    }
+  }
 };

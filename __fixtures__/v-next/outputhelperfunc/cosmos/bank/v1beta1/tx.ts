@@ -3,6 +3,7 @@ import { Input, InputAmino, InputSDKType, Output, OutputAmino, OutputSDKType } f
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.bank.v1beta1";
 /** MsgSend represents a message to send coins from one account to another. */
 export interface MsgSend {
@@ -229,6 +230,9 @@ export const MsgSend = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSend.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -315,7 +319,11 @@ export const MsgSendResponse = {
       value: MsgSendResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSendResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgMultiSend(): MsgMultiSend {
   return {
@@ -458,6 +466,9 @@ export const MsgMultiSend = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgMultiSend.typeUrl)) {
+      return;
+    }
     Input.registerTypeUrl();
     Output.registerTypeUrl();
   }
@@ -545,5 +556,9 @@ export const MsgMultiSendResponse = {
       value: MsgMultiSendResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgMultiSendResponse.typeUrl)) {
+      return;
+    }
+  }
 };

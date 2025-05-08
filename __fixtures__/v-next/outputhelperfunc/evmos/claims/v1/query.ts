@@ -307,7 +307,11 @@ export const QueryTotalUnclaimedRequest = {
       value: QueryTotalUnclaimedRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalUnclaimedRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryTotalUnclaimedResponse(): QueryTotalUnclaimedResponse {
   return {
@@ -416,6 +420,9 @@ export const QueryTotalUnclaimedResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalUnclaimedResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -495,7 +502,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -596,6 +607,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -698,6 +712,9 @@ export const QueryClaimsRecordsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimsRecordsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -827,6 +844,9 @@ export const QueryClaimsRecordsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimsRecordsResponse.typeUrl)) {
+      return;
+    }
     ClaimsRecordAddress.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -927,7 +947,11 @@ export const QueryClaimsRecordRequest = {
       value: QueryClaimsRecordRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimsRecordRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryClaimsRecordResponse(): QueryClaimsRecordResponse {
   return {
@@ -1053,6 +1077,9 @@ export const QueryClaimsRecordResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimsRecordResponse.typeUrl)) {
+      return;
+    }
     Claim.registerTypeUrl();
   }
 };

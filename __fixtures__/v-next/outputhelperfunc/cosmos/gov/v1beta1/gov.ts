@@ -609,7 +609,11 @@ export const WeightedVoteOption = {
       value: WeightedVoteOption.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WeightedVoteOption.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseTextProposal(): TextProposal {
   return {
@@ -890,6 +894,9 @@ export const Deposit = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Deposit.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1149,6 +1156,9 @@ export const Proposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Proposal.typeUrl)) {
+      return;
+    }
     TextProposal.registerTypeUrl();
     RegisterIncentiveProposal.registerTypeUrl();
     ClientUpdateProposal.registerTypeUrl();
@@ -1317,7 +1327,11 @@ export const TallyResult = {
       value: TallyResult.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TallyResult.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseVote(): Vote {
   return {
@@ -1486,6 +1500,9 @@ export const Vote = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Vote.typeUrl)) {
+      return;
+    }
     WeightedVoteOption.registerTypeUrl();
   }
 };
@@ -1622,6 +1639,9 @@ export const DepositParams = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DepositParams.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1730,7 +1750,11 @@ export const VotingParams = {
       value: VotingParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(VotingParams.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseTallyParams(): TallyParams {
   return {
@@ -1869,5 +1893,9 @@ export const TallyParams = {
       value: TallyParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TallyParams.typeUrl)) {
+      return;
+    }
+  }
 };

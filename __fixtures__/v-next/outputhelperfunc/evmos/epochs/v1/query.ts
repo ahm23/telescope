@@ -175,6 +175,9 @@ export const QueryEpochsInfoRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEpochsInfoRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -304,6 +307,9 @@ export const QueryEpochsInfoResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEpochsInfoResponse.typeUrl)) {
+      return;
+    }
     EpochInfo.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -404,7 +410,11 @@ export const QueryCurrentEpochRequest = {
       value: QueryCurrentEpochRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCurrentEpochRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryCurrentEpochResponse(): QueryCurrentEpochResponse {
   return {
@@ -504,5 +514,9 @@ export const QueryCurrentEpochResponse = {
       value: QueryCurrentEpochResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCurrentEpochResponse.typeUrl)) {
+      return;
+    }
+  }
 };

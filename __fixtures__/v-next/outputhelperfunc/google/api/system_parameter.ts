@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * ### System parameter configuration
@@ -326,6 +327,9 @@ export const SystemParameters = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SystemParameters.typeUrl)) {
+      return;
+    }
     SystemParameterRule.registerTypeUrl();
   }
 };
@@ -453,6 +457,9 @@ export const SystemParameterRule = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SystemParameterRule.typeUrl)) {
+      return;
+    }
     SystemParameter.registerTypeUrl();
   }
 };
@@ -586,5 +593,9 @@ export const SystemParameter = {
       value: SystemParameter.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SystemParameter.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -526,6 +526,9 @@ export const MonitoredResourceDescriptor = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MonitoredResourceDescriptor.typeUrl)) {
+      return;
+    }
     LabelDescriptor.registerTypeUrl();
   }
 };
@@ -626,7 +629,11 @@ export const MonitoredResource_LabelsEntry = {
   toProto(message: MonitoredResource_LabelsEntry): Uint8Array {
     return MonitoredResource_LabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MonitoredResource_LabelsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMonitoredResource(): MonitoredResource {
   return {
@@ -789,7 +796,11 @@ export const MonitoredResource = {
       value: MonitoredResource.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MonitoredResource.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMonitoredResourceMetadata_UserLabelsEntry(): MonitoredResourceMetadata_UserLabelsEntry {
   return {
@@ -888,7 +899,11 @@ export const MonitoredResourceMetadata_UserLabelsEntry = {
   toProto(message: MonitoredResourceMetadata_UserLabelsEntry): Uint8Array {
     return MonitoredResourceMetadata_UserLabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MonitoredResourceMetadata_UserLabelsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMonitoredResourceMetadata(): MonitoredResourceMetadata {
   return {
@@ -1054,6 +1069,9 @@ export const MonitoredResourceMetadata = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MonitoredResourceMetadata.typeUrl)) {
+      return;
+    }
     Struct.registerTypeUrl();
   }
 };

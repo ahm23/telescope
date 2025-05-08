@@ -431,7 +431,11 @@ export const DelegatorWithdrawInfo = {
       value: DelegatorWithdrawInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DelegatorWithdrawInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseValidatorOutstandingRewardsRecord(): ValidatorOutstandingRewardsRecord {
   return {
@@ -564,6 +568,9 @@ export const ValidatorOutstandingRewardsRecord = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorOutstandingRewardsRecord.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };
@@ -690,6 +697,9 @@ export const ValidatorAccumulatedCommissionRecord = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorAccumulatedCommissionRecord.typeUrl)) {
+      return;
+    }
     ValidatorAccumulatedCommission.registerTypeUrl();
   }
 };
@@ -835,6 +845,9 @@ export const ValidatorHistoricalRewardsRecord = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorHistoricalRewardsRecord.typeUrl)) {
+      return;
+    }
     ValidatorHistoricalRewards.registerTypeUrl();
   }
 };
@@ -961,6 +974,9 @@ export const ValidatorCurrentRewardsRecord = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorCurrentRewardsRecord.typeUrl)) {
+      return;
+    }
     ValidatorCurrentRewards.registerTypeUrl();
   }
 };
@@ -1104,6 +1120,9 @@ export const DelegatorStartingInfoRecord = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DelegatorStartingInfoRecord.typeUrl)) {
+      return;
+    }
     DelegatorStartingInfo.registerTypeUrl();
   }
 };
@@ -1268,6 +1287,9 @@ export const ValidatorSlashEventRecord = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorSlashEventRecord.typeUrl)) {
+      return;
+    }
     ValidatorSlashEvent.registerTypeUrl();
   }
 };
@@ -1602,6 +1624,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
     FeePool.registerTypeUrl();
     DelegatorWithdrawInfo.registerTypeUrl();

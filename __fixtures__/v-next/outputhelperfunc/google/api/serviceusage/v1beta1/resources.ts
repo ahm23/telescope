@@ -1226,6 +1226,9 @@ export const Service = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Service.typeUrl)) {
+      return;
+    }
     ServiceConfig.registerTypeUrl();
   }
 };
@@ -1519,6 +1522,9 @@ export const ServiceConfig = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ServiceConfig.typeUrl)) {
+      return;
+    }
     Api.registerTypeUrl();
     Documentation.registerTypeUrl();
     Quota.registerTypeUrl();
@@ -1635,7 +1641,11 @@ export const OperationMetadata = {
       value: OperationMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OperationMetadata.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseConsumerQuotaMetric(): ConsumerQuotaMetric {
   return {
@@ -1839,6 +1849,9 @@ export const ConsumerQuotaMetric = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsumerQuotaMetric.typeUrl)) {
+      return;
+    }
     ConsumerQuotaLimit.registerTypeUrl();
   }
 };
@@ -2034,6 +2047,9 @@ export const ConsumerQuotaLimit = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsumerQuotaLimit.typeUrl)) {
+      return;
+    }
     QuotaBucket.registerTypeUrl();
   }
 };
@@ -2134,7 +2150,11 @@ export const QuotaBucket_DimensionsEntry = {
   toProto(message: QuotaBucket_DimensionsEntry): Uint8Array {
     return QuotaBucket_DimensionsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaBucket_DimensionsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQuotaBucket(): QuotaBucket {
   return {
@@ -2376,6 +2396,9 @@ export const QuotaBucket = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaBucket.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
   }
 };
@@ -2476,7 +2499,11 @@ export const QuotaOverride_DimensionsEntry = {
   toProto(message: QuotaOverride_DimensionsEntry): Uint8Array {
     return QuotaOverride_DimensionsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaOverride_DimensionsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQuotaOverride(): QuotaOverride {
   return {
@@ -2709,7 +2736,11 @@ export const QuotaOverride = {
       value: QuotaOverride.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaOverride.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseOverrideInlineSource(): OverrideInlineSource {
   return {
@@ -2818,6 +2849,9 @@ export const OverrideInlineSource = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OverrideInlineSource.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
   }
 };
@@ -2918,7 +2952,11 @@ export const AdminQuotaPolicy_DimensionsEntry = {
   toProto(message: AdminQuotaPolicy_DimensionsEntry): Uint8Array {
     return AdminQuotaPolicy_DimensionsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AdminQuotaPolicy_DimensionsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAdminQuotaPolicy(): AdminQuotaPolicy {
   return {
@@ -3151,7 +3189,11 @@ export const AdminQuotaPolicy = {
       value: AdminQuotaPolicy.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AdminQuotaPolicy.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseServiceIdentity(): ServiceIdentity {
   return {
@@ -3266,5 +3308,9 @@ export const ServiceIdentity = {
       value: ServiceIdentity.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ServiceIdentity.typeUrl)) {
+      return;
+    }
+  }
 };

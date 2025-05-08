@@ -1246,7 +1246,11 @@ export const AttributeContext = {
       value: AttributeContext.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAttributeContext_Peer_LabelsEntry(): AttributeContext_Peer_LabelsEntry {
   return {
@@ -1345,7 +1349,11 @@ export const AttributeContext_Peer_LabelsEntry = {
   toProto(message: AttributeContext_Peer_LabelsEntry): Uint8Array {
     return AttributeContext_Peer_LabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext_Peer_LabelsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAttributeContext_Peer(): AttributeContext_Peer {
   return {
@@ -1561,7 +1569,11 @@ export const AttributeContext_Peer = {
       value: AttributeContext_Peer.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext_Peer.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAttributeContext_Api(): AttributeContext_Api {
   return {
@@ -1710,7 +1722,11 @@ export const AttributeContext_Api = {
       value: AttributeContext_Api.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext_Api.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAttributeContext_Auth(): AttributeContext_Auth {
   return {
@@ -1899,6 +1915,9 @@ export const AttributeContext_Auth = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext_Auth.typeUrl)) {
+      return;
+    }
     Struct.registerTypeUrl();
   }
 };
@@ -1999,7 +2018,11 @@ export const AttributeContext_Request_HeadersEntry = {
   toProto(message: AttributeContext_Request_HeadersEntry): Uint8Array {
     return AttributeContext_Request_HeadersEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext_Request_HeadersEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAttributeContext_Request(): AttributeContext_Request {
   return {
@@ -2337,6 +2360,9 @@ export const AttributeContext_Request = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext_Request.typeUrl)) {
+      return;
+    }
     AttributeContext_Auth.registerTypeUrl();
   }
 };
@@ -2437,7 +2463,11 @@ export const AttributeContext_Response_HeadersEntry = {
   toProto(message: AttributeContext_Response_HeadersEntry): Uint8Array {
     return AttributeContext_Response_HeadersEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext_Response_HeadersEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAttributeContext_Response(): AttributeContext_Response {
   return {
@@ -2657,7 +2687,11 @@ export const AttributeContext_Response = {
       value: AttributeContext_Response.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext_Response.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAttributeContext_Resource_LabelsEntry(): AttributeContext_Resource_LabelsEntry {
   return {
@@ -2756,7 +2790,11 @@ export const AttributeContext_Resource_LabelsEntry = {
   toProto(message: AttributeContext_Resource_LabelsEntry): Uint8Array {
     return AttributeContext_Resource_LabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext_Resource_LabelsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAttributeContext_Resource_AnnotationsEntry(): AttributeContext_Resource_AnnotationsEntry {
   return {
@@ -2855,7 +2893,11 @@ export const AttributeContext_Resource_AnnotationsEntry = {
   toProto(message: AttributeContext_Resource_AnnotationsEntry): Uint8Array {
     return AttributeContext_Resource_AnnotationsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext_Resource_AnnotationsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAttributeContext_Resource(): AttributeContext_Resource {
   return {
@@ -3236,5 +3278,9 @@ export const AttributeContext_Resource = {
       value: AttributeContext_Resource.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext_Resource.typeUrl)) {
+      return;
+    }
+  }
 };

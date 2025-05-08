@@ -334,6 +334,9 @@ export const MsgCreateGauge = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateGauge.typeUrl)) {
+      return;
+    }
     QueryCondition.registerTypeUrl();
     Coin.registerTypeUrl();
   }
@@ -421,7 +424,11 @@ export const MsgCreateGaugeResponse = {
       value: MsgCreateGaugeResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateGaugeResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgAddToGauge(): MsgAddToGauge {
   return {
@@ -573,6 +580,9 @@ export const MsgAddToGauge = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgAddToGauge.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -659,5 +669,9 @@ export const MsgAddToGaugeResponse = {
       value: MsgAddToGaugeResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgAddToGaugeResponse.typeUrl)) {
+      return;
+    }
+  }
 };

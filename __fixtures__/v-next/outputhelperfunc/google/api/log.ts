@@ -2,6 +2,7 @@ import { LabelDescriptor, LabelDescriptorAmino, LabelDescriptorSDKType } from ".
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * A description of a log type. Example in YAML format:
@@ -255,6 +256,9 @@ export const LogDescriptor = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogDescriptor.typeUrl)) {
+      return;
+    }
     LabelDescriptor.registerTypeUrl();
   }
 };

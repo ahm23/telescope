@@ -2,6 +2,7 @@ import { ProposalExecutorResult, ProposalExecutorResultSDKType, proposalExecutor
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.group.v1";
 /** EventCreateGroup is an event emitted when a group is created. */
 export interface EventCreateGroup {
@@ -316,7 +317,11 @@ export const EventCreateGroup = {
       value: EventCreateGroup.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EventCreateGroup.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseEventUpdateGroup(): EventUpdateGroup {
   return {
@@ -423,7 +428,11 @@ export const EventUpdateGroup = {
       value: EventUpdateGroup.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EventUpdateGroup.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseEventCreateGroupPolicy(): EventCreateGroupPolicy {
   return {
@@ -528,7 +537,11 @@ export const EventCreateGroupPolicy = {
       value: EventCreateGroupPolicy.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EventCreateGroupPolicy.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseEventUpdateGroupPolicy(): EventUpdateGroupPolicy {
   return {
@@ -633,7 +646,11 @@ export const EventUpdateGroupPolicy = {
       value: EventUpdateGroupPolicy.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EventUpdateGroupPolicy.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseEventSubmitProposal(): EventSubmitProposal {
   return {
@@ -740,7 +757,11 @@ export const EventSubmitProposal = {
       value: EventSubmitProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EventSubmitProposal.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseEventWithdrawProposal(): EventWithdrawProposal {
   return {
@@ -847,7 +868,11 @@ export const EventWithdrawProposal = {
       value: EventWithdrawProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EventWithdrawProposal.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseEventVote(): EventVote {
   return {
@@ -954,7 +979,11 @@ export const EventVote = {
       value: EventVote.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EventVote.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseEventExec(): EventExec {
   return {
@@ -1078,7 +1107,11 @@ export const EventExec = {
       value: EventExec.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EventExec.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseEventLeaveGroup(): EventLeaveGroup {
   return {
@@ -1202,5 +1235,9 @@ export const EventLeaveGroup = {
       value: EventLeaveGroup.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EventLeaveGroup.typeUrl)) {
+      return;
+    }
+  }
 };

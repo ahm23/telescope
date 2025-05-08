@@ -2,6 +2,7 @@ import { Account, AccountAmino, AccountSDKType, FractionalPayment, FractionalPay
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial, Exact } from "../../../helpers";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "akash.escrow.v1beta2";
 /** GenesisState defines the basic genesis state used by escrow module */
 export interface GenesisState {
@@ -167,6 +168,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     Account.registerTypeUrl();
     FractionalPayment.registerTypeUrl();
   }

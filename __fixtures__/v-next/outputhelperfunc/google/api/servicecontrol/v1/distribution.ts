@@ -597,6 +597,9 @@ export const Distribution = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution.typeUrl)) {
+      return;
+    }
     Distribution_LinearBuckets.registerTypeUrl();
     Distribution_ExponentialBuckets.registerTypeUrl();
     Distribution_ExplicitBuckets.registerTypeUrl();
@@ -733,7 +736,11 @@ export const Distribution_LinearBuckets = {
       value: Distribution_LinearBuckets.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_LinearBuckets.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDistribution_ExponentialBuckets(): Distribution_ExponentialBuckets {
   return {
@@ -865,7 +872,11 @@ export const Distribution_ExponentialBuckets = {
       value: Distribution_ExponentialBuckets.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_ExponentialBuckets.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDistribution_ExplicitBuckets(): Distribution_ExplicitBuckets {
   return {
@@ -982,5 +993,9 @@ export const Distribution_ExplicitBuckets = {
       value: Distribution_ExplicitBuckets.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_ExplicitBuckets.typeUrl)) {
+      return;
+    }
+  }
 };

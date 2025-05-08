@@ -3,8 +3,8 @@ import { Params, ParamsAmino, ParamsSDKType } from "./genesis";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { toTimestamp, fromTimestamp, isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
-import { Decimal } from "@cosmjs/math";
 import { GlobalDecoderRegistry } from "../../../registry";
+import { Decimal } from "@cosmjs/math";
 export const protobufPackage = "osmosis.twap.v1beta1";
 export interface ArithmeticTwapRequest {
   poolId: bigint;
@@ -296,7 +296,11 @@ export const ArithmeticTwapRequest = {
       value: ArithmeticTwapRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ArithmeticTwapRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseArithmeticTwapResponse(): ArithmeticTwapResponse {
   return {
@@ -401,7 +405,11 @@ export const ArithmeticTwapResponse = {
       value: ArithmeticTwapResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ArithmeticTwapResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseArithmeticTwapToNowRequest(): ArithmeticTwapToNowRequest {
   return {
@@ -559,7 +567,11 @@ export const ArithmeticTwapToNowRequest = {
       value: ArithmeticTwapToNowRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ArithmeticTwapToNowRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseArithmeticTwapToNowResponse(): ArithmeticTwapToNowResponse {
   return {
@@ -664,7 +676,11 @@ export const ArithmeticTwapToNowResponse = {
       value: ArithmeticTwapToNowResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ArithmeticTwapToNowResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseParamsRequest(): ParamsRequest {
   return {};
@@ -749,7 +765,11 @@ export const ParamsRequest = {
       value: ParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseParamsResponse(): ParamsResponse {
   return {
@@ -857,6 +877,9 @@ export const ParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };

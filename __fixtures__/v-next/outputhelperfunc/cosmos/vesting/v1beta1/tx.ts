@@ -3,6 +3,7 @@ import { Period, PeriodAmino, PeriodSDKType } from "./vesting";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.vesting.v1beta1";
 /**
  * MsgCreateVestingAccount defines a message that enables creating a vesting
@@ -353,6 +354,9 @@ export const MsgCreateVestingAccount = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateVestingAccount.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -439,7 +443,11 @@ export const MsgCreateVestingAccountResponse = {
       value: MsgCreateVestingAccountResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateVestingAccountResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgCreatePermanentLockedAccount(): MsgCreatePermanentLockedAccount {
   return {
@@ -589,6 +597,9 @@ export const MsgCreatePermanentLockedAccount = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreatePermanentLockedAccount.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -675,7 +686,11 @@ export const MsgCreatePermanentLockedAccountResponse = {
       value: MsgCreatePermanentLockedAccountResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreatePermanentLockedAccountResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgCreatePeriodicVestingAccount(): MsgCreatePeriodicVestingAccount {
   return {
@@ -844,6 +859,9 @@ export const MsgCreatePeriodicVestingAccount = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreatePeriodicVestingAccount.typeUrl)) {
+      return;
+    }
     Period.registerTypeUrl();
   }
 };
@@ -930,5 +948,9 @@ export const MsgCreatePeriodicVestingAccountResponse = {
       value: MsgCreatePeriodicVestingAccountResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreatePeriodicVestingAccountResponse.typeUrl)) {
+      return;
+    }
+  }
 };

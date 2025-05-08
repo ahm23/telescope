@@ -917,7 +917,11 @@ export const Member = {
       value: Member.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Member.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMembers(): Members {
   return {
@@ -1033,6 +1037,9 @@ export const Members = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Members.typeUrl)) {
+      return;
+    }
     Member.registerTypeUrl();
   }
 };
@@ -1424,7 +1431,11 @@ export const DecisionPolicyWindows = {
       value: DecisionPolicyWindows.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DecisionPolicyWindows.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGroupInfo(): GroupInfo {
   return {
@@ -1618,7 +1629,11 @@ export const GroupInfo = {
       value: GroupInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GroupInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGroupMember(): GroupMember {
   return {
@@ -1745,6 +1760,9 @@ export const GroupMember = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GroupMember.typeUrl)) {
+      return;
+    }
     Member.registerTypeUrl();
   }
 };
@@ -1960,6 +1978,9 @@ export const GroupPolicyInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GroupPolicyInfo.typeUrl)) {
+      return;
+    }
     ThresholdDecisionPolicy.registerTypeUrl();
     PercentageDecisionPolicy.registerTypeUrl();
   }
@@ -2299,7 +2320,11 @@ export const Proposal = {
       value: Proposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Proposal.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseTallyResult(): TallyResult {
   return {
@@ -2455,7 +2480,11 @@ export const TallyResult = {
       value: TallyResult.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TallyResult.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseVote(): Vote {
   return {
@@ -2630,5 +2659,9 @@ export const Vote = {
       value: Vote.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Vote.typeUrl)) {
+      return;
+    }
+  }
 };

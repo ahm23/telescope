@@ -225,6 +225,9 @@ export const Evidence = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Evidence.typeUrl)) {
+      return;
+    }
     DuplicateVoteEvidence.registerTypeUrl();
     LightClientAttackEvidence.registerTypeUrl();
   }
@@ -402,6 +405,9 @@ export const DuplicateVoteEvidence = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DuplicateVoteEvidence.typeUrl)) {
+      return;
+    }
     Vote.registerTypeUrl();
   }
 };
@@ -586,6 +592,9 @@ export const LightClientAttackEvidence = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LightClientAttackEvidence.typeUrl)) {
+      return;
+    }
     LightBlock.registerTypeUrl();
     Validator.registerTypeUrl();
   }
@@ -697,6 +706,9 @@ export const EvidenceList = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EvidenceList.typeUrl)) {
+      return;
+    }
     Evidence.registerTypeUrl();
   }
 };

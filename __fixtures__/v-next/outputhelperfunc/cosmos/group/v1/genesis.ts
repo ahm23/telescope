@@ -2,6 +2,7 @@ import { GroupInfo, GroupInfoAmino, GroupInfoSDKType, GroupMember, GroupMemberAm
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.group.v1";
 /** GenesisState defines the group module's genesis state. */
 export interface GenesisState {
@@ -357,6 +358,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     GroupInfo.registerTypeUrl();
     GroupMember.registerTypeUrl();
     GroupPolicyInfo.registerTypeUrl();

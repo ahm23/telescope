@@ -246,6 +246,9 @@ export const CPU = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CPU.typeUrl)) {
+      return;
+    }
     ResourceValue.registerTypeUrl();
     Attribute.registerTypeUrl();
   }
@@ -383,6 +386,9 @@ export const Memory = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Memory.typeUrl)) {
+      return;
+    }
     ResourceValue.registerTypeUrl();
     Attribute.registerTypeUrl();
   }
@@ -520,6 +526,9 @@ export const Storage = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Storage.typeUrl)) {
+      return;
+    }
     ResourceValue.registerTypeUrl();
     Attribute.registerTypeUrl();
   }
@@ -695,6 +704,9 @@ export const ResourceUnits = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResourceUnits.typeUrl)) {
+      return;
+    }
     CPU.registerTypeUrl();
     Memory.registerTypeUrl();
     Storage.registerTypeUrl();

@@ -1152,6 +1152,9 @@ export const Http = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Http.typeUrl)) {
+      return;
+    }
     HttpRule.registerTypeUrl();
   }
 };
@@ -1417,6 +1420,9 @@ export const HttpRule = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(HttpRule.typeUrl)) {
+      return;
+    }
     CustomHttpPattern.registerTypeUrl();
     HttpRule.registerTypeUrl();
   }
@@ -1534,5 +1540,9 @@ export const CustomHttpPattern = {
       value: CustomHttpPattern.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CustomHttpPattern.typeUrl)) {
+      return;
+    }
+  }
 };

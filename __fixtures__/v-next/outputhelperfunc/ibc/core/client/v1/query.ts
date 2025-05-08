@@ -641,7 +641,11 @@ export const QueryClientStateRequest = {
       value: QueryClientStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClientStateRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryClientStateResponse(): QueryClientStateResponse {
   return {
@@ -785,6 +789,9 @@ export const QueryClientStateResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClientStateResponse.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -894,6 +901,9 @@ export const QueryClientStatesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClientStatesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1030,6 +1040,9 @@ export const QueryClientStatesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClientStatesResponse.typeUrl)) {
+      return;
+    }
     IdentifiedClientState.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1192,7 +1205,11 @@ export const QueryConsensusStateRequest = {
       value: QueryConsensusStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConsensusStateRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryConsensusStateResponse(): QueryConsensusStateResponse {
   return {
@@ -1336,6 +1353,9 @@ export const QueryConsensusStateResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConsensusStateResponse.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -1462,6 +1482,9 @@ export const QueryConsensusStatesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConsensusStatesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1598,6 +1621,9 @@ export const QueryConsensusStatesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConsensusStatesResponse.typeUrl)) {
+      return;
+    }
     ConsensusStateWithHeight.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1705,7 +1731,11 @@ export const QueryClientStatusRequest = {
       value: QueryClientStatusRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClientStatusRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryClientStatusResponse(): QueryClientStatusResponse {
   return {
@@ -1810,7 +1840,11 @@ export const QueryClientStatusResponse = {
       value: QueryClientStatusResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClientStatusResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryClientParamsRequest(): QueryClientParamsRequest {
   return {};
@@ -1895,7 +1929,11 @@ export const QueryClientParamsRequest = {
       value: QueryClientParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClientParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryClientParamsResponse(): QueryClientParamsResponse {
   return {
@@ -2003,6 +2041,9 @@ export const QueryClientParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClientParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -2089,7 +2130,11 @@ export const QueryUpgradedClientStateRequest = {
       value: QueryUpgradedClientStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUpgradedClientStateRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryUpgradedClientStateResponse(): QueryUpgradedClientStateResponse {
   return {
@@ -2196,7 +2241,11 @@ export const QueryUpgradedClientStateResponse = {
       value: QueryUpgradedClientStateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUpgradedClientStateResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryUpgradedConsensusStateRequest(): QueryUpgradedConsensusStateRequest {
   return {};
@@ -2281,7 +2330,11 @@ export const QueryUpgradedConsensusStateRequest = {
       value: QueryUpgradedConsensusStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUpgradedConsensusStateRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryUpgradedConsensusStateResponse(): QueryUpgradedConsensusStateResponse {
   return {
@@ -2388,5 +2441,9 @@ export const QueryUpgradedConsensusStateResponse = {
       value: QueryUpgradedConsensusStateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUpgradedConsensusStateResponse.typeUrl)) {
+      return;
+    }
+  }
 };

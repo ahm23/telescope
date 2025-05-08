@@ -368,7 +368,11 @@ export const TokenPair = {
       value: TokenPair.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TokenPair.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRegisterCoinProposal(): RegisterCoinProposal {
   return {
@@ -503,6 +507,9 @@ export const RegisterCoinProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RegisterCoinProposal.typeUrl)) {
+      return;
+    }
     Metadata.registerTypeUrl();
   }
 };
@@ -636,7 +643,11 @@ export const RegisterERC20Proposal = {
       value: RegisterERC20Proposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RegisterERC20Proposal.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseToggleTokenConversionProposal(): ToggleTokenConversionProposal {
   return {
@@ -768,5 +779,9 @@ export const ToggleTokenConversionProposal = {
       value: ToggleTokenConversionProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ToggleTokenConversionProposal.typeUrl)) {
+      return;
+    }
+  }
 };

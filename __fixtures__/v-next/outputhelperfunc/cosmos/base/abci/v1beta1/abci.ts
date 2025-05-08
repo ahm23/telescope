@@ -810,6 +810,9 @@ export const TxResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TxResponse.typeUrl)) {
+      return;
+    }
     Event.registerTypeUrl();
   }
 };
@@ -961,6 +964,9 @@ export const ABCIMessageLog = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ABCIMessageLog.typeUrl)) {
+      return;
+    }
     StringEvent.registerTypeUrl();
   }
 };
@@ -1095,6 +1101,9 @@ export const StringEvent = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(StringEvent.typeUrl)) {
+      return;
+    }
     Attribute.registerTypeUrl();
   }
 };
@@ -1218,7 +1227,11 @@ export const Attribute = {
       value: Attribute.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Attribute.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGasInfo(): GasInfo {
   return {
@@ -1344,7 +1357,11 @@ export const GasInfo = {
       value: GasInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GasInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseResult(): Result {
   return {
@@ -1520,7 +1537,11 @@ export const Result = {
       value: Result.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Result.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSimulationResponse(): SimulationResponse {
   return {
@@ -1647,6 +1668,9 @@ export const SimulationResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SimulationResponse.typeUrl)) {
+      return;
+    }
     GasInfo.registerTypeUrl();
     Result.registerTypeUrl();
   }
@@ -1771,7 +1795,11 @@ export const MsgData = {
       value: MsgData.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgData.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseTxMsgData(): TxMsgData {
   return {
@@ -1913,7 +1941,11 @@ export const TxMsgData = {
       value: TxMsgData.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TxMsgData.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSearchTxsResult(): SearchTxsResult {
   return {
@@ -2124,6 +2156,9 @@ export const SearchTxsResult = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SearchTxsResult.typeUrl)) {
+      return;
+    }
     TxResponse.registerTypeUrl();
   }
 };

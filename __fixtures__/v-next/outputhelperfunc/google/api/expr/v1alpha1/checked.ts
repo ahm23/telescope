@@ -1002,6 +1002,9 @@ export const CheckedExpr_ReferenceMapEntry = {
     return CheckedExpr_ReferenceMapEntry.encode(message).finish();
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckedExpr_ReferenceMapEntry.typeUrl)) {
+      return;
+    }
     Reference.registerTypeUrl();
   }
 };
@@ -1107,6 +1110,9 @@ export const CheckedExpr_TypeMapEntry = {
     return CheckedExpr_TypeMapEntry.encode(message).finish();
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckedExpr_TypeMapEntry.typeUrl)) {
+      return;
+    }
     Type.registerTypeUrl();
   }
 };
@@ -1375,6 +1381,9 @@ export const CheckedExpr = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckedExpr.typeUrl)) {
+      return;
+    }
     Reference.registerTypeUrl();
     Type.registerTypeUrl();
     SourceInfo.registerTypeUrl();
@@ -1696,6 +1705,9 @@ export const Type = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Type.typeUrl)) {
+      return;
+    }
     Empty.registerTypeUrl();
     Type_ListType.registerTypeUrl();
     Type_MapType.registerTypeUrl();
@@ -1803,6 +1815,9 @@ export const Type_ListType = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Type_ListType.typeUrl)) {
+      return;
+    }
     Type.registerTypeUrl();
   }
 };
@@ -1924,6 +1939,9 @@ export const Type_MapType = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Type_MapType.typeUrl)) {
+      return;
+    }
     Type.registerTypeUrl();
   }
 };
@@ -2053,6 +2071,9 @@ export const Type_FunctionType = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Type_FunctionType.typeUrl)) {
+      return;
+    }
     Type.registerTypeUrl();
   }
 };
@@ -2180,6 +2201,9 @@ export const Type_AbstractType = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Type_AbstractType.typeUrl)) {
+      return;
+    }
     Type.registerTypeUrl();
   }
 };
@@ -2318,6 +2342,9 @@ export const Decl = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Decl.typeUrl)) {
+      return;
+    }
     Decl_IdentDecl.registerTypeUrl();
     Decl_FunctionDecl.registerTypeUrl();
   }
@@ -2457,6 +2484,9 @@ export const Decl_IdentDecl = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Decl_IdentDecl.typeUrl)) {
+      return;
+    }
     Type.registerTypeUrl();
     Constant.registerTypeUrl();
   }
@@ -2568,6 +2598,9 @@ export const Decl_FunctionDecl = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Decl_FunctionDecl.typeUrl)) {
+      return;
+    }
     Decl_FunctionDecl_Overload.registerTypeUrl();
   }
 };
@@ -2775,6 +2808,9 @@ export const Decl_FunctionDecl_Overload = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Decl_FunctionDecl_Overload.typeUrl)) {
+      return;
+    }
     Type.registerTypeUrl();
   }
 };
@@ -2921,6 +2957,9 @@ export const Reference = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Reference.typeUrl)) {
+      return;
+    }
     Constant.registerTypeUrl();
   }
 };

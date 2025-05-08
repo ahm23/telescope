@@ -701,7 +701,11 @@ export const QueryContractInfoRequest = {
       value: QueryContractInfoRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryContractInfoRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryContractInfoResponse(): QueryContractInfoResponse {
   return {
@@ -826,6 +830,9 @@ export const QueryContractInfoResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryContractInfoResponse.typeUrl)) {
+      return;
+    }
     ContractInfo.registerTypeUrl();
   }
 };
@@ -952,6 +959,9 @@ export const QueryContractHistoryRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryContractHistoryRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1088,6 +1098,9 @@ export const QueryContractHistoryResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryContractHistoryResponse.typeUrl)) {
+      return;
+    }
     ContractCodeHistoryEntry.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1217,6 +1230,9 @@ export const QueryContractsByCodeRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryContractsByCodeRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1353,6 +1369,9 @@ export const QueryContractsByCodeResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryContractsByCodeResponse.typeUrl)) {
+      return;
+    }
     PageResponse.registerTypeUrl();
   }
 };
@@ -1479,6 +1498,9 @@ export const QueryAllContractStateRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllContractStateRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1615,6 +1637,9 @@ export const QueryAllContractStateResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllContractStateResponse.typeUrl)) {
+      return;
+    }
     Model.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1739,7 +1764,11 @@ export const QueryRawContractStateRequest = {
       value: QueryRawContractStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryRawContractStateRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryRawContractStateResponse(): QueryRawContractStateResponse {
   return {
@@ -1844,7 +1873,11 @@ export const QueryRawContractStateResponse = {
       value: QueryRawContractStateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryRawContractStateResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQuerySmartContractStateRequest(): QuerySmartContractStateRequest {
   return {
@@ -1966,7 +1999,11 @@ export const QuerySmartContractStateRequest = {
       value: QuerySmartContractStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySmartContractStateRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQuerySmartContractStateResponse(): QuerySmartContractStateResponse {
   return {
@@ -2071,7 +2108,11 @@ export const QuerySmartContractStateResponse = {
       value: QuerySmartContractStateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySmartContractStateResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryCodeRequest(): QueryCodeRequest {
   return {
@@ -2178,7 +2219,11 @@ export const QueryCodeRequest = {
       value: QueryCodeRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCodeRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCodeInfoResponse(): CodeInfoResponse {
   return {
@@ -2319,7 +2364,11 @@ export const CodeInfoResponse = {
       value: CodeInfoResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CodeInfoResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryCodeResponse(): QueryCodeResponse {
   return {
@@ -2444,6 +2493,9 @@ export const QueryCodeResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCodeResponse.typeUrl)) {
+      return;
+    }
     CodeInfoResponse.registerTypeUrl();
   }
 };
@@ -2553,6 +2605,9 @@ export const QueryCodesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCodesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -2689,6 +2744,9 @@ export const QueryCodesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCodesResponse.typeUrl)) {
+      return;
+    }
     CodeInfoResponse.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -2799,6 +2857,9 @@ export const QueryPinnedCodesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPinnedCodesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -2944,6 +3005,9 @@ export const QueryPinnedCodesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPinnedCodesResponse.typeUrl)) {
+      return;
+    }
     PageResponse.registerTypeUrl();
   }
 };

@@ -343,6 +343,9 @@ export const QueryDevFeeInfosRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDevFeeInfosRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -472,6 +475,9 @@ export const QueryDevFeeInfosResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDevFeeInfosResponse.typeUrl)) {
+      return;
+    }
     DevFeeInfo.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -572,7 +578,11 @@ export const QueryDevFeeInfoRequest = {
       value: QueryDevFeeInfoRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDevFeeInfoRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryDevFeeInfoResponse(): QueryDevFeeInfoResponse {
   return {
@@ -673,6 +683,9 @@ export const QueryDevFeeInfoResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDevFeeInfoResponse.typeUrl)) {
+      return;
+    }
     DevFeeInfo.registerTypeUrl();
   }
 };
@@ -752,7 +765,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -853,6 +870,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -972,6 +992,9 @@ export const QueryDevFeeInfosPerDeployerRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDevFeeInfosPerDeployerRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1101,6 +1124,9 @@ export const QueryDevFeeInfosPerDeployerResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDevFeeInfosPerDeployerResponse.typeUrl)) {
+      return;
+    }
     DevFeeInfo.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }

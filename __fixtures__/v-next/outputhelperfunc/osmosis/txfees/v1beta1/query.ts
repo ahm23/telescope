@@ -2,6 +2,7 @@ import { FeeToken, FeeTokenAmino, FeeTokenSDKType } from "./feetoken";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial, isSet } from "../../../helpers";
+import { GlobalDecoderRegistry } from "../../../registry";
 import { Decimal } from "@cosmjs/math";
 export const protobufPackage = "osmosis.txfees.v1beta1";
 export interface QueryFeeTokensRequest {}
@@ -238,7 +239,11 @@ export const QueryFeeTokensRequest = {
       value: QueryFeeTokensRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryFeeTokensRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryFeeTokensResponse(): QueryFeeTokensResponse {
   return {
@@ -354,6 +359,9 @@ export const QueryFeeTokensResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryFeeTokensResponse.typeUrl)) {
+      return;
+    }
     FeeToken.registerTypeUrl();
   }
 };
@@ -460,7 +468,11 @@ export const QueryDenomSpotPriceRequest = {
       value: QueryDenomSpotPriceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomSpotPriceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryDenomSpotPriceResponse(): QueryDenomSpotPriceResponse {
   return {
@@ -584,7 +596,11 @@ export const QueryDenomSpotPriceResponse = {
       value: QueryDenomSpotPriceResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomSpotPriceResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryDenomPoolIdRequest(): QueryDenomPoolIdRequest {
   return {
@@ -689,7 +705,11 @@ export const QueryDenomPoolIdRequest = {
       value: QueryDenomPoolIdRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomPoolIdRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryDenomPoolIdResponse(): QueryDenomPoolIdResponse {
   return {
@@ -796,7 +816,11 @@ export const QueryDenomPoolIdResponse = {
       value: QueryDenomPoolIdResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomPoolIdResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryBaseDenomRequest(): QueryBaseDenomRequest {
   return {};
@@ -881,7 +905,11 @@ export const QueryBaseDenomRequest = {
       value: QueryBaseDenomRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBaseDenomRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryBaseDenomResponse(): QueryBaseDenomResponse {
   return {
@@ -986,5 +1014,9 @@ export const QueryBaseDenomResponse = {
       value: QueryBaseDenomResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBaseDenomResponse.typeUrl)) {
+      return;
+    }
+  }
 };

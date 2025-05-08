@@ -299,7 +299,11 @@ export const OrderID = {
       value: OrderID.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OrderID.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseOrder(): Order {
   return {
@@ -462,6 +466,9 @@ export const Order = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Order.typeUrl)) {
+      return;
+    }
     OrderID.registerTypeUrl();
     GroupSpec.registerTypeUrl();
   }
@@ -639,5 +646,9 @@ export const OrderFilters = {
       value: OrderFilters.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OrderFilters.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -295,7 +295,11 @@ export const Proof = {
       value: Proof.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Proof.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseValueOp(): ValueOp {
   return {
@@ -413,6 +417,9 @@ export const ValueOp = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValueOp.typeUrl)) {
+      return;
+    }
     Proof.registerTypeUrl();
   }
 };
@@ -546,7 +553,11 @@ export const DominoOp = {
       value: DominoOp.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DominoOp.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseProofOp(): ProofOp {
   return {
@@ -678,7 +689,11 @@ export const ProofOp = {
       value: ProofOp.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ProofOp.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseProofOps(): ProofOps {
   return {
@@ -787,6 +802,9 @@ export const ProofOps = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ProofOps.typeUrl)) {
+      return;
+    }
     ProofOp.registerTypeUrl();
   }
 };

@@ -1,6 +1,7 @@
 import { isSet, DeepPartial } from "../../helpers";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /** Value types that can be used as label values. */
 export enum LabelDescriptor_ValueType {
@@ -206,5 +207,9 @@ export const LabelDescriptor = {
       value: LabelDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LabelDescriptor.typeUrl)) {
+      return;
+    }
+  }
 };

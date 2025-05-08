@@ -313,6 +313,9 @@ export const Struct_FieldsEntry = {
     return Struct_FieldsEntry.encode(message).finish();
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Struct_FieldsEntry.typeUrl)) {
+      return;
+    }
     Value.registerTypeUrl();
   }
 };
@@ -461,6 +464,9 @@ export const Struct = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Struct.typeUrl)) {
+      return;
+    }
     Value.registerTypeUrl();
   }
 };
@@ -650,6 +656,9 @@ export const Value = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Value.typeUrl)) {
+      return;
+    }
     Struct.registerTypeUrl();
     ListValue.registerTypeUrl();
   }
@@ -761,6 +770,9 @@ export const ListValue = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListValue.typeUrl)) {
+      return;
+    }
     Value.registerTypeUrl();
   }
 };

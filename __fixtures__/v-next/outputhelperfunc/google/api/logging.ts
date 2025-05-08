@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * Logging configuration of the service.
@@ -325,6 +326,9 @@ export const Logging = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Logging.typeUrl)) {
+      return;
+    }
     Logging_LoggingDestination.registerTypeUrl();
   }
 };
@@ -451,5 +455,9 @@ export const Logging_LoggingDestination = {
       value: Logging_LoggingDestination.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Logging_LoggingDestination.typeUrl)) {
+      return;
+    }
+  }
 };

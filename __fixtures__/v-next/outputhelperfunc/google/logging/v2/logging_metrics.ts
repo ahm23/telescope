@@ -704,7 +704,11 @@ export const LogMetric_LabelExtractorsEntry = {
   toProto(message: LogMetric_LabelExtractorsEntry): Uint8Array {
     return LogMetric_LabelExtractorsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogMetric_LabelExtractorsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseLogMetric(): LogMetric {
   return {
@@ -1025,6 +1029,9 @@ export const LogMetric = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogMetric.typeUrl)) {
+      return;
+    }
     MetricDescriptor.registerTypeUrl();
     Distribution_BucketOptions.registerTypeUrl();
   }
@@ -1159,7 +1166,11 @@ export const ListLogMetricsRequest = {
       value: ListLogMetricsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListLogMetricsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListLogMetricsResponse(): ListLogMetricsResponse {
   return {
@@ -1285,6 +1296,9 @@ export const ListLogMetricsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListLogMetricsResponse.typeUrl)) {
+      return;
+    }
     LogMetric.registerTypeUrl();
   }
 };
@@ -1384,7 +1398,11 @@ export const GetLogMetricRequest = {
       value: GetLogMetricRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetLogMetricRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCreateLogMetricRequest(): CreateLogMetricRequest {
   return {
@@ -1502,6 +1520,9 @@ export const CreateLogMetricRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateLogMetricRequest.typeUrl)) {
+      return;
+    }
     LogMetric.registerTypeUrl();
   }
 };
@@ -1621,6 +1642,9 @@ export const UpdateLogMetricRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateLogMetricRequest.typeUrl)) {
+      return;
+    }
     LogMetric.registerTypeUrl();
   }
 };
@@ -1720,5 +1744,9 @@ export const DeleteLogMetricRequest = {
       value: DeleteLogMetricRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteLogMetricRequest.typeUrl)) {
+      return;
+    }
+  }
 };

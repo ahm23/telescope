@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, DeepPartial, isObject } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../../registry";
 export const protobufPackage = "google.api.expr.v1beta1";
 export interface SourceInfo_PositionsEntry {
   key: number;
@@ -236,7 +237,11 @@ export const SourceInfo_PositionsEntry = {
   toProto(message: SourceInfo_PositionsEntry): Uint8Array {
     return SourceInfo_PositionsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SourceInfo_PositionsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSourceInfo(): SourceInfo {
   return {
@@ -435,7 +440,11 @@ export const SourceInfo = {
       value: SourceInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SourceInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSourcePosition(): SourcePosition {
   return {
@@ -584,5 +593,9 @@ export const SourcePosition = {
       value: SourcePosition.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SourcePosition.typeUrl)) {
+      return;
+    }
+  }
 };

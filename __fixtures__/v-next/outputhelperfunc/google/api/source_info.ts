@@ -2,6 +2,7 @@ import { Any, AnyProtoMsg, AnyAmino, AnySDKType } from "../protobuf/any";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /** Source information used to create a Service Config */
 export interface SourceInfo {
@@ -131,5 +132,9 @@ export const SourceInfo = {
       value: SourceInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SourceInfo.typeUrl)) {
+      return;
+    }
+  }
 };

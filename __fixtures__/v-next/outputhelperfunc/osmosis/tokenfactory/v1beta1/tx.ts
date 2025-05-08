@@ -408,7 +408,11 @@ export const MsgCreateDenom = {
       value: MsgCreateDenom.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateDenom.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgCreateDenomResponse(): MsgCreateDenomResponse {
   return {
@@ -513,7 +517,11 @@ export const MsgCreateDenomResponse = {
       value: MsgCreateDenomResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateDenomResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgMint(): MsgMint {
   return {
@@ -638,6 +646,9 @@ export const MsgMint = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgMint.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -724,7 +735,11 @@ export const MsgMintResponse = {
       value: MsgMintResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgMintResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgBurn(): MsgBurn {
   return {
@@ -849,6 +864,9 @@ export const MsgBurn = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBurn.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -935,7 +953,11 @@ export const MsgBurnResponse = {
       value: MsgBurnResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBurnResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgChangeAdmin(): MsgChangeAdmin {
   return {
@@ -1074,7 +1096,11 @@ export const MsgChangeAdmin = {
       value: MsgChangeAdmin.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChangeAdmin.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgChangeAdminResponse(): MsgChangeAdminResponse {
   return {};
@@ -1159,7 +1185,11 @@ export const MsgChangeAdminResponse = {
       value: MsgChangeAdminResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChangeAdminResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgSetDenomMetadata(): MsgSetDenomMetadata {
   return {
@@ -1284,6 +1314,9 @@ export const MsgSetDenomMetadata = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSetDenomMetadata.typeUrl)) {
+      return;
+    }
     Metadata.registerTypeUrl();
   }
 };
@@ -1370,5 +1403,9 @@ export const MsgSetDenomMetadataResponse = {
       value: MsgSetDenomMetadataResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSetDenomMetadataResponse.typeUrl)) {
+      return;
+    }
+  }
 };

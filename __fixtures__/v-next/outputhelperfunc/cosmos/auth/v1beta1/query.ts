@@ -422,6 +422,9 @@ export const QueryAccountsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAccountsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -558,6 +561,9 @@ export const QueryAccountsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAccountsResponse.typeUrl)) {
+      return;
+    }
     BaseAccount.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -665,7 +671,11 @@ export const QueryAccountRequest = {
       value: QueryAccountRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAccountRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryModuleAccountsRequest(): QueryModuleAccountsRequest {
   return {};
@@ -750,7 +760,11 @@ export const QueryModuleAccountsRequest = {
       value: QueryModuleAccountsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryModuleAccountsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -858,6 +872,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -967,6 +984,9 @@ export const QueryAccountResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAccountResponse.typeUrl)) {
+      return;
+    }
     BaseAccount.registerTypeUrl();
   }
 };
@@ -1053,7 +1073,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryModuleAccountsResponse(): QueryModuleAccountsResponse {
   return {
@@ -1169,6 +1193,9 @@ export const QueryModuleAccountsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryModuleAccountsResponse.typeUrl)) {
+      return;
+    }
     ModuleAccount.registerTypeUrl();
   }
 };
@@ -1255,7 +1282,11 @@ export const Bech32PrefixRequest = {
       value: Bech32PrefixRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Bech32PrefixRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseBech32PrefixResponse(): Bech32PrefixResponse {
   return {
@@ -1360,7 +1391,11 @@ export const Bech32PrefixResponse = {
       value: Bech32PrefixResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Bech32PrefixResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAddressBytesToStringRequest(): AddressBytesToStringRequest {
   return {
@@ -1465,7 +1500,11 @@ export const AddressBytesToStringRequest = {
       value: AddressBytesToStringRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AddressBytesToStringRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAddressBytesToStringResponse(): AddressBytesToStringResponse {
   return {
@@ -1570,7 +1609,11 @@ export const AddressBytesToStringResponse = {
       value: AddressBytesToStringResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AddressBytesToStringResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAddressStringToBytesRequest(): AddressStringToBytesRequest {
   return {
@@ -1675,7 +1718,11 @@ export const AddressStringToBytesRequest = {
       value: AddressStringToBytesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AddressStringToBytesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAddressStringToBytesResponse(): AddressStringToBytesResponse {
   return {
@@ -1780,5 +1827,9 @@ export const AddressStringToBytesResponse = {
       value: AddressStringToBytesResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AddressStringToBytesResponse.typeUrl)) {
+      return;
+    }
+  }
 };

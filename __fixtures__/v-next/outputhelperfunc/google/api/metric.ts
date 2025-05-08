@@ -913,6 +913,9 @@ export const MetricDescriptor = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricDescriptor.typeUrl)) {
+      return;
+    }
     LabelDescriptor.registerTypeUrl();
     MetricDescriptor_MetricDescriptorMetadata.registerTypeUrl();
   }
@@ -1051,7 +1054,11 @@ export const MetricDescriptor_MetricDescriptorMetadata = {
       value: MetricDescriptor_MetricDescriptorMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricDescriptor_MetricDescriptorMetadata.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMetric_LabelsEntry(): Metric_LabelsEntry {
   return {
@@ -1150,7 +1157,11 @@ export const Metric_LabelsEntry = {
   toProto(message: Metric_LabelsEntry): Uint8Array {
     return Metric_LabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Metric_LabelsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMetric(): Metric {
   return {
@@ -1313,5 +1324,9 @@ export const Metric = {
       value: Metric.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Metric.typeUrl)) {
+      return;
+    }
+  }
 };

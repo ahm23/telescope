@@ -448,6 +448,9 @@ export const MsgCreateDeployment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateDeployment.typeUrl)) {
+      return;
+    }
     DeploymentID.registerTypeUrl();
     GroupSpec.registerTypeUrl();
     Coin.registerTypeUrl();
@@ -533,7 +536,11 @@ export const MsgCreateDeploymentResponse = {
       value: MsgCreateDeploymentResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateDeploymentResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgDepositDeployment(): MsgDepositDeployment {
   return {
@@ -657,6 +664,9 @@ export const MsgDepositDeployment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDepositDeployment.typeUrl)) {
+      return;
+    }
     DeploymentID.registerTypeUrl();
     Coin.registerTypeUrl();
   }
@@ -741,7 +751,11 @@ export const MsgDepositDeploymentResponse = {
       value: MsgDepositDeploymentResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDepositDeploymentResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUpdateDeployment(): MsgUpdateDeployment {
   return {
@@ -890,6 +904,9 @@ export const MsgUpdateDeployment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateDeployment.typeUrl)) {
+      return;
+    }
     DeploymentID.registerTypeUrl();
     GroupSpec.registerTypeUrl();
   }
@@ -974,7 +991,11 @@ export const MsgUpdateDeploymentResponse = {
       value: MsgUpdateDeploymentResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateDeploymentResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgCloseDeployment(): MsgCloseDeployment {
   return {
@@ -1079,6 +1100,9 @@ export const MsgCloseDeployment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseDeployment.typeUrl)) {
+      return;
+    }
     DeploymentID.registerTypeUrl();
   }
 };
@@ -1162,7 +1186,11 @@ export const MsgCloseDeploymentResponse = {
       value: MsgCloseDeploymentResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseDeploymentResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDeploymentID(): DeploymentID {
   return {
@@ -1283,7 +1311,11 @@ export const DeploymentID = {
       value: DeploymentID.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeploymentID.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDeployment(): Deployment {
   return {
@@ -1441,6 +1473,9 @@ export const Deployment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Deployment.typeUrl)) {
+      return;
+    }
     DeploymentID.registerTypeUrl();
   }
 };
@@ -1580,7 +1615,11 @@ export const DeploymentFilters = {
       value: DeploymentFilters.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeploymentFilters.typeUrl)) {
+      return;
+    }
+  }
 };
 /** Msg defines the deployment Msg service. */
 export interface Msg {

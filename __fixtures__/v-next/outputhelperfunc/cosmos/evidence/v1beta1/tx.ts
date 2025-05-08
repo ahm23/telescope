@@ -183,7 +183,11 @@ export const MsgSubmitEvidence = {
       value: MsgSubmitEvidence.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSubmitEvidence.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgSubmitEvidenceResponse(): MsgSubmitEvidenceResponse {
   return {
@@ -288,5 +292,9 @@ export const MsgSubmitEvidenceResponse = {
       value: MsgSubmitEvidenceResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSubmitEvidenceResponse.typeUrl)) {
+      return;
+    }
+  }
 };

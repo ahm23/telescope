@@ -399,6 +399,9 @@ export const EvalState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EvalState.typeUrl)) {
+      return;
+    }
     ExprValue.registerTypeUrl();
     EvalState_Result.registerTypeUrl();
   }
@@ -520,7 +523,11 @@ export const EvalState_Result = {
       value: EvalState_Result.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EvalState_Result.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseExprValue(): ExprValue {
   return {
@@ -659,6 +666,9 @@ export const ExprValue = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ExprValue.typeUrl)) {
+      return;
+    }
     Value.registerTypeUrl();
     ErrorSet.registerTypeUrl();
     UnknownSet.registerTypeUrl();
@@ -771,6 +781,9 @@ export const ErrorSet = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ErrorSet.typeUrl)) {
+      return;
+    }
     Status.registerTypeUrl();
   }
 };
@@ -889,5 +902,9 @@ export const UnknownSet = {
       value: UnknownSet.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UnknownSet.typeUrl)) {
+      return;
+    }
+  }
 };

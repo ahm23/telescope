@@ -360,6 +360,9 @@ export const SignatureDescriptors = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignatureDescriptors.typeUrl)) {
+      return;
+    }
     SignatureDescriptor.registerTypeUrl();
   }
 };
@@ -507,6 +510,9 @@ export const SignatureDescriptor = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignatureDescriptor.typeUrl)) {
+      return;
+    }
     SignatureDescriptor_Data.registerTypeUrl();
   }
 };
@@ -635,6 +641,9 @@ export const SignatureDescriptor_Data = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignatureDescriptor_Data.typeUrl)) {
+      return;
+    }
     SignatureDescriptor_Data_Single.registerTypeUrl();
     SignatureDescriptor_Data_Multi.registerTypeUrl();
   }
@@ -759,7 +768,11 @@ export const SignatureDescriptor_Data_Single = {
       value: SignatureDescriptor_Data_Single.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignatureDescriptor_Data_Single.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSignatureDescriptor_Data_Multi(): SignatureDescriptor_Data_Multi {
   return {
@@ -894,6 +907,9 @@ export const SignatureDescriptor_Data_Multi = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignatureDescriptor_Data_Multi.typeUrl)) {
+      return;
+    }
     CompactBitArray.registerTypeUrl();
     SignatureDescriptor_Data.registerTypeUrl();
   }

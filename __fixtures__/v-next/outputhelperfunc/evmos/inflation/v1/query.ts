@@ -370,7 +370,11 @@ export const QueryPeriodRequest = {
       value: QueryPeriodRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPeriodRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryPeriodResponse(): QueryPeriodResponse {
   return {
@@ -470,7 +474,11 @@ export const QueryPeriodResponse = {
       value: QueryPeriodResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPeriodResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryEpochMintProvisionRequest(): QueryEpochMintProvisionRequest {
   return {};
@@ -548,7 +556,11 @@ export const QueryEpochMintProvisionRequest = {
       value: QueryEpochMintProvisionRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEpochMintProvisionRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryEpochMintProvisionResponse(): QueryEpochMintProvisionResponse {
   return {
@@ -649,6 +661,9 @@ export const QueryEpochMintProvisionResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEpochMintProvisionResponse.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };
@@ -728,7 +743,11 @@ export const QuerySkippedEpochsRequest = {
       value: QuerySkippedEpochsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySkippedEpochsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQuerySkippedEpochsResponse(): QuerySkippedEpochsResponse {
   return {
@@ -828,7 +847,11 @@ export const QuerySkippedEpochsResponse = {
       value: QuerySkippedEpochsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySkippedEpochsResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryCirculatingSupplyRequest(): QueryCirculatingSupplyRequest {
   return {};
@@ -906,7 +929,11 @@ export const QueryCirculatingSupplyRequest = {
       value: QueryCirculatingSupplyRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCirculatingSupplyRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryCirculatingSupplyResponse(): QueryCirculatingSupplyResponse {
   return {
@@ -1007,6 +1034,9 @@ export const QueryCirculatingSupplyResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCirculatingSupplyResponse.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };
@@ -1086,7 +1116,11 @@ export const QueryInflationRateRequest = {
       value: QueryInflationRateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryInflationRateRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryInflationRateResponse(): QueryInflationRateResponse {
   return {
@@ -1184,7 +1218,11 @@ export const QueryInflationRateResponse = {
       value: QueryInflationRateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryInflationRateResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
@@ -1262,7 +1300,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -1363,6 +1405,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };

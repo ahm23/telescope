@@ -2,6 +2,7 @@ import { Class, ClassAmino, ClassSDKType, NFT, NFTAmino, NFTSDKType } from "./nf
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial, isSet } from "../../../helpers";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.nft.v1beta1";
 /** GenesisState defines the nft module's genesis state. */
 export interface GenesisState {
@@ -196,6 +197,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     Class.registerTypeUrl();
     Entry.registerTypeUrl();
   }
@@ -331,6 +335,9 @@ export const Entry = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Entry.typeUrl)) {
+      return;
+    }
     NFT.registerTypeUrl();
   }
 };

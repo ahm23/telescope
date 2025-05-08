@@ -171,6 +171,9 @@ export const Node = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Node.typeUrl)) {
+      return;
+    }
     Child.registerTypeUrl();
   }
 };
@@ -294,7 +297,11 @@ export const Child = {
       value: Child.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Child.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseLeaf(): Leaf {
   return {
@@ -402,6 +409,9 @@ export const Leaf = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Leaf.typeUrl)) {
+      return;
+    }
     Child.registerTypeUrl();
   }
 };

@@ -247,7 +247,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -355,6 +359,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -461,7 +468,11 @@ export const QuerySigningInfoRequest = {
       value: QuerySigningInfoRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySigningInfoRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQuerySigningInfoResponse(): QuerySigningInfoResponse {
   return {
@@ -569,6 +580,9 @@ export const QuerySigningInfoResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySigningInfoResponse.typeUrl)) {
+      return;
+    }
     ValidatorSigningInfo.registerTypeUrl();
   }
 };
@@ -678,6 +692,9 @@ export const QuerySigningInfosRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySigningInfosRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -814,6 +831,9 @@ export const QuerySigningInfosResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySigningInfosResponse.typeUrl)) {
+      return;
+    }
     ValidatorSigningInfo.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }

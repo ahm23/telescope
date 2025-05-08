@@ -232,6 +232,9 @@ export const CommitInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CommitInfo.typeUrl)) {
+      return;
+    }
     StoreInfo.registerTypeUrl();
   }
 };
@@ -358,6 +361,9 @@ export const StoreInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(StoreInfo.typeUrl)) {
+      return;
+    }
     CommitID.registerTypeUrl();
   }
 };
@@ -483,5 +489,9 @@ export const CommitID = {
       value: CommitID.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CommitID.typeUrl)) {
+      return;
+    }
+  }
 };

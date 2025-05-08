@@ -948,7 +948,11 @@ export const ManagedService = {
       value: ManagedService.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ManagedService.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseOperationMetadata(): OperationMetadata {
   return {
@@ -1118,6 +1122,9 @@ export const OperationMetadata = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OperationMetadata.typeUrl)) {
+      return;
+    }
     OperationMetadata_Step.registerTypeUrl();
   }
 };
@@ -1234,7 +1241,11 @@ export const OperationMetadata_Step = {
       value: OperationMetadata_Step.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OperationMetadata_Step.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDiagnostic(): Diagnostic {
   return {
@@ -1366,7 +1377,11 @@ export const Diagnostic = {
       value: Diagnostic.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Diagnostic.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseConfigSource(): ConfigSource {
   return {
@@ -1492,6 +1507,9 @@ export const ConfigSource = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConfigSource.typeUrl)) {
+      return;
+    }
     ConfigFile.registerTypeUrl();
   }
 };
@@ -1625,7 +1643,11 @@ export const ConfigFile = {
       value: ConfigFile.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConfigFile.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseConfigRef(): ConfigRef {
   return {
@@ -1723,7 +1745,11 @@ export const ConfigRef = {
       value: ConfigRef.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConfigRef.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseChangeReport(): ChangeReport {
   return {
@@ -1832,6 +1858,9 @@ export const ChangeReport = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ChangeReport.typeUrl)) {
+      return;
+    }
     ConfigChange.registerTypeUrl();
   }
 };
@@ -2038,6 +2067,9 @@ export const Rollout = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Rollout.typeUrl)) {
+      return;
+    }
     Rollout_TrafficPercentStrategy.registerTypeUrl();
     Rollout_DeleteServiceStrategy.registerTypeUrl();
   }
@@ -2139,7 +2171,11 @@ export const Rollout_TrafficPercentStrategy_PercentagesEntry = {
   toProto(message: Rollout_TrafficPercentStrategy_PercentagesEntry): Uint8Array {
     return Rollout_TrafficPercentStrategy_PercentagesEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Rollout_TrafficPercentStrategy_PercentagesEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRollout_TrafficPercentStrategy(): Rollout_TrafficPercentStrategy {
   return {
@@ -2285,7 +2321,11 @@ export const Rollout_TrafficPercentStrategy = {
       value: Rollout_TrafficPercentStrategy.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Rollout_TrafficPercentStrategy.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRollout_DeleteServiceStrategy(): Rollout_DeleteServiceStrategy {
   return {};
@@ -2363,5 +2403,9 @@ export const Rollout_DeleteServiceStrategy = {
       value: Rollout_DeleteServiceStrategy.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Rollout_DeleteServiceStrategy.typeUrl)) {
+      return;
+    }
+  }
 };

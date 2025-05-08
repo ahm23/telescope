@@ -583,6 +583,9 @@ export const StoreCodeProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(StoreCodeProposal.typeUrl)) {
+      return;
+    }
     AccessConfig.registerTypeUrl();
   }
 };
@@ -821,6 +824,9 @@ export const InstantiateContractProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(InstantiateContractProposal.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -997,7 +1003,11 @@ export const MigrateContractProposal = {
       value: MigrateContractProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MigrateContractProposal.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSudoContractProposal(): SudoContractProposal {
   return {
@@ -1153,7 +1163,11 @@ export const SudoContractProposal = {
       value: SudoContractProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SudoContractProposal.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseExecuteContractProposal(): ExecuteContractProposal {
   return {
@@ -1354,6 +1368,9 @@ export const ExecuteContractProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ExecuteContractProposal.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1511,7 +1528,11 @@ export const UpdateAdminProposal = {
       value: UpdateAdminProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateAdminProposal.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseClearAdminProposal(): ClearAdminProposal {
   return {
@@ -1650,7 +1671,11 @@ export const ClearAdminProposal = {
       value: ClearAdminProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClearAdminProposal.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBasePinCodesProposal(): PinCodesProposal {
   return {
@@ -1808,7 +1833,11 @@ export const PinCodesProposal = {
       value: PinCodesProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PinCodesProposal.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseUnpinCodesProposal(): UnpinCodesProposal {
   return {
@@ -1966,5 +1995,9 @@ export const UnpinCodesProposal = {
       value: UnpinCodesProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UnpinCodesProposal.typeUrl)) {
+      return;
+    }
+  }
 };

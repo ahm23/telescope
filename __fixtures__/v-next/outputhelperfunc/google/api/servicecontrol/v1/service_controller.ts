@@ -609,6 +609,9 @@ export const CheckRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckRequest.typeUrl)) {
+      return;
+    }
     Operation.registerTypeUrl();
   }
 };
@@ -789,6 +792,9 @@ export const CheckResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckResponse.typeUrl)) {
+      return;
+    }
     CheckError.registerTypeUrl();
     CheckResponse_CheckInfo.registerTypeUrl();
   }
@@ -919,6 +925,9 @@ export const CheckResponse_CheckInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckResponse_CheckInfo.typeUrl)) {
+      return;
+    }
     CheckResponse_ConsumerInfo.registerTypeUrl();
   }
 };
@@ -1056,7 +1065,11 @@ export const CheckResponse_ConsumerInfo = {
       value: CheckResponse_ConsumerInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckResponse_ConsumerInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseReportRequest(): ReportRequest {
   return {
@@ -1199,6 +1212,9 @@ export const ReportRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ReportRequest.typeUrl)) {
+      return;
+    }
     Operation.registerTypeUrl();
   }
 };
@@ -1343,6 +1359,9 @@ export const ReportResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ReportResponse.typeUrl)) {
+      return;
+    }
     ReportResponse_ReportError.registerTypeUrl();
   }
 };
@@ -1462,6 +1481,9 @@ export const ReportResponse_ReportError = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ReportResponse_ReportError.typeUrl)) {
+      return;
+    }
     Status.registerTypeUrl();
   }
 };

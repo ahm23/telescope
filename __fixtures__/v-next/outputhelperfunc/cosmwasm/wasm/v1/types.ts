@@ -480,7 +480,11 @@ export const AccessTypeParam = {
       value: AccessTypeParam.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccessTypeParam.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccessConfig(): AccessConfig {
   return {
@@ -602,7 +606,11 @@ export const AccessConfig = {
       value: AccessConfig.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccessConfig.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseParams(): Params {
   return {
@@ -746,6 +754,9 @@ export const Params = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
+      return;
+    }
     AccessConfig.registerTypeUrl();
   }
 };
@@ -889,6 +900,9 @@ export const CodeInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CodeInfo.typeUrl)) {
+      return;
+    }
     AccessConfig.registerTypeUrl();
   }
 };
@@ -1103,7 +1117,11 @@ export const ContractInfo = {
       value: ContractInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ContractInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseContractCodeHistoryEntry(): ContractCodeHistoryEntry {
   return {
@@ -1264,6 +1282,9 @@ export const ContractCodeHistoryEntry = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ContractCodeHistoryEntry.typeUrl)) {
+      return;
+    }
     AbsoluteTxPosition.registerTypeUrl();
   }
 };
@@ -1391,7 +1412,11 @@ export const AbsoluteTxPosition = {
       value: AbsoluteTxPosition.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AbsoluteTxPosition.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseModel(): Model {
   return {
@@ -1513,5 +1538,9 @@ export const Model = {
       value: Model.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Model.typeUrl)) {
+      return;
+    }
+  }
 };

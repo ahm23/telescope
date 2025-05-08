@@ -727,6 +727,9 @@ export const Authentication = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Authentication.typeUrl)) {
+      return;
+    }
     AuthenticationRule.registerTypeUrl();
     AuthProvider.registerTypeUrl();
   }
@@ -891,6 +894,9 @@ export const AuthenticationRule = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AuthenticationRule.typeUrl)) {
+      return;
+    }
     OAuthRequirements.registerTypeUrl();
     AuthRequirement.registerTypeUrl();
   }
@@ -1025,7 +1031,11 @@ export const JwtLocation = {
       value: JwtLocation.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(JwtLocation.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAuthProvider(): AuthProvider {
   return {
@@ -1219,6 +1229,9 @@ export const AuthProvider = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AuthProvider.typeUrl)) {
+      return;
+    }
     JwtLocation.registerTypeUrl();
   }
 };
@@ -1318,7 +1331,11 @@ export const OAuthRequirements = {
       value: OAuthRequirements.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OAuthRequirements.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAuthRequirement(): AuthRequirement {
   return {
@@ -1433,5 +1450,9 @@ export const AuthRequirement = {
       value: AuthRequirement.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AuthRequirement.typeUrl)) {
+      return;
+    }
+  }
 };

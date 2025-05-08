@@ -598,6 +598,9 @@ export const ClientState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClientState.typeUrl)) {
+      return;
+    }
     Fraction.registerTypeUrl();
     Height.registerTypeUrl();
     ProofSpec.registerTypeUrl();
@@ -743,6 +746,9 @@ export const ConsensusState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsensusState.typeUrl)) {
+      return;
+    }
     MerkleRoot.registerTypeUrl();
   }
 };
@@ -888,6 +894,9 @@ export const Misbehaviour = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Misbehaviour.typeUrl)) {
+      return;
+    }
     Header.registerTypeUrl();
   }
 };
@@ -1054,6 +1063,9 @@ export const Header = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Header.typeUrl)) {
+      return;
+    }
     SignedHeader.registerTypeUrl();
     ValidatorSet.registerTypeUrl();
     Height.registerTypeUrl();
@@ -1183,5 +1195,9 @@ export const Fraction = {
       value: Fraction.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Fraction.typeUrl)) {
+      return;
+    }
+  }
 };

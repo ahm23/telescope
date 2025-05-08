@@ -380,6 +380,9 @@ export const TableDescriptor = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TableDescriptor.typeUrl)) {
+      return;
+    }
     PrimaryKeyDescriptor.registerTypeUrl();
     SecondaryIndexDescriptor.registerTypeUrl();
   }
@@ -504,7 +507,11 @@ export const PrimaryKeyDescriptor = {
       value: PrimaryKeyDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PrimaryKeyDescriptor.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSecondaryIndexDescriptor(): SecondaryIndexDescriptor {
   return {
@@ -643,7 +650,11 @@ export const SecondaryIndexDescriptor = {
       value: SecondaryIndexDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SecondaryIndexDescriptor.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSingletonDescriptor(): SingletonDescriptor {
   return {
@@ -748,5 +759,9 @@ export const SingletonDescriptor = {
       value: SingletonDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SingletonDescriptor.typeUrl)) {
+      return;
+    }
+  }
 };

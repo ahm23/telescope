@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial, bytesFromBase64, base64FromBytes } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.protobuf";
 /**
  * Wrapper message for `double`.
@@ -404,7 +405,11 @@ export const DoubleValue = {
       value: DoubleValue.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DoubleValue.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseFloatValue(): FloatValue {
   return {
@@ -502,7 +507,11 @@ export const FloatValue = {
       value: FloatValue.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(FloatValue.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseInt64Value(): Int64Value {
   return {
@@ -602,7 +611,11 @@ export const Int64Value = {
       value: Int64Value.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Int64Value.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseUInt64Value(): UInt64Value {
   return {
@@ -702,7 +715,11 @@ export const UInt64Value = {
       value: UInt64Value.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UInt64Value.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseInt32Value(): Int32Value {
   return {
@@ -800,7 +817,11 @@ export const Int32Value = {
       value: Int32Value.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Int32Value.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseUInt32Value(): UInt32Value {
   return {
@@ -898,7 +919,11 @@ export const UInt32Value = {
       value: UInt32Value.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UInt32Value.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseBoolValue(): BoolValue {
   return {
@@ -996,7 +1021,11 @@ export const BoolValue = {
       value: BoolValue.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BoolValue.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseStringValue(): StringValue {
   return {
@@ -1094,7 +1123,11 @@ export const StringValue = {
       value: StringValue.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(StringValue.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseBytesValue(): BytesValue {
   return {
@@ -1192,5 +1225,9 @@ export const BytesValue = {
       value: BytesValue.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BytesValue.typeUrl)) {
+      return;
+    }
+  }
 };

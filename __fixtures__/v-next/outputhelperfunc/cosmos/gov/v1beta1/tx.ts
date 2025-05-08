@@ -363,6 +363,9 @@ export const MsgSubmitProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSubmitProposal.typeUrl)) {
+      return;
+    }
     TextProposal.registerTypeUrl();
     RegisterIncentiveProposal.registerTypeUrl();
     ClientUpdateProposal.registerTypeUrl();
@@ -481,7 +484,11 @@ export const MsgSubmitProposalResponse = {
       value: MsgSubmitProposalResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSubmitProposalResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgVote(): MsgVote {
   return {
@@ -622,7 +629,11 @@ export const MsgVote = {
       value: MsgVote.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgVote.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgVoteResponse(): MsgVoteResponse {
   return {};
@@ -707,7 +718,11 @@ export const MsgVoteResponse = {
       value: MsgVoteResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgVoteResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgVoteWeighted(): MsgVoteWeighted {
   return {
@@ -859,6 +874,9 @@ export const MsgVoteWeighted = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgVoteWeighted.typeUrl)) {
+      return;
+    }
     WeightedVoteOption.registerTypeUrl();
   }
 };
@@ -945,7 +963,11 @@ export const MsgVoteWeightedResponse = {
       value: MsgVoteWeightedResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgVoteWeightedResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgDeposit(): MsgDeposit {
   return {
@@ -1097,6 +1119,9 @@ export const MsgDeposit = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDeposit.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1183,5 +1208,9 @@ export const MsgDepositResponse = {
       value: MsgDepositResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDepositResponse.typeUrl)) {
+      return;
+    }
+  }
 };

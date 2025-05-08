@@ -192,6 +192,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     Order.registerTypeUrl();
     Lease.registerTypeUrl();
     Params.registerTypeUrl();

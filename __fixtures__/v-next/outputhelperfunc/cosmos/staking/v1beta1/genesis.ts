@@ -373,6 +373,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
     LastValidatorPower.registerTypeUrl();
     Validator.registerTypeUrl();
@@ -503,5 +506,9 @@ export const LastValidatorPower = {
       value: LastValidatorPower.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LastValidatorPower.typeUrl)) {
+      return;
+    }
+  }
 };

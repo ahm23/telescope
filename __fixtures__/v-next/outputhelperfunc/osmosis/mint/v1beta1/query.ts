@@ -177,7 +177,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -285,6 +289,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -371,7 +378,11 @@ export const QueryEpochProvisionsRequest = {
       value: QueryEpochProvisionsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEpochProvisionsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryEpochProvisionsResponse(): QueryEpochProvisionsResponse {
   return {
@@ -476,5 +487,9 @@ export const QueryEpochProvisionsResponse = {
       value: QueryEpochProvisionsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEpochProvisionsResponse.typeUrl)) {
+      return;
+    }
+  }
 };

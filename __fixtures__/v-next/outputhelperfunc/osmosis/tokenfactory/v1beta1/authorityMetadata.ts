@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "osmosis.tokenfactory.v1beta1";
 /**
  * DenomAuthorityMetadata specifies metadata for addresses that have specific
@@ -139,5 +140,9 @@ export const DenomAuthorityMetadata = {
       value: DenomAuthorityMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DenomAuthorityMetadata.typeUrl)) {
+      return;
+    }
+  }
 };

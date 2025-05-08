@@ -684,7 +684,11 @@ export const ModuleBalanceRequest = {
       value: ModuleBalanceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleBalanceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseModuleBalanceResponse(): ModuleBalanceResponse {
   return {
@@ -800,6 +804,9 @@ export const ModuleBalanceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleBalanceResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -886,7 +893,11 @@ export const ModuleLockedAmountRequest = {
       value: ModuleLockedAmountRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleLockedAmountRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseModuleLockedAmountResponse(): ModuleLockedAmountResponse {
   return {
@@ -1002,6 +1013,9 @@ export const ModuleLockedAmountResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleLockedAmountResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1108,7 +1122,11 @@ export const AccountUnlockableCoinsRequest = {
       value: AccountUnlockableCoinsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountUnlockableCoinsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccountUnlockableCoinsResponse(): AccountUnlockableCoinsResponse {
   return {
@@ -1224,6 +1242,9 @@ export const AccountUnlockableCoinsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountUnlockableCoinsResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1330,7 +1351,11 @@ export const AccountUnlockingCoinsRequest = {
       value: AccountUnlockingCoinsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountUnlockingCoinsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccountUnlockingCoinsResponse(): AccountUnlockingCoinsResponse {
   return {
@@ -1446,6 +1471,9 @@ export const AccountUnlockingCoinsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountUnlockingCoinsResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1552,7 +1580,11 @@ export const AccountLockedCoinsRequest = {
       value: AccountLockedCoinsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedCoinsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccountLockedCoinsResponse(): AccountLockedCoinsResponse {
   return {
@@ -1668,6 +1700,9 @@ export const AccountLockedCoinsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedCoinsResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1791,7 +1826,11 @@ export const AccountLockedPastTimeRequest = {
       value: AccountLockedPastTimeRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedPastTimeRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccountLockedPastTimeResponse(): AccountLockedPastTimeResponse {
   return {
@@ -1907,6 +1946,9 @@ export const AccountLockedPastTimeResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedPastTimeResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -2030,7 +2072,11 @@ export const AccountLockedPastTimeNotUnlockingOnlyRequest = {
       value: AccountLockedPastTimeNotUnlockingOnlyRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedPastTimeNotUnlockingOnlyRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccountLockedPastTimeNotUnlockingOnlyResponse(): AccountLockedPastTimeNotUnlockingOnlyResponse {
   return {
@@ -2146,6 +2192,9 @@ export const AccountLockedPastTimeNotUnlockingOnlyResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedPastTimeNotUnlockingOnlyResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -2269,7 +2318,11 @@ export const AccountUnlockedBeforeTimeRequest = {
       value: AccountUnlockedBeforeTimeRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountUnlockedBeforeTimeRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccountUnlockedBeforeTimeResponse(): AccountUnlockedBeforeTimeResponse {
   return {
@@ -2385,6 +2438,9 @@ export const AccountUnlockedBeforeTimeResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountUnlockedBeforeTimeResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -2525,7 +2581,11 @@ export const AccountLockedPastTimeDenomRequest = {
       value: AccountLockedPastTimeDenomRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedPastTimeDenomRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccountLockedPastTimeDenomResponse(): AccountLockedPastTimeDenomResponse {
   return {
@@ -2641,6 +2701,9 @@ export const AccountLockedPastTimeDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedPastTimeDenomResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -2766,7 +2829,11 @@ export const LockedDenomRequest = {
       value: LockedDenomRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LockedDenomRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseLockedDenomResponse(): LockedDenomResponse {
   return {
@@ -2871,7 +2938,11 @@ export const LockedDenomResponse = {
       value: LockedDenomResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LockedDenomResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseLockedRequest(): LockedRequest {
   return {
@@ -2978,7 +3049,11 @@ export const LockedRequest = {
       value: LockedRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LockedRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseLockedResponse(): LockedResponse {
   return {
@@ -3086,6 +3161,9 @@ export const LockedResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LockedResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -3194,7 +3272,11 @@ export const SyntheticLockupsByLockupIDRequest = {
       value: SyntheticLockupsByLockupIDRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SyntheticLockupsByLockupIDRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSyntheticLockupsByLockupIDResponse(): SyntheticLockupsByLockupIDResponse {
   return {
@@ -3310,6 +3392,9 @@ export const SyntheticLockupsByLockupIDResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SyntheticLockupsByLockupIDResponse.typeUrl)) {
+      return;
+    }
     SyntheticLock.registerTypeUrl();
   }
 };
@@ -3435,7 +3520,11 @@ export const AccountLockedLongerDurationRequest = {
       value: AccountLockedLongerDurationRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedLongerDurationRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccountLockedLongerDurationResponse(): AccountLockedLongerDurationResponse {
   return {
@@ -3551,6 +3640,9 @@ export const AccountLockedLongerDurationResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedLongerDurationResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -3676,7 +3768,11 @@ export const AccountLockedDurationRequest = {
       value: AccountLockedDurationRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedDurationRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccountLockedDurationResponse(): AccountLockedDurationResponse {
   return {
@@ -3792,6 +3888,9 @@ export const AccountLockedDurationResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedDurationResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -3917,7 +4016,11 @@ export const AccountLockedLongerDurationNotUnlockingOnlyRequest = {
       value: AccountLockedLongerDurationNotUnlockingOnlyRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedLongerDurationNotUnlockingOnlyRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccountLockedLongerDurationNotUnlockingOnlyResponse(): AccountLockedLongerDurationNotUnlockingOnlyResponse {
   return {
@@ -4033,6 +4136,9 @@ export const AccountLockedLongerDurationNotUnlockingOnlyResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedLongerDurationNotUnlockingOnlyResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -4175,7 +4281,11 @@ export const AccountLockedLongerDurationDenomRequest = {
       value: AccountLockedLongerDurationDenomRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedLongerDurationDenomRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseAccountLockedLongerDurationDenomResponse(): AccountLockedLongerDurationDenomResponse {
   return {
@@ -4291,6 +4401,9 @@ export const AccountLockedLongerDurationDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedLongerDurationDenomResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -4377,7 +4490,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -4485,6 +4602,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };

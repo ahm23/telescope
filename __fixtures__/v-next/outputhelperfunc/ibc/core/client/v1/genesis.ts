@@ -340,6 +340,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     IdentifiedClientState.registerTypeUrl();
     ClientConsensusStates.registerTypeUrl();
     IdentifiedGenesisMetadata.registerTypeUrl();
@@ -466,7 +469,11 @@ export const GenesisMetadata = {
       value: GenesisMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisMetadata.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseIdentifiedGenesisMetadata(): IdentifiedGenesisMetadata {
   return {
@@ -599,6 +606,9 @@ export const IdentifiedGenesisMetadata = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(IdentifiedGenesisMetadata.typeUrl)) {
+      return;
+    }
     GenesisMetadata.registerTypeUrl();
   }
 };

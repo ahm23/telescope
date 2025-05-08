@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * `Documentation` provides the information for describing a service.
@@ -606,6 +607,9 @@ export const Documentation = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Documentation.typeUrl)) {
+      return;
+    }
     Page.registerTypeUrl();
     DocumentationRule.registerTypeUrl();
   }
@@ -740,7 +744,11 @@ export const DocumentationRule = {
       value: DocumentationRule.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DocumentationRule.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBasePage(): Page {
   return {
@@ -883,6 +891,9 @@ export const Page = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Page.typeUrl)) {
+      return;
+    }
     Page.registerTypeUrl();
   }
 };

@@ -2,6 +2,7 @@ import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin"
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial } from "../../../helpers";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "osmosis.tokenfactory.v1beta1";
 /** Params defines the parameters for the tokenfactory module. */
 export interface Params {
@@ -137,6 +138,9 @@ export const Params = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

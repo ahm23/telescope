@@ -669,7 +669,11 @@ export const EnableServiceRequest = {
       value: EnableServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EnableServiceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseEnableServiceResponse(): EnableServiceResponse {
   return {
@@ -770,6 +774,9 @@ export const EnableServiceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EnableServiceResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };
@@ -903,7 +910,11 @@ export const DisableServiceRequest = {
       value: DisableServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DisableServiceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDisableServiceResponse(): DisableServiceResponse {
   return {
@@ -1004,6 +1015,9 @@ export const DisableServiceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DisableServiceResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };
@@ -1103,7 +1117,11 @@ export const GetServiceRequest = {
       value: GetServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetServiceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListServicesRequest(): ListServicesRequest {
   return {
@@ -1252,7 +1270,11 @@ export const ListServicesRequest = {
       value: ListServicesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServicesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListServicesResponse(): ListServicesResponse {
   return {
@@ -1378,6 +1400,9 @@ export const ListServicesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServicesResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };
@@ -1504,7 +1529,11 @@ export const BatchEnableServicesRequest = {
       value: BatchEnableServicesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BatchEnableServicesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseBatchEnableServicesResponse(): BatchEnableServicesResponse {
   return {
@@ -1640,6 +1669,9 @@ export const BatchEnableServicesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BatchEnableServicesResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
     BatchEnableServicesResponse_EnableFailure.registerTypeUrl();
   }
@@ -1757,7 +1789,11 @@ export const BatchEnableServicesResponse_EnableFailure = {
       value: BatchEnableServicesResponse_EnableFailure.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BatchEnableServicesResponse_EnableFailure.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseBatchGetServicesRequest(): BatchGetServicesRequest {
   return {
@@ -1882,7 +1918,11 @@ export const BatchGetServicesRequest = {
       value: BatchGetServicesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BatchGetServicesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseBatchGetServicesResponse(): BatchGetServicesResponse {
   return {
@@ -1991,6 +2031,9 @@ export const BatchGetServicesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BatchGetServicesResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };

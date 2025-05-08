@@ -685,6 +685,9 @@ export const MsgChannelOpenInit = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenInit.typeUrl)) {
+      return;
+    }
     Channel.registerTypeUrl();
   }
 };
@@ -771,7 +774,11 @@ export const MsgChannelOpenInitResponse = {
       value: MsgChannelOpenInitResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenInitResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgChannelOpenTry(): MsgChannelOpenTry {
   return {
@@ -983,6 +990,9 @@ export const MsgChannelOpenTry = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenTry.typeUrl)) {
+      return;
+    }
     Channel.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -1070,7 +1080,11 @@ export const MsgChannelOpenTryResponse = {
       value: MsgChannelOpenTryResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenTryResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgChannelOpenAck(): MsgChannelOpenAck {
   return {
@@ -1280,6 +1294,9 @@ export const MsgChannelOpenAck = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenAck.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -1366,7 +1383,11 @@ export const MsgChannelOpenAckResponse = {
       value: MsgChannelOpenAckResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenAckResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgChannelOpenConfirm(): MsgChannelOpenConfirm {
   return {
@@ -1542,6 +1563,9 @@ export const MsgChannelOpenConfirm = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenConfirm.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -1628,7 +1652,11 @@ export const MsgChannelOpenConfirmResponse = {
       value: MsgChannelOpenConfirmResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenConfirmResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgChannelCloseInit(): MsgChannelCloseInit {
   return {
@@ -1767,7 +1795,11 @@ export const MsgChannelCloseInit = {
       value: MsgChannelCloseInit.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelCloseInit.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgChannelCloseInitResponse(): MsgChannelCloseInitResponse {
   return {};
@@ -1852,7 +1884,11 @@ export const MsgChannelCloseInitResponse = {
       value: MsgChannelCloseInitResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelCloseInitResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgChannelCloseConfirm(): MsgChannelCloseConfirm {
   return {
@@ -2028,6 +2064,9 @@ export const MsgChannelCloseConfirm = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelCloseConfirm.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -2114,7 +2153,11 @@ export const MsgChannelCloseConfirmResponse = {
       value: MsgChannelCloseConfirmResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelCloseConfirmResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgRecvPacket(): MsgRecvPacket {
   return {
@@ -2275,6 +2318,9 @@ export const MsgRecvPacket = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRecvPacket.typeUrl)) {
+      return;
+    }
     Packet.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -2362,7 +2408,11 @@ export const MsgRecvPacketResponse = {
       value: MsgRecvPacketResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRecvPacketResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgTimeout(): MsgTimeout {
   return {
@@ -2542,6 +2592,9 @@ export const MsgTimeout = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgTimeout.typeUrl)) {
+      return;
+    }
     Packet.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -2629,7 +2682,11 @@ export const MsgTimeoutResponse = {
       value: MsgTimeoutResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgTimeoutResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgTimeoutOnClose(): MsgTimeoutOnClose {
   return {
@@ -2826,6 +2883,9 @@ export const MsgTimeoutOnClose = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgTimeoutOnClose.typeUrl)) {
+      return;
+    }
     Packet.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -2913,7 +2973,11 @@ export const MsgTimeoutOnCloseResponse = {
       value: MsgTimeoutOnCloseResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgTimeoutOnCloseResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgAcknowledgement(): MsgAcknowledgement {
   return {
@@ -3091,6 +3155,9 @@ export const MsgAcknowledgement = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgAcknowledgement.typeUrl)) {
+      return;
+    }
     Packet.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -3178,5 +3245,9 @@ export const MsgAcknowledgementResponse = {
       value: MsgAcknowledgementResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgAcknowledgementResponse.typeUrl)) {
+      return;
+    }
+  }
 };

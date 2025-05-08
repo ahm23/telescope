@@ -341,6 +341,9 @@ export const Incentive = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Incentive.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };
@@ -476,7 +479,11 @@ export const GasMeter = {
       value: GasMeter.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GasMeter.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRegisterIncentiveProposal(): RegisterIncentiveProposal {
   return {
@@ -791,5 +798,9 @@ export const CancelIncentiveProposal = {
       value: CancelIncentiveProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CancelIncentiveProposal.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -491,6 +491,9 @@ export const GetValidatorSetByHeightRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetValidatorSetByHeightRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -646,6 +649,9 @@ export const GetValidatorSetByHeightResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetValidatorSetByHeightResponse.typeUrl)) {
+      return;
+    }
     Validator.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -756,6 +762,9 @@ export const GetLatestValidatorSetRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetLatestValidatorSetRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -911,6 +920,9 @@ export const GetLatestValidatorSetResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetLatestValidatorSetResponse.typeUrl)) {
+      return;
+    }
     Validator.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1075,7 +1087,11 @@ export const Validator = {
       value: Validator.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Validator.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGetBlockByHeightRequest(): GetBlockByHeightRequest {
   return {
@@ -1182,7 +1198,11 @@ export const GetBlockByHeightRequest = {
       value: GetBlockByHeightRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetBlockByHeightRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGetBlockByHeightResponse(): GetBlockByHeightResponse {
   return {
@@ -1309,6 +1329,9 @@ export const GetBlockByHeightResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetBlockByHeightResponse.typeUrl)) {
+      return;
+    }
     BlockID.registerTypeUrl();
     Block.registerTypeUrl();
   }
@@ -1396,7 +1419,11 @@ export const GetLatestBlockRequest = {
       value: GetLatestBlockRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetLatestBlockRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGetLatestBlockResponse(): GetLatestBlockResponse {
   return {
@@ -1523,6 +1550,9 @@ export const GetLatestBlockResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetLatestBlockResponse.typeUrl)) {
+      return;
+    }
     BlockID.registerTypeUrl();
     Block.registerTypeUrl();
   }
@@ -1610,7 +1640,11 @@ export const GetSyncingRequest = {
       value: GetSyncingRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetSyncingRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGetSyncingResponse(): GetSyncingResponse {
   return {
@@ -1715,7 +1749,11 @@ export const GetSyncingResponse = {
       value: GetSyncingResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetSyncingResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGetNodeInfoRequest(): GetNodeInfoRequest {
   return {};
@@ -1800,7 +1838,11 @@ export const GetNodeInfoRequest = {
       value: GetNodeInfoRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetNodeInfoRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGetNodeInfoResponse(): GetNodeInfoResponse {
   return {
@@ -1927,6 +1969,9 @@ export const GetNodeInfoResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetNodeInfoResponse.typeUrl)) {
+      return;
+    }
     NodeInfo.registerTypeUrl();
     VersionInfo.registerTypeUrl();
   }
@@ -2164,6 +2209,9 @@ export const VersionInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(VersionInfo.typeUrl)) {
+      return;
+    }
     Module.registerTypeUrl();
   }
 };
@@ -2304,5 +2352,9 @@ export const Module = {
       value: Module.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Module.typeUrl)) {
+      return;
+    }
+  }
 };

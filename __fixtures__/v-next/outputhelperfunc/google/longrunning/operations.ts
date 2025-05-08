@@ -533,7 +533,11 @@ export const Operation = {
       value: Operation.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Operation.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGetOperationRequest(): GetOperationRequest {
   return {
@@ -631,7 +635,11 @@ export const GetOperationRequest = {
       value: GetOperationRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetOperationRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListOperationsRequest(): ListOperationsRequest {
   return {
@@ -780,7 +788,11 @@ export const ListOperationsRequest = {
       value: ListOperationsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListOperationsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListOperationsResponse(): ListOperationsResponse {
   return {
@@ -906,6 +918,9 @@ export const ListOperationsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListOperationsResponse.typeUrl)) {
+      return;
+    }
     Operation.registerTypeUrl();
   }
 };
@@ -1005,7 +1020,11 @@ export const CancelOperationRequest = {
       value: CancelOperationRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CancelOperationRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDeleteOperationRequest(): DeleteOperationRequest {
   return {
@@ -1103,7 +1122,11 @@ export const DeleteOperationRequest = {
       value: DeleteOperationRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteOperationRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseWaitOperationRequest(): WaitOperationRequest {
   return {
@@ -1220,7 +1243,11 @@ export const WaitOperationRequest = {
       value: WaitOperationRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WaitOperationRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseOperationInfo(): OperationInfo {
   return {
@@ -1335,5 +1362,9 @@ export const OperationInfo = {
       value: OperationInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OperationInfo.typeUrl)) {
+      return;
+    }
+  }
 };

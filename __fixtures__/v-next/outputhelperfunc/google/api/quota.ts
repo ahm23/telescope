@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet, isObject } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * Quota configuration helps to achieve fairness and budgeting in service
@@ -644,6 +645,9 @@ export const Quota = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Quota.typeUrl)) {
+      return;
+    }
     QuotaLimit.registerTypeUrl();
     MetricRule.registerTypeUrl();
   }
@@ -747,7 +751,11 @@ export const MetricRule_MetricCostsEntry = {
   toProto(message: MetricRule_MetricCostsEntry): Uint8Array {
     return MetricRule_MetricCostsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricRule_MetricCostsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMetricRule(): MetricRule {
   return {
@@ -910,7 +918,11 @@ export const MetricRule = {
       value: MetricRule.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricRule.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQuotaLimit_ValuesEntry(): QuotaLimit_ValuesEntry {
   return {
@@ -1011,7 +1023,11 @@ export const QuotaLimit_ValuesEntry = {
   toProto(message: QuotaLimit_ValuesEntry): Uint8Array {
     return QuotaLimit_ValuesEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaLimit_ValuesEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQuotaLimit(): QuotaLimit {
   return {
@@ -1316,5 +1332,9 @@ export const QuotaLimit = {
       value: QuotaLimit.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaLimit.typeUrl)) {
+      return;
+    }
+  }
 };

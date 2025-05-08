@@ -417,7 +417,11 @@ export const QueryCurrentPlanRequest = {
       value: QueryCurrentPlanRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCurrentPlanRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryCurrentPlanResponse(): QueryCurrentPlanResponse {
   return {
@@ -525,6 +529,9 @@ export const QueryCurrentPlanResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCurrentPlanResponse.typeUrl)) {
+      return;
+    }
     Plan.registerTypeUrl();
   }
 };
@@ -631,7 +638,11 @@ export const QueryAppliedPlanRequest = {
       value: QueryAppliedPlanRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAppliedPlanRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryAppliedPlanResponse(): QueryAppliedPlanResponse {
   return {
@@ -738,7 +749,11 @@ export const QueryAppliedPlanResponse = {
       value: QueryAppliedPlanResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAppliedPlanResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryUpgradedConsensusStateRequest(): QueryUpgradedConsensusStateRequest {
   return {
@@ -845,7 +860,11 @@ export const QueryUpgradedConsensusStateRequest = {
       value: QueryUpgradedConsensusStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUpgradedConsensusStateRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryUpgradedConsensusStateResponse(): QueryUpgradedConsensusStateResponse {
   return {
@@ -950,7 +969,11 @@ export const QueryUpgradedConsensusStateResponse = {
       value: QueryUpgradedConsensusStateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUpgradedConsensusStateResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryModuleVersionsRequest(): QueryModuleVersionsRequest {
   return {
@@ -1055,7 +1078,11 @@ export const QueryModuleVersionsRequest = {
       value: QueryModuleVersionsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryModuleVersionsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryModuleVersionsResponse(): QueryModuleVersionsResponse {
   return {
@@ -1171,6 +1198,9 @@ export const QueryModuleVersionsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryModuleVersionsResponse.typeUrl)) {
+      return;
+    }
     ModuleVersion.registerTypeUrl();
   }
 };
@@ -1257,7 +1287,11 @@ export const QueryAuthorityRequest = {
       value: QueryAuthorityRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAuthorityRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryAuthorityResponse(): QueryAuthorityResponse {
   return {
@@ -1362,5 +1396,9 @@ export const QueryAuthorityResponse = {
       value: QueryAuthorityResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAuthorityResponse.typeUrl)) {
+      return;
+    }
+  }
 };

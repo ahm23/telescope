@@ -641,7 +641,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -749,6 +753,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -855,7 +862,11 @@ export const QueryValidatorOutstandingRewardsRequest = {
       value: QueryValidatorOutstandingRewardsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryValidatorOutstandingRewardsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryValidatorOutstandingRewardsResponse(): QueryValidatorOutstandingRewardsResponse {
   return {
@@ -963,6 +974,9 @@ export const QueryValidatorOutstandingRewardsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryValidatorOutstandingRewardsResponse.typeUrl)) {
+      return;
+    }
     ValidatorOutstandingRewards.registerTypeUrl();
   }
 };
@@ -1069,7 +1083,11 @@ export const QueryValidatorCommissionRequest = {
       value: QueryValidatorCommissionRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryValidatorCommissionRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryValidatorCommissionResponse(): QueryValidatorCommissionResponse {
   return {
@@ -1177,6 +1195,9 @@ export const QueryValidatorCommissionResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryValidatorCommissionResponse.typeUrl)) {
+      return;
+    }
     ValidatorAccumulatedCommission.registerTypeUrl();
   }
 };
@@ -1341,6 +1362,9 @@ export const QueryValidatorSlashesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryValidatorSlashesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1477,6 +1501,9 @@ export const QueryValidatorSlashesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryValidatorSlashesResponse.typeUrl)) {
+      return;
+    }
     ValidatorSlashEvent.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1601,7 +1628,11 @@ export const QueryDelegationRewardsRequest = {
       value: QueryDelegationRewardsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDelegationRewardsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryDelegationRewardsResponse(): QueryDelegationRewardsResponse {
   return {
@@ -1717,6 +1748,9 @@ export const QueryDelegationRewardsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDelegationRewardsResponse.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };
@@ -1823,7 +1857,11 @@ export const QueryDelegationTotalRewardsRequest = {
       value: QueryDelegationTotalRewardsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDelegationTotalRewardsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryDelegationTotalRewardsResponse(): QueryDelegationTotalRewardsResponse {
   return {
@@ -1966,6 +2004,9 @@ export const QueryDelegationTotalRewardsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDelegationTotalRewardsResponse.typeUrl)) {
+      return;
+    }
     DelegationDelegatorReward.registerTypeUrl();
     DecCoin.registerTypeUrl();
   }
@@ -2073,7 +2114,11 @@ export const QueryDelegatorValidatorsRequest = {
       value: QueryDelegatorValidatorsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDelegatorValidatorsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryDelegatorValidatorsResponse(): QueryDelegatorValidatorsResponse {
   return {
@@ -2188,7 +2233,11 @@ export const QueryDelegatorValidatorsResponse = {
       value: QueryDelegatorValidatorsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDelegatorValidatorsResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryDelegatorWithdrawAddressRequest(): QueryDelegatorWithdrawAddressRequest {
   return {
@@ -2293,7 +2342,11 @@ export const QueryDelegatorWithdrawAddressRequest = {
       value: QueryDelegatorWithdrawAddressRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDelegatorWithdrawAddressRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryDelegatorWithdrawAddressResponse(): QueryDelegatorWithdrawAddressResponse {
   return {
@@ -2398,7 +2451,11 @@ export const QueryDelegatorWithdrawAddressResponse = {
       value: QueryDelegatorWithdrawAddressResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDelegatorWithdrawAddressResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryCommunityPoolRequest(): QueryCommunityPoolRequest {
   return {};
@@ -2483,7 +2540,11 @@ export const QueryCommunityPoolRequest = {
       value: QueryCommunityPoolRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCommunityPoolRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryCommunityPoolResponse(): QueryCommunityPoolResponse {
   return {
@@ -2599,6 +2660,9 @@ export const QueryCommunityPoolResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCommunityPoolResponse.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };

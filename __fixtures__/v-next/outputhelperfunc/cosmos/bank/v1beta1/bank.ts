@@ -432,6 +432,9 @@ export const Params = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
+      return;
+    }
     SendEnabled.registerTypeUrl();
   }
 };
@@ -555,7 +558,11 @@ export const SendEnabled = {
       value: SendEnabled.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SendEnabled.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseInput(): Input {
   return {
@@ -688,6 +695,9 @@ export const Input = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Input.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -822,6 +832,9 @@ export const Output = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Output.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1095,7 +1108,11 @@ export const DenomUnit = {
       value: DenomUnit.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DenomUnit.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMetadata(): Metadata {
   return {
@@ -1330,6 +1347,9 @@ export const Metadata = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Metadata.typeUrl)) {
+      return;
+    }
     DenomUnit.registerTypeUrl();
   }
 };

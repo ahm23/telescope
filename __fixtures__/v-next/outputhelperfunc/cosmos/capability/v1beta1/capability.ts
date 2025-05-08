@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.capability.v1beta1";
 /**
  * Capability defines an implementation of an object capability. The index
@@ -197,7 +198,11 @@ export const Capability = {
       value: Capability.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Capability.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseOwner(): Owner {
   return {
@@ -319,7 +324,11 @@ export const Owner = {
       value: Owner.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Owner.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCapabilityOwners(): CapabilityOwners {
   return {
@@ -435,6 +444,9 @@ export const CapabilityOwners = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CapabilityOwners.typeUrl)) {
+      return;
+    }
     Owner.registerTypeUrl();
   }
 };

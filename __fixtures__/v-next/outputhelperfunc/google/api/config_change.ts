@@ -1,6 +1,7 @@
 import { isSet, DeepPartial } from "../../helpers";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * Classifies set of possible modifications to an object in the service
@@ -376,6 +377,9 @@ export const ConfigChange = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConfigChange.typeUrl)) {
+      return;
+    }
     Advice.registerTypeUrl();
   }
 };
@@ -475,5 +479,9 @@ export const Advice = {
       value: Advice.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Advice.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -2,6 +2,7 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { Decimal } from "@cosmjs/math";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "evmos.inflation.v1";
 /**
  * InflationDistribution defines the distribution in which inflation is
@@ -267,7 +268,11 @@ export const InflationDistribution = {
       value: InflationDistribution.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(InflationDistribution.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseExponentialCalculation(): ExponentialCalculation {
   return {
@@ -433,5 +438,9 @@ export const ExponentialCalculation = {
       value: ExponentialCalculation.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ExponentialCalculation.typeUrl)) {
+      return;
+    }
+  }
 };

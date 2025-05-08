@@ -218,6 +218,9 @@ export const ValidatorSet = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorSet.typeUrl)) {
+      return;
+    }
     Validator.registerTypeUrl();
   }
 };
@@ -375,6 +378,9 @@ export const Validator = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Validator.typeUrl)) {
+      return;
+    }
     PublicKey.registerTypeUrl();
   }
 };
@@ -496,6 +502,9 @@ export const SimpleValidator = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SimpleValidator.typeUrl)) {
+      return;
+    }
     PublicKey.registerTypeUrl();
   }
 };

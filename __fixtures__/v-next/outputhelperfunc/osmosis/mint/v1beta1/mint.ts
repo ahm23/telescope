@@ -330,7 +330,11 @@ export const Minter = {
       value: Minter.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Minter.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseWeightedAddress(): WeightedAddress {
   return {
@@ -452,7 +456,11 @@ export const WeightedAddress = {
       value: WeightedAddress.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WeightedAddress.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDistributionProportions(): DistributionProportions {
   return {
@@ -608,7 +616,11 @@ export const DistributionProportions = {
       value: DistributionProportions.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DistributionProportions.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseParams(): Params {
   return {
@@ -849,6 +861,9 @@ export const Params = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
+      return;
+    }
     DistributionProportions.registerTypeUrl();
     WeightedAddress.registerTypeUrl();
   }

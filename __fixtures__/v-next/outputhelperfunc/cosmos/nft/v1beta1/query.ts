@@ -428,7 +428,11 @@ export const QueryBalanceRequest = {
       value: QueryBalanceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBalanceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryBalanceResponse(): QueryBalanceResponse {
   return {
@@ -535,7 +539,11 @@ export const QueryBalanceResponse = {
       value: QueryBalanceResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBalanceResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryOwnerRequest(): QueryOwnerRequest {
   return {
@@ -657,7 +665,11 @@ export const QueryOwnerRequest = {
       value: QueryOwnerRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryOwnerRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryOwnerResponse(): QueryOwnerResponse {
   return {
@@ -762,7 +774,11 @@ export const QueryOwnerResponse = {
       value: QueryOwnerResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryOwnerResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQuerySupplyRequest(): QuerySupplyRequest {
   return {
@@ -867,7 +883,11 @@ export const QuerySupplyRequest = {
       value: QuerySupplyRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySupplyRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQuerySupplyResponse(): QuerySupplyResponse {
   return {
@@ -974,7 +994,11 @@ export const QuerySupplyResponse = {
       value: QuerySupplyResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySupplyResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryNFTsRequest(): QueryNFTsRequest {
   return {
@@ -1116,6 +1140,9 @@ export const QueryNFTsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryNFTsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1252,6 +1279,9 @@ export const QueryNFTsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryNFTsResponse.typeUrl)) {
+      return;
+    }
     NFT.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1376,7 +1406,11 @@ export const QueryNFTRequest = {
       value: QueryNFTRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryNFTRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryNFTResponse(): QueryNFTResponse {
   return {
@@ -1484,6 +1518,9 @@ export const QueryNFTResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryNFTResponse.typeUrl)) {
+      return;
+    }
     NFT.registerTypeUrl();
   }
 };
@@ -1590,7 +1627,11 @@ export const QueryClassRequest = {
       value: QueryClassRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClassRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryClassResponse(): QueryClassResponse {
   return {
@@ -1698,6 +1739,9 @@ export const QueryClassResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClassResponse.typeUrl)) {
+      return;
+    }
     Class.registerTypeUrl();
   }
 };
@@ -1807,6 +1851,9 @@ export const QueryClassesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClassesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1943,6 +1990,9 @@ export const QueryClassesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClassesResponse.typeUrl)) {
+      return;
+    }
     Class.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }

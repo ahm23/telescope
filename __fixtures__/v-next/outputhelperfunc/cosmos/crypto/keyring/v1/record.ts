@@ -331,6 +331,9 @@ export const Record = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Record.typeUrl)) {
+      return;
+    }
     Record_Local.registerTypeUrl();
     Record_Ledger.registerTypeUrl();
     Record_Multi.registerTypeUrl();
@@ -459,7 +462,11 @@ export const Record_Local = {
       value: Record_Local.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Record_Local.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRecord_Ledger(): Record_Ledger {
   return {
@@ -567,6 +574,9 @@ export const Record_Ledger = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Record_Ledger.typeUrl)) {
+      return;
+    }
     BIP44Params.registerTypeUrl();
   }
 };
@@ -653,7 +663,11 @@ export const Record_Multi = {
       value: Record_Multi.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Record_Multi.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRecord_Offline(): Record_Offline {
   return {};
@@ -738,5 +752,9 @@ export const Record_Offline = {
       value: Record_Offline.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Record_Offline.typeUrl)) {
+      return;
+    }
+  }
 };

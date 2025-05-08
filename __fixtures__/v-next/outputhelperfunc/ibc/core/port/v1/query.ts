@@ -247,6 +247,9 @@ export const QueryAppVersionRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAppVersionRequest.typeUrl)) {
+      return;
+    }
     Counterparty.registerTypeUrl();
   }
 };
@@ -370,5 +373,9 @@ export const QueryAppVersionResponse = {
       value: QueryAppVersionResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAppVersionResponse.typeUrl)) {
+      return;
+    }
+  }
 };

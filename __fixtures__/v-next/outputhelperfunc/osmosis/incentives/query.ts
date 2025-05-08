@@ -473,7 +473,11 @@ export const ModuleToDistributeCoinsRequest = {
       value: ModuleToDistributeCoinsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleToDistributeCoinsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseModuleToDistributeCoinsResponse(): ModuleToDistributeCoinsResponse {
   return {
@@ -589,6 +593,9 @@ export const ModuleToDistributeCoinsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleToDistributeCoinsResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -697,7 +704,11 @@ export const GaugeByIDRequest = {
       value: GaugeByIDRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GaugeByIDRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGaugeByIDResponse(): GaugeByIDResponse {
   return {
@@ -805,6 +816,9 @@ export const GaugeByIDResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GaugeByIDResponse.typeUrl)) {
+      return;
+    }
     Gauge.registerTypeUrl();
   }
 };
@@ -914,6 +928,9 @@ export const GaugesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GaugesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1050,6 +1067,9 @@ export const GaugesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GaugesResponse.typeUrl)) {
+      return;
+    }
     Gauge.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1160,6 +1180,9 @@ export const ActiveGaugesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ActiveGaugesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1296,6 +1319,9 @@ export const ActiveGaugesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ActiveGaugesResponse.typeUrl)) {
+      return;
+    }
     Gauge.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1423,6 +1449,9 @@ export const ActiveGaugesPerDenomRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ActiveGaugesPerDenomRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1559,6 +1588,9 @@ export const ActiveGaugesPerDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ActiveGaugesPerDenomResponse.typeUrl)) {
+      return;
+    }
     Gauge.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1669,6 +1701,9 @@ export const UpcomingGaugesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpcomingGaugesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1805,6 +1840,9 @@ export const UpcomingGaugesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpcomingGaugesResponse.typeUrl)) {
+      return;
+    }
     Gauge.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1932,6 +1970,9 @@ export const UpcomingGaugesPerDenomRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpcomingGaugesPerDenomRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -2068,6 +2109,9 @@ export const UpcomingGaugesPerDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpcomingGaugesPerDenomResponse.typeUrl)) {
+      return;
+    }
     Gauge.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -2230,7 +2274,11 @@ export const RewardsEstRequest = {
       value: RewardsEstRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RewardsEstRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRewardsEstResponse(): RewardsEstResponse {
   return {
@@ -2346,6 +2394,9 @@ export const RewardsEstResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RewardsEstResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2432,7 +2483,11 @@ export const QueryLockableDurationsRequest = {
       value: QueryLockableDurationsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryLockableDurationsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryLockableDurationsResponse(): QueryLockableDurationsResponse {
   return {
@@ -2547,5 +2602,9 @@ export const QueryLockableDurationsResponse = {
       value: QueryLockableDurationsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryLockableDurationsResponse.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -438,7 +438,11 @@ export const Version = {
       value: Version.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Version.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCodeGeneratorRequest(): CodeGeneratorRequest {
   return {
@@ -610,6 +614,9 @@ export const CodeGeneratorRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CodeGeneratorRequest.typeUrl)) {
+      return;
+    }
     FileDescriptorProto.registerTypeUrl();
     Version.registerTypeUrl();
   }
@@ -738,6 +745,9 @@ export const CodeGeneratorResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CodeGeneratorResponse.typeUrl)) {
+      return;
+    }
     CodeGeneratorResponse_File.registerTypeUrl();
   }
 };
@@ -871,5 +881,9 @@ export const CodeGeneratorResponse_File = {
       value: CodeGeneratorResponse_File.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CodeGeneratorResponse_File.typeUrl)) {
+      return;
+    }
+  }
 };

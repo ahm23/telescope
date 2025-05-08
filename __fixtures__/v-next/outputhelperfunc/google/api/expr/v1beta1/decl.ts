@@ -327,6 +327,9 @@ export const Decl = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Decl.typeUrl)) {
+      return;
+    }
     IdentDecl.registerTypeUrl();
     FunctionDecl.registerTypeUrl();
   }
@@ -472,6 +475,9 @@ export const DeclType = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeclType.typeUrl)) {
+      return;
+    }
     DeclType.registerTypeUrl();
   }
 };
@@ -593,6 +599,9 @@ export const IdentDecl = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(IdentDecl.typeUrl)) {
+      return;
+    }
     DeclType.registerTypeUrl();
     Expr.registerTypeUrl();
   }
@@ -740,6 +749,9 @@ export const FunctionDecl = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(FunctionDecl.typeUrl)) {
+      return;
+    }
     IdentDecl.registerTypeUrl();
     DeclType.registerTypeUrl();
   }

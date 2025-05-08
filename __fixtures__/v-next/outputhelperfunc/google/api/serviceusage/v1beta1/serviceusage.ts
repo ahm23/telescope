@@ -1663,7 +1663,11 @@ export const EnableServiceRequest = {
       value: EnableServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EnableServiceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDisableServiceRequest(): DisableServiceRequest {
   return {
@@ -1761,7 +1765,11 @@ export const DisableServiceRequest = {
       value: DisableServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DisableServiceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGetServiceRequest(): GetServiceRequest {
   return {
@@ -1859,7 +1867,11 @@ export const GetServiceRequest = {
       value: GetServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetServiceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListServicesRequest(): ListServicesRequest {
   return {
@@ -2008,7 +2020,11 @@ export const ListServicesRequest = {
       value: ListServicesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServicesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListServicesResponse(): ListServicesResponse {
   return {
@@ -2134,6 +2150,9 @@ export const ListServicesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServicesResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };
@@ -2260,7 +2279,11 @@ export const BatchEnableServicesRequest = {
       value: BatchEnableServicesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BatchEnableServicesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListConsumerQuotaMetricsRequest(): ListConsumerQuotaMetricsRequest {
   return {
@@ -2409,7 +2432,11 @@ export const ListConsumerQuotaMetricsRequest = {
       value: ListConsumerQuotaMetricsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListConsumerQuotaMetricsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListConsumerQuotaMetricsResponse(): ListConsumerQuotaMetricsResponse {
   return {
@@ -2535,6 +2562,9 @@ export const ListConsumerQuotaMetricsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListConsumerQuotaMetricsResponse.typeUrl)) {
+      return;
+    }
     ConsumerQuotaMetric.registerTypeUrl();
   }
 };
@@ -2651,7 +2681,11 @@ export const GetConsumerQuotaMetricRequest = {
       value: GetConsumerQuotaMetricRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetConsumerQuotaMetricRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGetConsumerQuotaLimitRequest(): GetConsumerQuotaLimitRequest {
   return {
@@ -2766,7 +2800,11 @@ export const GetConsumerQuotaLimitRequest = {
       value: GetConsumerQuotaLimitRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetConsumerQuotaLimitRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCreateAdminOverrideRequest(): CreateAdminOverrideRequest {
   return {
@@ -2937,6 +2975,9 @@ export const CreateAdminOverrideRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateAdminOverrideRequest.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
   }
 };
@@ -3128,6 +3169,9 @@ export const UpdateAdminOverrideRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateAdminOverrideRequest.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -3281,7 +3325,11 @@ export const DeleteAdminOverrideRequest = {
       value: DeleteAdminOverrideRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteAdminOverrideRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListAdminOverridesRequest(): ListAdminOverridesRequest {
   return {
@@ -3413,7 +3461,11 @@ export const ListAdminOverridesRequest = {
       value: ListAdminOverridesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListAdminOverridesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListAdminOverridesResponse(): ListAdminOverridesResponse {
   return {
@@ -3539,6 +3591,9 @@ export const ListAdminOverridesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListAdminOverridesResponse.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
   }
 };
@@ -3649,6 +3704,9 @@ export const BatchCreateAdminOverridesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BatchCreateAdminOverridesResponse.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
   }
 };
@@ -3821,6 +3879,9 @@ export const ImportAdminOverridesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ImportAdminOverridesRequest.typeUrl)) {
+      return;
+    }
     OverrideInlineSource.registerTypeUrl();
   }
 };
@@ -3931,6 +3992,9 @@ export const ImportAdminOverridesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ImportAdminOverridesResponse.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
   }
 };
@@ -4010,7 +4074,11 @@ export const ImportAdminOverridesMetadata = {
       value: ImportAdminOverridesMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ImportAdminOverridesMetadata.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCreateConsumerOverrideRequest(): CreateConsumerOverrideRequest {
   return {
@@ -4181,6 +4249,9 @@ export const CreateConsumerOverrideRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateConsumerOverrideRequest.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
   }
 };
@@ -4372,6 +4443,9 @@ export const UpdateConsumerOverrideRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateConsumerOverrideRequest.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -4525,7 +4599,11 @@ export const DeleteConsumerOverrideRequest = {
       value: DeleteConsumerOverrideRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteConsumerOverrideRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListConsumerOverridesRequest(): ListConsumerOverridesRequest {
   return {
@@ -4657,7 +4735,11 @@ export const ListConsumerOverridesRequest = {
       value: ListConsumerOverridesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListConsumerOverridesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListConsumerOverridesResponse(): ListConsumerOverridesResponse {
   return {
@@ -4783,6 +4865,9 @@ export const ListConsumerOverridesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListConsumerOverridesResponse.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
   }
 };
@@ -4893,6 +4978,9 @@ export const BatchCreateConsumerOverridesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BatchCreateConsumerOverridesResponse.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
   }
 };
@@ -5065,6 +5153,9 @@ export const ImportConsumerOverridesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ImportConsumerOverridesRequest.typeUrl)) {
+      return;
+    }
     OverrideInlineSource.registerTypeUrl();
   }
 };
@@ -5175,6 +5266,9 @@ export const ImportConsumerOverridesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ImportConsumerOverridesResponse.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
   }
 };
@@ -5254,7 +5348,11 @@ export const ImportConsumerOverridesMetadata = {
       value: ImportConsumerOverridesMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ImportConsumerOverridesMetadata.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseImportAdminQuotaPoliciesResponse(): ImportAdminQuotaPoliciesResponse {
   return {
@@ -5363,6 +5461,9 @@ export const ImportAdminQuotaPoliciesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ImportAdminQuotaPoliciesResponse.typeUrl)) {
+      return;
+    }
     AdminQuotaPolicy.registerTypeUrl();
   }
 };
@@ -5442,7 +5543,11 @@ export const ImportAdminQuotaPoliciesMetadata = {
       value: ImportAdminQuotaPoliciesMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ImportAdminQuotaPoliciesMetadata.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCreateAdminQuotaPolicyMetadata(): CreateAdminQuotaPolicyMetadata {
   return {};
@@ -5520,7 +5625,11 @@ export const CreateAdminQuotaPolicyMetadata = {
       value: CreateAdminQuotaPolicyMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateAdminQuotaPolicyMetadata.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseUpdateAdminQuotaPolicyMetadata(): UpdateAdminQuotaPolicyMetadata {
   return {};
@@ -5598,7 +5707,11 @@ export const UpdateAdminQuotaPolicyMetadata = {
       value: UpdateAdminQuotaPolicyMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateAdminQuotaPolicyMetadata.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDeleteAdminQuotaPolicyMetadata(): DeleteAdminQuotaPolicyMetadata {
   return {};
@@ -5676,7 +5789,11 @@ export const DeleteAdminQuotaPolicyMetadata = {
       value: DeleteAdminQuotaPolicyMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteAdminQuotaPolicyMetadata.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGenerateServiceIdentityRequest(): GenerateServiceIdentityRequest {
   return {
@@ -5774,7 +5891,11 @@ export const GenerateServiceIdentityRequest = {
       value: GenerateServiceIdentityRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenerateServiceIdentityRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGetServiceIdentityResponse(): GetServiceIdentityResponse {
   return {
@@ -5892,6 +6013,9 @@ export const GetServiceIdentityResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetServiceIdentityResponse.typeUrl)) {
+      return;
+    }
     ServiceIdentity.registerTypeUrl();
   }
 };
@@ -5971,5 +6095,9 @@ export const GetServiceIdentityMetadata = {
       value: GetServiceIdentityMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetServiceIdentityMetadata.typeUrl)) {
+      return;
+    }
+  }
 };

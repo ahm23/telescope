@@ -424,5 +424,9 @@ export const StakeAuthorization_Validators = {
       value: StakeAuthorization_Validators.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(StakeAuthorization_Validators.typeUrl)) {
+      return;
+    }
+  }
 };

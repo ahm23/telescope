@@ -489,6 +489,9 @@ export const MsgConnectionOpenInit = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenInit.typeUrl)) {
+      return;
+    }
     Counterparty.registerTypeUrl();
     Version.registerTypeUrl();
   }
@@ -576,7 +579,11 @@ export const MsgConnectionOpenInitResponse = {
       value: MsgConnectionOpenInitResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenInitResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgConnectionOpenTry(): MsgConnectionOpenTry {
   return {
@@ -889,6 +896,9 @@ export const MsgConnectionOpenTry = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenTry.typeUrl)) {
+      return;
+    }
     Counterparty.registerTypeUrl();
     Version.registerTypeUrl();
     Height.registerTypeUrl();
@@ -977,7 +987,11 @@ export const MsgConnectionOpenTryResponse = {
       value: MsgConnectionOpenTryResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenTryResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgConnectionOpenAck(): MsgConnectionOpenAck {
   return {
@@ -1244,6 +1258,9 @@ export const MsgConnectionOpenAck = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenAck.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -1330,7 +1347,11 @@ export const MsgConnectionOpenAckResponse = {
       value: MsgConnectionOpenAckResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenAckResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgConnectionOpenConfirm(): MsgConnectionOpenConfirm {
   return {
@@ -1489,6 +1510,9 @@ export const MsgConnectionOpenConfirm = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenConfirm.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -1575,5 +1599,9 @@ export const MsgConnectionOpenConfirmResponse = {
       value: MsgConnectionOpenConfirmResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenConfirmResponse.typeUrl)) {
+      return;
+    }
+  }
 };

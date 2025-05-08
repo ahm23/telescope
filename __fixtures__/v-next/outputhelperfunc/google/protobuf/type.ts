@@ -713,6 +713,9 @@ export const Type = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Type.typeUrl)) {
+      return;
+    }
     Field.registerTypeUrl();
     Option.registerTypeUrl();
     SourceContext.registerTypeUrl();
@@ -978,6 +981,9 @@ export const Field = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Field.typeUrl)) {
+      return;
+    }
     Option.registerTypeUrl();
   }
 };
@@ -1168,6 +1174,9 @@ export const Enum = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Enum.typeUrl)) {
+      return;
+    }
     EnumValue.registerTypeUrl();
     Option.registerTypeUrl();
     SourceContext.registerTypeUrl();
@@ -1314,6 +1323,9 @@ export const EnumValue = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EnumValue.typeUrl)) {
+      return;
+    }
     Option.registerTypeUrl();
   }
 };
@@ -1432,5 +1444,9 @@ export const Option = {
       value: Option.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Option.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -783,6 +783,9 @@ export const Distribution = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution.typeUrl)) {
+      return;
+    }
     Distribution_Range.registerTypeUrl();
     Distribution_BucketOptions.registerTypeUrl();
     Distribution_Exemplar.registerTypeUrl();
@@ -901,7 +904,11 @@ export const Distribution_Range = {
       value: Distribution_Range.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_Range.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDistribution_BucketOptions(): Distribution_BucketOptions {
   return {
@@ -1040,6 +1047,9 @@ export const Distribution_BucketOptions = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_BucketOptions.typeUrl)) {
+      return;
+    }
     Distribution_BucketOptions_Linear.registerTypeUrl();
     Distribution_BucketOptions_Exponential.registerTypeUrl();
     Distribution_BucketOptions_Explicit.registerTypeUrl();
@@ -1175,7 +1185,11 @@ export const Distribution_BucketOptions_Linear = {
       value: Distribution_BucketOptions_Linear.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_BucketOptions_Linear.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDistribution_BucketOptions_Exponential(): Distribution_BucketOptions_Exponential {
   return {
@@ -1307,7 +1321,11 @@ export const Distribution_BucketOptions_Exponential = {
       value: Distribution_BucketOptions_Exponential.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_BucketOptions_Exponential.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDistribution_BucketOptions_Explicit(): Distribution_BucketOptions_Explicit {
   return {
@@ -1424,7 +1442,11 @@ export const Distribution_BucketOptions_Explicit = {
       value: Distribution_BucketOptions_Explicit.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_BucketOptions_Explicit.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDistribution_Exemplar(): Distribution_Exemplar {
   return {
@@ -1566,5 +1588,9 @@ export const Distribution_Exemplar = {
       value: Distribution_Exemplar.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_Exemplar.typeUrl)) {
+      return;
+    }
+  }
 };

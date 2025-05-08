@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "evmos.fees.v1";
 /** MsgRegisterFeesContract defines a message that registers a DevFeeInfo */
 export interface MsgRegisterDevFeeInfo {
@@ -347,7 +348,11 @@ export const MsgRegisterDevFeeInfo = {
       value: MsgRegisterDevFeeInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRegisterDevFeeInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgRegisterDevFeeInfoResponse(): MsgRegisterDevFeeInfoResponse {
   return {};
@@ -425,7 +430,11 @@ export const MsgRegisterDevFeeInfoResponse = {
       value: MsgRegisterDevFeeInfoResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRegisterDevFeeInfoResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgCancelDevFeeInfo(): MsgCancelDevFeeInfo {
   return {
@@ -540,7 +549,11 @@ export const MsgCancelDevFeeInfo = {
       value: MsgCancelDevFeeInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCancelDevFeeInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgCancelDevFeeInfoResponse(): MsgCancelDevFeeInfoResponse {
   return {};
@@ -618,7 +631,11 @@ export const MsgCancelDevFeeInfoResponse = {
       value: MsgCancelDevFeeInfoResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCancelDevFeeInfoResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUpdateDevFeeInfo(): MsgUpdateDevFeeInfo {
   return {
@@ -750,7 +767,11 @@ export const MsgUpdateDevFeeInfo = {
       value: MsgUpdateDevFeeInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateDevFeeInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUpdateDevFeeInfoResponse(): MsgUpdateDevFeeInfoResponse {
   return {};
@@ -828,5 +849,9 @@ export const MsgUpdateDevFeeInfoResponse = {
       value: MsgUpdateDevFeeInfoResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateDevFeeInfoResponse.typeUrl)) {
+      return;
+    }
+  }
 };

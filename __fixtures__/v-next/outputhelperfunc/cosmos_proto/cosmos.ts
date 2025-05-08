@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../binary";
 import { isSet, DeepPartial } from "../helpers";
 import { JsonSafe } from "../json-safe";
+import { GlobalDecoderRegistry } from "../registry";
 export const protobufPackage = "cosmos_proto";
 export enum ScalarType {
   SCALAR_TYPE_UNSPECIFIED = 0,
@@ -289,7 +290,11 @@ export const InterfaceDescriptor = {
       value: InterfaceDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(InterfaceDescriptor.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseScalarDescriptor(): ScalarDescriptor {
   return {
@@ -440,5 +445,9 @@ export const ScalarDescriptor = {
       value: ScalarDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ScalarDescriptor.typeUrl)) {
+      return;
+    }
+  }
 };

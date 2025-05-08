@@ -631,6 +631,9 @@ export const AllocateQuotaRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AllocateQuotaRequest.typeUrl)) {
+      return;
+    }
     QuotaOperation.registerTypeUrl();
   }
 };
@@ -731,7 +734,11 @@ export const QuotaOperation_LabelsEntry = {
   toProto(message: QuotaOperation_LabelsEntry): Uint8Array {
     return QuotaOperation_LabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaOperation_LabelsEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQuotaOperation(): QuotaOperation {
   return {
@@ -973,6 +980,9 @@ export const QuotaOperation = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaOperation.typeUrl)) {
+      return;
+    }
     MetricValueSet.registerTypeUrl();
   }
 };
@@ -1144,6 +1154,9 @@ export const AllocateQuotaResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AllocateQuotaResponse.typeUrl)) {
+      return;
+    }
     QuotaError.registerTypeUrl();
     MetricValueSet.registerTypeUrl();
   }
@@ -1298,6 +1311,9 @@ export const QuotaError = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaError.typeUrl)) {
+      return;
+    }
     Status.registerTypeUrl();
   }
 };

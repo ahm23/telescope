@@ -374,6 +374,9 @@ export const MsgCloseGroup = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseGroup.typeUrl)) {
+      return;
+    }
     GroupID.registerTypeUrl();
   }
 };
@@ -457,7 +460,11 @@ export const MsgCloseGroupResponse = {
       value: MsgCloseGroupResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseGroupResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgPauseGroup(): MsgPauseGroup {
   return {
@@ -562,6 +569,9 @@ export const MsgPauseGroup = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgPauseGroup.typeUrl)) {
+      return;
+    }
     GroupID.registerTypeUrl();
   }
 };
@@ -645,7 +655,11 @@ export const MsgPauseGroupResponse = {
       value: MsgPauseGroupResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgPauseGroupResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgStartGroup(): MsgStartGroup {
   return {
@@ -750,6 +764,9 @@ export const MsgStartGroup = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgStartGroup.typeUrl)) {
+      return;
+    }
     GroupID.registerTypeUrl();
   }
 };
@@ -833,7 +850,11 @@ export const MsgStartGroupResponse = {
       value: MsgStartGroupResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgStartGroupResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGroupID(): GroupID {
   return {
@@ -971,7 +992,11 @@ export const GroupID = {
       value: GroupID.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GroupID.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGroupSpec(): GroupSpec {
   return {
@@ -1120,6 +1145,9 @@ export const GroupSpec = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GroupSpec.typeUrl)) {
+      return;
+    }
     PlacementRequirements.registerTypeUrl();
     Resource.registerTypeUrl();
   }
@@ -1282,6 +1310,9 @@ export const Group = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Group.typeUrl)) {
+      return;
+    }
     GroupID.registerTypeUrl();
     GroupSpec.registerTypeUrl();
   }
@@ -1425,6 +1456,9 @@ export const Resource = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Resource.typeUrl)) {
+      return;
+    }
     ResourceUnits.registerTypeUrl();
     Coin.registerTypeUrl();
   }

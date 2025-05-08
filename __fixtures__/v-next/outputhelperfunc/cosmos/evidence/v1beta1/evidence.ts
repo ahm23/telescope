@@ -2,6 +2,7 @@ import { Timestamp, TimestampAmino, TimestampSDKType } from "../../../google/pro
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { toTimestamp, fromTimestamp, isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.evidence.v1beta1";
 /**
  * Equivocation implements the Evidence interface and defines evidence of double
@@ -199,5 +200,9 @@ export const Equivocation = {
       value: Equivocation.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Equivocation.typeUrl)) {
+      return;
+    }
+  }
 };

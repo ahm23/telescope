@@ -219,6 +219,9 @@ export const Config = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Config.typeUrl)) {
+      return;
+    }
     ModuleConfig.registerTypeUrl();
   }
 };
@@ -344,5 +347,9 @@ export const ModuleConfig = {
       value: ModuleConfig.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleConfig.typeUrl)) {
+      return;
+    }
+  }
 };

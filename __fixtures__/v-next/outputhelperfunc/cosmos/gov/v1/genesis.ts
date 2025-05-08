@@ -300,6 +300,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     Deposit.registerTypeUrl();
     Vote.registerTypeUrl();
     Proposal.registerTypeUrl();

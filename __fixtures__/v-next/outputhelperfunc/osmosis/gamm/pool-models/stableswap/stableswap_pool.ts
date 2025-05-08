@@ -234,7 +234,11 @@ export const PoolParams = {
       value: PoolParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PoolParams.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBasePool(): Pool {
   return {

@@ -466,6 +466,9 @@ export const CheckRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckRequest.typeUrl)) {
+      return;
+    }
     AttributeContext.registerTypeUrl();
     ResourceInfo.registerTypeUrl();
   }
@@ -634,7 +637,11 @@ export const ResourceInfo = {
       value: ResourceInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResourceInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCheckResponse_HeadersEntry(): CheckResponse_HeadersEntry {
   return {
@@ -733,7 +740,11 @@ export const CheckResponse_HeadersEntry = {
   toProto(message: CheckResponse_HeadersEntry): Uint8Array {
     return CheckResponse_HeadersEntry.encode(message).finish();
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckResponse_HeadersEntry.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCheckResponse(): CheckResponse {
   return {
@@ -899,6 +910,9 @@ export const CheckResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckResponse.typeUrl)) {
+      return;
+    }
     Status.registerTypeUrl();
   }
 };
@@ -1043,6 +1057,9 @@ export const ReportRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ReportRequest.typeUrl)) {
+      return;
+    }
     AttributeContext.registerTypeUrl();
   }
 };
@@ -1122,5 +1139,9 @@ export const ReportResponse = {
       value: ReportResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ReportResponse.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -305,7 +305,11 @@ export const Class = {
       value: Class.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Class.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseNFT(): NFT {
   return {
@@ -480,5 +484,9 @@ export const NFT = {
       value: NFT.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(NFT.typeUrl)) {
+      return;
+    }
+  }
 };

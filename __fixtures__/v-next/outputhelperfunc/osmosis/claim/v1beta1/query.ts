@@ -266,7 +266,11 @@ export const QueryModuleAccountBalanceRequest = {
       value: QueryModuleAccountBalanceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryModuleAccountBalanceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryModuleAccountBalanceResponse(): QueryModuleAccountBalanceResponse {
   return {
@@ -382,6 +386,9 @@ export const QueryModuleAccountBalanceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryModuleAccountBalanceResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -468,7 +475,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -576,6 +587,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -682,7 +696,11 @@ export const QueryClaimRecordRequest = {
       value: QueryClaimRecordRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimRecordRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryClaimRecordResponse(): QueryClaimRecordResponse {
   return {
@@ -790,6 +808,9 @@ export const QueryClaimRecordResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimRecordResponse.typeUrl)) {
+      return;
+    }
     ClaimRecord.registerTypeUrl();
   }
 };
@@ -913,7 +934,11 @@ export const QueryClaimableForActionRequest = {
       value: QueryClaimableForActionRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimableForActionRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryClaimableForActionResponse(): QueryClaimableForActionResponse {
   return {
@@ -1029,6 +1054,9 @@ export const QueryClaimableForActionResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimableForActionResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1135,7 +1163,11 @@ export const QueryTotalClaimableRequest = {
       value: QueryTotalClaimableRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalClaimableRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryTotalClaimableResponse(): QueryTotalClaimableResponse {
   return {
@@ -1251,6 +1283,9 @@ export const QueryTotalClaimableResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalClaimableResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

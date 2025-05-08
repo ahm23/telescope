@@ -937,6 +937,9 @@ export const MsgCreateGroup = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateGroup.typeUrl)) {
+      return;
+    }
     Member.registerTypeUrl();
   }
 };
@@ -1045,7 +1048,11 @@ export const MsgCreateGroupResponse = {
       value: MsgCreateGroupResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateGroupResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUpdateGroupMembers(): MsgUpdateGroupMembers {
   return {
@@ -1197,6 +1204,9 @@ export const MsgUpdateGroupMembers = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupMembers.typeUrl)) {
+      return;
+    }
     Member.registerTypeUrl();
   }
 };
@@ -1283,7 +1293,11 @@ export const MsgUpdateGroupMembersResponse = {
       value: MsgUpdateGroupMembersResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupMembersResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUpdateGroupAdmin(): MsgUpdateGroupAdmin {
   return {
@@ -1424,7 +1438,11 @@ export const MsgUpdateGroupAdmin = {
       value: MsgUpdateGroupAdmin.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupAdmin.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUpdateGroupAdminResponse(): MsgUpdateGroupAdminResponse {
   return {};
@@ -1509,7 +1527,11 @@ export const MsgUpdateGroupAdminResponse = {
       value: MsgUpdateGroupAdminResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupAdminResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUpdateGroupMetadata(): MsgUpdateGroupMetadata {
   return {
@@ -1650,7 +1672,11 @@ export const MsgUpdateGroupMetadata = {
       value: MsgUpdateGroupMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupMetadata.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUpdateGroupMetadataResponse(): MsgUpdateGroupMetadataResponse {
   return {};
@@ -1735,7 +1761,11 @@ export const MsgUpdateGroupMetadataResponse = {
       value: MsgUpdateGroupMetadataResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupMetadataResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgCreateGroupPolicy(): MsgCreateGroupPolicy {
   return {
@@ -1896,6 +1926,9 @@ export const MsgCreateGroupPolicy = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateGroupPolicy.typeUrl)) {
+      return;
+    }
     ThresholdDecisionPolicy.registerTypeUrl();
     PercentageDecisionPolicy.registerTypeUrl();
   }
@@ -2003,7 +2036,11 @@ export const MsgCreateGroupPolicyResponse = {
       value: MsgCreateGroupPolicyResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateGroupPolicyResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUpdateGroupPolicyAdmin(): MsgUpdateGroupPolicyAdmin {
   return {
@@ -2142,7 +2179,11 @@ export const MsgUpdateGroupPolicyAdmin = {
       value: MsgUpdateGroupPolicyAdmin.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupPolicyAdmin.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgCreateGroupWithPolicy(): MsgCreateGroupWithPolicy {
   return {
@@ -2345,6 +2386,9 @@ export const MsgCreateGroupWithPolicy = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateGroupWithPolicy.typeUrl)) {
+      return;
+    }
     ThresholdDecisionPolicy.registerTypeUrl();
     PercentageDecisionPolicy.registerTypeUrl();
   }
@@ -2471,7 +2515,11 @@ export const MsgCreateGroupWithPolicyResponse = {
       value: MsgCreateGroupWithPolicyResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateGroupWithPolicyResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUpdateGroupPolicyAdminResponse(): MsgUpdateGroupPolicyAdminResponse {
   return {};
@@ -2556,7 +2604,11 @@ export const MsgUpdateGroupPolicyAdminResponse = {
       value: MsgUpdateGroupPolicyAdminResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupPolicyAdminResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUpdateGroupPolicyDecisionPolicy(): MsgUpdateGroupPolicyDecisionPolicy {
   return {
@@ -2698,6 +2750,9 @@ export const MsgUpdateGroupPolicyDecisionPolicy = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupPolicyDecisionPolicy.typeUrl)) {
+      return;
+    }
     ThresholdDecisionPolicy.registerTypeUrl();
     PercentageDecisionPolicy.registerTypeUrl();
   }
@@ -2785,7 +2840,11 @@ export const MsgUpdateGroupPolicyDecisionPolicyResponse = {
       value: MsgUpdateGroupPolicyDecisionPolicyResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupPolicyDecisionPolicyResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUpdateGroupPolicyMetadata(): MsgUpdateGroupPolicyMetadata {
   return {
@@ -2924,7 +2983,11 @@ export const MsgUpdateGroupPolicyMetadata = {
       value: MsgUpdateGroupPolicyMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupPolicyMetadata.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgUpdateGroupPolicyMetadataResponse(): MsgUpdateGroupPolicyMetadataResponse {
   return {};
@@ -3009,7 +3072,11 @@ export const MsgUpdateGroupPolicyMetadataResponse = {
       value: MsgUpdateGroupPolicyMetadataResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupPolicyMetadataResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgSubmitProposal(): MsgSubmitProposal {
   return {
@@ -3202,7 +3269,11 @@ export const MsgSubmitProposal = {
       value: MsgSubmitProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSubmitProposal.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgSubmitProposalResponse(): MsgSubmitProposalResponse {
   return {
@@ -3309,7 +3380,11 @@ export const MsgSubmitProposalResponse = {
       value: MsgSubmitProposalResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSubmitProposalResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgWithdrawProposal(): MsgWithdrawProposal {
   return {
@@ -3433,7 +3508,11 @@ export const MsgWithdrawProposal = {
       value: MsgWithdrawProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgWithdrawProposal.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgWithdrawProposalResponse(): MsgWithdrawProposalResponse {
   return {};
@@ -3518,7 +3597,11 @@ export const MsgWithdrawProposalResponse = {
       value: MsgWithdrawProposalResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgWithdrawProposalResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgVote(): MsgVote {
   return {
@@ -3693,7 +3776,11 @@ export const MsgVote = {
       value: MsgVote.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgVote.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgVoteResponse(): MsgVoteResponse {
   return {};
@@ -3778,7 +3865,11 @@ export const MsgVoteResponse = {
       value: MsgVoteResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgVoteResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgExec(): MsgExec {
   return {
@@ -3902,7 +3993,11 @@ export const MsgExec = {
       value: MsgExec.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExec.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgExecResponse(): MsgExecResponse {
   return {};
@@ -3987,7 +4082,11 @@ export const MsgExecResponse = {
       value: MsgExecResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExecResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgLeaveGroup(): MsgLeaveGroup {
   return {
@@ -4111,7 +4210,11 @@ export const MsgLeaveGroup = {
       value: MsgLeaveGroup.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgLeaveGroup.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgLeaveGroupResponse(): MsgLeaveGroupResponse {
   return {};
@@ -4196,5 +4299,9 @@ export const MsgLeaveGroupResponse = {
       value: MsgLeaveGroupResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgLeaveGroupResponse.typeUrl)) {
+      return;
+    }
+  }
 };

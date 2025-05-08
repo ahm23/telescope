@@ -326,6 +326,9 @@ export const MsgCreateStableswapPool = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateStableswapPool.typeUrl)) {
+      return;
+    }
     PoolParams.registerTypeUrl();
     Coin.registerTypeUrl();
   }
@@ -435,7 +438,11 @@ export const MsgCreateStableswapPoolResponse = {
       value: MsgCreateStableswapPoolResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateStableswapPoolResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgStableSwapAdjustScalingFactors(): MsgStableSwapAdjustScalingFactors {
   return {
@@ -595,7 +602,11 @@ export const MsgStableSwapAdjustScalingFactors = {
       value: MsgStableSwapAdjustScalingFactors.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgStableSwapAdjustScalingFactors.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgStableSwapAdjustScalingFactorsResponse(): MsgStableSwapAdjustScalingFactorsResponse {
   return {};
@@ -680,5 +691,9 @@ export const MsgStableSwapAdjustScalingFactorsResponse = {
       value: MsgStableSwapAdjustScalingFactorsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgStableSwapAdjustScalingFactorsResponse.typeUrl)) {
+      return;
+    }
+  }
 };

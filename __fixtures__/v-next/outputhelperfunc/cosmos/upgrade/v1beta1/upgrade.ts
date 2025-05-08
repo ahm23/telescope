@@ -396,7 +396,11 @@ export const Plan = {
       value: Plan.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Plan.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSoftwareUpgradeProposal(): SoftwareUpgradeProposal {
   return {
@@ -538,6 +542,9 @@ export const SoftwareUpgradeProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SoftwareUpgradeProposal.typeUrl)) {
+      return;
+    }
     Plan.registerTypeUrl();
   }
 };
@@ -661,7 +668,11 @@ export const CancelSoftwareUpgradeProposal = {
       value: CancelSoftwareUpgradeProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CancelSoftwareUpgradeProposal.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseModuleVersion(): ModuleVersion {
   return {
@@ -785,5 +796,9 @@ export const ModuleVersion = {
       value: ModuleVersion.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleVersion.typeUrl)) {
+      return;
+    }
+  }
 };

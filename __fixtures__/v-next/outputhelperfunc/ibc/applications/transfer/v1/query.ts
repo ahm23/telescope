@@ -273,7 +273,11 @@ export const QueryDenomTraceRequest = {
       value: QueryDenomTraceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomTraceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryDenomTraceResponse(): QueryDenomTraceResponse {
   return {
@@ -381,6 +385,9 @@ export const QueryDenomTraceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomTraceResponse.typeUrl)) {
+      return;
+    }
     DenomTrace.registerTypeUrl();
   }
 };
@@ -490,6 +497,9 @@ export const QueryDenomTracesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomTracesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -626,6 +636,9 @@ export const QueryDenomTracesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomTracesResponse.typeUrl)) {
+      return;
+    }
     DenomTrace.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -713,7 +726,11 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -821,6 +838,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };

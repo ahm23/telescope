@@ -433,7 +433,11 @@ export const IdentifiedClientState = {
       value: IdentifiedClientState.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(IdentifiedClientState.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseConsensusStateWithHeight(): ConsensusStateWithHeight {
   return {
@@ -559,7 +563,11 @@ export const ConsensusStateWithHeight = {
       value: ConsensusStateWithHeight.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsensusStateWithHeight.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseClientConsensusStates(): ClientConsensusStates {
   return {
@@ -692,6 +700,9 @@ export const ClientConsensusStates = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClientConsensusStates.typeUrl)) {
+      return;
+    }
     ConsensusStateWithHeight.registerTypeUrl();
   }
 };
@@ -1145,7 +1156,11 @@ export const Height = {
       value: Height.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Height.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseParams(): Params {
   return {
@@ -1260,5 +1275,9 @@ export const Params = {
       value: Params.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -273,6 +273,9 @@ export const QueryProvidersResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProvidersResponse.typeUrl)) {
+      return;
+    }
     Provider.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -397,7 +400,11 @@ export const QueryProviderRequest = {
       value: QueryProviderRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProviderRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryAllProvidersAttributesRequest(): QueryAllProvidersAttributesRequest {
   return {
@@ -505,6 +512,9 @@ export const QueryAllProvidersAttributesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllProvidersAttributesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -631,6 +641,9 @@ export const QueryProviderAttributesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProviderAttributesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -754,7 +767,11 @@ export const QueryProviderAuditorRequest = {
       value: QueryProviderAuditorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProviderAuditorRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryAuditorAttributesRequest(): QueryAuditorAttributesRequest {
   return {
@@ -879,6 +896,9 @@ export const QueryAuditorAttributesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAuditorAttributesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };

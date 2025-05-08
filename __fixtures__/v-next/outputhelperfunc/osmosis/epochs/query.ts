@@ -2,6 +2,7 @@ import { EpochInfo, EpochInfoAmino, EpochInfoSDKType } from "./genesis";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "osmosis.epochs.v1beta1";
 export interface QueryEpochsInfoRequest {}
 export interface QueryEpochsInfoRequestProtoMsg {
@@ -148,7 +149,11 @@ export const QueryEpochsInfoRequest = {
       value: QueryEpochsInfoRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEpochsInfoRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryEpochsInfoResponse(): QueryEpochsInfoResponse {
   return {
@@ -264,6 +269,9 @@ export const QueryEpochsInfoResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEpochsInfoResponse.typeUrl)) {
+      return;
+    }
     EpochInfo.registerTypeUrl();
   }
 };
@@ -370,7 +378,11 @@ export const QueryCurrentEpochRequest = {
       value: QueryCurrentEpochRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCurrentEpochRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryCurrentEpochResponse(): QueryCurrentEpochResponse {
   return {
@@ -477,5 +489,9 @@ export const QueryCurrentEpochResponse = {
       value: QueryCurrentEpochResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCurrentEpochResponse.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -754,7 +754,11 @@ export const QueryPoolRequest = {
       value: QueryPoolRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryPoolResponse(): QueryPoolResponse {
   return {
@@ -862,6 +866,9 @@ export const QueryPoolResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolResponse.typeUrl)) {
+      return;
+    }
     Pool1.registerTypeUrl();
     Pool2.registerTypeUrl();
   }
@@ -972,6 +979,9 @@ export const QueryPoolsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1108,6 +1118,9 @@ export const QueryPoolsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolsResponse.typeUrl)) {
+      return;
+    }
     Pool1.registerTypeUrl();
     Pool2.registerTypeUrl();
     PageResponse.registerTypeUrl();
@@ -1196,7 +1209,11 @@ export const QueryNumPoolsRequest = {
       value: QueryNumPoolsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryNumPoolsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryNumPoolsResponse(): QueryNumPoolsResponse {
   return {
@@ -1303,7 +1320,11 @@ export const QueryNumPoolsResponse = {
       value: QueryNumPoolsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryNumPoolsResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryPoolTypeRequest(): QueryPoolTypeRequest {
   return {
@@ -1410,7 +1431,11 @@ export const QueryPoolTypeRequest = {
       value: QueryPoolTypeRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolTypeRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryPoolTypeResponse(): QueryPoolTypeResponse {
   return {
@@ -1515,7 +1540,11 @@ export const QueryPoolTypeResponse = {
       value: QueryPoolTypeResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolTypeResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryCalcJoinPoolSharesRequest(): QueryCalcJoinPoolSharesRequest {
   return {
@@ -1650,6 +1679,9 @@ export const QueryCalcJoinPoolSharesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCalcJoinPoolSharesRequest.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1784,6 +1816,9 @@ export const QueryCalcJoinPoolSharesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCalcJoinPoolSharesResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1909,7 +1944,11 @@ export const QueryCalcExitPoolCoinsFromSharesRequest = {
       value: QueryCalcExitPoolCoinsFromSharesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCalcExitPoolCoinsFromSharesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryCalcExitPoolCoinsFromSharesResponse(): QueryCalcExitPoolCoinsFromSharesResponse {
   return {
@@ -2025,6 +2064,9 @@ export const QueryCalcExitPoolCoinsFromSharesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCalcExitPoolCoinsFromSharesResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2133,7 +2175,11 @@ export const QueryPoolParamsRequest = {
       value: QueryPoolParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolParamsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryPoolParamsResponse(): QueryPoolParamsResponse {
   return {
@@ -2240,7 +2286,11 @@ export const QueryPoolParamsResponse = {
       value: QueryPoolParamsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolParamsResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryTotalPoolLiquidityRequest(): QueryTotalPoolLiquidityRequest {
   return {
@@ -2347,7 +2397,11 @@ export const QueryTotalPoolLiquidityRequest = {
       value: QueryTotalPoolLiquidityRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalPoolLiquidityRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryTotalPoolLiquidityResponse(): QueryTotalPoolLiquidityResponse {
   return {
@@ -2463,6 +2517,9 @@ export const QueryTotalPoolLiquidityResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalPoolLiquidityResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2571,7 +2628,11 @@ export const QueryTotalSharesRequest = {
       value: QueryTotalSharesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalSharesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryTotalSharesResponse(): QueryTotalSharesResponse {
   return {
@@ -2679,6 +2740,9 @@ export const QueryTotalSharesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalSharesResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2815,6 +2879,9 @@ export const QueryCalcJoinPoolNoSwapSharesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCalcJoinPoolNoSwapSharesRequest.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2949,6 +3016,9 @@ export const QueryCalcJoinPoolNoSwapSharesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCalcJoinPoolNoSwapSharesResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -3091,7 +3161,11 @@ export const QuerySpotPriceRequest = {
       value: QuerySpotPriceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySpotPriceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryPoolsWithFilterRequest(): QueryPoolsWithFilterRequest {
   return {
@@ -3243,6 +3317,9 @@ export const QueryPoolsWithFilterRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolsWithFilterRequest.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
     PageRequest.registerTypeUrl();
   }
@@ -3380,6 +3457,9 @@ export const QueryPoolsWithFilterResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolsWithFilterResponse.typeUrl)) {
+      return;
+    }
     Pool1.registerTypeUrl();
     Pool2.registerTypeUrl();
     PageResponse.registerTypeUrl();
@@ -3488,7 +3568,11 @@ export const QuerySpotPriceResponse = {
       value: QuerySpotPriceResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySpotPriceResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQuerySwapExactAmountInRequest(): QuerySwapExactAmountInRequest {
   return {
@@ -3657,6 +3741,9 @@ export const QuerySwapExactAmountInRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySwapExactAmountInRequest.typeUrl)) {
+      return;
+    }
     SwapAmountInRoute.registerTypeUrl();
   }
 };
@@ -3763,7 +3850,11 @@ export const QuerySwapExactAmountInResponse = {
       value: QuerySwapExactAmountInResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySwapExactAmountInResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQuerySwapExactAmountOutRequest(): QuerySwapExactAmountOutRequest {
   return {
@@ -3932,6 +4023,9 @@ export const QuerySwapExactAmountOutRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySwapExactAmountOutRequest.typeUrl)) {
+      return;
+    }
     SwapAmountOutRoute.registerTypeUrl();
   }
 };
@@ -4038,7 +4132,11 @@ export const QuerySwapExactAmountOutResponse = {
       value: QuerySwapExactAmountOutResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySwapExactAmountOutResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryTotalLiquidityRequest(): QueryTotalLiquidityRequest {
   return {};
@@ -4123,7 +4221,11 @@ export const QueryTotalLiquidityRequest = {
       value: QueryTotalLiquidityRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalLiquidityRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryTotalLiquidityResponse(): QueryTotalLiquidityResponse {
   return {
@@ -4239,6 +4341,9 @@ export const QueryTotalLiquidityResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalLiquidityResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

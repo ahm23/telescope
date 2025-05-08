@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * Monitoring configuration of the service.
@@ -398,6 +399,9 @@ export const Monitoring = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Monitoring.typeUrl)) {
+      return;
+    }
     Monitoring_MonitoringDestination.registerTypeUrl();
   }
 };
@@ -524,5 +528,9 @@ export const Monitoring_MonitoringDestination = {
       value: Monitoring_MonitoringDestination.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Monitoring_MonitoringDestination.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "tendermint.libs.bits";
 export interface BitArray {
   bits: bigint;
@@ -156,5 +157,9 @@ export const BitArray = {
       value: BitArray.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BitArray.typeUrl)) {
+      return;
+    }
+  }
 };

@@ -692,6 +692,9 @@ export const Api = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Api.typeUrl)) {
+      return;
+    }
     Method.registerTypeUrl();
     Option.registerTypeUrl();
     SourceContext.registerTypeUrl();
@@ -907,6 +910,9 @@ export const Method = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Method.typeUrl)) {
+      return;
+    }
     Option.registerTypeUrl();
   }
 };
@@ -1023,5 +1029,9 @@ export const Mixin = {
       value: Mixin.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Mixin.typeUrl)) {
+      return;
+    }
+  }
 };

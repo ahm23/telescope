@@ -219,7 +219,11 @@ export const QueryEvidenceRequest = {
       value: QueryEvidenceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEvidenceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryEvidenceResponse(): QueryEvidenceResponse {
   return {
@@ -326,7 +330,11 @@ export const QueryEvidenceResponse = {
       value: QueryEvidenceResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEvidenceResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryAllEvidenceRequest(): QueryAllEvidenceRequest {
   return {
@@ -434,6 +442,9 @@ export const QueryAllEvidenceRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllEvidenceRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -570,6 +581,9 @@ export const QueryAllEvidenceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllEvidenceResponse.typeUrl)) {
+      return;
+    }
     PageResponse.registerTypeUrl();
   }
 };

@@ -3,6 +3,7 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { Decimal } from "@cosmjs/math";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.distribution.v1beta1";
 /** Params defines the set of params for the distribution module. */
 export interface Params {
@@ -581,7 +582,11 @@ export const Params = {
       value: Params.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseValidatorHistoricalRewards(): ValidatorHistoricalRewards {
   return {
@@ -714,6 +719,9 @@ export const ValidatorHistoricalRewards = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorHistoricalRewards.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };
@@ -850,6 +858,9 @@ export const ValidatorCurrentRewards = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorCurrentRewards.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };
@@ -967,6 +978,9 @@ export const ValidatorAccumulatedCommission = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorAccumulatedCommission.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };
@@ -1084,6 +1098,9 @@ export const ValidatorOutstandingRewards = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorOutstandingRewards.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };
@@ -1209,7 +1226,11 @@ export const ValidatorSlashEvent = {
       value: ValidatorSlashEvent.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorSlashEvent.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseValidatorSlashEvents(): ValidatorSlashEvents {
   return {
@@ -1325,6 +1346,9 @@ export const ValidatorSlashEvents = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorSlashEvents.typeUrl)) {
+      return;
+    }
     ValidatorSlashEvent.registerTypeUrl();
   }
 };
@@ -1442,6 +1466,9 @@ export const FeePool = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(FeePool.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };
@@ -1610,6 +1637,9 @@ export const CommunityPoolSpendProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CommunityPoolSpendProposal.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1754,7 +1784,11 @@ export const DelegatorStartingInfo = {
       value: DelegatorStartingInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DelegatorStartingInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseDelegationDelegatorReward(): DelegationDelegatorReward {
   return {
@@ -1887,6 +1921,9 @@ export const DelegationDelegatorReward = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DelegationDelegatorReward.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };
@@ -2061,5 +2098,9 @@ export const CommunityPoolSpendProposalWithDeposit = {
       value: CommunityPoolSpendProposalWithDeposit.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CommunityPoolSpendProposalWithDeposit.typeUrl)) {
+      return;
+    }
+  }
 };

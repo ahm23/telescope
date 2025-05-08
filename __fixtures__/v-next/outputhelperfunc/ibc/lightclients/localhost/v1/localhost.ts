@@ -163,6 +163,9 @@ export const ClientState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClientState.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };

@@ -1747,6 +1747,9 @@ export const Request = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Request.typeUrl)) {
+      return;
+    }
     RequestEcho.registerTypeUrl();
     RequestFlush.registerTypeUrl();
     RequestInfo.registerTypeUrl();
@@ -1860,7 +1863,11 @@ export const RequestEcho = {
       value: RequestEcho.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestEcho.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRequestFlush(): RequestFlush {
   return {};
@@ -1938,7 +1945,11 @@ export const RequestFlush = {
       value: RequestFlush.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestFlush.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRequestInfo(): RequestInfo {
   return {
@@ -2074,7 +2085,11 @@ export const RequestInfo = {
       value: RequestInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRequestSetOption(): RequestSetOption {
   return {
@@ -2189,7 +2204,11 @@ export const RequestSetOption = {
       value: RequestSetOption.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestSetOption.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRequestInitChain(): RequestInitChain {
   return {
@@ -2387,6 +2406,9 @@ export const RequestInitChain = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestInitChain.typeUrl)) {
+      return;
+    }
     ConsensusParams.registerTypeUrl();
     ValidatorUpdate.registerTypeUrl();
   }
@@ -2540,7 +2562,11 @@ export const RequestQuery = {
       value: RequestQuery.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestQuery.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRequestBeginBlock(): RequestBeginBlock {
   return {
@@ -2704,6 +2730,9 @@ export const RequestBeginBlock = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestBeginBlock.typeUrl)) {
+      return;
+    }
     Header.registerTypeUrl();
     LastCommitInfo.registerTypeUrl();
     Evidence.registerTypeUrl();
@@ -2822,7 +2851,11 @@ export const RequestCheckTx = {
       value: RequestCheckTx.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestCheckTx.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRequestDeliverTx(): RequestDeliverTx {
   return {
@@ -2920,7 +2953,11 @@ export const RequestDeliverTx = {
       value: RequestDeliverTx.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestDeliverTx.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRequestEndBlock(): RequestEndBlock {
   return {
@@ -3020,7 +3057,11 @@ export const RequestEndBlock = {
       value: RequestEndBlock.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestEndBlock.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRequestCommit(): RequestCommit {
   return {};
@@ -3098,7 +3139,11 @@ export const RequestCommit = {
       value: RequestCommit.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestCommit.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRequestListSnapshots(): RequestListSnapshots {
   return {};
@@ -3176,7 +3221,11 @@ export const RequestListSnapshots = {
       value: RequestListSnapshots.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestListSnapshots.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRequestOfferSnapshot(): RequestOfferSnapshot {
   return {
@@ -3294,6 +3343,9 @@ export const RequestOfferSnapshot = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestOfferSnapshot.typeUrl)) {
+      return;
+    }
     Snapshot.registerTypeUrl();
   }
 };
@@ -3429,7 +3481,11 @@ export const RequestLoadSnapshotChunk = {
       value: RequestLoadSnapshotChunk.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestLoadSnapshotChunk.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseRequestApplySnapshotChunk(): RequestApplySnapshotChunk {
   return {
@@ -3561,7 +3617,11 @@ export const RequestApplySnapshotChunk = {
       value: RequestApplySnapshotChunk.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestApplySnapshotChunk.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseResponse(): Response {
   return {
@@ -3947,6 +4007,9 @@ export const Response = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Response.typeUrl)) {
+      return;
+    }
     ResponseException.registerTypeUrl();
     ResponseEcho.registerTypeUrl();
     ResponseFlush.registerTypeUrl();
@@ -4061,7 +4124,11 @@ export const ResponseException = {
       value: ResponseException.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseException.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseResponseEcho(): ResponseEcho {
   return {
@@ -4159,7 +4226,11 @@ export const ResponseEcho = {
       value: ResponseEcho.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseEcho.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseResponseFlush(): ResponseFlush {
   return {};
@@ -4237,7 +4308,11 @@ export const ResponseFlush = {
       value: ResponseFlush.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseFlush.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseResponseInfo(): ResponseInfo {
   return {
@@ -4407,7 +4482,11 @@ export const ResponseInfo = {
       value: ResponseInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseInfo.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseResponseSetOption(): ResponseSetOption {
   return {
@@ -4539,7 +4618,11 @@ export const ResponseSetOption = {
       value: ResponseSetOption.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseSetOption.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseResponseInitChain(): ResponseInitChain {
   return {
@@ -4684,6 +4767,9 @@ export const ResponseInitChain = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseInitChain.typeUrl)) {
+      return;
+    }
     ConsensusParams.registerTypeUrl();
     ValidatorUpdate.registerTypeUrl();
   }
@@ -4927,6 +5013,9 @@ export const ResponseQuery = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseQuery.typeUrl)) {
+      return;
+    }
     ProofOps.registerTypeUrl();
   }
 };
@@ -5037,6 +5126,9 @@ export const ResponseBeginBlock = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseBeginBlock.typeUrl)) {
+      return;
+    }
     Event.registerTypeUrl();
   }
 };
@@ -5270,6 +5362,9 @@ export const ResponseCheckTx = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseCheckTx.typeUrl)) {
+      return;
+    }
     Event.registerTypeUrl();
   }
 };
@@ -5503,6 +5598,9 @@ export const ResponseDeliverTx = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseDeliverTx.typeUrl)) {
+      return;
+    }
     Event.registerTypeUrl();
   }
 };
@@ -5659,6 +5757,9 @@ export const ResponseEndBlock = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseEndBlock.typeUrl)) {
+      return;
+    }
     ValidatorUpdate.registerTypeUrl();
     ConsensusParams.registerTypeUrl();
     Event.registerTypeUrl();
@@ -5779,7 +5880,11 @@ export const ResponseCommit = {
       value: ResponseCommit.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseCommit.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseResponseListSnapshots(): ResponseListSnapshots {
   return {
@@ -5888,6 +5993,9 @@ export const ResponseListSnapshots = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseListSnapshots.typeUrl)) {
+      return;
+    }
     Snapshot.registerTypeUrl();
   }
 };
@@ -5987,7 +6095,11 @@ export const ResponseOfferSnapshot = {
       value: ResponseOfferSnapshot.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseOfferSnapshot.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseResponseLoadSnapshotChunk(): ResponseLoadSnapshotChunk {
   return {
@@ -6085,7 +6197,11 @@ export const ResponseLoadSnapshotChunk = {
       value: ResponseLoadSnapshotChunk.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseLoadSnapshotChunk.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseResponseApplySnapshotChunk(): ResponseApplySnapshotChunk {
   return {
@@ -6246,7 +6362,11 @@ export const ResponseApplySnapshotChunk = {
       value: ResponseApplySnapshotChunk.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseApplySnapshotChunk.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseConsensusParams(): ConsensusParams {
   return {
@@ -6404,6 +6524,9 @@ export const ConsensusParams = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsensusParams.typeUrl)) {
+      return;
+    }
     BlockParams.registerTypeUrl();
     EvidenceParams.registerTypeUrl();
     ValidatorParams.registerTypeUrl();
@@ -6527,7 +6650,11 @@ export const BlockParams = {
       value: BlockParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BlockParams.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseLastCommitInfo(): LastCommitInfo {
   return {
@@ -6653,6 +6780,9 @@ export const LastCommitInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LastCommitInfo.typeUrl)) {
+      return;
+    }
     VoteInfo.registerTypeUrl();
   }
 };
@@ -6780,6 +6910,9 @@ export const Event = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Event.typeUrl)) {
+      return;
+    }
     EventAttribute.registerTypeUrl();
   }
 };
@@ -6913,7 +7046,11 @@ export const EventAttribute = {
       value: EventAttribute.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EventAttribute.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseTxResult(): TxResult {
   return {
@@ -7067,6 +7204,9 @@ export const TxResult = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TxResult.typeUrl)) {
+      return;
+    }
     ResponseDeliverTx.registerTypeUrl();
   }
 };
@@ -7185,7 +7325,11 @@ export const Validator = {
       value: Validator.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Validator.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseValidatorUpdate(): ValidatorUpdate {
   return {
@@ -7305,6 +7449,9 @@ export const ValidatorUpdate = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorUpdate.typeUrl)) {
+      return;
+    }
     PublicKey.registerTypeUrl();
   }
 };
@@ -7424,6 +7571,9 @@ export const VoteInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(VoteInfo.typeUrl)) {
+      return;
+    }
     Validator.registerTypeUrl();
   }
 };
@@ -7598,6 +7748,9 @@ export const Evidence = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Evidence.typeUrl)) {
+      return;
+    }
     Validator.registerTypeUrl();
   }
 };
@@ -7767,5 +7920,9 @@ export const Snapshot = {
       value: Snapshot.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Snapshot.typeUrl)) {
+      return;
+    }
+  }
 };

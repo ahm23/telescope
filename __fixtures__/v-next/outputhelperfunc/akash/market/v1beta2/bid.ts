@@ -404,6 +404,9 @@ export const MsgCreateBid = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateBid.typeUrl)) {
+      return;
+    }
     OrderID.registerTypeUrl();
     DecCoin.registerTypeUrl();
     Coin.registerTypeUrl();
@@ -492,7 +495,11 @@ export const MsgCreateBidResponse = {
       value: MsgCreateBidResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateBidResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMsgCloseBid(): MsgCloseBid {
   return {
@@ -600,6 +607,9 @@ export const MsgCloseBid = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseBid.typeUrl)) {
+      return;
+    }
     BidID.registerTypeUrl();
   }
 };
@@ -686,7 +696,11 @@ export const MsgCloseBidResponse = {
       value: MsgCloseBidResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseBidResponse.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseBidID(): BidID {
   return {
@@ -861,7 +875,11 @@ export const BidID = {
       value: BidID.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BidID.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseBid(): Bid {
   return {
@@ -1024,6 +1042,9 @@ export const Bid = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Bid.typeUrl)) {
+      return;
+    }
     BidID.registerTypeUrl();
     DecCoin.registerTypeUrl();
   }
@@ -1218,5 +1239,9 @@ export const BidFilters = {
       value: BidFilters.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BidFilters.typeUrl)) {
+      return;
+    }
+  }
 };

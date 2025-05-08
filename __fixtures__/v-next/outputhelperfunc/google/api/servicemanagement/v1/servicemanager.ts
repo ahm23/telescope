@@ -899,7 +899,11 @@ export const ListServicesRequest = {
       value: ListServicesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServicesRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListServicesResponse(): ListServicesResponse {
   return {
@@ -1025,6 +1029,9 @@ export const ListServicesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServicesResponse.typeUrl)) {
+      return;
+    }
     ManagedService.registerTypeUrl();
   }
 };
@@ -1124,7 +1131,11 @@ export const GetServiceRequest = {
       value: GetServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetServiceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseCreateServiceRequest(): CreateServiceRequest {
   return {
@@ -1225,6 +1236,9 @@ export const CreateServiceRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateServiceRequest.typeUrl)) {
+      return;
+    }
     ManagedService.registerTypeUrl();
   }
 };
@@ -1324,7 +1338,11 @@ export const DeleteServiceRequest = {
       value: DeleteServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteServiceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseUndeleteServiceRequest(): UndeleteServiceRequest {
   return {
@@ -1422,7 +1440,11 @@ export const UndeleteServiceRequest = {
       value: UndeleteServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UndeleteServiceRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseUndeleteServiceResponse(): UndeleteServiceResponse {
   return {
@@ -1523,6 +1545,9 @@ export const UndeleteServiceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UndeleteServiceResponse.typeUrl)) {
+      return;
+    }
     ManagedService.registerTypeUrl();
   }
 };
@@ -1656,7 +1681,11 @@ export const GetServiceConfigRequest = {
       value: GetServiceConfigRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetServiceConfigRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListServiceConfigsRequest(): ListServiceConfigsRequest {
   return {
@@ -1788,7 +1817,11 @@ export const ListServiceConfigsRequest = {
       value: ListServiceConfigsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServiceConfigsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListServiceConfigsResponse(): ListServiceConfigsResponse {
   return {
@@ -1914,6 +1947,9 @@ export const ListServiceConfigsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServiceConfigsResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };
@@ -2033,6 +2069,9 @@ export const CreateServiceConfigRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateServiceConfigRequest.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };
@@ -2169,6 +2208,9 @@ export const SubmitConfigSourceRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SubmitConfigSourceRequest.typeUrl)) {
+      return;
+    }
     ConfigSource.registerTypeUrl();
   }
 };
@@ -2271,6 +2313,9 @@ export const SubmitConfigSourceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SubmitConfigSourceResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };
@@ -2390,6 +2435,9 @@ export const CreateServiceRolloutRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateServiceRolloutRequest.typeUrl)) {
+      return;
+    }
     Rollout.registerTypeUrl();
   }
 };
@@ -2540,7 +2588,11 @@ export const ListServiceRolloutsRequest = {
       value: ListServiceRolloutsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServiceRolloutsRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseListServiceRolloutsResponse(): ListServiceRolloutsResponse {
   return {
@@ -2666,6 +2718,9 @@ export const ListServiceRolloutsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServiceRolloutsResponse.typeUrl)) {
+      return;
+    }
     Rollout.registerTypeUrl();
   }
 };
@@ -2782,7 +2837,11 @@ export const GetServiceRolloutRequest = {
       value: GetServiceRolloutRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetServiceRolloutRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGenerateConfigReportRequest(): GenerateConfigReportRequest {
   return {
@@ -2901,7 +2960,11 @@ export const GenerateConfigReportRequest = {
       value: GenerateConfigReportRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenerateConfigReportRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseGenerateConfigReportResponse(): GenerateConfigReportResponse {
   return {
@@ -3071,6 +3134,9 @@ export const GenerateConfigReportResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenerateConfigReportResponse.typeUrl)) {
+      return;
+    }
     ChangeReport.registerTypeUrl();
     Diagnostic.registerTypeUrl();
   }

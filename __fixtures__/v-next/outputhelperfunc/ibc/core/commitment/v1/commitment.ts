@@ -2,6 +2,7 @@ import { CommitmentProof, CommitmentProofAmino, CommitmentProofSDKType } from ".
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, bytesFromBase64, base64FromBytes, DeepPartial } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../../registry";
 export const protobufPackage = "ibc.core.commitment.v1";
 /**
  * MerkleRoot defines a merkle root hash.
@@ -237,7 +238,11 @@ export const MerkleRoot = {
       value: MerkleRoot.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MerkleRoot.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMerklePrefix(): MerklePrefix {
   return {
@@ -342,7 +347,11 @@ export const MerklePrefix = {
       value: MerklePrefix.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MerklePrefix.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMerklePath(): MerklePath {
   return {
@@ -457,7 +466,11 @@ export const MerklePath = {
       value: MerklePath.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MerklePath.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseMerkleProof(): MerkleProof {
   return {
@@ -573,6 +586,9 @@ export const MerkleProof = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MerkleProof.typeUrl)) {
+      return;
+    }
     CommitmentProof.registerTypeUrl();
   }
 };

@@ -189,6 +189,9 @@ export const GenesisOwners = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisOwners.typeUrl)) {
+      return;
+    }
     CapabilityOwners.registerTypeUrl();
   }
 };
@@ -325,6 +328,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     GenesisOwners.registerTypeUrl();
   }
 };

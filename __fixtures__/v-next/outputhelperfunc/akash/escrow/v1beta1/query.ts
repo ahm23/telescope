@@ -292,6 +292,9 @@ export const QueryAccountsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAccountsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -428,6 +431,9 @@ export const QueryAccountsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAccountsResponse.typeUrl)) {
+      return;
+    }
     Account.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -623,6 +629,9 @@ export const QueryPaymentsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPaymentsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -759,6 +768,9 @@ export const QueryPaymentsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPaymentsResponse.typeUrl)) {
+      return;
+    }
     Payment.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }

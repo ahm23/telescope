@@ -123,7 +123,11 @@ export const QueryConfigRequest = {
       value: QueryConfigRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConfigRequest.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseQueryConfigResponse(): QueryConfigResponse {
   return {
@@ -231,6 +235,9 @@ export const QueryConfigResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConfigResponse.typeUrl)) {
+      return;
+    }
     Config.registerTypeUrl();
   }
 };

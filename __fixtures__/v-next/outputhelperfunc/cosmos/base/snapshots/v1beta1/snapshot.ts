@@ -407,6 +407,9 @@ export const Snapshot = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Snapshot.typeUrl)) {
+      return;
+    }
     Metadata.registerTypeUrl();
   }
 };
@@ -523,7 +526,11 @@ export const Metadata = {
       value: Metadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Metadata.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSnapshotItem(): SnapshotItem {
   return {
@@ -726,6 +733,9 @@ export const SnapshotItem = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SnapshotItem.typeUrl)) {
+      return;
+    }
     SnapshotStoreItem.registerTypeUrl();
     SnapshotIAVLItem.registerTypeUrl();
     SnapshotExtensionMeta.registerTypeUrl();
@@ -837,7 +847,11 @@ export const SnapshotStoreItem = {
       value: SnapshotStoreItem.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SnapshotStoreItem.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSnapshotIAVLItem(): SnapshotIAVLItem {
   return {
@@ -995,7 +1009,11 @@ export const SnapshotIAVLItem = {
       value: SnapshotIAVLItem.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SnapshotIAVLItem.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSnapshotExtensionMeta(): SnapshotExtensionMeta {
   return {
@@ -1117,7 +1135,11 @@ export const SnapshotExtensionMeta = {
       value: SnapshotExtensionMeta.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SnapshotExtensionMeta.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSnapshotExtensionPayload(): SnapshotExtensionPayload {
   return {
@@ -1222,7 +1244,11 @@ export const SnapshotExtensionPayload = {
       value: SnapshotExtensionPayload.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SnapshotExtensionPayload.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSnapshotKVItem(): SnapshotKVItem {
   return {
@@ -1344,7 +1370,11 @@ export const SnapshotKVItem = {
       value: SnapshotKVItem.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SnapshotKVItem.typeUrl)) {
+      return;
+    }
+  }
 };
 function createBaseSnapshotSchema(): SnapshotSchema {
   return {
@@ -1459,5 +1489,9 @@ export const SnapshotSchema = {
       value: SnapshotSchema.encode(message).finish()
     };
   },
-  registerTypeUrl() {}
+  registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SnapshotSchema.typeUrl)) {
+      return;
+    }
+  }
 };

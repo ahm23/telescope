@@ -197,6 +197,9 @@ export const CertificateResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CertificateResponse.typeUrl)) {
+      return;
+    }
     Certificate.registerTypeUrl();
   }
 };
@@ -325,6 +328,9 @@ export const QueryCertificatesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCertificatesRequest.typeUrl)) {
+      return;
+    }
     CertificateFilter.registerTypeUrl();
     PageRequest.registerTypeUrl();
   }
@@ -462,6 +468,9 @@ export const QueryCertificatesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCertificatesResponse.typeUrl)) {
+      return;
+    }
     CertificateResponse.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }

@@ -173,6 +173,9 @@ export const Resource = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Resource.typeUrl)) {
+      return;
+    }
     ResourceUnits.registerTypeUrl();
     DecCoin.registerTypeUrl();
   }

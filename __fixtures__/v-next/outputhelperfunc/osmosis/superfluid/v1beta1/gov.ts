@@ -267,7 +267,7 @@ export const SetSuperfluidAssetsProposal = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(SetSuperfluidAssetsProposal.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SetSuperfluidAssetsProposal.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(SetSuperfluidAssetsProposal.typeUrl, SetSuperfluidAssetsProposal);
@@ -424,7 +424,7 @@ export const RemoveSuperfluidAssetsProposal = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(RemoveSuperfluidAssetsProposal.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RemoveSuperfluidAssetsProposal.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(RemoveSuperfluidAssetsProposal.typeUrl, RemoveSuperfluidAssetsProposal);
@@ -606,7 +606,7 @@ export const UpdateUnpoolWhiteListProposal = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(UpdateUnpoolWhiteListProposal.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateUnpoolWhiteListProposal.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(UpdateUnpoolWhiteListProposal.typeUrl, UpdateUnpoolWhiteListProposal);

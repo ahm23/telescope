@@ -62,16 +62,16 @@ export const createRegisterAminoProtoMapping = (
 };
 
 /**
- * create ast: if(GlobalDecoderRegistry.getDecoder(PeriodicAllowance.typeUrl)) {
- *   return;
- * }
+ * create ast: if(!GlobalDecoderRegistry.registerExistingTypeUrl(SignerInfo.typeUrl)){
+ *    return;
+ *  }
  * @param context
  * @param name
  * @returns
  */
-export const createIfGlobalDecoderRegistryGetDecoder = (
+export const createIfGlobalDecoderRegistryRegisterExistingTypeUrl = (
     context: ProtoParseContext,
-    name: string,
+    name: string
 ) => {
     if (name === "Any") {
         return;
@@ -79,12 +79,20 @@ export const createIfGlobalDecoderRegistryGetDecoder = (
     context.addUtil("GlobalDecoderRegistry");
 
     return t.ifStatement(
-        t.callExpression(
-            t.memberExpression(
-                t.identifier("GlobalDecoderRegistry"),
-                t.identifier("getDecoder")
-            ),
-            [t.memberExpression(t.identifier(name), t.identifier("typeUrl"))]
+        t.unaryExpression(
+            "!",
+            t.callExpression(
+                t.memberExpression(
+                    t.identifier("GlobalDecoderRegistry"),
+                    t.identifier("registerExistingTypeUrl")
+                ),
+                [
+                    t.memberExpression(
+                        t.identifier(name),
+                        t.identifier("typeUrl")
+                    ),
+                ]
+            )
         ),
         t.blockStatement([t.returnStatement()])
     );

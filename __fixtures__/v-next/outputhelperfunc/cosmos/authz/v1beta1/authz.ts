@@ -259,7 +259,7 @@ export const GenericAuthorization = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(GenericAuthorization.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenericAuthorization.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(GenericAuthorization.typeUrl, GenericAuthorization);

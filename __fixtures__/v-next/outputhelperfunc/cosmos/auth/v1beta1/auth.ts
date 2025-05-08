@@ -269,7 +269,7 @@ export const BaseAccount = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(BaseAccount.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BaseAccount.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(BaseAccount.typeUrl, BaseAccount);
@@ -427,7 +427,7 @@ export const ModuleAccount = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(ModuleAccount.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleAccount.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(ModuleAccount.typeUrl, ModuleAccount);

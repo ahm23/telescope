@@ -191,7 +191,7 @@ export const UpdateFeeTokenProposal = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(UpdateFeeTokenProposal.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateFeeTokenProposal.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(UpdateFeeTokenProposal.typeUrl, UpdateFeeTokenProposal);

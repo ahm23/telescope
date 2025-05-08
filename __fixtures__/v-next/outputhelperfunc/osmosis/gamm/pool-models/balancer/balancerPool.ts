@@ -942,7 +942,7 @@ export const Pool = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(Pool.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Pool.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(Pool.typeUrl, Pool);

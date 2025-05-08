@@ -654,7 +654,7 @@ export const RegisterIncentiveProposal = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(RegisterIncentiveProposal.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RegisterIncentiveProposal.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(RegisterIncentiveProposal.typeUrl, RegisterIncentiveProposal);

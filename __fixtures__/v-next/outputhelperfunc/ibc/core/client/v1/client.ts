@@ -851,7 +851,7 @@ export const ClientUpdateProposal = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(ClientUpdateProposal.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClientUpdateProposal.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(ClientUpdateProposal.typeUrl, ClientUpdateProposal);
@@ -1018,7 +1018,7 @@ export const UpgradeProposal = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(UpgradeProposal.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpgradeProposal.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(UpgradeProposal.typeUrl, UpgradeProposal);

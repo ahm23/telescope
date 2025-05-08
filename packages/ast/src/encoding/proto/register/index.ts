@@ -6,7 +6,7 @@ import {
     identifier,
     objectMethod,
 } from "../../../utils";
-import { createIfGlobalDecoderRegistryGetDecoder, createRegisterAminoProtoMapping, createRegisterObject } from "./utils";
+import { createIfGlobalDecoderRegistryRegisterExistingTypeUrl, createRegisterAminoProtoMapping, createRegisterObject } from "./utils";
 
 export * from "./utils";
 
@@ -89,7 +89,7 @@ export const registerTypeUrlMethod = (args: {
 
     if (isImplementsInterface) {
         registerStats = [
-            createIfGlobalDecoderRegistryGetDecoder(context, name),
+            createIfGlobalDecoderRegistryRegisterExistingTypeUrl(context, name),
             createRegisterObject(context, name, proto),
             createRegisterAminoProtoMapping(context, name, proto),
             ...registerStats,

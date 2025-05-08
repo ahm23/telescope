@@ -325,7 +325,7 @@ export const BasicAllowance = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(BasicAllowance.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BasicAllowance.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(BasicAllowance.typeUrl, BasicAllowance);
@@ -530,7 +530,7 @@ export const PeriodicAllowance = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(PeriodicAllowance.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PeriodicAllowance.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(PeriodicAllowance.typeUrl, PeriodicAllowance);
@@ -673,7 +673,7 @@ export const AllowedMsgAllowance = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(AllowedMsgAllowance.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AllowedMsgAllowance.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(AllowedMsgAllowance.typeUrl, AllowedMsgAllowance);

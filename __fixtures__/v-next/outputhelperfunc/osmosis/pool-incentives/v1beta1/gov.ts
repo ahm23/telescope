@@ -257,7 +257,7 @@ export const ReplacePoolIncentivesProposal = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(ReplacePoolIncentivesProposal.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ReplacePoolIncentivesProposal.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(ReplacePoolIncentivesProposal.typeUrl, ReplacePoolIncentivesProposal);
@@ -414,7 +414,7 @@ export const UpdatePoolIncentivesProposal = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(UpdatePoolIncentivesProposal.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdatePoolIncentivesProposal.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(UpdatePoolIncentivesProposal.typeUrl, UpdatePoolIncentivesProposal);

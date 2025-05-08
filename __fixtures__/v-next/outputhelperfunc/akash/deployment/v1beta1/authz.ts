@@ -147,7 +147,7 @@ export const DepositDeploymentAuthorization = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(DepositDeploymentAuthorization.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DepositDeploymentAuthorization.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(DepositDeploymentAuthorization.typeUrl, DepositDeploymentAuthorization);

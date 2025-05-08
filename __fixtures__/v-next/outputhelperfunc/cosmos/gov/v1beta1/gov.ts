@@ -733,7 +733,7 @@ export const TextProposal = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(TextProposal.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TextProposal.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(TextProposal.typeUrl, TextProposal);

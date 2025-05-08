@@ -940,7 +940,7 @@ export const Supply = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(Supply.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Supply.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(Supply.typeUrl, Supply);

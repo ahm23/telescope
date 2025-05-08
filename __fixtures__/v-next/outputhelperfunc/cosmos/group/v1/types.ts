@@ -1160,7 +1160,7 @@ export const ThresholdDecisionPolicy = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(ThresholdDecisionPolicy.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ThresholdDecisionPolicy.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(ThresholdDecisionPolicy.typeUrl, ThresholdDecisionPolicy);
@@ -1292,7 +1292,7 @@ export const PercentageDecisionPolicy = {
     };
   },
   registerTypeUrl() {
-    if (GlobalDecoderRegistry.getDecoder(PercentageDecisionPolicy.typeUrl)) {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PercentageDecisionPolicy.typeUrl)) {
       return;
     }
     GlobalDecoderRegistry.register(PercentageDecisionPolicy.typeUrl, PercentageDecisionPolicy);

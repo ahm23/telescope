@@ -14,6 +14,16 @@ export class GlobalDecoderRegistry {
     [key: string]: string;
   } = {};
 
+  static existingTypeUrls: string[] = [];
+
+  static registerExistingTypeUrl(typeUrl: string): boolean {
+    if (GlobalDecoderRegistry.existingTypeUrls.includes(typeUrl)) {
+      return false;
+    }
+    GlobalDecoderRegistry.existingTypeUrls.push(typeUrl);
+    return true;
+  }
+
   static registerAminoProtoMapping(aminoType: string, typeUrl: string) {
     GlobalDecoderRegistry.aminoProtoMapping[aminoType] = typeUrl;
   }

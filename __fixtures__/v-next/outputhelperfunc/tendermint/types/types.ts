@@ -629,11 +629,7 @@ export const PartSetHeader = {
       value: PartSetHeader.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PartSetHeader.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBasePart(): Part {
   return {
@@ -1333,11 +1329,7 @@ export const Data = {
       value: Data.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Data.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseVote(): Vote {
   return {
@@ -1881,11 +1873,7 @@ export const CommitSig = {
       value: CommitSig.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CommitSig.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseProposal(): Proposal {
   return {

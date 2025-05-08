@@ -462,11 +462,7 @@ export const Record_Local = {
       value: Record_Local.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Record_Local.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRecord_Ledger(): Record_Ledger {
   return {
@@ -663,11 +659,7 @@ export const Record_Multi = {
       value: Record_Multi.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Record_Multi.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRecord_Offline(): Record_Offline {
   return {};
@@ -752,9 +744,5 @@ export const Record_Offline = {
       value: Record_Offline.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Record_Offline.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

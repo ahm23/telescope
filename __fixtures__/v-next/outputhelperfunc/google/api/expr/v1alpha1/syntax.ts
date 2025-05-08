@@ -1364,11 +1364,7 @@ export const Expr_Ident = {
       value: Expr_Ident.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Expr_Ident.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseExpr_Select(): Expr_Select {
   return {
@@ -2518,11 +2514,7 @@ export const Constant = {
       value: Constant.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Constant.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSourceInfo_PositionsEntry(): SourceInfo_PositionsEntry {
   return {
@@ -2623,11 +2615,7 @@ export const SourceInfo_PositionsEntry = {
   toProto(message: SourceInfo_PositionsEntry): Uint8Array {
     return SourceInfo_PositionsEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SourceInfo_PositionsEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSourceInfo_MacroCallsEntry(): SourceInfo_MacroCallsEntry {
   return {
@@ -3170,9 +3158,5 @@ export const SourcePosition = {
       value: SourcePosition.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SourcePosition.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

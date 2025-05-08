@@ -1309,11 +1309,7 @@ export const SigningModeDescriptor = {
       value: SigningModeDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SigningModeDescriptor.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseChainDescriptor(): ChainDescriptor {
   return {
@@ -1418,11 +1414,7 @@ export const ChainDescriptor = {
       value: ChainDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ChainDescriptor.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCodecDescriptor(): CodecDescriptor {
   return {
@@ -1829,11 +1821,7 @@ export const InterfaceImplementerDescriptor = {
       value: InterfaceImplementerDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(InterfaceImplementerDescriptor.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseInterfaceAcceptingMessageDescriptor(): InterfaceAcceptingMessageDescriptor {
   return {
@@ -1965,11 +1953,7 @@ export const InterfaceAcceptingMessageDescriptor = {
       value: InterfaceAcceptingMessageDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(InterfaceAcceptingMessageDescriptor.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseConfigurationDescriptor(): ConfigurationDescriptor {
   return {
@@ -2074,11 +2058,7 @@ export const ConfigurationDescriptor = {
       value: ConfigurationDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConfigurationDescriptor.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgDescriptor(): MsgDescriptor {
   return {
@@ -2183,11 +2163,7 @@ export const MsgDescriptor = {
       value: MsgDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDescriptor.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetAuthnDescriptorRequest(): GetAuthnDescriptorRequest {
   return {};
@@ -2272,11 +2248,7 @@ export const GetAuthnDescriptorRequest = {
       value: GetAuthnDescriptorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetAuthnDescriptorRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetAuthnDescriptorResponse(): GetAuthnDescriptorResponse {
   return {
@@ -2473,11 +2445,7 @@ export const GetChainDescriptorRequest = {
       value: GetChainDescriptorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetChainDescriptorRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetChainDescriptorResponse(): GetChainDescriptorResponse {
   return {
@@ -2674,11 +2642,7 @@ export const GetCodecDescriptorRequest = {
       value: GetCodecDescriptorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetCodecDescriptorRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetCodecDescriptorResponse(): GetCodecDescriptorResponse {
   return {
@@ -2875,11 +2839,7 @@ export const GetConfigurationDescriptorRequest = {
       value: GetConfigurationDescriptorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetConfigurationDescriptorRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetConfigurationDescriptorResponse(): GetConfigurationDescriptorResponse {
   return {
@@ -3076,11 +3036,7 @@ export const GetQueryServicesDescriptorRequest = {
       value: GetQueryServicesDescriptorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetQueryServicesDescriptorRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetQueryServicesDescriptorResponse(): GetQueryServicesDescriptorResponse {
   return {
@@ -3277,11 +3233,7 @@ export const GetTxDescriptorRequest = {
       value: GetTxDescriptorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetTxDescriptorRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetTxDescriptorResponse(): GetTxDescriptorResponse {
   return {
@@ -3789,9 +3741,5 @@ export const QueryMethodDescriptor = {
       value: QueryMethodDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryMethodDescriptor.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

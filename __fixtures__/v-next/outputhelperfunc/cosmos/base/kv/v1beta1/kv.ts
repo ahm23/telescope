@@ -286,9 +286,5 @@ export const Pair = {
       value: Pair.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Pair.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

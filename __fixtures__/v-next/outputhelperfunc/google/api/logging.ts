@@ -455,9 +455,5 @@ export const Logging_LoggingDestination = {
       value: Logging_LoggingDestination.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Logging_LoggingDestination.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

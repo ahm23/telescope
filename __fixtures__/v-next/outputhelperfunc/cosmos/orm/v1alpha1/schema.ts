@@ -447,9 +447,5 @@ export const ModuleSchemaDescriptor_FileEntry = {
       value: ModuleSchemaDescriptor_FileEntry.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleSchemaDescriptor_FileEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

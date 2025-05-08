@@ -506,11 +506,7 @@ export const ParseRequest = {
       value: ParseRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ParseRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseParseResponse(): ParseResponse {
   return {

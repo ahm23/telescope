@@ -532,9 +532,5 @@ export const ContextRule = {
       value: ContextRule.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ContextRule.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

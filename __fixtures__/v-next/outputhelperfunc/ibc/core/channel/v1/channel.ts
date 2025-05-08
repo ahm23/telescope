@@ -966,11 +966,7 @@ export const Counterparty = {
       value: Counterparty.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Counterparty.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBasePacket(): Packet {
   return {
@@ -1363,11 +1359,7 @@ export const PacketState = {
       value: PacketState.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PacketState.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseAcknowledgement(): Acknowledgement {
   return {
@@ -1489,9 +1481,5 @@ export const Acknowledgement = {
       value: Acknowledgement.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Acknowledgement.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

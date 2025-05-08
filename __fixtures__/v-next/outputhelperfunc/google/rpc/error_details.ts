@@ -878,11 +878,7 @@ export const RetryInfo = {
       value: RetryInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RetryInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDebugInfo(): DebugInfo {
   return {
@@ -1007,11 +1003,7 @@ export const DebugInfo = {
       value: DebugInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DebugInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuotaFailure(): QuotaFailure {
   return {
@@ -1239,11 +1231,7 @@ export const QuotaFailure_Violation = {
       value: QuotaFailure_Violation.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaFailure_Violation.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseErrorInfo_MetadataEntry(): ErrorInfo_MetadataEntry {
   return {
@@ -1342,11 +1330,7 @@ export const ErrorInfo_MetadataEntry = {
   toProto(message: ErrorInfo_MetadataEntry): Uint8Array {
     return ErrorInfo_MetadataEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ErrorInfo_MetadataEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseErrorInfo(): ErrorInfo {
   return {
@@ -1526,11 +1510,7 @@ export const ErrorInfo = {
       value: ErrorInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ErrorInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBasePreconditionFailure(): PreconditionFailure {
   return {
@@ -1775,11 +1755,7 @@ export const PreconditionFailure_Violation = {
       value: PreconditionFailure_Violation.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PreconditionFailure_Violation.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseBadRequest(): BadRequest {
   return {
@@ -2007,11 +1983,7 @@ export const BadRequest_FieldViolation = {
       value: BadRequest_FieldViolation.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BadRequest_FieldViolation.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRequestInfo(): RequestInfo {
   return {
@@ -2126,11 +2098,7 @@ export const RequestInfo = {
       value: RequestInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseResourceInfo(): ResourceInfo {
   return {
@@ -2279,11 +2247,7 @@ export const ResourceInfo = {
       value: ResourceInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResourceInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseHelp(): Help {
   return {
@@ -2511,11 +2475,7 @@ export const Help_Link = {
       value: Help_Link.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Help_Link.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseLocalizedMessage(): LocalizedMessage {
   return {
@@ -2630,9 +2590,5 @@ export const LocalizedMessage = {
       value: LocalizedMessage.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LocalizedMessage.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -417,11 +417,7 @@ export const QueryCurrentPlanRequest = {
       value: QueryCurrentPlanRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCurrentPlanRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryCurrentPlanResponse(): QueryCurrentPlanResponse {
   return {
@@ -638,11 +634,7 @@ export const QueryAppliedPlanRequest = {
       value: QueryAppliedPlanRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAppliedPlanRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryAppliedPlanResponse(): QueryAppliedPlanResponse {
   return {
@@ -749,11 +741,7 @@ export const QueryAppliedPlanResponse = {
       value: QueryAppliedPlanResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAppliedPlanResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryUpgradedConsensusStateRequest(): QueryUpgradedConsensusStateRequest {
   return {
@@ -860,11 +848,7 @@ export const QueryUpgradedConsensusStateRequest = {
       value: QueryUpgradedConsensusStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUpgradedConsensusStateRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryUpgradedConsensusStateResponse(): QueryUpgradedConsensusStateResponse {
   return {
@@ -969,11 +953,7 @@ export const QueryUpgradedConsensusStateResponse = {
       value: QueryUpgradedConsensusStateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUpgradedConsensusStateResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryModuleVersionsRequest(): QueryModuleVersionsRequest {
   return {
@@ -1078,11 +1058,7 @@ export const QueryModuleVersionsRequest = {
       value: QueryModuleVersionsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryModuleVersionsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryModuleVersionsResponse(): QueryModuleVersionsResponse {
   return {
@@ -1287,11 +1263,7 @@ export const QueryAuthorityRequest = {
       value: QueryAuthorityRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAuthorityRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryAuthorityResponse(): QueryAuthorityResponse {
   return {
@@ -1396,9 +1368,5 @@ export const QueryAuthorityResponse = {
       value: QueryAuthorityResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAuthorityResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

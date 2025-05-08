@@ -482,11 +482,7 @@ export const QueryConnectionRequest = {
       value: QueryConnectionRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryConnectionResponse(): QueryConnectionResponse {
   return {
@@ -1012,11 +1008,7 @@ export const QueryClientConnectionsRequest = {
       value: QueryClientConnectionsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClientConnectionsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryClientConnectionsResponse(): QueryClientConnectionsResponse {
   return {
@@ -1277,11 +1269,7 @@ export const QueryConnectionClientStateRequest = {
       value: QueryConnectionClientStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionClientStateRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryConnectionClientStateResponse(): QueryConnectionClientStateResponse {
   return {
@@ -1573,11 +1561,7 @@ export const QueryConnectionConsensusStateRequest = {
       value: QueryConnectionConsensusStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionConsensusStateRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryConnectionConsensusStateResponse(): QueryConnectionConsensusStateResponse {
   return {

@@ -355,9 +355,5 @@ export const ParamChange = {
       value: ParamChange.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ParamChange.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

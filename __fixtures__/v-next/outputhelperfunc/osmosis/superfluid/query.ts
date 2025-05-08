@@ -668,11 +668,7 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -889,11 +885,7 @@ export const AssetTypeRequest = {
       value: AssetTypeRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AssetTypeRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseAssetTypeResponse(): AssetTypeResponse {
   return {
@@ -998,11 +990,7 @@ export const AssetTypeResponse = {
       value: AssetTypeResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AssetTypeResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseAllAssetsRequest(): AllAssetsRequest {
   return {};
@@ -1087,11 +1075,7 @@ export const AllAssetsRequest = {
       value: AllAssetsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AllAssetsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseAllAssetsResponse(): AllAssetsResponse {
   return {
@@ -1316,11 +1300,7 @@ export const AssetMultiplierRequest = {
       value: AssetMultiplierRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AssetMultiplierRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseAssetMultiplierResponse(): AssetMultiplierResponse {
   return {
@@ -1590,11 +1570,7 @@ export const SuperfluidIntermediaryAccountInfo = {
       value: SuperfluidIntermediaryAccountInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidIntermediaryAccountInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseAllIntermediaryAccountsRequest(): AllIntermediaryAccountsRequest {
   return {
@@ -1953,11 +1929,7 @@ export const ConnectedIntermediaryAccountRequest = {
       value: ConnectedIntermediaryAccountRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConnectedIntermediaryAccountRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseConnectedIntermediaryAccountResponse(): ConnectedIntermediaryAccountResponse {
   return {
@@ -2174,11 +2146,7 @@ export const QueryTotalDelegationByValidatorForDenomRequest = {
       value: QueryTotalDelegationByValidatorForDenomRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalDelegationByValidatorForDenomRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryTotalDelegationByValidatorForDenomResponse(): QueryTotalDelegationByValidatorForDenomResponse {
   return {
@@ -2437,11 +2405,7 @@ export const Delegations = {
       value: Delegations.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Delegations.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseTotalSuperfluidDelegationsRequest(): TotalSuperfluidDelegationsRequest {
   return {};
@@ -2526,11 +2490,7 @@ export const TotalSuperfluidDelegationsRequest = {
       value: TotalSuperfluidDelegationsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TotalSuperfluidDelegationsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseTotalSuperfluidDelegationsResponse(): TotalSuperfluidDelegationsResponse {
   return {
@@ -2635,11 +2595,7 @@ export const TotalSuperfluidDelegationsResponse = {
       value: TotalSuperfluidDelegationsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TotalSuperfluidDelegationsResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSuperfluidDelegationAmountRequest(): SuperfluidDelegationAmountRequest {
   return {
@@ -2778,11 +2734,7 @@ export const SuperfluidDelegationAmountRequest = {
       value: SuperfluidDelegationAmountRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidDelegationAmountRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSuperfluidDelegationAmountResponse(): SuperfluidDelegationAmountResponse {
   return {
@@ -3007,11 +2959,7 @@ export const SuperfluidDelegationsByDelegatorRequest = {
       value: SuperfluidDelegationsByDelegatorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidDelegationsByDelegatorRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSuperfluidDelegationsByDelegatorResponse(): SuperfluidDelegationsByDelegatorResponse {
   return {
@@ -3300,11 +3248,7 @@ export const SuperfluidUndelegationsByDelegatorRequest = {
       value: SuperfluidUndelegationsByDelegatorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidUndelegationsByDelegatorRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSuperfluidUndelegationsByDelegatorResponse(): SuperfluidUndelegationsByDelegatorResponse {
   return {
@@ -3602,11 +3546,7 @@ export const SuperfluidDelegationsByValidatorDenomRequest = {
       value: SuperfluidDelegationsByValidatorDenomRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidDelegationsByValidatorDenomRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSuperfluidDelegationsByValidatorDenomResponse(): SuperfluidDelegationsByValidatorDenomResponse {
   return {
@@ -3848,11 +3788,7 @@ export const EstimateSuperfluidDelegatedAmountByValidatorDenomRequest = {
       value: EstimateSuperfluidDelegatedAmountByValidatorDenomRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EstimateSuperfluidDelegatedAmountByValidatorDenomRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseEstimateSuperfluidDelegatedAmountByValidatorDenomResponse(): EstimateSuperfluidDelegatedAmountByValidatorDenomResponse {
   return {
@@ -4077,11 +4013,7 @@ export const QueryTotalDelegationByDelegatorRequest = {
       value: QueryTotalDelegationByDelegatorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalDelegationByDelegatorRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryTotalDelegationByDelegatorResponse(): QueryTotalDelegationByDelegatorResponse {
   return {
@@ -4361,11 +4293,7 @@ export const QueryUnpoolWhitelistRequest = {
       value: QueryUnpoolWhitelistRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUnpoolWhitelistRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryUnpoolWhitelistResponse(): QueryUnpoolWhitelistResponse {
   return {
@@ -4489,9 +4417,5 @@ export const QueryUnpoolWhitelistResponse = {
       value: QueryUnpoolWhitelistResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUnpoolWhitelistResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -751,11 +751,7 @@ export const MetricRule_MetricCostsEntry = {
   toProto(message: MetricRule_MetricCostsEntry): Uint8Array {
     return MetricRule_MetricCostsEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricRule_MetricCostsEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMetricRule(): MetricRule {
   return {
@@ -918,11 +914,7 @@ export const MetricRule = {
       value: MetricRule.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricRule.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuotaLimit_ValuesEntry(): QuotaLimit_ValuesEntry {
   return {
@@ -1023,11 +1015,7 @@ export const QuotaLimit_ValuesEntry = {
   toProto(message: QuotaLimit_ValuesEntry): Uint8Array {
     return QuotaLimit_ValuesEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaLimit_ValuesEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuotaLimit(): QuotaLimit {
   return {
@@ -1332,9 +1320,5 @@ export const QuotaLimit = {
       value: QuotaLimit.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaLimit.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

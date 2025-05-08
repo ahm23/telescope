@@ -368,11 +368,7 @@ export const TokenPair = {
       value: TokenPair.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TokenPair.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRegisterCoinProposal(): RegisterCoinProposal {
   return {
@@ -643,11 +639,7 @@ export const RegisterERC20Proposal = {
       value: RegisterERC20Proposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RegisterERC20Proposal.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseToggleTokenConversionProposal(): ToggleTokenConversionProposal {
   return {
@@ -779,9 +771,5 @@ export const ToggleTokenConversionProposal = {
       value: ToggleTokenConversionProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ToggleTokenConversionProposal.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

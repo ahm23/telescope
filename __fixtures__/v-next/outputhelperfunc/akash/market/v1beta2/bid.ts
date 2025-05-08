@@ -495,11 +495,7 @@ export const MsgCreateBidResponse = {
       value: MsgCreateBidResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateBidResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgCloseBid(): MsgCloseBid {
   return {
@@ -696,11 +692,7 @@ export const MsgCloseBidResponse = {
       value: MsgCloseBidResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseBidResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseBidID(): BidID {
   return {
@@ -875,11 +867,7 @@ export const BidID = {
       value: BidID.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BidID.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseBid(): Bid {
   return {
@@ -1239,9 +1227,5 @@ export const BidFilters = {
       value: BidFilters.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BidFilters.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

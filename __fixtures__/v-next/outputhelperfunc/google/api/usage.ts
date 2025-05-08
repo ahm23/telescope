@@ -504,9 +504,5 @@ export const UsageRule = {
       value: UsageRule.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UsageRule.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

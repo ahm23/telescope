@@ -1,7 +1,6 @@
 import { isSet, DeepPartial } from "../../../helpers";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
-import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "evmos.claims.v1";
 /** Action defines the list of available actions to claim the airdrop tokens. */
 export enum Action {
@@ -298,11 +297,7 @@ export const Claim = {
       value: Claim.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Claim.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseClaimsRecordAddress(): ClaimsRecordAddress {
   return {
@@ -453,11 +448,7 @@ export const ClaimsRecordAddress = {
       value: ClaimsRecordAddress.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClaimsRecordAddress.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseClaimsRecord(): ClaimsRecord {
   return {
@@ -591,9 +582,5 @@ export const ClaimsRecord = {
       value: ClaimsRecord.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClaimsRecord.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

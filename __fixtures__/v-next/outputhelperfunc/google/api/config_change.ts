@@ -479,9 +479,5 @@ export const Advice = {
       value: Advice.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Advice.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -523,11 +523,7 @@ export const EvalState_Result = {
       value: EvalState_Result.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EvalState_Result.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseExprValue(): ExprValue {
   return {
@@ -902,9 +898,5 @@ export const UnknownSet = {
       value: UnknownSet.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UnknownSet.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -704,11 +704,7 @@ export const LogMetric_LabelExtractorsEntry = {
   toProto(message: LogMetric_LabelExtractorsEntry): Uint8Array {
     return LogMetric_LabelExtractorsEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogMetric_LabelExtractorsEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseLogMetric(): LogMetric {
   return {
@@ -1166,11 +1162,7 @@ export const ListLogMetricsRequest = {
       value: ListLogMetricsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListLogMetricsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListLogMetricsResponse(): ListLogMetricsResponse {
   return {
@@ -1398,11 +1390,7 @@ export const GetLogMetricRequest = {
       value: GetLogMetricRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetLogMetricRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCreateLogMetricRequest(): CreateLogMetricRequest {
   return {
@@ -1744,9 +1732,5 @@ export const DeleteLogMetricRequest = {
       value: DeleteLogMetricRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteLogMetricRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

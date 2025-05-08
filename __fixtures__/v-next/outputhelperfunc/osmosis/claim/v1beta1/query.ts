@@ -266,11 +266,7 @@ export const QueryModuleAccountBalanceRequest = {
       value: QueryModuleAccountBalanceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryModuleAccountBalanceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryModuleAccountBalanceResponse(): QueryModuleAccountBalanceResponse {
   return {
@@ -475,11 +471,7 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -696,11 +688,7 @@ export const QueryClaimRecordRequest = {
       value: QueryClaimRecordRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimRecordRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryClaimRecordResponse(): QueryClaimRecordResponse {
   return {
@@ -934,11 +922,7 @@ export const QueryClaimableForActionRequest = {
       value: QueryClaimableForActionRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimableForActionRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryClaimableForActionResponse(): QueryClaimableForActionResponse {
   return {
@@ -1163,11 +1147,7 @@ export const QueryTotalClaimableRequest = {
       value: QueryTotalClaimableRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalClaimableRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryTotalClaimableResponse(): QueryTotalClaimableResponse {
   return {

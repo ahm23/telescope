@@ -319,11 +319,7 @@ export const MsgSendResponse = {
       value: MsgSendResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSendResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgMultiSend(): MsgMultiSend {
   return {
@@ -556,9 +552,5 @@ export const MsgMultiSendResponse = {
       value: MsgMultiSendResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgMultiSendResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

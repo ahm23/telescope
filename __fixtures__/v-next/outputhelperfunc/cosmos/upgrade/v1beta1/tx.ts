@@ -341,11 +341,7 @@ export const MsgSoftwareUpgradeResponse = {
       value: MsgSoftwareUpgradeResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSoftwareUpgradeResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgCancelUpgrade(): MsgCancelUpgrade {
   return {
@@ -450,11 +446,7 @@ export const MsgCancelUpgrade = {
       value: MsgCancelUpgrade.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCancelUpgrade.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgCancelUpgradeResponse(): MsgCancelUpgradeResponse {
   return {};
@@ -539,9 +531,5 @@ export const MsgCancelUpgradeResponse = {
       value: MsgCancelUpgradeResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCancelUpgradeResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

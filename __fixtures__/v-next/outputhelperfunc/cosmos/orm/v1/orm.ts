@@ -507,11 +507,7 @@ export const PrimaryKeyDescriptor = {
       value: PrimaryKeyDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PrimaryKeyDescriptor.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSecondaryIndexDescriptor(): SecondaryIndexDescriptor {
   return {
@@ -650,11 +646,7 @@ export const SecondaryIndexDescriptor = {
       value: SecondaryIndexDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SecondaryIndexDescriptor.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSingletonDescriptor(): SingletonDescriptor {
   return {
@@ -759,9 +751,5 @@ export const SingletonDescriptor = {
       value: SingletonDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SingletonDescriptor.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

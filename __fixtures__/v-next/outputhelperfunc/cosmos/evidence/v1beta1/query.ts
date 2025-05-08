@@ -219,11 +219,7 @@ export const QueryEvidenceRequest = {
       value: QueryEvidenceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEvidenceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryEvidenceResponse(): QueryEvidenceResponse {
   return {
@@ -330,11 +326,7 @@ export const QueryEvidenceResponse = {
       value: QueryEvidenceResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEvidenceResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryAllEvidenceRequest(): QueryAllEvidenceRequest {
   return {

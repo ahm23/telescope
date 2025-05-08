@@ -245,11 +245,7 @@ export const DeploymentID = {
       value: DeploymentID.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeploymentID.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDeployment(): Deployment {
   return {
@@ -555,9 +551,5 @@ export const DeploymentFilters = {
       value: DeploymentFilters.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeploymentFilters.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

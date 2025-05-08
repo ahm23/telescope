@@ -295,11 +295,7 @@ export const Proof = {
       value: Proof.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Proof.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseValueOp(): ValueOp {
   return {
@@ -553,11 +549,7 @@ export const DominoOp = {
       value: DominoOp.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DominoOp.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseProofOp(): ProofOp {
   return {
@@ -689,11 +681,7 @@ export const ProofOp = {
       value: ProofOp.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ProofOp.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseProofOps(): ProofOps {
   return {

@@ -669,11 +669,7 @@ export const EnableServiceRequest = {
       value: EnableServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EnableServiceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseEnableServiceResponse(): EnableServiceResponse {
   return {
@@ -910,11 +906,7 @@ export const DisableServiceRequest = {
       value: DisableServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DisableServiceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDisableServiceResponse(): DisableServiceResponse {
   return {
@@ -1117,11 +1109,7 @@ export const GetServiceRequest = {
       value: GetServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetServiceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListServicesRequest(): ListServicesRequest {
   return {
@@ -1270,11 +1258,7 @@ export const ListServicesRequest = {
       value: ListServicesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServicesRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListServicesResponse(): ListServicesResponse {
   return {
@@ -1529,11 +1513,7 @@ export const BatchEnableServicesRequest = {
       value: BatchEnableServicesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BatchEnableServicesRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseBatchEnableServicesResponse(): BatchEnableServicesResponse {
   return {
@@ -1789,11 +1769,7 @@ export const BatchEnableServicesResponse_EnableFailure = {
       value: BatchEnableServicesResponse_EnableFailure.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BatchEnableServicesResponse_EnableFailure.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseBatchGetServicesRequest(): BatchGetServicesRequest {
   return {
@@ -1918,11 +1894,7 @@ export const BatchGetServicesRequest = {
       value: BatchGetServicesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BatchGetServicesRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseBatchGetServicesResponse(): BatchGetServicesResponse {
   return {

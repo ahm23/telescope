@@ -593,9 +593,5 @@ export const SystemParameter = {
       value: SystemParameter.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SystemParameter.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

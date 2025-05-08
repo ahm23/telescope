@@ -408,11 +408,7 @@ export const MsgCreateDenom = {
       value: MsgCreateDenom.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateDenom.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgCreateDenomResponse(): MsgCreateDenomResponse {
   return {
@@ -517,11 +513,7 @@ export const MsgCreateDenomResponse = {
       value: MsgCreateDenomResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateDenomResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgMint(): MsgMint {
   return {
@@ -735,11 +727,7 @@ export const MsgMintResponse = {
       value: MsgMintResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgMintResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgBurn(): MsgBurn {
   return {
@@ -953,11 +941,7 @@ export const MsgBurnResponse = {
       value: MsgBurnResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBurnResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgChangeAdmin(): MsgChangeAdmin {
   return {
@@ -1096,11 +1080,7 @@ export const MsgChangeAdmin = {
       value: MsgChangeAdmin.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChangeAdmin.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgChangeAdminResponse(): MsgChangeAdminResponse {
   return {};
@@ -1185,11 +1165,7 @@ export const MsgChangeAdminResponse = {
       value: MsgChangeAdminResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChangeAdminResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgSetDenomMetadata(): MsgSetDenomMetadata {
   return {
@@ -1403,9 +1379,5 @@ export const MsgSetDenomMetadataResponse = {
       value: MsgSetDenomMetadataResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSetDenomMetadataResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

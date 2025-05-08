@@ -685,11 +685,7 @@ export const QueryBalanceRequest = {
       value: QueryBalanceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBalanceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryBalanceResponse(): QueryBalanceResponse {
   return {
@@ -1696,11 +1692,7 @@ export const QuerySupplyOfRequest = {
       value: QuerySupplyOfRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySupplyOfRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuerySupplyOfResponse(): QuerySupplyOfResponse {
   return {
@@ -1897,11 +1889,7 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -2370,11 +2358,7 @@ export const QueryDenomMetadataRequest = {
       value: QueryDenomMetadataRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomMetadataRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryDenomMetadataResponse(): QueryDenomMetadataResponse {
   return {

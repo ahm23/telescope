@@ -528,9 +528,5 @@ export const Monitoring_MonitoringDestination = {
       value: Monitoring_MonitoringDestination.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Monitoring_MonitoringDestination.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

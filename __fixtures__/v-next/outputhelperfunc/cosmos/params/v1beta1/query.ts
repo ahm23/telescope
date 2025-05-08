@@ -257,11 +257,7 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -458,11 +454,7 @@ export const QuerySubspacesRequest = {
       value: QuerySubspacesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySubspacesRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuerySubspacesResponse(): QuerySubspacesResponse {
   return {
@@ -714,9 +706,5 @@ export const Subspace = {
       value: Subspace.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Subspace.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

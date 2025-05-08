@@ -639,11 +639,7 @@ export const LogEntry_LabelsEntry = {
   toProto(message: LogEntry_LabelsEntry): Uint8Array {
     return LogEntry_LabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogEntry_LabelsEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseLogEntry(): LogEntry {
   return {
@@ -1233,11 +1229,7 @@ export const LogEntryOperation = {
       value: LogEntryOperation.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogEntryOperation.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseLogEntrySourceLocation(): LogEntrySourceLocation {
   return {
@@ -1371,11 +1363,7 @@ export const LogEntrySourceLocation = {
       value: LogEntrySourceLocation.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogEntrySourceLocation.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseLogSplit(): LogSplit {
   return {
@@ -1507,9 +1495,5 @@ export const LogSplit = {
       value: LogSplit.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogSplit.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

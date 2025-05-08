@@ -238,11 +238,7 @@ export const MerkleRoot = {
       value: MerkleRoot.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MerkleRoot.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMerklePrefix(): MerklePrefix {
   return {
@@ -347,11 +343,7 @@ export const MerklePrefix = {
       value: MerklePrefix.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MerklePrefix.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMerklePath(): MerklePath {
   return {
@@ -466,11 +458,7 @@ export const MerklePath = {
       value: MerklePath.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MerklePath.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMerkleProof(): MerkleProof {
   return {

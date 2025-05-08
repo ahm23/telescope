@@ -392,11 +392,7 @@ export const MsgCreateClient = {
       value: MsgCreateClient.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateClient.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgCreateClientResponse(): MsgCreateClientResponse {
   return {};
@@ -481,11 +477,7 @@ export const MsgCreateClientResponse = {
       value: MsgCreateClientResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateClientResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgUpdateClient(): MsgUpdateClient {
   return {
@@ -626,11 +618,7 @@ export const MsgUpdateClient = {
       value: MsgUpdateClient.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateClient.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgUpdateClientResponse(): MsgUpdateClientResponse {
   return {};
@@ -715,11 +703,7 @@ export const MsgUpdateClientResponse = {
       value: MsgUpdateClientResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateClientResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgUpgradeClient(): MsgUpgradeClient {
   return {
@@ -913,11 +897,7 @@ export const MsgUpgradeClient = {
       value: MsgUpgradeClient.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpgradeClient.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgUpgradeClientResponse(): MsgUpgradeClientResponse {
   return {};
@@ -1002,11 +982,7 @@ export const MsgUpgradeClientResponse = {
       value: MsgUpgradeClientResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpgradeClientResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgSubmitMisbehaviour(): MsgSubmitMisbehaviour {
   return {
@@ -1147,11 +1123,7 @@ export const MsgSubmitMisbehaviour = {
       value: MsgSubmitMisbehaviour.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSubmitMisbehaviour.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgSubmitMisbehaviourResponse(): MsgSubmitMisbehaviourResponse {
   return {};
@@ -1236,9 +1208,5 @@ export const MsgSubmitMisbehaviourResponse = {
       value: MsgSubmitMisbehaviourResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSubmitMisbehaviourResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

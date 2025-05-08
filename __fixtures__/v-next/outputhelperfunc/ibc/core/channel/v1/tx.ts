@@ -774,11 +774,7 @@ export const MsgChannelOpenInitResponse = {
       value: MsgChannelOpenInitResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenInitResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgChannelOpenTry(): MsgChannelOpenTry {
   return {
@@ -1080,11 +1076,7 @@ export const MsgChannelOpenTryResponse = {
       value: MsgChannelOpenTryResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenTryResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgChannelOpenAck(): MsgChannelOpenAck {
   return {
@@ -1383,11 +1375,7 @@ export const MsgChannelOpenAckResponse = {
       value: MsgChannelOpenAckResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenAckResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgChannelOpenConfirm(): MsgChannelOpenConfirm {
   return {
@@ -1652,11 +1640,7 @@ export const MsgChannelOpenConfirmResponse = {
       value: MsgChannelOpenConfirmResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenConfirmResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgChannelCloseInit(): MsgChannelCloseInit {
   return {
@@ -1795,11 +1779,7 @@ export const MsgChannelCloseInit = {
       value: MsgChannelCloseInit.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelCloseInit.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgChannelCloseInitResponse(): MsgChannelCloseInitResponse {
   return {};
@@ -1884,11 +1864,7 @@ export const MsgChannelCloseInitResponse = {
       value: MsgChannelCloseInitResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelCloseInitResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgChannelCloseConfirm(): MsgChannelCloseConfirm {
   return {
@@ -2153,11 +2129,7 @@ export const MsgChannelCloseConfirmResponse = {
       value: MsgChannelCloseConfirmResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelCloseConfirmResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgRecvPacket(): MsgRecvPacket {
   return {
@@ -2408,11 +2380,7 @@ export const MsgRecvPacketResponse = {
       value: MsgRecvPacketResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRecvPacketResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgTimeout(): MsgTimeout {
   return {
@@ -2682,11 +2650,7 @@ export const MsgTimeoutResponse = {
       value: MsgTimeoutResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgTimeoutResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgTimeoutOnClose(): MsgTimeoutOnClose {
   return {
@@ -2973,11 +2937,7 @@ export const MsgTimeoutOnCloseResponse = {
       value: MsgTimeoutOnCloseResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgTimeoutOnCloseResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgAcknowledgement(): MsgAcknowledgement {
   return {
@@ -3245,9 +3205,5 @@ export const MsgAcknowledgementResponse = {
       value: MsgAcknowledgementResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgAcknowledgementResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

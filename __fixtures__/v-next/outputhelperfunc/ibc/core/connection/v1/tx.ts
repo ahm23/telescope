@@ -579,11 +579,7 @@ export const MsgConnectionOpenInitResponse = {
       value: MsgConnectionOpenInitResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenInitResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgConnectionOpenTry(): MsgConnectionOpenTry {
   return {
@@ -987,11 +983,7 @@ export const MsgConnectionOpenTryResponse = {
       value: MsgConnectionOpenTryResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenTryResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgConnectionOpenAck(): MsgConnectionOpenAck {
   return {
@@ -1347,11 +1339,7 @@ export const MsgConnectionOpenAckResponse = {
       value: MsgConnectionOpenAckResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenAckResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgConnectionOpenConfirm(): MsgConnectionOpenConfirm {
   return {
@@ -1599,9 +1587,5 @@ export const MsgConnectionOpenConfirmResponse = {
       value: MsgConnectionOpenConfirmResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenConfirmResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

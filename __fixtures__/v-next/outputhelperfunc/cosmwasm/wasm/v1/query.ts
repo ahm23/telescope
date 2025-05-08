@@ -701,11 +701,7 @@ export const QueryContractInfoRequest = {
       value: QueryContractInfoRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryContractInfoRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryContractInfoResponse(): QueryContractInfoResponse {
   return {
@@ -1764,11 +1760,7 @@ export const QueryRawContractStateRequest = {
       value: QueryRawContractStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryRawContractStateRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryRawContractStateResponse(): QueryRawContractStateResponse {
   return {
@@ -1873,11 +1865,7 @@ export const QueryRawContractStateResponse = {
       value: QueryRawContractStateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryRawContractStateResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuerySmartContractStateRequest(): QuerySmartContractStateRequest {
   return {
@@ -1999,11 +1987,7 @@ export const QuerySmartContractStateRequest = {
       value: QuerySmartContractStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySmartContractStateRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuerySmartContractStateResponse(): QuerySmartContractStateResponse {
   return {
@@ -2108,11 +2092,7 @@ export const QuerySmartContractStateResponse = {
       value: QuerySmartContractStateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySmartContractStateResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryCodeRequest(): QueryCodeRequest {
   return {
@@ -2219,11 +2199,7 @@ export const QueryCodeRequest = {
       value: QueryCodeRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCodeRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCodeInfoResponse(): CodeInfoResponse {
   return {
@@ -2364,11 +2340,7 @@ export const CodeInfoResponse = {
       value: CodeInfoResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CodeInfoResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryCodeResponse(): QueryCodeResponse {
   return {

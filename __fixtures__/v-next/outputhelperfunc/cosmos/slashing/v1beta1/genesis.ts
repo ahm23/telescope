@@ -694,9 +694,5 @@ export const MissedBlock = {
       value: MissedBlock.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MissedBlock.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

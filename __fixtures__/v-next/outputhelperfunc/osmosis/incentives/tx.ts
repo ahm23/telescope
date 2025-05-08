@@ -424,11 +424,7 @@ export const MsgCreateGaugeResponse = {
       value: MsgCreateGaugeResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateGaugeResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgAddToGauge(): MsgAddToGauge {
   return {
@@ -669,9 +665,5 @@ export const MsgAddToGaugeResponse = {
       value: MsgAddToGaugeResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgAddToGaugeResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

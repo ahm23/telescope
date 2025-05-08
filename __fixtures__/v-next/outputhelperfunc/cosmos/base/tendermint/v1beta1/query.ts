@@ -1087,11 +1087,7 @@ export const Validator = {
       value: Validator.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Validator.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetBlockByHeightRequest(): GetBlockByHeightRequest {
   return {
@@ -1198,11 +1194,7 @@ export const GetBlockByHeightRequest = {
       value: GetBlockByHeightRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetBlockByHeightRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetBlockByHeightResponse(): GetBlockByHeightResponse {
   return {
@@ -1419,11 +1411,7 @@ export const GetLatestBlockRequest = {
       value: GetLatestBlockRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetLatestBlockRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetLatestBlockResponse(): GetLatestBlockResponse {
   return {
@@ -1640,11 +1628,7 @@ export const GetSyncingRequest = {
       value: GetSyncingRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetSyncingRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetSyncingResponse(): GetSyncingResponse {
   return {
@@ -1749,11 +1733,7 @@ export const GetSyncingResponse = {
       value: GetSyncingResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetSyncingResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetNodeInfoRequest(): GetNodeInfoRequest {
   return {};
@@ -1838,11 +1818,7 @@ export const GetNodeInfoRequest = {
       value: GetNodeInfoRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetNodeInfoRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetNodeInfoResponse(): GetNodeInfoResponse {
   return {
@@ -2352,9 +2328,5 @@ export const Module = {
       value: Module.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Module.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

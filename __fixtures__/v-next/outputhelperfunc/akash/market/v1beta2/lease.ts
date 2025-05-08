@@ -428,11 +428,7 @@ export const LeaseID = {
       value: LeaseID.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LeaseID.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseLease(): Lease {
   return {
@@ -811,11 +807,7 @@ export const LeaseFilters = {
       value: LeaseFilters.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LeaseFilters.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgCreateLease(): MsgCreateLease {
   return {
@@ -1012,11 +1004,7 @@ export const MsgCreateLeaseResponse = {
       value: MsgCreateLeaseResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateLeaseResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgWithdrawLease(): MsgWithdrawLease {
   return {
@@ -1213,11 +1201,7 @@ export const MsgWithdrawLeaseResponse = {
       value: MsgWithdrawLeaseResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgWithdrawLeaseResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgCloseLease(): MsgCloseLease {
   return {
@@ -1414,9 +1398,5 @@ export const MsgCloseLeaseResponse = {
       value: MsgCloseLeaseResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseLeaseResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

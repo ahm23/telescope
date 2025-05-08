@@ -531,11 +531,7 @@ export const QueryProposalRequest = {
       value: QueryProposalRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProposalRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryProposalResponse(): QueryProposalResponse {
   return {
@@ -1074,11 +1070,7 @@ export const QueryVoteRequest = {
       value: QueryVoteRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryVoteRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryVoteResponse(): QueryVoteResponse {
   return {
@@ -1566,11 +1558,7 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -1846,11 +1834,7 @@ export const QueryDepositRequest = {
       value: QueryDepositRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDepositRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryDepositResponse(): QueryDepositResponse {
   return {
@@ -2340,11 +2324,7 @@ export const QueryTallyResultRequest = {
       value: QueryTallyResultRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTallyResultRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryTallyResultResponse(): QueryTallyResultResponse {
   return {

@@ -747,11 +747,7 @@ export const AttributesFilters = {
       value: AttributesFilters.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributesFilters.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgSignProviderAttributes(): MsgSignProviderAttributes {
   return {
@@ -990,11 +986,7 @@ export const MsgSignProviderAttributesResponse = {
       value: MsgSignProviderAttributesResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSignProviderAttributesResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgDeleteProviderAttributes(): MsgDeleteProviderAttributes {
   return {
@@ -1143,11 +1135,7 @@ export const MsgDeleteProviderAttributes = {
       value: MsgDeleteProviderAttributes.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDeleteProviderAttributes.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgDeleteProviderAttributesResponse(): MsgDeleteProviderAttributesResponse {
   return {};
@@ -1232,9 +1220,5 @@ export const MsgDeleteProviderAttributesResponse = {
       value: MsgDeleteProviderAttributesResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDeleteProviderAttributesResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

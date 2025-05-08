@@ -270,11 +270,7 @@ export const ProtocolVersion = {
       value: ProtocolVersion.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ProtocolVersion.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseNodeInfo(): NodeInfo {
   return {
@@ -616,11 +612,7 @@ export const NodeInfoOther = {
       value: NodeInfoOther.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(NodeInfoOther.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBasePeerInfo(): PeerInfo {
   return {
@@ -916,9 +908,5 @@ export const PeerAddressInfo = {
       value: PeerAddressInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PeerAddressInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

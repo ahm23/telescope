@@ -506,9 +506,5 @@ export const LastValidatorPower = {
       value: LastValidatorPower.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LastValidatorPower.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

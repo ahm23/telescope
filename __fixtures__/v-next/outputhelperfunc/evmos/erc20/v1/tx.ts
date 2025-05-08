@@ -331,11 +331,7 @@ export const MsgConvertCoinResponse = {
       value: MsgConvertCoinResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConvertCoinResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgConvertERC20(): MsgConvertERC20 {
   return {
@@ -484,11 +480,7 @@ export const MsgConvertERC20 = {
       value: MsgConvertERC20.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConvertERC20.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgConvertERC20Response(): MsgConvertERC20Response {
   return {};
@@ -566,9 +558,5 @@ export const MsgConvertERC20Response = {
       value: MsgConvertERC20Response.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConvertERC20Response.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

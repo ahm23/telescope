@@ -584,11 +584,7 @@ export const MsgCreateValidatorResponse = {
       value: MsgCreateValidatorResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateValidatorResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgEditValidator(): MsgEditValidator {
   return {
@@ -836,11 +832,7 @@ export const MsgEditValidatorResponse = {
       value: MsgEditValidatorResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgEditValidatorResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgDelegate(): MsgDelegate {
   return {
@@ -1071,11 +1063,7 @@ export const MsgDelegateResponse = {
       value: MsgDelegateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDelegateResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgBeginRedelegate(): MsgBeginRedelegate {
   return {
@@ -1343,11 +1331,7 @@ export const MsgBeginRedelegateResponse = {
       value: MsgBeginRedelegateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBeginRedelegateResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgUndelegate(): MsgUndelegate {
   return {
@@ -1598,9 +1582,5 @@ export const MsgUndelegateResponse = {
       value: MsgUndelegateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUndelegateResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

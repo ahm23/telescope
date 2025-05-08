@@ -1,7 +1,6 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
-import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.crisis.v1beta1";
 /** MsgVerifyInvariant represents a message to verify a particular invariance. */
 export interface MsgVerifyInvariant {
@@ -180,11 +179,7 @@ export const MsgVerifyInvariant = {
       value: MsgVerifyInvariant.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgVerifyInvariant.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgVerifyInvariantResponse(): MsgVerifyInvariantResponse {
   return {};
@@ -269,9 +264,5 @@ export const MsgVerifyInvariantResponse = {
       value: MsgVerifyInvariantResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgVerifyInvariantResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

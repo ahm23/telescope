@@ -582,11 +582,7 @@ export const Params = {
       value: Params.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseValidatorHistoricalRewards(): ValidatorHistoricalRewards {
   return {
@@ -1226,11 +1222,7 @@ export const ValidatorSlashEvent = {
       value: ValidatorSlashEvent.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorSlashEvent.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseValidatorSlashEvents(): ValidatorSlashEvents {
   return {
@@ -1784,11 +1776,7 @@ export const DelegatorStartingInfo = {
       value: DelegatorStartingInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DelegatorStartingInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDelegationDelegatorReward(): DelegationDelegatorReward {
   return {
@@ -2098,9 +2086,5 @@ export const CommunityPoolSpendProposalWithDeposit = {
       value: CommunityPoolSpendProposalWithDeposit.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CommunityPoolSpendProposalWithDeposit.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

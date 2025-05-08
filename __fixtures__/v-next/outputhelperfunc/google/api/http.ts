@@ -1540,9 +1540,5 @@ export const CustomHttpPattern = {
       value: CustomHttpPattern.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CustomHttpPattern.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

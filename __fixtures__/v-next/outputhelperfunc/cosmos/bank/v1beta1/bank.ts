@@ -558,11 +558,7 @@ export const SendEnabled = {
       value: SendEnabled.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SendEnabled.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseInput(): Input {
   return {
@@ -1108,11 +1104,7 @@ export const DenomUnit = {
       value: DenomUnit.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DenomUnit.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMetadata(): Metadata {
   return {

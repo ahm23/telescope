@@ -164,9 +164,5 @@ export const GenesisState = {
       value: GenesisState.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

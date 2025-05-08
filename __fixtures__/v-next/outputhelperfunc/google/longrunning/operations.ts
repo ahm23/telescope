@@ -533,11 +533,7 @@ export const Operation = {
       value: Operation.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Operation.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetOperationRequest(): GetOperationRequest {
   return {
@@ -635,11 +631,7 @@ export const GetOperationRequest = {
       value: GetOperationRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetOperationRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListOperationsRequest(): ListOperationsRequest {
   return {
@@ -788,11 +780,7 @@ export const ListOperationsRequest = {
       value: ListOperationsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListOperationsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListOperationsResponse(): ListOperationsResponse {
   return {
@@ -1020,11 +1008,7 @@ export const CancelOperationRequest = {
       value: CancelOperationRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CancelOperationRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDeleteOperationRequest(): DeleteOperationRequest {
   return {
@@ -1122,11 +1106,7 @@ export const DeleteOperationRequest = {
       value: DeleteOperationRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteOperationRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseWaitOperationRequest(): WaitOperationRequest {
   return {
@@ -1243,11 +1223,7 @@ export const WaitOperationRequest = {
       value: WaitOperationRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WaitOperationRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseOperationInfo(): OperationInfo {
   return {
@@ -1362,9 +1338,5 @@ export const OperationInfo = {
       value: OperationInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OperationInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

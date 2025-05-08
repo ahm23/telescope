@@ -827,9 +827,5 @@ export const OperationMetadata = {
       value: OperationMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OperationMetadata.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

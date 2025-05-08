@@ -299,11 +299,7 @@ export const OrderID = {
       value: OrderID.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OrderID.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseOrder(): Order {
   return {
@@ -646,9 +642,5 @@ export const OrderFilters = {
       value: OrderFilters.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OrderFilters.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

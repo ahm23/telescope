@@ -278,11 +278,7 @@ export const QueryAllowanceRequest = {
       value: QueryAllowanceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllowanceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryAllowanceResponse(): QueryAllowanceResponse {
   return {

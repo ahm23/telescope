@@ -404,9 +404,5 @@ export const VisibilityRule = {
       value: VisibilityRule.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(VisibilityRule.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

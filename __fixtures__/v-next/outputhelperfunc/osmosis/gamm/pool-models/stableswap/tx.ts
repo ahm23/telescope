@@ -438,11 +438,7 @@ export const MsgCreateStableswapPoolResponse = {
       value: MsgCreateStableswapPoolResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateStableswapPoolResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgStableSwapAdjustScalingFactors(): MsgStableSwapAdjustScalingFactors {
   return {
@@ -602,11 +598,7 @@ export const MsgStableSwapAdjustScalingFactors = {
       value: MsgStableSwapAdjustScalingFactors.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgStableSwapAdjustScalingFactors.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgStableSwapAdjustScalingFactorsResponse(): MsgStableSwapAdjustScalingFactorsResponse {
   return {};
@@ -691,9 +683,5 @@ export const MsgStableSwapAdjustScalingFactorsResponse = {
       value: MsgStableSwapAdjustScalingFactorsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgStableSwapAdjustScalingFactorsResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -440,9 +440,5 @@ export const Property = {
       value: Property.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Property.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

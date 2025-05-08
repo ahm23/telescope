@@ -177,11 +177,7 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -378,11 +374,7 @@ export const QueryEpochProvisionsRequest = {
       value: QueryEpochProvisionsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEpochProvisionsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryEpochProvisionsResponse(): QueryEpochProvisionsResponse {
   return {
@@ -487,9 +479,5 @@ export const QueryEpochProvisionsResponse = {
       value: QueryEpochProvisionsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEpochProvisionsResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

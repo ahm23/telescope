@@ -332,9 +332,5 @@ export const MsgCreateBalancerPoolResponse = {
       value: MsgCreateBalancerPoolResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateBalancerPoolResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -1,7 +1,6 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
-import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.slashing.v1beta1";
 /** MsgUnjail defines the Msg/Unjail request type */
 export interface MsgUnjail {
@@ -140,11 +139,7 @@ export const MsgUnjail = {
       value: MsgUnjail.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUnjail.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgUnjailResponse(): MsgUnjailResponse {
   return {};
@@ -229,9 +224,5 @@ export const MsgUnjailResponse = {
       value: MsgUnjailResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUnjailResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

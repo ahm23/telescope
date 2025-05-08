@@ -1108,11 +1108,7 @@ export const CommissionRates = {
       value: CommissionRates.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CommissionRates.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCommission(): Commission {
   return {
@@ -1414,11 +1410,7 @@ export const Description = {
       value: Description.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Description.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseValidator(): Validator {
   return {
@@ -1822,11 +1814,7 @@ export const ValAddresses = {
       value: ValAddresses.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValAddresses.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDVPair(): DVPair {
   return {
@@ -1948,11 +1936,7 @@ export const DVPair = {
       value: DVPair.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DVPair.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDVPairs(): DVPairs {
   return {
@@ -2211,11 +2195,7 @@ export const DVVTriplet = {
       value: DVVTriplet.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DVVTriplet.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDVVTriplets(): DVVTriplets {
   return {
@@ -2474,11 +2454,7 @@ export const Delegation = {
       value: Delegation.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Delegation.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseUnbondingDelegation(): UnbondingDelegation {
   return {
@@ -2790,11 +2766,7 @@ export const UnbondingDelegationEntry = {
       value: UnbondingDelegationEntry.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UnbondingDelegationEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRedelegationEntry(): RedelegationEntry {
   return {
@@ -2952,11 +2924,7 @@ export const RedelegationEntry = {
       value: RedelegationEntry.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RedelegationEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRedelegation(): Redelegation {
   return {
@@ -3319,11 +3287,7 @@ export const Params = {
       value: Params.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDelegationResponse(): DelegationResponse {
   return {
@@ -3846,9 +3810,5 @@ export const Pool = {
       value: Pool.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Pool.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -904,11 +904,7 @@ export const Distribution_Range = {
       value: Distribution_Range.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_Range.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDistribution_BucketOptions(): Distribution_BucketOptions {
   return {
@@ -1185,11 +1181,7 @@ export const Distribution_BucketOptions_Linear = {
       value: Distribution_BucketOptions_Linear.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_BucketOptions_Linear.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDistribution_BucketOptions_Exponential(): Distribution_BucketOptions_Exponential {
   return {
@@ -1321,11 +1313,7 @@ export const Distribution_BucketOptions_Exponential = {
       value: Distribution_BucketOptions_Exponential.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_BucketOptions_Exponential.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDistribution_BucketOptions_Explicit(): Distribution_BucketOptions_Explicit {
   return {
@@ -1442,11 +1430,7 @@ export const Distribution_BucketOptions_Explicit = {
       value: Distribution_BucketOptions_Explicit.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_BucketOptions_Explicit.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDistribution_Exemplar(): Distribution_Exemplar {
   return {
@@ -1588,9 +1572,5 @@ export const Distribution_Exemplar = {
       value: Distribution_Exemplar.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_Exemplar.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

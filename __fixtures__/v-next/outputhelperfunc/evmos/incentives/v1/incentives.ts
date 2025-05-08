@@ -479,11 +479,7 @@ export const GasMeter = {
       value: GasMeter.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GasMeter.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRegisterIncentiveProposal(): RegisterIncentiveProposal {
   return {
@@ -798,9 +794,5 @@ export const CancelIncentiveProposal = {
       value: CancelIncentiveProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CancelIncentiveProposal.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

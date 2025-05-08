@@ -1444,9 +1444,5 @@ export const Option = {
       value: Option.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Option.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

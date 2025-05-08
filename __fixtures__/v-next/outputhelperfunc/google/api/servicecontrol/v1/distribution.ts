@@ -736,11 +736,7 @@ export const Distribution_LinearBuckets = {
       value: Distribution_LinearBuckets.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_LinearBuckets.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDistribution_ExponentialBuckets(): Distribution_ExponentialBuckets {
   return {
@@ -872,11 +868,7 @@ export const Distribution_ExponentialBuckets = {
       value: Distribution_ExponentialBuckets.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_ExponentialBuckets.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDistribution_ExplicitBuckets(): Distribution_ExplicitBuckets {
   return {
@@ -993,9 +985,5 @@ export const Distribution_ExplicitBuckets = {
       value: Distribution_ExplicitBuckets.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_ExplicitBuckets.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

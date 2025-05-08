@@ -1054,11 +1054,7 @@ export const MetricDescriptor_MetricDescriptorMetadata = {
       value: MetricDescriptor_MetricDescriptorMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricDescriptor_MetricDescriptorMetadata.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMetric_LabelsEntry(): Metric_LabelsEntry {
   return {
@@ -1157,11 +1153,7 @@ export const Metric_LabelsEntry = {
   toProto(message: Metric_LabelsEntry): Uint8Array {
     return Metric_LabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Metric_LabelsEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMetric(): Metric {
   return {
@@ -1324,9 +1316,5 @@ export const Metric = {
       value: Metric.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Metric.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

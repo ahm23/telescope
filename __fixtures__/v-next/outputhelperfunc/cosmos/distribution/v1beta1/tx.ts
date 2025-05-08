@@ -317,11 +317,7 @@ export const MsgSetWithdrawAddress = {
       value: MsgSetWithdrawAddress.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSetWithdrawAddress.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgSetWithdrawAddressResponse(): MsgSetWithdrawAddressResponse {
   return {};
@@ -406,11 +402,7 @@ export const MsgSetWithdrawAddressResponse = {
       value: MsgSetWithdrawAddressResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSetWithdrawAddressResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgWithdrawDelegatorReward(): MsgWithdrawDelegatorReward {
   return {
@@ -532,11 +524,7 @@ export const MsgWithdrawDelegatorReward = {
       value: MsgWithdrawDelegatorReward.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgWithdrawDelegatorReward.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgWithdrawDelegatorRewardResponse(): MsgWithdrawDelegatorRewardResponse {
   return {
@@ -761,11 +749,7 @@ export const MsgWithdrawValidatorCommission = {
       value: MsgWithdrawValidatorCommission.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgWithdrawValidatorCommission.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgWithdrawValidatorCommissionResponse(): MsgWithdrawValidatorCommissionResponse {
   return {
@@ -1107,9 +1091,5 @@ export const MsgFundCommunityPoolResponse = {
       value: MsgFundCommunityPoolResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgFundCommunityPoolResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

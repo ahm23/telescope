@@ -438,11 +438,7 @@ export const Version = {
       value: Version.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Version.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCodeGeneratorRequest(): CodeGeneratorRequest {
   return {
@@ -881,9 +877,5 @@ export const CodeGeneratorResponse_File = {
       value: CodeGeneratorResponse_File.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CodeGeneratorResponse_File.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

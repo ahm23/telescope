@@ -373,11 +373,7 @@ export const EpochInfo = {
       value: EpochInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EpochInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGenesisState(): GenesisState {
   return {

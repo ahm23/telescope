@@ -917,11 +917,7 @@ export const Member = {
       value: Member.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Member.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMembers(): Members {
   return {
@@ -1431,11 +1427,7 @@ export const DecisionPolicyWindows = {
       value: DecisionPolicyWindows.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DecisionPolicyWindows.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGroupInfo(): GroupInfo {
   return {
@@ -1629,11 +1621,7 @@ export const GroupInfo = {
       value: GroupInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GroupInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGroupMember(): GroupMember {
   return {
@@ -2320,11 +2308,7 @@ export const Proposal = {
       value: Proposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Proposal.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseTallyResult(): TallyResult {
   return {
@@ -2480,11 +2464,7 @@ export const TallyResult = {
       value: TallyResult.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TallyResult.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseVote(): Vote {
   return {
@@ -2659,9 +2639,5 @@ export const Vote = {
       value: Vote.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Vote.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

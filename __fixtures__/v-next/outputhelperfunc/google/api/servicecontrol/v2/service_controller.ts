@@ -637,11 +637,7 @@ export const ResourceInfo = {
       value: ResourceInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResourceInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCheckResponse_HeadersEntry(): CheckResponse_HeadersEntry {
   return {
@@ -740,11 +736,7 @@ export const CheckResponse_HeadersEntry = {
   toProto(message: CheckResponse_HeadersEntry): Uint8Array {
     return CheckResponse_HeadersEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckResponse_HeadersEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCheckResponse(): CheckResponse {
   return {
@@ -1139,9 +1131,5 @@ export const ReportResponse = {
       value: ReportResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ReportResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

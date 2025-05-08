@@ -497,11 +497,7 @@ export const MsgLockTokensResponse = {
       value: MsgLockTokensResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgLockTokensResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgBeginUnlockingAll(): MsgBeginUnlockingAll {
   return {
@@ -606,11 +602,7 @@ export const MsgBeginUnlockingAll = {
       value: MsgBeginUnlockingAll.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBeginUnlockingAll.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgBeginUnlockingAllResponse(): MsgBeginUnlockingAllResponse {
   return {
@@ -991,11 +983,7 @@ export const MsgBeginUnlockingResponse = {
       value: MsgBeginUnlockingResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBeginUnlockingResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgExtendLockup(): MsgExtendLockup {
   return {
@@ -1138,11 +1126,7 @@ export const MsgExtendLockup = {
       value: MsgExtendLockup.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExtendLockup.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgExtendLockupResponse(): MsgExtendLockupResponse {
   return {
@@ -1247,11 +1231,7 @@ export const MsgExtendLockupResponse = {
       value: MsgExtendLockupResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExtendLockupResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgForceUnlock(): MsgForceUnlock {
   return {
@@ -1512,9 +1492,5 @@ export const MsgForceUnlockResponse = {
       value: MsgForceUnlockResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgForceUnlockResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

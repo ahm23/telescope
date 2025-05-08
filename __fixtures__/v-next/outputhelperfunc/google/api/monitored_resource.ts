@@ -629,11 +629,7 @@ export const MonitoredResource_LabelsEntry = {
   toProto(message: MonitoredResource_LabelsEntry): Uint8Array {
     return MonitoredResource_LabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MonitoredResource_LabelsEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMonitoredResource(): MonitoredResource {
   return {
@@ -796,11 +792,7 @@ export const MonitoredResource = {
       value: MonitoredResource.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MonitoredResource.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMonitoredResourceMetadata_UserLabelsEntry(): MonitoredResourceMetadata_UserLabelsEntry {
   return {
@@ -899,11 +891,7 @@ export const MonitoredResourceMetadata_UserLabelsEntry = {
   toProto(message: MonitoredResourceMetadata_UserLabelsEntry): Uint8Array {
     return MonitoredResourceMetadata_UserLabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MonitoredResourceMetadata_UserLabelsEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMonitoredResourceMetadata(): MonitoredResourceMetadata {
   return {

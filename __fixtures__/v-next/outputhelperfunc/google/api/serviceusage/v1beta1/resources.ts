@@ -1641,11 +1641,7 @@ export const OperationMetadata = {
       value: OperationMetadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OperationMetadata.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseConsumerQuotaMetric(): ConsumerQuotaMetric {
   return {
@@ -2150,11 +2146,7 @@ export const QuotaBucket_DimensionsEntry = {
   toProto(message: QuotaBucket_DimensionsEntry): Uint8Array {
     return QuotaBucket_DimensionsEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaBucket_DimensionsEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuotaBucket(): QuotaBucket {
   return {
@@ -2499,11 +2491,7 @@ export const QuotaOverride_DimensionsEntry = {
   toProto(message: QuotaOverride_DimensionsEntry): Uint8Array {
     return QuotaOverride_DimensionsEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaOverride_DimensionsEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuotaOverride(): QuotaOverride {
   return {
@@ -2736,11 +2724,7 @@ export const QuotaOverride = {
       value: QuotaOverride.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaOverride.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseOverrideInlineSource(): OverrideInlineSource {
   return {
@@ -2952,11 +2936,7 @@ export const AdminQuotaPolicy_DimensionsEntry = {
   toProto(message: AdminQuotaPolicy_DimensionsEntry): Uint8Array {
     return AdminQuotaPolicy_DimensionsEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AdminQuotaPolicy_DimensionsEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseAdminQuotaPolicy(): AdminQuotaPolicy {
   return {
@@ -3189,11 +3169,7 @@ export const AdminQuotaPolicy = {
       value: AdminQuotaPolicy.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AdminQuotaPolicy.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseServiceIdentity(): ServiceIdentity {
   return {
@@ -3308,9 +3284,5 @@ export const ServiceIdentity = {
       value: ServiceIdentity.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ServiceIdentity.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

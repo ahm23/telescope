@@ -972,9 +972,5 @@ export const Sequence = {
       value: Sequence.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Sequence.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

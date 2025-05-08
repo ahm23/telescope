@@ -473,11 +473,7 @@ export const ModuleToDistributeCoinsRequest = {
       value: ModuleToDistributeCoinsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleToDistributeCoinsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseModuleToDistributeCoinsResponse(): ModuleToDistributeCoinsResponse {
   return {
@@ -704,11 +700,7 @@ export const GaugeByIDRequest = {
       value: GaugeByIDRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GaugeByIDRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGaugeByIDResponse(): GaugeByIDResponse {
   return {
@@ -2274,11 +2266,7 @@ export const RewardsEstRequest = {
       value: RewardsEstRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RewardsEstRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRewardsEstResponse(): RewardsEstResponse {
   return {
@@ -2483,11 +2471,7 @@ export const QueryLockableDurationsRequest = {
       value: QueryLockableDurationsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryLockableDurationsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryLockableDurationsResponse(): QueryLockableDurationsResponse {
   return {
@@ -2602,9 +2586,5 @@ export const QueryLockableDurationsResponse = {
       value: QueryLockableDurationsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryLockableDurationsResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

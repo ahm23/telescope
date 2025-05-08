@@ -314,11 +314,7 @@ export const CertificateID = {
       value: CertificateID.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CertificateID.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCertificate(): Certificate {
   return {
@@ -457,11 +453,7 @@ export const Certificate = {
       value: Certificate.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Certificate.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCertificateFilter(): CertificateFilter {
   return {
@@ -600,11 +592,7 @@ export const CertificateFilter = {
       value: CertificateFilter.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CertificateFilter.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgCreateCertificate(): MsgCreateCertificate {
   return {
@@ -743,11 +731,7 @@ export const MsgCreateCertificate = {
       value: MsgCreateCertificate.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateCertificate.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgCreateCertificateResponse(): MsgCreateCertificateResponse {
   return {};
@@ -832,11 +816,7 @@ export const MsgCreateCertificateResponse = {
       value: MsgCreateCertificateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateCertificateResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgRevokeCertificate(): MsgRevokeCertificate {
   return {
@@ -1033,9 +1013,5 @@ export const MsgRevokeCertificateResponse = {
       value: MsgRevokeCertificateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRevokeCertificateResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -1,7 +1,6 @@
 import { isSet, DeepPartial, Exact } from "../../../helpers";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
-import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "akash.base.v1beta1";
 /** This describes how the endpoint is implemented when the lease is deployed */
 export enum Endpoint_Kind {
@@ -161,9 +160,5 @@ export const Endpoint = {
       value: Endpoint.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Endpoint.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

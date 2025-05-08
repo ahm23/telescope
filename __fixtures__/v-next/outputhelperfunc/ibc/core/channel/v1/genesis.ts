@@ -524,9 +524,5 @@ export const PacketSequence = {
       value: PacketSequence.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PacketSequence.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

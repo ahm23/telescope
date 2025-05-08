@@ -1065,11 +1065,7 @@ export const CheckResponse_ConsumerInfo = {
       value: CheckResponse_ConsumerInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckResponse_ConsumerInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseReportRequest(): ReportRequest {
   return {

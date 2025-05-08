@@ -348,9 +348,5 @@ export const Explain_ExprStep = {
       value: Explain_ExprStep.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Explain_ExprStep.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

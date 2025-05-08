@@ -239,11 +239,7 @@ export const QueryFeeTokensRequest = {
       value: QueryFeeTokensRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryFeeTokensRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryFeeTokensResponse(): QueryFeeTokensResponse {
   return {
@@ -468,11 +464,7 @@ export const QueryDenomSpotPriceRequest = {
       value: QueryDenomSpotPriceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomSpotPriceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryDenomSpotPriceResponse(): QueryDenomSpotPriceResponse {
   return {
@@ -596,11 +588,7 @@ export const QueryDenomSpotPriceResponse = {
       value: QueryDenomSpotPriceResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomSpotPriceResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryDenomPoolIdRequest(): QueryDenomPoolIdRequest {
   return {
@@ -705,11 +693,7 @@ export const QueryDenomPoolIdRequest = {
       value: QueryDenomPoolIdRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomPoolIdRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryDenomPoolIdResponse(): QueryDenomPoolIdResponse {
   return {
@@ -816,11 +800,7 @@ export const QueryDenomPoolIdResponse = {
       value: QueryDenomPoolIdResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomPoolIdResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryBaseDenomRequest(): QueryBaseDenomRequest {
   return {};
@@ -905,11 +885,7 @@ export const QueryBaseDenomRequest = {
       value: QueryBaseDenomRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBaseDenomRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryBaseDenomResponse(): QueryBaseDenomResponse {
   return {
@@ -1014,9 +990,5 @@ export const QueryBaseDenomResponse = {
       value: QueryBaseDenomResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBaseDenomResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

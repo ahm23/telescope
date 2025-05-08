@@ -347,9 +347,5 @@ export const ModuleConfig = {
       value: ModuleConfig.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleConfig.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

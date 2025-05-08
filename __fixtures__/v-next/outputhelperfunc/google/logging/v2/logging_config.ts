@@ -3450,11 +3450,7 @@ export const LogView = {
       value: LogView.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogView.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseLogSink(): LogSink {
   return {
@@ -3872,11 +3868,7 @@ export const BigQueryOptions = {
       value: BigQueryOptions.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BigQueryOptions.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListBucketsRequest(): ListBucketsRequest {
   return {
@@ -4008,11 +4000,7 @@ export const ListBucketsRequest = {
       value: ListBucketsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListBucketsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListBucketsResponse(): ListBucketsResponse {
   return {
@@ -4521,11 +4509,7 @@ export const GetBucketRequest = {
       value: GetBucketRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetBucketRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDeleteBucketRequest(): DeleteBucketRequest {
   return {
@@ -4623,11 +4607,7 @@ export const DeleteBucketRequest = {
       value: DeleteBucketRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteBucketRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseUndeleteBucketRequest(): UndeleteBucketRequest {
   return {
@@ -4725,11 +4705,7 @@ export const UndeleteBucketRequest = {
       value: UndeleteBucketRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UndeleteBucketRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListViewsRequest(): ListViewsRequest {
   return {
@@ -4861,11 +4837,7 @@ export const ListViewsRequest = {
       value: ListViewsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListViewsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListViewsResponse(): ListViewsResponse {
   return {
@@ -5374,11 +5346,7 @@ export const GetViewRequest = {
       value: GetViewRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetViewRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDeleteViewRequest(): DeleteViewRequest {
   return {
@@ -5476,11 +5444,7 @@ export const DeleteViewRequest = {
       value: DeleteViewRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteViewRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListSinksRequest(): ListSinksRequest {
   return {
@@ -5612,11 +5576,7 @@ export const ListSinksRequest = {
       value: ListSinksRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListSinksRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListSinksResponse(): ListSinksResponse {
   return {
@@ -5844,11 +5804,7 @@ export const GetSinkRequest = {
       value: GetSinkRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetSinkRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCreateSinkRequest(): CreateSinkRequest {
   return {
@@ -6244,11 +6200,7 @@ export const DeleteSinkRequest = {
       value: DeleteSinkRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteSinkRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseLogExclusion(): LogExclusion {
   return {
@@ -6431,11 +6383,7 @@ export const LogExclusion = {
       value: LogExclusion.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogExclusion.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListExclusionsRequest(): ListExclusionsRequest {
   return {
@@ -6567,11 +6515,7 @@ export const ListExclusionsRequest = {
       value: ListExclusionsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListExclusionsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListExclusionsResponse(): ListExclusionsResponse {
   return {
@@ -6799,11 +6743,7 @@ export const GetExclusionRequest = {
       value: GetExclusionRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetExclusionRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCreateExclusionRequest(): CreateExclusionRequest {
   return {
@@ -7165,11 +7105,7 @@ export const DeleteExclusionRequest = {
       value: DeleteExclusionRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteExclusionRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetCmekSettingsRequest(): GetCmekSettingsRequest {
   return {
@@ -7267,11 +7203,7 @@ export const GetCmekSettingsRequest = {
       value: GetCmekSettingsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetCmekSettingsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseUpdateCmekSettingsRequest(): UpdateCmekSettingsRequest {
   return {
@@ -7545,11 +7477,7 @@ export const CmekSettings = {
       value: CmekSettings.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CmekSettings.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetSettingsRequest(): GetSettingsRequest {
   return {
@@ -7647,11 +7575,7 @@ export const GetSettingsRequest = {
       value: GetSettingsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetSettingsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseUpdateSettingsRequest(): UpdateSettingsRequest {
   return {
@@ -7959,11 +7883,7 @@ export const Settings = {
       value: Settings.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Settings.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCopyLogEntriesRequest(): CopyLogEntriesRequest {
   return {
@@ -8095,11 +8015,7 @@ export const CopyLogEntriesRequest = {
       value: CopyLogEntriesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CopyLogEntriesRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCopyLogEntriesMetadata(): CopyLogEntriesMetadata {
   return {
@@ -8406,9 +8322,5 @@ export const CopyLogEntriesResponse = {
       value: CopyLogEntriesResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CopyLogEntriesResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

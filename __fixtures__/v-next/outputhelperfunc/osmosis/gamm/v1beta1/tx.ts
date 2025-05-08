@@ -1164,11 +1164,7 @@ export const SwapAmountInRoute = {
       value: SwapAmountInRoute.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SwapAmountInRoute.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgSwapExactAmountIn(): MsgSwapExactAmountIn {
   return {
@@ -1447,11 +1443,7 @@ export const MsgSwapExactAmountInResponse = {
       value: MsgSwapExactAmountInResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSwapExactAmountInResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSwapAmountOutRoute(): SwapAmountOutRoute {
   return {
@@ -1575,11 +1567,7 @@ export const SwapAmountOutRoute = {
       value: SwapAmountOutRoute.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SwapAmountOutRoute.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgSwapExactAmountOut(): MsgSwapExactAmountOut {
   return {
@@ -1858,11 +1846,7 @@ export const MsgSwapExactAmountOutResponse = {
       value: MsgSwapExactAmountOutResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSwapExactAmountOutResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgJoinSwapExternAmountIn(): MsgJoinSwapExternAmountIn {
   return {
@@ -2132,11 +2116,7 @@ export const MsgJoinSwapExternAmountInResponse = {
       value: MsgJoinSwapExternAmountInResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgJoinSwapExternAmountInResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgJoinSwapShareAmountOut(): MsgJoinSwapShareAmountOut {
   return {
@@ -2311,11 +2291,7 @@ export const MsgJoinSwapShareAmountOut = {
       value: MsgJoinSwapShareAmountOut.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgJoinSwapShareAmountOut.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgJoinSwapShareAmountOutResponse(): MsgJoinSwapShareAmountOutResponse {
   return {
@@ -2420,11 +2396,7 @@ export const MsgJoinSwapShareAmountOutResponse = {
       value: MsgJoinSwapShareAmountOutResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgJoinSwapShareAmountOutResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgExitSwapShareAmountIn(): MsgExitSwapShareAmountIn {
   return {
@@ -2599,11 +2571,7 @@ export const MsgExitSwapShareAmountIn = {
       value: MsgExitSwapShareAmountIn.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExitSwapShareAmountIn.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgExitSwapShareAmountInResponse(): MsgExitSwapShareAmountInResponse {
   return {
@@ -2708,11 +2676,7 @@ export const MsgExitSwapShareAmountInResponse = {
       value: MsgExitSwapShareAmountInResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExitSwapShareAmountInResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgExitSwapExternAmountOut(): MsgExitSwapExternAmountOut {
   return {
@@ -2982,9 +2946,5 @@ export const MsgExitSwapExternAmountOutResponse = {
       value: MsgExitSwapExternAmountOutResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExitSwapExternAmountOutResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

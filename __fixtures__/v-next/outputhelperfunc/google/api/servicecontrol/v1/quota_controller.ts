@@ -734,11 +734,7 @@ export const QuotaOperation_LabelsEntry = {
   toProto(message: QuotaOperation_LabelsEntry): Uint8Array {
     return QuotaOperation_LabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaOperation_LabelsEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuotaOperation(): QuotaOperation {
   return {

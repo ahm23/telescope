@@ -373,9 +373,5 @@ export const QueryAppVersionResponse = {
       value: QueryAppVersionResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAppVersionResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

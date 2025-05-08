@@ -751,11 +751,7 @@ export const QueryIncentiveRequest = {
       value: QueryIncentiveRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryIncentiveRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryIncentiveResponse(): QueryIncentiveResponse {
   return {
@@ -1230,11 +1226,7 @@ export const QueryGasMeterRequest = {
       value: QueryGasMeterRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGasMeterRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryGasMeterResponse(): QueryGasMeterResponse {
   return {
@@ -1334,11 +1326,7 @@ export const QueryGasMeterResponse = {
       value: QueryGasMeterResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGasMeterResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryAllocationMetersRequest(): QueryAllocationMetersRequest {
   return {
@@ -1674,11 +1662,7 @@ export const QueryAllocationMeterRequest = {
       value: QueryAllocationMeterRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllocationMeterRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryAllocationMeterResponse(): QueryAllocationMeterResponse {
   return {
@@ -1861,11 +1845,7 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {

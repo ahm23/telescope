@@ -744,11 +744,7 @@ export const DocumentationRule = {
       value: DocumentationRule.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DocumentationRule.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBasePage(): Page {
   return {

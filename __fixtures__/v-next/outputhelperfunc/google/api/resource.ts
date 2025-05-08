@@ -1,7 +1,6 @@
 import { isSet, DeepPartial } from "../../helpers";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
-import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * A description of the historical or future-looking state of the
@@ -758,11 +757,7 @@ export const ResourceDescriptor = {
       value: ResourceDescriptor.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResourceDescriptor.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseResourceReference(): ResourceReference {
   return {
@@ -877,9 +872,5 @@ export const ResourceReference = {
       value: ResourceReference.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResourceReference.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -361,11 +361,7 @@ export const MsgSuperfluidDelegate = {
       value: MsgSuperfluidDelegate.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSuperfluidDelegate.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgSuperfluidDelegateResponse(): MsgSuperfluidDelegateResponse {
   return {};
@@ -450,11 +446,7 @@ export const MsgSuperfluidDelegateResponse = {
       value: MsgSuperfluidDelegateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSuperfluidDelegateResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgSuperfluidUndelegate(): MsgSuperfluidUndelegate {
   return {
@@ -578,11 +570,7 @@ export const MsgSuperfluidUndelegate = {
       value: MsgSuperfluidUndelegate.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSuperfluidUndelegate.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgSuperfluidUndelegateResponse(): MsgSuperfluidUndelegateResponse {
   return {};
@@ -667,11 +655,7 @@ export const MsgSuperfluidUndelegateResponse = {
       value: MsgSuperfluidUndelegateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSuperfluidUndelegateResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgSuperfluidUnbondLock(): MsgSuperfluidUnbondLock {
   return {
@@ -795,11 +779,7 @@ export const MsgSuperfluidUnbondLock = {
       value: MsgSuperfluidUnbondLock.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSuperfluidUnbondLock.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgSuperfluidUnbondLockResponse(): MsgSuperfluidUnbondLockResponse {
   return {};
@@ -884,11 +864,7 @@ export const MsgSuperfluidUnbondLockResponse = {
       value: MsgSuperfluidUnbondLockResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSuperfluidUnbondLockResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgLockAndSuperfluidDelegate(): MsgLockAndSuperfluidDelegate {
   return {
@@ -1149,11 +1125,7 @@ export const MsgLockAndSuperfluidDelegateResponse = {
       value: MsgLockAndSuperfluidDelegateResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgLockAndSuperfluidDelegateResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgUnPoolWhitelistedPool(): MsgUnPoolWhitelistedPool {
   return {
@@ -1277,11 +1249,7 @@ export const MsgUnPoolWhitelistedPool = {
       value: MsgUnPoolWhitelistedPool.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUnPoolWhitelistedPool.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgUnPoolWhitelistedPoolResponse(): MsgUnPoolWhitelistedPoolResponse {
   return {
@@ -1405,9 +1373,5 @@ export const MsgUnPoolWhitelistedPoolResponse = {
       value: MsgUnPoolWhitelistedPoolResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUnPoolWhitelistedPoolResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

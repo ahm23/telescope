@@ -1,7 +1,6 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, bytesFromBase64, base64FromBytes, DeepPartial, Exact } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
-import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "akash.base.v1beta2";
 /** Unit stores cpu, memory and storage metrics */
 export interface ResourceValue {
@@ -126,9 +125,5 @@ export const ResourceValue = {
       value: ResourceValue.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResourceValue.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -1,7 +1,6 @@
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { JsonSafe } from "../../../../json-safe";
 import { DeepPartial, isSet } from "../../../../helpers";
-import { GlobalDecoderRegistry } from "../../../../registry";
 export const protobufPackage = "cosmos.base.reflection.v1beta1";
 /** ListAllInterfacesRequest is the request type of the ListAllInterfaces RPC. */
 export interface ListAllInterfacesRequest {}
@@ -182,11 +181,7 @@ export const ListAllInterfacesRequest = {
       value: ListAllInterfacesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListAllInterfacesRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListAllInterfacesResponse(): ListAllInterfacesResponse {
   return {
@@ -301,11 +296,7 @@ export const ListAllInterfacesResponse = {
       value: ListAllInterfacesResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListAllInterfacesResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListImplementationsRequest(): ListImplementationsRequest {
   return {
@@ -410,11 +401,7 @@ export const ListImplementationsRequest = {
       value: ListImplementationsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListImplementationsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListImplementationsResponse(): ListImplementationsResponse {
   return {
@@ -529,9 +516,5 @@ export const ListImplementationsResponse = {
       value: ListImplementationsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListImplementationsResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

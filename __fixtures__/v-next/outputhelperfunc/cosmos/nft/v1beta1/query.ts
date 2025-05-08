@@ -428,11 +428,7 @@ export const QueryBalanceRequest = {
       value: QueryBalanceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBalanceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryBalanceResponse(): QueryBalanceResponse {
   return {
@@ -539,11 +535,7 @@ export const QueryBalanceResponse = {
       value: QueryBalanceResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBalanceResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryOwnerRequest(): QueryOwnerRequest {
   return {
@@ -665,11 +657,7 @@ export const QueryOwnerRequest = {
       value: QueryOwnerRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryOwnerRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryOwnerResponse(): QueryOwnerResponse {
   return {
@@ -774,11 +762,7 @@ export const QueryOwnerResponse = {
       value: QueryOwnerResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryOwnerResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuerySupplyRequest(): QuerySupplyRequest {
   return {
@@ -883,11 +867,7 @@ export const QuerySupplyRequest = {
       value: QuerySupplyRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySupplyRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuerySupplyResponse(): QuerySupplyResponse {
   return {
@@ -994,11 +974,7 @@ export const QuerySupplyResponse = {
       value: QuerySupplyResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySupplyResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryNFTsRequest(): QueryNFTsRequest {
   return {
@@ -1406,11 +1382,7 @@ export const QueryNFTRequest = {
       value: QueryNFTRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryNFTRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryNFTResponse(): QueryNFTResponse {
   return {
@@ -1627,11 +1599,7 @@ export const QueryClassRequest = {
       value: QueryClassRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClassRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryClassResponse(): QueryClassResponse {
   return {

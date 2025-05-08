@@ -1,7 +1,6 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, bytesFromBase64, base64FromBytes, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
-import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.crypto.secp256r1";
 /** PubKey defines a secp256r1 ECDSA public key. */
 export interface PubKey {
@@ -156,11 +155,7 @@ export const PubKey = {
       value: PubKey.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PubKey.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBasePrivKey(): PrivKey {
   return {
@@ -265,9 +260,5 @@ export const PrivKey = {
       value: PrivKey.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PrivKey.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

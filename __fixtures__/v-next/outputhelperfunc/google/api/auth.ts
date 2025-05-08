@@ -1031,11 +1031,7 @@ export const JwtLocation = {
       value: JwtLocation.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(JwtLocation.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseAuthProvider(): AuthProvider {
   return {
@@ -1331,11 +1327,7 @@ export const OAuthRequirements = {
       value: OAuthRequirements.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OAuthRequirements.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseAuthRequirement(): AuthRequirement {
   return {
@@ -1450,9 +1442,5 @@ export const AuthRequirement = {
       value: AuthRequirement.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AuthRequirement.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

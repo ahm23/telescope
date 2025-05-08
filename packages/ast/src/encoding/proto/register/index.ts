@@ -99,10 +99,15 @@ export const registerTypeUrlMethod = (args: {
             ...registerStats,
         ].filter(Boolean);
     } else {
-        registerStats = [
-            createIfGlobalDecoderRegistryRegisterExistingTypeUrl(context, name),
-            ...registerStats,
-        ].filter(Boolean);
+        if (registerStats.length) {
+            registerStats = [
+                createIfGlobalDecoderRegistryRegisterExistingTypeUrl(
+                    context,
+                    name
+                ),
+                ...registerStats,
+            ].filter(Boolean);
+        }
     }
 
     const method = objectMethod(

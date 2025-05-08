@@ -3295,11 +3295,7 @@ export const DescriptorProto_ReservedRange = {
       value: DescriptorProto_ReservedRange.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DescriptorProto_ReservedRange.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseExtensionRangeOptions(): ExtensionRangeOptions {
   return {
@@ -4112,11 +4108,7 @@ export const EnumDescriptorProto_EnumReservedRange = {
       value: EnumDescriptorProto_EnumReservedRange.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EnumDescriptorProto_EnumReservedRange.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseEnumValueDescriptorProto(): EnumValueDescriptorProto {
   return {
@@ -6445,11 +6437,7 @@ export const UninterpretedOption_NamePart = {
       value: UninterpretedOption_NamePart.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UninterpretedOption_NamePart.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSourceCodeInfo(): SourceCodeInfo {
   return {
@@ -6776,11 +6764,7 @@ export const SourceCodeInfo_Location = {
       value: SourceCodeInfo_Location.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SourceCodeInfo_Location.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGeneratedCodeInfo(): GeneratedCodeInfo {
   return {
@@ -7061,9 +7045,5 @@ export const GeneratedCodeInfo_Annotation = {
       value: GeneratedCodeInfo_Annotation.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GeneratedCodeInfo_Annotation.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

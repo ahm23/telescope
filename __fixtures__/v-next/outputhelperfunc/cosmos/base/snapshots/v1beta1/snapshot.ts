@@ -526,11 +526,7 @@ export const Metadata = {
       value: Metadata.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Metadata.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSnapshotItem(): SnapshotItem {
   return {
@@ -847,11 +843,7 @@ export const SnapshotStoreItem = {
       value: SnapshotStoreItem.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SnapshotStoreItem.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSnapshotIAVLItem(): SnapshotIAVLItem {
   return {
@@ -1009,11 +1001,7 @@ export const SnapshotIAVLItem = {
       value: SnapshotIAVLItem.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SnapshotIAVLItem.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSnapshotExtensionMeta(): SnapshotExtensionMeta {
   return {
@@ -1135,11 +1123,7 @@ export const SnapshotExtensionMeta = {
       value: SnapshotExtensionMeta.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SnapshotExtensionMeta.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSnapshotExtensionPayload(): SnapshotExtensionPayload {
   return {
@@ -1244,11 +1228,7 @@ export const SnapshotExtensionPayload = {
       value: SnapshotExtensionPayload.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SnapshotExtensionPayload.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSnapshotKVItem(): SnapshotKVItem {
   return {
@@ -1370,11 +1350,7 @@ export const SnapshotKVItem = {
       value: SnapshotKVItem.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SnapshotKVItem.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSnapshotSchema(): SnapshotSchema {
   return {
@@ -1489,9 +1465,5 @@ export const SnapshotSchema = {
       value: SnapshotSchema.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SnapshotSchema.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -1017,9 +1017,5 @@ export const IdRef = {
       value: IdRef.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(IdRef.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

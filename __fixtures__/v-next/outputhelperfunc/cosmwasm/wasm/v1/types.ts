@@ -480,11 +480,7 @@ export const AccessTypeParam = {
       value: AccessTypeParam.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccessTypeParam.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseAccessConfig(): AccessConfig {
   return {
@@ -606,11 +602,7 @@ export const AccessConfig = {
       value: AccessConfig.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccessConfig.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseParams(): Params {
   return {
@@ -1117,11 +1109,7 @@ export const ContractInfo = {
       value: ContractInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ContractInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseContractCodeHistoryEntry(): ContractCodeHistoryEntry {
   return {
@@ -1412,11 +1400,7 @@ export const AbsoluteTxPosition = {
       value: AbsoluteTxPosition.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AbsoluteTxPosition.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseModel(): Model {
   return {
@@ -1538,9 +1522,5 @@ export const Model = {
       value: Model.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Model.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

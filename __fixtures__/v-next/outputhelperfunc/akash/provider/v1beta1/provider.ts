@@ -296,11 +296,7 @@ export const ProviderInfo = {
       value: ProviderInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ProviderInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgCreateProvider(): MsgCreateProvider {
   return {
@@ -559,11 +555,7 @@ export const MsgCreateProviderResponse = {
       value: MsgCreateProviderResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateProviderResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgUpdateProvider(): MsgUpdateProvider {
   return {
@@ -822,11 +814,7 @@ export const MsgUpdateProviderResponse = {
       value: MsgUpdateProviderResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateProviderResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgDeleteProvider(): MsgDeleteProvider {
   return {
@@ -931,11 +919,7 @@ export const MsgDeleteProvider = {
       value: MsgDeleteProvider.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDeleteProvider.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgDeleteProviderResponse(): MsgDeleteProviderResponse {
   return {};
@@ -1020,11 +1004,7 @@ export const MsgDeleteProviderResponse = {
       value: MsgDeleteProviderResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDeleteProviderResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseProvider(): Provider {
   return {

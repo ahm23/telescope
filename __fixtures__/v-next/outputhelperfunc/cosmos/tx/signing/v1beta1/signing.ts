@@ -768,11 +768,7 @@ export const SignatureDescriptor_Data_Single = {
       value: SignatureDescriptor_Data_Single.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignatureDescriptor_Data_Single.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSignatureDescriptor_Data_Multi(): SignatureDescriptor_Data_Multi {
   return {

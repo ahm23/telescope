@@ -679,9 +679,5 @@ export const GrantQueueItem = {
       value: GrantQueueItem.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GrantQueueItem.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

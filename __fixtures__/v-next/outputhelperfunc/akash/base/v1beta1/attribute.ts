@@ -215,11 +215,7 @@ export const Attribute = {
       value: Attribute.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Attribute.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSignedBy(): SignedBy {
   return {
@@ -361,11 +357,7 @@ export const SignedBy = {
       value: SignedBy.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignedBy.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBasePlacementRequirements(): PlacementRequirements {
   return {

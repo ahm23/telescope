@@ -1195,9 +1195,5 @@ export const Fraction = {
       value: Fraction.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Fraction.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

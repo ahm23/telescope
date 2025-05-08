@@ -550,11 +550,7 @@ export const MsgSubmitProposalResponse = {
       value: MsgSubmitProposalResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSubmitProposalResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgExecLegacyContent(): MsgExecLegacyContent {
   return {
@@ -777,11 +773,7 @@ export const MsgExecLegacyContentResponse = {
       value: MsgExecLegacyContentResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExecLegacyContentResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgVote(): MsgVote {
   return {
@@ -939,11 +931,7 @@ export const MsgVote = {
       value: MsgVote.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgVote.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgVoteResponse(): MsgVoteResponse {
   return {};
@@ -1028,11 +1016,7 @@ export const MsgVoteResponse = {
       value: MsgVoteResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgVoteResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgVoteWeighted(): MsgVoteWeighted {
   return {
@@ -1290,11 +1274,7 @@ export const MsgVoteWeightedResponse = {
       value: MsgVoteWeightedResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgVoteWeightedResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgDeposit(): MsgDeposit {
   return {
@@ -1535,9 +1515,5 @@ export const MsgDepositResponse = {
       value: MsgDepositResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDepositResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

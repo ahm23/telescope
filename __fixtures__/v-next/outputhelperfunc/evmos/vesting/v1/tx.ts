@@ -440,11 +440,7 @@ export const MsgCreateClawbackVestingAccountResponse = {
       value: MsgCreateClawbackVestingAccountResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateClawbackVestingAccountResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgClawback(): MsgClawback {
   return {
@@ -576,11 +572,7 @@ export const MsgClawback = {
       value: MsgClawback.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgClawback.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgClawbackResponse(): MsgClawbackResponse {
   return {};
@@ -658,9 +650,5 @@ export const MsgClawbackResponse = {
       value: MsgClawbackResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgClawbackResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

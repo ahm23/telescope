@@ -1393,11 +1393,7 @@ export const LeafOp = {
       value: LeafOp.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LeafOp.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseInnerOp(): InnerOp {
   return {
@@ -1529,11 +1525,7 @@ export const InnerOp = {
       value: InnerOp.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(InnerOp.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseProofSpec(): ProofSpec {
   return {
@@ -1894,11 +1886,7 @@ export const InnerSpec = {
       value: InnerSpec.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(InnerSpec.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseBatchProof(): BatchProof {
   return {

@@ -1152,11 +1152,7 @@ export const Expr_Ident = {
       value: Expr_Ident.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Expr_Ident.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseExpr_Select(): Expr_Select {
   return {
@@ -2268,9 +2264,5 @@ export const Literal = {
       value: Literal.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Literal.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

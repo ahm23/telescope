@@ -418,9 +418,5 @@ export const Billing_BillingDestination = {
       value: Billing_BillingDestination.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Billing_BillingDestination.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

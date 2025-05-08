@@ -1003,11 +1003,7 @@ export const MigrateContractProposal = {
       value: MigrateContractProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MigrateContractProposal.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSudoContractProposal(): SudoContractProposal {
   return {
@@ -1163,11 +1159,7 @@ export const SudoContractProposal = {
       value: SudoContractProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SudoContractProposal.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseExecuteContractProposal(): ExecuteContractProposal {
   return {
@@ -1528,11 +1520,7 @@ export const UpdateAdminProposal = {
       value: UpdateAdminProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateAdminProposal.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseClearAdminProposal(): ClearAdminProposal {
   return {
@@ -1671,11 +1659,7 @@ export const ClearAdminProposal = {
       value: ClearAdminProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClearAdminProposal.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBasePinCodesProposal(): PinCodesProposal {
   return {
@@ -1833,11 +1817,7 @@ export const PinCodesProposal = {
       value: PinCodesProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PinCodesProposal.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseUnpinCodesProposal(): UnpinCodesProposal {
   return {
@@ -1995,9 +1975,5 @@ export const UnpinCodesProposal = {
       value: UnpinCodesProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UnpinCodesProposal.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

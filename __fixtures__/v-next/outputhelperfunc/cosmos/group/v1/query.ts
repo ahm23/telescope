@@ -767,11 +767,7 @@ export const QueryGroupInfoRequest = {
       value: QueryGroupInfoRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGroupInfoRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryGroupInfoResponse(): QueryGroupInfoResponse {
   return {
@@ -988,11 +984,7 @@ export const QueryGroupPolicyInfoRequest = {
       value: QueryGroupPolicyInfoRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGroupPolicyInfoRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryGroupPolicyInfoResponse(): QueryGroupPolicyInfoResponse {
   return {
@@ -2291,11 +2283,7 @@ export const QueryProposalRequest = {
       value: QueryProposalRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProposalRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryProposalResponse(): QueryProposalResponse {
   return {
@@ -2800,11 +2788,7 @@ export const QueryVoteByProposalVoterRequest = {
       value: QueryVoteByProposalVoterRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryVoteByProposalVoterRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryVoteByProposalVoterResponse(): QueryVoteByProposalVoterResponse {
   return {
@@ -3832,11 +3816,7 @@ export const QueryTallyResultRequest = {
       value: QueryTallyResultRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTallyResultRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryTallyResultResponse(): QueryTallyResultResponse {
   return {

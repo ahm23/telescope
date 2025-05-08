@@ -307,11 +307,7 @@ export const QueryTotalUnclaimedRequest = {
       value: QueryTotalUnclaimedRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalUnclaimedRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryTotalUnclaimedResponse(): QueryTotalUnclaimedResponse {
   return {
@@ -502,11 +498,7 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -947,11 +939,7 @@ export const QueryClaimsRecordRequest = {
       value: QueryClaimsRecordRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimsRecordRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryClaimsRecordResponse(): QueryClaimsRecordResponse {
   return {

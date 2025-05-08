@@ -899,11 +899,7 @@ export const ListServicesRequest = {
       value: ListServicesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServicesRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListServicesResponse(): ListServicesResponse {
   return {
@@ -1131,11 +1127,7 @@ export const GetServiceRequest = {
       value: GetServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetServiceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCreateServiceRequest(): CreateServiceRequest {
   return {
@@ -1338,11 +1330,7 @@ export const DeleteServiceRequest = {
       value: DeleteServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DeleteServiceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseUndeleteServiceRequest(): UndeleteServiceRequest {
   return {
@@ -1440,11 +1428,7 @@ export const UndeleteServiceRequest = {
       value: UndeleteServiceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UndeleteServiceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseUndeleteServiceResponse(): UndeleteServiceResponse {
   return {
@@ -1681,11 +1665,7 @@ export const GetServiceConfigRequest = {
       value: GetServiceConfigRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetServiceConfigRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListServiceConfigsRequest(): ListServiceConfigsRequest {
   return {
@@ -1817,11 +1797,7 @@ export const ListServiceConfigsRequest = {
       value: ListServiceConfigsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServiceConfigsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListServiceConfigsResponse(): ListServiceConfigsResponse {
   return {
@@ -2588,11 +2564,7 @@ export const ListServiceRolloutsRequest = {
       value: ListServiceRolloutsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServiceRolloutsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseListServiceRolloutsResponse(): ListServiceRolloutsResponse {
   return {
@@ -2837,11 +2809,7 @@ export const GetServiceRolloutRequest = {
       value: GetServiceRolloutRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetServiceRolloutRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGenerateConfigReportRequest(): GenerateConfigReportRequest {
   return {
@@ -2960,11 +2928,7 @@ export const GenerateConfigReportRequest = {
       value: GenerateConfigReportRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenerateConfigReportRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGenerateConfigReportResponse(): GenerateConfigReportResponse {
   return {

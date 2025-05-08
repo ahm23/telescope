@@ -1,7 +1,6 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
-import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "osmosis.gamm.v2";
 /**
  * QuerySpotPriceRequest defines the gRPC request structure for a SpotPrice
@@ -208,11 +207,7 @@ export const QuerySpotPriceRequest = {
       value: QuerySpotPriceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySpotPriceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuerySpotPriceResponse(): QuerySpotPriceResponse {
   return {
@@ -317,9 +312,5 @@ export const QuerySpotPriceResponse = {
       value: QuerySpotPriceResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySpotPriceResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

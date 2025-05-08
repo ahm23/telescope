@@ -1149,11 +1149,7 @@ export const QueryChannelRequest = {
       value: QueryChannelRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryChannelRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryChannelResponse(): QueryChannelResponse {
   return {
@@ -1985,11 +1981,7 @@ export const QueryChannelClientStateRequest = {
       value: QueryChannelClientStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryChannelClientStateRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryChannelClientStateResponse(): QueryChannelClientStateResponse {
   return {
@@ -2298,11 +2290,7 @@ export const QueryChannelConsensusStateRequest = {
       value: QueryChannelConsensusStateRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryChannelConsensusStateRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryChannelConsensusStateResponse(): QueryChannelConsensusStateResponse {
   return {
@@ -2608,11 +2596,7 @@ export const QueryPacketCommitmentRequest = {
       value: QueryPacketCommitmentRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPacketCommitmentRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryPacketCommitmentResponse(): QueryPacketCommitmentResponse {
   return {
@@ -3205,11 +3189,7 @@ export const QueryPacketReceiptRequest = {
       value: QueryPacketReceiptRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPacketReceiptRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryPacketReceiptResponse(): QueryPacketReceiptResponse {
   return {
@@ -3496,11 +3476,7 @@ export const QueryPacketAcknowledgementRequest = {
       value: QueryPacketAcknowledgementRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPacketAcknowledgementRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryPacketAcknowledgementResponse(): QueryPacketAcknowledgementResponse {
   return {
@@ -4146,11 +4122,7 @@ export const QueryUnreceivedPacketsRequest = {
       value: QueryUnreceivedPacketsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUnreceivedPacketsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryUnreceivedPacketsResponse(): QueryUnreceivedPacketsResponse {
   return {
@@ -4456,11 +4428,7 @@ export const QueryUnreceivedAcksRequest = {
       value: QueryUnreceivedAcksRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryUnreceivedAcksRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryUnreceivedAcksResponse(): QueryUnreceivedAcksResponse {
   return {
@@ -4730,11 +4698,7 @@ export const QueryNextSequenceReceiveRequest = {
       value: QueryNextSequenceReceiveRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryNextSequenceReceiveRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryNextSequenceReceiveResponse(): QueryNextSequenceReceiveResponse {
   return {

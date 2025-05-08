@@ -2,8 +2,8 @@ import { Coin, CoinAmino, CoinSDKType } from "../../cosmos/base/v1beta1/coin";
 import { isSet, DeepPartial } from "../../helpers";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
-import { GlobalDecoderRegistry } from "../../registry";
 import { Decimal } from "@cosmjs/math";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "osmosis.superfluid";
 /**
  * SuperfluidAssetType indicates whether the superfluid asset is
@@ -376,11 +376,7 @@ export const SuperfluidAsset = {
       value: SuperfluidAsset.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidAsset.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSuperfluidIntermediaryAccount(): SuperfluidIntermediaryAccount {
   return {
@@ -521,11 +517,7 @@ export const SuperfluidIntermediaryAccount = {
       value: SuperfluidIntermediaryAccount.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidIntermediaryAccount.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseOsmoEquivalentMultiplierRecord(): OsmoEquivalentMultiplierRecord {
   return {
@@ -666,11 +658,7 @@ export const OsmoEquivalentMultiplierRecord = {
       value: OsmoEquivalentMultiplierRecord.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OsmoEquivalentMultiplierRecord.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSuperfluidDelegationRecord(): SuperfluidDelegationRecord {
   return {
@@ -959,11 +947,7 @@ export const LockIdIntermediaryAccountConnection = {
       value: LockIdIntermediaryAccountConnection.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LockIdIntermediaryAccountConnection.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseUnpoolWhitelistedPools(): UnpoolWhitelistedPools {
   return {
@@ -1087,9 +1071,5 @@ export const UnpoolWhitelistedPools = {
       value: UnpoolWhitelistedPools.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UnpoolWhitelistedPools.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

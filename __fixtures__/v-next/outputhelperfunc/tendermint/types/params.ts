@@ -543,11 +543,7 @@ export const BlockParams = {
       value: BlockParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BlockParams.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseEvidenceParams(): EvidenceParams {
   return {
@@ -685,11 +681,7 @@ export const EvidenceParams = {
       value: EvidenceParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EvidenceParams.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseValidatorParams(): ValidatorParams {
   return {
@@ -797,11 +789,7 @@ export const ValidatorParams = {
       value: ValidatorParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorParams.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseVersionParams(): VersionParams {
   return {
@@ -901,11 +889,7 @@ export const VersionParams = {
       value: VersionParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(VersionParams.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseHashedParams(): HashedParams {
   return {
@@ -1024,9 +1008,5 @@ export const HashedParams = {
       value: HashedParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(HashedParams.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -619,11 +619,7 @@ export const QueryCondition = {
       value: QueryCondition.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCondition.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSyntheticLock(): SyntheticLock {
   return {
@@ -783,9 +779,5 @@ export const SyntheticLock = {
       value: SyntheticLock.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SyntheticLock.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

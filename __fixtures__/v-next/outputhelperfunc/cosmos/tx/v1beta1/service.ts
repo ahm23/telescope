@@ -931,11 +931,7 @@ export const BroadcastTxRequest = {
       value: BroadcastTxRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BroadcastTxRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseBroadcastTxResponse(): BroadcastTxResponse {
   return {
@@ -1413,11 +1409,7 @@ export const GetTxRequest = {
       value: GetTxRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetTxRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseGetTxResponse(): GetTxResponse {
   return {

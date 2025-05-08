@@ -149,11 +149,7 @@ export const QueryEpochsInfoRequest = {
       value: QueryEpochsInfoRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEpochsInfoRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryEpochsInfoResponse(): QueryEpochsInfoResponse {
   return {
@@ -378,11 +374,7 @@ export const QueryCurrentEpochRequest = {
       value: QueryCurrentEpochRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCurrentEpochRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryCurrentEpochResponse(): QueryCurrentEpochResponse {
   return {
@@ -489,9 +481,5 @@ export const QueryCurrentEpochResponse = {
       value: QueryCurrentEpochResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCurrentEpochResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

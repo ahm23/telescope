@@ -301,11 +301,7 @@ export const MsgCloseGroupResponse = {
       value: MsgCloseGroupResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseGroupResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgPauseGroup(): MsgPauseGroup {
   return {
@@ -502,11 +498,7 @@ export const MsgPauseGroupResponse = {
       value: MsgPauseGroupResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgPauseGroupResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgStartGroup(): MsgStartGroup {
   return {
@@ -703,9 +695,5 @@ export const MsgStartGroupResponse = {
       value: MsgStartGroupResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgStartGroupResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

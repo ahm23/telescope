@@ -957,11 +957,7 @@ export const ConsensusState = {
       value: ConsensusState.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsensusState.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseHeader(): Header {
   return {
@@ -1140,11 +1136,7 @@ export const Header = {
       value: Header.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Header.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMisbehaviour(): Misbehaviour {
   return {
@@ -1469,11 +1461,7 @@ export const SignatureAndData = {
       value: SignatureAndData.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignatureAndData.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseTimestampedSignatureData(): TimestampedSignatureData {
   return {
@@ -1597,11 +1585,7 @@ export const TimestampedSignatureData = {
       value: TimestampedSignatureData.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TimestampedSignatureData.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSignBytes(): SignBytes {
   return {
@@ -1778,11 +1762,7 @@ export const SignBytes = {
       value: SignBytes.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignBytes.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseHeaderData(): HeaderData {
   return {
@@ -1906,11 +1886,7 @@ export const HeaderData = {
       value: HeaderData.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(HeaderData.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseClientStateData(): ClientStateData {
   return {
@@ -2034,11 +2010,7 @@ export const ClientStateData = {
       value: ClientStateData.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClientStateData.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseConsensusStateData(): ConsensusStateData {
   return {
@@ -2162,11 +2134,7 @@ export const ConsensusStateData = {
       value: ConsensusStateData.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsensusStateData.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseConnectionStateData(): ConnectionStateData {
   return {
@@ -2546,11 +2514,7 @@ export const PacketCommitmentData = {
       value: PacketCommitmentData.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PacketCommitmentData.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBasePacketAcknowledgementData(): PacketAcknowledgementData {
   return {
@@ -2672,11 +2636,7 @@ export const PacketAcknowledgementData = {
       value: PacketAcknowledgementData.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PacketAcknowledgementData.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBasePacketReceiptAbsenceData(): PacketReceiptAbsenceData {
   return {
@@ -2781,11 +2741,7 @@ export const PacketReceiptAbsenceData = {
       value: PacketReceiptAbsenceData.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PacketReceiptAbsenceData.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseNextSequenceRecvData(): NextSequenceRecvData {
   return {
@@ -2909,9 +2865,5 @@ export const NextSequenceRecvData = {
       value: NextSequenceRecvData.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(NextSequenceRecvData.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

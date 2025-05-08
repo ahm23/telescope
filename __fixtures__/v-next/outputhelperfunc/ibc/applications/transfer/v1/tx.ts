@@ -397,9 +397,5 @@ export const MsgTransferResponse = {
       value: MsgTransferResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgTransferResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

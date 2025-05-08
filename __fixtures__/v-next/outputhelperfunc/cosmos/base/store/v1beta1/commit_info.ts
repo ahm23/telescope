@@ -489,9 +489,5 @@ export const CommitID = {
       value: CommitID.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CommitID.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

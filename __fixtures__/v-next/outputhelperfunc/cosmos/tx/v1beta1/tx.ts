@@ -1066,11 +1066,7 @@ export const TxRaw = {
       value: TxRaw.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TxRaw.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSignDoc(): SignDoc {
   return {
@@ -1228,11 +1224,7 @@ export const SignDoc = {
       value: SignDoc.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignDoc.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSignDocDirectAux(): SignDocDirectAux {
   return {
@@ -1640,11 +1632,7 @@ export const TxBody = {
       value: TxBody.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TxBody.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseAuthInfo(): AuthInfo {
   return {
@@ -2191,11 +2179,7 @@ export const ModeInfo_Single = {
       value: ModeInfo_Single.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModeInfo_Single.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseModeInfo_Multi(): ModeInfo_Multi {
   return {

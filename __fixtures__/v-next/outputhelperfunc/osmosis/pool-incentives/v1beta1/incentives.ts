@@ -233,11 +233,7 @@ export const Params = {
       value: Params.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseLockableDurationsInfo(): LockableDurationsInfo {
   return {
@@ -352,11 +348,7 @@ export const LockableDurationsInfo = {
       value: LockableDurationsInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LockableDurationsInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDistrInfo(): DistrInfo {
   return {
@@ -617,11 +609,7 @@ export const DistrRecord = {
       value: DistrRecord.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DistrRecord.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBasePoolToGauge(): PoolToGauge {
   return {
@@ -766,11 +754,7 @@ export const PoolToGauge = {
       value: PoolToGauge.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PoolToGauge.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBasePoolToGauges(): PoolToGauges {
   return {

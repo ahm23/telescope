@@ -254,11 +254,7 @@ export const MetricValue_LabelsEntry = {
   toProto(message: MetricValue_LabelsEntry): Uint8Array {
     return MetricValue_LabelsEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricValue_LabelsEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMetricValue(): MetricValue {
   return {

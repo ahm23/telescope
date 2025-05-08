@@ -534,9 +534,5 @@ export const HttpRequest = {
       value: HttpRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(HttpRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

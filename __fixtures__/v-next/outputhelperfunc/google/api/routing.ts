@@ -1482,9 +1482,5 @@ export const RoutingParameter = {
       value: RoutingParameter.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RoutingParameter.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

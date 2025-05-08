@@ -502,9 +502,5 @@ export const LockableDurationsInfo = {
       value: LockableDurationsInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LockableDurationsInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

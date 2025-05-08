@@ -331,11 +331,7 @@ export const QueryGaugeIdsRequest = {
       value: QueryGaugeIdsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGaugeIdsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryGaugeIdsResponse(): QueryGaugeIdsResponse {
   return {
@@ -598,11 +594,7 @@ export const QueryGaugeIdsResponse_GaugeIdWithDuration = {
       value: QueryGaugeIdsResponse_GaugeIdWithDuration.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGaugeIdsResponse_GaugeIdWithDuration.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryDistrInfoRequest(): QueryDistrInfoRequest {
   return {};
@@ -687,11 +679,7 @@ export const QueryDistrInfoRequest = {
       value: QueryDistrInfoRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDistrInfoRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryDistrInfoResponse(): QueryDistrInfoResponse {
   return {
@@ -888,11 +876,7 @@ export const QueryParamsRequest = {
       value: QueryParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
@@ -1089,11 +1073,7 @@ export const QueryLockableDurationsRequest = {
       value: QueryLockableDurationsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryLockableDurationsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryLockableDurationsResponse(): QueryLockableDurationsResponse {
   return {
@@ -1208,11 +1188,7 @@ export const QueryLockableDurationsResponse = {
       value: QueryLockableDurationsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryLockableDurationsResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryIncentivizedPoolsRequest(): QueryIncentivizedPoolsRequest {
   return {};
@@ -1297,11 +1273,7 @@ export const QueryIncentivizedPoolsRequest = {
       value: QueryIncentivizedPoolsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryIncentivizedPoolsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseIncentivizedPool(): IncentivizedPool {
   return {
@@ -1446,11 +1418,7 @@ export const IncentivizedPool = {
       value: IncentivizedPool.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(IncentivizedPool.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryIncentivizedPoolsResponse(): QueryIncentivizedPoolsResponse {
   return {
@@ -1655,11 +1623,7 @@ export const QueryExternalIncentiveGaugesRequest = {
       value: QueryExternalIncentiveGaugesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryExternalIncentiveGaugesRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryExternalIncentiveGaugesResponse(): QueryExternalIncentiveGaugesResponse {
   return {

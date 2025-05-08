@@ -335,11 +335,7 @@ export const MsgGrantAllowanceResponse = {
       value: MsgGrantAllowanceResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgGrantAllowanceResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgRevokeAllowance(): MsgRevokeAllowance {
   return {
@@ -461,11 +457,7 @@ export const MsgRevokeAllowance = {
       value: MsgRevokeAllowance.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRevokeAllowance.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgRevokeAllowanceResponse(): MsgRevokeAllowanceResponse {
   return {};
@@ -550,9 +542,5 @@ export const MsgRevokeAllowanceResponse = {
       value: MsgRevokeAllowanceResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRevokeAllowanceResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

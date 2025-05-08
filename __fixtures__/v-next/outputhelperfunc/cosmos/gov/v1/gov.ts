@@ -546,11 +546,7 @@ export const WeightedVoteOption = {
       value: WeightedVoteOption.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WeightedVoteOption.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDeposit(): Deposit {
   return {
@@ -1150,11 +1146,7 @@ export const TallyResult = {
       value: TallyResult.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TallyResult.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseVote(): Vote {
   return {
@@ -1573,11 +1565,7 @@ export const VotingParams = {
       value: VotingParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(VotingParams.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseTallyParams(): TallyParams {
   return {
@@ -1716,9 +1704,5 @@ export const TallyParams = {
       value: TallyParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TallyParams.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

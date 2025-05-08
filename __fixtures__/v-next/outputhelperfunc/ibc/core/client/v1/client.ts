@@ -433,11 +433,7 @@ export const IdentifiedClientState = {
       value: IdentifiedClientState.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(IdentifiedClientState.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseConsensusStateWithHeight(): ConsensusStateWithHeight {
   return {
@@ -563,11 +559,7 @@ export const ConsensusStateWithHeight = {
       value: ConsensusStateWithHeight.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsensusStateWithHeight.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseClientConsensusStates(): ClientConsensusStates {
   return {
@@ -1156,11 +1148,7 @@ export const Height = {
       value: Height.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Height.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseParams(): Params {
   return {
@@ -1275,9 +1263,5 @@ export const Params = {
       value: Params.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -198,11 +198,7 @@ export const Capability = {
       value: Capability.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Capability.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseOwner(): Owner {
   return {
@@ -324,11 +320,7 @@ export const Owner = {
       value: Owner.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Owner.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCapabilityOwners(): CapabilityOwners {
   return {

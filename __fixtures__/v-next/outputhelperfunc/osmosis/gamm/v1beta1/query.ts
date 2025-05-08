@@ -754,11 +754,7 @@ export const QueryPoolRequest = {
       value: QueryPoolRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryPoolResponse(): QueryPoolResponse {
   return {
@@ -1209,11 +1205,7 @@ export const QueryNumPoolsRequest = {
       value: QueryNumPoolsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryNumPoolsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryNumPoolsResponse(): QueryNumPoolsResponse {
   return {
@@ -1320,11 +1312,7 @@ export const QueryNumPoolsResponse = {
       value: QueryNumPoolsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryNumPoolsResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryPoolTypeRequest(): QueryPoolTypeRequest {
   return {
@@ -1431,11 +1419,7 @@ export const QueryPoolTypeRequest = {
       value: QueryPoolTypeRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolTypeRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryPoolTypeResponse(): QueryPoolTypeResponse {
   return {
@@ -1540,11 +1524,7 @@ export const QueryPoolTypeResponse = {
       value: QueryPoolTypeResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolTypeResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryCalcJoinPoolSharesRequest(): QueryCalcJoinPoolSharesRequest {
   return {
@@ -1944,11 +1924,7 @@ export const QueryCalcExitPoolCoinsFromSharesRequest = {
       value: QueryCalcExitPoolCoinsFromSharesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCalcExitPoolCoinsFromSharesRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryCalcExitPoolCoinsFromSharesResponse(): QueryCalcExitPoolCoinsFromSharesResponse {
   return {
@@ -2175,11 +2151,7 @@ export const QueryPoolParamsRequest = {
       value: QueryPoolParamsRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolParamsRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryPoolParamsResponse(): QueryPoolParamsResponse {
   return {
@@ -2286,11 +2258,7 @@ export const QueryPoolParamsResponse = {
       value: QueryPoolParamsResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolParamsResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryTotalPoolLiquidityRequest(): QueryTotalPoolLiquidityRequest {
   return {
@@ -2397,11 +2365,7 @@ export const QueryTotalPoolLiquidityRequest = {
       value: QueryTotalPoolLiquidityRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalPoolLiquidityRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryTotalPoolLiquidityResponse(): QueryTotalPoolLiquidityResponse {
   return {
@@ -2628,11 +2592,7 @@ export const QueryTotalSharesRequest = {
       value: QueryTotalSharesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalSharesRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryTotalSharesResponse(): QueryTotalSharesResponse {
   return {
@@ -3161,11 +3121,7 @@ export const QuerySpotPriceRequest = {
       value: QuerySpotPriceRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySpotPriceRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryPoolsWithFilterRequest(): QueryPoolsWithFilterRequest {
   return {
@@ -3568,11 +3524,7 @@ export const QuerySpotPriceResponse = {
       value: QuerySpotPriceResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySpotPriceResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuerySwapExactAmountInRequest(): QuerySwapExactAmountInRequest {
   return {
@@ -3850,11 +3802,7 @@ export const QuerySwapExactAmountInResponse = {
       value: QuerySwapExactAmountInResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySwapExactAmountInResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQuerySwapExactAmountOutRequest(): QuerySwapExactAmountOutRequest {
   return {
@@ -4132,11 +4080,7 @@ export const QuerySwapExactAmountOutResponse = {
       value: QuerySwapExactAmountOutResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySwapExactAmountOutResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryTotalLiquidityRequest(): QueryTotalLiquidityRequest {
   return {};
@@ -4221,11 +4165,7 @@ export const QueryTotalLiquidityRequest = {
       value: QueryTotalLiquidityRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalLiquidityRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryTotalLiquidityResponse(): QueryTotalLiquidityResponse {
   return {

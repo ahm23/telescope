@@ -611,11 +611,7 @@ export const MsgStoreCodeResponse = {
       value: MsgStoreCodeResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgStoreCodeResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgInstantiateContract(): MsgInstantiateContract {
   return {
@@ -944,11 +940,7 @@ export const MsgInstantiateContractResponse = {
       value: MsgInstantiateContractResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgInstantiateContractResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgExecuteContract(): MsgExecuteContract {
   return {
@@ -1224,11 +1216,7 @@ export const MsgExecuteContractResponse = {
       value: MsgExecuteContractResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExecuteContractResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgMigrateContract(): MsgMigrateContract {
   return {
@@ -1386,11 +1374,7 @@ export const MsgMigrateContract = {
       value: MsgMigrateContract.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgMigrateContract.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgMigrateContractResponse(): MsgMigrateContractResponse {
   return {
@@ -1495,11 +1479,7 @@ export const MsgMigrateContractResponse = {
       value: MsgMigrateContractResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgMigrateContractResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgUpdateAdmin(): MsgUpdateAdmin {
   return {
@@ -1638,11 +1618,7 @@ export const MsgUpdateAdmin = {
       value: MsgUpdateAdmin.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateAdmin.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgUpdateAdminResponse(): MsgUpdateAdminResponse {
   return {};
@@ -1727,11 +1703,7 @@ export const MsgUpdateAdminResponse = {
       value: MsgUpdateAdminResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateAdminResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgClearAdmin(): MsgClearAdmin {
   return {
@@ -1853,11 +1825,7 @@ export const MsgClearAdmin = {
       value: MsgClearAdmin.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgClearAdmin.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgClearAdminResponse(): MsgClearAdminResponse {
   return {};
@@ -1942,9 +1910,5 @@ export const MsgClearAdminResponse = {
       value: MsgClearAdminResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgClearAdminResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -400,11 +400,7 @@ export const QueryProviderRequest = {
       value: QueryProviderRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProviderRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryAllProvidersAttributesRequest(): QueryAllProvidersAttributesRequest {
   return {
@@ -767,11 +763,7 @@ export const QueryProviderAuditorRequest = {
       value: QueryProviderAuditorRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProviderAuditorRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryAuditorAttributesRequest(): QueryAuditorAttributesRequest {
   return {

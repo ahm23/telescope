@@ -1,7 +1,6 @@
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { bytesFromBase64, base64FromBytes, DeepPartial, isSet } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
-import { GlobalDecoderRegistry } from "../../../../registry";
 export const protobufPackage = "cosmos.crypto.multisig.v1beta1";
 /**
  * MultiSignature wraps the signatures from a multisig.LegacyAminoPubKey.
@@ -186,11 +185,7 @@ export const MultiSignature = {
       value: MultiSignature.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MultiSignature.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseCompactBitArray(): CompactBitArray {
   return {
@@ -312,9 +307,5 @@ export const CompactBitArray = {
       value: CompactBitArray.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CompactBitArray.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

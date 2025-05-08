@@ -163,11 +163,7 @@ export const QueryBalancesRequest = {
       value: QueryBalancesRequest.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBalancesRequest.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseQueryBalancesResponse(): QueryBalancesResponse {
   return {

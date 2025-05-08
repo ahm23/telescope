@@ -1,7 +1,6 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
-import { GlobalDecoderRegistry } from "../../../registry";
 import { Decimal } from "@cosmjs/math";
 export const protobufPackage = "cosmos.base.v1beta1";
 /**
@@ -240,11 +239,7 @@ export const Coin = {
       value: Coin.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Coin.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDecCoin(): DecCoin {
   return {
@@ -366,11 +361,7 @@ export const DecCoin = {
       value: DecCoin.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DecCoin.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseIntProto(): IntProto {
   return {
@@ -475,11 +466,7 @@ export const IntProto = {
       value: IntProto.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(IntProto.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDecProto(): DecProto {
   return {
@@ -584,9 +571,5 @@ export const DecProto = {
       value: DecProto.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DecProto.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

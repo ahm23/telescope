@@ -396,11 +396,7 @@ export const Plan = {
       value: Plan.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Plan.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseSoftwareUpgradeProposal(): SoftwareUpgradeProposal {
   return {
@@ -668,11 +664,7 @@ export const CancelSoftwareUpgradeProposal = {
       value: CancelSoftwareUpgradeProposal.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CancelSoftwareUpgradeProposal.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseModuleVersion(): ModuleVersion {
   return {
@@ -796,9 +788,5 @@ export const ModuleVersion = {
       value: ModuleVersion.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleVersion.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

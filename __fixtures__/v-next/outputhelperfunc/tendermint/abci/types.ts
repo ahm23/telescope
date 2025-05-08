@@ -1863,11 +1863,7 @@ export const RequestEcho = {
       value: RequestEcho.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestEcho.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRequestFlush(): RequestFlush {
   return {};
@@ -1945,11 +1941,7 @@ export const RequestFlush = {
       value: RequestFlush.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestFlush.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRequestInfo(): RequestInfo {
   return {
@@ -2085,11 +2077,7 @@ export const RequestInfo = {
       value: RequestInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRequestSetOption(): RequestSetOption {
   return {
@@ -2204,11 +2192,7 @@ export const RequestSetOption = {
       value: RequestSetOption.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestSetOption.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRequestInitChain(): RequestInitChain {
   return {
@@ -2562,11 +2546,7 @@ export const RequestQuery = {
       value: RequestQuery.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestQuery.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRequestBeginBlock(): RequestBeginBlock {
   return {
@@ -2851,11 +2831,7 @@ export const RequestCheckTx = {
       value: RequestCheckTx.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestCheckTx.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRequestDeliverTx(): RequestDeliverTx {
   return {
@@ -2953,11 +2929,7 @@ export const RequestDeliverTx = {
       value: RequestDeliverTx.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestDeliverTx.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRequestEndBlock(): RequestEndBlock {
   return {
@@ -3057,11 +3029,7 @@ export const RequestEndBlock = {
       value: RequestEndBlock.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestEndBlock.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRequestCommit(): RequestCommit {
   return {};
@@ -3139,11 +3107,7 @@ export const RequestCommit = {
       value: RequestCommit.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestCommit.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRequestListSnapshots(): RequestListSnapshots {
   return {};
@@ -3221,11 +3185,7 @@ export const RequestListSnapshots = {
       value: RequestListSnapshots.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestListSnapshots.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRequestOfferSnapshot(): RequestOfferSnapshot {
   return {
@@ -3481,11 +3441,7 @@ export const RequestLoadSnapshotChunk = {
       value: RequestLoadSnapshotChunk.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestLoadSnapshotChunk.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRequestApplySnapshotChunk(): RequestApplySnapshotChunk {
   return {
@@ -3617,11 +3573,7 @@ export const RequestApplySnapshotChunk = {
       value: RequestApplySnapshotChunk.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestApplySnapshotChunk.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseResponse(): Response {
   return {
@@ -4124,11 +4076,7 @@ export const ResponseException = {
       value: ResponseException.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseException.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseResponseEcho(): ResponseEcho {
   return {
@@ -4226,11 +4174,7 @@ export const ResponseEcho = {
       value: ResponseEcho.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseEcho.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseResponseFlush(): ResponseFlush {
   return {};
@@ -4308,11 +4252,7 @@ export const ResponseFlush = {
       value: ResponseFlush.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseFlush.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseResponseInfo(): ResponseInfo {
   return {
@@ -4482,11 +4422,7 @@ export const ResponseInfo = {
       value: ResponseInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseResponseSetOption(): ResponseSetOption {
   return {
@@ -4618,11 +4554,7 @@ export const ResponseSetOption = {
       value: ResponseSetOption.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseSetOption.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseResponseInitChain(): ResponseInitChain {
   return {
@@ -5880,11 +5812,7 @@ export const ResponseCommit = {
       value: ResponseCommit.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseCommit.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseResponseListSnapshots(): ResponseListSnapshots {
   return {
@@ -6095,11 +6023,7 @@ export const ResponseOfferSnapshot = {
       value: ResponseOfferSnapshot.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseOfferSnapshot.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseResponseLoadSnapshotChunk(): ResponseLoadSnapshotChunk {
   return {
@@ -6197,11 +6121,7 @@ export const ResponseLoadSnapshotChunk = {
       value: ResponseLoadSnapshotChunk.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseLoadSnapshotChunk.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseResponseApplySnapshotChunk(): ResponseApplySnapshotChunk {
   return {
@@ -6362,11 +6282,7 @@ export const ResponseApplySnapshotChunk = {
       value: ResponseApplySnapshotChunk.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseApplySnapshotChunk.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseConsensusParams(): ConsensusParams {
   return {
@@ -6650,11 +6566,7 @@ export const BlockParams = {
       value: BlockParams.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BlockParams.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseLastCommitInfo(): LastCommitInfo {
   return {
@@ -7046,11 +6958,7 @@ export const EventAttribute = {
       value: EventAttribute.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EventAttribute.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseTxResult(): TxResult {
   return {
@@ -7325,11 +7233,7 @@ export const Validator = {
       value: Validator.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Validator.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseValidatorUpdate(): ValidatorUpdate {
   return {
@@ -7920,9 +7824,5 @@ export const Snapshot = {
       value: Snapshot.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Snapshot.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

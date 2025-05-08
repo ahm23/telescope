@@ -948,11 +948,7 @@ export const ManagedService = {
       value: ManagedService.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ManagedService.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseOperationMetadata(): OperationMetadata {
   return {
@@ -1241,11 +1237,7 @@ export const OperationMetadata_Step = {
       value: OperationMetadata_Step.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OperationMetadata_Step.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseDiagnostic(): Diagnostic {
   return {
@@ -1377,11 +1369,7 @@ export const Diagnostic = {
       value: Diagnostic.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Diagnostic.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseConfigSource(): ConfigSource {
   return {
@@ -1643,11 +1631,7 @@ export const ConfigFile = {
       value: ConfigFile.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConfigFile.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseConfigRef(): ConfigRef {
   return {
@@ -1745,11 +1729,7 @@ export const ConfigRef = {
       value: ConfigRef.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConfigRef.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseChangeReport(): ChangeReport {
   return {
@@ -2171,11 +2151,7 @@ export const Rollout_TrafficPercentStrategy_PercentagesEntry = {
   toProto(message: Rollout_TrafficPercentStrategy_PercentagesEntry): Uint8Array {
     return Rollout_TrafficPercentStrategy_PercentagesEntry.encode(message).finish();
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Rollout_TrafficPercentStrategy_PercentagesEntry.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRollout_TrafficPercentStrategy(): Rollout_TrafficPercentStrategy {
   return {
@@ -2321,11 +2297,7 @@ export const Rollout_TrafficPercentStrategy = {
       value: Rollout_TrafficPercentStrategy.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Rollout_TrafficPercentStrategy.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseRollout_DeleteServiceStrategy(): Rollout_DeleteServiceStrategy {
   return {};
@@ -2403,9 +2375,5 @@ export const Rollout_DeleteServiceStrategy = {
       value: Rollout_DeleteServiceStrategy.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Rollout_DeleteServiceStrategy.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

@@ -494,11 +494,7 @@ export const PackageReference = {
       value: PackageReference.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PackageReference.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMigrateFromInfo(): MigrateFromInfo {
   return {
@@ -603,9 +599,5 @@ export const MigrateFromInfo = {
       value: MigrateFromInfo.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MigrateFromInfo.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

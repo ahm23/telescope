@@ -443,11 +443,7 @@ export const MsgCreateVestingAccountResponse = {
       value: MsgCreateVestingAccountResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateVestingAccountResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgCreatePermanentLockedAccount(): MsgCreatePermanentLockedAccount {
   return {
@@ -686,11 +682,7 @@ export const MsgCreatePermanentLockedAccountResponse = {
       value: MsgCreatePermanentLockedAccountResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreatePermanentLockedAccountResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };
 function createBaseMsgCreatePeriodicVestingAccount(): MsgCreatePeriodicVestingAccount {
   return {
@@ -948,9 +940,5 @@ export const MsgCreatePeriodicVestingAccountResponse = {
       value: MsgCreatePeriodicVestingAccountResponse.encode(message).finish()
     };
   },
-  registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreatePeriodicVestingAccountResponse.typeUrl)) {
-      return;
-    }
-  }
+  registerTypeUrl() {}
 };

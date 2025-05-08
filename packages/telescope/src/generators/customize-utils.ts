@@ -38,13 +38,13 @@ export const plugin = (builder: TelescopeBuilder) => {
     UTILS.base64FromBytes = {
       type: 'import',
       path: '@endo/base64',
-      name: 'decodeBase64',
+      name: 'encodeBase64',
       importAs: 'base64FromBytes',
     };
     UTILS.bytesFromBase64 = {
       type: 'import',
       path: '@endo/base64',
-      name: 'encodeBase64',
+      name: 'ecodeBase64',
       importAs: 'bytesFromBase64',
     };
   } else {

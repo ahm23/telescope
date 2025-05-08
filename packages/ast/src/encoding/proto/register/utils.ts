@@ -60,3 +60,32 @@ export const createRegisterAminoProtoMapping = (
         )
     );
 };
+
+/**
+ * create ast: if(GlobalDecoderRegistry.getDecoder(PeriodicAllowance.typeUrl)) {
+ *   return;
+ * }
+ * @param context
+ * @param name
+ * @returns
+ */
+export const createIfGlobalDecoderRegistryGetDecoder = (
+    context: ProtoParseContext,
+    name: string,
+) => {
+    if (name === "Any") {
+        return;
+    }
+    context.addUtil("GlobalDecoderRegistry");
+
+    return t.ifStatement(
+        t.callExpression(
+            t.memberExpression(
+                t.identifier("GlobalDecoderRegistry"),
+                t.identifier("getDecoder")
+            ),
+            [t.memberExpression(t.identifier(name), t.identifier("typeUrl"))]
+        ),
+        t.blockStatement([t.returnStatement()])
+    );
+};

@@ -147,6 +147,9 @@ export const DepositDeploymentAuthorization = {
     };
   },
   registerTypeUrl() {
+    if (GlobalDecoderRegistry.getDecoder(DepositDeploymentAuthorization.typeUrl)) {
+      return;
+    }
     GlobalDecoderRegistry.register(DepositDeploymentAuthorization.typeUrl, DepositDeploymentAuthorization);
     GlobalDecoderRegistry.registerAminoProtoMapping(DepositDeploymentAuthorization.aminoType, DepositDeploymentAuthorization.typeUrl);
     Coin.registerTypeUrl();

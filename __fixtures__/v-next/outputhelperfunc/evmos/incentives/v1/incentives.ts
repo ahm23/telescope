@@ -654,6 +654,9 @@ export const RegisterIncentiveProposal = {
     };
   },
   registerTypeUrl() {
+    if (GlobalDecoderRegistry.getDecoder(RegisterIncentiveProposal.typeUrl)) {
+      return;
+    }
     GlobalDecoderRegistry.register(RegisterIncentiveProposal.typeUrl, RegisterIncentiveProposal);
     DecCoin.registerTypeUrl();
   }

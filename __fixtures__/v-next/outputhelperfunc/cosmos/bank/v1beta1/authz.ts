@@ -156,6 +156,9 @@ export const SendAuthorization = {
     };
   },
   registerTypeUrl() {
+    if (GlobalDecoderRegistry.getDecoder(SendAuthorization.typeUrl)) {
+      return;
+    }
     GlobalDecoderRegistry.register(SendAuthorization.typeUrl, SendAuthorization);
     GlobalDecoderRegistry.registerAminoProtoMapping(SendAuthorization.aminoType, SendAuthorization.typeUrl);
     Coin.registerTypeUrl();

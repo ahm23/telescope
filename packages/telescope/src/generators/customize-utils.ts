@@ -44,7 +44,7 @@ export const plugin = (builder: TelescopeBuilder) => {
     UTILS.bytesFromBase64 = {
       type: 'import',
       path: '@endo/base64',
-      name: 'ecodeBase64',
+      name: 'decodeBase64',
       importAs: 'bytesFromBase64',
     };
   } else {

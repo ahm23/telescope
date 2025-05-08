@@ -583,6 +583,9 @@ export const StoreCodeProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(StoreCodeProposal.typeUrl)) {
+      return;
+    }
     AccessConfig.registerTypeUrl();
   }
 };
@@ -821,6 +824,9 @@ export const InstantiateContractProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(InstantiateContractProposal.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1354,6 +1360,9 @@ export const ExecuteContractProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ExecuteContractProposal.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

@@ -220,6 +220,9 @@ export const MsgCreateBalancerPool = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateBalancerPool.typeUrl)) {
+      return;
+    }
     PoolParams.registerTypeUrl();
     PoolAsset.registerTypeUrl();
   }

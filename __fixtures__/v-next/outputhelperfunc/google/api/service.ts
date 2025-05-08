@@ -930,6 +930,9 @@ export const Service = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Service.typeUrl)) {
+      return;
+    }
     Api.registerTypeUrl();
     Type.registerTypeUrl();
     Enum.registerTypeUrl();

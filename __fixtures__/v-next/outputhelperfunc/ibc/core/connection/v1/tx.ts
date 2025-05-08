@@ -489,6 +489,9 @@ export const MsgConnectionOpenInit = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenInit.typeUrl)) {
+      return;
+    }
     Counterparty.registerTypeUrl();
     Version.registerTypeUrl();
   }
@@ -889,6 +892,9 @@ export const MsgConnectionOpenTry = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenTry.typeUrl)) {
+      return;
+    }
     Counterparty.registerTypeUrl();
     Version.registerTypeUrl();
     Height.registerTypeUrl();
@@ -1244,6 +1250,9 @@ export const MsgConnectionOpenAck = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenAck.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -1489,6 +1498,9 @@ export const MsgConnectionOpenConfirm = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConnectionOpenConfirm.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };

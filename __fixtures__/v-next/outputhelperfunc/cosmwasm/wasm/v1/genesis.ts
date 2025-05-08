@@ -366,6 +366,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
     Code.registerTypeUrl();
     Contract.registerTypeUrl();
@@ -517,6 +520,9 @@ export const GenesisState_GenMsgs = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState_GenMsgs.typeUrl)) {
+      return;
+    }
     MsgStoreCode.registerTypeUrl();
     MsgInstantiateContract.registerTypeUrl();
     MsgExecuteContract.registerTypeUrl();
@@ -681,6 +687,9 @@ export const Code = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Code.typeUrl)) {
+      return;
+    }
     CodeInfo.registerTypeUrl();
   }
 };
@@ -834,6 +843,9 @@ export const Contract = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Contract.typeUrl)) {
+      return;
+    }
     ContractInfo.registerTypeUrl();
     Model.registerTypeUrl();
   }

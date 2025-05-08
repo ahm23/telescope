@@ -526,6 +526,9 @@ export const MetricValue = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricValue.typeUrl)) {
+      return;
+    }
     Distribution.registerTypeUrl();
   }
 };
@@ -653,6 +656,9 @@ export const MetricValueSet = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricValueSet.typeUrl)) {
+      return;
+    }
     MetricValue.registerTypeUrl();
   }
 };

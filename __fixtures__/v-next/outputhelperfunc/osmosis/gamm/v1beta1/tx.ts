@@ -606,6 +606,9 @@ export const MsgJoinPool = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgJoinPool.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -740,6 +743,9 @@ export const MsgJoinPoolResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgJoinPoolResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -910,6 +916,9 @@ export const MsgExitPool = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExitPool.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1027,6 +1036,9 @@ export const MsgExitPoolResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExitPoolResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1321,6 +1333,9 @@ export const MsgSwapExactAmountIn = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSwapExactAmountIn.typeUrl)) {
+      return;
+    }
     SwapAmountInRoute.registerTypeUrl();
     Coin.registerTypeUrl();
   }
@@ -1721,6 +1736,9 @@ export const MsgSwapExactAmountOut = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSwapExactAmountOut.typeUrl)) {
+      return;
+    }
     SwapAmountOutRoute.registerTypeUrl();
     Coin.registerTypeUrl();
   }
@@ -1989,6 +2007,9 @@ export const MsgJoinSwapExternAmountIn = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgJoinSwapExternAmountIn.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2816,6 +2837,9 @@ export const MsgExitSwapExternAmountOut = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExitSwapExternAmountOut.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

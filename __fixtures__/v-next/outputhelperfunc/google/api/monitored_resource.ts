@@ -526,6 +526,9 @@ export const MonitoredResourceDescriptor = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MonitoredResourceDescriptor.typeUrl)) {
+      return;
+    }
     LabelDescriptor.registerTypeUrl();
   }
 };
@@ -1054,6 +1057,9 @@ export const MonitoredResourceMetadata = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MonitoredResourceMetadata.typeUrl)) {
+      return;
+    }
     Struct.registerTypeUrl();
   }
 };

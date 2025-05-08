@@ -176,6 +176,9 @@ export const Params = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Params.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -331,6 +334,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     Pool1.registerTypeUrl();
     Pool2.registerTypeUrl();
     Params.registerTypeUrl();

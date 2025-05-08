@@ -776,6 +776,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -1188,6 +1191,9 @@ export const AllAssetsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AllAssetsResponse.typeUrl)) {
+      return;
+    }
     SuperfluidAsset.registerTypeUrl();
   }
 };
@@ -1402,6 +1408,9 @@ export const AssetMultiplierResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AssetMultiplierResponse.typeUrl)) {
+      return;
+    }
     OsmoEquivalentMultiplierRecord.registerTypeUrl();
   }
 };
@@ -1669,6 +1678,9 @@ export const AllIntermediaryAccountsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AllIntermediaryAccountsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1805,6 +1817,9 @@ export const AllIntermediaryAccountsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AllIntermediaryAccountsResponse.typeUrl)) {
+      return;
+    }
     SuperfluidIntermediaryAccountInfo.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -2022,6 +2037,9 @@ export const ConnectedIntermediaryAccountResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConnectedIntermediaryAccountResponse.typeUrl)) {
+      return;
+    }
     SuperfluidIntermediaryAccountInfo.registerTypeUrl();
   }
 };
@@ -2244,6 +2262,9 @@ export const QueryTotalDelegationByValidatorForDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalDelegationByValidatorForDenomResponse.typeUrl)) {
+      return;
+    }
     Delegations.registerTypeUrl();
   }
 };
@@ -2829,6 +2850,9 @@ export const SuperfluidDelegationAmountResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidDelegationAmountResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -3097,6 +3121,9 @@ export const SuperfluidDelegationsByDelegatorResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidDelegationsByDelegatorResponse.typeUrl)) {
+      return;
+    }
     SuperfluidDelegationRecord.registerTypeUrl();
     Coin.registerTypeUrl();
   }
@@ -3391,6 +3418,9 @@ export const SuperfluidUndelegationsByDelegatorResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidUndelegationsByDelegatorResponse.typeUrl)) {
+      return;
+    }
     SuperfluidDelegationRecord.registerTypeUrl();
     Coin.registerTypeUrl();
     SyntheticLock.registerTypeUrl();
@@ -3632,6 +3662,9 @@ export const SuperfluidDelegationsByValidatorDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidDelegationsByValidatorDenomResponse.typeUrl)) {
+      return;
+    }
     SuperfluidDelegationRecord.registerTypeUrl();
   }
 };
@@ -3871,6 +3904,9 @@ export const EstimateSuperfluidDelegatedAmountByValidatorDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EstimateSuperfluidDelegatedAmountByValidatorDenomResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -4166,6 +4202,9 @@ export const QueryTotalDelegationByDelegatorResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalDelegationByDelegatorResponse.typeUrl)) {
+      return;
+    }
     SuperfluidDelegationRecord.registerTypeUrl();
     DelegationResponse.registerTypeUrl();
     Coin.registerTypeUrl();

@@ -181,6 +181,9 @@ export const GroupSpec = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GroupSpec.typeUrl)) {
+      return;
+    }
     PlacementRequirements.registerTypeUrl();
     Resource.registerTypeUrl();
   }

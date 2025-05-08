@@ -1118,6 +1118,9 @@ export const OperationMetadata = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OperationMetadata.typeUrl)) {
+      return;
+    }
     OperationMetadata_Step.registerTypeUrl();
   }
 };
@@ -1492,6 +1495,9 @@ export const ConfigSource = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConfigSource.typeUrl)) {
+      return;
+    }
     ConfigFile.registerTypeUrl();
   }
 };
@@ -1832,6 +1838,9 @@ export const ChangeReport = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ChangeReport.typeUrl)) {
+      return;
+    }
     ConfigChange.registerTypeUrl();
   }
 };
@@ -2038,6 +2047,9 @@ export const Rollout = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Rollout.typeUrl)) {
+      return;
+    }
     Rollout_TrafficPercentStrategy.registerTypeUrl();
     Rollout_DeleteServiceStrategy.registerTypeUrl();
   }

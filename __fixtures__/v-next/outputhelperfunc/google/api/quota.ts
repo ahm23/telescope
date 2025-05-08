@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet, isObject } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * Quota configuration helps to achieve fairness and budgeting in service
@@ -644,6 +645,9 @@ export const Quota = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Quota.typeUrl)) {
+      return;
+    }
     QuotaLimit.registerTypeUrl();
     MetricRule.registerTypeUrl();
   }

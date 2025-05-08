@@ -685,6 +685,9 @@ export const MsgChannelOpenInit = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenInit.typeUrl)) {
+      return;
+    }
     Channel.registerTypeUrl();
   }
 };
@@ -983,6 +986,9 @@ export const MsgChannelOpenTry = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenTry.typeUrl)) {
+      return;
+    }
     Channel.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -1280,6 +1286,9 @@ export const MsgChannelOpenAck = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenAck.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -1542,6 +1551,9 @@ export const MsgChannelOpenConfirm = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelOpenConfirm.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -2028,6 +2040,9 @@ export const MsgChannelCloseConfirm = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgChannelCloseConfirm.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -2275,6 +2290,9 @@ export const MsgRecvPacket = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRecvPacket.typeUrl)) {
+      return;
+    }
     Packet.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -2542,6 +2560,9 @@ export const MsgTimeout = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgTimeout.typeUrl)) {
+      return;
+    }
     Packet.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -2826,6 +2847,9 @@ export const MsgTimeoutOnClose = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgTimeoutOnClose.typeUrl)) {
+      return;
+    }
     Packet.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -3091,6 +3115,9 @@ export const MsgAcknowledgement = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgAcknowledgement.typeUrl)) {
+      return;
+    }
     Packet.registerTypeUrl();
     Height.registerTypeUrl();
   }

@@ -770,6 +770,9 @@ export const EnableServiceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EnableServiceResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };
@@ -1004,6 +1007,9 @@ export const DisableServiceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DisableServiceResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };
@@ -1378,6 +1384,9 @@ export const ListServicesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServicesResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };
@@ -1640,6 +1649,9 @@ export const BatchEnableServicesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BatchEnableServicesResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
     BatchEnableServicesResponse_EnableFailure.registerTypeUrl();
   }
@@ -1991,6 +2003,9 @@ export const BatchGetServicesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BatchGetServicesResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };

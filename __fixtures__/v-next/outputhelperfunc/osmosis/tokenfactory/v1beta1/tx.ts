@@ -638,6 +638,9 @@ export const MsgMint = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgMint.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -849,6 +852,9 @@ export const MsgBurn = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBurn.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1284,6 +1290,9 @@ export const MsgSetDenomMetadata = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSetDenomMetadata.typeUrl)) {
+      return;
+    }
     Metadata.registerTypeUrl();
   }
 };

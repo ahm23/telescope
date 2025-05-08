@@ -381,6 +381,9 @@ export const QueryDenomTraceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomTraceResponse.typeUrl)) {
+      return;
+    }
     DenomTrace.registerTypeUrl();
   }
 };
@@ -490,6 +493,9 @@ export const QueryDenomTracesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomTracesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -626,6 +632,9 @@ export const QueryDenomTracesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomTracesResponse.typeUrl)) {
+      return;
+    }
     DenomTrace.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -821,6 +830,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };

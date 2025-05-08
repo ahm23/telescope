@@ -810,6 +810,9 @@ export const TxResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TxResponse.typeUrl)) {
+      return;
+    }
     Event.registerTypeUrl();
   }
 };
@@ -961,6 +964,9 @@ export const ABCIMessageLog = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ABCIMessageLog.typeUrl)) {
+      return;
+    }
     StringEvent.registerTypeUrl();
   }
 };
@@ -1095,6 +1101,9 @@ export const StringEvent = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(StringEvent.typeUrl)) {
+      return;
+    }
     Attribute.registerTypeUrl();
   }
 };
@@ -1647,6 +1656,9 @@ export const SimulationResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SimulationResponse.typeUrl)) {
+      return;
+    }
     GasInfo.registerTypeUrl();
     Result.registerTypeUrl();
   }
@@ -2124,6 +2136,9 @@ export const SearchTxsResult = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SearchTxsResult.typeUrl)) {
+      return;
+    }
     TxResponse.registerTypeUrl();
   }
 };

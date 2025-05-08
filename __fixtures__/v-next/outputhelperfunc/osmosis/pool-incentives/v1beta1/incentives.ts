@@ -481,6 +481,9 @@ export const DistrInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DistrInfo.typeUrl)) {
+      return;
+    }
     DistrRecord.registerTypeUrl();
   }
 };
@@ -867,6 +870,9 @@ export const PoolToGauges = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PoolToGauges.typeUrl)) {
+      return;
+    }
     PoolToGauge.registerTypeUrl();
   }
 };

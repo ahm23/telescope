@@ -187,6 +187,9 @@ export const Block = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Block.typeUrl)) {
+      return;
+    }
     Header.registerTypeUrl();
     Data.registerTypeUrl();
     EvidenceList.registerTypeUrl();

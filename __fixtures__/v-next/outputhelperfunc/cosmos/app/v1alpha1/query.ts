@@ -231,6 +231,9 @@ export const QueryConfigResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConfigResponse.typeUrl)) {
+      return;
+    }
     Config.registerTypeUrl();
   }
 };

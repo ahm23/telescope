@@ -495,6 +495,9 @@ export const MsgCreateValidator = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateValidator.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -740,6 +743,9 @@ export const MsgEditValidator = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgEditValidator.typeUrl)) {
+      return;
+    }
     Description.registerTypeUrl();
   }
 };
@@ -968,6 +974,9 @@ export const MsgDelegate = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDelegate.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1213,6 +1222,9 @@ export const MsgBeginRedelegate = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBeginRedelegate.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1461,6 +1473,9 @@ export const MsgUndelegate = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUndelegate.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

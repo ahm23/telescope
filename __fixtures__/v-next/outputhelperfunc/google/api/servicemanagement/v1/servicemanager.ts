@@ -1025,6 +1025,9 @@ export const ListServicesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServicesResponse.typeUrl)) {
+      return;
+    }
     ManagedService.registerTypeUrl();
   }
 };
@@ -1225,6 +1228,9 @@ export const CreateServiceRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateServiceRequest.typeUrl)) {
+      return;
+    }
     ManagedService.registerTypeUrl();
   }
 };
@@ -1523,6 +1529,9 @@ export const UndeleteServiceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UndeleteServiceResponse.typeUrl)) {
+      return;
+    }
     ManagedService.registerTypeUrl();
   }
 };
@@ -1914,6 +1923,9 @@ export const ListServiceConfigsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServiceConfigsResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };
@@ -2033,6 +2045,9 @@ export const CreateServiceConfigRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateServiceConfigRequest.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };
@@ -2169,6 +2184,9 @@ export const SubmitConfigSourceRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SubmitConfigSourceRequest.typeUrl)) {
+      return;
+    }
     ConfigSource.registerTypeUrl();
   }
 };
@@ -2271,6 +2289,9 @@ export const SubmitConfigSourceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SubmitConfigSourceResponse.typeUrl)) {
+      return;
+    }
     Service.registerTypeUrl();
   }
 };
@@ -2390,6 +2411,9 @@ export const CreateServiceRolloutRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateServiceRolloutRequest.typeUrl)) {
+      return;
+    }
     Rollout.registerTypeUrl();
   }
 };
@@ -2666,6 +2690,9 @@ export const ListServiceRolloutsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListServiceRolloutsResponse.typeUrl)) {
+      return;
+    }
     Rollout.registerTypeUrl();
   }
 };
@@ -3071,6 +3098,9 @@ export const GenerateConfigReportResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenerateConfigReportResponse.typeUrl)) {
+      return;
+    }
     ChangeReport.registerTypeUrl();
     Diagnostic.registerTypeUrl();
   }

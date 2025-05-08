@@ -465,6 +465,9 @@ export const MsgCreateProvider = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateProvider.typeUrl)) {
+      return;
+    }
     Attribute.registerTypeUrl();
     ProviderInfo.registerTypeUrl();
   }
@@ -721,6 +724,9 @@ export const MsgUpdateProvider = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateProvider.typeUrl)) {
+      return;
+    }
     Attribute.registerTypeUrl();
     ProviderInfo.registerTypeUrl();
   }
@@ -1167,6 +1173,9 @@ export const Provider = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Provider.typeUrl)) {
+      return;
+    }
     Attribute.registerTypeUrl();
     ProviderInfo.registerTypeUrl();
   }

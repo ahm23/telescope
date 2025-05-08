@@ -525,6 +525,9 @@ export const QueryCurrentPlanResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCurrentPlanResponse.typeUrl)) {
+      return;
+    }
     Plan.registerTypeUrl();
   }
 };
@@ -1171,6 +1174,9 @@ export const QueryModuleVersionsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryModuleVersionsResponse.typeUrl)) {
+      return;
+    }
     ModuleVersion.registerTypeUrl();
   }
 };

@@ -589,6 +589,9 @@ export const ModuleToDistributeCoinsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleToDistributeCoinsResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -805,6 +808,9 @@ export const GaugeByIDResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GaugeByIDResponse.typeUrl)) {
+      return;
+    }
     Gauge.registerTypeUrl();
   }
 };
@@ -914,6 +920,9 @@ export const GaugesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GaugesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1050,6 +1059,9 @@ export const GaugesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GaugesResponse.typeUrl)) {
+      return;
+    }
     Gauge.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1160,6 +1172,9 @@ export const ActiveGaugesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ActiveGaugesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1296,6 +1311,9 @@ export const ActiveGaugesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ActiveGaugesResponse.typeUrl)) {
+      return;
+    }
     Gauge.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1423,6 +1441,9 @@ export const ActiveGaugesPerDenomRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ActiveGaugesPerDenomRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1559,6 +1580,9 @@ export const ActiveGaugesPerDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ActiveGaugesPerDenomResponse.typeUrl)) {
+      return;
+    }
     Gauge.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1669,6 +1693,9 @@ export const UpcomingGaugesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpcomingGaugesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1805,6 +1832,9 @@ export const UpcomingGaugesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpcomingGaugesResponse.typeUrl)) {
+      return;
+    }
     Gauge.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1932,6 +1962,9 @@ export const UpcomingGaugesPerDenomRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpcomingGaugesPerDenomRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -2068,6 +2101,9 @@ export const UpcomingGaugesPerDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpcomingGaugesPerDenomResponse.typeUrl)) {
+      return;
+    }
     Gauge.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -2346,6 +2382,9 @@ export const RewardsEstResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RewardsEstResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

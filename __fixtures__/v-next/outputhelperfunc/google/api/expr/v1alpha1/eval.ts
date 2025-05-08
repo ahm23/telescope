@@ -399,6 +399,9 @@ export const EvalState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EvalState.typeUrl)) {
+      return;
+    }
     ExprValue.registerTypeUrl();
     EvalState_Result.registerTypeUrl();
   }
@@ -659,6 +662,9 @@ export const ExprValue = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ExprValue.typeUrl)) {
+      return;
+    }
     Value.registerTypeUrl();
     ErrorSet.registerTypeUrl();
     UnknownSet.registerTypeUrl();
@@ -771,6 +777,9 @@ export const ErrorSet = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ErrorSet.typeUrl)) {
+      return;
+    }
     Status.registerTypeUrl();
   }
 };

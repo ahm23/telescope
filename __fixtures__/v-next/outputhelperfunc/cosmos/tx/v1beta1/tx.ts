@@ -912,6 +912,9 @@ export const Tx = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Tx.typeUrl)) {
+      return;
+    }
     TxBody.registerTypeUrl();
     AuthInfo.registerTypeUrl();
   }
@@ -1420,6 +1423,9 @@ export const SignDocDirectAux = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignDocDirectAux.typeUrl)) {
+      return;
+    }
     Tip.registerTypeUrl();
   }
 };
@@ -1780,6 +1786,9 @@ export const AuthInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AuthInfo.typeUrl)) {
+      return;
+    }
     SignerInfo.registerTypeUrl();
     Fee.registerTypeUrl();
     Tip.registerTypeUrl();
@@ -1929,6 +1938,9 @@ export const SignerInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignerInfo.typeUrl)) {
+      return;
+    }
     ModeInfo.registerTypeUrl();
   }
 };
@@ -2057,6 +2069,9 @@ export const ModeInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModeInfo.typeUrl)) {
+      return;
+    }
     ModeInfo_Single.registerTypeUrl();
     ModeInfo_Multi.registerTypeUrl();
   }
@@ -2299,6 +2314,9 @@ export const ModeInfo_Multi = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModeInfo_Multi.typeUrl)) {
+      return;
+    }
     CompactBitArray.registerTypeUrl();
     ModeInfo.registerTypeUrl();
   }
@@ -2470,6 +2488,9 @@ export const Fee = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Fee.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2604,6 +2625,9 @@ export const Tip = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Tip.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2764,6 +2788,9 @@ export const AuxSignerData = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AuxSignerData.typeUrl)) {
+      return;
+    }
     SignDocDirectAux.registerTypeUrl();
   }
 };

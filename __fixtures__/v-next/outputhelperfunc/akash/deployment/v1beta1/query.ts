@@ -262,6 +262,9 @@ export const QueryDeploymentsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDeploymentsRequest.typeUrl)) {
+      return;
+    }
     DeploymentFilters.registerTypeUrl();
     PageRequest.registerTypeUrl();
   }
@@ -396,6 +399,9 @@ export const QueryDeploymentsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDeploymentsResponse.typeUrl)) {
+      return;
+    }
     QueryDeploymentResponse.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -503,6 +509,9 @@ export const QueryDeploymentRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDeploymentRequest.typeUrl)) {
+      return;
+    }
     DeploymentID.registerTypeUrl();
   }
 };
@@ -655,6 +664,9 @@ export const QueryDeploymentResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDeploymentResponse.typeUrl)) {
+      return;
+    }
     Deployment.registerTypeUrl();
     Group.registerTypeUrl();
     Account.registerTypeUrl();
@@ -763,6 +775,9 @@ export const QueryGroupRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGroupRequest.typeUrl)) {
+      return;
+    }
     GroupID.registerTypeUrl();
   }
 };
@@ -869,6 +884,9 @@ export const QueryGroupResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGroupResponse.typeUrl)) {
+      return;
+    }
     Group.registerTypeUrl();
   }
 };

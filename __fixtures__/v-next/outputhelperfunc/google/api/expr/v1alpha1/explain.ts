@@ -2,6 +2,7 @@ import { Value, ValueAmino, ValueSDKType } from "./value";
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { JsonSafe } from "../../../../json-safe";
 import { DeepPartial, isSet } from "../../../../helpers";
+import { GlobalDecoderRegistry } from "../../../../registry";
 export const protobufPackage = "google.api.expr.v1alpha1";
 /**
  * Values of intermediate expressions produced when evaluating expression.
@@ -225,6 +226,9 @@ export const Explain = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Explain.typeUrl)) {
+      return;
+    }
     Value.registerTypeUrl();
     Explain_ExprStep.registerTypeUrl();
   }

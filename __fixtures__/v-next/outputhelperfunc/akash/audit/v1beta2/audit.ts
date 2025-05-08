@@ -2,6 +2,7 @@ import { Attribute, AttributeAmino, AttributeSDKType } from "../../base/v1beta2/
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial, Exact } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "akash.audit.v1beta2";
 /** Provider stores owner auditor and attributes details */
 export interface Provider {
@@ -326,6 +327,9 @@ export const Provider = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Provider.typeUrl)) {
+      return;
+    }
     Attribute.registerTypeUrl();
   }
 };
@@ -477,6 +481,9 @@ export const AuditedAttributes = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AuditedAttributes.typeUrl)) {
+      return;
+    }
     Attribute.registerTypeUrl();
   }
 };
@@ -594,6 +601,9 @@ export const AttributesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributesResponse.typeUrl)) {
+      return;
+    }
     AuditedAttributes.registerTypeUrl();
   }
 };
@@ -887,6 +897,9 @@ export const MsgSignProviderAttributes = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSignProviderAttributes.typeUrl)) {
+      return;
+    }
     Attribute.registerTypeUrl();
   }
 };

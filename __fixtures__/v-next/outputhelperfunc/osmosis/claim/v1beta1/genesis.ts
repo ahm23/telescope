@@ -190,6 +190,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
     Params.registerTypeUrl();
     ClaimRecord.registerTypeUrl();

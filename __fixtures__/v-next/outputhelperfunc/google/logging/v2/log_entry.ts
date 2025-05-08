@@ -1072,6 +1072,9 @@ export const LogEntry = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogEntry.typeUrl)) {
+      return;
+    }
     Struct.registerTypeUrl();
     HttpRequest.registerTypeUrl();
     LogEntryOperation.registerTypeUrl();

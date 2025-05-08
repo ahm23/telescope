@@ -382,6 +382,9 @@ export const Gauge = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Gauge.typeUrl)) {
+      return;
+    }
     QueryCondition.registerTypeUrl();
     Coin.registerTypeUrl();
   }

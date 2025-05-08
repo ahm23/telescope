@@ -500,6 +500,9 @@ export const MsgStoreCode = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgStoreCode.typeUrl)) {
+      return;
+    }
     AccessConfig.registerTypeUrl();
   }
 };
@@ -811,6 +814,9 @@ export const MsgInstantiateContract = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgInstantiateContract.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1101,6 +1107,9 @@ export const MsgExecuteContract = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgExecuteContract.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

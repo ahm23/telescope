@@ -447,6 +447,9 @@ export const QueryGaugeIdsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGaugeIdsResponse.typeUrl)) {
+      return;
+    }
     QueryGaugeIdsResponse_GaugeIdWithDuration.registerTypeUrl();
   }
 };
@@ -784,6 +787,9 @@ export const QueryDistrInfoResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDistrInfoResponse.typeUrl)) {
+      return;
+    }
     DistrInfo.registerTypeUrl();
   }
 };
@@ -978,6 +984,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -1525,6 +1534,9 @@ export const QueryIncentivizedPoolsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryIncentivizedPoolsResponse.typeUrl)) {
+      return;
+    }
     IncentivizedPool.registerTypeUrl();
   }
 };
@@ -1727,6 +1739,9 @@ export const QueryExternalIncentiveGaugesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryExternalIncentiveGaugesResponse.typeUrl)) {
+      return;
+    }
     Gauge.registerTypeUrl();
   }
 };

@@ -1116,6 +1116,9 @@ export const QueryNFTsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryNFTsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1252,6 +1255,9 @@ export const QueryNFTsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryNFTsResponse.typeUrl)) {
+      return;
+    }
     NFT.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1484,6 +1490,9 @@ export const QueryNFTResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryNFTResponse.typeUrl)) {
+      return;
+    }
     NFT.registerTypeUrl();
   }
 };
@@ -1698,6 +1707,9 @@ export const QueryClassResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClassResponse.typeUrl)) {
+      return;
+    }
     Class.registerTypeUrl();
   }
 };
@@ -1807,6 +1819,9 @@ export const QueryClassesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClassesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1943,6 +1958,9 @@ export const QueryClassesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClassesResponse.typeUrl)) {
+      return;
+    }
     Class.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }

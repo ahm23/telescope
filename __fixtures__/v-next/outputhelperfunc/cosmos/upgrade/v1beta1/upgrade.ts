@@ -538,6 +538,9 @@ export const SoftwareUpgradeProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SoftwareUpgradeProposal.typeUrl)) {
+      return;
+    }
     Plan.registerTypeUrl();
   }
 };

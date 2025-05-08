@@ -457,6 +457,9 @@ export const PeriodLock = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PeriodLock.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

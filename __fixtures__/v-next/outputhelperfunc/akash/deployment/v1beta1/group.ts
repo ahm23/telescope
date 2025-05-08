@@ -374,6 +374,9 @@ export const MsgCloseGroup = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseGroup.typeUrl)) {
+      return;
+    }
     GroupID.registerTypeUrl();
   }
 };
@@ -562,6 +565,9 @@ export const MsgPauseGroup = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgPauseGroup.typeUrl)) {
+      return;
+    }
     GroupID.registerTypeUrl();
   }
 };
@@ -750,6 +756,9 @@ export const MsgStartGroup = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgStartGroup.typeUrl)) {
+      return;
+    }
     GroupID.registerTypeUrl();
   }
 };
@@ -1120,6 +1129,9 @@ export const GroupSpec = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GroupSpec.typeUrl)) {
+      return;
+    }
     PlacementRequirements.registerTypeUrl();
     Resource.registerTypeUrl();
   }
@@ -1282,6 +1294,9 @@ export const Group = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Group.typeUrl)) {
+      return;
+    }
     GroupID.registerTypeUrl();
     GroupSpec.registerTypeUrl();
   }
@@ -1425,6 +1440,9 @@ export const Resource = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Resource.typeUrl)) {
+      return;
+    }
     ResourceUnits.registerTypeUrl();
     Coin.registerTypeUrl();
   }

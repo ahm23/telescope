@@ -793,6 +793,9 @@ export const QueryBalanceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBalanceResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -919,6 +922,9 @@ export const QueryAllBalancesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllBalancesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1055,6 +1061,9 @@ export const QueryAllBalancesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllBalancesResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1182,6 +1191,9 @@ export const QuerySpendableBalancesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySpendableBalancesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1318,6 +1330,9 @@ export const QuerySpendableBalancesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySpendableBalancesResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1428,6 +1443,9 @@ export const QueryTotalSupplyRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalSupplyRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1564,6 +1582,9 @@ export const QueryTotalSupplyResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalSupplyResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1779,6 +1800,9 @@ export const QuerySupplyOfResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySupplyOfResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1973,6 +1997,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -2082,6 +2109,9 @@ export const QueryDenomsMetadataRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomsMetadataRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -2218,6 +2248,9 @@ export const QueryDenomsMetadataResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomsMetadataResponse.typeUrl)) {
+      return;
+    }
     Metadata.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -2433,6 +2466,9 @@ export const QueryDenomMetadataResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomMetadataResponse.typeUrl)) {
+      return;
+    }
     Metadata.registerTypeUrl();
   }
 };
@@ -2559,6 +2595,9 @@ export const QueryDenomOwnersRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomOwnersRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -2685,6 +2724,9 @@ export const DenomOwner = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DenomOwner.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2821,6 +2863,9 @@ export const QueryDenomOwnersResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomOwnersResponse.typeUrl)) {
+      return;
+    }
     DenomOwner.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }

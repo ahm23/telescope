@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * Path Translation specifies how to combine the backend address with the
@@ -422,6 +423,9 @@ export const Backend = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Backend.typeUrl)) {
+      return;
+    }
     BackendRule.registerTypeUrl();
   }
 };

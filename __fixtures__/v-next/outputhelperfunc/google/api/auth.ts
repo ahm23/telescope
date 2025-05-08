@@ -727,6 +727,9 @@ export const Authentication = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Authentication.typeUrl)) {
+      return;
+    }
     AuthenticationRule.registerTypeUrl();
     AuthProvider.registerTypeUrl();
   }
@@ -891,6 +894,9 @@ export const AuthenticationRule = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AuthenticationRule.typeUrl)) {
+      return;
+    }
     OAuthRequirements.registerTypeUrl();
     AuthRequirement.registerTypeUrl();
   }
@@ -1219,6 +1225,9 @@ export const AuthProvider = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AuthProvider.typeUrl)) {
+      return;
+    }
     JwtLocation.registerTypeUrl();
   }
 };

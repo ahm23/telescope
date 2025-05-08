@@ -462,6 +462,9 @@ export const Order = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Order.typeUrl)) {
+      return;
+    }
     OrderID.registerTypeUrl();
     GroupSpec.registerTypeUrl();
   }

@@ -610,6 +610,9 @@ export const CodeGeneratorRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CodeGeneratorRequest.typeUrl)) {
+      return;
+    }
     FileDescriptorProto.registerTypeUrl();
     Version.registerTypeUrl();
   }
@@ -738,6 +741,9 @@ export const CodeGeneratorResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CodeGeneratorResponse.typeUrl)) {
+      return;
+    }
     CodeGeneratorResponse_File.registerTypeUrl();
   }
 };

@@ -382,6 +382,9 @@ export const QueryModuleAccountBalanceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryModuleAccountBalanceResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -576,6 +579,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -790,6 +796,9 @@ export const QueryClaimRecordResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimRecordResponse.typeUrl)) {
+      return;
+    }
     ClaimRecord.registerTypeUrl();
   }
 };
@@ -1029,6 +1038,9 @@ export const QueryClaimableForActionResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimableForActionResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1251,6 +1263,9 @@ export const QueryTotalClaimableResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalClaimableResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

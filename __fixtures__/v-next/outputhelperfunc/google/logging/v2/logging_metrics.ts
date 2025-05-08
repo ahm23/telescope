@@ -1025,6 +1025,9 @@ export const LogMetric = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogMetric.typeUrl)) {
+      return;
+    }
     MetricDescriptor.registerTypeUrl();
     Distribution_BucketOptions.registerTypeUrl();
   }
@@ -1285,6 +1288,9 @@ export const ListLogMetricsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListLogMetricsResponse.typeUrl)) {
+      return;
+    }
     LogMetric.registerTypeUrl();
   }
 };
@@ -1502,6 +1508,9 @@ export const CreateLogMetricRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateLogMetricRequest.typeUrl)) {
+      return;
+    }
     LogMetric.registerTypeUrl();
   }
 };
@@ -1621,6 +1630,9 @@ export const UpdateLogMetricRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateLogMetricRequest.typeUrl)) {
+      return;
+    }
     LogMetric.registerTypeUrl();
   }
 };

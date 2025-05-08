@@ -307,6 +307,9 @@ export const MsgTransfer = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgTransfer.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
     Height.registerTypeUrl();
   }

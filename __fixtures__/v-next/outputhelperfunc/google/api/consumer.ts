@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /** Supported data type of the property values */
 export enum Property_PropertyType {
@@ -303,6 +304,9 @@ export const ProjectProperties = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ProjectProperties.typeUrl)) {
+      return;
+    }
     Property.registerTypeUrl();
   }
 };

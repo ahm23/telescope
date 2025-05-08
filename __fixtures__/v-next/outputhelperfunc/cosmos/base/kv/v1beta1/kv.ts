@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { JsonSafe } from "../../../../json-safe";
 import { DeepPartial, isSet, bytesFromBase64, base64FromBytes } from "../../../../helpers";
+import { GlobalDecoderRegistry } from "../../../../registry";
 export const protobufPackage = "cosmos.base.kv.v1beta1";
 /** Pairs defines a repeated slice of Pair objects. */
 export interface Pairs {
@@ -159,6 +160,9 @@ export const Pairs = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Pairs.typeUrl)) {
+      return;
+    }
     Pair.registerTypeUrl();
   }
 };

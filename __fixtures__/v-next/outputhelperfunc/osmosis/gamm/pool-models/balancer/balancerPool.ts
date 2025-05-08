@@ -447,6 +447,9 @@ export const SmoothWeightChangeParams = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SmoothWeightChangeParams.typeUrl)) {
+      return;
+    }
     PoolAsset.registerTypeUrl();
   }
 };
@@ -590,6 +593,9 @@ export const PoolParams = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PoolParams.typeUrl)) {
+      return;
+    }
     SmoothWeightChangeParams.registerTypeUrl();
   }
 };
@@ -716,6 +722,9 @@ export const PoolAsset = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PoolAsset.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

@@ -3,6 +3,7 @@ import { Period, PeriodAmino, PeriodSDKType } from "./vesting";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.vesting.v1beta1";
 /**
  * MsgCreateVestingAccount defines a message that enables creating a vesting
@@ -353,6 +354,9 @@ export const MsgCreateVestingAccount = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateVestingAccount.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -589,6 +593,9 @@ export const MsgCreatePermanentLockedAccount = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreatePermanentLockedAccount.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -844,6 +851,9 @@ export const MsgCreatePeriodicVestingAccount = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreatePeriodicVestingAccount.typeUrl)) {
+      return;
+    }
     Period.registerTypeUrl();
   }
 };

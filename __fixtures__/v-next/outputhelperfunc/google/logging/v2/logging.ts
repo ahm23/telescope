@@ -1392,6 +1392,9 @@ export const WriteLogEntriesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WriteLogEntriesRequest.typeUrl)) {
+      return;
+    }
     MonitoredResource.registerTypeUrl();
     LogEntry.registerTypeUrl();
   }
@@ -1574,6 +1577,9 @@ export const WriteLogEntriesPartialErrors_LogEntryErrorsEntry = {
     return WriteLogEntriesPartialErrors_LogEntryErrorsEntry.encode(message).finish();
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WriteLogEntriesPartialErrors_LogEntryErrorsEntry.typeUrl)) {
+      return;
+    }
     Status.registerTypeUrl();
   }
 };
@@ -1722,6 +1728,9 @@ export const WriteLogEntriesPartialErrors = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WriteLogEntriesPartialErrors.typeUrl)) {
+      return;
+    }
     Status.registerTypeUrl();
   }
 };
@@ -2025,6 +2034,9 @@ export const ListLogEntriesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListLogEntriesResponse.typeUrl)) {
+      return;
+    }
     LogEntry.registerTypeUrl();
   }
 };
@@ -2267,6 +2279,9 @@ export const ListMonitoredResourceDescriptorsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListMonitoredResourceDescriptorsResponse.typeUrl)) {
+      return;
+    }
     MonitoredResourceDescriptor.registerTypeUrl();
   }
 };
@@ -2832,6 +2847,9 @@ export const TailLogEntriesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TailLogEntriesResponse.typeUrl)) {
+      return;
+    }
     LogEntry.registerTypeUrl();
     TailLogEntriesResponse_SuppressionInfo.registerTypeUrl();
   }

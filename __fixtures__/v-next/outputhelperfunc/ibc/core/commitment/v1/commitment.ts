@@ -2,6 +2,7 @@ import { CommitmentProof, CommitmentProofAmino, CommitmentProofSDKType } from ".
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, bytesFromBase64, base64FromBytes, DeepPartial } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../../registry";
 export const protobufPackage = "ibc.core.commitment.v1";
 /**
  * MerkleRoot defines a merkle root hash.
@@ -573,6 +574,9 @@ export const MerkleProof = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MerkleProof.typeUrl)) {
+      return;
+    }
     CommitmentProof.registerTypeUrl();
   }
 };

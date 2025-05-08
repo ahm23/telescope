@@ -413,6 +413,9 @@ export const ValueOp = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValueOp.typeUrl)) {
+      return;
+    }
     Proof.registerTypeUrl();
   }
 };
@@ -787,6 +790,9 @@ export const ProofOps = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ProofOps.typeUrl)) {
+      return;
+    }
     ProofOp.registerTypeUrl();
   }
 };

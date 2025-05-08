@@ -2306,6 +2306,9 @@ export const FileDescriptorSet = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(FileDescriptorSet.typeUrl)) {
+      return;
+    }
     FileDescriptorProto.registerTypeUrl();
   }
 };
@@ -2685,6 +2688,9 @@ export const FileDescriptorProto = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(FileDescriptorProto.typeUrl)) {
+      return;
+    }
     DescriptorProto.registerTypeUrl();
     EnumDescriptorProto.registerTypeUrl();
     ServiceDescriptorProto.registerTypeUrl();
@@ -3025,6 +3031,9 @@ export const DescriptorProto = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DescriptorProto.typeUrl)) {
+      return;
+    }
     FieldDescriptorProto.registerTypeUrl();
     DescriptorProto.registerTypeUrl();
     EnumDescriptorProto.registerTypeUrl();
@@ -3167,6 +3176,9 @@ export const DescriptorProto_ExtensionRange = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(DescriptorProto_ExtensionRange.typeUrl)) {
+      return;
+    }
     ExtensionRangeOptions.registerTypeUrl();
   }
 };
@@ -3392,6 +3404,9 @@ export const ExtensionRangeOptions = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ExtensionRangeOptions.typeUrl)) {
+      return;
+    }
     UninterpretedOption.registerTypeUrl();
   }
 };
@@ -3647,6 +3662,9 @@ export const FieldDescriptorProto = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(FieldDescriptorProto.typeUrl)) {
+      return;
+    }
     FieldOptions.registerTypeUrl();
   }
 };
@@ -3766,6 +3784,9 @@ export const OneofDescriptorProto = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OneofDescriptorProto.typeUrl)) {
+      return;
+    }
     OneofOptions.registerTypeUrl();
   }
 };
@@ -3966,6 +3987,9 @@ export const EnumDescriptorProto = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EnumDescriptorProto.typeUrl)) {
+      return;
+    }
     EnumValueDescriptorProto.registerTypeUrl();
     EnumOptions.registerTypeUrl();
     EnumDescriptorProto_EnumReservedRange.registerTypeUrl();
@@ -4219,6 +4243,9 @@ export const EnumValueDescriptorProto = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EnumValueDescriptorProto.typeUrl)) {
+      return;
+    }
     EnumValueOptions.registerTypeUrl();
   }
 };
@@ -4365,6 +4392,9 @@ export const ServiceDescriptorProto = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ServiceDescriptorProto.typeUrl)) {
+      return;
+    }
     MethodDescriptorProto.registerTypeUrl();
     ServiceOptions.registerTypeUrl();
   }
@@ -4553,6 +4583,9 @@ export const MethodDescriptorProto = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MethodDescriptorProto.typeUrl)) {
+      return;
+    }
     MethodOptions.registerTypeUrl();
   }
 };
@@ -5003,6 +5036,9 @@ export const FileOptions = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(FileOptions.typeUrl)) {
+      return;
+    }
     UninterpretedOption.registerTypeUrl();
   }
 };
@@ -5181,6 +5217,9 @@ export const MessageOptions = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MessageOptions.typeUrl)) {
+      return;
+    }
     UninterpretedOption.registerTypeUrl();
   }
 };
@@ -5393,6 +5432,9 @@ export const FieldOptions = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(FieldOptions.typeUrl)) {
+      return;
+    }
     UninterpretedOption.registerTypeUrl();
   }
 };
@@ -5503,6 +5545,9 @@ export const OneofOptions = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OneofOptions.typeUrl)) {
+      return;
+    }
     UninterpretedOption.registerTypeUrl();
   }
 };
@@ -5647,6 +5692,9 @@ export const EnumOptions = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EnumOptions.typeUrl)) {
+      return;
+    }
     UninterpretedOption.registerTypeUrl();
   }
 };
@@ -5774,6 +5822,9 @@ export const EnumValueOptions = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EnumValueOptions.typeUrl)) {
+      return;
+    }
     UninterpretedOption.registerTypeUrl();
   }
 };
@@ -5901,6 +5952,9 @@ export const ServiceOptions = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ServiceOptions.typeUrl)) {
+      return;
+    }
     UninterpretedOption.registerTypeUrl();
   }
 };
@@ -6045,6 +6099,9 @@ export const MethodOptions = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MethodOptions.typeUrl)) {
+      return;
+    }
     UninterpretedOption.registerTypeUrl();
   }
 };
@@ -6261,6 +6318,9 @@ export const UninterpretedOption = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UninterpretedOption.typeUrl)) {
+      return;
+    }
     UninterpretedOption_NamePart.registerTypeUrl();
   }
 };
@@ -6486,6 +6546,9 @@ export const SourceCodeInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SourceCodeInfo.typeUrl)) {
+      return;
+    }
     SourceCodeInfo_Location.registerTypeUrl();
   }
 };
@@ -6810,6 +6873,9 @@ export const GeneratedCodeInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GeneratedCodeInfo.typeUrl)) {
+      return;
+    }
     GeneratedCodeInfo_Annotation.registerTypeUrl();
   }
 };

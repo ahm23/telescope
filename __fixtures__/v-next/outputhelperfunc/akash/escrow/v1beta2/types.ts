@@ -589,6 +589,9 @@ export const Account = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Account.typeUrl)) {
+      return;
+    }
     AccountID.registerTypeUrl();
     DecCoin.registerTypeUrl();
   }
@@ -807,6 +810,9 @@ export const FractionalPayment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(FractionalPayment.typeUrl)) {
+      return;
+    }
     AccountID.registerTypeUrl();
     DecCoin.registerTypeUrl();
     Coin.registerTypeUrl();

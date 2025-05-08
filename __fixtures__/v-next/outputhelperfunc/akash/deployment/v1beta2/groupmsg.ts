@@ -212,6 +212,9 @@ export const MsgCloseGroup = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseGroup.typeUrl)) {
+      return;
+    }
     GroupID.registerTypeUrl();
   }
 };
@@ -406,6 +409,9 @@ export const MsgPauseGroup = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgPauseGroup.typeUrl)) {
+      return;
+    }
     GroupID.registerTypeUrl();
   }
 };
@@ -600,6 +606,9 @@ export const MsgStartGroup = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgStartGroup.typeUrl)) {
+      return;
+    }
     GroupID.registerTypeUrl();
   }
 };

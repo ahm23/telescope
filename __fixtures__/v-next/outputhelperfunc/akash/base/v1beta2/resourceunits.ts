@@ -222,6 +222,9 @@ export const ResourceUnits = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResourceUnits.typeUrl)) {
+      return;
+    }
     CPU.registerTypeUrl();
     Memory.registerTypeUrl();
     Storage.registerTypeUrl();

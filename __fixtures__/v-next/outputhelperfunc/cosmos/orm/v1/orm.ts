@@ -380,6 +380,9 @@ export const TableDescriptor = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TableDescriptor.typeUrl)) {
+      return;
+    }
     PrimaryKeyDescriptor.registerTypeUrl();
     SecondaryIndexDescriptor.registerTypeUrl();
   }

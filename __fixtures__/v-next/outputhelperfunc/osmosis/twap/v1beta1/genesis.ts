@@ -312,6 +312,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     TwapRecord.registerTypeUrl();
     Params.registerTypeUrl();
   }

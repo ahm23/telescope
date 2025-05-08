@@ -194,6 +194,9 @@ export const QueryProvidersRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProvidersRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -330,6 +333,9 @@ export const QueryProvidersResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProvidersResponse.typeUrl)) {
+      return;
+    }
     Provider.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -545,6 +551,9 @@ export const QueryProviderResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryProviderResponse.typeUrl)) {
+      return;
+    }
     Provider.registerTypeUrl();
   }
 };

@@ -271,6 +271,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
     Balance.registerTypeUrl();
     Coin.registerTypeUrl();
@@ -408,6 +411,9 @@ export const Balance = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Balance.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

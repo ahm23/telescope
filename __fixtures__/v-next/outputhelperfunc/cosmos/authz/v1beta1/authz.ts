@@ -389,6 +389,9 @@ export const Grant = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Grant.typeUrl)) {
+      return;
+    }
     GenericAuthorization.registerTypeUrl();
     DepositDeploymentAuthorization1.registerTypeUrl();
     DepositDeploymentAuthorization2.registerTypeUrl();
@@ -553,6 +556,9 @@ export const GrantAuthorization = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GrantAuthorization.typeUrl)) {
+      return;
+    }
     GenericAuthorization.registerTypeUrl();
     DepositDeploymentAuthorization1.registerTypeUrl();
     DepositDeploymentAuthorization2.registerTypeUrl();

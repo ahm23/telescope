@@ -826,6 +826,9 @@ export const QueryContractInfoResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryContractInfoResponse.typeUrl)) {
+      return;
+    }
     ContractInfo.registerTypeUrl();
   }
 };
@@ -952,6 +955,9 @@ export const QueryContractHistoryRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryContractHistoryRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1088,6 +1094,9 @@ export const QueryContractHistoryResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryContractHistoryResponse.typeUrl)) {
+      return;
+    }
     ContractCodeHistoryEntry.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1217,6 +1226,9 @@ export const QueryContractsByCodeRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryContractsByCodeRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1353,6 +1365,9 @@ export const QueryContractsByCodeResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryContractsByCodeResponse.typeUrl)) {
+      return;
+    }
     PageResponse.registerTypeUrl();
   }
 };
@@ -1479,6 +1494,9 @@ export const QueryAllContractStateRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllContractStateRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1615,6 +1633,9 @@ export const QueryAllContractStateResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllContractStateResponse.typeUrl)) {
+      return;
+    }
     Model.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -2444,6 +2465,9 @@ export const QueryCodeResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCodeResponse.typeUrl)) {
+      return;
+    }
     CodeInfoResponse.registerTypeUrl();
   }
 };
@@ -2553,6 +2577,9 @@ export const QueryCodesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCodesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -2689,6 +2716,9 @@ export const QueryCodesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCodesResponse.typeUrl)) {
+      return;
+    }
     CodeInfoResponse.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -2799,6 +2829,9 @@ export const QueryPinnedCodesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPinnedCodesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -2944,6 +2977,9 @@ export const QueryPinnedCodesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPinnedCodesResponse.typeUrl)) {
+      return;
+    }
     PageResponse.registerTypeUrl();
   }
 };

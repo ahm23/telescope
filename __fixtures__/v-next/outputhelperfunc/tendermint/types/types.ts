@@ -764,6 +764,9 @@ export const Part = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Part.typeUrl)) {
+      return;
+    }
     Proof.registerTypeUrl();
   }
 };
@@ -883,6 +886,9 @@ export const BlockID = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BlockID.typeUrl)) {
+      return;
+    }
     PartSetHeader.registerTypeUrl();
   }
 };
@@ -1210,6 +1216,9 @@ export const Header = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Header.typeUrl)) {
+      return;
+    }
     Consensus.registerTypeUrl();
     BlockID.registerTypeUrl();
   }
@@ -1542,6 +1551,9 @@ export const Vote = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Vote.typeUrl)) {
+      return;
+    }
     BlockID.registerTypeUrl();
   }
 };
@@ -1707,6 +1719,9 @@ export const Commit = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Commit.typeUrl)) {
+      return;
+    }
     BlockID.registerTypeUrl();
     CommitSig.registerTypeUrl();
   }
@@ -2063,6 +2078,9 @@ export const Proposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Proposal.typeUrl)) {
+      return;
+    }
     BlockID.registerTypeUrl();
   }
 };
@@ -2184,6 +2202,9 @@ export const SignedHeader = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SignedHeader.typeUrl)) {
+      return;
+    }
     Header.registerTypeUrl();
     Commit.registerTypeUrl();
   }
@@ -2306,6 +2327,9 @@ export const LightBlock = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LightBlock.typeUrl)) {
+      return;
+    }
     SignedHeader.registerTypeUrl();
     ValidatorSet.registerTypeUrl();
   }
@@ -2466,6 +2490,9 @@ export const BlockMeta = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BlockMeta.typeUrl)) {
+      return;
+    }
     BlockID.registerTypeUrl();
     Header.registerTypeUrl();
   }
@@ -2603,6 +2630,9 @@ export const TxProof = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TxProof.typeUrl)) {
+      return;
+    }
     Proof.registerTypeUrl();
   }
 };

@@ -492,6 +492,9 @@ export const PlacementRequirements = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PlacementRequirements.typeUrl)) {
+      return;
+    }
     SignedBy.registerTypeUrl();
     Attribute.registerTypeUrl();
   }

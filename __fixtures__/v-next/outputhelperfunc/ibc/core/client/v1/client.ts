@@ -692,6 +692,9 @@ export const ClientConsensusStates = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClientConsensusStates.typeUrl)) {
+      return;
+    }
     ConsensusStateWithHeight.registerTypeUrl();
   }
 };

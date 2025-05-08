@@ -1899,6 +1899,9 @@ export const AttributeContext_Auth = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext_Auth.typeUrl)) {
+      return;
+    }
     Struct.registerTypeUrl();
   }
 };
@@ -2337,6 +2340,9 @@ export const AttributeContext_Request = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AttributeContext_Request.typeUrl)) {
+      return;
+    }
     AttributeContext_Auth.registerTypeUrl();
   }
 };

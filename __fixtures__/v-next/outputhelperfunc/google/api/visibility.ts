@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * `Visibility` defines restrictions for the visibility of service
@@ -284,6 +285,9 @@ export const Visibility = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Visibility.typeUrl)) {
+      return;
+    }
     VisibilityRule.registerTypeUrl();
   }
 };

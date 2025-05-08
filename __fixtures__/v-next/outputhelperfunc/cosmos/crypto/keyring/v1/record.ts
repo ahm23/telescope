@@ -331,6 +331,9 @@ export const Record = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Record.typeUrl)) {
+      return;
+    }
     Record_Local.registerTypeUrl();
     Record_Ledger.registerTypeUrl();
     Record_Multi.registerTypeUrl();
@@ -567,6 +570,9 @@ export const Record_Ledger = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Record_Ledger.typeUrl)) {
+      return;
+    }
     BIP44Params.registerTypeUrl();
   }
 };

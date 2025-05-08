@@ -175,6 +175,9 @@ export const QueryEpochsInfoRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEpochsInfoRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -304,6 +307,9 @@ export const QueryEpochsInfoResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryEpochsInfoResponse.typeUrl)) {
+      return;
+    }
     EpochInfo.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }

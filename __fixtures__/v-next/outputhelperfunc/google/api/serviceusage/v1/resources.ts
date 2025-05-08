@@ -412,6 +412,9 @@ export const Service = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Service.typeUrl)) {
+      return;
+    }
     ServiceConfig.registerTypeUrl();
   }
 };
@@ -705,6 +708,9 @@ export const ServiceConfig = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ServiceConfig.typeUrl)) {
+      return;
+    }
     Api.registerTypeUrl();
     Documentation.registerTypeUrl();
     Quota.registerTypeUrl();

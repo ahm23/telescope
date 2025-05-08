@@ -182,6 +182,9 @@ export const GenesisDeployment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisDeployment.typeUrl)) {
+      return;
+    }
     Deployment.registerTypeUrl();
     Group.registerTypeUrl();
   }
@@ -316,6 +319,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     GenesisDeployment.registerTypeUrl();
     Params.registerTypeUrl();
   }

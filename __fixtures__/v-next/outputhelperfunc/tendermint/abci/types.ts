@@ -1747,6 +1747,9 @@ export const Request = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Request.typeUrl)) {
+      return;
+    }
     RequestEcho.registerTypeUrl();
     RequestFlush.registerTypeUrl();
     RequestInfo.registerTypeUrl();
@@ -2387,6 +2390,9 @@ export const RequestInitChain = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestInitChain.typeUrl)) {
+      return;
+    }
     ConsensusParams.registerTypeUrl();
     ValidatorUpdate.registerTypeUrl();
   }
@@ -2704,6 +2710,9 @@ export const RequestBeginBlock = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestBeginBlock.typeUrl)) {
+      return;
+    }
     Header.registerTypeUrl();
     LastCommitInfo.registerTypeUrl();
     Evidence.registerTypeUrl();
@@ -3294,6 +3303,9 @@ export const RequestOfferSnapshot = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RequestOfferSnapshot.typeUrl)) {
+      return;
+    }
     Snapshot.registerTypeUrl();
   }
 };
@@ -3947,6 +3959,9 @@ export const Response = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Response.typeUrl)) {
+      return;
+    }
     ResponseException.registerTypeUrl();
     ResponseEcho.registerTypeUrl();
     ResponseFlush.registerTypeUrl();
@@ -4684,6 +4699,9 @@ export const ResponseInitChain = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseInitChain.typeUrl)) {
+      return;
+    }
     ConsensusParams.registerTypeUrl();
     ValidatorUpdate.registerTypeUrl();
   }
@@ -4927,6 +4945,9 @@ export const ResponseQuery = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseQuery.typeUrl)) {
+      return;
+    }
     ProofOps.registerTypeUrl();
   }
 };
@@ -5037,6 +5058,9 @@ export const ResponseBeginBlock = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseBeginBlock.typeUrl)) {
+      return;
+    }
     Event.registerTypeUrl();
   }
 };
@@ -5270,6 +5294,9 @@ export const ResponseCheckTx = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseCheckTx.typeUrl)) {
+      return;
+    }
     Event.registerTypeUrl();
   }
 };
@@ -5503,6 +5530,9 @@ export const ResponseDeliverTx = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseDeliverTx.typeUrl)) {
+      return;
+    }
     Event.registerTypeUrl();
   }
 };
@@ -5659,6 +5689,9 @@ export const ResponseEndBlock = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseEndBlock.typeUrl)) {
+      return;
+    }
     ValidatorUpdate.registerTypeUrl();
     ConsensusParams.registerTypeUrl();
     Event.registerTypeUrl();
@@ -5888,6 +5921,9 @@ export const ResponseListSnapshots = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ResponseListSnapshots.typeUrl)) {
+      return;
+    }
     Snapshot.registerTypeUrl();
   }
 };
@@ -6404,6 +6440,9 @@ export const ConsensusParams = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsensusParams.typeUrl)) {
+      return;
+    }
     BlockParams.registerTypeUrl();
     EvidenceParams.registerTypeUrl();
     ValidatorParams.registerTypeUrl();
@@ -6653,6 +6692,9 @@ export const LastCommitInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LastCommitInfo.typeUrl)) {
+      return;
+    }
     VoteInfo.registerTypeUrl();
   }
 };
@@ -6780,6 +6822,9 @@ export const Event = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Event.typeUrl)) {
+      return;
+    }
     EventAttribute.registerTypeUrl();
   }
 };
@@ -7067,6 +7112,9 @@ export const TxResult = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(TxResult.typeUrl)) {
+      return;
+    }
     ResponseDeliverTx.registerTypeUrl();
   }
 };
@@ -7305,6 +7353,9 @@ export const ValidatorUpdate = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ValidatorUpdate.typeUrl)) {
+      return;
+    }
     PublicKey.registerTypeUrl();
   }
 };
@@ -7424,6 +7475,9 @@ export const VoteInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(VoteInfo.typeUrl)) {
+      return;
+    }
     Validator.registerTypeUrl();
   }
 };
@@ -7598,6 +7652,9 @@ export const Evidence = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Evidence.typeUrl)) {
+      return;
+    }
     Validator.registerTypeUrl();
   }
 };

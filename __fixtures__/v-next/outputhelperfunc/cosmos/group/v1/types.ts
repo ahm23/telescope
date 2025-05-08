@@ -1033,6 +1033,9 @@ export const Members = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Members.typeUrl)) {
+      return;
+    }
     Member.registerTypeUrl();
   }
 };
@@ -1745,6 +1748,9 @@ export const GroupMember = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GroupMember.typeUrl)) {
+      return;
+    }
     Member.registerTypeUrl();
   }
 };
@@ -1960,6 +1966,9 @@ export const GroupPolicyInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GroupPolicyInfo.typeUrl)) {
+      return;
+    }
     ThresholdDecisionPolicy.registerTypeUrl();
     PercentageDecisionPolicy.registerTypeUrl();
   }

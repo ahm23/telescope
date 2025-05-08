@@ -637,6 +637,9 @@ export const GetTxsEventRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetTxsEventRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -800,6 +803,9 @@ export const GetTxsEventResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetTxsEventResponse.typeUrl)) {
+      return;
+    }
     Tx.registerTypeUrl();
     TxResponse.registerTypeUrl();
     PageResponse.registerTypeUrl();
@@ -1033,6 +1039,9 @@ export const BroadcastTxResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BroadcastTxResponse.typeUrl)) {
+      return;
+    }
     TxResponse.registerTypeUrl();
   }
 };
@@ -1159,6 +1168,9 @@ export const SimulateRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SimulateRequest.typeUrl)) {
+      return;
+    }
     Tx.registerTypeUrl();
   }
 };
@@ -1287,6 +1299,9 @@ export const SimulateResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SimulateResponse.typeUrl)) {
+      return;
+    }
     GasInfo.registerTypeUrl();
     Result.registerTypeUrl();
   }
@@ -1521,6 +1536,9 @@ export const GetTxResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetTxResponse.typeUrl)) {
+      return;
+    }
     Tx.registerTypeUrl();
     TxResponse.registerTypeUrl();
   }
@@ -1650,6 +1668,9 @@ export const GetBlockWithTxsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetBlockWithTxsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1824,6 +1845,9 @@ export const GetBlockWithTxsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetBlockWithTxsResponse.typeUrl)) {
+      return;
+    }
     Tx.registerTypeUrl();
     BlockID.registerTypeUrl();
     Block.registerTypeUrl();

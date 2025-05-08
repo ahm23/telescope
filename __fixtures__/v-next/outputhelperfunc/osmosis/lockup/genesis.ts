@@ -2,6 +2,7 @@ import { PeriodLock, PeriodLockAmino, PeriodLockSDKType, SyntheticLock, Syntheti
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "osmosis.lockup";
 /** GenesisState defines the lockup module's genesis state. */
 export interface GenesisState {
@@ -189,6 +190,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
     SyntheticLock.registerTypeUrl();
   }

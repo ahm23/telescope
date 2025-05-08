@@ -406,6 +406,9 @@ export const Deployment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Deployment.typeUrl)) {
+      return;
+    }
     DeploymentID.registerTypeUrl();
   }
 };

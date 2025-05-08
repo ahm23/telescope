@@ -363,6 +363,9 @@ export const MsgSubmitProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSubmitProposal.typeUrl)) {
+      return;
+    }
     TextProposal.registerTypeUrl();
     RegisterIncentiveProposal.registerTypeUrl();
     ClientUpdateProposal.registerTypeUrl();
@@ -859,6 +862,9 @@ export const MsgVoteWeighted = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgVoteWeighted.typeUrl)) {
+      return;
+    }
     WeightedVoteOption.registerTypeUrl();
   }
 };
@@ -1097,6 +1103,9 @@ export const MsgDeposit = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDeposit.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

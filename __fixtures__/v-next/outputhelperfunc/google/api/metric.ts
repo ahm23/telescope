@@ -913,6 +913,9 @@ export const MetricDescriptor = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MetricDescriptor.typeUrl)) {
+      return;
+    }
     LabelDescriptor.registerTypeUrl();
     MetricDescriptor_MetricDescriptorMetadata.registerTypeUrl();
   }

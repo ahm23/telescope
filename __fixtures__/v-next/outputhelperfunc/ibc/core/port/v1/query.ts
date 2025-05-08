@@ -247,6 +247,9 @@ export const QueryAppVersionRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAppVersionRequest.typeUrl)) {
+      return;
+    }
     Counterparty.registerTypeUrl();
   }
 };

@@ -365,6 +365,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     ParamChange.registerTypeUrl();
   }
 };
@@ -567,6 +570,9 @@ export const QuerySubspacesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySubspacesResponse.typeUrl)) {
+      return;
+    }
     Subspace.registerTypeUrl();
   }
 };

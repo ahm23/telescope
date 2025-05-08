@@ -1112,6 +1112,9 @@ export const QuotaFailure = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaFailure.typeUrl)) {
+      return;
+    }
     QuotaFailure_Violation.registerTypeUrl();
   }
 };
@@ -1616,6 +1619,9 @@ export const PreconditionFailure = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PreconditionFailure.typeUrl)) {
+      return;
+    }
     PreconditionFailure_Violation.registerTypeUrl();
   }
 };
@@ -1858,6 +1864,9 @@ export const BadRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(BadRequest.typeUrl)) {
+      return;
+    }
     BadRequest_FieldViolation.registerTypeUrl();
   }
 };
@@ -2347,6 +2356,9 @@ export const Help = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Help.typeUrl)) {
+      return;
+    }
     Help_Link.registerTypeUrl();
   }
 };

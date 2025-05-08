@@ -823,6 +823,9 @@ export const Grant = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Grant.typeUrl)) {
+      return;
+    }
     BasicAllowance.registerTypeUrl();
     PeriodicAllowance.registerTypeUrl();
     AllowedMsgAllowance.registerTypeUrl();

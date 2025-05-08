@@ -348,6 +348,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -562,6 +565,9 @@ export const QueryDenomAuthorityMetadataResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryDenomAuthorityMetadataResponse.typeUrl)) {
+      return;
+    }
     DenomAuthorityMetadata.registerTypeUrl();
   }
 };

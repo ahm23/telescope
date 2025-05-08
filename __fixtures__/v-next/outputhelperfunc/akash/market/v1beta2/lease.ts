@@ -610,6 +610,9 @@ export const Lease = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Lease.typeUrl)) {
+      return;
+    }
     LeaseID.registerTypeUrl();
     DecCoin.registerTypeUrl();
   }
@@ -912,6 +915,9 @@ export const MsgCreateLease = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateLease.typeUrl)) {
+      return;
+    }
     BidID.registerTypeUrl();
   }
 };
@@ -1106,6 +1112,9 @@ export const MsgWithdrawLease = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgWithdrawLease.typeUrl)) {
+      return;
+    }
     LeaseID.registerTypeUrl();
   }
 };
@@ -1300,6 +1309,9 @@ export const MsgCloseLease = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseLease.typeUrl)) {
+      return;
+    }
     LeaseID.registerTypeUrl();
   }
 };

@@ -491,6 +491,9 @@ export const GetValidatorSetByHeightRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetValidatorSetByHeightRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -646,6 +649,9 @@ export const GetValidatorSetByHeightResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetValidatorSetByHeightResponse.typeUrl)) {
+      return;
+    }
     Validator.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -756,6 +762,9 @@ export const GetLatestValidatorSetRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetLatestValidatorSetRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -911,6 +920,9 @@ export const GetLatestValidatorSetResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetLatestValidatorSetResponse.typeUrl)) {
+      return;
+    }
     Validator.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1309,6 +1321,9 @@ export const GetBlockByHeightResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetBlockByHeightResponse.typeUrl)) {
+      return;
+    }
     BlockID.registerTypeUrl();
     Block.registerTypeUrl();
   }
@@ -1523,6 +1538,9 @@ export const GetLatestBlockResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetLatestBlockResponse.typeUrl)) {
+      return;
+    }
     BlockID.registerTypeUrl();
     Block.registerTypeUrl();
   }
@@ -1927,6 +1945,9 @@ export const GetNodeInfoResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GetNodeInfoResponse.typeUrl)) {
+      return;
+    }
     NodeInfo.registerTypeUrl();
     VersionInfo.registerTypeUrl();
   }
@@ -2164,6 +2185,9 @@ export const VersionInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(VersionInfo.typeUrl)) {
+      return;
+    }
     Module.registerTypeUrl();
   }
 };

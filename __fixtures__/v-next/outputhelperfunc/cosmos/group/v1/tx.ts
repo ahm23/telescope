@@ -937,6 +937,9 @@ export const MsgCreateGroup = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateGroup.typeUrl)) {
+      return;
+    }
     Member.registerTypeUrl();
   }
 };
@@ -1197,6 +1200,9 @@ export const MsgUpdateGroupMembers = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupMembers.typeUrl)) {
+      return;
+    }
     Member.registerTypeUrl();
   }
 };
@@ -1896,6 +1902,9 @@ export const MsgCreateGroupPolicy = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateGroupPolicy.typeUrl)) {
+      return;
+    }
     ThresholdDecisionPolicy.registerTypeUrl();
     PercentageDecisionPolicy.registerTypeUrl();
   }
@@ -2345,6 +2354,9 @@ export const MsgCreateGroupWithPolicy = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateGroupWithPolicy.typeUrl)) {
+      return;
+    }
     ThresholdDecisionPolicy.registerTypeUrl();
     PercentageDecisionPolicy.registerTypeUrl();
   }
@@ -2698,6 +2710,9 @@ export const MsgUpdateGroupPolicyDecisionPolicy = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateGroupPolicyDecisionPolicy.typeUrl)) {
+      return;
+    }
     ThresholdDecisionPolicy.registerTypeUrl();
     PercentageDecisionPolicy.registerTypeUrl();
   }

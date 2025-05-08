@@ -924,6 +924,9 @@ export const MsgRevokeCertificate = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgRevokeCertificate.typeUrl)) {
+      return;
+    }
     CertificateID.registerTypeUrl();
   }
 };

@@ -219,6 +219,9 @@ export const Config = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Config.typeUrl)) {
+      return;
+    }
     ModuleConfig.registerTypeUrl();
   }
 };

@@ -492,6 +492,9 @@ export const NodeInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(NodeInfo.typeUrl)) {
+      return;
+    }
     ProtocolVersion.registerTypeUrl();
     NodeInfoOther.registerTypeUrl();
   }
@@ -752,6 +755,9 @@ export const PeerInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(PeerInfo.typeUrl)) {
+      return;
+    }
     PeerAddressInfo.registerTypeUrl();
   }
 };

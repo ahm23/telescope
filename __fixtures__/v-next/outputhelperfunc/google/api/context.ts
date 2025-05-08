@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * `Context` defines which contexts an API requests.
@@ -321,6 +322,9 @@ export const Context = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Context.typeUrl)) {
+      return;
+    }
     ContextRule.registerTypeUrl();
   }
 };

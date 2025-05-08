@@ -353,6 +353,9 @@ export const MsgCreateDeployment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateDeployment.typeUrl)) {
+      return;
+    }
     DeploymentID.registerTypeUrl();
     GroupSpec.registerTypeUrl();
     Coin.registerTypeUrl();
@@ -585,6 +588,9 @@ export const MsgDepositDeployment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgDepositDeployment.typeUrl)) {
+      return;
+    }
     DeploymentID.registerTypeUrl();
     Coin.registerTypeUrl();
   }
@@ -797,6 +803,9 @@ export const MsgUpdateDeployment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgUpdateDeployment.typeUrl)) {
+      return;
+    }
     DeploymentID.registerTypeUrl();
   }
 };
@@ -991,6 +1000,9 @@ export const MsgCloseDeployment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseDeployment.typeUrl)) {
+      return;
+    }
     DeploymentID.registerTypeUrl();
   }
 };

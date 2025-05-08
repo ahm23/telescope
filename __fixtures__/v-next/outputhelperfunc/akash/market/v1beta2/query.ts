@@ -397,6 +397,9 @@ export const QueryOrdersRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryOrdersRequest.typeUrl)) {
+      return;
+    }
     OrderFilters.registerTypeUrl();
     PageRequest.registerTypeUrl();
   }
@@ -534,6 +537,9 @@ export const QueryOrdersResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryOrdersResponse.typeUrl)) {
+      return;
+    }
     Order.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -644,6 +650,9 @@ export const QueryOrderRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryOrderRequest.typeUrl)) {
+      return;
+    }
     OrderID.registerTypeUrl();
   }
 };
@@ -753,6 +762,9 @@ export const QueryOrderResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryOrderResponse.typeUrl)) {
+      return;
+    }
     Order.registerTypeUrl();
   }
 };
@@ -881,6 +893,9 @@ export const QueryBidsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBidsRequest.typeUrl)) {
+      return;
+    }
     BidFilters.registerTypeUrl();
     PageRequest.registerTypeUrl();
   }
@@ -1018,6 +1033,9 @@ export const QueryBidsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBidsResponse.typeUrl)) {
+      return;
+    }
     QueryBidResponse.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1128,6 +1146,9 @@ export const QueryBidRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBidRequest.typeUrl)) {
+      return;
+    }
     BidID.registerTypeUrl();
   }
 };
@@ -1256,6 +1277,9 @@ export const QueryBidResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryBidResponse.typeUrl)) {
+      return;
+    }
     Bid.registerTypeUrl();
     Account.registerTypeUrl();
   }
@@ -1385,6 +1409,9 @@ export const QueryLeasesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryLeasesRequest.typeUrl)) {
+      return;
+    }
     LeaseFilters.registerTypeUrl();
     PageRequest.registerTypeUrl();
   }
@@ -1522,6 +1549,9 @@ export const QueryLeasesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryLeasesResponse.typeUrl)) {
+      return;
+    }
     QueryLeaseResponse.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1632,6 +1662,9 @@ export const QueryLeaseRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryLeaseRequest.typeUrl)) {
+      return;
+    }
     LeaseID.registerTypeUrl();
   }
 };
@@ -1760,6 +1793,9 @@ export const QueryLeaseResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryLeaseResponse.typeUrl)) {
+      return;
+    }
     Lease.registerTypeUrl();
     FractionalPayment.registerTypeUrl();
   }

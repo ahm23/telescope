@@ -3280,6 +3280,9 @@ export const LogBucket = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogBucket.typeUrl)) {
+      return;
+    }
     CmekSettings.registerTypeUrl();
   }
 };
@@ -3745,6 +3748,9 @@ export const LogSink = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LogSink.typeUrl)) {
+      return;
+    }
     LogExclusion.registerTypeUrl();
     BigQueryOptions.registerTypeUrl();
   }
@@ -4120,6 +4126,9 @@ export const ListBucketsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListBucketsResponse.typeUrl)) {
+      return;
+    }
     LogBucket.registerTypeUrl();
   }
 };
@@ -4256,6 +4265,9 @@ export const CreateBucketRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateBucketRequest.typeUrl)) {
+      return;
+    }
     LogBucket.registerTypeUrl();
   }
 };
@@ -4394,6 +4406,9 @@ export const UpdateBucketRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateBucketRequest.typeUrl)) {
+      return;
+    }
     LogBucket.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -4948,6 +4963,9 @@ export const ListViewsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListViewsResponse.typeUrl)) {
+      return;
+    }
     LogView.registerTypeUrl();
   }
 };
@@ -5084,6 +5102,9 @@ export const CreateViewRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateViewRequest.typeUrl)) {
+      return;
+    }
     LogView.registerTypeUrl();
   }
 };
@@ -5222,6 +5243,9 @@ export const UpdateViewRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateViewRequest.typeUrl)) {
+      return;
+    }
     LogView.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -5678,6 +5702,9 @@ export const ListSinksResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListSinksResponse.typeUrl)) {
+      return;
+    }
     LogSink.registerTypeUrl();
   }
 };
@@ -5912,6 +5939,9 @@ export const CreateSinkRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateSinkRequest.typeUrl)) {
+      return;
+    }
     LogSink.registerTypeUrl();
   }
 };
@@ -6067,6 +6097,9 @@ export const UpdateSinkRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateSinkRequest.typeUrl)) {
+      return;
+    }
     LogSink.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -6608,6 +6641,9 @@ export const ListExclusionsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListExclusionsResponse.typeUrl)) {
+      return;
+    }
     LogExclusion.registerTypeUrl();
   }
 };
@@ -6825,6 +6861,9 @@ export const CreateExclusionRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CreateExclusionRequest.typeUrl)) {
+      return;
+    }
     LogExclusion.registerTypeUrl();
   }
 };
@@ -6963,6 +7002,9 @@ export const UpdateExclusionRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateExclusionRequest.typeUrl)) {
+      return;
+    }
     LogExclusion.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -7298,6 +7340,9 @@ export const UpdateCmekSettingsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateCmekSettingsRequest.typeUrl)) {
+      return;
+    }
     CmekSettings.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -7667,6 +7712,9 @@ export const UpdateSettingsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(UpdateSettingsRequest.typeUrl)) {
+      return;
+    }
     Settings.registerTypeUrl();
     FieldMask.registerTypeUrl();
   }
@@ -8170,6 +8218,9 @@ export const CopyLogEntriesMetadata = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CopyLogEntriesMetadata.typeUrl)) {
+      return;
+    }
     CopyLogEntriesRequest.registerTypeUrl();
   }
 };

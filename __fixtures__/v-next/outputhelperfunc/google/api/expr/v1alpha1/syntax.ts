@@ -1017,6 +1017,9 @@ export const ParsedExpr = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ParsedExpr.typeUrl)) {
+      return;
+    }
     Expr.registerTypeUrl();
     SourceInfo.registerTypeUrl();
   }
@@ -1253,6 +1256,9 @@ export const Expr = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Expr.typeUrl)) {
+      return;
+    }
     Constant.registerTypeUrl();
     Expr_Ident.registerTypeUrl();
     Expr_Select.registerTypeUrl();
@@ -1493,6 +1499,9 @@ export const Expr_Select = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Expr_Select.typeUrl)) {
+      return;
+    }
     Expr.registerTypeUrl();
   }
 };
@@ -1639,6 +1648,9 @@ export const Expr_Call = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Expr_Call.typeUrl)) {
+      return;
+    }
     Expr.registerTypeUrl();
   }
 };
@@ -1749,6 +1761,9 @@ export const Expr_CreateList = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Expr_CreateList.typeUrl)) {
+      return;
+    }
     Expr.registerTypeUrl();
   }
 };
@@ -1876,6 +1891,9 @@ export const Expr_CreateStruct = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Expr_CreateStruct.typeUrl)) {
+      return;
+    }
     Expr_CreateStruct_Entry.registerTypeUrl();
   }
 };
@@ -2033,6 +2051,9 @@ export const Expr_CreateStruct_Entry = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Expr_CreateStruct_Entry.typeUrl)) {
+      return;
+    }
     Expr.registerTypeUrl();
   }
 };
@@ -2245,6 +2266,9 @@ export const Expr_Comprehension = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Expr_Comprehension.typeUrl)) {
+      return;
+    }
     Expr.registerTypeUrl();
   }
 };
@@ -2695,6 +2719,9 @@ export const SourceInfo_MacroCallsEntry = {
     return SourceInfo_MacroCallsEntry.encode(message).finish();
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SourceInfo_MacroCallsEntry.typeUrl)) {
+      return;
+    }
     Expr.registerTypeUrl();
   }
 };
@@ -2978,6 +3005,9 @@ export const SourceInfo = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SourceInfo.typeUrl)) {
+      return;
+    }
     Expr.registerTypeUrl();
   }
 };

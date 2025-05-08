@@ -597,6 +597,9 @@ export const Distribution = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution.typeUrl)) {
+      return;
+    }
     Distribution_LinearBuckets.registerTypeUrl();
     Distribution_ExponentialBuckets.registerTypeUrl();
     Distribution_ExplicitBuckets.registerTypeUrl();

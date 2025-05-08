@@ -819,6 +819,9 @@ export const SuperfluidDelegationRecord = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SuperfluidDelegationRecord.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

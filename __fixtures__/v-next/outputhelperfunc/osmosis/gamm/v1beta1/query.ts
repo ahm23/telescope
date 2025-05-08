@@ -862,6 +862,9 @@ export const QueryPoolResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolResponse.typeUrl)) {
+      return;
+    }
     Pool1.registerTypeUrl();
     Pool2.registerTypeUrl();
   }
@@ -972,6 +975,9 @@ export const QueryPoolsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1108,6 +1114,9 @@ export const QueryPoolsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolsResponse.typeUrl)) {
+      return;
+    }
     Pool1.registerTypeUrl();
     Pool2.registerTypeUrl();
     PageResponse.registerTypeUrl();
@@ -1650,6 +1659,9 @@ export const QueryCalcJoinPoolSharesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCalcJoinPoolSharesRequest.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1784,6 +1796,9 @@ export const QueryCalcJoinPoolSharesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCalcJoinPoolSharesResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2025,6 +2040,9 @@ export const QueryCalcExitPoolCoinsFromSharesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCalcExitPoolCoinsFromSharesResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2463,6 +2481,9 @@ export const QueryTotalPoolLiquidityResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalPoolLiquidityResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2679,6 +2700,9 @@ export const QueryTotalSharesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalSharesResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2815,6 +2839,9 @@ export const QueryCalcJoinPoolNoSwapSharesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCalcJoinPoolNoSwapSharesRequest.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -2949,6 +2976,9 @@ export const QueryCalcJoinPoolNoSwapSharesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryCalcJoinPoolNoSwapSharesResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -3243,6 +3273,9 @@ export const QueryPoolsWithFilterRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolsWithFilterRequest.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
     PageRequest.registerTypeUrl();
   }
@@ -3380,6 +3413,9 @@ export const QueryPoolsWithFilterResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryPoolsWithFilterResponse.typeUrl)) {
+      return;
+    }
     Pool1.registerTypeUrl();
     Pool2.registerTypeUrl();
     PageResponse.registerTypeUrl();
@@ -3657,6 +3693,9 @@ export const QuerySwapExactAmountInRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySwapExactAmountInRequest.typeUrl)) {
+      return;
+    }
     SwapAmountInRoute.registerTypeUrl();
   }
 };
@@ -3932,6 +3971,9 @@ export const QuerySwapExactAmountOutRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySwapExactAmountOutRequest.typeUrl)) {
+      return;
+    }
     SwapAmountOutRoute.registerTypeUrl();
   }
 };
@@ -4239,6 +4281,9 @@ export const QueryTotalLiquidityResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalLiquidityResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

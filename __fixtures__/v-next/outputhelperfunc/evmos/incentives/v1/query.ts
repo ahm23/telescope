@@ -516,6 +516,9 @@ export const QueryIncentivesRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryIncentivesRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -645,6 +648,9 @@ export const QueryIncentivesResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryIncentivesResponse.typeUrl)) {
+      return;
+    }
     Incentive.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -846,6 +852,9 @@ export const QueryIncentiveResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryIncentiveResponse.typeUrl)) {
+      return;
+    }
     Incentive.registerTypeUrl();
   }
 };
@@ -965,6 +974,9 @@ export const QueryGasMetersRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGasMetersRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1094,6 +1106,9 @@ export const QueryGasMetersResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryGasMetersResponse.typeUrl)) {
+      return;
+    }
     GasMeter.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1412,6 +1427,9 @@ export const QueryAllocationMetersRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllocationMetersRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -1541,6 +1559,9 @@ export const QueryAllocationMetersResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllocationMetersResponse.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1742,6 +1763,9 @@ export const QueryAllocationMeterResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAllocationMeterResponse.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };
@@ -1922,6 +1946,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };

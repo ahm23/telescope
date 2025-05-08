@@ -2,6 +2,7 @@ import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin"
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "osmosis.claim.v1beta1";
 export enum Action {
   ActionAddLiquidity = 0,
@@ -252,6 +253,9 @@ export const ClaimRecord = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClaimRecord.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

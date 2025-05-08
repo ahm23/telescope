@@ -341,6 +341,9 @@ export const Incentive = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Incentive.typeUrl)) {
+      return;
+    }
     DecCoin.registerTypeUrl();
   }
 };

@@ -404,6 +404,9 @@ export const MsgCreateBid = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateBid.typeUrl)) {
+      return;
+    }
     OrderID.registerTypeUrl();
     DecCoin.registerTypeUrl();
     Coin.registerTypeUrl();
@@ -600,6 +603,9 @@ export const MsgCloseBid = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCloseBid.typeUrl)) {
+      return;
+    }
     BidID.registerTypeUrl();
   }
 };
@@ -1024,6 +1030,9 @@ export const Bid = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Bid.typeUrl)) {
+      return;
+    }
     BidID.registerTypeUrl();
     DecCoin.registerTypeUrl();
   }

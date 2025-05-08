@@ -214,6 +214,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     IdentifiedConnection.registerTypeUrl();
     ConnectionPaths.registerTypeUrl();
     Params.registerTypeUrl();

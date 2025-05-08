@@ -270,6 +270,9 @@ export const QueryTokenPairsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTokenPairsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -399,6 +402,9 @@ export const QueryTokenPairsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTokenPairsResponse.typeUrl)) {
+      return;
+    }
     TokenPair.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -600,6 +606,9 @@ export const QueryTokenPairResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTokenPairResponse.typeUrl)) {
+      return;
+    }
     TokenPair.registerTypeUrl();
   }
 };
@@ -780,6 +789,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };

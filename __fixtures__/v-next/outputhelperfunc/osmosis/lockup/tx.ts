@@ -386,6 +386,9 @@ export const MsgLockTokens = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgLockTokens.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -715,6 +718,9 @@ export const MsgBeginUnlockingAllResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBeginUnlockingAllResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -868,6 +874,9 @@ export const MsgBeginUnlocking = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgBeginUnlocking.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1374,6 +1383,9 @@ export const MsgForceUnlock = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgForceUnlock.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

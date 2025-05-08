@@ -252,6 +252,9 @@ export const MsgSoftwareUpgrade = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgSoftwareUpgrade.typeUrl)) {
+      return;
+    }
     Plan.registerTypeUrl();
   }
 };

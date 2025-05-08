@@ -316,6 +316,9 @@ export const MsgGrant = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgGrant.typeUrl)) {
+      return;
+    }
     Grant.registerTypeUrl();
   }
 };

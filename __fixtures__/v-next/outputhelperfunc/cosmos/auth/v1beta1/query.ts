@@ -422,6 +422,9 @@ export const QueryAccountsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAccountsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -558,6 +561,9 @@ export const QueryAccountsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAccountsResponse.typeUrl)) {
+      return;
+    }
     BaseAccount.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -858,6 +864,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -967,6 +976,9 @@ export const QueryAccountResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryAccountResponse.typeUrl)) {
+      return;
+    }
     BaseAccount.registerTypeUrl();
   }
 };
@@ -1169,6 +1181,9 @@ export const QueryModuleAccountsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryModuleAccountsResponse.typeUrl)) {
+      return;
+    }
     ModuleAccount.registerTypeUrl();
   }
 };

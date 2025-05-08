@@ -198,6 +198,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
     GenesisDenom.registerTypeUrl();
   }
@@ -325,6 +328,9 @@ export const GenesisDenom = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisDenom.typeUrl)) {
+      return;
+    }
     DenomAuthorityMetadata.registerTypeUrl();
   }
 };

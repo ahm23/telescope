@@ -326,6 +326,9 @@ export const MsgCreateStableswapPool = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateStableswapPool.typeUrl)) {
+      return;
+    }
     PoolParams.registerTypeUrl();
     Coin.registerTypeUrl();
   }

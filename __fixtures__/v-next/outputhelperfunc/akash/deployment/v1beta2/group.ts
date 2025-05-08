@@ -251,6 +251,9 @@ export const Group = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Group.typeUrl)) {
+      return;
+    }
     GroupID.registerTypeUrl();
     GroupSpec.registerTypeUrl();
   }

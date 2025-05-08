@@ -1152,6 +1152,9 @@ export const Http = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Http.typeUrl)) {
+      return;
+    }
     HttpRule.registerTypeUrl();
   }
 };
@@ -1417,6 +1420,9 @@ export const HttpRule = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(HttpRule.typeUrl)) {
+      return;
+    }
     CustomHttpPattern.registerTypeUrl();
     HttpRule.registerTypeUrl();
   }

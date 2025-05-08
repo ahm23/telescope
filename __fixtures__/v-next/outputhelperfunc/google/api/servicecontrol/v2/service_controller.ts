@@ -466,6 +466,9 @@ export const CheckRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckRequest.typeUrl)) {
+      return;
+    }
     AttributeContext.registerTypeUrl();
     ResourceInfo.registerTypeUrl();
   }
@@ -899,6 +902,9 @@ export const CheckResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckResponse.typeUrl)) {
+      return;
+    }
     Status.registerTypeUrl();
   }
 };
@@ -1043,6 +1049,9 @@ export const ReportRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ReportRequest.typeUrl)) {
+      return;
+    }
     AttributeContext.registerTypeUrl();
   }
 };

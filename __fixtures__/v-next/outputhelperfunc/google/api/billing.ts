@@ -1,6 +1,7 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet } from "../../helpers";
+import { GlobalDecoderRegistry } from "../../registry";
 export const protobufPackage = "google.api";
 /**
  * Billing related configuration of the service.
@@ -288,6 +289,9 @@ export const Billing = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Billing.typeUrl)) {
+      return;
+    }
     Billing_BillingDestination.registerTypeUrl();
   }
 };

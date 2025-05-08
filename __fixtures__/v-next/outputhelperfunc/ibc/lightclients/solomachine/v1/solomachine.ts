@@ -810,6 +810,9 @@ export const ClientState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ClientState.typeUrl)) {
+      return;
+    }
     ConsensusState.registerTypeUrl();
   }
 };
@@ -1296,6 +1299,9 @@ export const Misbehaviour = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Misbehaviour.typeUrl)) {
+      return;
+    }
     SignatureAndData.registerTypeUrl();
   }
 };
@@ -2253,6 +2259,9 @@ export const ConnectionStateData = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConnectionStateData.typeUrl)) {
+      return;
+    }
     ConnectionEnd.registerTypeUrl();
   }
 };
@@ -2379,6 +2388,9 @@ export const ChannelStateData = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ChannelStateData.typeUrl)) {
+      return;
+    }
     Channel.registerTypeUrl();
   }
 };

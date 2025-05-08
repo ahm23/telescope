@@ -171,6 +171,9 @@ export const Node = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Node.typeUrl)) {
+      return;
+    }
     Child.registerTypeUrl();
   }
 };
@@ -402,6 +405,9 @@ export const Leaf = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Leaf.typeUrl)) {
+      return;
+    }
     Child.registerTypeUrl();
   }
 };

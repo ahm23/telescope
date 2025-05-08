@@ -2,6 +2,7 @@ import { IdentifiedChannel, IdentifiedChannelAmino, IdentifiedChannelSDKType, Pa
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, DeepPartial } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../../registry";
 export const protobufPackage = "ibc.core.channel.v1";
 /** GenesisState defines the ibc channel submodule's genesis state. */
 export interface GenesisState {
@@ -376,6 +377,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     IdentifiedChannel.registerTypeUrl();
     PacketState.registerTypeUrl();
     PacketSequence.registerTypeUrl();

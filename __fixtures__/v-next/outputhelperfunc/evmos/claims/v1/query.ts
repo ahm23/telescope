@@ -416,6 +416,9 @@ export const QueryTotalUnclaimedResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryTotalUnclaimedResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -596,6 +599,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -698,6 +704,9 @@ export const QueryClaimsRecordsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimsRecordsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -827,6 +836,9 @@ export const QueryClaimsRecordsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimsRecordsResponse.typeUrl)) {
+      return;
+    }
     ClaimsRecordAddress.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }
@@ -1053,6 +1065,9 @@ export const QueryClaimsRecordResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClaimsRecordResponse.typeUrl)) {
+      return;
+    }
     Claim.registerTypeUrl();
   }
 };

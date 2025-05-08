@@ -616,6 +616,9 @@ export const Channel = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Channel.typeUrl)) {
+      return;
+    }
     Counterparty.registerTypeUrl();
   }
 };
@@ -837,6 +840,9 @@ export const IdentifiedChannel = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(IdentifiedChannel.typeUrl)) {
+      return;
+    }
     Counterparty.registerTypeUrl();
   }
 };
@@ -1191,6 +1197,9 @@ export const Packet = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Packet.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };

@@ -783,6 +783,9 @@ export const Distribution = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution.typeUrl)) {
+      return;
+    }
     Distribution_Range.registerTypeUrl();
     Distribution_BucketOptions.registerTypeUrl();
     Distribution_Exemplar.registerTypeUrl();
@@ -1040,6 +1043,9 @@ export const Distribution_BucketOptions = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Distribution_BucketOptions.typeUrl)) {
+      return;
+    }
     Distribution_BucketOptions_Linear.registerTypeUrl();
     Distribution_BucketOptions_Exponential.registerTypeUrl();
     Distribution_BucketOptions_Explicit.registerTypeUrl();

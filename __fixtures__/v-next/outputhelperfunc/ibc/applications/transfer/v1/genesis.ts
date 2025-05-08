@@ -180,6 +180,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     DenomTrace.registerTypeUrl();
     Params.registerTypeUrl();
   }

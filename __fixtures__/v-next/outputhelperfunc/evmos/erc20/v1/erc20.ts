@@ -503,6 +503,9 @@ export const RegisterCoinProposal = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(RegisterCoinProposal.typeUrl)) {
+      return;
+    }
     Metadata.registerTypeUrl();
   }
 };

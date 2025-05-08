@@ -355,6 +355,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };
@@ -569,6 +572,9 @@ export const QuerySigningInfoResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySigningInfoResponse.typeUrl)) {
+      return;
+    }
     ValidatorSigningInfo.registerTypeUrl();
   }
 };
@@ -678,6 +684,9 @@ export const QuerySigningInfosRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySigningInfosRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -814,6 +823,9 @@ export const QuerySigningInfosResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuerySigningInfosResponse.typeUrl)) {
+      return;
+    }
     ValidatorSigningInfo.registerTypeUrl();
     PageResponse.registerTypeUrl();
   }

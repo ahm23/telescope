@@ -3,6 +3,7 @@ import { Period, PeriodAmino, PeriodSDKType } from "../../../cosmos/vesting/v1be
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { toTimestamp, fromTimestamp, isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "evmos.vesting.v1";
 /** MsgCreateClawbackVestingAccount defines a message that enables creating a ClawbackVestingAccount. */
 export interface MsgCreateClawbackVestingAccount {
@@ -357,6 +358,9 @@ export const MsgCreateClawbackVestingAccount = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgCreateClawbackVestingAccount.typeUrl)) {
+      return;
+    }
     Period.registerTypeUrl();
   }
 };

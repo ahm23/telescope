@@ -626,6 +626,9 @@ export const QueryConnectionResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionResponse.typeUrl)) {
+      return;
+    }
     ConnectionEnd.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -736,6 +739,9 @@ export const QueryConnectionsRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionsRequest.typeUrl)) {
+      return;
+    }
     PageRequest.registerTypeUrl();
   }
 };
@@ -891,6 +897,9 @@ export const QueryConnectionsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionsResponse.typeUrl)) {
+      return;
+    }
     IdentifiedConnection.registerTypeUrl();
     PageResponse.registerTypeUrl();
     Height.registerTypeUrl();
@@ -1151,6 +1160,9 @@ export const QueryClientConnectionsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryClientConnectionsResponse.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };
@@ -1401,6 +1413,9 @@ export const QueryConnectionClientStateResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionClientStateResponse.typeUrl)) {
+      return;
+    }
     IdentifiedClientState.registerTypeUrl();
     Height.registerTypeUrl();
   }
@@ -1707,6 +1722,9 @@ export const QueryConnectionConsensusStateResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryConnectionConsensusStateResponse.typeUrl)) {
+      return;
+    }
     Height.registerTypeUrl();
   }
 };

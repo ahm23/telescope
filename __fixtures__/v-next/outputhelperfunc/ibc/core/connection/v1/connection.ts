@@ -537,6 +537,9 @@ export const ConnectionEnd = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConnectionEnd.typeUrl)) {
+      return;
+    }
     Version.registerTypeUrl();
     Counterparty.registerTypeUrl();
   }
@@ -744,6 +747,9 @@ export const IdentifiedConnection = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(IdentifiedConnection.typeUrl)) {
+      return;
+    }
     Version.registerTypeUrl();
     Counterparty.registerTypeUrl();
   }
@@ -888,6 +894,9 @@ export const Counterparty = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Counterparty.typeUrl)) {
+      return;
+    }
     MerklePrefix.registerTypeUrl();
   }
 };

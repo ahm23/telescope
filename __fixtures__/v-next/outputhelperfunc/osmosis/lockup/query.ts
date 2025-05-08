@@ -800,6 +800,9 @@ export const ModuleBalanceResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleBalanceResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1002,6 +1005,9 @@ export const ModuleLockedAmountResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ModuleLockedAmountResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1224,6 +1230,9 @@ export const AccountUnlockableCoinsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountUnlockableCoinsResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1446,6 +1455,9 @@ export const AccountUnlockingCoinsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountUnlockingCoinsResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1668,6 +1680,9 @@ export const AccountLockedCoinsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedCoinsResponse.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };
@@ -1907,6 +1922,9 @@ export const AccountLockedPastTimeResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedPastTimeResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -2146,6 +2164,9 @@ export const AccountLockedPastTimeNotUnlockingOnlyResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedPastTimeNotUnlockingOnlyResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -2385,6 +2406,9 @@ export const AccountUnlockedBeforeTimeResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountUnlockedBeforeTimeResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -2641,6 +2665,9 @@ export const AccountLockedPastTimeDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedPastTimeDenomResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -3086,6 +3113,9 @@ export const LockedResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(LockedResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -3310,6 +3340,9 @@ export const SyntheticLockupsByLockupIDResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SyntheticLockupsByLockupIDResponse.typeUrl)) {
+      return;
+    }
     SyntheticLock.registerTypeUrl();
   }
 };
@@ -3551,6 +3584,9 @@ export const AccountLockedLongerDurationResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedLongerDurationResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -3792,6 +3828,9 @@ export const AccountLockedDurationResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedDurationResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -4033,6 +4072,9 @@ export const AccountLockedLongerDurationNotUnlockingOnlyResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedLongerDurationNotUnlockingOnlyResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -4291,6 +4333,9 @@ export const AccountLockedLongerDurationDenomResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(AccountLockedLongerDurationDenomResponse.typeUrl)) {
+      return;
+    }
     PeriodLock.registerTypeUrl();
   }
 };
@@ -4485,6 +4530,9 @@ export const QueryParamsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QueryParamsResponse.typeUrl)) {
+      return;
+    }
     Params.registerTypeUrl();
   }
 };

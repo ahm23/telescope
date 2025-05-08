@@ -906,6 +906,9 @@ export const ListOperationsResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ListOperationsResponse.typeUrl)) {
+      return;
+    }
     Operation.registerTypeUrl();
   }
 };

@@ -170,6 +170,9 @@ export const GenesisCertificate = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisCertificate.typeUrl)) {
+      return;
+    }
     Certificate.registerTypeUrl();
   }
 };
@@ -287,6 +290,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     GenesisCertificate.registerTypeUrl();
   }
 };

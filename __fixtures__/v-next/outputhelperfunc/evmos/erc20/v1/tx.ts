@@ -249,6 +249,9 @@ export const MsgConvertCoin = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(MsgConvertCoin.typeUrl)) {
+      return;
+    }
     Coin.registerTypeUrl();
   }
 };

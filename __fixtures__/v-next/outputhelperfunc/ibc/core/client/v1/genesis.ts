@@ -340,6 +340,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     IdentifiedClientState.registerTypeUrl();
     ClientConsensusStates.registerTypeUrl();
     IdentifiedGenesisMetadata.registerTypeUrl();
@@ -599,6 +602,9 @@ export const IdentifiedGenesisMetadata = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(IdentifiedGenesisMetadata.typeUrl)) {
+      return;
+    }
     GenesisMetadata.registerTypeUrl();
   }
 };

@@ -1226,6 +1226,9 @@ export const Service = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Service.typeUrl)) {
+      return;
+    }
     ServiceConfig.registerTypeUrl();
   }
 };
@@ -1519,6 +1522,9 @@ export const ServiceConfig = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ServiceConfig.typeUrl)) {
+      return;
+    }
     Api.registerTypeUrl();
     Documentation.registerTypeUrl();
     Quota.registerTypeUrl();
@@ -1839,6 +1845,9 @@ export const ConsumerQuotaMetric = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsumerQuotaMetric.typeUrl)) {
+      return;
+    }
     ConsumerQuotaLimit.registerTypeUrl();
   }
 };
@@ -2034,6 +2043,9 @@ export const ConsumerQuotaLimit = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ConsumerQuotaLimit.typeUrl)) {
+      return;
+    }
     QuotaBucket.registerTypeUrl();
   }
 };
@@ -2376,6 +2388,9 @@ export const QuotaBucket = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(QuotaBucket.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
   }
 };
@@ -2818,6 +2833,9 @@ export const OverrideInlineSource = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(OverrideInlineSource.typeUrl)) {
+      return;
+    }
     QuotaOverride.registerTypeUrl();
   }
 };

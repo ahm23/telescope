@@ -2,6 +2,7 @@ import { GrantAuthorization, GrantAuthorizationAmino, GrantAuthorizationSDKType 
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial } from "../../../helpers";
+import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "cosmos.authz.v1beta1";
 /** GenesisState defines the authz module's genesis state. */
 export interface GenesisState {
@@ -137,6 +138,9 @@ export const GenesisState = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(GenesisState.typeUrl)) {
+      return;
+    }
     GrantAuthorization.registerTypeUrl();
   }
 };

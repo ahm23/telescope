@@ -6,7 +6,11 @@ import {
     identifier,
     objectMethod,
 } from "../../../utils";
-import { createIfGlobalDecoderRegistryRegisterExistingTypeUrl, createRegisterAminoProtoMapping, createRegisterObject } from "./utils";
+import {
+    createIfGlobalDecoderRegistryRegisterExistingTypeUrl,
+    createRegisterAminoProtoMapping,
+    createRegisterObject,
+} from "./utils";
 
 export * from "./utils";
 
@@ -94,6 +98,16 @@ export const registerTypeUrlMethod = (args: {
             createRegisterAminoProtoMapping(context, name, proto),
             ...registerStats,
         ].filter(Boolean);
+    } else {
+        if (registerStats.length) {
+            registerStats = [
+                createIfGlobalDecoderRegistryRegisterExistingTypeUrl(
+                    context,
+                    name
+                ),
+                ...registerStats,
+            ].filter(Boolean);
+        }
     }
 
     const method = objectMethod(

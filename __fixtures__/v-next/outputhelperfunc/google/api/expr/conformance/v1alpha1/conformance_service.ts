@@ -634,6 +634,9 @@ export const ParseResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(ParseResponse.typeUrl)) {
+      return;
+    }
     ParsedExpr.registerTypeUrl();
     Status.registerTypeUrl();
   }
@@ -798,6 +801,9 @@ export const CheckRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckRequest.typeUrl)) {
+      return;
+    }
     ParsedExpr.registerTypeUrl();
     Decl.registerTypeUrl();
   }
@@ -928,6 +934,9 @@ export const CheckResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckResponse.typeUrl)) {
+      return;
+    }
     CheckedExpr.registerTypeUrl();
     Status.registerTypeUrl();
   }
@@ -1032,6 +1041,9 @@ export const EvalRequest_BindingsEntry = {
     return EvalRequest_BindingsEntry.encode(message).finish();
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EvalRequest_BindingsEntry.typeUrl)) {
+      return;
+    }
     ExprValue.registerTypeUrl();
   }
 };
@@ -1235,6 +1247,9 @@ export const EvalRequest = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EvalRequest.typeUrl)) {
+      return;
+    }
     ParsedExpr.registerTypeUrl();
     CheckedExpr.registerTypeUrl();
     ExprValue.registerTypeUrl();
@@ -1366,6 +1381,9 @@ export const EvalResponse = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EvalResponse.typeUrl)) {
+      return;
+    }
     ExprValue.registerTypeUrl();
     Status.registerTypeUrl();
   }
@@ -1505,6 +1523,9 @@ export const IssueDetails = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(IssueDetails.typeUrl)) {
+      return;
+    }
     SourcePosition.registerTypeUrl();
   }
 };

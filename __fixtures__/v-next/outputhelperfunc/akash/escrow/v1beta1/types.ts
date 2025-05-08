@@ -529,6 +529,9 @@ export const Account = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Account.typeUrl)) {
+      return;
+    }
     AccountID.registerTypeUrl();
     Coin.registerTypeUrl();
   }
@@ -747,6 +750,9 @@ export const Payment = {
     };
   },
   registerTypeUrl() {
+    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Payment.typeUrl)) {
+      return;
+    }
     AccountID.registerTypeUrl();
     Coin.registerTypeUrl();
   }

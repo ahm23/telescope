@@ -1,6 +1,6 @@
 {
   "name": "@cosmology/ast",
-  "version": "1.10.4",
+  "version": "1.10.5",
   "description": "Cosmos TypeScript AST generation",
   "author": "Dan Lynch <pyramation@gmail.com>",
   "homepage": "https://github.com/hyperweb-io/telescope/tree/master/packages/ast#readme",

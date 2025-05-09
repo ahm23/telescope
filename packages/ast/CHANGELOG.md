@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.5](https://github.com/hyperweb-io/telescope/compare/@cosmology/ast@1.10.4...@cosmology/ast@1.10.5) (2025-05-09)
+
+### Bug Fixes
+
+- registerTypeUrl no typeUrl bug ([b568a38](https://github.com/hyperweb-io/telescope/commit/b568a38f9265bbb8d6d5aa3c5a7aeb820d078094))
+
 ## [1.10.4](https://github.com/hyperweb-io/telescope/compare/@cosmology/ast@1.10.3...@cosmology/ast@1.10.4) (2025-05-08)
 
 ### Bug Fixes

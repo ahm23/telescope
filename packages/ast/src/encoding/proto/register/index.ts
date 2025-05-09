@@ -93,7 +93,11 @@ export const registerTypeUrlMethod = (args: {
 
     if (isImplementsInterface) {
         registerStats = [
-            createIfGlobalDecoderRegistryRegisterExistingTypeUrl(context, name),
+            createIfGlobalDecoderRegistryRegisterExistingTypeUrl(
+                context,
+                name,
+                proto
+            ),
             createRegisterObject(context, name, proto),
             createRegisterAminoProtoMapping(context, name, proto),
             ...registerStats,
@@ -103,7 +107,8 @@ export const registerTypeUrlMethod = (args: {
             registerStats = [
                 createIfGlobalDecoderRegistryRegisterExistingTypeUrl(
                     context,
-                    name
+                    name,
+                    proto
                 ),
                 ...registerStats,
             ].filter(Boolean);

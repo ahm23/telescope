@@ -2719,9 +2719,6 @@ export const SourceInfo_MacroCallsEntry = {
     return SourceInfo_MacroCallsEntry.encode(message).finish();
   },
   registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(SourceInfo_MacroCallsEntry.typeUrl)) {
-      return;
-    }
     Expr.registerTypeUrl();
   }
 };

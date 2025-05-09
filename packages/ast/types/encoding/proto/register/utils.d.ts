@@ -11,4 +11,4 @@ export declare const createRegisterAminoProtoMapping: (context: ProtoParseContex
  * @param name
  * @returns
  */
-export declare const createIfGlobalDecoderRegistryRegisterExistingTypeUrl: (context: ProtoParseContext, name: string) => t.IfStatement;
+export declare const createIfGlobalDecoderRegistryRegisterExistingTypeUrl: (context: ProtoParseContext, name: string, proto: ProtoType) => t.IfStatement;

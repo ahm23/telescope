@@ -1041,9 +1041,6 @@ export const EvalRequest_BindingsEntry = {
     return EvalRequest_BindingsEntry.encode(message).finish();
   },
   registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(EvalRequest_BindingsEntry.typeUrl)) {
-      return;
-    }
     ExprValue.registerTypeUrl();
   }
 };

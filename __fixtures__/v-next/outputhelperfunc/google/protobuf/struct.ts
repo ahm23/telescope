@@ -313,9 +313,6 @@ export const Struct_FieldsEntry = {
     return Struct_FieldsEntry.encode(message).finish();
   },
   registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(Struct_FieldsEntry.typeUrl)) {
-      return;
-    }
     Value.registerTypeUrl();
   }
 };

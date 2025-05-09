@@ -1577,9 +1577,6 @@ export const WriteLogEntriesPartialErrors_LogEntryErrorsEntry = {
     return WriteLogEntriesPartialErrors_LogEntryErrorsEntry.encode(message).finish();
   },
   registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(WriteLogEntriesPartialErrors_LogEntryErrorsEntry.typeUrl)) {
-      return;
-    }
     Status.registerTypeUrl();
   }
 };

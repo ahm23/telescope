@@ -1002,9 +1002,6 @@ export const CheckedExpr_ReferenceMapEntry = {
     return CheckedExpr_ReferenceMapEntry.encode(message).finish();
   },
   registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckedExpr_ReferenceMapEntry.typeUrl)) {
-      return;
-    }
     Reference.registerTypeUrl();
   }
 };
@@ -1110,9 +1107,6 @@ export const CheckedExpr_TypeMapEntry = {
     return CheckedExpr_TypeMapEntry.encode(message).finish();
   },
   registerTypeUrl() {
-    if (!GlobalDecoderRegistry.registerExistingTypeUrl(CheckedExpr_TypeMapEntry.typeUrl)) {
-      return;
-    }
     Type.registerTypeUrl();
   }
 };

@@ -44,6 +44,9 @@ export const createRegisterAminoProtoMapping = (
     const str = getAminoTypeName(context, context.ref.proto, proto);
     if (!str || str.startsWith("/")) return;
 
+    const typeUrl = getTypeUrl(context.ref.proto, proto);
+    if (!typeUrl) return;
+
     return t.expressionStatement(
         t.callExpression(
             t.memberExpression(
@@ -71,11 +74,14 @@ export const createRegisterAminoProtoMapping = (
  */
 export const createIfGlobalDecoderRegistryRegisterExistingTypeUrl = (
     context: ProtoParseContext,
-    name: string
+    name: string,
+    proto: ProtoType
 ) => {
     if (name === "Any") {
         return;
     }
+    const typeUrl = getTypeUrl(context.ref.proto, proto);
+    if (!typeUrl) return;
     context.addUtil("GlobalDecoderRegistry");
 
     return t.ifStatement(

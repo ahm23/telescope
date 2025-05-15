@@ -1,0 +1,104 @@
+# Quickstart
+
+This guide provides a quick reference for setting up and using Telescope to generate TypeScript packages for Cosmos SDK modules.
+
+## Installation
+
+Install Telescope and create-cosmos-app:
+
+```sh
+npm install -g @cosmology/telescope create-cosmos-app
+```
+
+## Package Generation
+
+### Using create-cosmos-app
+
+Create a new package using the telescope boilerplate:
+
+```sh
+cca --boilerplate telescope
+```
+
+Navigate to the generated project:
+
+```sh
+cd ./your-project/packages/telescope
+```
+
+### Using telescope generate command
+
+Generate a package with the telescope CLI:
+
+```sh
+telescope generate --access public --userfullname "Your Name" --useremail "your@email.com" --module-desc "Your module description" --username "your-username" --license MIT --module-name "your-module" --chain-name cosmos --use-npm-scoped
+```
+
+Available options:
+- `--userfullname`: Your full name
+- `--useremail`: Your email
+- `--module-desc`: Module description
+- `--username`: GitHub username
+- `--module-name`: Module name
+- `--chain-name`: Chain name
+- `--access`: Package access (`public` or `private`)
+- `--use-npm-scoped`: Use npm scoped package (only works with `--access public`)
+- `--license`: License type
+
+## Working with Protos
+
+Download protocol buffer files:
+
+```sh
+telescope download
+```
+
+This will clone repositories into `./git-modules` and generate proto files in `./protos`.
+
+### Examples
+
+Download with a config file:
+```sh
+telescope download --config ./protod.config.json --out ./git-modules
+```
+
+Download from a specific repo:
+```sh
+telescope download --git-repo owner/repository --targets cosmos/auth/v1beta1/auth.proto
+```
+
+## Code Generation
+
+Generate TypeScript code from proto files:
+
+```sh
+yarn codegen
+```
+
+Or using the CLI:
+
+```sh
+telescope transpile
+```
+
+## Building
+
+Build the package for distribution:
+
+```sh
+yarn build
+```
+
+## Publishing
+
+Publish your package to npm:
+
+```sh
+npm publish
+```
+
+If using the create-cosmos-app boilerplate, use lerna for package management:
+
+```sh
+lerna publish
+``` 

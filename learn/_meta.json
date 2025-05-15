@@ -1,0 +1,11 @@
+{
+    "label": "Learn",
+    "order": [
+        "telescope",
+        "usage"
+    ],
+    "titles": {
+        "telescope": "Telescope Tutorials",
+        "usage": "Usage Tutorials"
+    }
+}

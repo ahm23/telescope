@@ -1,0 +1,11 @@
+{
+    "label": "Documentation",
+    "order": [
+        "telescope",
+        "usage"
+    ],
+    "titles": {
+        "telescope": "Telescope 🔭",
+        "usage": "Usage 📚"
+    }
+}

@@ -1,11 +1,15 @@
 {
-    "label": "Documentation",
-    "order": [
-        "telescope",
-        "usage"
-    ],
-    "titles": {
-        "telescope": "Telescope 🔭",
-        "usage": "Usage 📚"
-    }
+  "index": "Introduction",
+  "get-started": "Get Started",
+  "programatic-usage": "Programatic Usage",
+  "options": "Options",
+  "types": "Types",
+  "interfaces": "Interfaces",
+  "composing-messages": "Composing Messages",
+  "calculating-fees": "Calculating Fees",
+  "clients": "Clients",
+  "manually-registering-types": "Manually registering types",
+  "cosmwasm": "CosmWasm",
+  "dependencies": "Dependencies",
+  "developing": "Developing"
 }

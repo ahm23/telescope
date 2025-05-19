@@ -1,0 +1,199 @@
+# Testing with Starship
+
+In this guide, you'll learn how to use Starship for end-to-end testing of your Telescope features. Starship provides a virtual environment to test generated code against real blockchain nodes.
+
+## What is Starship?
+
+Starship is a testing framework that spins up a local Kubernetes cluster with blockchain nodes, allowing you to test your generated code against actual blockchain implementations.
+
+## Setting Up Your Environment
+
+### Step 1: Install Dependencies
+
+First, you'll need to install the necessary tools:
+
+```bash
+# Install Docker if you don't have it
+# Visit https://docs.docker.com/get-docker/
+
+# Verify Docker is running
+docker --version
+```
+
+### Step 2: Install Cluster Tools
+
+Now, install the required cluster tools:
+
+```bash
+# Install Kind (Kubernetes in Docker)
+# For macOS: brew install kind
+# For Linux: curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.11.1/kind-linux-amd64 && chmod +x ./kind && sudo mv ./kind /usr/local/bin/
+
+# Install kubectl
+# For macOS: brew install kubectl
+# For Linux: sudo apt-get update && sudo apt-get install -y kubectl
+
+# Install Helm
+# For macOS: brew install helm
+# For Linux: curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+# Install yq
+# For macOS: brew install yq
+# For Linux: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CC86BB64 && sudo add-apt-repository ppa:rmescandon/yq && sudo apt update && sudo apt install yq
+```
+
+### Step 3: Verify Docker Kubernetes
+
+In Docker Desktop:
+1. Go to Settings
+2. Navigate to Kubernetes
+3. Check "Enable Kubernetes"
+4. Click "Apply & Restart"
+
+## Running Starship Tests
+
+### Step 1: Navigate to Starship
+
+```bash
+# Go to the starship package
+cd telescope/packages/starship
+```
+
+### Step 2: Start the Environment
+
+```bash
+# Clean up any previous runs (if needed)
+make stop
+
+# Check for running pods
+kubectl get pods
+# Wait until you see "No resources found in default namespace."
+
+# Start the Kubernetes pods
+make install
+
+# Check the pod status
+kubectl get pods
+# Wait until all pods show status "Running" (this may take a few minutes)
+```
+
+### Step 3: Forward Ports
+
+In a new terminal:
+
+```bash
+# Open ports for access
+make port-forward
+```
+
+### Step 4: Generate Code
+
+```bash
+# Generate code for testing
+npm run codegen
+```
+
+The generated code will be in `telescope/packages/starship/src/codegen`.
+
+### Step 5: Run Tests
+
+```bash
+# Run setup tests first
+npx jest __tests__/v1/setup.test.ts
+
+# Then run specific feature tests
+npx jest __tests__/v1/authz.test.ts
+```
+
+## Writing Your Own Starship Tests
+
+Let's create a simple test for a bank transfer:
+
+```typescript
+// __tests__/v1/my-custom-test.ts
+import { getSigningClient } from '../helpers';
+
+describe('My Custom Feature', () => {
+  it('should transfer tokens successfully', async () => {
+    // Get a signing client
+    const client = await getSigningClient();
+    
+    // Define test addresses
+    const sender = 'cosmos1...' // Your test sender address
+    const recipient = 'cosmos1...' // Your test recipient address
+    
+    // Perform a bank transfer using your generated code
+    const result = await client.sendTokens(
+      sender,
+      recipient,
+      [{ denom: 'stake', amount: '1000' }],
+      'auto'
+    );
+    
+    // Verify the transaction was successful
+    expect(result.code).toEqual(0);
+  });
+});
+```
+
+## Cleaning Up
+
+When you're done testing:
+
+```bash
+# Stop port forwarding
+# Press Ctrl+C in the terminal where port-forward is running
+
+# Stop the infrastructure
+npm run e2e:stop
+
+# Optional: Clean up Kind cluster
+npm run e2e:clean
+```
+
+## Troubleshooting
+
+### Pods Not Starting
+
+If pods aren't starting:
+
+```bash
+# Check pod status in detail
+kubectl describe pods
+
+# Check logs for a specific pod
+kubectl logs <pod-name>
+
+# Restart the setup
+make stop
+make install
+```
+
+### Network Issues
+
+If tests fail with network errors:
+
+```bash
+# Check if port forwarding is running
+# Restart port forwarding
+make port-forward
+```
+
+### Test Failures
+
+If tests are failing:
+
+1. Check the transaction logs
+2. Verify that the correct addresses and denoms are being used
+3. Ensure your generated code is up to date
+
+## Next Steps
+
+Now that you know how to use Starship:
+
+1. Create more complex test scenarios
+2. Test different Telescope generators
+3. Contribute to improving the Starship infrastructure
+4. Check out the [Creating New Generators](/learn/developing/creating-new-generators) guide to see what else you can build
+
+Happy testing with Starship! 

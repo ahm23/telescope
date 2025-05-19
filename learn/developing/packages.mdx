@@ -1,0 +1,165 @@
+# Understanding Telescope's Package Structure
+
+Learn about Telescope's monorepo structure and how the different packages work together. This guide will help you navigate and work with the codebase effectively.
+
+## Package Overview
+
+Telescope is organized as a monorepo with several packages:
+
+```
+├── ast       # AST generation and manipulation
+├── babel     # Babel transformations
+├── lcd       # LCD client generation
+├── parser    # Protocol Buffer parsing
+├── telescope # Main CLI and builder
+├── test      # Testing utilities
+├── types     # TypeScript types and options
+└── utils     # Shared utilities
+```
+
+## Key Packages
+
+### 1. AST Package (`packages/ast`)
+
+The AST package handles Abstract Syntax Tree generation and manipulation:
+
+```ts
+// Example AST generation
+import { createMessage } from '@cosmology/ast';
+
+const message = createMessage({
+  name: 'User',
+  fields: [
+    { name: 'id', type: 'string' }
+  ]
+});
+```
+
+### 2. Parser Package (`packages/parser`)
+
+The parser package handles Protocol Buffer parsing:
+
+```ts
+// Example parsing
+import { parse } from '@cosmology/parser';
+
+const ast = parse(protoContent);
+```
+
+### 3. Telescope Package (`packages/telescope`)
+
+The main package containing the CLI and builder:
+
+```ts
+// Example builder usage
+import { TelescopeBuilder } from '@cosmology/telescope';
+
+const builder = new TelescopeBuilder({
+  protoDirs: ['./protos'],
+  outPath: './generated'
+});
+```
+
+## Working with Packages
+
+### 1. Building Packages
+
+When working with interdependent packages:
+
+```sh
+# Navigate to the package
+cd packages/ast
+
+# Build the package
+yarn build
+
+# Build TypeScript definitions
+yarn build:ts
+```
+
+### 2. Testing Packages
+
+Run tests for a specific package:
+
+```sh
+# Run tests
+yarn test
+
+# Run tests in watch mode
+yarn test:watch
+```
+
+### 3. Package Dependencies
+
+Understand package dependencies:
+
+```json
+// package.json
+{
+  "dependencies": {
+    "@cosmology/ast": "workspace:*",
+    "@cosmology/parser": "workspace:*"
+  }
+}
+```
+
+## Best Practices
+
+### 1. Package Organization
+
+- Keep related code together
+- Use clear package boundaries
+- Follow the existing structure
+
+### 2. Cross-Package Development
+
+When making changes across packages:
+
+1. Make changes in the source package
+2. Build the package
+3. Test the changes
+4. Update dependent packages
+
+### 3. Version Management
+
+- Use workspace dependencies
+- Keep versions in sync
+- Update changelogs
+
+## Common Patterns
+
+### 1. Adding a New Package
+
+1. Create the package directory
+2. Initialize package.json
+3. Add workspace configuration
+4. Set up build process
+
+### 2. Modifying Existing Packages
+
+1. Make changes
+2. Build the package
+3. Update dependent packages
+4. Run tests
+
+### 3. Package Integration
+
+1. Add dependencies
+2. Import and use
+3. Test integration
+4. Document usage
+
+## Next Steps
+
+Now that you understand the package structure, you can:
+
+1. Navigate the codebase
+2. Make changes to packages
+3. Add new packages
+4. Contribute effectively
+
+Remember:
+- Keep packages focused
+- Maintain clear boundaries
+- Follow the build process
+- Test thoroughly 

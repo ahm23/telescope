@@ -1,0 +1,204 @@
+# Working with Common Helpers and Utilities
+
+In this guide, you'll learn how to use and create common helpers in Telescope. These helpers allow you to reuse code and import common utilities.
+
+## What Are Helpers?
+
+Helpers are reusable pieces of code that provide common functionality across your generators. Telescope makes it easy to use these helpers through a system that automatically manages imports.
+
+## Using Helpers in Your Code
+
+Let's start with a simple example of using a helper:
+
+### Step 1: Add a Utility in Your Generator
+
+```typescript
+import * as t from '@babel/types';
+import { GenericParseContext } from '../encoding';
+
+export const createMyGenerator = (
+  context: GenericParseContext
+) => {
+  // Add the useQuery utility from react-query
+  context.addUtil('useQuery');
+  
+  // Use it in your generated code
+  // The import will be automatically added!
+  return t.exportNamedDeclaration(
+    t.variableDeclaration('const', [
+      t.variableDeclarator(
+        t.identifier('useCustomQuery'),
+        t.callExpression(
+          t.identifier('useQuery'),
+          [t.stringLiteral('custom-query')]
+        )
+      )
+    ])
+  );
+};
+```
+
+### Step 2: See How It Works
+
+When your generator runs, Telescope will:
+1. Notice that you called `context.addUtil('useQuery')`
+2. Look up where `useQuery` comes from (defined in utils/index.ts)
+3. Automatically add the import `import { useQuery } from '@tanstack/react-query'` to your generated file
+
+## Creating Your Own Helper
+
+Now, let's create a custom helper:
+
+### Step 1: Create the Helper Content
+
+Create a file `packages/telescope/src/helpers/custom-helper.ts`:
+
+```typescript
+export const customHelperCode = `
+// A custom helper function
+export const formatData = (data: any) => {
+  return {
+    ...data,
+    formattedDate: new Date(data.timestamp).toISOString()
+  };
+};
+`;
+```
+
+### Step 2: Export the Helper
+
+In `packages/telescope/src/helpers/index.ts`, add:
+
+```typescript
+export * from './custom-helper';
+```
+
+### Step 3: Register the Helper
+
+In `packages/telescope/src/generators/create-helpers.ts`, add:
+
+```typescript
+import { customHelperCode } from '../helpers';
+
+export const plugin = (
+  builder: TelescopeBuilder
+) => {
+  // ... other helpers
+  
+  // Add your custom helper
+  builder.files.push('custom-helper.ts');
+  write(builder, 'custom-helper.ts', customHelperCode);
+};
+```
+
+### Step 4: Set Up the Alias
+
+In `packages/telescope/src/utils/index.ts`, add:
+
+```typescript
+export const UTILS = {
+  // ... other utils
+  formatData: '__custom-helper__'
+};
+
+export const UTIL_HELPERS = [
+  // ... other helpers
+  '__custom-helper__'
+];
+```
+
+### Step 5: Use Your Helper
+
+Now in any generator, you can use:
+
+```typescript
+context.addUtil('formatData');
+```
+
+And Telescope will automatically import it from the generated helper file!
+
+## Understanding Helper Types
+
+Telescope supports two main types of utilities:
+
+### 1. Package Imports
+
+For importing from external packages:
+
+```typescript
+export const UTILS = {
+  // Import default export: import useQuery from '@tanstack/react-query'
+  useQuery: '@tanstack/react-query',
+  
+  // Import namespace: import * as _m0 from 'protobufjs/minimal'
+  _m0: { type: 'namespace', path: 'protobufjs/minimal', name: '_m0' }
+};
+```
+
+### 2. Helper File Imports
+
+For importing from generated helper files:
+
+```typescript
+export const UTILS = {
+  // Import from helper file: import { formatData } from './custom-helper'
+  formatData: '__custom-helper__'
+};
+
+export const UTIL_HELPERS = [
+  '__custom-helper__'
+];
+```
+
+## Best Practices
+
+When working with helpers:
+
+1. **Use Descriptive Names**: Make helper names clear and meaningful
+2. **Keep Helpers Focused**: Each helper should do one thing well
+3. **Document Helpers**: Add comments to explain what helpers do
+4. **Test Helpers**: Write tests for your helpers to ensure they work correctly
+
+## Example: Creating a React Context Helper
+
+Let's create a more advanced helper for React context:
+
+```typescript
+// helpers/context.ts
+export const contextHelper = `
+import React, { createContext, useContext, useState } from 'react';
+
+export function createAppContext<T>(defaultValue: T) {
+  const Context = createContext<T>(defaultValue);
+  
+  function useAppContext() {
+    return useContext(Context);
+  }
+  
+  function AppContextProvider({ children, value }: { children: React.ReactNode, value: T }) {
+    return (
+      <Context.Provider value={value}>
+        {children}
+      </Context.Provider>
+    );
+  }
+  
+  return {
+    Context,
+    useAppContext,
+    AppContextProvider
+  };
+}
+`;
+```
+
+## Next Steps
+
+Now that you understand helpers:
+
+1. Explore the existing helpers in `packages/telescope/src/helpers`
+2. Create your own helpers for common patterns
+3. Use `context.addUtil()` in your generators
+4. Check out the [Creating New Generators](/learn/developing/creating-new-generators) guide to see how to use these helpers in a complete generator
+
+By using helpers effectively, you'll write more maintainable and reusable code in your Telescope generators! 

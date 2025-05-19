@@ -12,6 +12,8 @@ Before we begin, make sure you have:
 - Node.js (v14 or higher)
 - npm or yarn
 - Basic knowledge of TypeScript and the Cosmos SDK
+- if you want to use create-interchain-app boilerplate, please follow the video: https://youtu.be/iQf6p65fbdY 
+
 
 ## Step 1: Install Required Tools
 
@@ -68,22 +70,102 @@ telescope generate --access public --userfullname "Your Name" --useremail "your@
 
 ## Step 5: Download Protocol Buffers
 
-Next, we need to download the protocol buffer definitions for the Cosmos SDK modules we want to work with:
+Next, we need to download the protocol buffer definitions for the Cosmos SDK modules we want to work with. You can use the Telescope download command in two ways:
+
+### Option 1: Simple Download
 
 ```sh
 telescope download
 ```
 
 This command will:
-1. Clone the Cosmos SDK repositories specified in your configuration
+1. Clone the default Cosmos SDK repositories
 2. Extract the proto files
 3. Place them in the `./protos` directory
+
+### Option 2: Using a Configuration File
+
+For more control, create a file named `telescope.config.ts` with your download configuration:
+
+```typescript
+// telescope.config.ts
+export default {
+  repos: [
+    { owner: "cosmos", repo: "cosmos-sdk", branch: "release/v0.50.x" },
+    { owner: "cosmos", repo: "ibc-go" },
+    { owner: "injectivelabs", repo: "sdk-go" }
+  ],
+  protoDirMapping: {
+    "gogo/protobuf/master": ".",
+    "googleapis/googleapis/master": ".",
+    "protocolbuffers/protobuf/main": "src"
+  },
+  outDir: "protos/interchainjs",
+  ssh: true,
+  tempRepoDir: "git-modules",
+  targets: [
+    "cosmos/**/*.proto",
+    "cosmwasm/**/*.proto",
+    "ibc/**/*.proto",
+    "injective/types/v1beta1/account.proto"
+  ]
+};
+```
+
+Then run:
+
+```sh
+telescope download
+```
+
+This configuration lets you:
+- Specify which repositories to clone (with optional branch)
+- Map proto directories to specific locations
+- Set the output directory for proto files
+- Use SSH for cloning (vs HTTPS)
+- Define a directory for temporary repositories
+- Target specific proto files using glob patterns
 
 You should see output indicating which repos are being cloned and which proto files are being processed.
 
 ## Step 6: Generate TypeScript Code
 
-Now it's time to generate the TypeScript code from the proto files:
+Now it's time to generate the TypeScript code from the proto files. Create a file named `telescope.options.ts` with your code generation options:
+
+```typescript
+// telescope.options.ts
+import { TelescopeOptions } from '@cosmology/types';
+
+const options: TelescopeOptions = {
+  prototypes: {
+    includePackageVar: true,
+    addTypeUrlToDecoders: true,
+    methods: {
+      fromJSON: true,
+      toJSON: true,
+      fromPartial: true,
+      toSDK: true
+    }
+  },
+  interfaces: {
+    enabled: true
+  },
+  aminoEncoding: {
+    enabled: true
+  },
+  lcdClients: {
+    enabled: true
+  },
+  rpcClients: {
+    enabled: true,
+    camelCase: true
+  }
+};
+
+export default options;
+```
+
+Then run:
 
 ```sh
 yarn codegen

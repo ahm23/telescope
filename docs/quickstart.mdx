@@ -1,76 +1,45 @@
 # Quickstart
 
 This guide provides a quick reference for setting up and using Telescope to generate TypeScript packages for Cosmos SDK modules.
+Here is the video for using create-interchain-app boilerplate: 
+https://youtu.be/iQf6p65fbdY
 
 ## Installation
 
-Install create-cosmos-app:
+Install create-interchain-app:
 
 ```sh
-npm install -g create-cosmos-app
+npm install -g create-interchain-app
 ```
 
 ## Package Generation
 
-### Using create-cosmos-app boilerplate
+### Using create-interchain-app boilerplate
 
 Create a new package using the telescope boilerplate:
 
 ```sh
-cca --boilerplate telescope
+cia --boilerplate telescope
 ```
 
 Navigate to the generated project:
 
 ```sh
-cd ./your-project/packages/telescope
-npm install
+cd ./your-project/packages/your-module
+yarn install
 ```
-
-### Using create-interchain-app boilerplate
-
-Please follow the video: https://youtu.be/iQf6p65fbdY
-
-### Using telescope generate command
-
-Generate a package with the telescope CLI:
-
-```sh
-telescope generate --access public --userfullname "Your Name" --useremail "your@email.com" --module-desc "Your module description" --username "your-username" --license MIT --module-name "your-module" --chain-name cosmos --use-npm-scoped
-```
-
-Available options:
-- `--userfullname`: Your full name
-- `--useremail`: Your email
-- `--module-desc`: Module description
-- `--username`: GitHub username
-- `--module-name`: Module name
-- `--chain-name`: Chain name
-- `--access`: Package access (`public` or `private`)
-- `--use-npm-scoped`: Use npm scoped package (only works with `--access public`)
-- `--license`: License type
 
 ## Working with Protos
 
 Download protocol buffer files:
 
 ```sh
-telescope download
+yarn download-protos
 ```
 
 This will clone repositories into `./git-modules` and generate proto files in `./protos`.
 
-### Examples
-
-Download with a config file:
-```sh
-telescope download --config ./protod.config.json --out ./git-modules
-```
-
-Download from a specific repo:
-```sh
-telescope download --git-repo owner/repository --targets cosmos/auth/v1beta1/auth.proto
-```
+You can modify the configuration in ./scripts/download-protos.ts
 
 ## Code Generation
 
@@ -80,11 +49,7 @@ Generate TypeScript code from proto files:
 yarn codegen
 ```
 
-Or using the CLI:
-
-```sh
-telescope transpile
-```
+You can modify the configuration in ./scripts/codegen.ts
 
 ## Building
 
@@ -96,13 +61,7 @@ yarn build
 
 ## Publishing
 
-Publish your package to npm:
-
-```sh
-npm publish
-```
-
-If using the create-cosmos-app boilerplate, use lerna for package management:
+Use lerna for package management:
 
 ```sh
 lerna publish

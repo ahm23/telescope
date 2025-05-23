@@ -12,174 +12,112 @@ Before we begin, make sure you have:
 - Node.js (v14 or higher)
 - npm or yarn
 - Basic knowledge of TypeScript and the Cosmos SDK
-- if you want to use create-interchain-app boilerplate, please follow the video: https://youtu.be/iQf6p65fbdY 
-
 
 ## Step 1: Install Required Tools
 
-First, let's install create-cosmos-app globally:
+First, let's install create-interchain-app globally:
 
 ```sh
-npm install -g create-cosmos-app
+npm install -g create-interchain-app
 ```
 
-This will give you access to the `cca` commands in your terminal.
+This will give you access to the `cia` commands in your terminal.
 
 ## Step 2: Generate a New Project
 
 We'll create a new project using the Telescope boilerplate:
 
 ```sh
-cca --boilerplate telescope
+cia --boilerplate telescope
 ```
 
 This command creates a new project with the necessary configuration files and folder structure. It will prompt you for a project name - enter something descriptive for your package.
 
+If you prefer to see this process in action, you can follow along with this video tutorial: https://youtu.be/iQf6p65fbdY
+
 ## Step 3: Navigate to Your Package Directory
 
-Once the project is created, change to the telescope package directory:
+Once the project is created, change to your module directory:
 
 ```sh
-cd ./your-project/packages/telescope
-npm install
+cd ./your-project/packages/your-module
+yarn install
 ```
 
 This is where we'll be working for the rest of this tutorial.
 
-## Step 4: Configure Your Package
+## Step 4: Download Protocol Buffers
 
-If you'd like to customize your package settings, you can use the `telescope generate` command:
-
-```sh
-telescope generate
-```
-
-This will prompt you for various details like:
-- Your name and email
-- Module description
-- GitHub username
-- Module name
-- Chain name
-- Package access (public or private)
-- License type
-
-Alternatively, you can provide all these parameters directly in the command:
+Now we need to download the protocol buffer definitions for the Cosmos SDK modules we want to work with:
 
 ```sh
-telescope generate --access public --userfullname "Your Name" --useremail "your@email.com" --module-desc "Your module description" --username "your-username" --license MIT --module-name "your-module" --chain-name cosmos --use-npm-scoped
-```
-
-## Step 5: Download Protocol Buffers
-
-Next, we need to download the protocol buffer definitions for the Cosmos SDK modules we want to work with. You can use the Telescope download command in two ways:
-
-### Option 1: Simple Download
-
-```sh
-telescope download
+yarn download-protos
 ```
 
 This command will:
-1. Clone the default Cosmos SDK repositories
+1. Clone the specified repositories into `./git-modules`
 2. Extract the proto files
 3. Place them in the `./protos` directory
 
-### Option 2: Using a Configuration File
+Let's take a look at what's happening behind the scenes. When you run `yarn download-protos`, it executes a script located at `./scripts/download-protos.ts`. You can customize this script to download proto files from different repositories or specific branches.
 
-For more control, create a file named `telescope.config.ts` with your download configuration:
+Here's an example of what that script might look like:
 
 ```typescript
-// telescope.config.ts
-export default {
+// ./scripts/download-protos.ts
+import downloadProtos from '@cosmology/telescope/main/commands/download'
+
+const config = {
   repos: [
     { owner: "cosmos", repo: "cosmos-sdk", branch: "release/v0.50.x" },
     { owner: "cosmos", repo: "ibc-go" },
-    { owner: "injectivelabs", repo: "sdk-go" }
   ],
   protoDirMapping: {
     "gogo/protobuf/master": ".",
     "googleapis/googleapis/master": ".",
     "protocolbuffers/protobuf/main": "src"
   },
-  outDir: "protos/interchainjs",
-  ssh: true,
+  outDir: "protos",
+  ssh: false,
   tempRepoDir: "git-modules",
   targets: [
     "cosmos/**/*.proto",
-    "cosmwasm/**/*.proto",
     "ibc/**/*.proto",
-    "injective/types/v1beta1/account.proto"
   ]
 };
+
+downloadProtos(config)
+  .then(() => console.log('✅ Proto download completed'))
+  // @ts-ignore
+  .catch((error) => {
+    console.error('❌ Proto download failed:', error);
+    process.exit(1);
+  });
 ```
 
-Then run:
+Feel free to modify this script to include additional repos or change branches as needed for your project.
 
-```sh
-telescope download
-```
+## Step 5: Generate TypeScript Code
 
-This configuration lets you:
-- Specify which repositories to clone (with optional branch)
-- Map proto directories to specific locations
-- Set the output directory for proto files
-- Use SSH for cloning (vs HTTPS)
-- Define a directory for temporary repositories
-- Target specific proto files using glob patterns
-
-You should see output indicating which repos are being cloned and which proto files are being processed.
-
-## Step 6: Generate TypeScript Code
-
-Now it's time to generate the TypeScript code from the proto files. Create a file named `telescope.options.ts` with your code generation options:
-
-```typescript
-// telescope.options.ts
-import { TelescopeOptions } from '@cosmology/types';
-
-const options: TelescopeOptions = {
-  prototypes: {
-    includePackageVar: true,
-    addTypeUrlToDecoders: true,
-    methods: {
-      fromJSON: true,
-      toJSON: true,
-      fromPartial: true,
-      toSDK: true
-    }
-  },
-  interfaces: {
-    enabled: true
-  },
-  aminoEncoding: {
-    enabled: true
-  },
-  lcdClients: {
-    enabled: true
-  },
-  rpcClients: {
-    enabled: true,
-    camelCase: true
-  }
-};
-
-export default options;
-```
-
-Then run:
+Now that we have our proto files, let's generate the TypeScript code:
 
 ```sh
 yarn codegen
 ```
 
-This command reads your proto files and generates corresponding TypeScript interfaces, classes, and utility functions in the `./src` directory.
+This command runs the script at `./scripts/codegen.ts`, which uses Telescope to transpile the proto files into TypeScript.
 
-Take a moment to explore the generated code - you'll find:
-- Message types as TypeScript interfaces
-- Client classes for interacting with the blockchain
-- Helper functions for common operations
+You can customize the code generation by modifying this script. For example, you might want to generate different types of clients or adjust the output formatting.
 
-## Step 7: Build Your Package
+The generated code will include:
+- Protocol buffer message types
+- gRPC service definitions
+- REST/LCD client interfaces
+- Helper methods for encoding/decoding data
+
+Take some time to explore the generated code to understand what's available to you.
+
+## Step 6: Build Your Package
 
 With the TypeScript code generated, we can now build the package:
 
@@ -189,15 +127,7 @@ yarn build
 
 This compiles the TypeScript files to JavaScript and generates type definitions, preparing your package for distribution.
 
-## Step 8: Test Your Package (Optional)
-
-Before publishing, you might want to test your package:
-
-```sh
-yarn test
-```
-
-## Step 9: Publish Your Package
+## Step 7: Publish Your Package
 
 Finally, you can publish your package to npm:
 
@@ -205,7 +135,7 @@ Finally, you can publish your package to npm:
 npm publish
 ```
 
-If you're using the create-cosmos-app boilerplate with lerna, use:
+If you're using the create-interchain-app boilerplate with lerna for managing multiple packages, use:
 
 ```sh
 lerna publish

@@ -5307,7 +5307,7 @@ exports[`osmosis/claim/v1beta1/params 1`] = `
   ],
   "package": "osmosis.claim.v1beta1",
   "parsedExports": {
-    "Params": true,
+    "OsmosisClaimV1beta1Params": true,
   },
   "parsedImports": {
     "google/protobuf/duration.proto": [
@@ -5326,7 +5326,7 @@ exports[`osmosis/claim/v1beta1/params 1`] = `
               "v1beta1": {
                 "nested": {
                   "Params": {
-                    "aliasName": "Params",
+                    "aliasName": "OsmosisClaimV1beta1Params",
                     "comment": "Params defines the claim module's parameters.",
                     "fields": {
                       "airdropStartTime": {
@@ -5421,7 +5421,7 @@ exports[`osmosis/claim/v1beta1/params 1`] = `
                       },
                     },
                     "keyTypes": [],
-                    "name": "Params",
+                    "name": "OsmosisClaimV1beta1Params",
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,

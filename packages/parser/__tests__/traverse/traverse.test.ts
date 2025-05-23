@@ -1,8 +1,21 @@
 import { traverse } from '../../src';
 import { getNested } from '../../src'
 import { getTestProtoStore } from '../../test-utils';
+import { pascal } from 'case';
 
 const store = getTestProtoStore();
+
+if(!store.options.prototypes) {
+  store.options.prototypes = {
+  };
+}
+
+store.options.prototypes.alias = {
+  "**.Params": (ctx) => {
+    const packageName = pascal(ctx.package.replace(/\./g, "_"));
+    return packageName + ctx.name;
+  },
+}
 
 it('osmosis/claim/v1beta1/params', () => {
   const ref = store.findProto('osmosis/claim/v1beta1/params.proto');

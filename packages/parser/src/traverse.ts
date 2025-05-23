@@ -35,7 +35,7 @@ import {
 import { parseService } from "./services";
 import { ProtoStore } from "./store";
 import { instanceType, lookupSymbolScopes, SCALAR_TYPES } from "./utils";
-import { getEnumValues, getTypeNameByEnumObj } from "@cosmology/utils";
+import { getEnumValues, getTypeNameByEnumObj, getAliasName } from "@cosmology/utils";
 
 export interface TraverseContext {
   imports: TraverseImport;
@@ -277,7 +277,8 @@ const traverseFields = (
   ref: ProtoRef,
   obj: any,
   context: TraverseContext,
-  traversal: string[]
+  traversal: string[],
+  messageAlias?: string
 ): Record<string, ProtoField> => {
   return Object.keys(obj.fields).reduce((m, mykey) => {
     const field: ProtoField & { toJSON?: Function } = obj.fields[mykey];
@@ -300,7 +301,9 @@ const traverseFields = (
       // traversed
       // field.name is used for proto!
       field.name = fieldName;
-      field.message = obj.name;
+      field.message = messageAlias;
+      field.originalMessage = obj.name;
+      field.aliasMessage = messageAlias;
       field.package = ref.proto.package;
       return field;
     };
@@ -470,13 +473,18 @@ const traverseType = (
     }, {});
   }
 
+  const mapper = getPluginValue("prototypes.alias", ref.proto.package, store.options);
+  const aliasName = getAliasName(ref.proto.package, obj.name, mapper);
+
   if (!isNested) {
-    context.addExport(obj.name);
+    context.addExport(aliasName);
   }
 
   const traversed = {
     type: "Type",
-    name: obj.name,
+    name: aliasName,
+    originalName: obj.name,
+    aliasName,
     package: ref.proto.package,
     options: obj.options,
     oneofs: obj.oneofs
@@ -488,7 +496,7 @@ const traverseType = (
           return m;
         }, {})
       : undefined,
-    fields: traverseFields(store, ref, obj, context, traversal),
+    fields: traverseFields(store, ref, obj, context, traversal, aliasName),
     nested,
     keyTypes: [],
     comment: obj.comment,
@@ -522,7 +530,7 @@ const traverseType = (
     traversed.options?.["(cosmos_proto.implements_interface)"]
   ) {
     const name = traversed.options["(cosmos_proto.implements_interface)"];
-    context.addImplements(name, obj.name);
+    context.addImplements(name, aliasName);
   }
 
   return traversed as ProtoType;
@@ -536,9 +544,14 @@ const traverseEnum = (
   traversal: string[],
   isNested: boolean
 ) => {
+  const mapper = getPluginValue("prototypes.alias", ref.proto.package, store.options);
+  const aliasName = getAliasName(ref.proto.package, obj.name, mapper);
+
   const enumObj = {
     type: "Enum",
-    name: obj.name,
+    name: aliasName,
+    originalName: obj.name,
+    aliasName,
     package: ref.proto.package,
     ...obj.toJSON({ keepComments: true }),
   };
@@ -592,12 +605,17 @@ const traverseServiceMethod = (
     throw new Error("Symbol not found " + requestType);
   }
 
+  const mapper = getPluginValue("prototypes.alias", ref.proto.package, store.options);
+  const aliasRequestType = getAliasName(ref.proto.package, requestType, mapper);
+  const aliasResponseType = getAliasName(ref.proto.package, responseType, mapper);
+
   const fields = traverseFields(
     store,
     ref,
     requestObject.obj,
     context,
-    traversal
+    traversal,
+    aliasRequestType
   );
   // @ts-ignore
   const info: ProtoServiceMethodInfo = parseService({
@@ -610,8 +628,12 @@ const traverseServiceMethod = (
     info,
     name,
     comment,
-    requestType,
-    responseType,
+    requestType: aliasRequestType,
+    originalRequestType: requestType,
+    aliasRequestType,
+    responseType: aliasResponseType,
+    originalResponseType: responseType,
+    aliasResponseType,
     options,
     fields,
   };

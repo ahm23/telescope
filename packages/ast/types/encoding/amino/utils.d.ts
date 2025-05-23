@@ -10,6 +10,8 @@ export declare const protoFieldsToArray: (proto: ProtoType) => {
         type: string;
     };
     message?: string;
+    originalMessage?: string;
+    aliasMessage?: string;
     package?: string;
     keyType?: string;
     rule?: string;

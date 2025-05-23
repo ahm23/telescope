@@ -1,4 +1,4 @@
-import { ProtoRef, ProtoRoot, HelperFuncNameMappers } from "@cosmology/types";
+import { ProtoRef, ProtoRoot, HelperFuncNameMappers, AliasNameMappers } from "@cosmology/types";
 export declare const getNestedProto: (root: ProtoRoot) => any;
 export declare const getNestedProtoGeneric: (root: ProtoRoot, path: string[]) => any;
 export declare const getNested: (root: ProtoRoot, path: string[]) => any;
@@ -65,3 +65,11 @@ export declare function getHelperFuncName(packagePath: string, methodKey: string
     creator: string;
     hook: string;
 };
+/**
+ * get the alias name of the type name.
+ * @param packagePath e.g. "cosmos.bank.v1beta1"
+ * @param typeNameKey e.g. "Balance"
+ * @param alias a list of alias names. An earlier one will override a later one.
+ * @returns the alias name of the type name.
+ */
+export declare function getAliasName(packagePath: string, typeNameKey: string, alias?: AliasNameMappers): string;

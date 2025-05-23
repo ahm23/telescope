@@ -6,6 +6,8 @@ exports[`queries 1`] = `
     "comment": "Query defines the gRPC querier service.",
     "methods": {
       "Delegation": {
+        "aliasRequestType": "QueryDelegationRequest",
+        "aliasResponseType": "QueryDelegationResponse",
         "comment": "Delegation queries delegate info for given validator delegator pair.",
         "fields": {
           "delegatorAddr": {
@@ -64,11 +66,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/validators/{validator_addr}/delegations/{delegator_addr}",
         },
+        "originalRequestType": "QueryDelegationRequest",
+        "originalResponseType": "QueryDelegationResponse",
         "requestType": "QueryDelegationRequest",
         "responseType": "QueryDelegationResponse",
         "type": "ServiceMethod",
       },
       "DelegatorDelegations": {
+        "aliasRequestType": "QueryDelegatorDelegationsRequest",
+        "aliasResponseType": "QueryDelegatorDelegationsResponse",
         "comment": "DelegatorDelegations queries all delegations of a given delegator address.",
         "fields": {
           "delegatorAddr": {
@@ -132,11 +138,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/delegations/{delegator_addr}",
         },
+        "originalRequestType": "QueryDelegatorDelegationsRequest",
+        "originalResponseType": "QueryDelegatorDelegationsResponse",
         "requestType": "QueryDelegatorDelegationsRequest",
         "responseType": "QueryDelegatorDelegationsResponse",
         "type": "ServiceMethod",
       },
       "DelegatorUnbondingDelegations": {
+        "aliasRequestType": "QueryDelegatorUnbondingDelegationsRequest",
+        "aliasResponseType": "QueryDelegatorUnbondingDelegationsResponse",
         "comment": "DelegatorUnbondingDelegations queries all unbonding delegations of a given
  delegator address.",
         "fields": {
@@ -201,11 +211,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/delegators/{delegator_addr}/unbonding_delegations",
         },
+        "originalRequestType": "QueryDelegatorUnbondingDelegationsRequest",
+        "originalResponseType": "QueryDelegatorUnbondingDelegationsResponse",
         "requestType": "QueryDelegatorUnbondingDelegationsRequest",
         "responseType": "QueryDelegatorUnbondingDelegationsResponse",
         "type": "ServiceMethod",
       },
       "DelegatorValidator": {
+        "aliasRequestType": "QueryDelegatorValidatorRequest",
+        "aliasResponseType": "QueryDelegatorValidatorResponse",
         "comment": "DelegatorValidator queries validator info for given delegator validator
  pair.",
         "fields": {
@@ -265,11 +279,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/delegators/{delegator_addr}/validators/{validator_addr}",
         },
+        "originalRequestType": "QueryDelegatorValidatorRequest",
+        "originalResponseType": "QueryDelegatorValidatorResponse",
         "requestType": "QueryDelegatorValidatorRequest",
         "responseType": "QueryDelegatorValidatorResponse",
         "type": "ServiceMethod",
       },
       "DelegatorValidators": {
+        "aliasRequestType": "QueryDelegatorValidatorsRequest",
+        "aliasResponseType": "QueryDelegatorValidatorsResponse",
         "comment": "DelegatorValidators queries all validators info for given delegator
  address.",
         "fields": {
@@ -334,11 +352,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/delegators/{delegator_addr}/validators",
         },
+        "originalRequestType": "QueryDelegatorValidatorsRequest",
+        "originalResponseType": "QueryDelegatorValidatorsResponse",
         "requestType": "QueryDelegatorValidatorsRequest",
         "responseType": "QueryDelegatorValidatorsResponse",
         "type": "ServiceMethod",
       },
       "HistoricalInfo": {
+        "aliasRequestType": "QueryHistoricalInfoRequest",
+        "aliasResponseType": "QueryHistoricalInfoResponse",
         "comment": "HistoricalInfo queries the historical info for given height.",
         "fields": {
           "height": {
@@ -376,11 +398,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/historical_info/{height}",
         },
+        "originalRequestType": "QueryHistoricalInfoRequest",
+        "originalResponseType": "QueryHistoricalInfoResponse",
         "requestType": "QueryHistoricalInfoRequest",
         "responseType": "QueryHistoricalInfoResponse",
         "type": "ServiceMethod",
       },
       "Params": {
+        "aliasRequestType": "QueryParamsRequest",
+        "aliasResponseType": "QueryParamsResponse",
         "comment": "Parameters queries the staking parameters.",
         "fields": {},
         "info": {
@@ -395,11 +421,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/params",
         },
+        "originalRequestType": "QueryParamsRequest",
+        "originalResponseType": "QueryParamsResponse",
         "requestType": "QueryParamsRequest",
         "responseType": "QueryParamsResponse",
         "type": "ServiceMethod",
       },
       "Pool": {
+        "aliasRequestType": "QueryPoolRequest",
+        "aliasResponseType": "QueryPoolResponse",
         "comment": "Pool queries the pool info.",
         "fields": {},
         "info": {
@@ -414,11 +444,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/pool",
         },
+        "originalRequestType": "QueryPoolRequest",
+        "originalResponseType": "QueryPoolResponse",
         "requestType": "QueryPoolRequest",
         "responseType": "QueryPoolResponse",
         "type": "ServiceMethod",
       },
       "Redelegations": {
+        "aliasRequestType": "QueryRedelegationsRequest",
+        "aliasResponseType": "QueryRedelegationsResponse",
         "comment": "Redelegations queries redelegations of given address.",
         "fields": {
           "delegatorAddr": {
@@ -522,11 +556,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/delegators/{delegator_addr}/redelegations",
         },
+        "originalRequestType": "QueryRedelegationsRequest",
+        "originalResponseType": "QueryRedelegationsResponse",
         "requestType": "QueryRedelegationsRequest",
         "responseType": "QueryRedelegationsResponse",
         "type": "ServiceMethod",
       },
       "UnbondingDelegation": {
+        "aliasRequestType": "QueryUnbondingDelegationRequest",
+        "aliasResponseType": "QueryUnbondingDelegationResponse",
         "comment": "UnbondingDelegation queries unbonding info for given validator delegator
  pair.",
         "fields": {
@@ -586,11 +624,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/validators/{validator_addr}/delegations/{delegator_addr}/unbonding_delegation",
         },
+        "originalRequestType": "QueryUnbondingDelegationRequest",
+        "originalResponseType": "QueryUnbondingDelegationResponse",
         "requestType": "QueryUnbondingDelegationRequest",
         "responseType": "QueryUnbondingDelegationResponse",
         "type": "ServiceMethod",
       },
       "Validator": {
+        "aliasRequestType": "QueryValidatorRequest",
+        "aliasResponseType": "QueryValidatorResponse",
         "comment": "Validator queries validator info for given validator address.",
         "fields": {
           "validatorAddr": {
@@ -629,11 +671,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/validators/{validator_addr}",
         },
+        "originalRequestType": "QueryValidatorRequest",
+        "originalResponseType": "QueryValidatorResponse",
         "requestType": "QueryValidatorRequest",
         "responseType": "QueryValidatorResponse",
         "type": "ServiceMethod",
       },
       "ValidatorDelegations": {
+        "aliasRequestType": "QueryValidatorDelegationsRequest",
+        "aliasResponseType": "QueryValidatorDelegationsResponse",
         "comment": "ValidatorDelegations queries delegate info for given validator.",
         "fields": {
           "pagination": {
@@ -697,11 +743,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/validators/{validator_addr}/delegations",
         },
+        "originalRequestType": "QueryValidatorDelegationsRequest",
+        "originalResponseType": "QueryValidatorDelegationsResponse",
         "requestType": "QueryValidatorDelegationsRequest",
         "responseType": "QueryValidatorDelegationsResponse",
         "type": "ServiceMethod",
       },
       "ValidatorUnbondingDelegations": {
+        "aliasRequestType": "QueryValidatorUnbondingDelegationsRequest",
+        "aliasResponseType": "QueryValidatorUnbondingDelegationsResponse",
         "comment": "ValidatorUnbondingDelegations queries unbonding delegations of a validator.",
         "fields": {
           "pagination": {
@@ -765,11 +815,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/validators/{validator_addr}/unbonding_delegations",
         },
+        "originalRequestType": "QueryValidatorUnbondingDelegationsRequest",
+        "originalResponseType": "QueryValidatorUnbondingDelegationsResponse",
         "requestType": "QueryValidatorUnbondingDelegationsRequest",
         "responseType": "QueryValidatorUnbondingDelegationsResponse",
         "type": "ServiceMethod",
       },
       "Validators": {
+        "aliasRequestType": "QueryValidatorsRequest",
+        "aliasResponseType": "QueryValidatorsResponse",
         "comment": "Validators queries all validators that match the given status.",
         "fields": {
           "pagination": {
@@ -831,6 +885,8 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/cosmos/staking/v1beta1/validators",
         },
+        "originalRequestType": "QueryValidatorsRequest",
+        "originalResponseType": "QueryValidatorsResponse",
         "requestType": "QueryValidatorsRequest",
         "responseType": "QueryValidatorsResponse",
         "type": "ServiceMethod",
@@ -840,6 +896,7 @@ exports[`queries 1`] = `
     "type": "Service",
   },
   "QueryDelegationRequest": {
+    "aliasName": "QueryDelegationRequest",
     "comment": "QueryDelegationRequest is request type for the Query/Delegation RPC method.",
     "fields": {
       "delegatorAddr": {
@@ -885,10 +942,12 @@ exports[`queries 1`] = `
       "(gogoproto.equal)": false,
       "(gogoproto.goproto_getters)": false,
     },
+    "originalName": "QueryDelegationRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryDelegationResponse": {
+    "aliasName": "QueryDelegationResponse",
     "comment": "QueryDelegationResponse is response type for the Query/Delegation RPC method.",
     "fields": {
       "delegationResponse": {
@@ -919,10 +978,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryDelegationResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryDelegatorDelegationsRequest": {
+    "aliasName": "QueryDelegatorDelegationsRequest",
     "comment": "QueryDelegatorDelegationsRequest is request type for the
  Query/DelegatorDelegations RPC method.",
     "fields": {
@@ -973,10 +1034,12 @@ exports[`queries 1`] = `
       "(gogoproto.equal)": false,
       "(gogoproto.goproto_getters)": false,
     },
+    "originalName": "QueryDelegatorDelegationsRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryDelegatorDelegationsResponse": {
+    "aliasName": "QueryDelegatorDelegationsResponse",
     "comment": "QueryDelegatorDelegationsResponse is response type for the
  Query/DelegatorDelegations RPC method.",
     "fields": {
@@ -1031,10 +1094,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryDelegatorDelegationsResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryDelegatorUnbondingDelegationsRequest": {
+    "aliasName": "QueryDelegatorUnbondingDelegationsRequest",
     "comment": "QueryDelegatorUnbondingDelegationsRequest is request type for the
  Query/DelegatorUnbondingDelegations RPC method.",
     "fields": {
@@ -1085,10 +1150,12 @@ exports[`queries 1`] = `
       "(gogoproto.equal)": false,
       "(gogoproto.goproto_getters)": false,
     },
+    "originalName": "QueryDelegatorUnbondingDelegationsRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryDelegatorUnbondingDelegationsResponse": {
+    "aliasName": "QueryDelegatorUnbondingDelegationsResponse",
     "comment": "QueryUnbondingDelegatorDelegationsResponse is response type for the
  Query/UnbondingDelegatorDelegations RPC method.",
     "fields": {
@@ -1143,10 +1210,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryDelegatorUnbondingDelegationsResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryDelegatorValidatorRequest": {
+    "aliasName": "QueryDelegatorValidatorRequest",
     "comment": "QueryDelegatorValidatorRequest is request type for the
  Query/DelegatorValidator RPC method.",
     "fields": {
@@ -1193,10 +1262,12 @@ exports[`queries 1`] = `
       "(gogoproto.equal)": false,
       "(gogoproto.goproto_getters)": false,
     },
+    "originalName": "QueryDelegatorValidatorRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryDelegatorValidatorResponse": {
+    "aliasName": "QueryDelegatorValidatorResponse",
     "comment": "QueryDelegatorValidatorResponse response type for the
  Query/DelegatorValidator RPC method.",
     "fields": {
@@ -1229,10 +1300,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryDelegatorValidatorResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryDelegatorValidatorsRequest": {
+    "aliasName": "QueryDelegatorValidatorsRequest",
     "comment": "QueryDelegatorValidatorsRequest is request type for the
  Query/DelegatorValidators RPC method.",
     "fields": {
@@ -1283,10 +1356,12 @@ exports[`queries 1`] = `
       "(gogoproto.equal)": false,
       "(gogoproto.goproto_getters)": false,
     },
+    "originalName": "QueryDelegatorValidatorsRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryDelegatorValidatorsResponse": {
+    "aliasName": "QueryDelegatorValidatorsResponse",
     "comment": "QueryDelegatorValidatorsResponse is response type for the
  Query/DelegatorValidators RPC method.",
     "fields": {
@@ -1341,10 +1416,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryDelegatorValidatorsResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryHistoricalInfoRequest": {
+    "aliasName": "QueryHistoricalInfoRequest",
     "comment": "QueryHistoricalInfoRequest is request type for the Query/HistoricalInfo RPC
  method.",
     "fields": {
@@ -1370,10 +1447,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryHistoricalInfoRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryHistoricalInfoResponse": {
+    "aliasName": "QueryHistoricalInfoResponse",
     "comment": "QueryHistoricalInfoResponse is response type for the Query/HistoricalInfo RPC
  method.",
     "fields": {
@@ -1405,10 +1484,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryHistoricalInfoResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryParamsRequest": {
+    "aliasName": "QueryParamsRequest",
     "comment": "QueryParamsRequest is request type for the Query/Params RPC method.",
     "fields": {},
     "keyTypes": [],
@@ -1416,10 +1497,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryParamsRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryParamsResponse": {
+    "aliasName": "QueryParamsResponse",
     "comment": "QueryParamsResponse is response type for the Query/Params RPC method.",
     "fields": {
       "params": {
@@ -1451,10 +1534,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryParamsResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryPoolRequest": {
+    "aliasName": "QueryPoolRequest",
     "comment": "QueryPoolRequest is request type for the Query/Pool RPC method.",
     "fields": {},
     "keyTypes": [],
@@ -1462,10 +1547,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryPoolRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryPoolResponse": {
+    "aliasName": "QueryPoolResponse",
     "comment": "QueryPoolResponse is response type for the Query/Pool RPC method.",
     "fields": {
       "pool": {
@@ -1497,10 +1584,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryPoolResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryRedelegationsRequest": {
+    "aliasName": "QueryRedelegationsRequest",
     "comment": "QueryRedelegationsRequest is request type for the Query/Redelegations RPC
  method.",
     "fields": {
@@ -1585,10 +1674,12 @@ exports[`queries 1`] = `
       "(gogoproto.equal)": false,
       "(gogoproto.goproto_getters)": false,
     },
+    "originalName": "QueryRedelegationsRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryRedelegationsResponse": {
+    "aliasName": "QueryRedelegationsResponse",
     "comment": "QueryRedelegationsResponse is response type for the Query/Redelegations RPC
  method.",
     "fields": {
@@ -1643,10 +1734,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryRedelegationsResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryUnbondingDelegationRequest": {
+    "aliasName": "QueryUnbondingDelegationRequest",
     "comment": "QueryUnbondingDelegationRequest is request type for the
  Query/UnbondingDelegation RPC method.",
     "fields": {
@@ -1693,10 +1786,12 @@ exports[`queries 1`] = `
       "(gogoproto.equal)": false,
       "(gogoproto.goproto_getters)": false,
     },
+    "originalName": "QueryUnbondingDelegationRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryUnbondingDelegationResponse": {
+    "aliasName": "QueryUnbondingDelegationResponse",
     "comment": "QueryDelegationResponse is response type for the Query/UnbondingDelegation
  RPC method.",
     "fields": {
@@ -1729,10 +1824,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryUnbondingDelegationResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryValidatorDelegationsRequest": {
+    "aliasName": "QueryValidatorDelegationsRequest",
     "comment": "QueryValidatorDelegationsRequest is request type for the
  Query/ValidatorDelegations RPC method",
     "fields": {
@@ -1780,10 +1877,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryValidatorDelegationsRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryValidatorDelegationsResponse": {
+    "aliasName": "QueryValidatorDelegationsResponse",
     "comment": "QueryValidatorDelegationsResponse is response type for the
  Query/ValidatorDelegations RPC method",
     "fields": {
@@ -1839,10 +1938,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryValidatorDelegationsResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryValidatorRequest": {
+    "aliasName": "QueryValidatorRequest",
     "comment": "QueryValidatorRequest is response type for the Query/Validator RPC method",
     "fields": {
       "validatorAddr": {
@@ -1868,10 +1969,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryValidatorRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryValidatorResponse": {
+    "aliasName": "QueryValidatorResponse",
     "comment": "QueryValidatorResponse is response type for the Query/Validator RPC method",
     "fields": {
       "validator": {
@@ -1903,10 +2006,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryValidatorResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryValidatorUnbondingDelegationsRequest": {
+    "aliasName": "QueryValidatorUnbondingDelegationsRequest",
     "comment": "QueryValidatorUnbondingDelegationsRequest is required type for the
  Query/ValidatorUnbondingDelegations RPC method",
     "fields": {
@@ -1954,10 +2059,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryValidatorUnbondingDelegationsRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryValidatorUnbondingDelegationsResponse": {
+    "aliasName": "QueryValidatorUnbondingDelegationsResponse",
     "comment": "QueryValidatorUnbondingDelegationsResponse is response type for the
  Query/ValidatorUnbondingDelegations RPC method.",
     "fields": {
@@ -2012,10 +2119,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryValidatorUnbondingDelegationsResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryValidatorsRequest": {
+    "aliasName": "QueryValidatorsRequest",
     "comment": "QueryValidatorsRequest is request type for Query/Validators RPC method.",
     "fields": {
       "pagination": {
@@ -2061,10 +2170,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryValidatorsRequest",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },
   "QueryValidatorsResponse": {
+    "aliasName": "QueryValidatorsResponse",
     "comment": "QueryValidatorsResponse is response type for the Query/Validators RPC method",
     "fields": {
       "pagination": {
@@ -2118,6 +2229,7 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryValidatorsResponse",
     "package": "cosmos.staking.v1beta1",
     "type": "Type",
   },

@@ -376,6 +376,8 @@ describe('cosmology/example/c', () => {
       package: 'cosmology.finance',
       obj: {
         name: 'EnumPackageA',
+        originalName: 'EnumPackageA',
+        aliasName: 'EnumPackageA',
         package: "cosmology.finance",
         scope: ['cosmology.finance', 'MsgTypePackageA'],
         type: 'Enum',

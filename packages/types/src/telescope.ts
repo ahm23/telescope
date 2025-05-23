@@ -19,6 +19,15 @@ export interface HelperFuncNameMappersRule {
   hookPrefix?: string;
 }
 
+export interface AliasNameMappersContext {
+  name: string;
+  package: string;
+}
+
+export interface AliasNameMappers {
+  [key: string]: string | ((ctx: AliasNameMappersContext) => string);
+}
+
 /**
  * The name mappers for helper functions.
  */
@@ -59,6 +68,7 @@ export interface TelescopeOpts {
 
   prototypes?: {
     enabled?: boolean;
+    alias?: AliasNameMappers;
     parser?: {
       keepCase?: boolean;
       alternateCommentMode?: boolean;

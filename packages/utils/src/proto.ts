@@ -7,6 +7,7 @@ import {
   ProtoRoot,
   HelperFuncNameMappers,
   HelperFuncNameMappersRule,
+  AliasNameMappers,
 } from "@cosmology/types";
 import dotty from "dotty";
 
@@ -289,4 +290,41 @@ export function getHelperFuncName(
     creator: camel(`${camel(funcBodyFn(methodKey))}`),
     hook: camel(`${hookPrefix}_${camel(funcBodyFn(methodKey))}`),
   };
+}
+
+/**
+ * get the alias name of the type name.
+ * @param packagePath e.g. "cosmos.bank.v1beta1"
+ * @param typeNameKey e.g. "Balance"
+ * @param alias a list of alias names. An earlier one will override a later one.
+ * @returns the alias name of the type name.
+ */
+export function getAliasName(
+  packagePath: string,
+  typeNameKey: string,
+  alias?: AliasNameMappers
+) {
+  if (!alias) return typeNameKey;
+
+  const typeNameKeyWithPkg = `${packagePath}.${typeNameKey}`;
+
+  let isMatching = false;
+
+  for (const pattern in alias) {
+    if (!globPattern.test(pattern)) {
+      isMatching = typeNameKeyWithPkg === pattern;
+    }
+
+    isMatching = minimatch(typeNameKeyWithPkg, pattern);
+
+    if (isMatching) {
+      const aliasName = alias[pattern];
+      if (typeof aliasName === "function") {
+        return aliasName({ name: typeNameKey, package: packagePath });
+      }
+      return aliasName;
+    }
+  }
+
+  return typeNameKey;
 }

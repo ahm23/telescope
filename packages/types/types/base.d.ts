@@ -20,6 +20,8 @@ export interface ImportUsage {
 export interface ProtoEnum {
     type?: 'Enum';
     name?: string;
+    originalName?: string;
+    aliasName?: string;
     package?: string;
     values: {
         [key: string]: number;
@@ -38,6 +40,8 @@ export interface ProtoEnum {
 export interface ProtoType {
     type?: 'Type';
     name?: string;
+    originalName?: string;
+    aliasName?: string;
     package?: string;
     oneofs?: {
         [key: string]: {
@@ -65,6 +69,8 @@ export interface ProtoField {
         type: string;
     };
     message?: string;
+    originalMessage?: string;
+    aliasMessage?: string;
     package?: string;
     keyType?: string;
     rule?: string;
@@ -115,7 +121,11 @@ export interface ProtoServiceMethod {
     };
     comment?: string;
     requestType: string;
+    originalRequestType?: string;
+    aliasRequestType?: string;
     responseType: string;
+    originalResponseType?: string;
+    aliasResponseType?: string;
     fields: Record<string, ProtoField>;
 }
 export interface ProtoService {

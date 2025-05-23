@@ -41,6 +41,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                   "v1alpha1": {
                     "nested": {
                       "CheckedExpr": {
+                        "aliasName": "CheckedExpr",
                         "comment": "A CEL expression which has been successfully type checked.",
                         "fields": {
                           "expr": {
@@ -228,10 +229,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         "nested": null,
                         "oneofs": undefined,
                         "options": undefined,
+                        "originalName": "CheckedExpr",
                         "package": "google.api.expr.v1alpha1",
                         "type": "Type",
                       },
                       "Decl": {
+                        "aliasName": "Decl",
                         "comment": "Represents a declaration of a named value or function.
 
  A declaration is part of the contract between the expression, the agent
@@ -301,6 +304,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         "name": "Decl",
                         "nested": {
                           "FunctionDecl": {
+                            "aliasName": "FunctionDecl",
                             "comment": "Function declaration specifies one or more overloads which indicate the
  function's parameter types and return type.
 
@@ -332,6 +336,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "name": "FunctionDecl",
                             "nested": {
                               "Overload": {
+                                "aliasName": "Overload",
                                 "comment": "An overload indicates a function's parameter types and return type, and
  may optionally include a function body described in terms of [Expr][google.api.expr.v1alpha1.Expr]
  values.
@@ -470,16 +475,19 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                 "nested": null,
                                 "oneofs": undefined,
                                 "options": undefined,
+                                "originalName": "Overload",
                                 "package": "google.api.expr.v1alpha1",
                                 "type": "Type",
                               },
                             },
                             "oneofs": undefined,
                             "options": undefined,
+                            "originalName": "FunctionDecl",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Type",
                           },
                           "IdentDecl": {
+                            "aliasName": "IdentDecl",
                             "comment": "Identifier declaration which specifies its type and optional \`Expr\` value.
 
  An identifier without a value is a declaration that must be provided at
@@ -549,6 +557,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "nested": null,
                             "oneofs": undefined,
                             "options": undefined,
+                            "originalName": "IdentDecl",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Type",
                           },
@@ -562,10 +571,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                           },
                         },
                         "options": undefined,
+                        "originalName": "Decl",
                         "package": "google.api.expr.v1alpha1",
                         "type": "Type",
                       },
                       "Reference": {
+                        "aliasName": "Reference",
                         "comment": "Describes a resolved reference to a declaration.",
                         "fields": {
                           "name": {
@@ -637,10 +648,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         "nested": null,
                         "oneofs": undefined,
                         "options": undefined,
+                        "originalName": "Reference",
                         "package": "google.api.expr.v1alpha1",
                         "type": "Type",
                       },
                       "Type": {
+                        "aliasName": "Type",
                         "comment": "Represents a CEL type.",
                         "fields": {
                           "abstractType": {
@@ -900,6 +913,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         "name": "Type",
                         "nested": {
                           "AbstractType": {
+                            "aliasName": "AbstractType",
                             "comment": "Application defined abstract type.",
                             "fields": {
                               "name": {
@@ -942,10 +956,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "nested": null,
                             "oneofs": undefined,
                             "options": undefined,
+                            "originalName": "AbstractType",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Type",
                           },
                           "FunctionType": {
+                            "aliasName": "FunctionType",
                             "comment": "Function type with result and arg types.",
                             "fields": {
                               "argTypes": {
@@ -989,10 +1005,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "nested": null,
                             "oneofs": undefined,
                             "options": undefined,
+                            "originalName": "FunctionType",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Type",
                           },
                           "ListType": {
+                            "aliasName": "ListType",
                             "comment": "List type with typed elements, e.g. \`list<example.proto.MyMessage>\`.",
                             "fields": {
                               "elemType": {
@@ -1018,10 +1036,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "nested": null,
                             "oneofs": undefined,
                             "options": undefined,
+                            "originalName": "ListType",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Type",
                           },
                           "MapType": {
+                            "aliasName": "MapType",
                             "comment": "Map type with parameterized key and value types, e.g. \`map<string, int>\`.",
                             "fields": {
                               "keyType": {
@@ -1064,10 +1084,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "nested": null,
                             "oneofs": undefined,
                             "options": undefined,
+                            "originalName": "MapType",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Type",
                           },
                           "PrimitiveType": {
+                            "aliasName": "PrimitiveType",
                             "comment": "CEL primitive types.",
                             "comments": {
                               "BOOL": "Boolean type.",
@@ -1085,6 +1107,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
  Proto-based unsigned integer values are widened to uint64.",
                             },
                             "name": "PrimitiveType",
+                            "originalName": "PrimitiveType",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Enum",
                             "values": {
@@ -1098,6 +1121,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             },
                           },
                           "WellKnownType": {
+                            "aliasName": "WellKnownType",
                             "comment": "Well-known protobuf types treated with first-class support in CEL.",
                             "comments": {
                               "ANY": "Well-known protobuf.Any type.
@@ -1110,6 +1134,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "WELL_KNOWN_TYPE_UNSPECIFIED": "Unspecified type.",
                             },
                             "name": "WellKnownType",
+                            "originalName": "WellKnownType",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Enum",
                             "values": {
@@ -1140,6 +1165,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                           },
                         },
                         "options": undefined,
+                        "originalName": "Type",
                         "package": "google.api.expr.v1alpha1",
                         "type": "Type",
                       },

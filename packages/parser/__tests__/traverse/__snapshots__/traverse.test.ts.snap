@@ -44,6 +44,7 @@ exports[`cosmos/authz/v1beta1/authz 1`] = `
               "v1beta1": {
                 "nested": {
                   "GenericAuthorization": {
+                    "aliasName": "GenericAuthorization",
                     "comment": "GenericAuthorization gives the grantee unrestricted permissions to execute
  the provided method on behalf of the granter's account.",
                     "fields": {
@@ -71,10 +72,12 @@ exports[`cosmos/authz/v1beta1/authz 1`] = `
                     "options": {
                       "(cosmos_proto.implements_interface)": "Authorization",
                     },
+                    "originalName": "GenericAuthorization",
                     "package": "cosmos.authz.v1beta1",
                     "type": "Type",
                   },
                   "Grant": {
+                    "aliasName": "Grant",
                     "comment": "Grant gives permissions to execute
  the provide method with expiration time.",
                     "fields": {
@@ -131,10 +134,12 @@ exports[`cosmos/authz/v1beta1/authz 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "Grant",
                     "package": "cosmos.authz.v1beta1",
                     "type": "Type",
                   },
                   "GrantAuthorization": {
+                    "aliasName": "GrantAuthorization",
                     "comment": "GrantAuthorization extends a grant with both the addresses of the grantee and granter.
  It is used in genesis.proto and query.proto",
                     "fields": {
@@ -222,10 +227,12 @@ exports[`cosmos/authz/v1beta1/authz 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "GrantAuthorization",
                     "package": "cosmos.authz.v1beta1",
                     "type": "Type",
                   },
                   "GrantQueueItem": {
+                    "aliasName": "GrantQueueItem",
                     "comment": "GrantQueueItem contains the list of TypeURL of a sdk.Msg.",
                     "fields": {
                       "msgTypeUrls": {
@@ -251,6 +258,7 @@ exports[`cosmos/authz/v1beta1/authz 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "GrantQueueItem",
                     "package": "cosmos.authz.v1beta1",
                     "type": "Type",
                   },
@@ -302,6 +310,7 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                   "v1beta1": {
                     "nested": {
                       "SignMode": {
+                        "aliasName": "SignMode",
                         "comment": "SignMode represents a signing mode with its own security guarantees.
 
  This enum should be considered a registry of all known sign modes
@@ -328,6 +337,7 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
  rejected.",
                         },
                         "name": "SignMode",
+                        "originalName": "SignMode",
                         "package": "cosmos.tx.signing.v1beta1",
                         "type": "Enum",
                         "values": {
@@ -339,6 +349,7 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                         },
                       },
                       "SignatureDescriptor": {
+                        "aliasName": "SignatureDescriptor",
                         "comment": "SignatureDescriptor is a convenience type which represents the full data for
  a signature including the public key of the signer, signing modes and the
  signature itself. It is primarily used for coordinating signatures between
@@ -406,6 +417,7 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                         "name": "SignatureDescriptor",
                         "nested": {
                           "Data": {
+                            "aliasName": "Data",
                             "comment": "Data represents signature data",
                             "fields": {
                               "multi": {
@@ -451,6 +463,7 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                             "name": "Data",
                             "nested": {
                               "Multi": {
+                                "aliasName": "Multi",
                                 "comment": "Multi is the signature data for a multisig public key",
                                 "fields": {
                                   "bitarray": {
@@ -499,10 +512,12 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                                 "nested": null,
                                 "oneofs": undefined,
                                 "options": undefined,
+                                "originalName": "Multi",
                                 "package": "cosmos.tx.signing.v1beta1",
                                 "type": "Type",
                               },
                               "Single": {
+                                "aliasName": "Single",
                                 "comment": "Single is the signature data for a single signer",
                                 "fields": {
                                   "mode": {
@@ -544,6 +559,7 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                                 "nested": null,
                                 "oneofs": undefined,
                                 "options": undefined,
+                                "originalName": "Single",
                                 "package": "cosmos.tx.signing.v1beta1",
                                 "type": "Type",
                               },
@@ -557,16 +573,19 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                               },
                             },
                             "options": undefined,
+                            "originalName": "Data",
                             "package": "cosmos.tx.signing.v1beta1",
                             "type": "Type",
                           },
                         },
                         "oneofs": undefined,
                         "options": undefined,
+                        "originalName": "SignatureDescriptor",
                         "package": "cosmos.tx.signing.v1beta1",
                         "type": "Type",
                       },
                       "SignatureDescriptors": {
+                        "aliasName": "SignatureDescriptors",
                         "comment": "SignatureDescriptors wraps multiple SignatureDescriptor's.",
                         "fields": {
                           "signatures": {
@@ -593,6 +612,7 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                         "nested": null,
                         "oneofs": undefined,
                         "options": undefined,
+                        "originalName": "SignatureDescriptors",
                         "package": "cosmos.tx.signing.v1beta1",
                         "type": "Type",
                       },
@@ -664,6 +684,7 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
               "v1beta1": {
                 "nested": {
                   "AuthInfo": {
+                    "aliasName": "AuthInfo",
                     "comment": "AuthInfo describes the fee and signer modes that are used to sign a
  transaction.",
                     "fields": {
@@ -733,10 +754,12 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "AuthInfo",
                     "package": "cosmos.tx.v1beta1",
                     "type": "Type",
                   },
                   "AuxSignerData": {
+                    "aliasName": "AuxSignerData",
                     "comment": "AuxSignerData is the intermediary format that an auxiliary signer (e.g. a
  tipper) builds and sends to the fee payer (who will build and broadcast the
  actual tx). AuxSignerData is not a valid tx in itself, and will be rejected
@@ -825,10 +848,12 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "AuxSignerData",
                     "package": "cosmos.tx.v1beta1",
                     "type": "Type",
                   },
                   "Fee": {
+                    "aliasName": "Fee",
                     "comment": "Fee includes the amount of coins paid in fees and the maximum
  gas to be used by the transaction. The ratio yields an effective "gasprice",
  which must be above some miminum to be accepted into the mempool.",
@@ -918,10 +943,12 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "Fee",
                     "package": "cosmos.tx.v1beta1",
                     "type": "Type",
                   },
                   "ModeInfo": {
+                    "aliasName": "ModeInfo",
                     "comment": "ModeInfo describes the signing mode of a single or nested multisig signer.",
                     "fields": {
                       "multi": {
@@ -965,6 +992,7 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "name": "ModeInfo",
                     "nested": {
                       "Multi": {
+                        "aliasName": "Multi",
                         "comment": "Multi is the mode info for a multisig public key",
                         "fields": {
                           "bitarray": {
@@ -1013,10 +1041,12 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "nested": null,
                         "oneofs": undefined,
                         "options": undefined,
+                        "originalName": "Multi",
                         "package": "cosmos.tx.v1beta1",
                         "type": "Type",
                       },
                       "Single": {
+                        "aliasName": "Single",
                         "comment": "Single is the mode info for a single signer. It is structured as a message
  to allow for additional fields such as locale for SIGN_MODE_TEXTUAL in the
  future",
@@ -1048,6 +1078,7 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "nested": null,
                         "oneofs": undefined,
                         "options": undefined,
+                        "originalName": "Single",
                         "package": "cosmos.tx.v1beta1",
                         "type": "Type",
                       },
@@ -1061,10 +1092,12 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                       },
                     },
                     "options": undefined,
+                    "originalName": "ModeInfo",
                     "package": "cosmos.tx.v1beta1",
                     "type": "Type",
                   },
                   "SignDoc": {
+                    "aliasName": "SignDoc",
                     "comment": "SignDoc is the type used for generating sign bytes for SIGN_MODE_DIRECT.",
                     "fields": {
                       "accountNumber": {
@@ -1141,10 +1174,12 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "SignDoc",
                     "package": "cosmos.tx.v1beta1",
                     "type": "Type",
                   },
                   "SignDocDirectAux": {
+                    "aliasName": "SignDocDirectAux",
                     "comment": "SignDocDirectAux is the type used for generating sign bytes for
  SIGN_MODE_DIRECT_AUX.
 
@@ -1262,10 +1297,12 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "SignDocDirectAux",
                     "package": "cosmos.tx.v1beta1",
                     "type": "Type",
                   },
                   "SignerInfo": {
+                    "aliasName": "SignerInfo",
                     "comment": "SignerInfo describes the public key and signing mode of a single top-level
  signer.",
                     "fields": {
@@ -1334,10 +1371,12 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "SignerInfo",
                     "package": "cosmos.tx.v1beta1",
                     "type": "Type",
                   },
                   "Tip": {
+                    "aliasName": "Tip",
                     "comment": "Tip is the tip used for meta-transactions.
 
  Since: cosmos-sdk 0.46",
@@ -1389,10 +1428,12 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "Tip",
                     "package": "cosmos.tx.v1beta1",
                     "type": "Type",
                   },
                   "Tx": {
+                    "aliasName": "Tx",
                     "comment": "Tx is the standard type used for broadcasting transactions.",
                     "fields": {
                       "authInfo": {
@@ -1455,10 +1496,12 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "Tx",
                     "package": "cosmos.tx.v1beta1",
                     "type": "Type",
                   },
                   "TxBody": {
+                    "aliasName": "TxBody",
                     "comment": "TxBody is the body of a transaction that all signers sign over.",
                     "fields": {
                       "extensionOptions": {
@@ -1578,10 +1621,12 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "TxBody",
                     "package": "cosmos.tx.v1beta1",
                     "type": "Type",
                   },
                   "TxRaw": {
+                    "aliasName": "TxRaw",
                     "comment": "TxRaw is a variant of Tx that pins the signer's exact binary representation
  of body and auth_info. This is used for signing, broadcasting and
  verification. The binary \`serialize(tx: TxRaw)\` is stored in Tendermint and
@@ -1647,6 +1692,7 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "TxRaw",
                     "package": "cosmos.tx.v1beta1",
                     "type": "Type",
                   },
@@ -1704,6 +1750,7 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
               "v1": {
                 "nested": {
                   "ClearAdminProposal": {
+                    "aliasName": "ClearAdminProposal",
                     "comment": "ClearAdminProposal gov proposal content type to clear the admin of a
  contract.",
                     "fields": {
@@ -1761,10 +1808,12 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "ClearAdminProposal",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "ExecuteContractProposal": {
+                    "aliasName": "ExecuteContractProposal",
                     "comment": "ExecuteContractProposal gov proposal content type to call execute on a
  contract.",
                     "fields": {
@@ -1879,10 +1928,12 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "ExecuteContractProposal",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "InstantiateContractProposal": {
+                    "aliasName": "InstantiateContractProposal",
                     "comment": "InstantiateContractProposal gov proposal content type to instantiate a
  contract.",
                     "fields": {
@@ -2030,10 +2081,12 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "InstantiateContractProposal",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "MigrateContractProposal": {
+                    "aliasName": "MigrateContractProposal",
                     "comment": "MigrateContractProposal gov proposal content type to migrate a contract.",
                     "fields": {
                       "codeId": {
@@ -2124,10 +2177,12 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MigrateContractProposal",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "PinCodesProposal": {
+                    "aliasName": "PinCodesProposal",
                     "comment": "PinCodesProposal gov proposal content type to pin a set of code ids in the
  wasmvm cache.",
                     "fields": {
@@ -2190,10 +2245,12 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "PinCodesProposal",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "StoreCodeProposal": {
+                    "aliasName": "StoreCodeProposal",
                     "comment": "StoreCodeProposal gov proposal content type to submit WASM code to the system",
                     "fields": {
                       "description": {
@@ -2289,10 +2346,12 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "StoreCodeProposal",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "SudoContractProposal": {
+                    "aliasName": "SudoContractProposal",
                     "comment": "SudoContractProposal gov proposal content type to call sudo on a contract.",
                     "fields": {
                       "contract": {
@@ -2366,10 +2425,12 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "SudoContractProposal",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "UnpinCodesProposal": {
+                    "aliasName": "UnpinCodesProposal",
                     "comment": "UnpinCodesProposal gov proposal content type to unpin a set of code ids in
  the wasmvm cache.",
                     "fields": {
@@ -2432,10 +2493,12 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "UnpinCodesProposal",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "UpdateAdminProposal": {
+                    "aliasName": "UpdateAdminProposal",
                     "comment": "UpdateAdminProposal gov proposal content type to set an admin for a contract.",
                     "fields": {
                       "contract": {
@@ -2509,6 +2572,7 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "UpdateAdminProposal",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
@@ -2580,6 +2644,7 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
               "v1": {
                 "nested": {
                   "CodeInfoResponse": {
+                    "aliasName": "CodeInfoResponse",
                     "comment": "CodeInfoResponse contains code meta data from CodeInfo",
                     "fields": {
                       "codeId": {
@@ -2641,6 +2706,7 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "options": {
                       "(gogoproto.equal)": true,
                     },
+                    "originalName": "CodeInfoResponse",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
@@ -2648,6 +2714,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "comment": "Query provides defines the gRPC querier service",
                     "methods": {
                       "AllContractState": {
+                        "aliasRequestType": "QueryAllContractStateRequest",
+                        "aliasResponseType": "QueryAllContractStateResponse",
                         "comment": "AllContractState gets all raw store data for a single contract",
                         "fields": {
                           "address": {
@@ -2710,11 +2778,15 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "options": {
                           "(google.api.http).get": "/cosmwasm/wasm/v1/contract/{address}/state",
                         },
+                        "originalRequestType": "QueryAllContractStateRequest",
+                        "originalResponseType": "QueryAllContractStateResponse",
                         "requestType": "QueryAllContractStateRequest",
                         "responseType": "QueryAllContractStateResponse",
                         "type": "ServiceMethod",
                       },
                       "Code": {
+                        "aliasRequestType": "QueryCodeRequest",
+                        "aliasResponseType": "QueryCodeResponse",
                         "comment": "Code gets the binary code and metadata for a singe wasm code",
                         "fields": {
                           "codeId": {
@@ -2752,11 +2824,15 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "options": {
                           "(google.api.http).get": "/cosmwasm/wasm/v1/code/{code_id}",
                         },
+                        "originalRequestType": "QueryCodeRequest",
+                        "originalResponseType": "QueryCodeResponse",
                         "requestType": "QueryCodeRequest",
                         "responseType": "QueryCodeResponse",
                         "type": "ServiceMethod",
                       },
                       "Codes": {
+                        "aliasRequestType": "QueryCodesRequest",
+                        "aliasResponseType": "QueryCodesResponse",
                         "comment": "Codes gets the metadata for all stored wasm codes",
                         "fields": {
                           "pagination": {
@@ -2799,11 +2875,15 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "options": {
                           "(google.api.http).get": "/cosmwasm/wasm/v1/code",
                         },
+                        "originalRequestType": "QueryCodesRequest",
+                        "originalResponseType": "QueryCodesResponse",
                         "requestType": "QueryCodesRequest",
                         "responseType": "QueryCodesResponse",
                         "type": "ServiceMethod",
                       },
                       "ContractHistory": {
+                        "aliasRequestType": "QueryContractHistoryRequest",
+                        "aliasResponseType": "QueryContractHistoryResponse",
                         "comment": "ContractHistory gets the contract code history",
                         "fields": {
                           "address": {
@@ -2866,11 +2946,15 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "options": {
                           "(google.api.http).get": "/cosmwasm/wasm/v1/contract/{address}/history",
                         },
+                        "originalRequestType": "QueryContractHistoryRequest",
+                        "originalResponseType": "QueryContractHistoryResponse",
                         "requestType": "QueryContractHistoryRequest",
                         "responseType": "QueryContractHistoryResponse",
                         "type": "ServiceMethod",
                       },
                       "ContractInfo": {
+                        "aliasRequestType": "QueryContractInfoRequest",
+                        "aliasResponseType": "QueryContractInfoResponse",
                         "comment": "ContractInfo gets the contract meta data",
                         "fields": {
                           "address": {
@@ -2908,11 +2992,15 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "options": {
                           "(google.api.http).get": "/cosmwasm/wasm/v1/contract/{address}",
                         },
+                        "originalRequestType": "QueryContractInfoRequest",
+                        "originalResponseType": "QueryContractInfoResponse",
                         "requestType": "QueryContractInfoRequest",
                         "responseType": "QueryContractInfoResponse",
                         "type": "ServiceMethod",
                       },
                       "ContractsByCode": {
+                        "aliasRequestType": "QueryContractsByCodeRequest",
+                        "aliasResponseType": "QueryContractsByCodeResponse",
                         "comment": "ContractsByCode lists all smart contracts for a code id",
                         "fields": {
                           "codeId": {
@@ -2975,11 +3063,15 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "options": {
                           "(google.api.http).get": "/cosmwasm/wasm/v1/code/{code_id}/contracts",
                         },
+                        "originalRequestType": "QueryContractsByCodeRequest",
+                        "originalResponseType": "QueryContractsByCodeResponse",
                         "requestType": "QueryContractsByCodeRequest",
                         "responseType": "QueryContractsByCodeResponse",
                         "type": "ServiceMethod",
                       },
                       "PinnedCodes": {
+                        "aliasRequestType": "QueryPinnedCodesRequest",
+                        "aliasResponseType": "QueryPinnedCodesResponse",
                         "comment": "PinnedCodes gets the pinned code ids",
                         "fields": {
                           "pagination": {
@@ -3022,11 +3114,15 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "options": {
                           "(google.api.http).get": "/cosmwasm/wasm/v1/codes/pinned",
                         },
+                        "originalRequestType": "QueryPinnedCodesRequest",
+                        "originalResponseType": "QueryPinnedCodesResponse",
                         "requestType": "QueryPinnedCodesRequest",
                         "responseType": "QueryPinnedCodesResponse",
                         "type": "ServiceMethod",
                       },
                       "RawContractState": {
+                        "aliasRequestType": "QueryRawContractStateRequest",
+                        "aliasResponseType": "QueryRawContractStateResponse",
                         "comment": "RawContractState gets single key from the raw store data of a contract",
                         "fields": {
                           "address": {
@@ -3083,11 +3179,15 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "options": {
                           "(google.api.http).get": "/wasm/v1/contract/{address}/raw/{query_data}",
                         },
+                        "originalRequestType": "QueryRawContractStateRequest",
+                        "originalResponseType": "QueryRawContractStateResponse",
                         "requestType": "QueryRawContractStateRequest",
                         "responseType": "QueryRawContractStateResponse",
                         "type": "ServiceMethod",
                       },
                       "SmartContractState": {
+                        "aliasRequestType": "QuerySmartContractStateRequest",
+                        "aliasResponseType": "QuerySmartContractStateResponse",
                         "comment": "SmartContractState get smart query result from the contract",
                         "fields": {
                           "address": {
@@ -3145,6 +3245,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "options": {
                           "(google.api.http).get": "/wasm/v1/contract/{address}/smart/{query_data}",
                         },
+                        "originalRequestType": "QuerySmartContractStateRequest",
+                        "originalResponseType": "QuerySmartContractStateResponse",
                         "requestType": "QuerySmartContractStateRequest",
                         "responseType": "QuerySmartContractStateResponse",
                         "type": "ServiceMethod",
@@ -3154,6 +3256,7 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "type": "Service",
                   },
                   "QueryAllContractStateRequest": {
+                    "aliasName": "QueryAllContractStateRequest",
                     "comment": "QueryAllContractStateRequest is the request type for the
  Query/AllContractState RPC method",
                     "fields": {
@@ -3200,10 +3303,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryAllContractStateRequest",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryAllContractStateResponse": {
+                    "aliasName": "QueryAllContractStateResponse",
                     "comment": "QueryAllContractStateResponse is the response type for the
  Query/AllContractState RPC method",
                     "fields": {
@@ -3258,10 +3363,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryAllContractStateResponse",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryCodeRequest": {
+                    "aliasName": "QueryCodeRequest",
                     "comment": "QueryCodeRequest is the request type for the Query/Code RPC method",
                     "fields": {
                       "codeId": {
@@ -3286,10 +3393,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryCodeRequest",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryCodeResponse": {
+                    "aliasName": "QueryCodeResponse",
                     "comment": "QueryCodeResponse is the response type for the Query/Code RPC method",
                     "fields": {
                       "codeInfo": {
@@ -3336,10 +3445,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "options": {
                       "(gogoproto.equal)": true,
                     },
+                    "originalName": "QueryCodeResponse",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryCodesRequest": {
+                    "aliasName": "QueryCodesRequest",
                     "comment": "QueryCodesRequest is the request type for the Query/Codes RPC method",
                     "fields": {
                       "pagination": {
@@ -3369,10 +3480,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryCodesRequest",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryCodesResponse": {
+                    "aliasName": "QueryCodesResponse",
                     "comment": "QueryCodesResponse is the response type for the Query/Codes RPC method",
                     "fields": {
                       "codeInfos": {
@@ -3421,10 +3534,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryCodesResponse",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryContractHistoryRequest": {
+                    "aliasName": "QueryContractHistoryRequest",
                     "comment": "QueryContractHistoryRequest is the request type for the Query/ContractHistory
  RPC method",
                     "fields": {
@@ -3471,10 +3586,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryContractHistoryRequest",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryContractHistoryResponse": {
+                    "aliasName": "QueryContractHistoryResponse",
                     "comment": "QueryContractHistoryResponse is the response type for the
  Query/ContractHistory RPC method",
                     "fields": {
@@ -3529,10 +3646,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryContractHistoryResponse",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryContractInfoRequest": {
+                    "aliasName": "QueryContractInfoRequest",
                     "comment": "QueryContractInfoRequest is the request type for the Query/ContractInfo RPC
  method",
                     "fields": {
@@ -3558,10 +3677,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryContractInfoRequest",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryContractInfoResponse": {
+                    "aliasName": "QueryContractInfoResponse",
                     "comment": "QueryContractInfoResponse is the response type for the Query/ContractInfo RPC
  method",
                     "fields": {
@@ -3614,10 +3735,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "options": {
                       "(gogoproto.equal)": true,
                     },
+                    "originalName": "QueryContractInfoResponse",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryContractsByCodeRequest": {
+                    "aliasName": "QueryContractsByCodeRequest",
                     "comment": "QueryContractsByCodeRequest is the request type for the Query/ContractsByCode
  RPC method",
                     "fields": {
@@ -3664,10 +3787,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryContractsByCodeRequest",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryContractsByCodeResponse": {
+                    "aliasName": "QueryContractsByCodeResponse",
                     "comment": "QueryContractsByCodeResponse is the response type for the
  Query/ContractsByCode RPC method",
                     "fields": {
@@ -3715,10 +3840,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryContractsByCodeResponse",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryPinnedCodesRequest": {
+                    "aliasName": "QueryPinnedCodesRequest",
                     "comment": "QueryPinnedCodesRequest is the request type for the Query/PinnedCodes
  RPC method",
                     "fields": {
@@ -3749,10 +3876,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryPinnedCodesRequest",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryPinnedCodesResponse": {
+                    "aliasName": "QueryPinnedCodesResponse",
                     "comment": "QueryPinnedCodesResponse is the response type for the
  Query/PinnedCodes RPC method",
                     "fields": {
@@ -3802,10 +3931,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryPinnedCodesResponse",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryRawContractStateRequest": {
+                    "aliasName": "QueryRawContractStateRequest",
                     "comment": "QueryRawContractStateRequest is the request type for the
  Query/RawContractState RPC method",
                     "fields": {
@@ -3847,10 +3978,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryRawContractStateRequest",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QueryRawContractStateResponse": {
+                    "aliasName": "QueryRawContractStateResponse",
                     "comment": "QueryRawContractStateResponse is the response type for the
  Query/RawContractState RPC method",
                     "fields": {
@@ -3876,10 +4009,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QueryRawContractStateResponse",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QuerySmartContractStateRequest": {
+                    "aliasName": "QuerySmartContractStateRequest",
                     "comment": "QuerySmartContractStateRequest is the request type for the
  Query/SmartContractState RPC method",
                     "fields": {
@@ -3922,10 +4057,12 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QuerySmartContractStateRequest",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
                   "QuerySmartContractStateResponse": {
+                    "aliasName": "QuerySmartContractStateResponse",
                     "comment": "QuerySmartContractStateResponse is the response type for the
  Query/SmartContractState RPC method",
                     "fields": {
@@ -3952,6 +4089,7 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "QuerySmartContractStateResponse",
                     "package": "cosmwasm.wasm.v1",
                     "type": "Type",
                   },
@@ -4011,6 +4149,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                   "v1alpha1": {
                     "nested": {
                       "CheckedExpr": {
+                        "aliasName": "CheckedExpr",
                         "comment": "A CEL expression which has been successfully type checked.",
                         "fields": {
                           "expr": {
@@ -4198,10 +4337,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         "nested": null,
                         "oneofs": undefined,
                         "options": undefined,
+                        "originalName": "CheckedExpr",
                         "package": "google.api.expr.v1alpha1",
                         "type": "Type",
                       },
                       "Decl": {
+                        "aliasName": "Decl",
                         "comment": "Represents a declaration of a named value or function.
 
  A declaration is part of the contract between the expression, the agent
@@ -4271,6 +4412,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         "name": "Decl",
                         "nested": {
                           "FunctionDecl": {
+                            "aliasName": "FunctionDecl",
                             "comment": "Function declaration specifies one or more overloads which indicate the
  function's parameter types and return type.
 
@@ -4302,6 +4444,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "name": "FunctionDecl",
                             "nested": {
                               "Overload": {
+                                "aliasName": "Overload",
                                 "comment": "An overload indicates a function's parameter types and return type, and
  may optionally include a function body described in terms of [Expr][google.api.expr.v1alpha1.Expr]
  values.
@@ -4440,16 +4583,19 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                 "nested": null,
                                 "oneofs": undefined,
                                 "options": undefined,
+                                "originalName": "Overload",
                                 "package": "google.api.expr.v1alpha1",
                                 "type": "Type",
                               },
                             },
                             "oneofs": undefined,
                             "options": undefined,
+                            "originalName": "FunctionDecl",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Type",
                           },
                           "IdentDecl": {
+                            "aliasName": "IdentDecl",
                             "comment": "Identifier declaration which specifies its type and optional \`Expr\` value.
 
  An identifier without a value is a declaration that must be provided at
@@ -4519,6 +4665,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "nested": null,
                             "oneofs": undefined,
                             "options": undefined,
+                            "originalName": "IdentDecl",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Type",
                           },
@@ -4532,10 +4679,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                           },
                         },
                         "options": undefined,
+                        "originalName": "Decl",
                         "package": "google.api.expr.v1alpha1",
                         "type": "Type",
                       },
                       "Reference": {
+                        "aliasName": "Reference",
                         "comment": "Describes a resolved reference to a declaration.",
                         "fields": {
                           "name": {
@@ -4607,10 +4756,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         "nested": null,
                         "oneofs": undefined,
                         "options": undefined,
+                        "originalName": "Reference",
                         "package": "google.api.expr.v1alpha1",
                         "type": "Type",
                       },
                       "Type": {
+                        "aliasName": "Type",
                         "comment": "Represents a CEL type.",
                         "fields": {
                           "abstractType": {
@@ -4870,6 +5021,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         "name": "Type",
                         "nested": {
                           "AbstractType": {
+                            "aliasName": "AbstractType",
                             "comment": "Application defined abstract type.",
                             "fields": {
                               "name": {
@@ -4912,10 +5064,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "nested": null,
                             "oneofs": undefined,
                             "options": undefined,
+                            "originalName": "AbstractType",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Type",
                           },
                           "FunctionType": {
+                            "aliasName": "FunctionType",
                             "comment": "Function type with result and arg types.",
                             "fields": {
                               "argTypes": {
@@ -4959,10 +5113,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "nested": null,
                             "oneofs": undefined,
                             "options": undefined,
+                            "originalName": "FunctionType",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Type",
                           },
                           "ListType": {
+                            "aliasName": "ListType",
                             "comment": "List type with typed elements, e.g. \`list<example.proto.MyMessage>\`.",
                             "fields": {
                               "elemType": {
@@ -4988,10 +5144,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "nested": null,
                             "oneofs": undefined,
                             "options": undefined,
+                            "originalName": "ListType",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Type",
                           },
                           "MapType": {
+                            "aliasName": "MapType",
                             "comment": "Map type with parameterized key and value types, e.g. \`map<string, int>\`.",
                             "fields": {
                               "keyType": {
@@ -5034,10 +5192,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "nested": null,
                             "oneofs": undefined,
                             "options": undefined,
+                            "originalName": "MapType",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Type",
                           },
                           "PrimitiveType": {
+                            "aliasName": "PrimitiveType",
                             "comment": "CEL primitive types.",
                             "comments": {
                               "BOOL": "Boolean type.",
@@ -5055,6 +5215,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
  Proto-based unsigned integer values are widened to uint64.",
                             },
                             "name": "PrimitiveType",
+                            "originalName": "PrimitiveType",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Enum",
                             "values": {
@@ -5068,6 +5229,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             },
                           },
                           "WellKnownType": {
+                            "aliasName": "WellKnownType",
                             "comment": "Well-known protobuf types treated with first-class support in CEL.",
                             "comments": {
                               "ANY": "Well-known protobuf.Any type.
@@ -5080,6 +5242,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "WELL_KNOWN_TYPE_UNSPECIFIED": "Unspecified type.",
                             },
                             "name": "WellKnownType",
+                            "originalName": "WellKnownType",
                             "package": "google.api.expr.v1alpha1",
                             "type": "Enum",
                             "values": {
@@ -5110,6 +5273,7 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                           },
                         },
                         "options": undefined,
+                        "originalName": "Type",
                         "package": "google.api.expr.v1alpha1",
                         "type": "Type",
                       },
@@ -5162,6 +5326,7 @@ exports[`osmosis/claim/v1beta1/params 1`] = `
               "v1beta1": {
                 "nested": {
                   "Params": {
+                    "aliasName": "Params",
                     "comment": "Params defines the claim module's parameters.",
                     "fields": {
                       "airdropStartTime": {
@@ -5260,6 +5425,7 @@ exports[`osmosis/claim/v1beta1/params 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "Params",
                     "package": "osmosis.claim.v1beta1",
                     "type": "Type",
                   },
@@ -5325,6 +5491,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "comment": null,
                     "methods": {
                       "ExitPool": {
+                        "aliasRequestType": "MsgExitPool",
+                        "aliasResponseType": "MsgExitPoolResponse",
                         "comment": null,
                         "fields": {
                           "poolId": {
@@ -5408,11 +5576,15 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "info": undefined,
                         "name": "ExitPool",
                         "options": undefined,
+                        "originalRequestType": "MsgExitPool",
+                        "originalResponseType": "MsgExitPoolResponse",
                         "requestType": "MsgExitPool",
                         "responseType": "MsgExitPoolResponse",
                         "type": "ServiceMethod",
                       },
                       "ExitSwapExternAmountOut": {
+                        "aliasRequestType": "MsgExitSwapExternAmountOut",
+                        "aliasResponseType": "MsgExitSwapExternAmountOutResponse",
                         "comment": null,
                         "fields": {
                           "poolId": {
@@ -5495,11 +5667,15 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "info": undefined,
                         "name": "ExitSwapExternAmountOut",
                         "options": undefined,
+                        "originalRequestType": "MsgExitSwapExternAmountOut",
+                        "originalResponseType": "MsgExitSwapExternAmountOutResponse",
                         "requestType": "MsgExitSwapExternAmountOut",
                         "responseType": "MsgExitSwapExternAmountOutResponse",
                         "type": "ServiceMethod",
                       },
                       "ExitSwapShareAmountIn": {
+                        "aliasRequestType": "MsgExitSwapShareAmountIn",
+                        "aliasResponseType": "MsgExitSwapShareAmountInResponse",
                         "comment": null,
                         "fields": {
                           "poolId": {
@@ -5595,11 +5771,15 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "info": undefined,
                         "name": "ExitSwapShareAmountIn",
                         "options": undefined,
+                        "originalRequestType": "MsgExitSwapShareAmountIn",
+                        "originalResponseType": "MsgExitSwapShareAmountInResponse",
                         "requestType": "MsgExitSwapShareAmountIn",
                         "responseType": "MsgExitSwapShareAmountInResponse",
                         "type": "ServiceMethod",
                       },
                       "JoinPool": {
+                        "aliasRequestType": "MsgJoinPool",
+                        "aliasResponseType": "MsgJoinPoolResponse",
                         "comment": null,
                         "fields": {
                           "poolId": {
@@ -5683,11 +5863,15 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "info": undefined,
                         "name": "JoinPool",
                         "options": undefined,
+                        "originalRequestType": "MsgJoinPool",
+                        "originalResponseType": "MsgJoinPoolResponse",
                         "requestType": "MsgJoinPool",
                         "responseType": "MsgJoinPoolResponse",
                         "type": "ServiceMethod",
                       },
                       "JoinSwapExternAmountIn": {
+                        "aliasRequestType": "MsgJoinSwapExternAmountIn",
+                        "aliasResponseType": "MsgJoinSwapExternAmountInResponse",
                         "comment": null,
                         "fields": {
                           "poolId": {
@@ -5770,11 +5954,15 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "info": undefined,
                         "name": "JoinSwapExternAmountIn",
                         "options": undefined,
+                        "originalRequestType": "MsgJoinSwapExternAmountIn",
+                        "originalResponseType": "MsgJoinSwapExternAmountInResponse",
                         "requestType": "MsgJoinSwapExternAmountIn",
                         "responseType": "MsgJoinSwapExternAmountInResponse",
                         "type": "ServiceMethod",
                       },
                       "JoinSwapShareAmountOut": {
+                        "aliasRequestType": "MsgJoinSwapShareAmountOut",
+                        "aliasResponseType": "MsgJoinSwapShareAmountOutResponse",
                         "comment": null,
                         "fields": {
                           "poolId": {
@@ -5870,11 +6058,15 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "info": undefined,
                         "name": "JoinSwapShareAmountOut",
                         "options": undefined,
+                        "originalRequestType": "MsgJoinSwapShareAmountOut",
+                        "originalResponseType": "MsgJoinSwapShareAmountOutResponse",
                         "requestType": "MsgJoinSwapShareAmountOut",
                         "responseType": "MsgJoinSwapShareAmountOutResponse",
                         "type": "ServiceMethod",
                       },
                       "SwapExactAmountIn": {
+                        "aliasRequestType": "MsgSwapExactAmountIn",
+                        "aliasResponseType": "MsgSwapExactAmountInResponse",
                         "comment": null,
                         "fields": {
                           "routes": {
@@ -5959,11 +6151,15 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "info": undefined,
                         "name": "SwapExactAmountIn",
                         "options": undefined,
+                        "originalRequestType": "MsgSwapExactAmountIn",
+                        "originalResponseType": "MsgSwapExactAmountInResponse",
                         "requestType": "MsgSwapExactAmountIn",
                         "responseType": "MsgSwapExactAmountInResponse",
                         "type": "ServiceMethod",
                       },
                       "SwapExactAmountOut": {
+                        "aliasRequestType": "MsgSwapExactAmountOut",
+                        "aliasResponseType": "MsgSwapExactAmountOutResponse",
                         "comment": null,
                         "fields": {
                           "routes": {
@@ -6048,6 +6244,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "info": undefined,
                         "name": "SwapExactAmountOut",
                         "options": undefined,
+                        "originalRequestType": "MsgSwapExactAmountOut",
+                        "originalResponseType": "MsgSwapExactAmountOutResponse",
                         "requestType": "MsgSwapExactAmountOut",
                         "responseType": "MsgSwapExactAmountOutResponse",
                         "type": "ServiceMethod",
@@ -6057,6 +6255,7 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "type": "Service",
                   },
                   "MsgExitPool": {
+                    "aliasName": "MsgExitPool",
                     "comment": "===================== MsgExitPool",
                     "fields": {
                       "poolId": {
@@ -6142,10 +6341,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgExitPool",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgExitPoolResponse": {
+                    "aliasName": "MsgExitPoolResponse",
                     "comment": null,
                     "fields": {
                       "tokenOut": {
@@ -6178,10 +6379,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgExitPoolResponse",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgExitSwapExternAmountOut": {
+                    "aliasName": "MsgExitSwapExternAmountOut",
                     "comment": "===================== MsgExitSwapExternAmountOut",
                     "fields": {
                       "poolId": {
@@ -6266,10 +6469,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgExitSwapExternAmountOut",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgExitSwapExternAmountOutResponse": {
+                    "aliasName": "MsgExitSwapExternAmountOutResponse",
                     "comment": null,
                     "fields": {
                       "shareInAmount": {
@@ -6297,10 +6502,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgExitSwapExternAmountOutResponse",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgExitSwapShareAmountIn": {
+                    "aliasName": "MsgExitSwapShareAmountIn",
                     "comment": "===================== MsgExitSwapShareAmountIn",
                     "fields": {
                       "poolId": {
@@ -6398,10 +6605,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgExitSwapShareAmountIn",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgExitSwapShareAmountInResponse": {
+                    "aliasName": "MsgExitSwapShareAmountInResponse",
                     "comment": null,
                     "fields": {
                       "tokenOutAmount": {
@@ -6429,10 +6638,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgExitSwapShareAmountInResponse",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgJoinPool": {
+                    "aliasName": "MsgJoinPool",
                     "comment": "===================== MsgJoinPool
  This is really MsgJoinPoolNoSwap",
                     "fields": {
@@ -6519,10 +6730,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgJoinPool",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgJoinPoolResponse": {
+                    "aliasName": "MsgJoinPoolResponse",
                     "comment": null,
                     "fields": {
                       "shareOutAmount": {
@@ -6574,10 +6787,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgJoinPoolResponse",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgJoinSwapExternAmountIn": {
+                    "aliasName": "MsgJoinSwapExternAmountIn",
                     "comment": "===================== MsgJoinSwapExternAmountIn
  TODO: Rename to MsgJoinSwapExactAmountIn",
                     "fields": {
@@ -6663,10 +6878,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgJoinSwapExternAmountIn",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgJoinSwapExternAmountInResponse": {
+                    "aliasName": "MsgJoinSwapExternAmountInResponse",
                     "comment": null,
                     "fields": {
                       "shareOutAmount": {
@@ -6694,10 +6911,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgJoinSwapExternAmountInResponse",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgJoinSwapShareAmountOut": {
+                    "aliasName": "MsgJoinSwapShareAmountOut",
                     "comment": "===================== MsgJoinSwapShareAmountOut",
                     "fields": {
                       "poolId": {
@@ -6795,10 +7014,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgJoinSwapShareAmountOut",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgJoinSwapShareAmountOutResponse": {
+                    "aliasName": "MsgJoinSwapShareAmountOutResponse",
                     "comment": null,
                     "fields": {
                       "tokenInAmount": {
@@ -6826,10 +7047,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgJoinSwapShareAmountOutResponse",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgSwapExactAmountIn": {
+                    "aliasName": "MsgSwapExactAmountIn",
                     "comment": null,
                     "fields": {
                       "routes": {
@@ -6916,10 +7139,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgSwapExactAmountIn",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgSwapExactAmountInResponse": {
+                    "aliasName": "MsgSwapExactAmountInResponse",
                     "comment": null,
                     "fields": {
                       "tokenOutAmount": {
@@ -6947,10 +7172,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgSwapExactAmountInResponse",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgSwapExactAmountOut": {
+                    "aliasName": "MsgSwapExactAmountOut",
                     "comment": null,
                     "fields": {
                       "routes": {
@@ -7037,10 +7264,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgSwapExactAmountOut",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "MsgSwapExactAmountOutResponse": {
+                    "aliasName": "MsgSwapExactAmountOutResponse",
                     "comment": null,
                     "fields": {
                       "tokenInAmount": {
@@ -7068,10 +7297,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "MsgSwapExactAmountOutResponse",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "SwapAmountInRoute": {
+                    "aliasName": "SwapAmountInRoute",
                     "comment": "===================== MsgSwapExactAmountIn",
                     "fields": {
                       "poolId": {
@@ -7114,10 +7345,12 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "SwapAmountInRoute",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },
                   "SwapAmountOutRoute": {
+                    "aliasName": "SwapAmountOutRoute",
                     "comment": "===================== MsgSwapExactAmountOut",
                     "fields": {
                       "poolId": {
@@ -7160,6 +7393,7 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "nested": null,
                     "oneofs": undefined,
                     "options": undefined,
+                    "originalName": "SwapAmountOutRoute",
                     "package": "osmosis.gamm.v1beta1",
                     "type": "Type",
                   },

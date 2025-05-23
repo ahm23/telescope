@@ -33,6 +33,8 @@ export interface ImportUsage {
 export interface ProtoEnum {
     type?: 'Enum';
     name?: string;
+    originalName?: string;
+    aliasName?: string;
     package?: string; // added by parser
     values: { [key: string]: number };
     valuesOptions?: {
@@ -47,6 +49,8 @@ export interface ProtoEnum {
 export interface ProtoType {
     type?: 'Type';
     name?: string;
+    originalName?: string;
+    aliasName?: string;
     package?: string; // added by parser
     oneofs?: { [key: string]: { oneof: string[], comment: string | undefined } },
     options?: {
@@ -86,6 +90,8 @@ export interface ProtoField {
         type: string;
     },
     message?: string; // added by parser
+    originalMessage?: string; // added by parser
+    aliasMessage?: string; // added by parser
     package?: string; // added by parser
 
     keyType?: string;
@@ -153,7 +159,11 @@ export interface ProtoServiceMethod {
     }
     comment?: string;
     requestType: string;
+    originalRequestType?: string;
+    aliasRequestType?: string;
     responseType: string;
+    originalResponseType?: string;
+    aliasResponseType?: string;
     fields: Record<string, ProtoField>
 };
 export interface ProtoService {

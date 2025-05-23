@@ -2,6 +2,7 @@
 
 exports[`double import bug GenesisState 1`] = `
 {
+  "aliasName": "GenesisState",
   "comment": "GenesisState defines the ibc module's genesis state.",
   "fields": {
     "channelGenesis": {
@@ -79,6 +80,7 @@ exports[`double import bug GenesisState 1`] = `
   "nested": null,
   "oneofs": undefined,
   "options": undefined,
+  "originalName": "GenesisState",
   "package": "ibc.core.types.v1",
   "scope": [
     "ibc.core.types.v1",
@@ -206,6 +208,7 @@ exports[`proto import self imports/exports 3`] = `
 
 exports[`test nested msg TestNest_Graph 1`] = `
 {
+  "aliasName": "Graph",
   "comment": null,
   "fields": {
     "name": {
@@ -231,6 +234,7 @@ exports[`test nested msg TestNest_Graph 1`] = `
   "nestedMsgTypeName": "TestNest_Graph",
   "oneofs": undefined,
   "options": undefined,
+  "originalName": "Graph",
   "package": "misc",
   "scope": [
     "misc",

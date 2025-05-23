@@ -1,5 +1,74 @@
-import { getQueryMethodNames, makePkgMethodName, makeUsePkgHookName } from "..";
+import { getAliasName, getQueryMethodNames, makePkgMethodName, makeUsePkgHookName } from "..";
+import { pascal } from "case";
 
+// getAliasName tests
+it("returns the type name if there's no alias", () => {
+  const result = getAliasName("cosmos.bank.v1beta1", "Balance", undefined);
+
+  expect(result).toBe("Balance");
+});
+
+it("returns the alias name if there's an alias", () => {
+  const result = getAliasName("cosmos.bank.v1beta1", "Balance", {
+    "cosmos.bank.v1beta1.Balance": "BalanceAlias",
+  });
+
+  expect(result).toBe("BalanceAlias");
+});
+
+it("returns the alias name if there's an alias with a function", () => {
+  const result = getAliasName("cosmos.bank.v1beta1", "Balance", {
+    "cosmos.bank.v1beta1.Balance": (ctx) => {
+      return ctx.name + "Alias";
+    },
+  });
+
+  expect(result).toBe("BalanceAlias");
+
+  const result2 = getAliasName("cosmos.bank.v1beta1", "AllBalance", {
+    "cosmos.bank.v1beta1.AllBalance": (ctx) => {
+      //replace all the dots with underscores
+      const packageName = pascal(ctx.package.replace(/\./g, "_"));
+      return packageName + ctx.name + "Alias2";
+    },
+  });
+
+  expect(result2).toBe("CosmosBankV1beta1AllBalanceAlias2");
+});
+
+it("returns the alias name if there's an minimatch match alias", () => {
+  const result = getAliasName("cosmos.bank.v1beta1", "Balance", {
+    "cosmos.**.*Balance":(ctx) => {
+      //replace all the dots with underscores
+      const packageName = pascal(ctx.package.replace(/\./g, "_"));
+      return packageName + ctx.name + "Alias";
+    },
+  });
+
+  expect(result).toBe("CosmosBankV1beta1BalanceAlias");
+
+  const result2 = getAliasName("cosmos.bank.v1beta1", "AllBalance", {
+    "cosmos.**.*Balance":(ctx) => {
+      //replace all the dots with underscores
+      const packageName = pascal(ctx.package.replace(/\./g, "_"));
+      return packageName + ctx.name + "Alias2";
+    },
+  });
+
+  expect(result2).toBe("CosmosBankV1beta1AllBalanceAlias2");
+});
+
+it("returns the name if there's no alias", () => {
+  const result = getAliasName("cosmos.bank.v1beta1", "Balance", {
+    "cosmos.**.*Votes": "VotesAlias",
+  });
+
+  expect(result).toBe("Balance");
+});
+
+// getAliasName tests end
+
+// getQueryMethodNames tests
 it("is empty if there's no pattern for getQueryMethodNames", () => {
   const result = getQueryMethodNames("cosmos.bank.v1beta1", [
     "Balance",
@@ -48,6 +117,7 @@ it('returns ["Params"] matching *.nft.*.useBalance and **.*arams for getQueryMet
 
   expect(result).toMatchObject(["Params"]);
 });
+// getQueryMethodNames tests end
 
 it("returns useAB1CAllBalance for makeUsePkgHookName('a.b1.c', 'AllBalance')", () => {
   const result = makeUsePkgHookName("a.b1.c", "AllBalance")

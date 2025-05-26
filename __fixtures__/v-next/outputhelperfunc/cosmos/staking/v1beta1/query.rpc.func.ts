@@ -4,6 +4,7 @@ import { EndpointOrRpc, buildQuery } from "../../../helper-func-types";
 import { buildUseQuery } from "../../../react-query";
 import { buildUseVueQuery } from "../../../vue-query";
 import { QueryValidatorsRequest, QueryValidatorsRequestSDKType, QueryValidatorsResponse, QueryValidatorsResponseSDKType, QueryValidatorRequest, QueryValidatorRequestSDKType, QueryValidatorResponse, QueryValidatorResponseSDKType, QueryValidatorDelegationsRequest, QueryValidatorDelegationsRequestSDKType, QueryValidatorDelegationsResponse, QueryValidatorDelegationsResponseSDKType, QueryValidatorUnbondingDelegationsRequest, QueryValidatorUnbondingDelegationsRequestSDKType, QueryValidatorUnbondingDelegationsResponse, QueryValidatorUnbondingDelegationsResponseSDKType, QueryDelegationRequest, QueryDelegationRequestSDKType, QueryDelegationResponse, QueryDelegationResponseSDKType, QueryUnbondingDelegationRequest, QueryUnbondingDelegationRequestSDKType, QueryUnbondingDelegationResponse, QueryUnbondingDelegationResponseSDKType, QueryDelegatorDelegationsRequest, QueryDelegatorDelegationsRequestSDKType, QueryDelegatorDelegationsResponse, QueryDelegatorDelegationsResponseSDKType, QueryDelegatorUnbondingDelegationsRequest, QueryDelegatorUnbondingDelegationsRequestSDKType, QueryDelegatorUnbondingDelegationsResponse, QueryDelegatorUnbondingDelegationsResponseSDKType, QueryRedelegationsRequest, QueryRedelegationsRequestSDKType, QueryRedelegationsResponse, QueryRedelegationsResponseSDKType, QueryDelegatorValidatorsRequest, QueryDelegatorValidatorsRequestSDKType, QueryDelegatorValidatorsResponse, QueryDelegatorValidatorsResponseSDKType, QueryDelegatorValidatorRequest, QueryDelegatorValidatorRequestSDKType, QueryDelegatorValidatorResponse, QueryDelegatorValidatorResponseSDKType, QueryHistoricalInfoRequest, QueryHistoricalInfoRequestSDKType, QueryHistoricalInfoResponse, QueryHistoricalInfoResponseSDKType, QueryPoolRequest, QueryPoolRequestSDKType, QueryPoolResponse, QueryPoolResponseSDKType, QueryParamsRequest, QueryParamsRequestSDKType, QueryParamsResponse, QueryParamsResponseSDKType } from "./query";
+/* Validators queries all validators that match the given status. */
 export const getValidators = buildQuery<QueryValidatorsRequest, QueryValidatorsResponse>({
   encode: QueryValidatorsRequest.encode,
   decode: QueryValidatorsResponse.decode,
@@ -11,6 +12,7 @@ export const getValidators = buildQuery<QueryValidatorsRequest, QueryValidatorsR
   method: "Validators",
   deps: [QueryValidatorsRequest, QueryValidatorsResponse]
 });
+/* Validator queries validator info for given validator address. */
 export const getValidator = buildQuery<QueryValidatorRequest, QueryValidatorResponse>({
   encode: QueryValidatorRequest.encode,
   decode: QueryValidatorResponse.decode,
@@ -18,6 +20,7 @@ export const getValidator = buildQuery<QueryValidatorRequest, QueryValidatorResp
   method: "Validator",
   deps: [QueryValidatorRequest, QueryValidatorResponse]
 });
+/* ValidatorDelegations queries delegate info for given validator. */
 export const getValidatorDelegations = buildQuery<QueryValidatorDelegationsRequest, QueryValidatorDelegationsResponse>({
   encode: QueryValidatorDelegationsRequest.encode,
   decode: QueryValidatorDelegationsResponse.decode,
@@ -25,6 +28,7 @@ export const getValidatorDelegations = buildQuery<QueryValidatorDelegationsReque
   method: "ValidatorDelegations",
   deps: [QueryValidatorDelegationsRequest, QueryValidatorDelegationsResponse]
 });
+/* ValidatorUnbondingDelegations queries unbonding delegations of a validator. */
 export const getValidatorUnbondingDelegations = buildQuery<QueryValidatorUnbondingDelegationsRequest, QueryValidatorUnbondingDelegationsResponse>({
   encode: QueryValidatorUnbondingDelegationsRequest.encode,
   decode: QueryValidatorUnbondingDelegationsResponse.decode,
@@ -32,6 +36,7 @@ export const getValidatorUnbondingDelegations = buildQuery<QueryValidatorUnbondi
   method: "ValidatorUnbondingDelegations",
   deps: [QueryValidatorUnbondingDelegationsRequest, QueryValidatorUnbondingDelegationsResponse]
 });
+/* Delegation queries delegate info for given validator delegator pair. */
 export const getDelegation = buildQuery<QueryDelegationRequest, QueryDelegationResponse>({
   encode: QueryDelegationRequest.encode,
   decode: QueryDelegationResponse.decode,
@@ -39,6 +44,8 @@ export const getDelegation = buildQuery<QueryDelegationRequest, QueryDelegationR
   method: "Delegation",
   deps: [QueryDelegationRequest, QueryDelegationResponse]
 });
+/* UnbondingDelegation queries unbonding info for given validator delegator
+ pair. */
 export const getUnbondingDelegation = buildQuery<QueryUnbondingDelegationRequest, QueryUnbondingDelegationResponse>({
   encode: QueryUnbondingDelegationRequest.encode,
   decode: QueryUnbondingDelegationResponse.decode,
@@ -46,6 +53,7 @@ export const getUnbondingDelegation = buildQuery<QueryUnbondingDelegationRequest
   method: "UnbondingDelegation",
   deps: [QueryUnbondingDelegationRequest, QueryUnbondingDelegationResponse]
 });
+/* DelegatorDelegations queries all delegations of a given delegator address. */
 export const getDelegatorDelegations = buildQuery<QueryDelegatorDelegationsRequest, QueryDelegatorDelegationsResponse>({
   encode: QueryDelegatorDelegationsRequest.encode,
   decode: QueryDelegatorDelegationsResponse.decode,
@@ -53,6 +61,8 @@ export const getDelegatorDelegations = buildQuery<QueryDelegatorDelegationsReque
   method: "DelegatorDelegations",
   deps: [QueryDelegatorDelegationsRequest, QueryDelegatorDelegationsResponse]
 });
+/* DelegatorUnbondingDelegations queries all unbonding delegations of a given
+ delegator address. */
 export const getDelegatorUnbondingDelegations = buildQuery<QueryDelegatorUnbondingDelegationsRequest, QueryDelegatorUnbondingDelegationsResponse>({
   encode: QueryDelegatorUnbondingDelegationsRequest.encode,
   decode: QueryDelegatorUnbondingDelegationsResponse.decode,
@@ -60,6 +70,7 @@ export const getDelegatorUnbondingDelegations = buildQuery<QueryDelegatorUnbondi
   method: "DelegatorUnbondingDelegations",
   deps: [QueryDelegatorUnbondingDelegationsRequest, QueryDelegatorUnbondingDelegationsResponse]
 });
+/* Redelegations queries redelegations of given address. */
 export const getRedelegations = buildQuery<QueryRedelegationsRequest, QueryRedelegationsResponse>({
   encode: QueryRedelegationsRequest.encode,
   decode: QueryRedelegationsResponse.decode,
@@ -67,6 +78,8 @@ export const getRedelegations = buildQuery<QueryRedelegationsRequest, QueryRedel
   method: "Redelegations",
   deps: [QueryRedelegationsRequest, QueryRedelegationsResponse]
 });
+/* DelegatorValidators queries all validators info for given delegator
+ address. */
 export const getDelegatorValidators = buildQuery<QueryDelegatorValidatorsRequest, QueryDelegatorValidatorsResponse>({
   encode: QueryDelegatorValidatorsRequest.encode,
   decode: QueryDelegatorValidatorsResponse.decode,
@@ -74,6 +87,8 @@ export const getDelegatorValidators = buildQuery<QueryDelegatorValidatorsRequest
   method: "DelegatorValidators",
   deps: [QueryDelegatorValidatorsRequest, QueryDelegatorValidatorsResponse]
 });
+/* DelegatorValidator queries validator info for given delegator validator
+ pair. */
 export const getDelegatorValidator = buildQuery<QueryDelegatorValidatorRequest, QueryDelegatorValidatorResponse>({
   encode: QueryDelegatorValidatorRequest.encode,
   decode: QueryDelegatorValidatorResponse.decode,
@@ -81,6 +96,7 @@ export const getDelegatorValidator = buildQuery<QueryDelegatorValidatorRequest, 
   method: "DelegatorValidator",
   deps: [QueryDelegatorValidatorRequest, QueryDelegatorValidatorResponse]
 });
+/* HistoricalInfo queries the historical info for given height. */
 export const getHistoricalInfo = buildQuery<QueryHistoricalInfoRequest, QueryHistoricalInfoResponse>({
   encode: QueryHistoricalInfoRequest.encode,
   decode: QueryHistoricalInfoResponse.decode,
@@ -88,6 +104,7 @@ export const getHistoricalInfo = buildQuery<QueryHistoricalInfoRequest, QueryHis
   method: "HistoricalInfo",
   deps: [QueryHistoricalInfoRequest, QueryHistoricalInfoResponse]
 });
+/* Pool queries the pool info. */
 export const getPool = buildQuery<QueryPoolRequest, QueryPoolResponse>({
   encode: QueryPoolRequest.encode,
   decode: QueryPoolResponse.decode,
@@ -95,6 +112,7 @@ export const getPool = buildQuery<QueryPoolRequest, QueryPoolResponse>({
   method: "Pool",
   deps: [QueryPoolRequest, QueryPoolResponse]
 });
+/* Parameters queries the staking parameters. */
 export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,

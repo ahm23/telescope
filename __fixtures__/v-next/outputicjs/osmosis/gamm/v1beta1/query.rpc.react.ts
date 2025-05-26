@@ -13,18 +13,26 @@ export const useGetTotalLiquidity = buildUseQuery<QueryTotalLiquidityRequest, Qu
   builderQueryFn: getTotalLiquidity,
   queryKeyPrefix: "TotalLiquidityQuery"
 });
+/* PoolsWithFilter allows you to query specific pools with requested
+ parameters */
 export const useGetPoolsWithFilter = buildUseQuery<QueryPoolsWithFilterRequest, QueryPoolsWithFilterResponse>({
   builderQueryFn: getPoolsWithFilter,
   queryKeyPrefix: "PoolsWithFilterQuery"
 });
+/* Per Pool gRPC Endpoints */
 export const useGetPool = buildUseQuery<QueryPoolRequest, QueryPoolResponse>({
   builderQueryFn: getPool,
   queryKeyPrefix: "PoolQuery"
 });
+/* PoolType returns the type of the pool.
+ Returns "Balancer" as a string literal when the pool is a balancer pool.
+ Errors if the pool is failed to be type caseted. */
 export const useGetPoolType = buildUseQuery<QueryPoolTypeRequest, QueryPoolTypeResponse>({
   builderQueryFn: getPoolType,
   queryKeyPrefix: "PoolTypeQuery"
 });
+/* Simulates joining pool without a swap. Returns the amount of shares you'd
+ get and tokens needed to provide */
 export const useGetCalcJoinPoolNoSwapShares = buildUseQuery<QueryCalcJoinPoolNoSwapSharesRequest, QueryCalcJoinPoolNoSwapSharesResponse>({
   builderQueryFn: getCalcJoinPoolNoSwapShares,
   queryKeyPrefix: "CalcJoinPoolNoSwapSharesQuery"
@@ -49,10 +57,13 @@ export const useGetTotalShares = buildUseQuery<QueryTotalSharesRequest, QueryTot
   builderQueryFn: getTotalShares,
   queryKeyPrefix: "TotalSharesQuery"
 });
+/* SpotPrice defines a gRPC query handler that returns the spot price given
+ a base denomination and a quote denomination. */
 export const useGetSpotPrice = buildUseQuery<QuerySpotPriceRequest, QuerySpotPriceResponse>({
   builderQueryFn: getSpotPrice,
   queryKeyPrefix: "SpotPriceQuery"
 });
+/* Estimate the swap. */
 export const useGetEstimateSwapExactAmountIn = buildUseQuery<QuerySwapExactAmountInRequest, QuerySwapExactAmountInResponse>({
   builderQueryFn: getEstimateSwapExactAmountIn,
   queryKeyPrefix: "EstimateSwapExactAmountInQuery"

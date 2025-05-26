@@ -10,15 +10,21 @@ import { buildTx } from "../../../helper-func-types";
 import { buildUseMutation } from "../../../react-query";
 import { buildUseVueMutation } from "../../../vue-query";
 import { MsgSubmitProposal, MsgSubmitProposalSDKType, MsgSubmitProposalResponse, MsgSubmitProposalResponseSDKType, MsgVote, MsgVoteSDKType, MsgVoteResponse, MsgVoteResponseSDKType, MsgVoteWeighted, MsgVoteWeightedSDKType, MsgVoteWeightedResponse, MsgVoteWeightedResponseSDKType, MsgDeposit, MsgDepositSDKType, MsgDepositResponse, MsgDepositResponseSDKType } from "./tx";
+/* SubmitProposal defines a method to create new proposal given a content. */
 export const submitProposal = buildTx<MsgSubmitProposal>({
   msg: MsgSubmitProposal
 });
+/* Vote defines a method to add a vote on a specific proposal. */
 export const helperVote = buildTx<MsgVote>({
   msg: MsgVote
 });
+/* VoteWeighted defines a method to add a weighted vote on a specific proposal.
+
+ Since: cosmos-sdk 0.43 */
 export const letsVoteWeighted = buildTx<MsgVoteWeighted>({
   msg: MsgVoteWeighted
 });
+/* Deposit defines a method to add deposit on a specific proposal. */
 export const toDeposit = buildTx<MsgDeposit>({
   msg: MsgDeposit
 });

@@ -5,9 +5,11 @@ import { buildUseMutation } from "../../../react-query";
 import { buildUseVueMutation } from "../../../vue-query";
 import { MsgSend, MsgSendSDKType, MsgSendResponse, MsgSendResponseSDKType, MsgMultiSend, MsgMultiSendSDKType, MsgMultiSendResponse, MsgMultiSendResponseSDKType } from "./tx";
 import { send, multiSend } from "./tx.rpc.func";
+/* Send defines a method for sending coins from one account to another account. */
 export const useSend = buildUseVueMutation<MsgSend, Error>({
   builderMutationFn: send
 });
+/* MultiSend defines a method for sending coins from some accounts to other accounts. */
 export const useMultiSend = buildUseVueMutation<MsgMultiSend, Error>({
   builderMutationFn: multiSend
 });

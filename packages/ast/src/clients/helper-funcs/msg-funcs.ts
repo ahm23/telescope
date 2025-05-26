@@ -20,10 +20,10 @@ export function createMsgHelperCreator(
     const callExpression = ast.callExpression(ast.identifier("buildTx"), [
         ast.objectExpression(
             [
-              ast.objectProperty(
-                ast.identifier("msg"),
-                ast.identifier(service.requestType)
-              ),
+                ast.objectProperty(
+                    ast.identifier("msg"),
+                    ast.identifier(service.requestType)
+                ),
             ].filter(Boolean)
         ),
     ]);
@@ -31,7 +31,7 @@ export function createMsgHelperCreator(
         ast.tsTypeReference(ast.identifier(service.requestType)),
     ]);
 
-    return ast.exportNamedDeclaration(
+    const exportDeclaration = ast.exportNamedDeclaration(
         ast.variableDeclaration("const", [
             ast.variableDeclarator(
                 ast.identifier(helperCreatorName),
@@ -39,6 +39,19 @@ export function createMsgHelperCreator(
             ),
         ])
     );
+
+    // Add comments if service has a comment
+    if (service.comment) {
+        exportDeclaration.leadingComments = [{
+            type: 'CommentBlock',
+            value: ` ${service.comment} `,
+            start: null,
+            end: null,
+            loc: null
+        }];
+    }
+
+    return exportDeclaration;
 }
 
 /**
@@ -73,11 +86,25 @@ export function createMsgHooks(
         ast.tsTypeReference(ast.identifier(service.requestType)),
         ast.tsTypeReference(ast.identifier(`Error`)),
     ]);
-    return ast.exportNamedDeclaration(
+    const exportDeclaration = ast.exportNamedDeclaration(
         ast.variableDeclaration("const", [
             ast.variableDeclarator(ast.identifier(hookName), callExpression),
         ])
     );
+
+    
+    // Add comments if service has a comment
+    if (service.comment) {
+        exportDeclaration.leadingComments = [{
+            type: 'CommentBlock',
+            value: ` ${service.comment} `,
+            start: null,
+            end: null,
+            loc: null
+        }];
+    }
+
+    return exportDeclaration;
 }
 
 /**
@@ -112,9 +139,23 @@ export function createVueMsgHooks(
         ast.tsTypeReference(ast.identifier(service.requestType)),
         ast.tsTypeReference(ast.identifier(`Error`)),
     ]);
-    return ast.exportNamedDeclaration(
+    const exportDeclaration = ast.exportNamedDeclaration(
         ast.variableDeclaration("const", [
             ast.variableDeclarator(ast.identifier(hookName), callExpression),
         ])
     );
+
+    
+    // Add comments if service has a comment
+    if (service.comment) {
+        exportDeclaration.leadingComments = [{
+            type: 'CommentBlock',
+            value: ` ${service.comment} `,
+            start: null,
+            end: null,
+            loc: null
+        }];
+    }
+
+    return exportDeclaration;
 }

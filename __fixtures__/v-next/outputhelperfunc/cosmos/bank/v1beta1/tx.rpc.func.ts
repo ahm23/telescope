@@ -4,9 +4,11 @@ import { buildTx } from "../../../helper-func-types";
 import { buildUseMutation } from "../../../react-query";
 import { buildUseVueMutation } from "../../../vue-query";
 import { MsgSend, MsgSendSDKType, MsgSendResponse, MsgSendResponseSDKType, MsgMultiSend, MsgMultiSendSDKType, MsgMultiSendResponse, MsgMultiSendResponseSDKType } from "./tx";
+/* Send defines a method for sending coins from one account to another account. */
 export const send = buildTx<MsgSend>({
   msg: MsgSend
 });
+/* MultiSend defines a method for sending coins from some accounts to other accounts. */
 export const multiSend = buildTx<MsgMultiSend>({
   msg: MsgMultiSend
 });

@@ -82,10 +82,6 @@ exports[`cosmos/authz/v1beta1/authz 1`] = `
  the provide method with expiration time.",
                     "fields": {
                       "authorization": {
-                        "aliasScope": [
-                          "google.protobuf",
-                        ],
-                        "aliasType": "google.protobuf.Any",
                         "comment": null,
                         "id": 1,
                         "import": "google/protobuf/any.proto",
@@ -97,14 +93,8 @@ exports[`cosmos/authz/v1beta1/authz 1`] = `
                           "(telescope:name)": "authorization",
                           "(telescope:orig)": "authorization",
                         },
-                        "originalScope": [
-                          "google.protobuf",
-                        ],
-                        "originalType": "google.protobuf.Any",
                         "parsedType": {
-                          "aliasName": "Any",
                           "name": "Any",
-                          "originalName": "Any",
                           "type": "Type",
                         },
                         "scope": [
@@ -114,10 +104,6 @@ exports[`cosmos/authz/v1beta1/authz 1`] = `
                         "type": "google.protobuf.Any",
                       },
                       "expiration": {
-                        "aliasScope": [
-                          "google.protobuf",
-                        ],
-                        "aliasType": "google.protobuf.Timestamp",
                         "comment": "time when the grant will expire and will be pruned. If null, then the grant
  doesn't have a time expiration (other conditions  in \`authorization\`
  may apply to invalidate the grant)",
@@ -132,14 +118,8 @@ exports[`cosmos/authz/v1beta1/authz 1`] = `
                           "(telescope:name)": "expiration",
                           "(telescope:orig)": "expiration",
                         },
-                        "originalScope": [
-                          "google.protobuf",
-                        ],
-                        "originalType": "google.protobuf.Timestamp",
                         "parsedType": {
-                          "aliasName": "Timestamp",
                           "name": "Timestamp",
-                          "originalName": "Timestamp",
                           "type": "Type",
                         },
                         "scope": [
@@ -164,10 +144,6 @@ exports[`cosmos/authz/v1beta1/authz 1`] = `
  It is used in genesis.proto and query.proto",
                     "fields": {
                       "authorization": {
-                        "aliasScope": [
-                          "google.protobuf",
-                        ],
-                        "aliasType": "google.protobuf.Any",
                         "comment": null,
                         "id": 3,
                         "import": "google/protobuf/any.proto",
@@ -179,14 +155,8 @@ exports[`cosmos/authz/v1beta1/authz 1`] = `
                           "(telescope:name)": "authorization",
                           "(telescope:orig)": "authorization",
                         },
-                        "originalScope": [
-                          "google.protobuf",
-                        ],
-                        "originalType": "google.protobuf.Any",
                         "parsedType": {
-                          "aliasName": "Any",
                           "name": "Any",
-                          "originalName": "Any",
                           "type": "Type",
                         },
                         "scope": [
@@ -196,10 +166,6 @@ exports[`cosmos/authz/v1beta1/authz 1`] = `
                         "type": "google.protobuf.Any",
                       },
                       "expiration": {
-                        "aliasScope": [
-                          "google.protobuf",
-                        ],
-                        "aliasType": "google.protobuf.Timestamp",
                         "comment": null,
                         "id": 4,
                         "import": "google/protobuf/timestamp.proto",
@@ -211,14 +177,8 @@ exports[`cosmos/authz/v1beta1/authz 1`] = `
                           "(telescope:name)": "expiration",
                           "(telescope:orig)": "expiration",
                         },
-                        "originalScope": [
-                          "google.protobuf",
-                        ],
-                        "originalType": "google.protobuf.Timestamp",
                         "parsedType": {
-                          "aliasName": "Timestamp",
                           "name": "Timestamp",
-                          "originalName": "Timestamp",
                           "type": "Type",
                         },
                         "scope": [
@@ -396,11 +356,6 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
  clients.",
                         "fields": {
                           "data": {
-                            "aliasScope": [
-                              "cosmos.tx.signing.v1beta1",
-                              "SignatureDescriptor",
-                            ],
-                            "aliasType": "Data",
                             "comment": null,
                             "id": 2,
                             "options": {
@@ -408,15 +363,8 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                               "(telescope:name)": "data",
                               "(telescope:orig)": "data",
                             },
-                            "originalScope": [
-                              "cosmos.tx.signing.v1beta1",
-                              "SignatureDescriptor",
-                            ],
-                            "originalType": "Data",
                             "parsedType": {
-                              "aliasName": "Data",
                               "name": "Data",
-                              "originalName": "Data",
                               "type": "Type",
                             },
                             "scope": [
@@ -426,10 +374,6 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                             "type": "Data",
                           },
                           "publicKey": {
-                            "aliasScope": [
-                              "google.protobuf",
-                            ],
-                            "aliasType": "google.protobuf.Any",
                             "comment": "public_key is the public key of the signer",
                             "id": 1,
                             "import": "google/protobuf/any.proto",
@@ -440,14 +384,8 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                               "(telescope:name)": "publicKey",
                               "(telescope:orig)": "public_key",
                             },
-                            "originalScope": [
-                              "google.protobuf",
-                            ],
-                            "originalType": "google.protobuf.Any",
                             "parsedType": {
-                              "aliasName": "Any",
                               "name": "Any",
-                              "originalName": "Any",
                               "type": "Type",
                             },
                             "scope": [
@@ -483,12 +421,6 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                             "comment": "Data represents signature data",
                             "fields": {
                               "multi": {
-                                "aliasScope": [
-                                  "cosmos.tx.signing.v1beta1",
-                                  "SignatureDescriptor",
-                                  "Data",
-                                ],
-                                "aliasType": "Multi",
                                 "comment": "multi represents a multisig signer",
                                 "id": 2,
                                 "options": {
@@ -496,16 +428,8 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                                   "(telescope:name)": "multi",
                                   "(telescope:orig)": "multi",
                                 },
-                                "originalScope": [
-                                  "cosmos.tx.signing.v1beta1",
-                                  "SignatureDescriptor",
-                                  "Data",
-                                ],
-                                "originalType": "Multi",
                                 "parsedType": {
-                                  "aliasName": "Multi",
                                   "name": "Multi",
-                                  "originalName": "Multi",
                                   "type": "Type",
                                 },
                                 "scope": [
@@ -516,12 +440,6 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                                 "type": "Multi",
                               },
                               "single": {
-                                "aliasScope": [
-                                  "cosmos.tx.signing.v1beta1",
-                                  "SignatureDescriptor",
-                                  "Data",
-                                ],
-                                "aliasType": "Single",
                                 "comment": "single represents a single signer",
                                 "id": 1,
                                 "options": {
@@ -529,16 +447,8 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                                   "(telescope:name)": "single",
                                   "(telescope:orig)": "single",
                                 },
-                                "originalScope": [
-                                  "cosmos.tx.signing.v1beta1",
-                                  "SignatureDescriptor",
-                                  "Data",
-                                ],
-                                "originalType": "Single",
                                 "parsedType": {
-                                  "aliasName": "Single",
                                   "name": "Single",
-                                  "originalName": "Single",
                                   "type": "Type",
                                 },
                                 "scope": [
@@ -557,10 +467,6 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                                 "comment": "Multi is the signature data for a multisig public key",
                                 "fields": {
                                   "bitarray": {
-                                    "aliasScope": [
-                                      "cosmos.crypto.multisig.v1beta1",
-                                    ],
-                                    "aliasType": "cosmos.crypto.multisig.v1beta1.CompactBitArray",
                                     "comment": "bitarray specifies which keys within the multisig are signing",
                                     "id": 1,
                                     "import": "cosmos/crypto/multisig/v1beta1/multisig.proto",
@@ -571,14 +477,8 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                                       "(telescope:name)": "bitarray",
                                       "(telescope:orig)": "bitarray",
                                     },
-                                    "originalScope": [
-                                      "cosmos.crypto.multisig.v1beta1",
-                                    ],
-                                    "originalType": "cosmos.crypto.multisig.v1beta1.CompactBitArray",
                                     "parsedType": {
-                                      "aliasName": "CompactBitArray",
                                       "name": "CompactBitArray",
-                                      "originalName": "CompactBitArray",
                                       "type": "Type",
                                     },
                                     "scope": [
@@ -588,11 +488,6 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                                     "type": "cosmos.crypto.multisig.v1beta1.CompactBitArray",
                                   },
                                   "signatures": {
-                                    "aliasScope": [
-                                      "cosmos.tx.signing.v1beta1",
-                                      "SignatureDescriptor",
-                                    ],
-                                    "aliasType": "Data",
                                     "comment": "signatures is the signatures of the multi-signature",
                                     "id": 2,
                                     "options": {
@@ -600,15 +495,8 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                                       "(telescope:name)": "signatures",
                                       "(telescope:orig)": "signatures",
                                     },
-                                    "originalScope": [
-                                      "cosmos.tx.signing.v1beta1",
-                                      "SignatureDescriptor",
-                                    ],
-                                    "originalType": "Data",
                                     "parsedType": {
-                                      "aliasName": "Data",
                                       "name": "Data",
-                                      "originalName": "Data",
                                       "type": "Type",
                                     },
                                     "rule": "repeated",
@@ -633,10 +521,6 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                                 "comment": "Single is the signature data for a single signer",
                                 "fields": {
                                   "mode": {
-                                    "aliasScope": [
-                                      "cosmos.tx.signing.v1beta1",
-                                    ],
-                                    "aliasType": "SignMode",
                                     "comment": "mode is the signing mode of the single signer",
                                     "id": 1,
                                     "options": {
@@ -644,14 +528,8 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                                       "(telescope:name)": "mode",
                                       "(telescope:orig)": "mode",
                                     },
-                                    "originalScope": [
-                                      "cosmos.tx.signing.v1beta1",
-                                    ],
-                                    "originalType": "SignMode",
                                     "parsedType": {
-                                      "aliasName": "SignMode",
                                       "name": "SignMode",
-                                      "originalName": "SignMode",
                                       "type": "Enum",
                                     },
                                     "scope": [
@@ -711,10 +589,6 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                         "comment": "SignatureDescriptors wraps multiple SignatureDescriptor's.",
                         "fields": {
                           "signatures": {
-                            "aliasScope": [
-                              "cosmos.tx.signing.v1beta1",
-                            ],
-                            "aliasType": "SignatureDescriptor",
                             "comment": "signatures are the signature descriptors",
                             "id": 1,
                             "options": {
@@ -722,14 +596,8 @@ exports[`cosmos/tx/signing/v1beta1/signing 1`] = `
                               "(telescope:name)": "signatures",
                               "(telescope:orig)": "signatures",
                             },
-                            "originalScope": [
-                              "cosmos.tx.signing.v1beta1",
-                            ],
-                            "originalType": "SignatureDescriptor",
                             "parsedType": {
-                              "aliasName": "SignatureDescriptor",
                               "name": "SignatureDescriptor",
-                              "originalName": "SignatureDescriptor",
                               "type": "Type",
                             },
                             "rule": "repeated",
@@ -821,10 +689,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
  transaction.",
                     "fields": {
                       "fee": {
-                        "aliasScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "aliasType": "Fee",
                         "comment": "Fee is the fee and gas limit for the transaction. The first signer is the
  primary signer and the one which pays the fee. The fee can be calculated
  based on the cost of evaluating the body and doing signature verification
@@ -835,14 +699,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "fee",
                           "(telescope:orig)": "fee",
                         },
-                        "originalScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "originalType": "Fee",
                         "parsedType": {
-                          "aliasName": "Fee",
                           "name": "Fee",
-                          "originalName": "Fee",
                           "type": "Type",
                         },
                         "scope": [
@@ -851,10 +709,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "type": "Fee",
                       },
                       "signerInfos": {
-                        "aliasScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "aliasType": "SignerInfo",
                         "comment": "signer_infos defines the signing modes for the required signers. The number
  and order of elements must match the required signers from TxBody's
  messages. The first element is the primary signer and the one which pays
@@ -865,14 +719,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "signerInfos",
                           "(telescope:orig)": "signer_infos",
                         },
-                        "originalScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "originalType": "SignerInfo",
                         "parsedType": {
-                          "aliasName": "SignerInfo",
                           "name": "SignerInfo",
-                          "originalName": "SignerInfo",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -882,10 +730,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "type": "SignerInfo",
                       },
                       "tip": {
-                        "aliasScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "aliasType": "Tip",
                         "comment": "Tip is the optional tip used for meta-transactions.
 
  Since: cosmos-sdk 0.46",
@@ -895,14 +739,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "tip",
                           "(telescope:orig)": "tip",
                         },
-                        "originalScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "originalType": "Tip",
                         "parsedType": {
-                          "aliasName": "Tip",
                           "name": "Tip",
-                          "originalName": "Tip",
                           "type": "Type",
                         },
                         "scope": [
@@ -949,10 +787,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "typeNum": 13,
                       },
                       "mode": {
-                        "aliasScope": [
-                          "cosmos.tx.signing.v1beta1",
-                        ],
-                        "aliasType": "cosmos.tx.signing.v1beta1.SignMode",
                         "comment": "mode is the signing mode of the single signer",
                         "id": 3,
                         "import": "cosmos/tx/signing/v1beta1/signing.proto",
@@ -963,14 +797,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "mode",
                           "(telescope:orig)": "mode",
                         },
-                        "originalScope": [
-                          "cosmos.tx.signing.v1beta1",
-                        ],
-                        "originalType": "cosmos.tx.signing.v1beta1.SignMode",
                         "parsedType": {
-                          "aliasName": "SignMode",
                           "name": "SignMode",
-                          "originalName": "SignMode",
                           "type": "Enum",
                         },
                         "scope": [
@@ -996,10 +824,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "typeNum": 14,
                       },
                       "signDoc": {
-                        "aliasScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "aliasType": "SignDocDirectAux",
                         "comment": "sign_doc is the SIGN_MOD_DIRECT_AUX sign doc that the auxiliary signer
  signs. Note: we use the same sign doc even if we're signing with
  LEGACY_AMINO_JSON.",
@@ -1009,14 +833,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "signDoc",
                           "(telescope:orig)": "sign_doc",
                         },
-                        "originalScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "originalType": "SignDocDirectAux",
                         "parsedType": {
-                          "aliasName": "SignDocDirectAux",
                           "name": "SignDocDirectAux",
-                          "originalName": "SignDocDirectAux",
                           "type": "Type",
                         },
                         "scope": [
@@ -1041,10 +859,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
  which must be above some miminum to be accepted into the mempool.",
                     "fields": {
                       "amount": {
-                        "aliasScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.v1beta1.Coin",
                         "comment": "amount is the amount of coins to be paid as a fee",
                         "id": 1,
                         "import": "cosmos/base/v1beta1/coin.proto",
@@ -1057,14 +871,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "amount",
                           "(telescope:orig)": "amount",
                         },
-                        "originalScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.v1beta1.Coin",
                         "parsedType": {
-                          "aliasName": "Coin",
                           "name": "Coin",
-                          "originalName": "Coin",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -1144,11 +952,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "comment": "ModeInfo describes the signing mode of a single or nested multisig signer.",
                     "fields": {
                       "multi": {
-                        "aliasScope": [
-                          "cosmos.tx.v1beta1",
-                          "ModeInfo",
-                        ],
-                        "aliasType": "Multi",
                         "comment": "multi represents a nested multisig signer",
                         "id": 2,
                         "options": {
@@ -1156,15 +959,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "multi",
                           "(telescope:orig)": "multi",
                         },
-                        "originalScope": [
-                          "cosmos.tx.v1beta1",
-                          "ModeInfo",
-                        ],
-                        "originalType": "Multi",
                         "parsedType": {
-                          "aliasName": "Multi",
                           "name": "Multi",
-                          "originalName": "Multi",
                           "type": "Type",
                         },
                         "scope": [
@@ -1174,11 +970,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "type": "Multi",
                       },
                       "single": {
-                        "aliasScope": [
-                          "cosmos.tx.v1beta1",
-                          "ModeInfo",
-                        ],
-                        "aliasType": "Single",
                         "comment": "single represents a single signer",
                         "id": 1,
                         "options": {
@@ -1186,15 +977,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "single",
                           "(telescope:orig)": "single",
                         },
-                        "originalScope": [
-                          "cosmos.tx.v1beta1",
-                          "ModeInfo",
-                        ],
-                        "originalType": "Single",
                         "parsedType": {
-                          "aliasName": "Single",
                           "name": "Single",
-                          "originalName": "Single",
                           "type": "Type",
                         },
                         "scope": [
@@ -1212,10 +996,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "comment": "Multi is the mode info for a multisig public key",
                         "fields": {
                           "bitarray": {
-                            "aliasScope": [
-                              "cosmos.crypto.multisig.v1beta1",
-                            ],
-                            "aliasType": "cosmos.crypto.multisig.v1beta1.CompactBitArray",
                             "comment": "bitarray specifies which keys within the multisig are signing",
                             "id": 1,
                             "import": "cosmos/crypto/multisig/v1beta1/multisig.proto",
@@ -1226,14 +1006,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                               "(telescope:name)": "bitarray",
                               "(telescope:orig)": "bitarray",
                             },
-                            "originalScope": [
-                              "cosmos.crypto.multisig.v1beta1",
-                            ],
-                            "originalType": "cosmos.crypto.multisig.v1beta1.CompactBitArray",
                             "parsedType": {
-                              "aliasName": "CompactBitArray",
                               "name": "CompactBitArray",
-                              "originalName": "CompactBitArray",
                               "type": "Type",
                             },
                             "scope": [
@@ -1243,10 +1017,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                             "type": "cosmos.crypto.multisig.v1beta1.CompactBitArray",
                           },
                           "modeInfos": {
-                            "aliasScope": [
-                              "cosmos.tx.v1beta1",
-                            ],
-                            "aliasType": "ModeInfo",
                             "comment": "mode_infos is the corresponding modes of the signers of the multisig
  which could include nested multisig public keys",
                             "id": 2,
@@ -1255,14 +1025,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                               "(telescope:name)": "modeInfos",
                               "(telescope:orig)": "mode_infos",
                             },
-                            "originalScope": [
-                              "cosmos.tx.v1beta1",
-                            ],
-                            "originalType": "ModeInfo",
                             "parsedType": {
-                              "aliasName": "ModeInfo",
                               "name": "ModeInfo",
-                              "originalName": "ModeInfo",
                               "type": "Type",
                             },
                             "rule": "repeated",
@@ -1288,10 +1052,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
  future",
                         "fields": {
                           "mode": {
-                            "aliasScope": [
-                              "cosmos.tx.signing.v1beta1",
-                            ],
-                            "aliasType": "cosmos.tx.signing.v1beta1.SignMode",
                             "comment": "mode is the signing mode of the single signer",
                             "id": 1,
                             "import": "cosmos/tx/signing/v1beta1/signing.proto",
@@ -1302,14 +1062,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                               "(telescope:name)": "mode",
                               "(telescope:orig)": "mode",
                             },
-                            "originalScope": [
-                              "cosmos.tx.signing.v1beta1",
-                            ],
-                            "originalType": "cosmos.tx.signing.v1beta1.SignMode",
                             "parsedType": {
-                              "aliasName": "SignMode",
                               "name": "SignMode",
-                              "originalName": "SignMode",
                               "type": "Enum",
                             },
                             "scope": [
@@ -1483,10 +1237,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "typeNum": 13,
                       },
                       "publicKey": {
-                        "aliasScope": [
-                          "google.protobuf",
-                        ],
-                        "aliasType": "google.protobuf.Any",
                         "comment": "public_key is the public key of the signing account.",
                         "id": 2,
                         "import": "google/protobuf/any.proto",
@@ -1497,14 +1247,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "publicKey",
                           "(telescope:orig)": "public_key",
                         },
-                        "originalScope": [
-                          "google.protobuf",
-                        ],
-                        "originalType": "google.protobuf.Any",
                         "parsedType": {
-                          "aliasName": "Any",
                           "name": "Any",
-                          "originalName": "Any",
                           "type": "Type",
                         },
                         "scope": [
@@ -1530,10 +1274,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "typeNum": 8,
                       },
                       "tip": {
-                        "aliasScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "aliasType": "Tip",
                         "comment": "Tip is the optional tip used for meta-transactions. It should be left
  empty if the signer is not the tipper for this transaction.",
                         "id": 6,
@@ -1542,14 +1282,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "tip",
                           "(telescope:orig)": "tip",
                         },
-                        "originalScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "originalType": "Tip",
                         "parsedType": {
-                          "aliasName": "Tip",
                           "name": "Tip",
-                          "originalName": "Tip",
                           "type": "Type",
                         },
                         "scope": [
@@ -1573,10 +1307,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
  signer.",
                     "fields": {
                       "modeInfo": {
-                        "aliasScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "aliasType": "ModeInfo",
                         "comment": "mode_info describes the signing mode of the signer and is a nested
  structure to support nested multisig pubkey's",
                         "id": 2,
@@ -1585,14 +1315,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "modeInfo",
                           "(telescope:orig)": "mode_info",
                         },
-                        "originalScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "originalType": "ModeInfo",
                         "parsedType": {
-                          "aliasName": "ModeInfo",
                           "name": "ModeInfo",
-                          "originalName": "ModeInfo",
                           "type": "Type",
                         },
                         "scope": [
@@ -1601,10 +1325,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "type": "ModeInfo",
                       },
                       "publicKey": {
-                        "aliasScope": [
-                          "google.protobuf",
-                        ],
-                        "aliasType": "google.protobuf.Any",
                         "comment": "public_key is the public key of the signer. It is optional for accounts
  that already exist in state. If unset, the verifier can use the required \\
  signer address for this position and lookup the public key.",
@@ -1617,14 +1337,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "publicKey",
                           "(telescope:orig)": "public_key",
                         },
-                        "originalScope": [
-                          "google.protobuf",
-                        ],
-                        "originalType": "google.protobuf.Any",
                         "parsedType": {
-                          "aliasName": "Any",
                           "name": "Any",
-                          "originalName": "Any",
                           "type": "Type",
                         },
                         "scope": [
@@ -1668,10 +1382,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
  Since: cosmos-sdk 0.46",
                     "fields": {
                       "amount": {
-                        "aliasScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.v1beta1.Coin",
                         "comment": "amount is the amount of the tip",
                         "id": 1,
                         "import": "cosmos/base/v1beta1/coin.proto",
@@ -1684,14 +1394,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "amount",
                           "(telescope:orig)": "amount",
                         },
-                        "originalScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.v1beta1.Coin",
                         "parsedType": {
-                          "aliasName": "Coin",
                           "name": "Coin",
-                          "originalName": "Coin",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -1733,10 +1437,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "comment": "Tx is the standard type used for broadcasting transactions.",
                     "fields": {
                       "authInfo": {
-                        "aliasScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "aliasType": "AuthInfo",
                         "comment": "auth_info is the authorization related content of the transaction,
  specifically signers, signer modes and fee",
                         "id": 2,
@@ -1745,14 +1445,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "authInfo",
                           "(telescope:orig)": "auth_info",
                         },
-                        "originalScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "originalType": "AuthInfo",
                         "parsedType": {
-                          "aliasName": "AuthInfo",
                           "name": "AuthInfo",
-                          "originalName": "AuthInfo",
                           "type": "Type",
                         },
                         "scope": [
@@ -1761,10 +1455,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "type": "AuthInfo",
                       },
                       "body": {
-                        "aliasScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "aliasType": "TxBody",
                         "comment": "body is the processable content of the transaction",
                         "id": 1,
                         "options": {
@@ -1772,14 +1462,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "body",
                           "(telescope:orig)": "body",
                         },
-                        "originalScope": [
-                          "cosmos.tx.v1beta1",
-                        ],
-                        "originalType": "TxBody",
                         "parsedType": {
-                          "aliasName": "TxBody",
                           "name": "TxBody",
-                          "originalName": "TxBody",
                           "type": "Type",
                         },
                         "scope": [
@@ -1821,10 +1505,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                     "comment": "TxBody is the body of a transaction that all signers sign over.",
                     "fields": {
                       "extensionOptions": {
-                        "aliasScope": [
-                          "google.protobuf",
-                        ],
-                        "aliasType": "google.protobuf.Any",
                         "comment": "extension_options are arbitrary options that can be added by chains
  when the default options are not sufficient. If any of these are present
  and can't be handled, the transaction will be rejected",
@@ -1837,14 +1517,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "extensionOptions",
                           "(telescope:orig)": "extension_options",
                         },
-                        "originalScope": [
-                          "google.protobuf",
-                        ],
-                        "originalType": "google.protobuf.Any",
                         "parsedType": {
-                          "aliasName": "Any",
                           "name": "Any",
-                          "originalName": "Any",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -1873,10 +1547,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "typeNum": 13,
                       },
                       "messages": {
-                        "aliasScope": [
-                          "google.protobuf",
-                        ],
-                        "aliasType": "google.protobuf.Any",
                         "comment": "messages is a list of messages to be executed. The required signers of
  those messages define the number and order of elements in AuthInfo's
  signer_infos and Tx's signatures. Each required signer address is added to
@@ -1893,14 +1563,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "messages",
                           "(telescope:orig)": "messages",
                         },
-                        "originalScope": [
-                          "google.protobuf",
-                        ],
-                        "originalType": "google.protobuf.Any",
                         "parsedType": {
-                          "aliasName": "Any",
                           "name": "Any",
-                          "originalName": "Any",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -1911,10 +1575,6 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                         "type": "google.protobuf.Any",
                       },
                       "nonCriticalExtensionOptions": {
-                        "aliasScope": [
-                          "google.protobuf",
-                        ],
-                        "aliasType": "google.protobuf.Any",
                         "comment": "extension_options are arbitrary options that can be added by chains
  when the default options are not sufficient. If any of these are present
  and can't be handled, they will be ignored",
@@ -1927,14 +1587,8 @@ exports[`cosmos/tx/v1beta1/tx 1`] = `
                           "(telescope:name)": "nonCriticalExtensionOptions",
                           "(telescope:orig)": "non_critical_extension_options",
                         },
-                        "originalScope": [
-                          "google.protobuf",
-                        ],
-                        "originalType": "google.protobuf.Any",
                         "parsedType": {
-                          "aliasName": "Any",
                           "name": "Any",
-                          "originalName": "Any",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -2196,10 +1850,6 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                         "typeNum": 13,
                       },
                       "funds": {
-                        "aliasScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.v1beta1.Coin",
                         "comment": "Funds coins that are transferred to the contract on instantiation",
                         "id": 6,
                         "import": "cosmos/base/v1beta1/coin.proto",
@@ -2212,14 +1862,8 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                           "(telescope:name)": "funds",
                           "(telescope:orig)": "funds",
                         },
-                        "originalScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.v1beta1.Coin",
                         "parsedType": {
-                          "aliasName": "Coin",
                           "name": "Coin",
-                          "originalName": "Coin",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -2343,10 +1987,6 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                         "typeNum": 13,
                       },
                       "funds": {
-                        "aliasScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.v1beta1.Coin",
                         "comment": "Funds coins that are transferred to the contract on instantiation",
                         "id": 8,
                         "import": "cosmos/base/v1beta1/coin.proto",
@@ -2359,14 +1999,8 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                           "(telescope:name)": "funds",
                           "(telescope:orig)": "funds",
                         },
-                        "originalScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.v1beta1.Coin",
                         "parsedType": {
-                          "aliasName": "Coin",
                           "name": "Coin",
-                          "originalName": "Coin",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -2636,12 +2270,6 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                         "typeNum": 13,
                       },
                       "instantiatePermission": {
-                        "aliasScope": [
-                          [
-                            "cosmwasm.wasm.v1",
-                          ],
-                        ],
-                        "aliasType": "AccessConfig",
                         "comment": "InstantiatePermission to apply on contract creation, optional",
                         "id": 7,
                         "import": "cosmwasm/wasm/v1/types.proto",
@@ -2651,16 +2279,8 @@ exports[`cosmwasm/wasm/v1/proposal 1`] = `
                           "(telescope:name)": "instantiatePermission",
                           "(telescope:orig)": "instantiate_permission",
                         },
-                        "originalScope": [
-                          [
-                            "cosmwasm.wasm.v1",
-                          ],
-                        ],
-                        "originalType": "AccessConfig",
                         "parsedType": {
-                          "aliasName": "AccessConfig",
                           "name": "AccessConfig",
-                          "originalName": "AccessConfig",
                           "type": "Type",
                         },
                         "scope": [
@@ -3115,10 +2735,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                             "typeNum": 13,
                           },
                           "pagination": {
-                            "aliasScope": [
-                              "cosmos.base.query.v1beta1",
-                            ],
-                            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
                             "comment": "pagination defines an optional pagination for the request.",
                             "id": 2,
                             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -3129,14 +2745,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                               "(telescope:name)": "pagination",
                               "(telescope:orig)": "pagination",
                             },
-                            "originalScope": [
-                              "cosmos.base.query.v1beta1",
-                            ],
-                            "originalType": "cosmos.base.query.v1beta1.PageRequest",
                             "parsedType": {
-                              "aliasName": "PageRequest",
                               "name": "PageRequest",
-                              "originalName": "PageRequest",
                               "type": "Type",
                             },
                             "scope": [
@@ -3226,10 +2836,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "comment": "Codes gets the metadata for all stored wasm codes",
                         "fields": {
                           "pagination": {
-                            "aliasScope": [
-                              "cosmos.base.query.v1beta1",
-                            ],
-                            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
                             "comment": "pagination defines an optional pagination for the request.",
                             "id": 1,
                             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -3240,14 +2846,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                               "(telescope:name)": "pagination",
                               "(telescope:orig)": "pagination",
                             },
-                            "originalScope": [
-                              "cosmos.base.query.v1beta1",
-                            ],
-                            "originalType": "cosmos.base.query.v1beta1.PageRequest",
                             "parsedType": {
-                              "aliasName": "PageRequest",
                               "name": "PageRequest",
-                              "originalName": "PageRequest",
                               "type": "Type",
                             },
                             "scope": [
@@ -3303,10 +2903,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                             "typeNum": 13,
                           },
                           "pagination": {
-                            "aliasScope": [
-                              "cosmos.base.query.v1beta1",
-                            ],
-                            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
                             "comment": "pagination defines an optional pagination for the request.",
                             "id": 2,
                             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -3317,14 +2913,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                               "(telescope:name)": "pagination",
                               "(telescope:orig)": "pagination",
                             },
-                            "originalScope": [
-                              "cosmos.base.query.v1beta1",
-                            ],
-                            "originalType": "cosmos.base.query.v1beta1.PageRequest",
                             "parsedType": {
-                              "aliasName": "PageRequest",
                               "name": "PageRequest",
-                              "originalName": "PageRequest",
                               "type": "Type",
                             },
                             "scope": [
@@ -3430,10 +3020,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                             "typeNum": 8,
                           },
                           "pagination": {
-                            "aliasScope": [
-                              "cosmos.base.query.v1beta1",
-                            ],
-                            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
                             "comment": "pagination defines an optional pagination for the request.",
                             "id": 2,
                             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -3444,14 +3030,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                               "(telescope:name)": "pagination",
                               "(telescope:orig)": "pagination",
                             },
-                            "originalScope": [
-                              "cosmos.base.query.v1beta1",
-                            ],
-                            "originalType": "cosmos.base.query.v1beta1.PageRequest",
                             "parsedType": {
-                              "aliasName": "PageRequest",
                               "name": "PageRequest",
-                              "originalName": "PageRequest",
                               "type": "Type",
                             },
                             "scope": [
@@ -3495,10 +3075,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "comment": "PinnedCodes gets the pinned code ids",
                         "fields": {
                           "pagination": {
-                            "aliasScope": [
-                              "cosmos.base.query.v1beta1",
-                            ],
-                            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
                             "comment": "pagination defines an optional pagination for the request.",
                             "id": 2,
                             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -3509,14 +3085,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                               "(telescope:name)": "pagination",
                               "(telescope:orig)": "pagination",
                             },
-                            "originalScope": [
-                              "cosmos.base.query.v1beta1",
-                            ],
-                            "originalType": "cosmos.base.query.v1beta1.PageRequest",
                             "parsedType": {
-                              "aliasName": "PageRequest",
                               "name": "PageRequest",
-                              "originalName": "PageRequest",
                               "type": "Type",
                             },
                             "scope": [
@@ -3707,10 +3277,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "typeNum": 13,
                       },
                       "pagination": {
-                        "aliasScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
                         "comment": "pagination defines an optional pagination for the request.",
                         "id": 2,
                         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -3721,14 +3287,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "pagination",
                           "(telescope:orig)": "pagination",
                         },
-                        "originalScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.query.v1beta1.PageRequest",
                         "parsedType": {
-                          "aliasName": "PageRequest",
                           "name": "PageRequest",
-                          "originalName": "PageRequest",
                           "type": "Type",
                         },
                         "scope": [
@@ -3753,12 +3313,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
  Query/AllContractState RPC method",
                     "fields": {
                       "models": {
-                        "aliasScope": [
-                          [
-                            "cosmwasm.wasm.v1",
-                          ],
-                        ],
-                        "aliasType": "Model",
                         "comment": null,
                         "id": 1,
                         "import": "cosmwasm/wasm/v1/types.proto",
@@ -3769,16 +3323,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "models",
                           "(telescope:orig)": "models",
                         },
-                        "originalScope": [
-                          [
-                            "cosmwasm.wasm.v1",
-                          ],
-                        ],
-                        "originalType": "Model",
                         "parsedType": {
-                          "aliasName": "Model",
                           "name": "Model",
-                          "originalName": "Model",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -3791,10 +3337,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "type": "Model",
                       },
                       "pagination": {
-                        "aliasScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
                         "comment": "pagination defines the pagination in the response.",
                         "id": 2,
                         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -3805,14 +3347,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "pagination",
                           "(telescope:orig)": "pagination",
                         },
-                        "originalScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.query.v1beta1.PageResponse",
                         "parsedType": {
-                          "aliasName": "PageResponse",
                           "name": "PageResponse",
-                          "originalName": "PageResponse",
                           "type": "Type",
                         },
                         "scope": [
@@ -3866,10 +3402,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "comment": "QueryCodeResponse is the response type for the Query/Code RPC method",
                     "fields": {
                       "codeInfo": {
-                        "aliasScope": [
-                          "cosmwasm.wasm.v1",
-                        ],
-                        "aliasType": "CodeInfoResponse",
                         "comment": null,
                         "id": 1,
                         "options": {
@@ -3879,14 +3411,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "codeInfo",
                           "(telescope:orig)": "code_info",
                         },
-                        "originalScope": [
-                          "cosmwasm.wasm.v1",
-                        ],
-                        "originalType": "CodeInfoResponse",
                         "parsedType": {
-                          "aliasName": "CodeInfoResponse",
                           "name": "CodeInfoResponse",
-                          "originalName": "CodeInfoResponse",
                           "type": "Type",
                         },
                         "scope": [
@@ -3928,10 +3454,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "comment": "QueryCodesRequest is the request type for the Query/Codes RPC method",
                     "fields": {
                       "pagination": {
-                        "aliasScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
                         "comment": "pagination defines an optional pagination for the request.",
                         "id": 1,
                         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -3942,14 +3464,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "pagination",
                           "(telescope:orig)": "pagination",
                         },
-                        "originalScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.query.v1beta1.PageRequest",
                         "parsedType": {
-                          "aliasName": "PageRequest",
                           "name": "PageRequest",
-                          "originalName": "PageRequest",
                           "type": "Type",
                         },
                         "scope": [
@@ -3973,10 +3489,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                     "comment": "QueryCodesResponse is the response type for the Query/Codes RPC method",
                     "fields": {
                       "codeInfos": {
-                        "aliasScope": [
-                          "cosmwasm.wasm.v1",
-                        ],
-                        "aliasType": "CodeInfoResponse",
                         "comment": null,
                         "id": 1,
                         "options": {
@@ -3985,14 +3497,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "codeInfos",
                           "(telescope:orig)": "code_infos",
                         },
-                        "originalScope": [
-                          "cosmwasm.wasm.v1",
-                        ],
-                        "originalType": "CodeInfoResponse",
                         "parsedType": {
-                          "aliasName": "CodeInfoResponse",
                           "name": "CodeInfoResponse",
-                          "originalName": "CodeInfoResponse",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -4002,10 +3508,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "type": "CodeInfoResponse",
                       },
                       "pagination": {
-                        "aliasScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
                         "comment": "pagination defines the pagination in the response.",
                         "id": 2,
                         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -4016,14 +3518,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "pagination",
                           "(telescope:orig)": "pagination",
                         },
-                        "originalScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.query.v1beta1.PageResponse",
                         "parsedType": {
-                          "aliasName": "PageResponse",
                           "name": "PageResponse",
-                          "originalName": "PageResponse",
                           "type": "Type",
                         },
                         "scope": [
@@ -4064,10 +3560,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "typeNum": 13,
                       },
                       "pagination": {
-                        "aliasScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
                         "comment": "pagination defines an optional pagination for the request.",
                         "id": 2,
                         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -4078,14 +3570,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "pagination",
                           "(telescope:orig)": "pagination",
                         },
-                        "originalScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.query.v1beta1.PageRequest",
                         "parsedType": {
-                          "aliasName": "PageRequest",
                           "name": "PageRequest",
-                          "originalName": "PageRequest",
                           "type": "Type",
                         },
                         "scope": [
@@ -4110,12 +3596,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
  Query/ContractHistory RPC method",
                     "fields": {
                       "entries": {
-                        "aliasScope": [
-                          [
-                            "cosmwasm.wasm.v1",
-                          ],
-                        ],
-                        "aliasType": "ContractCodeHistoryEntry",
                         "comment": null,
                         "id": 1,
                         "import": "cosmwasm/wasm/v1/types.proto",
@@ -4126,16 +3606,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "entries",
                           "(telescope:orig)": "entries",
                         },
-                        "originalScope": [
-                          [
-                            "cosmwasm.wasm.v1",
-                          ],
-                        ],
-                        "originalType": "ContractCodeHistoryEntry",
                         "parsedType": {
-                          "aliasName": "ContractCodeHistoryEntry",
                           "name": "ContractCodeHistoryEntry",
-                          "originalName": "ContractCodeHistoryEntry",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -4148,10 +3620,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "type": "ContractCodeHistoryEntry",
                       },
                       "pagination": {
-                        "aliasScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
                         "comment": "pagination defines the pagination in the response.",
                         "id": 2,
                         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -4162,14 +3630,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "pagination",
                           "(telescope:orig)": "pagination",
                         },
-                        "originalScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.query.v1beta1.PageResponse",
                         "parsedType": {
-                          "aliasName": "PageResponse",
                           "name": "PageResponse",
-                          "originalName": "PageResponse",
                           "type": "Type",
                         },
                         "scope": [
@@ -4241,12 +3703,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "typeNum": 13,
                       },
                       "contractInfo": {
-                        "aliasScope": [
-                          [
-                            "cosmwasm.wasm.v1",
-                          ],
-                        ],
-                        "aliasType": "ContractInfo",
                         "comment": null,
                         "id": 2,
                         "import": "cosmwasm/wasm/v1/types.proto",
@@ -4259,16 +3715,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "contractInfo",
                           "(telescope:orig)": "contract_info",
                         },
-                        "originalScope": [
-                          [
-                            "cosmwasm.wasm.v1",
-                          ],
-                        ],
-                        "originalType": "ContractInfo",
                         "parsedType": {
-                          "aliasName": "ContractInfo",
                           "name": "ContractInfo",
-                          "originalName": "ContractInfo",
                           "type": "Type",
                         },
                         "scope": [
@@ -4313,10 +3761,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "typeNum": 8,
                       },
                       "pagination": {
-                        "aliasScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
                         "comment": "pagination defines an optional pagination for the request.",
                         "id": 2,
                         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -4327,14 +3771,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "pagination",
                           "(telescope:orig)": "pagination",
                         },
-                        "originalScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.query.v1beta1.PageRequest",
                         "parsedType": {
-                          "aliasName": "PageRequest",
                           "name": "PageRequest",
-                          "originalName": "PageRequest",
                           "type": "Type",
                         },
                         "scope": [
@@ -4376,10 +3814,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "typeNum": 13,
                       },
                       "pagination": {
-                        "aliasScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
                         "comment": "pagination defines the pagination in the response.",
                         "id": 2,
                         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -4390,14 +3824,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "pagination",
                           "(telescope:orig)": "pagination",
                         },
-                        "originalScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.query.v1beta1.PageResponse",
                         "parsedType": {
-                          "aliasName": "PageResponse",
                           "name": "PageResponse",
-                          "originalName": "PageResponse",
                           "type": "Type",
                         },
                         "scope": [
@@ -4422,10 +3850,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
  RPC method",
                     "fields": {
                       "pagination": {
-                        "aliasScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
                         "comment": "pagination defines an optional pagination for the request.",
                         "id": 2,
                         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -4436,14 +3860,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "pagination",
                           "(telescope:orig)": "pagination",
                         },
-                        "originalScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.query.v1beta1.PageRequest",
                         "parsedType": {
-                          "aliasName": "PageRequest",
                           "name": "PageRequest",
-                          "originalName": "PageRequest",
                           "type": "Type",
                         },
                         "scope": [
@@ -4487,10 +3905,6 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                         "typeNum": 8,
                       },
                       "pagination": {
-                        "aliasScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
                         "comment": "pagination defines the pagination in the response.",
                         "id": 2,
                         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -4501,14 +3915,8 @@ exports[`cosmwasm/wasm/v1/query 1`] = `
                           "(telescope:name)": "pagination",
                           "(telescope:orig)": "pagination",
                         },
-                        "originalScope": [
-                          "cosmos.base.query.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.query.v1beta1.PageResponse",
                         "parsedType": {
-                          "aliasName": "PageResponse",
                           "name": "PageResponse",
-                          "originalName": "PageResponse",
                           "type": "Type",
                         },
                         "scope": [
@@ -4745,12 +4153,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         "comment": "A CEL expression which has been successfully type checked.",
                         "fields": {
                           "expr": {
-                            "aliasScope": [
-                              [
-                                "google.api.expr.v1alpha1",
-                              ],
-                            ],
-                            "aliasType": "Expr",
                             "comment": "The checked expression. Semantically equivalent to the parsed \`expr\`, but
  may have structural differences.",
                             "id": 4,
@@ -4761,16 +4163,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "expr",
                               "(telescope:orig)": "expr",
                             },
-                            "originalScope": [
-                              [
-                                "google.api.expr.v1alpha1",
-                              ],
-                            ],
-                            "originalType": "Expr",
                             "parsedType": {
-                              "aliasName": "Expr",
                               "name": "Expr",
-                              "originalName": "Expr",
                               "type": "Type",
                             },
                             "scope": [
@@ -4804,10 +4198,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "typeNum": 13,
                           },
                           "referenceMap": {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                            ],
-                            "aliasType": "Reference",
                             "comment": "A map from expression ids to resolved references.
 
  The following entries are in this table:
@@ -4830,14 +4220,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "referenceMap",
                               "(telescope:orig)": "reference_map",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                            ],
-                            "originalType": "Reference",
                             "parsedType": {
-                              "aliasName": "Reference",
                               "name": "Reference",
-                              "originalName": "Reference",
                               "type": "Type",
                             },
                             "scope": [
@@ -4846,12 +4230,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "Reference",
                           },
                           "sourceInfo": {
-                            "aliasScope": [
-                              [
-                                "google.api.expr.v1alpha1",
-                              ],
-                            ],
-                            "aliasType": "SourceInfo",
                             "comment": "The source info derived from input that generated the parsed \`expr\` and
  any optimizations made during the type-checking pass.",
                             "id": 5,
@@ -4862,16 +4240,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "sourceInfo",
                               "(telescope:orig)": "source_info",
                             },
-                            "originalScope": [
-                              [
-                                "google.api.expr.v1alpha1",
-                              ],
-                            ],
-                            "originalType": "SourceInfo",
                             "parsedType": {
-                              "aliasName": "SourceInfo",
                               "name": "SourceInfo",
-                              "originalName": "SourceInfo",
                               "type": "Type",
                             },
                             "scope": [
@@ -4883,10 +4253,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "SourceInfo",
                           },
                           "typeMap": {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                            ],
-                            "aliasType": "Type",
                             "comment": "A map from expression ids to types.
 
  Every expression node which has a type different than DYN has a mapping
@@ -4899,14 +4265,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "typeMap",
                               "(telescope:orig)": "type_map",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                            ],
-                            "originalType": "Type",
                             "parsedType": {
-                              "aliasName": "Type",
                               "name": "Type",
-                              "originalName": "Type",
                               "type": "Type",
                             },
                             "scope": [
@@ -4917,10 +4277,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         },
                         "keyTypes": [
                           {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                            ],
-                            "aliasType": "Reference",
                             "comment": "A map from expression ids to resolved references.
 
  The following entries are in this table:
@@ -4944,14 +4300,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "referenceMap",
                               "(telescope:orig)": "reference_map",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                            ],
-                            "originalType": "Reference",
                             "parsedType": {
-                              "aliasName": "Reference",
                               "name": "Reference",
-                              "originalName": "Reference",
                               "type": "Type",
                             },
                             "scope": [
@@ -4960,10 +4310,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "Reference",
                           },
                           {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                            ],
-                            "aliasType": "Type",
                             "comment": "A map from expression ids to types.
 
  Every expression node which has a type different than DYN has a mapping
@@ -4977,14 +4323,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "typeMap",
                               "(telescope:orig)": "type_map",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                            ],
-                            "originalType": "Type",
                             "parsedType": {
-                              "aliasName": "Type",
                               "name": "Type",
-                              "originalName": "Type",
                               "type": "Type",
                             },
                             "scope": [
@@ -5009,11 +4349,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
  evaluating that expression, and the caller requesting evaluation.",
                         "fields": {
                           "function": {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                              "Decl",
-                            ],
-                            "aliasType": "FunctionDecl",
                             "comment": "Function declaration.",
                             "id": 3,
                             "options": {
@@ -5021,15 +4356,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "function",
                               "(telescope:orig)": "function",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                              "Decl",
-                            ],
-                            "originalType": "FunctionDecl",
                             "parsedType": {
-                              "aliasName": "FunctionDecl",
                               "name": "FunctionDecl",
-                              "originalName": "FunctionDecl",
                               "type": "Type",
                             },
                             "scope": [
@@ -5039,11 +4367,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "FunctionDecl",
                           },
                           "ident": {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                              "Decl",
-                            ],
-                            "aliasType": "IdentDecl",
                             "comment": "Identifier declaration.",
                             "id": 2,
                             "options": {
@@ -5051,15 +4374,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "ident",
                               "(telescope:orig)": "ident",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                              "Decl",
-                            ],
-                            "originalType": "IdentDecl",
                             "parsedType": {
-                              "aliasName": "IdentDecl",
                               "name": "IdentDecl",
-                              "originalName": "IdentDecl",
                               "type": "Type",
                             },
                             "scope": [
@@ -5104,12 +4420,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
  logging which are not observable from CEL).",
                             "fields": {
                               "overloads": {
-                                "aliasScope": [
-                                  "google.api.expr.v1alpha1",
-                                  "Decl",
-                                  "FunctionDecl",
-                                ],
-                                "aliasType": "Overload",
                                 "comment": "Required. List of function overloads, must contain at least one overload.",
                                 "id": 1,
                                 "options": {
@@ -5117,16 +4427,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "overloads",
                                   "(telescope:orig)": "overloads",
                                 },
-                                "originalScope": [
-                                  "google.api.expr.v1alpha1",
-                                  "Decl",
-                                  "FunctionDecl",
-                                ],
-                                "originalType": "Overload",
                                 "parsedType": {
-                                  "aliasName": "Overload",
                                   "name": "Overload",
-                                  "originalName": "Overload",
                                   "type": "Type",
                                 },
                                 "rule": "repeated",
@@ -5211,10 +4513,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                     "typeNum": 13,
                                   },
                                   "params": {
-                                    "aliasScope": [
-                                      "google.api.expr.v1alpha1",
-                                    ],
-                                    "aliasType": "Type",
                                     "comment": "List of function parameter [Type][google.api.expr.v1alpha1.Type] values.
 
  Param types are disjoint after generic type parameters have been
@@ -5231,14 +4529,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                       "(telescope:name)": "params",
                                       "(telescope:orig)": "params",
                                     },
-                                    "originalScope": [
-                                      "google.api.expr.v1alpha1",
-                                    ],
-                                    "originalType": "Type",
                                     "parsedType": {
-                                      "aliasName": "Type",
                                       "name": "Type",
-                                      "originalName": "Type",
                                       "type": "Type",
                                     },
                                     "rule": "repeated",
@@ -5248,10 +4540,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                     "type": "Type",
                                   },
                                   "resultType": {
-                                    "aliasScope": [
-                                      "google.api.expr.v1alpha1",
-                                    ],
-                                    "aliasType": "Type",
                                     "comment": "Required. The result type of the function. For example, the operator
  \`string.isEmpty()\` would have \`result_type\` of \`kind: BOOL\`.",
                                     "id": 4,
@@ -5260,14 +4548,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                       "(telescope:name)": "resultType",
                                       "(telescope:orig)": "result_type",
                                     },
-                                    "originalScope": [
-                                      "google.api.expr.v1alpha1",
-                                    ],
-                                    "originalType": "Type",
                                     "parsedType": {
-                                      "aliasName": "Type",
                                       "name": "Type",
-                                      "originalName": "Type",
                                       "type": "Type",
                                     },
                                     "scope": [
@@ -5338,10 +4620,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                 "typeNum": 13,
                               },
                               "type": {
-                                "aliasScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "aliasType": "Type",
                                 "comment": "Required. The type of the identifier.",
                                 "id": 1,
                                 "options": {
@@ -5349,14 +4627,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "type",
                                   "(telescope:orig)": "type",
                                 },
-                                "originalScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "originalType": "Type",
                                 "parsedType": {
-                                  "aliasName": "Type",
                                   "name": "Type",
-                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "scope": [
@@ -5365,12 +4637,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                 "type": "Type",
                               },
                               "value": {
-                                "aliasScope": [
-                                  [
-                                    "google.api.expr.v1alpha1",
-                                  ],
-                                ],
-                                "aliasType": "Constant",
                                 "comment": "The constant value of the identifier. If not specified, the identifier
  must be supplied at evaluation time.",
                                 "id": 2,
@@ -5381,16 +4647,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "value",
                                   "(telescope:orig)": "value",
                                 },
-                                "originalScope": [
-                                  [
-                                    "google.api.expr.v1alpha1",
-                                  ],
-                                ],
-                                "originalType": "Constant",
                                 "parsedType": {
-                                  "aliasName": "Constant",
                                   "name": "Constant",
-                                  "originalName": "Constant",
                                   "type": "Type",
                                 },
                                 "scope": [
@@ -5470,12 +4728,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "typeNum": 13,
                           },
                           "value": {
-                            "aliasScope": [
-                              [
-                                "google.api.expr.v1alpha1",
-                              ],
-                            ],
-                            "aliasType": "Constant",
                             "comment": "For references to constants, this may contain the value of the
  constant if known at compile time.",
                             "id": 4,
@@ -5486,16 +4738,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "value",
                               "(telescope:orig)": "value",
                             },
-                            "originalScope": [
-                              [
-                                "google.api.expr.v1alpha1",
-                              ],
-                            ],
-                            "originalType": "Constant",
                             "parsedType": {
-                              "aliasName": "Constant",
                               "name": "Constant",
-                              "originalName": "Constant",
                               "type": "Type",
                             },
                             "scope": [
@@ -5521,11 +4765,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         "comment": "Represents a CEL type.",
                         "fields": {
                           "abstractType": {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "aliasType": "AbstractType",
                             "comment": "Abstract, application defined type.",
                             "id": 14,
                             "options": {
@@ -5533,15 +4772,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "abstractType",
                               "(telescope:orig)": "abstract_type",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "originalType": "AbstractType",
                             "parsedType": {
-                              "aliasName": "AbstractType",
                               "name": "AbstractType",
-                              "originalName": "AbstractType",
                               "type": "Type",
                             },
                             "scope": [
@@ -5551,10 +4783,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "AbstractType",
                           },
                           "dyn": {
-                            "aliasScope": [
-                              "google.protobuf",
-                            ],
-                            "aliasType": "google.protobuf.Empty",
                             "comment": "Dynamic type.",
                             "id": 1,
                             "import": "google/protobuf/empty.proto",
@@ -5565,14 +4793,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "dyn",
                               "(telescope:orig)": "dyn",
                             },
-                            "originalScope": [
-                              "google.protobuf",
-                            ],
-                            "originalType": "google.protobuf.Empty",
                             "parsedType": {
-                              "aliasName": "Empty",
                               "name": "Empty",
-                              "originalName": "Empty",
                               "type": "Type",
                             },
                             "scope": [
@@ -5582,10 +4804,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "google.protobuf.Empty",
                           },
                           "error": {
-                            "aliasScope": [
-                              "google.protobuf",
-                            ],
-                            "aliasType": "google.protobuf.Empty",
                             "comment": "Error type.
 
  During type-checking if an expression is an error, its type is propagated
@@ -5600,14 +4818,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "error",
                               "(telescope:orig)": "error",
                             },
-                            "originalScope": [
-                              "google.protobuf",
-                            ],
-                            "originalType": "google.protobuf.Empty",
                             "parsedType": {
-                              "aliasName": "Empty",
                               "name": "Empty",
-                              "originalName": "Empty",
                               "type": "Type",
                             },
                             "scope": [
@@ -5617,11 +4829,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "google.protobuf.Empty",
                           },
                           "function": {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "aliasType": "FunctionType",
                             "comment": "Function type.",
                             "id": 8,
                             "options": {
@@ -5629,15 +4836,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "function",
                               "(telescope:orig)": "function",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "originalType": "FunctionType",
                             "parsedType": {
-                              "aliasName": "FunctionType",
                               "name": "FunctionType",
-                              "originalName": "FunctionType",
                               "type": "Type",
                             },
                             "scope": [
@@ -5647,11 +4847,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "FunctionType",
                           },
                           "listType": {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "aliasType": "ListType",
                             "comment": "Parameterized list with elements of \`list_type\`, e.g. \`list<timestamp>\`.",
                             "id": 6,
                             "options": {
@@ -5659,15 +4854,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "listType",
                               "(telescope:orig)": "list_type",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "originalType": "ListType",
                             "parsedType": {
-                              "aliasName": "ListType",
                               "name": "ListType",
-                              "originalName": "ListType",
                               "type": "Type",
                             },
                             "scope": [
@@ -5677,11 +4865,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "ListType",
                           },
                           "mapType": {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "aliasType": "MapType",
                             "comment": "Parameterized map with typed keys and values.",
                             "id": 7,
                             "options": {
@@ -5689,15 +4872,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "mapType",
                               "(telescope:orig)": "map_type",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "originalType": "MapType",
                             "parsedType": {
-                              "aliasName": "MapType",
                               "name": "MapType",
-                              "originalName": "MapType",
                               "type": "Type",
                             },
                             "scope": [
@@ -5726,10 +4902,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "typeNum": 13,
                           },
                           "null": {
-                            "aliasScope": [
-                              "google.protobuf",
-                            ],
-                            "aliasType": "google.protobuf.NullValue",
                             "comment": "Null value.",
                             "id": 2,
                             "import": "google/protobuf/struct.proto",
@@ -5740,14 +4912,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "null",
                               "(telescope:orig)": "null",
                             },
-                            "originalScope": [
-                              "google.protobuf",
-                            ],
-                            "originalType": "google.protobuf.NullValue",
                             "parsedType": {
-                              "aliasName": "NullValue",
                               "name": "NullValue",
-                              "originalName": "NullValue",
                               "type": "Enum",
                             },
                             "scope": [
@@ -5757,11 +4923,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "google.protobuf.NullValue",
                           },
                           "primitive": {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "aliasType": "PrimitiveType",
                             "comment": "Primitive types: \`true\`, \`1u\`, \`-2.0\`, \`'string'\`, \`b'bytes'\`.",
                             "id": 3,
                             "options": {
@@ -5769,15 +4930,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "primitive",
                               "(telescope:orig)": "primitive",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "originalType": "PrimitiveType",
                             "parsedType": {
-                              "aliasName": "PrimitiveType",
                               "name": "PrimitiveType",
-                              "originalName": "PrimitiveType",
                               "type": "Enum",
                             },
                             "scope": [
@@ -5787,10 +4941,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "PrimitiveType",
                           },
                           "type": {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                            ],
-                            "aliasType": "Type",
                             "comment": "Type type.
 
  The \`type\` value specifies the target type. e.g. int is type with a
@@ -5801,14 +4951,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "type",
                               "(telescope:orig)": "type",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                            ],
-                            "originalType": "Type",
                             "parsedType": {
-                              "aliasName": "Type",
                               "name": "Type",
-                              "originalName": "Type",
                               "type": "Type",
                             },
                             "scope": [
@@ -5837,11 +4981,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "typeNum": 13,
                           },
                           "wellKnown": {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "aliasType": "WellKnownType",
                             "comment": "Well-known protobuf type such as \`google.protobuf.Timestamp\`.",
                             "id": 5,
                             "options": {
@@ -5849,15 +4988,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "wellKnown",
                               "(telescope:orig)": "well_known",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "originalType": "WellKnownType",
                             "parsedType": {
-                              "aliasName": "WellKnownType",
                               "name": "WellKnownType",
-                              "originalName": "WellKnownType",
                               "type": "Enum",
                             },
                             "scope": [
@@ -5867,11 +4999,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "WellKnownType",
                           },
                           "wrapper": {
-                            "aliasScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "aliasType": "PrimitiveType",
                             "comment": "Wrapper of a primitive type, e.g. \`google.protobuf.Int64Value\`.",
                             "id": 4,
                             "options": {
@@ -5879,15 +5006,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "wrapper",
                               "(telescope:orig)": "wrapper",
                             },
-                            "originalScope": [
-                              "google.api.expr.v1alpha1",
-                              "Type",
-                            ],
-                            "originalType": "PrimitiveType",
                             "parsedType": {
-                              "aliasName": "PrimitiveType",
                               "name": "PrimitiveType",
-                              "originalName": "PrimitiveType",
                               "type": "Enum",
                             },
                             "scope": [
@@ -5921,10 +5041,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                 "typeNum": 13,
                               },
                               "parameterTypes": {
-                                "aliasScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "aliasType": "Type",
                                 "comment": "Parameter types for this abstract type.",
                                 "id": 2,
                                 "options": {
@@ -5932,14 +5048,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "parameterTypes",
                                   "(telescope:orig)": "parameter_types",
                                 },
-                                "originalScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "originalType": "Type",
                                 "parsedType": {
-                                  "aliasName": "Type",
                                   "name": "Type",
-                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "rule": "repeated",
@@ -5963,10 +5073,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "comment": "Function type with result and arg types.",
                             "fields": {
                               "argTypes": {
-                                "aliasScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "aliasType": "Type",
                                 "comment": "Argument types of the function.",
                                 "id": 2,
                                 "options": {
@@ -5974,14 +5080,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "argTypes",
                                   "(telescope:orig)": "arg_types",
                                 },
-                                "originalScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "originalType": "Type",
                                 "parsedType": {
-                                  "aliasName": "Type",
                                   "name": "Type",
-                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "rule": "repeated",
@@ -5991,10 +5091,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                 "type": "Type",
                               },
                               "resultType": {
-                                "aliasScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "aliasType": "Type",
                                 "comment": "Result type of the function.",
                                 "id": 1,
                                 "options": {
@@ -6002,14 +5098,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "resultType",
                                   "(telescope:orig)": "result_type",
                                 },
-                                "originalScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "originalType": "Type",
                                 "parsedType": {
-                                  "aliasName": "Type",
                                   "name": "Type",
-                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "scope": [
@@ -6032,10 +5122,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "comment": "List type with typed elements, e.g. \`list<example.proto.MyMessage>\`.",
                             "fields": {
                               "elemType": {
-                                "aliasScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "aliasType": "Type",
                                 "comment": "The element type.",
                                 "id": 1,
                                 "options": {
@@ -6043,14 +5129,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "elemType",
                                   "(telescope:orig)": "elem_type",
                                 },
-                                "originalScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "originalType": "Type",
                                 "parsedType": {
-                                  "aliasName": "Type",
                                   "name": "Type",
-                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "scope": [
@@ -6073,10 +5153,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "comment": "Map type with parameterized key and value types, e.g. \`map<string, int>\`.",
                             "fields": {
                               "keyType": {
-                                "aliasScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "aliasType": "Type",
                                 "comment": "The type of the key.",
                                 "id": 1,
                                 "options": {
@@ -6084,14 +5160,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "keyType",
                                   "(telescope:orig)": "key_type",
                                 },
-                                "originalScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "originalType": "Type",
                                 "parsedType": {
-                                  "aliasName": "Type",
                                   "name": "Type",
-                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "scope": [
@@ -6100,10 +5170,6 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                 "type": "Type",
                               },
                               "valueType": {
-                                "aliasScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "aliasType": "Type",
                                 "comment": "The type of the value.",
                                 "id": 2,
                                 "options": {
@@ -6111,14 +5177,8 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "valueType",
                                   "(telescope:orig)": "value_type",
                                 },
-                                "originalScope": [
-                                  "google.api.expr.v1alpha1",
-                                ],
-                                "originalType": "Type",
                                 "parsedType": {
-                                  "aliasName": "Type",
                                   "name": "Type",
-                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "scope": [
@@ -6270,15 +5330,13 @@ exports[`osmosis/claim/v1beta1/params 1`] = `
                     "comment": "Params defines the claim module's parameters.",
                     "fields": {
                       "airdropStartTime": {
-                        "aliasScope": [
-                          "google.protobuf",
-                        ],
-                        "aliasType": "google.protobuf.Timestamp",
+                        "aliasMessage": "OsmosisClaimV1beta1Params",
                         "comment": null,
                         "id": 1,
                         "import": "google/protobuf/timestamp.proto",
                         "importedName": "google.protobuf.Timestamp",
                         "isNestedMsg": false,
+                        "message": "OsmosisClaimV1beta1Params",
                         "options": {
                           "(gogoproto.moretags)": "yaml:airdrop_start_time",
                           "(gogoproto.nullable)": false,
@@ -6287,14 +5345,9 @@ exports[`osmosis/claim/v1beta1/params 1`] = `
                           "(telescope:name)": "airdropStartTime",
                           "(telescope:orig)": "airdrop_start_time",
                         },
-                        "originalScope": [
-                          "google.protobuf",
-                        ],
-                        "originalType": "google.protobuf.Timestamp",
+                        "originalMessage": "Params",
                         "parsedType": {
-                          "aliasName": "Timestamp",
                           "name": "Timestamp",
-                          "originalName": "Timestamp",
                           "type": "Type",
                         },
                         "scope": [
@@ -6304,14 +5357,17 @@ exports[`osmosis/claim/v1beta1/params 1`] = `
                         "type": "google.protobuf.Timestamp",
                       },
                       "claimDenom": {
+                        "aliasMessage": "OsmosisClaimV1beta1Params",
                         "comment": "denom of claimable asset",
                         "id": 4,
                         "isScalar": true,
+                        "message": "OsmosisClaimV1beta1Params",
                         "options": {
                           "(telescope:camel)": "claimDenom",
                           "(telescope:name)": "claimDenom",
                           "(telescope:orig)": "claim_denom",
                         },
+                        "originalMessage": "Params",
                         "parsedType": {
                           "name": "string",
                           "type": "native",
@@ -6320,15 +5376,13 @@ exports[`osmosis/claim/v1beta1/params 1`] = `
                         "typeNum": 13,
                       },
                       "durationOfDecay": {
-                        "aliasScope": [
-                          "google.protobuf",
-                        ],
-                        "aliasType": "google.protobuf.Duration",
+                        "aliasMessage": "OsmosisClaimV1beta1Params",
                         "comment": null,
                         "id": 3,
                         "import": "google/protobuf/duration.proto",
                         "importedName": "google.protobuf.Duration",
                         "isNestedMsg": false,
+                        "message": "OsmosisClaimV1beta1Params",
                         "options": {
                           "(gogoproto.jsontag)": "duration_of_decay,omitempty",
                           "(gogoproto.moretags)": "yaml:duration_of_decay",
@@ -6338,14 +5392,9 @@ exports[`osmosis/claim/v1beta1/params 1`] = `
                           "(telescope:name)": "durationOfDecay",
                           "(telescope:orig)": "duration_of_decay",
                         },
-                        "originalScope": [
-                          "google.protobuf",
-                        ],
-                        "originalType": "google.protobuf.Duration",
+                        "originalMessage": "Params",
                         "parsedType": {
-                          "aliasName": "Duration",
                           "name": "Duration",
-                          "originalName": "Duration",
                           "type": "Type",
                         },
                         "scope": [
@@ -6355,15 +5404,13 @@ exports[`osmosis/claim/v1beta1/params 1`] = `
                         "type": "google.protobuf.Duration",
                       },
                       "durationUntilDecay": {
-                        "aliasScope": [
-                          "google.protobuf",
-                        ],
-                        "aliasType": "google.protobuf.Duration",
+                        "aliasMessage": "OsmosisClaimV1beta1Params",
                         "comment": null,
                         "id": 2,
                         "import": "google/protobuf/duration.proto",
                         "importedName": "google.protobuf.Duration",
                         "isNestedMsg": false,
+                        "message": "OsmosisClaimV1beta1Params",
                         "options": {
                           "(gogoproto.jsontag)": "duration_until_decay,omitempty",
                           "(gogoproto.moretags)": "yaml:duration_until_decay",
@@ -6373,14 +5420,9 @@ exports[`osmosis/claim/v1beta1/params 1`] = `
                           "(telescope:name)": "durationUntilDecay",
                           "(telescope:orig)": "duration_until_decay",
                         },
-                        "originalScope": [
-                          "google.protobuf",
-                        ],
-                        "originalType": "google.protobuf.Duration",
+                        "originalMessage": "Params",
                         "parsedType": {
-                          "aliasName": "Duration",
                           "name": "Duration",
-                          "originalName": "Duration",
                           "type": "Type",
                         },
                         "scope": [
@@ -6519,10 +5561,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                             "typeNum": 13,
                           },
                           "tokenOutMins": {
-                            "aliasScope": [
-                              "cosmos.base.v1beta1",
-                            ],
-                            "aliasType": "cosmos.base.v1beta1.Coin",
                             "comment": null,
                             "id": 4,
                             "import": "cosmos/base/v1beta1/coin.proto",
@@ -6535,14 +5573,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                               "(telescope:name)": "tokenOutMins",
                               "(telescope:orig)": "token_out_mins",
                             },
-                            "originalScope": [
-                              "cosmos.base.v1beta1",
-                            ],
-                            "originalType": "cosmos.base.v1beta1.Coin",
                             "parsedType": {
-                              "aliasName": "Coin",
                               "name": "Coin",
-                              "originalName": "Coin",
                               "type": "Type",
                             },
                             "rule": "repeated",
@@ -6621,10 +5653,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                             "typeNum": 13,
                           },
                           "tokenOut": {
-                            "aliasScope": [
-                              "cosmos.base.v1beta1",
-                            ],
-                            "aliasType": "cosmos.base.v1beta1.Coin",
                             "comment": null,
                             "id": 3,
                             "import": "cosmos/base/v1beta1/coin.proto",
@@ -6637,14 +5665,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                               "(telescope:name)": "tokenOut",
                               "(telescope:orig)": "token_out",
                             },
-                            "originalScope": [
-                              "cosmos.base.v1beta1",
-                            ],
-                            "originalType": "cosmos.base.v1beta1.Coin",
                             "parsedType": {
-                              "aliasName": "Coin",
                               "name": "Coin",
-                              "originalName": "Coin",
                               "type": "Type",
                             },
                             "scope": [
@@ -6826,10 +5848,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                             "typeNum": 13,
                           },
                           "tokenInMaxs": {
-                            "aliasScope": [
-                              "cosmos.base.v1beta1",
-                            ],
-                            "aliasType": "cosmos.base.v1beta1.Coin",
                             "comment": null,
                             "id": 4,
                             "import": "cosmos/base/v1beta1/coin.proto",
@@ -6842,14 +5860,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                               "(telescope:name)": "tokenInMaxs",
                               "(telescope:orig)": "token_in_maxs",
                             },
-                            "originalScope": [
-                              "cosmos.base.v1beta1",
-                            ],
-                            "originalType": "cosmos.base.v1beta1.Coin",
                             "parsedType": {
-                              "aliasName": "Coin",
                               "name": "Coin",
-                              "originalName": "Coin",
                               "type": "Type",
                             },
                             "rule": "repeated",
@@ -6928,10 +5940,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                             "typeNum": 13,
                           },
                           "tokenIn": {
-                            "aliasScope": [
-                              "cosmos.base.v1beta1",
-                            ],
-                            "aliasType": "cosmos.base.v1beta1.Coin",
                             "comment": null,
                             "id": 3,
                             "import": "cosmos/base/v1beta1/coin.proto",
@@ -6944,14 +5952,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                               "(telescope:name)": "tokenIn",
                               "(telescope:orig)": "token_in",
                             },
-                            "originalScope": [
-                              "cosmos.base.v1beta1",
-                            ],
-                            "originalType": "cosmos.base.v1beta1.Coin",
                             "parsedType": {
-                              "aliasName": "Coin",
                               "name": "Coin",
-                              "originalName": "Coin",
                               "type": "Type",
                             },
                             "scope": [
@@ -7080,10 +6082,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "comment": null,
                         "fields": {
                           "routes": {
-                            "aliasScope": [
-                              "osmosis.gamm.v1beta1",
-                            ],
-                            "aliasType": "SwapAmountInRoute",
                             "comment": null,
                             "id": 2,
                             "options": {
@@ -7092,14 +6090,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                               "(telescope:name)": "routes",
                               "(telescope:orig)": "routes",
                             },
-                            "originalScope": [
-                              "osmosis.gamm.v1beta1",
-                            ],
-                            "originalType": "SwapAmountInRoute",
                             "parsedType": {
-                              "aliasName": "SwapAmountInRoute",
                               "name": "SwapAmountInRoute",
-                              "originalName": "SwapAmountInRoute",
                               "type": "Type",
                             },
                             "rule": "repeated",
@@ -7126,10 +6118,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                             "typeNum": 13,
                           },
                           "tokenIn": {
-                            "aliasScope": [
-                              "cosmos.base.v1beta1",
-                            ],
-                            "aliasType": "cosmos.base.v1beta1.Coin",
                             "comment": null,
                             "id": 3,
                             "import": "cosmos/base/v1beta1/coin.proto",
@@ -7142,14 +6130,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                               "(telescope:name)": "tokenIn",
                               "(telescope:orig)": "token_in",
                             },
-                            "originalScope": [
-                              "cosmos.base.v1beta1",
-                            ],
-                            "originalType": "cosmos.base.v1beta1.Coin",
                             "parsedType": {
-                              "aliasName": "Coin",
                               "name": "Coin",
-                              "originalName": "Coin",
                               "type": "Type",
                             },
                             "scope": [
@@ -7193,10 +6175,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "comment": null,
                         "fields": {
                           "routes": {
-                            "aliasScope": [
-                              "osmosis.gamm.v1beta1",
-                            ],
-                            "aliasType": "SwapAmountOutRoute",
                             "comment": null,
                             "id": 2,
                             "options": {
@@ -7205,14 +6183,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                               "(telescope:name)": "routes",
                               "(telescope:orig)": "routes",
                             },
-                            "originalScope": [
-                              "osmosis.gamm.v1beta1",
-                            ],
-                            "originalType": "SwapAmountOutRoute",
                             "parsedType": {
-                              "aliasName": "SwapAmountOutRoute",
                               "name": "SwapAmountOutRoute",
-                              "originalName": "SwapAmountOutRoute",
                               "type": "Type",
                             },
                             "rule": "repeated",
@@ -7258,10 +6230,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                             "typeNum": 13,
                           },
                           "tokenOut": {
-                            "aliasScope": [
-                              "cosmos.base.v1beta1",
-                            ],
-                            "aliasType": "cosmos.base.v1beta1.Coin",
                             "comment": null,
                             "id": 4,
                             "import": "cosmos/base/v1beta1/coin.proto",
@@ -7274,14 +6242,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                               "(telescope:name)": "tokenOut",
                               "(telescope:orig)": "token_out",
                             },
-                            "originalScope": [
-                              "cosmos.base.v1beta1",
-                            ],
-                            "originalType": "cosmos.base.v1beta1.Coin",
                             "parsedType": {
-                              "aliasName": "Coin",
                               "name": "Coin",
-                              "originalName": "Coin",
                               "type": "Type",
                             },
                             "scope": [
@@ -7362,10 +6324,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "typeNum": 13,
                       },
                       "tokenOutMins": {
-                        "aliasScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.v1beta1.Coin",
                         "comment": null,
                         "id": 4,
                         "import": "cosmos/base/v1beta1/coin.proto",
@@ -7378,14 +6336,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                           "(telescope:name)": "tokenOutMins",
                           "(telescope:orig)": "token_out_mins",
                         },
-                        "originalScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.v1beta1.Coin",
                         "parsedType": {
-                          "aliasName": "Coin",
                           "name": "Coin",
-                          "originalName": "Coin",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -7410,10 +6362,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "comment": null,
                     "fields": {
                       "tokenOut": {
-                        "aliasScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.v1beta1.Coin",
                         "comment": null,
                         "id": 1,
                         "import": "cosmos/base/v1beta1/coin.proto",
@@ -7426,14 +6374,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                           "(telescope:name)": "tokenOut",
                           "(telescope:orig)": "token_out",
                         },
-                        "originalScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.v1beta1.Coin",
                         "parsedType": {
-                          "aliasName": "Coin",
                           "name": "Coin",
-                          "originalName": "Coin",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -7511,10 +6453,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "typeNum": 13,
                       },
                       "tokenOut": {
-                        "aliasScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.v1beta1.Coin",
                         "comment": null,
                         "id": 3,
                         "import": "cosmos/base/v1beta1/coin.proto",
@@ -7527,14 +6465,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                           "(telescope:name)": "tokenOut",
                           "(telescope:orig)": "token_out",
                         },
-                        "originalScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.v1beta1.Coin",
                         "parsedType": {
-                          "aliasName": "Coin",
                           "name": "Coin",
-                          "originalName": "Coin",
                           "type": "Type",
                         },
                         "scope": [
@@ -7781,10 +6713,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "typeNum": 13,
                       },
                       "tokenInMaxs": {
-                        "aliasScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.v1beta1.Coin",
                         "comment": null,
                         "id": 4,
                         "import": "cosmos/base/v1beta1/coin.proto",
@@ -7797,14 +6725,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                           "(telescope:name)": "tokenInMaxs",
                           "(telescope:orig)": "token_in_maxs",
                         },
-                        "originalScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.v1beta1.Coin",
                         "parsedType": {
-                          "aliasName": "Coin",
                           "name": "Coin",
-                          "originalName": "Coin",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -7848,10 +6770,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "typeNum": 13,
                       },
                       "tokenIn": {
-                        "aliasScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.v1beta1.Coin",
                         "comment": null,
                         "id": 2,
                         "import": "cosmos/base/v1beta1/coin.proto",
@@ -7864,14 +6782,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                           "(telescope:name)": "tokenIn",
                           "(telescope:orig)": "token_in",
                         },
-                        "originalScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.v1beta1.Coin",
                         "parsedType": {
-                          "aliasName": "Coin",
                           "name": "Coin",
-                          "originalName": "Coin",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -7950,10 +6862,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "typeNum": 13,
                       },
                       "tokenIn": {
-                        "aliasScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.v1beta1.Coin",
                         "comment": null,
                         "id": 3,
                         "import": "cosmos/base/v1beta1/coin.proto",
@@ -7966,14 +6874,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                           "(telescope:name)": "tokenIn",
                           "(telescope:orig)": "token_in",
                         },
-                        "originalScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.v1beta1.Coin",
                         "parsedType": {
-                          "aliasName": "Coin",
                           "name": "Coin",
-                          "originalName": "Coin",
                           "type": "Type",
                         },
                         "scope": [
@@ -8166,10 +7068,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "comment": null,
                     "fields": {
                       "routes": {
-                        "aliasScope": [
-                          "osmosis.gamm.v1beta1",
-                        ],
-                        "aliasType": "SwapAmountInRoute",
                         "comment": null,
                         "id": 2,
                         "options": {
@@ -8178,14 +7076,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                           "(telescope:name)": "routes",
                           "(telescope:orig)": "routes",
                         },
-                        "originalScope": [
-                          "osmosis.gamm.v1beta1",
-                        ],
-                        "originalType": "SwapAmountInRoute",
                         "parsedType": {
-                          "aliasName": "SwapAmountInRoute",
                           "name": "SwapAmountInRoute",
-                          "originalName": "SwapAmountInRoute",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -8212,10 +7104,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "typeNum": 13,
                       },
                       "tokenIn": {
-                        "aliasScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.v1beta1.Coin",
                         "comment": null,
                         "id": 3,
                         "import": "cosmos/base/v1beta1/coin.proto",
@@ -8228,14 +7116,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                           "(telescope:name)": "tokenIn",
                           "(telescope:orig)": "token_in",
                         },
-                        "originalScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.v1beta1.Coin",
                         "parsedType": {
-                          "aliasName": "Coin",
                           "name": "Coin",
-                          "originalName": "Coin",
                           "type": "Type",
                         },
                         "scope": [
@@ -8311,10 +7193,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                     "comment": null,
                     "fields": {
                       "routes": {
-                        "aliasScope": [
-                          "osmosis.gamm.v1beta1",
-                        ],
-                        "aliasType": "SwapAmountOutRoute",
                         "comment": null,
                         "id": 2,
                         "options": {
@@ -8323,14 +7201,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                           "(telescope:name)": "routes",
                           "(telescope:orig)": "routes",
                         },
-                        "originalScope": [
-                          "osmosis.gamm.v1beta1",
-                        ],
-                        "originalType": "SwapAmountOutRoute",
                         "parsedType": {
-                          "aliasName": "SwapAmountOutRoute",
                           "name": "SwapAmountOutRoute",
-                          "originalName": "SwapAmountOutRoute",
                           "type": "Type",
                         },
                         "rule": "repeated",
@@ -8376,10 +7248,6 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                         "typeNum": 13,
                       },
                       "tokenOut": {
-                        "aliasScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "aliasType": "cosmos.base.v1beta1.Coin",
                         "comment": null,
                         "id": 4,
                         "import": "cosmos/base/v1beta1/coin.proto",
@@ -8392,14 +7260,8 @@ exports[`osmosis/gamm/v1beta1/tx 1`] = `
                           "(telescope:name)": "tokenOut",
                           "(telescope:orig)": "token_out",
                         },
-                        "originalScope": [
-                          "cosmos.base.v1beta1",
-                        ],
-                        "originalType": "cosmos.base.v1beta1.Coin",
                         "parsedType": {
-                          "aliasName": "Coin",
                           "name": "Coin",
-                          "originalName": "Coin",
                           "type": "Type",
                         },
                         "scope": [

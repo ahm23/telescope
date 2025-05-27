@@ -6,10 +6,6 @@ exports[`double import bug GenesisState 1`] = `
   "comment": "GenesisState defines the ibc module's genesis state.",
   "fields": {
     "channelGenesis": {
-      "aliasScope": [
-        "ibc.core.channel.v1",
-      ],
-      "aliasType": "ibc.core.channel.v1.GenesisState",
       "comment": "ICS004 - Channel genesis state",
       "id": 3,
       "import": "ibc/core/channel/v1/genesis.proto",
@@ -22,14 +18,8 @@ exports[`double import bug GenesisState 1`] = `
         "(telescope:name)": "channelGenesis",
         "(telescope:orig)": "channel_genesis",
       },
-      "originalScope": [
-        "ibc.core.channel.v1",
-      ],
-      "originalType": "ibc.core.channel.v1.GenesisState",
       "parsedType": {
-        "aliasName": "GenesisState",
         "name": "GenesisState",
-        "originalName": "GenesisState",
         "type": "Type",
       },
       "scope": [
@@ -39,10 +29,6 @@ exports[`double import bug GenesisState 1`] = `
       "type": "ibc.core.channel.v1.GenesisState",
     },
     "clientGenesis": {
-      "aliasScope": [
-        "ibc.core.client.v1",
-      ],
-      "aliasType": "ibc.core.client.v1.GenesisState",
       "comment": "ICS002 - Clients genesis state",
       "id": 1,
       "import": "ibc/core/client/v1/genesis.proto",
@@ -55,14 +41,8 @@ exports[`double import bug GenesisState 1`] = `
         "(telescope:name)": "clientGenesis",
         "(telescope:orig)": "client_genesis",
       },
-      "originalScope": [
-        "ibc.core.client.v1",
-      ],
-      "originalType": "ibc.core.client.v1.GenesisState",
       "parsedType": {
-        "aliasName": "GenesisState",
         "name": "GenesisState",
-        "originalName": "GenesisState",
         "type": "Type",
       },
       "scope": [
@@ -72,10 +52,6 @@ exports[`double import bug GenesisState 1`] = `
       "type": "ibc.core.client.v1.GenesisState",
     },
     "connectionGenesis": {
-      "aliasScope": [
-        "ibc.core.connection.v1",
-      ],
-      "aliasType": "ibc.core.connection.v1.GenesisState",
       "comment": "ICS003 - Connections genesis state",
       "id": 2,
       "import": "ibc/core/connection/v1/genesis.proto",
@@ -88,14 +64,8 @@ exports[`double import bug GenesisState 1`] = `
         "(telescope:name)": "connectionGenesis",
         "(telescope:orig)": "connection_genesis",
       },
-      "originalScope": [
-        "ibc.core.connection.v1",
-      ],
-      "originalType": "ibc.core.connection.v1.GenesisState",
       "parsedType": {
-        "aliasName": "GenesisState",
         "name": "GenesisState",
-        "originalName": "GenesisState",
         "type": "Type",
       },
       "scope": [

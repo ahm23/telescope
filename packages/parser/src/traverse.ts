@@ -330,7 +330,6 @@ const traverseFields = (
         field.aliasMessage = messageAlias;
         field.package = ref.proto.package;
 
-        console.log("traversed", field.name, field.message);
         return field;
       };
 

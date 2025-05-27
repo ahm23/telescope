@@ -10,11 +10,6 @@ exports[`google/rpc/error_details 1`] = `
  PreconditionFailure message.",
   "fields": {
     "violations": {
-      "aliasScope": [
-        "google.rpc",
-        "PreconditionFailure",
-      ],
-      "aliasType": "Violation",
       "comment": "Describes all precondition violations.",
       "id": 1,
       "options": {
@@ -22,15 +17,8 @@ exports[`google/rpc/error_details 1`] = `
         "(telescope:name)": "violations",
         "(telescope:orig)": "violations",
       },
-      "originalScope": [
-        "google.rpc",
-        "PreconditionFailure",
-      ],
-      "originalType": "Violation",
       "parsedType": {
-        "aliasName": "Violation",
         "name": "Violation",
-        "originalName": "Violation",
         "type": "Type",
       },
       "rule": "repeated",

@@ -97,10 +97,6 @@ exports[`queries 1`] = `
             "typeNum": 8,
           },
           "tokensIn": {
-            "aliasScope": [
-              "cosmos.base.v1beta1",
-            ],
-            "aliasType": "cosmos.base.v1beta1.Coin",
             "comment": null,
             "id": 2,
             "import": "cosmos/base/v1beta1/coin.proto",
@@ -113,14 +109,8 @@ exports[`queries 1`] = `
               "(telescope:name)": "tokensIn",
               "(telescope:orig)": "tokens_in",
             },
-            "originalScope": [
-              "cosmos.base.v1beta1",
-            ],
-            "originalType": "cosmos.base.v1beta1.Coin",
             "parsedType": {
-              "aliasName": "Coin",
               "name": "Coin",
-              "originalName": "Coin",
               "type": "Type",
             },
             "rule": "repeated",
@@ -163,10 +153,6 @@ exports[`queries 1`] = `
             "typeNum": 8,
           },
           "tokensIn": {
-            "aliasScope": [
-              "cosmos.base.v1beta1",
-            ],
-            "aliasType": "cosmos.base.v1beta1.Coin",
             "comment": null,
             "id": 2,
             "import": "cosmos/base/v1beta1/coin.proto",
@@ -179,14 +165,8 @@ exports[`queries 1`] = `
               "(telescope:name)": "tokensIn",
               "(telescope:orig)": "tokens_in",
             },
-            "originalScope": [
-              "cosmos.base.v1beta1",
-            ],
-            "originalType": "cosmos.base.v1beta1.Coin",
             "parsedType": {
-              "aliasName": "Coin",
               "name": "Coin",
-              "originalName": "Coin",
               "type": "Type",
             },
             "rule": "repeated",
@@ -248,12 +228,6 @@ exports[`queries 1`] = `
             "typeNum": 8,
           },
           "routes": {
-            "aliasScope": [
-              [
-                "osmosis.gamm.v1beta1",
-              ],
-            ],
-            "aliasType": "SwapAmountInRoute",
             "comment": null,
             "id": 4,
             "import": "osmosis/gamm/v1beta1/tx.proto",
@@ -265,16 +239,8 @@ exports[`queries 1`] = `
               "(telescope:name)": "routes",
               "(telescope:orig)": "routes",
             },
-            "originalScope": [
-              [
-                "osmosis.gamm.v1beta1",
-              ],
-            ],
-            "originalType": "SwapAmountInRoute",
             "parsedType": {
-              "aliasName": "SwapAmountInRoute",
               "name": "SwapAmountInRoute",
-              "originalName": "SwapAmountInRoute",
               "type": "Type",
             },
             "rule": "repeated",
@@ -378,12 +344,6 @@ exports[`queries 1`] = `
             "typeNum": 8,
           },
           "routes": {
-            "aliasScope": [
-              [
-                "osmosis.gamm.v1beta1",
-              ],
-            ],
-            "aliasType": "SwapAmountOutRoute",
             "comment": null,
             "id": 3,
             "import": "osmosis/gamm/v1beta1/tx.proto",
@@ -395,16 +355,8 @@ exports[`queries 1`] = `
               "(telescope:name)": "routes",
               "(telescope:orig)": "routes",
             },
-            "originalScope": [
-              [
-                "osmosis.gamm.v1beta1",
-              ],
-            ],
-            "originalType": "SwapAmountOutRoute",
             "parsedType": {
-              "aliasName": "SwapAmountOutRoute",
               "name": "SwapAmountOutRoute",
-              "originalName": "SwapAmountOutRoute",
               "type": "Type",
             },
             "rule": "repeated",
@@ -657,10 +609,6 @@ exports[`queries 1`] = `
         "comment": null,
         "fields": {
           "pagination": {
-            "aliasScope": [
-              "cosmos.base.query.v1beta1",
-            ],
-            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
             "comment": "pagination defines an optional pagination for the request.",
             "id": 2,
             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -671,14 +619,8 @@ exports[`queries 1`] = `
               "(telescope:name)": "pagination",
               "(telescope:orig)": "pagination",
             },
-            "originalScope": [
-              "cosmos.base.query.v1beta1",
-            ],
-            "originalType": "cosmos.base.query.v1beta1.PageRequest",
             "parsedType": {
-              "aliasName": "PageRequest",
               "name": "PageRequest",
-              "originalName": "PageRequest",
               "type": "Type",
             },
             "scope": [
@@ -719,10 +661,6 @@ exports[`queries 1`] = `
  parameters",
         "fields": {
           "minLiquidity": {
-            "aliasScope": [
-              "cosmos.base.v1beta1",
-            ],
-            "aliasType": "cosmos.base.v1beta1.Coin",
             "comment": null,
             "id": 1,
             "import": "cosmos/base/v1beta1/coin.proto",
@@ -736,14 +674,8 @@ exports[`queries 1`] = `
               "(telescope:name)": "minLiquidity",
               "(telescope:orig)": "min_liquidity",
             },
-            "originalScope": [
-              "cosmos.base.v1beta1",
-            ],
-            "originalType": "cosmos.base.v1beta1.Coin",
             "parsedType": {
-              "aliasName": "Coin",
               "name": "Coin",
-              "originalName": "Coin",
               "type": "Type",
             },
             "rule": "repeated",
@@ -754,10 +686,6 @@ exports[`queries 1`] = `
             "type": "cosmos.base.v1beta1.Coin",
           },
           "pagination": {
-            "aliasScope": [
-              "cosmos.base.query.v1beta1",
-            ],
-            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
             "comment": null,
             "id": 3,
             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -768,14 +696,8 @@ exports[`queries 1`] = `
               "(telescope:name)": "pagination",
               "(telescope:orig)": "pagination",
             },
-            "originalScope": [
-              "cosmos.base.query.v1beta1",
-            ],
-            "originalType": "cosmos.base.query.v1beta1.PageRequest",
             "parsedType": {
-              "aliasName": "PageRequest",
               "name": "PageRequest",
-              "originalName": "PageRequest",
               "type": "Type",
             },
             "scope": [
@@ -1095,10 +1017,6 @@ exports[`queries 1`] = `
     "comment": null,
     "fields": {
       "tokensOut": {
-        "aliasScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "aliasType": "cosmos.base.v1beta1.Coin",
         "comment": null,
         "id": 1,
         "import": "cosmos/base/v1beta1/coin.proto",
@@ -1111,14 +1029,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "tokensOut",
           "(telescope:orig)": "tokens_out",
         },
-        "originalScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "originalType": "cosmos.base.v1beta1.Coin",
         "parsedType": {
-          "aliasName": "Coin",
           "name": "Coin",
-          "originalName": "Coin",
           "type": "Type",
         },
         "rule": "repeated",
@@ -1160,10 +1072,6 @@ exports[`queries 1`] = `
         "typeNum": 8,
       },
       "tokensIn": {
-        "aliasScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "aliasType": "cosmos.base.v1beta1.Coin",
         "comment": null,
         "id": 2,
         "import": "cosmos/base/v1beta1/coin.proto",
@@ -1176,14 +1084,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "tokensIn",
           "(telescope:orig)": "tokens_in",
         },
-        "originalScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "originalType": "cosmos.base.v1beta1.Coin",
         "parsedType": {
-          "aliasName": "Coin",
           "name": "Coin",
-          "originalName": "Coin",
           "type": "Type",
         },
         "rule": "repeated",
@@ -1226,10 +1128,6 @@ exports[`queries 1`] = `
         "typeNum": 13,
       },
       "tokensOut": {
-        "aliasScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "aliasType": "cosmos.base.v1beta1.Coin",
         "comment": null,
         "id": 1,
         "import": "cosmos/base/v1beta1/coin.proto",
@@ -1243,14 +1141,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "tokensOut",
           "(telescope:orig)": "tokens_out",
         },
-        "originalScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "originalType": "cosmos.base.v1beta1.Coin",
         "parsedType": {
-          "aliasName": "Coin",
           "name": "Coin",
-          "originalName": "Coin",
           "type": "Type",
         },
         "rule": "repeated",
@@ -1292,10 +1184,6 @@ exports[`queries 1`] = `
         "typeNum": 8,
       },
       "tokensIn": {
-        "aliasScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "aliasType": "cosmos.base.v1beta1.Coin",
         "comment": null,
         "id": 2,
         "import": "cosmos/base/v1beta1/coin.proto",
@@ -1308,14 +1196,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "tokensIn",
           "(telescope:orig)": "tokens_in",
         },
-        "originalScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "originalType": "cosmos.base.v1beta1.Coin",
         "parsedType": {
-          "aliasName": "Coin",
           "name": "Coin",
-          "originalName": "Coin",
           "type": "Type",
         },
         "rule": "repeated",
@@ -1359,10 +1241,6 @@ exports[`queries 1`] = `
         "typeNum": 13,
       },
       "tokensOut": {
-        "aliasScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "aliasType": "cosmos.base.v1beta1.Coin",
         "comment": null,
         "id": 2,
         "import": "cosmos/base/v1beta1/coin.proto",
@@ -1375,14 +1253,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "tokensOut",
           "(telescope:orig)": "tokens_out",
         },
-        "originalScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "originalType": "cosmos.base.v1beta1.Coin",
         "parsedType": {
-          "aliasName": "Coin",
           "name": "Coin",
-          "originalName": "Coin",
           "type": "Type",
         },
         "rule": "repeated",
@@ -1482,10 +1354,6 @@ exports[`queries 1`] = `
     "comment": null,
     "fields": {
       "params": {
-        "aliasScope": [
-          "google.protobuf",
-        ],
-        "aliasType": "google.protobuf.Any",
         "comment": null,
         "id": 1,
         "import": "google/protobuf/any.proto",
@@ -1496,14 +1364,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "params",
           "(telescope:orig)": "params",
         },
-        "originalScope": [
-          "google.protobuf",
-        ],
-        "originalType": "google.protobuf.Any",
         "parsedType": {
-          "aliasName": "Any",
           "name": "Any",
-          "originalName": "Any",
           "type": "Type",
         },
         "scope": [
@@ -1558,10 +1420,6 @@ exports[`queries 1`] = `
     "comment": null,
     "fields": {
       "pool": {
-        "aliasScope": [
-          "google.protobuf",
-        ],
-        "aliasType": "google.protobuf.Any",
         "comment": null,
         "id": 1,
         "import": "google/protobuf/any.proto",
@@ -1573,14 +1431,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "pool",
           "(telescope:orig)": "pool",
         },
-        "originalScope": [
-          "google.protobuf",
-        ],
-        "originalType": "google.protobuf.Any",
         "parsedType": {
-          "aliasName": "Any",
           "name": "Any",
-          "originalName": "Any",
           "type": "Type",
         },
         "scope": [
@@ -1666,10 +1518,6 @@ exports[`queries 1`] = `
     "comment": "=============================== Pools",
     "fields": {
       "pagination": {
-        "aliasScope": [
-          "cosmos.base.query.v1beta1",
-        ],
-        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
         "comment": "pagination defines an optional pagination for the request.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1680,14 +1528,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
-        "originalScope": [
-          "cosmos.base.query.v1beta1",
-        ],
-        "originalType": "cosmos.base.query.v1beta1.PageRequest",
         "parsedType": {
-          "aliasName": "PageRequest",
           "name": "PageRequest",
-          "originalName": "PageRequest",
           "type": "Type",
         },
         "scope": [
@@ -1711,10 +1553,6 @@ exports[`queries 1`] = `
     "comment": null,
     "fields": {
       "pagination": {
-        "aliasScope": [
-          "cosmos.base.query.v1beta1",
-        ],
-        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
         "comment": "pagination defines the pagination in the response.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1725,14 +1563,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
-        "originalScope": [
-          "cosmos.base.query.v1beta1",
-        ],
-        "originalType": "cosmos.base.query.v1beta1.PageResponse",
         "parsedType": {
-          "aliasName": "PageResponse",
           "name": "PageResponse",
-          "originalName": "PageResponse",
           "type": "Type",
         },
         "scope": [
@@ -1742,10 +1574,6 @@ exports[`queries 1`] = `
         "type": "cosmos.base.query.v1beta1.PageResponse",
       },
       "pools": {
-        "aliasScope": [
-          "google.protobuf",
-        ],
-        "aliasType": "google.protobuf.Any",
         "comment": null,
         "id": 1,
         "import": "google/protobuf/any.proto",
@@ -1757,14 +1585,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "pools",
           "(telescope:orig)": "pools",
         },
-        "originalScope": [
-          "google.protobuf",
-        ],
-        "originalType": "google.protobuf.Any",
         "parsedType": {
-          "aliasName": "Any",
           "name": "Any",
-          "originalName": "Any",
           "type": "Type",
         },
         "rule": "repeated",
@@ -1789,10 +1611,6 @@ exports[`queries 1`] = `
     "comment": null,
     "fields": {
       "minLiquidity": {
-        "aliasScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "aliasType": "cosmos.base.v1beta1.Coin",
         "comment": null,
         "id": 1,
         "import": "cosmos/base/v1beta1/coin.proto",
@@ -1806,14 +1624,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "minLiquidity",
           "(telescope:orig)": "min_liquidity",
         },
-        "originalScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "originalType": "cosmos.base.v1beta1.Coin",
         "parsedType": {
-          "aliasName": "Coin",
           "name": "Coin",
-          "originalName": "Coin",
           "type": "Type",
         },
         "rule": "repeated",
@@ -1824,10 +1636,6 @@ exports[`queries 1`] = `
         "type": "cosmos.base.v1beta1.Coin",
       },
       "pagination": {
-        "aliasScope": [
-          "cosmos.base.query.v1beta1",
-        ],
-        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
         "comment": null,
         "id": 3,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1838,14 +1646,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
-        "originalScope": [
-          "cosmos.base.query.v1beta1",
-        ],
-        "originalType": "cosmos.base.query.v1beta1.PageRequest",
         "parsedType": {
-          "aliasName": "PageRequest",
           "name": "PageRequest",
-          "originalName": "PageRequest",
           "type": "Type",
         },
         "scope": [
@@ -1885,10 +1687,6 @@ exports[`queries 1`] = `
     "comment": null,
     "fields": {
       "pagination": {
-        "aliasScope": [
-          "cosmos.base.query.v1beta1",
-        ],
-        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
         "comment": "pagination defines the pagination in the response.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1899,14 +1697,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
-        "originalScope": [
-          "cosmos.base.query.v1beta1",
-        ],
-        "originalType": "cosmos.base.query.v1beta1.PageResponse",
         "parsedType": {
-          "aliasName": "PageResponse",
           "name": "PageResponse",
-          "originalName": "PageResponse",
           "type": "Type",
         },
         "scope": [
@@ -1916,10 +1708,6 @@ exports[`queries 1`] = `
         "type": "cosmos.base.query.v1beta1.PageResponse",
       },
       "pools": {
-        "aliasScope": [
-          "google.protobuf",
-        ],
-        "aliasType": "google.protobuf.Any",
         "comment": null,
         "id": 1,
         "import": "google/protobuf/any.proto",
@@ -1931,14 +1719,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "pools",
           "(telescope:orig)": "pools",
         },
-        "originalScope": [
-          "google.protobuf",
-        ],
-        "originalType": "google.protobuf.Any",
         "parsedType": {
-          "aliasName": "Any",
           "name": "Any",
-          "originalName": "Any",
           "type": "Type",
         },
         "rule": "repeated",
@@ -2082,12 +1864,6 @@ exports[`queries 1`] = `
         "typeNum": 8,
       },
       "routes": {
-        "aliasScope": [
-          [
-            "osmosis.gamm.v1beta1",
-          ],
-        ],
-        "aliasType": "SwapAmountInRoute",
         "comment": null,
         "id": 4,
         "import": "osmosis/gamm/v1beta1/tx.proto",
@@ -2099,16 +1875,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "routes",
           "(telescope:orig)": "routes",
         },
-        "originalScope": [
-          [
-            "osmosis.gamm.v1beta1",
-          ],
-        ],
-        "originalType": "SwapAmountInRoute",
         "parsedType": {
-          "aliasName": "SwapAmountInRoute",
           "name": "SwapAmountInRoute",
-          "originalName": "SwapAmountInRoute",
           "type": "Type",
         },
         "rule": "repeated",
@@ -2219,12 +1987,6 @@ exports[`queries 1`] = `
         "typeNum": 8,
       },
       "routes": {
-        "aliasScope": [
-          [
-            "osmosis.gamm.v1beta1",
-          ],
-        ],
-        "aliasType": "SwapAmountOutRoute",
         "comment": null,
         "id": 3,
         "import": "osmosis/gamm/v1beta1/tx.proto",
@@ -2236,16 +1998,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "routes",
           "(telescope:orig)": "routes",
         },
-        "originalScope": [
-          [
-            "osmosis.gamm.v1beta1",
-          ],
-        ],
-        "originalType": "SwapAmountOutRoute",
         "parsedType": {
-          "aliasName": "SwapAmountOutRoute",
           "name": "SwapAmountOutRoute",
-          "originalName": "SwapAmountOutRoute",
           "type": "Type",
         },
         "rule": "repeated",
@@ -2352,10 +2106,6 @@ exports[`queries 1`] = `
     "comment": null,
     "fields": {
       "liquidity": {
-        "aliasScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "aliasType": "cosmos.base.v1beta1.Coin",
         "comment": null,
         "id": 1,
         "import": "cosmos/base/v1beta1/coin.proto",
@@ -2369,14 +2119,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "liquidity",
           "(telescope:orig)": "liquidity",
         },
-        "originalScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "originalType": "cosmos.base.v1beta1.Coin",
         "parsedType": {
-          "aliasName": "Coin",
           "name": "Coin",
-          "originalName": "Coin",
           "type": "Type",
         },
         "rule": "repeated",
@@ -2432,10 +2176,6 @@ exports[`queries 1`] = `
     "comment": null,
     "fields": {
       "liquidity": {
-        "aliasScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "aliasType": "cosmos.base.v1beta1.Coin",
         "comment": null,
         "id": 1,
         "import": "cosmos/base/v1beta1/coin.proto",
@@ -2449,14 +2189,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "liquidity",
           "(telescope:orig)": "liquidity",
         },
-        "originalScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "originalType": "cosmos.base.v1beta1.Coin",
         "parsedType": {
-          "aliasName": "Coin",
           "name": "Coin",
-          "originalName": "Coin",
           "type": "Type",
         },
         "rule": "repeated",
@@ -2512,10 +2246,6 @@ exports[`queries 1`] = `
     "comment": null,
     "fields": {
       "totalShares": {
-        "aliasScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "aliasType": "cosmos.base.v1beta1.Coin",
         "comment": null,
         "id": 1,
         "import": "cosmos/base/v1beta1/coin.proto",
@@ -2528,14 +2258,8 @@ exports[`queries 1`] = `
           "(telescope:name)": "totalShares",
           "(telescope:orig)": "total_shares",
         },
-        "originalScope": [
-          "cosmos.base.v1beta1",
-        ],
-        "originalType": "cosmos.base.v1beta1.Coin",
         "parsedType": {
-          "aliasName": "Coin",
           "name": "Coin",
-          "originalName": "Coin",
           "type": "Type",
         },
         "scope": [

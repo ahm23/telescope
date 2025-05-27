@@ -49,6 +49,7 @@ export const parseProto = (content, options?: ParseProtoOptions) => {
     return parse(content, options);
 };
 export class ProtoStore implements IProtoStore {
+    _typeAliases: Record<string, Record<string, string>> = {};
     files: string[];
     protoDirs: string[];
     deps: ProtoDep[];
@@ -378,5 +379,15 @@ export class ProtoStore implements IProtoStore {
         }
 
         return Math.min(...Array.from(enumObj?.valueSet ?? []));
+    }
+
+    setTypeAlias(alias: string, type: string, filepath: string) {
+        this._typeAliases[filepath] = {
+            [type]: alias
+        };
+    }
+
+    getTypeAlias(type: string, filepath: string) {
+        return this._typeAliases[filepath]?.[type];
     }
 }

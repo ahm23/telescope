@@ -7,6 +7,7 @@ interface ParseProtoOptions {
 }
 export declare const parseProto: (content: any, options?: ParseProtoOptions) => import("@cosmology/protobufjs").IParserResult;
 export declare class ProtoStore implements IProtoStore {
+    _typeAliases: Record<string, Record<string, string>>;
     files: string[];
     protoDirs: string[];
     deps: ProtoDep[];
@@ -51,5 +52,7 @@ export declare class ProtoStore implements IProtoStore {
     getServices(myBase: string): Record<string, ProtoRef[]>;
     setEnumValues(pkg: string, name: string, protoSyntex: string, values: number[]): void;
     getDefaultOrExistingSmallestEnumValue(pkg: string, name: string): number;
+    setTypeAlias(alias: string, type: string, filepath: string): void;
+    getTypeAlias(type: string, filepath: string): string;
 }
 export {};

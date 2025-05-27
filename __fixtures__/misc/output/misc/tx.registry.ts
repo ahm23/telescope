@@ -1,4 +1,4 @@
-import { EncodingTestForDontOmit, EncodingTestForDontOmitSDKType, EncodingTestForOmit, EncodingTestForOmitSDKType } from "./all_fields";
+import { EncodingTestForDontOmit, EncodingTestForDontOmitSDKType } from "./all_fields";
 import { GeneratedType, Registry } from "@cosmjs/proto-signing";
 import { InputMsg, InputMsgSDKType } from "./tx";
 export const registry: ReadonlyArray<[string, GeneratedType]> = [["/misc.InputMsg", InputMsg]];

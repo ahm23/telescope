@@ -11,6 +11,10 @@ exports[`Akash 1`] = `
         "comment": "CloseDeployment defines a method to close a deployment given proper inputs.",
         "fields": {
           "id": {
+            "aliasScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "aliasType": "DeploymentID",
             "comment": null,
             "id": 1,
             "import": "akash/deployment/v1beta2/deployment.proto",
@@ -25,8 +29,14 @@ exports[`Akash 1`] = `
               "(telescope:name)": "id",
               "(telescope:orig)": "id",
             },
+            "originalScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "originalType": "DeploymentID",
             "parsedType": {
+              "aliasName": "DeploymentID",
               "name": "DeploymentID",
+              "originalName": "DeploymentID",
               "type": "Type",
             },
             "scope": [
@@ -51,6 +61,10 @@ exports[`Akash 1`] = `
         "comment": "CloseGroup defines a method to close a group of a deployment given proper inputs.",
         "fields": {
           "id": {
+            "aliasScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "aliasType": "GroupID",
             "comment": null,
             "id": 1,
             "import": "akash/deployment/v1beta2/groupid.proto",
@@ -65,8 +79,14 @@ exports[`Akash 1`] = `
               "(telescope:name)": "id",
               "(telescope:orig)": "id",
             },
+            "originalScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "originalType": "GroupID",
             "parsedType": {
+              "aliasName": "GroupID",
               "name": "GroupID",
+              "originalName": "GroupID",
               "type": "Type",
             },
             "scope": [
@@ -91,6 +111,10 @@ exports[`Akash 1`] = `
         "comment": "CreateDeployment defines a method to create new deployment given proper inputs.",
         "fields": {
           "deposit": {
+            "aliasScope": [
+              "cosmos.base.v1beta1",
+            ],
+            "aliasType": "cosmos.base.v1beta1.Coin",
             "comment": null,
             "id": 4,
             "import": "cosmos/base/v1beta1/coin.proto",
@@ -104,8 +128,14 @@ exports[`Akash 1`] = `
               "(telescope:name)": "deposit",
               "(telescope:orig)": "deposit",
             },
+            "originalScope": [
+              "cosmos.base.v1beta1",
+            ],
+            "originalType": "cosmos.base.v1beta1.Coin",
             "parsedType": {
+              "aliasName": "Coin",
               "name": "Coin",
+              "originalName": "Coin",
               "type": "Type",
             },
             "scope": [
@@ -133,6 +163,10 @@ exports[`Akash 1`] = `
             "typeNum": 13,
           },
           "groups": {
+            "aliasScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "aliasType": "GroupSpec",
             "comment": null,
             "id": 2,
             "import": "akash/deployment/v1beta2/groupspec.proto",
@@ -146,8 +180,14 @@ exports[`Akash 1`] = `
               "(telescope:name)": "groups",
               "(telescope:orig)": "groups",
             },
+            "originalScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "originalType": "GroupSpec",
             "parsedType": {
+              "aliasName": "GroupSpec",
               "name": "GroupSpec",
+              "originalName": "GroupSpec",
               "type": "Type",
             },
             "rule": "repeated",
@@ -158,6 +198,10 @@ exports[`Akash 1`] = `
             "type": "GroupSpec",
           },
           "id": {
+            "aliasScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "aliasType": "DeploymentID",
             "comment": null,
             "id": 1,
             "import": "akash/deployment/v1beta2/deployment.proto",
@@ -172,8 +216,14 @@ exports[`Akash 1`] = `
               "(telescope:name)": "id",
               "(telescope:orig)": "id",
             },
+            "originalScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "originalType": "DeploymentID",
             "parsedType": {
+              "aliasName": "DeploymentID",
               "name": "DeploymentID",
+              "originalName": "DeploymentID",
               "type": "Type",
             },
             "scope": [
@@ -216,6 +266,10 @@ exports[`Akash 1`] = `
         "comment": "DepositDeployment deposits more funds into the deployment account",
         "fields": {
           "amount": {
+            "aliasScope": [
+              "cosmos.base.v1beta1",
+            ],
+            "aliasType": "cosmos.base.v1beta1.Coin",
             "comment": null,
             "id": 2,
             "import": "cosmos/base/v1beta1/coin.proto",
@@ -229,8 +283,14 @@ exports[`Akash 1`] = `
               "(telescope:name)": "amount",
               "(telescope:orig)": "amount",
             },
+            "originalScope": [
+              "cosmos.base.v1beta1",
+            ],
+            "originalType": "cosmos.base.v1beta1.Coin",
             "parsedType": {
+              "aliasName": "Coin",
               "name": "Coin",
+              "originalName": "Coin",
               "type": "Type",
             },
             "scope": [
@@ -258,6 +318,10 @@ exports[`Akash 1`] = `
             "typeNum": 13,
           },
           "id": {
+            "aliasScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "aliasType": "DeploymentID",
             "comment": null,
             "id": 1,
             "import": "akash/deployment/v1beta2/deployment.proto",
@@ -272,8 +336,14 @@ exports[`Akash 1`] = `
               "(telescope:name)": "id",
               "(telescope:orig)": "id",
             },
+            "originalScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "originalType": "DeploymentID",
             "parsedType": {
+              "aliasName": "DeploymentID",
               "name": "DeploymentID",
+              "originalName": "DeploymentID",
               "type": "Type",
             },
             "scope": [
@@ -298,6 +368,10 @@ exports[`Akash 1`] = `
         "comment": "PauseGroup defines a method to close a group of a deployment given proper inputs.",
         "fields": {
           "id": {
+            "aliasScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "aliasType": "GroupID",
             "comment": null,
             "id": 1,
             "import": "akash/deployment/v1beta2/groupid.proto",
@@ -312,8 +386,14 @@ exports[`Akash 1`] = `
               "(telescope:name)": "id",
               "(telescope:orig)": "id",
             },
+            "originalScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "originalType": "GroupID",
             "parsedType": {
+              "aliasName": "GroupID",
               "name": "GroupID",
+              "originalName": "GroupID",
               "type": "Type",
             },
             "scope": [
@@ -338,6 +418,10 @@ exports[`Akash 1`] = `
         "comment": "StartGroup defines a method to close a group of a deployment given proper inputs.",
         "fields": {
           "id": {
+            "aliasScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "aliasType": "GroupID",
             "comment": null,
             "id": 1,
             "import": "akash/deployment/v1beta2/groupid.proto",
@@ -352,8 +436,14 @@ exports[`Akash 1`] = `
               "(telescope:name)": "id",
               "(telescope:orig)": "id",
             },
+            "originalScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "originalType": "GroupID",
             "parsedType": {
+              "aliasName": "GroupID",
               "name": "GroupID",
+              "originalName": "GroupID",
               "type": "Type",
             },
             "scope": [
@@ -378,6 +468,10 @@ exports[`Akash 1`] = `
         "comment": "UpdateDeployment defines a method to update a deployment given proper inputs.",
         "fields": {
           "id": {
+            "aliasScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "aliasType": "DeploymentID",
             "comment": null,
             "id": 1,
             "import": "akash/deployment/v1beta2/deployment.proto",
@@ -392,8 +486,14 @@ exports[`Akash 1`] = `
               "(telescope:name)": "id",
               "(telescope:orig)": "id",
             },
+            "originalScope": [
+              "akash.deployment.v1beta2",
+            ],
+            "originalType": "DeploymentID",
             "parsedType": {
+              "aliasName": "DeploymentID",
               "name": "DeploymentID",
+              "originalName": "DeploymentID",
               "type": "Type",
             },
             "scope": [

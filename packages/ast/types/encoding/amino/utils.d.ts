@@ -3,10 +3,16 @@ export { getTypeUrlWithPkgAndName, getTypeUrl, getAminoTypeName } from '@cosmolo
 export declare const arrayTypeNDim: (body: any, n: any) => any;
 export declare const protoFieldsToArray: (proto: ProtoType) => {
     type?: string;
+    originalType?: string;
+    aliasType?: string;
     name: string;
     scope?: string[];
+    originalScope?: string[];
+    aliasScope?: string[];
     parsedType?: {
         name: string;
+        originalName?: string;
+        aliasName?: string;
         type: string;
     };
     message?: string;
@@ -35,6 +41,8 @@ export declare const protoFieldsToArray: (proto: ProtoType) => {
     comment?: string;
     import?: string;
     importedName?: string;
+    aliasImportedName?: string;
+    originalImportedName?: string;
     scopeType?: string;
     isNestedMsg?: boolean;
 }[];

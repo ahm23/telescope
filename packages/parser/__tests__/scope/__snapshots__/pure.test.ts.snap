@@ -40,6 +40,10 @@ exports[`pure proto 1`] = `
                     "typeNum": 14,
                   },
                   "leaf": {
+                    "aliasScope": [
+                      "cosmology.finance",
+                    ],
+                    "aliasType": "LeafOp",
                     "comment": null,
                     "id": 3,
                     "options": {
@@ -47,8 +51,14 @@ exports[`pure proto 1`] = `
                       "(telescope:name)": "leaf",
                       "(telescope:orig)": "leaf",
                     },
+                    "originalScope": [
+                      "cosmology.finance",
+                    ],
+                    "originalType": "LeafOp",
                     "parsedType": {
+                      "aliasName": "LeafOp",
                       "name": "LeafOp",
+                      "originalName": "LeafOp",
                       "type": "Type",
                     },
                     "scope": [
@@ -57,6 +67,10 @@ exports[`pure proto 1`] = `
                     "type": "LeafOp",
                   },
                   "path": {
+                    "aliasScope": [
+                      "cosmology.finance",
+                    ],
+                    "aliasType": "LeafOp",
                     "comment": null,
                     "id": 4,
                     "options": {
@@ -64,8 +78,14 @@ exports[`pure proto 1`] = `
                       "(telescope:name)": "path",
                       "(telescope:orig)": "path",
                     },
+                    "originalScope": [
+                      "cosmology.finance",
+                    ],
+                    "originalType": "LeafOp",
                     "parsedType": {
+                      "aliasName": "LeafOp",
                       "name": "LeafOp",
+                      "originalName": "LeafOp",
                       "type": "Type",
                     },
                     "rule": "repeated",
@@ -129,6 +149,10 @@ exports[`pure proto 1`] = `
                 "comment": null,
                 "fields": {
                   "hash": {
+                    "aliasScope": [
+                      "cosmology.finance",
+                    ],
+                    "aliasType": "FancyEnumType",
                     "comment": null,
                     "id": 1,
                     "options": {
@@ -136,8 +160,14 @@ exports[`pure proto 1`] = `
                       "(telescope:name)": "hash",
                       "(telescope:orig)": "hash",
                     },
+                    "originalScope": [
+                      "cosmology.finance",
+                    ],
+                    "originalType": "FancyEnumType",
                     "parsedType": {
+                      "aliasName": "FancyEnumType",
                       "name": "FancyEnumType",
+                      "originalName": "FancyEnumType",
                       "type": "Enum",
                     },
                     "scope": [
@@ -162,6 +192,10 @@ exports[`pure proto 1`] = `
                     "typeNum": 14,
                   },
                   "prehashKey": {
+                    "aliasScope": [
+                      "cosmology.finance",
+                    ],
+                    "aliasType": "FancyEnumType",
                     "comment": null,
                     "id": 2,
                     "options": {
@@ -169,8 +203,14 @@ exports[`pure proto 1`] = `
                       "(telescope:name)": "prehashKey",
                       "(telescope:orig)": "prehash_key",
                     },
+                    "originalScope": [
+                      "cosmology.finance",
+                    ],
+                    "originalType": "FancyEnumType",
                     "parsedType": {
+                      "aliasName": "FancyEnumType",
                       "name": "FancyEnumType",
+                      "originalName": "FancyEnumType",
                       "type": "Enum",
                     },
                     "scope": [
@@ -179,6 +219,10 @@ exports[`pure proto 1`] = `
                     "type": "FancyEnumType",
                   },
                   "prehashValue": {
+                    "aliasScope": [
+                      "cosmology.finance",
+                    ],
+                    "aliasType": "FancyEnumType",
                     "comment": null,
                     "id": 3,
                     "options": {
@@ -186,8 +230,14 @@ exports[`pure proto 1`] = `
                       "(telescope:name)": "prehashValue",
                       "(telescope:orig)": "prehash_value",
                     },
+                    "originalScope": [
+                      "cosmology.finance",
+                    ],
+                    "originalType": "FancyEnumType",
                     "parsedType": {
+                      "aliasName": "FancyEnumType",
                       "name": "FancyEnumType",
+                      "originalName": "FancyEnumType",
                       "type": "Enum",
                     },
                     "scope": [
@@ -226,6 +276,10 @@ exports[`pure proto 1`] = `
                     "typeNum": 14,
                   },
                   "left": {
+                    "aliasScope": [
+                      "cosmology.finance",
+                    ],
+                    "aliasType": "ExistenceProof",
                     "comment": null,
                     "id": 2,
                     "options": {
@@ -233,8 +287,14 @@ exports[`pure proto 1`] = `
                       "(telescope:name)": "left",
                       "(telescope:orig)": "left",
                     },
+                    "originalScope": [
+                      "cosmology.finance",
+                    ],
+                    "originalType": "ExistenceProof",
                     "parsedType": {
+                      "aliasName": "ExistenceProof",
                       "name": "ExistenceProof",
+                      "originalName": "ExistenceProof",
                       "type": "Type",
                     },
                     "scope": [
@@ -243,6 +303,10 @@ exports[`pure proto 1`] = `
                     "type": "ExistenceProof",
                   },
                   "right": {
+                    "aliasScope": [
+                      "cosmology.finance",
+                    ],
+                    "aliasType": "ExistenceProof",
                     "comment": null,
                     "id": 3,
                     "options": {
@@ -250,8 +314,14 @@ exports[`pure proto 1`] = `
                       "(telescope:name)": "right",
                       "(telescope:orig)": "right",
                     },
+                    "originalScope": [
+                      "cosmology.finance",
+                    ],
+                    "originalType": "ExistenceProof",
                     "parsedType": {
+                      "aliasName": "ExistenceProof",
                       "name": "ExistenceProof",
+                      "originalName": "ExistenceProof",
                       "type": "Type",
                     },
                     "scope": [

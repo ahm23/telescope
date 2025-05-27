@@ -211,7 +211,7 @@ export interface EncodingTestForDontOmitSDKType {
   decs: string[];
   d_o_decs: string[];
 }
-export interface EncodingTestForOmit {
+export interface MiscEncodingTestForOmit {
   /** scalar */
   str: string;
   oStr: string;
@@ -283,11 +283,11 @@ export interface EncodingTestForOmit {
   decs: string[];
   oDecs: string[];
 }
-export interface EncodingTestForOmitProtoMsg {
-  typeUrl: "/misc.EncodingTestForOmit";
+export interface MiscEncodingTestForOmitProtoMsg {
+  typeUrl: "/misc.MiscEncodingTestForOmit";
   value: Uint8Array;
 }
-export interface EncodingTestForOmitAmino {
+export interface MiscEncodingTestForOmitAmino {
   /** scalar */
   str: string;
   o_str?: string;
@@ -359,11 +359,11 @@ export interface EncodingTestForOmitAmino {
   decs: string[];
   o_decs?: string[];
 }
-export interface EncodingTestForOmitAminoMsg {
-  type: "/misc.EncodingTestForOmit";
-  value: EncodingTestForOmitAmino;
+export interface MiscEncodingTestForOmitAminoMsg {
+  type: "/misc.MiscEncodingTestForOmit";
+  value: MiscEncodingTestForOmitAmino;
 }
-export interface EncodingTestForOmitSDKType {
+export interface MiscEncodingTestForOmitSDKType {
   str: string;
   o_str: string;
   b: boolean;
@@ -1574,7 +1574,7 @@ export const EncodingTestForDontOmit = {
     };
   }
 };
-function createBaseEncodingTestForOmit(): EncodingTestForOmit {
+function createBaseMiscEncodingTestForOmit(): MiscEncodingTestForOmit {
   return {
     str: "",
     oStr: "",
@@ -1626,9 +1626,9 @@ function createBaseEncodingTestForOmit(): EncodingTestForOmit {
     oDecs: []
   };
 }
-export const EncodingTestForOmit = {
-  typeUrl: "/misc.EncodingTestForOmit",
-  encode(message: EncodingTestForOmit, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+export const MiscEncodingTestForOmit = {
+  typeUrl: "/misc.MiscEncodingTestForOmit",
+  encode(message: MiscEncodingTestForOmit, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.str !== "") {
       writer.uint32(10).string(message.str);
     }
@@ -1787,10 +1787,10 @@ export const EncodingTestForOmit = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): EncodingTestForOmit {
+  decode(input: BinaryReader | Uint8Array, length?: number): MiscEncodingTestForOmit {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseEncodingTestForOmit();
+    const message = createBaseMiscEncodingTestForOmit();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -1987,8 +1987,8 @@ export const EncodingTestForOmit = {
     }
     return message;
   },
-  fromJSON(object: any): EncodingTestForOmit {
-    const obj = createBaseEncodingTestForOmit();
+  fromJSON(object: any): MiscEncodingTestForOmit {
+    const obj = createBaseMiscEncodingTestForOmit();
     if (isSet(object.str)) obj.str = String(object.str);
     if (isSet(object.oStr)) obj.oStr = String(object.oStr);
     if (isSet(object.b)) obj.b = Boolean(object.b);
@@ -2039,7 +2039,7 @@ export const EncodingTestForOmit = {
     if (Array.isArray(object?.oDecs)) obj.oDecs = object.oDecs.map((e: any) => String(e));
     return obj;
   },
-  toJSON(message: EncodingTestForOmit): JsonSafe<EncodingTestForOmit> {
+  toJSON(message: MiscEncodingTestForOmit): JsonSafe<MiscEncodingTestForOmit> {
     const obj: any = {};
     message.str !== undefined && (obj.str = message.str);
     message.oStr !== undefined && (obj.oStr = message.oStr);
@@ -2171,8 +2171,8 @@ export const EncodingTestForOmit = {
     }
     return obj;
   },
-  fromPartial(object: DeepPartial<EncodingTestForOmit>): EncodingTestForOmit {
-    const message = createBaseEncodingTestForOmit();
+  fromPartial(object: DeepPartial<MiscEncodingTestForOmit>): MiscEncodingTestForOmit {
+    const message = createBaseMiscEncodingTestForOmit();
     message.str = object.str ?? "";
     message.oStr = object.oStr ?? "";
     message.b = object.b ?? false;
@@ -2243,7 +2243,7 @@ export const EncodingTestForOmit = {
     message.oDecs = object.oDecs?.map(e => e) || [];
     return message;
   },
-  fromSDK(object: EncodingTestForOmitSDKType): EncodingTestForOmit {
+  fromSDK(object: MiscEncodingTestForOmitSDKType): MiscEncodingTestForOmit {
     return {
       str: object?.str,
       oStr: object?.o_str,
@@ -2295,7 +2295,7 @@ export const EncodingTestForOmit = {
       oDecs: Array.isArray(object?.o_decs) ? object.o_decs.map((e: any) => e) : []
     };
   },
-  fromSDKJSON(object: any): EncodingTestForOmitSDKType {
+  fromSDKJSON(object: any): MiscEncodingTestForOmitSDKType {
     return {
       str: isSet(object.str) ? String(object.str) : "",
       o_str: isSet(object.o_str) ? String(object.o_str) : "",
@@ -2347,7 +2347,7 @@ export const EncodingTestForOmit = {
       o_decs: Array.isArray(object?.o_decs) ? object.o_decs.map((e: any) => String(e)) : []
     };
   },
-  toSDK(message: EncodingTestForOmit): EncodingTestForOmitSDKType {
+  toSDK(message: MiscEncodingTestForOmit): MiscEncodingTestForOmitSDKType {
     const obj: any = {};
     obj.str = message.str;
     obj.o_str = message.oStr;
@@ -2479,8 +2479,8 @@ export const EncodingTestForOmit = {
     }
     return obj;
   },
-  fromAmino(object: EncodingTestForOmitAmino): EncodingTestForOmit {
-    const message = createBaseEncodingTestForOmit();
+  fromAmino(object: MiscEncodingTestForOmitAmino): MiscEncodingTestForOmit {
+    const message = createBaseMiscEncodingTestForOmit();
     if (object.str !== undefined && object.str !== null) {
       message.str = object.str;
     }
@@ -2587,7 +2587,7 @@ export const EncodingTestForOmit = {
     message.oDecs = object.o_decs?.map(e => e) || [];
     return message;
   },
-  toAmino(message: EncodingTestForOmit): EncodingTestForOmitAmino {
+  toAmino(message: MiscEncodingTestForOmit): MiscEncodingTestForOmitAmino {
     const obj: any = {};
     obj.str = message.str ?? "";
     obj.o_str = message.oStr === "" ? undefined : message.oStr;
@@ -2719,19 +2719,19 @@ export const EncodingTestForOmit = {
     }
     return obj;
   },
-  fromAminoMsg(object: EncodingTestForOmitAminoMsg): EncodingTestForOmit {
-    return EncodingTestForOmit.fromAmino(object.value);
+  fromAminoMsg(object: MiscEncodingTestForOmitAminoMsg): MiscEncodingTestForOmit {
+    return MiscEncodingTestForOmit.fromAmino(object.value);
   },
-  fromProtoMsg(message: EncodingTestForOmitProtoMsg): EncodingTestForOmit {
-    return EncodingTestForOmit.decode(message.value);
+  fromProtoMsg(message: MiscEncodingTestForOmitProtoMsg): MiscEncodingTestForOmit {
+    return MiscEncodingTestForOmit.decode(message.value);
   },
-  toProto(message: EncodingTestForOmit): Uint8Array {
-    return EncodingTestForOmit.encode(message).finish();
+  toProto(message: MiscEncodingTestForOmit): Uint8Array {
+    return MiscEncodingTestForOmit.encode(message).finish();
   },
-  toProtoMsg(message: EncodingTestForOmit): EncodingTestForOmitProtoMsg {
+  toProtoMsg(message: MiscEncodingTestForOmit): MiscEncodingTestForOmitProtoMsg {
     return {
-      typeUrl: "/misc.EncodingTestForOmit",
-      value: EncodingTestForOmit.encode(message).finish()
+      typeUrl: "/misc.MiscEncodingTestForOmit",
+      value: MiscEncodingTestForOmit.encode(message).finish()
     };
   }
 };

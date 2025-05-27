@@ -38,6 +38,10 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service CheckRequest 1
     "typeNum": 12,
   },
   "parsedExpr": {
+    "aliasScope": [
+      "google.api.expr.v1alpha1",
+    ],
+    "aliasType": "google.api.expr.v1alpha1.ParsedExpr",
     "comment": "Required. The parsed representation of the CEL program.",
     "id": 1,
     "import": "google/api/expr/v1alpha1/syntax.proto",
@@ -48,8 +52,14 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service CheckRequest 1
       "(telescope:name)": "parsedExpr",
       "(telescope:orig)": "parsed_expr",
     },
+    "originalScope": [
+      "google.api.expr.v1alpha1",
+    ],
+    "originalType": "google.api.expr.v1alpha1.ParsedExpr",
     "parsedType": {
+      "aliasName": "ParsedExpr",
       "name": "ParsedExpr",
+      "originalName": "ParsedExpr",
       "type": "Type",
     },
     "scope": [
@@ -59,6 +69,10 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service CheckRequest 1
     "type": "google.api.expr.v1alpha1.ParsedExpr",
   },
   "typeEnv": {
+    "aliasScope": [
+      "google.api.expr.v1alpha1",
+    ],
+    "aliasType": "google.api.expr.v1alpha1.Decl",
     "comment": "Declarations of types for external variables and functions.
  Required if program uses external variables or functions
  not in the default environment.",
@@ -71,8 +85,14 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service CheckRequest 1
       "(telescope:name)": "typeEnv",
       "(telescope:orig)": "type_env",
     },
+    "originalScope": [
+      "google.api.expr.v1alpha1",
+    ],
+    "originalType": "google.api.expr.v1alpha1.Decl",
     "parsedType": {
+      "aliasName": "Decl",
       "name": "Decl",
+      "originalName": "Decl",
       "type": "Type",
     },
     "rule": "repeated",
@@ -88,6 +108,11 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service CheckRequest 1
 exports[`google/api/expr/conformance/v1alpha1/conformance_service Decl 1`] = `
 {
   "function": {
+    "aliasScope": [
+      "google.api.expr.v1alpha1",
+      "Decl",
+    ],
+    "aliasType": "FunctionDecl",
     "comment": "Function declaration.",
     "id": 3,
     "options": {
@@ -95,8 +120,15 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service Decl 1`] = `
       "(telescope:name)": "function",
       "(telescope:orig)": "function",
     },
+    "originalScope": [
+      "google.api.expr.v1alpha1",
+      "Decl",
+    ],
+    "originalType": "FunctionDecl",
     "parsedType": {
+      "aliasName": "FunctionDecl",
       "name": "FunctionDecl",
+      "originalName": "FunctionDecl",
       "type": "Type",
     },
     "scope": [
@@ -106,6 +138,11 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service Decl 1`] = `
     "type": "FunctionDecl",
   },
   "ident": {
+    "aliasScope": [
+      "google.api.expr.v1alpha1",
+      "Decl",
+    ],
+    "aliasType": "IdentDecl",
     "comment": "Identifier declaration.",
     "id": 2,
     "options": {
@@ -113,8 +150,15 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service Decl 1`] = `
       "(telescope:name)": "ident",
       "(telescope:orig)": "ident",
     },
+    "originalScope": [
+      "google.api.expr.v1alpha1",
+      "Decl",
+    ],
+    "originalType": "IdentDecl",
     "parsedType": {
+      "aliasName": "IdentDecl",
       "name": "IdentDecl",
+      "originalName": "IdentDecl",
       "type": "Type",
     },
     "scope": [
@@ -168,6 +212,10 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service IdentDecl 1`] 
     "typeNum": 13,
   },
   "type": {
+    "aliasScope": [
+      "google.api.expr.v1alpha1",
+    ],
+    "aliasType": "Type",
     "comment": "Required. The type of the identifier.",
     "id": 1,
     "options": {
@@ -175,8 +223,14 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service IdentDecl 1`] 
       "(telescope:name)": "type",
       "(telescope:orig)": "type",
     },
+    "originalScope": [
+      "google.api.expr.v1alpha1",
+    ],
+    "originalType": "Type",
     "parsedType": {
+      "aliasName": "Type",
       "name": "Type",
+      "originalName": "Type",
       "type": "Type",
     },
     "scope": [
@@ -185,6 +239,12 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service IdentDecl 1`] 
     "type": "Type",
   },
   "value": {
+    "aliasScope": [
+      [
+        "google.api.expr.v1alpha1",
+      ],
+    ],
+    "aliasType": "Constant",
     "comment": "The constant value of the identifier. If not specified, the identifier
  must be supplied at evaluation time.",
     "id": 2,
@@ -195,8 +255,16 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service IdentDecl 1`] 
       "(telescope:name)": "value",
       "(telescope:orig)": "value",
     },
+    "originalScope": [
+      [
+        "google.api.expr.v1alpha1",
+      ],
+    ],
+    "originalType": "Constant",
     "parsedType": {
+      "aliasName": "Constant",
       "name": "Constant",
+      "originalName": "Constant",
       "type": "Type",
     },
     "scope": [
@@ -213,6 +281,10 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service IdentDecl 1`] 
 exports[`google/api/expr/conformance/v1alpha1/conformance_service ParsedExpr 1`] = `
 {
   "expr": {
+    "aliasScope": [
+      "google.api.expr.v1alpha1",
+    ],
+    "aliasType": "Expr",
     "comment": "The parsed expression.",
     "id": 2,
     "options": {
@@ -220,8 +292,14 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service ParsedExpr 1`]
       "(telescope:name)": "expr",
       "(telescope:orig)": "expr",
     },
+    "originalScope": [
+      "google.api.expr.v1alpha1",
+    ],
+    "originalType": "Expr",
     "parsedType": {
+      "aliasName": "Expr",
       "name": "Expr",
+      "originalName": "Expr",
       "type": "Type",
     },
     "scope": [
@@ -230,6 +308,10 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service ParsedExpr 1`]
     "type": "Expr",
   },
   "sourceInfo": {
+    "aliasScope": [
+      "google.api.expr.v1alpha1",
+    ],
+    "aliasType": "SourceInfo",
     "comment": "The source info derived from input that generated the parsed \`expr\`.",
     "id": 3,
     "options": {
@@ -237,8 +319,14 @@ exports[`google/api/expr/conformance/v1alpha1/conformance_service ParsedExpr 1`]
       "(telescope:name)": "sourceInfo",
       "(telescope:orig)": "source_info",
     },
+    "originalScope": [
+      "google.api.expr.v1alpha1",
+    ],
+    "originalType": "SourceInfo",
     "parsedType": {
+      "aliasName": "SourceInfo",
       "name": "SourceInfo",
+      "originalName": "SourceInfo",
       "type": "Type",
     },
     "scope": [

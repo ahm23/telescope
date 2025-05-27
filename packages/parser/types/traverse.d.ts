@@ -11,6 +11,7 @@ export interface TraverseContext {
 export declare class TraverseContext implements TraverseContext {
     constructor(store: ProtoStore, ref: ProtoRef);
     addImport(filename: string, symbolName: string): void;
+    removeImport(filename: string, symbolName: string): void;
     addImplements(symbolName: string, msgName: string): void;
     addAccepts(symbolName: string, msgName: string): void;
     addExport(symbolName: string): void;

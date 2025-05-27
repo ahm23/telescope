@@ -17,6 +17,10 @@ export declare const makeUsePkgHookName: (packageName: string, name: string) => 
 export declare const makePkgMethodName: (packageName: string, name: string) => any;
 export declare const makeUseHookTypeName: (name: string) => string;
 export declare const makeHookKeyName: (name: string) => any;
+export declare const makeAliasName: (ctx: {
+    package: string;
+    name: string;
+}) => string;
 /**
  * Get a list of query method names that matches the given patterns.
  * @param packagePath package path like 'cosmos.bank.v1beta1'

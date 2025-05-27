@@ -95,6 +95,10 @@ exports[`queries 1`] = `
             "typeNum": 13,
           },
           "pagination": {
+            "aliasScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
             "comment": "pagination defines an optional pagination for the request.",
             "id": 2,
             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -105,8 +109,14 @@ exports[`queries 1`] = `
               "(telescope:name)": "pagination",
               "(telescope:orig)": "pagination",
             },
+            "originalScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "originalType": "cosmos.base.query.v1beta1.PageRequest",
             "parsedType": {
+              "aliasName": "PageRequest",
               "name": "PageRequest",
+              "originalName": "PageRequest",
               "type": "Type",
             },
             "scope": [
@@ -168,6 +178,10 @@ exports[`queries 1`] = `
             "typeNum": 13,
           },
           "pagination": {
+            "aliasScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
             "comment": "pagination defines an optional pagination for the request.",
             "id": 2,
             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -178,8 +192,14 @@ exports[`queries 1`] = `
               "(telescope:name)": "pagination",
               "(telescope:orig)": "pagination",
             },
+            "originalScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "originalType": "cosmos.base.query.v1beta1.PageRequest",
             "parsedType": {
+              "aliasName": "PageRequest",
               "name": "PageRequest",
+              "originalName": "PageRequest",
               "type": "Type",
             },
             "scope": [
@@ -309,6 +329,10 @@ exports[`queries 1`] = `
             "typeNum": 13,
           },
           "pagination": {
+            "aliasScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
             "comment": "pagination defines an optional pagination for the request.",
             "id": 2,
             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -319,8 +343,14 @@ exports[`queries 1`] = `
               "(telescope:name)": "pagination",
               "(telescope:orig)": "pagination",
             },
+            "originalScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "originalType": "cosmos.base.query.v1beta1.PageRequest",
             "parsedType": {
+              "aliasName": "PageRequest",
               "name": "PageRequest",
+              "originalName": "PageRequest",
               "type": "Type",
             },
             "scope": [
@@ -490,6 +520,10 @@ exports[`queries 1`] = `
             "typeNum": 13,
           },
           "pagination": {
+            "aliasScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
             "comment": "pagination defines an optional pagination for the request.",
             "id": 4,
             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -500,8 +534,14 @@ exports[`queries 1`] = `
               "(telescope:name)": "pagination",
               "(telescope:orig)": "pagination",
             },
+            "originalScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "originalType": "cosmos.base.query.v1beta1.PageRequest",
             "parsedType": {
+              "aliasName": "PageRequest",
               "name": "PageRequest",
+              "originalName": "PageRequest",
               "type": "Type",
             },
             "scope": [
@@ -683,6 +723,10 @@ exports[`queries 1`] = `
         "comment": "ValidatorDelegations queries delegate info for given validator.",
         "fields": {
           "pagination": {
+            "aliasScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
             "comment": "pagination defines an optional pagination for the request.",
             "id": 2,
             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -693,8 +737,14 @@ exports[`queries 1`] = `
               "(telescope:name)": "pagination",
               "(telescope:orig)": "pagination",
             },
+            "originalScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "originalType": "cosmos.base.query.v1beta1.PageRequest",
             "parsedType": {
+              "aliasName": "PageRequest",
               "name": "PageRequest",
+              "originalName": "PageRequest",
               "type": "Type",
             },
             "scope": [
@@ -755,6 +805,10 @@ exports[`queries 1`] = `
         "comment": "ValidatorUnbondingDelegations queries unbonding delegations of a validator.",
         "fields": {
           "pagination": {
+            "aliasScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
             "comment": "pagination defines an optional pagination for the request.",
             "id": 2,
             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -765,8 +819,14 @@ exports[`queries 1`] = `
               "(telescope:name)": "pagination",
               "(telescope:orig)": "pagination",
             },
+            "originalScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "originalType": "cosmos.base.query.v1beta1.PageRequest",
             "parsedType": {
+              "aliasName": "PageRequest",
               "name": "PageRequest",
+              "originalName": "PageRequest",
               "type": "Type",
             },
             "scope": [
@@ -827,6 +887,10 @@ exports[`queries 1`] = `
         "comment": "Validators queries all validators that match the given status.",
         "fields": {
           "pagination": {
+            "aliasScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "aliasType": "cosmos.base.query.v1beta1.PageRequest",
             "comment": "pagination defines an optional pagination for the request.",
             "id": 2,
             "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -837,8 +901,14 @@ exports[`queries 1`] = `
               "(telescope:name)": "pagination",
               "(telescope:orig)": "pagination",
             },
+            "originalScope": [
+              "cosmos.base.query.v1beta1",
+            ],
+            "originalType": "cosmos.base.query.v1beta1.PageRequest",
             "parsedType": {
+              "aliasName": "PageRequest",
               "name": "PageRequest",
+              "originalName": "PageRequest",
               "type": "Type",
             },
             "scope": [
@@ -951,6 +1021,12 @@ exports[`queries 1`] = `
     "comment": "QueryDelegationResponse is response type for the Query/Delegation RPC method.",
     "fields": {
       "delegationResponse": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "DelegationResponse",
         "comment": "delegation_responses defines the delegation info of a delegation.",
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -960,8 +1036,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "delegationResponse",
           "(telescope:orig)": "delegation_response",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "DelegationResponse",
         "parsedType": {
+          "aliasName": "DelegationResponse",
           "name": "DelegationResponse",
+          "originalName": "DelegationResponse",
           "type": "Type",
         },
         "scope": [
@@ -1005,6 +1089,10 @@ exports[`queries 1`] = `
         "typeNum": 13,
       },
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
         "comment": "pagination defines an optional pagination for the request.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1015,8 +1103,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageRequest",
         "parsedType": {
+          "aliasName": "PageRequest",
           "name": "PageRequest",
+          "originalName": "PageRequest",
           "type": "Type",
         },
         "scope": [
@@ -1044,6 +1138,12 @@ exports[`queries 1`] = `
  Query/DelegatorDelegations RPC method.",
     "fields": {
       "delegationResponses": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "DelegationResponse",
         "comment": "delegation_responses defines all the delegations' info of a delegator.",
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -1054,8 +1154,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "delegationResponses",
           "(telescope:orig)": "delegation_responses",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "DelegationResponse",
         "parsedType": {
+          "aliasName": "DelegationResponse",
           "name": "DelegationResponse",
+          "originalName": "DelegationResponse",
           "type": "Type",
         },
         "rule": "repeated",
@@ -1068,6 +1176,10 @@ exports[`queries 1`] = `
         "type": "DelegationResponse",
       },
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
         "comment": "pagination defines the pagination in the response.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1078,8 +1190,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageResponse",
         "parsedType": {
+          "aliasName": "PageResponse",
           "name": "PageResponse",
+          "originalName": "PageResponse",
           "type": "Type",
         },
         "scope": [
@@ -1121,6 +1239,10 @@ exports[`queries 1`] = `
         "typeNum": 13,
       },
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
         "comment": "pagination defines an optional pagination for the request.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1131,8 +1253,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageRequest",
         "parsedType": {
+          "aliasName": "PageRequest",
           "name": "PageRequest",
+          "originalName": "PageRequest",
           "type": "Type",
         },
         "scope": [
@@ -1160,6 +1288,10 @@ exports[`queries 1`] = `
  Query/UnbondingDelegatorDelegations RPC method.",
     "fields": {
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
         "comment": "pagination defines the pagination in the response.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1170,8 +1302,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageResponse",
         "parsedType": {
+          "aliasName": "PageResponse",
           "name": "PageResponse",
+          "originalName": "PageResponse",
           "type": "Type",
         },
         "scope": [
@@ -1181,6 +1319,12 @@ exports[`queries 1`] = `
         "type": "cosmos.base.query.v1beta1.PageResponse",
       },
       "unbondingResponses": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "UnbondingDelegation",
         "comment": null,
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -1191,8 +1335,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "unbondingResponses",
           "(telescope:orig)": "unbonding_responses",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "UnbondingDelegation",
         "parsedType": {
+          "aliasName": "UnbondingDelegation",
           "name": "UnbondingDelegation",
+          "originalName": "UnbondingDelegation",
           "type": "Type",
         },
         "rule": "repeated",
@@ -1272,6 +1424,12 @@ exports[`queries 1`] = `
  Query/DelegatorValidator RPC method.",
     "fields": {
       "validator": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "Validator",
         "comment": "validator defines the the validator info.",
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -1282,8 +1440,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "validator",
           "(telescope:orig)": "validator",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "Validator",
         "parsedType": {
+          "aliasName": "Validator",
           "name": "Validator",
+          "originalName": "Validator",
           "type": "Type",
         },
         "scope": [
@@ -1327,6 +1493,10 @@ exports[`queries 1`] = `
         "typeNum": 13,
       },
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
         "comment": "pagination defines an optional pagination for the request.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1337,8 +1507,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageRequest",
         "parsedType": {
+          "aliasName": "PageRequest",
           "name": "PageRequest",
+          "originalName": "PageRequest",
           "type": "Type",
         },
         "scope": [
@@ -1366,6 +1542,10 @@ exports[`queries 1`] = `
  Query/DelegatorValidators RPC method.",
     "fields": {
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
         "comment": "pagination defines the pagination in the response.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1376,8 +1556,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageResponse",
         "parsedType": {
+          "aliasName": "PageResponse",
           "name": "PageResponse",
+          "originalName": "PageResponse",
           "type": "Type",
         },
         "scope": [
@@ -1387,6 +1573,12 @@ exports[`queries 1`] = `
         "type": "cosmos.base.query.v1beta1.PageResponse",
       },
       "validators": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "Validator",
         "comment": "validators defines the the validators' info of a delegator.",
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -1397,8 +1589,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "validators",
           "(telescope:orig)": "validators",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "Validator",
         "parsedType": {
+          "aliasName": "Validator",
           "name": "Validator",
+          "originalName": "Validator",
           "type": "Type",
         },
         "rule": "repeated",
@@ -1457,6 +1657,12 @@ exports[`queries 1`] = `
  method.",
     "fields": {
       "hist": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "HistoricalInfo",
         "comment": "hist defines the historical info at the given height.",
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -1466,8 +1672,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "hist",
           "(telescope:orig)": "hist",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "HistoricalInfo",
         "parsedType": {
+          "aliasName": "HistoricalInfo",
           "name": "HistoricalInfo",
+          "originalName": "HistoricalInfo",
           "type": "Type",
         },
         "scope": [
@@ -1506,6 +1720,12 @@ exports[`queries 1`] = `
     "comment": "QueryParamsResponse is response type for the Query/Params RPC method.",
     "fields": {
       "params": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "Params",
         "comment": "params holds all the parameters of this module.",
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -1516,8 +1736,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "params",
           "(telescope:orig)": "params",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "Params",
         "parsedType": {
+          "aliasName": "Params",
           "name": "Params",
+          "originalName": "Params",
           "type": "Type",
         },
         "scope": [
@@ -1556,6 +1784,12 @@ exports[`queries 1`] = `
     "comment": "QueryPoolResponse is response type for the Query/Pool RPC method.",
     "fields": {
       "pool": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "Pool",
         "comment": "pool defines the pool info.",
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -1566,8 +1800,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "pool",
           "(telescope:orig)": "pool",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "Pool",
         "parsedType": {
+          "aliasName": "Pool",
           "name": "Pool",
+          "originalName": "Pool",
           "type": "Type",
         },
         "scope": [
@@ -1628,6 +1870,10 @@ exports[`queries 1`] = `
         "typeNum": 13,
       },
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
         "comment": "pagination defines an optional pagination for the request.",
         "id": 4,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1638,8 +1884,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageRequest",
         "parsedType": {
+          "aliasName": "PageRequest",
           "name": "PageRequest",
+          "originalName": "PageRequest",
           "type": "Type",
         },
         "scope": [
@@ -1684,6 +1936,10 @@ exports[`queries 1`] = `
  method.",
     "fields": {
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
         "comment": "pagination defines the pagination in the response.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1694,8 +1950,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageResponse",
         "parsedType": {
+          "aliasName": "PageResponse",
           "name": "PageResponse",
+          "originalName": "PageResponse",
           "type": "Type",
         },
         "scope": [
@@ -1705,6 +1967,12 @@ exports[`queries 1`] = `
         "type": "cosmos.base.query.v1beta1.PageResponse",
       },
       "redelegationResponses": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "RedelegationResponse",
         "comment": null,
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -1715,8 +1983,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "redelegationResponses",
           "(telescope:orig)": "redelegation_responses",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "RedelegationResponse",
         "parsedType": {
+          "aliasName": "RedelegationResponse",
           "name": "RedelegationResponse",
+          "originalName": "RedelegationResponse",
           "type": "Type",
         },
         "rule": "repeated",
@@ -1796,6 +2072,12 @@ exports[`queries 1`] = `
  RPC method.",
     "fields": {
       "unbond": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "UnbondingDelegation",
         "comment": "unbond defines the unbonding information of a delegation.",
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -1806,8 +2088,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "unbond",
           "(telescope:orig)": "unbond",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "UnbondingDelegation",
         "parsedType": {
+          "aliasName": "UnbondingDelegation",
           "name": "UnbondingDelegation",
+          "originalName": "UnbondingDelegation",
           "type": "Type",
         },
         "scope": [
@@ -1834,6 +2124,10 @@ exports[`queries 1`] = `
  Query/ValidatorDelegations RPC method",
     "fields": {
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
         "comment": "pagination defines an optional pagination for the request.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1844,8 +2138,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageRequest",
         "parsedType": {
+          "aliasName": "PageRequest",
           "name": "PageRequest",
+          "originalName": "PageRequest",
           "type": "Type",
         },
         "scope": [
@@ -1887,6 +2187,12 @@ exports[`queries 1`] = `
  Query/ValidatorDelegations RPC method",
     "fields": {
       "delegationResponses": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "DelegationResponse",
         "comment": null,
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -1898,8 +2204,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "delegationResponses",
           "(telescope:orig)": "delegation_responses",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "DelegationResponse",
         "parsedType": {
+          "aliasName": "DelegationResponse",
           "name": "DelegationResponse",
+          "originalName": "DelegationResponse",
           "type": "Type",
         },
         "rule": "repeated",
@@ -1912,6 +2226,10 @@ exports[`queries 1`] = `
         "type": "DelegationResponse",
       },
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
         "comment": "pagination defines the pagination in the response.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -1922,8 +2240,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageResponse",
         "parsedType": {
+          "aliasName": "PageResponse",
           "name": "PageResponse",
+          "originalName": "PageResponse",
           "type": "Type",
         },
         "scope": [
@@ -1978,6 +2302,12 @@ exports[`queries 1`] = `
     "comment": "QueryValidatorResponse is response type for the Query/Validator RPC method",
     "fields": {
       "validator": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "Validator",
         "comment": "validator defines the the validator info.",
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -1988,8 +2318,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "validator",
           "(telescope:orig)": "validator",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "Validator",
         "parsedType": {
+          "aliasName": "Validator",
           "name": "Validator",
+          "originalName": "Validator",
           "type": "Type",
         },
         "scope": [
@@ -2016,6 +2354,10 @@ exports[`queries 1`] = `
  Query/ValidatorUnbondingDelegations RPC method",
     "fields": {
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
         "comment": "pagination defines an optional pagination for the request.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -2026,8 +2368,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageRequest",
         "parsedType": {
+          "aliasName": "PageRequest",
           "name": "PageRequest",
+          "originalName": "PageRequest",
           "type": "Type",
         },
         "scope": [
@@ -2069,6 +2417,10 @@ exports[`queries 1`] = `
  Query/ValidatorUnbondingDelegations RPC method.",
     "fields": {
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
         "comment": "pagination defines the pagination in the response.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -2079,8 +2431,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageResponse",
         "parsedType": {
+          "aliasName": "PageResponse",
           "name": "PageResponse",
+          "originalName": "PageResponse",
           "type": "Type",
         },
         "scope": [
@@ -2090,6 +2448,12 @@ exports[`queries 1`] = `
         "type": "cosmos.base.query.v1beta1.PageResponse",
       },
       "unbondingResponses": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "UnbondingDelegation",
         "comment": null,
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -2100,8 +2464,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "unbondingResponses",
           "(telescope:orig)": "unbonding_responses",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "UnbondingDelegation",
         "parsedType": {
+          "aliasName": "UnbondingDelegation",
           "name": "UnbondingDelegation",
+          "originalName": "UnbondingDelegation",
           "type": "Type",
         },
         "rule": "repeated",
@@ -2128,6 +2500,10 @@ exports[`queries 1`] = `
     "comment": "QueryValidatorsRequest is request type for Query/Validators RPC method.",
     "fields": {
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageRequest",
         "comment": "pagination defines an optional pagination for the request.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -2138,8 +2514,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageRequest",
         "parsedType": {
+          "aliasName": "PageRequest",
           "name": "PageRequest",
+          "originalName": "PageRequest",
           "type": "Type",
         },
         "scope": [
@@ -2179,6 +2561,10 @@ exports[`queries 1`] = `
     "comment": "QueryValidatorsResponse is response type for the Query/Validators RPC method",
     "fields": {
       "pagination": {
+        "aliasScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "aliasType": "cosmos.base.query.v1beta1.PageResponse",
         "comment": "pagination defines the pagination in the response.",
         "id": 2,
         "import": "cosmos/base/query/v1beta1/pagination.proto",
@@ -2189,8 +2575,14 @@ exports[`queries 1`] = `
           "(telescope:name)": "pagination",
           "(telescope:orig)": "pagination",
         },
+        "originalScope": [
+          "cosmos.base.query.v1beta1",
+        ],
+        "originalType": "cosmos.base.query.v1beta1.PageResponse",
         "parsedType": {
+          "aliasName": "PageResponse",
           "name": "PageResponse",
+          "originalName": "PageResponse",
           "type": "Type",
         },
         "scope": [
@@ -2200,6 +2592,12 @@ exports[`queries 1`] = `
         "type": "cosmos.base.query.v1beta1.PageResponse",
       },
       "validators": {
+        "aliasScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "aliasType": "Validator",
         "comment": "validators contains all the queried validators.",
         "id": 1,
         "import": "cosmos/staking/v1beta1/staking.proto",
@@ -2210,8 +2608,16 @@ exports[`queries 1`] = `
           "(telescope:name)": "validators",
           "(telescope:orig)": "validators",
         },
+        "originalScope": [
+          [
+            "cosmos.staking.v1beta1",
+          ],
+        ],
+        "originalType": "Validator",
         "parsedType": {
+          "aliasName": "Validator",
           "name": "Validator",
+          "originalName": "Validator",
           "type": "Type",
         },
         "rule": "repeated",

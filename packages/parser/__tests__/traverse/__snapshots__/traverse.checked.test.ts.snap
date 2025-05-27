@@ -45,6 +45,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         "comment": "A CEL expression which has been successfully type checked.",
                         "fields": {
                           "expr": {
+                            "aliasScope": [
+                              [
+                                "google.api.expr.v1alpha1",
+                              ],
+                            ],
+                            "aliasType": "Expr",
                             "comment": "The checked expression. Semantically equivalent to the parsed \`expr\`, but
  may have structural differences.",
                             "id": 4,
@@ -55,8 +61,16 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "expr",
                               "(telescope:orig)": "expr",
                             },
+                            "originalScope": [
+                              [
+                                "google.api.expr.v1alpha1",
+                              ],
+                            ],
+                            "originalType": "Expr",
                             "parsedType": {
+                              "aliasName": "Expr",
                               "name": "Expr",
+                              "originalName": "Expr",
                               "type": "Type",
                             },
                             "scope": [
@@ -90,6 +104,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "typeNum": 13,
                           },
                           "referenceMap": {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                            ],
+                            "aliasType": "Reference",
                             "comment": "A map from expression ids to resolved references.
 
  The following entries are in this table:
@@ -112,8 +130,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "referenceMap",
                               "(telescope:orig)": "reference_map",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                            ],
+                            "originalType": "Reference",
                             "parsedType": {
+                              "aliasName": "Reference",
                               "name": "Reference",
+                              "originalName": "Reference",
                               "type": "Type",
                             },
                             "scope": [
@@ -122,6 +146,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "Reference",
                           },
                           "sourceInfo": {
+                            "aliasScope": [
+                              [
+                                "google.api.expr.v1alpha1",
+                              ],
+                            ],
+                            "aliasType": "SourceInfo",
                             "comment": "The source info derived from input that generated the parsed \`expr\` and
  any optimizations made during the type-checking pass.",
                             "id": 5,
@@ -132,8 +162,16 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "sourceInfo",
                               "(telescope:orig)": "source_info",
                             },
+                            "originalScope": [
+                              [
+                                "google.api.expr.v1alpha1",
+                              ],
+                            ],
+                            "originalType": "SourceInfo",
                             "parsedType": {
+                              "aliasName": "SourceInfo",
                               "name": "SourceInfo",
+                              "originalName": "SourceInfo",
                               "type": "Type",
                             },
                             "scope": [
@@ -145,6 +183,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "SourceInfo",
                           },
                           "typeMap": {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                            ],
+                            "aliasType": "Type",
                             "comment": "A map from expression ids to types.
 
  Every expression node which has a type different than DYN has a mapping
@@ -157,8 +199,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "typeMap",
                               "(telescope:orig)": "type_map",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                            ],
+                            "originalType": "Type",
                             "parsedType": {
+                              "aliasName": "Type",
                               "name": "Type",
+                              "originalName": "Type",
                               "type": "Type",
                             },
                             "scope": [
@@ -169,6 +217,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         },
                         "keyTypes": [
                           {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                            ],
+                            "aliasType": "Reference",
                             "comment": "A map from expression ids to resolved references.
 
  The following entries are in this table:
@@ -192,8 +244,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "referenceMap",
                               "(telescope:orig)": "reference_map",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                            ],
+                            "originalType": "Reference",
                             "parsedType": {
+                              "aliasName": "Reference",
                               "name": "Reference",
+                              "originalName": "Reference",
                               "type": "Type",
                             },
                             "scope": [
@@ -202,6 +260,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "Reference",
                           },
                           {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                            ],
+                            "aliasType": "Type",
                             "comment": "A map from expression ids to types.
 
  Every expression node which has a type different than DYN has a mapping
@@ -215,8 +277,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "typeMap",
                               "(telescope:orig)": "type_map",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                            ],
+                            "originalType": "Type",
                             "parsedType": {
+                              "aliasName": "Type",
                               "name": "Type",
+                              "originalName": "Type",
                               "type": "Type",
                             },
                             "scope": [
@@ -241,6 +309,11 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
  evaluating that expression, and the caller requesting evaluation.",
                         "fields": {
                           "function": {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                              "Decl",
+                            ],
+                            "aliasType": "FunctionDecl",
                             "comment": "Function declaration.",
                             "id": 3,
                             "options": {
@@ -248,8 +321,15 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "function",
                               "(telescope:orig)": "function",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                              "Decl",
+                            ],
+                            "originalType": "FunctionDecl",
                             "parsedType": {
+                              "aliasName": "FunctionDecl",
                               "name": "FunctionDecl",
+                              "originalName": "FunctionDecl",
                               "type": "Type",
                             },
                             "scope": [
@@ -259,6 +339,11 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "FunctionDecl",
                           },
                           "ident": {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                              "Decl",
+                            ],
+                            "aliasType": "IdentDecl",
                             "comment": "Identifier declaration.",
                             "id": 2,
                             "options": {
@@ -266,8 +351,15 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "ident",
                               "(telescope:orig)": "ident",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                              "Decl",
+                            ],
+                            "originalType": "IdentDecl",
                             "parsedType": {
+                              "aliasName": "IdentDecl",
                               "name": "IdentDecl",
+                              "originalName": "IdentDecl",
                               "type": "Type",
                             },
                             "scope": [
@@ -312,6 +404,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
  logging which are not observable from CEL).",
                             "fields": {
                               "overloads": {
+                                "aliasScope": [
+                                  "google.api.expr.v1alpha1",
+                                  "Decl",
+                                  "FunctionDecl",
+                                ],
+                                "aliasType": "Overload",
                                 "comment": "Required. List of function overloads, must contain at least one overload.",
                                 "id": 1,
                                 "options": {
@@ -319,8 +417,16 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "overloads",
                                   "(telescope:orig)": "overloads",
                                 },
+                                "originalScope": [
+                                  "google.api.expr.v1alpha1",
+                                  "Decl",
+                                  "FunctionDecl",
+                                ],
+                                "originalType": "Overload",
                                 "parsedType": {
+                                  "aliasName": "Overload",
                                   "name": "Overload",
+                                  "originalName": "Overload",
                                   "type": "Type",
                                 },
                                 "rule": "repeated",
@@ -405,6 +511,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                     "typeNum": 13,
                                   },
                                   "params": {
+                                    "aliasScope": [
+                                      "google.api.expr.v1alpha1",
+                                    ],
+                                    "aliasType": "Type",
                                     "comment": "List of function parameter [Type][google.api.expr.v1alpha1.Type] values.
 
  Param types are disjoint after generic type parameters have been
@@ -421,8 +531,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                       "(telescope:name)": "params",
                                       "(telescope:orig)": "params",
                                     },
+                                    "originalScope": [
+                                      "google.api.expr.v1alpha1",
+                                    ],
+                                    "originalType": "Type",
                                     "parsedType": {
+                                      "aliasName": "Type",
                                       "name": "Type",
+                                      "originalName": "Type",
                                       "type": "Type",
                                     },
                                     "rule": "repeated",
@@ -432,6 +548,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                     "type": "Type",
                                   },
                                   "resultType": {
+                                    "aliasScope": [
+                                      "google.api.expr.v1alpha1",
+                                    ],
+                                    "aliasType": "Type",
                                     "comment": "Required. The result type of the function. For example, the operator
  \`string.isEmpty()\` would have \`result_type\` of \`kind: BOOL\`.",
                                     "id": 4,
@@ -440,8 +560,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                       "(telescope:name)": "resultType",
                                       "(telescope:orig)": "result_type",
                                     },
+                                    "originalScope": [
+                                      "google.api.expr.v1alpha1",
+                                    ],
+                                    "originalType": "Type",
                                     "parsedType": {
+                                      "aliasName": "Type",
                                       "name": "Type",
+                                      "originalName": "Type",
                                       "type": "Type",
                                     },
                                     "scope": [
@@ -512,6 +638,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                 "typeNum": 13,
                               },
                               "type": {
+                                "aliasScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "aliasType": "Type",
                                 "comment": "Required. The type of the identifier.",
                                 "id": 1,
                                 "options": {
@@ -519,8 +649,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "type",
                                   "(telescope:orig)": "type",
                                 },
+                                "originalScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "originalType": "Type",
                                 "parsedType": {
+                                  "aliasName": "Type",
                                   "name": "Type",
+                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "scope": [
@@ -529,6 +665,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                 "type": "Type",
                               },
                               "value": {
+                                "aliasScope": [
+                                  [
+                                    "google.api.expr.v1alpha1",
+                                  ],
+                                ],
+                                "aliasType": "Constant",
                                 "comment": "The constant value of the identifier. If not specified, the identifier
  must be supplied at evaluation time.",
                                 "id": 2,
@@ -539,8 +681,16 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "value",
                                   "(telescope:orig)": "value",
                                 },
+                                "originalScope": [
+                                  [
+                                    "google.api.expr.v1alpha1",
+                                  ],
+                                ],
+                                "originalType": "Constant",
                                 "parsedType": {
+                                  "aliasName": "Constant",
                                   "name": "Constant",
+                                  "originalName": "Constant",
                                   "type": "Type",
                                 },
                                 "scope": [
@@ -620,6 +770,12 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "typeNum": 13,
                           },
                           "value": {
+                            "aliasScope": [
+                              [
+                                "google.api.expr.v1alpha1",
+                              ],
+                            ],
+                            "aliasType": "Constant",
                             "comment": "For references to constants, this may contain the value of the
  constant if known at compile time.",
                             "id": 4,
@@ -630,8 +786,16 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "value",
                               "(telescope:orig)": "value",
                             },
+                            "originalScope": [
+                              [
+                                "google.api.expr.v1alpha1",
+                              ],
+                            ],
+                            "originalType": "Constant",
                             "parsedType": {
+                              "aliasName": "Constant",
                               "name": "Constant",
+                              "originalName": "Constant",
                               "type": "Type",
                             },
                             "scope": [
@@ -657,6 +821,11 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                         "comment": "Represents a CEL type.",
                         "fields": {
                           "abstractType": {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "aliasType": "AbstractType",
                             "comment": "Abstract, application defined type.",
                             "id": 14,
                             "options": {
@@ -664,8 +833,15 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "abstractType",
                               "(telescope:orig)": "abstract_type",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "originalType": "AbstractType",
                             "parsedType": {
+                              "aliasName": "AbstractType",
                               "name": "AbstractType",
+                              "originalName": "AbstractType",
                               "type": "Type",
                             },
                             "scope": [
@@ -675,6 +851,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "AbstractType",
                           },
                           "dyn": {
+                            "aliasScope": [
+                              "google.protobuf",
+                            ],
+                            "aliasType": "google.protobuf.Empty",
                             "comment": "Dynamic type.",
                             "id": 1,
                             "import": "google/protobuf/empty.proto",
@@ -685,8 +865,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "dyn",
                               "(telescope:orig)": "dyn",
                             },
+                            "originalScope": [
+                              "google.protobuf",
+                            ],
+                            "originalType": "google.protobuf.Empty",
                             "parsedType": {
+                              "aliasName": "Empty",
                               "name": "Empty",
+                              "originalName": "Empty",
                               "type": "Type",
                             },
                             "scope": [
@@ -696,6 +882,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "google.protobuf.Empty",
                           },
                           "error": {
+                            "aliasScope": [
+                              "google.protobuf",
+                            ],
+                            "aliasType": "google.protobuf.Empty",
                             "comment": "Error type.
 
  During type-checking if an expression is an error, its type is propagated
@@ -710,8 +900,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "error",
                               "(telescope:orig)": "error",
                             },
+                            "originalScope": [
+                              "google.protobuf",
+                            ],
+                            "originalType": "google.protobuf.Empty",
                             "parsedType": {
+                              "aliasName": "Empty",
                               "name": "Empty",
+                              "originalName": "Empty",
                               "type": "Type",
                             },
                             "scope": [
@@ -721,6 +917,11 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "google.protobuf.Empty",
                           },
                           "function": {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "aliasType": "FunctionType",
                             "comment": "Function type.",
                             "id": 8,
                             "options": {
@@ -728,8 +929,15 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "function",
                               "(telescope:orig)": "function",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "originalType": "FunctionType",
                             "parsedType": {
+                              "aliasName": "FunctionType",
                               "name": "FunctionType",
+                              "originalName": "FunctionType",
                               "type": "Type",
                             },
                             "scope": [
@@ -739,6 +947,11 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "FunctionType",
                           },
                           "listType": {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "aliasType": "ListType",
                             "comment": "Parameterized list with elements of \`list_type\`, e.g. \`list<timestamp>\`.",
                             "id": 6,
                             "options": {
@@ -746,8 +959,15 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "listType",
                               "(telescope:orig)": "list_type",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "originalType": "ListType",
                             "parsedType": {
+                              "aliasName": "ListType",
                               "name": "ListType",
+                              "originalName": "ListType",
                               "type": "Type",
                             },
                             "scope": [
@@ -757,6 +977,11 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "ListType",
                           },
                           "mapType": {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "aliasType": "MapType",
                             "comment": "Parameterized map with typed keys and values.",
                             "id": 7,
                             "options": {
@@ -764,8 +989,15 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "mapType",
                               "(telescope:orig)": "map_type",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "originalType": "MapType",
                             "parsedType": {
+                              "aliasName": "MapType",
                               "name": "MapType",
+                              "originalName": "MapType",
                               "type": "Type",
                             },
                             "scope": [
@@ -794,6 +1026,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "typeNum": 13,
                           },
                           "null": {
+                            "aliasScope": [
+                              "google.protobuf",
+                            ],
+                            "aliasType": "google.protobuf.NullValue",
                             "comment": "Null value.",
                             "id": 2,
                             "import": "google/protobuf/struct.proto",
@@ -804,8 +1040,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "null",
                               "(telescope:orig)": "null",
                             },
+                            "originalScope": [
+                              "google.protobuf",
+                            ],
+                            "originalType": "google.protobuf.NullValue",
                             "parsedType": {
+                              "aliasName": "NullValue",
                               "name": "NullValue",
+                              "originalName": "NullValue",
                               "type": "Enum",
                             },
                             "scope": [
@@ -815,6 +1057,11 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "google.protobuf.NullValue",
                           },
                           "primitive": {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "aliasType": "PrimitiveType",
                             "comment": "Primitive types: \`true\`, \`1u\`, \`-2.0\`, \`'string'\`, \`b'bytes'\`.",
                             "id": 3,
                             "options": {
@@ -822,8 +1069,15 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "primitive",
                               "(telescope:orig)": "primitive",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "originalType": "PrimitiveType",
                             "parsedType": {
+                              "aliasName": "PrimitiveType",
                               "name": "PrimitiveType",
+                              "originalName": "PrimitiveType",
                               "type": "Enum",
                             },
                             "scope": [
@@ -833,6 +1087,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "PrimitiveType",
                           },
                           "type": {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                            ],
+                            "aliasType": "Type",
                             "comment": "Type type.
 
  The \`type\` value specifies the target type. e.g. int is type with a
@@ -843,8 +1101,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "type",
                               "(telescope:orig)": "type",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                            ],
+                            "originalType": "Type",
                             "parsedType": {
+                              "aliasName": "Type",
                               "name": "Type",
+                              "originalName": "Type",
                               "type": "Type",
                             },
                             "scope": [
@@ -873,6 +1137,11 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "typeNum": 13,
                           },
                           "wellKnown": {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "aliasType": "WellKnownType",
                             "comment": "Well-known protobuf type such as \`google.protobuf.Timestamp\`.",
                             "id": 5,
                             "options": {
@@ -880,8 +1149,15 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "wellKnown",
                               "(telescope:orig)": "well_known",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "originalType": "WellKnownType",
                             "parsedType": {
+                              "aliasName": "WellKnownType",
                               "name": "WellKnownType",
+                              "originalName": "WellKnownType",
                               "type": "Enum",
                             },
                             "scope": [
@@ -891,6 +1167,11 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "type": "WellKnownType",
                           },
                           "wrapper": {
+                            "aliasScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "aliasType": "PrimitiveType",
                             "comment": "Wrapper of a primitive type, e.g. \`google.protobuf.Int64Value\`.",
                             "id": 4,
                             "options": {
@@ -898,8 +1179,15 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                               "(telescope:name)": "wrapper",
                               "(telescope:orig)": "wrapper",
                             },
+                            "originalScope": [
+                              "google.api.expr.v1alpha1",
+                              "Type",
+                            ],
+                            "originalType": "PrimitiveType",
                             "parsedType": {
+                              "aliasName": "PrimitiveType",
                               "name": "PrimitiveType",
+                              "originalName": "PrimitiveType",
                               "type": "Enum",
                             },
                             "scope": [
@@ -933,6 +1221,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                 "typeNum": 13,
                               },
                               "parameterTypes": {
+                                "aliasScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "aliasType": "Type",
                                 "comment": "Parameter types for this abstract type.",
                                 "id": 2,
                                 "options": {
@@ -940,8 +1232,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "parameterTypes",
                                   "(telescope:orig)": "parameter_types",
                                 },
+                                "originalScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "originalType": "Type",
                                 "parsedType": {
+                                  "aliasName": "Type",
                                   "name": "Type",
+                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "rule": "repeated",
@@ -965,6 +1263,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "comment": "Function type with result and arg types.",
                             "fields": {
                               "argTypes": {
+                                "aliasScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "aliasType": "Type",
                                 "comment": "Argument types of the function.",
                                 "id": 2,
                                 "options": {
@@ -972,8 +1274,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "argTypes",
                                   "(telescope:orig)": "arg_types",
                                 },
+                                "originalScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "originalType": "Type",
                                 "parsedType": {
+                                  "aliasName": "Type",
                                   "name": "Type",
+                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "rule": "repeated",
@@ -983,6 +1291,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                 "type": "Type",
                               },
                               "resultType": {
+                                "aliasScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "aliasType": "Type",
                                 "comment": "Result type of the function.",
                                 "id": 1,
                                 "options": {
@@ -990,8 +1302,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "resultType",
                                   "(telescope:orig)": "result_type",
                                 },
+                                "originalScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "originalType": "Type",
                                 "parsedType": {
+                                  "aliasName": "Type",
                                   "name": "Type",
+                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "scope": [
@@ -1014,6 +1332,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "comment": "List type with typed elements, e.g. \`list<example.proto.MyMessage>\`.",
                             "fields": {
                               "elemType": {
+                                "aliasScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "aliasType": "Type",
                                 "comment": "The element type.",
                                 "id": 1,
                                 "options": {
@@ -1021,8 +1343,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "elemType",
                                   "(telescope:orig)": "elem_type",
                                 },
+                                "originalScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "originalType": "Type",
                                 "parsedType": {
+                                  "aliasName": "Type",
                                   "name": "Type",
+                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "scope": [
@@ -1045,6 +1373,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                             "comment": "Map type with parameterized key and value types, e.g. \`map<string, int>\`.",
                             "fields": {
                               "keyType": {
+                                "aliasScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "aliasType": "Type",
                                 "comment": "The type of the key.",
                                 "id": 1,
                                 "options": {
@@ -1052,8 +1384,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "keyType",
                                   "(telescope:orig)": "key_type",
                                 },
+                                "originalScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "originalType": "Type",
                                 "parsedType": {
+                                  "aliasName": "Type",
                                   "name": "Type",
+                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "scope": [
@@ -1062,6 +1400,10 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                 "type": "Type",
                               },
                               "valueType": {
+                                "aliasScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "aliasType": "Type",
                                 "comment": "The type of the value.",
                                 "id": 2,
                                 "options": {
@@ -1069,8 +1411,14 @@ exports[`google/api/expr/v1alpha1/checked 1`] = `
                                   "(telescope:name)": "valueType",
                                   "(telescope:orig)": "value_type",
                                 },
+                                "originalScope": [
+                                  "google.api.expr.v1alpha1",
+                                ],
+                                "originalType": "Type",
                                 "parsedType": {
+                                  "aliasName": "Type",
                                   "name": "Type",
+                                  "originalName": "Type",
                                   "type": "Type",
                                 },
                                 "scope": [

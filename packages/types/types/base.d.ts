@@ -62,10 +62,16 @@ export interface ProtoType {
 }
 export interface ProtoField {
     type?: 'string' | 'double' | 'float' | 'int32' | 'uint32' | 'sint32' | 'fixed32' | 'sfixed32' | 'uint64' | 'int64' | 'sint64' | 'fixed64' | 'sfixed64' | 'bytes' | 'bool' | string;
+    originalType?: string;
+    aliasType?: string;
     name?: string;
     scope?: string[];
+    originalScope?: string[];
+    aliasScope?: string[];
     parsedType?: {
         name: string;
+        originalName?: string;
+        aliasName?: string;
         type: string;
     };
     message?: string;
@@ -94,6 +100,8 @@ export interface ProtoField {
     comment?: string;
     import?: string;
     importedName?: string;
+    aliasImportedName?: string;
+    originalImportedName?: string;
     scopeType?: string;
     isNestedMsg?: boolean;
 }

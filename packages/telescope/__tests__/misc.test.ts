@@ -120,6 +120,9 @@ describe('misc', () => {
         prototypes: {
           alias: {
             "**.EncodingTestForOmit": makeAliasName,
+            "**.AccessConfig": makeAliasName,
+            "**.VoteOption": makeAliasName,
+            "**.GenericAuthorization": makeAliasName,
           }
         }
       })

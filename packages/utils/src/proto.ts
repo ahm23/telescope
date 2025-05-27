@@ -61,8 +61,10 @@ export const makeHookKeyName = (name: string) => {
   return camel(name + "Query");
 };
 
-export const makeAliasName = (ctx: { package: string, name: string }) => {
-  return pascal(ctx.package.replace(/\./g, "_") + "_" + ctx.name);
+export const makeAliasName = (ctx: { package: string; name: string }) => {
+  return pascal(
+    `${ctx.package.replace(/\./g, "_")}${ctx.name}`
+  );
 };
 
 // https://github.com/isaacs/minimatch/blob/main/src/index.ts#L61
@@ -176,11 +178,11 @@ export const isRefIncluded = (
  * @param patterns to match the package
  * @returns bool
  */
-export const isPackageIncluded = (input, patterns)=>{
-  return patterns.some(pattern => {
-    return minimatch(input, pattern)
-})
-}
+export const isPackageIncluded = (input, patterns) => {
+  return patterns.some((pattern) => {
+    return minimatch(input, pattern);
+  });
+};
 
 /**
  * test if a proto ref is excluded from the operation.
@@ -274,10 +276,7 @@ export function getHelperFuncName(
     }
   }
 
-  let {
-    funcBody: funcBodyFn,
-    hookPrefix,
-  } = {
+  let { funcBody: funcBodyFn, hookPrefix } = {
     funcBody: defaultFuncBodyFn,
     hookPrefix: "use",
     ...rule,

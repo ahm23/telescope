@@ -1,4 +1,3 @@
-import { AccessConfig, AccessConfigAmino, AccessConfigSDKType, VoteOption, VoteOptionSDKType, voteOptionFromJSON, voteOptionToJSON } from "./eval_request";
 import { Any, AnyProtoMsg, AnyAmino, AnySDKType } from "../google/protobuf/any";
 import { Duration, DurationAmino, DurationSDKType } from "../google/protobuf/duration";
 import { Timestamp, TimestampAmino, TimestampSDKType } from "../google/protobuf/timestamp";
@@ -8,6 +7,7 @@ import { Decimal } from "@cosmjs/math";
 import { JsonSafe } from "../json-safe";
 import { toUtf8, fromBase64, fromUtf8, toBase64 } from "@cosmjs/encoding";
 import { encodePubkey, decodePubkey } from "@cosmjs/proto-signing";
+import { MiscAccessConfig, MiscAccessConfigAmino, MiscAccessConfigSDKType, MiscVoteOption, MiscVoteOptionSDKType, miscVoteOptionFromJSON, miscVoteOptionToJSON } from "./eval_request";
 export const protobufPackage = "misc";
 export interface EncodingTestForDontOmit {
   /** scalar */
@@ -21,8 +21,8 @@ export interface EncodingTestForDontOmit {
   big: bigint;
   dOBig: bigint;
   /** protoType */
-  proto?: AccessConfig;
-  dOProto: AccessConfig;
+  proto?: MiscAccessConfig;
+  dOProto: MiscAccessConfig;
   /** anyType */
   auth?: Any;
   dOAuth: Any;
@@ -36,8 +36,8 @@ export interface EncodingTestForDontOmit {
   wasm: Uint8Array;
   dOWasm: Uint8Array;
   /** enum */
-  opt: VoteOption;
-  dOOpt: VoteOption;
+  opt: MiscVoteOption;
+  dOOpt: MiscVoteOption;
   /** duration */
   period?: Duration;
   dOPeriod: Duration;
@@ -63,14 +63,14 @@ export interface EncodingTestForDontOmit {
   wasms: Uint8Array[];
   dOWasms: Uint8Array[];
   /** array enum */
-  opts: VoteOption[];
-  dOOpts: VoteOption[];
+  opts: MiscVoteOption[];
+  dOOpts: MiscVoteOption[];
   /** array duration */
   periods: Duration[];
   dOPeriods: Duration[];
   /** array protoType */
-  protos: AccessConfig[];
-  dOProtos: AccessConfig[];
+  protos: MiscAccessConfig[];
+  dOProtos: MiscAccessConfig[];
   /** array anyType */
   auths: Any[];
   dOAuths: Any[];
@@ -97,8 +97,8 @@ export interface EncodingTestForDontOmitAmino {
   big?: string;
   d_o_big: string;
   /** protoType */
-  proto?: AccessConfigAmino;
-  d_o_proto: AccessConfigAmino;
+  proto?: MiscAccessConfigAmino;
+  d_o_proto: MiscAccessConfigAmino;
   /** anyType */
   auth?: AnyAmino;
   d_o_auth: AnyAmino;
@@ -112,8 +112,8 @@ export interface EncodingTestForDontOmitAmino {
   wasm?: string;
   d_o_wasm: string;
   /** enum */
-  opt?: VoteOption;
-  d_o_opt: VoteOption;
+  opt?: MiscVoteOption;
+  d_o_opt: MiscVoteOption;
   /** duration */
   period?: DurationAmino;
   d_o_period: DurationAmino;
@@ -139,14 +139,14 @@ export interface EncodingTestForDontOmitAmino {
   wasms?: string[];
   d_o_wasms: string[];
   /** array enum */
-  opts?: VoteOption[];
-  d_o_opts: VoteOption[];
+  opts?: MiscVoteOption[];
+  d_o_opts: MiscVoteOption[];
   /** array duration */
   periods?: DurationAmino[];
   d_o_periods: DurationAmino[];
   /** array protoType */
-  protos?: AccessConfigAmino[];
-  d_o_protos: AccessConfigAmino[];
+  protos?: MiscAccessConfigAmino[];
+  d_o_protos: MiscAccessConfigAmino[];
   /** array anyType */
   auths?: AnyAmino[];
   d_o_auths: AnyAmino[];
@@ -170,8 +170,8 @@ export interface EncodingTestForDontOmitSDKType {
   d_o_num: number;
   big: bigint;
   d_o_big: bigint;
-  proto?: AccessConfigSDKType;
-  d_o_proto: AccessConfigSDKType;
+  proto?: MiscAccessConfigSDKType;
+  d_o_proto: MiscAccessConfigSDKType;
   auth?: AnySDKType;
   d_o_auth: AnySDKType;
   salt: Uint8Array;
@@ -180,8 +180,8 @@ export interface EncodingTestForDontOmitSDKType {
   d_o_raw: Uint8Array;
   wasm: Uint8Array;
   d_o_wasm: Uint8Array;
-  opt: VoteOption;
-  d_o_opt: VoteOption;
+  opt: MiscVoteOption;
+  d_o_opt: MiscVoteOption;
   period?: DurationSDKType;
   d_o_period: DurationSDKType;
   date?: Date;
@@ -198,12 +198,12 @@ export interface EncodingTestForDontOmitSDKType {
   d_o_raws: Uint8Array[];
   wasms: Uint8Array[];
   d_o_wasms: Uint8Array[];
-  opts: VoteOption[];
-  d_o_opts: VoteOption[];
+  opts: MiscVoteOption[];
+  d_o_opts: MiscVoteOption[];
   periods: DurationSDKType[];
   d_o_periods: DurationSDKType[];
-  protos: AccessConfigSDKType[];
-  d_o_protos: AccessConfigSDKType[];
+  protos: MiscAccessConfigSDKType[];
+  d_o_protos: MiscAccessConfigSDKType[];
   auths: AnySDKType[];
   d_o_auths: AnySDKType[];
   dec: string;
@@ -223,8 +223,8 @@ export interface MiscEncodingTestForOmit {
   big: bigint;
   oBig: bigint;
   /** protoType */
-  proto?: AccessConfig;
-  oProto: AccessConfig;
+  proto?: MiscAccessConfig;
+  oProto: MiscAccessConfig;
   /** anyType */
   auth?: Any;
   oAuth: Any;
@@ -238,8 +238,8 @@ export interface MiscEncodingTestForOmit {
   wasm: Uint8Array;
   oWasm: Uint8Array;
   /** enum */
-  opt: VoteOption;
-  oOpt: VoteOption;
+  opt: MiscVoteOption;
+  oOpt: MiscVoteOption;
   /** duration */
   period?: Duration;
   oPeriod: Duration;
@@ -265,14 +265,14 @@ export interface MiscEncodingTestForOmit {
   wasms: Uint8Array[];
   oWasms: Uint8Array[];
   /** array enum */
-  opts: VoteOption[];
-  oOpts: VoteOption[];
+  opts: MiscVoteOption[];
+  oOpts: MiscVoteOption[];
   /** array duration */
   periods: Duration[];
   oPeriods: Duration[];
   /** array protoType */
-  protos: AccessConfig[];
-  oProtos: AccessConfig[];
+  protos: MiscAccessConfig[];
+  oProtos: MiscAccessConfig[];
   /** array anyType */
   auths: Any[];
   oAuths: Any[];
@@ -299,8 +299,8 @@ export interface MiscEncodingTestForOmitAmino {
   big: string;
   o_big?: string;
   /** protoType */
-  proto: AccessConfigAmino;
-  o_proto?: AccessConfigAmino;
+  proto: MiscAccessConfigAmino;
+  o_proto?: MiscAccessConfigAmino;
   /** anyType */
   auth: AnyAmino;
   o_auth?: AnyAmino;
@@ -314,8 +314,8 @@ export interface MiscEncodingTestForOmitAmino {
   wasm: string;
   o_wasm?: string;
   /** enum */
-  opt: VoteOption;
-  o_opt?: VoteOption;
+  opt: MiscVoteOption;
+  o_opt?: MiscVoteOption;
   /** duration */
   period: DurationAmino;
   o_period?: DurationAmino;
@@ -341,14 +341,14 @@ export interface MiscEncodingTestForOmitAmino {
   wasms: string[];
   o_wasms?: string[];
   /** array enum */
-  opts: VoteOption[];
-  o_opts?: VoteOption[];
+  opts: MiscVoteOption[];
+  o_opts?: MiscVoteOption[];
   /** array duration */
   periods: DurationAmino[];
   o_periods?: DurationAmino[];
   /** array protoType */
-  protos: AccessConfigAmino[];
-  o_protos?: AccessConfigAmino[];
+  protos: MiscAccessConfigAmino[];
+  o_protos?: MiscAccessConfigAmino[];
   /** array anyType */
   auths: AnyAmino[];
   o_auths?: AnyAmino[];
@@ -372,8 +372,8 @@ export interface MiscEncodingTestForOmitSDKType {
   o_num: number;
   big: bigint;
   o_big: bigint;
-  proto?: AccessConfigSDKType;
-  o_proto: AccessConfigSDKType;
+  proto?: MiscAccessConfigSDKType;
+  o_proto: MiscAccessConfigSDKType;
   auth?: AnySDKType;
   o_auth: AnySDKType;
   salt: Uint8Array;
@@ -382,8 +382,8 @@ export interface MiscEncodingTestForOmitSDKType {
   o_raw: Uint8Array;
   wasm: Uint8Array;
   o_wasm: Uint8Array;
-  opt: VoteOption;
-  o_opt: VoteOption;
+  opt: MiscVoteOption;
+  o_opt: MiscVoteOption;
   period?: DurationSDKType;
   o_period: DurationSDKType;
   date?: Date;
@@ -400,12 +400,12 @@ export interface MiscEncodingTestForOmitSDKType {
   o_raws: Uint8Array[];
   wasms: Uint8Array[];
   o_wasms: Uint8Array[];
-  opts: VoteOption[];
-  o_opts: VoteOption[];
+  opts: MiscVoteOption[];
+  o_opts: MiscVoteOption[];
   periods: DurationSDKType[];
   o_periods: DurationSDKType[];
-  protos: AccessConfigSDKType[];
-  o_protos: AccessConfigSDKType[];
+  protos: MiscAccessConfigSDKType[];
+  o_protos: MiscAccessConfigSDKType[];
   auths: AnySDKType[];
   o_auths: AnySDKType[];
   dec: string;
@@ -424,7 +424,7 @@ function createBaseEncodingTestForDontOmit(): EncodingTestForDontOmit {
     big: BigInt(0),
     dOBig: BigInt(0),
     proto: undefined,
-    dOProto: AccessConfig.fromPartial({}),
+    dOProto: MiscAccessConfig.fromPartial({}),
     auth: undefined,
     dOAuth: Any.fromPartial({}),
     salt: new Uint8Array(),
@@ -493,10 +493,10 @@ export const EncodingTestForDontOmit = {
       writer.uint32(64).int64(message.dOBig);
     }
     if (message.proto !== undefined) {
-      AccessConfig.encode(message.proto, writer.uint32(74).fork()).ldelim();
+      MiscAccessConfig.encode(message.proto, writer.uint32(74).fork()).ldelim();
     }
     if (message.dOProto !== undefined) {
-      AccessConfig.encode(message.dOProto, writer.uint32(82).fork()).ldelim();
+      MiscAccessConfig.encode(message.dOProto, writer.uint32(82).fork()).ldelim();
     }
     if (message.auth !== undefined) {
       Any.encode(message.auth, writer.uint32(90).fork()).ldelim();
@@ -601,10 +601,10 @@ export const EncodingTestForDontOmit = {
       Duration.encode(v!, writer.uint32(322).fork()).ldelim();
     }
     for (const v of message.protos) {
-      AccessConfig.encode(v!, writer.uint32(346).fork()).ldelim();
+      MiscAccessConfig.encode(v!, writer.uint32(346).fork()).ldelim();
     }
     for (const v of message.dOProtos) {
-      AccessConfig.encode(v!, writer.uint32(354).fork()).ldelim();
+      MiscAccessConfig.encode(v!, writer.uint32(354).fork()).ldelim();
     }
     for (const v of message.auths) {
       Any.encode(v!, writer.uint32(362).fork()).ldelim();
@@ -658,10 +658,10 @@ export const EncodingTestForDontOmit = {
           message.dOBig = reader.int64();
           break;
         case 9:
-          message.proto = AccessConfig.decode(reader, reader.uint32());
+          message.proto = MiscAccessConfig.decode(reader, reader.uint32());
           break;
         case 10:
-          message.dOProto = AccessConfig.decode(reader, reader.uint32());
+          message.dOProto = MiscAccessConfig.decode(reader, reader.uint32());
           break;
         case 11:
           message.auth = Any.decode(reader, reader.uint32());
@@ -796,10 +796,10 @@ export const EncodingTestForDontOmit = {
           message.dOPeriods.push(Duration.decode(reader, reader.uint32()));
           break;
         case 43:
-          message.protos.push(AccessConfig.decode(reader, reader.uint32()));
+          message.protos.push(MiscAccessConfig.decode(reader, reader.uint32()));
           break;
         case 44:
-          message.dOProtos.push(AccessConfig.decode(reader, reader.uint32()));
+          message.dOProtos.push(MiscAccessConfig.decode(reader, reader.uint32()));
           break;
         case 45:
           message.auths.push(Any.decode(reader, reader.uint32()));
@@ -836,8 +836,8 @@ export const EncodingTestForDontOmit = {
     if (isSet(object.dONum)) obj.dONum = Number(object.dONum);
     if (isSet(object.big)) obj.big = BigInt(object.big.toString());
     if (isSet(object.dOBig)) obj.dOBig = BigInt(object.dOBig.toString());
-    if (isSet(object.proto)) obj.proto = AccessConfig.fromJSON(object.proto);
-    if (isSet(object.dOProto)) obj.dOProto = AccessConfig.fromJSON(object.dOProto);
+    if (isSet(object.proto)) obj.proto = MiscAccessConfig.fromJSON(object.proto);
+    if (isSet(object.dOProto)) obj.dOProto = MiscAccessConfig.fromJSON(object.dOProto);
     if (isSet(object.auth)) obj.auth = Any.fromJSON(object.auth);
     if (isSet(object.dOAuth)) obj.dOAuth = Any.fromJSON(object.dOAuth);
     if (isSet(object.salt)) obj.salt = bytesFromBase64(object.salt);
@@ -846,8 +846,8 @@ export const EncodingTestForDontOmit = {
     if (isSet(object.dORaw)) obj.dORaw = bytesFromBase64(object.dORaw);
     if (isSet(object.wasm)) obj.wasm = bytesFromBase64(object.wasm);
     if (isSet(object.dOWasm)) obj.dOWasm = bytesFromBase64(object.dOWasm);
-    if (isSet(object.opt)) obj.opt = voteOptionFromJSON(object.opt);
-    if (isSet(object.dOOpt)) obj.dOOpt = voteOptionFromJSON(object.dOOpt);
+    if (isSet(object.opt)) obj.opt = miscVoteOptionFromJSON(object.opt);
+    if (isSet(object.dOOpt)) obj.dOOpt = miscVoteOptionFromJSON(object.dOOpt);
     if (isSet(object.period)) obj.period = Duration.fromJSON(object.period);
     if (isSet(object.dOPeriod)) obj.dOPeriod = Duration.fromJSON(object.dOPeriod);
     if (isSet(object.date)) obj.date = new Date(object.date);
@@ -864,12 +864,12 @@ export const EncodingTestForDontOmit = {
     if (Array.isArray(object?.dORaws)) obj.dORaws = object.dORaws.map((e: any) => bytesFromBase64(e));
     if (Array.isArray(object?.wasms)) obj.wasms = object.wasms.map((e: any) => bytesFromBase64(e));
     if (Array.isArray(object?.dOWasms)) obj.dOWasms = object.dOWasms.map((e: any) => bytesFromBase64(e));
-    if (Array.isArray(object?.opts)) obj.opts = object.opts.map((e: any) => voteOptionFromJSON(e));
-    if (Array.isArray(object?.dOOpts)) obj.dOOpts = object.dOOpts.map((e: any) => voteOptionFromJSON(e));
+    if (Array.isArray(object?.opts)) obj.opts = object.opts.map((e: any) => miscVoteOptionFromJSON(e));
+    if (Array.isArray(object?.dOOpts)) obj.dOOpts = object.dOOpts.map((e: any) => miscVoteOptionFromJSON(e));
     if (Array.isArray(object?.periods)) obj.periods = object.periods.map((e: any) => Duration.fromJSON(e));
     if (Array.isArray(object?.dOPeriods)) obj.dOPeriods = object.dOPeriods.map((e: any) => Duration.fromJSON(e));
-    if (Array.isArray(object?.protos)) obj.protos = object.protos.map((e: any) => AccessConfig.fromJSON(e));
-    if (Array.isArray(object?.dOProtos)) obj.dOProtos = object.dOProtos.map((e: any) => AccessConfig.fromJSON(e));
+    if (Array.isArray(object?.protos)) obj.protos = object.protos.map((e: any) => MiscAccessConfig.fromJSON(e));
+    if (Array.isArray(object?.dOProtos)) obj.dOProtos = object.dOProtos.map((e: any) => MiscAccessConfig.fromJSON(e));
     if (Array.isArray(object?.auths)) obj.auths = object.auths.map((e: any) => Any.fromJSON(e));
     if (Array.isArray(object?.dOAuths)) obj.dOAuths = object.dOAuths.map((e: any) => Any.fromJSON(e));
     if (isSet(object.dec)) obj.dec = String(object.dec);
@@ -888,8 +888,8 @@ export const EncodingTestForDontOmit = {
     message.dONum !== undefined && (obj.dONum = Math.round(message.dONum));
     message.big !== undefined && (obj.big = (message.big || BigInt(0)).toString());
     message.dOBig !== undefined && (obj.dOBig = (message.dOBig || BigInt(0)).toString());
-    message.proto !== undefined && (obj.proto = message.proto ? AccessConfig.toJSON(message.proto) : undefined);
-    message.dOProto !== undefined && (obj.dOProto = message.dOProto ? AccessConfig.toJSON(message.dOProto) : undefined);
+    message.proto !== undefined && (obj.proto = message.proto ? MiscAccessConfig.toJSON(message.proto) : undefined);
+    message.dOProto !== undefined && (obj.dOProto = message.dOProto ? MiscAccessConfig.toJSON(message.dOProto) : undefined);
     message.auth !== undefined && (obj.auth = message.auth ? Any.toJSON(message.auth) : undefined);
     message.dOAuth !== undefined && (obj.dOAuth = message.dOAuth ? Any.toJSON(message.dOAuth) : undefined);
     message.salt !== undefined && (obj.salt = base64FromBytes(message.salt !== undefined ? message.salt : new Uint8Array()));
@@ -898,8 +898,8 @@ export const EncodingTestForDontOmit = {
     message.dORaw !== undefined && (obj.dORaw = base64FromBytes(message.dORaw !== undefined ? message.dORaw : new Uint8Array()));
     message.wasm !== undefined && (obj.wasm = base64FromBytes(message.wasm !== undefined ? message.wasm : new Uint8Array()));
     message.dOWasm !== undefined && (obj.dOWasm = base64FromBytes(message.dOWasm !== undefined ? message.dOWasm : new Uint8Array()));
-    message.opt !== undefined && (obj.opt = voteOptionToJSON(message.opt));
-    message.dOOpt !== undefined && (obj.dOOpt = voteOptionToJSON(message.dOOpt));
+    message.opt !== undefined && (obj.opt = miscVoteOptionToJSON(message.opt));
+    message.dOOpt !== undefined && (obj.dOOpt = miscVoteOptionToJSON(message.dOOpt));
     message.period !== undefined && (obj.period = message.period ? Duration.toJSON(message.period) : undefined);
     message.dOPeriod !== undefined && (obj.dOPeriod = message.dOPeriod ? Duration.toJSON(message.dOPeriod) : undefined);
     message.date !== undefined && (obj.date = message.date.toISOString());
@@ -957,12 +957,12 @@ export const EncodingTestForDontOmit = {
       obj.dOWasms = [];
     }
     if (message.opts) {
-      obj.opts = message.opts.map(e => voteOptionToJSON(e));
+      obj.opts = message.opts.map(e => miscVoteOptionToJSON(e));
     } else {
       obj.opts = [];
     }
     if (message.dOOpts) {
-      obj.dOOpts = message.dOOpts.map(e => voteOptionToJSON(e));
+      obj.dOOpts = message.dOOpts.map(e => miscVoteOptionToJSON(e));
     } else {
       obj.dOOpts = [];
     }
@@ -977,12 +977,12 @@ export const EncodingTestForDontOmit = {
       obj.dOPeriods = [];
     }
     if (message.protos) {
-      obj.protos = message.protos.map(e => e ? AccessConfig.toJSON(e) : undefined);
+      obj.protos = message.protos.map(e => e ? MiscAccessConfig.toJSON(e) : undefined);
     } else {
       obj.protos = [];
     }
     if (message.dOProtos) {
-      obj.dOProtos = message.dOProtos.map(e => e ? AccessConfig.toJSON(e) : undefined);
+      obj.dOProtos = message.dOProtos.map(e => e ? MiscAccessConfig.toJSON(e) : undefined);
     } else {
       obj.dOProtos = [];
     }
@@ -1025,10 +1025,10 @@ export const EncodingTestForDontOmit = {
       message.dOBig = BigInt(object.dOBig.toString());
     }
     if (object.proto !== undefined && object.proto !== null) {
-      message.proto = AccessConfig.fromPartial(object.proto);
+      message.proto = MiscAccessConfig.fromPartial(object.proto);
     }
     if (object.dOProto !== undefined && object.dOProto !== null) {
-      message.dOProto = AccessConfig.fromPartial(object.dOProto);
+      message.dOProto = MiscAccessConfig.fromPartial(object.dOProto);
     }
     if (object.auth !== undefined && object.auth !== null) {
       message.auth = Any.fromPartial(object.auth);
@@ -1072,8 +1072,8 @@ export const EncodingTestForDontOmit = {
     message.dOOpts = object.dOOpts?.map(e => e) || [];
     message.periods = object.periods?.map(e => Duration.fromPartial(e)) || [];
     message.dOPeriods = object.dOPeriods?.map(e => Duration.fromPartial(e)) || [];
-    message.protos = object.protos?.map(e => AccessConfig.fromPartial(e)) || [];
-    message.dOProtos = object.dOProtos?.map(e => AccessConfig.fromPartial(e)) || [];
+    message.protos = object.protos?.map(e => MiscAccessConfig.fromPartial(e)) || [];
+    message.dOProtos = object.dOProtos?.map(e => MiscAccessConfig.fromPartial(e)) || [];
     message.auths = object.auths?.map(e => Any.fromPartial(e)) || [];
     message.dOAuths = object.dOAuths?.map(e => Any.fromPartial(e)) || [];
     message.dec = object.dec ?? "";
@@ -1092,8 +1092,8 @@ export const EncodingTestForDontOmit = {
       dONum: object?.d_o_num,
       big: object?.big,
       dOBig: object?.d_o_big,
-      proto: object.proto ? AccessConfig.fromSDK(object.proto) : undefined,
-      dOProto: object.d_o_proto ? AccessConfig.fromSDK(object.d_o_proto) : undefined,
+      proto: object.proto ? MiscAccessConfig.fromSDK(object.proto) : undefined,
+      dOProto: object.d_o_proto ? MiscAccessConfig.fromSDK(object.d_o_proto) : undefined,
       auth: object.auth ? Any.fromSDK(object.auth) : undefined,
       dOAuth: object.d_o_auth ? Any.fromSDK(object.d_o_auth) : undefined,
       salt: object?.salt,
@@ -1102,8 +1102,8 @@ export const EncodingTestForDontOmit = {
       dORaw: object?.d_o_raw,
       wasm: object?.wasm,
       dOWasm: object?.d_o_wasm,
-      opt: isSet(object.opt) ? voteOptionFromJSON(object.opt) : -1,
-      dOOpt: isSet(object.d_o_opt) ? voteOptionFromJSON(object.d_o_opt) : -1,
+      opt: isSet(object.opt) ? miscVoteOptionFromJSON(object.opt) : -1,
+      dOOpt: isSet(object.d_o_opt) ? miscVoteOptionFromJSON(object.d_o_opt) : -1,
       period: object.period ? Duration.fromSDK(object.period) : undefined,
       dOPeriod: object.d_o_period ? Duration.fromSDK(object.d_o_period) : undefined,
       date: object.date ?? undefined,
@@ -1120,12 +1120,12 @@ export const EncodingTestForDontOmit = {
       dORaws: Array.isArray(object?.d_o_raws) ? object.d_o_raws.map((e: any) => e) : [],
       wasms: Array.isArray(object?.wasms) ? object.wasms.map((e: any) => e) : [],
       dOWasms: Array.isArray(object?.d_o_wasms) ? object.d_o_wasms.map((e: any) => e) : [],
-      opts: Array.isArray(object?.opts) ? object.opts.map((e: any) => voteOptionFromJSON(e)) : [],
-      dOOpts: Array.isArray(object?.d_o_opts) ? object.d_o_opts.map((e: any) => voteOptionFromJSON(e)) : [],
+      opts: Array.isArray(object?.opts) ? object.opts.map((e: any) => miscVoteOptionFromJSON(e)) : [],
+      dOOpts: Array.isArray(object?.d_o_opts) ? object.d_o_opts.map((e: any) => miscVoteOptionFromJSON(e)) : [],
       periods: Array.isArray(object?.periods) ? object.periods.map((e: any) => Duration.fromSDK(e)) : [],
       dOPeriods: Array.isArray(object?.d_o_periods) ? object.d_o_periods.map((e: any) => Duration.fromSDK(e)) : [],
-      protos: Array.isArray(object?.protos) ? object.protos.map((e: any) => AccessConfig.fromSDK(e)) : [],
-      dOProtos: Array.isArray(object?.d_o_protos) ? object.d_o_protos.map((e: any) => AccessConfig.fromSDK(e)) : [],
+      protos: Array.isArray(object?.protos) ? object.protos.map((e: any) => MiscAccessConfig.fromSDK(e)) : [],
+      dOProtos: Array.isArray(object?.d_o_protos) ? object.d_o_protos.map((e: any) => MiscAccessConfig.fromSDK(e)) : [],
       auths: Array.isArray(object?.auths) ? object.auths.map((e: any) => Any.fromSDK(e)) : [],
       dOAuths: Array.isArray(object?.d_o_auths) ? object.d_o_auths.map((e: any) => Any.fromSDK(e)) : [],
       dec: object?.dec,
@@ -1144,8 +1144,8 @@ export const EncodingTestForDontOmit = {
       d_o_num: isSet(object.d_o_num) ? Number(object.d_o_num) : 0,
       big: isSet(object.big) ? BigInt(object.big.toString()) : BigInt(0),
       d_o_big: isSet(object.d_o_big) ? BigInt(object.d_o_big.toString()) : BigInt(0),
-      proto: isSet(object.proto) ? AccessConfig.fromSDKJSON(object.proto) : undefined,
-      d_o_proto: isSet(object.d_o_proto) ? AccessConfig.fromSDKJSON(object.d_o_proto) : undefined,
+      proto: isSet(object.proto) ? MiscAccessConfig.fromSDKJSON(object.proto) : undefined,
+      d_o_proto: isSet(object.d_o_proto) ? MiscAccessConfig.fromSDKJSON(object.d_o_proto) : undefined,
       auth: isSet(object.auth) ? Any.fromSDKJSON(object.auth) : undefined,
       d_o_auth: isSet(object.d_o_auth) ? Any.fromSDKJSON(object.d_o_auth) : undefined,
       salt: isSet(object.salt) ? bytesFromBase64(object.salt) : new Uint8Array(),
@@ -1154,8 +1154,8 @@ export const EncodingTestForDontOmit = {
       d_o_raw: isSet(object.d_o_raw) ? bytesFromBase64(object.d_o_raw) : new Uint8Array(),
       wasm: isSet(object.wasm) ? bytesFromBase64(object.wasm) : new Uint8Array(),
       d_o_wasm: isSet(object.d_o_wasm) ? bytesFromBase64(object.d_o_wasm) : new Uint8Array(),
-      opt: isSet(object.opt) ? voteOptionFromJSON(object.opt) : -1,
-      d_o_opt: isSet(object.d_o_opt) ? voteOptionFromJSON(object.d_o_opt) : -1,
+      opt: isSet(object.opt) ? miscVoteOptionFromJSON(object.opt) : -1,
+      d_o_opt: isSet(object.d_o_opt) ? miscVoteOptionFromJSON(object.d_o_opt) : -1,
       period: isSet(object.period) ? Duration.fromSDKJSON(object.period) : undefined,
       d_o_period: isSet(object.d_o_period) ? Duration.fromSDKJSON(object.d_o_period) : undefined,
       date: isSet(object.date) ? new Date(object.date) : undefined,
@@ -1172,12 +1172,12 @@ export const EncodingTestForDontOmit = {
       d_o_raws: Array.isArray(object?.d_o_raws) ? object.d_o_raws.map((e: any) => bytesFromBase64(e)) : [],
       wasms: Array.isArray(object?.wasms) ? object.wasms.map((e: any) => bytesFromBase64(e)) : [],
       d_o_wasms: Array.isArray(object?.d_o_wasms) ? object.d_o_wasms.map((e: any) => bytesFromBase64(e)) : [],
-      opts: Array.isArray(object?.opts) ? object.opts.map((e: any) => voteOptionFromJSON(e)) : [],
-      d_o_opts: Array.isArray(object?.d_o_opts) ? object.d_o_opts.map((e: any) => voteOptionFromJSON(e)) : [],
+      opts: Array.isArray(object?.opts) ? object.opts.map((e: any) => miscVoteOptionFromJSON(e)) : [],
+      d_o_opts: Array.isArray(object?.d_o_opts) ? object.d_o_opts.map((e: any) => miscVoteOptionFromJSON(e)) : [],
       periods: Array.isArray(object?.periods) ? object.periods.map((e: any) => Duration.fromSDKJSON(e)) : [],
       d_o_periods: Array.isArray(object?.d_o_periods) ? object.d_o_periods.map((e: any) => Duration.fromSDKJSON(e)) : [],
-      protos: Array.isArray(object?.protos) ? object.protos.map((e: any) => AccessConfig.fromSDKJSON(e)) : [],
-      d_o_protos: Array.isArray(object?.d_o_protos) ? object.d_o_protos.map((e: any) => AccessConfig.fromSDKJSON(e)) : [],
+      protos: Array.isArray(object?.protos) ? object.protos.map((e: any) => MiscAccessConfig.fromSDKJSON(e)) : [],
+      d_o_protos: Array.isArray(object?.d_o_protos) ? object.d_o_protos.map((e: any) => MiscAccessConfig.fromSDKJSON(e)) : [],
       auths: Array.isArray(object?.auths) ? object.auths.map((e: any) => Any.fromSDKJSON(e)) : [],
       d_o_auths: Array.isArray(object?.d_o_auths) ? object.d_o_auths.map((e: any) => Any.fromSDKJSON(e)) : [],
       dec: isSet(object.dec) ? String(object.dec) : "",
@@ -1196,8 +1196,8 @@ export const EncodingTestForDontOmit = {
     obj.d_o_num = message.dONum;
     obj.big = message.big;
     obj.d_o_big = message.dOBig;
-    message.proto !== undefined && (obj.proto = message.proto ? AccessConfig.toSDK(message.proto) : undefined);
-    message.dOProto !== undefined && (obj.d_o_proto = message.dOProto ? AccessConfig.toSDK(message.dOProto) : undefined);
+    message.proto !== undefined && (obj.proto = message.proto ? MiscAccessConfig.toSDK(message.proto) : undefined);
+    message.dOProto !== undefined && (obj.d_o_proto = message.dOProto ? MiscAccessConfig.toSDK(message.dOProto) : undefined);
     message.auth !== undefined && (obj.auth = message.auth ? Any.toSDK(message.auth) : undefined);
     message.dOAuth !== undefined && (obj.d_o_auth = message.dOAuth ? Any.toSDK(message.dOAuth) : undefined);
     obj.salt = message.salt;
@@ -1206,8 +1206,8 @@ export const EncodingTestForDontOmit = {
     obj.d_o_raw = message.dORaw;
     obj.wasm = message.wasm;
     obj.d_o_wasm = message.dOWasm;
-    message.opt !== undefined && (obj.opt = voteOptionToJSON(message.opt));
-    message.dOOpt !== undefined && (obj.d_o_opt = voteOptionToJSON(message.dOOpt));
+    message.opt !== undefined && (obj.opt = miscVoteOptionToJSON(message.opt));
+    message.dOOpt !== undefined && (obj.d_o_opt = miscVoteOptionToJSON(message.dOOpt));
     message.period !== undefined && (obj.period = message.period ? Duration.toSDK(message.period) : undefined);
     message.dOPeriod !== undefined && (obj.d_o_period = message.dOPeriod ? Duration.toSDK(message.dOPeriod) : undefined);
     message.date !== undefined && (obj.date = message.date ?? undefined);
@@ -1265,12 +1265,12 @@ export const EncodingTestForDontOmit = {
       obj.d_o_wasms = [];
     }
     if (message.opts) {
-      obj.opts = message.opts.map(e => voteOptionToJSON(e));
+      obj.opts = message.opts.map(e => miscVoteOptionToJSON(e));
     } else {
       obj.opts = [];
     }
     if (message.dOOpts) {
-      obj.d_o_opts = message.dOOpts.map(e => voteOptionToJSON(e));
+      obj.d_o_opts = message.dOOpts.map(e => miscVoteOptionToJSON(e));
     } else {
       obj.d_o_opts = [];
     }
@@ -1285,12 +1285,12 @@ export const EncodingTestForDontOmit = {
       obj.d_o_periods = [];
     }
     if (message.protos) {
-      obj.protos = message.protos.map(e => e ? AccessConfig.toSDK(e) : undefined);
+      obj.protos = message.protos.map(e => e ? MiscAccessConfig.toSDK(e) : undefined);
     } else {
       obj.protos = [];
     }
     if (message.dOProtos) {
-      obj.d_o_protos = message.dOProtos.map(e => e ? AccessConfig.toSDK(e) : undefined);
+      obj.d_o_protos = message.dOProtos.map(e => e ? MiscAccessConfig.toSDK(e) : undefined);
     } else {
       obj.d_o_protos = [];
     }
@@ -1345,10 +1345,10 @@ export const EncodingTestForDontOmit = {
       message.dOBig = BigInt(object.d_o_big);
     }
     if (object.proto !== undefined && object.proto !== null) {
-      message.proto = AccessConfig.fromAmino(object.proto);
+      message.proto = MiscAccessConfig.fromAmino(object.proto);
     }
     if (object.d_o_proto !== undefined && object.d_o_proto !== null) {
-      message.dOProto = AccessConfig.fromAmino(object.d_o_proto);
+      message.dOProto = MiscAccessConfig.fromAmino(object.d_o_proto);
     }
     if (object.auth !== undefined && object.auth !== null) {
       message.auth = Any.fromAmino(object.auth);
@@ -1412,8 +1412,8 @@ export const EncodingTestForDontOmit = {
     message.dOOpts = object.d_o_opts?.map(e => e) || [];
     message.periods = object.periods?.map(e => Duration.fromAmino(e)) || [];
     message.dOPeriods = object.d_o_periods?.map(e => Duration.fromAmino(e)) || [];
-    message.protos = object.protos?.map(e => AccessConfig.fromAmino(e)) || [];
-    message.dOProtos = object.d_o_protos?.map(e => AccessConfig.fromAmino(e)) || [];
+    message.protos = object.protos?.map(e => MiscAccessConfig.fromAmino(e)) || [];
+    message.dOProtos = object.d_o_protos?.map(e => MiscAccessConfig.fromAmino(e)) || [];
     message.auths = object.auths?.map(e => Any.fromAmino(e)) || [];
     message.dOAuths = object.d_o_auths?.map(e => Any.fromAmino(e)) || [];
     if (object.dec !== undefined && object.dec !== null) {
@@ -1436,8 +1436,8 @@ export const EncodingTestForDontOmit = {
     obj.d_o_num = message.dONum ?? 0;
     obj.big = message.big !== BigInt(0) ? message.big?.toString() : undefined;
     obj.d_o_big = message.dOBig ? message.dOBig?.toString() : "0";
-    obj.proto = message.proto ? AccessConfig.toAmino(message.proto) : undefined;
-    obj.d_o_proto = message.dOProto ? AccessConfig.toAmino(message.dOProto) : AccessConfig.toAmino(AccessConfig.fromPartial({}));
+    obj.proto = message.proto ? MiscAccessConfig.toAmino(message.proto) : undefined;
+    obj.d_o_proto = message.dOProto ? MiscAccessConfig.toAmino(message.dOProto) : MiscAccessConfig.toAmino(MiscAccessConfig.fromPartial({}));
     obj.auth = message.auth ? Any.toAmino(message.auth) : undefined;
     obj.d_o_auth = message.dOAuth ? Any.toAmino(message.dOAuth) : Any.toAmino(Any.fromPartial({}));
     obj.salt = message.salt ? base64FromBytes(message.salt) : undefined;
@@ -1525,12 +1525,12 @@ export const EncodingTestForDontOmit = {
       obj.d_o_periods = message.dOPeriods;
     }
     if (message.protos) {
-      obj.protos = message.protos.map(e => e ? AccessConfig.toAmino(e) : undefined);
+      obj.protos = message.protos.map(e => e ? MiscAccessConfig.toAmino(e) : undefined);
     } else {
       obj.protos = message.protos;
     }
     if (message.dOProtos) {
-      obj.d_o_protos = message.dOProtos.map(e => e ? AccessConfig.toAmino(e) : undefined);
+      obj.d_o_protos = message.dOProtos.map(e => e ? MiscAccessConfig.toAmino(e) : undefined);
     } else {
       obj.d_o_protos = message.dOProtos;
     }
@@ -1585,7 +1585,7 @@ function createBaseMiscEncodingTestForOmit(): MiscEncodingTestForOmit {
     big: BigInt(0),
     oBig: BigInt(0),
     proto: undefined,
-    oProto: AccessConfig.fromPartial({}),
+    oProto: MiscAccessConfig.fromPartial({}),
     auth: undefined,
     oAuth: Any.fromPartial({}),
     salt: new Uint8Array(),
@@ -1654,10 +1654,10 @@ export const MiscEncodingTestForOmit = {
       writer.uint32(64).int64(message.oBig);
     }
     if (message.proto !== undefined) {
-      AccessConfig.encode(message.proto, writer.uint32(74).fork()).ldelim();
+      MiscAccessConfig.encode(message.proto, writer.uint32(74).fork()).ldelim();
     }
     if (message.oProto !== undefined) {
-      AccessConfig.encode(message.oProto, writer.uint32(82).fork()).ldelim();
+      MiscAccessConfig.encode(message.oProto, writer.uint32(82).fork()).ldelim();
     }
     if (message.auth !== undefined) {
       Any.encode(message.auth, writer.uint32(90).fork()).ldelim();
@@ -1762,10 +1762,10 @@ export const MiscEncodingTestForOmit = {
       Duration.encode(v!, writer.uint32(322).fork()).ldelim();
     }
     for (const v of message.protos) {
-      AccessConfig.encode(v!, writer.uint32(346).fork()).ldelim();
+      MiscAccessConfig.encode(v!, writer.uint32(346).fork()).ldelim();
     }
     for (const v of message.oProtos) {
-      AccessConfig.encode(v!, writer.uint32(354).fork()).ldelim();
+      MiscAccessConfig.encode(v!, writer.uint32(354).fork()).ldelim();
     }
     for (const v of message.auths) {
       Any.encode(v!, writer.uint32(362).fork()).ldelim();
@@ -1819,10 +1819,10 @@ export const MiscEncodingTestForOmit = {
           message.oBig = reader.int64();
           break;
         case 9:
-          message.proto = AccessConfig.decode(reader, reader.uint32());
+          message.proto = MiscAccessConfig.decode(reader, reader.uint32());
           break;
         case 10:
-          message.oProto = AccessConfig.decode(reader, reader.uint32());
+          message.oProto = MiscAccessConfig.decode(reader, reader.uint32());
           break;
         case 11:
           message.auth = Any.decode(reader, reader.uint32());
@@ -1957,10 +1957,10 @@ export const MiscEncodingTestForOmit = {
           message.oPeriods.push(Duration.decode(reader, reader.uint32()));
           break;
         case 43:
-          message.protos.push(AccessConfig.decode(reader, reader.uint32()));
+          message.protos.push(MiscAccessConfig.decode(reader, reader.uint32()));
           break;
         case 44:
-          message.oProtos.push(AccessConfig.decode(reader, reader.uint32()));
+          message.oProtos.push(MiscAccessConfig.decode(reader, reader.uint32()));
           break;
         case 45:
           message.auths.push(Any.decode(reader, reader.uint32()));
@@ -1997,8 +1997,8 @@ export const MiscEncodingTestForOmit = {
     if (isSet(object.oNum)) obj.oNum = Number(object.oNum);
     if (isSet(object.big)) obj.big = BigInt(object.big.toString());
     if (isSet(object.oBig)) obj.oBig = BigInt(object.oBig.toString());
-    if (isSet(object.proto)) obj.proto = AccessConfig.fromJSON(object.proto);
-    if (isSet(object.oProto)) obj.oProto = AccessConfig.fromJSON(object.oProto);
+    if (isSet(object.proto)) obj.proto = MiscAccessConfig.fromJSON(object.proto);
+    if (isSet(object.oProto)) obj.oProto = MiscAccessConfig.fromJSON(object.oProto);
     if (isSet(object.auth)) obj.auth = Any.fromJSON(object.auth);
     if (isSet(object.oAuth)) obj.oAuth = Any.fromJSON(object.oAuth);
     if (isSet(object.salt)) obj.salt = bytesFromBase64(object.salt);
@@ -2007,8 +2007,8 @@ export const MiscEncodingTestForOmit = {
     if (isSet(object.oRaw)) obj.oRaw = bytesFromBase64(object.oRaw);
     if (isSet(object.wasm)) obj.wasm = bytesFromBase64(object.wasm);
     if (isSet(object.oWasm)) obj.oWasm = bytesFromBase64(object.oWasm);
-    if (isSet(object.opt)) obj.opt = voteOptionFromJSON(object.opt);
-    if (isSet(object.oOpt)) obj.oOpt = voteOptionFromJSON(object.oOpt);
+    if (isSet(object.opt)) obj.opt = miscVoteOptionFromJSON(object.opt);
+    if (isSet(object.oOpt)) obj.oOpt = miscVoteOptionFromJSON(object.oOpt);
     if (isSet(object.period)) obj.period = Duration.fromJSON(object.period);
     if (isSet(object.oPeriod)) obj.oPeriod = Duration.fromJSON(object.oPeriod);
     if (isSet(object.date)) obj.date = new Date(object.date);
@@ -2025,12 +2025,12 @@ export const MiscEncodingTestForOmit = {
     if (Array.isArray(object?.oRaws)) obj.oRaws = object.oRaws.map((e: any) => bytesFromBase64(e));
     if (Array.isArray(object?.wasms)) obj.wasms = object.wasms.map((e: any) => bytesFromBase64(e));
     if (Array.isArray(object?.oWasms)) obj.oWasms = object.oWasms.map((e: any) => bytesFromBase64(e));
-    if (Array.isArray(object?.opts)) obj.opts = object.opts.map((e: any) => voteOptionFromJSON(e));
-    if (Array.isArray(object?.oOpts)) obj.oOpts = object.oOpts.map((e: any) => voteOptionFromJSON(e));
+    if (Array.isArray(object?.opts)) obj.opts = object.opts.map((e: any) => miscVoteOptionFromJSON(e));
+    if (Array.isArray(object?.oOpts)) obj.oOpts = object.oOpts.map((e: any) => miscVoteOptionFromJSON(e));
     if (Array.isArray(object?.periods)) obj.periods = object.periods.map((e: any) => Duration.fromJSON(e));
     if (Array.isArray(object?.oPeriods)) obj.oPeriods = object.oPeriods.map((e: any) => Duration.fromJSON(e));
-    if (Array.isArray(object?.protos)) obj.protos = object.protos.map((e: any) => AccessConfig.fromJSON(e));
-    if (Array.isArray(object?.oProtos)) obj.oProtos = object.oProtos.map((e: any) => AccessConfig.fromJSON(e));
+    if (Array.isArray(object?.protos)) obj.protos = object.protos.map((e: any) => MiscAccessConfig.fromJSON(e));
+    if (Array.isArray(object?.oProtos)) obj.oProtos = object.oProtos.map((e: any) => MiscAccessConfig.fromJSON(e));
     if (Array.isArray(object?.auths)) obj.auths = object.auths.map((e: any) => Any.fromJSON(e));
     if (Array.isArray(object?.oAuths)) obj.oAuths = object.oAuths.map((e: any) => Any.fromJSON(e));
     if (isSet(object.dec)) obj.dec = String(object.dec);
@@ -2049,8 +2049,8 @@ export const MiscEncodingTestForOmit = {
     message.oNum !== undefined && (obj.oNum = Math.round(message.oNum));
     message.big !== undefined && (obj.big = (message.big || BigInt(0)).toString());
     message.oBig !== undefined && (obj.oBig = (message.oBig || BigInt(0)).toString());
-    message.proto !== undefined && (obj.proto = message.proto ? AccessConfig.toJSON(message.proto) : undefined);
-    message.oProto !== undefined && (obj.oProto = message.oProto ? AccessConfig.toJSON(message.oProto) : undefined);
+    message.proto !== undefined && (obj.proto = message.proto ? MiscAccessConfig.toJSON(message.proto) : undefined);
+    message.oProto !== undefined && (obj.oProto = message.oProto ? MiscAccessConfig.toJSON(message.oProto) : undefined);
     message.auth !== undefined && (obj.auth = message.auth ? Any.toJSON(message.auth) : undefined);
     message.oAuth !== undefined && (obj.oAuth = message.oAuth ? Any.toJSON(message.oAuth) : undefined);
     message.salt !== undefined && (obj.salt = base64FromBytes(message.salt !== undefined ? message.salt : new Uint8Array()));
@@ -2059,8 +2059,8 @@ export const MiscEncodingTestForOmit = {
     message.oRaw !== undefined && (obj.oRaw = base64FromBytes(message.oRaw !== undefined ? message.oRaw : new Uint8Array()));
     message.wasm !== undefined && (obj.wasm = base64FromBytes(message.wasm !== undefined ? message.wasm : new Uint8Array()));
     message.oWasm !== undefined && (obj.oWasm = base64FromBytes(message.oWasm !== undefined ? message.oWasm : new Uint8Array()));
-    message.opt !== undefined && (obj.opt = voteOptionToJSON(message.opt));
-    message.oOpt !== undefined && (obj.oOpt = voteOptionToJSON(message.oOpt));
+    message.opt !== undefined && (obj.opt = miscVoteOptionToJSON(message.opt));
+    message.oOpt !== undefined && (obj.oOpt = miscVoteOptionToJSON(message.oOpt));
     message.period !== undefined && (obj.period = message.period ? Duration.toJSON(message.period) : undefined);
     message.oPeriod !== undefined && (obj.oPeriod = message.oPeriod ? Duration.toJSON(message.oPeriod) : undefined);
     message.date !== undefined && (obj.date = message.date.toISOString());
@@ -2118,12 +2118,12 @@ export const MiscEncodingTestForOmit = {
       obj.oWasms = [];
     }
     if (message.opts) {
-      obj.opts = message.opts.map(e => voteOptionToJSON(e));
+      obj.opts = message.opts.map(e => miscVoteOptionToJSON(e));
     } else {
       obj.opts = [];
     }
     if (message.oOpts) {
-      obj.oOpts = message.oOpts.map(e => voteOptionToJSON(e));
+      obj.oOpts = message.oOpts.map(e => miscVoteOptionToJSON(e));
     } else {
       obj.oOpts = [];
     }
@@ -2138,12 +2138,12 @@ export const MiscEncodingTestForOmit = {
       obj.oPeriods = [];
     }
     if (message.protos) {
-      obj.protos = message.protos.map(e => e ? AccessConfig.toJSON(e) : undefined);
+      obj.protos = message.protos.map(e => e ? MiscAccessConfig.toJSON(e) : undefined);
     } else {
       obj.protos = [];
     }
     if (message.oProtos) {
-      obj.oProtos = message.oProtos.map(e => e ? AccessConfig.toJSON(e) : undefined);
+      obj.oProtos = message.oProtos.map(e => e ? MiscAccessConfig.toJSON(e) : undefined);
     } else {
       obj.oProtos = [];
     }
@@ -2186,10 +2186,10 @@ export const MiscEncodingTestForOmit = {
       message.oBig = BigInt(object.oBig.toString());
     }
     if (object.proto !== undefined && object.proto !== null) {
-      message.proto = AccessConfig.fromPartial(object.proto);
+      message.proto = MiscAccessConfig.fromPartial(object.proto);
     }
     if (object.oProto !== undefined && object.oProto !== null) {
-      message.oProto = AccessConfig.fromPartial(object.oProto);
+      message.oProto = MiscAccessConfig.fromPartial(object.oProto);
     }
     if (object.auth !== undefined && object.auth !== null) {
       message.auth = Any.fromPartial(object.auth);
@@ -2233,8 +2233,8 @@ export const MiscEncodingTestForOmit = {
     message.oOpts = object.oOpts?.map(e => e) || [];
     message.periods = object.periods?.map(e => Duration.fromPartial(e)) || [];
     message.oPeriods = object.oPeriods?.map(e => Duration.fromPartial(e)) || [];
-    message.protos = object.protos?.map(e => AccessConfig.fromPartial(e)) || [];
-    message.oProtos = object.oProtos?.map(e => AccessConfig.fromPartial(e)) || [];
+    message.protos = object.protos?.map(e => MiscAccessConfig.fromPartial(e)) || [];
+    message.oProtos = object.oProtos?.map(e => MiscAccessConfig.fromPartial(e)) || [];
     message.auths = object.auths?.map(e => Any.fromPartial(e)) || [];
     message.oAuths = object.oAuths?.map(e => Any.fromPartial(e)) || [];
     message.dec = object.dec ?? "";
@@ -2253,8 +2253,8 @@ export const MiscEncodingTestForOmit = {
       oNum: object?.o_num,
       big: object?.big,
       oBig: object?.o_big,
-      proto: object.proto ? AccessConfig.fromSDK(object.proto) : undefined,
-      oProto: object.o_proto ? AccessConfig.fromSDK(object.o_proto) : undefined,
+      proto: object.proto ? MiscAccessConfig.fromSDK(object.proto) : undefined,
+      oProto: object.o_proto ? MiscAccessConfig.fromSDK(object.o_proto) : undefined,
       auth: object.auth ? Any.fromSDK(object.auth) : undefined,
       oAuth: object.o_auth ? Any.fromSDK(object.o_auth) : undefined,
       salt: object?.salt,
@@ -2263,8 +2263,8 @@ export const MiscEncodingTestForOmit = {
       oRaw: object?.o_raw,
       wasm: object?.wasm,
       oWasm: object?.o_wasm,
-      opt: isSet(object.opt) ? voteOptionFromJSON(object.opt) : -1,
-      oOpt: isSet(object.o_opt) ? voteOptionFromJSON(object.o_opt) : -1,
+      opt: isSet(object.opt) ? miscVoteOptionFromJSON(object.opt) : -1,
+      oOpt: isSet(object.o_opt) ? miscVoteOptionFromJSON(object.o_opt) : -1,
       period: object.period ? Duration.fromSDK(object.period) : undefined,
       oPeriod: object.o_period ? Duration.fromSDK(object.o_period) : undefined,
       date: object.date ?? undefined,
@@ -2281,12 +2281,12 @@ export const MiscEncodingTestForOmit = {
       oRaws: Array.isArray(object?.o_raws) ? object.o_raws.map((e: any) => e) : [],
       wasms: Array.isArray(object?.wasms) ? object.wasms.map((e: any) => e) : [],
       oWasms: Array.isArray(object?.o_wasms) ? object.o_wasms.map((e: any) => e) : [],
-      opts: Array.isArray(object?.opts) ? object.opts.map((e: any) => voteOptionFromJSON(e)) : [],
-      oOpts: Array.isArray(object?.o_opts) ? object.o_opts.map((e: any) => voteOptionFromJSON(e)) : [],
+      opts: Array.isArray(object?.opts) ? object.opts.map((e: any) => miscVoteOptionFromJSON(e)) : [],
+      oOpts: Array.isArray(object?.o_opts) ? object.o_opts.map((e: any) => miscVoteOptionFromJSON(e)) : [],
       periods: Array.isArray(object?.periods) ? object.periods.map((e: any) => Duration.fromSDK(e)) : [],
       oPeriods: Array.isArray(object?.o_periods) ? object.o_periods.map((e: any) => Duration.fromSDK(e)) : [],
-      protos: Array.isArray(object?.protos) ? object.protos.map((e: any) => AccessConfig.fromSDK(e)) : [],
-      oProtos: Array.isArray(object?.o_protos) ? object.o_protos.map((e: any) => AccessConfig.fromSDK(e)) : [],
+      protos: Array.isArray(object?.protos) ? object.protos.map((e: any) => MiscAccessConfig.fromSDK(e)) : [],
+      oProtos: Array.isArray(object?.o_protos) ? object.o_protos.map((e: any) => MiscAccessConfig.fromSDK(e)) : [],
       auths: Array.isArray(object?.auths) ? object.auths.map((e: any) => Any.fromSDK(e)) : [],
       oAuths: Array.isArray(object?.o_auths) ? object.o_auths.map((e: any) => Any.fromSDK(e)) : [],
       dec: object?.dec,
@@ -2305,8 +2305,8 @@ export const MiscEncodingTestForOmit = {
       o_num: isSet(object.o_num) ? Number(object.o_num) : 0,
       big: isSet(object.big) ? BigInt(object.big.toString()) : BigInt(0),
       o_big: isSet(object.o_big) ? BigInt(object.o_big.toString()) : BigInt(0),
-      proto: isSet(object.proto) ? AccessConfig.fromSDKJSON(object.proto) : undefined,
-      o_proto: isSet(object.o_proto) ? AccessConfig.fromSDKJSON(object.o_proto) : undefined,
+      proto: isSet(object.proto) ? MiscAccessConfig.fromSDKJSON(object.proto) : undefined,
+      o_proto: isSet(object.o_proto) ? MiscAccessConfig.fromSDKJSON(object.o_proto) : undefined,
       auth: isSet(object.auth) ? Any.fromSDKJSON(object.auth) : undefined,
       o_auth: isSet(object.o_auth) ? Any.fromSDKJSON(object.o_auth) : undefined,
       salt: isSet(object.salt) ? bytesFromBase64(object.salt) : new Uint8Array(),
@@ -2315,8 +2315,8 @@ export const MiscEncodingTestForOmit = {
       o_raw: isSet(object.o_raw) ? bytesFromBase64(object.o_raw) : new Uint8Array(),
       wasm: isSet(object.wasm) ? bytesFromBase64(object.wasm) : new Uint8Array(),
       o_wasm: isSet(object.o_wasm) ? bytesFromBase64(object.o_wasm) : new Uint8Array(),
-      opt: isSet(object.opt) ? voteOptionFromJSON(object.opt) : -1,
-      o_opt: isSet(object.o_opt) ? voteOptionFromJSON(object.o_opt) : -1,
+      opt: isSet(object.opt) ? miscVoteOptionFromJSON(object.opt) : -1,
+      o_opt: isSet(object.o_opt) ? miscVoteOptionFromJSON(object.o_opt) : -1,
       period: isSet(object.period) ? Duration.fromSDKJSON(object.period) : undefined,
       o_period: isSet(object.o_period) ? Duration.fromSDKJSON(object.o_period) : undefined,
       date: isSet(object.date) ? new Date(object.date) : undefined,
@@ -2333,12 +2333,12 @@ export const MiscEncodingTestForOmit = {
       o_raws: Array.isArray(object?.o_raws) ? object.o_raws.map((e: any) => bytesFromBase64(e)) : [],
       wasms: Array.isArray(object?.wasms) ? object.wasms.map((e: any) => bytesFromBase64(e)) : [],
       o_wasms: Array.isArray(object?.o_wasms) ? object.o_wasms.map((e: any) => bytesFromBase64(e)) : [],
-      opts: Array.isArray(object?.opts) ? object.opts.map((e: any) => voteOptionFromJSON(e)) : [],
-      o_opts: Array.isArray(object?.o_opts) ? object.o_opts.map((e: any) => voteOptionFromJSON(e)) : [],
+      opts: Array.isArray(object?.opts) ? object.opts.map((e: any) => miscVoteOptionFromJSON(e)) : [],
+      o_opts: Array.isArray(object?.o_opts) ? object.o_opts.map((e: any) => miscVoteOptionFromJSON(e)) : [],
       periods: Array.isArray(object?.periods) ? object.periods.map((e: any) => Duration.fromSDKJSON(e)) : [],
       o_periods: Array.isArray(object?.o_periods) ? object.o_periods.map((e: any) => Duration.fromSDKJSON(e)) : [],
-      protos: Array.isArray(object?.protos) ? object.protos.map((e: any) => AccessConfig.fromSDKJSON(e)) : [],
-      o_protos: Array.isArray(object?.o_protos) ? object.o_protos.map((e: any) => AccessConfig.fromSDKJSON(e)) : [],
+      protos: Array.isArray(object?.protos) ? object.protos.map((e: any) => MiscAccessConfig.fromSDKJSON(e)) : [],
+      o_protos: Array.isArray(object?.o_protos) ? object.o_protos.map((e: any) => MiscAccessConfig.fromSDKJSON(e)) : [],
       auths: Array.isArray(object?.auths) ? object.auths.map((e: any) => Any.fromSDKJSON(e)) : [],
       o_auths: Array.isArray(object?.o_auths) ? object.o_auths.map((e: any) => Any.fromSDKJSON(e)) : [],
       dec: isSet(object.dec) ? String(object.dec) : "",
@@ -2357,8 +2357,8 @@ export const MiscEncodingTestForOmit = {
     obj.o_num = message.oNum;
     obj.big = message.big;
     obj.o_big = message.oBig;
-    message.proto !== undefined && (obj.proto = message.proto ? AccessConfig.toSDK(message.proto) : undefined);
-    message.oProto !== undefined && (obj.o_proto = message.oProto ? AccessConfig.toSDK(message.oProto) : undefined);
+    message.proto !== undefined && (obj.proto = message.proto ? MiscAccessConfig.toSDK(message.proto) : undefined);
+    message.oProto !== undefined && (obj.o_proto = message.oProto ? MiscAccessConfig.toSDK(message.oProto) : undefined);
     message.auth !== undefined && (obj.auth = message.auth ? Any.toSDK(message.auth) : undefined);
     message.oAuth !== undefined && (obj.o_auth = message.oAuth ? Any.toSDK(message.oAuth) : undefined);
     obj.salt = message.salt;
@@ -2367,8 +2367,8 @@ export const MiscEncodingTestForOmit = {
     obj.o_raw = message.oRaw;
     obj.wasm = message.wasm;
     obj.o_wasm = message.oWasm;
-    message.opt !== undefined && (obj.opt = voteOptionToJSON(message.opt));
-    message.oOpt !== undefined && (obj.o_opt = voteOptionToJSON(message.oOpt));
+    message.opt !== undefined && (obj.opt = miscVoteOptionToJSON(message.opt));
+    message.oOpt !== undefined && (obj.o_opt = miscVoteOptionToJSON(message.oOpt));
     message.period !== undefined && (obj.period = message.period ? Duration.toSDK(message.period) : undefined);
     message.oPeriod !== undefined && (obj.o_period = message.oPeriod ? Duration.toSDK(message.oPeriod) : undefined);
     message.date !== undefined && (obj.date = message.date ?? undefined);
@@ -2426,12 +2426,12 @@ export const MiscEncodingTestForOmit = {
       obj.o_wasms = [];
     }
     if (message.opts) {
-      obj.opts = message.opts.map(e => voteOptionToJSON(e));
+      obj.opts = message.opts.map(e => miscVoteOptionToJSON(e));
     } else {
       obj.opts = [];
     }
     if (message.oOpts) {
-      obj.o_opts = message.oOpts.map(e => voteOptionToJSON(e));
+      obj.o_opts = message.oOpts.map(e => miscVoteOptionToJSON(e));
     } else {
       obj.o_opts = [];
     }
@@ -2446,12 +2446,12 @@ export const MiscEncodingTestForOmit = {
       obj.o_periods = [];
     }
     if (message.protos) {
-      obj.protos = message.protos.map(e => e ? AccessConfig.toSDK(e) : undefined);
+      obj.protos = message.protos.map(e => e ? MiscAccessConfig.toSDK(e) : undefined);
     } else {
       obj.protos = [];
     }
     if (message.oProtos) {
-      obj.o_protos = message.oProtos.map(e => e ? AccessConfig.toSDK(e) : undefined);
+      obj.o_protos = message.oProtos.map(e => e ? MiscAccessConfig.toSDK(e) : undefined);
     } else {
       obj.o_protos = [];
     }
@@ -2506,10 +2506,10 @@ export const MiscEncodingTestForOmit = {
       message.oBig = BigInt(object.o_big);
     }
     if (object.proto !== undefined && object.proto !== null) {
-      message.proto = AccessConfig.fromAmino(object.proto);
+      message.proto = MiscAccessConfig.fromAmino(object.proto);
     }
     if (object.o_proto !== undefined && object.o_proto !== null) {
-      message.oProto = AccessConfig.fromAmino(object.o_proto);
+      message.oProto = MiscAccessConfig.fromAmino(object.o_proto);
     }
     if (object.auth !== undefined && object.auth !== null) {
       message.auth = Any.fromAmino(object.auth);
@@ -2573,8 +2573,8 @@ export const MiscEncodingTestForOmit = {
     message.oOpts = object.o_opts?.map(e => e) || [];
     message.periods = object.periods?.map(e => Duration.fromAmino(e)) || [];
     message.oPeriods = object.o_periods?.map(e => Duration.fromAmino(e)) || [];
-    message.protos = object.protos?.map(e => AccessConfig.fromAmino(e)) || [];
-    message.oProtos = object.o_protos?.map(e => AccessConfig.fromAmino(e)) || [];
+    message.protos = object.protos?.map(e => MiscAccessConfig.fromAmino(e)) || [];
+    message.oProtos = object.o_protos?.map(e => MiscAccessConfig.fromAmino(e)) || [];
     message.auths = object.auths?.map(e => Any.fromAmino(e)) || [];
     message.oAuths = object.o_auths?.map(e => Any.fromAmino(e)) || [];
     if (object.dec !== undefined && object.dec !== null) {
@@ -2597,8 +2597,8 @@ export const MiscEncodingTestForOmit = {
     obj.o_num = message.oNum === 0 ? undefined : message.oNum;
     obj.big = message.big ? message.big?.toString() : "0";
     obj.o_big = message.oBig !== BigInt(0) ? message.oBig?.toString() : undefined;
-    obj.proto = message.proto ? AccessConfig.toAmino(message.proto) : AccessConfig.toAmino(AccessConfig.fromPartial({}));
-    obj.o_proto = message.oProto ? AccessConfig.toAmino(message.oProto) : undefined;
+    obj.proto = message.proto ? MiscAccessConfig.toAmino(message.proto) : MiscAccessConfig.toAmino(MiscAccessConfig.fromPartial({}));
+    obj.o_proto = message.oProto ? MiscAccessConfig.toAmino(message.oProto) : undefined;
     obj.auth = message.auth ? Any.toAmino(message.auth) : Any.toAmino(Any.fromPartial({}));
     obj.o_auth = message.oAuth ? Any.toAmino(message.oAuth) : undefined;
     obj.salt = message.salt ? base64FromBytes(message.salt) : "";
@@ -2686,12 +2686,12 @@ export const MiscEncodingTestForOmit = {
       obj.o_periods = message.oPeriods;
     }
     if (message.protos) {
-      obj.protos = message.protos.map(e => e ? AccessConfig.toAmino(e) : undefined);
+      obj.protos = message.protos.map(e => e ? MiscAccessConfig.toAmino(e) : undefined);
     } else {
       obj.protos = message.protos;
     }
     if (message.oProtos) {
-      obj.o_protos = message.oProtos.map(e => e ? AccessConfig.toAmino(e) : undefined);
+      obj.o_protos = message.oProtos.map(e => e ? MiscAccessConfig.toAmino(e) : undefined);
     } else {
       obj.o_protos = message.oProtos;
     }

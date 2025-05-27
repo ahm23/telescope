@@ -486,7 +486,7 @@ you should contact the maintainers.
       return;
     }
 
-    const ns = field.scope[0];
+    const ns = Array.isArray(field.scope[0]) ? field.scope[0][0] : field.scope[0];
 
     // get alias type name by field.parsedType.name
     const aliasParsedTypeName = getAliasName(ns, field.parsedType.name, mapper);

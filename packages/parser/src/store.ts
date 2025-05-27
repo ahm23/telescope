@@ -382,9 +382,10 @@ export class ProtoStore implements IProtoStore {
     }
 
     setTypeAlias(alias: string, type: string, filepath: string) {
-        this._typeAliases[filepath] = {
-            [type]: alias
-        };
+        if (!this._typeAliases[filepath]) {
+            this._typeAliases[filepath] = {};
+        }
+        this._typeAliases[filepath][type] = alias;
     }
 
     getTypeAlias(type: string, filepath: string) {

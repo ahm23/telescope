@@ -1,15 +1,14 @@
-import { EncodingTestForDontOmit, EncodingTestForDontOmitAmino, EncodingTestForDontOmitSDKType, EncodingTestForOmit, EncodingTestForOmitAmino, EncodingTestForOmitSDKType } from "./all_fields";
+import { EncodingTestForDontOmit, EncodingTestForDontOmitAmino, EncodingTestForDontOmitSDKType, MiscEncodingTestForOmit, MiscEncodingTestForOmitAmino, MiscEncodingTestForOmitSDKType } from "./all_fields";
 import { BinaryReader, BinaryWriter } from "../binary";
 import { isSet, DeepPartial } from "../helpers";
 import { JsonSafe } from "../json-safe";
-export const protobufPackage = "misc";
 /**
  * MsgGrant is a request type for Grant method. It declares authorization to the grantee
  * on behalf of the granter with the provided expiration time.
  */
 export interface InputMsg {
   dOTests: EncodingTestForDontOmit;
-  oTests: EncodingTestForOmit;
+  oTests: MiscEncodingTestForOmit;
 }
 export interface InputMsgProtoMsg {
   typeUrl: "/misc.InputMsg";
@@ -21,7 +20,7 @@ export interface InputMsgProtoMsg {
  */
 export interface InputMsgAmino {
   d_o_tests?: EncodingTestForDontOmitAmino;
-  o_tests?: EncodingTestForOmitAmino;
+  o_tests?: MiscEncodingTestForOmitAmino;
 }
 export interface InputMsgAminoMsg {
   type: "/misc.InputMsg";
@@ -33,7 +32,7 @@ export interface InputMsgAminoMsg {
  */
 export interface InputMsgSDKType {
   d_o_tests: EncodingTestForDontOmitSDKType;
-  o_tests: EncodingTestForOmitSDKType;
+  o_tests: MiscEncodingTestForOmitSDKType;
 }
 /** MsgGrantResponse defines the Msg/MsgGrant response type. */
 export interface MsgResponse {}
@@ -52,7 +51,7 @@ export interface MsgResponseSDKType {}
 function createBaseInputMsg(): InputMsg {
   return {
     dOTests: EncodingTestForDontOmit.fromPartial({}),
-    oTests: EncodingTestForOmit.fromPartial({})
+    oTests: MiscEncodingTestForOmit.fromPartial({})
   };
 }
 export const InputMsg = {
@@ -62,7 +61,7 @@ export const InputMsg = {
       EncodingTestForDontOmit.encode(message.dOTests, writer.uint32(10).fork()).ldelim();
     }
     if (message.oTests !== undefined) {
-      EncodingTestForOmit.encode(message.oTests, writer.uint32(18).fork()).ldelim();
+      MiscEncodingTestForOmit.encode(message.oTests, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
@@ -77,7 +76,7 @@ export const InputMsg = {
           message.dOTests = EncodingTestForDontOmit.decode(reader, reader.uint32());
           break;
         case 2:
-          message.oTests = EncodingTestForOmit.decode(reader, reader.uint32());
+          message.oTests = MiscEncodingTestForOmit.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -89,13 +88,13 @@ export const InputMsg = {
   fromJSON(object: any): InputMsg {
     const obj = createBaseInputMsg();
     if (isSet(object.dOTests)) obj.dOTests = EncodingTestForDontOmit.fromJSON(object.dOTests);
-    if (isSet(object.oTests)) obj.oTests = EncodingTestForOmit.fromJSON(object.oTests);
+    if (isSet(object.oTests)) obj.oTests = MiscEncodingTestForOmit.fromJSON(object.oTests);
     return obj;
   },
   toJSON(message: InputMsg): JsonSafe<InputMsg> {
     const obj: any = {};
     message.dOTests !== undefined && (obj.dOTests = message.dOTests ? EncodingTestForDontOmit.toJSON(message.dOTests) : undefined);
-    message.oTests !== undefined && (obj.oTests = message.oTests ? EncodingTestForOmit.toJSON(message.oTests) : undefined);
+    message.oTests !== undefined && (obj.oTests = message.oTests ? MiscEncodingTestForOmit.toJSON(message.oTests) : undefined);
     return obj;
   },
   fromPartial(object: DeepPartial<InputMsg>): InputMsg {
@@ -104,26 +103,26 @@ export const InputMsg = {
       message.dOTests = EncodingTestForDontOmit.fromPartial(object.dOTests);
     }
     if (object.oTests !== undefined && object.oTests !== null) {
-      message.oTests = EncodingTestForOmit.fromPartial(object.oTests);
+      message.oTests = MiscEncodingTestForOmit.fromPartial(object.oTests);
     }
     return message;
   },
   fromSDK(object: InputMsgSDKType): InputMsg {
     return {
       dOTests: object.d_o_tests ? EncodingTestForDontOmit.fromSDK(object.d_o_tests) : undefined,
-      oTests: object.o_tests ? EncodingTestForOmit.fromSDK(object.o_tests) : undefined
+      oTests: object.o_tests ? MiscEncodingTestForOmit.fromSDK(object.o_tests) : undefined
     };
   },
   fromSDKJSON(object: any): InputMsgSDKType {
     return {
       d_o_tests: isSet(object.d_o_tests) ? EncodingTestForDontOmit.fromSDKJSON(object.d_o_tests) : undefined,
-      o_tests: isSet(object.o_tests) ? EncodingTestForOmit.fromSDKJSON(object.o_tests) : undefined
+      o_tests: isSet(object.o_tests) ? MiscEncodingTestForOmit.fromSDKJSON(object.o_tests) : undefined
     };
   },
   toSDK(message: InputMsg): InputMsgSDKType {
     const obj: any = {};
     message.dOTests !== undefined && (obj.d_o_tests = message.dOTests ? EncodingTestForDontOmit.toSDK(message.dOTests) : undefined);
-    message.oTests !== undefined && (obj.o_tests = message.oTests ? EncodingTestForOmit.toSDK(message.oTests) : undefined);
+    message.oTests !== undefined && (obj.o_tests = message.oTests ? MiscEncodingTestForOmit.toSDK(message.oTests) : undefined);
     return obj;
   },
   fromAmino(object: InputMsgAmino): InputMsg {
@@ -132,14 +131,14 @@ export const InputMsg = {
       message.dOTests = EncodingTestForDontOmit.fromAmino(object.d_o_tests);
     }
     if (object.o_tests !== undefined && object.o_tests !== null) {
-      message.oTests = EncodingTestForOmit.fromAmino(object.o_tests);
+      message.oTests = MiscEncodingTestForOmit.fromAmino(object.o_tests);
     }
     return message;
   },
   toAmino(message: InputMsg): InputMsgAmino {
     const obj: any = {};
     obj.d_o_tests = message.dOTests ? EncodingTestForDontOmit.toAmino(message.dOTests) : undefined;
-    obj.o_tests = message.oTests ? EncodingTestForOmit.toAmino(message.oTests) : undefined;
+    obj.o_tests = message.oTests ? MiscEncodingTestForOmit.toAmino(message.oTests) : undefined;
     return obj;
   },
   fromAminoMsg(object: InputMsgAminoMsg): InputMsg {

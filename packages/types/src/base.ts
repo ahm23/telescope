@@ -33,6 +33,8 @@ export interface ImportUsage {
 export interface ProtoEnum {
     type?: 'Enum';
     name?: string;
+    originalName?: string;
+    aliasName?: string;
     package?: string; // added by parser
     values: { [key: string]: number };
     valuesOptions?: {
@@ -47,6 +49,8 @@ export interface ProtoEnum {
 export interface ProtoType {
     type?: 'Type';
     name?: string;
+    originalName?: string;
+    aliasName?: string;
     package?: string; // added by parser
     oneofs?: { [key: string]: { oneof: string[], comment: string | undefined } },
     options?: {
@@ -78,14 +82,22 @@ export interface ProtoField {
     'bytes' |
     'bool' |
     string;
+    originalType?: string;
+    aliasType?: string;
 
     name?: string;
     scope?: string[];
+    originalScope?: string[];
+    aliasScope?: string[];
     parsedType?: {
         name: string;
+        originalName?: string;
+        aliasName?: string;
         type: string;
     },
     message?: string; // added by parser
+    originalMessage?: string; // added by parser
+    aliasMessage?: string; // added by parser
     package?: string; // added by parser
 
     keyType?: string;
@@ -115,6 +127,8 @@ export interface ProtoField {
     comment?: string;
     import?: string;
     importedName?: string;
+    aliasImportedName?: string;
+    originalImportedName?: string;
     scopeType?: string;
     isNestedMsg?: boolean;
 };
@@ -153,7 +167,11 @@ export interface ProtoServiceMethod {
     }
     comment?: string;
     requestType: string;
+    originalRequestType?: string;
+    aliasRequestType?: string;
     responseType: string;
+    originalResponseType?: string;
+    aliasResponseType?: string;
     fields: Record<string, ProtoField>
 };
 export interface ProtoService {
@@ -258,4 +276,12 @@ export interface IProtoStore {
   getTypeUrlMap(ref: ProtoRef);
   setEnumValues(pkg: string, name: string, protoSyntex:string, values: number[]): void;
   getDefaultOrExistingSmallestEnumValue(pkg: string, name: string): number;
+
+  setTypePackageMapping(type: string, pkg: string): void;
+  getTypePackageMapping(type: string): string[];
+  getTypesInMultiplePackages(): string[];
+
+  setServicePackageMapping(service: string, pkg: string): void;
+  getServicePackageMapping(service: string): string[];
+  getServicesInMultiplePackages(): string[];
 }

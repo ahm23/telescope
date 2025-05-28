@@ -35,7 +35,11 @@ import {
 import { parseService } from "./services";
 import { ProtoStore } from "./store";
 import { instanceType, lookupSymbolScopes, SCALAR_TYPES } from "./utils";
-import { getEnumValues, getTypeNameByEnumObj } from "@cosmology/utils";
+import {
+  getEnumValues,
+  getTypeNameByEnumObj,
+  getAliasName,
+} from "@cosmology/utils";
 
 export interface TraverseContext {
   imports: TraverseImport;
@@ -61,6 +65,12 @@ export class TraverseContext implements TraverseContext {
     this.imports[filename] = [
       ...new Set([...this.imports[filename], symbolName]),
     ];
+  }
+
+  removeImport(filename: string, symbolName: string) {
+    this.imports[filename] = this.imports[filename]?.filter(
+      (s) => s !== symbolName
+    );
   }
 
   addImplements(symbolName: string, msgName: string) {
@@ -277,152 +287,143 @@ const traverseFields = (
   ref: ProtoRef,
   obj: any,
   context: TraverseContext,
-  traversal: string[]
+  traversal: string[],
+  messageAlias?: string
 ): Record<string, ProtoField> => {
-  return Object.keys(obj.fields).reduce((m, mykey) => {
-    const field: ProtoField & { toJSON?: Function } = obj.fields[mykey];
+  const mapper = getPluginValue(
+    "prototypes.alias",
+    ref.proto.package,
+    store.options
+  );
 
-    let fieldName = mykey;
-    const regexp = /([a-zA-Z0-9]+)[_]+([0-9]+)$/;
-    if (regexp.test(fieldName)) {
-      const matches = fieldName.match(regexp);
-      if (matches?.length) {
-        const begin = fieldName.split(matches[1])[0];
-        fieldName = `${begin}${matches[1]}${matches[2]}`;
+  const fields: Record<string, ProtoField> = Object.keys(obj.fields).reduce(
+    (m, mykey) => {
+      const field: ProtoField & { toJSON?: Function } = obj.fields[mykey];
+
+      let fieldName = mykey;
+      const regexp = /([a-zA-Z0-9]+)[_]+([0-9]+)$/;
+      if (regexp.test(fieldName)) {
+        const matches = fieldName.match(regexp);
+        if (matches?.length) {
+          const begin = fieldName.split(matches[1])[0];
+          fieldName = `${begin}${matches[1]}${matches[2]}`;
+        }
       }
-    }
 
-    const serialize = () => {
-      if (typeof field.toJSON !== "undefined") {
-        // non-traversed
-        return field.toJSON({ keepComments: true });
+      const serialize = () => {
+        if (typeof field.toJSON !== "undefined") {
+          // non-traversed
+          const json = field.toJSON({ keepComments: true });
+
+          if (messageAlias && messageAlias !== obj.name) {
+            json.message = messageAlias;
+            json.originalMessage = obj.name;
+            json.aliasMessage = messageAlias;
+          }
+          return json;
+        }
+        // traversed
+        // field.name is used for proto!
+        field.name = fieldName;
+        field.message = messageAlias;
+        field.originalMessage = obj.name;
+        field.aliasMessage = messageAlias;
+        field.package = ref.proto.package;
+
+        return field;
+      };
+
+      const implementsAcceptsAny = getPluginValue(
+        "interfaces.enabled",
+        ref.proto.package,
+        store.options
+      );
+      if (
+        implementsAcceptsAny &&
+        field.options?.["(cosmos_proto.accepts_interface)"]
+      ) {
+        const value = field.options["(cosmos_proto.accepts_interface)"];
+        // some of these contain a comma ...
+        value
+          .split(",")
+          .map((a) => a.trim())
+          .forEach((name) => {
+            context.addAccepts(name, obj.name);
+          });
       }
-      // traversed
-      // field.name is used for proto!
-      field.name = fieldName;
-      field.message = obj.name;
-      field.package = ref.proto.package;
-      return field;
-    };
 
-    const implementsAcceptsAny = getPluginValue(
-      "interfaces.enabled",
-      ref.proto.package,
-      store.options
-    );
-    if (
-      implementsAcceptsAny &&
-      field.options?.["(cosmos_proto.accepts_interface)"]
-    ) {
-      const value = field.options["(cosmos_proto.accepts_interface)"];
-      // some of these contain a comma ...
-      value
-        .split(",")
-        .map((a) => a.trim())
-        .forEach((name) => {
-          context.addAccepts(name, obj.name);
-        });
-    }
+      let found: any = null;
 
-    let found: any = null;
-
-    if (SCALAR_TYPES.includes(field.type)) {
-      m[fieldName] = {
-        parsedType: { name: field.type, type: "native" },
-        isScalar: true,
-        typeNum: SCALAR_TYPES.indexOf(field.type),
-        ...serialize(),
-      };
-      return m;
-    }
-
-    // nested scope first
-    found = lookupNested(ref, traversal, field.type);
-    if (found) {
-      m[fieldName] = {
-        scope: found.scope,
-        parsedType: instanceType(found),
-        ...serialize(),
-      };
-      return m;
-    }
-
-    // local scope second
-    found = lookup(store, ref, field.type);
-    if (found) {
-      m[fieldName] = {
-        scope: found.scope,
-        parsedType: instanceType(found),
-        ...serialize(),
-      };
-      return m;
-    }
-
-    found = importLookup(store, ref, field.type);
-    if (found) {
-      context.addImport(found.import, found.name);
-
-      m[fieldName] = {
-        parsedType: instanceType(found.obj),
-        scopeType: "import",
-        scope: [found.obj.scope],
-        ...serialize(),
-        importedName: found.importedName,
-        import: found.import,
-      };
-      return m;
-    }
-
-    // found = protoImportLookup(store, ref, field.type);
-    // if (found) {
-    //     imports[found.import] = imports[found.import] || [];
-    //     imports[found.import] = [...new Set([...imports[found.import], found.name])];
-    //     m[fieldName] = {
-
-    //         parsedType: instanceType(found.obj),
-    //         scopeType: 'protoImport',
-    //         scope: [found.package],
-    //         ...serialize(),
-    //         importedName: found.importedName,
-    //         import: found.import,
-    //     };
-    //     return m;
-    // }
-
-    // new scope lookup (TODO: replace above cases)
-    const typeNames = lookupSymbolScopes(
-      field.type,
-      ref.proto.package + ".dummy"
-    );
-    for (let lookupType of typeNames) {
-      found = protoScopeImportLookup(store, ref, lookupType);
-      if (found) {
-        context.addImport(found.import, found.name);
+      if (SCALAR_TYPES.includes(field.type)) {
         m[fieldName] = {
-          parsedType: instanceType(found.obj),
-          scopeType: "protoImport",
-          scope: found.obj.scope ? found.obj.scope : [found.package],
+          parsedType: { name: field.type, type: "native" },
+          isScalar: true,
+          typeNum: SCALAR_TYPES.indexOf(field.type),
           ...serialize(),
-          importedName: found.importedName,
-          import: found.import,
-          isNestedMsg: !!found.isNestedMsg,
         };
         return m;
       }
-    }
 
-    // e.g. akash/deployment/v1beta2/service.proto
-    // referencing messages in another file, and so we need access through our imports
-    // if we get this issue again, this should be recursive and not just one level...
-    const importRefs = ref?.proto?.imports?.map((imp) => store.findProto(imp)) ?? [];
-    // const importRefs = getAllRefs(store, ref);
-    for (let importRef of importRefs) {
+      // nested scope first
+      found = lookupNested(ref, traversal, field.type);
+      if (found) {
+        m[fieldName] = {
+          scope: found.scope,
+          parsedType: instanceType(found),
+          ...serialize(),
+        };
+        return m;
+      }
+
+      // local scope second
+      found = lookup(store, ref, field.type);
+      if (found) {
+        m[fieldName] = {
+          scope: found.scope,
+          parsedType: instanceType(found),
+          ...serialize(),
+        };
+        return m;
+      }
+
+      found = importLookup(store, ref, field.type);
+      if (found) {
+        context.addImport(found.import, found.name);
+
+        m[fieldName] = {
+          parsedType: instanceType(found.obj),
+          scopeType: "import",
+          scope: [found.obj.scope],
+          ...serialize(),
+          importedName: found.importedName,
+          import: found.import,
+        };
+        return m;
+      }
+
+      // found = protoImportLookup(store, ref, field.type);
+      // if (found) {
+      //     imports[found.import] = imports[found.import] || [];
+      //     imports[found.import] = [...new Set([...imports[found.import], found.name])];
+      //     m[fieldName] = {
+
+      //         parsedType: instanceType(found.obj),
+      //         scopeType: 'protoImport',
+      //         scope: [found.package],
+      //         ...serialize(),
+      //         importedName: found.importedName,
+      //         import: found.import,
+      //     };
+      //     return m;
+      // }
+
+      // new scope lookup (TODO: replace above cases)
       const typeNames = lookupSymbolScopes(
         field.type,
-        importRef.proto.package + ".dummy"
+        ref.proto.package + ".dummy"
       );
       for (let lookupType of typeNames) {
-        found = protoScopeImportLookup(store, importRef, lookupType);
+        found = protoScopeImportLookup(store, ref, lookupType);
         if (found) {
           context.addImport(found.import, found.name);
           m[fieldName] = {
@@ -432,19 +433,104 @@ const traverseFields = (
             ...serialize(),
             importedName: found.importedName,
             import: found.import,
-            isNestedMsg: !!found.isNested,
+            isNestedMsg: !!found.isNestedMsg,
           };
           return m;
         }
       }
-    }
 
-    console.warn(`
+      // e.g. akash/deployment/v1beta2/service.proto
+      // referencing messages in another file, and so we need access through our imports
+      // if we get this issue again, this should be recursive and not just one level...
+      const importRefs =
+        ref?.proto?.imports?.map((imp) => store.findProto(imp)) ?? [];
+      // const importRefs = getAllRefs(store, ref);
+      for (let importRef of importRefs) {
+        const typeNames = lookupSymbolScopes(
+          field.type,
+          importRef.proto.package + ".dummy"
+        );
+        for (let lookupType of typeNames) {
+          found = protoScopeImportLookup(store, importRef, lookupType);
+          if (found) {
+            context.addImport(found.import, found.name);
+            m[fieldName] = {
+              parsedType: instanceType(found.obj),
+              scopeType: "protoImport",
+              scope: found.obj.scope ? found.obj.scope : [found.package],
+              ...serialize(),
+              importedName: found.importedName,
+              import: found.import,
+              isNestedMsg: !!found.isNested,
+            };
+            return m;
+          }
+        }
+      }
+
+      console.warn(`
 ${obj.name}.${field.name}: ${field.type} NOT FOUND from ${ref.filename} in ${ref.proto.package}
 you should contact the maintainers.
 `);
-    return m;
-  }, {});
+      return m;
+    },
+    {}
+  );
+
+  // apply alias to fields(parsedType, scope, type)
+  Object.keys(fields).forEach((fieldName) => {
+    const field = fields[fieldName];
+
+    if (field.parsedType.type === "native") {
+      return;
+    }
+
+    const ns = Array.isArray(field.scope[0]) ? field.scope[0][0] : field.scope[0];
+
+    // get alias type name by field.parsedType.name
+    const aliasParsedTypeName = getAliasName(ns, field.parsedType.name, mapper);
+
+    // if the alias is the same as the original name, we don't need to process it
+    if (aliasParsedTypeName === field.parsedType.name) {
+      return;
+    }
+
+    context.removeImport(ref.filename, field.parsedType.name);
+
+    field.parsedType.originalName = field.parsedType.name;
+    field.parsedType.name = aliasParsedTypeName;
+    field.parsedType.aliasName = aliasParsedTypeName;
+
+    if (field.scope.length > 0) {
+      const aliasScope = [field.scope[0]];
+      // replace all types under scope if there's one.
+      if (field.scope.length > 1) {
+        for (let i = 1; i < field.scope.length; i++) {
+          const typeName = field.scope[i];
+          const aliasScopeTypeName = getAliasName(ns, typeName, mapper);
+          aliasScope.push(aliasScopeTypeName);
+        }
+      }
+      field.originalScope = field.scope;
+      field.scope = aliasScope;
+      field.aliasScope = aliasScope;
+    }
+
+    // replace the type name with the alias type name
+    const aliasType = field.type.replace(
+      field.parsedType.originalName,
+      aliasParsedTypeName
+    );
+    field.originalType = field.type;
+    field.type = aliasType;
+    field.aliasType = aliasType;
+
+    field.originalImportedName = field.importedName;
+    field.importedName = aliasType;
+    field.aliasImportedName = aliasType;
+  });
+
+  return fields;
 };
 
 const traverseType = (
@@ -470,13 +556,26 @@ const traverseType = (
     }, {});
   }
 
+  const mapper = getPluginValue(
+    "prototypes.alias",
+    ref.proto.package,
+    store.options
+  );
+  const aliasName = getAliasName(ref.proto.package, obj.name, mapper);
+
+  if(aliasName !== obj.name) {
+    store.setTypeAlias(aliasName, obj.name, ref.filename);
+  }
+
   if (!isNested) {
-    context.addExport(obj.name);
+    context.addExport(aliasName);
   }
 
   const traversed = {
     type: "Type",
-    name: obj.name,
+    name: aliasName,
+    originalName: obj.name,
+    aliasName,
     package: ref.proto.package,
     options: obj.options,
     oneofs: obj.oneofs
@@ -488,7 +587,7 @@ const traverseType = (
           return m;
         }, {})
       : undefined,
-    fields: traverseFields(store, ref, obj, context, traversal),
+    fields: traverseFields(store, ref, obj, context, traversal, aliasName),
     nested,
     keyTypes: [],
     comment: obj.comment,
@@ -522,8 +621,10 @@ const traverseType = (
     traversed.options?.["(cosmos_proto.implements_interface)"]
   ) {
     const name = traversed.options["(cosmos_proto.implements_interface)"];
-    context.addImplements(name, obj.name);
+    context.addImplements(name, aliasName);
   }
+
+  store.setTypePackageMapping(aliasName, ref.proto.package);
 
   return traversed as ProtoType;
 };
@@ -536,9 +637,22 @@ const traverseEnum = (
   traversal: string[],
   isNested: boolean
 ) => {
+  const mapper = getPluginValue(
+    "prototypes.alias",
+    ref.proto.package,
+    store.options
+  );
+  const aliasName = getAliasName(ref.proto.package, obj.name, mapper);
+
+  if(aliasName !== obj.name) {
+    store.setTypeAlias(aliasName, obj.name, ref.filename);
+  }
+
   const enumObj = {
     type: "Enum",
-    name: obj.name,
+    name: aliasName,
+    originalName: obj.name,
+    aliasName,
     package: ref.proto.package,
     ...obj.toJSON({ keepComments: true }),
   };
@@ -550,6 +664,7 @@ const traverseEnum = (
   );
 
   const enums = getEnumValues(enumObj);
+  store.setTypePackageMapping(typeName, ref.proto.package);
   store.setEnumValues(
     ref.proto.package,
     typeName,
@@ -592,12 +707,25 @@ const traverseServiceMethod = (
     throw new Error("Symbol not found " + requestType);
   }
 
+  const mapper = getPluginValue(
+    "prototypes.alias",
+    ref.proto.package,
+    store.options
+  );
+  const aliasRequestType = getAliasName(ref.proto.package, requestType, mapper);
+  const aliasResponseType = getAliasName(
+    ref.proto.package,
+    responseType,
+    mapper
+  );
+
   const fields = traverseFields(
     store,
     ref,
     requestObject.obj,
     context,
-    traversal
+    traversal,
+    aliasRequestType
   );
   // @ts-ignore
   const info: ProtoServiceMethodInfo = parseService({
@@ -610,8 +738,12 @@ const traverseServiceMethod = (
     info,
     name,
     comment,
-    requestType,
-    responseType,
+    requestType: aliasRequestType,
+    originalRequestType: requestType,
+    aliasRequestType,
+    responseType: aliasResponseType,
+    originalResponseType: responseType,
+    aliasResponseType,
     options,
     fields,
   };
@@ -634,6 +766,7 @@ const traverseServiceMethod = (
   }
 
   store.registerRequest(svc);
+  store.setServicePackageMapping(svc.name, ref.proto.package);
 
   return svc;
 };

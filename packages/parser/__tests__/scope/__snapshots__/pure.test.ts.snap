@@ -20,6 +20,7 @@ exports[`pure proto 1`] = `
           "finance": {
             "nested": {
               "ExistenceProof": {
+                "aliasName": "ExistenceProof",
                 "comment": null,
                 "fields": {
                   "key": {
@@ -95,10 +96,12 @@ exports[`pure proto 1`] = `
                 "nested": null,
                 "oneofs": undefined,
                 "options": undefined,
+                "originalName": "ExistenceProof",
                 "package": "cosmology.finance",
                 "type": "Type",
               },
               "FancyEnumType": {
+                "aliasName": "FancyEnumType",
                 "comment": null,
                 "comments": {
                   "BITCOIN": null,
@@ -109,6 +112,7 @@ exports[`pure proto 1`] = `
                   "SHA512": null,
                 },
                 "name": "FancyEnumType",
+                "originalName": "FancyEnumType",
                 "package": "cosmology.finance",
                 "type": "Enum",
                 "values": {
@@ -121,6 +125,7 @@ exports[`pure proto 1`] = `
                 },
               },
               "LeafOp": {
+                "aliasName": "LeafOp",
                 "comment": null,
                 "fields": {
                   "hash": {
@@ -196,10 +201,12 @@ exports[`pure proto 1`] = `
                 "nested": null,
                 "oneofs": undefined,
                 "options": undefined,
+                "originalName": "LeafOp",
                 "package": "cosmology.finance",
                 "type": "Type",
               },
               "NonExistenceProof": {
+                "aliasName": "NonExistenceProof",
                 "comment": null,
                 "fields": {
                   "key": {
@@ -258,6 +265,7 @@ exports[`pure proto 1`] = `
                 "nested": null,
                 "oneofs": undefined,
                 "options": undefined,
+                "originalName": "NonExistenceProof",
                 "package": "cosmology.finance",
                 "type": "Type",
               },

@@ -20,6 +20,8 @@ export interface ImportUsage {
 export interface ProtoEnum {
     type?: 'Enum';
     name?: string;
+    originalName?: string;
+    aliasName?: string;
     package?: string;
     values: {
         [key: string]: number;
@@ -38,6 +40,8 @@ export interface ProtoEnum {
 export interface ProtoType {
     type?: 'Type';
     name?: string;
+    originalName?: string;
+    aliasName?: string;
     package?: string;
     oneofs?: {
         [key: string]: {
@@ -58,13 +62,21 @@ export interface ProtoType {
 }
 export interface ProtoField {
     type?: 'string' | 'double' | 'float' | 'int32' | 'uint32' | 'sint32' | 'fixed32' | 'sfixed32' | 'uint64' | 'int64' | 'sint64' | 'fixed64' | 'sfixed64' | 'bytes' | 'bool' | string;
+    originalType?: string;
+    aliasType?: string;
     name?: string;
     scope?: string[];
+    originalScope?: string[];
+    aliasScope?: string[];
     parsedType?: {
         name: string;
+        originalName?: string;
+        aliasName?: string;
         type: string;
     };
     message?: string;
+    originalMessage?: string;
+    aliasMessage?: string;
     package?: string;
     keyType?: string;
     rule?: string;
@@ -88,6 +100,8 @@ export interface ProtoField {
     comment?: string;
     import?: string;
     importedName?: string;
+    aliasImportedName?: string;
+    originalImportedName?: string;
     scopeType?: string;
     isNestedMsg?: boolean;
 }
@@ -115,7 +129,11 @@ export interface ProtoServiceMethod {
     };
     comment?: string;
     requestType: string;
+    originalRequestType?: string;
+    aliasRequestType?: string;
     responseType: string;
+    originalResponseType?: string;
+    aliasResponseType?: string;
     fields: Record<string, ProtoField>;
 }
 export interface ProtoService {
@@ -209,4 +227,10 @@ export interface IProtoStore {
     getTypeUrlMap(ref: ProtoRef): any;
     setEnumValues(pkg: string, name: string, protoSyntex: string, values: number[]): void;
     getDefaultOrExistingSmallestEnumValue(pkg: string, name: string): number;
+    setTypePackageMapping(type: string, pkg: string): void;
+    getTypePackageMapping(type: string): string[];
+    getTypesInMultiplePackages(): string[];
+    setServicePackageMapping(service: string, pkg: string): void;
+    getServicePackageMapping(service: string): string[];
+    getServicesInMultiplePackages(): string[];
 }

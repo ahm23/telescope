@@ -20,6 +20,7 @@ export interface ImportObj {
   name: string;
   path: string;
   importAs?: string;
+  protoPath?: string;
 }
 export type UtilValue = ImportObj | string;
 

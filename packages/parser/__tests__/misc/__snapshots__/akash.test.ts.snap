@@ -6,6 +6,8 @@ exports[`Akash 1`] = `
     "comment": "Msg defines the deployment Msg service.",
     "methods": {
       "CloseDeployment": {
+        "aliasRequestType": "MsgCloseDeployment",
+        "aliasResponseType": "MsgCloseDeploymentResponse",
         "comment": "CloseDeployment defines a method to close a deployment given proper inputs.",
         "fields": {
           "id": {
@@ -37,11 +39,15 @@ exports[`Akash 1`] = `
         "info": undefined,
         "name": "CloseDeployment",
         "options": undefined,
+        "originalRequestType": "MsgCloseDeployment",
+        "originalResponseType": "MsgCloseDeploymentResponse",
         "requestType": "MsgCloseDeployment",
         "responseType": "MsgCloseDeploymentResponse",
         "type": "ServiceMethod",
       },
       "CloseGroup": {
+        "aliasRequestType": "MsgCloseGroup",
+        "aliasResponseType": "MsgCloseGroupResponse",
         "comment": "CloseGroup defines a method to close a group of a deployment given proper inputs.",
         "fields": {
           "id": {
@@ -73,11 +79,15 @@ exports[`Akash 1`] = `
         "info": undefined,
         "name": "CloseGroup",
         "options": undefined,
+        "originalRequestType": "MsgCloseGroup",
+        "originalResponseType": "MsgCloseGroupResponse",
         "requestType": "MsgCloseGroup",
         "responseType": "MsgCloseGroupResponse",
         "type": "ServiceMethod",
       },
       "CreateDeployment": {
+        "aliasRequestType": "MsgCreateDeployment",
+        "aliasResponseType": "MsgCreateDeploymentResponse",
         "comment": "CreateDeployment defines a method to create new deployment given proper inputs.",
         "fields": {
           "deposit": {
@@ -194,11 +204,15 @@ exports[`Akash 1`] = `
         "info": undefined,
         "name": "CreateDeployment",
         "options": undefined,
+        "originalRequestType": "MsgCreateDeployment",
+        "originalResponseType": "MsgCreateDeploymentResponse",
         "requestType": "MsgCreateDeployment",
         "responseType": "MsgCreateDeploymentResponse",
         "type": "ServiceMethod",
       },
       "DepositDeployment": {
+        "aliasRequestType": "MsgDepositDeployment",
+        "aliasResponseType": "MsgDepositDeploymentResponse",
         "comment": "DepositDeployment deposits more funds into the deployment account",
         "fields": {
           "amount": {
@@ -272,11 +286,15 @@ exports[`Akash 1`] = `
         "info": undefined,
         "name": "DepositDeployment",
         "options": undefined,
+        "originalRequestType": "MsgDepositDeployment",
+        "originalResponseType": "MsgDepositDeploymentResponse",
         "requestType": "MsgDepositDeployment",
         "responseType": "MsgDepositDeploymentResponse",
         "type": "ServiceMethod",
       },
       "PauseGroup": {
+        "aliasRequestType": "MsgPauseGroup",
+        "aliasResponseType": "MsgPauseGroupResponse",
         "comment": "PauseGroup defines a method to close a group of a deployment given proper inputs.",
         "fields": {
           "id": {
@@ -308,11 +326,15 @@ exports[`Akash 1`] = `
         "info": undefined,
         "name": "PauseGroup",
         "options": undefined,
+        "originalRequestType": "MsgPauseGroup",
+        "originalResponseType": "MsgPauseGroupResponse",
         "requestType": "MsgPauseGroup",
         "responseType": "MsgPauseGroupResponse",
         "type": "ServiceMethod",
       },
       "StartGroup": {
+        "aliasRequestType": "MsgStartGroup",
+        "aliasResponseType": "MsgStartGroupResponse",
         "comment": "StartGroup defines a method to close a group of a deployment given proper inputs.",
         "fields": {
           "id": {
@@ -344,11 +366,15 @@ exports[`Akash 1`] = `
         "info": undefined,
         "name": "StartGroup",
         "options": undefined,
+        "originalRequestType": "MsgStartGroup",
+        "originalResponseType": "MsgStartGroupResponse",
         "requestType": "MsgStartGroup",
         "responseType": "MsgStartGroupResponse",
         "type": "ServiceMethod",
       },
       "UpdateDeployment": {
+        "aliasRequestType": "MsgUpdateDeployment",
+        "aliasResponseType": "MsgUpdateDeploymentResponse",
         "comment": "UpdateDeployment defines a method to update a deployment given proper inputs.",
         "fields": {
           "id": {
@@ -398,6 +424,8 @@ exports[`Akash 1`] = `
         "info": undefined,
         "name": "UpdateDeployment",
         "options": undefined,
+        "originalRequestType": "MsgUpdateDeployment",
+        "originalResponseType": "MsgUpdateDeploymentResponse",
         "requestType": "MsgUpdateDeployment",
         "responseType": "MsgUpdateDeploymentResponse",
         "type": "ServiceMethod",

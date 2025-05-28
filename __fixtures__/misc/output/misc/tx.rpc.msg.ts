@@ -1,4 +1,4 @@
-import { EncodingTestForDontOmit, EncodingTestForDontOmitSDKType, EncodingTestForOmit, EncodingTestForOmitSDKType } from "./all_fields";
+import { EncodingTestForDontOmit, EncodingTestForDontOmitSDKType } from "./all_fields";
 import { Rpc } from "../helpers";
 import { BinaryReader } from "../binary";
 import { InputMsg, InputMsgSDKType, MsgResponse, MsgResponseSDKType } from "./tx";

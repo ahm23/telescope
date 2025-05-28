@@ -4,9 +4,8 @@ import { TestNest_Graph, TestNest_GraphAmino, TestNest_GraphSDKType } from "./ne
 import { BinaryReader, BinaryWriter } from "../binary";
 import { isSet, DeepPartial, isObject } from "../helpers";
 import { JsonSafe } from "../json-safe";
-export const protobufPackage = "misc";
 /** VoteOption enumerates the valid vote options for a given governance proposal. */
-export enum VoteOption {
+export enum MiscVoteOption {
   /** VOTE_OPTION_UNSPECIFIED - VOTE_OPTION_UNSPECIFIED defines a no-op vote option. */
   VOTE_OPTION_UNSPECIFIED = 0,
   /** VOTE_OPTION_YES - VOTE_OPTION_YES defines a yes vote option. */
@@ -19,44 +18,44 @@ export enum VoteOption {
   VOTE_OPTION_NO_WITH_VETO = 4,
   UNRECOGNIZED = -1,
 }
-export const VoteOptionSDKType = VoteOption;
-export const VoteOptionAmino = VoteOption;
-export function voteOptionFromJSON(object: any): VoteOption {
+export const MiscVoteOptionSDKType = MiscVoteOption;
+export const MiscVoteOptionAmino = MiscVoteOption;
+export function miscVoteOptionFromJSON(object: any): MiscVoteOption {
   switch (object) {
     case 0:
     case "VOTE_OPTION_UNSPECIFIED":
-      return VoteOption.VOTE_OPTION_UNSPECIFIED;
+      return MiscVoteOption.VOTE_OPTION_UNSPECIFIED;
     case 1:
     case "VOTE_OPTION_YES":
-      return VoteOption.VOTE_OPTION_YES;
+      return MiscVoteOption.VOTE_OPTION_YES;
     case 2:
     case "VOTE_OPTION_ABSTAIN":
-      return VoteOption.VOTE_OPTION_ABSTAIN;
+      return MiscVoteOption.VOTE_OPTION_ABSTAIN;
     case 3:
     case "VOTE_OPTION_NO":
-      return VoteOption.VOTE_OPTION_NO;
+      return MiscVoteOption.VOTE_OPTION_NO;
     case 4:
     case "VOTE_OPTION_NO_WITH_VETO":
-      return VoteOption.VOTE_OPTION_NO_WITH_VETO;
+      return MiscVoteOption.VOTE_OPTION_NO_WITH_VETO;
     case -1:
     case "UNRECOGNIZED":
     default:
-      return VoteOption.UNRECOGNIZED;
+      return MiscVoteOption.UNRECOGNIZED;
   }
 }
-export function voteOptionToJSON(object: VoteOption): string {
+export function miscVoteOptionToJSON(object: MiscVoteOption): string {
   switch (object) {
-    case VoteOption.VOTE_OPTION_UNSPECIFIED:
+    case MiscVoteOption.VOTE_OPTION_UNSPECIFIED:
       return "VOTE_OPTION_UNSPECIFIED";
-    case VoteOption.VOTE_OPTION_YES:
+    case MiscVoteOption.VOTE_OPTION_YES:
       return "VOTE_OPTION_YES";
-    case VoteOption.VOTE_OPTION_ABSTAIN:
+    case MiscVoteOption.VOTE_OPTION_ABSTAIN:
       return "VOTE_OPTION_ABSTAIN";
-    case VoteOption.VOTE_OPTION_NO:
+    case MiscVoteOption.VOTE_OPTION_NO:
       return "VOTE_OPTION_NO";
-    case VoteOption.VOTE_OPTION_NO_WITH_VETO:
+    case MiscVoteOption.VOTE_OPTION_NO_WITH_VETO:
       return "VOTE_OPTION_NO_WITH_VETO";
-    case VoteOption.UNRECOGNIZED:
+    case MiscVoteOption.UNRECOGNIZED:
     default:
       return "UNRECOGNIZED";
   }
@@ -115,7 +114,7 @@ export interface EvalRequest {
   testNum: number;
   testString: string;
   testBool: boolean;
-  instantiatePermission?: AccessConfig;
+  instantiatePermission?: MiscAccessConfig;
   /** [(gogoproto.nullable) = false] wouldn't work in this case */
   id?: string;
   name?: string;
@@ -144,7 +143,7 @@ export interface EvalRequestAmino {
   test_num?: number;
   test_string?: string;
   test_bool?: boolean;
-  instantiate_permission?: AccessConfigAmino;
+  instantiate_permission?: MiscAccessConfigAmino;
   /** [(gogoproto.nullable) = false] wouldn't work in this case */
   id?: string;
   name?: string;
@@ -169,7 +168,7 @@ export interface EvalRequestSDKType {
   test_num: number;
   test_string: string;
   test_bool: boolean;
-  instantiate_permission?: AccessConfigSDKType;
+  instantiate_permission?: MiscAccessConfigSDKType;
   id?: string;
   name?: string;
   test_array: string[];
@@ -178,40 +177,40 @@ export interface EvalRequestSDKType {
   deprecated?: string;
   false_deprecated: string;
 }
-export interface AccessConfig {
+export interface MiscAccessConfig {
   sender: string;
 }
-export interface AccessConfigProtoMsg {
-  typeUrl: "/misc.AccessConfig";
+export interface MiscAccessConfigProtoMsg {
+  typeUrl: "/misc.MiscAccessConfig";
   value: Uint8Array;
 }
-export interface AccessConfigAmino {
+export interface MiscAccessConfigAmino {
   sender?: string;
 }
-export interface AccessConfigAminoMsg {
-  type: "/misc.AccessConfig";
-  value: AccessConfigAmino;
+export interface MiscAccessConfigAminoMsg {
+  type: "/misc.MiscAccessConfig";
+  value: MiscAccessConfigAmino;
 }
-export interface AccessConfigSDKType {
+export interface MiscAccessConfigSDKType {
   sender: string;
 }
-export interface GenericAuthorization {
+export interface MiscGenericAuthorization {
   /** Msg, identified by it's type URL, to grant unrestricted permissions to execute */
   msg: string;
 }
-export interface GenericAuthorizationProtoMsg {
-  typeUrl: "/misc.GenericAuthorization";
+export interface MiscGenericAuthorizationProtoMsg {
+  typeUrl: "/misc.MiscGenericAuthorization";
   value: Uint8Array;
 }
-export interface GenericAuthorizationAmino {
+export interface MiscGenericAuthorizationAmino {
   /** Msg, identified by it's type URL, to grant unrestricted permissions to execute */
   msg?: string;
 }
-export interface GenericAuthorizationAminoMsg {
-  type: "/misc.GenericAuthorization";
-  value: GenericAuthorizationAmino;
+export interface MiscGenericAuthorizationAminoMsg {
+  type: "/misc.MiscGenericAuthorization";
+  value: MiscGenericAuthorizationAmino;
 }
-export interface GenericAuthorizationSDKType {
+export interface MiscGenericAuthorizationSDKType {
   msg: string;
 }
 function createBaseEvalRequest_BindingsEntry(): EvalRequest_BindingsEntry {
@@ -456,7 +455,7 @@ export const EvalRequest = {
       writer.uint32(40).bool(message.testBool);
     }
     if (message.instantiatePermission !== undefined) {
-      AccessConfig.encode(message.instantiatePermission, writer.uint32(66).fork()).ldelim();
+      MiscAccessConfig.encode(message.instantiatePermission, writer.uint32(66).fork()).ldelim();
     }
     if (message.id !== undefined) {
       writer.uint32(98).string(message.id);
@@ -510,7 +509,7 @@ export const EvalRequest = {
           message.testBool = reader.bool();
           break;
         case 8:
-          message.instantiatePermission = AccessConfig.decode(reader, reader.uint32());
+          message.instantiatePermission = MiscAccessConfig.decode(reader, reader.uint32());
           break;
         case 12:
           message.id = reader.string();
@@ -557,7 +556,7 @@ export const EvalRequest = {
     if (isSet(object.testNum)) obj.testNum = Number(object.testNum);
     if (isSet(object.testString)) obj.testString = String(object.testString);
     if (isSet(object.testBool)) obj.testBool = Boolean(object.testBool);
-    if (isSet(object.instantiatePermission)) obj.instantiatePermission = AccessConfig.fromJSON(object.instantiatePermission);
+    if (isSet(object.instantiatePermission)) obj.instantiatePermission = MiscAccessConfig.fromJSON(object.instantiatePermission);
     if (isSet(object.id)) obj.id = String(object.id);
     if (isSet(object.name)) obj.name = String(object.name);
     if (Array.isArray(object?.testArray)) obj.testArray = object.testArray.map((e: any) => String(e));
@@ -584,7 +583,7 @@ export const EvalRequest = {
     message.testNum !== undefined && (obj.testNum = Math.round(message.testNum));
     message.testString !== undefined && (obj.testString = message.testString);
     message.testBool !== undefined && (obj.testBool = message.testBool);
-    message.instantiatePermission !== undefined && (obj.instantiatePermission = message.instantiatePermission ? AccessConfig.toJSON(message.instantiatePermission) : undefined);
+    message.instantiatePermission !== undefined && (obj.instantiatePermission = message.instantiatePermission ? MiscAccessConfig.toJSON(message.instantiatePermission) : undefined);
     message.id !== undefined && (obj.id = message.id);
     message.name !== undefined && (obj.name = message.name);
     if (message.testArray) {
@@ -620,7 +619,7 @@ export const EvalRequest = {
     message.testString = object.testString ?? "";
     message.testBool = object.testBool ?? false;
     if (object.instantiatePermission !== undefined && object.instantiatePermission !== null) {
-      message.instantiatePermission = AccessConfig.fromPartial(object.instantiatePermission);
+      message.instantiatePermission = MiscAccessConfig.fromPartial(object.instantiatePermission);
     }
     message.id = object.id ?? undefined;
     message.name = object.name ?? undefined;
@@ -650,7 +649,7 @@ export const EvalRequest = {
       testNum: object?.test_num,
       testString: object?.test_string,
       testBool: object?.test_bool,
-      instantiatePermission: object.instantiate_permission ? AccessConfig.fromSDK(object.instantiate_permission) : undefined,
+      instantiatePermission: object.instantiate_permission ? MiscAccessConfig.fromSDK(object.instantiate_permission) : undefined,
       id: object?.id,
       name: object?.name,
       testArray: Array.isArray(object?.test_array) ? object.test_array.map((e: any) => e) : [],
@@ -677,7 +676,7 @@ export const EvalRequest = {
       test_num: isSet(object.test_num) ? Number(object.test_num) : 0,
       test_string: isSet(object.test_string) ? String(object.test_string) : "",
       test_bool: isSet(object.test_bool) ? Boolean(object.test_bool) : false,
-      instantiate_permission: isSet(object.instantiate_permission) ? AccessConfig.fromSDKJSON(object.instantiate_permission) : undefined,
+      instantiate_permission: isSet(object.instantiate_permission) ? MiscAccessConfig.fromSDKJSON(object.instantiate_permission) : undefined,
       id: isSet(object.id) ? String(object.id) : undefined,
       name: isSet(object.name) ? String(object.name) : undefined,
       test_array: Array.isArray(object?.test_array) ? object.test_array.map((e: any) => String(e)) : [],
@@ -704,7 +703,7 @@ export const EvalRequest = {
     obj.test_num = message.testNum;
     obj.test_string = message.testString;
     obj.test_bool = message.testBool;
-    message.instantiatePermission !== undefined && (obj.instantiate_permission = message.instantiatePermission ? AccessConfig.toSDK(message.instantiatePermission) : undefined);
+    message.instantiatePermission !== undefined && (obj.instantiate_permission = message.instantiatePermission ? MiscAccessConfig.toSDK(message.instantiatePermission) : undefined);
     obj.id = message.id;
     obj.name = message.name;
     if (message.testArray) {
@@ -746,7 +745,7 @@ export const EvalRequest = {
       message.testBool = object.test_bool;
     }
     if (object.instantiate_permission !== undefined && object.instantiate_permission !== null) {
-      message.instantiatePermission = AccessConfig.fromAmino(object.instantiate_permission);
+      message.instantiatePermission = MiscAccessConfig.fromAmino(object.instantiate_permission);
     }
     if (object.id !== undefined && object.id !== null) {
       message.id = object.id;
@@ -786,7 +785,7 @@ export const EvalRequest = {
     obj.test_num = message.testNum === 0 ? undefined : message.testNum;
     obj.test_string = message.testString === "" ? undefined : message.testString;
     obj.test_bool = message.testBool === false ? undefined : message.testBool;
-    obj.instantiate_permission = message.instantiatePermission ? AccessConfig.toAmino(message.instantiatePermission) : undefined;
+    obj.instantiate_permission = message.instantiatePermission ? MiscAccessConfig.toAmino(message.instantiatePermission) : undefined;
     obj.id = message.id === null ? undefined : message.id;
     obj.name = message.name === null ? undefined : message.name;
     if (message.testArray) {
@@ -816,23 +815,23 @@ export const EvalRequest = {
     };
   }
 };
-function createBaseAccessConfig(): AccessConfig {
+function createBaseMiscAccessConfig(): MiscAccessConfig {
   return {
     sender: ""
   };
 }
-export const AccessConfig = {
-  typeUrl: "/misc.AccessConfig",
-  encode(message: AccessConfig, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+export const MiscAccessConfig = {
+  typeUrl: "/misc.MiscAccessConfig",
+  encode(message: MiscAccessConfig, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): AccessConfig {
+  decode(input: BinaryReader | Uint8Array, length?: number): MiscAccessConfig {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseAccessConfig();
+    const message = createBaseMiscAccessConfig();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -846,81 +845,81 @@ export const AccessConfig = {
     }
     return message;
   },
-  fromJSON(object: any): AccessConfig {
-    const obj = createBaseAccessConfig();
+  fromJSON(object: any): MiscAccessConfig {
+    const obj = createBaseMiscAccessConfig();
     if (isSet(object.sender)) obj.sender = String(object.sender);
     return obj;
   },
-  toJSON(message: AccessConfig): JsonSafe<AccessConfig> {
+  toJSON(message: MiscAccessConfig): JsonSafe<MiscAccessConfig> {
     const obj: any = {};
     message.sender !== undefined && (obj.sender = message.sender);
     return obj;
   },
-  fromPartial(object: DeepPartial<AccessConfig>): AccessConfig {
-    const message = createBaseAccessConfig();
+  fromPartial(object: DeepPartial<MiscAccessConfig>): MiscAccessConfig {
+    const message = createBaseMiscAccessConfig();
     message.sender = object.sender ?? "";
     return message;
   },
-  fromSDK(object: AccessConfigSDKType): AccessConfig {
+  fromSDK(object: MiscAccessConfigSDKType): MiscAccessConfig {
     return {
       sender: object?.sender
     };
   },
-  fromSDKJSON(object: any): AccessConfigSDKType {
+  fromSDKJSON(object: any): MiscAccessConfigSDKType {
     return {
       sender: isSet(object.sender) ? String(object.sender) : ""
     };
   },
-  toSDK(message: AccessConfig): AccessConfigSDKType {
+  toSDK(message: MiscAccessConfig): MiscAccessConfigSDKType {
     const obj: any = {};
     obj.sender = message.sender;
     return obj;
   },
-  fromAmino(object: AccessConfigAmino): AccessConfig {
-    const message = createBaseAccessConfig();
+  fromAmino(object: MiscAccessConfigAmino): MiscAccessConfig {
+    const message = createBaseMiscAccessConfig();
     if (object.sender !== undefined && object.sender !== null) {
       message.sender = object.sender;
     }
     return message;
   },
-  toAmino(message: AccessConfig): AccessConfigAmino {
+  toAmino(message: MiscAccessConfig): MiscAccessConfigAmino {
     const obj: any = {};
     obj.sender = message.sender === "" ? undefined : message.sender;
     return obj;
   },
-  fromAminoMsg(object: AccessConfigAminoMsg): AccessConfig {
-    return AccessConfig.fromAmino(object.value);
+  fromAminoMsg(object: MiscAccessConfigAminoMsg): MiscAccessConfig {
+    return MiscAccessConfig.fromAmino(object.value);
   },
-  fromProtoMsg(message: AccessConfigProtoMsg): AccessConfig {
-    return AccessConfig.decode(message.value);
+  fromProtoMsg(message: MiscAccessConfigProtoMsg): MiscAccessConfig {
+    return MiscAccessConfig.decode(message.value);
   },
-  toProto(message: AccessConfig): Uint8Array {
-    return AccessConfig.encode(message).finish();
+  toProto(message: MiscAccessConfig): Uint8Array {
+    return MiscAccessConfig.encode(message).finish();
   },
-  toProtoMsg(message: AccessConfig): AccessConfigProtoMsg {
+  toProtoMsg(message: MiscAccessConfig): MiscAccessConfigProtoMsg {
     return {
-      typeUrl: "/misc.AccessConfig",
-      value: AccessConfig.encode(message).finish()
+      typeUrl: "/misc.MiscAccessConfig",
+      value: MiscAccessConfig.encode(message).finish()
     };
   }
 };
-function createBaseGenericAuthorization(): GenericAuthorization {
+function createBaseMiscGenericAuthorization(): MiscGenericAuthorization {
   return {
     msg: ""
   };
 }
-export const GenericAuthorization = {
-  typeUrl: "/misc.GenericAuthorization",
-  encode(message: GenericAuthorization, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+export const MiscGenericAuthorization = {
+  typeUrl: "/misc.MiscGenericAuthorization",
+  encode(message: MiscGenericAuthorization, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.msg !== "") {
       writer.uint32(10).string(message.msg);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): GenericAuthorization {
+  decode(input: BinaryReader | Uint8Array, length?: number): MiscGenericAuthorization {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseGenericAuthorization();
+    const message = createBaseMiscGenericAuthorization();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -934,61 +933,61 @@ export const GenericAuthorization = {
     }
     return message;
   },
-  fromJSON(object: any): GenericAuthorization {
-    const obj = createBaseGenericAuthorization();
+  fromJSON(object: any): MiscGenericAuthorization {
+    const obj = createBaseMiscGenericAuthorization();
     if (isSet(object.msg)) obj.msg = String(object.msg);
     return obj;
   },
-  toJSON(message: GenericAuthorization): JsonSafe<GenericAuthorization> {
+  toJSON(message: MiscGenericAuthorization): JsonSafe<MiscGenericAuthorization> {
     const obj: any = {};
     message.msg !== undefined && (obj.msg = message.msg);
     return obj;
   },
-  fromPartial(object: DeepPartial<GenericAuthorization>): GenericAuthorization {
-    const message = createBaseGenericAuthorization();
+  fromPartial(object: DeepPartial<MiscGenericAuthorization>): MiscGenericAuthorization {
+    const message = createBaseMiscGenericAuthorization();
     message.msg = object.msg ?? "";
     return message;
   },
-  fromSDK(object: GenericAuthorizationSDKType): GenericAuthorization {
+  fromSDK(object: MiscGenericAuthorizationSDKType): MiscGenericAuthorization {
     return {
       msg: object?.msg
     };
   },
-  fromSDKJSON(object: any): GenericAuthorizationSDKType {
+  fromSDKJSON(object: any): MiscGenericAuthorizationSDKType {
     return {
       msg: isSet(object.msg) ? String(object.msg) : ""
     };
   },
-  toSDK(message: GenericAuthorization): GenericAuthorizationSDKType {
+  toSDK(message: MiscGenericAuthorization): MiscGenericAuthorizationSDKType {
     const obj: any = {};
     obj.msg = message.msg;
     return obj;
   },
-  fromAmino(object: GenericAuthorizationAmino): GenericAuthorization {
-    const message = createBaseGenericAuthorization();
+  fromAmino(object: MiscGenericAuthorizationAmino): MiscGenericAuthorization {
+    const message = createBaseMiscGenericAuthorization();
     if (object.msg !== undefined && object.msg !== null) {
       message.msg = object.msg;
     }
     return message;
   },
-  toAmino(message: GenericAuthorization): GenericAuthorizationAmino {
+  toAmino(message: MiscGenericAuthorization): MiscGenericAuthorizationAmino {
     const obj: any = {};
     obj.msg = message.msg === "" ? undefined : message.msg;
     return obj;
   },
-  fromAminoMsg(object: GenericAuthorizationAminoMsg): GenericAuthorization {
-    return GenericAuthorization.fromAmino(object.value);
+  fromAminoMsg(object: MiscGenericAuthorizationAminoMsg): MiscGenericAuthorization {
+    return MiscGenericAuthorization.fromAmino(object.value);
   },
-  fromProtoMsg(message: GenericAuthorizationProtoMsg): GenericAuthorization {
-    return GenericAuthorization.decode(message.value);
+  fromProtoMsg(message: MiscGenericAuthorizationProtoMsg): MiscGenericAuthorization {
+    return MiscGenericAuthorization.decode(message.value);
   },
-  toProto(message: GenericAuthorization): Uint8Array {
-    return GenericAuthorization.encode(message).finish();
+  toProto(message: MiscGenericAuthorization): Uint8Array {
+    return MiscGenericAuthorization.encode(message).finish();
   },
-  toProtoMsg(message: GenericAuthorization): GenericAuthorizationProtoMsg {
+  toProtoMsg(message: MiscGenericAuthorization): MiscGenericAuthorizationProtoMsg {
     return {
-      typeUrl: "/misc.GenericAuthorization",
-      value: GenericAuthorization.encode(message).finish()
+      typeUrl: "/misc.MiscGenericAuthorization",
+      value: MiscGenericAuthorization.encode(message).finish()
     };
   }
 };

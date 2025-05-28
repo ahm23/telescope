@@ -2,6 +2,7 @@
 
 exports[`google/rpc/error_details 1`] = `
 {
+  "aliasName": "PreconditionFailure",
   "comment": "Describes what preconditions have failed.
 
  For example, if an RPC failed because it required the Terms of Service to be
@@ -32,6 +33,7 @@ exports[`google/rpc/error_details 1`] = `
   "name": "PreconditionFailure",
   "nested": {
     "Violation": {
+      "aliasName": "Violation",
       "comment": "A message type used to describe a single precondition failure.",
       "fields": {
         "description": {
@@ -95,12 +97,14 @@ exports[`google/rpc/error_details 1`] = `
       "nested": null,
       "oneofs": undefined,
       "options": undefined,
+      "originalName": "Violation",
       "package": "google.rpc",
       "type": "Type",
     },
   },
   "oneofs": undefined,
   "options": undefined,
+  "originalName": "PreconditionFailure",
   "package": "google.rpc",
   "type": "Type",
 }

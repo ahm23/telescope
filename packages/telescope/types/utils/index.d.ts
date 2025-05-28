@@ -10,6 +10,7 @@ export declare const fixlocalpaths: (imports: ImportObj[]) => {
     type: string;
     name: string;
     importAs?: string;
+    protoPath?: string;
 }[];
 export declare const getRelativePath: (f1: string, f2: string, ext?: string) => string;
 export * from './common-create-bundle';

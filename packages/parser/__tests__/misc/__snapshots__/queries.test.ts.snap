@@ -6,6 +6,8 @@ exports[`queries 1`] = `
     "comment": null,
     "methods": {
       "CalcExitPoolCoinsFromShares": {
+        "aliasRequestType": "QueryCalcExitPoolCoinsFromSharesRequest",
+        "aliasResponseType": "QueryCalcExitPoolCoinsFromSharesResponse",
         "comment": null,
         "fields": {
           "poolId": {
@@ -65,11 +67,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/osmosis/gamm/v1beta1/pools/{pool_id}/exit_swap_share_amount_in",
         },
+        "originalRequestType": "QueryCalcExitPoolCoinsFromSharesRequest",
+        "originalResponseType": "QueryCalcExitPoolCoinsFromSharesResponse",
         "requestType": "QueryCalcExitPoolCoinsFromSharesRequest",
         "responseType": "QueryCalcExitPoolCoinsFromSharesResponse",
         "type": "ServiceMethod",
       },
       "CalcJoinPoolNoSwapShares": {
+        "aliasRequestType": "QueryCalcJoinPoolNoSwapSharesRequest",
+        "aliasResponseType": "QueryCalcJoinPoolNoSwapSharesResponse",
         "comment": "Simulates joining pool without a swap. Returns the amount of shares you'd
  get and tokens needed to provide",
         "fields": {
@@ -118,11 +124,15 @@ exports[`queries 1`] = `
         "info": undefined,
         "name": "CalcJoinPoolNoSwapShares",
         "options": undefined,
+        "originalRequestType": "QueryCalcJoinPoolNoSwapSharesRequest",
+        "originalResponseType": "QueryCalcJoinPoolNoSwapSharesResponse",
         "requestType": "QueryCalcJoinPoolNoSwapSharesRequest",
         "responseType": "QueryCalcJoinPoolNoSwapSharesResponse",
         "type": "ServiceMethod",
       },
       "CalcJoinPoolShares": {
+        "aliasRequestType": "QueryCalcJoinPoolSharesRequest",
+        "aliasResponseType": "QueryCalcJoinPoolSharesResponse",
         "comment": null,
         "fields": {
           "poolId": {
@@ -189,11 +199,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/osmosis/gamm/v1beta1/pools/{pool_id}/join_swap_exact_in",
         },
+        "originalRequestType": "QueryCalcJoinPoolSharesRequest",
+        "originalResponseType": "QueryCalcJoinPoolSharesResponse",
         "requestType": "QueryCalcJoinPoolSharesRequest",
         "responseType": "QueryCalcJoinPoolSharesResponse",
         "type": "ServiceMethod",
       },
       "EstimateSwapExactAmountIn": {
+        "aliasRequestType": "QuerySwapExactAmountInRequest",
+        "aliasResponseType": "QuerySwapExactAmountInResponse",
         "comment": "Estimate the swap.",
         "fields": {
           "poolId": {
@@ -301,11 +315,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/osmosis/gamm/v1beta1/{pool_id}/estimate/swap_exact_amount_in",
         },
+        "originalRequestType": "QuerySwapExactAmountInRequest",
+        "originalResponseType": "QuerySwapExactAmountInResponse",
         "requestType": "QuerySwapExactAmountInRequest",
         "responseType": "QuerySwapExactAmountInResponse",
         "type": "ServiceMethod",
       },
       "EstimateSwapExactAmountOut": {
+        "aliasRequestType": "QuerySwapExactAmountOutRequest",
+        "aliasResponseType": "QuerySwapExactAmountOutResponse",
         "comment": null,
         "fields": {
           "poolId": {
@@ -413,11 +431,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/osmosis/gamm/v1beta1/{pool_id}/estimate/swap_exact_amount_out",
         },
+        "originalRequestType": "QuerySwapExactAmountOutRequest",
+        "originalResponseType": "QuerySwapExactAmountOutResponse",
         "requestType": "QuerySwapExactAmountOutRequest",
         "responseType": "QuerySwapExactAmountOutResponse",
         "type": "ServiceMethod",
       },
       "NumPools": {
+        "aliasRequestType": "QueryNumPoolsRequest",
+        "aliasResponseType": "QueryNumPoolsResponse",
         "comment": null,
         "fields": {},
         "info": {
@@ -432,11 +454,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/osmosis/gamm/v1beta1/num_pools",
         },
+        "originalRequestType": "QueryNumPoolsRequest",
+        "originalResponseType": "QueryNumPoolsResponse",
         "requestType": "QueryNumPoolsRequest",
         "responseType": "QueryNumPoolsResponse",
         "type": "ServiceMethod",
       },
       "Pool": {
+        "aliasRequestType": "QueryPoolRequest",
+        "aliasResponseType": "QueryPoolResponse",
         "comment": "Per Pool gRPC Endpoints",
         "fields": {
           "poolId": {
@@ -475,11 +501,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/osmosis/gamm/v1beta1/pools/{pool_id}",
         },
+        "originalRequestType": "QueryPoolRequest",
+        "originalResponseType": "QueryPoolResponse",
         "requestType": "QueryPoolRequest",
         "responseType": "QueryPoolResponse",
         "type": "ServiceMethod",
       },
       "PoolParams": {
+        "aliasRequestType": "QueryPoolParamsRequest",
+        "aliasResponseType": "QueryPoolParamsResponse",
         "comment": null,
         "fields": {
           "poolId": {
@@ -518,11 +548,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/osmosis/gamm/v1beta1/pools/{pool_id}/params",
         },
+        "originalRequestType": "QueryPoolParamsRequest",
+        "originalResponseType": "QueryPoolParamsResponse",
         "requestType": "QueryPoolParamsRequest",
         "responseType": "QueryPoolParamsResponse",
         "type": "ServiceMethod",
       },
       "PoolType": {
+        "aliasRequestType": "QueryPoolTypeRequest",
+        "aliasResponseType": "QueryPoolTypeResponse",
         "comment": "PoolType returns the type of the pool.
  Returns "Balancer" as a string literal when the pool is a balancer pool.
  Errors if the pool is failed to be type caseted.",
@@ -563,11 +597,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/osmosis/gamm/v1beta1/pool_type/{pool_id}",
         },
+        "originalRequestType": "QueryPoolTypeRequest",
+        "originalResponseType": "QueryPoolTypeResponse",
         "requestType": "QueryPoolTypeRequest",
         "responseType": "QueryPoolTypeResponse",
         "type": "ServiceMethod",
       },
       "Pools": {
+        "aliasRequestType": "QueryPoolsRequest",
+        "aliasResponseType": "QueryPoolsResponse",
         "comment": null,
         "fields": {
           "pagination": {
@@ -610,11 +648,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/osmosis/gamm/v1beta1/pools",
         },
+        "originalRequestType": "QueryPoolsRequest",
+        "originalResponseType": "QueryPoolsResponse",
         "requestType": "QueryPoolsRequest",
         "responseType": "QueryPoolsResponse",
         "type": "ServiceMethod",
       },
       "PoolsWithFilter": {
+        "aliasRequestType": "QueryPoolsWithFilterRequest",
+        "aliasResponseType": "QueryPoolsWithFilterResponse",
         "comment": "PoolsWithFilter allows you to query specific pools with requested
  parameters",
         "fields": {
@@ -705,11 +747,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/osmosis/gamm/v1beta1/filtered_pools",
         },
+        "originalRequestType": "QueryPoolsWithFilterRequest",
+        "originalResponseType": "QueryPoolsWithFilterResponse",
         "requestType": "QueryPoolsWithFilterRequest",
         "responseType": "QueryPoolsWithFilterResponse",
         "type": "ServiceMethod",
       },
       "SpotPrice": {
+        "aliasRequestType": "QuerySpotPriceRequest",
+        "aliasResponseType": "QuerySpotPriceResponse",
         "comment": "SpotPrice defines a gRPC query handler that returns the spot price given
  a base denomination and a quote denomination.",
         "fields": {
@@ -791,11 +837,15 @@ exports[`queries 1`] = `
           "(google.api.http).get": "/osmosis/gamm/v1beta1/pools/{pool_id}/prices",
           "deprecated": true,
         },
+        "originalRequestType": "QuerySpotPriceRequest",
+        "originalResponseType": "QuerySpotPriceResponse",
         "requestType": "QuerySpotPriceRequest",
         "responseType": "QuerySpotPriceResponse",
         "type": "ServiceMethod",
       },
       "TotalLiquidity": {
+        "aliasRequestType": "QueryTotalLiquidityRequest",
+        "aliasResponseType": "QueryTotalLiquidityResponse",
         "comment": null,
         "fields": {},
         "info": {
@@ -810,11 +860,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/osmosis/gamm/v1beta1/total_liquidity",
         },
+        "originalRequestType": "QueryTotalLiquidityRequest",
+        "originalResponseType": "QueryTotalLiquidityResponse",
         "requestType": "QueryTotalLiquidityRequest",
         "responseType": "QueryTotalLiquidityResponse",
         "type": "ServiceMethod",
       },
       "TotalPoolLiquidity": {
+        "aliasRequestType": "QueryTotalPoolLiquidityRequest",
+        "aliasResponseType": "QueryTotalPoolLiquidityResponse",
         "comment": null,
         "fields": {
           "poolId": {
@@ -853,11 +907,15 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/osmosis/gamm/v1beta1/pools/{pool_id}/total_pool_liquidity",
         },
+        "originalRequestType": "QueryTotalPoolLiquidityRequest",
+        "originalResponseType": "QueryTotalPoolLiquidityResponse",
         "requestType": "QueryTotalPoolLiquidityRequest",
         "responseType": "QueryTotalPoolLiquidityResponse",
         "type": "ServiceMethod",
       },
       "TotalShares": {
+        "aliasRequestType": "QueryTotalSharesRequest",
+        "aliasResponseType": "QueryTotalSharesResponse",
         "comment": null,
         "fields": {
           "poolId": {
@@ -896,6 +954,8 @@ exports[`queries 1`] = `
         "options": {
           "(google.api.http).get": "/osmosis/gamm/v1beta1/pools/{pool_id}/total_shares",
         },
+        "originalRequestType": "QueryTotalSharesRequest",
+        "originalResponseType": "QueryTotalSharesResponse",
         "requestType": "QueryTotalSharesRequest",
         "responseType": "QueryTotalSharesResponse",
         "type": "ServiceMethod",
@@ -905,6 +965,7 @@ exports[`queries 1`] = `
     "type": "Service",
   },
   "QueryCalcExitPoolCoinsFromSharesRequest": {
+    "aliasName": "QueryCalcExitPoolCoinsFromSharesRequest",
     "comment": "=============================== CalcExitPoolCoinsFromShares",
     "fields": {
       "poolId": {
@@ -947,10 +1008,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryCalcExitPoolCoinsFromSharesRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryCalcExitPoolCoinsFromSharesResponse": {
+    "aliasName": "QueryCalcExitPoolCoinsFromSharesResponse",
     "comment": null,
     "fields": {
       "tokensOut": {
@@ -983,10 +1046,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryCalcExitPoolCoinsFromSharesResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryCalcJoinPoolNoSwapSharesRequest": {
+    "aliasName": "QueryCalcJoinPoolNoSwapSharesRequest",
     "comment": "=============================== CalcJoinPoolNoSwapShares",
     "fields": {
       "poolId": {
@@ -1036,10 +1101,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryCalcJoinPoolNoSwapSharesRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryCalcJoinPoolNoSwapSharesResponse": {
+    "aliasName": "QueryCalcJoinPoolNoSwapSharesResponse",
     "comment": null,
     "fields": {
       "sharesOut": {
@@ -1091,10 +1158,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryCalcJoinPoolNoSwapSharesResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryCalcJoinPoolSharesRequest": {
+    "aliasName": "QueryCalcJoinPoolSharesRequest",
     "comment": "=============================== CalcJoinPoolShares",
     "fields": {
       "poolId": {
@@ -1144,10 +1213,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryCalcJoinPoolSharesRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryCalcJoinPoolSharesResponse": {
+    "aliasName": "QueryCalcJoinPoolSharesResponse",
     "comment": null,
     "fields": {
       "shareOutAmount": {
@@ -1199,10 +1270,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryCalcJoinPoolSharesResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryNumPoolsRequest": {
+    "aliasName": "QueryNumPoolsRequest",
     "comment": "=============================== NumPools",
     "fields": {},
     "keyTypes": [],
@@ -1210,10 +1283,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryNumPoolsRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryNumPoolsResponse": {
+    "aliasName": "QueryNumPoolsResponse",
     "comment": null,
     "fields": {
       "numPools": {
@@ -1239,10 +1314,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryNumPoolsResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryPoolParamsRequest": {
+    "aliasName": "QueryPoolParamsRequest",
     "comment": "=============================== PoolParams",
     "fields": {
       "poolId": {
@@ -1268,10 +1345,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryPoolParamsRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryPoolParamsResponse": {
+    "aliasName": "QueryPoolParamsResponse",
     "comment": null,
     "fields": {
       "params": {
@@ -1301,10 +1380,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryPoolParamsResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryPoolRequest": {
+    "aliasName": "QueryPoolRequest",
     "comment": "=============================== Pool",
     "fields": {
       "poolId": {
@@ -1330,10 +1411,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryPoolRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryPoolResponse": {
+    "aliasName": "QueryPoolResponse",
     "comment": null,
     "fields": {
       "pool": {
@@ -1364,10 +1447,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryPoolResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryPoolTypeRequest": {
+    "aliasName": "QueryPoolTypeRequest",
     "comment": "=============================== PoolType",
     "fields": {
       "poolId": {
@@ -1393,10 +1478,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryPoolTypeRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryPoolTypeResponse": {
+    "aliasName": "QueryPoolTypeResponse",
     "comment": null,
     "fields": {
       "poolType": {
@@ -1422,10 +1509,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryPoolTypeResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryPoolsRequest": {
+    "aliasName": "QueryPoolsRequest",
     "comment": "=============================== Pools",
     "fields": {
       "pagination": {
@@ -1455,10 +1544,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryPoolsRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryPoolsResponse": {
+    "aliasName": "QueryPoolsResponse",
     "comment": null,
     "fields": {
       "pagination": {
@@ -1511,10 +1602,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryPoolsResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryPoolsWithFilterRequest": {
+    "aliasName": "QueryPoolsWithFilterRequest",
     "comment": null,
     "fields": {
       "minLiquidity": {
@@ -1585,10 +1678,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryPoolsWithFilterRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryPoolsWithFilterResponse": {
+    "aliasName": "QueryPoolsWithFilterResponse",
     "comment": null,
     "fields": {
       "pagination": {
@@ -1641,10 +1736,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryPoolsWithFilterResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QuerySpotPriceRequest": {
+    "aliasName": "QuerySpotPriceRequest",
     "comment": "QuerySpotPriceRequest defines the gRPC request structure for a SpotPrice
  query.",
     "fields": {
@@ -1707,10 +1804,12 @@ exports[`queries 1`] = `
     "options": {
       "deprecated": true,
     },
+    "originalName": "QuerySpotPriceRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QuerySpotPriceResponse": {
+    "aliasName": "QuerySpotPriceResponse",
     "comment": "QuerySpotPriceResponse defines the gRPC response structure for a SpotPrice
  query.",
     "fields": {
@@ -1739,10 +1838,12 @@ exports[`queries 1`] = `
     "options": {
       "deprecated": true,
     },
+    "originalName": "QuerySpotPriceResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QuerySwapExactAmountInRequest": {
+    "aliasName": "QuerySwapExactAmountInRequest",
     "comment": "=============================== EstimateSwapExactAmountIn",
     "fields": {
       "poolId": {
@@ -1827,10 +1928,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QuerySwapExactAmountInRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QuerySwapExactAmountInResponse": {
+    "aliasName": "QuerySwapExactAmountInResponse",
     "comment": null,
     "fields": {
       "tokenOutAmount": {
@@ -1858,10 +1961,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QuerySwapExactAmountInResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QuerySwapExactAmountOutRequest": {
+    "aliasName": "QuerySwapExactAmountOutRequest",
     "comment": "=============================== EstimateSwapExactAmountOut",
     "fields": {
       "poolId": {
@@ -1946,10 +2051,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QuerySwapExactAmountOutRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QuerySwapExactAmountOutResponse": {
+    "aliasName": "QuerySwapExactAmountOutResponse",
     "comment": null,
     "fields": {
       "tokenInAmount": {
@@ -1977,10 +2084,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QuerySwapExactAmountOutResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryTotalLiquidityRequest": {
+    "aliasName": "QueryTotalLiquidityRequest",
     "comment": null,
     "fields": {},
     "keyTypes": [],
@@ -1988,10 +2097,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryTotalLiquidityRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryTotalLiquidityResponse": {
+    "aliasName": "QueryTotalLiquidityResponse",
     "comment": null,
     "fields": {
       "liquidity": {
@@ -2025,10 +2136,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryTotalLiquidityResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryTotalPoolLiquidityRequest": {
+    "aliasName": "QueryTotalPoolLiquidityRequest",
     "comment": "=============================== PoolLiquidity",
     "fields": {
       "poolId": {
@@ -2054,10 +2167,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryTotalPoolLiquidityRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryTotalPoolLiquidityResponse": {
+    "aliasName": "QueryTotalPoolLiquidityResponse",
     "comment": null,
     "fields": {
       "liquidity": {
@@ -2091,10 +2206,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryTotalPoolLiquidityResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryTotalSharesRequest": {
+    "aliasName": "QueryTotalSharesRequest",
     "comment": "=============================== TotalShares",
     "fields": {
       "poolId": {
@@ -2120,10 +2237,12 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryTotalSharesRequest",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },
   "QueryTotalSharesResponse": {
+    "aliasName": "QueryTotalSharesResponse",
     "comment": null,
     "fields": {
       "totalShares": {
@@ -2155,6 +2274,7 @@ exports[`queries 1`] = `
     "nested": null,
     "oneofs": undefined,
     "options": undefined,
+    "originalName": "QueryTotalSharesResponse",
     "package": "osmosis.gamm.v1beta1",
     "type": "Type",
   },

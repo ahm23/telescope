@@ -2,6 +2,7 @@ import { TelescopeBuilder } from '../src/builder';
 import { TelescopeOptions } from '@cosmology/types';
 import { TelescopeInput } from '../src';
 import deepmerge from 'deepmerge';
+import { makeAliasName } from '@cosmology/utils';
 
 const outPath = __dirname + '/../../../__fixtures__/misc/output';
 
@@ -113,7 +114,23 @@ const input: TelescopeInput = {
 
 describe('misc', () => {
   it('generates', async () => {
-    const telescope = new TelescopeBuilder(input);
+    const telescope = new TelescopeBuilder({
+      ...input,
+      options: deepmerge(input.options, {
+        prototypes: {
+          includePackageVar: false,
+          alias: {
+            "**.EncodingTestForOmit": makeAliasName,
+            "**.AccessConfig": makeAliasName,
+            "**.VoteOption": makeAliasName,
+            "**.GenericAuthorization": makeAliasName,
+          }
+        },
+        bundle: {
+          type: "module",
+        }
+      })
+    });
 
     await telescope.build();
   });

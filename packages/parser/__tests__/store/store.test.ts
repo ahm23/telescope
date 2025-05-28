@@ -1,7 +1,11 @@
+import { makeAliasName } from '@cosmology/utils';
 import { getTestProtoStore } from '../../test-utils';
 
 it('get all packages', () => {
   const store = getTestProtoStore();
+  store.options.prototypes!.alias = {
+    "**.TextProposal": "TextProposalAlias",
+  }
   store.traverseAll();
   const pkgs = store.getPackages().sort();
 

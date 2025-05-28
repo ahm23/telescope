@@ -1,5 +1,5 @@
-import { ProtoDep, ProtoRef, ProtoServiceMethod, TelescopeOptions } from '@cosmology/types';
-import { TraversalSymbol, IProtoStore } from '@cosmology/types';
+import { ProtoDep, ProtoRef, ProtoServiceMethod, TelescopeOptions } from "@cosmology/types";
+import { TraversalSymbol, IProtoStore } from "@cosmology/types";
 interface ParseProtoOptions {
     keepCase?: boolean;
     alternateCommentMode?: boolean;
@@ -7,6 +7,9 @@ interface ParseProtoOptions {
 }
 export declare const parseProto: (content: any, options?: ParseProtoOptions) => import("@cosmology/protobufjs").IParserResult;
 export declare class ProtoStore implements IProtoStore {
+    _typeAliases: Record<string, Record<string, string>>;
+    _typePackageMapping: Record<string, string[]>;
+    _servicePackageMapping: Record<string, string[]>;
     files: string[];
     protoDirs: string[];
     deps: ProtoDep[];
@@ -51,5 +54,13 @@ export declare class ProtoStore implements IProtoStore {
     getServices(myBase: string): Record<string, ProtoRef[]>;
     setEnumValues(pkg: string, name: string, protoSyntex: string, values: number[]): void;
     getDefaultOrExistingSmallestEnumValue(pkg: string, name: string): number;
+    setTypeAlias(alias: string, type: string, filepath: string): void;
+    getTypeAlias(type: string, filepath: string): string;
+    setTypePackageMapping(type: string, pkg: string): void;
+    getTypePackageMapping(type: string): string[];
+    getTypesInMultiplePackages(): string[];
+    setServicePackageMapping(service: string, pkg: string): void;
+    getServicePackageMapping(service: string): string[];
+    getServicesInMultiplePackages(): string[];
 }
 export {};

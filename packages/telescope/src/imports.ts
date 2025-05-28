@@ -38,6 +38,7 @@ const getProtoImports = (
         name: usage.name,
         importAs: usage.importedAs,
         path: importPath,
+        protoPath: usage.import,
       };
     })
     .filter(Boolean);
@@ -56,6 +57,7 @@ const getAminoImports = (
         name: usage.name,
         importAs: usage.importedAs,
         path: importPath,
+        protoPath: usage.import,
       };
     })
     .filter(Boolean);
@@ -74,6 +76,7 @@ const getGenericImports = (
         name: usage.name,
         importAs: usage.importedAs,
         path: importPath,
+        protoPath: usage.import,
       };
     })
     .filter(Boolean);
@@ -99,6 +102,7 @@ const getParsedImports = (
         name,
         importAs,
         path: importPath,
+        protoPath: path,
       });
     });
   });
@@ -292,6 +296,7 @@ const addDerivativeTypesToImports = (
           orig: obj.name,
           name: SymbolNames[baseType](obj.name),
           importAs: SymbolNames[baseType](obj.importAs ?? obj.name),
+          protoPath: obj.protoPath,
         };
       };
 
@@ -398,7 +403,7 @@ export const aggregateImports = (
   const additionalImports: ImportObj[] = importHashToArray(allImports);
   const utilities: ImportObj[] = convertUtilsToImports(context);
 
-  const list = []
+  let list = []
     .concat(parsedImports)
     .concat(utilities)
     .concat(protoImports)
@@ -411,10 +416,15 @@ export const aggregateImports = (
     (context.options.aminoEncoding?.enabled &&
       !context.options.aminoEncoding?.useLegacyInlineEncoding)
   ) {
-    return addDerivativeTypesToImports(context, list);
-  } else {
-    return list;
+    list = addDerivativeTypesToImports(context, list);
   }
+
+  list = list.filter((imp) => {
+    const alias = context.store.getTypeAlias(imp.orig || imp.name, imp.protoPath);
+    return !alias;
+  });
+
+  return list;
 };
 
 export const getImportsFromMutations = (mutations: ServiceMutation[]) => {

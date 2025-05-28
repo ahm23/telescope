@@ -8,7 +8,6 @@ import { JsonSafe } from "../json-safe";
 import { toUtf8, fromBase64, fromUtf8, toBase64 } from "@cosmjs/encoding";
 import { encodePubkey, decodePubkey } from "@cosmjs/proto-signing";
 import { MiscAccessConfig, MiscAccessConfigAmino, MiscAccessConfigSDKType, MiscVoteOption, MiscVoteOptionSDKType, miscVoteOptionFromJSON, miscVoteOptionToJSON } from "./eval_request";
-export const protobufPackage = "misc";
 export interface EncodingTestForDontOmit {
   /** scalar */
   str: string;

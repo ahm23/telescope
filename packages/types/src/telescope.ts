@@ -171,6 +171,7 @@ export interface TelescopeOpts {
 
   bundle?: {
     enabled: boolean;
+    type?: "namespace" | "module";
   };
 
   cosmwasm?: TSBuilderInput;
@@ -462,6 +463,7 @@ export const defaultTelescopeOptions: TelescopeOptions = {
 
   bundle: {
     enabled: true,
+    type: "namespace",
   },
 
   tsDisable: {

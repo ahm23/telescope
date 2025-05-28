@@ -1,7 +1,6 @@
 import { BinaryReader, BinaryWriter } from "../binary";
 import { isSet, DeepPartial } from "../helpers";
 import { JsonSafe } from "../json-safe";
-export const protobufPackage = "misc";
 export interface TestNest {
   test: string;
 }

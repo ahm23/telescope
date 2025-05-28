@@ -118,12 +118,16 @@ describe('misc', () => {
       ...input,
       options: deepmerge(input.options, {
         prototypes: {
+          includePackageVar: false,
           alias: {
             "**.EncodingTestForOmit": makeAliasName,
             "**.AccessConfig": makeAliasName,
             "**.VoteOption": makeAliasName,
             "**.GenericAuthorization": makeAliasName,
           }
+        },
+        bundle: {
+          type: "module",
         }
       })
     });

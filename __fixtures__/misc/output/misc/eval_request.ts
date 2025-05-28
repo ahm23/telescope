@@ -4,7 +4,6 @@ import { TestNest_Graph, TestNest_GraphAmino, TestNest_GraphSDKType } from "./ne
 import { BinaryReader, BinaryWriter } from "../binary";
 import { isSet, DeepPartial, isObject } from "../helpers";
 import { JsonSafe } from "../json-safe";
-export const protobufPackage = "misc";
 /** VoteOption enumerates the valid vote options for a given governance proposal. */
 export enum MiscVoteOption {
   /** VOTE_OPTION_UNSPECIFIED - VOTE_OPTION_UNSPECIFIED defines a no-op vote option. */

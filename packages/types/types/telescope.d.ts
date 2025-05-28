@@ -140,6 +140,7 @@ export interface TelescopeOpts {
     };
     bundle?: {
         enabled: boolean;
+        type?: "namespace" | "module";
     };
     cosmwasm?: TSBuilderInput;
     aggregatedLCD?: {

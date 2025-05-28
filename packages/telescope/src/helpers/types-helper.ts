@@ -14,7 +14,6 @@ import { HttpEndpoint } from "${
 ${options.useInterchainJs ? `
 
 import { DeliverTxResponse, Event, Attribute } from "@interchainjs/types";
-export type { DeliverTxResponse, Event, Attribute };
 
 ` : ''}
 export type ProtoMsg = Omit<Any, "typeUrl"> & { typeUrl: any };
@@ -73,7 +72,7 @@ export type GeneratedType = TelescopeGeneratedCodec;
  * NOTE: The amount field is an Int which implements the custom method
  * signatures required by gogoproto.
  */
-export interface Coin {
+interface Coin {
   denom: string;
   amount: string;
 }
@@ -94,11 +93,11 @@ export interface StdFee {
   payer?: string;
 }
 
+${options.useInterchainJs ? '' : `
 export interface MsgData {
   msgType: string;
   data: Uint8Array;
 }
-${options.useInterchainJs ? '' : `
 export interface Attribute {
   key: string;
   value: string;

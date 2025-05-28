@@ -65,7 +65,7 @@ export type GeneratedType = TelescopeGeneratedCodec;
  * NOTE: The amount field is an Int which implements the custom method
  * signatures required by gogoproto.
  */
-export interface Coin {
+interface Coin {
   denom: string;
   amount: string;
 }
@@ -86,11 +86,11 @@ export interface StdFee {
   payer?: string;
 }
 
+
 export interface MsgData {
   msgType: string;
   data: Uint8Array;
 }
-
 export interface Attribute {
   key: string;
   value: string;

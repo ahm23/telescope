@@ -227,4 +227,10 @@ export interface IProtoStore {
     getTypeUrlMap(ref: ProtoRef): any;
     setEnumValues(pkg: string, name: string, protoSyntex: string, values: number[]): void;
     getDefaultOrExistingSmallestEnumValue(pkg: string, name: string): number;
+    setTypePackageMapping(type: string, pkg: string): void;
+    getTypePackageMapping(type: string): string[];
+    getTypesInMultiplePackages(): string[];
+    setServicePackageMapping(service: string, pkg: string): void;
+    getServicePackageMapping(service: string): string[];
+    getServicesInMultiplePackages(): string[];
 }

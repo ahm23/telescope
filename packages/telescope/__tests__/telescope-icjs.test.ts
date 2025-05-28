@@ -6,8 +6,6 @@ import {
   parseContextsForRegistry,
 } from "../src/bundle";
 import { TelescopeInput } from "../src";
-import { kebab } from "case";
-import { join } from "path";
 import { getTestProtoStore } from "../test-utils";
 import { TelescopeParseContext } from "../src/build";
 

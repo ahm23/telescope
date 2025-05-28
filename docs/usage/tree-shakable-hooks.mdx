@@ -2,12 +2,11 @@
 
 We are planning to **deprecate the `reactQuery` option** in the Telescope options. Instead, we are introducing **tree-shakable hooks** to replace the functionality. This guide explains how to enable and use the new hooks.
 
----
 
 ## Overview
 Tree-shakable hooks are available for both **React** and **Vue**. These hooks are designed to improve modularity and optimize performance by allowing you to import only the functionality you need.
 Here's the video tutorial link: https://youtu.be/3dRm9HEklMo
----
+
 
 ## Enabling Tree-Shakable Hooks
 
@@ -102,25 +101,6 @@ export const useGetBalance = buildUseVueQuery<QueryBalanceRequest, QueryBalanceR
 3. **Framework-Specific**: Provides optimized hooks tailored for React and Vue.
 
 By adopting this approach, you can ensure cleaner, more maintainable, and efficient code.
-
-
-## Use Example of Shared Functions
-
-Shared functions allow you to create API interaction logic that can be used across both React and Vue without duplicating code. Here's an example of how you might use the shared function `createGetBalance`:
-
-```typescript
-import { createGetBalance } from "@interchainjs/cosmos-types/cosmos/bank/v1beta1/query.rpc.func";
-
-({ chainInfo, getCoin, getRpcEndpoint, creditFromFaucet } = useChain('osmosis'));
-const rpcEndpoint = await getRpcEndpoint();
-getBalance = createGetBalance(rpcEndpoint);
-const { balance } = await getBalance({
-  address: directAddress,
-  denom,
-});
-```
-
-In this example, the createGetBalance function is called with an RPC endpoint and is used to fetch the balance for a specific address and denomination.
 
 ## Use Example of Tree-Shakable Hooks
 

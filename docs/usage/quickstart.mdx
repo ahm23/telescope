@@ -1,0 +1,68 @@
+# Quickstart
+
+This guide provides a quick reference for setting up and using Telescope to generate TypeScript packages for Cosmos SDK modules.
+Here is the video for using create-interchain-app boilerplate: 
+https://youtu.be/iQf6p65fbdY
+
+## Installation
+
+Install create-interchain-app:
+
+```sh
+npm install -g create-interchain-app
+```
+
+## Package Generation
+
+### Using create-interchain-app boilerplate
+
+Create a new package using the telescope boilerplate:
+
+```sh
+cia --boilerplate telescope
+```
+
+Navigate to the generated project:
+
+```sh
+cd ./your-project/packages/your-module
+yarn install
+```
+
+## Working with Protos
+
+Download protocol buffer files:
+
+```sh
+yarn download-protos
+```
+
+This will clone repositories into `./git-modules` and generate proto files in `./protos`.
+
+You can modify the configuration in ./scripts/download-protos.ts
+
+## Code Generation
+
+Generate TypeScript code from proto files:
+
+```sh
+yarn codegen
+```
+
+You can modify the configuration in ./scripts/codegen.ts
+
+## Building
+
+Build the package for distribution:
+
+```sh
+yarn build
+```
+
+## Publishing
+
+Use lerna for package management:
+
+```sh
+lerna publish
+``` 

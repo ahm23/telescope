@@ -1,5 +1,6 @@
 import { buildQuery } from "../../../../helper-func-types";
 import { QueryAppVersionRequest, QueryAppVersionResponse } from "./query";
+/* AppVersion queries an IBC Port and determines the appropriate application version to be used */
 export const getAppVersion = buildQuery<QueryAppVersionRequest, QueryAppVersionResponse>({
   encode: QueryAppVersionRequest.encode,
   decode: QueryAppVersionResponse.decode,

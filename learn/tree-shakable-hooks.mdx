@@ -1,0 +1,289 @@
+# Implementing Tree-Shakable Hooks
+
+In this tutorial, you'll learn how to use Telescope's tree-shakable hooks feature for both React and Vue applications. We'll walk through the setup, configuration, and implementation with practical examples.
+
+## What Are Tree-Shakable Hooks?
+
+Tree-shakable hooks are a new feature in Telescope that replaces the older `reactQuery` option. These hooks are more efficient because they:
+
+1. Allow you to import only the hooks you need
+2. Reduce bundle size through tree-shaking
+3. Support both React and Vue frameworks
+4. Make your code more modular and maintainable
+
+## Setting Up Tree-Shakable Hooks
+
+Let's get started by configuring your Telescope project to generate tree-shakable hooks:
+
+### Step 1: Update Your Configuration
+
+Create or update your Telescope configuration file:
+
+```typescript
+// telescope.config.ts
+import { TelescopeOptions } from '@cosmology/types';
+
+const options: TelescopeOptions = {
+  // Existing options...
+  
+  // Enable helper functions and hooks
+  helperFunctions: {
+    enabled: true,
+    hooks: {
+      react: true,  // Enable React hooks
+      vue: true     // Enable Vue hooks (optional)
+    }
+  }
+};
+
+export default options;
+```
+
+### Step 2: Run Telescope
+
+Generate the code with your updated configuration:
+
+```bash
+telescope transpile --config telescope.config.ts
+```
+
+### Step 3: Explore Generated Files
+
+After transpile, you'll find these new files:
+
+```
+output/
+├── cosmos/
+│   ├── react-query/        # React hooks directory
+│   ├── vue-query/          # Vue hooks directory
+│   └── bank/v1beta1/
+│       ├── query.rpc.react.ts  # React hooks
+│       └── query.rpc.vue.ts    # Vue hooks
+```
+
+## Understanding the Generated Files
+
+Let's look at what each type of file contains:
+
+### 1. React Hooks (`query.rpc.react.ts`)
+
+React-specific hooks built on top of the shared functions:
+
+```typescript
+// cosmos/bank/v1beta1/query.rpc.react.ts
+export const useGetBalance = buildUseQuery<QueryBalanceRequest, QueryBalanceResponse>({
+  builderQueryFn: createGetBalance,
+  queryKeyPrefix: "BalanceQuery",
+});
+```
+
+### 2. Vue Hooks (`query.rpc.vue.ts`)
+
+Vue-specific hooks built on top of the shared functions:
+
+```typescript
+// cosmos/bank/v1beta1/query.rpc.vue.ts
+export const useGetBalance = buildUseVueQuery<QueryBalanceRequest, QueryBalanceResponse>({
+  builderQueryFn: createGetBalance,
+  queryKeyPrefix: "BalanceQuery",
+});
+```
+
+## Using Tree-Shakable Hooks
+
+Now let's see how to use these hooks in your application:
+
+### Example: Using React Hooks
+
+In a React component:
+
+```tsx
+import { useGetBalance } from '@interchainjs/react/cosmos/bank/v1beta1/query.rpc.react';
+
+function AccountBalance({ address }) {
+  const { data, isLoading, error } = useGetBalance({
+    request: {
+      address,
+      denom: "uosmo",
+    },
+    clientResolver: "https://rpc.osmosis.zone",
+    options: {
+      enabled: !!address,
+    }
+  });
+  
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+  
+  return <div>Balance: {data?.balance?.amount || '0'} uosmo</div>;
+}
+```
+
+### Example: Using Vue Hooks
+
+In a Vue component:
+
+```vue
+<script setup>
+import { ref, computed } from 'vue';
+import { useGetBalance } from '@interchainjs/vue/cosmos/bank/v1beta1/query.rpc.vue';
+
+const address = ref('osmo1...');
+
+const request = computed(() => ({
+  address: address.value,
+  denom: 'uosmo',
+}));
+
+const {
+  data: balance,
+  isLoading,
+  error
+} = useGetBalance({
+  request,
+  clientResolver: 'https://rpc.osmosis.zone',
+  options: {
+    enabled: !!address.value,
+  }
+});
+</script>
+
+<template>
+  <div v-if="isLoading">Loading...</div>
+  <div v-else-if="error">Error: {{ error.message }}</div>
+  <div v-else>Balance: {{ balance?.amount || '0' }} uosmo</div>
+</template>
+```
+
+## Creating Advanced Hooks
+
+Let's create a more advanced hook for handling balance with formatting:
+
+### For React
+
+```tsx
+// hooks/useFormattedBalance.ts
+import { useGetBalance } from '@interchainjs/react/cosmos/bank/v1beta1/query.rpc.react';
+import BigNumber from 'bignumber.js';
+
+export function useFormattedBalance(address: string, denom: string, exponent: number = 6) {
+  const { data, isLoading, error, refetch } = useGetBalance({
+    request: {
+      address,
+      denom,
+    },
+    clientResolver: 'https://rpc.osmosis.zone',
+    options: {
+      enabled: !!address,
+      select: (data) => {
+        const amount = data.balance?.amount || '0';
+        return new BigNumber(amount).multipliedBy(10 ** -exponent).toString();
+      },
+    }
+  });
+  
+  return {
+    balance: data,
+    isLoading,
+    error,
+    refetch,
+  };
+}
+
+// Usage in component
+function MyComponent() {
+  const { balance } = useFormattedBalance('osmo1...', 'uosmo', 6);
+  return <div>Balance: {balance} OSMO</div>;
+}
+```
+
+### For Vue
+
+```typescript
+// hooks/useFormattedBalance.ts
+import { computed, ref } from 'vue';
+import { useGetBalance } from '@interchainjs/vue/cosmos/bank/v1beta1/query.rpc.vue';
+import BigNumber from 'bignumber.js';
+
+export function useFormattedBalance(address, denom, exponent = 6) {
+  const request = computed(() => ({
+    address: address.value,
+    denom,
+  }));
+  
+  const { data, isLoading, error, refetch } = useGetBalance({
+    request,
+    clientResolver: 'https://rpc.osmosis.zone',
+    options: {
+      enabled: !!address.value,
+      select: (data) => {
+        const amount = data.balance?.amount || '0';
+        return new BigNumber(amount).multipliedBy(10 ** -exponent).toString();
+      },
+    }
+  });
+  
+  return {
+    balance: data,
+    isLoading,
+    error,
+    refetch,
+  };
+}
+```
+
+## Best Practices
+
+When working with tree-shakable hooks:
+
+1. **Import Selectively**: Only import the hooks you need
+2. **Create Custom Hooks**: Wrap the generated hooks with your own business logic
+3. **Handle Loading and Errors**: Always handle loading states and errors
+4. **Use TypeScript**: Leverage TypeScript for type safety
+5. **Memoize Requests**: Use `useMemo` (React) or `computed` (Vue) for request objects
+
+## Migrating from ReactQuery
+
+If you're migrating from the old `reactQuery` option:
+
+1. Update your configuration as shown above
+2. Replace imports from `@generated/client` with specific hook imports
+3. Update hook usage with the new pattern (passing `request` and `clientResolver`)
+4. Add error handling for the new return structure
+
+## Troubleshooting
+
+### Hook Not Found
+
+If you get "module not found" errors:
+
+```bash
+# Check that the files were generated
+ls -la output/cosmos/react-query
+
+# Ensure your import paths are correct
+import { useGetBalance } from '@interchainjs/react/cosmos/bank/v1beta1/query.rpc.react';
+```
+
+### Type Errors
+
+If you get TypeScript errors:
+
+```typescript
+// Make sure you're passing the correct types
+const request: QueryBalanceRequest = {
+  address: "osmo1...",
+  denom: "uosmo",
+};
+```
+
+## Next Steps
+
+Now that you've learned about tree-shakable hooks:
+
+1. Update your Telescope configuration
+2. Explore the generated hook files
+3. Start using the hooks in your application
+4. Create custom hooks for your business logic
+
+Congratulations! You're now using Telescope's tree-shakable hooks to build more efficient blockchain applications. 

@@ -1,29 +1,41 @@
 import { buildQuery } from "../../../helper-func-types";
 import { QueryCurrentPlanRequest, QueryCurrentPlanResponse, QueryAppliedPlanRequest, QueryAppliedPlanResponse, QueryUpgradedConsensusStateRequest, QueryUpgradedConsensusStateResponse, QueryModuleVersionsRequest, QueryModuleVersionsResponse, QueryAuthorityRequest, QueryAuthorityResponse } from "./query";
+/* CurrentPlan queries the current upgrade plan. */
 export const getCurrentPlan = buildQuery<QueryCurrentPlanRequest, QueryCurrentPlanResponse>({
   encode: QueryCurrentPlanRequest.encode,
   decode: QueryCurrentPlanResponse.decode,
   service: "cosmos.upgrade.v1beta1.Query",
   method: "CurrentPlan"
 });
+/* AppliedPlan queries a previously applied upgrade plan by its name. */
 export const getAppliedPlan = buildQuery<QueryAppliedPlanRequest, QueryAppliedPlanResponse>({
   encode: QueryAppliedPlanRequest.encode,
   decode: QueryAppliedPlanResponse.decode,
   service: "cosmos.upgrade.v1beta1.Query",
   method: "AppliedPlan"
 });
+/* UpgradedConsensusState queries the consensus state that will serve
+ as a trusted kernel for the next version of this chain. It will only be
+ stored at the last height of this chain.
+ UpgradedConsensusState RPC not supported with legacy querier
+ This rpc is deprecated now that IBC has its own replacement
+ (https://github.com/cosmos/ibc-go/blob/2c880a22e9f9cc75f62b527ca94aa75ce1106001/proto/ibc/core/client/v1/query.proto#L54) */
 export const getUpgradedConsensusState = buildQuery<QueryUpgradedConsensusStateRequest, QueryUpgradedConsensusStateResponse>({
   encode: QueryUpgradedConsensusStateRequest.encode,
   decode: QueryUpgradedConsensusStateResponse.decode,
   service: "cosmos.upgrade.v1beta1.Query",
   method: "UpgradedConsensusState"
 });
+/* ModuleVersions queries the list of module versions from state.
+
+ Since: cosmos-sdk 0.43 */
 export const getModuleVersions = buildQuery<QueryModuleVersionsRequest, QueryModuleVersionsResponse>({
   encode: QueryModuleVersionsRequest.encode,
   decode: QueryModuleVersionsResponse.decode,
   service: "cosmos.upgrade.v1beta1.Query",
   method: "ModuleVersions"
 });
+/* Returns the account with authority to conduct upgrades */
 export const getAuthority = buildQuery<QueryAuthorityRequest, QueryAuthorityResponse>({
   encode: QueryAuthorityRequest.encode,
   decode: QueryAuthorityResponse.decode,

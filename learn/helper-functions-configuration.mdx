@@ -1,0 +1,571 @@
+# Creating Custom Helper Functions
+
+In this tutorial, we'll explore how to configure Telescope to generate custom helper functions for your blockchain interactions. These helper functions provide a more intuitive and streamlined way to interact with your blockchain's services, simplifying your application code and improving developer experience.
+
+## Understanding Helper Functions
+
+When working with Cosmos SDK blockchains, you often need to interact with various services through RPC or LCD clients. This typically involves creating clients, formatting requests, and handling responses. While Telescope generates comprehensive clients for all your proto definitions, sometimes you want a simpler interface focused on specific use cases.
+
+This is where helper functions come in. They provide:
+
+1. **Simplified interfaces** - Direct functions that abstract away client creation and management
+2. **Intuitive naming** - Custom function names that better reflect their purpose in your application
+3. **React/Vue hooks** - Framework-specific hooks for state management (optional)
+4. **Focused scope** - Generate helpers only for the services you actually use
+
+## Setting Up Your Project
+
+For this tutorial, let's start with a basic Telescope project. If you don't have one set up already, follow these steps:
+
+```bash
+mkdir helper-functions-demo
+cd helper-functions-demo
+npm init -y
+npm install --save-dev @cosmology/telescope
+```
+
+Next, create a basic Telescope configuration file (telescope.config.js):
+
+```javascript
+const { join } = require('path');
+
+module.exports = {
+  protoDirs: [join(__dirname, './proto')],
+  outPath: join(__dirname, './src/generated'),
+  options: {
+    // We'll add our helper function configuration here
+  }
+};
+```
+
+## Basic Helper Function Configuration
+
+Let's start with a basic configuration to generate helper functions for all services:
+
+```javascript
+module.exports = {
+  protoDirs: [join(__dirname, './proto')],
+  outPath: join(__dirname, './src/generated'),
+  options: {
+    helperFunctions: {
+      enabled: true
+    }
+  }
+};
+```
+
+With this minimal configuration, Telescope will generate a `.func.ts` file alongside each proto service file, containing simple helper functions for each method in the service.
+
+For example, if you have a `cosmos.bank.v1beta1.Query` service with a `balance` method, Telescope will generate:
+
+```typescript
+// In cosmos/bank/v1beta1/query.func.ts
+export function getBalance(
+  rpcEndpoint: string,
+  params: QueryBalanceRequest
+): Promise<QueryBalanceResponse> {
+  // Implementation that creates a client and calls the service
+}
+```
+
+Notice that Telescope has automatically prefixed the function with `get` since this is a Query service.
+
+## Customizing Helper Function Names
+
+While the default naming is often sufficient, you might want to customize the function names to better fit your application's naming conventions. Let's update our configuration:
+
+```javascript
+module.exports = {
+  // ...
+  options: {
+    helperFunctions: {
+      enabled: true,
+      nameMappers: {
+        Query: {
+          funcBody: (name) => `fetch${name}` // Instead of "get" prefix
+        },
+        Msg: {
+          funcBody: (name) => `send${name}` // For transaction functions
+        }
+      }
+    }
+  }
+};
+```
+
+Now, the generated functions will be:
+
+```typescript
+// For Query services
+export function fetchBalance(/* ... */) { /* ... */ }
+
+// For Msg services
+export function sendSend(/* ... */) { /* ... */ }
+```
+
+You might notice that `sendSend` doesn't sound great. Let's make our naming more specific:
+
+```javascript
+nameMappers: {
+  Query: {
+    funcBody: (name) => `fetch${name}`
+  },
+  Msg: {
+    // Custom transformer function
+    funcBody: (name) => {
+      if (name.toLowerCase() === 'send') {
+        return 'transferTokens';
+      }
+      return `send${name}`;
+    }
+  }
+}
+```
+
+Now our bank function will be named `transferTokens` instead of the redundant `sendSend`.
+
+## Pattern-specific Naming
+
+You might want different naming conventions for different services. Telescope supports pattern-based naming rules:
+
+```javascript
+nameMappers: {
+  Query: {
+    // Default for all Query services
+    funcBody: (name) => `get${name}`,
+    
+    // Special rule for governance proposals
+    "cosmos.gov.v1beta1.*Proposal*": {
+      funcBody: (name) => `govQuery${name}`
+    }
+  },
+  Msg: {
+    // Default for all Msg services
+    funcBody: "unchanged", // Use original method name
+    
+    // Special rule for staking
+    "cosmos.staking.v1beta1.*": {
+      funcBody: (name) => `stake${name.charAt(0).toUpperCase()}${name.slice(1)}`
+    }
+  }
+}
+```
+
+With this configuration:
+
+- `cosmos.gov.v1beta1.Query.proposals` becomes `govQueryProposals`
+- `cosmos.staking.v1beta1.Msg.delegate` becomes `stakeDelegate`
+- Other Query services use the `get` prefix
+- Other Msg services use their original names
+
+## Generating React Hooks
+
+If you're using React in your project, you can configure Telescope to generate React Query hooks:
+
+```javascript
+module.exports = {
+  // ...
+  options: {
+    helperFunctions: {
+      enabled: true,
+      hooks: {
+        react: true
+      },
+      nameMappers: {
+        Query: {
+          funcBody: (name) => `get${name}`,
+          hookPrefix: "use" // Default, could be customized
+        },
+        Msg: {
+          funcBody: "unchanged",
+          hookPrefix: "useTx" // Custom prefix for transaction hooks
+        }
+      }
+    }
+  }
+};
+```
+
+Now, in addition to the regular helper functions, Telescope will generate React hooks:
+
+```typescript
+// Regular function
+export function getBalance(/* ... */) { /* ... */ }
+
+// React Query hook
+export function useBalance(
+  rpcEndpoint: string,
+  params: QueryBalanceRequest,
+  options?: UseQueryOptions<QueryBalanceResponse>
+): UseQueryResult<QueryBalanceResponse, Error> {
+  return useQuery<QueryBalanceResponse, Error>(
+    ['balance', rpcEndpoint, params],
+    () => getBalance(rpcEndpoint, params),
+    options
+  );
+}
+
+// Transaction hook
+export function useTxSend(
+  rpcEndpoint: string,
+  options?: UseMutationOptions<MsgSendResponse, Error, MsgSendRequest>
+): UseMutationResult<MsgSendResponse, Error, MsgSendRequest> {
+  return useMutation<MsgSendResponse, Error, MsgSendRequest>(
+    (params) => send(rpcEndpoint, params),
+    options
+  );
+}
+```
+
+These hooks integrate seamlessly with React Query, providing automatic caching, refetching, and loading states.
+
+## Generating Vue Composables
+
+If you're a Vue developer, you can generate Vue Query composables instead:
+
+```javascript
+hooks: {
+  vue: true,
+  react: false
+}
+```
+
+This will generate Vue composables using the same naming rules:
+
+```typescript
+// Vue Query composable
+export function useBalance(
+  rpcEndpoint: string,
+  params: QueryBalanceRequest,
+  options?: UseQueryOptions<QueryBalanceResponse>
+): {
+  data: Ref<QueryBalanceResponse | undefined>;
+  isLoading: Ref<boolean>;
+  error: Ref<Error | null>;
+  // ... other Vue Query properties
+} {
+  return useQuery<QueryBalanceResponse, Error>(
+    ['balance', rpcEndpoint, params],
+    () => getBalance(rpcEndpoint, params),
+    options
+  );
+}
+```
+
+## Limiting Generated Helpers
+
+For larger projects, you might want to generate helpers only for specific services to keep your codebase clean. Use the `include` option:
+
+```javascript
+helperFunctions: {
+  enabled: true,
+  include: {
+    // Only generate for Query services (not Msg services)
+    serviceTypes: ["Query"],
+    
+    // Only generate for these specific patterns
+    patterns: [
+      "cosmos.bank.v1beta1.**", // All bank query methods
+      "cosmos.gov.v1beta1.Query.proposal", // Only the proposal query
+      "cosmos.gov.v1beta1.Query.proposals" // And the proposals query
+    ]
+  }
+  // ... other options
+}
+```
+
+## Advanced Pattern Matching
+
+The pattern matching in Telescope is quite flexible, supporting glob-style patterns:
+
+- `**` - Match any number of segments
+- `*` - Match any characters within a segment
+
+For example:
+
+- `cosmos.bank.**` - All bank services and methods
+- `cosmos.*.v1beta1.Query.*Balance*` - Any v1beta1 Query method with "Balance" in its name, across any module
+- `**.delegation` - Any method named "delegation" in any service
+
+## A Complete Example
+
+Let's put everything together in a comprehensive example:
+
+```javascript
+const { join } = require('path');
+
+module.exports = {
+  protoDirs: [join(__dirname, './proto')],
+  outPath: join(__dirname, './src/generated'),
+  options: {
+    helperFunctions: {
+      enabled: true,
+      hooks: {
+        react: true,
+        vue: false
+      },
+      include: {
+        serviceTypes: ["Query", "Msg"],
+        patterns: [
+          "cosmos.bank.v1beta1.**",
+          "cosmos.staking.v1beta1.**",
+          "cosmos.gov.v1beta1.**"
+        ]
+      },
+      nameMappers: {
+        // Global patterns (applied to both Query and Msg)
+        All: {
+          // Special handling for votes
+          "cosmos.gov.v1beta1.*Vote*": {
+            funcBody: (name) => `governance${name}`,
+            hookPrefix: "useGov"
+          }
+        },
+        
+        // Query-specific patterns
+        Query: {
+          // Default for all Query services
+          funcBody: (name) => `get${name}`,
+          hookPrefix: "use",
+          
+          // Bank balance queries
+          "cosmos.bank.v1beta1.*Balance*": {
+            funcBody: (name) => `fetch${name}`,
+            hookPrefix: "useBank"
+          },
+          
+          // Staking queries
+          "cosmos.staking.v1beta1.*": {
+            funcBody: (name) => `staking${name}`,
+            hookPrefix: "useStaking"
+          }
+        },
+        
+        // Msg-specific patterns
+        Msg: {
+          // Default for all Msg services
+          funcBody: "unchanged",
+          hookPrefix: "useTx",
+          
+          // Bank transactions
+          "cosmos.bank.v1beta1.send": {
+            funcBody: () => "transferTokens",
+            hookPrefix: "useBankTx"
+          },
+          
+          // Staking transactions
+          "cosmos.staking.v1beta1.*": {
+            funcBody: (name) => `stake${name.charAt(0).toUpperCase()}${name.slice(1)}`,
+            hookPrefix: "useStakingTx"
+          }
+        }
+      }
+    }
+  }
+};
+```
+
+## Using Generated Helper Functions
+
+Now that we've configured our helper functions, let's see how to use them in our application:
+
+### Basic Helper Functions
+
+```typescript
+import { getBalance } from './generated/cosmos/bank/v1beta1/query.func';
+
+async function displayBalance(address: string) {
+  const balance = await getBalance(
+    'https://rpc.cosmos.network',
+    { address, denom: 'uatom' }
+  );
+  
+  console.log(`Balance: ${parseInt(balance.balance.amount) / 1_000_000} ATOM`);
+}
+```
+
+### React Hooks
+
+```tsx
+import React from 'react';
+import { useBalance } from './generated/cosmos/bank/v1beta1/query.func';
+
+function BalanceDisplay({ address }: { address: string }) {
+  const { data, isLoading, error } = useBalance(
+    'https://rpc.cosmos.network',
+    { address, denom: 'uatom' }
+  );
+  
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+  
+  const atomAmount = parseInt(data?.balance?.amount || '0') / 1_000_000;
+  
+  return (
+    <div>
+      <h2>Account Balance</h2>
+      <p>{atomAmount} ATOM</p>
+    </div>
+  );
+}
+```
+
+### Transaction Hooks
+
+```tsx
+import React from 'react';
+import { useBankTxTransferTokens } from './generated/cosmos/bank/v1beta1/tx.func';
+
+function SendTokensForm() {
+  const [recipient, setRecipient] = React.useState('');
+  const [amount, setAmount] = React.useState('');
+  
+  const mutation = useBankTxTransferTokens('https://rpc.cosmos.network');
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const atomAmount = parseFloat(amount) * 1_000_000; // Convert to uatom
+    
+    await mutation.mutateAsync({
+      fromAddress: 'cosmos1yoursenderaddress',
+      toAddress: recipient,
+      amount: [{ denom: 'uatom', amount: atomAmount.toString() }]
+    });
+  };
+  
+  return (
+    <form onSubmit={handleSubmit}>
+      <h2>Send Tokens</h2>
+      <div>
+        <label>Recipient:</label>
+        <input
+          value={recipient}
+          onChange={(e) => setRecipient(e.target.value)}
+        />
+      </div>
+      <div>
+        <label>Amount (ATOM):</label>
+        <input
+          type="number"
+          value={amount}
+          onChange={(e) => setAmount(e.target.value)}
+        />
+      </div>
+      <button type="submit" disabled={mutation.isLoading}>
+        {mutation.isLoading ? 'Sending...' : 'Send Tokens'}
+      </button>
+      
+      {mutation.isError && (
+        <div>Error: {mutation.error?.message}</div>
+      )}
+      
+      {mutation.isSuccess && (
+        <div>Success! Transaction hash: {mutation.data?.transactionHash}</div>
+      )}
+    </form>
+  );
+}
+```
+
+## Best Practices for Helper Functions
+
+To get the most out of Telescope's helper function generation, follow these best practices:
+
+### 1. Use Consistent Naming Conventions
+
+Establish clear naming conventions for different types of operations:
+
+- **Queries**: Use prefixes like `get`, `fetch`, or `query`
+- **Transactions**: Use action verbs like `send`, `execute`, or `perform`
+- **Hooks**: Use standard prefixes like `use` for React and Vue
+
+### 2. Limit Generated Helpers to What You Need
+
+Only generate helpers for the services you actually use in your application:
+
+```javascript
+include: {
+  patterns: [
+    // Only the modules and methods you actually use
+    "cosmos.bank.v1beta1.Query.balance",
+    "cosmos.bank.v1beta1.Query.allBalances",
+    "cosmos.bank.v1beta1.Msg.send"
+  ]
+}
+```
+
+### 3. Create Domain-Specific Helper Groups
+
+Group related functionality with consistent naming:
+
+```javascript
+nameMappers: {
+  Query: {
+    // Prefixes based on domain
+    "cosmos.bank.**": { funcBody: (name) => `bank${name}` },
+    "cosmos.staking.**": { funcBody: (name) => `staking${name}` },
+    "cosmos.gov.**": { funcBody: (name) => `governance${name}` }
+  }
+}
+```
+
+### 4. Document Your Naming Logic
+
+If you use complex naming transformations, document them for your team:
+
+```javascript
+// Custom transformer function with documentation
+funcBody: (name) => {
+  // For delegation-related methods, use active verb form
+  if (name.includes('delegation')) {
+    return `stake${name.replace('delegation', '')}`;
+  }
+  // For validator methods, use 'validator' prefix
+  if (name.includes('validator')) {
+    return `validator${name.replace('validator', '')}`;
+  }
+  // Default fallback
+  return `get${name}`;
+}
+```
+
+## Troubleshooting
+
+### Helper Functions Not Being Generated
+
+If your helper functions aren't being generated, check:
+
+1. Is `helperFunctions.enabled` set to `true`?
+2. Do your `include.patterns` match the services you expect?
+3. Are your proto files being properly processed by Telescope?
+
+Try running Telescope with debug logging enabled:
+
+```javascript
+options: {
+  debug: {
+    enabled: true,
+    helperFunctionsLog: true
+  },
+  helperFunctions: {
+    // Your config...
+  }
+}
+```
+
+### Incorrect Function Names
+
+If your generated function names don't match your expectations, check:
+
+1. Are your pattern matches correct?
+2. Remember that more specific patterns take precedence
+3. Service-specific patterns (`Query`, `Msg`) override `All` patterns
+
+## Conclusion
+
+Telescope's helper function generation is a powerful feature that can significantly improve your development experience when working with Cosmos SDK blockchains. By providing a simplified interface to your blockchain's services, you can write cleaner, more intuitive code and focus on your application's unique features rather than boilerplate client code.
+
+By carefully configuring your helper functions with meaningful names, targeted scoping, and framework integration, you can create a developer-friendly API tailored to your specific needs.
+
+In the next tutorial, we'll explore other advanced features of Telescope to further enhance your Cosmos SDK development workflow. 

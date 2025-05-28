@@ -11,15 +11,21 @@ import { buildUseMutation } from "../../../react-query";
 import { buildUseVueMutation } from "../../../vue-query";
 import { MsgSubmitProposal, MsgSubmitProposalSDKType, MsgSubmitProposalResponse, MsgSubmitProposalResponseSDKType, MsgVote, MsgVoteSDKType, MsgVoteResponse, MsgVoteResponseSDKType, MsgVoteWeighted, MsgVoteWeightedSDKType, MsgVoteWeightedResponse, MsgVoteWeightedResponseSDKType, MsgDeposit, MsgDepositSDKType, MsgDepositResponse, MsgDepositResponseSDKType } from "./tx";
 import { submitProposal, helperVote, letsVoteWeighted, toDeposit } from "./tx.rpc.func";
+/* SubmitProposal defines a method to create new proposal given a content. */
 export const useSubmitProposal = buildUseMutation<MsgSubmitProposal, Error>({
   builderMutationFn: submitProposal
 });
+/* Vote defines a method to add a vote on a specific proposal. */
 export const useHelperVote = buildUseMutation<MsgVote, Error>({
   builderMutationFn: helperVote
 });
+/* VoteWeighted defines a method to add a weighted vote on a specific proposal.
+
+ Since: cosmos-sdk 0.43 */
 export const useTxLetsVoteWeighted = buildUseMutation<MsgVoteWeighted, Error>({
   builderMutationFn: letsVoteWeighted
 });
+/* Deposit defines a method to add deposit on a specific proposal. */
 export const useToDeposit = buildUseMutation<MsgDeposit, Error>({
   builderMutationFn: toDeposit
 });

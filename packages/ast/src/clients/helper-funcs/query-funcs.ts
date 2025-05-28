@@ -69,7 +69,7 @@ export function createQueryHelperCreator(
         ast.tsTypeReference(ast.identifier(service.responseType)),
     ]);
 
-    return ast.exportNamedDeclaration(
+    const exportDeclaration = ast.exportNamedDeclaration(
         ast.variableDeclaration("const", [
             ast.variableDeclarator(
                 ast.identifier(helperCreatorName),
@@ -77,6 +77,19 @@ export function createQueryHelperCreator(
             ),
         ])
     );
+
+    // Add comments if service has a comment
+    if (service.comment) {
+        exportDeclaration.leadingComments = [{
+            type: 'CommentBlock',
+            value: ` ${service.comment} `,
+            start: null,
+            end: null,
+            loc: null
+        }];
+    }
+
+    return exportDeclaration;
 }
 
 /**
@@ -112,11 +125,25 @@ export function createQueryHooks(
         ast.tsTypeReference(ast.identifier(service.requestType)),
         ast.tsTypeReference(ast.identifier(service.responseType)),
     ]);
-    return ast.exportNamedDeclaration(
+
+    const exportDeclaration = ast.exportNamedDeclaration(
         ast.variableDeclaration("const", [
             ast.variableDeclarator(ast.identifier(hookName), callExpression),
         ])
     );
+
+    // Add comments if service has a comment
+    if (service.comment) {
+        exportDeclaration.leadingComments = [{
+            type: 'CommentBlock',
+            value: ` ${service.comment} `,
+            start: null,
+            end: null,
+            loc: null
+        }];
+    }
+
+    return exportDeclaration;
 }
 
 
@@ -154,9 +181,22 @@ export function createVueQueryHooks(
         ast.tsTypeReference(ast.identifier(service.responseType)),
     ]);
 
-    return ast.exportNamedDeclaration(
+    const exportDeclaration = ast.exportNamedDeclaration(
         ast.variableDeclaration("const", [
             ast.variableDeclarator(ast.identifier(hookName), callExpression),
         ])
     );
+
+    // Add comments if service has a comment
+    if (service.comment) {
+        exportDeclaration.leadingComments = [{
+            type: 'CommentBlock',
+            value: ` ${service.comment} `,
+            start: null,
+            end: null,
+            loc: null
+        }];
+    }
+
+    return exportDeclaration;
 }

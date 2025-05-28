@@ -1,9 +1,12 @@
 import { buildUseMutation } from "../../../react-query";
 import { MsgCreateClawbackVestingAccount, MsgClawback } from "./tx";
 import { createClawbackVestingAccount, clawback } from "./tx.rpc.func";
+/* CreateClawbackVestingAccount creats a vesting account that is subject to
+ clawback and the configuration of vesting and lockup schedules. */
 export const useCreateClawbackVestingAccount = buildUseMutation<MsgCreateClawbackVestingAccount, Error>({
   builderMutationFn: createClawbackVestingAccount
 });
+/* Clawback removes the unvested tokens from a ClawbackVestingAccount. */
 export const useClawback = buildUseMutation<MsgClawback, Error>({
   builderMutationFn: clawback
 });

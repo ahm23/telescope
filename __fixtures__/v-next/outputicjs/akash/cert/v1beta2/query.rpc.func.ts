@@ -1,5 +1,6 @@
 import { buildQuery } from "../../../helper-func-types";
 import { QueryCertificatesRequest, QueryCertificatesResponse } from "./query";
+/* Certificates queries certificates */
 export const getCertificates = buildQuery<QueryCertificatesRequest, QueryCertificatesResponse>({
   encode: QueryCertificatesRequest.encode,
   decode: QueryCertificatesResponse.decode,

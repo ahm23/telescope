@@ -1,19 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`msg funcs works 1`] = `
-"export const send = buildTx<MsgSend>({
+"/* Send defines a method for sending coins from one account to another account. */
+export const send = buildTx<MsgSend>({
   msg: MsgSend
 });"
 `;
 
 exports[`msg funcs works 2`] = `
-"export const useSend = buildUseMutation<MsgSend, Error>({
+"/* Send defines a method for sending coins from one account to another account. */
+export const useSend = buildUseMutation<MsgSend, Error>({
   builderMutationFn: send
 });"
 `;
 
 exports[`query funcs works 1`] = `
-"export const getBalance = buildQuery<QueryBalanceRequest, QueryBalanceResponse>({
+"/* Balance queries the balance of a single coin for a single account. */
+export const getBalance = buildQuery<QueryBalanceRequest, QueryBalanceResponse>({
   encode: QueryBalanceRequest.encode,
   decode: QueryBalanceResponse.decode,
   service: "cosmos.bank.v1beta1.Query",
@@ -22,7 +25,8 @@ exports[`query funcs works 1`] = `
 `;
 
 exports[`query funcs works 2`] = `
-"export const useBalance = buildUseQuery<QueryBalanceRequest, QueryBalanceResponse>({
+"/* Balance queries the balance of a single coin for a single account. */
+export const useBalance = buildUseQuery<QueryBalanceRequest, QueryBalanceResponse>({
   builderQueryFn: getBalance,
   queryKeyPrefix: "BalanceQuery"
 });"

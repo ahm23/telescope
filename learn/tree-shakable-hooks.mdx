@@ -57,7 +57,6 @@ output/
 │   ├── react-query/        # React hooks directory
 │   ├── vue-query/          # Vue hooks directory
 │   └── bank/v1beta1/
-│       ├── query.rpc.func.ts   # Shared functions
 │       ├── query.rpc.react.ts  # React hooks
 │       └── query.rpc.vue.ts    # Vue hooks
 ```
@@ -66,24 +65,7 @@ output/
 
 Let's look at what each type of file contains:
 
-### 1. Shared Functions (`query.rpc.func.ts`)
-
-These are framework-agnostic functions that both React and Vue hooks can use:
-
-```typescript
-// cosmos/bank/v1beta1/query.rpc.func.ts
-export const createGetBalance = (clientResolver?: RpcResolver) =>
-  buildQuery<QueryBalanceRequest, QueryBalanceResponse>({
-    encode: QueryBalanceRequest.encode,
-    decode: QueryBalanceResponse.decode,
-    service: "cosmos.bank.v1beta1.Query",
-    method: "Balance",
-    clientResolver,
-    deps: [QueryBalanceRequest, QueryBalanceResponse],
-  });
-```
-
-### 2. React Hooks (`query.rpc.react.ts`)
+### 1. React Hooks (`query.rpc.react.ts`)
 
 React-specific hooks built on top of the shared functions:
 
@@ -95,7 +77,7 @@ export const useGetBalance = buildUseQuery<QueryBalanceRequest, QueryBalanceResp
 });
 ```
 
-### 3. Vue Hooks (`query.rpc.vue.ts`)
+### 2. Vue Hooks (`query.rpc.vue.ts`)
 
 Vue-specific hooks built on top of the shared functions:
 
@@ -111,32 +93,7 @@ export const useGetBalance = buildUseVueQuery<QueryBalanceRequest, QueryBalanceR
 
 Now let's see how to use these hooks in your application:
 
-### Example 1: Using Shared Functions Directly
-
-This approach is framework-agnostic:
-
-```typescript
-import { createGetBalance } from "@interchainjs/cosmos-types/cosmos/bank/v1beta1/query.rpc.func";
-
-async function getAccountBalance() {
-  // Get chain info and RPC endpoint
-  const { getRpcEndpoint } = useChain('osmosis');
-  const rpcEndpoint = await getRpcEndpoint();
-  
-  // Create the function with the RPC endpoint
-  const getBalance = createGetBalance(rpcEndpoint);
-  
-  // Execute the query
-  const { balance } = await getBalance({
-    address: "osmo1...",
-    denom: "uosmo",
-  });
-  
-  return balance;
-}
-```
-
-### Example 2: Using React Hooks
+### Example: Using React Hooks
 
 In a React component:
 
@@ -162,7 +119,7 @@ function AccountBalance({ address }) {
 }
 ```
 
-### Example 3: Using Vue Hooks
+### Example: Using Vue Hooks
 
 In a Vue component:
 

@@ -290,8 +290,8 @@ export function getHelperFuncName(
       : funcBodyFn;
 
   return {
-    creator: camel(`${camel(funcBodyFn(methodKey))}`),
-    hook: camel(`${hookPrefix}_${camel(funcBodyFn(methodKey))}`),
+    creator: camel(`${camel(funcBodyFn(methodKey, packagePath))}`),
+    hook: camel(`${hookPrefix}_${camel(funcBodyFn(methodKey, packagePath))}`),
   };
 }
 

@@ -212,6 +212,29 @@ Download with a config file:
 telescope download --config ./protod.config.json --out ./git-modules
 ```
 
+protod.config.json example:
+```json
+{
+  "repos": [
+    { "owner": "cosmos", "repo": "cosmos-sdk", "branch": "release/v0.50.x" },
+    { "owner": "cosmos", "repo": "ibc-go" },
+  ],
+  "protoDirMapping": {
+    "gogo/protobuf/master": ".",
+    "googleapis/googleapis/master": ".",
+    "protocolbuffers/protobuf/main": "src"
+  },
+  "outDir": "protos",
+  "ssh": true,
+  "tempRepoDir": "git-modules",
+  "targets": [
+    "cosmos/**/*.proto",
+    "cosmwasm/**/*.proto",
+    "ibc/**/*.proto",
+  ]
+}
+```
+
 Download from a specific repo:
 ```sh
 telescope download --git-repo owner/repository --targets cosmos/auth/v1beta1/auth.proto
@@ -225,7 +248,97 @@ telescope transpile
 
 Use customized telescope option:
 ```sh
-telescope transpile --config your-config.json
+telescope transpile --config telescope-config.json
+```
+
+telescope-config.json exmaple:
+```json
+{
+    "protoDirs": [
+        "./protos/interchainjs"
+    ],
+    "outPath": "./libs/interchain-react/src",
+    "options": {
+        "classesUseArrowFunctions": true,
+        "env": "v-next",
+        "useInterchainJs": true,
+        "useSDKTypes": false,
+        "prototypes": {
+            "enableRegistryLoader": false,
+            "enableMessageComposer": false,
+            "enabled": true,
+            "parser": {
+                "keepCase": false
+            },
+            "methods": {
+                "fromJSON": false,
+                "toJSON": false,
+                "encode": true,
+                "decode": true,
+                "fromPartial": true,
+                "toAmino": true,
+                "fromAmino": true,
+                "fromProto": false,
+                "toProto": false,
+                "fromProtoMsg": false,
+                "toProtoMsg": false,
+                "toAminoMsg": true,
+                "fromAminoMsg": true
+            },
+            "addTypeUrlToDecoders": false,
+            "addTypeUrlToObjects": true,
+            "addAminoTypeToObjects": true,
+            "typingsFormat": {
+                "duration": "duration",
+                "timestamp": "date",
+                "useExact": false,
+                "useDeepPartial": true,
+                "num64": "bigint",
+                "customTypes": {
+                    "useCosmosSDKDec": true,
+                    "useEnhancedDecimal": false
+                },
+                "useTelescopeGeneratedType": true,
+                "autoFixUndefinedEnumDefault": true
+            }
+        },
+        "bundle": {
+            "enabled": false
+        },
+        "stargateClients": {
+            "enabled": false
+        },
+        "lcdClients": {
+            "enabled": false
+        },
+        "rpcClients": {
+            "enabled": false
+        },
+        "helperFunctions": {
+            "enabled": true,
+            "useGlobalDecoderRegistry": true,
+            "hooks": {
+              "react": true,
+              "vue": false
+            }
+        },
+        "interfaces": {
+            "enabled": true,
+            "useGlobalDecoderRegistry": true,
+            "registerAllDecodersToGlobal": false,
+            "useUnionTypes": true
+        },
+        "aminoEncoding": {
+            "enabled": true,
+            "useLegacyInlineEncoding": false,
+            "disableMsgTypes": false,
+            "useProtoOptionality": true,
+            "customTypes": {
+              "useCosmosSDKDec": true
+            }
+        }
+    }
+}
 ```
 
 ### CIA

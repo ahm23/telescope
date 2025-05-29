@@ -259,7 +259,7 @@ const options: TelescopeOptions = {
         // this rule will override VoteWeighted method matched in All
         // constructLetsVoteWeighted and useTxLetsVoteWeighted will be created
         "cosmos.gov.v1beta1.*VoteWeighted*": {
-          funcBody: (name: string) => {
+          funcBody: (name: string, pkg: string) => {
             return `lets${name}`;
           },
           hookPrefix: "useTx",
@@ -267,7 +267,7 @@ const options: TelescopeOptions = {
         // this rule will override Deposit method matched in All
         // createToDeposit and useToDeposit will be created
         "cosmos.gov.v1beta1.*Deposit*": {
-          funcBody: (name: string) => {
+          funcBody: (name: string, pkg: string) => {
             return `to${name}`;
           },
         },

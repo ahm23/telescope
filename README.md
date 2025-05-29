@@ -255,9 +255,9 @@ telescope-config.json exmaple:
 ```json
 {
     "protoDirs": [
-        "./protos/interchainjs"
+        "./protos/"
     ],
-    "outPath": "./libs/interchain-react/src",
+    "outPath": "./codegen/",
     "options": {
         "classesUseArrowFunctions": true,
         "env": "v-next",

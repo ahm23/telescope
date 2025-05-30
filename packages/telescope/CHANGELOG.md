@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.16](https://github.com/hyperweb-io/telescope/compare/@cosmology/telescope@1.12.15...@cosmology/telescope@1.12.16) (2025-05-30)
+
+### Bug Fixes
+
+- export DeliverTxResponse ([b2b7761](https://github.com/hyperweb-io/telescope/commit/b2b77613c2ca61653f7319700c5f0d947f76bb97))
+
 ## [1.12.15](https://github.com/hyperweb-io/telescope/compare/@cosmology/telescope@1.12.14...@cosmology/telescope@1.12.15) (2025-05-30)
 
 ### Bug Fixes

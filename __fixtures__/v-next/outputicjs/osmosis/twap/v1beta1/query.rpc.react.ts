@@ -1,8 +1,8 @@
 import { buildUseQuery } from "../../../react-query";
 import { ParamsRequest, ParamsResponse, ArithmeticTwapRequest, ArithmeticTwapResponse, ArithmeticTwapToNowRequest, ArithmeticTwapToNowResponse } from "./query";
-import { getParams, getArithmeticTwap, getArithmeticTwapToNow } from "./query.rpc.func";
-export const useGetParams = buildUseQuery<ParamsRequest, ParamsResponse>({
-  builderQueryFn: getParams,
+import { getOsmosisTwapV1beta1Params, getArithmeticTwap, getArithmeticTwapToNow } from "./query.rpc.func";
+export const useGetOsmosisTwapV1beta1Params = buildUseQuery<ParamsRequest, ParamsResponse>({
+  builderQueryFn: getOsmosisTwapV1beta1Params,
   queryKeyPrefix: "ParamsQuery"
 });
 export const useGetArithmeticTwap = buildUseQuery<ArithmeticTwapRequest, ArithmeticTwapResponse>({

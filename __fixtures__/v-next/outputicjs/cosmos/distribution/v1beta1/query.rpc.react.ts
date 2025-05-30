@@ -1,9 +1,9 @@
 import { buildUseQuery } from "../../../react-query";
 import { QueryParamsRequest, QueryParamsResponse, QueryValidatorOutstandingRewardsRequest, QueryValidatorOutstandingRewardsResponse, QueryValidatorCommissionRequest, QueryValidatorCommissionResponse, QueryValidatorSlashesRequest, QueryValidatorSlashesResponse, QueryDelegationRewardsRequest, QueryDelegationRewardsResponse, QueryDelegationTotalRewardsRequest, QueryDelegationTotalRewardsResponse, QueryDelegatorValidatorsRequest, QueryDelegatorValidatorsResponse, QueryDelegatorWithdrawAddressRequest, QueryDelegatorWithdrawAddressResponse, QueryCommunityPoolRequest, QueryCommunityPoolResponse } from "./query";
-import { getParams, getValidatorOutstandingRewards, getValidatorCommission, getValidatorSlashes, getDelegationRewards, getDelegationTotalRewards, getDelegatorValidators, getDelegatorWithdrawAddress, getCommunityPool } from "./query.rpc.func";
+import { getCosmosDistributionV1beta1Params, getValidatorOutstandingRewards, getValidatorCommission, getValidatorSlashes, getDelegationRewards, getDelegationTotalRewards, getDelegatorValidators, getDelegatorWithdrawAddress, getCommunityPool } from "./query.rpc.func";
 /* Params queries params of the distribution module. */
-export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
-  builderQueryFn: getParams,
+export const useGetCosmosDistributionV1beta1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
+  builderQueryFn: getCosmosDistributionV1beta1Params,
   queryKeyPrefix: "ParamsQuery"
 });
 /* ValidatorOutstandingRewards queries rewards of a validator address. */

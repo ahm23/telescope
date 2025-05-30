@@ -1,6 +1,6 @@
 import { buildUseQuery } from "../../react-query";
 import { ModuleBalanceRequest, ModuleBalanceResponse, ModuleLockedAmountRequest, ModuleLockedAmountResponse, AccountUnlockableCoinsRequest, AccountUnlockableCoinsResponse, AccountUnlockingCoinsRequest, AccountUnlockingCoinsResponse, AccountLockedCoinsRequest, AccountLockedCoinsResponse, AccountLockedPastTimeRequest, AccountLockedPastTimeResponse, AccountLockedPastTimeNotUnlockingOnlyRequest, AccountLockedPastTimeNotUnlockingOnlyResponse, AccountUnlockedBeforeTimeRequest, AccountUnlockedBeforeTimeResponse, AccountLockedPastTimeDenomRequest, AccountLockedPastTimeDenomResponse, LockedDenomRequest, LockedDenomResponse, LockedRequest, LockedResponse, SyntheticLockupsByLockupIDRequest, SyntheticLockupsByLockupIDResponse, AccountLockedLongerDurationRequest, AccountLockedLongerDurationResponse, AccountLockedDurationRequest, AccountLockedDurationResponse, AccountLockedLongerDurationNotUnlockingOnlyRequest, AccountLockedLongerDurationNotUnlockingOnlyResponse, AccountLockedLongerDurationDenomRequest, AccountLockedLongerDurationDenomResponse, QueryParamsRequest, QueryParamsResponse } from "./query";
-import { getModuleBalance, getModuleLockedAmount, getAccountUnlockableCoins, getAccountUnlockingCoins, getAccountLockedCoins, getAccountLockedPastTime, getAccountLockedPastTimeNotUnlockingOnly, getAccountUnlockedBeforeTime, getAccountLockedPastTimeDenom, getLockedDenom, getLockedByID, getSyntheticLockupsByLockupID, getAccountLockedLongerDuration, getAccountLockedDuration, getAccountLockedLongerDurationNotUnlockingOnly, getAccountLockedLongerDurationDenom, getParams } from "./query.rpc.func";
+import { getModuleBalance, getModuleLockedAmount, getAccountUnlockableCoins, getAccountUnlockingCoins, getAccountLockedCoins, getAccountLockedPastTime, getAccountLockedPastTimeNotUnlockingOnly, getAccountUnlockedBeforeTime, getAccountLockedPastTimeDenom, getLockedDenom, getLockedByID, getSyntheticLockupsByLockupID, getAccountLockedLongerDuration, getAccountLockedDuration, getAccountLockedLongerDurationNotUnlockingOnly, getAccountLockedLongerDurationDenom, getOsmosisLockupParams } from "./query.rpc.func";
 /* Return full balance of the module */
 export const useGetModuleBalance = buildUseQuery<ModuleBalanceRequest, ModuleBalanceResponse>({
   builderQueryFn: getModuleBalance,
@@ -84,7 +84,7 @@ export const useGetAccountLockedLongerDurationDenom = buildUseQuery<AccountLocke
   queryKeyPrefix: "AccountLockedLongerDurationDenomQuery"
 });
 /* Params returns lockup params. */
-export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
-  builderQueryFn: getParams,
+export const useGetOsmosisLockupParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
+  builderQueryFn: getOsmosisLockupParams,
   queryKeyPrefix: "ParamsQuery"
 });

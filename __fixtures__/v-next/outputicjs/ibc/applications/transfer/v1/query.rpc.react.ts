@@ -1,6 +1,6 @@
 import { buildUseQuery } from "../../../../react-query";
 import { QueryDenomTraceRequest, QueryDenomTraceResponse, QueryDenomTracesRequest, QueryDenomTracesResponse, QueryParamsRequest, QueryParamsResponse } from "./query";
-import { getDenomTrace, getDenomTraces, getParams } from "./query.rpc.func";
+import { getDenomTrace, getDenomTraces, getIbcApplicationsTransferV1Params } from "./query.rpc.func";
 /* DenomTrace queries a denomination trace information. */
 export const useGetDenomTrace = buildUseQuery<QueryDenomTraceRequest, QueryDenomTraceResponse>({
   builderQueryFn: getDenomTrace,
@@ -12,7 +12,7 @@ export const useGetDenomTraces = buildUseQuery<QueryDenomTracesRequest, QueryDen
   queryKeyPrefix: "DenomTracesQuery"
 });
 /* Params queries all parameters of the ibc-transfer module. */
-export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
-  builderQueryFn: getParams,
+export const useGetIbcApplicationsTransferV1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
+  builderQueryFn: getIbcApplicationsTransferV1Params,
   queryKeyPrefix: "ParamsQuery"
 });

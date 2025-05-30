@@ -1,7 +1,7 @@
 import { buildQuery } from "../../../helper-func-types";
 import { QueryParamsRequest, QueryParamsResponse, QueryInflationRequest, QueryInflationResponse, QueryAnnualProvisionsRequest, QueryAnnualProvisionsResponse } from "./query";
 /* Params returns the total set of minting parameters. */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getCosmosMintV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "cosmos.mint.v1beta1.Query",

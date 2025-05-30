@@ -1,7 +1,7 @@
 import { buildQuery } from "../../../helper-func-types";
 import { QueryParamsRequest, QueryParamsResponse, QueryValidatorOutstandingRewardsRequest, QueryValidatorOutstandingRewardsResponse, QueryValidatorCommissionRequest, QueryValidatorCommissionResponse, QueryValidatorSlashesRequest, QueryValidatorSlashesResponse, QueryDelegationRewardsRequest, QueryDelegationRewardsResponse, QueryDelegationTotalRewardsRequest, QueryDelegationTotalRewardsResponse, QueryDelegatorValidatorsRequest, QueryDelegatorValidatorsResponse, QueryDelegatorWithdrawAddressRequest, QueryDelegatorWithdrawAddressResponse, QueryCommunityPoolRequest, QueryCommunityPoolResponse } from "./query";
 /* Params queries params of the distribution module. */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getCosmosDistributionV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "cosmos.distribution.v1beta1.Query",

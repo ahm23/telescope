@@ -131,7 +131,7 @@ If some required options are missing, it will prompt to ask for the info.
 
 For detailed cli `generate` commands, please check our docs and learn directories.
 
-### Download protos 
+### Download protos
 
 The old ` telescope install ` command has been deprecated
 
@@ -1294,18 +1294,24 @@ const options: TelescopeOptions = {
     nameMappers: {
       All: {
         "cosmos.gov.v1beta1.*Vote*": {
-          funcBody: (name) => `helper${name}`,
+          funcBody: (ctx: AliasNameMappersContext) => {
+            return `helper${ctx.name}`;
+          },
           hookPrefix: "use",
         },
       },
       Query: {
         "cosmos.gov.v1beta1.*Deposits*": {
-          funcBody: (name) => `goOver${name}`,
+          funcBody: (ctx: AliasNameMappersContext) => {
+            return `goOver${ctx.name}`;
+          },
         },
       },
       Msg: {
         "cosmos.gov.v1beta1.*VoteWeighted*": {
-          funcBody: (name) => `lets${name}`,
+          funcBody: (ctx: AliasNameMappersContext) => {
+            return `lets${ctx.name}`;
+          },
           hookPrefix: "useTx",
         },
       },

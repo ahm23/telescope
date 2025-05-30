@@ -1,6 +1,6 @@
 import { buildUseQuery } from "../../../react-query";
 import { QueryBalanceRequest, QueryBalanceResponse, QueryAllBalancesRequest, QueryAllBalancesResponse, QuerySpendableBalancesRequest, QuerySpendableBalancesResponse, QueryTotalSupplyRequest, QueryTotalSupplyResponse, QuerySupplyOfRequest, QuerySupplyOfResponse, QueryParamsRequest, QueryParamsResponse, QueryDenomMetadataRequest, QueryDenomMetadataResponse, QueryDenomsMetadataRequest, QueryDenomsMetadataResponse, QueryDenomOwnersRequest, QueryDenomOwnersResponse } from "./query";
-import { getBalance, getAllBalances, getSpendableBalances, getTotalSupply, getSupplyOf, getParams, getDenomMetadata, getDenomsMetadata, getDenomOwners } from "./query.rpc.func";
+import { getBalance, getAllBalances, getSpendableBalances, getTotalSupply, getSupplyOf, getCosmosBankV1beta1Params, getDenomMetadata, getDenomsMetadata, getDenomOwners } from "./query.rpc.func";
 /* Balance queries the balance of a single coin for a single account. */
 export const useGetBalance = buildUseQuery<QueryBalanceRequest, QueryBalanceResponse>({
   builderQueryFn: getBalance,
@@ -28,8 +28,8 @@ export const useGetSupplyOf = buildUseQuery<QuerySupplyOfRequest, QuerySupplyOfR
   queryKeyPrefix: "SupplyOfQuery"
 });
 /* Params queries the parameters of x/bank module. */
-export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
-  builderQueryFn: getParams,
+export const useGetCosmosBankV1beta1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
+  builderQueryFn: getCosmosBankV1beta1Params,
   queryKeyPrefix: "ParamsQuery"
 });
 /* DenomsMetadata queries the client metadata of a given coin denomination. */

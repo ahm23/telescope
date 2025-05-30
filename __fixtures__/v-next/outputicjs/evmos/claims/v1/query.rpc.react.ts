@@ -1,14 +1,14 @@
 import { buildUseQuery } from "../../../react-query";
 import { QueryTotalUnclaimedRequest, QueryTotalUnclaimedResponse, QueryParamsRequest, QueryParamsResponse, QueryClaimsRecordsRequest, QueryClaimsRecordsResponse, QueryClaimsRecordRequest, QueryClaimsRecordResponse } from "./query";
-import { getTotalUnclaimed, getParams, getClaimsRecords, getClaimsRecord } from "./query.rpc.func";
+import { getTotalUnclaimed, getEvmosClaimsV1Params, getClaimsRecords, getClaimsRecord } from "./query.rpc.func";
 /* TotalUnclaimed queries the total unclaimed tokens from the airdrop */
 export const useGetTotalUnclaimed = buildUseQuery<QueryTotalUnclaimedRequest, QueryTotalUnclaimedResponse>({
   builderQueryFn: getTotalUnclaimed,
   queryKeyPrefix: "TotalUnclaimedQuery"
 });
 /* Params returns the claims module parameters */
-export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
-  builderQueryFn: getParams,
+export const useGetEvmosClaimsV1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
+  builderQueryFn: getEvmosClaimsV1Params,
   queryKeyPrefix: "ParamsQuery"
 });
 /* ClaimsRecords returns all claims records */

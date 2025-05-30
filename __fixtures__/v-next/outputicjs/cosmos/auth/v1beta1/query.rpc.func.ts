@@ -17,7 +17,7 @@ export const getAccount = buildQuery<QueryAccountRequest, QueryAccountResponse>(
   method: "Account"
 });
 /* Params queries all parameters. */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getCosmosAuthV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "cosmos.auth.v1beta1.Query",

@@ -1,7 +1,7 @@
 import { buildQuery } from "../../../helper-func-types";
 import { QueryParamsRequest, QueryParamsResponse, QueryEpochProvisionsRequest, QueryEpochProvisionsResponse } from "./query";
 /* Params returns the total set of minting parameters. */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getOsmosisMintV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "osmosis.mint.v1beta1.Query",

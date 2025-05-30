@@ -6,7 +6,7 @@ export const getModuleAccountBalance = buildQuery<QueryModuleAccountBalanceReque
   service: "osmosis.claim.v1beta1.Query",
   method: "ModuleAccountBalance"
 });
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getOsmosisClaimV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "osmosis.claim.v1beta1.Query",

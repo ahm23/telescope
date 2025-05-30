@@ -37,7 +37,7 @@ export const getInflationRate = buildQuery<QueryInflationRateRequest, QueryInfla
   method: "InflationRate"
 });
 /* Params retrieves the total set of minting parameters. */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getEvmosInflationV1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "evmos.inflation.v1.Query",

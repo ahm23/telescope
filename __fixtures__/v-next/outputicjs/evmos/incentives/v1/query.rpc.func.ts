@@ -44,7 +44,7 @@ export const getAllocationMeter = buildQuery<QueryAllocationMeterRequest, QueryA
   method: "AllocationMeter"
 });
 /* Params retrieves the incentives module params */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getEvmosIncentivesV1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "evmos.incentives.v1.Query",

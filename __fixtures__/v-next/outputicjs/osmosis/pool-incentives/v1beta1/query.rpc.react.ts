@@ -1,6 +1,6 @@
 import { buildUseQuery } from "../../../react-query";
 import { QueryGaugeIdsRequest, QueryGaugeIdsResponse, QueryDistrInfoRequest, QueryDistrInfoResponse, QueryParamsRequest, QueryParamsResponse, QueryLockableDurationsRequest, QueryLockableDurationsResponse, QueryIncentivizedPoolsRequest, QueryIncentivizedPoolsResponse, QueryExternalIncentiveGaugesRequest, QueryExternalIncentiveGaugesResponse } from "./query";
-import { getGaugeIds, getDistrInfo, getParams, getLockableDurations, getIncentivizedPools, getExternalIncentiveGauges } from "./query.rpc.func";
+import { getGaugeIds, getDistrInfo, getOsmosisPoolincentivesV1beta1Params, getLockableDurations, getIncentivizedPools, getExternalIncentiveGauges } from "./query.rpc.func";
 /* GaugeIds takes the pool id and returns the matching gauge ids and durations */
 export const useGetGaugeIds = buildUseQuery<QueryGaugeIdsRequest, QueryGaugeIdsResponse>({
   builderQueryFn: getGaugeIds,
@@ -12,8 +12,8 @@ export const useGetDistrInfo = buildUseQuery<QueryDistrInfoRequest, QueryDistrIn
   queryKeyPrefix: "DistrInfoQuery"
 });
 /* Params returns pool incentives params. */
-export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
-  builderQueryFn: getParams,
+export const useGetOsmosisPoolincentivesV1beta1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
+  builderQueryFn: getOsmosisPoolincentivesV1beta1Params,
   queryKeyPrefix: "ParamsQuery"
 });
 /* LockableDurations returns lock durations for pools. */

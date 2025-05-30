@@ -115,7 +115,7 @@ export const getAccountLockedLongerDurationDenom = buildQuery<AccountLockedLonge
   method: "AccountLockedLongerDurationDenom"
 });
 /* Params returns lockup params. */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getOsmosisLockupParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "osmosis.lockup.Query",

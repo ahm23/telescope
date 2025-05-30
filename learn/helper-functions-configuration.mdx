@@ -27,14 +27,14 @@ npm install --save-dev @cosmology/telescope
 Next, create a basic Telescope configuration file (telescope.config.js):
 
 ```javascript
-const { join } = require('path');
+const { join } = require("path");
 
 module.exports = {
-  protoDirs: [join(__dirname, './proto')],
-  outPath: join(__dirname, './src/generated'),
+  protoDirs: [join(__dirname, "./proto")],
+  outPath: join(__dirname, "./src/generated"),
   options: {
     // We'll add our helper function configuration here
-  }
+  },
 };
 ```
 
@@ -44,13 +44,13 @@ Let's start with a basic configuration to generate helper functions for all serv
 
 ```javascript
 module.exports = {
-  protoDirs: [join(__dirname, './proto')],
-  outPath: join(__dirname, './src/generated'),
+  protoDirs: [join(__dirname, "./proto")],
+  outPath: join(__dirname, "./src/generated"),
   options: {
     helperFunctions: {
-      enabled: true
-    }
-  }
+      enabled: true,
+    },
+  },
 };
 ```
 
@@ -82,14 +82,18 @@ module.exports = {
       enabled: true,
       nameMappers: {
         Query: {
-          funcBody: (name) => `fetch${name}` // Instead of "get" prefix
+          funcBody: (ctx: AliasNameMappersContext) => {
+            return `fetch${ctx.name}`;
+          },
         },
         Msg: {
-          funcBody: (name) => `send${name}` // For transaction functions
-        }
-      }
-    }
-  }
+          funcBody: (ctx: AliasNameMappersContext) => {
+            return `send${ctx.name}`;
+          },
+        },
+      },
+    },
+  },
 };
 ```
 
@@ -97,10 +101,14 @@ Now, the generated functions will be:
 
 ```typescript
 // For Query services
-export function fetchBalance(/* ... */) { /* ... */ }
+export function fetchBalance(/* ... */) {
+  /* ... */
+}
 
 // For Msg services
-export function sendSend(/* ... */) { /* ... */ }
+export function sendSend(/* ... */) {
+  /* ... */
+}
 ```
 
 You might notice that `sendSend` doesn't sound great. Let's make our naming more specific:
@@ -108,15 +116,17 @@ You might notice that `sendSend` doesn't sound great. Let's make our naming more
 ```javascript
 nameMappers: {
   Query: {
-    funcBody: (name) => `fetch${name}`
+    funcBody: (ctx: AliasNameMappersContext) => {
+      return `fetch${ctx.name}`;
+    }
   },
   Msg: {
     // Custom transformer function
-    funcBody: (name) => {
-      if (name.toLowerCase() === 'send') {
+    funcBody: (ctx: AliasNameMappersContext) => {
+      if (ctx.name.toLowerCase() === 'send') {
         return 'transferTokens';
       }
-      return `send${name}`;
+      return `send${ctx.name}`;
     }
   }
 }
@@ -132,20 +142,26 @@ You might want different naming conventions for different services. Telescope su
 nameMappers: {
   Query: {
     // Default for all Query services
-    funcBody: (name) => `get${name}`,
-    
+    funcBody: (ctx: AliasNameMappersContext) => {
+      return `get${ctx.name}`;
+    },
+
     // Special rule for governance proposals
     "cosmos.gov.v1beta1.*Proposal*": {
-      funcBody: (name) => `govQuery${name}`
+      funcBody: (ctx: AliasNameMappersContext) => {
+        return `govQuery${ctx.name}`;
+      }
     }
   },
   Msg: {
     // Default for all Msg services
     funcBody: "unchanged", // Use original method name
-    
+
     // Special rule for staking
     "cosmos.staking.v1beta1.*": {
-      funcBody: (name) => `stake${name.charAt(0).toUpperCase()}${name.slice(1)}`
+      funcBody: (ctx: AliasNameMappersContext) => {
+        return `stake${ctx.name.charAt(0).toUpperCase()}${ctx.name.slice(1)}`;
+      }
     }
   }
 }
@@ -169,20 +185,22 @@ module.exports = {
     helperFunctions: {
       enabled: true,
       hooks: {
-        react: true
+        react: true,
       },
       nameMappers: {
         Query: {
-          funcBody: (name) => `get${name}`,
-          hookPrefix: "use" // Default, could be customized
+          funcBody: (ctx: AliasNameMappersContext) => {
+            return `get${ctx.name}`;
+          },
+          hookPrefix: "use", // Default, could be customized
         },
         Msg: {
           funcBody: "unchanged",
-          hookPrefix: "useTx" // Custom prefix for transaction hooks
-        }
-      }
-    }
-  }
+          hookPrefix: "useTx", // Custom prefix for transaction hooks
+        },
+      },
+    },
+  },
 };
 ```
 
@@ -190,7 +208,9 @@ Now, in addition to the regular helper functions, Telescope will generate React 
 
 ```typescript
 // Regular function
-export function getBalance(/* ... */) { /* ... */ }
+export function getBalance(/* ... */) {
+  /* ... */
+}
 
 // React Query hook
 export function useBalance(
@@ -199,7 +219,7 @@ export function useBalance(
   options?: UseQueryOptions<QueryBalanceResponse>
 ): UseQueryResult<QueryBalanceResponse, Error> {
   return useQuery<QueryBalanceResponse, Error>(
-    ['balance', rpcEndpoint, params],
+    ["balance", rpcEndpoint, params],
     () => getBalance(rpcEndpoint, params),
     options
   );
@@ -245,7 +265,7 @@ export function useBalance(
   // ... other Vue Query properties
 } {
   return useQuery<QueryBalanceResponse, Error>(
-    ['balance', rpcEndpoint, params],
+    ["balance", rpcEndpoint, params],
     () => getBalance(rpcEndpoint, params),
     options
   );
@@ -262,7 +282,7 @@ helperFunctions: {
   include: {
     // Only generate for Query services (not Msg services)
     serviceTypes: ["Query"],
-    
+
     // Only generate for these specific patterns
     patterns: [
       "cosmos.bank.v1beta1.**", // All bank query methods
@@ -292,76 +312,88 @@ For example:
 Let's put everything together in a comprehensive example:
 
 ```javascript
-const { join } = require('path');
+const { join } = require("path");
 
 module.exports = {
-  protoDirs: [join(__dirname, './proto')],
-  outPath: join(__dirname, './src/generated'),
+  protoDirs: [join(__dirname, "./proto")],
+  outPath: join(__dirname, "./src/generated"),
   options: {
     helperFunctions: {
       enabled: true,
       hooks: {
         react: true,
-        vue: false
+        vue: false,
       },
       include: {
         serviceTypes: ["Query", "Msg"],
         patterns: [
           "cosmos.bank.v1beta1.**",
           "cosmos.staking.v1beta1.**",
-          "cosmos.gov.v1beta1.**"
-        ]
+          "cosmos.gov.v1beta1.**",
+        ],
       },
       nameMappers: {
         // Global patterns (applied to both Query and Msg)
         All: {
           // Special handling for votes
           "cosmos.gov.v1beta1.*Vote*": {
-            funcBody: (name) => `governance${name}`,
-            hookPrefix: "useGov"
-          }
+            funcBody: (ctx: AliasNameMappersContext) => {
+              return `governance${ctx.name}`;
+            },
+            hookPrefix: "useGov",
+          },
         },
-        
+
         // Query-specific patterns
         Query: {
           // Default for all Query services
-          funcBody: (name) => `get${name}`,
+          funcBody: (ctx: AliasNameMappersContext) => {
+            return `get${ctx.name}`;
+          },
           hookPrefix: "use",
-          
+
           // Bank balance queries
           "cosmos.bank.v1beta1.*Balance*": {
-            funcBody: (name) => `fetch${name}`,
-            hookPrefix: "useBank"
+            funcBody: (ctx: AliasNameMappersContext) => {
+              return `fetch${ctx.name}`;
+            },
+            hookPrefix: "useBank",
           },
-          
+
           // Staking queries
           "cosmos.staking.v1beta1.*": {
-            funcBody: (name) => `staking${name}`,
-            hookPrefix: "useStaking"
-          }
+            funcBody: (ctx: AliasNameMappersContext) => {
+              return `staking${ctx.name}`;
+            },
+            hookPrefix: "useStaking",
+          },
         },
-        
+
         // Msg-specific patterns
         Msg: {
           // Default for all Msg services
           funcBody: "unchanged",
           hookPrefix: "useTx",
-          
+
           // Bank transactions
           "cosmos.bank.v1beta1.send": {
             funcBody: () => "transferTokens",
-            hookPrefix: "useBankTx"
+            hookPrefix: "useBankTx",
           },
-          
+
           // Staking transactions
           "cosmos.staking.v1beta1.*": {
-            funcBody: (name) => `stake${name.charAt(0).toUpperCase()}${name.slice(1)}`,
-            hookPrefix: "useStakingTx"
-          }
-        }
-      }
-    }
-  }
+            funcBody: (ctx: AliasNameMappersContext) => {
+              return `stake${ctx.name.charAt(0).toUpperCase()}${ctx.name.slice(
+                1
+              )}`;
+            },
+            hookPrefix: "useStakingTx",
+          },
+        },
+      },
+    },
+  },
 };
 ```
 
@@ -372,14 +404,14 @@ Now that we've configured our helper functions, let's see how to use them in our
 ### Basic Helper Functions
 
 ```typescript
-import { getBalance } from './generated/cosmos/bank/v1beta1/query.func';
+import { getBalance } from "./generated/cosmos/bank/v1beta1/query.func";
 
 async function displayBalance(address: string) {
-  const balance = await getBalance(
-    'https://rpc.cosmos.network',
-    { address, denom: 'uatom' }
-  );
-  
+  const balance = await getBalance("https://rpc.cosmos.network", {
+    address,
+    denom: "uatom",
+  });
+
   console.log(`Balance: ${parseInt(balance.balance.amount) / 1_000_000} ATOM`);
 }
 ```
@@ -387,20 +419,20 @@ async function displayBalance(address: string) {
 ### React Hooks
 
 ```tsx
-import React from 'react';
-import { useBalance } from './generated/cosmos/bank/v1beta1/query.func';
+import React from "react";
+import { useBalance } from "./generated/cosmos/bank/v1beta1/query.func";
 
 function BalanceDisplay({ address }: { address: string }) {
-  const { data, isLoading, error } = useBalance(
-    'https://rpc.cosmos.network',
-    { address, denom: 'uatom' }
-  );
-  
+  const { data, isLoading, error } = useBalance("https://rpc.cosmos.network", {
+    address,
+    denom: "uatom",
+  });
+
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
-  
-  const atomAmount = parseInt(data?.balance?.amount || '0') / 1_000_000;
-  
+
+  const atomAmount = parseInt(data?.balance?.amount || "0") / 1_000_000;
+
   return (
     <div>
       <h2>Account Balance</h2>
@@ -413,27 +445,27 @@ function BalanceDisplay({ address }: { address: string }) {
 ### Transaction Hooks
 
 ```tsx
-import React from 'react';
-import { useBankTxTransferTokens } from './generated/cosmos/bank/v1beta1/tx.func';
+import React from "react";
+import { useBankTxTransferTokens } from "./generated/cosmos/bank/v1beta1/tx.func";
 
 function SendTokensForm() {
-  const [recipient, setRecipient] = React.useState('');
-  const [amount, setAmount] = React.useState('');
-  
-  const mutation = useBankTxTransferTokens('https://rpc.cosmos.network');
-  
+  const [recipient, setRecipient] = React.useState("");
+  const [amount, setAmount] = React.useState("");
+
+  const mutation = useBankTxTransferTokens("https://rpc.cosmos.network");
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const atomAmount = parseFloat(amount) * 1_000_000; // Convert to uatom
-    
+
     await mutation.mutateAsync({
-      fromAddress: 'cosmos1yoursenderaddress',
+      fromAddress: "cosmos1yoursenderaddress",
       toAddress: recipient,
-      amount: [{ denom: 'uatom', amount: atomAmount.toString() }]
+      amount: [{ denom: "uatom", amount: atomAmount.toString() }],
     });
   };
-  
+
   return (
     <form onSubmit={handleSubmit}>
       <h2>Send Tokens</h2>
@@ -453,13 +485,11 @@ function SendTokensForm() {
         />
       </div>
       <button type="submit" disabled={mutation.isLoading}>
-        {mutation.isLoading ? 'Sending...' : 'Send Tokens'}
+        {mutation.isLoading ? "Sending..." : "Send Tokens"}
       </button>
-      
-      {mutation.isError && (
-        <div>Error: {mutation.error?.message}</div>
-      )}
-      
+
+      {mutation.isError && <div>Error: {mutation.error?.message}</div>}
+
       {mutation.isSuccess && (
         <div>Success! Transaction hash: {mutation.data?.transactionHash}</div>
       )}
@@ -490,8 +520,8 @@ include: {
     // Only the modules and methods you actually use
     "cosmos.bank.v1beta1.Query.balance",
     "cosmos.bank.v1beta1.Query.allBalances",
-    "cosmos.bank.v1beta1.Msg.send"
-  ]
+    "cosmos.bank.v1beta1.Msg.send",
+  ];
 }
 ```
 
@@ -503,9 +533,15 @@ Group related functionality with consistent naming:
 nameMappers: {
   Query: {
     // Prefixes based on domain
-    "cosmos.bank.**": { funcBody: (name) => `bank${name}` },
-    "cosmos.staking.**": { funcBody: (name) => `staking${name}` },
-    "cosmos.gov.**": { funcBody: (name) => `governance${name}` }
+    "cosmos.bank.**": { funcBody: (ctx: AliasNameMappersContext) => {
+      return `bank${ctx.name}`;
+    } },
+    "cosmos.staking.**": { funcBody: (ctx: AliasNameMappersContext) => {
+      return `staking${ctx.name}`;
+    } },
+    "cosmos.gov.**": { funcBody: (ctx: AliasNameMappersContext) => {
+      return `governance${ctx.name}`;
+    } }
   }
 }
 ```
@@ -516,18 +552,18 @@ If you use complex naming transformations, document them for your team:
 
 ```javascript
 // Custom transformer function with documentation
-funcBody: (name) => {
+funcBody: (ctx: AliasNameMappersContext) => {
   // For delegation-related methods, use active verb form
-  if (name.includes('delegation')) {
-    return `stake${name.replace('delegation', '')}`;
+  if (ctx.name.includes("delegation")) {
+    return `stake${ctx.name.replace("delegation", "")}`;
   }
   // For validator methods, use 'validator' prefix
-  if (name.includes('validator')) {
-    return `validator${name.replace('validator', '')}`;
+  if (ctx.name.includes("validator")) {
+    return `validator${ctx.name.replace("validator", "")}`;
   }
   // Default fallback
-  return `get${name}`;
-}
+  return `get${ctx.name}`;
+};
 ```
 
 ## Troubleshooting
@@ -568,4 +604,4 @@ Telescope's helper function generation is a powerful feature that can significan
 
 By carefully configuring your helper functions with meaningful names, targeted scoping, and framework integration, you can create a developer-friendly API tailored to your specific needs.
 
-In the next tutorial, we'll explore other advanced features of Telescope to further enhance your Cosmos SDK development workflow. 
+In the next tutorial, we'll explore other advanced features of Telescope to further enhance your Cosmos SDK development workflow.

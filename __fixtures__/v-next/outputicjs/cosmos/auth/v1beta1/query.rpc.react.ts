@@ -1,6 +1,6 @@
 import { buildUseQuery } from "../../../react-query";
 import { QueryAccountsRequest, QueryAccountsResponse, QueryAccountRequest, QueryAccountResponse, QueryParamsRequest, QueryParamsResponse, QueryModuleAccountsRequest, QueryModuleAccountsResponse, Bech32PrefixRequest, Bech32PrefixResponse, AddressBytesToStringRequest, AddressBytesToStringResponse, AddressStringToBytesRequest, AddressStringToBytesResponse } from "./query";
-import { getAccounts, getAccount, getParams, getModuleAccounts, getBech32Prefix, getAddressBytesToString, getAddressStringToBytes } from "./query.rpc.func";
+import { getAccounts, getAccount, getCosmosAuthV1beta1Params, getModuleAccounts, getBech32Prefix, getAddressBytesToString, getAddressStringToBytes } from "./query.rpc.func";
 /* Accounts returns all the existing accounts
 
  Since: cosmos-sdk 0.43 */
@@ -14,8 +14,8 @@ export const useGetAccount = buildUseQuery<QueryAccountRequest, QueryAccountResp
   queryKeyPrefix: "AccountQuery"
 });
 /* Params queries all parameters. */
-export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
-  builderQueryFn: getParams,
+export const useGetCosmosAuthV1beta1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
+  builderQueryFn: getCosmosAuthV1beta1Params,
   queryKeyPrefix: "ParamsQuery"
 });
 /* ModuleAccounts returns all the existing module accounts. */

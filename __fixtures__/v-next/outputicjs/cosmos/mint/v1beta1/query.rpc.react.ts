@@ -1,9 +1,9 @@
 import { buildUseQuery } from "../../../react-query";
 import { QueryParamsRequest, QueryParamsResponse, QueryInflationRequest, QueryInflationResponse, QueryAnnualProvisionsRequest, QueryAnnualProvisionsResponse } from "./query";
-import { getParams, getInflation, getAnnualProvisions } from "./query.rpc.func";
+import { getCosmosMintV1beta1Params, getInflation, getAnnualProvisions } from "./query.rpc.func";
 /* Params returns the total set of minting parameters. */
-export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
-  builderQueryFn: getParams,
+export const useGetCosmosMintV1beta1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
+  builderQueryFn: getCosmosMintV1beta1Params,
   queryKeyPrefix: "ParamsQuery"
 });
 /* Inflation returns the current minting inflation value. */

@@ -1,6 +1,6 @@
 import { buildQuery } from "../../../helper-func-types";
 import { ParamsRequest, ParamsResponse, ArithmeticTwapRequest, ArithmeticTwapResponse, ArithmeticTwapToNowRequest, ArithmeticTwapToNowResponse } from "./query";
-export const getParams = buildQuery<ParamsRequest, ParamsResponse>({
+export const getOsmosisTwapV1beta1Params = buildQuery<ParamsRequest, ParamsResponse>({
   encode: ParamsRequest.encode,
   decode: ParamsResponse.decode,
   service: "osmosis.twap.v1beta1.Query",

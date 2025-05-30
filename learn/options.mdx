@@ -9,10 +9,10 @@ Telescope's configuration options are passed to the main function through a Java
 ```js
 telescope({
   protoDirs, // Input directories
-  outPath,   // Output directory
+  outPath, // Output directory
   options: {
     // All configuration options go here
-  }
+  },
 });
 ```
 
@@ -29,7 +29,7 @@ The most basic setup is enabling or disabling Amino encoding:
 ```js
 options: {
   aminoEncoding: {
-    enabled: true // Default is true
+    enabled: true; // Default is true
   }
 }
 ```
@@ -343,11 +343,15 @@ options: {
     // Custom function naming
     nameMappers: {
       Query: {
-        funcBody: (name) => `get${name}`,
+        funcBody: (ctx: AliasNameMappersContext) => {
+          return `get${ctx.name}`;
+        },
         hookPrefix: 'use'
       },
       Msg: {
-        funcBody: (name) => `send${name}`,
+        funcBody: (ctx: AliasNameMappersContext) => {
+          return `send${ctx.name}`;
+        },
         hookPrefix: 'useTx'
       }
     }
@@ -403,18 +407,18 @@ Here's a more complete configuration example combining various options:
 
 ```js
 telescope({
-  protoDirs: [join(__dirname, '/proto')],
-  outPath: join(__dirname, '/src/generated'),
+  protoDirs: [join(__dirname, "/proto")],
+  outPath: join(__dirname, "/src/generated"),
   options: {
     aminoEncoding: {
       enabled: true,
       exceptions: {
-        '/cosmos.gov.v1beta1.MsgSubmitProposal': 'cosmos-sdk/MsgSubmitProposal'
-      }
+        "/cosmos.gov.v1beta1.MsgSubmitProposal": "cosmos-sdk/MsgSubmitProposal",
+      },
     },
     interfaces: {
       enabled: true,
-      useGlobalDecoderRegistry: true
+      useGlobalDecoderRegistry: true,
     },
     prototypes: {
       includePackageVar: true,
@@ -424,44 +428,44 @@ telescope({
         decode: true,
         fromJSON: true,
         toJSON: true,
-        fromPartial: true
+        fromPartial: true,
       },
       typingsFormat: {
         useDeepPartial: true,
-        timestamp: 'date',
-        duration: 'duration',
-        num64: 'bigint'
-      }
+        timestamp: "date",
+        duration: "duration",
+        num64: "bigint",
+      },
     },
     lcdClients: {
       enabled: true,
-      bundle: true
+      bundle: true,
     },
     rpcClients: {
       enabled: true,
-      type: 'tendermint',
-      camelCase: true
+      type: "tendermint",
+      camelCase: true,
     },
     reactQuery: {
       enabled: true,
       include: {
-        packages: ['cosmos.bank.v1beta1', 'cosmos.staking.v1beta1']
-      }
+        packages: ["cosmos.bank.v1beta1", "cosmos.staking.v1beta1"],
+      },
     },
     helperFunctions: {
       enabled: true,
       hooks: {
-        react: true
+        react: true,
       },
       include: {
-        patterns: ['cosmos.bank.v1beta1.*']
-      }
+        patterns: ["cosmos.bank.v1beta1.*"],
+      },
     },
     tsDisable: {
-      patterns: ['**/amino/**']
+      patterns: ["**/amino/**"],
     },
-    removeUnusedImports: true
-  }
+    removeUnusedImports: true,
+  },
 });
 ```
 
@@ -518,4 +522,4 @@ In the next tutorial, we'll explore how to use the generated types and clients t
 
 - Check out the [Types documentation](./types.md) to learn how to use the generated types
 - Explore the [Stargate Clients documentation](./stargate-clients.md) to learn how to use the generated clients
-- Read the [Composing Messages documentation](./composing-messages.md) to learn how to create and send transactions 
+- Read the [Composing Messages documentation](./composing-messages.md) to learn how to create and send transactions

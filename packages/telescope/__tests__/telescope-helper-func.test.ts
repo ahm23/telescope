@@ -1,5 +1,5 @@
 import { TelescopeBuilder } from "../src/builder";
-import { TelescopeOptions } from "@cosmology/types";
+import { AliasNameMappersContext, TelescopeOptions } from "@cosmology/types";
 import {
   bundleBaseRegistries,
   bundleRegistries,
@@ -235,14 +235,14 @@ const options: TelescopeOptions = {
     nameMappers: {
       All: {
         "cosmos.gov.v1beta1.*Vote*": {
-          funcBody: (name: string) => {
-            return `helper${name}`;
+          funcBody: (ctx: AliasNameMappersContext) => {
+            return `helper${ctx.name}`;
           },
           hookPrefix: "use",
         },
         "cosmos.gov.v1beta1.*Deposit*": {
-          funcBody: (name: string) => {
-            return `check${name}`;
+          funcBody: (ctx: AliasNameMappersContext) => {
+            return `check${ctx.name}`;
           },
         },
       },
@@ -250,8 +250,8 @@ const options: TelescopeOptions = {
         // this rule will override Deposits method matched in All
         // createGoOverDeposits and useGoOverDeposits will be created
         "cosmos.gov.v1beta1.*Deposits*": {
-          funcBody: (name: string) => {
-            return `goOver${name}`;
+          funcBody: (ctx: AliasNameMappersContext) => {
+            return `goOver${ctx.name}`;
           },
         },
       },
@@ -259,16 +259,16 @@ const options: TelescopeOptions = {
         // this rule will override VoteWeighted method matched in All
         // constructLetsVoteWeighted and useTxLetsVoteWeighted will be created
         "cosmos.gov.v1beta1.*VoteWeighted*": {
-          funcBody: (name: string, pkg: string) => {
-            return `lets${name}`;
+          funcBody: (ctx: AliasNameMappersContext) => {
+            return `lets${ctx.name}`;
           },
           hookPrefix: "useTx",
         },
         // this rule will override Deposit method matched in All
         // createToDeposit and useToDeposit will be created
         "cosmos.gov.v1beta1.*Deposit*": {
-          funcBody: (name: string, pkg: string) => {
-            return `to${name}`;
+          funcBody: (ctx: AliasNameMappersContext) => {
+            return `to${ctx.name}`;
           },
         },
       }

@@ -15,7 +15,7 @@ export const getDevFeeInfo = buildQuery<QueryDevFeeInfoRequest, QueryDevFeeInfoR
   method: "DevFeeInfo"
 });
 /* Params retrieves the fees module params */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getEvmosFeesV1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "evmos.fees.v1.Query",

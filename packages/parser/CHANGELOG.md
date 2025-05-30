@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.4](https://github.com/hyperweb-io/telescope/compare/@cosmology/proto-parser@1.10.3...@cosmology/proto-parser@1.10.4) (2025-05-30)
+
+### Bug Fixes
+
+- exclude .registry from bundle ([8c2ff6f](https://github.com/hyperweb-io/telescope/commit/8c2ff6f39ecab9e3ee0bdc950701dccf17b9549a))
+
 ## [1.10.3](https://github.com/hyperweb-io/telescope/compare/@cosmology/proto-parser@1.10.2...@cosmology/proto-parser@1.10.3) (2025-05-30)
 
 **Note:** Version bump only for package @cosmology/proto-parser

@@ -12,6 +12,8 @@ import { HttpEndpoint } from "@interchainjs/types";
 
 import { DeliverTxResponse, Event, Attribute } from "@interchainjs/types";
 
+export { DeliverTxResponse }
+
 
 export type ProtoMsg = Omit<Any, "typeUrl"> & { typeUrl: any };
 

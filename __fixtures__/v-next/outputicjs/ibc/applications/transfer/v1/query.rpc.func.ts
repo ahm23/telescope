@@ -15,7 +15,7 @@ export const getDenomTraces = buildQuery<QueryDenomTracesRequest, QueryDenomTrac
   method: "DenomTraces"
 });
 /* Params queries all parameters of the ibc-transfer module. */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getIbcApplicationsTransferV1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "ibc.applications.transfer.v1.Query",

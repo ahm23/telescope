@@ -15,7 +15,7 @@ export const getDistrInfo = buildQuery<QueryDistrInfoRequest, QueryDistrInfoResp
   method: "DistrInfo"
 });
 /* Params returns pool incentives params. */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getOsmosisPoolincentivesV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "osmosis.poolincentives.v1beta1.Query",

@@ -96,7 +96,7 @@ export const getPool = buildQuery<QueryPoolRequest, QueryPoolResponse>({
   method: "Pool"
 });
 /* Parameters queries the staking parameters. */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getCosmosStakingV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "cosmos.staking.v1beta1.Query",

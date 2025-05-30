@@ -1,4 +1,4 @@
-import { ProtoRef, ProtoRoot, HelperFuncNameMappers, AliasNameMappers } from "@cosmology/types";
+import { ProtoRef, ProtoRoot, HelperFuncNameMappers, AliasNameMappers, AliasNameMappersContext } from "@cosmology/types";
 export declare const getNestedProto: (root: ProtoRoot) => any;
 export declare const getNestedProtoGeneric: (root: ProtoRoot, path: string[]) => any;
 export declare const getNested: (root: ProtoRoot, path: string[]) => any;
@@ -17,7 +17,46 @@ export declare const makeUsePkgHookName: (packageName: string, name: string) => 
 export declare const makePkgMethodName: (packageName: string, name: string) => any;
 export declare const makeUseHookTypeName: (name: string) => string;
 export declare const makeHookKeyName: (name: string) => any;
+/**
+ * make alias name with the full package.
+ * e.g. cosmos.bank.v1beta1.Balance -> CosmosBankV1Beta1Balance
+ * @param ctx context
+ * @returns alias name
+ */
 export declare const makeAliasName: (ctx: {
+    package: string;
+    name: string;
+}) => string;
+/**
+ * make alias name with a prefix.
+ * @param prefix prefix
+ * @param makeAliasName function to make alias name
+ * @returns alias name
+ */
+export declare const makeServiceAliasName: (prefix: string, makeAliasName: (ctx: {
+    package: string;
+    name: string;
+}) => string) => (ctx: {
+    package: string;
+    name: string;
+}) => any;
+/**
+ * make alias name with the last part of the package.
+ * e.g. cosmos.bank.v1beta1.Balance -> V1Beta1Balance
+ * @param ctx context
+ * @returns alias name
+ */
+export declare const makeAliasNameWithLastPkgPart: (ctx: {
+    package: string;
+    name: string;
+}) => string;
+/**
+ * make alias name with the last two parts of the package.
+ * e.g. cosmos.bank.v1beta1.Balance -> BankV1Beta1Balance
+ * @param ctx context
+ * @returns alias name
+ */
+export declare const makeAliasNameWithLastTwoPkgParts: (ctx: {
     package: string;
     name: string;
 }) => string;
@@ -65,7 +104,7 @@ export declare const getTypeNameFromFieldName: (name: string, importSrc: string,
  * @param methodKey e.g. "balance"
  * @param mappers a list of mappers to apply. An earlier one will override a later one.
  */
-export declare function getHelperFuncName(packagePath: string, methodKey: string, mappers: HelperFuncNameMappers[], defaultFuncBodyFn: "unchanged" | "get" | ((name: string) => string)): {
+export declare function getHelperFuncName(packagePath: string, methodKey: string, mappers: HelperFuncNameMappers[], defaultFuncBodyFn: "unchanged" | "get" | ((ctx: AliasNameMappersContext) => string)): {
     creator: string;
     hook: string;
 };

@@ -8,6 +8,7 @@ import {
   HelperFuncNameMappers,
   HelperFuncNameMappersRule,
   AliasNameMappers,
+  AliasNameMappersContext,
 } from "@cosmology/types";
 import dotty from "dotty";
 
@@ -61,10 +62,59 @@ export const makeHookKeyName = (name: string) => {
   return camel(name + "Query");
 };
 
+/**
+ * make alias name with the full package.
+ * e.g. cosmos.bank.v1beta1.Balance -> CosmosBankV1Beta1Balance
+ * @param ctx context
+ * @returns alias name
+ */
 export const makeAliasName = (ctx: { package: string; name: string }) => {
-  return pascal(
-    `${ctx.package.replace(/\./g, "_")}${ctx.name}`
-  );
+  return pascal(`${ctx.package.replace(/\./g, "_")}_${ctx.name}`);
+};
+
+/**
+ * make alias name with a prefix.
+ * @param prefix prefix
+ * @param makeAliasName function to make alias name
+ * @returns alias name
+ */
+export const makeServiceAliasName = (
+  prefix: string,
+  makeAliasName: (ctx: { package: string; name: string }) => string
+) => {
+  return (ctx: { package: string; name: string }) => {
+    return camel(`${prefix}_${camel(makeAliasName(ctx))}`);
+  };
+};
+
+/**
+ * make alias name with the last part of the package.
+ * e.g. cosmos.bank.v1beta1.Balance -> V1Beta1Balance
+ * @param ctx context
+ * @returns alias name
+ */
+export const makeAliasNameWithLastPkgPart = (ctx: {
+  package: string;
+  name: string;
+}) => {
+  const pkgParts = ctx.package.split(".");
+  const lastPkgPart = pkgParts[pkgParts.length - 1];
+  return pascal(`${lastPkgPart}_${ctx.name}`);
+};
+
+/**
+ * make alias name with the last two parts of the package.
+ * e.g. cosmos.bank.v1beta1.Balance -> BankV1Beta1Balance
+ * @param ctx context
+ * @returns alias name
+ */
+export const makeAliasNameWithLastTwoPkgParts = (ctx: {
+  package: string;
+  name: string;
+}) => {
+  const pkgParts = ctx.package.split(".");
+  const lastTwoPkgParts = pkgParts.slice(-2);
+  return pascal(`${lastTwoPkgParts.join("_")}_${ctx.name}`);
 };
 
 // https://github.com/isaacs/minimatch/blob/main/src/index.ts#L61
@@ -246,7 +296,10 @@ export function getHelperFuncName(
   packagePath: string,
   methodKey: string,
   mappers: HelperFuncNameMappers[],
-  defaultFuncBodyFn: "unchanged" | "get" | ((name: string) => string)
+  defaultFuncBodyFn:
+    | "unchanged"
+    | "get"
+    | ((ctx: AliasNameMappersContext) => string)
 ): {
   creator: string;
   hook: string;
@@ -284,14 +337,20 @@ export function getHelperFuncName(
 
   funcBodyFn =
     funcBodyFn === "unchanged"
-      ? String
+      ? (ctx: AliasNameMappersContext) => ctx.name
       : funcBodyFn === "get"
-      ? (name: string) => camel("get_" + camel(name))
+      ? (ctx: AliasNameMappersContext) => camel("get_" + camel(ctx.name))
       : funcBodyFn;
 
   return {
-    creator: camel(`${camel(funcBodyFn(methodKey, packagePath))}`),
-    hook: camel(`${hookPrefix}_${camel(funcBodyFn(methodKey, packagePath))}`),
+    creator: camel(
+      `${camel(funcBodyFn({ name: methodKey, package: packagePath }))}`
+    ),
+    hook: camel(
+      `${hookPrefix}_${camel(
+        funcBodyFn({ name: methodKey, package: packagePath })
+      )}`
+    ),
   };
 }
 

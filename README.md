@@ -131,7 +131,7 @@ If some required options are missing, it will prompt to ask for the info.
 
 For detailed cli `generate` commands, please check our docs and learn directories.
 
-### Download protos 
+### Download protos
 
 The old ` telescope install ` command has been deprecated
 
@@ -1387,7 +1387,7 @@ The nameMappers object supports three service types: All, Query, and Msg. Each p
 ```js
 {
   "pattern": {
-    funcBody: (name: string) => string,    // Function to transform the method name
+    funcBody: (ctx: AliasNameMappersContext) => string,    // Function to transform the method name
     hookPrefix?: string                    // Prefix for the hook function (default: "use")
   }
 }
@@ -1407,18 +1407,18 @@ const options: TelescopeOptions = {
     nameMappers: {
       All: {
         "cosmos.gov.v1beta1.*Vote*": {
-          funcBody: (name) => `helper${name}`,
+          funcBody: (ctx) => `helper${ctx.name}`,
           hookPrefix: "use",
         },
       },
       Query: {
         "cosmos.gov.v1beta1.*Deposits*": {
-          funcBody: (name) => `goOver${name}`,
+          funcBody: (ctx) => `goOver${ctx.name}`,
         },
       },
       Msg: {
         "cosmos.gov.v1beta1.*VoteWeighted*": {
-          funcBody: (name) => `lets${name}`,
+          funcBody: (ctx) => `lets${ctx.name}`,
           hookPrefix: "useTx",
         },
       },

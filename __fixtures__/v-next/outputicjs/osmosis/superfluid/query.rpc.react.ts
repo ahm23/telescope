@@ -1,9 +1,9 @@
 import { buildUseQuery } from "../../react-query";
 import { QueryParamsRequest, QueryParamsResponse, AssetTypeRequest, AssetTypeResponse, AllAssetsRequest, AllAssetsResponse, AssetMultiplierRequest, AssetMultiplierResponse, AllIntermediaryAccountsRequest, AllIntermediaryAccountsResponse, ConnectedIntermediaryAccountRequest, ConnectedIntermediaryAccountResponse, QueryTotalDelegationByValidatorForDenomRequest, QueryTotalDelegationByValidatorForDenomResponse, TotalSuperfluidDelegationsRequest, TotalSuperfluidDelegationsResponse, SuperfluidDelegationAmountRequest, SuperfluidDelegationAmountResponse, SuperfluidDelegationsByDelegatorRequest, SuperfluidDelegationsByDelegatorResponse, SuperfluidUndelegationsByDelegatorRequest, SuperfluidUndelegationsByDelegatorResponse, SuperfluidDelegationsByValidatorDenomRequest, SuperfluidDelegationsByValidatorDenomResponse, EstimateSuperfluidDelegatedAmountByValidatorDenomRequest, EstimateSuperfluidDelegatedAmountByValidatorDenomResponse, QueryTotalDelegationByDelegatorRequest, QueryTotalDelegationByDelegatorResponse, QueryUnpoolWhitelistRequest, QueryUnpoolWhitelistResponse } from "./query";
-import { getParams, getAssetType, getAllAssets, getAssetMultiplier, getAllIntermediaryAccounts, getConnectedIntermediaryAccount, getTotalDelegationByValidatorForDenom, getTotalSuperfluidDelegations, getSuperfluidDelegationAmount, getSuperfluidDelegationsByDelegator, getSuperfluidUndelegationsByDelegator, getSuperfluidDelegationsByValidatorDenom, getEstimateSuperfluidDelegatedAmountByValidatorDenom, getTotalDelegationByDelegator, getUnpoolWhitelist } from "./query.rpc.func";
+import { getOsmosisSuperfluidParams, getAssetType, getAllAssets, getAssetMultiplier, getAllIntermediaryAccounts, getConnectedIntermediaryAccount, getTotalDelegationByValidatorForDenom, getTotalSuperfluidDelegations, getSuperfluidDelegationAmount, getSuperfluidDelegationsByDelegator, getSuperfluidUndelegationsByDelegator, getSuperfluidDelegationsByValidatorDenom, getEstimateSuperfluidDelegatedAmountByValidatorDenom, getTotalDelegationByDelegator, getUnpoolWhitelist } from "./query.rpc.func";
 /* Params returns the total set of superfluid parameters. */
-export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
-  builderQueryFn: getParams,
+export const useGetOsmosisSuperfluidParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
+  builderQueryFn: getOsmosisSuperfluidParams,
   queryKeyPrefix: "ParamsQuery"
 });
 /* Returns superfluid asset type, whether if it's a native asset or an lp

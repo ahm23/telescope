@@ -12,7 +12,7 @@ export declare enum TelescopeLogLevel {
  * The name mappers for helper functions.
  */
 export interface HelperFuncNameMappersRule {
-    funcBody: "unchanged" | "get" | ((name: string, pkg: string) => string);
+    funcBody: "unchanged" | "get" | ((ctx: AliasNameMappersContext) => string);
     hookPrefix?: string;
 }
 export interface AliasNameMappersContext {
@@ -31,7 +31,7 @@ export interface HelperFuncNameMappers {
      * .e.g: cosmos.gov.v1beta1.*Vote*
      */
     [key: string]: {
-        funcBody: "unchanged" | "get" | ((name: string, pkg: string) => string);
+        funcBody: "unchanged" | "get" | ((ctx: AliasNameMappersContext) => string);
         hookPrefix?: string;
     };
 }

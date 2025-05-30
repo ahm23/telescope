@@ -18,29 +18,33 @@ const options: TelescopeOptions = {
     enabled: true,
     hooks: {
       react: true,
-      vue: false
+      vue: false,
     },
     include: {
       serviceTypes: ["Query", "Msg"],
-      patterns: ["cosmos.gov.v1beta1.**", "cosmos.bank.v1beta1.*Send*"]
+      patterns: ["cosmos.gov.v1beta1.**", "cosmos.bank.v1beta1.*Send*"],
     },
     nameMappers: {
       All: {
         "cosmos.gov.v1beta1.*Vote*": {
-          funcBody: (name) => `helper${name}`,
-          hookPrefix: "use"
-        }
+          funcBody: (ctx: AliasNameMappersContext) => {
+            return `helper${ctx.name}`;
+          },
+          hookPrefix: "use",
+        },
       },
       Query: {
-        funcBody: (name) => `get${name}`,
-        hookPrefix: "use"
+        funcBody: (ctx: AliasNameMappersContext) => {
+          return `get${ctx.name}`;
+        },
+        hookPrefix: "use",
       },
       Msg: {
         funcBody: "unchanged",
-        hookPrefix: "useTx"
-      }
-    }
-  }
+        hookPrefix: "useTx",
+      },
+    },
+  },
 };
 ```
 
@@ -48,17 +52,17 @@ const options: TelescopeOptions = {
 
 ### Basic Options
 
-| Property | Type | Description | Default |
-| -------- | ---- | ----------- | ------- |
-| `helperFunctions.enabled` | boolean | Enable or disable helper function generation | `false` |
-| `helperFunctions.hooks` | object | Configuration for generating hook functions for React and Vue | `{ react: false, vue: false }` |
+| Property                  | Type    | Description                                                   | Default                        |
+| ------------------------- | ------- | ------------------------------------------------------------- | ------------------------------ |
+| `helperFunctions.enabled` | boolean | Enable or disable helper function generation                  | `false`                        |
+| `helperFunctions.hooks`   | object  | Configuration for generating hook functions for React and Vue | `{ react: false, vue: false }` |
 
 ### Include Options
 
-| Property | Type | Description | Default |
-| -------- | ---- | ----------- | ------- |
-| `helperFunctions.include.serviceTypes` | string[] | Which service types to include (`Query`, `Msg`) | `undefined` (all types) |
-| `helperFunctions.include.patterns` | string[] | Glob patterns to match specific services | `undefined` (all services) |
+| Property                               | Type     | Description                                     | Default                    |
+| -------------------------------------- | -------- | ----------------------------------------------- | -------------------------- |
+| `helperFunctions.include.serviceTypes` | string[] | Which service types to include (`Query`, `Msg`) | `undefined` (all types)    |
+| `helperFunctions.include.patterns`     | string[] | Glob patterns to match specific services        | `undefined` (all services) |
 
 ### Name Mapping Options
 
@@ -70,10 +74,10 @@ The `nameMappers` object allows you to customize how function names are generate
 
 For each category, you can specify:
 
-| Property | Type | Description | Default |
-| -------- | ---- | ----------- | ------- |
-| `funcBody` | string or function | How to transform method names | Query: "get", Msg: "unchanged" |
-| `hookPrefix` | string | Prefix for hook functions | "use" |
+| Property     | Type               | Description                   | Default                        |
+| ------------ | ------------------ | ----------------------------- | ------------------------------ |
+| `funcBody`   | string or function | How to transform method names | Query: "get", Msg: "unchanged" |
+| `hookPrefix` | string             | Prefix for hook functions     | "use"                          |
 
 ## Pattern Matching Priority
 
@@ -88,6 +92,7 @@ When multiple patterns match a service, the following priority rules apply:
 The `funcBody` property can be either:
 
 1. A string value:
+
    - `"unchanged"` - Keep the original method name
    - Any other string - Use as a prefix for the method name
 
@@ -96,8 +101,11 @@ The `funcBody` property can be either:
    - Returns the transformed name
 
 Example function transformation:
+
 ```typescript
-funcBody: (name) => `execute${name.charAt(0).toUpperCase()}${name.slice(1)}`
+funcBody: (ctx: AliasNameMappersContext) => {
+  return `execute${ctx.name.charAt(0).toUpperCase()}${ctx.name.slice(1)}`;
+};
 ```
 
 ## Generated Output Examples
@@ -109,7 +117,7 @@ For a service `cosmos.gov.v1beta1.Query.proposals`, with default configuration:
 ```typescript
 // Generated function
 export function getProposals(
-  rpcEndpoint: string, 
+  rpcEndpoint: string,
   params: QueryProposalsRequest
 ): Promise<QueryProposalsResponse> {
   // Implementation
@@ -124,7 +132,7 @@ If React hooks are enabled:
 // Generated React hook
 export function useProposals(
   rpcEndpoint: string,
-  params: QueryProposalsRequest, 
+  params: QueryProposalsRequest,
   options?: UseQueryOptions<QueryProposalsResponse>
 ): UseQueryResult<QueryProposalsResponse, Error> {
   // Implementation
@@ -139,7 +147,9 @@ With custom naming rules:
 nameMappers: {
   Query: {
     "cosmos.gov.v1beta1.*Proposals*": {
-      funcBody: (name) => `fetch${name}`,
+      funcBody: (ctx: AliasNameMappersContext) => {
+        return `fetch${ctx.name}`;
+      },
       hookPrefix: "useGov"
     }
   }
@@ -150,10 +160,14 @@ Would generate:
 
 ```typescript
 // Generated function
-export function fetchProposals(/* ... */) { /* ... */ }
+export function fetchProposals(/* ... */) {
+  /* ... */
+}
 
 // Generated React hook
-export function useGovFetchProposals(/* ... */) { /* ... */ }
+export function useGovFetchProposals(/* ... */) {
+  /* ... */
+}
 ```
 
 ## Best Practices
@@ -161,4 +175,4 @@ export function useGovFetchProposals(/* ... */) { /* ... */ }
 1. **Limit the scope**: Use `include.patterns` to generate helpers only for the services you need
 2. **Use consistent naming**: Maintain a consistent naming convention across your codebase
 3. **Prefer descriptive names**: Use prefixes that describe the action (e.g., `get` for queries, `send` for transactions)
-4. **Document custom mappers**: If using complex name transformations, document the logic for your team 
+4. **Document custom mappers**: If using complex name transformations, document the logic for your team

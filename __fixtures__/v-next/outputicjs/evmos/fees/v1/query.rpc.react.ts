@@ -1,6 +1,6 @@
 import { buildUseQuery } from "../../../react-query";
 import { QueryDevFeeInfosRequest, QueryDevFeeInfosResponse, QueryDevFeeInfoRequest, QueryDevFeeInfoResponse, QueryParamsRequest, QueryParamsResponse, QueryDevFeeInfosPerDeployerRequest, QueryDevFeeInfosPerDeployerResponse } from "./query";
-import { getDevFeeInfos, getDevFeeInfo, getParams, getDevFeeInfosPerDeployer } from "./query.rpc.func";
+import { getDevFeeInfos, getDevFeeInfo, getEvmosFeesV1Params, getDevFeeInfosPerDeployer } from "./query.rpc.func";
 /* DevFeeInfos retrieves all registered contracts for fee distribution */
 export const useGetDevFeeInfos = buildUseQuery<QueryDevFeeInfosRequest, QueryDevFeeInfosResponse>({
   builderQueryFn: getDevFeeInfos,
@@ -12,8 +12,8 @@ export const useGetDevFeeInfo = buildUseQuery<QueryDevFeeInfoRequest, QueryDevFe
   queryKeyPrefix: "DevFeeInfoQuery"
 });
 /* Params retrieves the fees module params */
-export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
-  builderQueryFn: getParams,
+export const useGetEvmosFeesV1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
+  builderQueryFn: getEvmosFeesV1Params,
   queryKeyPrefix: "ParamsQuery"
 });
 /* DevFeeInfosPerDeployer retrieves all contracts that a deployer has

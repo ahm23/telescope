@@ -1,10 +1,10 @@
 import { buildUseQuery } from "../../../react-query";
 import { QueryParamsRequest, QueryParamsResponse, QueryDenomAuthorityMetadataRequest, QueryDenomAuthorityMetadataResponse, QueryDenomsFromCreatorRequest, QueryDenomsFromCreatorResponse } from "./query";
-import { getParams, getDenomAuthorityMetadata, getDenomsFromCreator } from "./query.rpc.func";
+import { getOsmosisTokenfactoryV1beta1Params, getDenomAuthorityMetadata, getDenomsFromCreator } from "./query.rpc.func";
 /* Params defines a gRPC query method that returns the tokenfactory module's
  parameters. */
-export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
-  builderQueryFn: getParams,
+export const useGetOsmosisTokenfactoryV1beta1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
+  builderQueryFn: getOsmosisTokenfactoryV1beta1Params,
   queryKeyPrefix: "ParamsQuery"
 });
 /* DenomAuthorityMetadata defines a gRPC query method for fetching

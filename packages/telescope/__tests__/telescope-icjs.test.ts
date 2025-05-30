@@ -8,6 +8,7 @@ import {
 import { TelescopeInput } from "../src";
 import { getTestProtoStore } from "../test-utils";
 import { TelescopeParseContext } from "../src/build";
+import { makeAliasName, makeServiceAliasName } from "@cosmology/utils";
 
 const outPath = __dirname + "/../../../__fixtures__/v-next/outputicjs";
 const store = getTestProtoStore();
@@ -69,7 +70,14 @@ const options: TelescopeOptions = {
     enabled: true,
     hooks: {
       react: true,
-      vue: false
+      vue: false,
+    },
+    nameMappers: {
+      Query: {
+        "**.Params": {
+          funcBody: makeServiceAliasName("get", makeAliasName),
+        },
+      },
     },
   },
 

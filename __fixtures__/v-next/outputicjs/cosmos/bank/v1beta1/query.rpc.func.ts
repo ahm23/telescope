@@ -37,7 +37,7 @@ export const getSupplyOf = buildQuery<QuerySupplyOfRequest, QuerySupplyOfRespons
   method: "SupplyOf"
 });
 /* Params queries the parameters of x/bank module. */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getCosmosBankV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "cosmos.bank.v1beta1.Query",

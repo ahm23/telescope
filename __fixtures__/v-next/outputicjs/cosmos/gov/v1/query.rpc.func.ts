@@ -29,7 +29,7 @@ export const getVotes = buildQuery<QueryVotesRequest, QueryVotesResponse>({
   method: "Votes"
 });
 /* Params queries all parameters of the gov module. */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getCosmosGovV1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "cosmos.gov.v1.Query",

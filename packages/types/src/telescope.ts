@@ -15,7 +15,7 @@ export enum TelescopeLogLevel {
  * The name mappers for helper functions.
  */
 export interface HelperFuncNameMappersRule {
-  funcBody: "unchanged" | "get" | ((name: string, pkg: string) => string);
+  funcBody: "unchanged" | "get" | ((ctx: AliasNameMappersContext) => string);
   hookPrefix?: string;
 }
 
@@ -39,7 +39,7 @@ export interface HelperFuncNameMappers {
   [key: string]: {
     // change the method name to a new name to make the body part without the prefix, if pattern matched.
     // Otherwise, see defaults in Query and Msg.
-    funcBody: "unchanged" | "get" | ((name: string, pkg: string) => string);
+    funcBody: "unchanged" | "get" | ((ctx: AliasNameMappersContext) => string);
     // prefix for the hook function, if pattern matched. Otherwise, default to "use"
     hookPrefix?: string;
   };
@@ -229,17 +229,17 @@ export interface TelescopeOpts {
   rpcClients?: {
     type?: "tendermint" | "grpc-web" | "grpc-gateway";
     clientStyle?: {
-      useUpdatedClientStyle?: boolean,
-      type?: ("all-client" | "sdk-module-client" | "custom-client")[],
+      useUpdatedClientStyle?: boolean;
+      type?: ("all-client" | "sdk-module-client" | "custom-client")[];
       customClientOption?: {
         name: string;
         fileName: string;
         include?: {
           patterns?: string[];
         };
-      }[],
-      sdkModuleClientOption?: string[],
-    }
+      }[];
+      sdkModuleClientOption?: string[];
+    };
     enabled: boolean;
     inline?: boolean;
     extensions?: boolean;
@@ -248,13 +248,13 @@ export interface TelescopeOpts {
     bundle?: boolean;
     serviceImplement?: {
       [
-      key:
-        | "Msg"
-        | "Query"
-        | "Service"
-        | "ReflectionService"
-        | "ABCIApplication"
-        | string
+        key:
+          | "Msg"
+          | "Query"
+          | "Service"
+          | "ReflectionService"
+          | "ABCIApplication"
+          | string
       ]: {
         include?: {
           patterns?: string[];

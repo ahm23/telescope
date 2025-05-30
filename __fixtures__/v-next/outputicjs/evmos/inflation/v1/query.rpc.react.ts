@@ -1,6 +1,6 @@
 import { buildUseQuery } from "../../../react-query";
 import { QueryPeriodRequest, QueryPeriodResponse, QueryEpochMintProvisionRequest, QueryEpochMintProvisionResponse, QuerySkippedEpochsRequest, QuerySkippedEpochsResponse, QueryCirculatingSupplyRequest, QueryCirculatingSupplyResponse, QueryInflationRateRequest, QueryInflationRateResponse, QueryParamsRequest, QueryParamsResponse } from "./query";
-import { getPeriod, getEpochMintProvision, getSkippedEpochs, getCirculatingSupply, getInflationRate, getParams } from "./query.rpc.func";
+import { getPeriod, getEpochMintProvision, getSkippedEpochs, getCirculatingSupply, getInflationRate, getEvmosInflationV1Params } from "./query.rpc.func";
 /* Period retrieves current period. */
 export const useGetPeriod = buildUseQuery<QueryPeriodRequest, QueryPeriodResponse>({
   builderQueryFn: getPeriod,
@@ -28,7 +28,7 @@ export const useGetInflationRate = buildUseQuery<QueryInflationRateRequest, Quer
   queryKeyPrefix: "InflationRateQuery"
 });
 /* Params retrieves the total set of minting parameters. */
-export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
-  builderQueryFn: getParams,
+export const useGetEvmosInflationV1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
+  builderQueryFn: getEvmosInflationV1Params,
   queryKeyPrefix: "ParamsQuery"
 });

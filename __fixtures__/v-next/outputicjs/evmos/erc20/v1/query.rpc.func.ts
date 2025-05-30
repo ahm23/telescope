@@ -15,7 +15,7 @@ export const getTokenPair = buildQuery<QueryTokenPairRequest, QueryTokenPairResp
   method: "TokenPair"
 });
 /* Params retrieves the erc20 module params */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getEvmosErc20V1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "evmos.erc20.v1.Query",

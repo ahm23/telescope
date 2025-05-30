@@ -1,9 +1,9 @@
 import { buildUseQuery } from "../../../react-query";
 import { QueryParamsRequest, QueryParamsResponse, QuerySigningInfoRequest, QuerySigningInfoResponse, QuerySigningInfosRequest, QuerySigningInfosResponse } from "./query";
-import { getParams, getSigningInfo, getSigningInfos } from "./query.rpc.func";
+import { getCosmosSlashingV1beta1Params, getSigningInfo, getSigningInfos } from "./query.rpc.func";
 /* Params queries the parameters of slashing module */
-export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
-  builderQueryFn: getParams,
+export const useGetCosmosSlashingV1beta1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
+  builderQueryFn: getCosmosSlashingV1beta1Params,
   queryKeyPrefix: "ParamsQuery"
 });
 /* SigningInfo queries the signing info of given cons address */

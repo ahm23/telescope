@@ -8,7 +8,7 @@ export const getTotalUnclaimed = buildQuery<QueryTotalUnclaimedRequest, QueryTot
   method: "TotalUnclaimed"
 });
 /* Params returns the claims module parameters */
-export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
+export const getEvmosClaimsV1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
   service: "evmos.claims.v1.Query",

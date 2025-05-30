@@ -23,7 +23,12 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
     );
     prog = prog.concat(importPaths).concat(body);
   } else if (builder.options.bundle.type === "module") {
-    const body = exportAllFromImportDeclarations(bundler.bundle.importPaths);
+    const body = exportAllFromImportDeclarations(
+      bundler.bundle.importPaths.filter((importPath) => {
+        // exclude .registry
+        return !importPath.source.value.includes(".registry");
+      })
+    );
     prog = prog.concat(body);
   }
 

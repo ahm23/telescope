@@ -624,7 +624,9 @@ const traverseType = (
     context.addImplements(name, aliasName);
   }
 
-  store.setTypePackageMapping(aliasName, ref.proto.package);
+  if(!isNested) {
+    store.setTypePackageMapping(aliasName, ref.proto.package);
+  }
 
   return traversed as ProtoType;
 };
@@ -664,7 +666,9 @@ const traverseEnum = (
   );
 
   const enums = getEnumValues(enumObj);
-  store.setTypePackageMapping(typeName, ref.proto.package);
+  if(!isNested) {
+    store.setTypePackageMapping(typeName, ref.proto.package);
+  }
   store.setEnumValues(
     ref.proto.package,
     typeName,

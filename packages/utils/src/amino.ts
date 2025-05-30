@@ -15,8 +15,8 @@ export const getTypeUrlWithPkgAndName = (pkg: string, name: string) => {
   return `/${pkg}.${name}`;
 };
 export const getTypeUrl = (root: ProtoRoot, proto: ProtoAny | ProtoType) => {
-  if (!proto.name) return;
-  return getTypeUrlWithPkgAndName(root.package, proto.name);
+  if (!proto.originalName) return;
+  return getTypeUrlWithPkgAndName(root.package, proto.originalName);
 };
 
 export const getAminoTypeName = (

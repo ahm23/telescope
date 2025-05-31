@@ -283,7 +283,7 @@ export interface MiscEncodingTestForOmit {
   oDecs: string[];
 }
 export interface MiscEncodingTestForOmitProtoMsg {
-  typeUrl: "/misc.MiscEncodingTestForOmit";
+  typeUrl: "/misc.EncodingTestForOmit";
   value: Uint8Array;
 }
 export interface MiscEncodingTestForOmitAmino {
@@ -359,7 +359,7 @@ export interface MiscEncodingTestForOmitAmino {
   o_decs?: string[];
 }
 export interface MiscEncodingTestForOmitAminoMsg {
-  type: "/misc.MiscEncodingTestForOmit";
+  type: "/misc.EncodingTestForOmit";
   value: MiscEncodingTestForOmitAmino;
 }
 export interface MiscEncodingTestForOmitSDKType {
@@ -1626,7 +1626,7 @@ function createBaseMiscEncodingTestForOmit(): MiscEncodingTestForOmit {
   };
 }
 export const MiscEncodingTestForOmit = {
-  typeUrl: "/misc.MiscEncodingTestForOmit",
+  typeUrl: "/misc.EncodingTestForOmit",
   encode(message: MiscEncodingTestForOmit, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.str !== "") {
       writer.uint32(10).string(message.str);
@@ -2729,7 +2729,7 @@ export const MiscEncodingTestForOmit = {
   },
   toProtoMsg(message: MiscEncodingTestForOmit): MiscEncodingTestForOmitProtoMsg {
     return {
-      typeUrl: "/misc.MiscEncodingTestForOmit",
+      typeUrl: "/misc.EncodingTestForOmit",
       value: MiscEncodingTestForOmit.encode(message).finish()
     };
   }

@@ -181,14 +181,14 @@ export interface MiscAccessConfig {
   sender: string;
 }
 export interface MiscAccessConfigProtoMsg {
-  typeUrl: "/misc.MiscAccessConfig";
+  typeUrl: "/misc.AccessConfig";
   value: Uint8Array;
 }
 export interface MiscAccessConfigAmino {
   sender?: string;
 }
 export interface MiscAccessConfigAminoMsg {
-  type: "/misc.MiscAccessConfig";
+  type: "/misc.AccessConfig";
   value: MiscAccessConfigAmino;
 }
 export interface MiscAccessConfigSDKType {
@@ -199,7 +199,7 @@ export interface MiscGenericAuthorization {
   msg: string;
 }
 export interface MiscGenericAuthorizationProtoMsg {
-  typeUrl: "/misc.MiscGenericAuthorization";
+  typeUrl: "/misc.GenericAuthorization";
   value: Uint8Array;
 }
 export interface MiscGenericAuthorizationAmino {
@@ -207,7 +207,7 @@ export interface MiscGenericAuthorizationAmino {
   msg?: string;
 }
 export interface MiscGenericAuthorizationAminoMsg {
-  type: "/misc.MiscGenericAuthorization";
+  type: "/misc.GenericAuthorization";
   value: MiscGenericAuthorizationAmino;
 }
 export interface MiscGenericAuthorizationSDKType {
@@ -821,7 +821,7 @@ function createBaseMiscAccessConfig(): MiscAccessConfig {
   };
 }
 export const MiscAccessConfig = {
-  typeUrl: "/misc.MiscAccessConfig",
+  typeUrl: "/misc.AccessConfig",
   encode(message: MiscAccessConfig, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
@@ -898,7 +898,7 @@ export const MiscAccessConfig = {
   },
   toProtoMsg(message: MiscAccessConfig): MiscAccessConfigProtoMsg {
     return {
-      typeUrl: "/misc.MiscAccessConfig",
+      typeUrl: "/misc.AccessConfig",
       value: MiscAccessConfig.encode(message).finish()
     };
   }
@@ -909,7 +909,7 @@ function createBaseMiscGenericAuthorization(): MiscGenericAuthorization {
   };
 }
 export const MiscGenericAuthorization = {
-  typeUrl: "/misc.MiscGenericAuthorization",
+  typeUrl: "/misc.GenericAuthorization",
   encode(message: MiscGenericAuthorization, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.msg !== "") {
       writer.uint32(10).string(message.msg);
@@ -986,7 +986,7 @@ export const MiscGenericAuthorization = {
   },
   toProtoMsg(message: MiscGenericAuthorization): MiscGenericAuthorizationProtoMsg {
     return {
-      typeUrl: "/misc.MiscGenericAuthorization",
+      typeUrl: "/misc.GenericAuthorization",
       value: MiscGenericAuthorization.encode(message).finish()
     };
   }

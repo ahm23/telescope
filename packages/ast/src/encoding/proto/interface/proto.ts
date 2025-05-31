@@ -17,7 +17,7 @@ import {
     TelescopeBaseTypes,
     getTSType
 } from '../../types';
-import { getTypeUrlWithPkgAndName, getTypeUrl } from '../../amino';
+import { getTypeUrl } from '../../amino';
 import { TraversalSymbol } from '@cosmology/types';
 
 const getProtoField = (
@@ -119,7 +119,7 @@ export const createProtoType = (
                 && name === 'Any'
             ))
     ) {
-      const typeUrl = getTypeUrlWithPkgAndName(context.ref.proto.package, name);
+      const typeUrl = getTypeUrl(context.ref.proto, proto);
 
       const typeAnnotation = (
         context.ref.proto.package === 'google.protobuf'
@@ -392,7 +392,7 @@ export const createCreateProtoType = (
                 && name === 'Any'
             ))
     ) {
-        const typeUrl = getTypeUrlWithPkgAndName(context.ref.proto.package, name);
+        const typeUrl = getTypeUrl(context.ref.proto, proto);
         fields.push(t.objectProperty(
             t.identifier('$typeUrl'),
             t.stringLiteral(typeUrl)

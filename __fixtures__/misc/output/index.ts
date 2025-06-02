@@ -4,7 +4,6 @@
     * and run the transpile command or npm scripts command that is used to regenerate this bundle.
   */
  
-export * from "./gogoproto/bundle";
 export * from "./google/bundle";
 export * from "./misc/bundle";
 export * from "./misc/client";

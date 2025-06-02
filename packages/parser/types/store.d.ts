@@ -67,9 +67,9 @@ export declare class ProtoStore implements IProtoStore {
     getHelperFuncFilesMapping(helperFunc: string): string[];
     getHelperFuncsInMultipleFiles(): string[];
     isHelperFuncInMultipleFiles(helperFunc: string): boolean;
-    private setFilesTypesMapping;
+    setFilesTypesMapping(file: string, type: string): void;
     getFilesTypesMapping(file: string): string[];
-    private setFilesHelperFuncsMapping;
+    setFilesHelperFuncsMapping(file: string, helperFunc: string): void;
     getFilesHelperFuncsMapping(file: string): string[];
     getTypeSerialNumber(type: string): number;
     getAndIncTypeSerialNumber(type: string): number;

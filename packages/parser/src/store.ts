@@ -467,7 +467,9 @@ export class ProtoStore implements IProtoStore {
       this._typeFilesMapping[type] = [];
     }
     // no duplicates using Set
-    this._typeFilesMapping[type] = [...new Set([...this._typeFilesMapping[type], file])];
+    this._typeFilesMapping[type] = [
+      ...new Set([...this._typeFilesMapping[type], file]),
+    ];
 
     this.setFilesTypesMapping(file, type);
   }
@@ -491,7 +493,9 @@ export class ProtoStore implements IProtoStore {
       this._helperFuncFilesMapping[helperFunc] = [];
     }
     // no duplicates using Set
-    this._helperFuncFilesMapping[helperFunc] = [...new Set([...this._helperFuncFilesMapping[helperFunc], file])];
+    this._helperFuncFilesMapping[helperFunc] = [
+      ...new Set([...this._helperFuncFilesMapping[helperFunc], file]),
+    ];
 
     this.setFilesHelperFuncsMapping(file, helperFunc);
   }
@@ -510,24 +514,28 @@ export class ProtoStore implements IProtoStore {
     return this._helperFuncFilesMapping[helperFunc].length > 1;
   }
 
-  private setFilesTypesMapping(file: string, type: string) {
+  setFilesTypesMapping(file: string, type: string) {
     if (!this._filesTypesMapping[file]) {
       this._filesTypesMapping[file] = [];
     }
     // no duplicates using Set
-    this._filesTypesMapping[file] = [...new Set([...this._filesTypesMapping[file], type])];
+    this._filesTypesMapping[file] = [
+      ...new Set([...this._filesTypesMapping[file], type]),
+    ];
   }
 
   getFilesTypesMapping(file: string) {
     return this._filesTypesMapping[file];
   }
 
-  private setFilesHelperFuncsMapping(file: string, helperFunc: string) {
+  setFilesHelperFuncsMapping(file: string, helperFunc: string) {
     if (!this._filesHelperFuncsMapping[file]) {
       this._filesHelperFuncsMapping[file] = [];
     }
     // no duplicates using Set
-    this._filesHelperFuncsMapping[file] = [...new Set([...this._filesHelperFuncsMapping[file], helperFunc])];
+    this._filesHelperFuncsMapping[file] = [
+      ...new Set([...this._filesHelperFuncsMapping[file], helperFunc]),
+    ];
   }
 
   getFilesHelperFuncsMapping(file: string) {

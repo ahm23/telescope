@@ -277,11 +277,16 @@ export interface IProtoStore {
   setEnumValues(pkg: string, name: string, protoSyntex:string, values: number[]): void;
   getDefaultOrExistingSmallestEnumValue(pkg: string, name: string): number;
 
-  setTypePackageMapping(type: string, pkg: string): void;
-  getTypePackageMapping(type: string): string[];
-  getTypesInMultiplePackages(): string[];
-
-  setServicePackageMapping(service: string, pkg: string): void;
-  getServicePackageMapping(service: string): string[];
-  getServicesInMultiplePackages(): string[];
+  setTypeFilesMapping(type: string, file: string): void;
+  getTypeFilesMapping(type: string): string[];
+  getTypesInMultipleFiles(): string[];
+  isTypeInMultipleFiles(type: string): boolean;
+  setHelperFuncFilesMapping(helperFunc: string, file: string): void;
+  getHelperFuncFilesMapping(helperFunc: string): string[];
+  getHelperFuncsInMultipleFiles(): string[];
+  isHelperFuncInMultipleFiles(helperFunc: string): boolean;
+  getFilesTypesMapping(file: string): string[];
+  getFilesHelperFuncsMapping(file: string): string[];
+  getTypeSerialNumber(type: string): number;
+  getAndIncTypeSerialNumber(type: string): number;
 }

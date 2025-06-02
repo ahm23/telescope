@@ -76,8 +76,11 @@ export const parseProto = (content, options?: ParseProtoOptions) => {
 };
 export class ProtoStore implements IProtoStore {
   _typeAliases: Record<string, Record<string, string>> = {};
-  _typePackageMapping: Record<string, string[]> = {};
-  _servicePackageMapping: Record<string, string[]> = {};
+  _typeFilesMapping: Record<string, string[]> = {};
+  _helperFuncFilesMapping: Record<string, string[]> = {};
+  _filesTypesMapping: Record<string, string[]> = {};
+  _filesHelperFuncsMapping: Record<string, string[]> = {};
+  _typeSerialNumbers: Record<string, number> = {};
 
   files: string[];
   protoDirs: string[];
@@ -459,45 +462,94 @@ export class ProtoStore implements IProtoStore {
     return this._typeAliases[filepath]?.[type];
   }
 
-  setTypePackageMapping(type: string, pkg: string) {
-    if (!this._typePackageMapping[type]) {
-      this._typePackageMapping[type] = [];
+  setTypeFilesMapping(type: string, file: string) {
+    if (!this._typeFilesMapping[type]) {
+      this._typeFilesMapping[type] = [];
     }
-
-    // use Set to avoid duplicates
-    this._typePackageMapping[type] = [
-      ...new Set([...this._typePackageMapping[type], pkg]),
+    // no duplicates using Set
+    this._typeFilesMapping[type] = [
+      ...new Set([...this._typeFilesMapping[type], file]),
     ];
+
+    this.setFilesTypesMapping(file, type);
   }
 
-  getTypePackageMapping(type: string) {
-    return this._typePackageMapping[type];
+  getTypeFilesMapping(type: string) {
+    return this._typeFilesMapping[type];
   }
 
-  getTypesInMultiplePackages() {
-    return Object.keys(this._typePackageMapping).filter(
-      (type) => this._typePackageMapping[type].length > 1
+  getTypesInMultipleFiles() {
+    return Object.keys(this._typeFilesMapping).filter(
+      (type) => this._typeFilesMapping[type].length > 1
     );
   }
 
-  setServicePackageMapping(service: string, pkg: string) {
-    if (!this._servicePackageMapping[service]) {
-      this._servicePackageMapping[service] = [];
-    }
+  isTypeInMultipleFiles(type: string) {
+    return this._typeFilesMapping[type].length > 1;
+  }
 
-    // use Set to avoid duplicates
-    this._servicePackageMapping[service] = [
-      ...new Set([...this._servicePackageMapping[service], pkg]),
+  setHelperFuncFilesMapping(helperFunc: string, file: string) {
+    if (!this._helperFuncFilesMapping[helperFunc]) {
+      this._helperFuncFilesMapping[helperFunc] = [];
+    }
+    // no duplicates using Set
+    this._helperFuncFilesMapping[helperFunc] = [
+      ...new Set([...this._helperFuncFilesMapping[helperFunc], file]),
+    ];
+
+    this.setFilesHelperFuncsMapping(file, helperFunc);
+  }
+
+  getHelperFuncFilesMapping(helperFunc: string) {
+    return this._helperFuncFilesMapping[helperFunc];
+  }
+
+  getHelperFuncsInMultipleFiles() {
+    return Object.keys(this._helperFuncFilesMapping).filter(
+      (helperFunc) => this._helperFuncFilesMapping[helperFunc].length > 1
+    );
+  }
+
+  isHelperFuncInMultipleFiles(helperFunc: string) {
+    return this._helperFuncFilesMapping[helperFunc].length > 1;
+  }
+
+  setFilesTypesMapping(file: string, type: string) {
+    if (!this._filesTypesMapping[file]) {
+      this._filesTypesMapping[file] = [];
+    }
+    // no duplicates using Set
+    this._filesTypesMapping[file] = [
+      ...new Set([...this._filesTypesMapping[file], type]),
     ];
   }
 
-  getServicePackageMapping(service: string) {
-    return this._servicePackageMapping[service];
+  getFilesTypesMapping(file: string) {
+    return this._filesTypesMapping[file];
   }
 
-  getServicesInMultiplePackages() {
-    return Object.keys(this._servicePackageMapping).filter(
-      (service) => this._servicePackageMapping[service].length > 1
-    );
+  setFilesHelperFuncsMapping(file: string, helperFunc: string) {
+    if (!this._filesHelperFuncsMapping[file]) {
+      this._filesHelperFuncsMapping[file] = [];
+    }
+    // no duplicates using Set
+    this._filesHelperFuncsMapping[file] = [
+      ...new Set([...this._filesHelperFuncsMapping[file], helperFunc]),
+    ];
+  }
+
+  getFilesHelperFuncsMapping(file: string) {
+    return this._filesHelperFuncsMapping[file];
+  }
+
+  getTypeSerialNumber(type: string): number {
+    return this._typeSerialNumbers[type] ?? 0;
+  }
+
+  getAndIncTypeSerialNumber(type: string): number {
+    if (!this._typeSerialNumbers[type]) {
+      this._typeSerialNumbers[type] = 0;
+    }
+    return this._typeSerialNumbers[type]++;
   }
 }

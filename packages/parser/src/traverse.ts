@@ -624,10 +624,6 @@ const traverseType = (
     context.addImplements(name, aliasName);
   }
 
-  if(!isNested) {
-    store.setTypePackageMapping(aliasName, ref.proto.package);
-  }
-
   return traversed as ProtoType;
 };
 
@@ -666,9 +662,7 @@ const traverseEnum = (
   );
 
   const enums = getEnumValues(enumObj);
-  if(!isNested) {
-    store.setTypePackageMapping(typeName, ref.proto.package);
-  }
+
   store.setEnumValues(
     ref.proto.package,
     typeName,
@@ -770,7 +764,6 @@ const traverseServiceMethod = (
   }
 
   store.registerRequest(svc);
-  store.setServicePackageMapping(svc.name, ref.proto.package);
 
   return svc;
 };

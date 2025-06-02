@@ -1,8 +1,8 @@
-import * as t from '@babel/types';
-import { TelescopeParseContext } from './build';
-import { TelescopeBuilder } from './builder';
-import { ProtoRef } from '@cosmology/types';
-import { Bundle, BundlerFile } from './types';
+import * as t from "@babel/types";
+import { TelescopeParseContext } from "./build";
+import { TelescopeBuilder } from "./builder";
+import { ProtoRef } from "@cosmology/types";
+import { Bundle, BundlerFile } from "./types";
 export declare class Bundler {
     builder: TelescopeBuilder;
     contexts: TelescopeParseContext[];
@@ -27,4 +27,5 @@ export declare class Bundler {
     writeAst(program: t.Statement[], filename: string): void;
     addToBundle(context: TelescopeParseContext, localname: string): void;
     addToBundleToPackage(packagename: string, localname: string): void;
+    addExportObjToBundle(pkg: string, localname: string, exportedIdentifiers: string[], isHelperFunc?: boolean): void;
 }

@@ -47,28 +47,26 @@ export const plugin = (builder: TelescopeBuilder) => {
     builder.options.bundle.enabled &&
     builder.options.bundle.type === "module"
   ) {
-    const typePackageMapping = builder.store.getTypesInMultiplePackages();
-    const servicePackageMapping = builder.store.getServicesInMultiplePackages();
+    const typePackageMapping = builder.store.getTypesInMultipleFiles();
+    const servicePackageMapping = builder.store.getHelperFuncsInMultipleFiles();
 
     const typePackageMappingMap = typePackageMapping.reduce((obj, type) => {
-      const pkg = builder.store.getTypePackageMapping(type);
+      const pkg = builder.store.getTypeFilesMapping(type);
       obj[type] = pkg.join(", ");
       return obj;
     }, {});
 
-    console.log("types in multiple packages:");
-    console.log(JSON.stringify(typePackageMappingMap, null, 2));
+    console.log("types in multiple files:", JSON.stringify(typePackageMappingMap, null, 2));
 
     const servicePackageMappingMap = servicePackageMapping.reduce(
       (obj, service) => {
-        const pkg = builder.store.getServicePackageMapping(service);
+        const pkg = builder.store.getHelperFuncFilesMapping(service);
         obj[service] = pkg.join(", ");
         return obj;
       },
       {}
     );
 
-    console.log("services in multiple packages:");
-    console.log(JSON.stringify(servicePackageMappingMap, null, 2));
+    console.log("services in multiple files:", JSON.stringify(servicePackageMappingMap, null, 2));
   }
 };

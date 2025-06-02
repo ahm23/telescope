@@ -12,6 +12,7 @@ import {
   swapKeyValue,
 } from "@cosmology/utils";
 import { BundlerFile } from "../types";
+import { getExportedTypeNames } from "../utils/files";
 
 export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
   const clients = bundler.contexts
@@ -175,12 +176,29 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
       const progReact = [].concat(importsReact).concat(reactAsts);
       const progVue = [].concat(importsVue).concat(vueAsts);
 
+      const exportedTypeNames = getExportedTypeNames(prog);
+      const exportedTypeNamesReact = getExportedTypeNames(progReact);
+      const exportedTypeNamesVue = getExportedTypeNames(progVue);
+
+      exportedTypeNames.forEach((name) => {
+        builder.store.setHelperFuncFilesMapping(name, localname);
+      });
+      exportedTypeNamesReact.forEach((name) => {
+        builder.store.setHelperFuncFilesMapping(name, localnameReact);
+      });
+      exportedTypeNamesVue.forEach((name) => {
+        builder.store.setHelperFuncFilesMapping(name, localnameVue);
+      });
+
       bundler.writeAst(prog, filename);
+      bundler.addExportObjToBundle(c.ref.proto.package, localname, exportedTypeNames, true);
       if(reactAsts.length) {
         bundler.writeAst(progReact, filenameReact);
+        bundler.addExportObjToBundle(c.ref.proto.package, localnameReact, exportedTypeNamesReact, true);
       }
       if(vueAsts.length) {
         bundler.writeAst(progVue, filenameVue);
+        bundler.addExportObjToBundle(c.ref.proto.package, localnameVue, exportedTypeNamesVue, true);
       }
       bundler.addToBundle(c, localname);
 

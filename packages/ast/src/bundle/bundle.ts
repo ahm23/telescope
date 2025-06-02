@@ -93,3 +93,26 @@ export const exportAllFromImportDeclarations = (
         );
     });
 };
+
+export const exportAllFromRelPath = (relPath: string) => {
+    return t.exportAllDeclaration(t.stringLiteral(relPath));
+};
+
+/**
+ * e.g. export { MsgCreatePost, MsgUpdatePost as aliasMsgUpdatePost} from "./msg";
+ * @param types
+ * @param relPath
+ */
+export const exportTypesWithAlias = (
+    types: { name: string; alias: string }[],
+    relPath: string
+) => {
+    const exportSpecifiers = types.map((type) =>
+        t.exportSpecifier(t.identifier(type.name), t.identifier(type.alias))
+    );
+    return t.exportNamedDeclaration(
+        null,
+        exportSpecifiers,
+        t.stringLiteral(relPath)
+    );
+};

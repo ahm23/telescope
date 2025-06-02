@@ -8,8 +8,11 @@ interface ParseProtoOptions {
 export declare const parseProto: (content: any, options?: ParseProtoOptions) => import("@cosmology/protobufjs").IParserResult;
 export declare class ProtoStore implements IProtoStore {
     _typeAliases: Record<string, Record<string, string>>;
-    _typePackageMapping: Record<string, string[]>;
-    _servicePackageMapping: Record<string, string[]>;
+    _typeFilesMapping: Record<string, string[]>;
+    _helperFuncFilesMapping: Record<string, string[]>;
+    _filesTypesMapping: Record<string, string[]>;
+    _filesHelperFuncsMapping: Record<string, string[]>;
+    _typeSerialNumbers: Record<string, number>;
     files: string[];
     protoDirs: string[];
     deps: ProtoDep[];
@@ -56,11 +59,19 @@ export declare class ProtoStore implements IProtoStore {
     getDefaultOrExistingSmallestEnumValue(pkg: string, name: string): number;
     setTypeAlias(alias: string, type: string, filepath: string): void;
     getTypeAlias(type: string, filepath: string): string;
-    setTypePackageMapping(type: string, pkg: string): void;
-    getTypePackageMapping(type: string): string[];
-    getTypesInMultiplePackages(): string[];
-    setServicePackageMapping(service: string, pkg: string): void;
-    getServicePackageMapping(service: string): string[];
-    getServicesInMultiplePackages(): string[];
+    setTypeFilesMapping(type: string, file: string): void;
+    getTypeFilesMapping(type: string): string[];
+    getTypesInMultipleFiles(): string[];
+    isTypeInMultipleFiles(type: string): boolean;
+    setHelperFuncFilesMapping(helperFunc: string, file: string): void;
+    getHelperFuncFilesMapping(helperFunc: string): string[];
+    getHelperFuncsInMultipleFiles(): string[];
+    isHelperFuncInMultipleFiles(helperFunc: string): boolean;
+    private setFilesTypesMapping;
+    getFilesTypesMapping(file: string): string[];
+    private setFilesHelperFuncsMapping;
+    getFilesHelperFuncsMapping(file: string): string[];
+    getTypeSerialNumber(type: string): number;
+    getAndIncTypeSerialNumber(type: string): number;
 }
 export {};

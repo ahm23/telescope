@@ -54,7 +54,8 @@ const options: TelescopeOptions = {
     },
   },
   bundle: {
-    enabled: false,
+    enabled: true,
+    type: "module",
   },
   stargateClients: {
     enabled: false,

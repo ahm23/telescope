@@ -1,9 +1,17 @@
 import { ImportDeclaration } from '@babel/types';
 import { ProtoServiceMethod, TelescopeOptions } from '@cosmology/types';
+export interface ExportObj {
+    pkg: string;
+    localname: string;
+    relativePath: string;
+    exportedIdentifiers: string[];
+    isHelperFunc?: boolean;
+}
 export interface Bundle {
     bundleVariables: {};
     bundleFile: string;
     importPaths: ImportDeclaration[];
+    exportObjs?: ExportObj[];
     base: string;
 }
 export interface BundlerFile {

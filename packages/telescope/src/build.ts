@@ -210,7 +210,6 @@ export class TelescopeParseContext implements TelescopeParseContext {
                 })
             }
         }
-
     }
 
     buildRegistry() {

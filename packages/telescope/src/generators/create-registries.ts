@@ -2,60 +2,69 @@ import { buildAllImports, getDepsFromMutations } from '../imports';
 import { Bundler } from '../bundler';
 import { parse } from '../parse';
 import { TelescopeBuilder } from '../builder';
+import { getExportedTypeNames } from '../utils/files';
 
 export const plugin = (
-    builder: TelescopeBuilder,
-    bundler: Bundler
+  builder: TelescopeBuilder,
+  bundler: Bundler
 ) => {
 
-    if (!builder.options.aminoEncoding?.enabled) {
-        return;
-    }
+  if (!builder.options.aminoEncoding?.enabled) {
+    return;
+  }
 
-    const mutationContexts = bundler
-        .contexts
-        .filter(context => context.mutations.length > 0);
+  const mutationContexts = bundler
+    .contexts
+    .filter(context => context.mutations.length > 0);
 
-    // [x] write out one registry helper for all contexts w/mutations
-    const registries = mutationContexts.map(c => {
+  // [x] write out one registry helper for all contexts w/mutations
+  const registries = mutationContexts.map(c => {
 
-        const enabled = c.amino.pluginValue('aminoEncoding.enabled');
-        if (!enabled) return;
+    const enabled = c.amino.pluginValue('aminoEncoding.enabled');
+    if (!enabled) return;
 
-        if (c.proto.isExcluded()) return;
+    if (c.proto.isExcluded()) return;
 
-        const localname = bundler.getLocalFilename(c.ref, 'registry');
-        const filename = bundler.getFilename(localname);
-        const ctx = bundler.getFreshContext(c);
+    const localname = bundler.getLocalFilename(c.ref, 'registry');
+    const filename = bundler.getFilename(localname);
+    const ctx = bundler.getFreshContext(c);
 
-        // get mutations, services
-        parse(ctx);
+    // get mutations, services
+    parse(ctx);
 
-        ctx.buildRegistry();
-        ctx.buildRegistryLoader();
-        ctx.buildHelperObject();
+    ctx.buildRegistry();
+    ctx.buildRegistryLoader();
+    ctx.buildHelperObject();
 
-        const serviceImports = getDepsFromMutations(
-            ctx.mutations,
-            localname
-        );
+    const serviceImports = getDepsFromMutations(
+      ctx.mutations,
+      localname
+    );
 
-        const imports = buildAllImports(ctx, serviceImports, localname);
-        const prog = []
-            .concat(imports)
-            .concat(ctx.body);
+    const imports = buildAllImports(ctx, serviceImports, localname);
+    const prog = []
+      .concat(imports)
+      .concat(ctx.body);
 
-        bundler.writeAst(prog, filename);
-        bundler.addToBundle(c, localname);
+    const exportedTypeNames = getExportedTypeNames(prog);
 
-        return {
-            package: c.ref.proto.package,
-            localname,
-            filename
-        };
+    exportedTypeNames.forEach((name) => {
+      builder.store.setTypeFilesMapping(name, localname);
+    });
 
-    }).filter(Boolean);
+    bundler.addExportObjToBundle(c.ref.proto.package, localname, exportedTypeNames);
 
-    bundler.addRegistries(registries);
+    bundler.writeAst(prog, filename);
+    bundler.addToBundle(c, localname);
+
+    return {
+      package: c.ref.proto.package,
+      localname,
+      filename
+    };
+
+  }).filter(Boolean);
+
+  bundler.addRegistries(registries);
 
 };

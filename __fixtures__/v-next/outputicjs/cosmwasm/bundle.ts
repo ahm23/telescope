@@ -4,6 +4,7 @@ export * from "./wasm/v1/proposal";
 export * from "./wasm/v1/query";
 export * from "./wasm/v1/tx";
 export { AccessType, AccessTypeAmino, ContractCodeHistoryOperationType, ContractCodeHistoryOperationTypeAmino, AccessTypeParam, AccessTypeParamProtoMsg, AccessTypeParamAmino, AccessTypeParamAminoMsg, AccessConfig, AccessConfigProtoMsg, AccessConfigAmino, AccessConfigAminoMsg, Params as CosmwasmWasmV1Params, ParamsProtoMsg as CosmwasmWasmV1ParamsProtoMsg, ParamsAmino as CosmwasmWasmV1ParamsAmino, ParamsAminoMsg as CosmwasmWasmV1ParamsAminoMsg, CodeInfo, CodeInfoProtoMsg, CodeInfoAmino, CodeInfoAminoMsg, ContractInfo, ContractInfoProtoMsg, ContractInfoEncoded, ContractInfoAmino, ContractInfoAminoMsg, ContractCodeHistoryEntry, ContractCodeHistoryEntryProtoMsg, ContractCodeHistoryEntryAmino, ContractCodeHistoryEntryAminoMsg, AbsoluteTxPosition, AbsoluteTxPositionProtoMsg, AbsoluteTxPositionAmino, AbsoluteTxPositionAminoMsg, Model, ModelProtoMsg, ModelAmino, ModelAminoMsg, ContractInfoExtension_InterfaceDecoder, ContractInfoExtension_FromAmino, ContractInfoExtension_ToAmino } from "./wasm/v1/types";
+export { registry as CosmwasmWasmV1Registry, MessageComposer as CosmwasmWasmV1MessageComposer } from "./wasm/v1/tx.registry";
 export * from "./wasm/v1/query.rpc.func";
 export * from "./wasm/v1/query.rpc.react";
 export * from "./wasm/v1/tx.rpc.func";

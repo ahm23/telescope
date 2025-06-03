@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.3](https://github.com/hyperweb-io/telescope/compare/@cosmology/types@1.12.2...@cosmology/types@1.12.3) (2025-06-03)
+
+**Note:** Version bump only for package @cosmology/types
+
 ## [1.12.2](https://github.com/hyperweb-io/telescope/compare/@cosmology/types@1.12.1...@cosmology/types@1.12.2) (2025-05-30)
 
 **Note:** Version bump only for package @cosmology/types

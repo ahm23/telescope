@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.4](https://github.com/hyperweb-io/telescope/compare/@cosmology/utils@1.10.3...@cosmology/utils@1.10.4) (2025-06-03)
+
+**Note:** Version bump only for package @cosmology/utils
+
 ## [1.10.3](https://github.com/hyperweb-io/telescope/compare/@cosmology/utils@1.10.2...@cosmology/utils@1.10.3) (2025-05-31)
 
 ### Bug Fixes

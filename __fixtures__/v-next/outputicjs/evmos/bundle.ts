@@ -22,6 +22,9 @@ export { QueryParamsRequest as EvmosRecoveryV1QueryParamsRequest, QueryParamsReq
 export * from "./vesting/v1/query";
 export * from "./vesting/v1/tx";
 export * from "./vesting/v1/vesting";
+export { registry as EvmosErc20V1Registry, MessageComposer as EvmosErc20V1MessageComposer } from "./erc20/v1/tx.registry";
+export { registry as EvmosFeesV1Registry, MessageComposer as EvmosFeesV1MessageComposer } from "./fees/v1/tx.registry";
+export { registry as EvmosVestingV1Registry, MessageComposer as EvmosVestingV1MessageComposer } from "./vesting/v1/tx.registry";
 export * from "./claims/v1/query.rpc.func";
 export * from "./claims/v1/query.rpc.react";
 export { getEpochInfos, getCurrentEpoch } from "./epochs/v1/query.rpc.func";

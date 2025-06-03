@@ -21,7 +21,7 @@ const options: TelescopeOptions = {
   useSDKTypes: false,
   prototypes: {
     enableRegistryLoader: false,
-    enableMessageComposer: false,
+    enableMessageComposer: true,
     enabled: true,
     parser: {
       keepCase: false,

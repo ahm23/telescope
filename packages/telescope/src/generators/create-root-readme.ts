@@ -1,34 +1,23 @@
 import { TelescopeBuilder } from "../builder";
 import { writeContentToFile } from "../utils/files";
-import { join, relative } from "path";
-import { readdirSync, statSync } from "fs";
+import { join } from "path";
+
 
 /**
- * Generates a file tree representation for the README
+ * Gets the aliased function name if it's duplicated across multiple files
  */
-function generateFileTree(dir: string, prefix = "", rootPath: string): string {
-    let result = "";
-    const files = readdirSync(dir);
+function getAliasedFunctionName(builder: TelescopeBuilder, functionName: string): string {
+    const duplicatedHelperFuncs = builder.store.getHelperFuncsInMultipleFiles();
+    const isDuplicated = duplicatedHelperFuncs.includes(functionName);
 
-    files.forEach((file, index) => {
-        const isLast = index === files.length - 1;
-        const path = join(dir, file);
-        const stats = statSync(path);
-
-        // Add file/directory entry with proper prefix
-        if (stats.isDirectory()) {
-            result += `${prefix}${isLast ? "└── " : "├── "}${file}/\n`;
-            result += generateFileTree(
-                path,
-                prefix + (isLast ? "    " : "│   "),
-                rootPath
-            );
-        } else {
-            result += `${prefix}${isLast ? "└── " : "├── "}${file}\n`;
+    if (isDuplicated) {
+        const serialNumber = builder.store.getAndIncTypeSerialNumber(functionName);
+        if (serialNumber > 0) {
+            return `${functionName}${serialNumber}`;
         }
-    });
+    }
 
-    return result;
+    return functionName;
 }
 
 export const plugin = (builder: TelescopeBuilder) => {
@@ -37,9 +26,6 @@ export const plugin = (builder: TelescopeBuilder) => {
     }
 
     const readmePath = join(builder.outPath, "README.md");
-
-    // Generate file tree
-    const fileTree = generateFileTree(builder.outPath, "", builder.outPath);
 
     // Get function mappings from builder
     const functionMappings = builder.getFunctionMappings();
@@ -60,8 +46,15 @@ export const plugin = (builder: TelescopeBuilder) => {
             queryMethods.forEach(methodName => {
                 const method = packageServices.Query[methodName];
 
+                // Get the aliased function name
+                const aliasedFunctionName = getAliasedFunctionName(builder, method.functionName);
+                const aliasedHookName = getAliasedFunctionName(builder, method.hookName);
+
                 packageDocs += `**${methodName}**\n`;
-                packageDocs += `- Function: \`${method.functionName}\`\n`;
+                packageDocs += `- Function: \`${aliasedFunctionName}\`\n`;
+                if (method.hookName && aliasedHookName !== aliasedFunctionName) {
+                    packageDocs += `- Hook: \`${aliasedHookName}\`\n`;
+                }
                 if (method.comment) {
                     packageDocs += `- Description: ${method.comment}\n`;
                 }
@@ -82,8 +75,15 @@ export const plugin = (builder: TelescopeBuilder) => {
             msgMethods.forEach(methodName => {
                 const method = packageServices.Msg[methodName];
 
+                // Get the aliased function name
+                const aliasedFunctionName = getAliasedFunctionName(builder, method.functionName);
+                const aliasedHookName = getAliasedFunctionName(builder, method.hookName);
+
                 packageDocs += `**${methodName}**\n`;
-                packageDocs += `- Function: \`${method.functionName}\`\n`;
+                packageDocs += `- Function: \`${aliasedFunctionName}\`\n`;
+                if (method.hookName && aliasedHookName !== aliasedFunctionName) {
+                    packageDocs += `- Hook: \`${aliasedHookName}\`\n`;
+                }
                 if (method.comment) {
                     packageDocs += `- Description: ${method.comment}\n`;
                 }
@@ -99,12 +99,6 @@ export const plugin = (builder: TelescopeBuilder) => {
     });
 
     const readmeContent = `# Generated Code
-
-## File Structure
-
-\`\`\`
-${fileTree}
-\`\`\`
 
 # Package Documentation
 

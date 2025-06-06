@@ -6,50 +6,95 @@ import { buildUseQuery } from "../../../react-query";
 import { buildUseVueQuery } from "../../../vue-query";
 import { QueryBalanceRequest, QueryBalanceRequestSDKType, QueryBalanceResponse, QueryBalanceResponseSDKType, QueryAllBalancesRequest, QueryAllBalancesRequestSDKType, QueryAllBalancesResponse, QueryAllBalancesResponseSDKType, QuerySpendableBalancesRequest, QuerySpendableBalancesRequestSDKType, QuerySpendableBalancesResponse, QuerySpendableBalancesResponseSDKType, QueryTotalSupplyRequest, QueryTotalSupplyRequestSDKType, QueryTotalSupplyResponse, QueryTotalSupplyResponseSDKType, QuerySupplyOfRequest, QuerySupplyOfRequestSDKType, QuerySupplyOfResponse, QuerySupplyOfResponseSDKType, QueryParamsRequest, QueryParamsRequestSDKType, QueryParamsResponse, QueryParamsResponseSDKType, QueryDenomMetadataRequest, QueryDenomMetadataRequestSDKType, QueryDenomMetadataResponse, QueryDenomMetadataResponseSDKType, QueryDenomsMetadataRequest, QueryDenomsMetadataRequestSDKType, QueryDenomsMetadataResponse, QueryDenomsMetadataResponseSDKType, QueryDenomOwnersRequest, QueryDenomOwnersRequestSDKType, QueryDenomOwnersResponse, QueryDenomOwnersResponseSDKType } from "./query";
 import { getBalance, getAllBalances, getSpendableBalances, getTotalSupply, getSupplyOf, getParams, getDenomMetadata, getDenomsMetadata, getDenomOwners } from "./query.rpc.func";
-/* Balance queries the balance of a single coin for a single account. */
+/**
+ * Balance queries the balance of a single coin for a single account.
+ * @name useGetBalance
+ * @package cosmos.bank.v1beta1
+ * @see protoservice: cosmos.bank.v1beta1.Balance
+ */
 export const useGetBalance = buildUseQuery<QueryBalanceRequest, QueryBalanceResponse>({
   builderQueryFn: getBalance,
   queryKeyPrefix: "BalanceQuery"
 });
-/* AllBalances queries the balance of all coins for a single account. */
+/**
+ * AllBalances queries the balance of all coins for a single account.
+ * @name useGetAllBalances
+ * @package cosmos.bank.v1beta1
+ * @see protoservice: cosmos.bank.v1beta1.AllBalances
+ */
 export const useGetAllBalances = buildUseQuery<QueryAllBalancesRequest, QueryAllBalancesResponse>({
   builderQueryFn: getAllBalances,
   queryKeyPrefix: "AllBalancesQuery"
 });
-/* SpendableBalances queries the spenable balance of all coins for a single
- account. */
+/**
+ * SpendableBalances queries the spenable balance of all coins for a single
+ * account.
+ * @name useGetSpendableBalances
+ * @package cosmos.bank.v1beta1
+ * @see protoservice: cosmos.bank.v1beta1.SpendableBalances
+ */
 export const useGetSpendableBalances = buildUseQuery<QuerySpendableBalancesRequest, QuerySpendableBalancesResponse>({
   builderQueryFn: getSpendableBalances,
   queryKeyPrefix: "SpendableBalancesQuery"
 });
-/* TotalSupply queries the total supply of all coins. */
+/**
+ * TotalSupply queries the total supply of all coins.
+ * @name useGetTotalSupply
+ * @package cosmos.bank.v1beta1
+ * @see protoservice: cosmos.bank.v1beta1.TotalSupply
+ */
 export const useGetTotalSupply = buildUseQuery<QueryTotalSupplyRequest, QueryTotalSupplyResponse>({
   builderQueryFn: getTotalSupply,
   queryKeyPrefix: "TotalSupplyQuery"
 });
-/* SupplyOf queries the supply of a single coin. */
+/**
+ * SupplyOf queries the supply of a single coin.
+ * @name useGetSupplyOf
+ * @package cosmos.bank.v1beta1
+ * @see protoservice: cosmos.bank.v1beta1.SupplyOf
+ */
 export const useGetSupplyOf = buildUseQuery<QuerySupplyOfRequest, QuerySupplyOfResponse>({
   builderQueryFn: getSupplyOf,
   queryKeyPrefix: "SupplyOfQuery"
 });
-/* Params queries the parameters of x/bank module. */
+/**
+ * Params queries the parameters of x/bank module.
+ * @name useGetParams
+ * @package cosmos.bank.v1beta1
+ * @see protoservice: cosmos.bank.v1beta1.Params
+ */
 export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
   builderQueryFn: getParams,
   queryKeyPrefix: "ParamsQuery"
 });
-/* DenomsMetadata queries the client metadata of a given coin denomination. */
+/**
+ * DenomsMetadata queries the client metadata of a given coin denomination.
+ * @name useGetDenomMetadata
+ * @package cosmos.bank.v1beta1
+ * @see protoservice: cosmos.bank.v1beta1.DenomMetadata
+ */
 export const useGetDenomMetadata = buildUseQuery<QueryDenomMetadataRequest, QueryDenomMetadataResponse>({
   builderQueryFn: getDenomMetadata,
   queryKeyPrefix: "DenomMetadataQuery"
 });
-/* DenomsMetadata queries the client metadata for all registered coin
- denominations. */
+/**
+ * DenomsMetadata queries the client metadata for all registered coin
+ * denominations.
+ * @name useGetDenomsMetadata
+ * @package cosmos.bank.v1beta1
+ * @see protoservice: cosmos.bank.v1beta1.DenomsMetadata
+ */
 export const useGetDenomsMetadata = buildUseQuery<QueryDenomsMetadataRequest, QueryDenomsMetadataResponse>({
   builderQueryFn: getDenomsMetadata,
   queryKeyPrefix: "DenomsMetadataQuery"
 });
-/* DenomOwners queries for all account addresses that own a particular token
- denomination. */
+/**
+ * DenomOwners queries for all account addresses that own a particular token
+ * denomination.
+ * @name useGetDenomOwners
+ * @package cosmos.bank.v1beta1
+ * @see protoservice: cosmos.bank.v1beta1.DenomOwners
+ */
 export const useGetDenomOwners = buildUseQuery<QueryDenomOwnersRequest, QueryDenomOwnersResponse>({
   builderQueryFn: getDenomOwners,
   queryKeyPrefix: "DenomOwnersQuery"

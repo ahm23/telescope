@@ -1,11 +1,21 @@
 import { buildUseMutation } from "../../../react-query";
 import { MsgSend, MsgMultiSend } from "./tx";
 import { send, multiSend } from "./tx.rpc.func";
-/* Send defines a method for sending coins from one account to another account. */
+/**
+ * Send defines a method for sending coins from one account to another account.
+ * @name useSend
+ * @package cosmos.bank.v1beta1
+ * @see protoservice: cosmos.bank.v1beta1.Send
+ */
 export const useSend = buildUseMutation<MsgSend, Error>({
   builderMutationFn: send
 });
-/* MultiSend defines a method for sending coins from some accounts to other accounts. */
+/**
+ * MultiSend defines a method for sending coins from some accounts to other accounts.
+ * @name useMultiSend
+ * @package cosmos.bank.v1beta1
+ * @see protoservice: cosmos.bank.v1beta1.MultiSend
+ */
 export const useMultiSend = buildUseMutation<MsgMultiSend, Error>({
   builderMutationFn: multiSend
 });

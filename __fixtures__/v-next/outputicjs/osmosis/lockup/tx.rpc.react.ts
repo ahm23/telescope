@@ -1,22 +1,47 @@
 import { buildUseMutation } from "../../react-query";
 import { MsgLockTokens, MsgBeginUnlockingAll, MsgBeginUnlocking, MsgExtendLockup, MsgForceUnlock } from "./tx";
 import { lockTokens, beginUnlockingAll, beginUnlocking, extendLockup, forceUnlock } from "./tx.rpc.func";
-/* LockTokens lock tokens */
+/**
+ * LockTokens lock tokens
+ * @name useLockTokens
+ * @package osmosis.lockup
+ * @see protoservice: osmosis.lockup.LockTokens
+ */
 export const useLockTokens = buildUseMutation<MsgLockTokens, Error>({
   builderMutationFn: lockTokens
 });
-/* BeginUnlockingAll begin unlocking all tokens */
+/**
+ * BeginUnlockingAll begin unlocking all tokens
+ * @name useBeginUnlockingAll
+ * @package osmosis.lockup
+ * @see protoservice: osmosis.lockup.BeginUnlockingAll
+ */
 export const useBeginUnlockingAll = buildUseMutation<MsgBeginUnlockingAll, Error>({
   builderMutationFn: beginUnlockingAll
 });
-/* MsgBeginUnlocking begins unlocking tokens by lock ID */
+/**
+ * MsgBeginUnlocking begins unlocking tokens by lock ID
+ * @name useBeginUnlocking
+ * @package osmosis.lockup
+ * @see protoservice: osmosis.lockup.BeginUnlocking
+ */
 export const useBeginUnlocking = buildUseMutation<MsgBeginUnlocking, Error>({
   builderMutationFn: beginUnlocking
 });
-/* MsgEditLockup edits the existing lockups by lock ID */
+/**
+ * MsgEditLockup edits the existing lockups by lock ID
+ * @name useExtendLockup
+ * @package osmosis.lockup
+ * @see protoservice: osmosis.lockup.ExtendLockup
+ */
 export const useExtendLockup = buildUseMutation<MsgExtendLockup, Error>({
   builderMutationFn: extendLockup
 });
+/**
+ * @name useForceUnlock
+ * @package osmosis.lockup
+ * @see protoservice: osmosis.lockup.ForceUnlock
+ */
 export const useForceUnlock = buildUseMutation<MsgForceUnlock, Error>({
   builderMutationFn: forceUnlock
 });

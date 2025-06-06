@@ -1,18 +1,38 @@
 import { buildTx } from "../../../../helper-func-types";
 import { MsgCreateClient, MsgUpdateClient, MsgUpgradeClient, MsgSubmitMisbehaviour } from "./tx";
-/* CreateClient defines a rpc handler method for MsgCreateClient. */
+/**
+ * CreateClient defines a rpc handler method for MsgCreateClient.
+ * @name createClient
+ * @package ibc.core.client.v1
+ * @see protoservice: ibc.core.client.v1.CreateClient
+ */
 export const createClient = buildTx<MsgCreateClient>({
   msg: MsgCreateClient
 });
-/* UpdateClient defines a rpc handler method for MsgUpdateClient. */
+/**
+ * UpdateClient defines a rpc handler method for MsgUpdateClient.
+ * @name updateClient
+ * @package ibc.core.client.v1
+ * @see protoservice: ibc.core.client.v1.UpdateClient
+ */
 export const updateClient = buildTx<MsgUpdateClient>({
   msg: MsgUpdateClient
 });
-/* UpgradeClient defines a rpc handler method for MsgUpgradeClient. */
+/**
+ * UpgradeClient defines a rpc handler method for MsgUpgradeClient.
+ * @name upgradeClient
+ * @package ibc.core.client.v1
+ * @see protoservice: ibc.core.client.v1.UpgradeClient
+ */
 export const upgradeClient = buildTx<MsgUpgradeClient>({
   msg: MsgUpgradeClient
 });
-/* SubmitMisbehaviour defines a rpc handler method for MsgSubmitMisbehaviour. */
+/**
+ * SubmitMisbehaviour defines a rpc handler method for MsgSubmitMisbehaviour.
+ * @name submitMisbehaviour
+ * @package ibc.core.client.v1
+ * @see protoservice: ibc.core.client.v1.SubmitMisbehaviour
+ */
 export const submitMisbehaviour = buildTx<MsgSubmitMisbehaviour>({
   msg: MsgSubmitMisbehaviour
 });

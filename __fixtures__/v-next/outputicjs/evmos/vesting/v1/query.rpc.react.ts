@@ -1,7 +1,12 @@
 import { buildUseQuery } from "../../../react-query";
 import { QueryBalancesRequest, QueryBalancesResponse } from "./query";
 import { getBalances } from "./query.rpc.func";
-/* Retrieves the unvested, vested and locked tokens for a vesting account */
+/**
+ * Retrieves the unvested, vested and locked tokens for a vesting account
+ * @name useGetBalances
+ * @package evmos.vesting.v1
+ * @see protoservice: evmos.vesting.v1.Balances
+ */
 export const useGetBalances = buildUseQuery<QueryBalancesRequest, QueryBalancesResponse>({
   builderQueryFn: getBalances,
   queryKeyPrefix: "BalancesQuery"

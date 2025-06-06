@@ -1,6 +1,7 @@
 import * as ast from "@babel/types";
 import { ProtoServiceMethod } from "@cosmology/types";
 import { GenericParseContext } from "../../encoding";
+import { CommentBlockBuilder, makeCommentBlock } from "../../utils";
 
 /**
  *
@@ -40,15 +41,16 @@ export function createMsgHelperCreator(
         ])
     );
 
-    // Add comments if service has a comment
-    if (service.comment) {
-        exportDeclaration.leadingComments = [{
-            type: 'CommentBlock',
-            value: ` ${service.comment} `,
-            start: null,
-            end: null,
-            loc: null
-        }];
+    const commentBlock = new CommentBlockBuilder()
+    .addLine(service.comment)
+    .addLine(`@name ${helperCreatorName}`)
+    .addLine(`@package ${context.ref.proto.package}`)
+    .addLine(`@see protoservice: ${context.ref.proto.package}.${service.name}`)
+    .addLine(service.options?.deprecated ? '@deprecated' : null)
+    .build();
+
+    if (commentBlock) {
+        exportDeclaration.leadingComments = [commentBlock];
     }
 
     return exportDeclaration;
@@ -92,16 +94,16 @@ export function createMsgHooks(
         ])
     );
 
-    
-    // Add comments if service has a comment
-    if (service.comment) {
-        exportDeclaration.leadingComments = [{
-            type: 'CommentBlock',
-            value: ` ${service.comment} `,
-            start: null,
-            end: null,
-            loc: null
-        }];
+    const commentBlock = new CommentBlockBuilder()
+    .addLine(service.comment)
+    .addLine(`@name ${hookName}`)
+    .addLine(`@package ${context.ref.proto.package}`)
+    .addLine(`@see protoservice: ${context.ref.proto.package}.${service.name}`)
+    .addLine(service.options?.deprecated ? '@deprecated' : null)
+    .build();
+
+    if (commentBlock) {
+        exportDeclaration.leadingComments = [commentBlock];
     }
 
     return exportDeclaration;
@@ -145,16 +147,16 @@ export function createVueMsgHooks(
         ])
     );
 
-    
-    // Add comments if service has a comment
-    if (service.comment) {
-        exportDeclaration.leadingComments = [{
-            type: 'CommentBlock',
-            value: ` ${service.comment} `,
-            start: null,
-            end: null,
-            loc: null
-        }];
+    const commentBlock = new CommentBlockBuilder()
+    .addLine(service.comment)
+    .addLine(`@name ${hookName}`)
+    .addLine(`@package ${context.ref.proto.package}`)
+    .addLine(`@see protoservice: ${context.ref.proto.package}.${service.name}`)
+    .addLine(service.options?.deprecated ? '@deprecated' : null)
+    .build();
+
+    if (commentBlock) {
+        exportDeclaration.leadingComments = [commentBlock];
     }
 
     return exportDeclaration;

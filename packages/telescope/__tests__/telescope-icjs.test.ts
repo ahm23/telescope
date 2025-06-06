@@ -19,6 +19,7 @@ const options: TelescopeOptions = {
   env: "v-next",
   useInterchainJs: true,
   useSDKTypes: false,
+  exportReadme: true,
   prototypes: {
     enableRegistryLoader: false,
     enableMessageComposer: true,

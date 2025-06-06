@@ -101,6 +101,19 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
               );
 
             helperCreatorNameList.push(helperCreatorName);
+
+            // Store the mapping in builder
+            builder.addFunctionMapping(
+              bundlerFile.package,
+              svcKey,
+              methodKey,
+              helperCreatorName,
+              hookName,
+              svc.methods[methodKey].comment,
+              svc.methods[methodKey].requestType,
+              svc.methods[methodKey].responseType
+            );
+
             // gen helper funcs
             asts.push(
               createMsgHelperCreator(
@@ -182,12 +195,16 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
       });
 
       bundler.writeAst(prog, filename);
+<<<<<<< Updated upstream
       bundler.addExportObjToBundle(c.ref.proto.package, localname, exportedTypeNames, true);
       if(reactAsts.length) {
+=======
+      if (reactAsts.length) {
+>>>>>>> Stashed changes
         bundler.writeAst(progReact, filenameReact);
         bundler.addExportObjToBundle(c.ref.proto.package, localnameReact, exportedTypeNamesReact, true);
       }
-      if(vueAsts.length) {
+      if (vueAsts.length) {
         bundler.writeAst(progVue, filenameVue);
         bundler.addExportObjToBundle(c.ref.proto.package, localnameVue, exportedTypeNamesVue, true);
       }

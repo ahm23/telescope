@@ -53,6 +53,7 @@ export interface TelescopeOpts {
   useSDKTypes?: boolean;
   includeExternalHelpers?: boolean;
   restoreImportExtension?: string;
+  exportReadme?: boolean;
 
   logLevel?: TelescopeLogLevel;
 
@@ -394,6 +395,7 @@ export const defaultTelescopeOptions: TelescopeOptions = {
   useSDKTypes: true,
   includeExternalHelpers: false,
   logLevel: TelescopeLogLevel.None,
+  exportReadme: false,
 
   interfaces: {
     enabled: true,

@@ -15,10 +15,25 @@ export declare class TelescopeBuilder {
     readonly rpcMsgClients: BundlerFile[];
     readonly registries: BundlerFile[];
     readonly stateManagers: Record<string, BundlerFile[]>;
+    readonly functionMappings: Record<string, Record<string, Record<string, {
+        functionName: string;
+        hookName: string;
+        comment?: string;
+        requestType: string;
+        responseType: string;
+    }>>>;
     constructor({ protoDirs, outPath, store, options, }: TelescopeInput & {
         store?: ProtoStore;
     });
     context(ref: any): TelescopeParseContext;
+    addFunctionMapping(packageName: string, serviceName: string, methodName: string, functionName: string, hookName: string, comment?: string, requestType?: string, responseType?: string): void;
+    getFunctionMappings(): Record<string, Record<string, Record<string, {
+        functionName: string;
+        hookName: string;
+        comment?: string;
+        requestType: string;
+        responseType: string;
+    }>>>;
     addStateManagers(type: string, files: BundlerFile[]): void;
     addRPCQueryClients(files: BundlerFile[]): void;
     addRPCMsgClients(files: BundlerFile[]): void;

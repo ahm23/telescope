@@ -5,7 +5,7 @@ import { getChannel, getChannels, getConnectionChannels, getChannelClientState, 
  * Channel queries an IBC Channel.
  * @name useGetChannel
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.Channel
+ * @see proto service: ibc.core.channel.v1.Channel
  */
 export const useGetChannel = buildUseQuery<QueryChannelRequest, QueryChannelResponse>({
   builderQueryFn: getChannel,
@@ -15,7 +15,7 @@ export const useGetChannel = buildUseQuery<QueryChannelRequest, QueryChannelResp
  * Channels queries all the IBC channels of a chain.
  * @name useGetChannels
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.Channels
+ * @see proto service: ibc.core.channel.v1.Channels
  */
 export const useGetChannels = buildUseQuery<QueryChannelsRequest, QueryChannelsResponse>({
   builderQueryFn: getChannels,
@@ -26,7 +26,7 @@ export const useGetChannels = buildUseQuery<QueryChannelsRequest, QueryChannelsR
  * end.
  * @name useGetConnectionChannels
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.ConnectionChannels
+ * @see proto service: ibc.core.channel.v1.ConnectionChannels
  */
 export const useGetConnectionChannels = buildUseQuery<QueryConnectionChannelsRequest, QueryConnectionChannelsResponse>({
   builderQueryFn: getConnectionChannels,
@@ -37,7 +37,7 @@ export const useGetConnectionChannels = buildUseQuery<QueryConnectionChannelsReq
  * with the provided channel identifiers.
  * @name useGetChannelClientState
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.ChannelClientState
+ * @see proto service: ibc.core.channel.v1.ChannelClientState
  */
 export const useGetChannelClientState = buildUseQuery<QueryChannelClientStateRequest, QueryChannelClientStateResponse>({
   builderQueryFn: getChannelClientState,
@@ -48,7 +48,7 @@ export const useGetChannelClientState = buildUseQuery<QueryChannelClientStateReq
  * associated with the provided channel identifiers.
  * @name useGetChannelConsensusState
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.ChannelConsensusState
+ * @see proto service: ibc.core.channel.v1.ChannelConsensusState
  */
 export const useGetChannelConsensusState = buildUseQuery<QueryChannelConsensusStateRequest, QueryChannelConsensusStateResponse>({
   builderQueryFn: getChannelConsensusState,
@@ -58,7 +58,7 @@ export const useGetChannelConsensusState = buildUseQuery<QueryChannelConsensusSt
  * PacketCommitment queries a stored packet commitment hash.
  * @name useGetPacketCommitment
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.PacketCommitment
+ * @see proto service: ibc.core.channel.v1.PacketCommitment
  */
 export const useGetPacketCommitment = buildUseQuery<QueryPacketCommitmentRequest, QueryPacketCommitmentResponse>({
   builderQueryFn: getPacketCommitment,
@@ -69,7 +69,7 @@ export const useGetPacketCommitment = buildUseQuery<QueryPacketCommitmentRequest
  * with a channel.
  * @name useGetPacketCommitments
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.PacketCommitments
+ * @see proto service: ibc.core.channel.v1.PacketCommitments
  */
 export const useGetPacketCommitments = buildUseQuery<QueryPacketCommitmentsRequest, QueryPacketCommitmentsResponse>({
   builderQueryFn: getPacketCommitments,
@@ -80,7 +80,7 @@ export const useGetPacketCommitments = buildUseQuery<QueryPacketCommitmentsReque
  * queried chain
  * @name useGetPacketReceipt
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.PacketReceipt
+ * @see proto service: ibc.core.channel.v1.PacketReceipt
  */
 export const useGetPacketReceipt = buildUseQuery<QueryPacketReceiptRequest, QueryPacketReceiptResponse>({
   builderQueryFn: getPacketReceipt,
@@ -90,7 +90,7 @@ export const useGetPacketReceipt = buildUseQuery<QueryPacketReceiptRequest, Quer
  * PacketAcknowledgement queries a stored packet acknowledgement hash.
  * @name useGetPacketAcknowledgement
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.PacketAcknowledgement
+ * @see proto service: ibc.core.channel.v1.PacketAcknowledgement
  */
 export const useGetPacketAcknowledgement = buildUseQuery<QueryPacketAcknowledgementRequest, QueryPacketAcknowledgementResponse>({
   builderQueryFn: getPacketAcknowledgement,
@@ -101,7 +101,7 @@ export const useGetPacketAcknowledgement = buildUseQuery<QueryPacketAcknowledgem
  * with a channel.
  * @name useGetPacketAcknowledgements
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.PacketAcknowledgements
+ * @see proto service: ibc.core.channel.v1.PacketAcknowledgements
  */
 export const useGetPacketAcknowledgements = buildUseQuery<QueryPacketAcknowledgementsRequest, QueryPacketAcknowledgementsResponse>({
   builderQueryFn: getPacketAcknowledgements,
@@ -112,7 +112,7 @@ export const useGetPacketAcknowledgements = buildUseQuery<QueryPacketAcknowledge
  * channel and sequences.
  * @name useGetUnreceivedPackets
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.UnreceivedPackets
+ * @see proto service: ibc.core.channel.v1.UnreceivedPackets
  */
 export const useGetUnreceivedPackets = buildUseQuery<QueryUnreceivedPacketsRequest, QueryUnreceivedPacketsResponse>({
   builderQueryFn: getUnreceivedPackets,
@@ -123,7 +123,7 @@ export const useGetUnreceivedPackets = buildUseQuery<QueryUnreceivedPacketsReque
  * with a channel and sequences.
  * @name useGetUnreceivedAcks
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.UnreceivedAcks
+ * @see proto service: ibc.core.channel.v1.UnreceivedAcks
  */
 export const useGetUnreceivedAcks = buildUseQuery<QueryUnreceivedAcksRequest, QueryUnreceivedAcksResponse>({
   builderQueryFn: getUnreceivedAcks,
@@ -133,7 +133,7 @@ export const useGetUnreceivedAcks = buildUseQuery<QueryUnreceivedAcksRequest, Qu
  * NextSequenceReceive returns the next receive sequence for a given channel.
  * @name useGetNextSequenceReceive
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.NextSequenceReceive
+ * @see proto service: ibc.core.channel.v1.NextSequenceReceive
  */
 export const useGetNextSequenceReceive = buildUseQuery<QueryNextSequenceReceiveRequest, QueryNextSequenceReceiveResponse>({
   builderQueryFn: getNextSequenceReceive,

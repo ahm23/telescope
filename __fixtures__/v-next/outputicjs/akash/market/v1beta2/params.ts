@@ -1,33 +1,49 @@
 import { Coin, CoinAmino } from "../../../cosmos/base/v1beta1/coin";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** Params is the params for the x/market module */
-export interface Params {
+/**
+ * Params is the params for the x/market module
+ * @name AkashMarketV1beta2Params
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Params
+ */
+export interface AkashMarketV1beta2Params {
   bidMinDeposit: Coin;
   orderMaxBids: number;
 }
-export interface ParamsProtoMsg {
+export interface AkashMarketV1beta2ParamsProtoMsg {
   typeUrl: "/akash.market.v1beta2.Params";
   value: Uint8Array;
 }
-/** Params is the params for the x/market module */
-export interface ParamsAmino {
+/**
+ * Params is the params for the x/market module
+ * @name AkashMarketV1beta2ParamsAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.AkashMarketV1beta2Params
+ */
+export interface AkashMarketV1beta2ParamsAmino {
   bid_min_deposit: CoinAmino;
   order_max_bids: number;
 }
-export interface ParamsAminoMsg {
+export interface AkashMarketV1beta2ParamsAminoMsg {
   type: "/akash.market.v1beta2.Params";
-  value: ParamsAmino;
+  value: AkashMarketV1beta2ParamsAmino;
 }
-function createBaseParams(): Params {
+function createBaseAkashMarketV1beta2Params(): AkashMarketV1beta2Params {
   return {
     bidMinDeposit: Coin.fromPartial({}),
     orderMaxBids: 0
   };
 }
-export const Params = {
+/**
+ * Params is the params for the x/market module
+ * @name AkashMarketV1beta2Params
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Params
+ */
+export const AkashMarketV1beta2Params = {
   typeUrl: "/akash.market.v1beta2.Params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: AkashMarketV1beta2Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.bidMinDeposit !== undefined) {
       Coin.encode(message.bidMinDeposit, writer.uint32(10).fork()).ldelim();
     }
@@ -36,10 +52,10 @@ export const Params = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): AkashMarketV1beta2Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseAkashMarketV1beta2Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -56,14 +72,14 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<AkashMarketV1beta2Params>): AkashMarketV1beta2Params {
+    const message = createBaseAkashMarketV1beta2Params();
     message.bidMinDeposit = object.bidMinDeposit !== undefined && object.bidMinDeposit !== null ? Coin.fromPartial(object.bidMinDeposit) : undefined;
     message.orderMaxBids = object.orderMaxBids ?? 0;
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: AkashMarketV1beta2ParamsAmino): AkashMarketV1beta2Params {
+    const message = createBaseAkashMarketV1beta2Params();
     if (object.bid_min_deposit !== undefined && object.bid_min_deposit !== null) {
       message.bidMinDeposit = Coin.fromAmino(object.bid_min_deposit);
     }
@@ -72,25 +88,25 @@ export const Params = {
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: AkashMarketV1beta2Params): AkashMarketV1beta2ParamsAmino {
     const obj: any = {};
     obj.bid_min_deposit = message.bidMinDeposit ? Coin.toAmino(message.bidMinDeposit) : Coin.toAmino(Coin.fromPartial({}));
     obj.order_max_bids = message.orderMaxBids ?? 0;
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: AkashMarketV1beta2ParamsAminoMsg): AkashMarketV1beta2Params {
+    return AkashMarketV1beta2Params.fromAmino(object.value);
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: AkashMarketV1beta2ParamsProtoMsg): AkashMarketV1beta2Params {
+    return AkashMarketV1beta2Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: AkashMarketV1beta2Params): Uint8Array {
+    return AkashMarketV1beta2Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: AkashMarketV1beta2Params): AkashMarketV1beta2ParamsProtoMsg {
     return {
       typeUrl: "/akash.market.v1beta2.Params",
-      value: Params.encode(message).finish()
+      value: AkashMarketV1beta2Params.encode(message).finish()
     };
   }
 };

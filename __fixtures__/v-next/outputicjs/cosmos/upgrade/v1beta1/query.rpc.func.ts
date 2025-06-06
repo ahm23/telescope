@@ -4,7 +4,7 @@ import { QueryCurrentPlanRequest, QueryCurrentPlanResponse, QueryAppliedPlanRequ
  * CurrentPlan queries the current upgrade plan.
  * @name getCurrentPlan
  * @package cosmos.upgrade.v1beta1
- * @see protoservice: cosmos.upgrade.v1beta1.CurrentPlan
+ * @see proto service: cosmos.upgrade.v1beta1.CurrentPlan
  */
 export const getCurrentPlan = buildQuery<QueryCurrentPlanRequest, QueryCurrentPlanResponse>({
   encode: QueryCurrentPlanRequest.encode,
@@ -16,7 +16,7 @@ export const getCurrentPlan = buildQuery<QueryCurrentPlanRequest, QueryCurrentPl
  * AppliedPlan queries a previously applied upgrade plan by its name.
  * @name getAppliedPlan
  * @package cosmos.upgrade.v1beta1
- * @see protoservice: cosmos.upgrade.v1beta1.AppliedPlan
+ * @see proto service: cosmos.upgrade.v1beta1.AppliedPlan
  */
 export const getAppliedPlan = buildQuery<QueryAppliedPlanRequest, QueryAppliedPlanResponse>({
   encode: QueryAppliedPlanRequest.encode,
@@ -33,7 +33,7 @@ export const getAppliedPlan = buildQuery<QueryAppliedPlanRequest, QueryAppliedPl
  * (https://github.com/cosmos/ibc-go/blob/2c880a22e9f9cc75f62b527ca94aa75ce1106001/proto/ibc/core/client/v1/query.proto#L54)
  * @name getUpgradedConsensusState
  * @package cosmos.upgrade.v1beta1
- * @see protoservice: cosmos.upgrade.v1beta1.UpgradedConsensusState
+ * @see proto service: cosmos.upgrade.v1beta1.UpgradedConsensusState
  * @deprecated
  */
 export const getUpgradedConsensusState = buildQuery<QueryUpgradedConsensusStateRequest, QueryUpgradedConsensusStateResponse>({
@@ -48,7 +48,7 @@ export const getUpgradedConsensusState = buildQuery<QueryUpgradedConsensusStateR
  * Since: cosmos-sdk 0.43
  * @name getModuleVersions
  * @package cosmos.upgrade.v1beta1
- * @see protoservice: cosmos.upgrade.v1beta1.ModuleVersions
+ * @see proto service: cosmos.upgrade.v1beta1.ModuleVersions
  */
 export const getModuleVersions = buildQuery<QueryModuleVersionsRequest, QueryModuleVersionsResponse>({
   encode: QueryModuleVersionsRequest.encode,
@@ -60,7 +60,7 @@ export const getModuleVersions = buildQuery<QueryModuleVersionsRequest, QueryMod
  * Returns the account with authority to conduct upgrades
  * @name getAuthority
  * @package cosmos.upgrade.v1beta1
- * @see protoservice: cosmos.upgrade.v1beta1.Authority
+ * @see proto service: cosmos.upgrade.v1beta1.Authority
  */
 export const getAuthority = buildQuery<QueryAuthorityRequest, QueryAuthorityResponse>({
   encode: QueryAuthorityRequest.encode,

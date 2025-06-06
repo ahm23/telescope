@@ -13,6 +13,9 @@ import { DeepPartial } from "../../helpers";
  * Different APIs can support different monitored resource types. APIs generally
  * provide a `list` method that returns the monitored resource descriptors used
  * by the API.
+ * @name MonitoredResourceDescriptor
+ * @package google.api
+ * @see proto type: google.api.MonitoredResourceDescriptor
  */
 export interface MonitoredResourceDescriptor {
   /**
@@ -47,7 +50,9 @@ export interface MonitoredResourceDescriptor {
    * identified by values for the labels `"database_id"` and `"zone"`.
    */
   labels: LabelDescriptor[];
-  /** Optional. The launch stage of the monitored resource definition. */
+  /**
+   * Optional. The launch stage of the monitored resource definition.
+  */
   launchStage: LaunchStage;
 }
 export interface MonitoredResourceDescriptorProtoMsg {
@@ -64,6 +69,9 @@ export interface MonitoredResourceDescriptorProtoMsg {
  * Different APIs can support different monitored resource types. APIs generally
  * provide a `list` method that returns the monitored resource descriptors used
  * by the API.
+ * @name MonitoredResourceDescriptorAmino
+ * @package google.api
+ * @see proto type: google.api.MonitoredResourceDescriptor
  */
 export interface MonitoredResourceDescriptorAmino {
   /**
@@ -98,13 +106,20 @@ export interface MonitoredResourceDescriptorAmino {
    * identified by values for the labels `"database_id"` and `"zone"`.
    */
   labels: LabelDescriptorAmino[];
-  /** Optional. The launch stage of the monitored resource definition. */
+  /**
+   * Optional. The launch stage of the monitored resource definition.
+  */
   launch_stage: LaunchStage;
 }
 export interface MonitoredResourceDescriptorAminoMsg {
   type: "/google.api.MonitoredResourceDescriptor";
   value: MonitoredResourceDescriptorAmino;
 }
+/**
+ * @name MonitoredResource_LabelsEntry
+ * @package google.api
+ * @see proto type: google.api.undefined
+ */
 export interface MonitoredResource_LabelsEntry {
   key: string;
   value: string;
@@ -113,6 +128,11 @@ export interface MonitoredResource_LabelsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name MonitoredResource_LabelsEntryAmino
+ * @package google.api
+ * @see proto type: google.api.MonitoredResource_LabelsEntry
+ */
 export interface MonitoredResource_LabelsEntryAmino {
   key: string;
   value: string;
@@ -135,6 +155,9 @@ export interface MonitoredResource_LabelsEntryAminoMsg {
  *     { "type": "gce_instance",
  *       "labels": { "instance_id": "12345678901234",
  *                   "zone": "us-central1-a" }}
+ * @name MonitoredResource
+ * @package google.api
+ * @see proto type: google.api.MonitoredResource
  */
 export interface MonitoredResource {
   /**
@@ -170,6 +193,9 @@ export interface MonitoredResourceProtoMsg {
  *     { "type": "gce_instance",
  *       "labels": { "instance_id": "12345678901234",
  *                   "zone": "us-central1-a" }}
+ * @name MonitoredResourceAmino
+ * @package google.api
+ * @see proto type: google.api.MonitoredResource
  */
 export interface MonitoredResourceAmino {
   /**
@@ -191,6 +217,11 @@ export interface MonitoredResourceAminoMsg {
   type: "/google.api.MonitoredResource";
   value: MonitoredResourceAmino;
 }
+/**
+ * @name MonitoredResourceMetadata_UserLabelsEntry
+ * @package google.api
+ * @see proto type: google.api.undefined
+ */
 export interface MonitoredResourceMetadata_UserLabelsEntry {
   key: string;
   value: string;
@@ -199,6 +230,11 @@ export interface MonitoredResourceMetadata_UserLabelsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name MonitoredResourceMetadata_UserLabelsEntryAmino
+ * @package google.api
+ * @see proto type: google.api.MonitoredResourceMetadata_UserLabelsEntry
+ */
 export interface MonitoredResourceMetadata_UserLabelsEntryAmino {
   key: string;
   value: string;
@@ -214,6 +250,9 @@ export interface MonitoredResourceMetadata_UserLabelsEntryAminoMsg {
  * auxiliary metadata. Monitoring and Logging use an ingestion
  * pipeline to extract metadata for cloud resources of all types, and store
  * the metadata in this message.
+ * @name MonitoredResourceMetadata
+ * @package google.api
+ * @see proto type: google.api.MonitoredResourceMetadata
  */
 export interface MonitoredResourceMetadata {
   /**
@@ -229,7 +268,9 @@ export interface MonitoredResourceMetadata {
    *       "spot_instance": false }
    */
   systemLabels?: Struct;
-  /** Output only. A map of user-defined metadata labels. */
+  /**
+   * Output only. A map of user-defined metadata labels.
+  */
   userLabels: {
     [key: string]: string;
   };
@@ -245,6 +286,9 @@ export interface MonitoredResourceMetadataProtoMsg {
  * auxiliary metadata. Monitoring and Logging use an ingestion
  * pipeline to extract metadata for cloud resources of all types, and store
  * the metadata in this message.
+ * @name MonitoredResourceMetadataAmino
+ * @package google.api
+ * @see proto type: google.api.MonitoredResourceMetadata
  */
 export interface MonitoredResourceMetadataAmino {
   /**
@@ -260,7 +304,9 @@ export interface MonitoredResourceMetadataAmino {
    *       "spot_instance": false }
    */
   system_labels?: StructAmino;
-  /** Output only. A map of user-defined metadata labels. */
+  /**
+   * Output only. A map of user-defined metadata labels.
+  */
   user_labels: {
     [key: string]: string;
   };
@@ -279,6 +325,20 @@ function createBaseMonitoredResourceDescriptor(): MonitoredResourceDescriptor {
     launchStage: 0
   };
 }
+/**
+ * An object that describes the schema of a [MonitoredResource][google.api.MonitoredResource] object using a
+ * type name and a set of labels.  For example, the monitored resource
+ * descriptor for Google Compute Engine VM instances has a type of
+ * `"gce_instance"` and specifies the use of the labels `"instance_id"` and
+ * `"zone"` to identify particular VM instances.
+ * 
+ * Different APIs can support different monitored resource types. APIs generally
+ * provide a `list` method that returns the monitored resource descriptors used
+ * by the API.
+ * @name MonitoredResourceDescriptor
+ * @package google.api
+ * @see proto type: google.api.MonitoredResourceDescriptor
+ */
 export const MonitoredResourceDescriptor = {
   typeUrl: "/google.api.MonitoredResourceDescriptor",
   encode(message: MonitoredResourceDescriptor, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -400,6 +460,11 @@ function createBaseMonitoredResource_LabelsEntry(): MonitoredResource_LabelsEntr
     value: ""
   };
 }
+/**
+ * @name MonitoredResource_LabelsEntry
+ * @package google.api
+ * @see proto type: google.api.undefined
+ */
 export const MonitoredResource_LabelsEntry = {
   encode(message: MonitoredResource_LabelsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -468,6 +533,24 @@ function createBaseMonitoredResource(): MonitoredResource {
     labels: {}
   };
 }
+/**
+ * An object representing a resource that can be used for monitoring, logging,
+ * billing, or other purposes. Examples include virtual machine instances,
+ * databases, and storage devices such as disks. The `type` field identifies a
+ * [MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] object that describes the resource's
+ * schema. Information in the `labels` field identifies the actual resource and
+ * its attributes according to the schema. For example, a particular Compute
+ * Engine VM instance could be represented by the following object, because the
+ * [MonitoredResourceDescriptor][google.api.MonitoredResourceDescriptor] for `"gce_instance"` has labels
+ * `"instance_id"` and `"zone"`:
+ * 
+ *     { "type": "gce_instance",
+ *       "labels": { "instance_id": "12345678901234",
+ *                   "zone": "us-central1-a" }}
+ * @name MonitoredResource
+ * @package google.api
+ * @see proto type: google.api.MonitoredResource
+ */
 export const MonitoredResource = {
   typeUrl: "/google.api.MonitoredResource",
   encode(message: MonitoredResource, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -566,6 +649,11 @@ function createBaseMonitoredResourceMetadata_UserLabelsEntry(): MonitoredResourc
     value: ""
   };
 }
+/**
+ * @name MonitoredResourceMetadata_UserLabelsEntry
+ * @package google.api
+ * @see proto type: google.api.undefined
+ */
 export const MonitoredResourceMetadata_UserLabelsEntry = {
   encode(message: MonitoredResourceMetadata_UserLabelsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -634,6 +722,17 @@ function createBaseMonitoredResourceMetadata(): MonitoredResourceMetadata {
     userLabels: {}
   };
 }
+/**
+ * Auxiliary metadata for a [MonitoredResource][google.api.MonitoredResource] object.
+ * [MonitoredResource][google.api.MonitoredResource] objects contain the minimum set of information to
+ * uniquely identify a monitored resource instance. There is some other useful
+ * auxiliary metadata. Monitoring and Logging use an ingestion
+ * pipeline to extract metadata for cloud resources of all types, and store
+ * the metadata in this message.
+ * @name MonitoredResourceMetadata
+ * @package google.api
+ * @see proto type: google.api.MonitoredResourceMetadata
+ */
 export const MonitoredResourceMetadata = {
   typeUrl: "/google.api.MonitoredResourceMetadata",
   encode(message: MonitoredResourceMetadata, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

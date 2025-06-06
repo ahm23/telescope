@@ -5,7 +5,7 @@ import { getOrders, getOrder, getBids, getBid, getLeases, getLease } from "./que
  * Orders queries orders with filters
  * @name useGetOrders
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.Orders
+ * @see proto service: akash.market.v1beta2.Orders
  */
 export const useGetOrders = buildUseQuery<QueryOrdersRequest, QueryOrdersResponse>({
   builderQueryFn: getOrders,
@@ -15,7 +15,7 @@ export const useGetOrders = buildUseQuery<QueryOrdersRequest, QueryOrdersRespons
  * Order queries order details
  * @name useGetOrder
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.Order
+ * @see proto service: akash.market.v1beta2.Order
  */
 export const useGetOrder = buildUseQuery<QueryOrderRequest, QueryOrderResponse>({
   builderQueryFn: getOrder,
@@ -25,7 +25,7 @@ export const useGetOrder = buildUseQuery<QueryOrderRequest, QueryOrderResponse>(
  * Bids queries bids with filters
  * @name useGetBids
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.Bids
+ * @see proto service: akash.market.v1beta2.Bids
  */
 export const useGetBids = buildUseQuery<QueryBidsRequest, QueryBidsResponse>({
   builderQueryFn: getBids,
@@ -35,7 +35,7 @@ export const useGetBids = buildUseQuery<QueryBidsRequest, QueryBidsResponse>({
  * Bid queries bid details
  * @name useGetBid
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.Bid
+ * @see proto service: akash.market.v1beta2.Bid
  */
 export const useGetBid = buildUseQuery<QueryBidRequest, QueryBidResponse>({
   builderQueryFn: getBid,
@@ -45,7 +45,7 @@ export const useGetBid = buildUseQuery<QueryBidRequest, QueryBidResponse>({
  * Leases queries leases with filters
  * @name useGetLeases
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.Leases
+ * @see proto service: akash.market.v1beta2.Leases
  */
 export const useGetLeases = buildUseQuery<QueryLeasesRequest, QueryLeasesResponse>({
   builderQueryFn: getLeases,
@@ -55,7 +55,7 @@ export const useGetLeases = buildUseQuery<QueryLeasesRequest, QueryLeasesRespons
  * Lease queries lease details
  * @name useGetLease
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.Lease
+ * @see proto service: akash.market.v1beta2.Lease
  */
 export const useGetLease = buildUseQuery<QueryLeaseRequest, QueryLeaseResponse>({
   builderQueryFn: getLease,

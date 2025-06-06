@@ -5,7 +5,7 @@ import { createValidator, editValidator, delegate, beginRedelegate, undelegate }
  * CreateValidator defines a method for creating a new validator.
  * @name useCreateValidator
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.CreateValidator
+ * @see proto service: cosmos.staking.v1beta1.CreateValidator
  */
 export const useCreateValidator = buildUseMutation<MsgCreateValidator, Error>({
   builderMutationFn: createValidator
@@ -14,7 +14,7 @@ export const useCreateValidator = buildUseMutation<MsgCreateValidator, Error>({
  * EditValidator defines a method for editing an existing validator.
  * @name useEditValidator
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.EditValidator
+ * @see proto service: cosmos.staking.v1beta1.EditValidator
  */
 export const useEditValidator = buildUseMutation<MsgEditValidator, Error>({
   builderMutationFn: editValidator
@@ -24,7 +24,7 @@ export const useEditValidator = buildUseMutation<MsgEditValidator, Error>({
  * from a delegator to a validator.
  * @name useDelegate
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.Delegate
+ * @see proto service: cosmos.staking.v1beta1.Delegate
  */
 export const useDelegate = buildUseMutation<MsgDelegate, Error>({
   builderMutationFn: delegate
@@ -34,7 +34,7 @@ export const useDelegate = buildUseMutation<MsgDelegate, Error>({
  * of coins from a delegator and source validator to a destination validator.
  * @name useBeginRedelegate
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.BeginRedelegate
+ * @see proto service: cosmos.staking.v1beta1.BeginRedelegate
  */
 export const useBeginRedelegate = buildUseMutation<MsgBeginRedelegate, Error>({
   builderMutationFn: beginRedelegate
@@ -44,7 +44,7 @@ export const useBeginRedelegate = buildUseMutation<MsgBeginRedelegate, Error>({
  * delegate and a validator.
  * @name useUndelegate
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.Undelegate
+ * @see proto service: cosmos.staking.v1beta1.Undelegate
  */
 export const useUndelegate = buildUseMutation<MsgUndelegate, Error>({
   builderMutationFn: undelegate

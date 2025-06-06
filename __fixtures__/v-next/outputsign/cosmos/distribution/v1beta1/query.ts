@@ -4,48 +4,87 @@ import { DecCoin, DecCoinAmino, DecCoinSDKType } from "../../base/v1beta1/coin";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 export const protobufPackage = "cosmos.distribution.v1beta1";
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: "/cosmos.distribution.v1beta1.QueryParamsRequest";
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
   type: "cosmos-sdk/QueryParamsRequest";
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+  */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
   typeUrl: "/cosmos.distribution.v1beta1.QueryParamsResponse";
   value: Uint8Array;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+  */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
   type: "cosmos-sdk/QueryParamsResponse";
   value: QueryParamsResponseAmino;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 /**
  * QueryValidatorOutstandingRewardsRequest is the request type for the
  * Query/ValidatorOutstandingRewards RPC method.
+ * @name QueryValidatorOutstandingRewardsRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorOutstandingRewardsRequest
  */
 export interface QueryValidatorOutstandingRewardsRequest {
-  /** validator_address defines the validator address to query for. */
+  /**
+   * validator_address defines the validator address to query for.
+  */
   validatorAddress: string;
 }
 export interface QueryValidatorOutstandingRewardsRequestProtoMsg {
@@ -55,9 +94,14 @@ export interface QueryValidatorOutstandingRewardsRequestProtoMsg {
 /**
  * QueryValidatorOutstandingRewardsRequest is the request type for the
  * Query/ValidatorOutstandingRewards RPC method.
+ * @name QueryValidatorOutstandingRewardsRequestAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorOutstandingRewardsRequest
  */
 export interface QueryValidatorOutstandingRewardsRequestAmino {
-  /** validator_address defines the validator address to query for. */
+  /**
+   * validator_address defines the validator address to query for.
+  */
   validator_address?: string;
 }
 export interface QueryValidatorOutstandingRewardsRequestAminoMsg {
@@ -67,6 +111,9 @@ export interface QueryValidatorOutstandingRewardsRequestAminoMsg {
 /**
  * QueryValidatorOutstandingRewardsRequest is the request type for the
  * Query/ValidatorOutstandingRewards RPC method.
+ * @name QueryValidatorOutstandingRewardsRequestSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorOutstandingRewardsRequest
  */
 export interface QueryValidatorOutstandingRewardsRequestSDKType {
   validator_address: string;
@@ -74,6 +121,9 @@ export interface QueryValidatorOutstandingRewardsRequestSDKType {
 /**
  * QueryValidatorOutstandingRewardsResponse is the response type for the
  * Query/ValidatorOutstandingRewards RPC method.
+ * @name QueryValidatorOutstandingRewardsResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorOutstandingRewardsResponse
  */
 export interface QueryValidatorOutstandingRewardsResponse {
   rewards: ValidatorOutstandingRewards;
@@ -85,6 +135,9 @@ export interface QueryValidatorOutstandingRewardsResponseProtoMsg {
 /**
  * QueryValidatorOutstandingRewardsResponse is the response type for the
  * Query/ValidatorOutstandingRewards RPC method.
+ * @name QueryValidatorOutstandingRewardsResponseAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorOutstandingRewardsResponse
  */
 export interface QueryValidatorOutstandingRewardsResponseAmino {
   rewards?: ValidatorOutstandingRewardsAmino;
@@ -96,6 +149,9 @@ export interface QueryValidatorOutstandingRewardsResponseAminoMsg {
 /**
  * QueryValidatorOutstandingRewardsResponse is the response type for the
  * Query/ValidatorOutstandingRewards RPC method.
+ * @name QueryValidatorOutstandingRewardsResponseSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorOutstandingRewardsResponse
  */
 export interface QueryValidatorOutstandingRewardsResponseSDKType {
   rewards: ValidatorOutstandingRewardsSDKType;
@@ -103,9 +159,14 @@ export interface QueryValidatorOutstandingRewardsResponseSDKType {
 /**
  * QueryValidatorCommissionRequest is the request type for the
  * Query/ValidatorCommission RPC method
+ * @name QueryValidatorCommissionRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorCommissionRequest
  */
 export interface QueryValidatorCommissionRequest {
-  /** validator_address defines the validator address to query for. */
+  /**
+   * validator_address defines the validator address to query for.
+  */
   validatorAddress: string;
 }
 export interface QueryValidatorCommissionRequestProtoMsg {
@@ -115,9 +176,14 @@ export interface QueryValidatorCommissionRequestProtoMsg {
 /**
  * QueryValidatorCommissionRequest is the request type for the
  * Query/ValidatorCommission RPC method
+ * @name QueryValidatorCommissionRequestAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorCommissionRequest
  */
 export interface QueryValidatorCommissionRequestAmino {
-  /** validator_address defines the validator address to query for. */
+  /**
+   * validator_address defines the validator address to query for.
+  */
   validator_address?: string;
 }
 export interface QueryValidatorCommissionRequestAminoMsg {
@@ -127,6 +193,9 @@ export interface QueryValidatorCommissionRequestAminoMsg {
 /**
  * QueryValidatorCommissionRequest is the request type for the
  * Query/ValidatorCommission RPC method
+ * @name QueryValidatorCommissionRequestSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorCommissionRequest
  */
 export interface QueryValidatorCommissionRequestSDKType {
   validator_address: string;
@@ -134,9 +203,14 @@ export interface QueryValidatorCommissionRequestSDKType {
 /**
  * QueryValidatorCommissionResponse is the response type for the
  * Query/ValidatorCommission RPC method
+ * @name QueryValidatorCommissionResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorCommissionResponse
  */
 export interface QueryValidatorCommissionResponse {
-  /** commission defines the commision the validator received. */
+  /**
+   * commission defines the commision the validator received.
+  */
   commission: ValidatorAccumulatedCommission;
 }
 export interface QueryValidatorCommissionResponseProtoMsg {
@@ -146,9 +220,14 @@ export interface QueryValidatorCommissionResponseProtoMsg {
 /**
  * QueryValidatorCommissionResponse is the response type for the
  * Query/ValidatorCommission RPC method
+ * @name QueryValidatorCommissionResponseAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorCommissionResponse
  */
 export interface QueryValidatorCommissionResponseAmino {
-  /** commission defines the commision the validator received. */
+  /**
+   * commission defines the commision the validator received.
+  */
   commission?: ValidatorAccumulatedCommissionAmino;
 }
 export interface QueryValidatorCommissionResponseAminoMsg {
@@ -158,6 +237,9 @@ export interface QueryValidatorCommissionResponseAminoMsg {
 /**
  * QueryValidatorCommissionResponse is the response type for the
  * Query/ValidatorCommission RPC method
+ * @name QueryValidatorCommissionResponseSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorCommissionResponse
  */
 export interface QueryValidatorCommissionResponseSDKType {
   commission: ValidatorAccumulatedCommissionSDKType;
@@ -165,15 +247,26 @@ export interface QueryValidatorCommissionResponseSDKType {
 /**
  * QueryValidatorSlashesRequest is the request type for the
  * Query/ValidatorSlashes RPC method
+ * @name QueryValidatorSlashesRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorSlashesRequest
  */
 export interface QueryValidatorSlashesRequest {
-  /** validator_address defines the validator address to query for. */
+  /**
+   * validator_address defines the validator address to query for.
+  */
   validatorAddress: string;
-  /** starting_height defines the optional starting height to query the slashes. */
+  /**
+   * starting_height defines the optional starting height to query the slashes.
+  */
   startingHeight: bigint;
-  /** starting_height defines the optional ending height to query the slashes. */
+  /**
+   * starting_height defines the optional ending height to query the slashes.
+  */
   endingHeight: bigint;
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+  */
   pagination?: PageRequest;
 }
 export interface QueryValidatorSlashesRequestProtoMsg {
@@ -183,15 +276,26 @@ export interface QueryValidatorSlashesRequestProtoMsg {
 /**
  * QueryValidatorSlashesRequest is the request type for the
  * Query/ValidatorSlashes RPC method
+ * @name QueryValidatorSlashesRequestAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorSlashesRequest
  */
 export interface QueryValidatorSlashesRequestAmino {
-  /** validator_address defines the validator address to query for. */
+  /**
+   * validator_address defines the validator address to query for.
+  */
   validator_address?: string;
-  /** starting_height defines the optional starting height to query the slashes. */
+  /**
+   * starting_height defines the optional starting height to query the slashes.
+  */
   starting_height?: string;
-  /** starting_height defines the optional ending height to query the slashes. */
+  /**
+   * starting_height defines the optional ending height to query the slashes.
+  */
   ending_height?: string;
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+  */
   pagination?: PageRequestAmino;
 }
 export interface QueryValidatorSlashesRequestAminoMsg {
@@ -201,6 +305,9 @@ export interface QueryValidatorSlashesRequestAminoMsg {
 /**
  * QueryValidatorSlashesRequest is the request type for the
  * Query/ValidatorSlashes RPC method
+ * @name QueryValidatorSlashesRequestSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorSlashesRequest
  */
 export interface QueryValidatorSlashesRequestSDKType {
   validator_address: string;
@@ -211,11 +318,18 @@ export interface QueryValidatorSlashesRequestSDKType {
 /**
  * QueryValidatorSlashesResponse is the response type for the
  * Query/ValidatorSlashes RPC method.
+ * @name QueryValidatorSlashesResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorSlashesResponse
  */
 export interface QueryValidatorSlashesResponse {
-  /** slashes defines the slashes the validator received. */
+  /**
+   * slashes defines the slashes the validator received.
+  */
   slashes: ValidatorSlashEvent[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+  */
   pagination?: PageResponse;
 }
 export interface QueryValidatorSlashesResponseProtoMsg {
@@ -225,11 +339,18 @@ export interface QueryValidatorSlashesResponseProtoMsg {
 /**
  * QueryValidatorSlashesResponse is the response type for the
  * Query/ValidatorSlashes RPC method.
+ * @name QueryValidatorSlashesResponseAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorSlashesResponse
  */
 export interface QueryValidatorSlashesResponseAmino {
-  /** slashes defines the slashes the validator received. */
+  /**
+   * slashes defines the slashes the validator received.
+  */
   slashes?: ValidatorSlashEventAmino[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+  */
   pagination?: PageResponseAmino;
 }
 export interface QueryValidatorSlashesResponseAminoMsg {
@@ -239,6 +360,9 @@ export interface QueryValidatorSlashesResponseAminoMsg {
 /**
  * QueryValidatorSlashesResponse is the response type for the
  * Query/ValidatorSlashes RPC method.
+ * @name QueryValidatorSlashesResponseSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorSlashesResponse
  */
 export interface QueryValidatorSlashesResponseSDKType {
   slashes: ValidatorSlashEventSDKType[];
@@ -247,11 +371,18 @@ export interface QueryValidatorSlashesResponseSDKType {
 /**
  * QueryDelegationRewardsRequest is the request type for the
  * Query/DelegationRewards RPC method.
+ * @name QueryDelegationRewardsRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationRewardsRequest
  */
 export interface QueryDelegationRewardsRequest {
-  /** delegator_address defines the delegator address to query for. */
+  /**
+   * delegator_address defines the delegator address to query for.
+  */
   delegatorAddress: string;
-  /** validator_address defines the validator address to query for. */
+  /**
+   * validator_address defines the validator address to query for.
+  */
   validatorAddress: string;
 }
 export interface QueryDelegationRewardsRequestProtoMsg {
@@ -261,11 +392,18 @@ export interface QueryDelegationRewardsRequestProtoMsg {
 /**
  * QueryDelegationRewardsRequest is the request type for the
  * Query/DelegationRewards RPC method.
+ * @name QueryDelegationRewardsRequestAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationRewardsRequest
  */
 export interface QueryDelegationRewardsRequestAmino {
-  /** delegator_address defines the delegator address to query for. */
+  /**
+   * delegator_address defines the delegator address to query for.
+  */
   delegator_address?: string;
-  /** validator_address defines the validator address to query for. */
+  /**
+   * validator_address defines the validator address to query for.
+  */
   validator_address?: string;
 }
 export interface QueryDelegationRewardsRequestAminoMsg {
@@ -275,6 +413,9 @@ export interface QueryDelegationRewardsRequestAminoMsg {
 /**
  * QueryDelegationRewardsRequest is the request type for the
  * Query/DelegationRewards RPC method.
+ * @name QueryDelegationRewardsRequestSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationRewardsRequest
  */
 export interface QueryDelegationRewardsRequestSDKType {
   delegator_address: string;
@@ -283,9 +424,14 @@ export interface QueryDelegationRewardsRequestSDKType {
 /**
  * QueryDelegationRewardsResponse is the response type for the
  * Query/DelegationRewards RPC method.
+ * @name QueryDelegationRewardsResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationRewardsResponse
  */
 export interface QueryDelegationRewardsResponse {
-  /** rewards defines the rewards accrued by a delegation. */
+  /**
+   * rewards defines the rewards accrued by a delegation.
+  */
   rewards: DecCoin[];
 }
 export interface QueryDelegationRewardsResponseProtoMsg {
@@ -295,9 +441,14 @@ export interface QueryDelegationRewardsResponseProtoMsg {
 /**
  * QueryDelegationRewardsResponse is the response type for the
  * Query/DelegationRewards RPC method.
+ * @name QueryDelegationRewardsResponseAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationRewardsResponse
  */
 export interface QueryDelegationRewardsResponseAmino {
-  /** rewards defines the rewards accrued by a delegation. */
+  /**
+   * rewards defines the rewards accrued by a delegation.
+  */
   rewards?: DecCoinAmino[];
 }
 export interface QueryDelegationRewardsResponseAminoMsg {
@@ -307,6 +458,9 @@ export interface QueryDelegationRewardsResponseAminoMsg {
 /**
  * QueryDelegationRewardsResponse is the response type for the
  * Query/DelegationRewards RPC method.
+ * @name QueryDelegationRewardsResponseSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationRewardsResponse
  */
 export interface QueryDelegationRewardsResponseSDKType {
   rewards: DecCoinSDKType[];
@@ -314,9 +468,14 @@ export interface QueryDelegationRewardsResponseSDKType {
 /**
  * QueryDelegationTotalRewardsRequest is the request type for the
  * Query/DelegationTotalRewards RPC method.
+ * @name QueryDelegationTotalRewardsRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationTotalRewardsRequest
  */
 export interface QueryDelegationTotalRewardsRequest {
-  /** delegator_address defines the delegator address to query for. */
+  /**
+   * delegator_address defines the delegator address to query for.
+  */
   delegatorAddress: string;
 }
 export interface QueryDelegationTotalRewardsRequestProtoMsg {
@@ -326,9 +485,14 @@ export interface QueryDelegationTotalRewardsRequestProtoMsg {
 /**
  * QueryDelegationTotalRewardsRequest is the request type for the
  * Query/DelegationTotalRewards RPC method.
+ * @name QueryDelegationTotalRewardsRequestAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationTotalRewardsRequest
  */
 export interface QueryDelegationTotalRewardsRequestAmino {
-  /** delegator_address defines the delegator address to query for. */
+  /**
+   * delegator_address defines the delegator address to query for.
+  */
   delegator_address?: string;
 }
 export interface QueryDelegationTotalRewardsRequestAminoMsg {
@@ -338,6 +502,9 @@ export interface QueryDelegationTotalRewardsRequestAminoMsg {
 /**
  * QueryDelegationTotalRewardsRequest is the request type for the
  * Query/DelegationTotalRewards RPC method.
+ * @name QueryDelegationTotalRewardsRequestSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationTotalRewardsRequest
  */
 export interface QueryDelegationTotalRewardsRequestSDKType {
   delegator_address: string;
@@ -345,11 +512,18 @@ export interface QueryDelegationTotalRewardsRequestSDKType {
 /**
  * QueryDelegationTotalRewardsResponse is the response type for the
  * Query/DelegationTotalRewards RPC method.
+ * @name QueryDelegationTotalRewardsResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationTotalRewardsResponse
  */
 export interface QueryDelegationTotalRewardsResponse {
-  /** rewards defines all the rewards accrued by a delegator. */
+  /**
+   * rewards defines all the rewards accrued by a delegator.
+  */
   rewards: DelegationDelegatorReward[];
-  /** total defines the sum of all the rewards. */
+  /**
+   * total defines the sum of all the rewards.
+  */
   total: DecCoin[];
 }
 export interface QueryDelegationTotalRewardsResponseProtoMsg {
@@ -359,11 +533,18 @@ export interface QueryDelegationTotalRewardsResponseProtoMsg {
 /**
  * QueryDelegationTotalRewardsResponse is the response type for the
  * Query/DelegationTotalRewards RPC method.
+ * @name QueryDelegationTotalRewardsResponseAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationTotalRewardsResponse
  */
 export interface QueryDelegationTotalRewardsResponseAmino {
-  /** rewards defines all the rewards accrued by a delegator. */
+  /**
+   * rewards defines all the rewards accrued by a delegator.
+  */
   rewards?: DelegationDelegatorRewardAmino[];
-  /** total defines the sum of all the rewards. */
+  /**
+   * total defines the sum of all the rewards.
+  */
   total?: DecCoinAmino[];
 }
 export interface QueryDelegationTotalRewardsResponseAminoMsg {
@@ -373,6 +554,9 @@ export interface QueryDelegationTotalRewardsResponseAminoMsg {
 /**
  * QueryDelegationTotalRewardsResponse is the response type for the
  * Query/DelegationTotalRewards RPC method.
+ * @name QueryDelegationTotalRewardsResponseSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationTotalRewardsResponse
  */
 export interface QueryDelegationTotalRewardsResponseSDKType {
   rewards: DelegationDelegatorRewardSDKType[];
@@ -381,9 +565,14 @@ export interface QueryDelegationTotalRewardsResponseSDKType {
 /**
  * QueryDelegatorValidatorsRequest is the request type for the
  * Query/DelegatorValidators RPC method.
+ * @name QueryDelegatorValidatorsRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorValidatorsRequest
  */
 export interface QueryDelegatorValidatorsRequest {
-  /** delegator_address defines the delegator address to query for. */
+  /**
+   * delegator_address defines the delegator address to query for.
+  */
   delegatorAddress: string;
 }
 export interface QueryDelegatorValidatorsRequestProtoMsg {
@@ -393,9 +582,14 @@ export interface QueryDelegatorValidatorsRequestProtoMsg {
 /**
  * QueryDelegatorValidatorsRequest is the request type for the
  * Query/DelegatorValidators RPC method.
+ * @name QueryDelegatorValidatorsRequestAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorValidatorsRequest
  */
 export interface QueryDelegatorValidatorsRequestAmino {
-  /** delegator_address defines the delegator address to query for. */
+  /**
+   * delegator_address defines the delegator address to query for.
+  */
   delegator_address?: string;
 }
 export interface QueryDelegatorValidatorsRequestAminoMsg {
@@ -405,6 +599,9 @@ export interface QueryDelegatorValidatorsRequestAminoMsg {
 /**
  * QueryDelegatorValidatorsRequest is the request type for the
  * Query/DelegatorValidators RPC method.
+ * @name QueryDelegatorValidatorsRequestSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorValidatorsRequest
  */
 export interface QueryDelegatorValidatorsRequestSDKType {
   delegator_address: string;
@@ -412,9 +609,14 @@ export interface QueryDelegatorValidatorsRequestSDKType {
 /**
  * QueryDelegatorValidatorsResponse is the response type for the
  * Query/DelegatorValidators RPC method.
+ * @name QueryDelegatorValidatorsResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorValidatorsResponse
  */
 export interface QueryDelegatorValidatorsResponse {
-  /** validators defines the validators a delegator is delegating for. */
+  /**
+   * validators defines the validators a delegator is delegating for.
+  */
   validators: string[];
 }
 export interface QueryDelegatorValidatorsResponseProtoMsg {
@@ -424,9 +626,14 @@ export interface QueryDelegatorValidatorsResponseProtoMsg {
 /**
  * QueryDelegatorValidatorsResponse is the response type for the
  * Query/DelegatorValidators RPC method.
+ * @name QueryDelegatorValidatorsResponseAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorValidatorsResponse
  */
 export interface QueryDelegatorValidatorsResponseAmino {
-  /** validators defines the validators a delegator is delegating for. */
+  /**
+   * validators defines the validators a delegator is delegating for.
+  */
   validators?: string[];
 }
 export interface QueryDelegatorValidatorsResponseAminoMsg {
@@ -436,6 +643,9 @@ export interface QueryDelegatorValidatorsResponseAminoMsg {
 /**
  * QueryDelegatorValidatorsResponse is the response type for the
  * Query/DelegatorValidators RPC method.
+ * @name QueryDelegatorValidatorsResponseSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorValidatorsResponse
  */
 export interface QueryDelegatorValidatorsResponseSDKType {
   validators: string[];
@@ -443,9 +653,14 @@ export interface QueryDelegatorValidatorsResponseSDKType {
 /**
  * QueryDelegatorWithdrawAddressRequest is the request type for the
  * Query/DelegatorWithdrawAddress RPC method.
+ * @name QueryDelegatorWithdrawAddressRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorWithdrawAddressRequest
  */
 export interface QueryDelegatorWithdrawAddressRequest {
-  /** delegator_address defines the delegator address to query for. */
+  /**
+   * delegator_address defines the delegator address to query for.
+  */
   delegatorAddress: string;
 }
 export interface QueryDelegatorWithdrawAddressRequestProtoMsg {
@@ -455,9 +670,14 @@ export interface QueryDelegatorWithdrawAddressRequestProtoMsg {
 /**
  * QueryDelegatorWithdrawAddressRequest is the request type for the
  * Query/DelegatorWithdrawAddress RPC method.
+ * @name QueryDelegatorWithdrawAddressRequestAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorWithdrawAddressRequest
  */
 export interface QueryDelegatorWithdrawAddressRequestAmino {
-  /** delegator_address defines the delegator address to query for. */
+  /**
+   * delegator_address defines the delegator address to query for.
+  */
   delegator_address?: string;
 }
 export interface QueryDelegatorWithdrawAddressRequestAminoMsg {
@@ -467,6 +687,9 @@ export interface QueryDelegatorWithdrawAddressRequestAminoMsg {
 /**
  * QueryDelegatorWithdrawAddressRequest is the request type for the
  * Query/DelegatorWithdrawAddress RPC method.
+ * @name QueryDelegatorWithdrawAddressRequestSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorWithdrawAddressRequest
  */
 export interface QueryDelegatorWithdrawAddressRequestSDKType {
   delegator_address: string;
@@ -474,9 +697,14 @@ export interface QueryDelegatorWithdrawAddressRequestSDKType {
 /**
  * QueryDelegatorWithdrawAddressResponse is the response type for the
  * Query/DelegatorWithdrawAddress RPC method.
+ * @name QueryDelegatorWithdrawAddressResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorWithdrawAddressResponse
  */
 export interface QueryDelegatorWithdrawAddressResponse {
-  /** withdraw_address defines the delegator address to query for. */
+  /**
+   * withdraw_address defines the delegator address to query for.
+  */
   withdrawAddress: string;
 }
 export interface QueryDelegatorWithdrawAddressResponseProtoMsg {
@@ -486,9 +714,14 @@ export interface QueryDelegatorWithdrawAddressResponseProtoMsg {
 /**
  * QueryDelegatorWithdrawAddressResponse is the response type for the
  * Query/DelegatorWithdrawAddress RPC method.
+ * @name QueryDelegatorWithdrawAddressResponseAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorWithdrawAddressResponse
  */
 export interface QueryDelegatorWithdrawAddressResponseAmino {
-  /** withdraw_address defines the delegator address to query for. */
+  /**
+   * withdraw_address defines the delegator address to query for.
+  */
   withdraw_address?: string;
 }
 export interface QueryDelegatorWithdrawAddressResponseAminoMsg {
@@ -498,6 +731,9 @@ export interface QueryDelegatorWithdrawAddressResponseAminoMsg {
 /**
  * QueryDelegatorWithdrawAddressResponse is the response type for the
  * Query/DelegatorWithdrawAddress RPC method.
+ * @name QueryDelegatorWithdrawAddressResponseSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorWithdrawAddressResponse
  */
 export interface QueryDelegatorWithdrawAddressResponseSDKType {
   withdraw_address: string;
@@ -505,6 +741,9 @@ export interface QueryDelegatorWithdrawAddressResponseSDKType {
 /**
  * QueryCommunityPoolRequest is the request type for the Query/CommunityPool RPC
  * method.
+ * @name QueryCommunityPoolRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryCommunityPoolRequest
  */
 export interface QueryCommunityPoolRequest {}
 export interface QueryCommunityPoolRequestProtoMsg {
@@ -514,6 +753,9 @@ export interface QueryCommunityPoolRequestProtoMsg {
 /**
  * QueryCommunityPoolRequest is the request type for the Query/CommunityPool RPC
  * method.
+ * @name QueryCommunityPoolRequestAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryCommunityPoolRequest
  */
 export interface QueryCommunityPoolRequestAmino {}
 export interface QueryCommunityPoolRequestAminoMsg {
@@ -523,14 +765,22 @@ export interface QueryCommunityPoolRequestAminoMsg {
 /**
  * QueryCommunityPoolRequest is the request type for the Query/CommunityPool RPC
  * method.
+ * @name QueryCommunityPoolRequestSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryCommunityPoolRequest
  */
 export interface QueryCommunityPoolRequestSDKType {}
 /**
  * QueryCommunityPoolResponse is the response type for the Query/CommunityPool
  * RPC method.
+ * @name QueryCommunityPoolResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryCommunityPoolResponse
  */
 export interface QueryCommunityPoolResponse {
-  /** pool defines community pool's coins. */
+  /**
+   * pool defines community pool's coins.
+  */
   pool: DecCoin[];
 }
 export interface QueryCommunityPoolResponseProtoMsg {
@@ -540,9 +790,14 @@ export interface QueryCommunityPoolResponseProtoMsg {
 /**
  * QueryCommunityPoolResponse is the response type for the Query/CommunityPool
  * RPC method.
+ * @name QueryCommunityPoolResponseAmino
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryCommunityPoolResponse
  */
 export interface QueryCommunityPoolResponseAmino {
-  /** pool defines community pool's coins. */
+  /**
+   * pool defines community pool's coins.
+  */
   pool?: DecCoinAmino[];
 }
 export interface QueryCommunityPoolResponseAminoMsg {
@@ -552,6 +807,9 @@ export interface QueryCommunityPoolResponseAminoMsg {
 /**
  * QueryCommunityPoolResponse is the response type for the Query/CommunityPool
  * RPC method.
+ * @name QueryCommunityPoolResponseSDKType
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryCommunityPoolResponse
  */
 export interface QueryCommunityPoolResponseSDKType {
   pool: DecCoinSDKType[];
@@ -559,6 +817,12 @@ export interface QueryCommunityPoolResponseSDKType {
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryParamsRequest",
   encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -617,6 +881,12 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({})
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryParamsResponse",
   encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -688,6 +958,13 @@ function createBaseQueryValidatorOutstandingRewardsRequest(): QueryValidatorOuts
     validatorAddress: ""
   };
 }
+/**
+ * QueryValidatorOutstandingRewardsRequest is the request type for the
+ * Query/ValidatorOutstandingRewards RPC method.
+ * @name QueryValidatorOutstandingRewardsRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorOutstandingRewardsRequest
+ */
 export const QueryValidatorOutstandingRewardsRequest = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryValidatorOutstandingRewardsRequest",
   encode(message: QueryValidatorOutstandingRewardsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -757,6 +1034,13 @@ function createBaseQueryValidatorOutstandingRewardsResponse(): QueryValidatorOut
     rewards: ValidatorOutstandingRewards.fromPartial({})
   };
 }
+/**
+ * QueryValidatorOutstandingRewardsResponse is the response type for the
+ * Query/ValidatorOutstandingRewards RPC method.
+ * @name QueryValidatorOutstandingRewardsResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorOutstandingRewardsResponse
+ */
 export const QueryValidatorOutstandingRewardsResponse = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryValidatorOutstandingRewardsResponse",
   encode(message: QueryValidatorOutstandingRewardsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -828,6 +1112,13 @@ function createBaseQueryValidatorCommissionRequest(): QueryValidatorCommissionRe
     validatorAddress: ""
   };
 }
+/**
+ * QueryValidatorCommissionRequest is the request type for the
+ * Query/ValidatorCommission RPC method
+ * @name QueryValidatorCommissionRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorCommissionRequest
+ */
 export const QueryValidatorCommissionRequest = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryValidatorCommissionRequest",
   encode(message: QueryValidatorCommissionRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -897,6 +1188,13 @@ function createBaseQueryValidatorCommissionResponse(): QueryValidatorCommissionR
     commission: ValidatorAccumulatedCommission.fromPartial({})
   };
 }
+/**
+ * QueryValidatorCommissionResponse is the response type for the
+ * Query/ValidatorCommission RPC method
+ * @name QueryValidatorCommissionResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorCommissionResponse
+ */
 export const QueryValidatorCommissionResponse = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryValidatorCommissionResponse",
   encode(message: QueryValidatorCommissionResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -971,6 +1269,13 @@ function createBaseQueryValidatorSlashesRequest(): QueryValidatorSlashesRequest 
     pagination: undefined
   };
 }
+/**
+ * QueryValidatorSlashesRequest is the request type for the
+ * Query/ValidatorSlashes RPC method
+ * @name QueryValidatorSlashesRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorSlashesRequest
+ */
 export const QueryValidatorSlashesRequest = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryValidatorSlashesRequest",
   encode(message: QueryValidatorSlashesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1080,6 +1385,13 @@ function createBaseQueryValidatorSlashesResponse(): QueryValidatorSlashesRespons
     pagination: undefined
   };
 }
+/**
+ * QueryValidatorSlashesResponse is the response type for the
+ * Query/ValidatorSlashes RPC method.
+ * @name QueryValidatorSlashesResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryValidatorSlashesResponse
+ */
 export const QueryValidatorSlashesResponse = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryValidatorSlashesResponse",
   encode(message: QueryValidatorSlashesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1165,6 +1477,13 @@ function createBaseQueryDelegationRewardsRequest(): QueryDelegationRewardsReques
     validatorAddress: ""
   };
 }
+/**
+ * QueryDelegationRewardsRequest is the request type for the
+ * Query/DelegationRewards RPC method.
+ * @name QueryDelegationRewardsRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationRewardsRequest
+ */
 export const QueryDelegationRewardsRequest = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryDelegationRewardsRequest",
   encode(message: QueryDelegationRewardsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1245,6 +1564,13 @@ function createBaseQueryDelegationRewardsResponse(): QueryDelegationRewardsRespo
     rewards: []
   };
 }
+/**
+ * QueryDelegationRewardsResponse is the response type for the
+ * Query/DelegationRewards RPC method.
+ * @name QueryDelegationRewardsResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationRewardsResponse
+ */
 export const QueryDelegationRewardsResponse = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryDelegationRewardsResponse",
   encode(message: QueryDelegationRewardsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1316,6 +1642,13 @@ function createBaseQueryDelegationTotalRewardsRequest(): QueryDelegationTotalRew
     delegatorAddress: ""
   };
 }
+/**
+ * QueryDelegationTotalRewardsRequest is the request type for the
+ * Query/DelegationTotalRewards RPC method.
+ * @name QueryDelegationTotalRewardsRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationTotalRewardsRequest
+ */
 export const QueryDelegationTotalRewardsRequest = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryDelegationTotalRewardsRequest",
   encode(message: QueryDelegationTotalRewardsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1386,6 +1719,13 @@ function createBaseQueryDelegationTotalRewardsResponse(): QueryDelegationTotalRe
     total: []
   };
 }
+/**
+ * QueryDelegationTotalRewardsResponse is the response type for the
+ * Query/DelegationTotalRewards RPC method.
+ * @name QueryDelegationTotalRewardsResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegationTotalRewardsResponse
+ */
 export const QueryDelegationTotalRewardsResponse = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryDelegationTotalRewardsResponse",
   encode(message: QueryDelegationTotalRewardsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1470,6 +1810,13 @@ function createBaseQueryDelegatorValidatorsRequest(): QueryDelegatorValidatorsRe
     delegatorAddress: ""
   };
 }
+/**
+ * QueryDelegatorValidatorsRequest is the request type for the
+ * Query/DelegatorValidators RPC method.
+ * @name QueryDelegatorValidatorsRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorValidatorsRequest
+ */
 export const QueryDelegatorValidatorsRequest = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryDelegatorValidatorsRequest",
   encode(message: QueryDelegatorValidatorsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1539,6 +1886,13 @@ function createBaseQueryDelegatorValidatorsResponse(): QueryDelegatorValidatorsR
     validators: []
   };
 }
+/**
+ * QueryDelegatorValidatorsResponse is the response type for the
+ * Query/DelegatorValidators RPC method.
+ * @name QueryDelegatorValidatorsResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorValidatorsResponse
+ */
 export const QueryDelegatorValidatorsResponse = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryDelegatorValidatorsResponse",
   encode(message: QueryDelegatorValidatorsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1610,6 +1964,13 @@ function createBaseQueryDelegatorWithdrawAddressRequest(): QueryDelegatorWithdra
     delegatorAddress: ""
   };
 }
+/**
+ * QueryDelegatorWithdrawAddressRequest is the request type for the
+ * Query/DelegatorWithdrawAddress RPC method.
+ * @name QueryDelegatorWithdrawAddressRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorWithdrawAddressRequest
+ */
 export const QueryDelegatorWithdrawAddressRequest = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryDelegatorWithdrawAddressRequest",
   encode(message: QueryDelegatorWithdrawAddressRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1679,6 +2040,13 @@ function createBaseQueryDelegatorWithdrawAddressResponse(): QueryDelegatorWithdr
     withdrawAddress: ""
   };
 }
+/**
+ * QueryDelegatorWithdrawAddressResponse is the response type for the
+ * Query/DelegatorWithdrawAddress RPC method.
+ * @name QueryDelegatorWithdrawAddressResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryDelegatorWithdrawAddressResponse
+ */
 export const QueryDelegatorWithdrawAddressResponse = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryDelegatorWithdrawAddressResponse",
   encode(message: QueryDelegatorWithdrawAddressResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1746,6 +2114,13 @@ export const QueryDelegatorWithdrawAddressResponse = {
 function createBaseQueryCommunityPoolRequest(): QueryCommunityPoolRequest {
   return {};
 }
+/**
+ * QueryCommunityPoolRequest is the request type for the Query/CommunityPool RPC
+ * method.
+ * @name QueryCommunityPoolRequest
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryCommunityPoolRequest
+ */
 export const QueryCommunityPoolRequest = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryCommunityPoolRequest",
   encode(_: QueryCommunityPoolRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1804,6 +2179,13 @@ function createBaseQueryCommunityPoolResponse(): QueryCommunityPoolResponse {
     pool: []
   };
 }
+/**
+ * QueryCommunityPoolResponse is the response type for the Query/CommunityPool
+ * RPC method.
+ * @name QueryCommunityPoolResponse
+ * @package cosmos.distribution.v1beta1
+ * @see proto type: cosmos.distribution.v1beta1.QueryCommunityPoolResponse
+ */
 export const QueryCommunityPoolResponse = {
   typeUrl: "/cosmos.distribution.v1beta1.QueryCommunityPoolResponse",
   encode(message: QueryCommunityPoolResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

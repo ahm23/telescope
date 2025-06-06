@@ -1,37 +1,52 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { DeepPartial } from "../../helpers";
-export interface Params {
+/**
+ * @name OsmosisLockupParams
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.Params
+ */
+export interface OsmosisLockupParams {
   forceUnlockAllowedAddresses: string[];
 }
-export interface ParamsProtoMsg {
+export interface OsmosisLockupParamsProtoMsg {
   typeUrl: "/osmosis.lockup.Params";
   value: Uint8Array;
 }
-export interface ParamsAmino {
+/**
+ * @name OsmosisLockupParamsAmino
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.OsmosisLockupParams
+ */
+export interface OsmosisLockupParamsAmino {
   force_unlock_allowed_addresses: string[];
 }
-export interface ParamsAminoMsg {
+export interface OsmosisLockupParamsAminoMsg {
   type: "osmosis/lockup/params";
-  value: ParamsAmino;
+  value: OsmosisLockupParamsAmino;
 }
-function createBaseParams(): Params {
+function createBaseOsmosisLockupParams(): OsmosisLockupParams {
   return {
     forceUnlockAllowedAddresses: []
   };
 }
-export const Params = {
+/**
+ * @name OsmosisLockupParams
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.Params
+ */
+export const OsmosisLockupParams = {
   typeUrl: "/osmosis.lockup.Params",
   aminoType: "osmosis/lockup/params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: OsmosisLockupParams, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.forceUnlockAllowedAddresses) {
       writer.uint32(10).string(v!);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): OsmosisLockupParams {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseOsmosisLockupParams();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -45,17 +60,17 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<OsmosisLockupParams>): OsmosisLockupParams {
+    const message = createBaseOsmosisLockupParams();
     message.forceUnlockAllowedAddresses = object.forceUnlockAllowedAddresses?.map(e => e) || [];
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: OsmosisLockupParamsAmino): OsmosisLockupParams {
+    const message = createBaseOsmosisLockupParams();
     message.forceUnlockAllowedAddresses = object.force_unlock_allowed_addresses?.map(e => e) || [];
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: OsmosisLockupParams): OsmosisLockupParamsAmino {
     const obj: any = {};
     if (message.forceUnlockAllowedAddresses) {
       obj.force_unlock_allowed_addresses = message.forceUnlockAllowedAddresses.map(e => e);
@@ -64,25 +79,25 @@ export const Params = {
     }
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: OsmosisLockupParamsAminoMsg): OsmosisLockupParams {
+    return OsmosisLockupParams.fromAmino(object.value);
   },
-  toAminoMsg(message: Params): ParamsAminoMsg {
+  toAminoMsg(message: OsmosisLockupParams): OsmosisLockupParamsAminoMsg {
     return {
       type: "osmosis/lockup/params",
-      value: Params.toAmino(message)
+      value: OsmosisLockupParams.toAmino(message)
     };
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: OsmosisLockupParamsProtoMsg): OsmosisLockupParams {
+    return OsmosisLockupParams.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: OsmosisLockupParams): Uint8Array {
+    return OsmosisLockupParams.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: OsmosisLockupParams): OsmosisLockupParamsProtoMsg {
     return {
       typeUrl: "/osmosis.lockup.Params",
-      value: Params.encode(message).finish()
+      value: OsmosisLockupParams.encode(message).finish()
     };
   }
 };

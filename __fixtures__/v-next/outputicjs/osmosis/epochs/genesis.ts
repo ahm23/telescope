@@ -5,9 +5,14 @@ import { toTimestamp, fromTimestamp, DeepPartial } from "../../helpers";
 /**
  * EpochInfo is a struct that describes the data going into
  * a timer defined by the x/epochs module.
+ * @name EpochInfo
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.EpochInfo
  */
 export interface EpochInfo {
-  /** identifier is a unique reference to this particular timer. */
+  /**
+   * identifier is a unique reference to this particular timer.
+  */
   identifier: string;
   /**
    * start_time is the time at which the timer first ever ticks.
@@ -67,9 +72,14 @@ export interface EpochInfoProtoMsg {
 /**
  * EpochInfo is a struct that describes the data going into
  * a timer defined by the x/epochs module.
+ * @name EpochInfoAmino
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.EpochInfo
  */
 export interface EpochInfoAmino {
-  /** identifier is a unique reference to this particular timer. */
+  /**
+   * identifier is a unique reference to this particular timer.
+  */
   identifier: string;
   /**
    * start_time is the time at which the timer first ever ticks.
@@ -126,7 +136,12 @@ export interface EpochInfoAminoMsg {
   type: "osmosis/epochs/epoch-info";
   value: EpochInfoAmino;
 }
-/** GenesisState defines the epochs module's genesis state. */
+/**
+ * GenesisState defines the epochs module's genesis state.
+ * @name GenesisState
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.GenesisState
+ */
 export interface GenesisState {
   epochs: EpochInfo[];
 }
@@ -134,7 +149,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.epochs.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the epochs module's genesis state. */
+/**
+ * GenesisState defines the epochs module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   epochs: EpochInfoAmino[];
 }
@@ -153,6 +173,13 @@ function createBaseEpochInfo(): EpochInfo {
     currentEpochStartHeight: BigInt(0)
   };
 }
+/**
+ * EpochInfo is a struct that describes the data going into
+ * a timer defined by the x/epochs module.
+ * @name EpochInfo
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.EpochInfo
+ */
 export const EpochInfo = {
   typeUrl: "/osmosis.epochs.v1beta1.EpochInfo",
   aminoType: "osmosis/epochs/epoch-info",
@@ -289,6 +316,12 @@ function createBaseGenesisState(): GenesisState {
     epochs: []
   };
 }
+/**
+ * GenesisState defines the epochs module's genesis state.
+ * @name GenesisState
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.epochs.v1beta1.GenesisState",
   aminoType: "osmosis/epochs/genesis-state",

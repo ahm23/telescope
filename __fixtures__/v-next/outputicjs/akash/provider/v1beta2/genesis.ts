@@ -1,7 +1,12 @@
 import { Provider, ProviderAmino } from "./provider";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState defines the basic genesis state used by provider module */
+/**
+ * GenesisState defines the basic genesis state used by provider module
+ * @name GenesisState
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.GenesisState
+ */
 export interface GenesisState {
   providers: Provider[];
 }
@@ -9,7 +14,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/akash.provider.v1beta2.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the basic genesis state used by provider module */
+/**
+ * GenesisState defines the basic genesis state used by provider module
+ * @name GenesisStateAmino
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.GenesisState
+ */
 export interface GenesisStateAmino {
   providers: ProviderAmino[];
 }
@@ -22,6 +32,12 @@ function createBaseGenesisState(): GenesisState {
     providers: []
   };
 }
+/**
+ * GenesisState defines the basic genesis state used by provider module
+ * @name GenesisState
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.provider.v1beta2.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

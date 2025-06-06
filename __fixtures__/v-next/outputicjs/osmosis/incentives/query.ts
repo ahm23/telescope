@@ -4,256 +4,485 @@ import { Gauge, GaugeAmino } from "./gauge";
 import { Duration, DurationAmino } from "../../google/protobuf/duration";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { DeepPartial } from "../../helpers";
+/**
+ * @name ModuleToDistributeCoinsRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ModuleToDistributeCoinsRequest
+ */
 export interface ModuleToDistributeCoinsRequest {}
 export interface ModuleToDistributeCoinsRequestProtoMsg {
   typeUrl: "/osmosis.incentives.ModuleToDistributeCoinsRequest";
   value: Uint8Array;
 }
+/**
+ * @name ModuleToDistributeCoinsRequestAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ModuleToDistributeCoinsRequest
+ */
 export interface ModuleToDistributeCoinsRequestAmino {}
 export interface ModuleToDistributeCoinsRequestAminoMsg {
   type: "osmosis/incentives/module-to-distribute-coins-request";
   value: ModuleToDistributeCoinsRequestAmino;
 }
+/**
+ * @name ModuleToDistributeCoinsResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ModuleToDistributeCoinsResponse
+ */
 export interface ModuleToDistributeCoinsResponse {
-  /** Coins that have yet to be distributed */
+  /**
+   * Coins that have yet to be distributed
+  */
   coins: Coin[];
 }
 export interface ModuleToDistributeCoinsResponseProtoMsg {
   typeUrl: "/osmosis.incentives.ModuleToDistributeCoinsResponse";
   value: Uint8Array;
 }
+/**
+ * @name ModuleToDistributeCoinsResponseAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ModuleToDistributeCoinsResponse
+ */
 export interface ModuleToDistributeCoinsResponseAmino {
-  /** Coins that have yet to be distributed */
+  /**
+   * Coins that have yet to be distributed
+  */
   coins: CoinAmino[];
 }
 export interface ModuleToDistributeCoinsResponseAminoMsg {
   type: "osmosis/incentives/module-to-distribute-coins-response";
   value: ModuleToDistributeCoinsResponseAmino;
 }
+/**
+ * @name GaugeByIDRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GaugeByIDRequest
+ */
 export interface GaugeByIDRequest {
-  /** Gague ID being queried */
+  /**
+   * Gague ID being queried
+  */
   id: bigint;
 }
 export interface GaugeByIDRequestProtoMsg {
   typeUrl: "/osmosis.incentives.GaugeByIDRequest";
   value: Uint8Array;
 }
+/**
+ * @name GaugeByIDRequestAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GaugeByIDRequest
+ */
 export interface GaugeByIDRequestAmino {
-  /** Gague ID being queried */
+  /**
+   * Gague ID being queried
+  */
   id: string;
 }
 export interface GaugeByIDRequestAminoMsg {
   type: "osmosis/incentives/gauge-by-id-request";
   value: GaugeByIDRequestAmino;
 }
+/**
+ * @name GaugeByIDResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GaugeByIDResponse
+ */
 export interface GaugeByIDResponse {
-  /** Gauge that corresponds to provided gague ID */
+  /**
+   * Gauge that corresponds to provided gague ID
+  */
   gauge?: Gauge;
 }
 export interface GaugeByIDResponseProtoMsg {
   typeUrl: "/osmosis.incentives.GaugeByIDResponse";
   value: Uint8Array;
 }
+/**
+ * @name GaugeByIDResponseAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GaugeByIDResponse
+ */
 export interface GaugeByIDResponseAmino {
-  /** Gauge that corresponds to provided gague ID */
+  /**
+   * Gauge that corresponds to provided gague ID
+  */
   gauge?: GaugeAmino;
 }
 export interface GaugeByIDResponseAminoMsg {
   type: "osmosis/incentives/gauge-by-id-response";
   value: GaugeByIDResponseAmino;
 }
+/**
+ * @name GaugesRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GaugesRequest
+ */
 export interface GaugesRequest {
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+  */
   pagination?: PageRequest;
 }
 export interface GaugesRequestProtoMsg {
   typeUrl: "/osmosis.incentives.GaugesRequest";
   value: Uint8Array;
 }
+/**
+ * @name GaugesRequestAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GaugesRequest
+ */
 export interface GaugesRequestAmino {
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+  */
   pagination?: PageRequestAmino;
 }
 export interface GaugesRequestAminoMsg {
   type: "osmosis/incentives/gauges-request";
   value: GaugesRequestAmino;
 }
+/**
+ * @name GaugesResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GaugesResponse
+ */
 export interface GaugesResponse {
-  /** Upcoming and active gauges */
+  /**
+   * Upcoming and active gauges
+  */
   data: Gauge[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+  */
   pagination?: PageResponse;
 }
 export interface GaugesResponseProtoMsg {
   typeUrl: "/osmosis.incentives.GaugesResponse";
   value: Uint8Array;
 }
+/**
+ * @name GaugesResponseAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GaugesResponse
+ */
 export interface GaugesResponseAmino {
-  /** Upcoming and active gauges */
+  /**
+   * Upcoming and active gauges
+  */
   data: GaugeAmino[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+  */
   pagination?: PageResponseAmino;
 }
 export interface GaugesResponseAminoMsg {
   type: "osmosis/incentives/gauges-response";
   value: GaugesResponseAmino;
 }
+/**
+ * @name ActiveGaugesRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ActiveGaugesRequest
+ */
 export interface ActiveGaugesRequest {
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+  */
   pagination?: PageRequest;
 }
 export interface ActiveGaugesRequestProtoMsg {
   typeUrl: "/osmosis.incentives.ActiveGaugesRequest";
   value: Uint8Array;
 }
+/**
+ * @name ActiveGaugesRequestAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ActiveGaugesRequest
+ */
 export interface ActiveGaugesRequestAmino {
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+  */
   pagination?: PageRequestAmino;
 }
 export interface ActiveGaugesRequestAminoMsg {
   type: "osmosis/incentives/active-gauges-request";
   value: ActiveGaugesRequestAmino;
 }
+/**
+ * @name ActiveGaugesResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ActiveGaugesResponse
+ */
 export interface ActiveGaugesResponse {
-  /** Active gagues only */
+  /**
+   * Active gagues only
+  */
   data: Gauge[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+  */
   pagination?: PageResponse;
 }
 export interface ActiveGaugesResponseProtoMsg {
   typeUrl: "/osmosis.incentives.ActiveGaugesResponse";
   value: Uint8Array;
 }
+/**
+ * @name ActiveGaugesResponseAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ActiveGaugesResponse
+ */
 export interface ActiveGaugesResponseAmino {
-  /** Active gagues only */
+  /**
+   * Active gagues only
+  */
   data: GaugeAmino[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+  */
   pagination?: PageResponseAmino;
 }
 export interface ActiveGaugesResponseAminoMsg {
   type: "osmosis/incentives/active-gauges-response";
   value: ActiveGaugesResponseAmino;
 }
+/**
+ * @name ActiveGaugesPerDenomRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ActiveGaugesPerDenomRequest
+ */
 export interface ActiveGaugesPerDenomRequest {
-  /** Desired denom when querying active gagues */
+  /**
+   * Desired denom when querying active gagues
+  */
   denom: string;
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+  */
   pagination?: PageRequest;
 }
 export interface ActiveGaugesPerDenomRequestProtoMsg {
   typeUrl: "/osmosis.incentives.ActiveGaugesPerDenomRequest";
   value: Uint8Array;
 }
+/**
+ * @name ActiveGaugesPerDenomRequestAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ActiveGaugesPerDenomRequest
+ */
 export interface ActiveGaugesPerDenomRequestAmino {
-  /** Desired denom when querying active gagues */
+  /**
+   * Desired denom when querying active gagues
+  */
   denom: string;
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+  */
   pagination?: PageRequestAmino;
 }
 export interface ActiveGaugesPerDenomRequestAminoMsg {
   type: "osmosis/incentives/active-gauges-per-denom-request";
   value: ActiveGaugesPerDenomRequestAmino;
 }
+/**
+ * @name ActiveGaugesPerDenomResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ActiveGaugesPerDenomResponse
+ */
 export interface ActiveGaugesPerDenomResponse {
-  /** Active gagues that match denom in query */
+  /**
+   * Active gagues that match denom in query
+  */
   data: Gauge[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+  */
   pagination?: PageResponse;
 }
 export interface ActiveGaugesPerDenomResponseProtoMsg {
   typeUrl: "/osmosis.incentives.ActiveGaugesPerDenomResponse";
   value: Uint8Array;
 }
+/**
+ * @name ActiveGaugesPerDenomResponseAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ActiveGaugesPerDenomResponse
+ */
 export interface ActiveGaugesPerDenomResponseAmino {
-  /** Active gagues that match denom in query */
+  /**
+   * Active gagues that match denom in query
+  */
   data: GaugeAmino[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+  */
   pagination?: PageResponseAmino;
 }
 export interface ActiveGaugesPerDenomResponseAminoMsg {
   type: "osmosis/incentives/active-gauges-per-denom-response";
   value: ActiveGaugesPerDenomResponseAmino;
 }
+/**
+ * @name UpcomingGaugesRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.UpcomingGaugesRequest
+ */
 export interface UpcomingGaugesRequest {
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+  */
   pagination?: PageRequest;
 }
 export interface UpcomingGaugesRequestProtoMsg {
   typeUrl: "/osmosis.incentives.UpcomingGaugesRequest";
   value: Uint8Array;
 }
+/**
+ * @name UpcomingGaugesRequestAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.UpcomingGaugesRequest
+ */
 export interface UpcomingGaugesRequestAmino {
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+  */
   pagination?: PageRequestAmino;
 }
 export interface UpcomingGaugesRequestAminoMsg {
   type: "osmosis/incentives/upcoming-gauges-request";
   value: UpcomingGaugesRequestAmino;
 }
+/**
+ * @name UpcomingGaugesResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.UpcomingGaugesResponse
+ */
 export interface UpcomingGaugesResponse {
-  /** Gauges whose distribution is upcoming */
+  /**
+   * Gauges whose distribution is upcoming
+  */
   data: Gauge[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+  */
   pagination?: PageResponse;
 }
 export interface UpcomingGaugesResponseProtoMsg {
   typeUrl: "/osmosis.incentives.UpcomingGaugesResponse";
   value: Uint8Array;
 }
+/**
+ * @name UpcomingGaugesResponseAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.UpcomingGaugesResponse
+ */
 export interface UpcomingGaugesResponseAmino {
-  /** Gauges whose distribution is upcoming */
+  /**
+   * Gauges whose distribution is upcoming
+  */
   data: GaugeAmino[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+  */
   pagination?: PageResponseAmino;
 }
 export interface UpcomingGaugesResponseAminoMsg {
   type: "osmosis/incentives/upcoming-gauges-response";
   value: UpcomingGaugesResponseAmino;
 }
+/**
+ * @name UpcomingGaugesPerDenomRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.UpcomingGaugesPerDenomRequest
+ */
 export interface UpcomingGaugesPerDenomRequest {
-  /** Filter for upcoming gagues that match specific denom */
+  /**
+   * Filter for upcoming gagues that match specific denom
+  */
   denom: string;
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+  */
   pagination?: PageRequest;
 }
 export interface UpcomingGaugesPerDenomRequestProtoMsg {
   typeUrl: "/osmosis.incentives.UpcomingGaugesPerDenomRequest";
   value: Uint8Array;
 }
+/**
+ * @name UpcomingGaugesPerDenomRequestAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.UpcomingGaugesPerDenomRequest
+ */
 export interface UpcomingGaugesPerDenomRequestAmino {
-  /** Filter for upcoming gagues that match specific denom */
+  /**
+   * Filter for upcoming gagues that match specific denom
+  */
   denom: string;
-  /** Pagination defines pagination for the request */
+  /**
+   * Pagination defines pagination for the request
+  */
   pagination?: PageRequestAmino;
 }
 export interface UpcomingGaugesPerDenomRequestAminoMsg {
   type: "osmosis/incentives/upcoming-gauges-per-denom-request";
   value: UpcomingGaugesPerDenomRequestAmino;
 }
+/**
+ * @name UpcomingGaugesPerDenomResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.UpcomingGaugesPerDenomResponse
+ */
 export interface UpcomingGaugesPerDenomResponse {
-  /** Upcoming gagues that match denom in query */
+  /**
+   * Upcoming gagues that match denom in query
+  */
   upcomingGauges: Gauge[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+  */
   pagination?: PageResponse;
 }
 export interface UpcomingGaugesPerDenomResponseProtoMsg {
   typeUrl: "/osmosis.incentives.UpcomingGaugesPerDenomResponse";
   value: Uint8Array;
 }
+/**
+ * @name UpcomingGaugesPerDenomResponseAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.UpcomingGaugesPerDenomResponse
+ */
 export interface UpcomingGaugesPerDenomResponseAmino {
-  /** Upcoming gagues that match denom in query */
+  /**
+   * Upcoming gagues that match denom in query
+  */
   upcoming_gauges: GaugeAmino[];
-  /** Pagination defines pagination for the response */
+  /**
+   * Pagination defines pagination for the response
+  */
   pagination?: PageResponseAmino;
 }
 export interface UpcomingGaugesPerDenomResponseAminoMsg {
   type: "osmosis/incentives/upcoming-gauges-per-denom-response";
   value: UpcomingGaugesPerDenomResponseAmino;
 }
+/**
+ * @name RewardsEstRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.RewardsEstRequest
+ */
 export interface RewardsEstRequest {
-  /** Address that is being queried for future estimated rewards */
+  /**
+   * Address that is being queried for future estimated rewards
+  */
   owner: string;
-  /** Lock IDs included in future reward estimation */
+  /**
+   * Lock IDs included in future reward estimation
+  */
   lockIds: bigint[];
   /**
    * Upper time limit of reward estimation
@@ -265,10 +494,19 @@ export interface RewardsEstRequestProtoMsg {
   typeUrl: "/osmosis.incentives.RewardsEstRequest";
   value: Uint8Array;
 }
+/**
+ * @name RewardsEstRequestAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.RewardsEstRequest
+ */
 export interface RewardsEstRequestAmino {
-  /** Address that is being queried for future estimated rewards */
+  /**
+   * Address that is being queried for future estimated rewards
+  */
   owner: string;
-  /** Lock IDs included in future reward estimation */
+  /**
+   * Lock IDs included in future reward estimation
+  */
   lock_ids: string[];
   /**
    * Upper time limit of reward estimation
@@ -280,6 +518,11 @@ export interface RewardsEstRequestAminoMsg {
   type: "osmosis/incentives/rewards-est-request";
   value: RewardsEstRequestAmino;
 }
+/**
+ * @name RewardsEstResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.RewardsEstResponse
+ */
 export interface RewardsEstResponse {
   /**
    * Estimated coin rewards that will be recieved at provided address
@@ -291,6 +534,11 @@ export interface RewardsEstResponseProtoMsg {
   typeUrl: "/osmosis.incentives.RewardsEstResponse";
   value: Uint8Array;
 }
+/**
+ * @name RewardsEstResponseAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.RewardsEstResponse
+ */
 export interface RewardsEstResponseAmino {
   /**
    * Estimated coin rewards that will be recieved at provided address
@@ -302,26 +550,50 @@ export interface RewardsEstResponseAminoMsg {
   type: "osmosis/incentives/rewards-est-response";
   value: RewardsEstResponseAmino;
 }
+/**
+ * @name QueryLockableDurationsRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.QueryLockableDurationsRequest
+ */
 export interface QueryLockableDurationsRequest {}
 export interface QueryLockableDurationsRequestProtoMsg {
   typeUrl: "/osmosis.incentives.QueryLockableDurationsRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryLockableDurationsRequestAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.QueryLockableDurationsRequest
+ */
 export interface QueryLockableDurationsRequestAmino {}
 export interface QueryLockableDurationsRequestAminoMsg {
   type: "osmosis/incentives/query-lockable-durations-request";
   value: QueryLockableDurationsRequestAmino;
 }
+/**
+ * @name QueryLockableDurationsResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.QueryLockableDurationsResponse
+ */
 export interface QueryLockableDurationsResponse {
-  /** Time durations that users can lock coins for in order to recieve rewards */
+  /**
+   * Time durations that users can lock coins for in order to recieve rewards
+  */
   lockableDurations: Duration[];
 }
 export interface QueryLockableDurationsResponseProtoMsg {
   typeUrl: "/osmosis.incentives.QueryLockableDurationsResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryLockableDurationsResponseAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.QueryLockableDurationsResponse
+ */
 export interface QueryLockableDurationsResponseAmino {
-  /** Time durations that users can lock coins for in order to recieve rewards */
+  /**
+   * Time durations that users can lock coins for in order to recieve rewards
+  */
   lockable_durations: DurationAmino[];
 }
 export interface QueryLockableDurationsResponseAminoMsg {
@@ -331,6 +603,11 @@ export interface QueryLockableDurationsResponseAminoMsg {
 function createBaseModuleToDistributeCoinsRequest(): ModuleToDistributeCoinsRequest {
   return {};
 }
+/**
+ * @name ModuleToDistributeCoinsRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ModuleToDistributeCoinsRequest
+ */
 export const ModuleToDistributeCoinsRequest = {
   typeUrl: "/osmosis.incentives.ModuleToDistributeCoinsRequest",
   aminoType: "osmosis/incentives/module-to-distribute-coins-request",
@@ -390,6 +667,11 @@ function createBaseModuleToDistributeCoinsResponse(): ModuleToDistributeCoinsRes
     coins: []
   };
 }
+/**
+ * @name ModuleToDistributeCoinsResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ModuleToDistributeCoinsResponse
+ */
 export const ModuleToDistributeCoinsResponse = {
   typeUrl: "/osmosis.incentives.ModuleToDistributeCoinsResponse",
   aminoType: "osmosis/incentives/module-to-distribute-coins-response",
@@ -462,6 +744,11 @@ function createBaseGaugeByIDRequest(): GaugeByIDRequest {
     id: BigInt(0)
   };
 }
+/**
+ * @name GaugeByIDRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GaugeByIDRequest
+ */
 export const GaugeByIDRequest = {
   typeUrl: "/osmosis.incentives.GaugeByIDRequest",
   aminoType: "osmosis/incentives/gauge-by-id-request",
@@ -532,6 +819,11 @@ function createBaseGaugeByIDResponse(): GaugeByIDResponse {
     gauge: undefined
   };
 }
+/**
+ * @name GaugeByIDResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GaugeByIDResponse
+ */
 export const GaugeByIDResponse = {
   typeUrl: "/osmosis.incentives.GaugeByIDResponse",
   aminoType: "osmosis/incentives/gauge-by-id-response",
@@ -602,6 +894,11 @@ function createBaseGaugesRequest(): GaugesRequest {
     pagination: undefined
   };
 }
+/**
+ * @name GaugesRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GaugesRequest
+ */
 export const GaugesRequest = {
   typeUrl: "/osmosis.incentives.GaugesRequest",
   aminoType: "osmosis/incentives/gauges-request",
@@ -673,6 +970,11 @@ function createBaseGaugesResponse(): GaugesResponse {
     pagination: undefined
   };
 }
+/**
+ * @name GaugesResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GaugesResponse
+ */
 export const GaugesResponse = {
   typeUrl: "/osmosis.incentives.GaugesResponse",
   aminoType: "osmosis/incentives/gauges-response",
@@ -756,6 +1058,11 @@ function createBaseActiveGaugesRequest(): ActiveGaugesRequest {
     pagination: undefined
   };
 }
+/**
+ * @name ActiveGaugesRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ActiveGaugesRequest
+ */
 export const ActiveGaugesRequest = {
   typeUrl: "/osmosis.incentives.ActiveGaugesRequest",
   aminoType: "osmosis/incentives/active-gauges-request",
@@ -827,6 +1134,11 @@ function createBaseActiveGaugesResponse(): ActiveGaugesResponse {
     pagination: undefined
   };
 }
+/**
+ * @name ActiveGaugesResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ActiveGaugesResponse
+ */
 export const ActiveGaugesResponse = {
   typeUrl: "/osmosis.incentives.ActiveGaugesResponse",
   aminoType: "osmosis/incentives/active-gauges-response",
@@ -911,6 +1223,11 @@ function createBaseActiveGaugesPerDenomRequest(): ActiveGaugesPerDenomRequest {
     pagination: undefined
   };
 }
+/**
+ * @name ActiveGaugesPerDenomRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ActiveGaugesPerDenomRequest
+ */
 export const ActiveGaugesPerDenomRequest = {
   typeUrl: "/osmosis.incentives.ActiveGaugesPerDenomRequest",
   aminoType: "osmosis/incentives/active-gauges-per-denom-request",
@@ -993,6 +1310,11 @@ function createBaseActiveGaugesPerDenomResponse(): ActiveGaugesPerDenomResponse 
     pagination: undefined
   };
 }
+/**
+ * @name ActiveGaugesPerDenomResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.ActiveGaugesPerDenomResponse
+ */
 export const ActiveGaugesPerDenomResponse = {
   typeUrl: "/osmosis.incentives.ActiveGaugesPerDenomResponse",
   aminoType: "osmosis/incentives/active-gauges-per-denom-response",
@@ -1076,6 +1398,11 @@ function createBaseUpcomingGaugesRequest(): UpcomingGaugesRequest {
     pagination: undefined
   };
 }
+/**
+ * @name UpcomingGaugesRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.UpcomingGaugesRequest
+ */
 export const UpcomingGaugesRequest = {
   typeUrl: "/osmosis.incentives.UpcomingGaugesRequest",
   aminoType: "osmosis/incentives/upcoming-gauges-request",
@@ -1147,6 +1474,11 @@ function createBaseUpcomingGaugesResponse(): UpcomingGaugesResponse {
     pagination: undefined
   };
 }
+/**
+ * @name UpcomingGaugesResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.UpcomingGaugesResponse
+ */
 export const UpcomingGaugesResponse = {
   typeUrl: "/osmosis.incentives.UpcomingGaugesResponse",
   aminoType: "osmosis/incentives/upcoming-gauges-response",
@@ -1231,6 +1563,11 @@ function createBaseUpcomingGaugesPerDenomRequest(): UpcomingGaugesPerDenomReques
     pagination: undefined
   };
 }
+/**
+ * @name UpcomingGaugesPerDenomRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.UpcomingGaugesPerDenomRequest
+ */
 export const UpcomingGaugesPerDenomRequest = {
   typeUrl: "/osmosis.incentives.UpcomingGaugesPerDenomRequest",
   aminoType: "osmosis/incentives/upcoming-gauges-per-denom-request",
@@ -1313,6 +1650,11 @@ function createBaseUpcomingGaugesPerDenomResponse(): UpcomingGaugesPerDenomRespo
     pagination: undefined
   };
 }
+/**
+ * @name UpcomingGaugesPerDenomResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.UpcomingGaugesPerDenomResponse
+ */
 export const UpcomingGaugesPerDenomResponse = {
   typeUrl: "/osmosis.incentives.UpcomingGaugesPerDenomResponse",
   aminoType: "osmosis/incentives/upcoming-gauges-per-denom-response",
@@ -1398,6 +1740,11 @@ function createBaseRewardsEstRequest(): RewardsEstRequest {
     endEpoch: BigInt(0)
   };
 }
+/**
+ * @name RewardsEstRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.RewardsEstRequest
+ */
 export const RewardsEstRequest = {
   typeUrl: "/osmosis.incentives.RewardsEstRequest",
   aminoType: "osmosis/incentives/rewards-est-request",
@@ -1501,6 +1848,11 @@ function createBaseRewardsEstResponse(): RewardsEstResponse {
     coins: []
   };
 }
+/**
+ * @name RewardsEstResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.RewardsEstResponse
+ */
 export const RewardsEstResponse = {
   typeUrl: "/osmosis.incentives.RewardsEstResponse",
   aminoType: "osmosis/incentives/rewards-est-response",
@@ -1571,6 +1923,11 @@ export const RewardsEstResponse = {
 function createBaseQueryLockableDurationsRequest(): QueryLockableDurationsRequest {
   return {};
 }
+/**
+ * @name QueryLockableDurationsRequest
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.QueryLockableDurationsRequest
+ */
 export const QueryLockableDurationsRequest = {
   typeUrl: "/osmosis.incentives.QueryLockableDurationsRequest",
   aminoType: "osmosis/incentives/query-lockable-durations-request",
@@ -1630,6 +1987,11 @@ function createBaseQueryLockableDurationsResponse(): QueryLockableDurationsRespo
     lockableDurations: []
   };
 }
+/**
+ * @name QueryLockableDurationsResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.QueryLockableDurationsResponse
+ */
 export const QueryLockableDurationsResponse = {
   typeUrl: "/osmosis.incentives.QueryLockableDurationsResponse",
   aminoType: "osmosis/incentives/query-lockable-durations-response",

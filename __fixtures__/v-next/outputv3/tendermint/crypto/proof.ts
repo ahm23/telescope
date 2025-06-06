@@ -1,6 +1,11 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, bytesFromBase64, DeepPartial, base64FromBytes } from "../../helpers";
 export const protobufPackage = "tendermint.crypto";
+/**
+ * @name Proof
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.Proof
+ */
 export interface Proof {
   total: bigint;
   index: bigint;
@@ -11,38 +16,76 @@ export interface ProofProtoMsg {
   typeUrl: "/tendermint.crypto.Proof";
   value: Uint8Array;
 }
+/**
+ * @name ProofAmino
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.Proof
+ */
 export interface ProofAmino {
   total?: string;
   index?: string;
   leaf_hash?: string;
   aunts?: string[];
 }
+/**
+ * @name ProofSDKType
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.Proof
+ */
 export interface ProofSDKType {
   total: bigint;
   index: bigint;
   leaf_hash: Uint8Array;
   aunts: Uint8Array[];
 }
+/**
+ * @name ValueOp
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.ValueOp
+ */
 export interface ValueOp {
-  /** Encoded in ProofOp.Key. */
+  /**
+   * Encoded in ProofOp.Key.
+  */
   key: Uint8Array;
-  /** To encode in ProofOp.Data */
+  /**
+   * To encode in ProofOp.Data
+  */
   proof?: Proof;
 }
 export interface ValueOpProtoMsg {
   typeUrl: "/tendermint.crypto.ValueOp";
   value: Uint8Array;
 }
+/**
+ * @name ValueOpAmino
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.ValueOp
+ */
 export interface ValueOpAmino {
-  /** Encoded in ProofOp.Key. */
+  /**
+   * Encoded in ProofOp.Key.
+  */
   key?: string;
-  /** To encode in ProofOp.Data */
+  /**
+   * To encode in ProofOp.Data
+  */
   proof?: ProofAmino;
 }
+/**
+ * @name ValueOpSDKType
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.ValueOp
+ */
 export interface ValueOpSDKType {
   key: Uint8Array;
   proof?: ProofSDKType;
 }
+/**
+ * @name DominoOp
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.DominoOp
+ */
 export interface DominoOp {
   key: string;
   input: string;
@@ -52,11 +95,21 @@ export interface DominoOpProtoMsg {
   typeUrl: "/tendermint.crypto.DominoOp";
   value: Uint8Array;
 }
+/**
+ * @name DominoOpAmino
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.DominoOp
+ */
 export interface DominoOpAmino {
   key?: string;
   input?: string;
   output?: string;
 }
+/**
+ * @name DominoOpSDKType
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.DominoOp
+ */
 export interface DominoOpSDKType {
   key: string;
   input: string;
@@ -66,6 +119,9 @@ export interface DominoOpSDKType {
  * ProofOp defines an operation used for calculating Merkle root
  * The data could be arbitrary format, providing nessecary data
  * for example neighbouring node hash
+ * @name ProofOp
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.ProofOp
  */
 export interface ProofOp {
   type: string;
@@ -80,6 +136,9 @@ export interface ProofOpProtoMsg {
  * ProofOp defines an operation used for calculating Merkle root
  * The data could be arbitrary format, providing nessecary data
  * for example neighbouring node hash
+ * @name ProofOpAmino
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.ProofOp
  */
 export interface ProofOpAmino {
   type?: string;
@@ -90,13 +149,21 @@ export interface ProofOpAmino {
  * ProofOp defines an operation used for calculating Merkle root
  * The data could be arbitrary format, providing nessecary data
  * for example neighbouring node hash
+ * @name ProofOpSDKType
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.ProofOp
  */
 export interface ProofOpSDKType {
   type: string;
   key: Uint8Array;
   data: Uint8Array;
 }
-/** ProofOps is Merkle proof defined by the list of ProofOps */
+/**
+ * ProofOps is Merkle proof defined by the list of ProofOps
+ * @name ProofOps
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.ProofOps
+ */
 export interface ProofOps {
   ops: ProofOp[];
 }
@@ -104,11 +171,21 @@ export interface ProofOpsProtoMsg {
   typeUrl: "/tendermint.crypto.ProofOps";
   value: Uint8Array;
 }
-/** ProofOps is Merkle proof defined by the list of ProofOps */
+/**
+ * ProofOps is Merkle proof defined by the list of ProofOps
+ * @name ProofOpsAmino
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.ProofOps
+ */
 export interface ProofOpsAmino {
   ops?: ProofOpAmino[];
 }
-/** ProofOps is Merkle proof defined by the list of ProofOps */
+/**
+ * ProofOps is Merkle proof defined by the list of ProofOps
+ * @name ProofOpsSDKType
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.ProofOps
+ */
 export interface ProofOpsSDKType {
   ops: ProofOpSDKType[];
 }
@@ -120,6 +197,11 @@ function createBaseProof(): Proof {
     aunts: []
   };
 }
+/**
+ * @name Proof
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.Proof
+ */
 export const Proof = {
   typeUrl: "/tendermint.crypto.Proof",
   encode(message: Proof, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -248,6 +330,11 @@ function createBaseValueOp(): ValueOp {
     proof: undefined
   };
 }
+/**
+ * @name ValueOp
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.ValueOp
+ */
 export const ValueOp = {
   typeUrl: "/tendermint.crypto.ValueOp",
   encode(message: ValueOp, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -341,6 +428,11 @@ function createBaseDominoOp(): DominoOp {
     output: ""
   };
 }
+/**
+ * @name DominoOp
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.DominoOp
+ */
 export const DominoOp = {
   typeUrl: "/tendermint.crypto.DominoOp",
   encode(message: DominoOp, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -446,6 +538,14 @@ function createBaseProofOp(): ProofOp {
     data: new Uint8Array()
   };
 }
+/**
+ * ProofOp defines an operation used for calculating Merkle root
+ * The data could be arbitrary format, providing nessecary data
+ * for example neighbouring node hash
+ * @name ProofOp
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.ProofOp
+ */
 export const ProofOp = {
   typeUrl: "/tendermint.crypto.ProofOp",
   encode(message: ProofOp, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -549,6 +649,12 @@ function createBaseProofOps(): ProofOps {
     ops: []
   };
 }
+/**
+ * ProofOps is Merkle proof defined by the list of ProofOps
+ * @name ProofOps
+ * @package tendermint.crypto
+ * @see proto type: tendermint.crypto.ProofOps
+ */
 export const ProofOps = {
   typeUrl: "/tendermint.crypto.ProofOps",
   encode(message: ProofOps, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

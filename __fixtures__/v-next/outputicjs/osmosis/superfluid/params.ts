@@ -1,8 +1,13 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { Decimal } from "@interchainjs/math";
 import { DeepPartial } from "../../helpers";
-/** Params holds parameters for the superfluid module */
-export interface Params {
+/**
+ * Params holds parameters for the superfluid module
+ * @name OsmosisSuperfluidParams
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.Params
+ */
+export interface OsmosisSuperfluidParams {
   /**
    * minimum_risk_factor is to be cut on OSMO equivalent value of lp tokens for
    * superfluid staking, default: 5%. The minimum risk factor works
@@ -11,12 +16,17 @@ export interface Params {
    */
   minimumRiskFactor: string;
 }
-export interface ParamsProtoMsg {
+export interface OsmosisSuperfluidParamsProtoMsg {
   typeUrl: "/osmosis.superfluid.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the superfluid module */
-export interface ParamsAmino {
+/**
+ * Params holds parameters for the superfluid module
+ * @name OsmosisSuperfluidParamsAmino
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.OsmosisSuperfluidParams
+ */
+export interface OsmosisSuperfluidParamsAmino {
   /**
    * minimum_risk_factor is to be cut on OSMO equivalent value of lp tokens for
    * superfluid staking, default: 5%. The minimum risk factor works
@@ -25,28 +35,34 @@ export interface ParamsAmino {
    */
   minimum_risk_factor: string;
 }
-export interface ParamsAminoMsg {
+export interface OsmosisSuperfluidParamsAminoMsg {
   type: "osmosis/params";
-  value: ParamsAmino;
+  value: OsmosisSuperfluidParamsAmino;
 }
-function createBaseParams(): Params {
+function createBaseOsmosisSuperfluidParams(): OsmosisSuperfluidParams {
   return {
     minimumRiskFactor: ""
   };
 }
-export const Params = {
+/**
+ * Params holds parameters for the superfluid module
+ * @name OsmosisSuperfluidParams
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.Params
+ */
+export const OsmosisSuperfluidParams = {
   typeUrl: "/osmosis.superfluid.Params",
   aminoType: "osmosis/params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: OsmosisSuperfluidParams, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.minimumRiskFactor !== "") {
       writer.uint32(10).string(Decimal.fromUserInput(message.minimumRiskFactor, 18).atomics);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): OsmosisSuperfluidParams {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseOsmosisSuperfluidParams();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -60,42 +76,42 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<OsmosisSuperfluidParams>): OsmosisSuperfluidParams {
+    const message = createBaseOsmosisSuperfluidParams();
     message.minimumRiskFactor = object.minimumRiskFactor ?? "";
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: OsmosisSuperfluidParamsAmino): OsmosisSuperfluidParams {
+    const message = createBaseOsmosisSuperfluidParams();
     if (object.minimum_risk_factor !== undefined && object.minimum_risk_factor !== null) {
       message.minimumRiskFactor = object.minimum_risk_factor;
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: OsmosisSuperfluidParams): OsmosisSuperfluidParamsAmino {
     const obj: any = {};
     obj.minimum_risk_factor = message.minimumRiskFactor === "" ? undefined : message.minimumRiskFactor;
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: OsmosisSuperfluidParamsAminoMsg): OsmosisSuperfluidParams {
+    return OsmosisSuperfluidParams.fromAmino(object.value);
   },
-  toAminoMsg(message: Params): ParamsAminoMsg {
+  toAminoMsg(message: OsmosisSuperfluidParams): OsmosisSuperfluidParamsAminoMsg {
     return {
       type: "osmosis/params",
-      value: Params.toAmino(message)
+      value: OsmosisSuperfluidParams.toAmino(message)
     };
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: OsmosisSuperfluidParamsProtoMsg): OsmosisSuperfluidParams {
+    return OsmosisSuperfluidParams.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: OsmosisSuperfluidParams): Uint8Array {
+    return OsmosisSuperfluidParams.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: OsmosisSuperfluidParams): OsmosisSuperfluidParamsProtoMsg {
     return {
       typeUrl: "/osmosis.superfluid.Params",
-      value: Params.encode(message).finish()
+      value: OsmosisSuperfluidParams.encode(message).finish()
     };
   }
 };

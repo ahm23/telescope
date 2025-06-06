@@ -5,7 +5,7 @@ import { lockTokens, beginUnlockingAll, beginUnlocking, extendLockup, forceUnloc
  * LockTokens lock tokens
  * @name useLockTokens
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.LockTokens
+ * @see proto service: osmosis.lockup.LockTokens
  */
 export const useLockTokens = buildUseMutation<MsgLockTokens, Error>({
   builderMutationFn: lockTokens
@@ -14,7 +14,7 @@ export const useLockTokens = buildUseMutation<MsgLockTokens, Error>({
  * BeginUnlockingAll begin unlocking all tokens
  * @name useBeginUnlockingAll
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.BeginUnlockingAll
+ * @see proto service: osmosis.lockup.BeginUnlockingAll
  */
 export const useBeginUnlockingAll = buildUseMutation<MsgBeginUnlockingAll, Error>({
   builderMutationFn: beginUnlockingAll
@@ -23,7 +23,7 @@ export const useBeginUnlockingAll = buildUseMutation<MsgBeginUnlockingAll, Error
  * MsgBeginUnlocking begins unlocking tokens by lock ID
  * @name useBeginUnlocking
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.BeginUnlocking
+ * @see proto service: osmosis.lockup.BeginUnlocking
  */
 export const useBeginUnlocking = buildUseMutation<MsgBeginUnlocking, Error>({
   builderMutationFn: beginUnlocking
@@ -32,7 +32,7 @@ export const useBeginUnlocking = buildUseMutation<MsgBeginUnlocking, Error>({
  * MsgEditLockup edits the existing lockups by lock ID
  * @name useExtendLockup
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.ExtendLockup
+ * @see proto service: osmosis.lockup.ExtendLockup
  */
 export const useExtendLockup = buildUseMutation<MsgExtendLockup, Error>({
   builderMutationFn: extendLockup
@@ -40,7 +40,7 @@ export const useExtendLockup = buildUseMutation<MsgExtendLockup, Error>({
 /**
  * @name useForceUnlock
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.ForceUnlock
+ * @see proto service: osmosis.lockup.ForceUnlock
  */
 export const useForceUnlock = buildUseMutation<MsgForceUnlock, Error>({
   builderMutationFn: forceUnlock

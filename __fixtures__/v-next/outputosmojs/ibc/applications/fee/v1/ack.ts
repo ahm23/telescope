@@ -2,20 +2,36 @@ import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, bytesFromBase64, base64FromBytes, DeepPartial } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
 export const protobufPackage = "ibc.applications.fee.v1";
-/** IncentivizedAcknowledgement is the acknowledgement format to be used by applications wrapped in the fee middleware */
+/**
+ * IncentivizedAcknowledgement is the acknowledgement format to be used by applications wrapped in the fee middleware
+ * @name IncentivizedAcknowledgement
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.IncentivizedAcknowledgement
+ */
 export interface IncentivizedAcknowledgement {
-  /** the underlying app acknowledgement bytes */
+  /**
+   * the underlying app acknowledgement bytes
+  */
   appAcknowledgement: Uint8Array;
-  /** the relayer address which submits the recv packet message */
+  /**
+   * the relayer address which submits the recv packet message
+  */
   forwardRelayerAddress: string;
-  /** success flag of the base application callback */
+  /**
+   * success flag of the base application callback
+  */
   underlyingAppSuccess: boolean;
 }
 export interface IncentivizedAcknowledgementProtoMsg {
   typeUrl: "/ibc.applications.fee.v1.IncentivizedAcknowledgement";
   value: Uint8Array;
 }
-/** IncentivizedAcknowledgement is the acknowledgement format to be used by applications wrapped in the fee middleware */
+/**
+ * IncentivizedAcknowledgement is the acknowledgement format to be used by applications wrapped in the fee middleware
+ * @name IncentivizedAcknowledgementSDKType
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.IncentivizedAcknowledgement
+ */
 export interface IncentivizedAcknowledgementSDKType {
   app_acknowledgement: Uint8Array;
   forward_relayer_address: string;
@@ -28,6 +44,12 @@ function createBaseIncentivizedAcknowledgement(): IncentivizedAcknowledgement {
     underlyingAppSuccess: false
   };
 }
+/**
+ * IncentivizedAcknowledgement is the acknowledgement format to be used by applications wrapped in the fee middleware
+ * @name IncentivizedAcknowledgement
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.IncentivizedAcknowledgement
+ */
 export const IncentivizedAcknowledgement = {
   typeUrl: "/ibc.applications.fee.v1.IncentivizedAcknowledgement",
   encode(message: IncentivizedAcknowledgement, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

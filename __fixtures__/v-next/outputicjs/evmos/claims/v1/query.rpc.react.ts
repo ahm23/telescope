@@ -5,7 +5,7 @@ import { getTotalUnclaimed, getEvmosClaimsV1Params, getClaimsRecords, getClaimsR
  * TotalUnclaimed queries the total unclaimed tokens from the airdrop
  * @name useGetTotalUnclaimed
  * @package evmos.claims.v1
- * @see protoservice: evmos.claims.v1.TotalUnclaimed
+ * @see proto service: evmos.claims.v1.TotalUnclaimed
  */
 export const useGetTotalUnclaimed = buildUseQuery<QueryTotalUnclaimedRequest, QueryTotalUnclaimedResponse>({
   builderQueryFn: getTotalUnclaimed,
@@ -15,7 +15,7 @@ export const useGetTotalUnclaimed = buildUseQuery<QueryTotalUnclaimedRequest, Qu
  * Params returns the claims module parameters
  * @name useGetEvmosClaimsV1Params
  * @package evmos.claims.v1
- * @see protoservice: evmos.claims.v1.Params
+ * @see proto service: evmos.claims.v1.Params
  */
 export const useGetEvmosClaimsV1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
   builderQueryFn: getEvmosClaimsV1Params,
@@ -25,7 +25,7 @@ export const useGetEvmosClaimsV1Params = buildUseQuery<QueryParamsRequest, Query
  * ClaimsRecords returns all claims records
  * @name useGetClaimsRecords
  * @package evmos.claims.v1
- * @see protoservice: evmos.claims.v1.ClaimsRecords
+ * @see proto service: evmos.claims.v1.ClaimsRecords
  */
 export const useGetClaimsRecords = buildUseQuery<QueryClaimsRecordsRequest, QueryClaimsRecordsResponse>({
   builderQueryFn: getClaimsRecords,
@@ -35,7 +35,7 @@ export const useGetClaimsRecords = buildUseQuery<QueryClaimsRecordsRequest, Quer
  * ClaimsRecord returns the claims record for a given address
  * @name useGetClaimsRecord
  * @package evmos.claims.v1
- * @see protoservice: evmos.claims.v1.ClaimsRecord
+ * @see proto service: evmos.claims.v1.ClaimsRecord
  */
 export const useGetClaimsRecord = buildUseQuery<QueryClaimsRecordRequest, QueryClaimsRecordResponse>({
   builderQueryFn: getClaimsRecord,

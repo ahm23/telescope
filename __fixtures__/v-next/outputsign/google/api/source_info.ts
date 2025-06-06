@@ -2,25 +2,44 @@ import { Any, AnyProtoMsg, AnyAmino, AnySDKType } from "../protobuf/any";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { DeepPartial } from "../../helpers";
 export const protobufPackage = "google.api";
-/** Source information used to create a Service Config */
+/**
+ * Source information used to create a Service Config
+ * @name SourceInfo
+ * @package google.api
+ * @see proto type: google.api.SourceInfo
+ */
 export interface SourceInfo {
-  /** All files used during config generation. */
+  /**
+   * All files used during config generation.
+  */
   sourceFiles: Any[];
 }
 export interface SourceInfoProtoMsg {
   typeUrl: "/google.api.SourceInfo";
   value: Uint8Array;
 }
-/** Source information used to create a Service Config */
+/**
+ * Source information used to create a Service Config
+ * @name SourceInfoAmino
+ * @package google.api
+ * @see proto type: google.api.SourceInfo
+ */
 export interface SourceInfoAmino {
-  /** All files used during config generation. */
+  /**
+   * All files used during config generation.
+  */
   source_files?: AnyAmino[];
 }
 export interface SourceInfoAminoMsg {
   type: "/google.api.SourceInfo";
   value: SourceInfoAmino;
 }
-/** Source information used to create a Service Config */
+/**
+ * Source information used to create a Service Config
+ * @name SourceInfoSDKType
+ * @package google.api
+ * @see proto type: google.api.SourceInfo
+ */
 export interface SourceInfoSDKType {
   source_files: AnySDKType[];
 }
@@ -29,6 +48,12 @@ function createBaseSourceInfo(): SourceInfo {
     sourceFiles: []
   };
 }
+/**
+ * Source information used to create a Service Config
+ * @name SourceInfo
+ * @package google.api
+ * @see proto type: google.api.SourceInfo
+ */
 export const SourceInfo = {
   typeUrl: "/google.api.SourceInfo",
   encode(message: SourceInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

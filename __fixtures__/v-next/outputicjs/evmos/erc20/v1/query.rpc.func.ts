@@ -4,7 +4,7 @@ import { QueryTokenPairsRequest, QueryTokenPairsResponse, QueryTokenPairRequest,
  * TokenPairs retrieves registered token pairs
  * @name getTokenPairs
  * @package evmos.erc20.v1
- * @see protoservice: evmos.erc20.v1.TokenPairs
+ * @see proto service: evmos.erc20.v1.TokenPairs
  */
 export const getTokenPairs = buildQuery<QueryTokenPairsRequest, QueryTokenPairsResponse>({
   encode: QueryTokenPairsRequest.encode,
@@ -16,7 +16,7 @@ export const getTokenPairs = buildQuery<QueryTokenPairsRequest, QueryTokenPairsR
  * TokenPair retrieves a registered token pair
  * @name getTokenPair
  * @package evmos.erc20.v1
- * @see protoservice: evmos.erc20.v1.TokenPair
+ * @see proto service: evmos.erc20.v1.TokenPair
  */
 export const getTokenPair = buildQuery<QueryTokenPairRequest, QueryTokenPairResponse>({
   encode: QueryTokenPairRequest.encode,
@@ -28,7 +28,7 @@ export const getTokenPair = buildQuery<QueryTokenPairRequest, QueryTokenPairResp
  * Params retrieves the erc20 module params
  * @name getEvmosErc20V1Params
  * @package evmos.erc20.v1
- * @see protoservice: evmos.erc20.v1.Params
+ * @see proto service: evmos.erc20.v1.Params
  */
 export const getEvmosErc20V1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,

@@ -58,7 +58,12 @@ export function stateToJSON(object: State): string {
       return "UNRECOGNIZED";
   }
 }
-/** A service that is available for use by the consumer. */
+/**
+ * A service that is available for use by the consumer.
+ * @name Service
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.Service
+ */
 export interface Service {
   /**
    * The resource name of the consumer and service.
@@ -81,21 +86,33 @@ export interface Service {
    * the `GetService` method.
    */
   config?: ServiceConfig;
-  /** Whether or not the service has been enabled for use by the consumer. */
+  /**
+   * Whether or not the service has been enabled for use by the consumer.
+  */
   state: State;
 }
 export interface ServiceProtoMsg {
   typeUrl: "/google.api.serviceusage.v1.Service";
   value: Uint8Array;
 }
-/** A service that is available for use by the consumer. */
+/**
+ * A service that is available for use by the consumer.
+ * @name ServiceSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.Service
+ */
 export interface ServiceSDKType {
   name: string;
   parent: string;
   config?: ServiceConfigSDKType;
   state: State;
 }
-/** The configuration of the service. */
+/**
+ * The configuration of the service.
+ * @name ServiceConfig
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.ServiceConfig
+ */
 export interface ServiceConfig {
   /**
    * The DNS address at which this service is available.
@@ -104,7 +121,9 @@ export interface ServiceConfig {
    * `calendar.googleapis.com`.
    */
   name: string;
-  /** The product title for this service. */
+  /**
+   * The product title for this service.
+  */
   title: string;
   /**
    * A list of API interfaces exported by this service. Contains only the names,
@@ -116,11 +135,17 @@ export interface ServiceConfig {
    * documentation URL.
    */
   documentation?: Documentation;
-  /** Quota configuration. */
+  /**
+   * Quota configuration.
+  */
   quota?: Quota;
-  /** Auth configuration. Contains only the OAuth rules. */
+  /**
+   * Auth configuration. Contains only the OAuth rules.
+  */
   authentication?: Authentication;
-  /** Configuration controlling usage of this service. */
+  /**
+   * Configuration controlling usage of this service.
+  */
   usage?: Usage;
   /**
    * Configuration for network endpoints. Contains only the names and aliases
@@ -142,7 +167,12 @@ export interface ServiceConfigProtoMsg {
   typeUrl: "/google.api.serviceusage.v1.ServiceConfig";
   value: Uint8Array;
 }
-/** The configuration of the service. */
+/**
+ * The configuration of the service.
+ * @name ServiceConfigSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.ServiceConfig
+ */
 export interface ServiceConfigSDKType {
   name: string;
   title: string;
@@ -155,7 +185,12 @@ export interface ServiceConfigSDKType {
   monitored_resources: MonitoredResourceDescriptorSDKType[];
   monitoring?: MonitoringSDKType;
 }
-/** The operation metadata returned for the batchend services operation. */
+/**
+ * The operation metadata returned for the batchend services operation.
+ * @name OperationMetadata
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.OperationMetadata
+ */
 export interface OperationMetadata {
   /**
    * The full name of the resources that this operation is directly
@@ -167,7 +202,12 @@ export interface OperationMetadataProtoMsg {
   typeUrl: "/google.api.serviceusage.v1.OperationMetadata";
   value: Uint8Array;
 }
-/** The operation metadata returned for the batchend services operation. */
+/**
+ * The operation metadata returned for the batchend services operation.
+ * @name OperationMetadataSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.OperationMetadata
+ */
 export interface OperationMetadataSDKType {
   resource_names: string[];
 }
@@ -179,6 +219,12 @@ function createBaseService(): Service {
     state: 0
   };
 }
+/**
+ * A service that is available for use by the consumer.
+ * @name Service
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.Service
+ */
 export const Service = {
   typeUrl: "/google.api.serviceusage.v1.Service",
   encode(message: Service, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -326,6 +372,12 @@ function createBaseServiceConfig(): ServiceConfig {
     monitoring: undefined
   };
 }
+/**
+ * The configuration of the service.
+ * @name ServiceConfig
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.ServiceConfig
+ */
 export const ServiceConfig = {
   typeUrl: "/google.api.serviceusage.v1.ServiceConfig",
   encode(message: ServiceConfig, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -598,6 +650,12 @@ function createBaseOperationMetadata(): OperationMetadata {
     resourceNames: []
   };
 }
+/**
+ * The operation metadata returned for the batchend services operation.
+ * @name OperationMetadata
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.OperationMetadata
+ */
 export const OperationMetadata = {
   typeUrl: "/google.api.serviceusage.v1.OperationMetadata",
   encode(message: OperationMetadata, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

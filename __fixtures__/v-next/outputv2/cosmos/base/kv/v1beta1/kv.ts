@@ -2,7 +2,12 @@ import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { JsonSafe } from "../../../../json-safe";
 import { DeepPartial, isSet, bytesFromBase64, base64FromBytes } from "../../../../helpers";
 export const protobufPackage = "cosmos.base.kv.v1beta1";
-/** Pairs defines a repeated slice of Pair objects. */
+/**
+ * Pairs defines a repeated slice of Pair objects.
+ * @name Pairs
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pairs
+ */
 export interface Pairs {
   pairs: Pair[];
 }
@@ -10,7 +15,12 @@ export interface PairsProtoMsg {
   typeUrl: "/cosmos.base.kv.v1beta1.Pairs";
   value: Uint8Array;
 }
-/** Pairs defines a repeated slice of Pair objects. */
+/**
+ * Pairs defines a repeated slice of Pair objects.
+ * @name PairsAmino
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pairs
+ */
 export interface PairsAmino {
   pairs?: PairAmino[];
 }
@@ -18,11 +28,21 @@ export interface PairsAminoMsg {
   type: "cosmos-sdk/Pairs";
   value: PairsAmino;
 }
-/** Pairs defines a repeated slice of Pair objects. */
+/**
+ * Pairs defines a repeated slice of Pair objects.
+ * @name PairsSDKType
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pairs
+ */
 export interface PairsSDKType {
   pairs: PairSDKType[];
 }
-/** Pair defines a key/value bytes tuple. */
+/**
+ * Pair defines a key/value bytes tuple.
+ * @name Pair
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pair
+ */
 export interface Pair {
   key: Uint8Array;
   value: Uint8Array;
@@ -31,7 +51,12 @@ export interface PairProtoMsg {
   typeUrl: "/cosmos.base.kv.v1beta1.Pair";
   value: Uint8Array;
 }
-/** Pair defines a key/value bytes tuple. */
+/**
+ * Pair defines a key/value bytes tuple.
+ * @name PairAmino
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pair
+ */
 export interface PairAmino {
   key?: string;
   value?: string;
@@ -40,7 +65,12 @@ export interface PairAminoMsg {
   type: "cosmos-sdk/Pair";
   value: PairAmino;
 }
-/** Pair defines a key/value bytes tuple. */
+/**
+ * Pair defines a key/value bytes tuple.
+ * @name PairSDKType
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pair
+ */
 export interface PairSDKType {
   key: Uint8Array;
   value: Uint8Array;
@@ -50,6 +80,12 @@ function createBasePairs(): Pairs {
     pairs: []
   };
 }
+/**
+ * Pairs defines a repeated slice of Pair objects.
+ * @name Pairs
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pairs
+ */
 export const Pairs = {
   typeUrl: "/cosmos.base.kv.v1beta1.Pairs",
   aminoType: "cosmos-sdk/Pairs",
@@ -151,6 +187,12 @@ function createBasePair(): Pair {
     value: new Uint8Array()
   };
 }
+/**
+ * Pair defines a key/value bytes tuple.
+ * @name Pair
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pair
+ */
 export const Pair = {
   typeUrl: "/cosmos.base.kv.v1beta1.Pair",
   aminoType: "cosmos-sdk/Pair",

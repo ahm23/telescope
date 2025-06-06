@@ -5,7 +5,7 @@ import { createProvider, updateProvider, deleteProvider } from "./provider.rpc.f
  * CreateProvider defines a method that creates a provider given the proper inputs
  * @name useCreateProvider
  * @package akash.provider.v1beta1
- * @see protoservice: akash.provider.v1beta1.CreateProvider
+ * @see proto service: akash.provider.v1beta1.CreateProvider
  */
 export const useCreateProvider = buildUseMutation<MsgCreateProvider, Error>({
   builderMutationFn: createProvider
@@ -14,7 +14,7 @@ export const useCreateProvider = buildUseMutation<MsgCreateProvider, Error>({
  * UpdateProvider defines a method that updates a provider given the proper inputs
  * @name useUpdateProvider
  * @package akash.provider.v1beta1
- * @see protoservice: akash.provider.v1beta1.UpdateProvider
+ * @see proto service: akash.provider.v1beta1.UpdateProvider
  */
 export const useUpdateProvider = buildUseMutation<MsgUpdateProvider, Error>({
   builderMutationFn: updateProvider
@@ -23,7 +23,7 @@ export const useUpdateProvider = buildUseMutation<MsgUpdateProvider, Error>({
  * DeleteProvider defines a method that deletes a provider given the proper inputs
  * @name useDeleteProvider
  * @package akash.provider.v1beta1
- * @see protoservice: akash.provider.v1beta1.DeleteProvider
+ * @see proto service: akash.provider.v1beta1.DeleteProvider
  */
 export const useDeleteProvider = buildUseMutation<MsgDeleteProvider, Error>({
   builderMutationFn: deleteProvider

@@ -3,7 +3,7 @@ import { ParamsRequest, ParamsResponse, ArithmeticTwapRequest, ArithmeticTwapRes
 /**
  * @name getOsmosisTwapV1beta1Params
  * @package osmosis.twap.v1beta1
- * @see protoservice: osmosis.twap.v1beta1.Params
+ * @see proto service: osmosis.twap.v1beta1.Params
  */
 export const getOsmosisTwapV1beta1Params = buildQuery<ParamsRequest, ParamsResponse>({
   encode: ParamsRequest.encode,
@@ -14,7 +14,7 @@ export const getOsmosisTwapV1beta1Params = buildQuery<ParamsRequest, ParamsRespo
 /**
  * @name getArithmeticTwap
  * @package osmosis.twap.v1beta1
- * @see protoservice: osmosis.twap.v1beta1.ArithmeticTwap
+ * @see proto service: osmosis.twap.v1beta1.ArithmeticTwap
  */
 export const getArithmeticTwap = buildQuery<ArithmeticTwapRequest, ArithmeticTwapResponse>({
   encode: ArithmeticTwapRequest.encode,
@@ -25,7 +25,7 @@ export const getArithmeticTwap = buildQuery<ArithmeticTwapRequest, ArithmeticTwa
 /**
  * @name getArithmeticTwapToNow
  * @package osmosis.twap.v1beta1
- * @see protoservice: osmosis.twap.v1beta1.ArithmeticTwapToNow
+ * @see proto service: osmosis.twap.v1beta1.ArithmeticTwapToNow
  * @deprecated
  */
 export const getArithmeticTwapToNow = buildQuery<ArithmeticTwapToNowRequest, ArithmeticTwapToNowResponse>({

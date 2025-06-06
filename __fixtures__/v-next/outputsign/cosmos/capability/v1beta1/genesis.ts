@@ -2,36 +2,66 @@ import { CapabilityOwners, CapabilityOwnersAmino, CapabilityOwnersSDKType } from
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 export const protobufPackage = "cosmos.capability.v1beta1";
-/** GenesisOwners defines the capability owners with their corresponding index. */
+/**
+ * GenesisOwners defines the capability owners with their corresponding index.
+ * @name GenesisOwners
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.GenesisOwners
+ */
 export interface GenesisOwners {
-  /** index is the index of the capability owner. */
+  /**
+   * index is the index of the capability owner.
+  */
   index: bigint;
-  /** index_owners are the owners at the given index. */
+  /**
+   * index_owners are the owners at the given index.
+  */
   indexOwners: CapabilityOwners;
 }
 export interface GenesisOwnersProtoMsg {
   typeUrl: "/cosmos.capability.v1beta1.GenesisOwners";
   value: Uint8Array;
 }
-/** GenesisOwners defines the capability owners with their corresponding index. */
+/**
+ * GenesisOwners defines the capability owners with their corresponding index.
+ * @name GenesisOwnersAmino
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.GenesisOwners
+ */
 export interface GenesisOwnersAmino {
-  /** index is the index of the capability owner. */
+  /**
+   * index is the index of the capability owner.
+  */
   index?: string;
-  /** index_owners are the owners at the given index. */
+  /**
+   * index_owners are the owners at the given index.
+  */
   index_owners?: CapabilityOwnersAmino;
 }
 export interface GenesisOwnersAminoMsg {
   type: "cosmos-sdk/GenesisOwners";
   value: GenesisOwnersAmino;
 }
-/** GenesisOwners defines the capability owners with their corresponding index. */
+/**
+ * GenesisOwners defines the capability owners with their corresponding index.
+ * @name GenesisOwnersSDKType
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.GenesisOwners
+ */
 export interface GenesisOwnersSDKType {
   index: bigint;
   index_owners: CapabilityOwnersSDKType;
 }
-/** GenesisState defines the capability module's genesis state. */
+/**
+ * GenesisState defines the capability module's genesis state.
+ * @name GenesisState
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** index is the capability global index. */
+  /**
+   * index is the capability global index.
+  */
   index: bigint;
   /**
    * owners represents a map from index to owners of the capability index
@@ -43,9 +73,16 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.capability.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the capability module's genesis state. */
+/**
+ * GenesisState defines the capability module's genesis state.
+ * @name GenesisStateAmino
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** index is the capability global index. */
+  /**
+   * index is the capability global index.
+  */
   index?: string;
   /**
    * owners represents a map from index to owners of the capability index
@@ -57,7 +94,12 @@ export interface GenesisStateAminoMsg {
   type: "cosmos-sdk/GenesisState";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the capability module's genesis state. */
+/**
+ * GenesisState defines the capability module's genesis state.
+ * @name GenesisStateSDKType
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   index: bigint;
   owners: GenesisOwnersSDKType[];
@@ -68,6 +110,12 @@ function createBaseGenesisOwners(): GenesisOwners {
     indexOwners: CapabilityOwners.fromPartial({})
   };
 }
+/**
+ * GenesisOwners defines the capability owners with their corresponding index.
+ * @name GenesisOwners
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.GenesisOwners
+ */
 export const GenesisOwners = {
   typeUrl: "/cosmos.capability.v1beta1.GenesisOwners",
   encode(message: GenesisOwners, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -153,6 +201,12 @@ function createBaseGenesisState(): GenesisState {
     owners: []
   };
 }
+/**
+ * GenesisState defines the capability module's genesis state.
+ * @name GenesisState
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.capability.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

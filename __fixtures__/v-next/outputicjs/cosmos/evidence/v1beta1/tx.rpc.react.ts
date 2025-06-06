@@ -6,7 +6,7 @@ import { submitEvidence } from "./tx.rpc.func";
  * counterfactual signing.
  * @name useSubmitEvidence
  * @package cosmos.evidence.v1beta1
- * @see protoservice: cosmos.evidence.v1beta1.SubmitEvidence
+ * @see proto service: cosmos.evidence.v1beta1.SubmitEvidence
  */
 export const useSubmitEvidence = buildUseMutation<MsgSubmitEvidence, Error>({
   builderMutationFn: submitEvidence

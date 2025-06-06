@@ -47,11 +47,20 @@ export function actionToJSON(object: Action): string {
       return "UNRECOGNIZED";
   }
 }
-/** A Claim Records is the metadata of claim data per address */
+/**
+ * A Claim Records is the metadata of claim data per address
+ * @name ClaimRecord
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.ClaimRecord
+ */
 export interface ClaimRecord {
-  /** address of claim user */
+  /**
+   * address of claim user
+  */
   address: string;
-  /** total initial claimable amount for the user */
+  /**
+   * total initial claimable amount for the user
+  */
   initialClaimableAmount: Coin[];
   /**
    * true if action is completed
@@ -63,11 +72,20 @@ export interface ClaimRecordProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.ClaimRecord";
   value: Uint8Array;
 }
-/** A Claim Records is the metadata of claim data per address */
+/**
+ * A Claim Records is the metadata of claim data per address
+ * @name ClaimRecordAmino
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.ClaimRecord
+ */
 export interface ClaimRecordAmino {
-  /** address of claim user */
+  /**
+   * address of claim user
+  */
   address?: string;
-  /** total initial claimable amount for the user */
+  /**
+   * total initial claimable amount for the user
+  */
   initial_claimable_amount?: CoinAmino[];
   /**
    * true if action is completed
@@ -79,7 +97,12 @@ export interface ClaimRecordAminoMsg {
   type: "osmosis/claim/claim-record";
   value: ClaimRecordAmino;
 }
-/** A Claim Records is the metadata of claim data per address */
+/**
+ * A Claim Records is the metadata of claim data per address
+ * @name ClaimRecordSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.ClaimRecord
+ */
 export interface ClaimRecordSDKType {
   address: string;
   initial_claimable_amount: CoinSDKType[];
@@ -92,6 +115,12 @@ function createBaseClaimRecord(): ClaimRecord {
     actionCompleted: []
   };
 }
+/**
+ * A Claim Records is the metadata of claim data per address
+ * @name ClaimRecord
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.ClaimRecord
+ */
 export const ClaimRecord = {
   typeUrl: "/osmosis.claim.v1beta1.ClaimRecord",
   aminoType: "osmosis/claim/claim-record",

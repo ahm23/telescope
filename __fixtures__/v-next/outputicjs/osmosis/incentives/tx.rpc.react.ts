@@ -4,7 +4,7 @@ import { createGauge, addToGauge } from "./tx.rpc.func";
 /**
  * @name useCreateGauge
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.CreateGauge
+ * @see proto service: osmosis.incentives.CreateGauge
  */
 export const useCreateGauge = buildUseMutation<MsgCreateGauge, Error>({
   builderMutationFn: createGauge
@@ -12,7 +12,7 @@ export const useCreateGauge = buildUseMutation<MsgCreateGauge, Error>({
 /**
  * @name useAddToGauge
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.AddToGauge
+ * @see proto service: osmosis.incentives.AddToGauge
  */
 export const useAddToGauge = buildUseMutation<MsgAddToGauge, Error>({
   builderMutationFn: addToGauge

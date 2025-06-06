@@ -3,11 +3,20 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.mint.v1beta1";
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisState
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** minter is an abstraction for holding current rewards information. */
+  /**
+   * minter is an abstraction for holding current rewards information.
+  */
   minter: Minter;
-  /** params defines all the paramaters of the mint module. */
+  /**
+   * params defines all the paramaters of the mint module.
+  */
   params: Params;
   /**
    * reduction_started_epoch is the first epoch in which the reduction of mint
@@ -19,11 +28,20 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.mint.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** minter is an abstraction for holding current rewards information. */
+  /**
+   * minter is an abstraction for holding current rewards information.
+  */
   minter?: MinterAmino;
-  /** params defines all the paramaters of the mint module. */
+  /**
+   * params defines all the paramaters of the mint module.
+  */
   params?: ParamsAmino;
   /**
    * reduction_started_epoch is the first epoch in which the reduction of mint
@@ -35,7 +53,12 @@ export interface GenesisStateAminoMsg {
   type: "osmosis/mint/genesis-state";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   minter: MinterSDKType;
   params: ParamsSDKType;
@@ -48,6 +71,12 @@ function createBaseGenesisState(): GenesisState {
     reductionStartedEpoch: BigInt(0)
   };
 }
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisState
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.mint.v1beta1.GenesisState",
   aminoType: "osmosis/mint/genesis-state",

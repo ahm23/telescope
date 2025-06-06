@@ -1,12 +1,21 @@
-import { Minter, MinterAmino, Params, ParamsAmino } from "./mint";
+import { Minter, MinterAmino, OsmosisMintV1beta1Params, OsmosisMintV1beta1ParamsAmino } from "./mint";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisState
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** minter is an abstraction for holding current rewards information. */
+  /**
+   * minter is an abstraction for holding current rewards information.
+  */
   minter: Minter;
-  /** params defines all the paramaters of the mint module. */
-  params: Params;
+  /**
+   * params defines all the paramaters of the mint module.
+  */
+  params: OsmosisMintV1beta1Params;
   /**
    * reduction_started_epoch is the first epoch in which the reduction of mint
    * begins.
@@ -17,12 +26,21 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.mint.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** minter is an abstraction for holding current rewards information. */
+  /**
+   * minter is an abstraction for holding current rewards information.
+  */
   minter: MinterAmino;
-  /** params defines all the paramaters of the mint module. */
-  params: ParamsAmino;
+  /**
+   * params defines all the paramaters of the mint module.
+  */
+  params: OsmosisMintV1beta1ParamsAmino;
   /**
    * reduction_started_epoch is the first epoch in which the reduction of mint
    * begins.
@@ -36,10 +54,16 @@ export interface GenesisStateAminoMsg {
 function createBaseGenesisState(): GenesisState {
   return {
     minter: Minter.fromPartial({}),
-    params: Params.fromPartial({}),
+    params: OsmosisMintV1beta1Params.fromPartial({}),
     reductionStartedEpoch: BigInt(0)
   };
 }
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisState
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.mint.v1beta1.GenesisState",
   aminoType: "osmosis/mint/genesis-state",
@@ -48,7 +72,7 @@ export const GenesisState = {
       Minter.encode(message.minter, writer.uint32(10).fork()).ldelim();
     }
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(18).fork()).ldelim();
+      OsmosisMintV1beta1Params.encode(message.params, writer.uint32(18).fork()).ldelim();
     }
     if (message.reductionStartedEpoch !== BigInt(0)) {
       writer.uint32(24).int64(message.reductionStartedEpoch);
@@ -66,7 +90,7 @@ export const GenesisState = {
           message.minter = Minter.decode(reader, reader.uint32());
           break;
         case 2:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = OsmosisMintV1beta1Params.decode(reader, reader.uint32());
           break;
         case 3:
           message.reductionStartedEpoch = reader.int64();
@@ -81,7 +105,7 @@ export const GenesisState = {
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
     message.minter = object.minter !== undefined && object.minter !== null ? Minter.fromPartial(object.minter) : undefined;
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? OsmosisMintV1beta1Params.fromPartial(object.params) : undefined;
     message.reductionStartedEpoch = object.reductionStartedEpoch !== undefined && object.reductionStartedEpoch !== null ? BigInt(object.reductionStartedEpoch.toString()) : BigInt(0);
     return message;
   },
@@ -91,7 +115,7 @@ export const GenesisState = {
       message.minter = Minter.fromAmino(object.minter);
     }
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = OsmosisMintV1beta1Params.fromAmino(object.params);
     }
     if (object.reduction_started_epoch !== undefined && object.reduction_started_epoch !== null) {
       message.reductionStartedEpoch = BigInt(object.reduction_started_epoch);
@@ -101,7 +125,7 @@ export const GenesisState = {
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
     obj.minter = message.minter ? Minter.toAmino(message.minter) : undefined;
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? OsmosisMintV1beta1Params.toAmino(message.params) : undefined;
     obj.reduction_started_epoch = message.reductionStartedEpoch !== BigInt(0) ? message.reductionStartedEpoch?.toString() : undefined;
     return obj;
   },

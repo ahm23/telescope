@@ -8,11 +8,18 @@ export const protobufPackage = "cosmos.base.store.v1beta1";
  * Deletes
  * 
  * Since: cosmos-sdk 0.43
+ * @name StoreKVPair
+ * @package cosmos.base.store.v1beta1
+ * @see proto type: cosmos.base.store.v1beta1.StoreKVPair
  */
 export interface StoreKVPair {
-  /** the store key for the KVStore this pair originates from */
+  /**
+   * the store key for the KVStore this pair originates from
+  */
   storeKey: string;
-  /** true indicates a delete operation, false indicates a set operation */
+  /**
+   * true indicates a delete operation, false indicates a set operation
+  */
   delete: boolean;
   key: Uint8Array;
   value: Uint8Array;
@@ -27,11 +34,18 @@ export interface StoreKVPairProtoMsg {
  * Deletes
  * 
  * Since: cosmos-sdk 0.43
+ * @name StoreKVPairAmino
+ * @package cosmos.base.store.v1beta1
+ * @see proto type: cosmos.base.store.v1beta1.StoreKVPair
  */
 export interface StoreKVPairAmino {
-  /** the store key for the KVStore this pair originates from */
+  /**
+   * the store key for the KVStore this pair originates from
+  */
   store_key?: string;
-  /** true indicates a delete operation, false indicates a set operation */
+  /**
+   * true indicates a delete operation, false indicates a set operation
+  */
   delete?: boolean;
   key?: string;
   value?: string;
@@ -46,6 +60,9 @@ export interface StoreKVPairAminoMsg {
  * Deletes
  * 
  * Since: cosmos-sdk 0.43
+ * @name StoreKVPairSDKType
+ * @package cosmos.base.store.v1beta1
+ * @see proto type: cosmos.base.store.v1beta1.StoreKVPair
  */
 export interface StoreKVPairSDKType {
   store_key: string;
@@ -61,6 +78,16 @@ function createBaseStoreKVPair(): StoreKVPair {
     value: new Uint8Array()
   };
 }
+/**
+ * StoreKVPair is a KVStore KVPair used for listening to state changes (Sets and Deletes)
+ * It optionally includes the StoreKey for the originating KVStore and a Boolean flag to distinguish between Sets and
+ * Deletes
+ * 
+ * Since: cosmos-sdk 0.43
+ * @name StoreKVPair
+ * @package cosmos.base.store.v1beta1
+ * @see proto type: cosmos.base.store.v1beta1.StoreKVPair
+ */
 export const StoreKVPair = {
   typeUrl: "/cosmos.base.store.v1beta1.StoreKVPair",
   aminoType: "cosmos-sdk/StoreKVPair",

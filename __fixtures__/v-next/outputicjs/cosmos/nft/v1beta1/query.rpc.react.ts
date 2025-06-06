@@ -5,7 +5,7 @@ import { getBalance, getOwner, getSupply, getNFTs, getNFT, getClass, getClasses 
  * Balance queries the number of NFTs of a given class owned by the owner, same as balanceOf in ERC721
  * @name useGetBalance
  * @package cosmos.nft.v1beta1
- * @see protoservice: cosmos.nft.v1beta1.Balance
+ * @see proto service: cosmos.nft.v1beta1.Balance
  */
 export const useGetBalance = buildUseQuery<QueryBalanceRequest, QueryBalanceResponse>({
   builderQueryFn: getBalance,
@@ -15,7 +15,7 @@ export const useGetBalance = buildUseQuery<QueryBalanceRequest, QueryBalanceResp
  * Owner queries the owner of the NFT based on its class and id, same as ownerOf in ERC721
  * @name useGetOwner
  * @package cosmos.nft.v1beta1
- * @see protoservice: cosmos.nft.v1beta1.Owner
+ * @see proto service: cosmos.nft.v1beta1.Owner
  */
 export const useGetOwner = buildUseQuery<QueryOwnerRequest, QueryOwnerResponse>({
   builderQueryFn: getOwner,
@@ -25,7 +25,7 @@ export const useGetOwner = buildUseQuery<QueryOwnerRequest, QueryOwnerResponse>(
  * Supply queries the number of NFTs from the given class, same as totalSupply of ERC721.
  * @name useGetSupply
  * @package cosmos.nft.v1beta1
- * @see protoservice: cosmos.nft.v1beta1.Supply
+ * @see proto service: cosmos.nft.v1beta1.Supply
  */
 export const useGetSupply = buildUseQuery<QuerySupplyRequest, QuerySupplyResponse>({
   builderQueryFn: getSupply,
@@ -36,7 +36,7 @@ export const useGetSupply = buildUseQuery<QuerySupplyRequest, QuerySupplyRespons
  * ERC721Enumerable
  * @name useGetNFTs
  * @package cosmos.nft.v1beta1
- * @see protoservice: cosmos.nft.v1beta1.NFTs
+ * @see proto service: cosmos.nft.v1beta1.NFTs
  */
 export const useGetNFTs = buildUseQuery<QueryNFTsRequest, QueryNFTsResponse>({
   builderQueryFn: getNFTs,
@@ -46,7 +46,7 @@ export const useGetNFTs = buildUseQuery<QueryNFTsRequest, QueryNFTsResponse>({
  * NFT queries an NFT based on its class and id.
  * @name useGetNFT
  * @package cosmos.nft.v1beta1
- * @see protoservice: cosmos.nft.v1beta1.NFT
+ * @see proto service: cosmos.nft.v1beta1.NFT
  */
 export const useGetNFT = buildUseQuery<QueryNFTRequest, QueryNFTResponse>({
   builderQueryFn: getNFT,
@@ -56,7 +56,7 @@ export const useGetNFT = buildUseQuery<QueryNFTRequest, QueryNFTResponse>({
  * Class queries an NFT class based on its id
  * @name useGetClass
  * @package cosmos.nft.v1beta1
- * @see protoservice: cosmos.nft.v1beta1.Class
+ * @see proto service: cosmos.nft.v1beta1.Class
  */
 export const useGetClass = buildUseQuery<QueryClassRequest, QueryClassResponse>({
   builderQueryFn: getClass,
@@ -66,7 +66,7 @@ export const useGetClass = buildUseQuery<QueryClassRequest, QueryClassResponse>(
  * Classes queries all NFT classes
  * @name useGetClasses
  * @package cosmos.nft.v1beta1
- * @see protoservice: cosmos.nft.v1beta1.Classes
+ * @see proto service: cosmos.nft.v1beta1.Classes
  */
 export const useGetClasses = buildUseQuery<QueryClassesRequest, QueryClassesResponse>({
   builderQueryFn: getClasses,

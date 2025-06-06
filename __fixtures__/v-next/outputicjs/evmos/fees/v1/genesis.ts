@@ -2,31 +2,56 @@ import { DevFeeInfo, DevFeeInfoAmino } from "./fees";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 import { Decimal } from "@interchainjs/math";
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.GenesisState
+ */
 export interface GenesisState {
-  /** module parameters */
-  params: Params;
-  /** active registered contracts */
+  /**
+   * module parameters
+  */
+  params: EvmosFeesV1Params;
+  /**
+   * active registered contracts
+  */
   devFeeInfos: DevFeeInfo[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/evmos.fees.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisStateAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** module parameters */
-  params: ParamsAmino;
-  /** active registered contracts */
+  /**
+   * module parameters
+  */
+  params: EvmosFeesV1ParamsAmino;
+  /**
+   * active registered contracts
+  */
   dev_fee_infos: DevFeeInfoAmino[];
 }
 export interface GenesisStateAminoMsg {
   type: "/evmos.fees.v1.GenesisState";
   value: GenesisStateAmino;
 }
-/** Params defines the fees module params */
-export interface Params {
-  /** parameter to enable fees */
+/**
+ * Params defines the fees module params
+ * @name EvmosFeesV1Params
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.Params
+ */
+export interface EvmosFeesV1Params {
+  /**
+   * parameter to enable fees
+  */
   enableFees: boolean;
   /**
    * developer_shares defines the proportion of the transaction fees to be
@@ -43,16 +68,25 @@ export interface Params {
    * verifying the contract deployer at fee registration
    */
   addrDerivationCostCreate: bigint;
-  /** min_gas_price defines the minimum gas price value for cosmos and eth transactions */
+  /**
+   * min_gas_price defines the minimum gas price value for cosmos and eth transactions
+  */
   minGasPrice: string;
 }
-export interface ParamsProtoMsg {
+export interface EvmosFeesV1ParamsProtoMsg {
   typeUrl: "/evmos.fees.v1.Params";
   value: Uint8Array;
 }
-/** Params defines the fees module params */
-export interface ParamsAmino {
-  /** parameter to enable fees */
+/**
+ * Params defines the fees module params
+ * @name EvmosFeesV1ParamsAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.EvmosFeesV1Params
+ */
+export interface EvmosFeesV1ParamsAmino {
+  /**
+   * parameter to enable fees
+  */
   enable_fees: boolean;
   /**
    * developer_shares defines the proportion of the transaction fees to be
@@ -69,24 +103,32 @@ export interface ParamsAmino {
    * verifying the contract deployer at fee registration
    */
   addr_derivation_cost_create: string;
-  /** min_gas_price defines the minimum gas price value for cosmos and eth transactions */
+  /**
+   * min_gas_price defines the minimum gas price value for cosmos and eth transactions
+  */
   min_gas_price: string;
 }
-export interface ParamsAminoMsg {
+export interface EvmosFeesV1ParamsAminoMsg {
   type: "/evmos.fees.v1.Params";
-  value: ParamsAmino;
+  value: EvmosFeesV1ParamsAmino;
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({}),
+    params: EvmosFeesV1Params.fromPartial({}),
     devFeeInfos: []
   };
 }
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/evmos.fees.v1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      EvmosFeesV1Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.devFeeInfos) {
       DevFeeInfo.encode(v!, writer.uint32(18).fork()).ldelim();
@@ -101,7 +143,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = EvmosFeesV1Params.decode(reader, reader.uint32());
           break;
         case 2:
           message.devFeeInfos.push(DevFeeInfo.decode(reader, reader.uint32()));
@@ -115,21 +157,21 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? EvmosFeesV1Params.fromPartial(object.params) : undefined;
     message.devFeeInfos = object.devFeeInfos?.map(e => DevFeeInfo.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = EvmosFeesV1Params.fromAmino(object.params);
     }
     message.devFeeInfos = object.dev_fee_infos?.map(e => DevFeeInfo.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? EvmosFeesV1Params.toAmino(message.params) : undefined;
     if (message.devFeeInfos) {
       obj.dev_fee_infos = message.devFeeInfos.map(e => e ? DevFeeInfo.toAmino(e) : undefined);
     } else {
@@ -153,7 +195,7 @@ export const GenesisState = {
     };
   }
 };
-function createBaseParams(): Params {
+function createBaseEvmosFeesV1Params(): EvmosFeesV1Params {
   return {
     enableFees: false,
     developerShares: "",
@@ -162,9 +204,15 @@ function createBaseParams(): Params {
     minGasPrice: ""
   };
 }
-export const Params = {
+/**
+ * Params defines the fees module params
+ * @name EvmosFeesV1Params
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.Params
+ */
+export const EvmosFeesV1Params = {
   typeUrl: "/evmos.fees.v1.Params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: EvmosFeesV1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.enableFees === true) {
       writer.uint32(8).bool(message.enableFees);
     }
@@ -182,10 +230,10 @@ export const Params = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): EvmosFeesV1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseEvmosFeesV1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -211,8 +259,8 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<EvmosFeesV1Params>): EvmosFeesV1Params {
+    const message = createBaseEvmosFeesV1Params();
     message.enableFees = object.enableFees ?? false;
     message.developerShares = object.developerShares ?? "";
     message.validatorShares = object.validatorShares ?? "";
@@ -220,8 +268,8 @@ export const Params = {
     message.minGasPrice = object.minGasPrice ?? "";
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: EvmosFeesV1ParamsAmino): EvmosFeesV1Params {
+    const message = createBaseEvmosFeesV1Params();
     if (object.enable_fees !== undefined && object.enable_fees !== null) {
       message.enableFees = object.enable_fees;
     }
@@ -239,7 +287,7 @@ export const Params = {
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: EvmosFeesV1Params): EvmosFeesV1ParamsAmino {
     const obj: any = {};
     obj.enable_fees = message.enableFees === false ? undefined : message.enableFees;
     obj.developer_shares = message.developerShares === "" ? undefined : message.developerShares;
@@ -248,19 +296,19 @@ export const Params = {
     obj.min_gas_price = message.minGasPrice === "" ? undefined : message.minGasPrice;
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: EvmosFeesV1ParamsAminoMsg): EvmosFeesV1Params {
+    return EvmosFeesV1Params.fromAmino(object.value);
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: EvmosFeesV1ParamsProtoMsg): EvmosFeesV1Params {
+    return EvmosFeesV1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: EvmosFeesV1Params): Uint8Array {
+    return EvmosFeesV1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: EvmosFeesV1Params): EvmosFeesV1ParamsProtoMsg {
     return {
       typeUrl: "/evmos.fees.v1.Params",
-      value: Params.encode(message).finish()
+      value: EvmosFeesV1Params.encode(message).finish()
     };
   }
 };

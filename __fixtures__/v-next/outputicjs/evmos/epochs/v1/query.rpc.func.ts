@@ -4,7 +4,7 @@ import { QueryEpochsInfoRequest, QueryEpochsInfoResponse, QueryCurrentEpochReque
  * EpochInfos provide running epochInfos
  * @name getEpochInfos
  * @package evmos.epochs.v1
- * @see protoservice: evmos.epochs.v1.EpochInfos
+ * @see proto service: evmos.epochs.v1.EpochInfos
  */
 export const getEpochInfos = buildQuery<QueryEpochsInfoRequest, QueryEpochsInfoResponse>({
   encode: QueryEpochsInfoRequest.encode,
@@ -16,7 +16,7 @@ export const getEpochInfos = buildQuery<QueryEpochsInfoRequest, QueryEpochsInfoR
  * CurrentEpoch provide current epoch of specified identifier
  * @name getCurrentEpoch
  * @package evmos.epochs.v1
- * @see protoservice: evmos.epochs.v1.CurrentEpoch
+ * @see proto service: evmos.epochs.v1.CurrentEpoch
  */
 export const getCurrentEpoch = buildQuery<QueryCurrentEpochRequest, QueryCurrentEpochResponse>({
   encode: QueryCurrentEpochRequest.encode,

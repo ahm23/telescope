@@ -1,36 +1,66 @@
-import { IdentifiedClientState, IdentifiedClientStateAmino, ClientConsensusStates, ClientConsensusStatesAmino, Params, ParamsAmino } from "./client";
+import { IdentifiedClientState, IdentifiedClientStateAmino, ClientConsensusStates, ClientConsensusStatesAmino, IbcCoreClientV1Params, IbcCoreClientV1ParamsAmino } from "./client";
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../../helpers";
-/** GenesisState defines the ibc client submodule's genesis state. */
+/**
+ * GenesisState defines the ibc client submodule's genesis state.
+ * @name GenesisState
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.GenesisState
+ */
 export interface GenesisState {
-  /** client states with their corresponding identifiers */
+  /**
+   * client states with their corresponding identifiers
+  */
   clients: IdentifiedClientState[];
-  /** consensus states from each client */
+  /**
+   * consensus states from each client
+  */
   clientsConsensus: ClientConsensusStates[];
-  /** metadata from each client */
+  /**
+   * metadata from each client
+  */
   clientsMetadata: IdentifiedGenesisMetadata[];
-  params: Params;
-  /** create localhost on initialization */
+  params: IbcCoreClientV1Params;
+  /**
+   * create localhost on initialization
+  */
   createLocalhost: boolean;
-  /** the sequence for the next generated client identifier */
+  /**
+   * the sequence for the next generated client identifier
+  */
   nextClientSequence: bigint;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/ibc.core.client.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the ibc client submodule's genesis state. */
+/**
+ * GenesisState defines the ibc client submodule's genesis state.
+ * @name GenesisStateAmino
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** client states with their corresponding identifiers */
+  /**
+   * client states with their corresponding identifiers
+  */
   clients: IdentifiedClientStateAmino[];
-  /** consensus states from each client */
+  /**
+   * consensus states from each client
+  */
   clients_consensus: ClientConsensusStatesAmino[];
-  /** metadata from each client */
+  /**
+   * metadata from each client
+  */
   clients_metadata: IdentifiedGenesisMetadataAmino[];
-  params: ParamsAmino;
-  /** create localhost on initialization */
+  params: IbcCoreClientV1ParamsAmino;
+  /**
+   * create localhost on initialization
+  */
   create_localhost: boolean;
-  /** the sequence for the next generated client identifier */
+  /**
+   * the sequence for the next generated client identifier
+  */
   next_client_sequence: string;
 }
 export interface GenesisStateAminoMsg {
@@ -40,11 +70,18 @@ export interface GenesisStateAminoMsg {
 /**
  * GenesisMetadata defines the genesis type for metadata that clients may return
  * with ExportMetadata
+ * @name GenesisMetadata
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.GenesisMetadata
  */
 export interface GenesisMetadata {
-  /** store key of metadata without clientID-prefix */
+  /**
+   * store key of metadata without clientID-prefix
+  */
   key: Uint8Array;
-  /** metadata value */
+  /**
+   * metadata value
+  */
   value: Uint8Array;
 }
 export interface GenesisMetadataProtoMsg {
@@ -54,11 +91,18 @@ export interface GenesisMetadataProtoMsg {
 /**
  * GenesisMetadata defines the genesis type for metadata that clients may return
  * with ExportMetadata
+ * @name GenesisMetadataAmino
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.GenesisMetadata
  */
 export interface GenesisMetadataAmino {
-  /** store key of metadata without clientID-prefix */
+  /**
+   * store key of metadata without clientID-prefix
+  */
   key: string;
-  /** metadata value */
+  /**
+   * metadata value
+  */
   value: string;
 }
 export interface GenesisMetadataAminoMsg {
@@ -68,6 +112,9 @@ export interface GenesisMetadataAminoMsg {
 /**
  * IdentifiedGenesisMetadata has the client metadata with the corresponding
  * client id.
+ * @name IdentifiedGenesisMetadata
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.IdentifiedGenesisMetadata
  */
 export interface IdentifiedGenesisMetadata {
   clientId: string;
@@ -80,6 +127,9 @@ export interface IdentifiedGenesisMetadataProtoMsg {
 /**
  * IdentifiedGenesisMetadata has the client metadata with the corresponding
  * client id.
+ * @name IdentifiedGenesisMetadataAmino
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.IdentifiedGenesisMetadata
  */
 export interface IdentifiedGenesisMetadataAmino {
   client_id: string;
@@ -94,11 +144,17 @@ function createBaseGenesisState(): GenesisState {
     clients: [],
     clientsConsensus: [],
     clientsMetadata: [],
-    params: Params.fromPartial({}),
+    params: IbcCoreClientV1Params.fromPartial({}),
     createLocalhost: false,
     nextClientSequence: BigInt(0)
   };
 }
+/**
+ * GenesisState defines the ibc client submodule's genesis state.
+ * @name GenesisState
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/ibc.core.client.v1.GenesisState",
   aminoType: "cosmos-sdk/GenesisState",
@@ -113,7 +169,7 @@ export const GenesisState = {
       IdentifiedGenesisMetadata.encode(v!, writer.uint32(26).fork()).ldelim();
     }
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(34).fork()).ldelim();
+      IbcCoreClientV1Params.encode(message.params, writer.uint32(34).fork()).ldelim();
     }
     if (message.createLocalhost === true) {
       writer.uint32(40).bool(message.createLocalhost);
@@ -140,7 +196,7 @@ export const GenesisState = {
           message.clientsMetadata.push(IdentifiedGenesisMetadata.decode(reader, reader.uint32()));
           break;
         case 4:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = IbcCoreClientV1Params.decode(reader, reader.uint32());
           break;
         case 5:
           message.createLocalhost = reader.bool();
@@ -160,7 +216,7 @@ export const GenesisState = {
     message.clients = object.clients?.map(e => IdentifiedClientState.fromPartial(e)) || [];
     message.clientsConsensus = object.clientsConsensus?.map(e => ClientConsensusStates.fromPartial(e)) || [];
     message.clientsMetadata = object.clientsMetadata?.map(e => IdentifiedGenesisMetadata.fromPartial(e)) || [];
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? IbcCoreClientV1Params.fromPartial(object.params) : undefined;
     message.createLocalhost = object.createLocalhost ?? false;
     message.nextClientSequence = object.nextClientSequence !== undefined && object.nextClientSequence !== null ? BigInt(object.nextClientSequence.toString()) : BigInt(0);
     return message;
@@ -171,7 +227,7 @@ export const GenesisState = {
     message.clientsConsensus = object.clients_consensus?.map(e => ClientConsensusStates.fromAmino(e)) || [];
     message.clientsMetadata = object.clients_metadata?.map(e => IdentifiedGenesisMetadata.fromAmino(e)) || [];
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = IbcCoreClientV1Params.fromAmino(object.params);
     }
     if (object.create_localhost !== undefined && object.create_localhost !== null) {
       message.createLocalhost = object.create_localhost;
@@ -198,7 +254,7 @@ export const GenesisState = {
     } else {
       obj.clients_metadata = message.clientsMetadata;
     }
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? IbcCoreClientV1Params.toAmino(message.params) : undefined;
     obj.create_localhost = message.createLocalhost === false ? undefined : message.createLocalhost;
     obj.next_client_sequence = message.nextClientSequence !== BigInt(0) ? message.nextClientSequence?.toString() : undefined;
     return obj;
@@ -231,6 +287,13 @@ function createBaseGenesisMetadata(): GenesisMetadata {
     value: new Uint8Array()
   };
 }
+/**
+ * GenesisMetadata defines the genesis type for metadata that clients may return
+ * with ExportMetadata
+ * @name GenesisMetadata
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.GenesisMetadata
+ */
 export const GenesisMetadata = {
   typeUrl: "/ibc.core.client.v1.GenesisMetadata",
   aminoType: "cosmos-sdk/GenesisMetadata",
@@ -313,6 +376,13 @@ function createBaseIdentifiedGenesisMetadata(): IdentifiedGenesisMetadata {
     clientMetadata: []
   };
 }
+/**
+ * IdentifiedGenesisMetadata has the client metadata with the corresponding
+ * client id.
+ * @name IdentifiedGenesisMetadata
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.IdentifiedGenesisMetadata
+ */
 export const IdentifiedGenesisMetadata = {
   typeUrl: "/ibc.core.client.v1.IdentifiedGenesisMetadata",
   aminoType: "cosmos-sdk/IdentifiedGenesisMetadata",

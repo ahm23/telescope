@@ -3,51 +3,93 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "evmos.recovery.v1";
-/** GenesisState defines the recovery module's genesis state. */
+/**
+ * GenesisState defines the recovery module's genesis state.
+ * @name GenesisState
+ * @package evmos.recovery.v1
+ * @see proto type: evmos.recovery.v1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the paramaters of the module. */
+  /**
+   * params defines all the paramaters of the module.
+  */
   params: Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/evmos.recovery.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the recovery module's genesis state. */
+/**
+ * GenesisState defines the recovery module's genesis state.
+ * @name GenesisStateAmino
+ * @package evmos.recovery.v1
+ * @see proto type: evmos.recovery.v1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines all the paramaters of the module. */
+  /**
+   * params defines all the paramaters of the module.
+  */
   params?: ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
   type: "/evmos.recovery.v1.GenesisState";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the recovery module's genesis state. */
+/**
+ * GenesisState defines the recovery module's genesis state.
+ * @name GenesisStateSDKType
+ * @package evmos.recovery.v1
+ * @see proto type: evmos.recovery.v1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
 }
-/** Params holds parameters for the recovery module */
+/**
+ * Params holds parameters for the recovery module
+ * @name Params
+ * @package evmos.recovery.v1
+ * @see proto type: evmos.recovery.v1.Params
+ */
 export interface Params {
-  /** enable recovery IBC middleware */
+  /**
+   * enable recovery IBC middleware
+  */
   enableRecovery: boolean;
-  /** duration added to timeout timestamp for balances recovered via IBC packets */
+  /**
+   * duration added to timeout timestamp for balances recovered via IBC packets
+  */
   packetTimeoutDuration: Duration;
 }
 export interface ParamsProtoMsg {
   typeUrl: "/evmos.recovery.v1.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the recovery module */
+/**
+ * Params holds parameters for the recovery module
+ * @name ParamsAmino
+ * @package evmos.recovery.v1
+ * @see proto type: evmos.recovery.v1.Params
+ */
 export interface ParamsAmino {
-  /** enable recovery IBC middleware */
+  /**
+   * enable recovery IBC middleware
+  */
   enable_recovery?: boolean;
-  /** duration added to timeout timestamp for balances recovered via IBC packets */
+  /**
+   * duration added to timeout timestamp for balances recovered via IBC packets
+  */
   packet_timeout_duration?: DurationAmino;
 }
 export interface ParamsAminoMsg {
   type: "/evmos.recovery.v1.Params";
   value: ParamsAmino;
 }
-/** Params holds parameters for the recovery module */
+/**
+ * Params holds parameters for the recovery module
+ * @name ParamsSDKType
+ * @package evmos.recovery.v1
+ * @see proto type: evmos.recovery.v1.Params
+ */
 export interface ParamsSDKType {
   enable_recovery: boolean;
   packet_timeout_duration: DurationSDKType;
@@ -57,6 +99,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the recovery module's genesis state.
+ * @name GenesisState
+ * @package evmos.recovery.v1
+ * @see proto type: evmos.recovery.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/evmos.recovery.v1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -143,6 +191,12 @@ function createBaseParams(): Params {
     packetTimeoutDuration: Duration.fromPartial({})
   };
 }
+/**
+ * Params holds parameters for the recovery module
+ * @name Params
+ * @package evmos.recovery.v1
+ * @see proto type: evmos.recovery.v1.Params
+ */
 export const Params = {
   typeUrl: "/evmos.recovery.v1.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -5,7 +5,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "akash.deployment.v1beta2";
-/** GenesisDeployment defines the basic genesis state used by deployment module */
+/**
+ * GenesisDeployment defines the basic genesis state used by deployment module
+ * @name GenesisDeployment
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GenesisDeployment
+ */
 export interface GenesisDeployment {
   deployment: Deployment;
   groups: Group[];
@@ -14,7 +19,12 @@ export interface GenesisDeploymentProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.GenesisDeployment";
   value: Uint8Array;
 }
-/** GenesisDeployment defines the basic genesis state used by deployment module */
+/**
+ * GenesisDeployment defines the basic genesis state used by deployment module
+ * @name GenesisDeploymentAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GenesisDeployment
+ */
 export interface GenesisDeploymentAmino {
   deployment: DeploymentAmino;
   groups: GroupAmino[];
@@ -23,12 +33,22 @@ export interface GenesisDeploymentAminoMsg {
   type: "/akash.deployment.v1beta2.GenesisDeployment";
   value: GenesisDeploymentAmino;
 }
-/** GenesisDeployment defines the basic genesis state used by deployment module */
+/**
+ * GenesisDeployment defines the basic genesis state used by deployment module
+ * @name GenesisDeploymentSDKType
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GenesisDeployment
+ */
 export interface GenesisDeploymentSDKType {
   deployment: DeploymentSDKType;
   groups: GroupSDKType[];
 }
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisState
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GenesisState
+ */
 export interface GenesisState {
   deployments: GenesisDeployment[];
   params: Params;
@@ -37,7 +57,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisStateAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GenesisState
+ */
 export interface GenesisStateAmino {
   deployments: GenesisDeploymentAmino[];
   params: ParamsAmino;
@@ -46,7 +71,12 @@ export interface GenesisStateAminoMsg {
   type: "/akash.deployment.v1beta2.GenesisState";
   value: GenesisStateAmino;
 }
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisStateSDKType
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GenesisState
+ */
 export interface GenesisStateSDKType {
   deployments: GenesisDeploymentSDKType[];
   params: ParamsSDKType;
@@ -57,6 +87,12 @@ function createBaseGenesisDeployment(): GenesisDeployment {
     groups: []
   };
 }
+/**
+ * GenesisDeployment defines the basic genesis state used by deployment module
+ * @name GenesisDeployment
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GenesisDeployment
+ */
 export const GenesisDeployment = {
   typeUrl: "/akash.deployment.v1beta2.GenesisDeployment",
   encode(message: GenesisDeployment, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -168,6 +204,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({})
   };
 }
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisState
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.deployment.v1beta2.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

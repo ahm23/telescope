@@ -8,9 +8,14 @@ export const protobufPackage = "evmos.erc20.v1";
 /**
  * QueryTokenPairsRequest is the request type for the Query/TokenPairs RPC
  * method.
+ * @name QueryTokenPairsRequest
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairsRequest
  */
 export interface QueryTokenPairsRequest {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+  */
   pagination?: PageRequest;
 }
 export interface QueryTokenPairsRequestProtoMsg {
@@ -20,9 +25,14 @@ export interface QueryTokenPairsRequestProtoMsg {
 /**
  * QueryTokenPairsRequest is the request type for the Query/TokenPairs RPC
  * method.
+ * @name QueryTokenPairsRequestAmino
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairsRequest
  */
 export interface QueryTokenPairsRequestAmino {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+  */
   pagination?: PageRequestAmino;
 }
 export interface QueryTokenPairsRequestAminoMsg {
@@ -32,6 +42,9 @@ export interface QueryTokenPairsRequestAminoMsg {
 /**
  * QueryTokenPairsRequest is the request type for the Query/TokenPairs RPC
  * method.
+ * @name QueryTokenPairsRequestSDKType
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairsRequest
  */
 export interface QueryTokenPairsRequestSDKType {
   pagination?: PageRequestSDKType;
@@ -39,10 +52,15 @@ export interface QueryTokenPairsRequestSDKType {
 /**
  * QueryTokenPairsResponse is the response type for the Query/TokenPairs RPC
  * method.
+ * @name QueryTokenPairsResponse
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairsResponse
  */
 export interface QueryTokenPairsResponse {
   tokenPairs: TokenPair[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+  */
   pagination?: PageResponse;
 }
 export interface QueryTokenPairsResponseProtoMsg {
@@ -52,10 +70,15 @@ export interface QueryTokenPairsResponseProtoMsg {
 /**
  * QueryTokenPairsResponse is the response type for the Query/TokenPairs RPC
  * method.
+ * @name QueryTokenPairsResponseAmino
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairsResponse
  */
 export interface QueryTokenPairsResponseAmino {
   token_pairs?: TokenPairAmino[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+  */
   pagination?: PageResponseAmino;
 }
 export interface QueryTokenPairsResponseAminoMsg {
@@ -65,12 +88,20 @@ export interface QueryTokenPairsResponseAminoMsg {
 /**
  * QueryTokenPairsResponse is the response type for the Query/TokenPairs RPC
  * method.
+ * @name QueryTokenPairsResponseSDKType
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairsResponse
  */
 export interface QueryTokenPairsResponseSDKType {
   token_pairs: TokenPairSDKType[];
   pagination?: PageResponseSDKType;
 }
-/** QueryTokenPairRequest is the request type for the Query/TokenPair RPC method. */
+/**
+ * QueryTokenPairRequest is the request type for the Query/TokenPair RPC method.
+ * @name QueryTokenPairRequest
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairRequest
+ */
 export interface QueryTokenPairRequest {
   /**
    * token identifier can be either the hex contract address of the ERC20 or the
@@ -82,7 +113,12 @@ export interface QueryTokenPairRequestProtoMsg {
   typeUrl: "/evmos.erc20.v1.QueryTokenPairRequest";
   value: Uint8Array;
 }
-/** QueryTokenPairRequest is the request type for the Query/TokenPair RPC method. */
+/**
+ * QueryTokenPairRequest is the request type for the Query/TokenPair RPC method.
+ * @name QueryTokenPairRequestAmino
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairRequest
+ */
 export interface QueryTokenPairRequestAmino {
   /**
    * token identifier can be either the hex contract address of the ERC20 or the
@@ -94,13 +130,21 @@ export interface QueryTokenPairRequestAminoMsg {
   type: "/evmos.erc20.v1.QueryTokenPairRequest";
   value: QueryTokenPairRequestAmino;
 }
-/** QueryTokenPairRequest is the request type for the Query/TokenPair RPC method. */
+/**
+ * QueryTokenPairRequest is the request type for the Query/TokenPair RPC method.
+ * @name QueryTokenPairRequestSDKType
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairRequest
+ */
 export interface QueryTokenPairRequestSDKType {
   token: string;
 }
 /**
  * QueryTokenPairResponse is the response type for the Query/TokenPair RPC
  * method.
+ * @name QueryTokenPairResponse
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairResponse
  */
 export interface QueryTokenPairResponse {
   tokenPair: TokenPair;
@@ -112,6 +156,9 @@ export interface QueryTokenPairResponseProtoMsg {
 /**
  * QueryTokenPairResponse is the response type for the Query/TokenPair RPC
  * method.
+ * @name QueryTokenPairResponseAmino
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairResponse
  */
 export interface QueryTokenPairResponseAmino {
   token_pair?: TokenPairAmino;
@@ -123,27 +170,48 @@ export interface QueryTokenPairResponseAminoMsg {
 /**
  * QueryTokenPairResponse is the response type for the Query/TokenPair RPC
  * method.
+ * @name QueryTokenPairResponseSDKType
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairResponse
  */
 export interface QueryTokenPairResponseSDKType {
   token_pair: TokenPairSDKType;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: "/evmos.erc20.v1.QueryParamsRequest";
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
   type: "/evmos.erc20.v1.QueryParamsRequest";
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
 /**
  * QueryParamsResponse is the response type for the Query/Params RPC
  * method.
+ * @name QueryParamsResponse
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryParamsResponse
  */
 export interface QueryParamsResponse {
   params: Params;
@@ -155,6 +223,9 @@ export interface QueryParamsResponseProtoMsg {
 /**
  * QueryParamsResponse is the response type for the Query/Params RPC
  * method.
+ * @name QueryParamsResponseAmino
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryParamsResponse
  */
 export interface QueryParamsResponseAmino {
   params?: ParamsAmino;
@@ -166,6 +237,9 @@ export interface QueryParamsResponseAminoMsg {
 /**
  * QueryParamsResponse is the response type for the Query/Params RPC
  * method.
+ * @name QueryParamsResponseSDKType
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryParamsResponse
  */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
@@ -175,6 +249,13 @@ function createBaseQueryTokenPairsRequest(): QueryTokenPairsRequest {
     pagination: undefined
   };
 }
+/**
+ * QueryTokenPairsRequest is the request type for the Query/TokenPairs RPC
+ * method.
+ * @name QueryTokenPairsRequest
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairsRequest
+ */
 export const QueryTokenPairsRequest = {
   typeUrl: "/evmos.erc20.v1.QueryTokenPairsRequest",
   encode(message: QueryTokenPairsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -261,6 +342,13 @@ function createBaseQueryTokenPairsResponse(): QueryTokenPairsResponse {
     pagination: undefined
   };
 }
+/**
+ * QueryTokenPairsResponse is the response type for the Query/TokenPairs RPC
+ * method.
+ * @name QueryTokenPairsResponse
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairsResponse
+ */
 export const QueryTokenPairsResponse = {
   typeUrl: "/evmos.erc20.v1.QueryTokenPairsResponse",
   encode(message: QueryTokenPairsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -371,6 +459,12 @@ function createBaseQueryTokenPairRequest(): QueryTokenPairRequest {
     token: ""
   };
 }
+/**
+ * QueryTokenPairRequest is the request type for the Query/TokenPair RPC method.
+ * @name QueryTokenPairRequest
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairRequest
+ */
 export const QueryTokenPairRequest = {
   typeUrl: "/evmos.erc20.v1.QueryTokenPairRequest",
   encode(message: QueryTokenPairRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -454,6 +548,13 @@ function createBaseQueryTokenPairResponse(): QueryTokenPairResponse {
     tokenPair: TokenPair.fromPartial({})
   };
 }
+/**
+ * QueryTokenPairResponse is the response type for the Query/TokenPair RPC
+ * method.
+ * @name QueryTokenPairResponse
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryTokenPairResponse
+ */
 export const QueryTokenPairResponse = {
   typeUrl: "/evmos.erc20.v1.QueryTokenPairResponse",
   encode(message: QueryTokenPairResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -537,6 +638,12 @@ export const QueryTokenPairResponse = {
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: "/evmos.erc20.v1.QueryParamsRequest",
   encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -604,6 +711,13 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({})
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC
+ * method.
+ * @name QueryParamsResponse
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: "/evmos.erc20.v1.QueryParamsResponse",
   encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

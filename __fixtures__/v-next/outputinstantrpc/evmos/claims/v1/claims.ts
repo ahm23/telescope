@@ -60,13 +60,22 @@ export function actionToJSON(object: Action): string {
 /**
  * Claim defines the action, completed flag and the remaining claimable amount
  * for a given user. This is only used during client queries.
+ * @name Claim
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.Claim
  */
 export interface Claim {
-  /** action enum */
+  /**
+   * action enum
+  */
   action: Action;
-  /** true if the action has been completed */
+  /**
+   * true if the action has been completed
+  */
   completed: boolean;
-  /** claimable token amount for the action. Zero if completed */
+  /**
+   * claimable token amount for the action. Zero if completed
+  */
   claimableAmount: string;
 }
 export interface ClaimProtoMsg {
@@ -76,26 +85,45 @@ export interface ClaimProtoMsg {
 /**
  * Claim defines the action, completed flag and the remaining claimable amount
  * for a given user. This is only used during client queries.
+ * @name ClaimSDKType
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.Claim
  */
 export interface ClaimSDKType {
   action: Action;
   completed: boolean;
   claimable_amount: string;
 }
-/** ClaimsRecordAddress is the claims metadata per address that is used at Genesis. */
+/**
+ * ClaimsRecordAddress is the claims metadata per address that is used at Genesis.
+ * @name ClaimsRecordAddress
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.ClaimsRecordAddress
+ */
 export interface ClaimsRecordAddress {
-  /** bech32 or hex address of claim user */
+  /**
+   * bech32 or hex address of claim user
+  */
   address: string;
-  /** total initial claimable amount for the user */
+  /**
+   * total initial claimable amount for the user
+  */
   initialClaimableAmount: string;
-  /** slice of the available actions completed */
+  /**
+   * slice of the available actions completed
+  */
   actionsCompleted: boolean[];
 }
 export interface ClaimsRecordAddressProtoMsg {
   typeUrl: "/evmos.claims.v1.ClaimsRecordAddress";
   value: Uint8Array;
 }
-/** ClaimsRecordAddress is the claims metadata per address that is used at Genesis. */
+/**
+ * ClaimsRecordAddress is the claims metadata per address that is used at Genesis.
+ * @name ClaimsRecordAddressSDKType
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.ClaimsRecordAddress
+ */
 export interface ClaimsRecordAddressSDKType {
   address: string;
   initial_claimable_amount: string;
@@ -104,11 +132,18 @@ export interface ClaimsRecordAddressSDKType {
 /**
  * ClaimsRecord defines the initial claimable airdrop amount and the list of
  * completed actions to claim the tokens.
+ * @name ClaimsRecord
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.ClaimsRecord
  */
 export interface ClaimsRecord {
-  /** total initial claimable amount for the user */
+  /**
+   * total initial claimable amount for the user
+  */
   initialClaimableAmount: string;
-  /** slice of the available actions completed */
+  /**
+   * slice of the available actions completed
+  */
   actionsCompleted: boolean[];
 }
 export interface ClaimsRecordProtoMsg {
@@ -118,6 +153,9 @@ export interface ClaimsRecordProtoMsg {
 /**
  * ClaimsRecord defines the initial claimable airdrop amount and the list of
  * completed actions to claim the tokens.
+ * @name ClaimsRecordSDKType
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.ClaimsRecord
  */
 export interface ClaimsRecordSDKType {
   initial_claimable_amount: string;
@@ -130,6 +168,13 @@ function createBaseClaim(): Claim {
     claimableAmount: ""
   };
 }
+/**
+ * Claim defines the action, completed flag and the remaining claimable amount
+ * for a given user. This is only used during client queries.
+ * @name Claim
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.Claim
+ */
 export const Claim = {
   typeUrl: "/evmos.claims.v1.Claim",
   encode(message: Claim, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -252,6 +297,12 @@ function createBaseClaimsRecordAddress(): ClaimsRecordAddress {
     actionsCompleted: []
   };
 }
+/**
+ * ClaimsRecordAddress is the claims metadata per address that is used at Genesis.
+ * @name ClaimsRecordAddress
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.ClaimsRecordAddress
+ */
 export const ClaimsRecordAddress = {
   typeUrl: "/evmos.claims.v1.ClaimsRecordAddress",
   encode(message: ClaimsRecordAddress, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -392,6 +443,13 @@ function createBaseClaimsRecord(): ClaimsRecord {
     actionsCompleted: []
   };
 }
+/**
+ * ClaimsRecord defines the initial claimable airdrop amount and the list of
+ * completed actions to claim the tokens.
+ * @name ClaimsRecord
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.ClaimsRecord
+ */
 export const ClaimsRecord = {
   typeUrl: "/evmos.claims.v1.ClaimsRecord",
   encode(message: ClaimsRecord, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

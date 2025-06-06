@@ -1,10 +1,15 @@
-import { Params, ParamsAmino } from "./params";
 import { SuperfluidAsset, SuperfluidAssetAmino, OsmoEquivalentMultiplierRecord, OsmoEquivalentMultiplierRecordAmino, SuperfluidIntermediaryAccount, SuperfluidIntermediaryAccountAmino, LockIdIntermediaryAccountConnection, LockIdIntermediaryAccountConnectionAmino } from "./superfluid";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { DeepPartial } from "../../helpers";
-/** GenesisState defines the module's genesis state. */
+import { OsmosisSuperfluidParams, OsmosisSuperfluidParamsAmino } from "./params";
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.GenesisState
+ */
 export interface GenesisState {
-  params: Params;
+  params: OsmosisSuperfluidParams;
   /**
    * superfluid_assets defines the registered superfluid assets that have been
    * registered via governance.
@@ -26,9 +31,14 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.superfluid.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.GenesisState
+ */
 export interface GenesisStateAmino {
-  params: ParamsAmino;
+  params: OsmosisSuperfluidParamsAmino;
   /**
    * superfluid_assets defines the registered superfluid assets that have been
    * registered via governance.
@@ -52,19 +62,25 @@ export interface GenesisStateAminoMsg {
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({}),
+    params: OsmosisSuperfluidParams.fromPartial({}),
     superfluidAssets: [],
     osmoEquivalentMultipliers: [],
     intermediaryAccounts: [],
     intemediaryAccountConnections: []
   };
 }
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.superfluid.GenesisState",
   aminoType: "osmosis/genesis-state",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      OsmosisSuperfluidParams.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.superfluidAssets) {
       SuperfluidAsset.encode(v!, writer.uint32(18).fork()).ldelim();
@@ -88,7 +104,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = OsmosisSuperfluidParams.decode(reader, reader.uint32());
           break;
         case 2:
           message.superfluidAssets.push(SuperfluidAsset.decode(reader, reader.uint32()));
@@ -111,7 +127,7 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? OsmosisSuperfluidParams.fromPartial(object.params) : undefined;
     message.superfluidAssets = object.superfluidAssets?.map(e => SuperfluidAsset.fromPartial(e)) || [];
     message.osmoEquivalentMultipliers = object.osmoEquivalentMultipliers?.map(e => OsmoEquivalentMultiplierRecord.fromPartial(e)) || [];
     message.intermediaryAccounts = object.intermediaryAccounts?.map(e => SuperfluidIntermediaryAccount.fromPartial(e)) || [];
@@ -121,7 +137,7 @@ export const GenesisState = {
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = OsmosisSuperfluidParams.fromAmino(object.params);
     }
     message.superfluidAssets = object.superfluid_assets?.map(e => SuperfluidAsset.fromAmino(e)) || [];
     message.osmoEquivalentMultipliers = object.osmo_equivalent_multipliers?.map(e => OsmoEquivalentMultiplierRecord.fromAmino(e)) || [];
@@ -131,7 +147,7 @@ export const GenesisState = {
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? OsmosisSuperfluidParams.toAmino(message.params) : undefined;
     if (message.superfluidAssets) {
       obj.superfluid_assets = message.superfluidAssets.map(e => e ? SuperfluidAsset.toAmino(e) : undefined);
     } else {

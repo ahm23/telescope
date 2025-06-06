@@ -7,6 +7,9 @@ export const protobufPackage = "cosmos.vesting.v1beta1";
 /**
  * BaseVestingAccount implements the VestingAccount interface. It contains all
  * the necessary fields needed for any vesting account implementation.
+ * @name BaseVestingAccount
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.BaseVestingAccount
  */
 export interface BaseVestingAccount {
   baseAccount?: BaseAccount;
@@ -22,6 +25,9 @@ export interface BaseVestingAccountProtoMsg {
 /**
  * BaseVestingAccount implements the VestingAccount interface. It contains all
  * the necessary fields needed for any vesting account implementation.
+ * @name BaseVestingAccountAmino
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.BaseVestingAccount
  */
 export interface BaseVestingAccountAmino {
   base_account?: BaseAccountAmino;
@@ -37,6 +43,9 @@ export interface BaseVestingAccountAminoMsg {
 /**
  * BaseVestingAccount implements the VestingAccount interface. It contains all
  * the necessary fields needed for any vesting account implementation.
+ * @name BaseVestingAccountSDKType
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.BaseVestingAccount
  */
 export interface BaseVestingAccountSDKType {
   base_account?: BaseAccountSDKType;
@@ -48,6 +57,9 @@ export interface BaseVestingAccountSDKType {
 /**
  * ContinuousVestingAccount implements the VestingAccount interface. It
  * continuously vests by unlocking coins linearly with respect to time.
+ * @name ContinuousVestingAccount
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.ContinuousVestingAccount
  */
 export interface ContinuousVestingAccount {
   baseVestingAccount?: BaseVestingAccount;
@@ -60,6 +72,9 @@ export interface ContinuousVestingAccountProtoMsg {
 /**
  * ContinuousVestingAccount implements the VestingAccount interface. It
  * continuously vests by unlocking coins linearly with respect to time.
+ * @name ContinuousVestingAccountAmino
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.ContinuousVestingAccount
  */
 export interface ContinuousVestingAccountAmino {
   base_vesting_account?: BaseVestingAccountAmino;
@@ -72,6 +87,9 @@ export interface ContinuousVestingAccountAminoMsg {
 /**
  * ContinuousVestingAccount implements the VestingAccount interface. It
  * continuously vests by unlocking coins linearly with respect to time.
+ * @name ContinuousVestingAccountSDKType
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.ContinuousVestingAccount
  */
 export interface ContinuousVestingAccountSDKType {
   base_vesting_account?: BaseVestingAccountSDKType;
@@ -81,6 +99,9 @@ export interface ContinuousVestingAccountSDKType {
  * DelayedVestingAccount implements the VestingAccount interface. It vests all
  * coins after a specific time, but non prior. In other words, it keeps them
  * locked until a specified time.
+ * @name DelayedVestingAccount
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.DelayedVestingAccount
  */
 export interface DelayedVestingAccount {
   baseVestingAccount?: BaseVestingAccount;
@@ -93,6 +114,9 @@ export interface DelayedVestingAccountProtoMsg {
  * DelayedVestingAccount implements the VestingAccount interface. It vests all
  * coins after a specific time, but non prior. In other words, it keeps them
  * locked until a specified time.
+ * @name DelayedVestingAccountAmino
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.DelayedVestingAccount
  */
 export interface DelayedVestingAccountAmino {
   base_vesting_account?: BaseVestingAccountAmino;
@@ -105,11 +129,19 @@ export interface DelayedVestingAccountAminoMsg {
  * DelayedVestingAccount implements the VestingAccount interface. It vests all
  * coins after a specific time, but non prior. In other words, it keeps them
  * locked until a specified time.
+ * @name DelayedVestingAccountSDKType
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.DelayedVestingAccount
  */
 export interface DelayedVestingAccountSDKType {
   base_vesting_account?: BaseVestingAccountSDKType;
 }
-/** Period defines a length of time and amount of coins that will vest. */
+/**
+ * Period defines a length of time and amount of coins that will vest.
+ * @name Period
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.Period
+ */
 export interface Period {
   length: bigint;
   amount: Coin[];
@@ -118,7 +150,12 @@ export interface PeriodProtoMsg {
   typeUrl: "/cosmos.vesting.v1beta1.Period";
   value: Uint8Array;
 }
-/** Period defines a length of time and amount of coins that will vest. */
+/**
+ * Period defines a length of time and amount of coins that will vest.
+ * @name PeriodAmino
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.Period
+ */
 export interface PeriodAmino {
   length?: string;
   amount?: CoinAmino[];
@@ -127,7 +164,12 @@ export interface PeriodAminoMsg {
   type: "cosmos-sdk/Period";
   value: PeriodAmino;
 }
-/** Period defines a length of time and amount of coins that will vest. */
+/**
+ * Period defines a length of time and amount of coins that will vest.
+ * @name PeriodSDKType
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.Period
+ */
 export interface PeriodSDKType {
   length: bigint;
   amount: CoinSDKType[];
@@ -135,6 +177,9 @@ export interface PeriodSDKType {
 /**
  * PeriodicVestingAccount implements the VestingAccount interface. It
  * periodically vests by unlocking coins during each specified period.
+ * @name PeriodicVestingAccount
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.PeriodicVestingAccount
  */
 export interface PeriodicVestingAccount {
   baseVestingAccount?: BaseVestingAccount;
@@ -148,6 +193,9 @@ export interface PeriodicVestingAccountProtoMsg {
 /**
  * PeriodicVestingAccount implements the VestingAccount interface. It
  * periodically vests by unlocking coins during each specified period.
+ * @name PeriodicVestingAccountAmino
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.PeriodicVestingAccount
  */
 export interface PeriodicVestingAccountAmino {
   base_vesting_account?: BaseVestingAccountAmino;
@@ -161,6 +209,9 @@ export interface PeriodicVestingAccountAminoMsg {
 /**
  * PeriodicVestingAccount implements the VestingAccount interface. It
  * periodically vests by unlocking coins during each specified period.
+ * @name PeriodicVestingAccountSDKType
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.PeriodicVestingAccount
  */
 export interface PeriodicVestingAccountSDKType {
   base_vesting_account?: BaseVestingAccountSDKType;
@@ -173,6 +224,9 @@ export interface PeriodicVestingAccountSDKType {
  * still be used for delegating and for governance votes even while locked.
  * 
  * Since: cosmos-sdk 0.43
+ * @name PermanentLockedAccount
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.PermanentLockedAccount
  */
 export interface PermanentLockedAccount {
   baseVestingAccount?: BaseVestingAccount;
@@ -187,6 +241,9 @@ export interface PermanentLockedAccountProtoMsg {
  * still be used for delegating and for governance votes even while locked.
  * 
  * Since: cosmos-sdk 0.43
+ * @name PermanentLockedAccountAmino
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.PermanentLockedAccount
  */
 export interface PermanentLockedAccountAmino {
   base_vesting_account?: BaseVestingAccountAmino;
@@ -201,6 +258,9 @@ export interface PermanentLockedAccountAminoMsg {
  * still be used for delegating and for governance votes even while locked.
  * 
  * Since: cosmos-sdk 0.43
+ * @name PermanentLockedAccountSDKType
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.PermanentLockedAccount
  */
 export interface PermanentLockedAccountSDKType {
   base_vesting_account?: BaseVestingAccountSDKType;
@@ -214,6 +274,13 @@ function createBaseBaseVestingAccount(): BaseVestingAccount {
     endTime: BigInt(0)
   };
 }
+/**
+ * BaseVestingAccount implements the VestingAccount interface. It contains all
+ * the necessary fields needed for any vesting account implementation.
+ * @name BaseVestingAccount
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.BaseVestingAccount
+ */
 export const BaseVestingAccount = {
   typeUrl: "/cosmos.vesting.v1beta1.BaseVestingAccount",
   aminoType: "cosmos-sdk/BaseVestingAccount",
@@ -399,6 +466,13 @@ function createBaseContinuousVestingAccount(): ContinuousVestingAccount {
     startTime: BigInt(0)
   };
 }
+/**
+ * ContinuousVestingAccount implements the VestingAccount interface. It
+ * continuously vests by unlocking coins linearly with respect to time.
+ * @name ContinuousVestingAccount
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.ContinuousVestingAccount
+ */
 export const ContinuousVestingAccount = {
   typeUrl: "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
   aminoType: "cosmos-sdk/ContinuousVestingAccount",
@@ -508,6 +582,14 @@ function createBaseDelayedVestingAccount(): DelayedVestingAccount {
     baseVestingAccount: undefined
   };
 }
+/**
+ * DelayedVestingAccount implements the VestingAccount interface. It vests all
+ * coins after a specific time, but non prior. In other words, it keeps them
+ * locked until a specified time.
+ * @name DelayedVestingAccount
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.DelayedVestingAccount
+ */
 export const DelayedVestingAccount = {
   typeUrl: "/cosmos.vesting.v1beta1.DelayedVestingAccount",
   aminoType: "cosmos-sdk/DelayedVestingAccount",
@@ -601,6 +683,12 @@ function createBasePeriod(): Period {
     amount: []
   };
 }
+/**
+ * Period defines a length of time and amount of coins that will vest.
+ * @name Period
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.Period
+ */
 export const Period = {
   typeUrl: "/cosmos.vesting.v1beta1.Period",
   aminoType: "cosmos-sdk/Period",
@@ -720,6 +808,13 @@ function createBasePeriodicVestingAccount(): PeriodicVestingAccount {
     vestingPeriods: []
   };
 }
+/**
+ * PeriodicVestingAccount implements the VestingAccount interface. It
+ * periodically vests by unlocking coins during each specified period.
+ * @name PeriodicVestingAccount
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.PeriodicVestingAccount
+ */
 export const PeriodicVestingAccount = {
   typeUrl: "/cosmos.vesting.v1beta1.PeriodicVestingAccount",
   aminoType: "cosmos-sdk/PeriodicVestingAccount",
@@ -854,6 +949,16 @@ function createBasePermanentLockedAccount(): PermanentLockedAccount {
     baseVestingAccount: undefined
   };
 }
+/**
+ * PermanentLockedAccount implements the VestingAccount interface. It does
+ * not ever release coins, locking them indefinitely. Coins in this account can
+ * still be used for delegating and for governance votes even while locked.
+ * 
+ * Since: cosmos-sdk 0.43
+ * @name PermanentLockedAccount
+ * @package cosmos.vesting.v1beta1
+ * @see proto type: cosmos.vesting.v1beta1.PermanentLockedAccount
+ */
 export const PermanentLockedAccount = {
   typeUrl: "/cosmos.vesting.v1beta1.PermanentLockedAccount",
   aminoType: "cosmos-sdk/PermanentLockedAccount",

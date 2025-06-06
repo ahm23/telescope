@@ -8,7 +8,7 @@ import { QueryValidatorsRequest, QueryValidatorsRequestSDKType, QueryValidatorsR
  * Validators queries all validators that match the given status.
  * @name getValidators
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.Validators
+ * @see proto service: cosmos.staking.v1beta1.Validators
  */
 export const getValidators = buildQuery<QueryValidatorsRequest, QueryValidatorsResponse>({
   encode: QueryValidatorsRequest.encode,
@@ -21,7 +21,7 @@ export const getValidators = buildQuery<QueryValidatorsRequest, QueryValidatorsR
  * Validator queries validator info for given validator address.
  * @name getValidator
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.Validator
+ * @see proto service: cosmos.staking.v1beta1.Validator
  */
 export const getValidator = buildQuery<QueryValidatorRequest, QueryValidatorResponse>({
   encode: QueryValidatorRequest.encode,
@@ -34,7 +34,7 @@ export const getValidator = buildQuery<QueryValidatorRequest, QueryValidatorResp
  * ValidatorDelegations queries delegate info for given validator.
  * @name getValidatorDelegations
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.ValidatorDelegations
+ * @see proto service: cosmos.staking.v1beta1.ValidatorDelegations
  */
 export const getValidatorDelegations = buildQuery<QueryValidatorDelegationsRequest, QueryValidatorDelegationsResponse>({
   encode: QueryValidatorDelegationsRequest.encode,
@@ -47,7 +47,7 @@ export const getValidatorDelegations = buildQuery<QueryValidatorDelegationsReque
  * ValidatorUnbondingDelegations queries unbonding delegations of a validator.
  * @name getValidatorUnbondingDelegations
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.ValidatorUnbondingDelegations
+ * @see proto service: cosmos.staking.v1beta1.ValidatorUnbondingDelegations
  */
 export const getValidatorUnbondingDelegations = buildQuery<QueryValidatorUnbondingDelegationsRequest, QueryValidatorUnbondingDelegationsResponse>({
   encode: QueryValidatorUnbondingDelegationsRequest.encode,
@@ -60,7 +60,7 @@ export const getValidatorUnbondingDelegations = buildQuery<QueryValidatorUnbondi
  * Delegation queries delegate info for given validator delegator pair.
  * @name getDelegation
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.Delegation
+ * @see proto service: cosmos.staking.v1beta1.Delegation
  */
 export const getDelegation = buildQuery<QueryDelegationRequest, QueryDelegationResponse>({
   encode: QueryDelegationRequest.encode,
@@ -74,7 +74,7 @@ export const getDelegation = buildQuery<QueryDelegationRequest, QueryDelegationR
  * pair.
  * @name getUnbondingDelegation
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.UnbondingDelegation
+ * @see proto service: cosmos.staking.v1beta1.UnbondingDelegation
  */
 export const getUnbondingDelegation = buildQuery<QueryUnbondingDelegationRequest, QueryUnbondingDelegationResponse>({
   encode: QueryUnbondingDelegationRequest.encode,
@@ -87,7 +87,7 @@ export const getUnbondingDelegation = buildQuery<QueryUnbondingDelegationRequest
  * DelegatorDelegations queries all delegations of a given delegator address.
  * @name getDelegatorDelegations
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.DelegatorDelegations
+ * @see proto service: cosmos.staking.v1beta1.DelegatorDelegations
  */
 export const getDelegatorDelegations = buildQuery<QueryDelegatorDelegationsRequest, QueryDelegatorDelegationsResponse>({
   encode: QueryDelegatorDelegationsRequest.encode,
@@ -101,7 +101,7 @@ export const getDelegatorDelegations = buildQuery<QueryDelegatorDelegationsReque
  * delegator address.
  * @name getDelegatorUnbondingDelegations
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.DelegatorUnbondingDelegations
+ * @see proto service: cosmos.staking.v1beta1.DelegatorUnbondingDelegations
  */
 export const getDelegatorUnbondingDelegations = buildQuery<QueryDelegatorUnbondingDelegationsRequest, QueryDelegatorUnbondingDelegationsResponse>({
   encode: QueryDelegatorUnbondingDelegationsRequest.encode,
@@ -114,7 +114,7 @@ export const getDelegatorUnbondingDelegations = buildQuery<QueryDelegatorUnbondi
  * Redelegations queries redelegations of given address.
  * @name getRedelegations
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.Redelegations
+ * @see proto service: cosmos.staking.v1beta1.Redelegations
  */
 export const getRedelegations = buildQuery<QueryRedelegationsRequest, QueryRedelegationsResponse>({
   encode: QueryRedelegationsRequest.encode,
@@ -128,7 +128,7 @@ export const getRedelegations = buildQuery<QueryRedelegationsRequest, QueryRedel
  * address.
  * @name getDelegatorValidators
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.DelegatorValidators
+ * @see proto service: cosmos.staking.v1beta1.DelegatorValidators
  */
 export const getDelegatorValidators = buildQuery<QueryDelegatorValidatorsRequest, QueryDelegatorValidatorsResponse>({
   encode: QueryDelegatorValidatorsRequest.encode,
@@ -142,7 +142,7 @@ export const getDelegatorValidators = buildQuery<QueryDelegatorValidatorsRequest
  * pair.
  * @name getDelegatorValidator
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.DelegatorValidator
+ * @see proto service: cosmos.staking.v1beta1.DelegatorValidator
  */
 export const getDelegatorValidator = buildQuery<QueryDelegatorValidatorRequest, QueryDelegatorValidatorResponse>({
   encode: QueryDelegatorValidatorRequest.encode,
@@ -155,7 +155,7 @@ export const getDelegatorValidator = buildQuery<QueryDelegatorValidatorRequest, 
  * HistoricalInfo queries the historical info for given height.
  * @name getHistoricalInfo
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.HistoricalInfo
+ * @see proto service: cosmos.staking.v1beta1.HistoricalInfo
  */
 export const getHistoricalInfo = buildQuery<QueryHistoricalInfoRequest, QueryHistoricalInfoResponse>({
   encode: QueryHistoricalInfoRequest.encode,
@@ -168,7 +168,7 @@ export const getHistoricalInfo = buildQuery<QueryHistoricalInfoRequest, QueryHis
  * Pool queries the pool info.
  * @name getPool
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.Pool
+ * @see proto service: cosmos.staking.v1beta1.Pool
  */
 export const getPool = buildQuery<QueryPoolRequest, QueryPoolResponse>({
   encode: QueryPoolRequest.encode,
@@ -181,7 +181,7 @@ export const getPool = buildQuery<QueryPoolRequest, QueryPoolResponse>({
  * Parameters queries the staking parameters.
  * @name getParams
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.Params
+ * @see proto service: cosmos.staking.v1beta1.Params
  */
 export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,

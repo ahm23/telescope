@@ -3,72 +3,134 @@ import { Decimal } from "@cosmjs/math";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "cosmos.mint.v1beta1";
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name Minter
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.Minter
+ */
 export interface Minter {
-  /** current annual inflation rate */
+  /**
+   * current annual inflation rate
+  */
   inflation: string;
-  /** current annual expected provisions */
+  /**
+   * current annual expected provisions
+  */
   annualProvisions: string;
 }
 export interface MinterProtoMsg {
   typeUrl: "/cosmos.mint.v1beta1.Minter";
   value: Uint8Array;
 }
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name MinterAmino
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.Minter
+ */
 export interface MinterAmino {
-  /** current annual inflation rate */
+  /**
+   * current annual inflation rate
+  */
   inflation?: string;
-  /** current annual expected provisions */
+  /**
+   * current annual expected provisions
+  */
   annual_provisions?: string;
 }
 export interface MinterAminoMsg {
   type: "cosmos-sdk/Minter";
   value: MinterAmino;
 }
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name MinterSDKType
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.Minter
+ */
 export interface MinterSDKType {
   inflation: string;
   annual_provisions: string;
 }
-/** Params holds parameters for the mint module. */
+/**
+ * Params holds parameters for the mint module.
+ * @name Params
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.Params
+ */
 export interface Params {
-  /** type of coin to mint */
+  /**
+   * type of coin to mint
+  */
   mintDenom: string;
-  /** maximum annual change in inflation rate */
+  /**
+   * maximum annual change in inflation rate
+  */
   inflationRateChange: string;
-  /** maximum inflation rate */
+  /**
+   * maximum inflation rate
+  */
   inflationMax: string;
-  /** minimum inflation rate */
+  /**
+   * minimum inflation rate
+  */
   inflationMin: string;
-  /** goal of percent bonded atoms */
+  /**
+   * goal of percent bonded atoms
+  */
   goalBonded: string;
-  /** expected blocks per year */
+  /**
+   * expected blocks per year
+  */
   blocksPerYear: bigint;
 }
 export interface ParamsProtoMsg {
   typeUrl: "/cosmos.mint.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the mint module. */
+/**
+ * Params holds parameters for the mint module.
+ * @name ParamsAmino
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.Params
+ */
 export interface ParamsAmino {
-  /** type of coin to mint */
+  /**
+   * type of coin to mint
+  */
   mint_denom?: string;
-  /** maximum annual change in inflation rate */
+  /**
+   * maximum annual change in inflation rate
+  */
   inflation_rate_change?: string;
-  /** maximum inflation rate */
+  /**
+   * maximum inflation rate
+  */
   inflation_max?: string;
-  /** minimum inflation rate */
+  /**
+   * minimum inflation rate
+  */
   inflation_min?: string;
-  /** goal of percent bonded atoms */
+  /**
+   * goal of percent bonded atoms
+  */
   goal_bonded?: string;
-  /** expected blocks per year */
+  /**
+   * expected blocks per year
+  */
   blocks_per_year?: string;
 }
 export interface ParamsAminoMsg {
   type: "cosmos-sdk/Params";
   value: ParamsAmino;
 }
-/** Params holds parameters for the mint module. */
+/**
+ * Params holds parameters for the mint module.
+ * @name ParamsSDKType
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.Params
+ */
 export interface ParamsSDKType {
   mint_denom: string;
   inflation_rate_change: string;
@@ -83,6 +145,12 @@ function createBaseMinter(): Minter {
     annualProvisions: ""
   };
 }
+/**
+ * Minter represents the minting state.
+ * @name Minter
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.Minter
+ */
 export const Minter = {
   typeUrl: "/cosmos.mint.v1beta1.Minter",
   aminoType: "cosmos-sdk/Minter",
@@ -209,6 +277,12 @@ function createBaseParams(): Params {
     blocksPerYear: BigInt(0)
   };
 }
+/**
+ * Params holds parameters for the mint module.
+ * @name Params
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/cosmos.mint.v1beta1.Params",
   aminoType: "cosmos-sdk/Params",

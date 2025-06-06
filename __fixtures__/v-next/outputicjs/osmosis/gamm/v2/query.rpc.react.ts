@@ -6,7 +6,7 @@ import { getSpotPrice } from "./query.rpc.func";
  * a base denomination and a quote denomination.
  * @name useGetSpotPrice
  * @package osmosis.gamm.v2
- * @see protoservice: osmosis.gamm.v2.SpotPrice
+ * @see proto service: osmosis.gamm.v2.SpotPrice
  */
 export const useGetSpotPrice = buildUseQuery<QuerySpotPriceRequest, QuerySpotPriceResponse>({
   builderQueryFn: getSpotPrice,

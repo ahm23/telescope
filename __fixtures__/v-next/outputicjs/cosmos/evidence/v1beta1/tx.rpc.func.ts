@@ -5,7 +5,7 @@ import { MsgSubmitEvidence } from "./tx";
  * counterfactual signing.
  * @name submitEvidence
  * @package cosmos.evidence.v1beta1
- * @see protoservice: cosmos.evidence.v1beta1.SubmitEvidence
+ * @see proto service: cosmos.evidence.v1beta1.SubmitEvidence
  */
 export const submitEvidence = buildTx<MsgSubmitEvidence>({
   msg: MsgSubmitEvidence

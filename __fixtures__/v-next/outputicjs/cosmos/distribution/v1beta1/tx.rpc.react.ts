@@ -6,7 +6,7 @@ import { setWithdrawAddress, withdrawDelegatorReward, withdrawValidatorCommissio
  * for a delegator (or validator self-delegation).
  * @name useSetWithdrawAddress
  * @package cosmos.distribution.v1beta1
- * @see protoservice: cosmos.distribution.v1beta1.SetWithdrawAddress
+ * @see proto service: cosmos.distribution.v1beta1.SetWithdrawAddress
  */
 export const useSetWithdrawAddress = buildUseMutation<MsgSetWithdrawAddress, Error>({
   builderMutationFn: setWithdrawAddress
@@ -16,7 +16,7 @@ export const useSetWithdrawAddress = buildUseMutation<MsgSetWithdrawAddress, Err
  * from a single validator.
  * @name useWithdrawDelegatorReward
  * @package cosmos.distribution.v1beta1
- * @see protoservice: cosmos.distribution.v1beta1.WithdrawDelegatorReward
+ * @see proto service: cosmos.distribution.v1beta1.WithdrawDelegatorReward
  */
 export const useWithdrawDelegatorReward = buildUseMutation<MsgWithdrawDelegatorReward, Error>({
   builderMutationFn: withdrawDelegatorReward
@@ -26,7 +26,7 @@ export const useWithdrawDelegatorReward = buildUseMutation<MsgWithdrawDelegatorR
  * full commission to the validator address.
  * @name useWithdrawValidatorCommission
  * @package cosmos.distribution.v1beta1
- * @see protoservice: cosmos.distribution.v1beta1.WithdrawValidatorCommission
+ * @see proto service: cosmos.distribution.v1beta1.WithdrawValidatorCommission
  */
 export const useWithdrawValidatorCommission = buildUseMutation<MsgWithdrawValidatorCommission, Error>({
   builderMutationFn: withdrawValidatorCommission
@@ -36,7 +36,7 @@ export const useWithdrawValidatorCommission = buildUseMutation<MsgWithdrawValida
  * fund the community pool.
  * @name useFundCommunityPool
  * @package cosmos.distribution.v1beta1
- * @see protoservice: cosmos.distribution.v1beta1.FundCommunityPool
+ * @see proto service: cosmos.distribution.v1beta1.FundCommunityPool
  */
 export const useFundCommunityPool = buildUseMutation<MsgFundCommunityPool, Error>({
   builderMutationFn: fundCommunityPool

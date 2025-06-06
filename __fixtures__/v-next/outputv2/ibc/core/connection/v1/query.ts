@@ -9,9 +9,14 @@ export const protobufPackage = "ibc.core.connection.v1";
 /**
  * QueryConnectionRequest is the request type for the Query/Connection RPC
  * method
+ * @name QueryConnectionRequest
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionRequest
  */
 export interface QueryConnectionRequest {
-  /** connection unique identifier */
+  /**
+   * connection unique identifier
+  */
   connectionId: string;
 }
 export interface QueryConnectionRequestProtoMsg {
@@ -21,9 +26,14 @@ export interface QueryConnectionRequestProtoMsg {
 /**
  * QueryConnectionRequest is the request type for the Query/Connection RPC
  * method
+ * @name QueryConnectionRequestAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionRequest
  */
 export interface QueryConnectionRequestAmino {
-  /** connection unique identifier */
+  /**
+   * connection unique identifier
+  */
   connection_id?: string;
 }
 export interface QueryConnectionRequestAminoMsg {
@@ -33,6 +43,9 @@ export interface QueryConnectionRequestAminoMsg {
 /**
  * QueryConnectionRequest is the request type for the Query/Connection RPC
  * method
+ * @name QueryConnectionRequestSDKType
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionRequest
  */
 export interface QueryConnectionRequestSDKType {
   connection_id: string;
@@ -41,13 +54,22 @@ export interface QueryConnectionRequestSDKType {
  * QueryConnectionResponse is the response type for the Query/Connection RPC
  * method. Besides the connection end, it includes a proof and the height from
  * which the proof was retrieved.
+ * @name QueryConnectionResponse
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionResponse
  */
 export interface QueryConnectionResponse {
-  /** connection associated with the request identifier */
+  /**
+   * connection associated with the request identifier
+  */
   connection?: ConnectionEnd;
-  /** merkle proof of existence */
+  /**
+   * merkle proof of existence
+  */
   proof: Uint8Array;
-  /** height at which the proof was retrieved */
+  /**
+   * height at which the proof was retrieved
+  */
   proofHeight: Height;
 }
 export interface QueryConnectionResponseProtoMsg {
@@ -58,13 +80,22 @@ export interface QueryConnectionResponseProtoMsg {
  * QueryConnectionResponse is the response type for the Query/Connection RPC
  * method. Besides the connection end, it includes a proof and the height from
  * which the proof was retrieved.
+ * @name QueryConnectionResponseAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionResponse
  */
 export interface QueryConnectionResponseAmino {
-  /** connection associated with the request identifier */
+  /**
+   * connection associated with the request identifier
+  */
   connection?: ConnectionEndAmino;
-  /** merkle proof of existence */
+  /**
+   * merkle proof of existence
+  */
   proof?: string;
-  /** height at which the proof was retrieved */
+  /**
+   * height at which the proof was retrieved
+  */
   proof_height?: HeightAmino;
 }
 export interface QueryConnectionResponseAminoMsg {
@@ -75,6 +106,9 @@ export interface QueryConnectionResponseAminoMsg {
  * QueryConnectionResponse is the response type for the Query/Connection RPC
  * method. Besides the connection end, it includes a proof and the height from
  * which the proof was retrieved.
+ * @name QueryConnectionResponseSDKType
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionResponse
  */
 export interface QueryConnectionResponseSDKType {
   connection?: ConnectionEndSDKType;
@@ -84,6 +118,9 @@ export interface QueryConnectionResponseSDKType {
 /**
  * QueryConnectionsRequest is the request type for the Query/Connections RPC
  * method
+ * @name QueryConnectionsRequest
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionsRequest
  */
 export interface QueryConnectionsRequest {
   pagination?: PageRequest;
@@ -95,6 +132,9 @@ export interface QueryConnectionsRequestProtoMsg {
 /**
  * QueryConnectionsRequest is the request type for the Query/Connections RPC
  * method
+ * @name QueryConnectionsRequestAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionsRequest
  */
 export interface QueryConnectionsRequestAmino {
   pagination?: PageRequestAmino;
@@ -106,6 +146,9 @@ export interface QueryConnectionsRequestAminoMsg {
 /**
  * QueryConnectionsRequest is the request type for the Query/Connections RPC
  * method
+ * @name QueryConnectionsRequestSDKType
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionsRequest
  */
 export interface QueryConnectionsRequestSDKType {
   pagination?: PageRequestSDKType;
@@ -113,13 +156,22 @@ export interface QueryConnectionsRequestSDKType {
 /**
  * QueryConnectionsResponse is the response type for the Query/Connections RPC
  * method.
+ * @name QueryConnectionsResponse
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionsResponse
  */
 export interface QueryConnectionsResponse {
-  /** list of stored connections of the chain. */
+  /**
+   * list of stored connections of the chain.
+  */
   connections: IdentifiedConnection[];
-  /** pagination response */
+  /**
+   * pagination response
+  */
   pagination?: PageResponse;
-  /** query block height */
+  /**
+   * query block height
+  */
   height: Height;
 }
 export interface QueryConnectionsResponseProtoMsg {
@@ -129,13 +181,22 @@ export interface QueryConnectionsResponseProtoMsg {
 /**
  * QueryConnectionsResponse is the response type for the Query/Connections RPC
  * method.
+ * @name QueryConnectionsResponseAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionsResponse
  */
 export interface QueryConnectionsResponseAmino {
-  /** list of stored connections of the chain. */
+  /**
+   * list of stored connections of the chain.
+  */
   connections?: IdentifiedConnectionAmino[];
-  /** pagination response */
+  /**
+   * pagination response
+  */
   pagination?: PageResponseAmino;
-  /** query block height */
+  /**
+   * query block height
+  */
   height?: HeightAmino;
 }
 export interface QueryConnectionsResponseAminoMsg {
@@ -145,6 +206,9 @@ export interface QueryConnectionsResponseAminoMsg {
 /**
  * QueryConnectionsResponse is the response type for the Query/Connections RPC
  * method.
+ * @name QueryConnectionsResponseSDKType
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionsResponse
  */
 export interface QueryConnectionsResponseSDKType {
   connections: IdentifiedConnectionSDKType[];
@@ -154,9 +218,14 @@ export interface QueryConnectionsResponseSDKType {
 /**
  * QueryClientConnectionsRequest is the request type for the
  * Query/ClientConnections RPC method
+ * @name QueryClientConnectionsRequest
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryClientConnectionsRequest
  */
 export interface QueryClientConnectionsRequest {
-  /** client identifier associated with a connection */
+  /**
+   * client identifier associated with a connection
+  */
   clientId: string;
 }
 export interface QueryClientConnectionsRequestProtoMsg {
@@ -166,9 +235,14 @@ export interface QueryClientConnectionsRequestProtoMsg {
 /**
  * QueryClientConnectionsRequest is the request type for the
  * Query/ClientConnections RPC method
+ * @name QueryClientConnectionsRequestAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryClientConnectionsRequest
  */
 export interface QueryClientConnectionsRequestAmino {
-  /** client identifier associated with a connection */
+  /**
+   * client identifier associated with a connection
+  */
   client_id?: string;
 }
 export interface QueryClientConnectionsRequestAminoMsg {
@@ -178,6 +252,9 @@ export interface QueryClientConnectionsRequestAminoMsg {
 /**
  * QueryClientConnectionsRequest is the request type for the
  * Query/ClientConnections RPC method
+ * @name QueryClientConnectionsRequestSDKType
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryClientConnectionsRequest
  */
 export interface QueryClientConnectionsRequestSDKType {
   client_id: string;
@@ -185,13 +262,22 @@ export interface QueryClientConnectionsRequestSDKType {
 /**
  * QueryClientConnectionsResponse is the response type for the
  * Query/ClientConnections RPC method
+ * @name QueryClientConnectionsResponse
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryClientConnectionsResponse
  */
 export interface QueryClientConnectionsResponse {
-  /** slice of all the connection paths associated with a client. */
+  /**
+   * slice of all the connection paths associated with a client.
+  */
   connectionPaths: string[];
-  /** merkle proof of existence */
+  /**
+   * merkle proof of existence
+  */
   proof: Uint8Array;
-  /** height at which the proof was generated */
+  /**
+   * height at which the proof was generated
+  */
   proofHeight: Height;
 }
 export interface QueryClientConnectionsResponseProtoMsg {
@@ -201,13 +287,22 @@ export interface QueryClientConnectionsResponseProtoMsg {
 /**
  * QueryClientConnectionsResponse is the response type for the
  * Query/ClientConnections RPC method
+ * @name QueryClientConnectionsResponseAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryClientConnectionsResponse
  */
 export interface QueryClientConnectionsResponseAmino {
-  /** slice of all the connection paths associated with a client. */
+  /**
+   * slice of all the connection paths associated with a client.
+  */
   connection_paths?: string[];
-  /** merkle proof of existence */
+  /**
+   * merkle proof of existence
+  */
   proof?: string;
-  /** height at which the proof was generated */
+  /**
+   * height at which the proof was generated
+  */
   proof_height?: HeightAmino;
 }
 export interface QueryClientConnectionsResponseAminoMsg {
@@ -217,6 +312,9 @@ export interface QueryClientConnectionsResponseAminoMsg {
 /**
  * QueryClientConnectionsResponse is the response type for the
  * Query/ClientConnections RPC method
+ * @name QueryClientConnectionsResponseSDKType
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryClientConnectionsResponse
  */
 export interface QueryClientConnectionsResponseSDKType {
   connection_paths: string[];
@@ -226,9 +324,14 @@ export interface QueryClientConnectionsResponseSDKType {
 /**
  * QueryConnectionClientStateRequest is the request type for the
  * Query/ConnectionClientState RPC method
+ * @name QueryConnectionClientStateRequest
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionClientStateRequest
  */
 export interface QueryConnectionClientStateRequest {
-  /** connection identifier */
+  /**
+   * connection identifier
+  */
   connectionId: string;
 }
 export interface QueryConnectionClientStateRequestProtoMsg {
@@ -238,9 +341,14 @@ export interface QueryConnectionClientStateRequestProtoMsg {
 /**
  * QueryConnectionClientStateRequest is the request type for the
  * Query/ConnectionClientState RPC method
+ * @name QueryConnectionClientStateRequestAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionClientStateRequest
  */
 export interface QueryConnectionClientStateRequestAmino {
-  /** connection identifier */
+  /**
+   * connection identifier
+  */
   connection_id?: string;
 }
 export interface QueryConnectionClientStateRequestAminoMsg {
@@ -250,6 +358,9 @@ export interface QueryConnectionClientStateRequestAminoMsg {
 /**
  * QueryConnectionClientStateRequest is the request type for the
  * Query/ConnectionClientState RPC method
+ * @name QueryConnectionClientStateRequestSDKType
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionClientStateRequest
  */
 export interface QueryConnectionClientStateRequestSDKType {
   connection_id: string;
@@ -257,13 +368,22 @@ export interface QueryConnectionClientStateRequestSDKType {
 /**
  * QueryConnectionClientStateResponse is the response type for the
  * Query/ConnectionClientState RPC method
+ * @name QueryConnectionClientStateResponse
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionClientStateResponse
  */
 export interface QueryConnectionClientStateResponse {
-  /** client state associated with the channel */
+  /**
+   * client state associated with the channel
+  */
   identifiedClientState?: IdentifiedClientState;
-  /** merkle proof of existence */
+  /**
+   * merkle proof of existence
+  */
   proof: Uint8Array;
-  /** height at which the proof was retrieved */
+  /**
+   * height at which the proof was retrieved
+  */
   proofHeight: Height;
 }
 export interface QueryConnectionClientStateResponseProtoMsg {
@@ -273,13 +393,22 @@ export interface QueryConnectionClientStateResponseProtoMsg {
 /**
  * QueryConnectionClientStateResponse is the response type for the
  * Query/ConnectionClientState RPC method
+ * @name QueryConnectionClientStateResponseAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionClientStateResponse
  */
 export interface QueryConnectionClientStateResponseAmino {
-  /** client state associated with the channel */
+  /**
+   * client state associated with the channel
+  */
   identified_client_state?: IdentifiedClientStateAmino;
-  /** merkle proof of existence */
+  /**
+   * merkle proof of existence
+  */
   proof?: string;
-  /** height at which the proof was retrieved */
+  /**
+   * height at which the proof was retrieved
+  */
   proof_height?: HeightAmino;
 }
 export interface QueryConnectionClientStateResponseAminoMsg {
@@ -289,6 +418,9 @@ export interface QueryConnectionClientStateResponseAminoMsg {
 /**
  * QueryConnectionClientStateResponse is the response type for the
  * Query/ConnectionClientState RPC method
+ * @name QueryConnectionClientStateResponseSDKType
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionClientStateResponse
  */
 export interface QueryConnectionClientStateResponseSDKType {
   identified_client_state?: IdentifiedClientStateSDKType;
@@ -298,9 +430,14 @@ export interface QueryConnectionClientStateResponseSDKType {
 /**
  * QueryConnectionConsensusStateRequest is the request type for the
  * Query/ConnectionConsensusState RPC method
+ * @name QueryConnectionConsensusStateRequest
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionConsensusStateRequest
  */
 export interface QueryConnectionConsensusStateRequest {
-  /** connection identifier */
+  /**
+   * connection identifier
+  */
   connectionId: string;
   revisionNumber: bigint;
   revisionHeight: bigint;
@@ -312,9 +449,14 @@ export interface QueryConnectionConsensusStateRequestProtoMsg {
 /**
  * QueryConnectionConsensusStateRequest is the request type for the
  * Query/ConnectionConsensusState RPC method
+ * @name QueryConnectionConsensusStateRequestAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionConsensusStateRequest
  */
 export interface QueryConnectionConsensusStateRequestAmino {
-  /** connection identifier */
+  /**
+   * connection identifier
+  */
   connection_id?: string;
   revision_number?: string;
   revision_height?: string;
@@ -326,6 +468,9 @@ export interface QueryConnectionConsensusStateRequestAminoMsg {
 /**
  * QueryConnectionConsensusStateRequest is the request type for the
  * Query/ConnectionConsensusState RPC method
+ * @name QueryConnectionConsensusStateRequestSDKType
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionConsensusStateRequest
  */
 export interface QueryConnectionConsensusStateRequestSDKType {
   connection_id: string;
@@ -335,15 +480,26 @@ export interface QueryConnectionConsensusStateRequestSDKType {
 /**
  * QueryConnectionConsensusStateResponse is the response type for the
  * Query/ConnectionConsensusState RPC method
+ * @name QueryConnectionConsensusStateResponse
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionConsensusStateResponse
  */
 export interface QueryConnectionConsensusStateResponse {
-  /** consensus state associated with the channel */
+  /**
+   * consensus state associated with the channel
+  */
   consensusState?: Any;
-  /** client ID associated with the consensus state */
+  /**
+   * client ID associated with the consensus state
+  */
   clientId: string;
-  /** merkle proof of existence */
+  /**
+   * merkle proof of existence
+  */
   proof: Uint8Array;
-  /** height at which the proof was retrieved */
+  /**
+   * height at which the proof was retrieved
+  */
   proofHeight: Height;
 }
 export interface QueryConnectionConsensusStateResponseProtoMsg {
@@ -353,15 +509,26 @@ export interface QueryConnectionConsensusStateResponseProtoMsg {
 /**
  * QueryConnectionConsensusStateResponse is the response type for the
  * Query/ConnectionConsensusState RPC method
+ * @name QueryConnectionConsensusStateResponseAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionConsensusStateResponse
  */
 export interface QueryConnectionConsensusStateResponseAmino {
-  /** consensus state associated with the channel */
+  /**
+   * consensus state associated with the channel
+  */
   consensus_state?: AnyAmino;
-  /** client ID associated with the consensus state */
+  /**
+   * client ID associated with the consensus state
+  */
   client_id?: string;
-  /** merkle proof of existence */
+  /**
+   * merkle proof of existence
+  */
   proof?: string;
-  /** height at which the proof was retrieved */
+  /**
+   * height at which the proof was retrieved
+  */
   proof_height?: HeightAmino;
 }
 export interface QueryConnectionConsensusStateResponseAminoMsg {
@@ -371,6 +538,9 @@ export interface QueryConnectionConsensusStateResponseAminoMsg {
 /**
  * QueryConnectionConsensusStateResponse is the response type for the
  * Query/ConnectionConsensusState RPC method
+ * @name QueryConnectionConsensusStateResponseSDKType
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionConsensusStateResponse
  */
 export interface QueryConnectionConsensusStateResponseSDKType {
   consensus_state?: AnySDKType;
@@ -383,6 +553,13 @@ function createBaseQueryConnectionRequest(): QueryConnectionRequest {
     connectionId: ""
   };
 }
+/**
+ * QueryConnectionRequest is the request type for the Query/Connection RPC
+ * method
+ * @name QueryConnectionRequest
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionRequest
+ */
 export const QueryConnectionRequest = {
   typeUrl: "/ibc.core.connection.v1.QueryConnectionRequest",
   aminoType: "cosmos-sdk/QueryConnectionRequest",
@@ -475,6 +652,14 @@ function createBaseQueryConnectionResponse(): QueryConnectionResponse {
     proofHeight: Height.fromPartial({})
   };
 }
+/**
+ * QueryConnectionResponse is the response type for the Query/Connection RPC
+ * method. Besides the connection end, it includes a proof and the height from
+ * which the proof was retrieved.
+ * @name QueryConnectionResponse
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionResponse
+ */
 export const QueryConnectionResponse = {
   typeUrl: "/ibc.core.connection.v1.QueryConnectionResponse",
   aminoType: "cosmos-sdk/QueryConnectionResponse",
@@ -599,6 +784,13 @@ function createBaseQueryConnectionsRequest(): QueryConnectionsRequest {
     pagination: undefined
   };
 }
+/**
+ * QueryConnectionsRequest is the request type for the Query/Connections RPC
+ * method
+ * @name QueryConnectionsRequest
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionsRequest
+ */
 export const QueryConnectionsRequest = {
   typeUrl: "/ibc.core.connection.v1.QueryConnectionsRequest",
   aminoType: "cosmos-sdk/QueryConnectionsRequest",
@@ -693,6 +885,13 @@ function createBaseQueryConnectionsResponse(): QueryConnectionsResponse {
     height: Height.fromPartial({})
   };
 }
+/**
+ * QueryConnectionsResponse is the response type for the Query/Connections RPC
+ * method.
+ * @name QueryConnectionsResponse
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionsResponse
+ */
 export const QueryConnectionsResponse = {
   typeUrl: "/ibc.core.connection.v1.QueryConnectionsResponse",
   aminoType: "cosmos-sdk/QueryConnectionsResponse",
@@ -827,6 +1026,13 @@ function createBaseQueryClientConnectionsRequest(): QueryClientConnectionsReques
     clientId: ""
   };
 }
+/**
+ * QueryClientConnectionsRequest is the request type for the
+ * Query/ClientConnections RPC method
+ * @name QueryClientConnectionsRequest
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryClientConnectionsRequest
+ */
 export const QueryClientConnectionsRequest = {
   typeUrl: "/ibc.core.connection.v1.QueryClientConnectionsRequest",
   aminoType: "cosmos-sdk/QueryClientConnectionsRequest",
@@ -919,6 +1125,13 @@ function createBaseQueryClientConnectionsResponse(): QueryClientConnectionsRespo
     proofHeight: Height.fromPartial({})
   };
 }
+/**
+ * QueryClientConnectionsResponse is the response type for the
+ * Query/ClientConnections RPC method
+ * @name QueryClientConnectionsResponse
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryClientConnectionsResponse
+ */
 export const QueryClientConnectionsResponse = {
   typeUrl: "/ibc.core.connection.v1.QueryClientConnectionsResponse",
   aminoType: "cosmos-sdk/QueryClientConnectionsResponse",
@@ -1051,6 +1264,13 @@ function createBaseQueryConnectionClientStateRequest(): QueryConnectionClientSta
     connectionId: ""
   };
 }
+/**
+ * QueryConnectionClientStateRequest is the request type for the
+ * Query/ConnectionClientState RPC method
+ * @name QueryConnectionClientStateRequest
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionClientStateRequest
+ */
 export const QueryConnectionClientStateRequest = {
   typeUrl: "/ibc.core.connection.v1.QueryConnectionClientStateRequest",
   aminoType: "cosmos-sdk/QueryConnectionClientStateRequest",
@@ -1143,6 +1363,13 @@ function createBaseQueryConnectionClientStateResponse(): QueryConnectionClientSt
     proofHeight: Height.fromPartial({})
   };
 }
+/**
+ * QueryConnectionClientStateResponse is the response type for the
+ * Query/ConnectionClientState RPC method
+ * @name QueryConnectionClientStateResponse
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionClientStateResponse
+ */
 export const QueryConnectionClientStateResponse = {
   typeUrl: "/ibc.core.connection.v1.QueryConnectionClientStateResponse",
   aminoType: "cosmos-sdk/QueryConnectionClientStateResponse",
@@ -1269,6 +1496,13 @@ function createBaseQueryConnectionConsensusStateRequest(): QueryConnectionConsen
     revisionHeight: BigInt(0)
   };
 }
+/**
+ * QueryConnectionConsensusStateRequest is the request type for the
+ * Query/ConnectionConsensusState RPC method
+ * @name QueryConnectionConsensusStateRequest
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionConsensusStateRequest
+ */
 export const QueryConnectionConsensusStateRequest = {
   typeUrl: "/ibc.core.connection.v1.QueryConnectionConsensusStateRequest",
   aminoType: "cosmos-sdk/QueryConnectionConsensusStateRequest",
@@ -1396,6 +1630,13 @@ function createBaseQueryConnectionConsensusStateResponse(): QueryConnectionConse
     proofHeight: Height.fromPartial({})
   };
 }
+/**
+ * QueryConnectionConsensusStateResponse is the response type for the
+ * Query/ConnectionConsensusState RPC method
+ * @name QueryConnectionConsensusStateResponse
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.QueryConnectionConsensusStateResponse
+ */
 export const QueryConnectionConsensusStateResponse = {
   typeUrl: "/ibc.core.connection.v1.QueryConnectionConsensusStateResponse",
   aminoType: "cosmos-sdk/QueryConnectionConsensusStateResponse",

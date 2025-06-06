@@ -7,7 +7,7 @@ import { unjail } from "./tx.rpc.func";
  * and rewards again.
  * @name useUnjail
  * @package cosmos.slashing.v1beta1
- * @see protoservice: cosmos.slashing.v1beta1.Unjail
+ * @see proto service: cosmos.slashing.v1beta1.Unjail
  */
 export const useUnjail = buildUseMutation<MsgUnjail, Error>({
   builderMutationFn: unjail

@@ -5,7 +5,7 @@ import { MsgGrantAllowance, MsgRevokeAllowance } from "./tx";
  * account with the provided expiration time.
  * @name grantAllowance
  * @package cosmos.feegrant.v1beta1
- * @see protoservice: cosmos.feegrant.v1beta1.GrantAllowance
+ * @see proto service: cosmos.feegrant.v1beta1.GrantAllowance
  */
 export const grantAllowance = buildTx<MsgGrantAllowance>({
   msg: MsgGrantAllowance
@@ -15,7 +15,7 @@ export const grantAllowance = buildTx<MsgGrantAllowance>({
  * has been granted to the grantee.
  * @name revokeAllowance
  * @package cosmos.feegrant.v1beta1
- * @see protoservice: cosmos.feegrant.v1beta1.RevokeAllowance
+ * @see proto service: cosmos.feegrant.v1beta1.RevokeAllowance
  */
 export const revokeAllowance = buildTx<MsgRevokeAllowance>({
   msg: MsgRevokeAllowance

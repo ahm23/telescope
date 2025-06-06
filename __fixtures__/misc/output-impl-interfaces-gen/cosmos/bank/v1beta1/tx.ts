@@ -7,15 +7,26 @@ export const protobufPackage = "cosmos.bank.v1beta1";
 /**
  * MsgInstantiateContract2 create a new smart contract instance for the given
  * code id with a predicable address.
+ * @name MsgInstantiateContract2
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgInstantiateContract2
  */
 export interface MsgInstantiateContract2 {
-  /** CodeID is the reference to the stored WASM code */
+  /**
+   * CodeID is the reference to the stored WASM code
+  */
   codeId: bigint;
-  /** Label is optional metadata to be stored with a contract instance. */
+  /**
+   * Label is optional metadata to be stored with a contract instance.
+  */
   label: string;
-  /** Funds coins that are transferred to the contract on instantiation */
+  /**
+   * Funds coins that are transferred to the contract on instantiation
+  */
   funds: Coin[];
-  /** Salt is an arbitrary value provided by the sender. Size can be 1 to 64. */
+  /**
+   * Salt is an arbitrary value provided by the sender. Size can be 1 to 64.
+  */
   salt: Uint8Array;
   /**
    * FixMsg include the msg value into the hash for the predictable address.
@@ -32,15 +43,26 @@ export interface MsgInstantiateContract2ProtoMsg {
 /**
  * MsgInstantiateContract2 create a new smart contract instance for the given
  * code id with a predicable address.
+ * @name MsgInstantiateContract2Amino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgInstantiateContract2
  */
 export interface MsgInstantiateContract2Amino {
-  /** CodeID is the reference to the stored WASM code */
+  /**
+   * CodeID is the reference to the stored WASM code
+  */
   code_id?: string;
-  /** Label is optional metadata to be stored with a contract instance. */
+  /**
+   * Label is optional metadata to be stored with a contract instance.
+  */
   label?: string;
-  /** Funds coins that are transferred to the contract on instantiation */
+  /**
+   * Funds coins that are transferred to the contract on instantiation
+  */
   funds: CoinAmino[];
-  /** Salt is an arbitrary value provided by the sender. Size can be 1 to 64. */
+  /**
+   * Salt is an arbitrary value provided by the sender. Size can be 1 to 64.
+  */
   salt?: string;
   /**
    * FixMsg include the msg value into the hash for the predictable address.
@@ -57,6 +79,9 @@ export interface MsgInstantiateContract2AminoMsg {
 /**
  * MsgInstantiateContract2 create a new smart contract instance for the given
  * code id with a predicable address.
+ * @name MsgInstantiateContract2SDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgInstantiateContract2
  */
 export interface MsgInstantiateContract2SDKType {
   code_id: bigint;
@@ -78,6 +103,13 @@ function createBaseMsgInstantiateContract2(): MsgInstantiateContract2 {
     aListOfBytes: []
   };
 }
+/**
+ * MsgInstantiateContract2 create a new smart contract instance for the given
+ * code id with a predicable address.
+ * @name MsgInstantiateContract2
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgInstantiateContract2
+ */
 export const MsgInstantiateContract2 = {
   typeUrl: "/cosmos.bank.v1beta1.MsgInstantiateContract2",
   aminoType: "wasm/MsgInstantiateContract2",

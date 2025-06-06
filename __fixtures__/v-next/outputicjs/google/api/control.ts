@@ -4,6 +4,9 @@ import { DeepPartial } from "../../helpers";
  * Selects and configures the service controller used by the service.  The
  * service controller handles features like abuse, quota, billing, logging,
  * monitoring, etc.
+ * @name Control
+ * @package google.api
+ * @see proto type: google.api.Control
  */
 export interface Control {
   /**
@@ -20,6 +23,9 @@ export interface ControlProtoMsg {
  * Selects and configures the service controller used by the service.  The
  * service controller handles features like abuse, quota, billing, logging,
  * monitoring, etc.
+ * @name ControlAmino
+ * @package google.api
+ * @see proto type: google.api.Control
  */
 export interface ControlAmino {
   /**
@@ -37,6 +43,14 @@ function createBaseControl(): Control {
     environment: ""
   };
 }
+/**
+ * Selects and configures the service controller used by the service.  The
+ * service controller handles features like abuse, quota, billing, logging,
+ * monitoring, etc.
+ * @name Control
+ * @package google.api
+ * @see proto type: google.api.Control
+ */
 export const Control = {
   typeUrl: "/google.api.Control",
   encode(message: Control, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

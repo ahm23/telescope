@@ -60,7 +60,12 @@ export function group_StateToJSON(object: Group_State): string {
       return "UNRECOGNIZED";
   }
 }
-/** MsgCloseGroup defines SDK message to close a single Group within a Deployment. */
+/**
+ * MsgCloseGroup defines SDK message to close a single Group within a Deployment.
+ * @name MsgCloseGroup
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgCloseGroup
+ */
 export interface MsgCloseGroup {
   id: GroupID;
 }
@@ -68,25 +73,55 @@ export interface MsgCloseGroupProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.MsgCloseGroup";
   value: Uint8Array;
 }
-/** MsgCloseGroup defines SDK message to close a single Group within a Deployment. */
+/**
+ * MsgCloseGroup defines SDK message to close a single Group within a Deployment.
+ * @name MsgCloseGroupAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgCloseGroup
+ */
 export interface MsgCloseGroupAmino {
   id: GroupIDAmino;
 }
-/** MsgCloseGroup defines SDK message to close a single Group within a Deployment. */
+/**
+ * MsgCloseGroup defines SDK message to close a single Group within a Deployment.
+ * @name MsgCloseGroupSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgCloseGroup
+ */
 export interface MsgCloseGroupSDKType {
   id: GroupIDSDKType;
 }
-/** MsgCloseGroupResponse defines the Msg/CloseGroup response type. */
+/**
+ * MsgCloseGroupResponse defines the Msg/CloseGroup response type.
+ * @name MsgCloseGroupResponse
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgCloseGroupResponse
+ */
 export interface MsgCloseGroupResponse {}
 export interface MsgCloseGroupResponseProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.MsgCloseGroupResponse";
   value: Uint8Array;
 }
-/** MsgCloseGroupResponse defines the Msg/CloseGroup response type. */
+/**
+ * MsgCloseGroupResponse defines the Msg/CloseGroup response type.
+ * @name MsgCloseGroupResponseAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgCloseGroupResponse
+ */
 export interface MsgCloseGroupResponseAmino {}
-/** MsgCloseGroupResponse defines the Msg/CloseGroup response type. */
+/**
+ * MsgCloseGroupResponse defines the Msg/CloseGroup response type.
+ * @name MsgCloseGroupResponseSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgCloseGroupResponse
+ */
 export interface MsgCloseGroupResponseSDKType {}
-/** MsgPauseGroup defines SDK message to close a single Group within a Deployment. */
+/**
+ * MsgPauseGroup defines SDK message to close a single Group within a Deployment.
+ * @name MsgPauseGroup
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgPauseGroup
+ */
 export interface MsgPauseGroup {
   id: GroupID;
 }
@@ -94,25 +129,55 @@ export interface MsgPauseGroupProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.MsgPauseGroup";
   value: Uint8Array;
 }
-/** MsgPauseGroup defines SDK message to close a single Group within a Deployment. */
+/**
+ * MsgPauseGroup defines SDK message to close a single Group within a Deployment.
+ * @name MsgPauseGroupAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgPauseGroup
+ */
 export interface MsgPauseGroupAmino {
   id: GroupIDAmino;
 }
-/** MsgPauseGroup defines SDK message to close a single Group within a Deployment. */
+/**
+ * MsgPauseGroup defines SDK message to close a single Group within a Deployment.
+ * @name MsgPauseGroupSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgPauseGroup
+ */
 export interface MsgPauseGroupSDKType {
   id: GroupIDSDKType;
 }
-/** MsgPauseGroupResponse defines the Msg/PauseGroup response type. */
+/**
+ * MsgPauseGroupResponse defines the Msg/PauseGroup response type.
+ * @name MsgPauseGroupResponse
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgPauseGroupResponse
+ */
 export interface MsgPauseGroupResponse {}
 export interface MsgPauseGroupResponseProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.MsgPauseGroupResponse";
   value: Uint8Array;
 }
-/** MsgPauseGroupResponse defines the Msg/PauseGroup response type. */
+/**
+ * MsgPauseGroupResponse defines the Msg/PauseGroup response type.
+ * @name MsgPauseGroupResponseAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgPauseGroupResponse
+ */
 export interface MsgPauseGroupResponseAmino {}
-/** MsgPauseGroupResponse defines the Msg/PauseGroup response type. */
+/**
+ * MsgPauseGroupResponse defines the Msg/PauseGroup response type.
+ * @name MsgPauseGroupResponseSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgPauseGroupResponse
+ */
 export interface MsgPauseGroupResponseSDKType {}
-/** MsgStartGroup defines SDK message to close a single Group within a Deployment. */
+/**
+ * MsgStartGroup defines SDK message to close a single Group within a Deployment.
+ * @name MsgStartGroup
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgStartGroup
+ */
 export interface MsgStartGroup {
   id: GroupID;
 }
@@ -120,25 +185,55 @@ export interface MsgStartGroupProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.MsgStartGroup";
   value: Uint8Array;
 }
-/** MsgStartGroup defines SDK message to close a single Group within a Deployment. */
+/**
+ * MsgStartGroup defines SDK message to close a single Group within a Deployment.
+ * @name MsgStartGroupAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgStartGroup
+ */
 export interface MsgStartGroupAmino {
   id: GroupIDAmino;
 }
-/** MsgStartGroup defines SDK message to close a single Group within a Deployment. */
+/**
+ * MsgStartGroup defines SDK message to close a single Group within a Deployment.
+ * @name MsgStartGroupSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgStartGroup
+ */
 export interface MsgStartGroupSDKType {
   id: GroupIDSDKType;
 }
-/** MsgStartGroupResponse defines the Msg/StartGroup response type. */
+/**
+ * MsgStartGroupResponse defines the Msg/StartGroup response type.
+ * @name MsgStartGroupResponse
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgStartGroupResponse
+ */
 export interface MsgStartGroupResponse {}
 export interface MsgStartGroupResponseProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.MsgStartGroupResponse";
   value: Uint8Array;
 }
-/** MsgStartGroupResponse defines the Msg/StartGroup response type. */
+/**
+ * MsgStartGroupResponse defines the Msg/StartGroup response type.
+ * @name MsgStartGroupResponseAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgStartGroupResponse
+ */
 export interface MsgStartGroupResponseAmino {}
-/** MsgStartGroupResponse defines the Msg/StartGroup response type. */
+/**
+ * MsgStartGroupResponse defines the Msg/StartGroup response type.
+ * @name MsgStartGroupResponseSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgStartGroupResponse
+ */
 export interface MsgStartGroupResponseSDKType {}
-/** GroupID stores owner, deployment sequence number and group sequence number */
+/**
+ * GroupID stores owner, deployment sequence number and group sequence number
+ * @name GroupID
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GroupID
+ */
 export interface GroupID {
   owner: string;
   dseq: bigint;
@@ -148,19 +243,34 @@ export interface GroupIDProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.GroupID";
   value: Uint8Array;
 }
-/** GroupID stores owner, deployment sequence number and group sequence number */
+/**
+ * GroupID stores owner, deployment sequence number and group sequence number
+ * @name GroupIDAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GroupID
+ */
 export interface GroupIDAmino {
   owner: string;
   dseq: string;
   gseq: number;
 }
-/** GroupID stores owner, deployment sequence number and group sequence number */
+/**
+ * GroupID stores owner, deployment sequence number and group sequence number
+ * @name GroupIDSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GroupID
+ */
 export interface GroupIDSDKType {
   owner: string;
   dseq: bigint;
   gseq: number;
 }
-/** GroupSpec stores group specifications */
+/**
+ * GroupSpec stores group specifications
+ * @name GroupSpec
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GroupSpec
+ */
 export interface GroupSpec {
   name: string;
   requirements: PlacementRequirements;
@@ -170,19 +280,34 @@ export interface GroupSpecProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.GroupSpec";
   value: Uint8Array;
 }
-/** GroupSpec stores group specifications */
+/**
+ * GroupSpec stores group specifications
+ * @name GroupSpecAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GroupSpec
+ */
 export interface GroupSpecAmino {
   name: string;
   requirements: PlacementRequirementsAmino;
   resources: ResourceAmino[];
 }
-/** GroupSpec stores group specifications */
+/**
+ * GroupSpec stores group specifications
+ * @name GroupSpecSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GroupSpec
+ */
 export interface GroupSpecSDKType {
   name: string;
   requirements: PlacementRequirementsSDKType;
   resources: ResourceSDKType[];
 }
-/** Group stores group id, state and specifications of group */
+/**
+ * Group stores group id, state and specifications of group
+ * @name Group
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Group
+ */
 export interface Group {
   groupId: GroupID;
   state: Group_State;
@@ -193,21 +318,36 @@ export interface GroupProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.Group";
   value: Uint8Array;
 }
-/** Group stores group id, state and specifications of group */
+/**
+ * Group stores group id, state and specifications of group
+ * @name GroupAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Group
+ */
 export interface GroupAmino {
   group_id: GroupIDAmino;
   state: Group_State;
   group_spec: GroupSpecAmino;
   created_at?: string;
 }
-/** Group stores group id, state and specifications of group */
+/**
+ * Group stores group id, state and specifications of group
+ * @name GroupSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Group
+ */
 export interface GroupSDKType {
   group_id: GroupIDSDKType;
   state: Group_State;
   group_spec: GroupSpecSDKType;
   created_at: bigint;
 }
-/** Resource stores unit, total count and price of resource */
+/**
+ * Resource stores unit, total count and price of resource
+ * @name Resource
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Resource
+ */
 export interface Resource {
   resources: ResourceUnits;
   count: number;
@@ -217,13 +357,23 @@ export interface ResourceProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.Resource";
   value: Uint8Array;
 }
-/** Resource stores unit, total count and price of resource */
+/**
+ * Resource stores unit, total count and price of resource
+ * @name ResourceAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Resource
+ */
 export interface ResourceAmino {
   resources: ResourceUnitsAmino;
   count: number;
   price: CoinAmino;
 }
-/** Resource stores unit, total count and price of resource */
+/**
+ * Resource stores unit, total count and price of resource
+ * @name ResourceSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Resource
+ */
 export interface ResourceSDKType {
   resources: ResourceUnitsSDKType;
   count: number;
@@ -234,6 +384,12 @@ function createBaseMsgCloseGroup(): MsgCloseGroup {
     id: GroupID.fromPartial({})
   };
 }
+/**
+ * MsgCloseGroup defines SDK message to close a single Group within a Deployment.
+ * @name MsgCloseGroup
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgCloseGroup
+ */
 export const MsgCloseGroup = {
   typeUrl: "/akash.deployment.v1beta1.MsgCloseGroup",
   encode(message: MsgCloseGroup, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -309,6 +465,12 @@ export const MsgCloseGroup = {
 function createBaseMsgCloseGroupResponse(): MsgCloseGroupResponse {
   return {};
 }
+/**
+ * MsgCloseGroupResponse defines the Msg/CloseGroup response type.
+ * @name MsgCloseGroupResponse
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgCloseGroupResponse
+ */
 export const MsgCloseGroupResponse = {
   typeUrl: "/akash.deployment.v1beta1.MsgCloseGroupResponse",
   encode(_: MsgCloseGroupResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -369,6 +531,12 @@ function createBaseMsgPauseGroup(): MsgPauseGroup {
     id: GroupID.fromPartial({})
   };
 }
+/**
+ * MsgPauseGroup defines SDK message to close a single Group within a Deployment.
+ * @name MsgPauseGroup
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgPauseGroup
+ */
 export const MsgPauseGroup = {
   typeUrl: "/akash.deployment.v1beta1.MsgPauseGroup",
   encode(message: MsgPauseGroup, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -444,6 +612,12 @@ export const MsgPauseGroup = {
 function createBaseMsgPauseGroupResponse(): MsgPauseGroupResponse {
   return {};
 }
+/**
+ * MsgPauseGroupResponse defines the Msg/PauseGroup response type.
+ * @name MsgPauseGroupResponse
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgPauseGroupResponse
+ */
 export const MsgPauseGroupResponse = {
   typeUrl: "/akash.deployment.v1beta1.MsgPauseGroupResponse",
   encode(_: MsgPauseGroupResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -504,6 +678,12 @@ function createBaseMsgStartGroup(): MsgStartGroup {
     id: GroupID.fromPartial({})
   };
 }
+/**
+ * MsgStartGroup defines SDK message to close a single Group within a Deployment.
+ * @name MsgStartGroup
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgStartGroup
+ */
 export const MsgStartGroup = {
   typeUrl: "/akash.deployment.v1beta1.MsgStartGroup",
   encode(message: MsgStartGroup, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -579,6 +759,12 @@ export const MsgStartGroup = {
 function createBaseMsgStartGroupResponse(): MsgStartGroupResponse {
   return {};
 }
+/**
+ * MsgStartGroupResponse defines the Msg/StartGroup response type.
+ * @name MsgStartGroupResponse
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.MsgStartGroupResponse
+ */
 export const MsgStartGroupResponse = {
   typeUrl: "/akash.deployment.v1beta1.MsgStartGroupResponse",
   encode(_: MsgStartGroupResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -641,6 +827,12 @@ function createBaseGroupID(): GroupID {
     gseq: 0
   };
 }
+/**
+ * GroupID stores owner, deployment sequence number and group sequence number
+ * @name GroupID
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GroupID
+ */
 export const GroupID = {
   typeUrl: "/akash.deployment.v1beta1.GroupID",
   encode(message: GroupID, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -748,6 +940,12 @@ function createBaseGroupSpec(): GroupSpec {
     resources: []
   };
 }
+/**
+ * GroupSpec stores group specifications
+ * @name GroupSpec
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GroupSpec
+ */
 export const GroupSpec = {
   typeUrl: "/akash.deployment.v1beta1.GroupSpec",
   encode(message: GroupSpec, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -862,6 +1060,12 @@ function createBaseGroup(): Group {
     createdAt: BigInt(0)
   };
 }
+/**
+ * Group stores group id, state and specifications of group
+ * @name Group
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Group
+ */
 export const Group = {
   typeUrl: "/akash.deployment.v1beta1.Group",
   encode(message: Group, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -987,6 +1191,12 @@ function createBaseResource(): Resource {
     price: Coin.fromPartial({})
   };
 }
+/**
+ * Resource stores unit, total count and price of resource
+ * @name Resource
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Resource
+ */
 export const Resource = {
   typeUrl: "/akash.deployment.v1beta1.Resource",
   encode(message: Resource, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

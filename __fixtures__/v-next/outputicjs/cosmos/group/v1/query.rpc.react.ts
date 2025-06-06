@@ -5,7 +5,7 @@ import { getGroupInfo, getGroupPolicyInfo, getGroupMembers, getGroupsByAdmin, ge
  * GroupInfo queries group info based on group id.
  * @name useGetGroupInfo
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.GroupInfo
+ * @see proto service: cosmos.group.v1.GroupInfo
  */
 export const useGetGroupInfo = buildUseQuery<QueryGroupInfoRequest, QueryGroupInfoResponse>({
   builderQueryFn: getGroupInfo,
@@ -15,7 +15,7 @@ export const useGetGroupInfo = buildUseQuery<QueryGroupInfoRequest, QueryGroupIn
  * GroupPolicyInfo queries group policy info based on account address of group policy.
  * @name useGetGroupPolicyInfo
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.GroupPolicyInfo
+ * @see proto service: cosmos.group.v1.GroupPolicyInfo
  */
 export const useGetGroupPolicyInfo = buildUseQuery<QueryGroupPolicyInfoRequest, QueryGroupPolicyInfoResponse>({
   builderQueryFn: getGroupPolicyInfo,
@@ -25,7 +25,7 @@ export const useGetGroupPolicyInfo = buildUseQuery<QueryGroupPolicyInfoRequest, 
  * GroupMembers queries members of a group
  * @name useGetGroupMembers
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.GroupMembers
+ * @see proto service: cosmos.group.v1.GroupMembers
  */
 export const useGetGroupMembers = buildUseQuery<QueryGroupMembersRequest, QueryGroupMembersResponse>({
   builderQueryFn: getGroupMembers,
@@ -35,7 +35,7 @@ export const useGetGroupMembers = buildUseQuery<QueryGroupMembersRequest, QueryG
  * GroupsByAdmin queries groups by admin address.
  * @name useGetGroupsByAdmin
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.GroupsByAdmin
+ * @see proto service: cosmos.group.v1.GroupsByAdmin
  */
 export const useGetGroupsByAdmin = buildUseQuery<QueryGroupsByAdminRequest, QueryGroupsByAdminResponse>({
   builderQueryFn: getGroupsByAdmin,
@@ -45,7 +45,7 @@ export const useGetGroupsByAdmin = buildUseQuery<QueryGroupsByAdminRequest, Quer
  * GroupPoliciesByGroup queries group policies by group id.
  * @name useGetGroupPoliciesByGroup
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.GroupPoliciesByGroup
+ * @see proto service: cosmos.group.v1.GroupPoliciesByGroup
  */
 export const useGetGroupPoliciesByGroup = buildUseQuery<QueryGroupPoliciesByGroupRequest, QueryGroupPoliciesByGroupResponse>({
   builderQueryFn: getGroupPoliciesByGroup,
@@ -55,7 +55,7 @@ export const useGetGroupPoliciesByGroup = buildUseQuery<QueryGroupPoliciesByGrou
  * GroupsByAdmin queries group policies by admin address.
  * @name useGetGroupPoliciesByAdmin
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.GroupPoliciesByAdmin
+ * @see proto service: cosmos.group.v1.GroupPoliciesByAdmin
  */
 export const useGetGroupPoliciesByAdmin = buildUseQuery<QueryGroupPoliciesByAdminRequest, QueryGroupPoliciesByAdminResponse>({
   builderQueryFn: getGroupPoliciesByAdmin,
@@ -65,7 +65,7 @@ export const useGetGroupPoliciesByAdmin = buildUseQuery<QueryGroupPoliciesByAdmi
  * Proposal queries a proposal based on proposal id.
  * @name useGetProposal
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.Proposal
+ * @see proto service: cosmos.group.v1.Proposal
  */
 export const useGetProposal = buildUseQuery<QueryProposalRequest, QueryProposalResponse>({
   builderQueryFn: getProposal,
@@ -75,7 +75,7 @@ export const useGetProposal = buildUseQuery<QueryProposalRequest, QueryProposalR
  * ProposalsByGroupPolicy queries proposals based on account address of group policy.
  * @name useGetProposalsByGroupPolicy
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.ProposalsByGroupPolicy
+ * @see proto service: cosmos.group.v1.ProposalsByGroupPolicy
  */
 export const useGetProposalsByGroupPolicy = buildUseQuery<QueryProposalsByGroupPolicyRequest, QueryProposalsByGroupPolicyResponse>({
   builderQueryFn: getProposalsByGroupPolicy,
@@ -85,7 +85,7 @@ export const useGetProposalsByGroupPolicy = buildUseQuery<QueryProposalsByGroupP
  * VoteByProposalVoter queries a vote by proposal id and voter.
  * @name useGetVoteByProposalVoter
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.VoteByProposalVoter
+ * @see proto service: cosmos.group.v1.VoteByProposalVoter
  */
 export const useGetVoteByProposalVoter = buildUseQuery<QueryVoteByProposalVoterRequest, QueryVoteByProposalVoterResponse>({
   builderQueryFn: getVoteByProposalVoter,
@@ -95,7 +95,7 @@ export const useGetVoteByProposalVoter = buildUseQuery<QueryVoteByProposalVoterR
  * VotesByProposal queries a vote by proposal.
  * @name useGetVotesByProposal
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.VotesByProposal
+ * @see proto service: cosmos.group.v1.VotesByProposal
  */
 export const useGetVotesByProposal = buildUseQuery<QueryVotesByProposalRequest, QueryVotesByProposalResponse>({
   builderQueryFn: getVotesByProposal,
@@ -105,7 +105,7 @@ export const useGetVotesByProposal = buildUseQuery<QueryVotesByProposalRequest, 
  * VotesByVoter queries a vote by voter.
  * @name useGetVotesByVoter
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.VotesByVoter
+ * @see proto service: cosmos.group.v1.VotesByVoter
  */
 export const useGetVotesByVoter = buildUseQuery<QueryVotesByVoterRequest, QueryVotesByVoterResponse>({
   builderQueryFn: getVotesByVoter,
@@ -115,7 +115,7 @@ export const useGetVotesByVoter = buildUseQuery<QueryVotesByVoterRequest, QueryV
  * GroupsByMember queries groups by member address.
  * @name useGetGroupsByMember
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.GroupsByMember
+ * @see proto service: cosmos.group.v1.GroupsByMember
  */
 export const useGetGroupsByMember = buildUseQuery<QueryGroupsByMemberRequest, QueryGroupsByMemberResponse>({
   builderQueryFn: getGroupsByMember,
@@ -125,7 +125,7 @@ export const useGetGroupsByMember = buildUseQuery<QueryGroupsByMemberRequest, Qu
  * TallyResult queries the tally of a proposal votes.
  * @name useGetTallyResult
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.TallyResult
+ * @see proto service: cosmos.group.v1.TallyResult
  */
 export const useGetTallyResult = buildUseQuery<QueryTallyResultRequest, QueryTallyResultResponse>({
   builderQueryFn: getTallyResult,

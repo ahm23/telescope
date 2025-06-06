@@ -4,7 +4,12 @@ import { GlobalDecoderRegistry } from "../../../registry";
 import { isSet, Exact } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "akash.deployment.v1beta1";
-/** Params defines the parameters for the x/deployment package */
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name Params
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Params
+ */
 export interface Params {
   deploymentMinDeposit: Coin | undefined;
 }
@@ -12,7 +17,12 @@ export interface ParamsProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params defines the parameters for the x/deployment package */
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name ParamsAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Params
+ */
 export interface ParamsAmino {
   deployment_min_deposit: CoinAmino | undefined;
 }
@@ -20,7 +30,12 @@ export interface ParamsAminoMsg {
   type: "akash/deployment/params";
   value: ParamsAmino;
 }
-/** Params defines the parameters for the x/deployment package */
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name ParamsSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Params
+ */
 export interface ParamsSDKType {
   deployment_min_deposit: CoinSDKType | undefined;
 }
@@ -29,6 +44,12 @@ function createBaseParams(): Params {
     deploymentMinDeposit: Coin.fromPartial({})
   };
 }
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name Params
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/akash.deployment.v1beta1.Params",
   aminoType: "akash/deployment/params",

@@ -4,33 +4,60 @@ import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, DeepPartial, bytesFromBase64, base64FromBytes } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
 export const protobufPackage = "google.api.expr.v1beta1";
-/** An expression together with source information as returned by the parser. */
+/**
+ * An expression together with source information as returned by the parser.
+ * @name ParsedExpr
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ParsedExpr
+ */
 export interface ParsedExpr {
-  /** The parsed expression. */
+  /**
+   * The parsed expression.
+  */
   expr?: Expr;
-  /** The source info derived from input that generated the parsed `expr`. */
+  /**
+   * The source info derived from input that generated the parsed `expr`.
+  */
   sourceInfo?: SourceInfo;
-  /** The syntax version of the source, e.g. `cel1`. */
+  /**
+   * The syntax version of the source, e.g. `cel1`.
+  */
   syntaxVersion: string;
 }
 export interface ParsedExprProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.ParsedExpr";
   value: Uint8Array;
 }
-/** An expression together with source information as returned by the parser. */
+/**
+ * An expression together with source information as returned by the parser.
+ * @name ParsedExprAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ParsedExpr
+ */
 export interface ParsedExprAmino {
-  /** The parsed expression. */
+  /**
+   * The parsed expression.
+  */
   expr?: ExprAmino;
-  /** The source info derived from input that generated the parsed `expr`. */
+  /**
+   * The source info derived from input that generated the parsed `expr`.
+  */
   source_info?: SourceInfoAmino;
-  /** The syntax version of the source, e.g. `cel1`. */
+  /**
+   * The syntax version of the source, e.g. `cel1`.
+  */
   syntax_version?: string;
 }
 export interface ParsedExprAminoMsg {
   type: "/google.api.expr.v1beta1.ParsedExpr";
   value: ParsedExprAmino;
 }
-/** An expression together with source information as returned by the parser. */
+/**
+ * An expression together with source information as returned by the parser.
+ * @name ParsedExprSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ParsedExpr
+ */
 export interface ParsedExprSDKType {
   expr?: ExprSDKType;
   source_info?: SourceInfoSDKType;
@@ -52,6 +79,9 @@ export interface ParsedExprSDKType {
  * For example, the expression `google.api.name.startsWith('expr')` references
  * the declaration `google.api.name` within a [Expr.Select][google.api.expr.v1beta1.Expr.Select] expression, and
  * the function declaration `startsWith`.
+ * @name Expr
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Expr
  */
 export interface Expr {
   /**
@@ -60,19 +90,33 @@ export interface Expr {
    * attributes to a node in the parse tree.
    */
   id: number;
-  /** A literal expression. */
+  /**
+   * A literal expression.
+  */
   literalExpr?: Literal;
-  /** An identifier expression. */
+  /**
+   * An identifier expression.
+  */
   identExpr?: Expr_Ident;
-  /** A field selection expression, e.g. `request.auth`. */
+  /**
+   * A field selection expression, e.g. `request.auth`.
+  */
   selectExpr?: Expr_Select;
-  /** A call expression, including calls to predefined functions and operators. */
+  /**
+   * A call expression, including calls to predefined functions and operators.
+  */
   callExpr?: Expr_Call;
-  /** A list creation expression. */
+  /**
+   * A list creation expression.
+  */
   listExpr?: Expr_CreateList;
-  /** A map or object creation expression. */
+  /**
+   * A map or object creation expression.
+  */
   structExpr?: Expr_CreateStruct;
-  /** A comprehension expression. */
+  /**
+   * A comprehension expression.
+  */
   comprehensionExpr?: Expr_Comprehension;
 }
 export interface ExprProtoMsg {
@@ -95,6 +139,9 @@ export interface ExprProtoMsg {
  * For example, the expression `google.api.name.startsWith('expr')` references
  * the declaration `google.api.name` within a [Expr.Select][google.api.expr.v1beta1.Expr.Select] expression, and
  * the function declaration `startsWith`.
+ * @name ExprAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Expr
  */
 export interface ExprAmino {
   /**
@@ -103,19 +150,33 @@ export interface ExprAmino {
    * attributes to a node in the parse tree.
    */
   id?: number;
-  /** A literal expression. */
+  /**
+   * A literal expression.
+  */
   literal_expr?: LiteralAmino;
-  /** An identifier expression. */
+  /**
+   * An identifier expression.
+  */
   ident_expr?: Expr_IdentAmino;
-  /** A field selection expression, e.g. `request.auth`. */
+  /**
+   * A field selection expression, e.g. `request.auth`.
+  */
   select_expr?: Expr_SelectAmino;
-  /** A call expression, including calls to predefined functions and operators. */
+  /**
+   * A call expression, including calls to predefined functions and operators.
+  */
   call_expr?: Expr_CallAmino;
-  /** A list creation expression. */
+  /**
+   * A list creation expression.
+  */
   list_expr?: Expr_CreateListAmino;
-  /** A map or object creation expression. */
+  /**
+   * A map or object creation expression.
+  */
   struct_expr?: Expr_CreateStructAmino;
-  /** A comprehension expression. */
+  /**
+   * A comprehension expression.
+  */
   comprehension_expr?: Expr_ComprehensionAmino;
 }
 export interface ExprAminoMsg {
@@ -138,6 +199,9 @@ export interface ExprAminoMsg {
  * For example, the expression `google.api.name.startsWith('expr')` references
  * the declaration `google.api.name` within a [Expr.Select][google.api.expr.v1beta1.Expr.Select] expression, and
  * the function declaration `startsWith`.
+ * @name ExprSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Expr
  */
 export interface ExprSDKType {
   id: number;
@@ -149,7 +213,12 @@ export interface ExprSDKType {
   struct_expr?: Expr_CreateStructSDKType;
   comprehension_expr?: Expr_ComprehensionSDKType;
 }
-/** An identifier expression. e.g. `request`. */
+/**
+ * An identifier expression. e.g. `request`.
+ * @name Expr_Ident
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Ident
+ */
 export interface Expr_Ident {
   /**
    * Required. Holds a single, unqualified identifier, possibly preceded by a
@@ -163,7 +232,12 @@ export interface Expr_IdentProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.Ident";
   value: Uint8Array;
 }
-/** An identifier expression. e.g. `request`. */
+/**
+ * An identifier expression. e.g. `request`.
+ * @name Expr_IdentAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Expr_Ident
+ */
 export interface Expr_IdentAmino {
   /**
    * Required. Holds a single, unqualified identifier, possibly preceded by a
@@ -177,11 +251,21 @@ export interface Expr_IdentAminoMsg {
   type: "/google.api.expr.v1beta1.Ident";
   value: Expr_IdentAmino;
 }
-/** An identifier expression. e.g. `request`. */
+/**
+ * An identifier expression. e.g. `request`.
+ * @name Expr_IdentSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Ident
+ */
 export interface Expr_IdentSDKType {
   name: string;
 }
-/** A field selection expression. e.g. `request.auth`. */
+/**
+ * A field selection expression. e.g. `request.auth`.
+ * @name Expr_Select
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Select
+ */
 export interface Expr_Select {
   /**
    * Required. The target of the selection expression.
@@ -208,7 +292,12 @@ export interface Expr_SelectProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.Select";
   value: Uint8Array;
 }
-/** A field selection expression. e.g. `request.auth`. */
+/**
+ * A field selection expression. e.g. `request.auth`.
+ * @name Expr_SelectAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Expr_Select
+ */
 export interface Expr_SelectAmino {
   /**
    * Required. The target of the selection expression.
@@ -235,7 +324,12 @@ export interface Expr_SelectAminoMsg {
   type: "/google.api.expr.v1beta1.Select";
   value: Expr_SelectAmino;
 }
-/** A field selection expression. e.g. `request.auth`. */
+/**
+ * A field selection expression. e.g. `request.auth`.
+ * @name Expr_SelectSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Select
+ */
 export interface Expr_SelectSDKType {
   operand?: ExprSDKType;
   field: string;
@@ -245,6 +339,9 @@ export interface Expr_SelectSDKType {
  * A call expression, including calls to predefined functions and operators.
  * 
  * For example, `value == 10`, `size(map_value)`.
+ * @name Expr_Call
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Call
  */
 export interface Expr_Call {
   /**
@@ -252,9 +349,13 @@ export interface Expr_Call {
    * `x.f()`.
    */
   target?: Expr;
-  /** Required. The name of the function or method being called. */
+  /**
+   * Required. The name of the function or method being called.
+  */
   function: string;
-  /** The arguments. */
+  /**
+   * The arguments.
+  */
   args: Expr[];
 }
 export interface Expr_CallProtoMsg {
@@ -265,6 +366,9 @@ export interface Expr_CallProtoMsg {
  * A call expression, including calls to predefined functions and operators.
  * 
  * For example, `value == 10`, `size(map_value)`.
+ * @name Expr_CallAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Expr_Call
  */
 export interface Expr_CallAmino {
   /**
@@ -272,9 +376,13 @@ export interface Expr_CallAmino {
    * `x.f()`.
    */
   target?: ExprAmino;
-  /** Required. The name of the function or method being called. */
+  /**
+   * Required. The name of the function or method being called.
+  */
   function?: string;
-  /** The arguments. */
+  /**
+   * The arguments.
+  */
   args?: ExprAmino[];
 }
 export interface Expr_CallAminoMsg {
@@ -285,6 +393,9 @@ export interface Expr_CallAminoMsg {
  * A call expression, including calls to predefined functions and operators.
  * 
  * For example, `value == 10`, `size(map_value)`.
+ * @name Expr_CallSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Call
  */
 export interface Expr_CallSDKType {
   target?: ExprSDKType;
@@ -296,9 +407,14 @@ export interface Expr_CallSDKType {
  * 
  * Lists may either be homogenous, e.g. `[1, 2, 3]`, or heterogenous, e.g.
  * `dyn([1, 'hello', 2.0])`
+ * @name Expr_CreateList
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.CreateList
  */
 export interface Expr_CreateList {
-  /** The elements part of the list. */
+  /**
+   * The elements part of the list.
+  */
   elements: Expr[];
 }
 export interface Expr_CreateListProtoMsg {
@@ -310,9 +426,14 @@ export interface Expr_CreateListProtoMsg {
  * 
  * Lists may either be homogenous, e.g. `[1, 2, 3]`, or heterogenous, e.g.
  * `dyn([1, 'hello', 2.0])`
+ * @name Expr_CreateListAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Expr_CreateList
  */
 export interface Expr_CreateListAmino {
-  /** The elements part of the list. */
+  /**
+   * The elements part of the list.
+  */
   elements?: ExprAmino[];
 }
 export interface Expr_CreateListAminoMsg {
@@ -324,6 +445,9 @@ export interface Expr_CreateListAminoMsg {
  * 
  * Lists may either be homogenous, e.g. `[1, 2, 3]`, or heterogenous, e.g.
  * `dyn([1, 'hello', 2.0])`
+ * @name Expr_CreateListSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.CreateList
  */
 export interface Expr_CreateListSDKType {
   elements: ExprSDKType[];
@@ -334,6 +458,9 @@ export interface Expr_CreateListSDKType {
  * Maps are constructed as `{'key_name': 'value'}`. Message construction is
  * similar, but prefixed with a type name and composed of field ids:
  * `types.MyType{field_id: 'value'}`.
+ * @name Expr_CreateStruct
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.CreateStruct
  */
 export interface Expr_CreateStruct {
   /**
@@ -341,7 +468,9 @@ export interface Expr_CreateStruct {
    * literals.
    */
   type: string;
-  /** The entries in the creation expression. */
+  /**
+   * The entries in the creation expression.
+  */
   entries: Expr_CreateStruct_Entry[];
 }
 export interface Expr_CreateStructProtoMsg {
@@ -354,6 +483,9 @@ export interface Expr_CreateStructProtoMsg {
  * Maps are constructed as `{'key_name': 'value'}`. Message construction is
  * similar, but prefixed with a type name and composed of field ids:
  * `types.MyType{field_id: 'value'}`.
+ * @name Expr_CreateStructAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Expr_CreateStruct
  */
 export interface Expr_CreateStructAmino {
   /**
@@ -361,7 +493,9 @@ export interface Expr_CreateStructAmino {
    * literals.
    */
   type?: string;
-  /** The entries in the creation expression. */
+  /**
+   * The entries in the creation expression.
+  */
   entries?: Expr_CreateStruct_EntryAmino[];
 }
 export interface Expr_CreateStructAminoMsg {
@@ -374,12 +508,20 @@ export interface Expr_CreateStructAminoMsg {
  * Maps are constructed as `{'key_name': 'value'}`. Message construction is
  * similar, but prefixed with a type name and composed of field ids:
  * `types.MyType{field_id: 'value'}`.
+ * @name Expr_CreateStructSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.CreateStruct
  */
 export interface Expr_CreateStructSDKType {
   type: string;
   entries: Expr_CreateStruct_EntrySDKType[];
 }
-/** Represents an entry. */
+/**
+ * Represents an entry.
+ * @name Expr_CreateStruct_Entry
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Entry
+ */
 export interface Expr_CreateStruct_Entry {
   /**
    * Required. An id assigned to this node by the parser which is unique
@@ -387,18 +529,29 @@ export interface Expr_CreateStruct_Entry {
    * information and other attributes to the node.
    */
   id: number;
-  /** The field key for a message creator statement. */
+  /**
+   * The field key for a message creator statement.
+  */
   fieldKey?: string;
-  /** The key expression for a map creation statement. */
+  /**
+   * The key expression for a map creation statement.
+  */
   mapKey?: Expr;
-  /** Required. The value assigned to the key. */
+  /**
+   * Required. The value assigned to the key.
+  */
   value?: Expr;
 }
 export interface Expr_CreateStruct_EntryProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.Entry";
   value: Uint8Array;
 }
-/** Represents an entry. */
+/**
+ * Represents an entry.
+ * @name Expr_CreateStruct_EntryAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Expr_CreateStruct_Entry
+ */
 export interface Expr_CreateStruct_EntryAmino {
   /**
    * Required. An id assigned to this node by the parser which is unique
@@ -406,18 +559,29 @@ export interface Expr_CreateStruct_EntryAmino {
    * information and other attributes to the node.
    */
   id?: number;
-  /** The field key for a message creator statement. */
+  /**
+   * The field key for a message creator statement.
+  */
   field_key?: string;
-  /** The key expression for a map creation statement. */
+  /**
+   * The key expression for a map creation statement.
+  */
   map_key?: ExprAmino;
-  /** Required. The value assigned to the key. */
+  /**
+   * Required. The value assigned to the key.
+  */
   value?: ExprAmino;
 }
 export interface Expr_CreateStruct_EntryAminoMsg {
   type: "/google.api.expr.v1beta1.Entry";
   value: Expr_CreateStruct_EntryAmino;
 }
-/** Represents an entry. */
+/**
+ * Represents an entry.
+ * @name Expr_CreateStruct_EntrySDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Entry
+ */
 export interface Expr_CreateStruct_EntrySDKType {
   id: number;
   field_key?: string;
@@ -451,15 +615,26 @@ export interface Expr_CreateStruct_EntrySDKType {
  * messages `has(m.x)` is defined as 'defined, but not set`. For proto3, the
  * macro tests whether the property is set to its default. For map and struct
  * types, the macro tests whether the property `x` is defined on `m`.
+ * @name Expr_Comprehension
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Comprehension
  */
 export interface Expr_Comprehension {
-  /** The name of the iteration variable. */
+  /**
+   * The name of the iteration variable.
+  */
   iterVar: string;
-  /** The range over which var iterates. */
+  /**
+   * The range over which var iterates.
+  */
   iterRange?: Expr;
-  /** The name of the variable used for accumulation of the result. */
+  /**
+   * The name of the variable used for accumulation of the result.
+  */
   accuVar: string;
-  /** The initial value of the accumulator. */
+  /**
+   * The initial value of the accumulator.
+  */
   accuInit?: Expr;
   /**
    * An expression which can contain iter_var and accu_var.
@@ -512,15 +687,26 @@ export interface Expr_ComprehensionProtoMsg {
  * messages `has(m.x)` is defined as 'defined, but not set`. For proto3, the
  * macro tests whether the property is set to its default. For map and struct
  * types, the macro tests whether the property `x` is defined on `m`.
+ * @name Expr_ComprehensionAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Expr_Comprehension
  */
 export interface Expr_ComprehensionAmino {
-  /** The name of the iteration variable. */
+  /**
+   * The name of the iteration variable.
+  */
   iter_var?: string;
-  /** The range over which var iterates. */
+  /**
+   * The range over which var iterates.
+  */
   iter_range?: ExprAmino;
-  /** The name of the variable used for accumulation of the result. */
+  /**
+   * The name of the variable used for accumulation of the result.
+  */
   accu_var?: string;
-  /** The initial value of the accumulator. */
+  /**
+   * The initial value of the accumulator.
+  */
   accu_init?: ExprAmino;
   /**
    * An expression which can contain iter_var and accu_var.
@@ -573,6 +759,9 @@ export interface Expr_ComprehensionAminoMsg {
  * messages `has(m.x)` is defined as 'defined, but not set`. For proto3, the
  * macro tests whether the property is set to its default. For map and struct
  * types, the macro tests whether the property `x` is defined on `m`.
+ * @name Expr_ComprehensionSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Comprehension
  */
 export interface Expr_ComprehensionSDKType {
   iter_var: string;
@@ -595,21 +784,38 @@ export interface Expr_ComprehensionSDKType {
  * 
  * Examples of literals include: `"hello"`, `b'bytes'`, `1u`, `4.2`, `-2`,
  * `true`, `null`.
+ * @name Literal
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Literal
  */
 export interface Literal {
-  /** null value. */
+  /**
+   * null value.
+  */
   nullValue?: NullValue;
-  /** boolean value. */
+  /**
+   * boolean value.
+  */
   boolValue?: boolean;
-  /** int64 value. */
+  /**
+   * int64 value.
+  */
   int64Value?: bigint;
-  /** uint64 value. */
+  /**
+   * uint64 value.
+  */
   uint64Value?: bigint;
-  /** double value. */
+  /**
+   * double value.
+  */
   doubleValue?: number;
-  /** string value. */
+  /**
+   * string value.
+  */
   stringValue?: string;
-  /** bytes value. */
+  /**
+   * bytes value.
+  */
   bytesValue?: Uint8Array;
 }
 export interface LiteralProtoMsg {
@@ -628,21 +834,38 @@ export interface LiteralProtoMsg {
  * 
  * Examples of literals include: `"hello"`, `b'bytes'`, `1u`, `4.2`, `-2`,
  * `true`, `null`.
+ * @name LiteralAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Literal
  */
 export interface LiteralAmino {
-  /** null value. */
+  /**
+   * null value.
+  */
   null_value?: NullValue;
-  /** boolean value. */
+  /**
+   * boolean value.
+  */
   bool_value?: boolean;
-  /** int64 value. */
+  /**
+   * int64 value.
+  */
   int64_value?: string;
-  /** uint64 value. */
+  /**
+   * uint64 value.
+  */
   uint64_value?: string;
-  /** double value. */
+  /**
+   * double value.
+  */
   double_value?: number;
-  /** string value. */
+  /**
+   * string value.
+  */
   string_value?: string;
-  /** bytes value. */
+  /**
+   * bytes value.
+  */
   bytes_value?: string;
 }
 export interface LiteralAminoMsg {
@@ -661,6 +884,9 @@ export interface LiteralAminoMsg {
  * 
  * Examples of literals include: `"hello"`, `b'bytes'`, `1u`, `4.2`, `-2`,
  * `true`, `null`.
+ * @name LiteralSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Literal
  */
 export interface LiteralSDKType {
   null_value?: NullValue;
@@ -678,6 +904,12 @@ function createBaseParsedExpr(): ParsedExpr {
     syntaxVersion: ""
   };
 }
+/**
+ * An expression together with source information as returned by the parser.
+ * @name ParsedExpr
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ParsedExpr
+ */
 export const ParsedExpr = {
   typeUrl: "/google.api.expr.v1beta1.ParsedExpr",
   encode(message: ParsedExpr, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -802,6 +1034,26 @@ function createBaseExpr(): Expr {
     comprehensionExpr: undefined
   };
 }
+/**
+ * An abstract representation of a common expression.
+ * 
+ * Expressions are abstractly represented as a collection of identifiers,
+ * select statements, function calls, literals, and comprehensions. All
+ * operators with the exception of the '.' operator are modelled as function
+ * calls. This makes it easy to represent new operators into the existing AST.
+ * 
+ * All references within expressions must resolve to a [Decl][google.api.expr.v1beta1.Decl] provided at
+ * type-check for an expression to be valid. A reference may either be a bare
+ * identifier `name` or a qualified identifier `google.api.name`. References
+ * may either refer to a value or a function declaration.
+ * 
+ * For example, the expression `google.api.name.startsWith('expr')` references
+ * the declaration `google.api.name` within a [Expr.Select][google.api.expr.v1beta1.Expr.Select] expression, and
+ * the function declaration `startsWith`.
+ * @name Expr
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Expr
+ */
 export const Expr = {
   typeUrl: "/google.api.expr.v1beta1.Expr",
   encode(message: Expr, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1004,6 +1256,12 @@ function createBaseExpr_Ident(): Expr_Ident {
     name: ""
   };
 }
+/**
+ * An identifier expression. e.g. `request`.
+ * @name Expr_Ident
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Ident
+ */
 export const Expr_Ident = {
   typeUrl: "/google.api.expr.v1beta1.Ident",
   encode(message: Expr_Ident, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1089,6 +1347,12 @@ function createBaseExpr_Select(): Expr_Select {
     testOnly: false
   };
 }
+/**
+ * A field selection expression. e.g. `request.auth`.
+ * @name Expr_Select
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Select
+ */
 export const Expr_Select = {
   typeUrl: "/google.api.expr.v1beta1.Select",
   encode(message: Expr_Select, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1206,6 +1470,14 @@ function createBaseExpr_Call(): Expr_Call {
     args: []
   };
 }
+/**
+ * A call expression, including calls to predefined functions and operators.
+ * 
+ * For example, `value == 10`, `size(map_value)`.
+ * @name Expr_Call
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Call
+ */
 export const Expr_Call = {
   typeUrl: "/google.api.expr.v1beta1.Call",
   encode(message: Expr_Call, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1331,6 +1603,15 @@ function createBaseExpr_CreateList(): Expr_CreateList {
     elements: []
   };
 }
+/**
+ * A list creation expression.
+ * 
+ * Lists may either be homogenous, e.g. `[1, 2, 3]`, or heterogenous, e.g.
+ * `dyn([1, 'hello', 2.0])`
+ * @name Expr_CreateList
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.CreateList
+ */
 export const Expr_CreateList = {
   typeUrl: "/google.api.expr.v1beta1.CreateList",
   encode(message: Expr_CreateList, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1425,6 +1706,16 @@ function createBaseExpr_CreateStruct(): Expr_CreateStruct {
     entries: []
   };
 }
+/**
+ * A map or message creation expression.
+ * 
+ * Maps are constructed as `{'key_name': 'value'}`. Message construction is
+ * similar, but prefixed with a type name and composed of field ids:
+ * `types.MyType{field_id: 'value'}`.
+ * @name Expr_CreateStruct
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.CreateStruct
+ */
 export const Expr_CreateStruct = {
   typeUrl: "/google.api.expr.v1beta1.CreateStruct",
   encode(message: Expr_CreateStruct, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1536,6 +1827,12 @@ function createBaseExpr_CreateStruct_Entry(): Expr_CreateStruct_Entry {
     value: undefined
   };
 }
+/**
+ * Represents an entry.
+ * @name Expr_CreateStruct_Entry
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Entry
+ */
 export const Expr_CreateStruct_Entry = {
   typeUrl: "/google.api.expr.v1beta1.Entry",
   encode(message: Expr_CreateStruct_Entry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1674,6 +1971,37 @@ function createBaseExpr_Comprehension(): Expr_Comprehension {
     result: undefined
   };
 }
+/**
+ * A comprehension expression applied to a list or map.
+ * 
+ * Comprehensions are not part of the core syntax, but enabled with macros.
+ * A macro matches a specific call signature within a parsed AST and replaces
+ * the call with an alternate AST block. Macro expansion happens at parse
+ * time.
+ * 
+ * The following macros are supported within CEL:
+ * 
+ * Aggregate type macros may be applied to all elements in a list or all keys
+ * in a map:
+ * 
+ * *  `all`, `exists`, `exists_one` -  test a predicate expression against
+ *    the inputs and return `true` if the predicate is satisfied for all,
+ *    any, or only one value `list.all(x, x < 10)`.
+ * *  `filter` - test a predicate expression against the inputs and return
+ *    the subset of elements which satisfy the predicate:
+ *    `payments.filter(p, p > 1000)`.
+ * *  `map` - apply an expression to all elements in the input and return the
+ *    output aggregate type: `[1, 2, 3].map(i, i * i)`.
+ * 
+ * The `has(m.x)` macro tests whether the property `x` is present in struct
+ * `m`. The semantics of this macro depend on the type of `m`. For proto2
+ * messages `has(m.x)` is defined as 'defined, but not set`. For proto3, the
+ * macro tests whether the property is set to its default. For map and struct
+ * types, the macro tests whether the property `x` is defined on `m`.
+ * @name Expr_Comprehension
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Comprehension
+ */
 export const Expr_Comprehension = {
   typeUrl: "/google.api.expr.v1beta1.Comprehension",
   encode(message: Expr_Comprehension, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1863,6 +2191,22 @@ function createBaseLiteral(): Literal {
     bytesValue: undefined
   };
 }
+/**
+ * Represents a primitive literal.
+ * 
+ * This is similar to the primitives supported in the well-known type
+ * `google.protobuf.Value`, but richer so it can represent CEL's full range of
+ * primitives.
+ * 
+ * Lists and structs are not included as constants as these aggregate types may
+ * contain [Expr][google.api.expr.v1beta1.Expr] elements which require evaluation and are thus not constant.
+ * 
+ * Examples of literals include: `"hello"`, `b'bytes'`, `1u`, `4.2`, `-2`,
+ * `true`, `null`.
+ * @name Literal
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Literal
+ */
 export const Literal = {
   typeUrl: "/google.api.expr.v1beta1.Literal",
   encode(message: Literal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

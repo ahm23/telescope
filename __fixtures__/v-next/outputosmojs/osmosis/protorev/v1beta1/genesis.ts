@@ -5,11 +5,20 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.protorev.v1beta1";
-/** GenesisState defines the protorev module's genesis state. */
+/**
+ * GenesisState defines the protorev module's genesis state.
+ * @name GenesisState
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** Parameters for the protorev module. */
+  /**
+   * Parameters for the protorev module.
+  */
   params: Params;
-  /** Token pair arb routes for the protorev module (hot routes). */
+  /**
+   * Token pair arb routes for the protorev module (hot routes).
+  */
   tokenPairArbRoutes: TokenPairArbRoutes[];
   /**
    * The base denominations being used to create cyclic arbitrage routes via the
@@ -21,13 +30,21 @@ export interface GenesisState {
    * of each route.
    */
   poolWeights: PoolWeights;
-  /** The number of days since module genesis. */
+  /**
+   * The number of days since module genesis.
+  */
   daysSinceModuleGenesis: bigint;
-  /** The fees the developer account has accumulated over time. */
+  /**
+   * The fees the developer account has accumulated over time.
+  */
   developerFees: Coin[];
-  /** The latest block height that the module has processed. */
+  /**
+   * The latest block height that the module has processed.
+  */
   latestBlockHeight: bigint;
-  /** The developer account address of the module. */
+  /**
+   * The developer account address of the module.
+  */
   developerAddress: string;
   /**
    * Max pool points per block i.e. the maximum compute time (in ms)
@@ -39,14 +56,21 @@ export interface GenesisState {
    * protorev can use per tx.
    */
   maxPoolPointsPerTx: bigint;
-  /** The number of pool points that have been consumed in the current block. */
+  /**
+   * The number of pool points that have been consumed in the current block.
+  */
   pointCountForBlock: bigint;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the protorev module's genesis state. */
+/**
+ * GenesisState defines the protorev module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   token_pair_arb_routes: TokenPairArbRoutesSDKType[];
@@ -75,6 +99,12 @@ function createBaseGenesisState(): GenesisState {
     pointCountForBlock: BigInt(0)
   };
 }
+/**
+ * GenesisState defines the protorev module's genesis state.
+ * @name GenesisState
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.protorev.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

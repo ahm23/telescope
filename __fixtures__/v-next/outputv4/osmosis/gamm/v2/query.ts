@@ -5,6 +5,9 @@ export const protobufPackage = "osmosis.gamm.v2";
 /**
  * QuerySpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceRequest
+ * @package osmosis.gamm.v2
+ * @see proto type: osmosis.gamm.v2.QuerySpotPriceRequest
  */
 export interface QuerySpotPriceRequest {
   poolId: bigint;
@@ -18,6 +21,9 @@ export interface QuerySpotPriceRequestProtoMsg {
 /**
  * QuerySpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceRequestSDKType
+ * @package osmosis.gamm.v2
+ * @see proto type: osmosis.gamm.v2.QuerySpotPriceRequest
  */
 export interface QuerySpotPriceRequestSDKType {
   pool_id: bigint;
@@ -27,9 +33,14 @@ export interface QuerySpotPriceRequestSDKType {
 /**
  * QuerySpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceResponse
+ * @package osmosis.gamm.v2
+ * @see proto type: osmosis.gamm.v2.QuerySpotPriceResponse
  */
 export interface QuerySpotPriceResponse {
-  /** String of the Dec. Ex) 10.203uatom */
+  /**
+   * String of the Dec. Ex) 10.203uatom
+  */
   spotPrice: string;
 }
 export interface QuerySpotPriceResponseProtoMsg {
@@ -39,6 +50,9 @@ export interface QuerySpotPriceResponseProtoMsg {
 /**
  * QuerySpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name QuerySpotPriceResponseSDKType
+ * @package osmosis.gamm.v2
+ * @see proto type: osmosis.gamm.v2.QuerySpotPriceResponse
  */
 export interface QuerySpotPriceResponseSDKType {
   spot_price: string;
@@ -50,6 +64,13 @@ function createBaseQuerySpotPriceRequest(): QuerySpotPriceRequest {
     quoteAssetDenom: ""
   };
 }
+/**
+ * QuerySpotPriceRequest defines the gRPC request structure for a SpotPrice
+ * query.
+ * @name QuerySpotPriceRequest
+ * @package osmosis.gamm.v2
+ * @see proto type: osmosis.gamm.v2.QuerySpotPriceRequest
+ */
 export const QuerySpotPriceRequest = {
   typeUrl: "/osmosis.gamm.v2.QuerySpotPriceRequest",
   encode(message: QuerySpotPriceRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -178,6 +199,13 @@ function createBaseQuerySpotPriceResponse(): QuerySpotPriceResponse {
     spotPrice: ""
   };
 }
+/**
+ * QuerySpotPriceResponse defines the gRPC response structure for a SpotPrice
+ * query.
+ * @name QuerySpotPriceResponse
+ * @package osmosis.gamm.v2
+ * @see proto type: osmosis.gamm.v2.QuerySpotPriceResponse
+ */
 export const QuerySpotPriceResponse = {
   typeUrl: "/osmosis.gamm.v2.QuerySpotPriceResponse",
   encode(message: QuerySpotPriceResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

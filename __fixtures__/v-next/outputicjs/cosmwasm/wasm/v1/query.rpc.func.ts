@@ -4,7 +4,7 @@ import { QueryContractInfoRequest, QueryContractInfoResponse, QueryContractHisto
  * ContractInfo gets the contract meta data
  * @name getContractInfo
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.ContractInfo
+ * @see proto service: cosmwasm.wasm.v1.ContractInfo
  */
 export const getContractInfo = buildQuery<QueryContractInfoRequest, QueryContractInfoResponse>({
   encode: QueryContractInfoRequest.encode,
@@ -16,7 +16,7 @@ export const getContractInfo = buildQuery<QueryContractInfoRequest, QueryContrac
  * ContractHistory gets the contract code history
  * @name getContractHistory
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.ContractHistory
+ * @see proto service: cosmwasm.wasm.v1.ContractHistory
  */
 export const getContractHistory = buildQuery<QueryContractHistoryRequest, QueryContractHistoryResponse>({
   encode: QueryContractHistoryRequest.encode,
@@ -28,7 +28,7 @@ export const getContractHistory = buildQuery<QueryContractHistoryRequest, QueryC
  * ContractsByCode lists all smart contracts for a code id
  * @name getContractsByCode
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.ContractsByCode
+ * @see proto service: cosmwasm.wasm.v1.ContractsByCode
  */
 export const getContractsByCode = buildQuery<QueryContractsByCodeRequest, QueryContractsByCodeResponse>({
   encode: QueryContractsByCodeRequest.encode,
@@ -40,7 +40,7 @@ export const getContractsByCode = buildQuery<QueryContractsByCodeRequest, QueryC
  * AllContractState gets all raw store data for a single contract
  * @name getAllContractState
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.AllContractState
+ * @see proto service: cosmwasm.wasm.v1.AllContractState
  */
 export const getAllContractState = buildQuery<QueryAllContractStateRequest, QueryAllContractStateResponse>({
   encode: QueryAllContractStateRequest.encode,
@@ -52,7 +52,7 @@ export const getAllContractState = buildQuery<QueryAllContractStateRequest, Quer
  * RawContractState gets single key from the raw store data of a contract
  * @name getRawContractState
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.RawContractState
+ * @see proto service: cosmwasm.wasm.v1.RawContractState
  */
 export const getRawContractState = buildQuery<QueryRawContractStateRequest, QueryRawContractStateResponse>({
   encode: QueryRawContractStateRequest.encode,
@@ -64,7 +64,7 @@ export const getRawContractState = buildQuery<QueryRawContractStateRequest, Quer
  * SmartContractState get smart query result from the contract
  * @name getSmartContractState
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.SmartContractState
+ * @see proto service: cosmwasm.wasm.v1.SmartContractState
  */
 export const getSmartContractState = buildQuery<QuerySmartContractStateRequest, QuerySmartContractStateResponse>({
   encode: QuerySmartContractStateRequest.encode,
@@ -76,7 +76,7 @@ export const getSmartContractState = buildQuery<QuerySmartContractStateRequest, 
  * Code gets the binary code and metadata for a singe wasm code
  * @name getCode
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.Code
+ * @see proto service: cosmwasm.wasm.v1.Code
  */
 export const getCode = buildQuery<QueryCodeRequest, QueryCodeResponse>({
   encode: QueryCodeRequest.encode,
@@ -88,7 +88,7 @@ export const getCode = buildQuery<QueryCodeRequest, QueryCodeResponse>({
  * Codes gets the metadata for all stored wasm codes
  * @name getCodes
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.Codes
+ * @see proto service: cosmwasm.wasm.v1.Codes
  */
 export const getCodes = buildQuery<QueryCodesRequest, QueryCodesResponse>({
   encode: QueryCodesRequest.encode,
@@ -100,7 +100,7 @@ export const getCodes = buildQuery<QueryCodesRequest, QueryCodesResponse>({
  * PinnedCodes gets the pinned code ids
  * @name getPinnedCodes
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.PinnedCodes
+ * @see proto service: cosmwasm.wasm.v1.PinnedCodes
  */
 export const getPinnedCodes = buildQuery<QueryPinnedCodesRequest, QueryPinnedCodesResponse>({
   encode: QueryPinnedCodesRequest.encode,

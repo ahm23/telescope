@@ -47,15 +47,26 @@ export function ownerToJSON(object: Owner): string {
 /**
  * TokenPair defines an instance that records a pairing consisting of a native
  *  Cosmos Coin and an ERC20 token address.
+ * @name TokenPair
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.TokenPair
  */
 export interface TokenPair {
-  /** address of ERC20 contract token */
+  /**
+   * address of ERC20 contract token
+  */
   erc20Address: string;
-  /** cosmos base denomination to be mapped to */
+  /**
+   * cosmos base denomination to be mapped to
+  */
   denom: string;
-  /** shows token mapping enable status */
+  /**
+   * shows token mapping enable status
+  */
   enabled: boolean;
-  /** ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address) */
+  /**
+   * ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address)
+  */
   contractOwner: Owner;
 }
 export interface TokenPairProtoMsg {
@@ -65,6 +76,9 @@ export interface TokenPairProtoMsg {
 /**
  * TokenPair defines an instance that records a pairing consisting of a native
  *  Cosmos Coin and an ERC20 token address.
+ * @name TokenPairSDKType
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.TokenPair
  */
 export interface TokenPairSDKType {
   erc20_address: string;
@@ -75,13 +89,22 @@ export interface TokenPairSDKType {
 /**
  * RegisterCoinProposal is a gov Content type to register a token pair for a
  * native Cosmos coin.
+ * @name RegisterCoinProposal
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.RegisterCoinProposal
  */
 export interface RegisterCoinProposal {
-  /** title of the proposal */
+  /**
+   * title of the proposal
+  */
   title: string;
-  /** proposal description */
+  /**
+   * proposal description
+  */
   description: string;
-  /** metadata of the native Cosmos coin */
+  /**
+   * metadata of the native Cosmos coin
+  */
   metadata: Metadata;
 }
 export interface RegisterCoinProposalProtoMsg {
@@ -91,6 +114,9 @@ export interface RegisterCoinProposalProtoMsg {
 /**
  * RegisterCoinProposal is a gov Content type to register a token pair for a
  * native Cosmos coin.
+ * @name RegisterCoinProposalSDKType
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.RegisterCoinProposal
  */
 export interface RegisterCoinProposalSDKType {
   title: string;
@@ -100,13 +126,22 @@ export interface RegisterCoinProposalSDKType {
 /**
  * RegisterERC20Proposal is a gov Content type to register a token pair for an
  * ERC20 token
+ * @name RegisterERC20Proposal
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.RegisterERC20Proposal
  */
 export interface RegisterERC20Proposal {
-  /** title of the proposal */
+  /**
+   * title of the proposal
+  */
   title: string;
-  /** proposal description */
+  /**
+   * proposal description
+  */
   description: string;
-  /** contract address of ERC20 token */
+  /**
+   * contract address of ERC20 token
+  */
   erc20address: string;
 }
 export interface RegisterERC20ProposalProtoMsg {
@@ -116,6 +151,9 @@ export interface RegisterERC20ProposalProtoMsg {
 /**
  * RegisterERC20Proposal is a gov Content type to register a token pair for an
  * ERC20 token
+ * @name RegisterERC20ProposalSDKType
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.RegisterERC20Proposal
  */
 export interface RegisterERC20ProposalSDKType {
   title: string;
@@ -125,11 +163,18 @@ export interface RegisterERC20ProposalSDKType {
 /**
  * ToggleTokenConversionProposal is a gov Content type to toggle the conversion
  * of a token pair.
+ * @name ToggleTokenConversionProposal
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.ToggleTokenConversionProposal
  */
 export interface ToggleTokenConversionProposal {
-  /** title of the proposal */
+  /**
+   * title of the proposal
+  */
   title: string;
-  /** proposal description */
+  /**
+   * proposal description
+  */
   description: string;
   /**
    * token identifier can be either the hex contract address of the ERC20 or the
@@ -144,6 +189,9 @@ export interface ToggleTokenConversionProposalProtoMsg {
 /**
  * ToggleTokenConversionProposal is a gov Content type to toggle the conversion
  * of a token pair.
+ * @name ToggleTokenConversionProposalSDKType
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.ToggleTokenConversionProposal
  */
 export interface ToggleTokenConversionProposalSDKType {
   title: string;
@@ -158,6 +206,13 @@ function createBaseTokenPair(): TokenPair {
     contractOwner: 0
   };
 }
+/**
+ * TokenPair defines an instance that records a pairing consisting of a native
+ *  Cosmos Coin and an ERC20 token address.
+ * @name TokenPair
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.TokenPair
+ */
 export const TokenPair = {
   typeUrl: "/evmos.erc20.v1.TokenPair",
   encode(message: TokenPair, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -296,6 +351,13 @@ function createBaseRegisterCoinProposal(): RegisterCoinProposal {
     metadata: Metadata.fromPartial({})
   };
 }
+/**
+ * RegisterCoinProposal is a gov Content type to register a token pair for a
+ * native Cosmos coin.
+ * @name RegisterCoinProposal
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.RegisterCoinProposal
+ */
 export const RegisterCoinProposal = {
   typeUrl: "/evmos.erc20.v1.RegisterCoinProposal",
   encode(message: RegisterCoinProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -420,6 +482,13 @@ function createBaseRegisterERC20Proposal(): RegisterERC20Proposal {
     erc20address: ""
   };
 }
+/**
+ * RegisterERC20Proposal is a gov Content type to register a token pair for an
+ * ERC20 token
+ * @name RegisterERC20Proposal
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.RegisterERC20Proposal
+ */
 export const RegisterERC20Proposal = {
   typeUrl: "/evmos.erc20.v1.RegisterERC20Proposal",
   encode(message: RegisterERC20Proposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -542,6 +611,13 @@ function createBaseToggleTokenConversionProposal(): ToggleTokenConversionProposa
     token: ""
   };
 }
+/**
+ * ToggleTokenConversionProposal is a gov Content type to toggle the conversion
+ * of a token pair.
+ * @name ToggleTokenConversionProposal
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.ToggleTokenConversionProposal
+ */
 export const ToggleTokenConversionProposal = {
   typeUrl: "/evmos.erc20.v1.ToggleTokenConversionProposal",
   encode(message: ToggleTokenConversionProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

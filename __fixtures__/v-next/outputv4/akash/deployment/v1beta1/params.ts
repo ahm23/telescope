@@ -3,7 +3,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary.js";
 import { isSet, Exact } from "../../../helpers.js";
 import { JsonSafe } from "../../../json-safe.js";
 export const protobufPackage = "akash.deployment.v1beta1";
-/** Params defines the parameters for the x/deployment package */
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name Params
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Params
+ */
 export interface Params {
   deploymentMinDeposit: Coin | undefined;
 }
@@ -11,7 +16,12 @@ export interface ParamsProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params defines the parameters for the x/deployment package */
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name ParamsSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Params
+ */
 export interface ParamsSDKType {
   deployment_min_deposit: CoinSDKType | undefined;
 }
@@ -20,6 +30,12 @@ function createBaseParams(): Params {
     deploymentMinDeposit: Coin.fromPartial({})
   };
 }
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name Params
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/akash.deployment.v1beta1.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

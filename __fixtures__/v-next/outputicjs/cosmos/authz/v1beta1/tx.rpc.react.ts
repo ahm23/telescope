@@ -8,7 +8,7 @@ import { grant, exec, revoke } from "./tx.rpc.func";
  * will be overwritten.
  * @name useGrant
  * @package cosmos.authz.v1beta1
- * @see protoservice: cosmos.authz.v1beta1.Grant
+ * @see proto service: cosmos.authz.v1beta1.Grant
  */
 export const useGrant = buildUseMutation<MsgGrant, Error>({
   builderMutationFn: grant
@@ -19,7 +19,7 @@ export const useGrant = buildUseMutation<MsgGrant, Error>({
  * one signer corresponding to the granter of the authorization.
  * @name useExec
  * @package cosmos.authz.v1beta1
- * @see protoservice: cosmos.authz.v1beta1.Exec
+ * @see proto service: cosmos.authz.v1beta1.Exec
  */
 export const useExec = buildUseMutation<MsgExec, Error>({
   builderMutationFn: exec
@@ -29,7 +29,7 @@ export const useExec = buildUseMutation<MsgExec, Error>({
  * granter's account that has been granted to the grantee.
  * @name useRevoke
  * @package cosmos.authz.v1beta1
- * @see protoservice: cosmos.authz.v1beta1.Revoke
+ * @see proto service: cosmos.authz.v1beta1.Revoke
  */
 export const useRevoke = buildUseMutation<MsgRevoke, Error>({
   builderMutationFn: revoke

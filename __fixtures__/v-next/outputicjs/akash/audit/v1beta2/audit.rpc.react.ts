@@ -5,7 +5,7 @@ import { signProviderAttributes, deleteProviderAttributes } from "./audit.rpc.fu
  * SignProviderAttributes defines a method that signs provider attributes
  * @name useSignProviderAttributes
  * @package akash.audit.v1beta2
- * @see protoservice: akash.audit.v1beta2.SignProviderAttributes
+ * @see proto service: akash.audit.v1beta2.SignProviderAttributes
  */
 export const useSignProviderAttributes = buildUseMutation<MsgSignProviderAttributes, Error>({
   builderMutationFn: signProviderAttributes
@@ -14,7 +14,7 @@ export const useSignProviderAttributes = buildUseMutation<MsgSignProviderAttribu
  * DeleteProviderAttributes defines a method that deletes provider attributes
  * @name useDeleteProviderAttributes
  * @package akash.audit.v1beta2
- * @see protoservice: akash.audit.v1beta2.DeleteProviderAttributes
+ * @see proto service: akash.audit.v1beta2.DeleteProviderAttributes
  */
 export const useDeleteProviderAttributes = buildUseMutation<MsgDeleteProviderAttributes, Error>({
   builderMutationFn: deleteProviderAttributes

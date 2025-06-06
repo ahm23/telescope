@@ -5,7 +5,7 @@ import { connectionOpenInit, connectionOpenTry, connectionOpenAck, connectionOpe
  * ConnectionOpenInit defines a rpc handler method for MsgConnectionOpenInit.
  * @name useConnectionOpenInit
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ConnectionOpenInit
+ * @see proto service: ibc.core.connection.v1.ConnectionOpenInit
  */
 export const useConnectionOpenInit = buildUseMutation<MsgConnectionOpenInit, Error>({
   builderMutationFn: connectionOpenInit
@@ -14,7 +14,7 @@ export const useConnectionOpenInit = buildUseMutation<MsgConnectionOpenInit, Err
  * ConnectionOpenTry defines a rpc handler method for MsgConnectionOpenTry.
  * @name useConnectionOpenTry
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ConnectionOpenTry
+ * @see proto service: ibc.core.connection.v1.ConnectionOpenTry
  */
 export const useConnectionOpenTry = buildUseMutation<MsgConnectionOpenTry, Error>({
   builderMutationFn: connectionOpenTry
@@ -23,7 +23,7 @@ export const useConnectionOpenTry = buildUseMutation<MsgConnectionOpenTry, Error
  * ConnectionOpenAck defines a rpc handler method for MsgConnectionOpenAck.
  * @name useConnectionOpenAck
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ConnectionOpenAck
+ * @see proto service: ibc.core.connection.v1.ConnectionOpenAck
  */
 export const useConnectionOpenAck = buildUseMutation<MsgConnectionOpenAck, Error>({
   builderMutationFn: connectionOpenAck
@@ -33,7 +33,7 @@ export const useConnectionOpenAck = buildUseMutation<MsgConnectionOpenAck, Error
  * MsgConnectionOpenConfirm.
  * @name useConnectionOpenConfirm
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ConnectionOpenConfirm
+ * @see proto service: ibc.core.connection.v1.ConnectionOpenConfirm
  */
 export const useConnectionOpenConfirm = buildUseMutation<MsgConnectionOpenConfirm, Error>({
   builderMutationFn: connectionOpenConfirm

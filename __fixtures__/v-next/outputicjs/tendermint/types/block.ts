@@ -2,6 +2,11 @@ import { Header, HeaderAmino, Data, DataAmino, Commit, CommitAmino } from "./typ
 import { EvidenceList, EvidenceListAmino } from "./evidence";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { DeepPartial } from "../../helpers";
+/**
+ * @name Block
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Block
+ */
 export interface Block {
   header: Header;
   data: Data;
@@ -12,6 +17,11 @@ export interface BlockProtoMsg {
   typeUrl: "/tendermint.types.Block";
   value: Uint8Array;
 }
+/**
+ * @name BlockAmino
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Block
+ */
 export interface BlockAmino {
   header: HeaderAmino;
   data: DataAmino;
@@ -30,6 +40,11 @@ function createBaseBlock(): Block {
     lastCommit: undefined
   };
 }
+/**
+ * @name Block
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Block
+ */
 export const Block = {
   typeUrl: "/tendermint.types.Block",
   encode(message: Block, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

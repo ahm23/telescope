@@ -3,20 +3,37 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.valsetpref.v1beta1";
-/** Request type for UserValidatorPreferences. */
+/**
+ * Request type for UserValidatorPreferences.
+ * @name UserValidatorPreferencesRequest
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.UserValidatorPreferencesRequest
+ */
 export interface UserValidatorPreferencesRequest {
-  /** user account address */
+  /**
+   * user account address
+  */
   address: string;
 }
 export interface UserValidatorPreferencesRequestProtoMsg {
   typeUrl: "/osmosis.valsetpref.v1beta1.UserValidatorPreferencesRequest";
   value: Uint8Array;
 }
-/** Request type for UserValidatorPreferences. */
+/**
+ * Request type for UserValidatorPreferences.
+ * @name UserValidatorPreferencesRequestSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.UserValidatorPreferencesRequest
+ */
 export interface UserValidatorPreferencesRequestSDKType {
   address: string;
 }
-/** Response type the QueryUserValidatorPreferences query request */
+/**
+ * Response type the QueryUserValidatorPreferences query request
+ * @name UserValidatorPreferencesResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.UserValidatorPreferencesResponse
+ */
 export interface UserValidatorPreferencesResponse {
   preferences: ValidatorPreference[];
 }
@@ -24,7 +41,12 @@ export interface UserValidatorPreferencesResponseProtoMsg {
   typeUrl: "/osmosis.valsetpref.v1beta1.UserValidatorPreferencesResponse";
   value: Uint8Array;
 }
-/** Response type the QueryUserValidatorPreferences query request */
+/**
+ * Response type the QueryUserValidatorPreferences query request
+ * @name UserValidatorPreferencesResponseSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.UserValidatorPreferencesResponse
+ */
 export interface UserValidatorPreferencesResponseSDKType {
   preferences: ValidatorPreferenceSDKType[];
 }
@@ -33,6 +55,12 @@ function createBaseUserValidatorPreferencesRequest(): UserValidatorPreferencesRe
     address: ""
   };
 }
+/**
+ * Request type for UserValidatorPreferences.
+ * @name UserValidatorPreferencesRequest
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.UserValidatorPreferencesRequest
+ */
 export const UserValidatorPreferencesRequest = {
   typeUrl: "/osmosis.valsetpref.v1beta1.UserValidatorPreferencesRequest",
   encode(message: UserValidatorPreferencesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -127,6 +155,12 @@ function createBaseUserValidatorPreferencesResponse(): UserValidatorPreferencesR
     preferences: []
   };
 }
+/**
+ * Response type the QueryUserValidatorPreferences query request
+ * @name UserValidatorPreferencesResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.UserValidatorPreferencesResponse
+ */
 export const UserValidatorPreferencesResponse = {
   typeUrl: "/osmosis.valsetpref.v1beta1.UserValidatorPreferencesResponse",
   encode(message: UserValidatorPreferencesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

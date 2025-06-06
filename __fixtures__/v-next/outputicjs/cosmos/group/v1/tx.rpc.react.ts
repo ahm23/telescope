@@ -5,7 +5,7 @@ import { createGroup, updateGroupMembers, updateGroupAdmin, updateGroupMetadata,
  * CreateGroup creates a new group with an admin account address, a list of members and some optional metadata.
  * @name useCreateGroup
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.CreateGroup
+ * @see proto service: cosmos.group.v1.CreateGroup
  */
 export const useCreateGroup = buildUseMutation<MsgCreateGroup, Error>({
   builderMutationFn: createGroup
@@ -14,7 +14,7 @@ export const useCreateGroup = buildUseMutation<MsgCreateGroup, Error>({
  * UpdateGroupMembers updates the group members with given group id and admin address.
  * @name useUpdateGroupMembers
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.UpdateGroupMembers
+ * @see proto service: cosmos.group.v1.UpdateGroupMembers
  */
 export const useUpdateGroupMembers = buildUseMutation<MsgUpdateGroupMembers, Error>({
   builderMutationFn: updateGroupMembers
@@ -23,7 +23,7 @@ export const useUpdateGroupMembers = buildUseMutation<MsgUpdateGroupMembers, Err
  * UpdateGroupAdmin updates the group admin with given group id and previous admin address.
  * @name useUpdateGroupAdmin
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.UpdateGroupAdmin
+ * @see proto service: cosmos.group.v1.UpdateGroupAdmin
  */
 export const useUpdateGroupAdmin = buildUseMutation<MsgUpdateGroupAdmin, Error>({
   builderMutationFn: updateGroupAdmin
@@ -32,7 +32,7 @@ export const useUpdateGroupAdmin = buildUseMutation<MsgUpdateGroupAdmin, Error>(
  * UpdateGroupMetadata updates the group metadata with given group id and admin address.
  * @name useUpdateGroupMetadata
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.UpdateGroupMetadata
+ * @see proto service: cosmos.group.v1.UpdateGroupMetadata
  */
 export const useUpdateGroupMetadata = buildUseMutation<MsgUpdateGroupMetadata, Error>({
   builderMutationFn: updateGroupMetadata
@@ -41,7 +41,7 @@ export const useUpdateGroupMetadata = buildUseMutation<MsgUpdateGroupMetadata, E
  * CreateGroupPolicy creates a new group policy using given DecisionPolicy.
  * @name useCreateGroupPolicy
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.CreateGroupPolicy
+ * @see proto service: cosmos.group.v1.CreateGroupPolicy
  */
 export const useCreateGroupPolicy = buildUseMutation<MsgCreateGroupPolicy, Error>({
   builderMutationFn: createGroupPolicy
@@ -50,7 +50,7 @@ export const useCreateGroupPolicy = buildUseMutation<MsgCreateGroupPolicy, Error
  * CreateGroupWithPolicy creates a new group with policy.
  * @name useCreateGroupWithPolicy
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.CreateGroupWithPolicy
+ * @see proto service: cosmos.group.v1.CreateGroupWithPolicy
  */
 export const useCreateGroupWithPolicy = buildUseMutation<MsgCreateGroupWithPolicy, Error>({
   builderMutationFn: createGroupWithPolicy
@@ -59,7 +59,7 @@ export const useCreateGroupWithPolicy = buildUseMutation<MsgCreateGroupWithPolic
  * UpdateGroupPolicyAdmin updates a group policy admin.
  * @name useUpdateGroupPolicyAdmin
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.UpdateGroupPolicyAdmin
+ * @see proto service: cosmos.group.v1.UpdateGroupPolicyAdmin
  */
 export const useUpdateGroupPolicyAdmin = buildUseMutation<MsgUpdateGroupPolicyAdmin, Error>({
   builderMutationFn: updateGroupPolicyAdmin
@@ -68,7 +68,7 @@ export const useUpdateGroupPolicyAdmin = buildUseMutation<MsgUpdateGroupPolicyAd
  * UpdateGroupPolicyDecisionPolicy allows a group policy's decision policy to be updated.
  * @name useUpdateGroupPolicyDecisionPolicy
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.UpdateGroupPolicyDecisionPolicy
+ * @see proto service: cosmos.group.v1.UpdateGroupPolicyDecisionPolicy
  */
 export const useUpdateGroupPolicyDecisionPolicy = buildUseMutation<MsgUpdateGroupPolicyDecisionPolicy, Error>({
   builderMutationFn: updateGroupPolicyDecisionPolicy
@@ -77,7 +77,7 @@ export const useUpdateGroupPolicyDecisionPolicy = buildUseMutation<MsgUpdateGrou
  * UpdateGroupPolicyMetadata updates a group policy metadata.
  * @name useUpdateGroupPolicyMetadata
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.UpdateGroupPolicyMetadata
+ * @see proto service: cosmos.group.v1.UpdateGroupPolicyMetadata
  */
 export const useUpdateGroupPolicyMetadata = buildUseMutation<MsgUpdateGroupPolicyMetadata, Error>({
   builderMutationFn: updateGroupPolicyMetadata
@@ -86,7 +86,7 @@ export const useUpdateGroupPolicyMetadata = buildUseMutation<MsgUpdateGroupPolic
  * SubmitProposal submits a new proposal.
  * @name useSubmitProposal
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.SubmitProposal
+ * @see proto service: cosmos.group.v1.SubmitProposal
  */
 export const useSubmitProposal = buildUseMutation<MsgSubmitProposal, Error>({
   builderMutationFn: submitProposal
@@ -95,7 +95,7 @@ export const useSubmitProposal = buildUseMutation<MsgSubmitProposal, Error>({
  * WithdrawProposal aborts a proposal.
  * @name useWithdrawProposal
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.WithdrawProposal
+ * @see proto service: cosmos.group.v1.WithdrawProposal
  */
 export const useWithdrawProposal = buildUseMutation<MsgWithdrawProposal, Error>({
   builderMutationFn: withdrawProposal
@@ -104,7 +104,7 @@ export const useWithdrawProposal = buildUseMutation<MsgWithdrawProposal, Error>(
  * Vote allows a voter to vote on a proposal.
  * @name useVote
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.Vote
+ * @see proto service: cosmos.group.v1.Vote
  */
 export const useVote = buildUseMutation<MsgVote, Error>({
   builderMutationFn: vote
@@ -113,7 +113,7 @@ export const useVote = buildUseMutation<MsgVote, Error>({
  * Exec executes a proposal.
  * @name useExec
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.Exec
+ * @see proto service: cosmos.group.v1.Exec
  */
 export const useExec = buildUseMutation<MsgExec, Error>({
   builderMutationFn: exec
@@ -122,7 +122,7 @@ export const useExec = buildUseMutation<MsgExec, Error>({
  * LeaveGroup allows a group member to leave the group.
  * @name useLeaveGroup
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.LeaveGroup
+ * @see proto service: cosmos.group.v1.LeaveGroup
  */
 export const useLeaveGroup = buildUseMutation<MsgLeaveGroup, Error>({
   builderMutationFn: leaveGroup

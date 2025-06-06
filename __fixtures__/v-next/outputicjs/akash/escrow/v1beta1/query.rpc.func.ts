@@ -6,7 +6,7 @@ import { QueryAccountsRequest, QueryAccountsResponse, QueryPaymentsRequest, Quer
  * Accounts queries all accounts
  * @name getAccounts
  * @package akash.escrow.v1beta1
- * @see protoservice: akash.escrow.v1beta1.Accounts
+ * @see proto service: akash.escrow.v1beta1.Accounts
  */
 export const getAccounts = buildQuery<QueryAccountsRequest, QueryAccountsResponse>({
   encode: QueryAccountsRequest.encode,
@@ -20,7 +20,7 @@ export const getAccounts = buildQuery<QueryAccountsRequest, QueryAccountsRespons
  * Payments queries all payments
  * @name getPayments
  * @package akash.escrow.v1beta1
- * @see protoservice: akash.escrow.v1beta1.Payments
+ * @see proto service: akash.escrow.v1beta1.Payments
  */
 export const getPayments = buildQuery<QueryPaymentsRequest, QueryPaymentsResponse>({
   encode: QueryPaymentsRequest.encode,

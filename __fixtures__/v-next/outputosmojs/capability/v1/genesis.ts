@@ -3,25 +3,46 @@ import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
 export const protobufPackage = "capability.v1";
-/** GenesisOwners defines the capability owners with their corresponding index. */
+/**
+ * GenesisOwners defines the capability owners with their corresponding index.
+ * @name GenesisOwners
+ * @package capability.v1
+ * @see proto type: capability.v1.GenesisOwners
+ */
 export interface GenesisOwners {
-  /** index is the index of the capability owner. */
+  /**
+   * index is the index of the capability owner.
+  */
   index: bigint;
-  /** index_owners are the owners at the given index. */
+  /**
+   * index_owners are the owners at the given index.
+  */
   indexOwners: CapabilityOwners;
 }
 export interface GenesisOwnersProtoMsg {
   typeUrl: "/capability.v1.GenesisOwners";
   value: Uint8Array;
 }
-/** GenesisOwners defines the capability owners with their corresponding index. */
+/**
+ * GenesisOwners defines the capability owners with their corresponding index.
+ * @name GenesisOwnersSDKType
+ * @package capability.v1
+ * @see proto type: capability.v1.GenesisOwners
+ */
 export interface GenesisOwnersSDKType {
   index: bigint;
   index_owners: CapabilityOwnersSDKType;
 }
-/** GenesisState defines the capability module's genesis state. */
+/**
+ * GenesisState defines the capability module's genesis state.
+ * @name GenesisState
+ * @package capability.v1
+ * @see proto type: capability.v1.GenesisState
+ */
 export interface GenesisState {
-  /** index is the capability global index. */
+  /**
+   * index is the capability global index.
+  */
   index: bigint;
   /**
    * owners represents a map from index to owners of the capability index
@@ -33,7 +54,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/capability.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the capability module's genesis state. */
+/**
+ * GenesisState defines the capability module's genesis state.
+ * @name GenesisStateSDKType
+ * @package capability.v1
+ * @see proto type: capability.v1.GenesisState
+ */
 export interface GenesisStateSDKType {
   index: bigint;
   owners: GenesisOwnersSDKType[];
@@ -44,6 +70,12 @@ function createBaseGenesisOwners(): GenesisOwners {
     indexOwners: CapabilityOwners.fromPartial({})
   };
 }
+/**
+ * GenesisOwners defines the capability owners with their corresponding index.
+ * @name GenesisOwners
+ * @package capability.v1
+ * @see proto type: capability.v1.GenesisOwners
+ */
 export const GenesisOwners = {
   typeUrl: "/capability.v1.GenesisOwners",
   encode(message: GenesisOwners, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -149,6 +181,12 @@ function createBaseGenesisState(): GenesisState {
     owners: []
   };
 }
+/**
+ * GenesisState defines the capability module's genesis state.
+ * @name GenesisState
+ * @package capability.v1
+ * @see proto type: capability.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/capability.v1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

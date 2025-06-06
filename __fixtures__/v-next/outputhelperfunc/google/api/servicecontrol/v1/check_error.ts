@@ -196,9 +196,14 @@ export function checkError_CodeToJSON(object: CheckError_Code): string {
 /**
  * Defines the errors to be returned in
  * [google.api.servicecontrol.v1.CheckResponse.check_errors][google.api.servicecontrol.v1.CheckResponse.check_errors].
+ * @name CheckError
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckError
  */
 export interface CheckError {
-  /** The error code. */
+  /**
+   * The error code.
+  */
   code: CheckError_Code;
   /**
    * Subject to whom this error applies. See the specific code enum for more
@@ -209,7 +214,9 @@ export interface CheckError {
    * - "organization:<organization-id>"
    */
   subject: string;
-  /** Free-form text providing details on the error cause of the error. */
+  /**
+   * Free-form text providing details on the error cause of the error.
+  */
   detail: string;
   /**
    * Contains public information about the check error. If available,
@@ -225,9 +232,14 @@ export interface CheckErrorProtoMsg {
 /**
  * Defines the errors to be returned in
  * [google.api.servicecontrol.v1.CheckResponse.check_errors][google.api.servicecontrol.v1.CheckResponse.check_errors].
+ * @name CheckErrorAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckError
  */
 export interface CheckErrorAmino {
-  /** The error code. */
+  /**
+   * The error code.
+  */
   code?: CheckError_Code;
   /**
    * Subject to whom this error applies. See the specific code enum for more
@@ -238,7 +250,9 @@ export interface CheckErrorAmino {
    * - "organization:<organization-id>"
    */
   subject?: string;
-  /** Free-form text providing details on the error cause of the error. */
+  /**
+   * Free-form text providing details on the error cause of the error.
+  */
   detail?: string;
   /**
    * Contains public information about the check error. If available,
@@ -254,6 +268,9 @@ export interface CheckErrorAminoMsg {
 /**
  * Defines the errors to be returned in
  * [google.api.servicecontrol.v1.CheckResponse.check_errors][google.api.servicecontrol.v1.CheckResponse.check_errors].
+ * @name CheckErrorSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckError
  */
 export interface CheckErrorSDKType {
   code: CheckError_Code;
@@ -269,6 +286,13 @@ function createBaseCheckError(): CheckError {
     status: undefined
   };
 }
+/**
+ * Defines the errors to be returned in
+ * [google.api.servicecontrol.v1.CheckResponse.check_errors][google.api.servicecontrol.v1.CheckResponse.check_errors].
+ * @name CheckError
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckError
+ */
 export const CheckError = {
   typeUrl: "/google.api.servicecontrol.v1.CheckError",
   is(o: any): o is CheckError {

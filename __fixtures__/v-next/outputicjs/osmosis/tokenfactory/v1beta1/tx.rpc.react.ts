@@ -4,7 +4,7 @@ import { createDenom, mint, burn, changeAdmin, setDenomMetadata } from "./tx.rpc
 /**
  * @name useCreateDenom
  * @package osmosis.tokenfactory.v1beta1
- * @see protoservice: osmosis.tokenfactory.v1beta1.CreateDenom
+ * @see proto service: osmosis.tokenfactory.v1beta1.CreateDenom
  */
 export const useCreateDenom = buildUseMutation<MsgCreateDenom, Error>({
   builderMutationFn: createDenom
@@ -12,7 +12,7 @@ export const useCreateDenom = buildUseMutation<MsgCreateDenom, Error>({
 /**
  * @name useMint
  * @package osmosis.tokenfactory.v1beta1
- * @see protoservice: osmosis.tokenfactory.v1beta1.Mint
+ * @see proto service: osmosis.tokenfactory.v1beta1.Mint
  */
 export const useMint = buildUseMutation<MsgMint, Error>({
   builderMutationFn: mint
@@ -20,7 +20,7 @@ export const useMint = buildUseMutation<MsgMint, Error>({
 /**
  * @name useBurn
  * @package osmosis.tokenfactory.v1beta1
- * @see protoservice: osmosis.tokenfactory.v1beta1.Burn
+ * @see proto service: osmosis.tokenfactory.v1beta1.Burn
  */
 export const useBurn = buildUseMutation<MsgBurn, Error>({
   builderMutationFn: burn
@@ -28,7 +28,7 @@ export const useBurn = buildUseMutation<MsgBurn, Error>({
 /**
  * @name useChangeAdmin
  * @package osmosis.tokenfactory.v1beta1
- * @see protoservice: osmosis.tokenfactory.v1beta1.ChangeAdmin
+ * @see proto service: osmosis.tokenfactory.v1beta1.ChangeAdmin
  */
 export const useChangeAdmin = buildUseMutation<MsgChangeAdmin, Error>({
   builderMutationFn: changeAdmin
@@ -36,7 +36,7 @@ export const useChangeAdmin = buildUseMutation<MsgChangeAdmin, Error>({
 /**
  * @name useSetDenomMetadata
  * @package osmosis.tokenfactory.v1beta1
- * @see protoservice: osmosis.tokenfactory.v1beta1.SetDenomMetadata
+ * @see proto service: osmosis.tokenfactory.v1beta1.SetDenomMetadata
  */
 export const useSetDenomMetadata = buildUseMutation<MsgSetDenomMetadata, Error>({
   builderMutationFn: setDenomMetadata

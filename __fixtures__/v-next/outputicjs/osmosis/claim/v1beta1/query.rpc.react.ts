@@ -4,7 +4,7 @@ import { getModuleAccountBalance, getOsmosisClaimV1beta1Params, getClaimRecord, 
 /**
  * @name useGetModuleAccountBalance
  * @package osmosis.claim.v1beta1
- * @see protoservice: osmosis.claim.v1beta1.ModuleAccountBalance
+ * @see proto service: osmosis.claim.v1beta1.ModuleAccountBalance
  */
 export const useGetModuleAccountBalance = buildUseQuery<QueryModuleAccountBalanceRequest, QueryModuleAccountBalanceResponse>({
   builderQueryFn: getModuleAccountBalance,
@@ -13,7 +13,7 @@ export const useGetModuleAccountBalance = buildUseQuery<QueryModuleAccountBalanc
 /**
  * @name useGetOsmosisClaimV1beta1Params
  * @package osmosis.claim.v1beta1
- * @see protoservice: osmosis.claim.v1beta1.Params
+ * @see proto service: osmosis.claim.v1beta1.Params
  */
 export const useGetOsmosisClaimV1beta1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
   builderQueryFn: getOsmosisClaimV1beta1Params,
@@ -22,7 +22,7 @@ export const useGetOsmosisClaimV1beta1Params = buildUseQuery<QueryParamsRequest,
 /**
  * @name useGetClaimRecord
  * @package osmosis.claim.v1beta1
- * @see protoservice: osmosis.claim.v1beta1.ClaimRecord
+ * @see proto service: osmosis.claim.v1beta1.ClaimRecord
  */
 export const useGetClaimRecord = buildUseQuery<QueryClaimRecordRequest, QueryClaimRecordResponse>({
   builderQueryFn: getClaimRecord,
@@ -31,7 +31,7 @@ export const useGetClaimRecord = buildUseQuery<QueryClaimRecordRequest, QueryCla
 /**
  * @name useGetClaimableForAction
  * @package osmosis.claim.v1beta1
- * @see protoservice: osmosis.claim.v1beta1.ClaimableForAction
+ * @see proto service: osmosis.claim.v1beta1.ClaimableForAction
  */
 export const useGetClaimableForAction = buildUseQuery<QueryClaimableForActionRequest, QueryClaimableForActionResponse>({
   builderQueryFn: getClaimableForAction,
@@ -40,7 +40,7 @@ export const useGetClaimableForAction = buildUseQuery<QueryClaimableForActionReq
 /**
  * @name useGetTotalClaimable
  * @package osmosis.claim.v1beta1
- * @see protoservice: osmosis.claim.v1beta1.TotalClaimable
+ * @see proto service: osmosis.claim.v1beta1.TotalClaimable
  */
 export const useGetTotalClaimable = buildUseQuery<QueryTotalClaimableRequest, QueryTotalClaimableResponse>({
   builderQueryFn: getTotalClaimable,

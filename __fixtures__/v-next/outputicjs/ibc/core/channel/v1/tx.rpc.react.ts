@@ -5,7 +5,7 @@ import { channelOpenInit, channelOpenTry, channelOpenAck, channelOpenConfirm, ch
  * ChannelOpenInit defines a rpc handler method for MsgChannelOpenInit.
  * @name useChannelOpenInit
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.ChannelOpenInit
+ * @see proto service: ibc.core.channel.v1.ChannelOpenInit
  */
 export const useChannelOpenInit = buildUseMutation<MsgChannelOpenInit, Error>({
   builderMutationFn: channelOpenInit
@@ -14,7 +14,7 @@ export const useChannelOpenInit = buildUseMutation<MsgChannelOpenInit, Error>({
  * ChannelOpenTry defines a rpc handler method for MsgChannelOpenTry.
  * @name useChannelOpenTry
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.ChannelOpenTry
+ * @see proto service: ibc.core.channel.v1.ChannelOpenTry
  */
 export const useChannelOpenTry = buildUseMutation<MsgChannelOpenTry, Error>({
   builderMutationFn: channelOpenTry
@@ -23,7 +23,7 @@ export const useChannelOpenTry = buildUseMutation<MsgChannelOpenTry, Error>({
  * ChannelOpenAck defines a rpc handler method for MsgChannelOpenAck.
  * @name useChannelOpenAck
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.ChannelOpenAck
+ * @see proto service: ibc.core.channel.v1.ChannelOpenAck
  */
 export const useChannelOpenAck = buildUseMutation<MsgChannelOpenAck, Error>({
   builderMutationFn: channelOpenAck
@@ -32,7 +32,7 @@ export const useChannelOpenAck = buildUseMutation<MsgChannelOpenAck, Error>({
  * ChannelOpenConfirm defines a rpc handler method for MsgChannelOpenConfirm.
  * @name useChannelOpenConfirm
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.ChannelOpenConfirm
+ * @see proto service: ibc.core.channel.v1.ChannelOpenConfirm
  */
 export const useChannelOpenConfirm = buildUseMutation<MsgChannelOpenConfirm, Error>({
   builderMutationFn: channelOpenConfirm
@@ -41,7 +41,7 @@ export const useChannelOpenConfirm = buildUseMutation<MsgChannelOpenConfirm, Err
  * ChannelCloseInit defines a rpc handler method for MsgChannelCloseInit.
  * @name useChannelCloseInit
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.ChannelCloseInit
+ * @see proto service: ibc.core.channel.v1.ChannelCloseInit
  */
 export const useChannelCloseInit = buildUseMutation<MsgChannelCloseInit, Error>({
   builderMutationFn: channelCloseInit
@@ -51,7 +51,7 @@ export const useChannelCloseInit = buildUseMutation<MsgChannelCloseInit, Error>(
  * MsgChannelCloseConfirm.
  * @name useChannelCloseConfirm
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.ChannelCloseConfirm
+ * @see proto service: ibc.core.channel.v1.ChannelCloseConfirm
  */
 export const useChannelCloseConfirm = buildUseMutation<MsgChannelCloseConfirm, Error>({
   builderMutationFn: channelCloseConfirm
@@ -60,7 +60,7 @@ export const useChannelCloseConfirm = buildUseMutation<MsgChannelCloseConfirm, E
  * RecvPacket defines a rpc handler method for MsgRecvPacket.
  * @name useRecvPacket
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.RecvPacket
+ * @see proto service: ibc.core.channel.v1.RecvPacket
  */
 export const useRecvPacket = buildUseMutation<MsgRecvPacket, Error>({
   builderMutationFn: recvPacket
@@ -69,7 +69,7 @@ export const useRecvPacket = buildUseMutation<MsgRecvPacket, Error>({
  * Timeout defines a rpc handler method for MsgTimeout.
  * @name useTimeout
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.Timeout
+ * @see proto service: ibc.core.channel.v1.Timeout
  */
 export const useTimeout = buildUseMutation<MsgTimeout, Error>({
   builderMutationFn: timeout
@@ -78,7 +78,7 @@ export const useTimeout = buildUseMutation<MsgTimeout, Error>({
  * TimeoutOnClose defines a rpc handler method for MsgTimeoutOnClose.
  * @name useTimeoutOnClose
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.TimeoutOnClose
+ * @see proto service: ibc.core.channel.v1.TimeoutOnClose
  */
 export const useTimeoutOnClose = buildUseMutation<MsgTimeoutOnClose, Error>({
   builderMutationFn: timeoutOnClose
@@ -87,7 +87,7 @@ export const useTimeoutOnClose = buildUseMutation<MsgTimeoutOnClose, Error>({
  * Acknowledgement defines a rpc handler method for MsgAcknowledgement.
  * @name useAcknowledgement
  * @package ibc.core.channel.v1
- * @see protoservice: ibc.core.channel.v1.Acknowledgement
+ * @see proto service: ibc.core.channel.v1.Acknowledgement
  */
 export const useAcknowledgement = buildUseMutation<MsgAcknowledgement, Error>({
   builderMutationFn: acknowledgement

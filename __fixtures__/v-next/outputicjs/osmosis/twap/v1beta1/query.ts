@@ -1,8 +1,13 @@
 import { Timestamp } from "../../../google/protobuf/timestamp";
-import { Params, ParamsAmino } from "./genesis";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { toTimestamp, fromTimestamp, DeepPartial } from "../../../helpers";
 import { Decimal } from "@interchainjs/math";
+import { OsmosisTwapV1beta1Params, OsmosisTwapV1beta1ParamsAmino } from "./genesis";
+/**
+ * @name ArithmeticTwapRequest
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapRequest
+ */
 export interface ArithmeticTwapRequest {
   poolId: bigint;
   baseAsset: string;
@@ -14,6 +19,11 @@ export interface ArithmeticTwapRequestProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapRequest";
   value: Uint8Array;
 }
+/**
+ * @name ArithmeticTwapRequestAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapRequest
+ */
 export interface ArithmeticTwapRequestAmino {
   pool_id: string;
   base_asset: string;
@@ -25,6 +35,11 @@ export interface ArithmeticTwapRequestAminoMsg {
   type: "osmosis/twap/arithmetic-twap-request";
   value: ArithmeticTwapRequestAmino;
 }
+/**
+ * @name ArithmeticTwapResponse
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapResponse
+ */
 export interface ArithmeticTwapResponse {
   arithmeticTwap: string;
 }
@@ -32,6 +47,11 @@ export interface ArithmeticTwapResponseProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapResponse";
   value: Uint8Array;
 }
+/**
+ * @name ArithmeticTwapResponseAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapResponse
+ */
 export interface ArithmeticTwapResponseAmino {
   arithmetic_twap: string;
 }
@@ -39,6 +59,11 @@ export interface ArithmeticTwapResponseAminoMsg {
   type: "osmosis/twap/arithmetic-twap-response";
   value: ArithmeticTwapResponseAmino;
 }
+/**
+ * @name ArithmeticTwapToNowRequest
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowRequest
+ */
 export interface ArithmeticTwapToNowRequest {
   poolId: bigint;
   baseAsset: string;
@@ -49,6 +74,11 @@ export interface ArithmeticTwapToNowRequestProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapToNowRequest";
   value: Uint8Array;
 }
+/**
+ * @name ArithmeticTwapToNowRequestAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowRequest
+ */
 export interface ArithmeticTwapToNowRequestAmino {
   pool_id: string;
   base_asset: string;
@@ -59,6 +89,11 @@ export interface ArithmeticTwapToNowRequestAminoMsg {
   type: "osmosis/twap/arithmetic-twap-to-now-request";
   value: ArithmeticTwapToNowRequestAmino;
 }
+/**
+ * @name ArithmeticTwapToNowResponse
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowResponse
+ */
 export interface ArithmeticTwapToNowResponse {
   arithmeticTwap: string;
 }
@@ -66,6 +101,11 @@ export interface ArithmeticTwapToNowResponseProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapToNowResponse";
   value: Uint8Array;
 }
+/**
+ * @name ArithmeticTwapToNowResponseAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowResponse
+ */
 export interface ArithmeticTwapToNowResponseAmino {
   arithmetic_twap: string;
 }
@@ -73,25 +113,45 @@ export interface ArithmeticTwapToNowResponseAminoMsg {
   type: "osmosis/twap/arithmetic-twap-to-now-response";
   value: ArithmeticTwapToNowResponseAmino;
 }
+/**
+ * @name ParamsRequest
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsRequest
+ */
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.ParamsRequest";
   value: Uint8Array;
 }
+/**
+ * @name ParamsRequestAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestAmino {}
 export interface ParamsRequestAminoMsg {
   type: "osmosis/twap/params-request";
   value: ParamsRequestAmino;
 }
+/**
+ * @name ParamsResponse
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsResponse
+ */
 export interface ParamsResponse {
-  params: Params;
+  params: OsmosisTwapV1beta1Params;
 }
 export interface ParamsResponseProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.ParamsResponse";
   value: Uint8Array;
 }
+/**
+ * @name ParamsResponseAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseAmino {
-  params: ParamsAmino;
+  params: OsmosisTwapV1beta1ParamsAmino;
 }
 export interface ParamsResponseAminoMsg {
   type: "osmosis/twap/params-response";
@@ -106,6 +166,11 @@ function createBaseArithmeticTwapRequest(): ArithmeticTwapRequest {
     endTime: undefined
   };
 }
+/**
+ * @name ArithmeticTwapRequest
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapRequest
+ */
 export const ArithmeticTwapRequest = {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapRequest",
   aminoType: "osmosis/twap/arithmetic-twap-request",
@@ -220,6 +285,11 @@ function createBaseArithmeticTwapResponse(): ArithmeticTwapResponse {
     arithmeticTwap: ""
   };
 }
+/**
+ * @name ArithmeticTwapResponse
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapResponse
+ */
 export const ArithmeticTwapResponse = {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapResponse",
   aminoType: "osmosis/twap/arithmetic-twap-response",
@@ -293,6 +363,11 @@ function createBaseArithmeticTwapToNowRequest(): ArithmeticTwapToNowRequest {
     startTime: new Date()
   };
 }
+/**
+ * @name ArithmeticTwapToNowRequest
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowRequest
+ */
 export const ArithmeticTwapToNowRequest = {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapToNowRequest",
   aminoType: "osmosis/twap/arithmetic-twap-to-now-request",
@@ -396,6 +471,11 @@ function createBaseArithmeticTwapToNowResponse(): ArithmeticTwapToNowResponse {
     arithmeticTwap: ""
   };
 }
+/**
+ * @name ArithmeticTwapToNowResponse
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowResponse
+ */
 export const ArithmeticTwapToNowResponse = {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapToNowResponse",
   aminoType: "osmosis/twap/arithmetic-twap-to-now-response",
@@ -464,6 +544,11 @@ export const ArithmeticTwapToNowResponse = {
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
+/**
+ * @name ParamsRequest
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsRequest
+ */
 export const ParamsRequest = {
   typeUrl: "/osmosis.twap.v1beta1.ParamsRequest",
   aminoType: "osmosis/twap/params-request",
@@ -520,15 +605,20 @@ export const ParamsRequest = {
 };
 function createBaseParamsResponse(): ParamsResponse {
   return {
-    params: Params.fromPartial({})
+    params: OsmosisTwapV1beta1Params.fromPartial({})
   };
 }
+/**
+ * @name ParamsResponse
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsResponse
+ */
 export const ParamsResponse = {
   typeUrl: "/osmosis.twap.v1beta1.ParamsResponse",
   aminoType: "osmosis/twap/params-response",
   encode(message: ParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      OsmosisTwapV1beta1Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
@@ -540,7 +630,7 @@ export const ParamsResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = OsmosisTwapV1beta1Params.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -551,19 +641,19 @@ export const ParamsResponse = {
   },
   fromPartial(object: DeepPartial<ParamsResponse>): ParamsResponse {
     const message = createBaseParamsResponse();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? OsmosisTwapV1beta1Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: ParamsResponseAmino): ParamsResponse {
     const message = createBaseParamsResponse();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = OsmosisTwapV1beta1Params.fromAmino(object.params);
     }
     return message;
   },
   toAmino(message: ParamsResponse): ParamsResponseAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? OsmosisTwapV1beta1Params.toAmino(message.params) : undefined;
     return obj;
   },
   fromAminoMsg(object: ParamsResponseAminoMsg): ParamsResponse {

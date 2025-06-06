@@ -6,7 +6,7 @@ import { getListAllInterfaces, getListImplementations } from "./reflection.rpc.f
  * registry.
  * @name useGetListAllInterfaces
  * @package cosmos.base.reflection.v1beta1
- * @see protoservice: cosmos.base.reflection.v1beta1.ListAllInterfaces
+ * @see proto service: cosmos.base.reflection.v1beta1.ListAllInterfaces
  */
 export const useGetListAllInterfaces = buildUseQuery<ListAllInterfacesRequest, ListAllInterfacesResponse>({
   builderQueryFn: getListAllInterfaces,
@@ -17,7 +17,7 @@ export const useGetListAllInterfaces = buildUseQuery<ListAllInterfacesRequest, L
  * interface.
  * @name useGetListImplementations
  * @package cosmos.base.reflection.v1beta1
- * @see protoservice: cosmos.base.reflection.v1beta1.ListImplementations
+ * @see proto service: cosmos.base.reflection.v1beta1.ListImplementations
  */
 export const useGetListImplementations = buildUseQuery<ListImplementationsRequest, ListImplementationsResponse>({
   builderQueryFn: getListImplementations,

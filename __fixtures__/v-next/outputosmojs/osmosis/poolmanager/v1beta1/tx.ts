@@ -4,7 +4,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.poolmanager.v1beta1";
-/** ===================== MsgSwapExactAmountIn */
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountIn
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.MsgSwapExactAmountIn
+ */
 export interface MsgSwapExactAmountIn {
   sender: string;
   routes: SwapAmountInRoute[];
@@ -15,13 +20,23 @@ export interface MsgSwapExactAmountInProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.MsgSwapExactAmountIn";
   value: Uint8Array;
 }
-/** ===================== MsgSwapExactAmountIn */
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountInSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.MsgSwapExactAmountIn
+ */
 export interface MsgSwapExactAmountInSDKType {
   sender: string;
   routes: SwapAmountInRouteSDKType[];
   token_in: CoinSDKType;
   token_out_min_amount: string;
 }
+/**
+ * @name MsgSwapExactAmountInResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.MsgSwapExactAmountInResponse
+ */
 export interface MsgSwapExactAmountInResponse {
   tokenOutAmount: string;
 }
@@ -29,10 +44,20 @@ export interface MsgSwapExactAmountInResponseProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.MsgSwapExactAmountInResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgSwapExactAmountInResponseSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.MsgSwapExactAmountInResponse
+ */
 export interface MsgSwapExactAmountInResponseSDKType {
   token_out_amount: string;
 }
-/** ===================== MsgSwapExactAmountOut */
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name MsgSwapExactAmountOut
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.MsgSwapExactAmountOut
+ */
 export interface MsgSwapExactAmountOut {
   sender: string;
   routes: SwapAmountOutRoute[];
@@ -43,13 +68,23 @@ export interface MsgSwapExactAmountOutProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.MsgSwapExactAmountOut";
   value: Uint8Array;
 }
-/** ===================== MsgSwapExactAmountOut */
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name MsgSwapExactAmountOutSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.MsgSwapExactAmountOut
+ */
 export interface MsgSwapExactAmountOutSDKType {
   sender: string;
   routes: SwapAmountOutRouteSDKType[];
   token_in_max_amount: string;
   token_out: CoinSDKType;
 }
+/**
+ * @name MsgSwapExactAmountOutResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export interface MsgSwapExactAmountOutResponse {
   tokenInAmount: string;
 }
@@ -57,6 +92,11 @@ export interface MsgSwapExactAmountOutResponseProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.MsgSwapExactAmountOutResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgSwapExactAmountOutResponseSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export interface MsgSwapExactAmountOutResponseSDKType {
   token_in_amount: string;
 }
@@ -68,6 +108,12 @@ function createBaseMsgSwapExactAmountIn(): MsgSwapExactAmountIn {
     tokenOutMinAmount: ""
   };
 }
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name MsgSwapExactAmountIn
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.MsgSwapExactAmountIn
+ */
 export const MsgSwapExactAmountIn = {
   typeUrl: "/osmosis.poolmanager.v1beta1.MsgSwapExactAmountIn",
   encode(message: MsgSwapExactAmountIn, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -220,6 +266,11 @@ function createBaseMsgSwapExactAmountInResponse(): MsgSwapExactAmountInResponse 
     tokenOutAmount: ""
   };
 }
+/**
+ * @name MsgSwapExactAmountInResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.MsgSwapExactAmountInResponse
+ */
 export const MsgSwapExactAmountInResponse = {
   typeUrl: "/osmosis.poolmanager.v1beta1.MsgSwapExactAmountInResponse",
   encode(message: MsgSwapExactAmountInResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -317,6 +368,12 @@ function createBaseMsgSwapExactAmountOut(): MsgSwapExactAmountOut {
     tokenOut: Coin.fromPartial({})
   };
 }
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name MsgSwapExactAmountOut
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.MsgSwapExactAmountOut
+ */
 export const MsgSwapExactAmountOut = {
   typeUrl: "/osmosis.poolmanager.v1beta1.MsgSwapExactAmountOut",
   encode(message: MsgSwapExactAmountOut, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -469,6 +526,11 @@ function createBaseMsgSwapExactAmountOutResponse(): MsgSwapExactAmountOutRespons
     tokenInAmount: ""
   };
 }
+/**
+ * @name MsgSwapExactAmountOutResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export const MsgSwapExactAmountOutResponse = {
   typeUrl: "/osmosis.poolmanager.v1beta1.MsgSwapExactAmountOutResponse",
   encode(message: MsgSwapExactAmountOutResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

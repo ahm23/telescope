@@ -3,16 +3,28 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.ibcratelimit.v1beta1";
-/** GenesisState defines the ibc-rate-limit module's genesis state. */
+/**
+ * GenesisState defines the ibc-rate-limit module's genesis state.
+ * @name GenesisState
+ * @package osmosis.ibcratelimit.v1beta1
+ * @see proto type: osmosis.ibcratelimit.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params are all the parameters of the module */
+  /**
+   * params are all the parameters of the module
+  */
   params: Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.ibcratelimit.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the ibc-rate-limit module's genesis state. */
+/**
+ * GenesisState defines the ibc-rate-limit module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.ibcratelimit.v1beta1
+ * @see proto type: osmosis.ibcratelimit.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
 }
@@ -21,6 +33,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the ibc-rate-limit module's genesis state.
+ * @name GenesisState
+ * @package osmosis.ibcratelimit.v1beta1
+ * @see proto type: osmosis.ibcratelimit.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.ibcratelimit.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

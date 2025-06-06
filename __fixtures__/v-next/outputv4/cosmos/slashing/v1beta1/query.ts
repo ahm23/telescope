@@ -4,15 +4,30 @@ import { BinaryReader, BinaryWriter } from "../../../binary.js";
 import { JsonSafe } from "../../../json-safe.js";
 import { DeepPartial, isSet } from "../../../helpers.js";
 export const protobufPackage = "cosmos.slashing.v1beta1";
-/** QueryParamsRequest is the request type for the Query/Params RPC method */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method
+ * @name QueryParamsRequest
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: "/cosmos.slashing.v1beta1.QueryParamsRequest";
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method
+ * @name QueryParamsRequestSDKType
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is the response type for the Query/Params RPC method */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method
+ * @name QueryParamsResponse
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
   params: Params;
 }
@@ -20,16 +35,26 @@ export interface QueryParamsResponseProtoMsg {
   typeUrl: "/cosmos.slashing.v1beta1.QueryParamsResponse";
   value: Uint8Array;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method
+ * @name QueryParamsResponseSDKType
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 /**
  * QuerySigningInfoRequest is the request type for the Query/SigningInfo RPC
  * method
+ * @name QuerySigningInfoRequest
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QuerySigningInfoRequest
  */
 export interface QuerySigningInfoRequest {
-  /** cons_address is the address to query signing info of */
+  /**
+   * cons_address is the address to query signing info of
+  */
   consAddress: string;
 }
 export interface QuerySigningInfoRequestProtoMsg {
@@ -39,6 +64,9 @@ export interface QuerySigningInfoRequestProtoMsg {
 /**
  * QuerySigningInfoRequest is the request type for the Query/SigningInfo RPC
  * method
+ * @name QuerySigningInfoRequestSDKType
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QuerySigningInfoRequest
  */
 export interface QuerySigningInfoRequestSDKType {
   cons_address: string;
@@ -46,9 +74,14 @@ export interface QuerySigningInfoRequestSDKType {
 /**
  * QuerySigningInfoResponse is the response type for the Query/SigningInfo RPC
  * method
+ * @name QuerySigningInfoResponse
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QuerySigningInfoResponse
  */
 export interface QuerySigningInfoResponse {
-  /** val_signing_info is the signing info of requested val cons address */
+  /**
+   * val_signing_info is the signing info of requested val cons address
+  */
   valSigningInfo: ValidatorSigningInfo;
 }
 export interface QuerySigningInfoResponseProtoMsg {
@@ -58,6 +91,9 @@ export interface QuerySigningInfoResponseProtoMsg {
 /**
  * QuerySigningInfoResponse is the response type for the Query/SigningInfo RPC
  * method
+ * @name QuerySigningInfoResponseSDKType
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QuerySigningInfoResponse
  */
 export interface QuerySigningInfoResponseSDKType {
   val_signing_info: ValidatorSigningInfoSDKType;
@@ -65,6 +101,9 @@ export interface QuerySigningInfoResponseSDKType {
 /**
  * QuerySigningInfosRequest is the request type for the Query/SigningInfos RPC
  * method
+ * @name QuerySigningInfosRequest
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QuerySigningInfosRequest
  */
 export interface QuerySigningInfosRequest {
   pagination?: PageRequest;
@@ -76,6 +115,9 @@ export interface QuerySigningInfosRequestProtoMsg {
 /**
  * QuerySigningInfosRequest is the request type for the Query/SigningInfos RPC
  * method
+ * @name QuerySigningInfosRequestSDKType
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QuerySigningInfosRequest
  */
 export interface QuerySigningInfosRequestSDKType {
   pagination?: PageRequestSDKType;
@@ -83,9 +125,14 @@ export interface QuerySigningInfosRequestSDKType {
 /**
  * QuerySigningInfosResponse is the response type for the Query/SigningInfos RPC
  * method
+ * @name QuerySigningInfosResponse
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QuerySigningInfosResponse
  */
 export interface QuerySigningInfosResponse {
-  /** info is the signing info of all validators */
+  /**
+   * info is the signing info of all validators
+  */
   info: ValidatorSigningInfo[];
   pagination?: PageResponse;
 }
@@ -96,6 +143,9 @@ export interface QuerySigningInfosResponseProtoMsg {
 /**
  * QuerySigningInfosResponse is the response type for the Query/SigningInfos RPC
  * method
+ * @name QuerySigningInfosResponseSDKType
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QuerySigningInfosResponse
  */
 export interface QuerySigningInfosResponseSDKType {
   info: ValidatorSigningInfoSDKType[];
@@ -104,6 +154,12 @@ export interface QuerySigningInfosResponseSDKType {
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method
+ * @name QueryParamsRequest
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: "/cosmos.slashing.v1beta1.QueryParamsRequest",
   encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -180,6 +236,12 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({})
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method
+ * @name QueryParamsResponse
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: "/cosmos.slashing.v1beta1.QueryParamsResponse",
   encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -276,6 +338,13 @@ function createBaseQuerySigningInfoRequest(): QuerySigningInfoRequest {
     consAddress: ""
   };
 }
+/**
+ * QuerySigningInfoRequest is the request type for the Query/SigningInfo RPC
+ * method
+ * @name QuerySigningInfoRequest
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QuerySigningInfoRequest
+ */
 export const QuerySigningInfoRequest = {
   typeUrl: "/cosmos.slashing.v1beta1.QuerySigningInfoRequest",
   encode(message: QuerySigningInfoRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -370,6 +439,13 @@ function createBaseQuerySigningInfoResponse(): QuerySigningInfoResponse {
     valSigningInfo: ValidatorSigningInfo.fromPartial({})
   };
 }
+/**
+ * QuerySigningInfoResponse is the response type for the Query/SigningInfo RPC
+ * method
+ * @name QuerySigningInfoResponse
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QuerySigningInfoResponse
+ */
 export const QuerySigningInfoResponse = {
   typeUrl: "/cosmos.slashing.v1beta1.QuerySigningInfoResponse",
   encode(message: QuerySigningInfoResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -466,6 +542,13 @@ function createBaseQuerySigningInfosRequest(): QuerySigningInfosRequest {
     pagination: undefined
   };
 }
+/**
+ * QuerySigningInfosRequest is the request type for the Query/SigningInfos RPC
+ * method
+ * @name QuerySigningInfosRequest
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QuerySigningInfosRequest
+ */
 export const QuerySigningInfosRequest = {
   typeUrl: "/cosmos.slashing.v1beta1.QuerySigningInfosRequest",
   encode(message: QuerySigningInfosRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -563,6 +646,13 @@ function createBaseQuerySigningInfosResponse(): QuerySigningInfosResponse {
     pagination: undefined
   };
 }
+/**
+ * QuerySigningInfosResponse is the response type for the Query/SigningInfos RPC
+ * method
+ * @name QuerySigningInfosResponse
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.QuerySigningInfosResponse
+ */
 export const QuerySigningInfosResponse = {
   typeUrl: "/cosmos.slashing.v1beta1.QuerySigningInfosResponse",
   encode(message: QuerySigningInfosResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

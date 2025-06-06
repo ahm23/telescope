@@ -4,38 +4,66 @@ import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "evmos.vesting.v1";
-/** QueryBalancesRequest is the request type for the Query/Balances RPC method. */
+/**
+ * QueryBalancesRequest is the request type for the Query/Balances RPC method.
+ * @name QueryBalancesRequest
+ * @package evmos.vesting.v1
+ * @see proto type: evmos.vesting.v1.QueryBalancesRequest
+ */
 export interface QueryBalancesRequest {
-  /** address of the clawback vesting account */
+  /**
+   * address of the clawback vesting account
+  */
   address: string;
 }
 export interface QueryBalancesRequestProtoMsg {
   typeUrl: "/evmos.vesting.v1.QueryBalancesRequest";
   value: Uint8Array;
 }
-/** QueryBalancesRequest is the request type for the Query/Balances RPC method. */
+/**
+ * QueryBalancesRequest is the request type for the Query/Balances RPC method.
+ * @name QueryBalancesRequestAmino
+ * @package evmos.vesting.v1
+ * @see proto type: evmos.vesting.v1.QueryBalancesRequest
+ */
 export interface QueryBalancesRequestAmino {
-  /** address of the clawback vesting account */
+  /**
+   * address of the clawback vesting account
+  */
   address?: string;
 }
 export interface QueryBalancesRequestAminoMsg {
   type: "/evmos.vesting.v1.QueryBalancesRequest";
   value: QueryBalancesRequestAmino;
 }
-/** QueryBalancesRequest is the request type for the Query/Balances RPC method. */
+/**
+ * QueryBalancesRequest is the request type for the Query/Balances RPC method.
+ * @name QueryBalancesRequestSDKType
+ * @package evmos.vesting.v1
+ * @see proto type: evmos.vesting.v1.QueryBalancesRequest
+ */
 export interface QueryBalancesRequestSDKType {
   address: string;
 }
 /**
  * QueryBalancesResponse is the response type for the Query/Balances RPC
  * method.
+ * @name QueryBalancesResponse
+ * @package evmos.vesting.v1
+ * @see proto type: evmos.vesting.v1.QueryBalancesResponse
  */
 export interface QueryBalancesResponse {
-  /** current amount of locked tokens */
+  /**
+   * current amount of locked tokens
+  */
   locked: Coin[];
-  /** current amount of unvested tokens */
+  /**
+   * current amount of unvested tokens
+  */
   unvested: Coin[];
-  /** current amount of vested tokens */
+  /**
+   * current amount of vested tokens
+  */
   vested: Coin[];
 }
 export interface QueryBalancesResponseProtoMsg {
@@ -45,13 +73,22 @@ export interface QueryBalancesResponseProtoMsg {
 /**
  * QueryBalancesResponse is the response type for the Query/Balances RPC
  * method.
+ * @name QueryBalancesResponseAmino
+ * @package evmos.vesting.v1
+ * @see proto type: evmos.vesting.v1.QueryBalancesResponse
  */
 export interface QueryBalancesResponseAmino {
-  /** current amount of locked tokens */
+  /**
+   * current amount of locked tokens
+  */
   locked?: CoinAmino[];
-  /** current amount of unvested tokens */
+  /**
+   * current amount of unvested tokens
+  */
   unvested?: CoinAmino[];
-  /** current amount of vested tokens */
+  /**
+   * current amount of vested tokens
+  */
   vested?: CoinAmino[];
 }
 export interface QueryBalancesResponseAminoMsg {
@@ -61,6 +98,9 @@ export interface QueryBalancesResponseAminoMsg {
 /**
  * QueryBalancesResponse is the response type for the Query/Balances RPC
  * method.
+ * @name QueryBalancesResponseSDKType
+ * @package evmos.vesting.v1
+ * @see proto type: evmos.vesting.v1.QueryBalancesResponse
  */
 export interface QueryBalancesResponseSDKType {
   locked: CoinSDKType[];
@@ -72,6 +112,12 @@ function createBaseQueryBalancesRequest(): QueryBalancesRequest {
     address: ""
   };
 }
+/**
+ * QueryBalancesRequest is the request type for the Query/Balances RPC method.
+ * @name QueryBalancesRequest
+ * @package evmos.vesting.v1
+ * @see proto type: evmos.vesting.v1.QueryBalancesRequest
+ */
 export const QueryBalancesRequest = {
   typeUrl: "/evmos.vesting.v1.QueryBalancesRequest",
   is(o: any): o is QueryBalancesRequest {
@@ -172,6 +218,13 @@ function createBaseQueryBalancesResponse(): QueryBalancesResponse {
     vested: []
   };
 }
+/**
+ * QueryBalancesResponse is the response type for the Query/Balances RPC
+ * method.
+ * @name QueryBalancesResponse
+ * @package evmos.vesting.v1
+ * @see proto type: evmos.vesting.v1.QueryBalancesResponse
+ */
 export const QueryBalancesResponse = {
   typeUrl: "/evmos.vesting.v1.QueryBalancesResponse",
   is(o: any): o is QueryBalancesResponse {

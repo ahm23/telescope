@@ -3,7 +3,7 @@ import { MsgCreateDenom, MsgMint, MsgBurn, MsgChangeAdmin, MsgSetDenomMetadata }
 /**
  * @name createDenom
  * @package osmosis.tokenfactory.v1beta1
- * @see protoservice: osmosis.tokenfactory.v1beta1.CreateDenom
+ * @see proto service: osmosis.tokenfactory.v1beta1.CreateDenom
  */
 export const createDenom = buildTx<MsgCreateDenom>({
   msg: MsgCreateDenom
@@ -11,7 +11,7 @@ export const createDenom = buildTx<MsgCreateDenom>({
 /**
  * @name mint
  * @package osmosis.tokenfactory.v1beta1
- * @see protoservice: osmosis.tokenfactory.v1beta1.Mint
+ * @see proto service: osmosis.tokenfactory.v1beta1.Mint
  */
 export const mint = buildTx<MsgMint>({
   msg: MsgMint
@@ -19,7 +19,7 @@ export const mint = buildTx<MsgMint>({
 /**
  * @name burn
  * @package osmosis.tokenfactory.v1beta1
- * @see protoservice: osmosis.tokenfactory.v1beta1.Burn
+ * @see proto service: osmosis.tokenfactory.v1beta1.Burn
  */
 export const burn = buildTx<MsgBurn>({
   msg: MsgBurn
@@ -27,7 +27,7 @@ export const burn = buildTx<MsgBurn>({
 /**
  * @name changeAdmin
  * @package osmosis.tokenfactory.v1beta1
- * @see protoservice: osmosis.tokenfactory.v1beta1.ChangeAdmin
+ * @see proto service: osmosis.tokenfactory.v1beta1.ChangeAdmin
  */
 export const changeAdmin = buildTx<MsgChangeAdmin>({
   msg: MsgChangeAdmin
@@ -35,7 +35,7 @@ export const changeAdmin = buildTx<MsgChangeAdmin>({
 /**
  * @name setDenomMetadata
  * @package osmosis.tokenfactory.v1beta1
- * @see protoservice: osmosis.tokenfactory.v1beta1.SetDenomMetadata
+ * @see proto service: osmosis.tokenfactory.v1beta1.SetDenomMetadata
  */
 export const setDenomMetadata = buildTx<MsgSetDenomMetadata>({
   msg: MsgSetDenomMetadata

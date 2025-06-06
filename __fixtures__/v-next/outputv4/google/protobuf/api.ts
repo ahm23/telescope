@@ -14,6 +14,9 @@ export const protobufPackage = "google.protobuf";
  * sometimes simply referred to as "APIs" in other contexts, such as the name of
  * this message itself. See https://cloud.google.com/apis/design/glossary for
  * detailed terminology.
+ * @name Api
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Api
  */
 export interface Api {
   /**
@@ -21,9 +24,13 @@ export interface Api {
    * followed by the interface's simple name.
    */
   name: string;
-  /** The methods of this interface, in unspecified order. */
+  /**
+   * The methods of this interface, in unspecified order.
+  */
   methods: Method[];
-  /** Any metadata attached to the interface. */
+  /**
+   * Any metadata attached to the interface.
+  */
   options: Option[];
   /**
    * A version string for this interface. If specified, must have the form
@@ -52,9 +59,13 @@ export interface Api {
    * message.
    */
   sourceContext?: SourceContext;
-  /** Included interfaces. See [Mixin][]. */
+  /**
+   * Included interfaces. See [Mixin][].
+  */
   mixins: Mixin[];
-  /** The source syntax of the service. */
+  /**
+   * The source syntax of the service.
+  */
   syntax: Syntax;
 }
 export interface ApiProtoMsg {
@@ -71,6 +82,9 @@ export interface ApiProtoMsg {
  * sometimes simply referred to as "APIs" in other contexts, such as the name of
  * this message itself. See https://cloud.google.com/apis/design/glossary for
  * detailed terminology.
+ * @name ApiSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Api
  */
 export interface ApiSDKType {
   name: string;
@@ -81,28 +95,52 @@ export interface ApiSDKType {
   mixins: MixinSDKType[];
   syntax: Syntax;
 }
-/** Method represents a method of an API interface. */
+/**
+ * Method represents a method of an API interface.
+ * @name Method
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Method
+ */
 export interface Method {
-  /** The simple name of this method. */
+  /**
+   * The simple name of this method.
+  */
   name: string;
-  /** A URL of the input message type. */
+  /**
+   * A URL of the input message type.
+  */
   requestTypeUrl: string;
-  /** If true, the request is streamed. */
+  /**
+   * If true, the request is streamed.
+  */
   requestStreaming: boolean;
-  /** The URL of the output message type. */
+  /**
+   * The URL of the output message type.
+  */
   responseTypeUrl: string;
-  /** If true, the response is streamed. */
+  /**
+   * If true, the response is streamed.
+  */
   responseStreaming: boolean;
-  /** Any metadata attached to the method. */
+  /**
+   * Any metadata attached to the method.
+  */
   options: Option[];
-  /** The source syntax of this method. */
+  /**
+   * The source syntax of this method.
+  */
   syntax: Syntax;
 }
 export interface MethodProtoMsg {
   typeUrl: "/google.protobuf.Method";
   value: Uint8Array;
 }
-/** Method represents a method of an API interface. */
+/**
+ * Method represents a method of an API interface.
+ * @name MethodSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Method
+ */
 export interface MethodSDKType {
   name: string;
   request_type_url: string;
@@ -191,9 +229,14 @@ export interface MethodSDKType {
  *       }
  *       ...
  *     }
+ * @name Mixin
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Mixin
  */
 export interface Mixin {
-  /** The fully qualified name of the interface which is included. */
+  /**
+   * The fully qualified name of the interface which is included.
+  */
   name: string;
   /**
    * If non-empty specifies a path under which inherited HTTP paths
@@ -284,6 +327,9 @@ export interface MixinProtoMsg {
  *       }
  *       ...
  *     }
+ * @name MixinSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Mixin
  */
 export interface MixinSDKType {
   name: string;
@@ -300,6 +346,20 @@ function createBaseApi(): Api {
     syntax: 0
   };
 }
+/**
+ * Api is a light-weight descriptor for an API Interface.
+ * 
+ * Interfaces are also described as "protocol buffer services" in some contexts,
+ * such as by the "service" keyword in a .proto file, but they are different
+ * from API Services, which represent a concrete implementation of an interface
+ * as opposed to simply a description of methods and bindings. They are also
+ * sometimes simply referred to as "APIs" in other contexts, such as the name of
+ * this message itself. See https://cloud.google.com/apis/design/glossary for
+ * detailed terminology.
+ * @name Api
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Api
+ */
 export const Api = {
   typeUrl: "/google.protobuf.Api",
   encode(message: Api, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -522,6 +582,12 @@ function createBaseMethod(): Method {
     syntax: 0
   };
 }
+/**
+ * Method represents a method of an API interface.
+ * @name Method
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Method
+ */
 export const Method = {
   typeUrl: "/google.protobuf.Method",
   encode(message: Method, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -717,6 +783,89 @@ function createBaseMixin(): Mixin {
     root: ""
   };
 }
+/**
+ * Declares an API Interface to be included in this interface. The including
+ * interface must redeclare all the methods from the included interface, but
+ * documentation and options are inherited as follows:
+ * 
+ * - If after comment and whitespace stripping, the documentation
+ *   string of the redeclared method is empty, it will be inherited
+ *   from the original method.
+ * 
+ * - Each annotation belonging to the service config (http,
+ *   visibility) which is not set in the redeclared method will be
+ *   inherited.
+ * 
+ * - If an http annotation is inherited, the path pattern will be
+ *   modified as follows. Any version prefix will be replaced by the
+ *   version of the including interface plus the [root][] path if
+ *   specified.
+ * 
+ * Example of a simple mixin:
+ * 
+ *     package google.acl.v1;
+ *     service AccessControl {
+ *       // Get the underlying ACL object.
+ *       rpc GetAcl(GetAclRequest) returns (Acl) {
+ *         option (google.api.http).get = "/v1/{resource=**}:getAcl";
+ *       }
+ *     }
+ * 
+ *     package google.storage.v2;
+ *     service Storage {
+ *       rpc GetAcl(GetAclRequest) returns (Acl);
+ * 
+ *       // Get a data record.
+ *       rpc GetData(GetDataRequest) returns (Data) {
+ *         option (google.api.http).get = "/v2/{resource=**}";
+ *       }
+ *     }
+ * 
+ * Example of a mixin configuration:
+ * 
+ *     apis:
+ *     - name: google.storage.v2.Storage
+ *       mixins:
+ *       - name: google.acl.v1.AccessControl
+ * 
+ * The mixin construct implies that all methods in `AccessControl` are
+ * also declared with same name and request/response types in
+ * `Storage`. A documentation generator or annotation processor will
+ * see the effective `Storage.GetAcl` method after inherting
+ * documentation and annotations as follows:
+ * 
+ *     service Storage {
+ *       // Get the underlying ACL object.
+ *       rpc GetAcl(GetAclRequest) returns (Acl) {
+ *         option (google.api.http).get = "/v2/{resource=**}:getAcl";
+ *       }
+ *       ...
+ *     }
+ * 
+ * Note how the version in the path pattern changed from `v1` to `v2`.
+ * 
+ * If the `root` field in the mixin is specified, it should be a
+ * relative path under which inherited HTTP paths are placed. Example:
+ * 
+ *     apis:
+ *     - name: google.storage.v2.Storage
+ *       mixins:
+ *       - name: google.acl.v1.AccessControl
+ *         root: acls
+ * 
+ * This implies the following inherited HTTP annotation:
+ * 
+ *     service Storage {
+ *       // Get the underlying ACL object.
+ *       rpc GetAcl(GetAclRequest) returns (Acl) {
+ *         option (google.api.http).get = "/v2/acls/{resource=**}:getAcl";
+ *       }
+ *       ...
+ *     }
+ * @name Mixin
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Mixin
+ */
 export const Mixin = {
   typeUrl: "/google.protobuf.Mixin",
   encode(message: Mixin, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

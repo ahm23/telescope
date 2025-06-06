@@ -4,7 +4,7 @@ import { SimulateRequest, SimulateResponse, GetTxRequest, GetTxResponse, Broadca
  * Simulate simulates executing a transaction for estimating gas usage.
  * @name getSimulate
  * @package cosmos.tx.v1beta1
- * @see protoservice: cosmos.tx.v1beta1.Simulate
+ * @see proto service: cosmos.tx.v1beta1.Simulate
  */
 export const getSimulate = buildQuery<SimulateRequest, SimulateResponse>({
   encode: SimulateRequest.encode,
@@ -16,7 +16,7 @@ export const getSimulate = buildQuery<SimulateRequest, SimulateResponse>({
  * GetTx fetches a tx by hash.
  * @name getGetTx
  * @package cosmos.tx.v1beta1
- * @see protoservice: cosmos.tx.v1beta1.GetTx
+ * @see proto service: cosmos.tx.v1beta1.GetTx
  */
 export const getGetTx = buildQuery<GetTxRequest, GetTxResponse>({
   encode: GetTxRequest.encode,
@@ -28,7 +28,7 @@ export const getGetTx = buildQuery<GetTxRequest, GetTxResponse>({
  * BroadcastTx broadcast transaction.
  * @name getBroadcastTx
  * @package cosmos.tx.v1beta1
- * @see protoservice: cosmos.tx.v1beta1.BroadcastTx
+ * @see proto service: cosmos.tx.v1beta1.BroadcastTx
  */
 export const getBroadcastTx = buildQuery<BroadcastTxRequest, BroadcastTxResponse>({
   encode: BroadcastTxRequest.encode,
@@ -40,7 +40,7 @@ export const getBroadcastTx = buildQuery<BroadcastTxRequest, BroadcastTxResponse
  * GetTxsEvent fetches txs by event.
  * @name getGetTxsEvent
  * @package cosmos.tx.v1beta1
- * @see protoservice: cosmos.tx.v1beta1.GetTxsEvent
+ * @see proto service: cosmos.tx.v1beta1.GetTxsEvent
  */
 export const getGetTxsEvent = buildQuery<GetTxsEventRequest, GetTxsEventResponse>({
   encode: GetTxsEventRequest.encode,
@@ -54,7 +54,7 @@ export const getGetTxsEvent = buildQuery<GetTxsEventRequest, GetTxsEventResponse
  * Since: cosmos-sdk 0.45.2
  * @name getGetBlockWithTxs
  * @package cosmos.tx.v1beta1
- * @see protoservice: cosmos.tx.v1beta1.GetBlockWithTxs
+ * @see proto service: cosmos.tx.v1beta1.GetBlockWithTxs
  */
 export const getGetBlockWithTxs = buildQuery<GetBlockWithTxsRequest, GetBlockWithTxsResponse>({
   encode: GetBlockWithTxsRequest.encode,

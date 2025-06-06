@@ -2,6 +2,11 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.poolmanager.v1beta1";
+/**
+ * @name SwapAmountInRoute
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.SwapAmountInRoute
+ */
 export interface SwapAmountInRoute {
   poolId: bigint;
   tokenOutDenom: string;
@@ -10,10 +15,20 @@ export interface SwapAmountInRouteProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.SwapAmountInRoute";
   value: Uint8Array;
 }
+/**
+ * @name SwapAmountInRouteSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.SwapAmountInRoute
+ */
 export interface SwapAmountInRouteSDKType {
   pool_id: bigint;
   token_out_denom: string;
 }
+/**
+ * @name SwapAmountOutRoute
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.SwapAmountOutRoute
+ */
 export interface SwapAmountOutRoute {
   poolId: bigint;
   tokenInDenom: string;
@@ -22,6 +37,11 @@ export interface SwapAmountOutRouteProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.SwapAmountOutRoute";
   value: Uint8Array;
 }
+/**
+ * @name SwapAmountOutRouteSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.SwapAmountOutRoute
+ */
 export interface SwapAmountOutRouteSDKType {
   pool_id: bigint;
   token_in_denom: string;
@@ -32,6 +52,11 @@ function createBaseSwapAmountInRoute(): SwapAmountInRoute {
     tokenOutDenom: ""
   };
 }
+/**
+ * @name SwapAmountInRoute
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.SwapAmountInRoute
+ */
 export const SwapAmountInRoute = {
   typeUrl: "/osmosis.poolmanager.v1beta1.SwapAmountInRoute",
   encode(message: SwapAmountInRoute, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -143,6 +168,11 @@ function createBaseSwapAmountOutRoute(): SwapAmountOutRoute {
     tokenInDenom: ""
   };
 }
+/**
+ * @name SwapAmountOutRoute
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.SwapAmountOutRoute
+ */
 export const SwapAmountOutRoute = {
   typeUrl: "/osmosis.poolmanager.v1beta1.SwapAmountOutRoute",
   encode(message: SwapAmountOutRoute, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

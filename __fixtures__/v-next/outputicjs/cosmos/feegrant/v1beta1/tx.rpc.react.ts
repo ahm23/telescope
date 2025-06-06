@@ -6,7 +6,7 @@ import { grantAllowance, revokeAllowance } from "./tx.rpc.func";
  * account with the provided expiration time.
  * @name useGrantAllowance
  * @package cosmos.feegrant.v1beta1
- * @see protoservice: cosmos.feegrant.v1beta1.GrantAllowance
+ * @see proto service: cosmos.feegrant.v1beta1.GrantAllowance
  */
 export const useGrantAllowance = buildUseMutation<MsgGrantAllowance, Error>({
   builderMutationFn: grantAllowance
@@ -16,7 +16,7 @@ export const useGrantAllowance = buildUseMutation<MsgGrantAllowance, Error>({
  * has been granted to the grantee.
  * @name useRevokeAllowance
  * @package cosmos.feegrant.v1beta1
- * @see protoservice: cosmos.feegrant.v1beta1.RevokeAllowance
+ * @see proto service: cosmos.feegrant.v1beta1.RevokeAllowance
  */
 export const useRevokeAllowance = buildUseMutation<MsgRevokeAllowance, Error>({
   builderMutationFn: revokeAllowance

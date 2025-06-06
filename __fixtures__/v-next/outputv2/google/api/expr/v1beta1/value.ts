@@ -9,31 +9,58 @@ export const protobufPackage = "google.api.expr.v1beta1";
  * 
  * This is similar to `google.protobuf.Value`, but can represent CEL's full
  * range of values.
+ * @name Value
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Value
  */
 export interface Value {
-  /** Null value. */
+  /**
+   * Null value.
+  */
   nullValue?: NullValue;
-  /** Boolean value. */
+  /**
+   * Boolean value.
+  */
   boolValue?: boolean;
-  /** Signed integer value. */
+  /**
+   * Signed integer value.
+  */
   int64Value?: bigint;
-  /** Unsigned integer value. */
+  /**
+   * Unsigned integer value.
+  */
   uint64Value?: bigint;
-  /** Floating point value. */
+  /**
+   * Floating point value.
+  */
   doubleValue?: number;
-  /** UTF-8 string value. */
+  /**
+   * UTF-8 string value.
+  */
   stringValue?: string;
-  /** Byte string value. */
+  /**
+   * Byte string value.
+  */
   bytesValue?: Uint8Array;
-  /** An enum value. */
+  /**
+   * An enum value.
+  */
   enumValue?: EnumValue;
-  /** The proto message backing an object value. */
+  /**
+   * The proto message backing an object value.
+  */
   objectValue?: Any;
-  /** Map value. */
+  /**
+   * Map value.
+  */
   mapValue?: MapValue;
-  /** List value. */
+  /**
+   * List value.
+  */
   listValue?: ListValue;
-  /** A Type value represented by the fully qualified name of the type. */
+  /**
+   * A Type value represented by the fully qualified name of the type.
+  */
   typeValue?: string;
 }
 export interface ValueProtoMsg {
@@ -45,31 +72,58 @@ export interface ValueProtoMsg {
  * 
  * This is similar to `google.protobuf.Value`, but can represent CEL's full
  * range of values.
+ * @name ValueAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Value
  */
 export interface ValueAmino {
-  /** Null value. */
+  /**
+   * Null value.
+  */
   null_value?: NullValue;
-  /** Boolean value. */
+  /**
+   * Boolean value.
+  */
   bool_value?: boolean;
-  /** Signed integer value. */
+  /**
+   * Signed integer value.
+  */
   int64_value?: string;
-  /** Unsigned integer value. */
+  /**
+   * Unsigned integer value.
+  */
   uint64_value?: string;
-  /** Floating point value. */
+  /**
+   * Floating point value.
+  */
   double_value?: number;
-  /** UTF-8 string value. */
+  /**
+   * UTF-8 string value.
+  */
   string_value?: string;
-  /** Byte string value. */
+  /**
+   * Byte string value.
+  */
   bytes_value?: string;
-  /** An enum value. */
+  /**
+   * An enum value.
+  */
   enum_value?: EnumValueAmino;
-  /** The proto message backing an object value. */
+  /**
+   * The proto message backing an object value.
+  */
   object_value?: AnyAmino;
-  /** Map value. */
+  /**
+   * Map value.
+  */
   map_value?: MapValueAmino;
-  /** List value. */
+  /**
+   * List value.
+  */
   list_value?: ListValueAmino;
-  /** A Type value represented by the fully qualified name of the type. */
+  /**
+   * A Type value represented by the fully qualified name of the type.
+  */
   type_value?: string;
 }
 export interface ValueAminoMsg {
@@ -81,6 +135,9 @@ export interface ValueAminoMsg {
  * 
  * This is similar to `google.protobuf.Value`, but can represent CEL's full
  * range of values.
+ * @name ValueSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Value
  */
 export interface ValueSDKType {
   null_value?: NullValue;
@@ -96,29 +153,52 @@ export interface ValueSDKType {
   list_value?: ListValueSDKType;
   type_value?: string;
 }
-/** An enum value. */
+/**
+ * An enum value.
+ * @name EnumValue
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.EnumValue
+ */
 export interface EnumValue {
-  /** The fully qualified name of the enum type. */
+  /**
+   * The fully qualified name of the enum type.
+  */
   type: string;
-  /** The value of the enum. */
+  /**
+   * The value of the enum.
+  */
   value: number;
 }
 export interface EnumValueProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.EnumValue";
   value: Uint8Array;
 }
-/** An enum value. */
+/**
+ * An enum value.
+ * @name EnumValueAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.EnumValue
+ */
 export interface EnumValueAmino {
-  /** The fully qualified name of the enum type. */
+  /**
+   * The fully qualified name of the enum type.
+  */
   type?: string;
-  /** The value of the enum. */
+  /**
+   * The value of the enum.
+  */
   value?: number;
 }
 export interface EnumValueAminoMsg {
   type: "/google.api.expr.v1beta1.EnumValue";
   value: EnumValueAmino;
 }
-/** An enum value. */
+/**
+ * An enum value.
+ * @name EnumValueSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.EnumValue
+ */
 export interface EnumValueSDKType {
   type: string;
   value: number;
@@ -128,9 +208,14 @@ export interface EnumValueSDKType {
  * 
  * Wrapped in a message so 'not set' and empty can be differentiated, which is
  * required for use in a 'oneof'.
+ * @name ListValue
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ListValue
  */
 export interface ListValue {
-  /** The ordered values in the list. */
+  /**
+   * The ordered values in the list.
+  */
   values: Value[];
 }
 export interface ListValueProtoMsg {
@@ -142,9 +227,14 @@ export interface ListValueProtoMsg {
  * 
  * Wrapped in a message so 'not set' and empty can be differentiated, which is
  * required for use in a 'oneof'.
+ * @name ListValueAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ListValue
  */
 export interface ListValueAmino {
-  /** The ordered values in the list. */
+  /**
+   * The ordered values in the list.
+  */
   values?: ValueAmino[];
 }
 export interface ListValueAminoMsg {
@@ -156,6 +246,9 @@ export interface ListValueAminoMsg {
  * 
  * Wrapped in a message so 'not set' and empty can be differentiated, which is
  * required for use in a 'oneof'.
+ * @name ListValueSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ListValue
  */
 export interface ListValueSDKType {
   values: ValueSDKType[];
@@ -165,6 +258,9 @@ export interface ListValueSDKType {
  * 
  * Wrapped in a message so 'not set' and empty can be differentiated, which is
  * required for use in a 'oneof'.
+ * @name MapValue
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.MapValue
  */
 export interface MapValue {
   /**
@@ -184,6 +280,9 @@ export interface MapValueProtoMsg {
  * 
  * Wrapped in a message so 'not set' and empty can be differentiated, which is
  * required for use in a 'oneof'.
+ * @name MapValueAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.MapValue
  */
 export interface MapValueAmino {
   /**
@@ -203,11 +302,19 @@ export interface MapValueAminoMsg {
  * 
  * Wrapped in a message so 'not set' and empty can be differentiated, which is
  * required for use in a 'oneof'.
+ * @name MapValueSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.MapValue
  */
 export interface MapValueSDKType {
   entries: MapValue_EntrySDKType[];
 }
-/** An entry in the map. */
+/**
+ * An entry in the map.
+ * @name MapValue_Entry
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Entry
+ */
 export interface MapValue_Entry {
   /**
    * The key.
@@ -216,14 +323,21 @@ export interface MapValue_Entry {
    * Currently only boolean, int, uint, and string values can be keys.
    */
   key?: Value;
-  /** The value. */
+  /**
+   * The value.
+  */
   value?: Value;
 }
 export interface MapValue_EntryProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.Entry";
   value: Uint8Array;
 }
-/** An entry in the map. */
+/**
+ * An entry in the map.
+ * @name MapValue_EntryAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.MapValue_Entry
+ */
 export interface MapValue_EntryAmino {
   /**
    * The key.
@@ -232,14 +346,21 @@ export interface MapValue_EntryAmino {
    * Currently only boolean, int, uint, and string values can be keys.
    */
   key?: ValueAmino;
-  /** The value. */
+  /**
+   * The value.
+  */
   value?: ValueAmino;
 }
 export interface MapValue_EntryAminoMsg {
   type: "/google.api.expr.v1beta1.Entry";
   value: MapValue_EntryAmino;
 }
-/** An entry in the map. */
+/**
+ * An entry in the map.
+ * @name MapValue_EntrySDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Entry
+ */
 export interface MapValue_EntrySDKType {
   key?: ValueSDKType;
   value?: ValueSDKType;
@@ -260,6 +381,15 @@ function createBaseValue(): Value {
     typeValue: undefined
   };
 }
+/**
+ * Represents a CEL value.
+ * 
+ * This is similar to `google.protobuf.Value`, but can represent CEL's full
+ * range of values.
+ * @name Value
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Value
+ */
 export const Value = {
   typeUrl: "/google.api.expr.v1beta1.Value",
   encode(message: Value, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -525,6 +655,12 @@ function createBaseEnumValue(): EnumValue {
     value: 0
   };
 }
+/**
+ * An enum value.
+ * @name EnumValue
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.EnumValue
+ */
 export const EnumValue = {
   typeUrl: "/google.api.expr.v1beta1.EnumValue",
   encode(message: EnumValue, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -623,6 +759,15 @@ function createBaseListValue(): ListValue {
     values: []
   };
 }
+/**
+ * A list.
+ * 
+ * Wrapped in a message so 'not set' and empty can be differentiated, which is
+ * required for use in a 'oneof'.
+ * @name ListValue
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ListValue
+ */
 export const ListValue = {
   typeUrl: "/google.api.expr.v1beta1.ListValue",
   encode(message: ListValue, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -716,6 +861,15 @@ function createBaseMapValue(): MapValue {
     entries: []
   };
 }
+/**
+ * A map.
+ * 
+ * Wrapped in a message so 'not set' and empty can be differentiated, which is
+ * required for use in a 'oneof'.
+ * @name MapValue
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.MapValue
+ */
 export const MapValue = {
   typeUrl: "/google.api.expr.v1beta1.MapValue",
   encode(message: MapValue, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -810,6 +964,12 @@ function createBaseMapValue_Entry(): MapValue_Entry {
     value: undefined
   };
 }
+/**
+ * An entry in the map.
+ * @name MapValue_Entry
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Entry
+ */
 export const MapValue_Entry = {
   typeUrl: "/google.api.expr.v1beta1.Entry",
   encode(message: MapValue_Entry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

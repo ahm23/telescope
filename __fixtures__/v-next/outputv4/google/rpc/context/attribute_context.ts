@@ -24,6 +24,9 @@ export const protobufPackage = "google.rpc.context";
  * NOTE: Different system may generate different subset of attributes. Please
  * verify the system specification before relying on an attribute generated
  * a system.
+ * @name AttributeContext
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.AttributeContext
  */
 export interface AttributeContext {
   /**
@@ -44,9 +47,13 @@ export interface AttributeContext {
    * the last hop.
    */
   destination?: AttributeContext_Peer;
-  /** Represents a network request, such as an HTTP request. */
+  /**
+   * Represents a network request, such as an HTTP request.
+  */
   request?: AttributeContext_Request;
-  /** Represents a network response, such as an HTTP response. */
+  /**
+   * Represents a network response, such as an HTTP response.
+  */
   response?: AttributeContext_Response;
   /**
    * Represents a target resource that is involved with a network activity.
@@ -54,9 +61,13 @@ export interface AttributeContext {
    * primary one.
    */
   resource?: AttributeContext_Resource;
-  /** Represents an API operation that is involved to a network activity. */
+  /**
+   * Represents an API operation that is involved to a network activity.
+  */
   api?: AttributeContext_Api;
-  /** Supports extensions for advanced use cases, such as logs and metrics. */
+  /**
+   * Supports extensions for advanced use cases, such as logs and metrics.
+  */
   extensions: Any[];
 }
 export interface AttributeContextProtoMsg {
@@ -81,6 +92,9 @@ export interface AttributeContextProtoMsg {
  * NOTE: Different system may generate different subset of attributes. Please
  * verify the system specification before relying on an attribute generated
  * a system.
+ * @name AttributeContextSDKType
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.AttributeContext
  */
 export interface AttributeContextSDKType {
   origin?: AttributeContext_PeerSDKType;
@@ -92,6 +106,11 @@ export interface AttributeContextSDKType {
   api?: AttributeContext_ApiSDKType;
   extensions: AnySDKType[];
 }
+/**
+ * @name AttributeContext_Peer_LabelsEntry
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export interface AttributeContext_Peer_LabelsEntry {
   key: string;
   value: string;
@@ -100,6 +119,11 @@ export interface AttributeContext_Peer_LabelsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name AttributeContext_Peer_LabelsEntrySDKType
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export interface AttributeContext_Peer_LabelsEntrySDKType {
   key: string;
   value: string;
@@ -109,13 +133,22 @@ export interface AttributeContext_Peer_LabelsEntrySDKType {
  * The node can be either a service or an application that sends, forwards,
  * or receives the request. Service peers should fill in
  * `principal` and `labels` as appropriate.
+ * @name AttributeContext_Peer
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Peer
  */
 export interface AttributeContext_Peer {
-  /** The IP address of the peer. */
+  /**
+   * The IP address of the peer.
+  */
   ip: string;
-  /** The network port of the peer. */
+  /**
+   * The network port of the peer.
+  */
   port: bigint;
-  /** The labels associated with the peer. */
+  /**
+   * The labels associated with the peer.
+  */
   labels: {
     [key: string]: string;
   };
@@ -141,6 +174,9 @@ export interface AttributeContext_PeerProtoMsg {
  * The node can be either a service or an application that sends, forwards,
  * or receives the request. Service peers should fill in
  * `principal` and `labels` as appropriate.
+ * @name AttributeContext_PeerSDKType
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Peer
  */
 export interface AttributeContext_PeerSDKType {
   ip: string;
@@ -155,6 +191,9 @@ export interface AttributeContext_PeerSDKType {
  * This message defines attributes associated with API operations, such as
  * a network API request. The terminology is based on the conventions used
  * by Google APIs, Istio, and OpenAPI.
+ * @name AttributeContext_Api
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Api
  */
 export interface AttributeContext_Api {
   /**
@@ -188,6 +227,9 @@ export interface AttributeContext_ApiProtoMsg {
  * This message defines attributes associated with API operations, such as
  * a network API request. The terminology is based on the conventions used
  * by Google APIs, Istio, and OpenAPI.
+ * @name AttributeContext_ApiSDKType
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Api
  */
 export interface AttributeContext_ApiSDKType {
   service: string;
@@ -199,6 +241,9 @@ export interface AttributeContext_ApiSDKType {
  * This message defines request authentication attributes. Terminology is
  * based on the JSON Web Token (JWT) standard, but the terms also
  * correlate to concepts in other standards.
+ * @name AttributeContext_Auth
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Auth
  */
 export interface AttributeContext_Auth {
   /**
@@ -270,6 +315,9 @@ export interface AttributeContext_AuthProtoMsg {
  * This message defines request authentication attributes. Terminology is
  * based on the JSON Web Token (JWT) standard, but the terms also
  * correlate to concepts in other standards.
+ * @name AttributeContext_AuthSDKType
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Auth
  */
 export interface AttributeContext_AuthSDKType {
   principal: string;
@@ -278,6 +326,11 @@ export interface AttributeContext_AuthSDKType {
   claims?: StructSDKType;
   access_levels: string[];
 }
+/**
+ * @name AttributeContext_Request_HeadersEntry
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export interface AttributeContext_Request_HeadersEntry {
   key: string;
   value: string;
@@ -286,6 +339,11 @@ export interface AttributeContext_Request_HeadersEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name AttributeContext_Request_HeadersEntrySDKType
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export interface AttributeContext_Request_HeadersEntrySDKType {
   key: string;
   value: string;
@@ -294,6 +352,9 @@ export interface AttributeContext_Request_HeadersEntrySDKType {
  * This message defines attributes for an HTTP request. If the actual
  * request is not an HTTP request, the runtime system should try to map
  * the actual request to an equivalent HTTP request.
+ * @name AttributeContext_Request
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Request
  */
 export interface AttributeContext_Request {
   /**
@@ -302,7 +363,9 @@ export interface AttributeContext_Request {
    * within a single day for a specific service.
    */
   id: string;
-  /** The HTTP request method, such as `GET`, `POST`. */
+  /**
+   * The HTTP request method, such as `GET`, `POST`.
+  */
   method: string;
   /**
    * The HTTP request headers. If multiple headers share the same key, they
@@ -312,11 +375,17 @@ export interface AttributeContext_Request {
   headers: {
     [key: string]: string;
   };
-  /** The HTTP URL path. */
+  /**
+   * The HTTP URL path.
+  */
   path: string;
-  /** The HTTP request `Host` header value. */
+  /**
+   * The HTTP request `Host` header value.
+  */
   host: string;
-  /** The HTTP URL scheme, such as `http` and `https`. */
+  /**
+   * The HTTP URL scheme, such as `http` and `https`.
+  */
   scheme: string;
   /**
    * The HTTP URL query in the format of `name1=value1&name2=value2`, as it
@@ -328,7 +397,9 @@ export interface AttributeContext_Request {
    * the request.
    */
   time?: Date;
-  /** The HTTP request size in bytes. If unknown, it must be -1. */
+  /**
+   * The HTTP request size in bytes. If unknown, it must be -1.
+  */
   size: bigint;
   /**
    * The network protocol used with the request, such as "http/1.1",
@@ -356,6 +427,9 @@ export interface AttributeContext_RequestProtoMsg {
  * This message defines attributes for an HTTP request. If the actual
  * request is not an HTTP request, the runtime system should try to map
  * the actual request to an equivalent HTTP request.
+ * @name AttributeContext_RequestSDKType
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Request
  */
 export interface AttributeContext_RequestSDKType {
   id: string;
@@ -373,6 +447,11 @@ export interface AttributeContext_RequestSDKType {
   reason: string;
   auth?: AttributeContext_AuthSDKType;
 }
+/**
+ * @name AttributeContext_Response_HeadersEntry
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export interface AttributeContext_Response_HeadersEntry {
   key: string;
   value: string;
@@ -381,6 +460,11 @@ export interface AttributeContext_Response_HeadersEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name AttributeContext_Response_HeadersEntrySDKType
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export interface AttributeContext_Response_HeadersEntrySDKType {
   key: string;
   value: string;
@@ -388,11 +472,18 @@ export interface AttributeContext_Response_HeadersEntrySDKType {
 /**
  * This message defines attributes for a typical network response. It
  * generally models semantics of an HTTP response.
+ * @name AttributeContext_Response
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Response
  */
 export interface AttributeContext_Response {
-  /** The HTTP response status code, such as `200` and `404`. */
+  /**
+   * The HTTP response status code, such as `200` and `404`.
+  */
   code: bigint;
-  /** The HTTP response size in bytes. If unknown, it must be -1. */
+  /**
+   * The HTTP response size in bytes. If unknown, it must be -1.
+  */
   size: bigint;
   /**
    * The HTTP response headers. If multiple headers share the same key, they
@@ -422,6 +513,9 @@ export interface AttributeContext_ResponseProtoMsg {
 /**
  * This message defines attributes for a typical network response. It
  * generally models semantics of an HTTP response.
+ * @name AttributeContext_ResponseSDKType
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Response
  */
 export interface AttributeContext_ResponseSDKType {
   code: bigint;
@@ -432,6 +526,11 @@ export interface AttributeContext_ResponseSDKType {
   time?: Date;
   backend_latency?: DurationSDKType;
 }
+/**
+ * @name AttributeContext_Resource_LabelsEntry
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export interface AttributeContext_Resource_LabelsEntry {
   key: string;
   value: string;
@@ -440,10 +539,20 @@ export interface AttributeContext_Resource_LabelsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name AttributeContext_Resource_LabelsEntrySDKType
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export interface AttributeContext_Resource_LabelsEntrySDKType {
   key: string;
   value: string;
 }
+/**
+ * @name AttributeContext_Resource_AnnotationsEntry
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export interface AttributeContext_Resource_AnnotationsEntry {
   key: string;
   value: string;
@@ -452,6 +561,11 @@ export interface AttributeContext_Resource_AnnotationsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name AttributeContext_Resource_AnnotationsEntrySDKType
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export interface AttributeContext_Resource_AnnotationsEntrySDKType {
   key: string;
   value: string;
@@ -460,6 +574,9 @@ export interface AttributeContext_Resource_AnnotationsEntrySDKType {
  * This message defines core attributes for a resource. A resource is an
  * addressable (named) entity provided by the destination service. For
  * example, a file stored on a network storage service.
+ * @name AttributeContext_Resource
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Resource
  */
 export interface AttributeContext_Resource {
   /**
@@ -515,7 +632,9 @@ export interface AttributeContext_Resource {
   annotations: {
     [key: string]: string;
   };
-  /** Mutable. The display name set by clients. Must be <= 63 characters. */
+  /**
+   * Mutable. The display name set by clients. Must be <= 63 characters.
+  */
   displayName: string;
   /**
    * Output only. The timestamp when the resource was created. This may
@@ -559,6 +678,9 @@ export interface AttributeContext_ResourceProtoMsg {
  * This message defines core attributes for a resource. A resource is an
  * addressable (named) entity provided by the destination service. For
  * example, a file stored on a network storage service.
+ * @name AttributeContext_ResourceSDKType
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Resource
  */
 export interface AttributeContext_ResourceSDKType {
   service: string;
@@ -590,6 +712,28 @@ function createBaseAttributeContext(): AttributeContext {
     extensions: []
   };
 }
+/**
+ * This message defines the standard attribute vocabulary for Google APIs.
+ * 
+ * An attribute is a piece of metadata that describes an activity on a network
+ * service. For example, the size of an HTTP request, or the status code of
+ * an HTTP response.
+ * 
+ * Each attribute has a type and a name, which is logically defined as
+ * a proto message field in `AttributeContext`. The field type becomes the
+ * attribute type, and the field path becomes the attribute name. For example,
+ * the attribute `source.ip` maps to field `AttributeContext.source.ip`.
+ * 
+ * This message definition is guaranteed not to have any wire breaking change.
+ * So you can use it directly for passing attributes across different systems.
+ * 
+ * NOTE: Different system may generate different subset of attributes. Please
+ * verify the system specification before relying on an attribute generated
+ * a system.
+ * @name AttributeContext
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.AttributeContext
+ */
 export const AttributeContext = {
   typeUrl: "/google.rpc.context.AttributeContext",
   encode(message: AttributeContext, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -815,6 +959,11 @@ function createBaseAttributeContext_Peer_LabelsEntry(): AttributeContext_Peer_La
     value: ""
   };
 }
+/**
+ * @name AttributeContext_Peer_LabelsEntry
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export const AttributeContext_Peer_LabelsEntry = {
   encode(message: AttributeContext_Peer_LabelsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== undefined) {
@@ -916,6 +1065,15 @@ function createBaseAttributeContext_Peer(): AttributeContext_Peer {
     regionCode: ""
   };
 }
+/**
+ * This message defines attributes for a node that handles a network request.
+ * The node can be either a service or an application that sends, forwards,
+ * or receives the request. Service peers should fill in
+ * `principal` and `labels` as appropriate.
+ * @name AttributeContext_Peer
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Peer
+ */
 export const AttributeContext_Peer = {
   typeUrl: "/google.rpc.context.Peer",
   encode(message: AttributeContext_Peer, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1121,6 +1279,14 @@ function createBaseAttributeContext_Api(): AttributeContext_Api {
     version: ""
   };
 }
+/**
+ * This message defines attributes associated with API operations, such as
+ * a network API request. The terminology is based on the conventions used
+ * by Google APIs, Istio, and OpenAPI.
+ * @name AttributeContext_Api
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Api
+ */
 export const AttributeContext_Api = {
   typeUrl: "/google.rpc.context.Api",
   encode(message: AttributeContext_Api, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1261,6 +1427,14 @@ function createBaseAttributeContext_Auth(): AttributeContext_Auth {
     accessLevels: []
   };
 }
+/**
+ * This message defines request authentication attributes. Terminology is
+ * based on the JSON Web Token (JWT) standard, but the terms also
+ * correlate to concepts in other standards.
+ * @name AttributeContext_Auth
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Auth
+ */
 export const AttributeContext_Auth = {
   typeUrl: "/google.rpc.context.Auth",
   encode(message: AttributeContext_Auth, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1436,6 +1610,11 @@ function createBaseAttributeContext_Request_HeadersEntry(): AttributeContext_Req
     value: ""
   };
 }
+/**
+ * @name AttributeContext_Request_HeadersEntry
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export const AttributeContext_Request_HeadersEntry = {
   encode(message: AttributeContext_Request_HeadersEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== undefined) {
@@ -1544,6 +1723,14 @@ function createBaseAttributeContext_Request(): AttributeContext_Request {
     auth: undefined
   };
 }
+/**
+ * This message defines attributes for an HTTP request. If the actual
+ * request is not an HTTP request, the runtime system should try to map
+ * the actual request to an equivalent HTTP request.
+ * @name AttributeContext_Request
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Request
+ */
 export const AttributeContext_Request = {
   typeUrl: "/google.rpc.context.Request",
   encode(message: AttributeContext_Request, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1861,6 +2048,11 @@ function createBaseAttributeContext_Response_HeadersEntry(): AttributeContext_Re
     value: ""
   };
 }
+/**
+ * @name AttributeContext_Response_HeadersEntry
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export const AttributeContext_Response_HeadersEntry = {
   encode(message: AttributeContext_Response_HeadersEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== undefined) {
@@ -1962,6 +2154,13 @@ function createBaseAttributeContext_Response(): AttributeContext_Response {
     backendLatency: undefined
   };
 }
+/**
+ * This message defines attributes for a typical network response. It
+ * generally models semantics of an HTTP response.
+ * @name AttributeContext_Response
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Response
+ */
 export const AttributeContext_Response = {
   typeUrl: "/google.rpc.context.Response",
   encode(message: AttributeContext_Response, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2169,6 +2368,11 @@ function createBaseAttributeContext_Resource_LabelsEntry(): AttributeContext_Res
     value: ""
   };
 }
+/**
+ * @name AttributeContext_Resource_LabelsEntry
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export const AttributeContext_Resource_LabelsEntry = {
   encode(message: AttributeContext_Resource_LabelsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== undefined) {
@@ -2267,6 +2471,11 @@ function createBaseAttributeContext_Resource_AnnotationsEntry(): AttributeContex
     value: ""
   };
 }
+/**
+ * @name AttributeContext_Resource_AnnotationsEntry
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.undefined
+ */
 export const AttributeContext_Resource_AnnotationsEntry = {
   encode(message: AttributeContext_Resource_AnnotationsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== undefined) {
@@ -2375,6 +2584,14 @@ function createBaseAttributeContext_Resource(): AttributeContext_Resource {
     location: ""
   };
 }
+/**
+ * This message defines core attributes for a resource. A resource is an
+ * addressable (named) entity provided by the destination service. For
+ * example, a file stored on a network storage service.
+ * @name AttributeContext_Resource
+ * @package google.rpc.context
+ * @see proto type: google.rpc.context.Resource
+ */
 export const AttributeContext_Resource = {
   typeUrl: "/google.rpc.context.Resource",
   encode(message: AttributeContext_Resource, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

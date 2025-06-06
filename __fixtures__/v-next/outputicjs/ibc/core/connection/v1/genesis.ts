@@ -1,25 +1,39 @@
-import { IdentifiedConnection, IdentifiedConnectionAmino, ConnectionPaths, ConnectionPathsAmino, Params, ParamsAmino } from "./connection";
+import { IdentifiedConnection, IdentifiedConnectionAmino, ConnectionPaths, ConnectionPathsAmino, IbcCoreConnectionV1Params, IbcCoreConnectionV1ParamsAmino } from "./connection";
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { DeepPartial } from "../../../../helpers";
-/** GenesisState defines the ibc connection submodule's genesis state. */
+/**
+ * GenesisState defines the ibc connection submodule's genesis state.
+ * @name GenesisState
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.GenesisState
+ */
 export interface GenesisState {
   connections: IdentifiedConnection[];
   clientConnectionPaths: ConnectionPaths[];
-  /** the sequence for the next generated connection identifier */
+  /**
+   * the sequence for the next generated connection identifier
+  */
   nextConnectionSequence: bigint;
-  params: Params;
+  params: IbcCoreConnectionV1Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/ibc.core.connection.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the ibc connection submodule's genesis state. */
+/**
+ * GenesisState defines the ibc connection submodule's genesis state.
+ * @name GenesisStateAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.GenesisState
+ */
 export interface GenesisStateAmino {
   connections: IdentifiedConnectionAmino[];
   client_connection_paths: ConnectionPathsAmino[];
-  /** the sequence for the next generated connection identifier */
+  /**
+   * the sequence for the next generated connection identifier
+  */
   next_connection_sequence: string;
-  params: ParamsAmino;
+  params: IbcCoreConnectionV1ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
   type: "cosmos-sdk/GenesisState";
@@ -30,9 +44,15 @@ function createBaseGenesisState(): GenesisState {
     connections: [],
     clientConnectionPaths: [],
     nextConnectionSequence: BigInt(0),
-    params: Params.fromPartial({})
+    params: IbcCoreConnectionV1Params.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the ibc connection submodule's genesis state.
+ * @name GenesisState
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/ibc.core.connection.v1.GenesisState",
   aminoType: "cosmos-sdk/GenesisState",
@@ -47,7 +67,7 @@ export const GenesisState = {
       writer.uint32(24).uint64(message.nextConnectionSequence);
     }
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(34).fork()).ldelim();
+      IbcCoreConnectionV1Params.encode(message.params, writer.uint32(34).fork()).ldelim();
     }
     return writer;
   },
@@ -68,7 +88,7 @@ export const GenesisState = {
           message.nextConnectionSequence = reader.uint64();
           break;
         case 4:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = IbcCoreConnectionV1Params.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -82,7 +102,7 @@ export const GenesisState = {
     message.connections = object.connections?.map(e => IdentifiedConnection.fromPartial(e)) || [];
     message.clientConnectionPaths = object.clientConnectionPaths?.map(e => ConnectionPaths.fromPartial(e)) || [];
     message.nextConnectionSequence = object.nextConnectionSequence !== undefined && object.nextConnectionSequence !== null ? BigInt(object.nextConnectionSequence.toString()) : BigInt(0);
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? IbcCoreConnectionV1Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
@@ -93,7 +113,7 @@ export const GenesisState = {
       message.nextConnectionSequence = BigInt(object.next_connection_sequence);
     }
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = IbcCoreConnectionV1Params.fromAmino(object.params);
     }
     return message;
   },
@@ -110,7 +130,7 @@ export const GenesisState = {
       obj.client_connection_paths = message.clientConnectionPaths;
     }
     obj.next_connection_sequence = message.nextConnectionSequence !== BigInt(0) ? message.nextConnectionSequence?.toString() : undefined;
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? IbcCoreConnectionV1Params.toAmino(message.params) : undefined;
     return obj;
   },
   fromAminoMsg(object: GenesisStateAminoMsg): GenesisState {

@@ -5,7 +5,7 @@ import { MsgCreateVestingAccount, MsgCreatePermanentLockedAccount, MsgCreatePeri
  * account.
  * @name createVestingAccount
  * @package cosmos.vesting.v1beta1
- * @see protoservice: cosmos.vesting.v1beta1.CreateVestingAccount
+ * @see proto service: cosmos.vesting.v1beta1.CreateVestingAccount
  */
 export const createVestingAccount = buildTx<MsgCreateVestingAccount>({
   msg: MsgCreateVestingAccount
@@ -15,7 +15,7 @@ export const createVestingAccount = buildTx<MsgCreateVestingAccount>({
  * locked account.
  * @name createPermanentLockedAccount
  * @package cosmos.vesting.v1beta1
- * @see protoservice: cosmos.vesting.v1beta1.CreatePermanentLockedAccount
+ * @see proto service: cosmos.vesting.v1beta1.CreatePermanentLockedAccount
  */
 export const createPermanentLockedAccount = buildTx<MsgCreatePermanentLockedAccount>({
   msg: MsgCreatePermanentLockedAccount
@@ -25,7 +25,7 @@ export const createPermanentLockedAccount = buildTx<MsgCreatePermanentLockedAcco
  * periodic vesting account.
  * @name createPeriodicVestingAccount
  * @package cosmos.vesting.v1beta1
- * @see protoservice: cosmos.vesting.v1beta1.CreatePeriodicVestingAccount
+ * @see proto service: cosmos.vesting.v1beta1.CreatePeriodicVestingAccount
  */
 export const createPeriodicVestingAccount = buildTx<MsgCreatePeriodicVestingAccount>({
   msg: MsgCreatePeriodicVestingAccount

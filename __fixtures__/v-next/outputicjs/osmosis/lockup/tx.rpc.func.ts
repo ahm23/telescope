@@ -4,7 +4,7 @@ import { MsgLockTokens, MsgBeginUnlockingAll, MsgBeginUnlocking, MsgExtendLockup
  * LockTokens lock tokens
  * @name lockTokens
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.LockTokens
+ * @see proto service: osmosis.lockup.LockTokens
  */
 export const lockTokens = buildTx<MsgLockTokens>({
   msg: MsgLockTokens
@@ -13,7 +13,7 @@ export const lockTokens = buildTx<MsgLockTokens>({
  * BeginUnlockingAll begin unlocking all tokens
  * @name beginUnlockingAll
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.BeginUnlockingAll
+ * @see proto service: osmosis.lockup.BeginUnlockingAll
  */
 export const beginUnlockingAll = buildTx<MsgBeginUnlockingAll>({
   msg: MsgBeginUnlockingAll
@@ -22,7 +22,7 @@ export const beginUnlockingAll = buildTx<MsgBeginUnlockingAll>({
  * MsgBeginUnlocking begins unlocking tokens by lock ID
  * @name beginUnlocking
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.BeginUnlocking
+ * @see proto service: osmosis.lockup.BeginUnlocking
  */
 export const beginUnlocking = buildTx<MsgBeginUnlocking>({
   msg: MsgBeginUnlocking
@@ -31,7 +31,7 @@ export const beginUnlocking = buildTx<MsgBeginUnlocking>({
  * MsgEditLockup edits the existing lockups by lock ID
  * @name extendLockup
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.ExtendLockup
+ * @see proto service: osmosis.lockup.ExtendLockup
  */
 export const extendLockup = buildTx<MsgExtendLockup>({
   msg: MsgExtendLockup
@@ -39,7 +39,7 @@ export const extendLockup = buildTx<MsgExtendLockup>({
 /**
  * @name forceUnlock
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.ForceUnlock
+ * @see proto service: osmosis.lockup.ForceUnlock
  */
 export const forceUnlock = buildTx<MsgForceUnlock>({
   msg: MsgForceUnlock

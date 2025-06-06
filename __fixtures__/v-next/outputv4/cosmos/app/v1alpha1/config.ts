@@ -11,9 +11,14 @@ export const protobufPackage = "cosmos.app.v1alpha1";
  * allow a mixture of declarative and imperative app wiring, however, apps
  * that strive for the maximum ease of maintainability should be able to describe
  * their state machine with a config object alone.
+ * @name Config
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.Config
  */
 export interface Config {
-  /** modules are the module configurations for the app. */
+  /**
+   * modules are the module configurations for the app.
+  */
   modules: ModuleConfig[];
 }
 export interface ConfigProtoMsg {
@@ -28,11 +33,19 @@ export interface ConfigProtoMsg {
  * allow a mixture of declarative and imperative app wiring, however, apps
  * that strive for the maximum ease of maintainability should be able to describe
  * their state machine with a config object alone.
+ * @name ConfigSDKType
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.Config
  */
 export interface ConfigSDKType {
   modules: ModuleConfigSDKType[];
 }
-/** ModuleConfig is a module configuration for an app. */
+/**
+ * ModuleConfig is a module configuration for an app.
+ * @name ModuleConfig
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.ModuleConfig
+ */
 export interface ModuleConfig {
   /**
    * name is the unique name of the module within the app. It should be a name
@@ -57,7 +70,12 @@ export interface ModuleConfigProtoMsg {
   typeUrl: "/cosmos.app.v1alpha1.ModuleConfig";
   value: Uint8Array;
 }
-/** ModuleConfig is a module configuration for an app. */
+/**
+ * ModuleConfig is a module configuration for an app.
+ * @name ModuleConfigSDKType
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.ModuleConfig
+ */
 export interface ModuleConfigSDKType {
   name: string;
   config?: AnySDKType;
@@ -67,6 +85,18 @@ function createBaseConfig(): Config {
     modules: []
   };
 }
+/**
+ * Config represents the configuration for a Cosmos SDK ABCI app.
+ * It is intended that all state machine logic including the version of
+ * baseapp and tx handlers (and possibly even Tendermint) that an app needs
+ * can be described in a config object. For compatibility, the framework should
+ * allow a mixture of declarative and imperative app wiring, however, apps
+ * that strive for the maximum ease of maintainability should be able to describe
+ * their state machine with a config object alone.
+ * @name Config
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.Config
+ */
 export const Config = {
   typeUrl: "/cosmos.app.v1alpha1.Config",
   encode(message: Config, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -172,6 +202,12 @@ function createBaseModuleConfig(): ModuleConfig {
     config: undefined
   };
 }
+/**
+ * ModuleConfig is a module configuration for an app.
+ * @name ModuleConfig
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.ModuleConfig
+ */
 export const ModuleConfig = {
   typeUrl: "/cosmos.app.v1alpha1.ModuleConfig",
   encode(message: ModuleConfig, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

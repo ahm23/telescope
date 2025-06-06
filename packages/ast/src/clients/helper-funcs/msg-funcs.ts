@@ -1,7 +1,7 @@
 import * as ast from "@babel/types";
 import { ProtoServiceMethod } from "@cosmology/types";
 import { GenericParseContext } from "../../encoding";
-import { CommentBlockBuilder, makeCommentBlock } from "../../utils";
+import { CommentBlockBuilder } from "../../utils";
 
 /**
  *
@@ -45,7 +45,7 @@ export function createMsgHelperCreator(
     .addLine(service.comment)
     .addLine(`@name ${helperCreatorName}`)
     .addLine(`@package ${context.ref.proto.package}`)
-    .addLine(`@see protoservice: ${context.ref.proto.package}.${service.name}`)
+    .addLine(`@see proto service: ${context.ref.proto.package}.${service.name}`)
     .addLine(service.options?.deprecated ? '@deprecated' : null)
     .build();
 
@@ -98,7 +98,7 @@ export function createMsgHooks(
     .addLine(service.comment)
     .addLine(`@name ${hookName}`)
     .addLine(`@package ${context.ref.proto.package}`)
-    .addLine(`@see protoservice: ${context.ref.proto.package}.${service.name}`)
+    .addLine(`@see proto service: ${context.ref.proto.package}.${service.name}`)
     .addLine(service.options?.deprecated ? '@deprecated' : null)
     .build();
 
@@ -151,7 +151,7 @@ export function createVueMsgHooks(
     .addLine(service.comment)
     .addLine(`@name ${hookName}`)
     .addLine(`@package ${context.ref.proto.package}`)
-    .addLine(`@see protoservice: ${context.ref.proto.package}.${service.name}`)
+    .addLine(`@see proto service: ${context.ref.proto.package}.${service.name}`)
     .addLine(service.options?.deprecated ? '@deprecated' : null)
     .build();
 

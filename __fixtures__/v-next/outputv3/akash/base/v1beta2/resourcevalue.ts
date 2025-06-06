@@ -1,7 +1,12 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, bytesFromBase64, DeepPartial, base64FromBytes } from "../../../helpers";
 export const protobufPackage = "akash.base.v1beta2";
-/** Unit stores cpu, memory and storage metrics */
+/**
+ * Unit stores cpu, memory and storage metrics
+ * @name ResourceValue
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.ResourceValue
+ */
 export interface ResourceValue {
   val: Uint8Array;
 }
@@ -9,11 +14,21 @@ export interface ResourceValueProtoMsg {
   typeUrl: "/akash.base.v1beta2.ResourceValue";
   value: Uint8Array;
 }
-/** Unit stores cpu, memory and storage metrics */
+/**
+ * Unit stores cpu, memory and storage metrics
+ * @name ResourceValueAmino
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.ResourceValue
+ */
 export interface ResourceValueAmino {
   val?: string;
 }
-/** Unit stores cpu, memory and storage metrics */
+/**
+ * Unit stores cpu, memory and storage metrics
+ * @name ResourceValueSDKType
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.ResourceValue
+ */
 export interface ResourceValueSDKType {
   val: Uint8Array;
 }
@@ -22,6 +37,12 @@ function createBaseResourceValue(): ResourceValue {
     val: new Uint8Array()
   };
 }
+/**
+ * Unit stores cpu, memory and storage metrics
+ * @name ResourceValue
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.ResourceValue
+ */
 export const ResourceValue = {
   typeUrl: "/akash.base.v1beta2.ResourceValue",
   encode(message: ResourceValue, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

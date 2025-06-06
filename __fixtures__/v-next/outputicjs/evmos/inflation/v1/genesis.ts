@@ -1,84 +1,146 @@
 import { ExponentialCalculation, ExponentialCalculationAmino, InflationDistribution, InflationDistributionAmino } from "./inflation";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState defines the inflation module's genesis state. */
+/**
+ * GenesisState defines the inflation module's genesis state.
+ * @name GenesisState
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the paramaters of the module. */
-  params: Params;
-  /** amount of past periods, based on the epochs per period param */
+  /**
+   * params defines all the paramaters of the module.
+  */
+  params: EvmosInflationV1Params;
+  /**
+   * amount of past periods, based on the epochs per period param
+  */
   period: bigint;
-  /** inflation epoch identifier */
+  /**
+   * inflation epoch identifier
+  */
   epochIdentifier: string;
-  /** number of epochs after which inflation is recalculated */
+  /**
+   * number of epochs after which inflation is recalculated
+  */
   epochsPerPeriod: bigint;
-  /** number of epochs that have passed while inflation is disabled */
+  /**
+   * number of epochs that have passed while inflation is disabled
+  */
   skippedEpochs: bigint;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/evmos.inflation.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the inflation module's genesis state. */
+/**
+ * GenesisState defines the inflation module's genesis state.
+ * @name GenesisStateAmino
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines all the paramaters of the module. */
-  params: ParamsAmino;
-  /** amount of past periods, based on the epochs per period param */
+  /**
+   * params defines all the paramaters of the module.
+  */
+  params: EvmosInflationV1ParamsAmino;
+  /**
+   * amount of past periods, based on the epochs per period param
+  */
   period: string;
-  /** inflation epoch identifier */
+  /**
+   * inflation epoch identifier
+  */
   epoch_identifier: string;
-  /** number of epochs after which inflation is recalculated */
+  /**
+   * number of epochs after which inflation is recalculated
+  */
   epochs_per_period: string;
-  /** number of epochs that have passed while inflation is disabled */
+  /**
+   * number of epochs that have passed while inflation is disabled
+  */
   skipped_epochs: string;
 }
 export interface GenesisStateAminoMsg {
   type: "/evmos.inflation.v1.GenesisState";
   value: GenesisStateAmino;
 }
-/** Params holds parameters for the inflation module. */
-export interface Params {
-  /** type of coin to mint */
+/**
+ * Params holds parameters for the inflation module.
+ * @name EvmosInflationV1Params
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.Params
+ */
+export interface EvmosInflationV1Params {
+  /**
+   * type of coin to mint
+  */
   mintDenom: string;
-  /** variables to calculate exponential inflation */
+  /**
+   * variables to calculate exponential inflation
+  */
   exponentialCalculation: ExponentialCalculation;
-  /** inflation distribution of the minted denom */
+  /**
+   * inflation distribution of the minted denom
+  */
   inflationDistribution: InflationDistribution;
-  /** parameter to enable inflation and halt increasing the skipped_epochs */
+  /**
+   * parameter to enable inflation and halt increasing the skipped_epochs
+  */
   enableInflation: boolean;
 }
-export interface ParamsProtoMsg {
+export interface EvmosInflationV1ParamsProtoMsg {
   typeUrl: "/evmos.inflation.v1.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the inflation module. */
-export interface ParamsAmino {
-  /** type of coin to mint */
+/**
+ * Params holds parameters for the inflation module.
+ * @name EvmosInflationV1ParamsAmino
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.EvmosInflationV1Params
+ */
+export interface EvmosInflationV1ParamsAmino {
+  /**
+   * type of coin to mint
+  */
   mint_denom: string;
-  /** variables to calculate exponential inflation */
+  /**
+   * variables to calculate exponential inflation
+  */
   exponential_calculation: ExponentialCalculationAmino;
-  /** inflation distribution of the minted denom */
+  /**
+   * inflation distribution of the minted denom
+  */
   inflation_distribution: InflationDistributionAmino;
-  /** parameter to enable inflation and halt increasing the skipped_epochs */
+  /**
+   * parameter to enable inflation and halt increasing the skipped_epochs
+  */
   enable_inflation: boolean;
 }
-export interface ParamsAminoMsg {
+export interface EvmosInflationV1ParamsAminoMsg {
   type: "/evmos.inflation.v1.Params";
-  value: ParamsAmino;
+  value: EvmosInflationV1ParamsAmino;
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({}),
+    params: EvmosInflationV1Params.fromPartial({}),
     period: BigInt(0),
     epochIdentifier: "",
     epochsPerPeriod: BigInt(0),
     skippedEpochs: BigInt(0)
   };
 }
+/**
+ * GenesisState defines the inflation module's genesis state.
+ * @name GenesisState
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/evmos.inflation.v1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      EvmosInflationV1Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     if (message.period !== BigInt(0)) {
       writer.uint32(16).uint64(message.period);
@@ -102,7 +164,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = EvmosInflationV1Params.decode(reader, reader.uint32());
           break;
         case 2:
           message.period = reader.uint64();
@@ -125,7 +187,7 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? EvmosInflationV1Params.fromPartial(object.params) : undefined;
     message.period = object.period !== undefined && object.period !== null ? BigInt(object.period.toString()) : BigInt(0);
     message.epochIdentifier = object.epochIdentifier ?? "";
     message.epochsPerPeriod = object.epochsPerPeriod !== undefined && object.epochsPerPeriod !== null ? BigInt(object.epochsPerPeriod.toString()) : BigInt(0);
@@ -135,7 +197,7 @@ export const GenesisState = {
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = EvmosInflationV1Params.fromAmino(object.params);
     }
     if (object.period !== undefined && object.period !== null) {
       message.period = BigInt(object.period);
@@ -153,7 +215,7 @@ export const GenesisState = {
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? EvmosInflationV1Params.toAmino(message.params) : undefined;
     obj.period = message.period !== BigInt(0) ? message.period?.toString() : undefined;
     obj.epoch_identifier = message.epochIdentifier === "" ? undefined : message.epochIdentifier;
     obj.epochs_per_period = message.epochsPerPeriod !== BigInt(0) ? message.epochsPerPeriod?.toString() : undefined;
@@ -176,7 +238,7 @@ export const GenesisState = {
     };
   }
 };
-function createBaseParams(): Params {
+function createBaseEvmosInflationV1Params(): EvmosInflationV1Params {
   return {
     mintDenom: "",
     exponentialCalculation: ExponentialCalculation.fromPartial({}),
@@ -184,9 +246,15 @@ function createBaseParams(): Params {
     enableInflation: false
   };
 }
-export const Params = {
+/**
+ * Params holds parameters for the inflation module.
+ * @name EvmosInflationV1Params
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.Params
+ */
+export const EvmosInflationV1Params = {
   typeUrl: "/evmos.inflation.v1.Params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: EvmosInflationV1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.mintDenom !== "") {
       writer.uint32(10).string(message.mintDenom);
     }
@@ -201,10 +269,10 @@ export const Params = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): EvmosInflationV1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseEvmosInflationV1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -227,16 +295,16 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<EvmosInflationV1Params>): EvmosInflationV1Params {
+    const message = createBaseEvmosInflationV1Params();
     message.mintDenom = object.mintDenom ?? "";
     message.exponentialCalculation = object.exponentialCalculation !== undefined && object.exponentialCalculation !== null ? ExponentialCalculation.fromPartial(object.exponentialCalculation) : undefined;
     message.inflationDistribution = object.inflationDistribution !== undefined && object.inflationDistribution !== null ? InflationDistribution.fromPartial(object.inflationDistribution) : undefined;
     message.enableInflation = object.enableInflation ?? false;
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: EvmosInflationV1ParamsAmino): EvmosInflationV1Params {
+    const message = createBaseEvmosInflationV1Params();
     if (object.mint_denom !== undefined && object.mint_denom !== null) {
       message.mintDenom = object.mint_denom;
     }
@@ -251,7 +319,7 @@ export const Params = {
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: EvmosInflationV1Params): EvmosInflationV1ParamsAmino {
     const obj: any = {};
     obj.mint_denom = message.mintDenom === "" ? undefined : message.mintDenom;
     obj.exponential_calculation = message.exponentialCalculation ? ExponentialCalculation.toAmino(message.exponentialCalculation) : undefined;
@@ -259,19 +327,19 @@ export const Params = {
     obj.enable_inflation = message.enableInflation === false ? undefined : message.enableInflation;
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: EvmosInflationV1ParamsAminoMsg): EvmosInflationV1Params {
+    return EvmosInflationV1Params.fromAmino(object.value);
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: EvmosInflationV1ParamsProtoMsg): EvmosInflationV1Params {
+    return EvmosInflationV1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: EvmosInflationV1Params): Uint8Array {
+    return EvmosInflationV1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: EvmosInflationV1Params): EvmosInflationV1ParamsProtoMsg {
     return {
       typeUrl: "/evmos.inflation.v1.Params",
-      value: Params.encode(message).finish()
+      value: EvmosInflationV1Params.encode(message).finish()
     };
   }
 };

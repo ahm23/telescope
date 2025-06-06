@@ -5,7 +5,7 @@ import { superfluidDelegate, superfluidUndelegate, superfluidUnbondLock, lockAnd
  * Execute superfluid delegation for a lockup
  * @name useSuperfluidDelegate
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidDelegate
+ * @see proto service: osmosis.superfluid.SuperfluidDelegate
  */
 export const useSuperfluidDelegate = buildUseMutation<MsgSuperfluidDelegate, Error>({
   builderMutationFn: superfluidDelegate
@@ -14,7 +14,7 @@ export const useSuperfluidDelegate = buildUseMutation<MsgSuperfluidDelegate, Err
  * Execute superfluid undelegation for a lockup
  * @name useSuperfluidUndelegate
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidUndelegate
+ * @see proto service: osmosis.superfluid.SuperfluidUndelegate
  */
 export const useSuperfluidUndelegate = buildUseMutation<MsgSuperfluidUndelegate, Error>({
   builderMutationFn: superfluidUndelegate
@@ -24,7 +24,7 @@ export const useSuperfluidUndelegate = buildUseMutation<MsgSuperfluidUndelegate,
  * also unbond the underlying lock.
  * @name useSuperfluidUnbondLock
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidUnbondLock
+ * @see proto service: osmosis.superfluid.SuperfluidUnbondLock
  */
 export const useSuperfluidUnbondLock = buildUseMutation<MsgSuperfluidUnbondLock, Error>({
   builderMutationFn: superfluidUnbondLock
@@ -33,7 +33,7 @@ export const useSuperfluidUnbondLock = buildUseMutation<MsgSuperfluidUnbondLock,
  * Execute lockup lock and superfluid delegation in a single msg
  * @name useLockAndSuperfluidDelegate
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.LockAndSuperfluidDelegate
+ * @see proto service: osmosis.superfluid.LockAndSuperfluidDelegate
  */
 export const useLockAndSuperfluidDelegate = buildUseMutation<MsgLockAndSuperfluidDelegate, Error>({
   builderMutationFn: lockAndSuperfluidDelegate
@@ -41,7 +41,7 @@ export const useLockAndSuperfluidDelegate = buildUseMutation<MsgLockAndSuperflui
 /**
  * @name useUnPoolWhitelistedPool
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.UnPoolWhitelistedPool
+ * @see proto service: osmosis.superfluid.UnPoolWhitelistedPool
  */
 export const useUnPoolWhitelistedPool = buildUseMutation<MsgUnPoolWhitelistedPool, Error>({
   builderMutationFn: unPoolWhitelistedPool

@@ -3,7 +3,7 @@ import { QueryModuleAccountBalanceRequest, QueryModuleAccountBalanceResponse, Qu
 /**
  * @name getModuleAccountBalance
  * @package osmosis.claim.v1beta1
- * @see protoservice: osmosis.claim.v1beta1.ModuleAccountBalance
+ * @see proto service: osmosis.claim.v1beta1.ModuleAccountBalance
  */
 export const getModuleAccountBalance = buildQuery<QueryModuleAccountBalanceRequest, QueryModuleAccountBalanceResponse>({
   encode: QueryModuleAccountBalanceRequest.encode,
@@ -14,7 +14,7 @@ export const getModuleAccountBalance = buildQuery<QueryModuleAccountBalanceReque
 /**
  * @name getOsmosisClaimV1beta1Params
  * @package osmosis.claim.v1beta1
- * @see protoservice: osmosis.claim.v1beta1.Params
+ * @see proto service: osmosis.claim.v1beta1.Params
  */
 export const getOsmosisClaimV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
@@ -25,7 +25,7 @@ export const getOsmosisClaimV1beta1Params = buildQuery<QueryParamsRequest, Query
 /**
  * @name getClaimRecord
  * @package osmosis.claim.v1beta1
- * @see protoservice: osmosis.claim.v1beta1.ClaimRecord
+ * @see proto service: osmosis.claim.v1beta1.ClaimRecord
  */
 export const getClaimRecord = buildQuery<QueryClaimRecordRequest, QueryClaimRecordResponse>({
   encode: QueryClaimRecordRequest.encode,
@@ -36,7 +36,7 @@ export const getClaimRecord = buildQuery<QueryClaimRecordRequest, QueryClaimReco
 /**
  * @name getClaimableForAction
  * @package osmosis.claim.v1beta1
- * @see protoservice: osmosis.claim.v1beta1.ClaimableForAction
+ * @see proto service: osmosis.claim.v1beta1.ClaimableForAction
  */
 export const getClaimableForAction = buildQuery<QueryClaimableForActionRequest, QueryClaimableForActionResponse>({
   encode: QueryClaimableForActionRequest.encode,
@@ -47,7 +47,7 @@ export const getClaimableForAction = buildQuery<QueryClaimableForActionRequest, 
 /**
  * @name getTotalClaimable
  * @package osmosis.claim.v1beta1
- * @see protoservice: osmosis.claim.v1beta1.TotalClaimable
+ * @see proto service: osmosis.claim.v1beta1.TotalClaimable
  */
 export const getTotalClaimable = buildQuery<QueryTotalClaimableRequest, QueryTotalClaimableResponse>({
   encode: QueryTotalClaimableRequest.encode,

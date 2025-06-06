@@ -10,33 +10,60 @@ import { GenesisStateSDKType as GenesisState3SDKType } from "../../channel/v1/ge
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { DeepPartial } from "../../../../helpers";
 export const protobufPackage = "ibc.core.types.v1";
-/** GenesisState defines the ibc module's genesis state. */
+/**
+ * GenesisState defines the ibc module's genesis state.
+ * @name GenesisState
+ * @package ibc.core.types.v1
+ * @see proto type: ibc.core.types.v1.GenesisState
+ */
 export interface GenesisState {
-  /** ICS002 - Clients genesis state */
+  /**
+   * ICS002 - Clients genesis state
+  */
   clientGenesis: GenesisState1;
-  /** ICS003 - Connections genesis state */
+  /**
+   * ICS003 - Connections genesis state
+  */
   connectionGenesis: GenesisState2;
-  /** ICS004 - Channel genesis state */
+  /**
+   * ICS004 - Channel genesis state
+  */
   channelGenesis: GenesisState3;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/ibc.core.types.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the ibc module's genesis state. */
+/**
+ * GenesisState defines the ibc module's genesis state.
+ * @name GenesisStateAmino
+ * @package ibc.core.types.v1
+ * @see proto type: ibc.core.types.v1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** ICS002 - Clients genesis state */
+  /**
+   * ICS002 - Clients genesis state
+  */
   client_genesis?: GenesisState1Amino;
-  /** ICS003 - Connections genesis state */
+  /**
+   * ICS003 - Connections genesis state
+  */
   connection_genesis?: GenesisState2Amino;
-  /** ICS004 - Channel genesis state */
+  /**
+   * ICS004 - Channel genesis state
+  */
   channel_genesis?: GenesisState3Amino;
 }
 export interface GenesisStateAminoMsg {
   type: "cosmos-sdk/GenesisState";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the ibc module's genesis state. */
+/**
+ * GenesisState defines the ibc module's genesis state.
+ * @name GenesisStateSDKType
+ * @package ibc.core.types.v1
+ * @see proto type: ibc.core.types.v1.GenesisState
+ */
 export interface GenesisStateSDKType {
   client_genesis: GenesisState1SDKType;
   connection_genesis: GenesisState2SDKType;
@@ -49,6 +76,12 @@ function createBaseGenesisState(): GenesisState {
     channelGenesis: GenesisState3.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the ibc module's genesis state.
+ * @name GenesisState
+ * @package ibc.core.types.v1
+ * @see proto type: ibc.core.types.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/ibc.core.types.v1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

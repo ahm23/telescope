@@ -4,7 +4,7 @@ import { QueryPeriodRequest, QueryPeriodResponse, QueryEpochMintProvisionRequest
  * Period retrieves current period.
  * @name getPeriod
  * @package evmos.inflation.v1
- * @see protoservice: evmos.inflation.v1.Period
+ * @see proto service: evmos.inflation.v1.Period
  */
 export const getPeriod = buildQuery<QueryPeriodRequest, QueryPeriodResponse>({
   encode: QueryPeriodRequest.encode,
@@ -16,7 +16,7 @@ export const getPeriod = buildQuery<QueryPeriodRequest, QueryPeriodResponse>({
  * EpochMintProvision retrieves current minting epoch provision value.
  * @name getEpochMintProvision
  * @package evmos.inflation.v1
- * @see protoservice: evmos.inflation.v1.EpochMintProvision
+ * @see proto service: evmos.inflation.v1.EpochMintProvision
  */
 export const getEpochMintProvision = buildQuery<QueryEpochMintProvisionRequest, QueryEpochMintProvisionResponse>({
   encode: QueryEpochMintProvisionRequest.encode,
@@ -28,7 +28,7 @@ export const getEpochMintProvision = buildQuery<QueryEpochMintProvisionRequest, 
  * SkippedEpochs retrieves the total number of skipped epochs.
  * @name getSkippedEpochs
  * @package evmos.inflation.v1
- * @see protoservice: evmos.inflation.v1.SkippedEpochs
+ * @see proto service: evmos.inflation.v1.SkippedEpochs
  */
 export const getSkippedEpochs = buildQuery<QuerySkippedEpochsRequest, QuerySkippedEpochsResponse>({
   encode: QuerySkippedEpochsRequest.encode,
@@ -41,7 +41,7 @@ export const getSkippedEpochs = buildQuery<QuerySkippedEpochsRequest, QuerySkipp
  * circulation (i.e. excluding unvested tokens).
  * @name getCirculatingSupply
  * @package evmos.inflation.v1
- * @see protoservice: evmos.inflation.v1.CirculatingSupply
+ * @see proto service: evmos.inflation.v1.CirculatingSupply
  */
 export const getCirculatingSupply = buildQuery<QueryCirculatingSupplyRequest, QueryCirculatingSupplyResponse>({
   encode: QueryCirculatingSupplyRequest.encode,
@@ -53,7 +53,7 @@ export const getCirculatingSupply = buildQuery<QueryCirculatingSupplyRequest, Qu
  * InflationRate retrieves the inflation rate of the current period.
  * @name getInflationRate
  * @package evmos.inflation.v1
- * @see protoservice: evmos.inflation.v1.InflationRate
+ * @see proto service: evmos.inflation.v1.InflationRate
  */
 export const getInflationRate = buildQuery<QueryInflationRateRequest, QueryInflationRateResponse>({
   encode: QueryInflationRateRequest.encode,
@@ -65,7 +65,7 @@ export const getInflationRate = buildQuery<QueryInflationRateRequest, QueryInfla
  * Params retrieves the total set of minting parameters.
  * @name getEvmosInflationV1Params
  * @package evmos.inflation.v1
- * @see protoservice: evmos.inflation.v1.Params
+ * @see proto service: evmos.inflation.v1.Params
  */
 export const getEvmosInflationV1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,

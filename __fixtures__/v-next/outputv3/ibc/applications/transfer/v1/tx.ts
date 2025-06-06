@@ -7,17 +7,30 @@ export const protobufPackage = "ibc.applications.transfer.v1";
  * MsgTransfer defines a msg to transfer fungible tokens (i.e Coins) between
  * ICS20 enabled chains. See ICS Spec here:
  * https://github.com/cosmos/ibc/tree/master/spec/app/ics-020-fungible-token-transfer#data-structures
+ * @name MsgTransfer
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.MsgTransfer
  */
 export interface MsgTransfer {
-  /** the port on which the packet will be sent */
+  /**
+   * the port on which the packet will be sent
+  */
   sourcePort: string;
-  /** the channel by which the packet will be sent */
+  /**
+   * the channel by which the packet will be sent
+  */
   sourceChannel: string;
-  /** the tokens to be transferred */
+  /**
+   * the tokens to be transferred
+  */
   token: Coin;
-  /** the sender address */
+  /**
+   * the sender address
+  */
   sender: string;
-  /** the recipient address on the destination chain */
+  /**
+   * the recipient address on the destination chain
+  */
   receiver: string;
   /**
    * Timeout height relative to the current block height.
@@ -38,17 +51,30 @@ export interface MsgTransferProtoMsg {
  * MsgTransfer defines a msg to transfer fungible tokens (i.e Coins) between
  * ICS20 enabled chains. See ICS Spec here:
  * https://github.com/cosmos/ibc/tree/master/spec/app/ics-020-fungible-token-transfer#data-structures
+ * @name MsgTransferAmino
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.MsgTransfer
  */
 export interface MsgTransferAmino {
-  /** the port on which the packet will be sent */
+  /**
+   * the port on which the packet will be sent
+  */
   source_port?: string;
-  /** the channel by which the packet will be sent */
+  /**
+   * the channel by which the packet will be sent
+  */
   source_channel?: string;
-  /** the tokens to be transferred */
+  /**
+   * the tokens to be transferred
+  */
   token?: CoinAmino;
-  /** the sender address */
+  /**
+   * the sender address
+  */
   sender?: string;
-  /** the recipient address on the destination chain */
+  /**
+   * the recipient address on the destination chain
+  */
   receiver?: string;
   /**
    * Timeout height relative to the current block height.
@@ -65,6 +91,9 @@ export interface MsgTransferAmino {
  * MsgTransfer defines a msg to transfer fungible tokens (i.e Coins) between
  * ICS20 enabled chains. See ICS Spec here:
  * https://github.com/cosmos/ibc/tree/master/spec/app/ics-020-fungible-token-transfer#data-structures
+ * @name MsgTransferSDKType
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.MsgTransfer
  */
 export interface MsgTransferSDKType {
   source_port: string;
@@ -75,15 +104,30 @@ export interface MsgTransferSDKType {
   timeout_height: HeightSDKType;
   timeout_timestamp: bigint;
 }
-/** MsgTransferResponse defines the Msg/Transfer response type. */
+/**
+ * MsgTransferResponse defines the Msg/Transfer response type.
+ * @name MsgTransferResponse
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.MsgTransferResponse
+ */
 export interface MsgTransferResponse {}
 export interface MsgTransferResponseProtoMsg {
   typeUrl: "/ibc.applications.transfer.v1.MsgTransferResponse";
   value: Uint8Array;
 }
-/** MsgTransferResponse defines the Msg/Transfer response type. */
+/**
+ * MsgTransferResponse defines the Msg/Transfer response type.
+ * @name MsgTransferResponseAmino
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.MsgTransferResponse
+ */
 export interface MsgTransferResponseAmino {}
-/** MsgTransferResponse defines the Msg/Transfer response type. */
+/**
+ * MsgTransferResponse defines the Msg/Transfer response type.
+ * @name MsgTransferResponseSDKType
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.MsgTransferResponse
+ */
 export interface MsgTransferResponseSDKType {}
 function createBaseMsgTransfer(): MsgTransfer {
   return {
@@ -96,6 +140,14 @@ function createBaseMsgTransfer(): MsgTransfer {
     timeoutTimestamp: BigInt(0)
   };
 }
+/**
+ * MsgTransfer defines a msg to transfer fungible tokens (i.e Coins) between
+ * ICS20 enabled chains. See ICS Spec here:
+ * https://github.com/cosmos/ibc/tree/master/spec/app/ics-020-fungible-token-transfer#data-structures
+ * @name MsgTransfer
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.MsgTransfer
+ */
 export const MsgTransfer = {
   typeUrl: "/ibc.applications.transfer.v1.MsgTransfer",
   aminoType: "cosmos-sdk/MsgTransfer",
@@ -260,6 +312,12 @@ export const MsgTransfer = {
 function createBaseMsgTransferResponse(): MsgTransferResponse {
   return {};
 }
+/**
+ * MsgTransferResponse defines the Msg/Transfer response type.
+ * @name MsgTransferResponse
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.MsgTransferResponse
+ */
 export const MsgTransferResponse = {
   typeUrl: "/ibc.applications.transfer.v1.MsgTransferResponse",
   aminoType: "cosmos-sdk/MsgTransferResponse",

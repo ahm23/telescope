@@ -3,7 +3,7 @@ import { MsgCreateGauge, MsgAddToGauge } from "./tx";
 /**
  * @name createGauge
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.CreateGauge
+ * @see proto service: osmosis.incentives.CreateGauge
  */
 export const createGauge = buildTx<MsgCreateGauge>({
   msg: MsgCreateGauge
@@ -11,7 +11,7 @@ export const createGauge = buildTx<MsgCreateGauge>({
 /**
  * @name addToGauge
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.AddToGauge
+ * @see proto service: osmosis.incentives.AddToGauge
  */
 export const addToGauge = buildTx<MsgAddToGauge>({
   msg: MsgAddToGauge

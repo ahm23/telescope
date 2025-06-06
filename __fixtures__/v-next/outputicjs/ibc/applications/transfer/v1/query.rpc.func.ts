@@ -4,7 +4,7 @@ import { QueryDenomTraceRequest, QueryDenomTraceResponse, QueryDenomTracesReques
  * DenomTrace queries a denomination trace information.
  * @name getDenomTrace
  * @package ibc.applications.transfer.v1
- * @see protoservice: ibc.applications.transfer.v1.DenomTrace
+ * @see proto service: ibc.applications.transfer.v1.DenomTrace
  */
 export const getDenomTrace = buildQuery<QueryDenomTraceRequest, QueryDenomTraceResponse>({
   encode: QueryDenomTraceRequest.encode,
@@ -16,7 +16,7 @@ export const getDenomTrace = buildQuery<QueryDenomTraceRequest, QueryDenomTraceR
  * DenomTraces queries all denomination traces.
  * @name getDenomTraces
  * @package ibc.applications.transfer.v1
- * @see protoservice: ibc.applications.transfer.v1.DenomTraces
+ * @see proto service: ibc.applications.transfer.v1.DenomTraces
  */
 export const getDenomTraces = buildQuery<QueryDenomTracesRequest, QueryDenomTracesResponse>({
   encode: QueryDenomTracesRequest.encode,
@@ -28,7 +28,7 @@ export const getDenomTraces = buildQuery<QueryDenomTracesRequest, QueryDenomTrac
  * Params queries all parameters of the ibc-transfer module.
  * @name getIbcApplicationsTransferV1Params
  * @package ibc.applications.transfer.v1
- * @see protoservice: ibc.applications.transfer.v1.Params
+ * @see proto service: ibc.applications.transfer.v1.Params
  */
 export const getIbcApplicationsTransferV1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,

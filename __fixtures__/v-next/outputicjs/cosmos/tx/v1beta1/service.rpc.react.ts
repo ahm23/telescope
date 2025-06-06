@@ -5,7 +5,7 @@ import { getSimulate, getGetTx, getBroadcastTx, getGetTxsEvent, getGetBlockWithT
  * Simulate simulates executing a transaction for estimating gas usage.
  * @name useGetSimulate
  * @package cosmos.tx.v1beta1
- * @see protoservice: cosmos.tx.v1beta1.Simulate
+ * @see proto service: cosmos.tx.v1beta1.Simulate
  */
 export const useGetSimulate = buildUseQuery<SimulateRequest, SimulateResponse>({
   builderQueryFn: getSimulate,
@@ -15,7 +15,7 @@ export const useGetSimulate = buildUseQuery<SimulateRequest, SimulateResponse>({
  * GetTx fetches a tx by hash.
  * @name useGetGetTx
  * @package cosmos.tx.v1beta1
- * @see protoservice: cosmos.tx.v1beta1.GetTx
+ * @see proto service: cosmos.tx.v1beta1.GetTx
  */
 export const useGetGetTx = buildUseQuery<GetTxRequest, GetTxResponse>({
   builderQueryFn: getGetTx,
@@ -25,7 +25,7 @@ export const useGetGetTx = buildUseQuery<GetTxRequest, GetTxResponse>({
  * BroadcastTx broadcast transaction.
  * @name useGetBroadcastTx
  * @package cosmos.tx.v1beta1
- * @see protoservice: cosmos.tx.v1beta1.BroadcastTx
+ * @see proto service: cosmos.tx.v1beta1.BroadcastTx
  */
 export const useGetBroadcastTx = buildUseQuery<BroadcastTxRequest, BroadcastTxResponse>({
   builderQueryFn: getBroadcastTx,
@@ -35,7 +35,7 @@ export const useGetBroadcastTx = buildUseQuery<BroadcastTxRequest, BroadcastTxRe
  * GetTxsEvent fetches txs by event.
  * @name useGetGetTxsEvent
  * @package cosmos.tx.v1beta1
- * @see protoservice: cosmos.tx.v1beta1.GetTxsEvent
+ * @see proto service: cosmos.tx.v1beta1.GetTxsEvent
  */
 export const useGetGetTxsEvent = buildUseQuery<GetTxsEventRequest, GetTxsEventResponse>({
   builderQueryFn: getGetTxsEvent,
@@ -47,7 +47,7 @@ export const useGetGetTxsEvent = buildUseQuery<GetTxsEventRequest, GetTxsEventRe
  * Since: cosmos-sdk 0.45.2
  * @name useGetGetBlockWithTxs
  * @package cosmos.tx.v1beta1
- * @see protoservice: cosmos.tx.v1beta1.GetBlockWithTxs
+ * @see proto service: cosmos.tx.v1beta1.GetBlockWithTxs
  */
 export const useGetGetBlockWithTxs = buildUseQuery<GetBlockWithTxsRequest, GetBlockWithTxsResponse>({
   builderQueryFn: getGetBlockWithTxs,

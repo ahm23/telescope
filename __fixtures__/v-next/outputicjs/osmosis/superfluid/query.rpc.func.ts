@@ -4,7 +4,7 @@ import { QueryParamsRequest, QueryParamsResponse, AssetTypeRequest, AssetTypeRes
  * Params returns the total set of superfluid parameters.
  * @name getOsmosisSuperfluidParams
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.Params
+ * @see proto service: osmosis.superfluid.Params
  */
 export const getOsmosisSuperfluidParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
@@ -17,7 +17,7 @@ export const getOsmosisSuperfluidParams = buildQuery<QueryParamsRequest, QueryPa
  * share.
  * @name getAssetType
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.AssetType
+ * @see proto service: osmosis.superfluid.AssetType
  */
 export const getAssetType = buildQuery<AssetTypeRequest, AssetTypeResponse>({
   encode: AssetTypeRequest.encode,
@@ -29,7 +29,7 @@ export const getAssetType = buildQuery<AssetTypeRequest, AssetTypeResponse>({
  * Returns all registered superfluid assets.
  * @name getAllAssets
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.AllAssets
+ * @see proto service: osmosis.superfluid.AllAssets
  */
 export const getAllAssets = buildQuery<AllAssetsRequest, AllAssetsResponse>({
   encode: AllAssetsRequest.encode,
@@ -41,7 +41,7 @@ export const getAllAssets = buildQuery<AllAssetsRequest, AllAssetsResponse>({
  * Returns the osmo equivalent multiplier used in the most recent epoch.
  * @name getAssetMultiplier
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.AssetMultiplier
+ * @see proto service: osmosis.superfluid.AssetMultiplier
  */
 export const getAssetMultiplier = buildQuery<AssetMultiplierRequest, AssetMultiplierResponse>({
   encode: AssetMultiplierRequest.encode,
@@ -53,7 +53,7 @@ export const getAssetMultiplier = buildQuery<AssetMultiplierRequest, AssetMultip
  * Returns all superfluid intermediary accounts.
  * @name getAllIntermediaryAccounts
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.AllIntermediaryAccounts
+ * @see proto service: osmosis.superfluid.AllIntermediaryAccounts
  */
 export const getAllIntermediaryAccounts = buildQuery<AllIntermediaryAccountsRequest, AllIntermediaryAccountsResponse>({
   encode: AllIntermediaryAccountsRequest.encode,
@@ -65,7 +65,7 @@ export const getAllIntermediaryAccounts = buildQuery<AllIntermediaryAccountsRequ
  * Returns intermediary account connected to a superfluid staked lock by id
  * @name getConnectedIntermediaryAccount
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.ConnectedIntermediaryAccount
+ * @see proto service: osmosis.superfluid.ConnectedIntermediaryAccount
  */
 export const getConnectedIntermediaryAccount = buildQuery<ConnectedIntermediaryAccountRequest, ConnectedIntermediaryAccountResponse>({
   encode: ConnectedIntermediaryAccountRequest.encode,
@@ -77,7 +77,7 @@ export const getConnectedIntermediaryAccount = buildQuery<ConnectedIntermediaryA
  * Returns the amount of delegations of specific denom for all validators
  * @name getTotalDelegationByValidatorForDenom
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.TotalDelegationByValidatorForDenom
+ * @see proto service: osmosis.superfluid.TotalDelegationByValidatorForDenom
  */
 export const getTotalDelegationByValidatorForDenom = buildQuery<QueryTotalDelegationByValidatorForDenomRequest, QueryTotalDelegationByValidatorForDenomResponse>({
   encode: QueryTotalDelegationByValidatorForDenomRequest.encode,
@@ -90,7 +90,7 @@ export const getTotalDelegationByValidatorForDenom = buildQuery<QueryTotalDelega
  * Response is denominated in uosmo.
  * @name getTotalSuperfluidDelegations
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.TotalSuperfluidDelegations
+ * @see proto service: osmosis.superfluid.TotalSuperfluidDelegations
  */
 export const getTotalSuperfluidDelegations = buildQuery<TotalSuperfluidDelegationsRequest, TotalSuperfluidDelegationsResponse>({
   encode: TotalSuperfluidDelegationsRequest.encode,
@@ -103,7 +103,7 @@ export const getTotalSuperfluidDelegations = buildQuery<TotalSuperfluidDelegatio
  * triplet
  * @name getSuperfluidDelegationAmount
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidDelegationAmount
+ * @see proto service: osmosis.superfluid.SuperfluidDelegationAmount
  */
 export const getSuperfluidDelegationAmount = buildQuery<SuperfluidDelegationAmountRequest, SuperfluidDelegationAmountResponse>({
   encode: SuperfluidDelegationAmountRequest.encode,
@@ -115,7 +115,7 @@ export const getSuperfluidDelegationAmount = buildQuery<SuperfluidDelegationAmou
  * Returns all the delegated superfluid poistions for a specific delegator.
  * @name getSuperfluidDelegationsByDelegator
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidDelegationsByDelegator
+ * @see proto service: osmosis.superfluid.SuperfluidDelegationsByDelegator
  */
 export const getSuperfluidDelegationsByDelegator = buildQuery<SuperfluidDelegationsByDelegatorRequest, SuperfluidDelegationsByDelegatorResponse>({
   encode: SuperfluidDelegationsByDelegatorRequest.encode,
@@ -127,7 +127,7 @@ export const getSuperfluidDelegationsByDelegator = buildQuery<SuperfluidDelegati
  * Returns all the undelegating superfluid poistions for a specific delegator.
  * @name getSuperfluidUndelegationsByDelegator
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidUndelegationsByDelegator
+ * @see proto service: osmosis.superfluid.SuperfluidUndelegationsByDelegator
  */
 export const getSuperfluidUndelegationsByDelegator = buildQuery<SuperfluidUndelegationsByDelegatorRequest, SuperfluidUndelegationsByDelegatorResponse>({
   encode: SuperfluidUndelegationsByDelegatorRequest.encode,
@@ -140,7 +140,7 @@ export const getSuperfluidUndelegationsByDelegator = buildQuery<SuperfluidUndele
  * validator
  * @name getSuperfluidDelegationsByValidatorDenom
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidDelegationsByValidatorDenom
+ * @see proto service: osmosis.superfluid.SuperfluidDelegationsByValidatorDenom
  */
 export const getSuperfluidDelegationsByValidatorDenom = buildQuery<SuperfluidDelegationsByValidatorDenomRequest, SuperfluidDelegationsByValidatorDenomResponse>({
   encode: SuperfluidDelegationsByValidatorDenomRequest.encode,
@@ -154,7 +154,7 @@ export const getSuperfluidDelegationsByValidatorDenom = buildQuery<SuperfluidDel
  * lead rounding errors from the true delegated amount
  * @name getEstimateSuperfluidDelegatedAmountByValidatorDenom
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenom
+ * @see proto service: osmosis.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenom
  */
 export const getEstimateSuperfluidDelegatedAmountByValidatorDenom = buildQuery<EstimateSuperfluidDelegatedAmountByValidatorDenomRequest, EstimateSuperfluidDelegatedAmountByValidatorDenomResponse>({
   encode: EstimateSuperfluidDelegatedAmountByValidatorDenomRequest.encode,
@@ -166,7 +166,7 @@ export const getEstimateSuperfluidDelegatedAmountByValidatorDenom = buildQuery<E
  * Returns the specified delegations for a specific delegator
  * @name getTotalDelegationByDelegator
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.TotalDelegationByDelegator
+ * @see proto service: osmosis.superfluid.TotalDelegationByDelegator
  */
 export const getTotalDelegationByDelegator = buildQuery<QueryTotalDelegationByDelegatorRequest, QueryTotalDelegationByDelegatorResponse>({
   encode: QueryTotalDelegationByDelegatorRequest.encode,
@@ -178,7 +178,7 @@ export const getTotalDelegationByDelegator = buildQuery<QueryTotalDelegationByDe
  * Returns a list of whitelisted pool ids to unpool.
  * @name getUnpoolWhitelist
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.UnpoolWhitelist
+ * @see proto service: osmosis.superfluid.UnpoolWhitelist
  */
 export const getUnpoolWhitelist = buildQuery<QueryUnpoolWhitelistRequest, QueryUnpoolWhitelistResponse>({
   encode: QueryUnpoolWhitelistRequest.encode,

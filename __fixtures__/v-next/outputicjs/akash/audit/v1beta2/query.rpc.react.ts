@@ -7,7 +7,7 @@ import { getAllProvidersAttributes, getProviderAttributes, getProviderAuditorAtt
  * buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
  * @name useGetAllProvidersAttributes
  * @package akash.audit.v1beta2
- * @see protoservice: akash.audit.v1beta2.AllProvidersAttributes
+ * @see proto service: akash.audit.v1beta2.AllProvidersAttributes
  */
 export const useGetAllProvidersAttributes = buildUseQuery<QueryAllProvidersAttributesRequest, QueryProvidersResponse>({
   builderQueryFn: getAllProvidersAttributes,
@@ -19,7 +19,7 @@ export const useGetAllProvidersAttributes = buildUseQuery<QueryAllProvidersAttri
  * buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
  * @name useGetProviderAttributes
  * @package akash.audit.v1beta2
- * @see protoservice: akash.audit.v1beta2.ProviderAttributes
+ * @see proto service: akash.audit.v1beta2.ProviderAttributes
  */
 export const useGetProviderAttributes = buildUseQuery<QueryProviderAttributesRequest, QueryProvidersResponse>({
   builderQueryFn: getProviderAttributes,
@@ -31,7 +31,7 @@ export const useGetProviderAttributes = buildUseQuery<QueryProviderAttributesReq
  * buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
  * @name useGetProviderAuditorAttributes
  * @package akash.audit.v1beta2
- * @see protoservice: akash.audit.v1beta2.ProviderAuditorAttributes
+ * @see proto service: akash.audit.v1beta2.ProviderAuditorAttributes
  */
 export const useGetProviderAuditorAttributes = buildUseQuery<QueryProviderAuditorRequest, QueryProvidersResponse>({
   builderQueryFn: getProviderAuditorAttributes,
@@ -43,7 +43,7 @@ export const useGetProviderAuditorAttributes = buildUseQuery<QueryProviderAudito
  * buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
  * @name useGetAuditorAttributes
  * @package akash.audit.v1beta2
- * @see protoservice: akash.audit.v1beta2.AuditorAttributes
+ * @see proto service: akash.audit.v1beta2.AuditorAttributes
  */
 export const useGetAuditorAttributes = buildUseQuery<QueryAuditorAttributesRequest, QueryProvidersResponse>({
   builderQueryFn: getAuditorAttributes,

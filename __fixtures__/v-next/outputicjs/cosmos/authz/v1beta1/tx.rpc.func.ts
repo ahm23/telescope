@@ -7,7 +7,7 @@ import { MsgGrant, MsgExec, MsgRevoke } from "./tx";
  * will be overwritten.
  * @name grant
  * @package cosmos.authz.v1beta1
- * @see protoservice: cosmos.authz.v1beta1.Grant
+ * @see proto service: cosmos.authz.v1beta1.Grant
  */
 export const grant = buildTx<MsgGrant>({
   msg: MsgGrant
@@ -18,7 +18,7 @@ export const grant = buildTx<MsgGrant>({
  * one signer corresponding to the granter of the authorization.
  * @name exec
  * @package cosmos.authz.v1beta1
- * @see protoservice: cosmos.authz.v1beta1.Exec
+ * @see proto service: cosmos.authz.v1beta1.Exec
  */
 export const exec = buildTx<MsgExec>({
   msg: MsgExec
@@ -28,7 +28,7 @@ export const exec = buildTx<MsgExec>({
  * granter's account that has been granted to the grantee.
  * @name revoke
  * @package cosmos.authz.v1beta1
- * @see protoservice: cosmos.authz.v1beta1.Revoke
+ * @see proto service: cosmos.authz.v1beta1.Revoke
  */
 export const revoke = buildTx<MsgRevoke>({
   msg: MsgRevoke

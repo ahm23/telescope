@@ -7,10 +7,15 @@ export const protobufPackage = "cosmos.slashing.v1beta1";
 /**
  * ValidatorSigningInfo defines a validator's signing info for monitoring their
  * liveness activity.
+ * @name ValidatorSigningInfo
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.ValidatorSigningInfo
  */
 export interface ValidatorSigningInfo {
   address: string;
-  /** Height at which validator was first a candidate OR was unjailed */
+  /**
+   * Height at which validator was first a candidate OR was unjailed
+  */
   startHeight: bigint;
   /**
    * Index which is incremented each time the validator was a bonded
@@ -18,7 +23,9 @@ export interface ValidatorSigningInfo {
    * `SignedBlocksWindow` param determines the index in the `MissedBlocksBitArray`.
    */
   indexOffset: bigint;
-  /** Timestamp until which the validator is jailed due to liveness downtime. */
+  /**
+   * Timestamp until which the validator is jailed due to liveness downtime.
+  */
   jailedUntil: Date;
   /**
    * Whether or not a validator has been tombstoned (killed out of validator set). It is set
@@ -38,10 +45,15 @@ export interface ValidatorSigningInfoProtoMsg {
 /**
  * ValidatorSigningInfo defines a validator's signing info for monitoring their
  * liveness activity.
+ * @name ValidatorSigningInfoAmino
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.ValidatorSigningInfo
  */
 export interface ValidatorSigningInfoAmino {
   address?: string;
-  /** Height at which validator was first a candidate OR was unjailed */
+  /**
+   * Height at which validator was first a candidate OR was unjailed
+  */
   start_height?: string;
   /**
    * Index which is incremented each time the validator was a bonded
@@ -49,7 +61,9 @@ export interface ValidatorSigningInfoAmino {
    * `SignedBlocksWindow` param determines the index in the `MissedBlocksBitArray`.
    */
   index_offset?: string;
-  /** Timestamp until which the validator is jailed due to liveness downtime. */
+  /**
+   * Timestamp until which the validator is jailed due to liveness downtime.
+  */
   jailed_until?: string;
   /**
    * Whether or not a validator has been tombstoned (killed out of validator set). It is set
@@ -69,6 +83,9 @@ export interface ValidatorSigningInfoAminoMsg {
 /**
  * ValidatorSigningInfo defines a validator's signing info for monitoring their
  * liveness activity.
+ * @name ValidatorSigningInfoSDKType
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.ValidatorSigningInfo
  */
 export interface ValidatorSigningInfoSDKType {
   address: string;
@@ -78,7 +95,12 @@ export interface ValidatorSigningInfoSDKType {
   tombstoned: boolean;
   missed_blocks_counter: bigint;
 }
-/** Params represents the parameters used for by the slashing module. */
+/**
+ * Params represents the parameters used for by the slashing module.
+ * @name Params
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.Params
+ */
 export interface Params {
   signedBlocksWindow: bigint;
   minSignedPerWindow: Uint8Array;
@@ -90,7 +112,12 @@ export interface ParamsProtoMsg {
   typeUrl: "/cosmos.slashing.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params represents the parameters used for by the slashing module. */
+/**
+ * Params represents the parameters used for by the slashing module.
+ * @name ParamsAmino
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.Params
+ */
 export interface ParamsAmino {
   signed_blocks_window?: string;
   min_signed_per_window?: string;
@@ -102,7 +129,12 @@ export interface ParamsAminoMsg {
   type: "cosmos-sdk/Params";
   value: ParamsAmino;
 }
-/** Params represents the parameters used for by the slashing module. */
+/**
+ * Params represents the parameters used for by the slashing module.
+ * @name ParamsSDKType
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.Params
+ */
 export interface ParamsSDKType {
   signed_blocks_window: bigint;
   min_signed_per_window: Uint8Array;
@@ -120,6 +152,13 @@ function createBaseValidatorSigningInfo(): ValidatorSigningInfo {
     missedBlocksCounter: BigInt(0)
   };
 }
+/**
+ * ValidatorSigningInfo defines a validator's signing info for monitoring their
+ * liveness activity.
+ * @name ValidatorSigningInfo
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.ValidatorSigningInfo
+ */
 export const ValidatorSigningInfo = {
   typeUrl: "/cosmos.slashing.v1beta1.ValidatorSigningInfo",
   aminoType: "cosmos-sdk/ValidatorSigningInfo",
@@ -295,6 +334,12 @@ function createBaseParams(): Params {
     slashFractionDowntime: new Uint8Array()
   };
 }
+/**
+ * Params represents the parameters used for by the slashing module.
+ * @name Params
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/cosmos.slashing.v1beta1.Params",
   aminoType: "cosmos-sdk/Params",

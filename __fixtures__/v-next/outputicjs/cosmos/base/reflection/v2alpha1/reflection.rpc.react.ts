@@ -7,7 +7,7 @@ import { getGetAuthnDescriptor, getGetChainDescriptor, getGetCodecDescriptor, ge
  * future releases of the cosmos-sdk.
  * @name useGetGetAuthnDescriptor
  * @package cosmos.base.reflection.v2alpha1
- * @see protoservice: cosmos.base.reflection.v2alpha1.GetAuthnDescriptor
+ * @see proto service: cosmos.base.reflection.v2alpha1.GetAuthnDescriptor
  */
 export const useGetGetAuthnDescriptor = buildUseQuery<GetAuthnDescriptorRequest, GetAuthnDescriptorResponse>({
   builderQueryFn: getGetAuthnDescriptor,
@@ -17,7 +17,7 @@ export const useGetGetAuthnDescriptor = buildUseQuery<GetAuthnDescriptorRequest,
  * GetChainDescriptor returns the description of the chain
  * @name useGetGetChainDescriptor
  * @package cosmos.base.reflection.v2alpha1
- * @see protoservice: cosmos.base.reflection.v2alpha1.GetChainDescriptor
+ * @see proto service: cosmos.base.reflection.v2alpha1.GetChainDescriptor
  */
 export const useGetGetChainDescriptor = buildUseQuery<GetChainDescriptorRequest, GetChainDescriptorResponse>({
   builderQueryFn: getGetChainDescriptor,
@@ -27,7 +27,7 @@ export const useGetGetChainDescriptor = buildUseQuery<GetChainDescriptorRequest,
  * GetCodecDescriptor returns the descriptor of the codec of the application
  * @name useGetGetCodecDescriptor
  * @package cosmos.base.reflection.v2alpha1
- * @see protoservice: cosmos.base.reflection.v2alpha1.GetCodecDescriptor
+ * @see proto service: cosmos.base.reflection.v2alpha1.GetCodecDescriptor
  */
 export const useGetGetCodecDescriptor = buildUseQuery<GetCodecDescriptorRequest, GetCodecDescriptorResponse>({
   builderQueryFn: getGetCodecDescriptor,
@@ -37,7 +37,7 @@ export const useGetGetCodecDescriptor = buildUseQuery<GetCodecDescriptorRequest,
  * GetConfigurationDescriptor returns the descriptor for the sdk.Config of the application
  * @name useGetGetConfigurationDescriptor
  * @package cosmos.base.reflection.v2alpha1
- * @see protoservice: cosmos.base.reflection.v2alpha1.GetConfigurationDescriptor
+ * @see proto service: cosmos.base.reflection.v2alpha1.GetConfigurationDescriptor
  */
 export const useGetGetConfigurationDescriptor = buildUseQuery<GetConfigurationDescriptorRequest, GetConfigurationDescriptorResponse>({
   builderQueryFn: getGetConfigurationDescriptor,
@@ -47,7 +47,7 @@ export const useGetGetConfigurationDescriptor = buildUseQuery<GetConfigurationDe
  * GetQueryServicesDescriptor returns the available gRPC queryable services of the application
  * @name useGetGetQueryServicesDescriptor
  * @package cosmos.base.reflection.v2alpha1
- * @see protoservice: cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptor
+ * @see proto service: cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptor
  */
 export const useGetGetQueryServicesDescriptor = buildUseQuery<GetQueryServicesDescriptorRequest, GetQueryServicesDescriptorResponse>({
   builderQueryFn: getGetQueryServicesDescriptor,
@@ -57,7 +57,7 @@ export const useGetGetQueryServicesDescriptor = buildUseQuery<GetQueryServicesDe
  * GetTxDescriptor returns information on the used transaction object and available msgs that can be used
  * @name useGetGetTxDescriptor
  * @package cosmos.base.reflection.v2alpha1
- * @see protoservice: cosmos.base.reflection.v2alpha1.GetTxDescriptor
+ * @see proto service: cosmos.base.reflection.v2alpha1.GetTxDescriptor
  */
 export const useGetGetTxDescriptor = buildUseQuery<GetTxDescriptorRequest, GetTxDescriptorResponse>({
   builderQueryFn: getGetTxDescriptor,

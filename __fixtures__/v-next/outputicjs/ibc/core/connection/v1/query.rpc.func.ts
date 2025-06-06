@@ -4,7 +4,7 @@ import { QueryConnectionRequest, QueryConnectionResponse, QueryConnectionsReques
  * Connection queries an IBC connection end.
  * @name getConnection
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.Connection
+ * @see proto service: ibc.core.connection.v1.Connection
  */
 export const getConnection = buildQuery<QueryConnectionRequest, QueryConnectionResponse>({
   encode: QueryConnectionRequest.encode,
@@ -16,7 +16,7 @@ export const getConnection = buildQuery<QueryConnectionRequest, QueryConnectionR
  * Connections queries all the IBC connections of a chain.
  * @name getConnections
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.Connections
+ * @see proto service: ibc.core.connection.v1.Connections
  */
 export const getConnections = buildQuery<QueryConnectionsRequest, QueryConnectionsResponse>({
   encode: QueryConnectionsRequest.encode,
@@ -29,7 +29,7 @@ export const getConnections = buildQuery<QueryConnectionsRequest, QueryConnectio
  * state.
  * @name getClientConnections
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ClientConnections
+ * @see proto service: ibc.core.connection.v1.ClientConnections
  */
 export const getClientConnections = buildQuery<QueryClientConnectionsRequest, QueryClientConnectionsResponse>({
   encode: QueryClientConnectionsRequest.encode,
@@ -42,7 +42,7 @@ export const getClientConnections = buildQuery<QueryClientConnectionsRequest, Qu
  * connection.
  * @name getConnectionClientState
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ConnectionClientState
+ * @see proto service: ibc.core.connection.v1.ConnectionClientState
  */
 export const getConnectionClientState = buildQuery<QueryConnectionClientStateRequest, QueryConnectionClientStateResponse>({
   encode: QueryConnectionClientStateRequest.encode,
@@ -55,7 +55,7 @@ export const getConnectionClientState = buildQuery<QueryConnectionClientStateReq
  * connection.
  * @name getConnectionConsensusState
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ConnectionConsensusState
+ * @see proto service: ibc.core.connection.v1.ConnectionConsensusState
  */
 export const getConnectionConsensusState = buildQuery<QueryConnectionConsensusStateRequest, QueryConnectionConsensusStateResponse>({
   encode: QueryConnectionConsensusStateRequest.encode,

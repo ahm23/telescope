@@ -9,9 +9,14 @@ export const protobufPackage = "google.api.expr.v1beta1";
  * The state of an evaluation.
  * 
  * Can represent an initial, partial, or completed state of evaluation.
+ * @name EvalState
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.EvalState
  */
 export interface EvalState {
-  /** The unique values referenced in this message. */
+  /**
+   * The unique values referenced in this message.
+  */
   values: ExprValue[];
   /**
    * An ordered list of results.
@@ -29,9 +34,14 @@ export interface EvalStateProtoMsg {
  * The state of an evaluation.
  * 
  * Can represent an initial, partial, or completed state of evaluation.
+ * @name EvalStateAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.EvalState
  */
 export interface EvalStateAmino {
-  /** The unique values referenced in this message. */
+  /**
+   * The unique values referenced in this message.
+  */
   values?: ExprValueAmino[];
   /**
    * An ordered list of results.
@@ -49,41 +59,74 @@ export interface EvalStateAminoMsg {
  * The state of an evaluation.
  * 
  * Can represent an initial, partial, or completed state of evaluation.
+ * @name EvalStateSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.EvalState
  */
 export interface EvalStateSDKType {
   values: ExprValueSDKType[];
   results: EvalState_ResultSDKType[];
 }
-/** A single evaluation result. */
+/**
+ * A single evaluation result.
+ * @name EvalState_Result
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Result
+ */
 export interface EvalState_Result {
-  /** The expression this result is for. */
+  /**
+   * The expression this result is for.
+  */
   expr?: IdRef;
-  /** The index in `values` of the resulting value. */
+  /**
+   * The index in `values` of the resulting value.
+  */
   value: number;
 }
 export interface EvalState_ResultProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.Result";
   value: Uint8Array;
 }
-/** A single evaluation result. */
+/**
+ * A single evaluation result.
+ * @name EvalState_ResultAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.EvalState_Result
+ */
 export interface EvalState_ResultAmino {
-  /** The expression this result is for. */
+  /**
+   * The expression this result is for.
+  */
   expr?: IdRefAmino;
-  /** The index in `values` of the resulting value. */
+  /**
+   * The index in `values` of the resulting value.
+  */
   value?: number;
 }
 export interface EvalState_ResultAminoMsg {
   type: "/google.api.expr.v1beta1.Result";
   value: EvalState_ResultAmino;
 }
-/** A single evaluation result. */
+/**
+ * A single evaluation result.
+ * @name EvalState_ResultSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Result
+ */
 export interface EvalState_ResultSDKType {
   expr?: IdRefSDKType;
   value: number;
 }
-/** The value of an evaluated expression. */
+/**
+ * The value of an evaluated expression.
+ * @name ExprValue
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ExprValue
+ */
 export interface ExprValue {
-  /** A concrete value. */
+  /**
+   * A concrete value.
+  */
   value?: Value;
   /**
    * The set of errors in the critical path of evalution.
@@ -136,9 +179,16 @@ export interface ExprValueProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.ExprValue";
   value: Uint8Array;
 }
-/** The value of an evaluated expression. */
+/**
+ * The value of an evaluated expression.
+ * @name ExprValueAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ExprValue
+ */
 export interface ExprValueAmino {
-  /** A concrete value. */
+  /**
+   * A concrete value.
+  */
   value?: ValueAmino;
   /**
    * The set of errors in the critical path of evalution.
@@ -191,7 +241,12 @@ export interface ExprValueAminoMsg {
   type: "/google.api.expr.v1beta1.ExprValue";
   value: ExprValueAmino;
 }
-/** The value of an evaluated expression. */
+/**
+ * The value of an evaluated expression.
+ * @name ExprValueSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ExprValue
+ */
 export interface ExprValueSDKType {
   value?: ValueSDKType;
   error?: ErrorSetSDKType;
@@ -201,9 +256,14 @@ export interface ExprValueSDKType {
  * A set of errors.
  * 
  * The errors included depend on the context. See `ExprValue.error`.
+ * @name ErrorSet
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ErrorSet
  */
 export interface ErrorSet {
-  /** The errors in the set. */
+  /**
+   * The errors in the set.
+  */
   errors: Status[];
 }
 export interface ErrorSetProtoMsg {
@@ -214,9 +274,14 @@ export interface ErrorSetProtoMsg {
  * A set of errors.
  * 
  * The errors included depend on the context. See `ExprValue.error`.
+ * @name ErrorSetAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ErrorSet
  */
 export interface ErrorSetAmino {
-  /** The errors in the set. */
+  /**
+   * The errors in the set.
+  */
   errors?: StatusAmino[];
 }
 export interface ErrorSetAminoMsg {
@@ -227,6 +292,9 @@ export interface ErrorSetAminoMsg {
  * A set of errors.
  * 
  * The errors included depend on the context. See `ExprValue.error`.
+ * @name ErrorSetSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ErrorSet
  */
 export interface ErrorSetSDKType {
   errors: StatusSDKType[];
@@ -235,9 +303,14 @@ export interface ErrorSetSDKType {
  * A set of expressions for which the value is unknown.
  * 
  * The unknowns included depend on the context. See `ExprValue.unknown`.
+ * @name UnknownSet
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.UnknownSet
  */
 export interface UnknownSet {
-  /** The ids of the expressions with unknown values. */
+  /**
+   * The ids of the expressions with unknown values.
+  */
   exprs: IdRef[];
 }
 export interface UnknownSetProtoMsg {
@@ -248,9 +321,14 @@ export interface UnknownSetProtoMsg {
  * A set of expressions for which the value is unknown.
  * 
  * The unknowns included depend on the context. See `ExprValue.unknown`.
+ * @name UnknownSetAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.UnknownSet
  */
 export interface UnknownSetAmino {
-  /** The ids of the expressions with unknown values. */
+  /**
+   * The ids of the expressions with unknown values.
+  */
   exprs?: IdRefAmino[];
 }
 export interface UnknownSetAminoMsg {
@@ -261,29 +339,51 @@ export interface UnknownSetAminoMsg {
  * A set of expressions for which the value is unknown.
  * 
  * The unknowns included depend on the context. See `ExprValue.unknown`.
+ * @name UnknownSetSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.UnknownSet
  */
 export interface UnknownSetSDKType {
   exprs: IdRefSDKType[];
 }
-/** A reference to an expression id. */
+/**
+ * A reference to an expression id.
+ * @name IdRef
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.IdRef
+ */
 export interface IdRef {
-  /** The expression id. */
+  /**
+   * The expression id.
+  */
   id: number;
 }
 export interface IdRefProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.IdRef";
   value: Uint8Array;
 }
-/** A reference to an expression id. */
+/**
+ * A reference to an expression id.
+ * @name IdRefAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.IdRef
+ */
 export interface IdRefAmino {
-  /** The expression id. */
+  /**
+   * The expression id.
+  */
   id?: number;
 }
 export interface IdRefAminoMsg {
   type: "/google.api.expr.v1beta1.IdRef";
   value: IdRefAmino;
 }
-/** A reference to an expression id. */
+/**
+ * A reference to an expression id.
+ * @name IdRefSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.IdRef
+ */
 export interface IdRefSDKType {
   id: number;
 }
@@ -293,6 +393,14 @@ function createBaseEvalState(): EvalState {
     results: []
   };
 }
+/**
+ * The state of an evaluation.
+ * 
+ * Can represent an initial, partial, or completed state of evaluation.
+ * @name EvalState
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.EvalState
+ */
 export const EvalState = {
   typeUrl: "/google.api.expr.v1beta1.EvalState",
   is(o: any): o is EvalState {
@@ -434,6 +542,12 @@ function createBaseEvalState_Result(): EvalState_Result {
     value: 0
   };
 }
+/**
+ * A single evaluation result.
+ * @name EvalState_Result
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Result
+ */
 export const EvalState_Result = {
   typeUrl: "/google.api.expr.v1beta1.Result",
   is(o: any): o is EvalState_Result {
@@ -557,6 +671,12 @@ function createBaseExprValue(): ExprValue {
     unknown: undefined
   };
 }
+/**
+ * The value of an evaluated expression.
+ * @name ExprValue
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ExprValue
+ */
 export const ExprValue = {
   typeUrl: "/google.api.expr.v1beta1.ExprValue",
   is(o: any): o is ExprValue {
@@ -700,6 +820,14 @@ function createBaseErrorSet(): ErrorSet {
     errors: []
   };
 }
+/**
+ * A set of errors.
+ * 
+ * The errors included depend on the context. See `ExprValue.error`.
+ * @name ErrorSet
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.ErrorSet
+ */
 export const ErrorSet = {
   typeUrl: "/google.api.expr.v1beta1.ErrorSet",
   is(o: any): o is ErrorSet {
@@ -813,6 +941,14 @@ function createBaseUnknownSet(): UnknownSet {
     exprs: []
   };
 }
+/**
+ * A set of expressions for which the value is unknown.
+ * 
+ * The unknowns included depend on the context. See `ExprValue.unknown`.
+ * @name UnknownSet
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.UnknownSet
+ */
 export const UnknownSet = {
   typeUrl: "/google.api.expr.v1beta1.UnknownSet",
   is(o: any): o is UnknownSet {
@@ -926,6 +1062,12 @@ function createBaseIdRef(): IdRef {
     id: 0
   };
 }
+/**
+ * A reference to an expression id.
+ * @name IdRef
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.IdRef
+ */
 export const IdRef = {
   typeUrl: "/google.api.expr.v1beta1.IdRef",
   is(o: any): o is IdRef {

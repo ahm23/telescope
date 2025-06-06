@@ -4,7 +4,7 @@ import { QueryBalanceRequest, QueryBalanceResponse, QueryAllBalancesRequest, Que
  * Balance queries the balance of a single coin for a single account.
  * @name getBalance
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.Balance
+ * @see proto service: cosmos.bank.v1beta1.Balance
  */
 export const getBalance = buildQuery<QueryBalanceRequest, QueryBalanceResponse>({
   encode: QueryBalanceRequest.encode,
@@ -16,7 +16,7 @@ export const getBalance = buildQuery<QueryBalanceRequest, QueryBalanceResponse>(
  * AllBalances queries the balance of all coins for a single account.
  * @name getAllBalances
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.AllBalances
+ * @see proto service: cosmos.bank.v1beta1.AllBalances
  */
 export const getAllBalances = buildQuery<QueryAllBalancesRequest, QueryAllBalancesResponse>({
   encode: QueryAllBalancesRequest.encode,
@@ -29,7 +29,7 @@ export const getAllBalances = buildQuery<QueryAllBalancesRequest, QueryAllBalanc
  * account.
  * @name getSpendableBalances
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.SpendableBalances
+ * @see proto service: cosmos.bank.v1beta1.SpendableBalances
  */
 export const getSpendableBalances = buildQuery<QuerySpendableBalancesRequest, QuerySpendableBalancesResponse>({
   encode: QuerySpendableBalancesRequest.encode,
@@ -41,7 +41,7 @@ export const getSpendableBalances = buildQuery<QuerySpendableBalancesRequest, Qu
  * TotalSupply queries the total supply of all coins.
  * @name getTotalSupply
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.TotalSupply
+ * @see proto service: cosmos.bank.v1beta1.TotalSupply
  */
 export const getTotalSupply = buildQuery<QueryTotalSupplyRequest, QueryTotalSupplyResponse>({
   encode: QueryTotalSupplyRequest.encode,
@@ -53,7 +53,7 @@ export const getTotalSupply = buildQuery<QueryTotalSupplyRequest, QueryTotalSupp
  * SupplyOf queries the supply of a single coin.
  * @name getSupplyOf
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.SupplyOf
+ * @see proto service: cosmos.bank.v1beta1.SupplyOf
  */
 export const getSupplyOf = buildQuery<QuerySupplyOfRequest, QuerySupplyOfResponse>({
   encode: QuerySupplyOfRequest.encode,
@@ -65,7 +65,7 @@ export const getSupplyOf = buildQuery<QuerySupplyOfRequest, QuerySupplyOfRespons
  * Params queries the parameters of x/bank module.
  * @name getCosmosBankV1beta1Params
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.Params
+ * @see proto service: cosmos.bank.v1beta1.Params
  */
 export const getCosmosBankV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
@@ -77,7 +77,7 @@ export const getCosmosBankV1beta1Params = buildQuery<QueryParamsRequest, QueryPa
  * DenomsMetadata queries the client metadata of a given coin denomination.
  * @name getDenomMetadata
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.DenomMetadata
+ * @see proto service: cosmos.bank.v1beta1.DenomMetadata
  */
 export const getDenomMetadata = buildQuery<QueryDenomMetadataRequest, QueryDenomMetadataResponse>({
   encode: QueryDenomMetadataRequest.encode,
@@ -90,7 +90,7 @@ export const getDenomMetadata = buildQuery<QueryDenomMetadataRequest, QueryDenom
  * denominations.
  * @name getDenomsMetadata
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.DenomsMetadata
+ * @see proto service: cosmos.bank.v1beta1.DenomsMetadata
  */
 export const getDenomsMetadata = buildQuery<QueryDenomsMetadataRequest, QueryDenomsMetadataResponse>({
   encode: QueryDenomsMetadataRequest.encode,
@@ -103,7 +103,7 @@ export const getDenomsMetadata = buildQuery<QueryDenomsMetadataRequest, QueryDen
  * denomination.
  * @name getDenomOwners
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.DenomOwners
+ * @see proto service: cosmos.bank.v1beta1.DenomOwners
  */
 export const getDenomOwners = buildQuery<QueryDenomOwnersRequest, QueryDenomOwnersResponse>({
   encode: QueryDenomOwnersRequest.encode,

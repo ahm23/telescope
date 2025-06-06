@@ -64,9 +64,14 @@ export function poolTypeToJSON(object: PoolType): string {
  * It is used as the value of a mapping from pool id to the pool type,
  * allowing the pool manager to know which module to route swaps to given the
  * pool id.
+ * @name ModuleRoute
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.ModuleRoute
  */
 export interface ModuleRoute {
-  /** pool_type specifies the type of the pool */
+  /**
+   * pool_type specifies the type of the pool
+  */
   poolType: PoolType;
   poolId?: bigint;
 }
@@ -79,6 +84,9 @@ export interface ModuleRouteProtoMsg {
  * It is used as the value of a mapping from pool id to the pool type,
  * allowing the pool manager to know which module to route swaps to given the
  * pool id.
+ * @name ModuleRouteSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.ModuleRoute
  */
 export interface ModuleRouteSDKType {
   pool_type: PoolType;
@@ -90,6 +98,15 @@ function createBaseModuleRoute(): ModuleRoute {
     poolId: undefined
   };
 }
+/**
+ * ModuleRouter defines a route encapsulating pool type.
+ * It is used as the value of a mapping from pool id to the pool type,
+ * allowing the pool manager to know which module to route swaps to given the
+ * pool id.
+ * @name ModuleRoute
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.ModuleRoute
+ */
 export const ModuleRoute = {
   typeUrl: "/osmosis.poolmanager.v1beta1.ModuleRoute",
   encode(message: ModuleRoute, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

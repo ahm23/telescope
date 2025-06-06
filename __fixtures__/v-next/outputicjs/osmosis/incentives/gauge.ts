@@ -8,9 +8,14 @@ import { toTimestamp, fromTimestamp, DeepPartial } from "../../helpers";
  * Gauge is an object that stores and distributes yields to recipients who
  * satisfy certain conditions. Currently gauges support conditions around the
  * duration for which a given denom is locked.
+ * @name Gauge
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.Gauge
  */
 export interface Gauge {
-  /** id is the unique ID of a Gauge */
+  /**
+   * id is the unique ID of a Gauge
+  */
   id: bigint;
   /**
    * is_perpetual is a flag to show if it's a perpetual or non-perpetual gauge
@@ -30,7 +35,9 @@ export interface Gauge {
    * Can distribute multiple coin denoms
    */
   coins: Coin[];
-  /** start_time is the distribution start time */
+  /**
+   * start_time is the distribution start time
+  */
   startTime: Date;
   /**
    * num_epochs_paid_over is the number of total epochs distribution will be
@@ -42,7 +49,9 @@ export interface Gauge {
    * already
    */
   filledEpochs: bigint;
-  /** distributed_coins are coins that have been distributed already */
+  /**
+   * distributed_coins are coins that have been distributed already
+  */
   distributedCoins: Coin[];
 }
 export interface GaugeProtoMsg {
@@ -53,9 +62,14 @@ export interface GaugeProtoMsg {
  * Gauge is an object that stores and distributes yields to recipients who
  * satisfy certain conditions. Currently gauges support conditions around the
  * duration for which a given denom is locked.
+ * @name GaugeAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.Gauge
  */
 export interface GaugeAmino {
-  /** id is the unique ID of a Gauge */
+  /**
+   * id is the unique ID of a Gauge
+  */
   id: string;
   /**
    * is_perpetual is a flag to show if it's a perpetual or non-perpetual gauge
@@ -75,7 +89,9 @@ export interface GaugeAmino {
    * Can distribute multiple coin denoms
    */
   coins: CoinAmino[];
-  /** start_time is the distribution start time */
+  /**
+   * start_time is the distribution start time
+  */
   start_time: string;
   /**
    * num_epochs_paid_over is the number of total epochs distribution will be
@@ -87,23 +103,39 @@ export interface GaugeAmino {
    * already
    */
   filled_epochs: string;
-  /** distributed_coins are coins that have been distributed already */
+  /**
+   * distributed_coins are coins that have been distributed already
+  */
   distributed_coins: CoinAmino[];
 }
 export interface GaugeAminoMsg {
   type: "osmosis/incentives/gauge";
   value: GaugeAmino;
 }
+/**
+ * @name LockableDurationsInfo
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.LockableDurationsInfo
+ */
 export interface LockableDurationsInfo {
-  /** List of incentivised durations that gauges will pay out to */
+  /**
+   * List of incentivised durations that gauges will pay out to
+  */
   lockableDurations: Duration[];
 }
 export interface LockableDurationsInfoProtoMsg {
   typeUrl: "/osmosis.incentives.LockableDurationsInfo";
   value: Uint8Array;
 }
+/**
+ * @name LockableDurationsInfoAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.LockableDurationsInfo
+ */
 export interface LockableDurationsInfoAmino {
-  /** List of incentivised durations that gauges will pay out to */
+  /**
+   * List of incentivised durations that gauges will pay out to
+  */
   lockable_durations: DurationAmino[];
 }
 export interface LockableDurationsInfoAminoMsg {
@@ -122,6 +154,14 @@ function createBaseGauge(): Gauge {
     distributedCoins: []
   };
 }
+/**
+ * Gauge is an object that stores and distributes yields to recipients who
+ * satisfy certain conditions. Currently gauges support conditions around the
+ * duration for which a given denom is locked.
+ * @name Gauge
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.Gauge
+ */
 export const Gauge = {
   typeUrl: "/osmosis.incentives.Gauge",
   aminoType: "osmosis/incentives/gauge",
@@ -273,6 +313,11 @@ function createBaseLockableDurationsInfo(): LockableDurationsInfo {
     lockableDurations: []
   };
 }
+/**
+ * @name LockableDurationsInfo
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.LockableDurationsInfo
+ */
 export const LockableDurationsInfo = {
   typeUrl: "/osmosis.incentives.LockableDurationsInfo",
   aminoType: "osmosis/incentives/lockable-durations-info",

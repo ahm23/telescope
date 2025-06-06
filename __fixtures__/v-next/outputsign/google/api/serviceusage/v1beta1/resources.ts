@@ -161,7 +161,12 @@ export function quotaSafetyCheckToJSON(object: QuotaSafetyCheck): string {
       return "UNRECOGNIZED";
   }
 }
-/** A service that is available for use by the consumer. */
+/**
+ * A service that is available for use by the consumer.
+ * @name Service
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.Service
+ */
 export interface Service {
   /**
    * The resource name of the consumer and service.
@@ -184,14 +189,21 @@ export interface Service {
    * the `GetService` method.
    */
   config?: ServiceConfig;
-  /** Whether or not the service has been enabled for use by the consumer. */
+  /**
+   * Whether or not the service has been enabled for use by the consumer.
+  */
   state: State;
 }
 export interface ServiceProtoMsg {
   typeUrl: "/google.api.serviceusage.v1beta1.Service";
   value: Uint8Array;
 }
-/** A service that is available for use by the consumer. */
+/**
+ * A service that is available for use by the consumer.
+ * @name ServiceAmino
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.Service
+ */
 export interface ServiceAmino {
   /**
    * The resource name of the consumer and service.
@@ -214,21 +226,33 @@ export interface ServiceAmino {
    * the `GetService` method.
    */
   config?: ServiceConfigAmino;
-  /** Whether or not the service has been enabled for use by the consumer. */
+  /**
+   * Whether or not the service has been enabled for use by the consumer.
+  */
   state?: State;
 }
 export interface ServiceAminoMsg {
   type: "/google.api.serviceusage.v1beta1.Service";
   value: ServiceAmino;
 }
-/** A service that is available for use by the consumer. */
+/**
+ * A service that is available for use by the consumer.
+ * @name ServiceSDKType
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.Service
+ */
 export interface ServiceSDKType {
   name: string;
   parent: string;
   config?: ServiceConfigSDKType;
   state: State;
 }
-/** The configuration of the service. */
+/**
+ * The configuration of the service.
+ * @name ServiceConfig
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ServiceConfig
+ */
 export interface ServiceConfig {
   /**
    * The DNS address at which this service is available.
@@ -237,7 +261,9 @@ export interface ServiceConfig {
    * `calendar.googleapis.com`.
    */
   name: string;
-  /** The product title for this service. */
+  /**
+   * The product title for this service.
+  */
   title: string;
   /**
    * A list of API interfaces exported by this service. Contains only the names,
@@ -249,11 +275,17 @@ export interface ServiceConfig {
    * documentation URL.
    */
   documentation?: Documentation;
-  /** Quota configuration. */
+  /**
+   * Quota configuration.
+  */
   quota?: Quota;
-  /** Auth configuration. Contains only the OAuth rules. */
+  /**
+   * Auth configuration. Contains only the OAuth rules.
+  */
   authentication?: Authentication;
-  /** Configuration controlling usage of this service. */
+  /**
+   * Configuration controlling usage of this service.
+  */
   usage?: Usage;
   /**
    * Configuration for network endpoints. Contains only the names and aliases
@@ -275,7 +307,12 @@ export interface ServiceConfigProtoMsg {
   typeUrl: "/google.api.serviceusage.v1beta1.ServiceConfig";
   value: Uint8Array;
 }
-/** The configuration of the service. */
+/**
+ * The configuration of the service.
+ * @name ServiceConfigAmino
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ServiceConfig
+ */
 export interface ServiceConfigAmino {
   /**
    * The DNS address at which this service is available.
@@ -284,7 +321,9 @@ export interface ServiceConfigAmino {
    * `calendar.googleapis.com`.
    */
   name?: string;
-  /** The product title for this service. */
+  /**
+   * The product title for this service.
+  */
   title?: string;
   /**
    * A list of API interfaces exported by this service. Contains only the names,
@@ -296,11 +335,17 @@ export interface ServiceConfigAmino {
    * documentation URL.
    */
   documentation?: DocumentationAmino;
-  /** Quota configuration. */
+  /**
+   * Quota configuration.
+  */
   quota?: QuotaAmino;
-  /** Auth configuration. Contains only the OAuth rules. */
+  /**
+   * Auth configuration. Contains only the OAuth rules.
+  */
   authentication?: AuthenticationAmino;
-  /** Configuration controlling usage of this service. */
+  /**
+   * Configuration controlling usage of this service.
+  */
   usage?: UsageAmino;
   /**
    * Configuration for network endpoints. Contains only the names and aliases
@@ -322,7 +367,12 @@ export interface ServiceConfigAminoMsg {
   type: "/google.api.serviceusage.v1beta1.ServiceConfig";
   value: ServiceConfigAmino;
 }
-/** The configuration of the service. */
+/**
+ * The configuration of the service.
+ * @name ServiceConfigSDKType
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ServiceConfig
+ */
 export interface ServiceConfigSDKType {
   name: string;
   title: string;
@@ -335,7 +385,12 @@ export interface ServiceConfigSDKType {
   monitored_resources: MonitoredResourceDescriptorSDKType[];
   monitoring?: MonitoringSDKType;
 }
-/** The operation metadata returned for the batchend services operation. */
+/**
+ * The operation metadata returned for the batchend services operation.
+ * @name OperationMetadata
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.OperationMetadata
+ */
 export interface OperationMetadata {
   /**
    * The full name of the resources that this operation is directly
@@ -347,7 +402,12 @@ export interface OperationMetadataProtoMsg {
   typeUrl: "/google.api.serviceusage.v1beta1.OperationMetadata";
   value: Uint8Array;
 }
-/** The operation metadata returned for the batchend services operation. */
+/**
+ * The operation metadata returned for the batchend services operation.
+ * @name OperationMetadataAmino
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.OperationMetadata
+ */
 export interface OperationMetadataAmino {
   /**
    * The full name of the resources that this operation is directly
@@ -359,11 +419,21 @@ export interface OperationMetadataAminoMsg {
   type: "/google.api.serviceusage.v1beta1.OperationMetadata";
   value: OperationMetadataAmino;
 }
-/** The operation metadata returned for the batchend services operation. */
+/**
+ * The operation metadata returned for the batchend services operation.
+ * @name OperationMetadataSDKType
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.OperationMetadata
+ */
 export interface OperationMetadataSDKType {
   resource_names: string[];
 }
-/** Consumer quota settings for a quota metric. */
+/**
+ * Consumer quota settings for a quota metric.
+ * @name ConsumerQuotaMetric
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ConsumerQuotaMetric
+ */
 export interface ConsumerQuotaMetric {
   /**
    * The resource name of the quota settings on this metric for this consumer.
@@ -389,7 +459,9 @@ export interface ConsumerQuotaMetric {
    * `CPUs`
    */
   displayName: string;
-  /** The consumer quota for each quota limit defined on the metric. */
+  /**
+   * The consumer quota for each quota limit defined on the metric.
+  */
   consumerQuotaLimits: ConsumerQuotaLimit[];
   /**
    * The quota limits targeting the descendant containers of the
@@ -403,14 +475,21 @@ export interface ConsumerQuotaMetric {
    * be populated.
    */
   descendantConsumerQuotaLimits: ConsumerQuotaLimit[];
-  /** The units in which the metric value is reported. */
+  /**
+   * The units in which the metric value is reported.
+  */
   unit: string;
 }
 export interface ConsumerQuotaMetricProtoMsg {
   typeUrl: "/google.api.serviceusage.v1beta1.ConsumerQuotaMetric";
   value: Uint8Array;
 }
-/** Consumer quota settings for a quota metric. */
+/**
+ * Consumer quota settings for a quota metric.
+ * @name ConsumerQuotaMetricAmino
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ConsumerQuotaMetric
+ */
 export interface ConsumerQuotaMetricAmino {
   /**
    * The resource name of the quota settings on this metric for this consumer.
@@ -436,7 +515,9 @@ export interface ConsumerQuotaMetricAmino {
    * `CPUs`
    */
   display_name?: string;
-  /** The consumer quota for each quota limit defined on the metric. */
+  /**
+   * The consumer quota for each quota limit defined on the metric.
+  */
   consumer_quota_limits?: ConsumerQuotaLimitAmino[];
   /**
    * The quota limits targeting the descendant containers of the
@@ -450,14 +531,21 @@ export interface ConsumerQuotaMetricAmino {
    * be populated.
    */
   descendant_consumer_quota_limits?: ConsumerQuotaLimitAmino[];
-  /** The units in which the metric value is reported. */
+  /**
+   * The units in which the metric value is reported.
+  */
   unit?: string;
 }
 export interface ConsumerQuotaMetricAminoMsg {
   type: "/google.api.serviceusage.v1beta1.ConsumerQuotaMetric";
   value: ConsumerQuotaMetricAmino;
 }
-/** Consumer quota settings for a quota metric. */
+/**
+ * Consumer quota settings for a quota metric.
+ * @name ConsumerQuotaMetricSDKType
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ConsumerQuotaMetric
+ */
 export interface ConsumerQuotaMetricSDKType {
   name: string;
   metric: string;
@@ -466,7 +554,12 @@ export interface ConsumerQuotaMetricSDKType {
   descendant_consumer_quota_limits: ConsumerQuotaLimitSDKType[];
   unit: string;
 }
-/** Consumer quota settings for a quota limit. */
+/**
+ * Consumer quota settings for a quota limit.
+ * @name ConsumerQuotaLimit
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ConsumerQuotaLimit
+ */
 export interface ConsumerQuotaLimit {
   /**
    * The resource name of the quota limit.
@@ -494,9 +587,13 @@ export interface ConsumerQuotaLimit {
    * the literal characters `{` and `}` occur in the string.
    */
   unit: string;
-  /** Whether this limit is precise or imprecise. */
+  /**
+   * Whether this limit is precise or imprecise.
+  */
   isPrecise: boolean;
-  /** Whether admin overrides are allowed on this limit */
+  /**
+   * Whether admin overrides are allowed on this limit
+  */
   allowsAdminOverrides: boolean;
   /**
    * Summary of the enforced quota buckets, organized by quota dimension,
@@ -509,7 +606,12 @@ export interface ConsumerQuotaLimitProtoMsg {
   typeUrl: "/google.api.serviceusage.v1beta1.ConsumerQuotaLimit";
   value: Uint8Array;
 }
-/** Consumer quota settings for a quota limit. */
+/**
+ * Consumer quota settings for a quota limit.
+ * @name ConsumerQuotaLimitAmino
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ConsumerQuotaLimit
+ */
 export interface ConsumerQuotaLimitAmino {
   /**
    * The resource name of the quota limit.
@@ -537,9 +639,13 @@ export interface ConsumerQuotaLimitAmino {
    * the literal characters `{` and `}` occur in the string.
    */
   unit?: string;
-  /** Whether this limit is precise or imprecise. */
+  /**
+   * Whether this limit is precise or imprecise.
+  */
   is_precise?: boolean;
-  /** Whether admin overrides are allowed on this limit */
+  /**
+   * Whether admin overrides are allowed on this limit
+  */
   allows_admin_overrides?: boolean;
   /**
    * Summary of the enforced quota buckets, organized by quota dimension,
@@ -552,7 +658,12 @@ export interface ConsumerQuotaLimitAminoMsg {
   type: "/google.api.serviceusage.v1beta1.ConsumerQuotaLimit";
   value: ConsumerQuotaLimitAmino;
 }
-/** Consumer quota settings for a quota limit. */
+/**
+ * Consumer quota settings for a quota limit.
+ * @name ConsumerQuotaLimitSDKType
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ConsumerQuotaLimit
+ */
 export interface ConsumerQuotaLimitSDKType {
   name: string;
   metric: string;
@@ -561,6 +672,11 @@ export interface ConsumerQuotaLimitSDKType {
   allows_admin_overrides: boolean;
   quota_buckets: QuotaBucketSDKType[];
 }
+/**
+ * @name QuotaBucket_DimensionsEntry
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.undefined
+ */
 export interface QuotaBucket_DimensionsEntry {
   key: string;
   value: string;
@@ -569,6 +685,11 @@ export interface QuotaBucket_DimensionsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name QuotaBucket_DimensionsEntryAmino
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.QuotaBucket_DimensionsEntry
+ */
 export interface QuotaBucket_DimensionsEntryAmino {
   key?: string;
   value?: string;
@@ -577,11 +698,21 @@ export interface QuotaBucket_DimensionsEntryAminoMsg {
   type: string;
   value: QuotaBucket_DimensionsEntryAmino;
 }
+/**
+ * @name QuotaBucket_DimensionsEntrySDKType
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.undefined
+ */
 export interface QuotaBucket_DimensionsEntrySDKType {
   key: string;
   value: string;
 }
-/** A quota bucket is a quota provisioning unit for a specific set of dimensions. */
+/**
+ * A quota bucket is a quota provisioning unit for a specific set of dimensions.
+ * @name QuotaBucket
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.QuotaBucket
+ */
 export interface QuotaBucket {
   /**
    * The effective limit of this quota bucket. Equal to default_limit if there
@@ -593,11 +724,17 @@ export interface QuotaBucket {
    * configuration.
    */
   defaultLimit: bigint;
-  /** Producer override on this quota bucket. */
+  /**
+   * Producer override on this quota bucket.
+  */
   producerOverride?: QuotaOverride;
-  /** Consumer override on this quota bucket. */
+  /**
+   * Consumer override on this quota bucket.
+  */
   consumerOverride?: QuotaOverride;
-  /** Admin override on this quota bucket. */
+  /**
+   * Admin override on this quota bucket.
+  */
   adminOverride?: QuotaOverride;
   /**
    * The dimensions of this quota bucket.
@@ -620,7 +757,12 @@ export interface QuotaBucketProtoMsg {
   typeUrl: "/google.api.serviceusage.v1beta1.QuotaBucket";
   value: Uint8Array;
 }
-/** A quota bucket is a quota provisioning unit for a specific set of dimensions. */
+/**
+ * A quota bucket is a quota provisioning unit for a specific set of dimensions.
+ * @name QuotaBucketAmino
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.QuotaBucket
+ */
 export interface QuotaBucketAmino {
   /**
    * The effective limit of this quota bucket. Equal to default_limit if there
@@ -632,11 +774,17 @@ export interface QuotaBucketAmino {
    * configuration.
    */
   default_limit?: string;
-  /** Producer override on this quota bucket. */
+  /**
+   * Producer override on this quota bucket.
+  */
   producer_override?: QuotaOverrideAmino;
-  /** Consumer override on this quota bucket. */
+  /**
+   * Consumer override on this quota bucket.
+  */
   consumer_override?: QuotaOverrideAmino;
-  /** Admin override on this quota bucket. */
+  /**
+   * Admin override on this quota bucket.
+  */
   admin_override?: QuotaOverrideAmino;
   /**
    * The dimensions of this quota bucket.
@@ -659,7 +807,12 @@ export interface QuotaBucketAminoMsg {
   type: "/google.api.serviceusage.v1beta1.QuotaBucket";
   value: QuotaBucketAmino;
 }
-/** A quota bucket is a quota provisioning unit for a specific set of dimensions. */
+/**
+ * A quota bucket is a quota provisioning unit for a specific set of dimensions.
+ * @name QuotaBucketSDKType
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.QuotaBucket
+ */
 export interface QuotaBucketSDKType {
   effective_limit: bigint;
   default_limit: bigint;
@@ -670,6 +823,11 @@ export interface QuotaBucketSDKType {
     [key: string]: string;
   };
 }
+/**
+ * @name QuotaOverride_DimensionsEntry
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.undefined
+ */
 export interface QuotaOverride_DimensionsEntry {
   key: string;
   value: string;
@@ -678,6 +836,11 @@ export interface QuotaOverride_DimensionsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name QuotaOverride_DimensionsEntryAmino
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.QuotaOverride_DimensionsEntry
+ */
 export interface QuotaOverride_DimensionsEntryAmino {
   key?: string;
   value?: string;
@@ -686,11 +849,21 @@ export interface QuotaOverride_DimensionsEntryAminoMsg {
   type: string;
   value: QuotaOverride_DimensionsEntryAmino;
 }
+/**
+ * @name QuotaOverride_DimensionsEntrySDKType
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.undefined
+ */
 export interface QuotaOverride_DimensionsEntrySDKType {
   key: string;
   value: string;
 }
-/** A quota override */
+/**
+ * A quota override
+ * @name QuotaOverride
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.QuotaOverride
+ */
 export interface QuotaOverride {
   /**
    * The resource name of the override.
@@ -763,7 +936,12 @@ export interface QuotaOverrideProtoMsg {
   typeUrl: "/google.api.serviceusage.v1beta1.QuotaOverride";
   value: Uint8Array;
 }
-/** A quota override */
+/**
+ * A quota override
+ * @name QuotaOverrideAmino
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.QuotaOverride
+ */
 export interface QuotaOverrideAmino {
   /**
    * The resource name of the override.
@@ -836,7 +1014,12 @@ export interface QuotaOverrideAminoMsg {
   type: "/google.api.serviceusage.v1beta1.QuotaOverride";
   value: QuotaOverrideAmino;
 }
-/** A quota override */
+/**
+ * A quota override
+ * @name QuotaOverrideSDKType
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.QuotaOverride
+ */
 export interface QuotaOverrideSDKType {
   name: string;
   override_value: bigint;
@@ -847,7 +1030,12 @@ export interface QuotaOverrideSDKType {
   unit: string;
   admin_override_ancestor: string;
 }
-/** Import data embedded in the request message */
+/**
+ * Import data embedded in the request message
+ * @name OverrideInlineSource
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.OverrideInlineSource
+ */
 export interface OverrideInlineSource {
   /**
    * The overrides to create.
@@ -861,7 +1049,12 @@ export interface OverrideInlineSourceProtoMsg {
   typeUrl: "/google.api.serviceusage.v1beta1.OverrideInlineSource";
   value: Uint8Array;
 }
-/** Import data embedded in the request message */
+/**
+ * Import data embedded in the request message
+ * @name OverrideInlineSourceAmino
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.OverrideInlineSource
+ */
 export interface OverrideInlineSourceAmino {
   /**
    * The overrides to create.
@@ -875,10 +1068,20 @@ export interface OverrideInlineSourceAminoMsg {
   type: "/google.api.serviceusage.v1beta1.OverrideInlineSource";
   value: OverrideInlineSourceAmino;
 }
-/** Import data embedded in the request message */
+/**
+ * Import data embedded in the request message
+ * @name OverrideInlineSourceSDKType
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.OverrideInlineSource
+ */
 export interface OverrideInlineSourceSDKType {
   overrides: QuotaOverrideSDKType[];
 }
+/**
+ * @name AdminQuotaPolicy_DimensionsEntry
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.undefined
+ */
 export interface AdminQuotaPolicy_DimensionsEntry {
   key: string;
   value: string;
@@ -887,6 +1090,11 @@ export interface AdminQuotaPolicy_DimensionsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name AdminQuotaPolicy_DimensionsEntryAmino
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.AdminQuotaPolicy_DimensionsEntry
+ */
 export interface AdminQuotaPolicy_DimensionsEntryAmino {
   key?: string;
   value?: string;
@@ -895,11 +1103,21 @@ export interface AdminQuotaPolicy_DimensionsEntryAminoMsg {
   type: string;
   value: AdminQuotaPolicy_DimensionsEntryAmino;
 }
+/**
+ * @name AdminQuotaPolicy_DimensionsEntrySDKType
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.undefined
+ */
 export interface AdminQuotaPolicy_DimensionsEntrySDKType {
   key: string;
   value: string;
 }
-/** Quota policy created by quota administrator. */
+/**
+ * Quota policy created by quota administrator.
+ * @name AdminQuotaPolicy
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.AdminQuotaPolicy
+ */
 export interface AdminQuotaPolicy {
   /**
    * The resource name of the policy.
@@ -957,7 +1175,12 @@ export interface AdminQuotaPolicyProtoMsg {
   typeUrl: "/google.api.serviceusage.v1beta1.AdminQuotaPolicy";
   value: Uint8Array;
 }
-/** Quota policy created by quota administrator. */
+/**
+ * Quota policy created by quota administrator.
+ * @name AdminQuotaPolicyAmino
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.AdminQuotaPolicy
+ */
 export interface AdminQuotaPolicyAmino {
   /**
    * The resource name of the policy.
@@ -1015,7 +1238,12 @@ export interface AdminQuotaPolicyAminoMsg {
   type: "/google.api.serviceusage.v1beta1.AdminQuotaPolicy";
   value: AdminQuotaPolicyAmino;
 }
-/** Quota policy created by quota administrator. */
+/**
+ * Quota policy created by quota administrator.
+ * @name AdminQuotaPolicySDKType
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.AdminQuotaPolicy
+ */
 export interface AdminQuotaPolicySDKType {
   name: string;
   policy_value: bigint;
@@ -1029,6 +1257,9 @@ export interface AdminQuotaPolicySDKType {
 /**
  * Service identity for a service. This is the identity that service producer
  * should use to access consumer resources.
+ * @name ServiceIdentity
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ServiceIdentity
  */
 export interface ServiceIdentity {
   /**
@@ -1049,6 +1280,9 @@ export interface ServiceIdentityProtoMsg {
 /**
  * Service identity for a service. This is the identity that service producer
  * should use to access consumer resources.
+ * @name ServiceIdentityAmino
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ServiceIdentity
  */
 export interface ServiceIdentityAmino {
   /**
@@ -1069,6 +1303,9 @@ export interface ServiceIdentityAminoMsg {
 /**
  * Service identity for a service. This is the identity that service producer
  * should use to access consumer resources.
+ * @name ServiceIdentitySDKType
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ServiceIdentity
  */
 export interface ServiceIdentitySDKType {
   email: string;
@@ -1082,6 +1319,12 @@ function createBaseService(): Service {
     state: 0
   };
 }
+/**
+ * A service that is available for use by the consumer.
+ * @name Service
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.Service
+ */
 export const Service = {
   typeUrl: "/google.api.serviceusage.v1beta1.Service",
   encode(message: Service, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1189,6 +1432,12 @@ function createBaseServiceConfig(): ServiceConfig {
     monitoring: undefined
   };
 }
+/**
+ * The configuration of the service.
+ * @name ServiceConfig
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ServiceConfig
+ */
 export const ServiceConfig = {
   typeUrl: "/google.api.serviceusage.v1beta1.ServiceConfig",
   encode(message: ServiceConfig, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1367,6 +1616,12 @@ function createBaseOperationMetadata(): OperationMetadata {
     resourceNames: []
   };
 }
+/**
+ * The operation metadata returned for the batchend services operation.
+ * @name OperationMetadata
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.OperationMetadata
+ */
 export const OperationMetadata = {
   typeUrl: "/google.api.serviceusage.v1beta1.OperationMetadata",
   encode(message: OperationMetadata, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1437,6 +1692,12 @@ function createBaseConsumerQuotaMetric(): ConsumerQuotaMetric {
     unit: ""
   };
 }
+/**
+ * Consumer quota settings for a quota metric.
+ * @name ConsumerQuotaMetric
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ConsumerQuotaMetric
+ */
 export const ConsumerQuotaMetric = {
   typeUrl: "/google.api.serviceusage.v1beta1.ConsumerQuotaMetric",
   encode(message: ConsumerQuotaMetric, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1564,6 +1825,12 @@ function createBaseConsumerQuotaLimit(): ConsumerQuotaLimit {
     quotaBuckets: []
   };
 }
+/**
+ * Consumer quota settings for a quota limit.
+ * @name ConsumerQuotaLimit
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ConsumerQuotaLimit
+ */
 export const ConsumerQuotaLimit = {
   typeUrl: "/google.api.serviceusage.v1beta1.ConsumerQuotaLimit",
   encode(message: ConsumerQuotaLimit, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1685,6 +1952,11 @@ function createBaseQuotaBucket_DimensionsEntry(): QuotaBucket_DimensionsEntry {
     value: ""
   };
 }
+/**
+ * @name QuotaBucket_DimensionsEntry
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.undefined
+ */
 export const QuotaBucket_DimensionsEntry = {
   encode(message: QuotaBucket_DimensionsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -1757,6 +2029,12 @@ function createBaseQuotaBucket(): QuotaBucket {
     dimensions: {}
   };
 }
+/**
+ * A quota bucket is a quota provisioning unit for a specific set of dimensions.
+ * @name QuotaBucket
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.QuotaBucket
+ */
 export const QuotaBucket = {
   typeUrl: "/google.api.serviceusage.v1beta1.QuotaBucket",
   encode(message: QuotaBucket, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1909,6 +2187,11 @@ function createBaseQuotaOverride_DimensionsEntry(): QuotaOverride_DimensionsEntr
     value: ""
   };
 }
+/**
+ * @name QuotaOverride_DimensionsEntry
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.undefined
+ */
 export const QuotaOverride_DimensionsEntry = {
   encode(message: QuotaOverride_DimensionsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -1981,6 +2264,12 @@ function createBaseQuotaOverride(): QuotaOverride {
     adminOverrideAncestor: ""
   };
 }
+/**
+ * A quota override
+ * @name QuotaOverride
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.QuotaOverride
+ */
 export const QuotaOverride = {
   typeUrl: "/google.api.serviceusage.v1beta1.QuotaOverride",
   encode(message: QuotaOverride, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2124,6 +2413,12 @@ function createBaseOverrideInlineSource(): OverrideInlineSource {
     overrides: []
   };
 }
+/**
+ * Import data embedded in the request message
+ * @name OverrideInlineSource
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.OverrideInlineSource
+ */
 export const OverrideInlineSource = {
   typeUrl: "/google.api.serviceusage.v1beta1.OverrideInlineSource",
   encode(message: OverrideInlineSource, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2190,6 +2485,11 @@ function createBaseAdminQuotaPolicy_DimensionsEntry(): AdminQuotaPolicy_Dimensio
     value: ""
   };
 }
+/**
+ * @name AdminQuotaPolicy_DimensionsEntry
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.undefined
+ */
 export const AdminQuotaPolicy_DimensionsEntry = {
   encode(message: AdminQuotaPolicy_DimensionsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -2262,6 +2562,12 @@ function createBaseAdminQuotaPolicy(): AdminQuotaPolicy {
     container: ""
   };
 }
+/**
+ * Quota policy created by quota administrator.
+ * @name AdminQuotaPolicy
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.AdminQuotaPolicy
+ */
 export const AdminQuotaPolicy = {
   typeUrl: "/google.api.serviceusage.v1beta1.AdminQuotaPolicy",
   encode(message: AdminQuotaPolicy, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2406,6 +2712,13 @@ function createBaseServiceIdentity(): ServiceIdentity {
     uniqueId: ""
   };
 }
+/**
+ * Service identity for a service. This is the identity that service producer
+ * should use to access consumer resources.
+ * @name ServiceIdentity
+ * @package google.api.serviceusage.v1beta1
+ * @see proto type: google.api.serviceusage.v1beta1.ServiceIdentity
+ */
 export const ServiceIdentity = {
   typeUrl: "/google.api.serviceusage.v1beta1.ServiceIdentity",
   encode(message: ServiceIdentity, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

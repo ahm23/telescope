@@ -4,7 +4,7 @@ import { ModuleToDistributeCoinsRequest, ModuleToDistributeCoinsResponse, GaugeB
  * ModuleToDistributeCoins returns coins that are going to be distributed
  * @name getModuleToDistributeCoins
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.ModuleToDistributeCoins
+ * @see proto service: osmosis.incentives.ModuleToDistributeCoins
  */
 export const getModuleToDistributeCoins = buildQuery<ModuleToDistributeCoinsRequest, ModuleToDistributeCoinsResponse>({
   encode: ModuleToDistributeCoinsRequest.encode,
@@ -16,7 +16,7 @@ export const getModuleToDistributeCoins = buildQuery<ModuleToDistributeCoinsRequ
  * GaugeByID returns gauges by their respective ID
  * @name getGaugeByID
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.GaugeByID
+ * @see proto service: osmosis.incentives.GaugeByID
  */
 export const getGaugeByID = buildQuery<GaugeByIDRequest, GaugeByIDResponse>({
   encode: GaugeByIDRequest.encode,
@@ -28,7 +28,7 @@ export const getGaugeByID = buildQuery<GaugeByIDRequest, GaugeByIDResponse>({
  * Gauges returns both upcoming and active gauges
  * @name getGauges
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.Gauges
+ * @see proto service: osmosis.incentives.Gauges
  */
 export const getGauges = buildQuery<GaugesRequest, GaugesResponse>({
   encode: GaugesRequest.encode,
@@ -40,7 +40,7 @@ export const getGauges = buildQuery<GaugesRequest, GaugesResponse>({
  * ActiveGauges returns active gauges
  * @name getActiveGauges
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.ActiveGauges
+ * @see proto service: osmosis.incentives.ActiveGauges
  */
 export const getActiveGauges = buildQuery<ActiveGaugesRequest, ActiveGaugesResponse>({
   encode: ActiveGaugesRequest.encode,
@@ -52,7 +52,7 @@ export const getActiveGauges = buildQuery<ActiveGaugesRequest, ActiveGaugesRespo
  * ActiveGaugesPerDenom returns active gauges by denom
  * @name getActiveGaugesPerDenom
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.ActiveGaugesPerDenom
+ * @see proto service: osmosis.incentives.ActiveGaugesPerDenom
  */
 export const getActiveGaugesPerDenom = buildQuery<ActiveGaugesPerDenomRequest, ActiveGaugesPerDenomResponse>({
   encode: ActiveGaugesPerDenomRequest.encode,
@@ -64,7 +64,7 @@ export const getActiveGaugesPerDenom = buildQuery<ActiveGaugesPerDenomRequest, A
  * Returns scheduled gauges that have not yet occured
  * @name getUpcomingGauges
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.UpcomingGauges
+ * @see proto service: osmosis.incentives.UpcomingGauges
  */
 export const getUpcomingGauges = buildQuery<UpcomingGaugesRequest, UpcomingGaugesResponse>({
   encode: UpcomingGaugesRequest.encode,
@@ -77,7 +77,7 @@ export const getUpcomingGauges = buildQuery<UpcomingGaugesRequest, UpcomingGauge
  * by denom
  * @name getUpcomingGaugesPerDenom
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.UpcomingGaugesPerDenom
+ * @see proto service: osmosis.incentives.UpcomingGaugesPerDenom
  */
 export const getUpcomingGaugesPerDenom = buildQuery<UpcomingGaugesPerDenomRequest, UpcomingGaugesPerDenomResponse>({
   encode: UpcomingGaugesPerDenomRequest.encode,
@@ -91,7 +91,7 @@ export const getUpcomingGaugesPerDenom = buildQuery<UpcomingGaugesPerDenomReques
  * for which they want to find the associated rewards
  * @name getRewardsEst
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.RewardsEst
+ * @see proto service: osmosis.incentives.RewardsEst
  */
 export const getRewardsEst = buildQuery<RewardsEstRequest, RewardsEstResponse>({
   encode: RewardsEstRequest.encode,
@@ -104,7 +104,7 @@ export const getRewardsEst = buildQuery<RewardsEstRequest, RewardsEstResponse>({
  * incentives for
  * @name getLockableDurations
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.LockableDurations
+ * @see proto service: osmosis.incentives.LockableDurations
  */
 export const getLockableDurations = buildQuery<QueryLockableDurationsRequest, QueryLockableDurationsResponse>({
   encode: QueryLockableDurationsRequest.encode,

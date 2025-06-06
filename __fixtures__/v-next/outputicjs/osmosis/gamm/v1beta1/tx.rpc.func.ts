@@ -3,7 +3,7 @@ import { MsgJoinPool, MsgExitPool, MsgSwapExactAmountIn, MsgSwapExactAmountOut, 
 /**
  * @name joinPool
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.JoinPool
+ * @see proto service: osmosis.gamm.v1beta1.JoinPool
  */
 export const joinPool = buildTx<MsgJoinPool>({
   msg: MsgJoinPool
@@ -11,7 +11,7 @@ export const joinPool = buildTx<MsgJoinPool>({
 /**
  * @name exitPool
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.ExitPool
+ * @see proto service: osmosis.gamm.v1beta1.ExitPool
  */
 export const exitPool = buildTx<MsgExitPool>({
   msg: MsgExitPool
@@ -19,7 +19,7 @@ export const exitPool = buildTx<MsgExitPool>({
 /**
  * @name swapExactAmountIn
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.SwapExactAmountIn
+ * @see proto service: osmosis.gamm.v1beta1.SwapExactAmountIn
  */
 export const swapExactAmountIn = buildTx<MsgSwapExactAmountIn>({
   msg: MsgSwapExactAmountIn
@@ -27,7 +27,7 @@ export const swapExactAmountIn = buildTx<MsgSwapExactAmountIn>({
 /**
  * @name swapExactAmountOut
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.SwapExactAmountOut
+ * @see proto service: osmosis.gamm.v1beta1.SwapExactAmountOut
  */
 export const swapExactAmountOut = buildTx<MsgSwapExactAmountOut>({
   msg: MsgSwapExactAmountOut
@@ -35,7 +35,7 @@ export const swapExactAmountOut = buildTx<MsgSwapExactAmountOut>({
 /**
  * @name joinSwapExternAmountIn
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.JoinSwapExternAmountIn
+ * @see proto service: osmosis.gamm.v1beta1.JoinSwapExternAmountIn
  */
 export const joinSwapExternAmountIn = buildTx<MsgJoinSwapExternAmountIn>({
   msg: MsgJoinSwapExternAmountIn
@@ -43,7 +43,7 @@ export const joinSwapExternAmountIn = buildTx<MsgJoinSwapExternAmountIn>({
 /**
  * @name joinSwapShareAmountOut
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.JoinSwapShareAmountOut
+ * @see proto service: osmosis.gamm.v1beta1.JoinSwapShareAmountOut
  */
 export const joinSwapShareAmountOut = buildTx<MsgJoinSwapShareAmountOut>({
   msg: MsgJoinSwapShareAmountOut
@@ -51,7 +51,7 @@ export const joinSwapShareAmountOut = buildTx<MsgJoinSwapShareAmountOut>({
 /**
  * @name exitSwapExternAmountOut
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.ExitSwapExternAmountOut
+ * @see proto service: osmosis.gamm.v1beta1.ExitSwapExternAmountOut
  */
 export const exitSwapExternAmountOut = buildTx<MsgExitSwapExternAmountOut>({
   msg: MsgExitSwapExternAmountOut
@@ -59,7 +59,7 @@ export const exitSwapExternAmountOut = buildTx<MsgExitSwapExternAmountOut>({
 /**
  * @name exitSwapShareAmountIn
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.ExitSwapShareAmountIn
+ * @see proto service: osmosis.gamm.v1beta1.ExitSwapShareAmountIn
  */
 export const exitSwapShareAmountIn = buildTx<MsgExitSwapShareAmountIn>({
   msg: MsgExitSwapShareAmountIn

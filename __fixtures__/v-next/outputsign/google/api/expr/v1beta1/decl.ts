@@ -2,41 +2,76 @@ import { Expr, ExprAmino, ExprSDKType } from "./expr";
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { DeepPartial } from "../../../../helpers";
 export const protobufPackage = "google.api.expr.v1beta1";
-/** A declaration. */
+/**
+ * A declaration.
+ * @name Decl
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Decl
+ */
 export interface Decl {
-  /** The id of the declaration. */
+  /**
+   * The id of the declaration.
+  */
   id: number;
-  /** The name of the declaration. */
+  /**
+   * The name of the declaration.
+  */
   name: string;
-  /** The documentation string for the declaration. */
+  /**
+   * The documentation string for the declaration.
+  */
   doc: string;
-  /** An identifier declaration. */
+  /**
+   * An identifier declaration.
+  */
   ident?: IdentDecl;
-  /** A function declaration. */
+  /**
+   * A function declaration.
+  */
   function?: FunctionDecl;
 }
 export interface DeclProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.Decl";
   value: Uint8Array;
 }
-/** A declaration. */
+/**
+ * A declaration.
+ * @name DeclAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Decl
+ */
 export interface DeclAmino {
-  /** The id of the declaration. */
+  /**
+   * The id of the declaration.
+  */
   id?: number;
-  /** The name of the declaration. */
+  /**
+   * The name of the declaration.
+  */
   name?: string;
-  /** The documentation string for the declaration. */
+  /**
+   * The documentation string for the declaration.
+  */
   doc?: string;
-  /** An identifier declaration. */
+  /**
+   * An identifier declaration.
+  */
   ident?: IdentDeclAmino;
-  /** A function declaration. */
+  /**
+   * A function declaration.
+  */
   function?: FunctionDeclAmino;
 }
 export interface DeclAminoMsg {
   type: "/google.api.expr.v1beta1.Decl";
   value: DeclAmino;
 }
-/** A declaration. */
+/**
+ * A declaration.
+ * @name DeclSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Decl
+ */
 export interface DeclSDKType {
   id: number;
   name: string;
@@ -49,11 +84,18 @@ export interface DeclSDKType {
  * 
  * Extends runtime type values with extra information used for type checking
  * and dispatching.
+ * @name DeclType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.DeclType
  */
 export interface DeclType {
-  /** The expression id of the declared type, if applicable. */
+  /**
+   * The expression id of the declared type, if applicable.
+  */
   id: number;
-  /** The type name, e.g. 'int', 'my.type.Type' or 'T' */
+  /**
+   * The type name, e.g. 'int', 'my.type.Type' or 'T'
+  */
   type: string;
   /**
    * An ordered list of type parameters, e.g. `<string, int>`.
@@ -70,11 +112,18 @@ export interface DeclTypeProtoMsg {
  * 
  * Extends runtime type values with extra information used for type checking
  * and dispatching.
+ * @name DeclTypeAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.DeclType
  */
 export interface DeclTypeAmino {
-  /** The expression id of the declared type, if applicable. */
+  /**
+   * The expression id of the declared type, if applicable.
+  */
   id?: number;
-  /** The type name, e.g. 'int', 'my.type.Type' or 'T' */
+  /**
+   * The type name, e.g. 'int', 'my.type.Type' or 'T'
+  */
   type?: string;
   /**
    * An ordered list of type parameters, e.g. `<string, int>`.
@@ -91,66 +140,119 @@ export interface DeclTypeAminoMsg {
  * 
  * Extends runtime type values with extra information used for type checking
  * and dispatching.
+ * @name DeclTypeSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.DeclType
  */
 export interface DeclTypeSDKType {
   id: number;
   type: string;
   type_params: DeclTypeSDKType[];
 }
-/** An identifier declaration. */
+/**
+ * An identifier declaration.
+ * @name IdentDecl
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.IdentDecl
+ */
 export interface IdentDecl {
-  /** Optional type of the identifier. */
+  /**
+   * Optional type of the identifier.
+  */
   type?: DeclType;
-  /** Optional value of the identifier. */
+  /**
+   * Optional value of the identifier.
+  */
   value?: Expr;
 }
 export interface IdentDeclProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.IdentDecl";
   value: Uint8Array;
 }
-/** An identifier declaration. */
+/**
+ * An identifier declaration.
+ * @name IdentDeclAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.IdentDecl
+ */
 export interface IdentDeclAmino {
-  /** Optional type of the identifier. */
+  /**
+   * Optional type of the identifier.
+  */
   type?: DeclTypeAmino;
-  /** Optional value of the identifier. */
+  /**
+   * Optional value of the identifier.
+  */
   value?: ExprAmino;
 }
 export interface IdentDeclAminoMsg {
   type: "/google.api.expr.v1beta1.IdentDecl";
   value: IdentDeclAmino;
 }
-/** An identifier declaration. */
+/**
+ * An identifier declaration.
+ * @name IdentDeclSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.IdentDecl
+ */
 export interface IdentDeclSDKType {
   type?: DeclTypeSDKType;
   value?: ExprSDKType;
 }
-/** A function declaration. */
+/**
+ * A function declaration.
+ * @name FunctionDecl
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.FunctionDecl
+ */
 export interface FunctionDecl {
-  /** The function arguments. */
+  /**
+   * The function arguments.
+  */
   args: IdentDecl[];
-  /** Optional declared return type. */
+  /**
+   * Optional declared return type.
+  */
   returnType?: DeclType;
-  /** If the first argument of the function is the receiver. */
+  /**
+   * If the first argument of the function is the receiver.
+  */
   receiverFunction: boolean;
 }
 export interface FunctionDeclProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.FunctionDecl";
   value: Uint8Array;
 }
-/** A function declaration. */
+/**
+ * A function declaration.
+ * @name FunctionDeclAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.FunctionDecl
+ */
 export interface FunctionDeclAmino {
-  /** The function arguments. */
+  /**
+   * The function arguments.
+  */
   args?: IdentDeclAmino[];
-  /** Optional declared return type. */
+  /**
+   * Optional declared return type.
+  */
   return_type?: DeclTypeAmino;
-  /** If the first argument of the function is the receiver. */
+  /**
+   * If the first argument of the function is the receiver.
+  */
   receiver_function?: boolean;
 }
 export interface FunctionDeclAminoMsg {
   type: "/google.api.expr.v1beta1.FunctionDecl";
   value: FunctionDeclAmino;
 }
-/** A function declaration. */
+/**
+ * A function declaration.
+ * @name FunctionDeclSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.FunctionDecl
+ */
 export interface FunctionDeclSDKType {
   args: IdentDeclSDKType[];
   return_type?: DeclTypeSDKType;
@@ -165,6 +267,12 @@ function createBaseDecl(): Decl {
     function: undefined
   };
 }
+/**
+ * A declaration.
+ * @name Decl
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.Decl
+ */
 export const Decl = {
   typeUrl: "/google.api.expr.v1beta1.Decl",
   encode(message: Decl, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -278,6 +386,15 @@ function createBaseDeclType(): DeclType {
     typeParams: []
   };
 }
+/**
+ * The declared type of a variable.
+ * 
+ * Extends runtime type values with extra information used for type checking
+ * and dispatching.
+ * @name DeclType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.DeclType
+ */
 export const DeclType = {
   typeUrl: "/google.api.expr.v1beta1.DeclType",
   encode(message: DeclType, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -366,6 +483,12 @@ function createBaseIdentDecl(): IdentDecl {
     value: undefined
   };
 }
+/**
+ * An identifier declaration.
+ * @name IdentDecl
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.IdentDecl
+ */
 export const IdentDecl = {
   typeUrl: "/google.api.expr.v1beta1.IdentDecl",
   encode(message: IdentDecl, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -446,6 +569,12 @@ function createBaseFunctionDecl(): FunctionDecl {
     receiverFunction: false
   };
 }
+/**
+ * A function declaration.
+ * @name FunctionDecl
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.FunctionDecl
+ */
 export const FunctionDecl = {
   typeUrl: "/google.api.expr.v1beta1.FunctionDecl",
   encode(message: FunctionDecl, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

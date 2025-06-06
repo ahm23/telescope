@@ -6,7 +6,7 @@ import { QueryAllProvidersAttributesRequest, QueryProvidersResponse, QueryProvid
  * buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
  * @name getAllProvidersAttributes
  * @package akash.audit.v1beta2
- * @see protoservice: akash.audit.v1beta2.AllProvidersAttributes
+ * @see proto service: akash.audit.v1beta2.AllProvidersAttributes
  */
 export const getAllProvidersAttributes = buildQuery<QueryAllProvidersAttributesRequest, QueryProvidersResponse>({
   encode: QueryAllProvidersAttributesRequest.encode,
@@ -20,7 +20,7 @@ export const getAllProvidersAttributes = buildQuery<QueryAllProvidersAttributesR
  * buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
  * @name getProviderAttributes
  * @package akash.audit.v1beta2
- * @see protoservice: akash.audit.v1beta2.ProviderAttributes
+ * @see proto service: akash.audit.v1beta2.ProviderAttributes
  */
 export const getProviderAttributes = buildQuery<QueryProviderAttributesRequest, QueryProvidersResponse>({
   encode: QueryProviderAttributesRequest.encode,
@@ -34,7 +34,7 @@ export const getProviderAttributes = buildQuery<QueryProviderAttributesRequest, 
  * buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
  * @name getProviderAuditorAttributes
  * @package akash.audit.v1beta2
- * @see protoservice: akash.audit.v1beta2.ProviderAuditorAttributes
+ * @see proto service: akash.audit.v1beta2.ProviderAuditorAttributes
  */
 export const getProviderAuditorAttributes = buildQuery<QueryProviderAuditorRequest, QueryProvidersResponse>({
   encode: QueryProviderAuditorRequest.encode,
@@ -48,7 +48,7 @@ export const getProviderAuditorAttributes = buildQuery<QueryProviderAuditorReque
  * buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
  * @name getAuditorAttributes
  * @package akash.audit.v1beta2
- * @see protoservice: akash.audit.v1beta2.AuditorAttributes
+ * @see proto service: akash.audit.v1beta2.AuditorAttributes
  */
 export const getAuditorAttributes = buildQuery<QueryAuditorAttributesRequest, QueryProvidersResponse>({
   encode: QueryAuditorAttributesRequest.encode,

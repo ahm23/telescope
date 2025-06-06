@@ -6,7 +6,7 @@ import { createVestingAccount, createPermanentLockedAccount, createPeriodicVesti
  * account.
  * @name useCreateVestingAccount
  * @package cosmos.vesting.v1beta1
- * @see protoservice: cosmos.vesting.v1beta1.CreateVestingAccount
+ * @see proto service: cosmos.vesting.v1beta1.CreateVestingAccount
  */
 export const useCreateVestingAccount = buildUseMutation<MsgCreateVestingAccount, Error>({
   builderMutationFn: createVestingAccount
@@ -16,7 +16,7 @@ export const useCreateVestingAccount = buildUseMutation<MsgCreateVestingAccount,
  * locked account.
  * @name useCreatePermanentLockedAccount
  * @package cosmos.vesting.v1beta1
- * @see protoservice: cosmos.vesting.v1beta1.CreatePermanentLockedAccount
+ * @see proto service: cosmos.vesting.v1beta1.CreatePermanentLockedAccount
  */
 export const useCreatePermanentLockedAccount = buildUseMutation<MsgCreatePermanentLockedAccount, Error>({
   builderMutationFn: createPermanentLockedAccount
@@ -26,7 +26,7 @@ export const useCreatePermanentLockedAccount = buildUseMutation<MsgCreatePermane
  * periodic vesting account.
  * @name useCreatePeriodicVestingAccount
  * @package cosmos.vesting.v1beta1
- * @see protoservice: cosmos.vesting.v1beta1.CreatePeriodicVestingAccount
+ * @see proto service: cosmos.vesting.v1beta1.CreatePeriodicVestingAccount
  */
 export const useCreatePeriodicVestingAccount = buildUseMutation<MsgCreatePeriodicVestingAccount, Error>({
   builderMutationFn: createPeriodicVestingAccount

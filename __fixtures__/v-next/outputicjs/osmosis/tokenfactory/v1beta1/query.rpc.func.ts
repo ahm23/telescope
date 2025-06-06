@@ -5,7 +5,7 @@ import { QueryParamsRequest, QueryParamsResponse, QueryDenomAuthorityMetadataReq
  * parameters.
  * @name getOsmosisTokenfactoryV1beta1Params
  * @package osmosis.tokenfactory.v1beta1
- * @see protoservice: osmosis.tokenfactory.v1beta1.Params
+ * @see proto service: osmosis.tokenfactory.v1beta1.Params
  */
 export const getOsmosisTokenfactoryV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
@@ -18,7 +18,7 @@ export const getOsmosisTokenfactoryV1beta1Params = buildQuery<QueryParamsRequest
  * DenomAuthorityMetadata for a particular denom.
  * @name getDenomAuthorityMetadata
  * @package osmosis.tokenfactory.v1beta1
- * @see protoservice: osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata
+ * @see proto service: osmosis.tokenfactory.v1beta1.DenomAuthorityMetadata
  */
 export const getDenomAuthorityMetadata = buildQuery<QueryDenomAuthorityMetadataRequest, QueryDenomAuthorityMetadataResponse>({
   encode: QueryDenomAuthorityMetadataRequest.encode,
@@ -31,7 +31,7 @@ export const getDenomAuthorityMetadata = buildQuery<QueryDenomAuthorityMetadataR
  * denominations created by a specific admin/creator.
  * @name getDenomsFromCreator
  * @package osmosis.tokenfactory.v1beta1
- * @see protoservice: osmosis.tokenfactory.v1beta1.DenomsFromCreator
+ * @see proto service: osmosis.tokenfactory.v1beta1.DenomsFromCreator
  */
 export const getDenomsFromCreator = buildQuery<QueryDenomsFromCreatorRequest, QueryDenomsFromCreatorResponse>({
   encode: QueryDenomsFromCreatorRequest.encode,

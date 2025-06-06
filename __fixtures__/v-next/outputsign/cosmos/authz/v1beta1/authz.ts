@@ -6,9 +6,14 @@ export const protobufPackage = "cosmos.authz.v1beta1";
 /**
  * GenericAuthorization gives the grantee unrestricted permissions to execute
  * the provided method on behalf of the granter's account.
+ * @name GenericAuthorization
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GenericAuthorization
  */
 export interface GenericAuthorization {
-  /** Msg, identified by it's type URL, to grant unrestricted permissions to execute */
+  /**
+   * Msg, identified by it's type URL, to grant unrestricted permissions to execute
+  */
   msg: string;
 }
 export interface GenericAuthorizationProtoMsg {
@@ -18,9 +23,14 @@ export interface GenericAuthorizationProtoMsg {
 /**
  * GenericAuthorization gives the grantee unrestricted permissions to execute
  * the provided method on behalf of the granter's account.
+ * @name GenericAuthorizationAmino
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GenericAuthorization
  */
 export interface GenericAuthorizationAmino {
-  /** Msg, identified by it's type URL, to grant unrestricted permissions to execute */
+  /**
+   * Msg, identified by it's type URL, to grant unrestricted permissions to execute
+  */
   msg?: string;
 }
 export interface GenericAuthorizationAminoMsg {
@@ -30,6 +40,9 @@ export interface GenericAuthorizationAminoMsg {
 /**
  * GenericAuthorization gives the grantee unrestricted permissions to execute
  * the provided method on behalf of the granter's account.
+ * @name GenericAuthorizationSDKType
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GenericAuthorization
  */
 export interface GenericAuthorizationSDKType {
   msg: string;
@@ -37,6 +50,9 @@ export interface GenericAuthorizationSDKType {
 /**
  * Grant gives permissions to execute
  * the provide method with expiration time.
+ * @name Grant
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.Grant
  */
 export interface Grant {
   authorization?: Any;
@@ -54,6 +70,9 @@ export interface GrantProtoMsg {
 /**
  * Grant gives permissions to execute
  * the provide method with expiration time.
+ * @name GrantAmino
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.Grant
  */
 export interface GrantAmino {
   authorization?: AnyAmino;
@@ -71,6 +90,9 @@ export interface GrantAminoMsg {
 /**
  * Grant gives permissions to execute
  * the provide method with expiration time.
+ * @name GrantSDKType
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.Grant
  */
 export interface GrantSDKType {
   authorization?: AnySDKType;
@@ -79,6 +101,9 @@ export interface GrantSDKType {
 /**
  * GrantAuthorization extends a grant with both the addresses of the grantee and granter.
  * It is used in genesis.proto and query.proto
+ * @name GrantAuthorization
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GrantAuthorization
  */
 export interface GrantAuthorization {
   granter: string;
@@ -93,6 +118,9 @@ export interface GrantAuthorizationProtoMsg {
 /**
  * GrantAuthorization extends a grant with both the addresses of the grantee and granter.
  * It is used in genesis.proto and query.proto
+ * @name GrantAuthorizationAmino
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GrantAuthorization
  */
 export interface GrantAuthorizationAmino {
   granter?: string;
@@ -107,6 +135,9 @@ export interface GrantAuthorizationAminoMsg {
 /**
  * GrantAuthorization extends a grant with both the addresses of the grantee and granter.
  * It is used in genesis.proto and query.proto
+ * @name GrantAuthorizationSDKType
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GrantAuthorization
  */
 export interface GrantAuthorizationSDKType {
   granter: string;
@@ -114,25 +145,44 @@ export interface GrantAuthorizationSDKType {
   authorization?: AnySDKType;
   expiration?: Date;
 }
-/** GrantQueueItem contains the list of TypeURL of a sdk.Msg. */
+/**
+ * GrantQueueItem contains the list of TypeURL of a sdk.Msg.
+ * @name GrantQueueItem
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GrantQueueItem
+ */
 export interface GrantQueueItem {
-  /** msg_type_urls contains the list of TypeURL of a sdk.Msg. */
+  /**
+   * msg_type_urls contains the list of TypeURL of a sdk.Msg.
+  */
   msgTypeUrls: string[];
 }
 export interface GrantQueueItemProtoMsg {
   typeUrl: "/cosmos.authz.v1beta1.GrantQueueItem";
   value: Uint8Array;
 }
-/** GrantQueueItem contains the list of TypeURL of a sdk.Msg. */
+/**
+ * GrantQueueItem contains the list of TypeURL of a sdk.Msg.
+ * @name GrantQueueItemAmino
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GrantQueueItem
+ */
 export interface GrantQueueItemAmino {
-  /** msg_type_urls contains the list of TypeURL of a sdk.Msg. */
+  /**
+   * msg_type_urls contains the list of TypeURL of a sdk.Msg.
+  */
   msg_type_urls?: string[];
 }
 export interface GrantQueueItemAminoMsg {
   type: "cosmos-sdk/GrantQueueItem";
   value: GrantQueueItemAmino;
 }
-/** GrantQueueItem contains the list of TypeURL of a sdk.Msg. */
+/**
+ * GrantQueueItem contains the list of TypeURL of a sdk.Msg.
+ * @name GrantQueueItemSDKType
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GrantQueueItem
+ */
 export interface GrantQueueItemSDKType {
   msg_type_urls: string[];
 }
@@ -141,6 +191,13 @@ function createBaseGenericAuthorization(): GenericAuthorization {
     msg: ""
   };
 }
+/**
+ * GenericAuthorization gives the grantee unrestricted permissions to execute
+ * the provided method on behalf of the granter's account.
+ * @name GenericAuthorization
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GenericAuthorization
+ */
 export const GenericAuthorization = {
   typeUrl: "/cosmos.authz.v1beta1.GenericAuthorization",
   encode(message: GenericAuthorization, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -211,6 +268,13 @@ function createBaseGrant(): Grant {
     expiration: undefined
   };
 }
+/**
+ * Grant gives permissions to execute
+ * the provide method with expiration time.
+ * @name Grant
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.Grant
+ */
 export const Grant = {
   typeUrl: "/cosmos.authz.v1beta1.Grant",
   encode(message: Grant, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -296,6 +360,13 @@ function createBaseGrantAuthorization(): GrantAuthorization {
     expiration: undefined
   };
 }
+/**
+ * GrantAuthorization extends a grant with both the addresses of the grantee and granter.
+ * It is used in genesis.proto and query.proto
+ * @name GrantAuthorization
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GrantAuthorization
+ */
 export const GrantAuthorization = {
   typeUrl: "/cosmos.authz.v1beta1.GrantAuthorization",
   encode(message: GrantAuthorization, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -400,6 +471,12 @@ function createBaseGrantQueueItem(): GrantQueueItem {
     msgTypeUrls: []
   };
 }
+/**
+ * GrantQueueItem contains the list of TypeURL of a sdk.Msg.
+ * @name GrantQueueItem
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GrantQueueItem
+ */
 export const GrantQueueItem = {
   typeUrl: "/cosmos.authz.v1beta1.GrantQueueItem",
   encode(message: GrantQueueItem, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

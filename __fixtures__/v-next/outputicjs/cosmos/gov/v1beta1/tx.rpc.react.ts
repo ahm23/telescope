@@ -5,7 +5,7 @@ import { submitProposal, vote, voteWeighted, deposit } from "./tx.rpc.func";
  * SubmitProposal defines a method to create new proposal given a content.
  * @name useSubmitProposal
  * @package cosmos.gov.v1beta1
- * @see protoservice: cosmos.gov.v1beta1.SubmitProposal
+ * @see proto service: cosmos.gov.v1beta1.SubmitProposal
  */
 export const useSubmitProposal = buildUseMutation<MsgSubmitProposal, Error>({
   builderMutationFn: submitProposal
@@ -14,7 +14,7 @@ export const useSubmitProposal = buildUseMutation<MsgSubmitProposal, Error>({
  * Vote defines a method to add a vote on a specific proposal.
  * @name useVote
  * @package cosmos.gov.v1beta1
- * @see protoservice: cosmos.gov.v1beta1.Vote
+ * @see proto service: cosmos.gov.v1beta1.Vote
  */
 export const useVote = buildUseMutation<MsgVote, Error>({
   builderMutationFn: vote
@@ -25,7 +25,7 @@ export const useVote = buildUseMutation<MsgVote, Error>({
  * Since: cosmos-sdk 0.43
  * @name useVoteWeighted
  * @package cosmos.gov.v1beta1
- * @see protoservice: cosmos.gov.v1beta1.VoteWeighted
+ * @see proto service: cosmos.gov.v1beta1.VoteWeighted
  */
 export const useVoteWeighted = buildUseMutation<MsgVoteWeighted, Error>({
   builderMutationFn: voteWeighted
@@ -34,7 +34,7 @@ export const useVoteWeighted = buildUseMutation<MsgVoteWeighted, Error>({
  * Deposit defines a method to add deposit on a specific proposal.
  * @name useDeposit
  * @package cosmos.gov.v1beta1
- * @see protoservice: cosmos.gov.v1beta1.Deposit
+ * @see proto service: cosmos.gov.v1beta1.Deposit
  */
 export const useDeposit = buildUseMutation<MsgDeposit, Error>({
   builderMutationFn: deposit

@@ -4,7 +4,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial, Exact } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "akash.escrow.v1beta2";
-/** QueryAccountRequest is request type for the Query/Account RPC method */
+/**
+ * QueryAccountRequest is request type for the Query/Account RPC method
+ * @name QueryAccountsRequest
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.QueryAccountsRequest
+ */
 export interface QueryAccountsRequest {
   scope: string;
   xid: string;
@@ -16,7 +21,12 @@ export interface QueryAccountsRequestProtoMsg {
   typeUrl: "/akash.escrow.v1beta2.QueryAccountsRequest";
   value: Uint8Array;
 }
-/** QueryAccountRequest is request type for the Query/Account RPC method */
+/**
+ * QueryAccountRequest is request type for the Query/Account RPC method
+ * @name QueryAccountsRequestSDKType
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.QueryAccountsRequest
+ */
 export interface QueryAccountsRequestSDKType {
   scope: string;
   xid: string;
@@ -24,7 +34,12 @@ export interface QueryAccountsRequestSDKType {
   state: string;
   pagination?: PageRequestSDKType;
 }
-/** QueryProvidersResponse is response type for the Query/Providers RPC method */
+/**
+ * QueryProvidersResponse is response type for the Query/Providers RPC method
+ * @name QueryAccountsResponse
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.QueryAccountsResponse
+ */
 export interface QueryAccountsResponse {
   accounts: Account[];
   pagination?: PageResponse;
@@ -33,12 +48,22 @@ export interface QueryAccountsResponseProtoMsg {
   typeUrl: "/akash.escrow.v1beta2.QueryAccountsResponse";
   value: Uint8Array;
 }
-/** QueryProvidersResponse is response type for the Query/Providers RPC method */
+/**
+ * QueryProvidersResponse is response type for the Query/Providers RPC method
+ * @name QueryAccountsResponseSDKType
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.QueryAccountsResponse
+ */
 export interface QueryAccountsResponseSDKType {
   accounts: AccountSDKType[];
   pagination?: PageResponseSDKType;
 }
-/** QueryPaymentRequest is request type for the Query/Payment RPC method */
+/**
+ * QueryPaymentRequest is request type for the Query/Payment RPC method
+ * @name QueryPaymentsRequest
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.QueryPaymentsRequest
+ */
 export interface QueryPaymentsRequest {
   scope: string;
   xid: string;
@@ -51,7 +76,12 @@ export interface QueryPaymentsRequestProtoMsg {
   typeUrl: "/akash.escrow.v1beta2.QueryPaymentsRequest";
   value: Uint8Array;
 }
-/** QueryPaymentRequest is request type for the Query/Payment RPC method */
+/**
+ * QueryPaymentRequest is request type for the Query/Payment RPC method
+ * @name QueryPaymentsRequestSDKType
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.QueryPaymentsRequest
+ */
 export interface QueryPaymentsRequestSDKType {
   scope: string;
   xid: string;
@@ -60,7 +90,12 @@ export interface QueryPaymentsRequestSDKType {
   state: string;
   pagination?: PageRequestSDKType;
 }
-/** QueryProvidersResponse is response type for the Query/Providers RPC method */
+/**
+ * QueryProvidersResponse is response type for the Query/Providers RPC method
+ * @name QueryPaymentsResponse
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.QueryPaymentsResponse
+ */
 export interface QueryPaymentsResponse {
   payments: FractionalPayment[];
   pagination?: PageResponse;
@@ -69,7 +104,12 @@ export interface QueryPaymentsResponseProtoMsg {
   typeUrl: "/akash.escrow.v1beta2.QueryPaymentsResponse";
   value: Uint8Array;
 }
-/** QueryProvidersResponse is response type for the Query/Providers RPC method */
+/**
+ * QueryProvidersResponse is response type for the Query/Providers RPC method
+ * @name QueryPaymentsResponseSDKType
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.QueryPaymentsResponse
+ */
 export interface QueryPaymentsResponseSDKType {
   payments: FractionalPaymentSDKType[];
   pagination?: PageResponseSDKType;
@@ -83,6 +123,12 @@ function createBaseQueryAccountsRequest(): QueryAccountsRequest {
     pagination: undefined
   };
 }
+/**
+ * QueryAccountRequest is request type for the Query/Account RPC method
+ * @name QueryAccountsRequest
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.QueryAccountsRequest
+ */
 export const QueryAccountsRequest = {
   typeUrl: "/akash.escrow.v1beta2.QueryAccountsRequest",
   encode(message: QueryAccountsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -242,6 +288,12 @@ function createBaseQueryAccountsResponse(): QueryAccountsResponse {
     pagination: undefined
   };
 }
+/**
+ * QueryProvidersResponse is response type for the Query/Providers RPC method
+ * @name QueryAccountsResponse
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.QueryAccountsResponse
+ */
 export const QueryAccountsResponse = {
   typeUrl: "/akash.escrow.v1beta2.QueryAccountsResponse",
   encode(message: QueryAccountsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -367,6 +419,12 @@ function createBaseQueryPaymentsRequest(): QueryPaymentsRequest {
     pagination: undefined
   };
 }
+/**
+ * QueryPaymentRequest is request type for the Query/Payment RPC method
+ * @name QueryPaymentsRequest
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.QueryPaymentsRequest
+ */
 export const QueryPaymentsRequest = {
   typeUrl: "/akash.escrow.v1beta2.QueryPaymentsRequest",
   encode(message: QueryPaymentsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -542,6 +600,12 @@ function createBaseQueryPaymentsResponse(): QueryPaymentsResponse {
     pagination: undefined
   };
 }
+/**
+ * QueryProvidersResponse is response type for the Query/Providers RPC method
+ * @name QueryPaymentsResponse
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.QueryPaymentsResponse
+ */
 export const QueryPaymentsResponse = {
   typeUrl: "/akash.escrow.v1beta2.QueryPaymentsResponse",
   encode(message: QueryPaymentsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

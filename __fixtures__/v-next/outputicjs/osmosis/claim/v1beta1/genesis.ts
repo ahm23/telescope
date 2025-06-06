@@ -1,28 +1,50 @@
 import { Coin, CoinAmino } from "../../../cosmos/base/v1beta1/coin";
-import { Params, ParamsAmino } from "./params";
 import { ClaimRecord, ClaimRecordAmino } from "./claim";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState defines the claim module's genesis state. */
+import { OsmosisClaimV1beta1Params, OsmosisClaimV1beta1ParamsAmino } from "./params";
+/**
+ * GenesisState defines the claim module's genesis state.
+ * @name GenesisState
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** balance of the claim module's account */
+  /**
+   * balance of the claim module's account
+  */
   moduleAccountBalance: Coin;
-  /** params defines all the parameters of the module. */
-  params: Params;
-  /** list of claim records, one for every airdrop recipient */
+  /**
+   * params defines all the parameters of the module.
+  */
+  params: OsmosisClaimV1beta1Params;
+  /**
+   * list of claim records, one for every airdrop recipient
+  */
   claimRecords: ClaimRecord[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the claim module's genesis state. */
+/**
+ * GenesisState defines the claim module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** balance of the claim module's account */
+  /**
+   * balance of the claim module's account
+  */
   module_account_balance: CoinAmino;
-  /** params defines all the parameters of the module. */
-  params: ParamsAmino;
-  /** list of claim records, one for every airdrop recipient */
+  /**
+   * params defines all the parameters of the module.
+  */
+  params: OsmosisClaimV1beta1ParamsAmino;
+  /**
+   * list of claim records, one for every airdrop recipient
+  */
   claim_records: ClaimRecordAmino[];
 }
 export interface GenesisStateAminoMsg {
@@ -32,10 +54,16 @@ export interface GenesisStateAminoMsg {
 function createBaseGenesisState(): GenesisState {
   return {
     moduleAccountBalance: Coin.fromPartial({}),
-    params: Params.fromPartial({}),
+    params: OsmosisClaimV1beta1Params.fromPartial({}),
     claimRecords: []
   };
 }
+/**
+ * GenesisState defines the claim module's genesis state.
+ * @name GenesisState
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.claim.v1beta1.GenesisState",
   aminoType: "osmosis/claim/genesis-state",
@@ -44,7 +72,7 @@ export const GenesisState = {
       Coin.encode(message.moduleAccountBalance, writer.uint32(10).fork()).ldelim();
     }
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(18).fork()).ldelim();
+      OsmosisClaimV1beta1Params.encode(message.params, writer.uint32(18).fork()).ldelim();
     }
     for (const v of message.claimRecords) {
       ClaimRecord.encode(v!, writer.uint32(26).fork()).ldelim();
@@ -62,7 +90,7 @@ export const GenesisState = {
           message.moduleAccountBalance = Coin.decode(reader, reader.uint32());
           break;
         case 2:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = OsmosisClaimV1beta1Params.decode(reader, reader.uint32());
           break;
         case 3:
           message.claimRecords.push(ClaimRecord.decode(reader, reader.uint32()));
@@ -77,7 +105,7 @@ export const GenesisState = {
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
     message.moduleAccountBalance = object.moduleAccountBalance !== undefined && object.moduleAccountBalance !== null ? Coin.fromPartial(object.moduleAccountBalance) : undefined;
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? OsmosisClaimV1beta1Params.fromPartial(object.params) : undefined;
     message.claimRecords = object.claimRecords?.map(e => ClaimRecord.fromPartial(e)) || [];
     return message;
   },
@@ -87,7 +115,7 @@ export const GenesisState = {
       message.moduleAccountBalance = Coin.fromAmino(object.module_account_balance);
     }
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = OsmosisClaimV1beta1Params.fromAmino(object.params);
     }
     message.claimRecords = object.claim_records?.map(e => ClaimRecord.fromAmino(e)) || [];
     return message;
@@ -95,7 +123,7 @@ export const GenesisState = {
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
     obj.module_account_balance = message.moduleAccountBalance ? Coin.toAmino(message.moduleAccountBalance) : undefined;
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? OsmosisClaimV1beta1Params.toAmino(message.params) : undefined;
     if (message.claimRecords) {
       obj.claim_records = message.claimRecords.map(e => e ? ClaimRecord.toAmino(e) : undefined);
     } else {

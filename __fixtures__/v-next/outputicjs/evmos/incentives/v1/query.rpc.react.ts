@@ -5,7 +5,7 @@ import { getIncentives, getIncentive, getGasMeters, getGasMeter, getAllocationMe
  * Incentives retrieves registered incentives
  * @name useGetIncentives
  * @package evmos.incentives.v1
- * @see protoservice: evmos.incentives.v1.Incentives
+ * @see proto service: evmos.incentives.v1.Incentives
  */
 export const useGetIncentives = buildUseQuery<QueryIncentivesRequest, QueryIncentivesResponse>({
   builderQueryFn: getIncentives,
@@ -15,7 +15,7 @@ export const useGetIncentives = buildUseQuery<QueryIncentivesRequest, QueryIncen
  * Incentive retrieves a registered incentive
  * @name useGetIncentive
  * @package evmos.incentives.v1
- * @see protoservice: evmos.incentives.v1.Incentive
+ * @see proto service: evmos.incentives.v1.Incentive
  */
 export const useGetIncentive = buildUseQuery<QueryIncentiveRequest, QueryIncentiveResponse>({
   builderQueryFn: getIncentive,
@@ -25,7 +25,7 @@ export const useGetIncentive = buildUseQuery<QueryIncentiveRequest, QueryIncenti
  * GasMeters retrieves active gas meters for a given contract
  * @name useGetGasMeters
  * @package evmos.incentives.v1
- * @see protoservice: evmos.incentives.v1.GasMeters
+ * @see proto service: evmos.incentives.v1.GasMeters
  */
 export const useGetGasMeters = buildUseQuery<QueryGasMetersRequest, QueryGasMetersResponse>({
   builderQueryFn: getGasMeters,
@@ -35,7 +35,7 @@ export const useGetGasMeters = buildUseQuery<QueryGasMetersRequest, QueryGasMete
  * GasMeter Retrieves a active gas meter
  * @name useGetGasMeter
  * @package evmos.incentives.v1
- * @see protoservice: evmos.incentives.v1.GasMeter
+ * @see proto service: evmos.incentives.v1.GasMeter
  */
 export const useGetGasMeter = buildUseQuery<QueryGasMeterRequest, QueryGasMeterResponse>({
   builderQueryFn: getGasMeter,
@@ -46,7 +46,7 @@ export const useGetGasMeter = buildUseQuery<QueryGasMeterRequest, QueryGasMeterR
  * denomination
  * @name useGetAllocationMeters
  * @package evmos.incentives.v1
- * @see protoservice: evmos.incentives.v1.AllocationMeters
+ * @see proto service: evmos.incentives.v1.AllocationMeters
  */
 export const useGetAllocationMeters = buildUseQuery<QueryAllocationMetersRequest, QueryAllocationMetersResponse>({
   builderQueryFn: getAllocationMeters,
@@ -56,7 +56,7 @@ export const useGetAllocationMeters = buildUseQuery<QueryAllocationMetersRequest
  * AllocationMeter Retrieves a active gas meter
  * @name useGetAllocationMeter
  * @package evmos.incentives.v1
- * @see protoservice: evmos.incentives.v1.AllocationMeter
+ * @see proto service: evmos.incentives.v1.AllocationMeter
  */
 export const useGetAllocationMeter = buildUseQuery<QueryAllocationMeterRequest, QueryAllocationMeterResponse>({
   builderQueryFn: getAllocationMeter,
@@ -66,7 +66,7 @@ export const useGetAllocationMeter = buildUseQuery<QueryAllocationMeterRequest, 
  * Params retrieves the incentives module params
  * @name useGetEvmosIncentivesV1Params
  * @package evmos.incentives.v1
- * @see protoservice: evmos.incentives.v1.Params
+ * @see proto service: evmos.incentives.v1.Params
  */
 export const useGetEvmosIncentivesV1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
   builderQueryFn: getEvmosIncentivesV1Params,

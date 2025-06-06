@@ -51,7 +51,12 @@ export function order_StateToJSON(object: Order_State): string {
       return "UNRECOGNIZED";
   }
 }
-/** OrderID stores owner and all other seq numbers */
+/**
+ * OrderID stores owner and all other seq numbers
+ * @name OrderID
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.OrderID
+ */
 export interface OrderID {
   owner: string;
   dseq: bigint;
@@ -62,14 +67,24 @@ export interface OrderIDProtoMsg {
   typeUrl: "/akash.market.v1beta2.OrderID";
   value: Uint8Array;
 }
-/** OrderID stores owner and all other seq numbers */
+/**
+ * OrderID stores owner and all other seq numbers
+ * @name OrderIDSDKType
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.OrderID
+ */
 export interface OrderIDSDKType {
   owner: string;
   dseq: bigint;
   gseq: number;
   oseq: number;
 }
-/** Order stores orderID, state of order and other details */
+/**
+ * Order stores orderID, state of order and other details
+ * @name Order
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Order
+ */
 export interface Order {
   orderId: OrderID;
   state: Order_State;
@@ -80,14 +95,24 @@ export interface OrderProtoMsg {
   typeUrl: "/akash.market.v1beta2.Order";
   value: Uint8Array;
 }
-/** Order stores orderID, state of order and other details */
+/**
+ * Order stores orderID, state of order and other details
+ * @name OrderSDKType
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Order
+ */
 export interface OrderSDKType {
   order_id: OrderIDSDKType;
   state: Order_State;
   spec: GroupSpecSDKType;
   created_at: bigint;
 }
-/** OrderFilters defines flags for order list filter */
+/**
+ * OrderFilters defines flags for order list filter
+ * @name OrderFilters
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.OrderFilters
+ */
 export interface OrderFilters {
   owner: string;
   dseq: bigint;
@@ -99,7 +124,12 @@ export interface OrderFiltersProtoMsg {
   typeUrl: "/akash.market.v1beta2.OrderFilters";
   value: Uint8Array;
 }
-/** OrderFilters defines flags for order list filter */
+/**
+ * OrderFilters defines flags for order list filter
+ * @name OrderFiltersSDKType
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.OrderFilters
+ */
 export interface OrderFiltersSDKType {
   owner: string;
   dseq: bigint;
@@ -115,6 +145,12 @@ function createBaseOrderID(): OrderID {
     oseq: 0
   };
 }
+/**
+ * OrderID stores owner and all other seq numbers
+ * @name OrderID
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.OrderID
+ */
 export const OrderID = {
   typeUrl: "/akash.market.v1beta2.OrderID",
   encode(message: OrderID, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -260,6 +296,12 @@ function createBaseOrder(): Order {
     createdAt: BigInt(0)
   };
 }
+/**
+ * Order stores orderID, state of order and other details
+ * @name Order
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Order
+ */
 export const Order = {
   typeUrl: "/akash.market.v1beta2.Order",
   encode(message: Order, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -406,6 +448,12 @@ function createBaseOrderFilters(): OrderFilters {
     state: ""
   };
 }
+/**
+ * OrderFilters defines flags for order list filter
+ * @name OrderFilters
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.OrderFilters
+ */
 export const OrderFilters = {
   typeUrl: "/akash.market.v1beta2.OrderFilters",
   encode(message: OrderFilters, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

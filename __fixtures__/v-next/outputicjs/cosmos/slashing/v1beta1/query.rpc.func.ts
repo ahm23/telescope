@@ -4,7 +4,7 @@ import { QueryParamsRequest, QueryParamsResponse, QuerySigningInfoRequest, Query
  * Params queries the parameters of slashing module
  * @name getCosmosSlashingV1beta1Params
  * @package cosmos.slashing.v1beta1
- * @see protoservice: cosmos.slashing.v1beta1.Params
+ * @see proto service: cosmos.slashing.v1beta1.Params
  */
 export const getCosmosSlashingV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
@@ -16,7 +16,7 @@ export const getCosmosSlashingV1beta1Params = buildQuery<QueryParamsRequest, Que
  * SigningInfo queries the signing info of given cons address
  * @name getSigningInfo
  * @package cosmos.slashing.v1beta1
- * @see protoservice: cosmos.slashing.v1beta1.SigningInfo
+ * @see proto service: cosmos.slashing.v1beta1.SigningInfo
  */
 export const getSigningInfo = buildQuery<QuerySigningInfoRequest, QuerySigningInfoResponse>({
   encode: QuerySigningInfoRequest.encode,
@@ -28,7 +28,7 @@ export const getSigningInfo = buildQuery<QuerySigningInfoRequest, QuerySigningIn
  * SigningInfos queries signing info of all validators
  * @name getSigningInfos
  * @package cosmos.slashing.v1beta1
- * @see protoservice: cosmos.slashing.v1beta1.SigningInfos
+ * @see proto service: cosmos.slashing.v1beta1.SigningInfos
  */
 export const getSigningInfos = buildQuery<QuerySigningInfosRequest, QuerySigningInfosResponse>({
   encode: QuerySigningInfosRequest.encode,

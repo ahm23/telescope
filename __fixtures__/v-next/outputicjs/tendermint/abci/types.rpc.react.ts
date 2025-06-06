@@ -4,7 +4,7 @@ import { getEcho, getFlush, getInfo, getSetOption, getDeliverTx, getCheckTx, get
 /**
  * @name useGetEcho
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.Echo
+ * @see proto service: tendermint.abci.Echo
  */
 export const useGetEcho = buildUseQuery<RequestEcho, ResponseEcho>({
   builderQueryFn: getEcho,
@@ -13,7 +13,7 @@ export const useGetEcho = buildUseQuery<RequestEcho, ResponseEcho>({
 /**
  * @name useGetFlush
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.Flush
+ * @see proto service: tendermint.abci.Flush
  */
 export const useGetFlush = buildUseQuery<RequestFlush, ResponseFlush>({
   builderQueryFn: getFlush,
@@ -22,7 +22,7 @@ export const useGetFlush = buildUseQuery<RequestFlush, ResponseFlush>({
 /**
  * @name useGetInfo
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.Info
+ * @see proto service: tendermint.abci.Info
  */
 export const useGetInfo = buildUseQuery<RequestInfo, ResponseInfo>({
   builderQueryFn: getInfo,
@@ -31,7 +31,7 @@ export const useGetInfo = buildUseQuery<RequestInfo, ResponseInfo>({
 /**
  * @name useGetSetOption
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.SetOption
+ * @see proto service: tendermint.abci.SetOption
  */
 export const useGetSetOption = buildUseQuery<RequestSetOption, ResponseSetOption>({
   builderQueryFn: getSetOption,
@@ -40,7 +40,7 @@ export const useGetSetOption = buildUseQuery<RequestSetOption, ResponseSetOption
 /**
  * @name useGetDeliverTx
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.DeliverTx
+ * @see proto service: tendermint.abci.DeliverTx
  */
 export const useGetDeliverTx = buildUseQuery<RequestDeliverTx, ResponseDeliverTx>({
   builderQueryFn: getDeliverTx,
@@ -49,7 +49,7 @@ export const useGetDeliverTx = buildUseQuery<RequestDeliverTx, ResponseDeliverTx
 /**
  * @name useGetCheckTx
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.CheckTx
+ * @see proto service: tendermint.abci.CheckTx
  */
 export const useGetCheckTx = buildUseQuery<RequestCheckTx, ResponseCheckTx>({
   builderQueryFn: getCheckTx,
@@ -58,7 +58,7 @@ export const useGetCheckTx = buildUseQuery<RequestCheckTx, ResponseCheckTx>({
 /**
  * @name useGetQuery
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.Query
+ * @see proto service: tendermint.abci.Query
  */
 export const useGetQuery = buildUseQuery<RequestQuery, ResponseQuery>({
   builderQueryFn: getQuery,
@@ -67,7 +67,7 @@ export const useGetQuery = buildUseQuery<RequestQuery, ResponseQuery>({
 /**
  * @name useGetCommit
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.Commit
+ * @see proto service: tendermint.abci.Commit
  */
 export const useGetCommit = buildUseQuery<RequestCommit, ResponseCommit>({
   builderQueryFn: getCommit,
@@ -76,7 +76,7 @@ export const useGetCommit = buildUseQuery<RequestCommit, ResponseCommit>({
 /**
  * @name useGetInitChain
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.InitChain
+ * @see proto service: tendermint.abci.InitChain
  */
 export const useGetInitChain = buildUseQuery<RequestInitChain, ResponseInitChain>({
   builderQueryFn: getInitChain,
@@ -85,7 +85,7 @@ export const useGetInitChain = buildUseQuery<RequestInitChain, ResponseInitChain
 /**
  * @name useGetBeginBlock
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.BeginBlock
+ * @see proto service: tendermint.abci.BeginBlock
  */
 export const useGetBeginBlock = buildUseQuery<RequestBeginBlock, ResponseBeginBlock>({
   builderQueryFn: getBeginBlock,
@@ -94,7 +94,7 @@ export const useGetBeginBlock = buildUseQuery<RequestBeginBlock, ResponseBeginBl
 /**
  * @name useGetEndBlock
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.EndBlock
+ * @see proto service: tendermint.abci.EndBlock
  */
 export const useGetEndBlock = buildUseQuery<RequestEndBlock, ResponseEndBlock>({
   builderQueryFn: getEndBlock,
@@ -103,7 +103,7 @@ export const useGetEndBlock = buildUseQuery<RequestEndBlock, ResponseEndBlock>({
 /**
  * @name useGetListSnapshots
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.ListSnapshots
+ * @see proto service: tendermint.abci.ListSnapshots
  */
 export const useGetListSnapshots = buildUseQuery<RequestListSnapshots, ResponseListSnapshots>({
   builderQueryFn: getListSnapshots,
@@ -112,7 +112,7 @@ export const useGetListSnapshots = buildUseQuery<RequestListSnapshots, ResponseL
 /**
  * @name useGetOfferSnapshot
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.OfferSnapshot
+ * @see proto service: tendermint.abci.OfferSnapshot
  */
 export const useGetOfferSnapshot = buildUseQuery<RequestOfferSnapshot, ResponseOfferSnapshot>({
   builderQueryFn: getOfferSnapshot,
@@ -121,7 +121,7 @@ export const useGetOfferSnapshot = buildUseQuery<RequestOfferSnapshot, ResponseO
 /**
  * @name useGetLoadSnapshotChunk
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.LoadSnapshotChunk
+ * @see proto service: tendermint.abci.LoadSnapshotChunk
  */
 export const useGetLoadSnapshotChunk = buildUseQuery<RequestLoadSnapshotChunk, ResponseLoadSnapshotChunk>({
   builderQueryFn: getLoadSnapshotChunk,
@@ -130,7 +130,7 @@ export const useGetLoadSnapshotChunk = buildUseQuery<RequestLoadSnapshotChunk, R
 /**
  * @name useGetApplySnapshotChunk
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.ApplySnapshotChunk
+ * @see proto service: tendermint.abci.ApplySnapshotChunk
  */
 export const useGetApplySnapshotChunk = buildUseQuery<RequestApplySnapshotChunk, ResponseApplySnapshotChunk>({
   builderQueryFn: getApplySnapshotChunk,

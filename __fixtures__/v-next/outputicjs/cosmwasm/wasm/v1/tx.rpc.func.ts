@@ -4,7 +4,7 @@ import { MsgStoreCode, MsgInstantiateContract, MsgExecuteContract, MsgMigrateCon
  * StoreCode to submit Wasm code to the system
  * @name storeCode
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.StoreCode
+ * @see proto service: cosmwasm.wasm.v1.StoreCode
  */
 export const storeCode = buildTx<MsgStoreCode>({
   msg: MsgStoreCode
@@ -13,7 +13,7 @@ export const storeCode = buildTx<MsgStoreCode>({
  * Instantiate creates a new smart contract instance for the given code id.
  * @name instantiateContract
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.InstantiateContract
+ * @see proto service: cosmwasm.wasm.v1.InstantiateContract
  */
 export const instantiateContract = buildTx<MsgInstantiateContract>({
   msg: MsgInstantiateContract
@@ -22,7 +22,7 @@ export const instantiateContract = buildTx<MsgInstantiateContract>({
  * Execute submits the given message data to a smart contract
  * @name executeContract
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.ExecuteContract
+ * @see proto service: cosmwasm.wasm.v1.ExecuteContract
  */
 export const executeContract = buildTx<MsgExecuteContract>({
   msg: MsgExecuteContract
@@ -31,7 +31,7 @@ export const executeContract = buildTx<MsgExecuteContract>({
  * Migrate runs a code upgrade/ downgrade for a smart contract
  * @name migrateContract
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.MigrateContract
+ * @see proto service: cosmwasm.wasm.v1.MigrateContract
  */
 export const migrateContract = buildTx<MsgMigrateContract>({
   msg: MsgMigrateContract
@@ -40,7 +40,7 @@ export const migrateContract = buildTx<MsgMigrateContract>({
  * UpdateAdmin sets a new   admin for a smart contract
  * @name updateAdmin
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.UpdateAdmin
+ * @see proto service: cosmwasm.wasm.v1.UpdateAdmin
  */
 export const updateAdmin = buildTx<MsgUpdateAdmin>({
   msg: MsgUpdateAdmin
@@ -49,7 +49,7 @@ export const updateAdmin = buildTx<MsgUpdateAdmin>({
  * ClearAdmin removes any admin stored for a smart contract
  * @name clearAdmin
  * @package cosmwasm.wasm.v1
- * @see protoservice: cosmwasm.wasm.v1.ClearAdmin
+ * @see proto service: cosmwasm.wasm.v1.ClearAdmin
  */
 export const clearAdmin = buildTx<MsgClearAdmin>({
   msg: MsgClearAdmin

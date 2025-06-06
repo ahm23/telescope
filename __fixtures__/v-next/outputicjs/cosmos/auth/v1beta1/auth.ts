@@ -5,6 +5,9 @@ import { DeepPartial } from "../../../helpers";
  * BaseAccount defines a base account type. It contains all the necessary fields
  * for basic account functionality. Any custom account type should extend this
  * type for additional functionality (e.g. vesting).
+ * @name BaseAccount
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.BaseAccount
  */
 export interface BaseAccount {
   address: string;
@@ -20,6 +23,9 @@ export interface BaseAccountProtoMsg {
  * BaseAccount defines a base account type. It contains all the necessary fields
  * for basic account functionality. Any custom account type should extend this
  * type for additional functionality (e.g. vesting).
+ * @name BaseAccountAmino
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.BaseAccount
  */
 export interface BaseAccountAmino {
   address: string;
@@ -31,7 +37,12 @@ export interface BaseAccountAminoMsg {
   type: "cosmos-sdk/BaseAccount";
   value: BaseAccountAmino;
 }
-/** ModuleAccount defines an account for modules that holds coins on a pool. */
+/**
+ * ModuleAccount defines an account for modules that holds coins on a pool.
+ * @name ModuleAccount
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.ModuleAccount
+ */
 export interface ModuleAccount {
   baseAccount?: BaseAccount;
   name: string;
@@ -41,7 +52,12 @@ export interface ModuleAccountProtoMsg {
   typeUrl: "/cosmos.auth.v1beta1.ModuleAccount";
   value: Uint8Array;
 }
-/** ModuleAccount defines an account for modules that holds coins on a pool. */
+/**
+ * ModuleAccount defines an account for modules that holds coins on a pool.
+ * @name ModuleAccountAmino
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.ModuleAccount
+ */
 export interface ModuleAccountAmino {
   base_account?: BaseAccountAmino;
   name: string;
@@ -51,29 +67,39 @@ export interface ModuleAccountAminoMsg {
   type: "cosmos-sdk/ModuleAccount";
   value: ModuleAccountAmino;
 }
-/** Params defines the parameters for the auth module. */
-export interface Params {
+/**
+ * Params defines the parameters for the auth module.
+ * @name CosmosAuthV1beta1Params
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.Params
+ */
+export interface CosmosAuthV1beta1Params {
   maxMemoCharacters: bigint;
   txSigLimit: bigint;
   txSizeCostPerByte: bigint;
   sigVerifyCostEd25519: bigint;
   sigVerifyCostSecp256k1: bigint;
 }
-export interface ParamsProtoMsg {
+export interface CosmosAuthV1beta1ParamsProtoMsg {
   typeUrl: "/cosmos.auth.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params defines the parameters for the auth module. */
-export interface ParamsAmino {
+/**
+ * Params defines the parameters for the auth module.
+ * @name CosmosAuthV1beta1ParamsAmino
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.CosmosAuthV1beta1Params
+ */
+export interface CosmosAuthV1beta1ParamsAmino {
   max_memo_characters: string;
   tx_sig_limit: string;
   tx_size_cost_per_byte: string;
   sig_verify_cost_ed25519: string;
   sig_verify_cost_secp256k1: string;
 }
-export interface ParamsAminoMsg {
+export interface CosmosAuthV1beta1ParamsAminoMsg {
   type: "cosmos-sdk/Params";
-  value: ParamsAmino;
+  value: CosmosAuthV1beta1ParamsAmino;
 }
 function createBaseBaseAccount(): BaseAccount {
   return {
@@ -83,6 +109,14 @@ function createBaseBaseAccount(): BaseAccount {
     sequence: BigInt(0)
   };
 }
+/**
+ * BaseAccount defines a base account type. It contains all the necessary fields
+ * for basic account functionality. Any custom account type should extend this
+ * type for additional functionality (e.g. vesting).
+ * @name BaseAccount
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.BaseAccount
+ */
 export const BaseAccount = {
   typeUrl: "/cosmos.auth.v1beta1.BaseAccount",
   aminoType: "cosmos-sdk/BaseAccount",
@@ -188,6 +222,12 @@ function createBaseModuleAccount(): ModuleAccount {
     permissions: []
   };
 }
+/**
+ * ModuleAccount defines an account for modules that holds coins on a pool.
+ * @name ModuleAccount
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.ModuleAccount
+ */
 export const ModuleAccount = {
   typeUrl: "/cosmos.auth.v1beta1.ModuleAccount",
   aminoType: "cosmos-sdk/ModuleAccount",
@@ -277,7 +317,7 @@ export const ModuleAccount = {
     };
   }
 };
-function createBaseParams(): Params {
+function createBaseCosmosAuthV1beta1Params(): CosmosAuthV1beta1Params {
   return {
     maxMemoCharacters: BigInt(0),
     txSigLimit: BigInt(0),
@@ -286,10 +326,16 @@ function createBaseParams(): Params {
     sigVerifyCostSecp256k1: BigInt(0)
   };
 }
-export const Params = {
+/**
+ * Params defines the parameters for the auth module.
+ * @name CosmosAuthV1beta1Params
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.Params
+ */
+export const CosmosAuthV1beta1Params = {
   typeUrl: "/cosmos.auth.v1beta1.Params",
   aminoType: "cosmos-sdk/Params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: CosmosAuthV1beta1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.maxMemoCharacters !== BigInt(0)) {
       writer.uint32(8).uint64(message.maxMemoCharacters);
     }
@@ -307,10 +353,10 @@ export const Params = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): CosmosAuthV1beta1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseCosmosAuthV1beta1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -336,8 +382,8 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<CosmosAuthV1beta1Params>): CosmosAuthV1beta1Params {
+    const message = createBaseCosmosAuthV1beta1Params();
     message.maxMemoCharacters = object.maxMemoCharacters !== undefined && object.maxMemoCharacters !== null ? BigInt(object.maxMemoCharacters.toString()) : BigInt(0);
     message.txSigLimit = object.txSigLimit !== undefined && object.txSigLimit !== null ? BigInt(object.txSigLimit.toString()) : BigInt(0);
     message.txSizeCostPerByte = object.txSizeCostPerByte !== undefined && object.txSizeCostPerByte !== null ? BigInt(object.txSizeCostPerByte.toString()) : BigInt(0);
@@ -345,8 +391,8 @@ export const Params = {
     message.sigVerifyCostSecp256k1 = object.sigVerifyCostSecp256k1 !== undefined && object.sigVerifyCostSecp256k1 !== null ? BigInt(object.sigVerifyCostSecp256k1.toString()) : BigInt(0);
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: CosmosAuthV1beta1ParamsAmino): CosmosAuthV1beta1Params {
+    const message = createBaseCosmosAuthV1beta1Params();
     if (object.max_memo_characters !== undefined && object.max_memo_characters !== null) {
       message.maxMemoCharacters = BigInt(object.max_memo_characters);
     }
@@ -364,7 +410,7 @@ export const Params = {
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: CosmosAuthV1beta1Params): CosmosAuthV1beta1ParamsAmino {
     const obj: any = {};
     obj.max_memo_characters = message.maxMemoCharacters !== BigInt(0) ? message.maxMemoCharacters?.toString() : undefined;
     obj.tx_sig_limit = message.txSigLimit !== BigInt(0) ? message.txSigLimit?.toString() : undefined;
@@ -373,25 +419,25 @@ export const Params = {
     obj.sig_verify_cost_secp256k1 = message.sigVerifyCostSecp256k1 !== BigInt(0) ? message.sigVerifyCostSecp256k1?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: CosmosAuthV1beta1ParamsAminoMsg): CosmosAuthV1beta1Params {
+    return CosmosAuthV1beta1Params.fromAmino(object.value);
   },
-  toAminoMsg(message: Params): ParamsAminoMsg {
+  toAminoMsg(message: CosmosAuthV1beta1Params): CosmosAuthV1beta1ParamsAminoMsg {
     return {
       type: "cosmos-sdk/Params",
-      value: Params.toAmino(message)
+      value: CosmosAuthV1beta1Params.toAmino(message)
     };
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: CosmosAuthV1beta1ParamsProtoMsg): CosmosAuthV1beta1Params {
+    return CosmosAuthV1beta1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: CosmosAuthV1beta1Params): Uint8Array {
+    return CosmosAuthV1beta1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: CosmosAuthV1beta1Params): CosmosAuthV1beta1ParamsProtoMsg {
     return {
       typeUrl: "/cosmos.auth.v1beta1.Params",
-      value: Params.encode(message).finish()
+      value: CosmosAuthV1beta1Params.encode(message).finish()
     };
   }
 };

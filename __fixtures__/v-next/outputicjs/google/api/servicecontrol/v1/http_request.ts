@@ -5,9 +5,14 @@ import { DeepPartial } from "../../../../helpers";
  * A common proto for logging HTTP requests. Only contains semantics
  * defined by the HTTP specification. Product-specific logging
  * information MUST be defined in a separate message.
+ * @name HttpRequest
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.HttpRequest
  */
 export interface HttpRequest {
-  /** The request method. Examples: `"GET"`, `"HEAD"`, `"PUT"`, `"POST"`. */
+  /**
+   * The request method. Examples: `"GET"`, `"HEAD"`, `"PUT"`, `"POST"`.
+  */
   requestMethod: string;
   /**
    * The scheme (http, https), the host name, the path, and the query
@@ -57,7 +62,9 @@ export interface HttpRequest {
    * received until the response was sent.
    */
   latency?: Duration;
-  /** Whether or not a cache lookup was attempted. */
+  /**
+   * Whether or not a cache lookup was attempted.
+  */
   cacheLookup: boolean;
   /**
    * Whether or not an entity was served from cache
@@ -75,7 +82,9 @@ export interface HttpRequest {
    * cache fill was attempted.
    */
   cacheFillBytes: bigint;
-  /** Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket" */
+  /**
+   * Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket"
+  */
   protocol: string;
 }
 export interface HttpRequestProtoMsg {
@@ -86,9 +95,14 @@ export interface HttpRequestProtoMsg {
  * A common proto for logging HTTP requests. Only contains semantics
  * defined by the HTTP specification. Product-specific logging
  * information MUST be defined in a separate message.
+ * @name HttpRequestAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.HttpRequest
  */
 export interface HttpRequestAmino {
-  /** The request method. Examples: `"GET"`, `"HEAD"`, `"PUT"`, `"POST"`. */
+  /**
+   * The request method. Examples: `"GET"`, `"HEAD"`, `"PUT"`, `"POST"`.
+  */
   request_method: string;
   /**
    * The scheme (http, https), the host name, the path, and the query
@@ -138,7 +152,9 @@ export interface HttpRequestAmino {
    * received until the response was sent.
    */
   latency?: DurationAmino;
-  /** Whether or not a cache lookup was attempted. */
+  /**
+   * Whether or not a cache lookup was attempted.
+  */
   cache_lookup: boolean;
   /**
    * Whether or not an entity was served from cache
@@ -156,7 +172,9 @@ export interface HttpRequestAmino {
    * cache fill was attempted.
    */
   cache_fill_bytes: string;
-  /** Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket" */
+  /**
+   * Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket"
+  */
   protocol: string;
 }
 export interface HttpRequestAminoMsg {
@@ -182,6 +200,14 @@ function createBaseHttpRequest(): HttpRequest {
     protocol: ""
   };
 }
+/**
+ * A common proto for logging HTTP requests. Only contains semantics
+ * defined by the HTTP specification. Product-specific logging
+ * information MUST be defined in a separate message.
+ * @name HttpRequest
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.HttpRequest
+ */
 export const HttpRequest = {
   typeUrl: "/google.api.servicecontrol.v1.HttpRequest",
   encode(message: HttpRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

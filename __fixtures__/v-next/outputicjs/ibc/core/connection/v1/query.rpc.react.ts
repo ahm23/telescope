@@ -5,7 +5,7 @@ import { getConnection, getConnections, getClientConnections, getConnectionClien
  * Connection queries an IBC connection end.
  * @name useGetConnection
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.Connection
+ * @see proto service: ibc.core.connection.v1.Connection
  */
 export const useGetConnection = buildUseQuery<QueryConnectionRequest, QueryConnectionResponse>({
   builderQueryFn: getConnection,
@@ -15,7 +15,7 @@ export const useGetConnection = buildUseQuery<QueryConnectionRequest, QueryConne
  * Connections queries all the IBC connections of a chain.
  * @name useGetConnections
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.Connections
+ * @see proto service: ibc.core.connection.v1.Connections
  */
 export const useGetConnections = buildUseQuery<QueryConnectionsRequest, QueryConnectionsResponse>({
   builderQueryFn: getConnections,
@@ -26,7 +26,7 @@ export const useGetConnections = buildUseQuery<QueryConnectionsRequest, QueryCon
  * state.
  * @name useGetClientConnections
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ClientConnections
+ * @see proto service: ibc.core.connection.v1.ClientConnections
  */
 export const useGetClientConnections = buildUseQuery<QueryClientConnectionsRequest, QueryClientConnectionsResponse>({
   builderQueryFn: getClientConnections,
@@ -37,7 +37,7 @@ export const useGetClientConnections = buildUseQuery<QueryClientConnectionsReque
  * connection.
  * @name useGetConnectionClientState
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ConnectionClientState
+ * @see proto service: ibc.core.connection.v1.ConnectionClientState
  */
 export const useGetConnectionClientState = buildUseQuery<QueryConnectionClientStateRequest, QueryConnectionClientStateResponse>({
   builderQueryFn: getConnectionClientState,
@@ -48,7 +48,7 @@ export const useGetConnectionClientState = buildUseQuery<QueryConnectionClientSt
  * connection.
  * @name useGetConnectionConsensusState
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ConnectionConsensusState
+ * @see proto service: ibc.core.connection.v1.ConnectionConsensusState
  */
 export const useGetConnectionConsensusState = buildUseQuery<QueryConnectionConsensusStateRequest, QueryConnectionConsensusStateResponse>({
   builderQueryFn: getConnectionConsensusState,

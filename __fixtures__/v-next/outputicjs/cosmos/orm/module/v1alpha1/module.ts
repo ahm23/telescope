@@ -4,6 +4,9 @@ import { DeepPartial } from "../../../../helpers";
  * Module defines the ORM module which adds providers to the app container for
  * module-scoped DB's. In the future it may provide gRPC services for interacting
  * with ORM data.
+ * @name Module
+ * @package cosmos.orm.module.v1alpha1
+ * @see proto type: cosmos.orm.module.v1alpha1.Module
  */
 export interface Module {}
 export interface ModuleProtoMsg {
@@ -14,6 +17,9 @@ export interface ModuleProtoMsg {
  * Module defines the ORM module which adds providers to the app container for
  * module-scoped DB's. In the future it may provide gRPC services for interacting
  * with ORM data.
+ * @name ModuleAmino
+ * @package cosmos.orm.module.v1alpha1
+ * @see proto type: cosmos.orm.module.v1alpha1.Module
  */
 export interface ModuleAmino {}
 export interface ModuleAminoMsg {
@@ -23,6 +29,14 @@ export interface ModuleAminoMsg {
 function createBaseModule(): Module {
   return {};
 }
+/**
+ * Module defines the ORM module which adds providers to the app container for
+ * module-scoped DB's. In the future it may provide gRPC services for interacting
+ * with ORM data.
+ * @name Module
+ * @package cosmos.orm.module.v1alpha1
+ * @see proto type: cosmos.orm.module.v1alpha1.Module
+ */
 export const Module = {
   typeUrl: "/cosmos.orm.module.v1alpha1.Module",
   aminoType: "cosmos-sdk/Module",

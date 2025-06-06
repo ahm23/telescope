@@ -1,6 +1,11 @@
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../../helpers";
-/** Pairs defines a repeated slice of Pair objects. */
+/**
+ * Pairs defines a repeated slice of Pair objects.
+ * @name Pairs
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pairs
+ */
 export interface Pairs {
   pairs: Pair[];
 }
@@ -8,7 +13,12 @@ export interface PairsProtoMsg {
   typeUrl: "/cosmos.base.kv.v1beta1.Pairs";
   value: Uint8Array;
 }
-/** Pairs defines a repeated slice of Pair objects. */
+/**
+ * Pairs defines a repeated slice of Pair objects.
+ * @name PairsAmino
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pairs
+ */
 export interface PairsAmino {
   pairs: PairAmino[];
 }
@@ -16,7 +26,12 @@ export interface PairsAminoMsg {
   type: "cosmos-sdk/Pairs";
   value: PairsAmino;
 }
-/** Pair defines a key/value bytes tuple. */
+/**
+ * Pair defines a key/value bytes tuple.
+ * @name Pair
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pair
+ */
 export interface Pair {
   key: Uint8Array;
   value: Uint8Array;
@@ -25,7 +40,12 @@ export interface PairProtoMsg {
   typeUrl: "/cosmos.base.kv.v1beta1.Pair";
   value: Uint8Array;
 }
-/** Pair defines a key/value bytes tuple. */
+/**
+ * Pair defines a key/value bytes tuple.
+ * @name PairAmino
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pair
+ */
 export interface PairAmino {
   key: string;
   value: string;
@@ -39,6 +59,12 @@ function createBasePairs(): Pairs {
     pairs: []
   };
 }
+/**
+ * Pairs defines a repeated slice of Pair objects.
+ * @name Pairs
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pairs
+ */
 export const Pairs = {
   typeUrl: "/cosmos.base.kv.v1beta1.Pairs",
   aminoType: "cosmos-sdk/Pairs",
@@ -112,6 +138,12 @@ function createBasePair(): Pair {
     value: new Uint8Array()
   };
 }
+/**
+ * Pair defines a key/value bytes tuple.
+ * @name Pair
+ * @package cosmos.base.kv.v1beta1
+ * @see proto type: cosmos.base.kv.v1beta1.Pair
+ */
 export const Pair = {
   typeUrl: "/cosmos.base.kv.v1beta1.Pair",
   aminoType: "cosmos-sdk/Pair",

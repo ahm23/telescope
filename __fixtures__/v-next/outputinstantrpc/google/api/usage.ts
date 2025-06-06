@@ -2,7 +2,12 @@ import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
 export const protobufPackage = "google.api";
-/** Configuration controlling usage of a service. */
+/**
+ * Configuration controlling usage of a service.
+ * @name Usage
+ * @package google.api
+ * @see proto type: google.api.Usage
+ */
 export interface Usage {
   /**
    * Requirements that must be satisfied before a consumer project can use the
@@ -38,7 +43,12 @@ export interface UsageProtoMsg {
   typeUrl: "/google.api.Usage";
   value: Uint8Array;
 }
-/** Configuration controlling usage of a service. */
+/**
+ * Configuration controlling usage of a service.
+ * @name UsageSDKType
+ * @package google.api
+ * @see proto type: google.api.Usage
+ */
 export interface UsageSDKType {
   requirements: string[];
   rules: UsageRuleSDKType[];
@@ -70,6 +80,9 @@ export interface UsageSDKType {
  *       rules:
  *       - selector: "google.example.library.v1.LibraryService.CreateBook"
  *         allow_unregistered_calls: true
+ * @name UsageRule
+ * @package google.api
+ * @see proto type: google.api.UsageRule
  */
 export interface UsageRule {
   /**
@@ -122,6 +135,9 @@ export interface UsageRuleProtoMsg {
  *       rules:
  *       - selector: "google.example.library.v1.LibraryService.CreateBook"
  *         allow_unregistered_calls: true
+ * @name UsageRuleSDKType
+ * @package google.api
+ * @see proto type: google.api.UsageRule
  */
 export interface UsageRuleSDKType {
   selector: string;
@@ -135,6 +151,12 @@ function createBaseUsage(): Usage {
     producerNotificationChannel: ""
   };
 }
+/**
+ * Configuration controlling usage of a service.
+ * @name Usage
+ * @package google.api
+ * @see proto type: google.api.Usage
+ */
 export const Usage = {
   typeUrl: "/google.api.Usage",
   encode(message: Usage, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -277,6 +299,36 @@ function createBaseUsageRule(): UsageRule {
     skipServiceControl: false
   };
 }
+/**
+ * Usage configuration rules for the service.
+ * 
+ * NOTE: Under development.
+ * 
+ * 
+ * Use this rule to configure unregistered calls for the service. Unregistered
+ * calls are calls that do not contain consumer project identity.
+ * (Example: calls that do not contain an API key).
+ * By default, API methods do not allow unregistered calls, and each method call
+ * must be identified by a consumer project identity. Use this rule to
+ * allow/disallow unregistered calls.
+ * 
+ * Example of an API that wants to allow unregistered calls for entire service.
+ * 
+ *     usage:
+ *       rules:
+ *       - selector: "*"
+ *         allow_unregistered_calls: true
+ * 
+ * Example of a method that wants to allow unregistered calls.
+ * 
+ *     usage:
+ *       rules:
+ *       - selector: "google.example.library.v1.LibraryService.CreateBook"
+ *         allow_unregistered_calls: true
+ * @name UsageRule
+ * @package google.api
+ * @see proto type: google.api.UsageRule
+ */
 export const UsageRule = {
   typeUrl: "/google.api.UsageRule",
   encode(message: UsageRule, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

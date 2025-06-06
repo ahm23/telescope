@@ -4,7 +4,7 @@ import { MsgCreateGroup, MsgUpdateGroupMembers, MsgUpdateGroupAdmin, MsgUpdateGr
  * CreateGroup creates a new group with an admin account address, a list of members and some optional metadata.
  * @name createGroup
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.CreateGroup
+ * @see proto service: cosmos.group.v1.CreateGroup
  */
 export const createGroup = buildTx<MsgCreateGroup>({
   msg: MsgCreateGroup
@@ -13,7 +13,7 @@ export const createGroup = buildTx<MsgCreateGroup>({
  * UpdateGroupMembers updates the group members with given group id and admin address.
  * @name updateGroupMembers
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.UpdateGroupMembers
+ * @see proto service: cosmos.group.v1.UpdateGroupMembers
  */
 export const updateGroupMembers = buildTx<MsgUpdateGroupMembers>({
   msg: MsgUpdateGroupMembers
@@ -22,7 +22,7 @@ export const updateGroupMembers = buildTx<MsgUpdateGroupMembers>({
  * UpdateGroupAdmin updates the group admin with given group id and previous admin address.
  * @name updateGroupAdmin
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.UpdateGroupAdmin
+ * @see proto service: cosmos.group.v1.UpdateGroupAdmin
  */
 export const updateGroupAdmin = buildTx<MsgUpdateGroupAdmin>({
   msg: MsgUpdateGroupAdmin
@@ -31,7 +31,7 @@ export const updateGroupAdmin = buildTx<MsgUpdateGroupAdmin>({
  * UpdateGroupMetadata updates the group metadata with given group id and admin address.
  * @name updateGroupMetadata
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.UpdateGroupMetadata
+ * @see proto service: cosmos.group.v1.UpdateGroupMetadata
  */
 export const updateGroupMetadata = buildTx<MsgUpdateGroupMetadata>({
   msg: MsgUpdateGroupMetadata
@@ -40,7 +40,7 @@ export const updateGroupMetadata = buildTx<MsgUpdateGroupMetadata>({
  * CreateGroupPolicy creates a new group policy using given DecisionPolicy.
  * @name createGroupPolicy
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.CreateGroupPolicy
+ * @see proto service: cosmos.group.v1.CreateGroupPolicy
  */
 export const createGroupPolicy = buildTx<MsgCreateGroupPolicy>({
   msg: MsgCreateGroupPolicy
@@ -49,7 +49,7 @@ export const createGroupPolicy = buildTx<MsgCreateGroupPolicy>({
  * CreateGroupWithPolicy creates a new group with policy.
  * @name createGroupWithPolicy
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.CreateGroupWithPolicy
+ * @see proto service: cosmos.group.v1.CreateGroupWithPolicy
  */
 export const createGroupWithPolicy = buildTx<MsgCreateGroupWithPolicy>({
   msg: MsgCreateGroupWithPolicy
@@ -58,7 +58,7 @@ export const createGroupWithPolicy = buildTx<MsgCreateGroupWithPolicy>({
  * UpdateGroupPolicyAdmin updates a group policy admin.
  * @name updateGroupPolicyAdmin
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.UpdateGroupPolicyAdmin
+ * @see proto service: cosmos.group.v1.UpdateGroupPolicyAdmin
  */
 export const updateGroupPolicyAdmin = buildTx<MsgUpdateGroupPolicyAdmin>({
   msg: MsgUpdateGroupPolicyAdmin
@@ -67,7 +67,7 @@ export const updateGroupPolicyAdmin = buildTx<MsgUpdateGroupPolicyAdmin>({
  * UpdateGroupPolicyDecisionPolicy allows a group policy's decision policy to be updated.
  * @name updateGroupPolicyDecisionPolicy
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.UpdateGroupPolicyDecisionPolicy
+ * @see proto service: cosmos.group.v1.UpdateGroupPolicyDecisionPolicy
  */
 export const updateGroupPolicyDecisionPolicy = buildTx<MsgUpdateGroupPolicyDecisionPolicy>({
   msg: MsgUpdateGroupPolicyDecisionPolicy
@@ -76,7 +76,7 @@ export const updateGroupPolicyDecisionPolicy = buildTx<MsgUpdateGroupPolicyDecis
  * UpdateGroupPolicyMetadata updates a group policy metadata.
  * @name updateGroupPolicyMetadata
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.UpdateGroupPolicyMetadata
+ * @see proto service: cosmos.group.v1.UpdateGroupPolicyMetadata
  */
 export const updateGroupPolicyMetadata = buildTx<MsgUpdateGroupPolicyMetadata>({
   msg: MsgUpdateGroupPolicyMetadata
@@ -85,7 +85,7 @@ export const updateGroupPolicyMetadata = buildTx<MsgUpdateGroupPolicyMetadata>({
  * SubmitProposal submits a new proposal.
  * @name submitProposal
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.SubmitProposal
+ * @see proto service: cosmos.group.v1.SubmitProposal
  */
 export const submitProposal = buildTx<MsgSubmitProposal>({
   msg: MsgSubmitProposal
@@ -94,7 +94,7 @@ export const submitProposal = buildTx<MsgSubmitProposal>({
  * WithdrawProposal aborts a proposal.
  * @name withdrawProposal
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.WithdrawProposal
+ * @see proto service: cosmos.group.v1.WithdrawProposal
  */
 export const withdrawProposal = buildTx<MsgWithdrawProposal>({
   msg: MsgWithdrawProposal
@@ -103,7 +103,7 @@ export const withdrawProposal = buildTx<MsgWithdrawProposal>({
  * Vote allows a voter to vote on a proposal.
  * @name vote
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.Vote
+ * @see proto service: cosmos.group.v1.Vote
  */
 export const vote = buildTx<MsgVote>({
   msg: MsgVote
@@ -112,7 +112,7 @@ export const vote = buildTx<MsgVote>({
  * Exec executes a proposal.
  * @name exec
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.Exec
+ * @see proto service: cosmos.group.v1.Exec
  */
 export const exec = buildTx<MsgExec>({
   msg: MsgExec
@@ -121,7 +121,7 @@ export const exec = buildTx<MsgExec>({
  * LeaveGroup allows a group member to leave the group.
  * @name leaveGroup
  * @package cosmos.group.v1
- * @see protoservice: cosmos.group.v1.LeaveGroup
+ * @see proto service: cosmos.group.v1.LeaveGroup
  */
 export const leaveGroup = buildTx<MsgLeaveGroup>({
   msg: MsgLeaveGroup

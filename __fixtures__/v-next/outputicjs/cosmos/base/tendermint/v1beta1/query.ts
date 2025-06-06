@@ -5,89 +5,150 @@ import { Block, BlockAmino } from "../../../../tendermint/types/block";
 import { NodeInfo, NodeInfoAmino } from "../../../../tendermint/p2p/types";
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { DeepPartial } from "../../../../helpers";
-/** GetValidatorSetByHeightRequest is the request type for the Query/GetValidatorSetByHeight RPC method. */
+/**
+ * GetValidatorSetByHeightRequest is the request type for the Query/GetValidatorSetByHeight RPC method.
+ * @name GetValidatorSetByHeightRequest
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest
+ */
 export interface GetValidatorSetByHeightRequest {
   height: bigint;
-  /** pagination defines an pagination for the request. */
+  /**
+   * pagination defines an pagination for the request.
+  */
   pagination?: PageRequest;
 }
 export interface GetValidatorSetByHeightRequestProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest";
   value: Uint8Array;
 }
-/** GetValidatorSetByHeightRequest is the request type for the Query/GetValidatorSetByHeight RPC method. */
+/**
+ * GetValidatorSetByHeightRequest is the request type for the Query/GetValidatorSetByHeight RPC method.
+ * @name GetValidatorSetByHeightRequestAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest
+ */
 export interface GetValidatorSetByHeightRequestAmino {
   height: string;
-  /** pagination defines an pagination for the request. */
+  /**
+   * pagination defines an pagination for the request.
+  */
   pagination?: PageRequestAmino;
 }
 export interface GetValidatorSetByHeightRequestAminoMsg {
   type: "cosmos-sdk/GetValidatorSetByHeightRequest";
   value: GetValidatorSetByHeightRequestAmino;
 }
-/** GetValidatorSetByHeightResponse is the response type for the Query/GetValidatorSetByHeight RPC method. */
+/**
+ * GetValidatorSetByHeightResponse is the response type for the Query/GetValidatorSetByHeight RPC method.
+ * @name GetValidatorSetByHeightResponse
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse
+ */
 export interface GetValidatorSetByHeightResponse {
   blockHeight: bigint;
   validators: Validator[];
-  /** pagination defines an pagination for the response. */
+  /**
+   * pagination defines an pagination for the response.
+  */
   pagination?: PageResponse;
 }
 export interface GetValidatorSetByHeightResponseProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse";
   value: Uint8Array;
 }
-/** GetValidatorSetByHeightResponse is the response type for the Query/GetValidatorSetByHeight RPC method. */
+/**
+ * GetValidatorSetByHeightResponse is the response type for the Query/GetValidatorSetByHeight RPC method.
+ * @name GetValidatorSetByHeightResponseAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse
+ */
 export interface GetValidatorSetByHeightResponseAmino {
   block_height: string;
   validators: ValidatorAmino[];
-  /** pagination defines an pagination for the response. */
+  /**
+   * pagination defines an pagination for the response.
+  */
   pagination?: PageResponseAmino;
 }
 export interface GetValidatorSetByHeightResponseAminoMsg {
   type: "cosmos-sdk/GetValidatorSetByHeightResponse";
   value: GetValidatorSetByHeightResponseAmino;
 }
-/** GetLatestValidatorSetRequest is the request type for the Query/GetValidatorSetByHeight RPC method. */
+/**
+ * GetLatestValidatorSetRequest is the request type for the Query/GetValidatorSetByHeight RPC method.
+ * @name GetLatestValidatorSetRequest
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest
+ */
 export interface GetLatestValidatorSetRequest {
-  /** pagination defines an pagination for the request. */
+  /**
+   * pagination defines an pagination for the request.
+  */
   pagination?: PageRequest;
 }
 export interface GetLatestValidatorSetRequestProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest";
   value: Uint8Array;
 }
-/** GetLatestValidatorSetRequest is the request type for the Query/GetValidatorSetByHeight RPC method. */
+/**
+ * GetLatestValidatorSetRequest is the request type for the Query/GetValidatorSetByHeight RPC method.
+ * @name GetLatestValidatorSetRequestAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest
+ */
 export interface GetLatestValidatorSetRequestAmino {
-  /** pagination defines an pagination for the request. */
+  /**
+   * pagination defines an pagination for the request.
+  */
   pagination?: PageRequestAmino;
 }
 export interface GetLatestValidatorSetRequestAminoMsg {
   type: "cosmos-sdk/GetLatestValidatorSetRequest";
   value: GetLatestValidatorSetRequestAmino;
 }
-/** GetLatestValidatorSetResponse is the response type for the Query/GetValidatorSetByHeight RPC method. */
+/**
+ * GetLatestValidatorSetResponse is the response type for the Query/GetValidatorSetByHeight RPC method.
+ * @name GetLatestValidatorSetResponse
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse
+ */
 export interface GetLatestValidatorSetResponse {
   blockHeight: bigint;
   validators: Validator[];
-  /** pagination defines an pagination for the response. */
+  /**
+   * pagination defines an pagination for the response.
+  */
   pagination?: PageResponse;
 }
 export interface GetLatestValidatorSetResponseProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse";
   value: Uint8Array;
 }
-/** GetLatestValidatorSetResponse is the response type for the Query/GetValidatorSetByHeight RPC method. */
+/**
+ * GetLatestValidatorSetResponse is the response type for the Query/GetValidatorSetByHeight RPC method.
+ * @name GetLatestValidatorSetResponseAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse
+ */
 export interface GetLatestValidatorSetResponseAmino {
   block_height: string;
   validators: ValidatorAmino[];
-  /** pagination defines an pagination for the response. */
+  /**
+   * pagination defines an pagination for the response.
+  */
   pagination?: PageResponseAmino;
 }
 export interface GetLatestValidatorSetResponseAminoMsg {
   type: "cosmos-sdk/GetLatestValidatorSetResponse";
   value: GetLatestValidatorSetResponseAmino;
 }
-/** Validator is the type for the validator-set. */
+/**
+ * Validator is the type for the validator-set.
+ * @name Validator
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.Validator
+ */
 export interface Validator {
   address: string;
   pubKey?: Any;
@@ -98,7 +159,12 @@ export interface ValidatorProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.Validator";
   value: Uint8Array;
 }
-/** Validator is the type for the validator-set. */
+/**
+ * Validator is the type for the validator-set.
+ * @name ValidatorAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.Validator
+ */
 export interface ValidatorAmino {
   address: string;
   pub_key?: AnyAmino;
@@ -109,7 +175,12 @@ export interface ValidatorAminoMsg {
   type: "cosmos-sdk/Validator";
   value: ValidatorAmino;
 }
-/** GetBlockByHeightRequest is the request type for the Query/GetBlockByHeight RPC method. */
+/**
+ * GetBlockByHeightRequest is the request type for the Query/GetBlockByHeight RPC method.
+ * @name GetBlockByHeightRequest
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest
+ */
 export interface GetBlockByHeightRequest {
   height: bigint;
 }
@@ -117,7 +188,12 @@ export interface GetBlockByHeightRequestProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest";
   value: Uint8Array;
 }
-/** GetBlockByHeightRequest is the request type for the Query/GetBlockByHeight RPC method. */
+/**
+ * GetBlockByHeightRequest is the request type for the Query/GetBlockByHeight RPC method.
+ * @name GetBlockByHeightRequestAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest
+ */
 export interface GetBlockByHeightRequestAmino {
   height: string;
 }
@@ -125,7 +201,12 @@ export interface GetBlockByHeightRequestAminoMsg {
   type: "cosmos-sdk/GetBlockByHeightRequest";
   value: GetBlockByHeightRequestAmino;
 }
-/** GetBlockByHeightResponse is the response type for the Query/GetBlockByHeight RPC method. */
+/**
+ * GetBlockByHeightResponse is the response type for the Query/GetBlockByHeight RPC method.
+ * @name GetBlockByHeightResponse
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse
+ */
 export interface GetBlockByHeightResponse {
   blockId?: BlockID;
   block?: Block;
@@ -134,7 +215,12 @@ export interface GetBlockByHeightResponseProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse";
   value: Uint8Array;
 }
-/** GetBlockByHeightResponse is the response type for the Query/GetBlockByHeight RPC method. */
+/**
+ * GetBlockByHeightResponse is the response type for the Query/GetBlockByHeight RPC method.
+ * @name GetBlockByHeightResponseAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse
+ */
 export interface GetBlockByHeightResponseAmino {
   block_id?: BlockIDAmino;
   block?: BlockAmino;
@@ -143,19 +229,34 @@ export interface GetBlockByHeightResponseAminoMsg {
   type: "cosmos-sdk/GetBlockByHeightResponse";
   value: GetBlockByHeightResponseAmino;
 }
-/** GetLatestBlockRequest is the request type for the Query/GetLatestBlock RPC method. */
+/**
+ * GetLatestBlockRequest is the request type for the Query/GetLatestBlock RPC method.
+ * @name GetLatestBlockRequest
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetLatestBlockRequest
+ */
 export interface GetLatestBlockRequest {}
 export interface GetLatestBlockRequestProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetLatestBlockRequest";
   value: Uint8Array;
 }
-/** GetLatestBlockRequest is the request type for the Query/GetLatestBlock RPC method. */
+/**
+ * GetLatestBlockRequest is the request type for the Query/GetLatestBlock RPC method.
+ * @name GetLatestBlockRequestAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetLatestBlockRequest
+ */
 export interface GetLatestBlockRequestAmino {}
 export interface GetLatestBlockRequestAminoMsg {
   type: "cosmos-sdk/GetLatestBlockRequest";
   value: GetLatestBlockRequestAmino;
 }
-/** GetLatestBlockResponse is the response type for the Query/GetLatestBlock RPC method. */
+/**
+ * GetLatestBlockResponse is the response type for the Query/GetLatestBlock RPC method.
+ * @name GetLatestBlockResponse
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetLatestBlockResponse
+ */
 export interface GetLatestBlockResponse {
   blockId?: BlockID;
   block?: Block;
@@ -164,7 +265,12 @@ export interface GetLatestBlockResponseProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetLatestBlockResponse";
   value: Uint8Array;
 }
-/** GetLatestBlockResponse is the response type for the Query/GetLatestBlock RPC method. */
+/**
+ * GetLatestBlockResponse is the response type for the Query/GetLatestBlock RPC method.
+ * @name GetLatestBlockResponseAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetLatestBlockResponse
+ */
 export interface GetLatestBlockResponseAmino {
   block_id?: BlockIDAmino;
   block?: BlockAmino;
@@ -173,19 +279,34 @@ export interface GetLatestBlockResponseAminoMsg {
   type: "cosmos-sdk/GetLatestBlockResponse";
   value: GetLatestBlockResponseAmino;
 }
-/** GetSyncingRequest is the request type for the Query/GetSyncing RPC method. */
+/**
+ * GetSyncingRequest is the request type for the Query/GetSyncing RPC method.
+ * @name GetSyncingRequest
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetSyncingRequest
+ */
 export interface GetSyncingRequest {}
 export interface GetSyncingRequestProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetSyncingRequest";
   value: Uint8Array;
 }
-/** GetSyncingRequest is the request type for the Query/GetSyncing RPC method. */
+/**
+ * GetSyncingRequest is the request type for the Query/GetSyncing RPC method.
+ * @name GetSyncingRequestAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetSyncingRequest
+ */
 export interface GetSyncingRequestAmino {}
 export interface GetSyncingRequestAminoMsg {
   type: "cosmos-sdk/GetSyncingRequest";
   value: GetSyncingRequestAmino;
 }
-/** GetSyncingResponse is the response type for the Query/GetSyncing RPC method. */
+/**
+ * GetSyncingResponse is the response type for the Query/GetSyncing RPC method.
+ * @name GetSyncingResponse
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetSyncingResponse
+ */
 export interface GetSyncingResponse {
   syncing: boolean;
 }
@@ -193,7 +314,12 @@ export interface GetSyncingResponseProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetSyncingResponse";
   value: Uint8Array;
 }
-/** GetSyncingResponse is the response type for the Query/GetSyncing RPC method. */
+/**
+ * GetSyncingResponse is the response type for the Query/GetSyncing RPC method.
+ * @name GetSyncingResponseAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetSyncingResponse
+ */
 export interface GetSyncingResponseAmino {
   syncing: boolean;
 }
@@ -201,19 +327,34 @@ export interface GetSyncingResponseAminoMsg {
   type: "cosmos-sdk/GetSyncingResponse";
   value: GetSyncingResponseAmino;
 }
-/** GetNodeInfoRequest is the request type for the Query/GetNodeInfo RPC method. */
+/**
+ * GetNodeInfoRequest is the request type for the Query/GetNodeInfo RPC method.
+ * @name GetNodeInfoRequest
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetNodeInfoRequest
+ */
 export interface GetNodeInfoRequest {}
 export interface GetNodeInfoRequestProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetNodeInfoRequest";
   value: Uint8Array;
 }
-/** GetNodeInfoRequest is the request type for the Query/GetNodeInfo RPC method. */
+/**
+ * GetNodeInfoRequest is the request type for the Query/GetNodeInfo RPC method.
+ * @name GetNodeInfoRequestAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetNodeInfoRequest
+ */
 export interface GetNodeInfoRequestAmino {}
 export interface GetNodeInfoRequestAminoMsg {
   type: "cosmos-sdk/GetNodeInfoRequest";
   value: GetNodeInfoRequestAmino;
 }
-/** GetNodeInfoResponse is the response type for the Query/GetNodeInfo RPC method. */
+/**
+ * GetNodeInfoResponse is the response type for the Query/GetNodeInfo RPC method.
+ * @name GetNodeInfoResponse
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetNodeInfoResponse
+ */
 export interface GetNodeInfoResponse {
   nodeInfo?: NodeInfo;
   applicationVersion?: VersionInfo;
@@ -222,7 +363,12 @@ export interface GetNodeInfoResponseProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetNodeInfoResponse";
   value: Uint8Array;
 }
-/** GetNodeInfoResponse is the response type for the Query/GetNodeInfo RPC method. */
+/**
+ * GetNodeInfoResponse is the response type for the Query/GetNodeInfo RPC method.
+ * @name GetNodeInfoResponseAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetNodeInfoResponse
+ */
 export interface GetNodeInfoResponseAmino {
   node_info?: NodeInfoAmino;
   application_version?: VersionInfoAmino;
@@ -231,7 +377,12 @@ export interface GetNodeInfoResponseAminoMsg {
   type: "cosmos-sdk/GetNodeInfoResponse";
   value: GetNodeInfoResponseAmino;
 }
-/** VersionInfo is the type for the GetNodeInfoResponse message. */
+/**
+ * VersionInfo is the type for the GetNodeInfoResponse message.
+ * @name VersionInfo
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.VersionInfo
+ */
 export interface VersionInfo {
   name: string;
   appName: string;
@@ -240,14 +391,21 @@ export interface VersionInfo {
   buildTags: string;
   goVersion: string;
   buildDeps: Module[];
-  /** Since: cosmos-sdk 0.43 */
+  /**
+   * Since: cosmos-sdk 0.43
+  */
   cosmosSdkVersion: string;
 }
 export interface VersionInfoProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.VersionInfo";
   value: Uint8Array;
 }
-/** VersionInfo is the type for the GetNodeInfoResponse message. */
+/**
+ * VersionInfo is the type for the GetNodeInfoResponse message.
+ * @name VersionInfoAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.VersionInfo
+ */
 export interface VersionInfoAmino {
   name: string;
   app_name: string;
@@ -256,33 +414,57 @@ export interface VersionInfoAmino {
   build_tags: string;
   go_version: string;
   build_deps: ModuleAmino[];
-  /** Since: cosmos-sdk 0.43 */
+  /**
+   * Since: cosmos-sdk 0.43
+  */
   cosmos_sdk_version: string;
 }
 export interface VersionInfoAminoMsg {
   type: "cosmos-sdk/VersionInfo";
   value: VersionInfoAmino;
 }
-/** Module is the type for VersionInfo */
+/**
+ * Module is the type for VersionInfo
+ * @name Module
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.Module
+ */
 export interface Module {
-  /** module path */
+  /**
+   * module path
+  */
   path: string;
-  /** module version */
+  /**
+   * module version
+  */
   version: string;
-  /** checksum */
+  /**
+   * checksum
+  */
   sum: string;
 }
 export interface ModuleProtoMsg {
   typeUrl: "/cosmos.base.tendermint.v1beta1.Module";
   value: Uint8Array;
 }
-/** Module is the type for VersionInfo */
+/**
+ * Module is the type for VersionInfo
+ * @name ModuleAmino
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.Module
+ */
 export interface ModuleAmino {
-  /** module path */
+  /**
+   * module path
+  */
   path: string;
-  /** module version */
+  /**
+   * module version
+  */
   version: string;
-  /** checksum */
+  /**
+   * checksum
+  */
   sum: string;
 }
 export interface ModuleAminoMsg {
@@ -295,6 +477,12 @@ function createBaseGetValidatorSetByHeightRequest(): GetValidatorSetByHeightRequ
     pagination: undefined
   };
 }
+/**
+ * GetValidatorSetByHeightRequest is the request type for the Query/GetValidatorSetByHeight RPC method.
+ * @name GetValidatorSetByHeightRequest
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest
+ */
 export const GetValidatorSetByHeightRequest = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest",
   aminoType: "cosmos-sdk/GetValidatorSetByHeightRequest",
@@ -378,6 +566,12 @@ function createBaseGetValidatorSetByHeightResponse(): GetValidatorSetByHeightRes
     pagination: undefined
   };
 }
+/**
+ * GetValidatorSetByHeightResponse is the response type for the Query/GetValidatorSetByHeight RPC method.
+ * @name GetValidatorSetByHeightResponse
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse
+ */
 export const GetValidatorSetByHeightResponse = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse",
   aminoType: "cosmos-sdk/GetValidatorSetByHeightResponse",
@@ -472,6 +666,12 @@ function createBaseGetLatestValidatorSetRequest(): GetLatestValidatorSetRequest 
     pagination: undefined
   };
 }
+/**
+ * GetLatestValidatorSetRequest is the request type for the Query/GetValidatorSetByHeight RPC method.
+ * @name GetLatestValidatorSetRequest
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest
+ */
 export const GetLatestValidatorSetRequest = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest",
   aminoType: "cosmos-sdk/GetLatestValidatorSetRequest",
@@ -544,6 +744,12 @@ function createBaseGetLatestValidatorSetResponse(): GetLatestValidatorSetRespons
     pagination: undefined
   };
 }
+/**
+ * GetLatestValidatorSetResponse is the response type for the Query/GetValidatorSetByHeight RPC method.
+ * @name GetLatestValidatorSetResponse
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse
+ */
 export const GetLatestValidatorSetResponse = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse",
   aminoType: "cosmos-sdk/GetLatestValidatorSetResponse",
@@ -641,6 +847,12 @@ function createBaseValidator(): Validator {
     proposerPriority: BigInt(0)
   };
 }
+/**
+ * Validator is the type for the validator-set.
+ * @name Validator
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.Validator
+ */
 export const Validator = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.Validator",
   aminoType: "cosmos-sdk/Validator",
@@ -744,6 +956,12 @@ function createBaseGetBlockByHeightRequest(): GetBlockByHeightRequest {
     height: BigInt(0)
   };
 }
+/**
+ * GetBlockByHeightRequest is the request type for the Query/GetBlockByHeight RPC method.
+ * @name GetBlockByHeightRequest
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest
+ */
 export const GetBlockByHeightRequest = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest",
   aminoType: "cosmos-sdk/GetBlockByHeightRequest",
@@ -815,6 +1033,12 @@ function createBaseGetBlockByHeightResponse(): GetBlockByHeightResponse {
     block: undefined
   };
 }
+/**
+ * GetBlockByHeightResponse is the response type for the Query/GetBlockByHeight RPC method.
+ * @name GetBlockByHeightResponse
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse
+ */
 export const GetBlockByHeightResponse = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse",
   aminoType: "cosmos-sdk/GetBlockByHeightResponse",
@@ -894,6 +1118,12 @@ export const GetBlockByHeightResponse = {
 function createBaseGetLatestBlockRequest(): GetLatestBlockRequest {
   return {};
 }
+/**
+ * GetLatestBlockRequest is the request type for the Query/GetLatestBlock RPC method.
+ * @name GetLatestBlockRequest
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetLatestBlockRequest
+ */
 export const GetLatestBlockRequest = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetLatestBlockRequest",
   aminoType: "cosmos-sdk/GetLatestBlockRequest",
@@ -954,6 +1184,12 @@ function createBaseGetLatestBlockResponse(): GetLatestBlockResponse {
     block: undefined
   };
 }
+/**
+ * GetLatestBlockResponse is the response type for the Query/GetLatestBlock RPC method.
+ * @name GetLatestBlockResponse
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetLatestBlockResponse
+ */
 export const GetLatestBlockResponse = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetLatestBlockResponse",
   aminoType: "cosmos-sdk/GetLatestBlockResponse",
@@ -1033,6 +1269,12 @@ export const GetLatestBlockResponse = {
 function createBaseGetSyncingRequest(): GetSyncingRequest {
   return {};
 }
+/**
+ * GetSyncingRequest is the request type for the Query/GetSyncing RPC method.
+ * @name GetSyncingRequest
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetSyncingRequest
+ */
 export const GetSyncingRequest = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetSyncingRequest",
   aminoType: "cosmos-sdk/GetSyncingRequest",
@@ -1092,6 +1334,12 @@ function createBaseGetSyncingResponse(): GetSyncingResponse {
     syncing: false
   };
 }
+/**
+ * GetSyncingResponse is the response type for the Query/GetSyncing RPC method.
+ * @name GetSyncingResponse
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetSyncingResponse
+ */
 export const GetSyncingResponse = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetSyncingResponse",
   aminoType: "cosmos-sdk/GetSyncingResponse",
@@ -1160,6 +1408,12 @@ export const GetSyncingResponse = {
 function createBaseGetNodeInfoRequest(): GetNodeInfoRequest {
   return {};
 }
+/**
+ * GetNodeInfoRequest is the request type for the Query/GetNodeInfo RPC method.
+ * @name GetNodeInfoRequest
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetNodeInfoRequest
+ */
 export const GetNodeInfoRequest = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetNodeInfoRequest",
   aminoType: "cosmos-sdk/GetNodeInfoRequest",
@@ -1220,6 +1474,12 @@ function createBaseGetNodeInfoResponse(): GetNodeInfoResponse {
     applicationVersion: undefined
   };
 }
+/**
+ * GetNodeInfoResponse is the response type for the Query/GetNodeInfo RPC method.
+ * @name GetNodeInfoResponse
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.GetNodeInfoResponse
+ */
 export const GetNodeInfoResponse = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.GetNodeInfoResponse",
   aminoType: "cosmos-sdk/GetNodeInfoResponse",
@@ -1308,6 +1568,12 @@ function createBaseVersionInfo(): VersionInfo {
     cosmosSdkVersion: ""
   };
 }
+/**
+ * VersionInfo is the type for the GetNodeInfoResponse message.
+ * @name VersionInfo
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.VersionInfo
+ */
 export const VersionInfo = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.VersionInfo",
   aminoType: "cosmos-sdk/VersionInfo",
@@ -1459,6 +1725,12 @@ function createBaseModule(): Module {
     sum: ""
   };
 }
+/**
+ * Module is the type for VersionInfo
+ * @name Module
+ * @package cosmos.base.tendermint.v1beta1
+ * @see proto type: cosmos.base.tendermint.v1beta1.Module
+ */
 export const Module = {
   typeUrl: "/cosmos.base.tendermint.v1beta1.Module",
   aminoType: "cosmos-sdk/Module",

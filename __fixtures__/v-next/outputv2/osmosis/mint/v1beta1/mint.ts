@@ -3,25 +3,44 @@ import { Decimal } from "@cosmjs/math";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.mint.v1beta1";
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name Minter
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.Minter
+ */
 export interface Minter {
-  /** epoch_provisions represent rewards for the current epoch. */
+  /**
+   * epoch_provisions represent rewards for the current epoch.
+  */
   epochProvisions: string;
 }
 export interface MinterProtoMsg {
   typeUrl: "/osmosis.mint.v1beta1.Minter";
   value: Uint8Array;
 }
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name MinterAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.Minter
+ */
 export interface MinterAmino {
-  /** epoch_provisions represent rewards for the current epoch. */
+  /**
+   * epoch_provisions represent rewards for the current epoch.
+  */
   epoch_provisions?: string;
 }
 export interface MinterAminoMsg {
   type: "osmosis/mint/minter";
   value: MinterAmino;
 }
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name MinterSDKType
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.Minter
+ */
 export interface MinterSDKType {
   epoch_provisions: string;
 }
@@ -29,6 +48,9 @@ export interface MinterSDKType {
  * WeightedAddress represents an address with a weight assigned to it.
  * The weight is used to determine the proportion of the total minted
  * tokens to be minted to the address.
+ * @name WeightedAddress
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.WeightedAddress
  */
 export interface WeightedAddress {
   address: string;
@@ -42,6 +64,9 @@ export interface WeightedAddressProtoMsg {
  * WeightedAddress represents an address with a weight assigned to it.
  * The weight is used to determine the proportion of the total minted
  * tokens to be minted to the address.
+ * @name WeightedAddressAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.WeightedAddress
  */
 export interface WeightedAddressAmino {
   address?: string;
@@ -55,6 +80,9 @@ export interface WeightedAddressAminoMsg {
  * WeightedAddress represents an address with a weight assigned to it.
  * The weight is used to determine the proportion of the total minted
  * tokens to be minted to the address.
+ * @name WeightedAddressSDKType
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.WeightedAddress
  */
 export interface WeightedAddressSDKType {
   address: string;
@@ -64,6 +92,9 @@ export interface WeightedAddressSDKType {
  * DistributionProportions defines the distribution proportions of the minted
  * denom. In other words, defines which stakeholders will receive the minted
  * denoms and how much.
+ * @name DistributionProportions
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.DistributionProportions
  */
 export interface DistributionProportions {
   /**
@@ -95,6 +126,9 @@ export interface DistributionProportionsProtoMsg {
  * DistributionProportions defines the distribution proportions of the minted
  * denom. In other words, defines which stakeholders will receive the minted
  * denoms and how much.
+ * @name DistributionProportionsAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.DistributionProportions
  */
 export interface DistributionProportionsAmino {
   /**
@@ -126,6 +160,9 @@ export interface DistributionProportionsAminoMsg {
  * DistributionProportions defines the distribution proportions of the minted
  * denom. In other words, defines which stakeholders will receive the minted
  * denoms and how much.
+ * @name DistributionProportionsSDKType
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.DistributionProportions
  */
 export interface DistributionProportionsSDKType {
   staking: string;
@@ -133,13 +170,24 @@ export interface DistributionProportionsSDKType {
   developer_rewards: string;
   community_pool: string;
 }
-/** Params holds parameters for the x/mint module. */
+/**
+ * Params holds parameters for the x/mint module.
+ * @name Params
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.Params
+ */
 export interface Params {
-  /** mint_denom is the denom of the coin to mint. */
+  /**
+   * mint_denom is the denom of the coin to mint.
+  */
   mintDenom: string;
-  /** genesis_epoch_provisions epoch provisions from the first epoch. */
+  /**
+   * genesis_epoch_provisions epoch provisions from the first epoch.
+  */
   genesisEpochProvisions: string;
-  /** epoch_identifier mint epoch identifier e.g. (day, week). */
+  /**
+   * epoch_identifier mint epoch identifier e.g. (day, week).
+  */
   epochIdentifier: string;
   /**
    * reduction_period_in_epochs the number of epochs it takes
@@ -174,13 +222,24 @@ export interface ParamsProtoMsg {
   typeUrl: "/osmosis.mint.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the x/mint module. */
+/**
+ * Params holds parameters for the x/mint module.
+ * @name ParamsAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.Params
+ */
 export interface ParamsAmino {
-  /** mint_denom is the denom of the coin to mint. */
+  /**
+   * mint_denom is the denom of the coin to mint.
+  */
   mint_denom?: string;
-  /** genesis_epoch_provisions epoch provisions from the first epoch. */
+  /**
+   * genesis_epoch_provisions epoch provisions from the first epoch.
+  */
   genesis_epoch_provisions?: string;
-  /** epoch_identifier mint epoch identifier e.g. (day, week). */
+  /**
+   * epoch_identifier mint epoch identifier e.g. (day, week).
+  */
   epoch_identifier?: string;
   /**
    * reduction_period_in_epochs the number of epochs it takes
@@ -215,7 +274,12 @@ export interface ParamsAminoMsg {
   type: "osmosis/mint/params";
   value: ParamsAmino;
 }
-/** Params holds parameters for the x/mint module. */
+/**
+ * Params holds parameters for the x/mint module.
+ * @name ParamsSDKType
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.Params
+ */
 export interface ParamsSDKType {
   mint_denom: string;
   genesis_epoch_provisions: string;
@@ -231,6 +295,12 @@ function createBaseMinter(): Minter {
     epochProvisions: ""
   };
 }
+/**
+ * Minter represents the minting state.
+ * @name Minter
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.Minter
+ */
 export const Minter = {
   typeUrl: "/osmosis.mint.v1beta1.Minter",
   aminoType: "osmosis/mint/minter",
@@ -322,6 +392,14 @@ function createBaseWeightedAddress(): WeightedAddress {
     weight: ""
   };
 }
+/**
+ * WeightedAddress represents an address with a weight assigned to it.
+ * The weight is used to determine the proportion of the total minted
+ * tokens to be minted to the address.
+ * @name WeightedAddress
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.WeightedAddress
+ */
 export const WeightedAddress = {
   typeUrl: "/osmosis.mint.v1beta1.WeightedAddress",
   aminoType: "osmosis/mint/weighted-address",
@@ -430,6 +508,14 @@ function createBaseDistributionProportions(): DistributionProportions {
     communityPool: ""
   };
 }
+/**
+ * DistributionProportions defines the distribution proportions of the minted
+ * denom. In other words, defines which stakeholders will receive the minted
+ * denoms and how much.
+ * @name DistributionProportions
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.DistributionProportions
+ */
 export const DistributionProportions = {
   typeUrl: "/osmosis.mint.v1beta1.DistributionProportions",
   aminoType: "osmosis/mint/distribution-proportions",
@@ -572,6 +658,12 @@ function createBaseParams(): Params {
     mintingRewardsDistributionStartEpoch: BigInt(0)
   };
 }
+/**
+ * Params holds parameters for the x/mint module.
+ * @name Params
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.mint.v1beta1.Params",
   aminoType: "osmosis/mint/params",

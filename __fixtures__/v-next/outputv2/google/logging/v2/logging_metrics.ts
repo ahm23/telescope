@@ -40,6 +40,11 @@ export function logMetric_ApiVersionToJSON(object: LogMetric_ApiVersion): string
       return "UNRECOGNIZED";
   }
 }
+/**
+ * @name LogMetric_LabelExtractorsEntry
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.undefined
+ */
 export interface LogMetric_LabelExtractorsEntry {
   key: string;
   value: string;
@@ -48,6 +53,11 @@ export interface LogMetric_LabelExtractorsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name LogMetric_LabelExtractorsEntryAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogMetric_LabelExtractorsEntry
+ */
 export interface LogMetric_LabelExtractorsEntryAmino {
   key?: string;
   value?: string;
@@ -56,6 +66,11 @@ export interface LogMetric_LabelExtractorsEntryAminoMsg {
   type: string;
   value: LogMetric_LabelExtractorsEntryAmino;
 }
+/**
+ * @name LogMetric_LabelExtractorsEntrySDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.undefined
+ */
 export interface LogMetric_LabelExtractorsEntrySDKType {
   key: string;
   value: string;
@@ -68,6 +83,9 @@ export interface LogMetric_LabelExtractorsEntrySDKType {
  * distribution of the values. The distribution records the statistics of the
  * extracted values along with an optional histogram of the values as specified
  * by the bucket options.
+ * @name LogMetric
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogMetric
  */
 export interface LogMetric {
   /**
@@ -192,8 +210,8 @@ export interface LogMetric {
   /**
    * Deprecated. The API version that created or updated this metric.
    * The v2 format is used by default and cannot be changed.
+   * @deprecated
    */
-  /** @deprecated */
   version: LogMetric_ApiVersion;
 }
 export interface LogMetricProtoMsg {
@@ -208,6 +226,9 @@ export interface LogMetricProtoMsg {
  * distribution of the values. The distribution records the statistics of the
  * extracted values along with an optional histogram of the values as specified
  * by the bucket options.
+ * @name LogMetricAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogMetric
  */
 export interface LogMetricAmino {
   /**
@@ -332,8 +353,8 @@ export interface LogMetricAmino {
   /**
    * Deprecated. The API version that created or updated this metric.
    * The v2 format is used by default and cannot be changed.
+   * @deprecated
    */
-  /** @deprecated */
   version?: LogMetric_ApiVersion;
 }
 export interface LogMetricAminoMsg {
@@ -348,6 +369,9 @@ export interface LogMetricAminoMsg {
  * distribution of the values. The distribution records the statistics of the
  * extracted values along with an optional histogram of the values as specified
  * by the bucket options.
+ * @name LogMetricSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogMetric
  */
 export interface LogMetricSDKType {
   name: string;
@@ -362,10 +386,17 @@ export interface LogMetricSDKType {
   bucket_options?: Distribution_BucketOptionsSDKType;
   create_time?: Date;
   update_time?: Date;
-  /** @deprecated */
+  /**
+   * @deprecated
+  */
   version: LogMetric_ApiVersion;
 }
-/** The parameters to ListLogMetrics. */
+/**
+ * The parameters to ListLogMetrics.
+ * @name ListLogMetricsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogMetricsRequest
+ */
 export interface ListLogMetricsRequest {
   /**
    * Required. The name of the project containing the metrics:
@@ -391,7 +422,12 @@ export interface ListLogMetricsRequestProtoMsg {
   typeUrl: "/google.logging.v2.ListLogMetricsRequest";
   value: Uint8Array;
 }
-/** The parameters to ListLogMetrics. */
+/**
+ * The parameters to ListLogMetrics.
+ * @name ListLogMetricsRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogMetricsRequest
+ */
 export interface ListLogMetricsRequestAmino {
   /**
    * Required. The name of the project containing the metrics:
@@ -417,15 +453,27 @@ export interface ListLogMetricsRequestAminoMsg {
   type: "/google.logging.v2.ListLogMetricsRequest";
   value: ListLogMetricsRequestAmino;
 }
-/** The parameters to ListLogMetrics. */
+/**
+ * The parameters to ListLogMetrics.
+ * @name ListLogMetricsRequestSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogMetricsRequest
+ */
 export interface ListLogMetricsRequestSDKType {
   parent: string;
   page_token: string;
   page_size: number;
 }
-/** Result returned from ListLogMetrics. */
+/**
+ * Result returned from ListLogMetrics.
+ * @name ListLogMetricsResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogMetricsResponse
+ */
 export interface ListLogMetricsResponse {
-  /** A list of logs-based metrics. */
+  /**
+   * A list of logs-based metrics.
+  */
   metrics: LogMetric[];
   /**
    * If there might be more results than appear in this response, then
@@ -438,9 +486,16 @@ export interface ListLogMetricsResponseProtoMsg {
   typeUrl: "/google.logging.v2.ListLogMetricsResponse";
   value: Uint8Array;
 }
-/** Result returned from ListLogMetrics. */
+/**
+ * Result returned from ListLogMetrics.
+ * @name ListLogMetricsResponseAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogMetricsResponse
+ */
 export interface ListLogMetricsResponseAmino {
-  /** A list of logs-based metrics. */
+  /**
+   * A list of logs-based metrics.
+  */
   metrics?: LogMetricAmino[];
   /**
    * If there might be more results than appear in this response, then
@@ -453,12 +508,22 @@ export interface ListLogMetricsResponseAminoMsg {
   type: "/google.logging.v2.ListLogMetricsResponse";
   value: ListLogMetricsResponseAmino;
 }
-/** Result returned from ListLogMetrics. */
+/**
+ * Result returned from ListLogMetrics.
+ * @name ListLogMetricsResponseSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogMetricsResponse
+ */
 export interface ListLogMetricsResponseSDKType {
   metrics: LogMetricSDKType[];
   next_page_token: string;
 }
-/** The parameters to GetLogMetric. */
+/**
+ * The parameters to GetLogMetric.
+ * @name GetLogMetricRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetLogMetricRequest
+ */
 export interface GetLogMetricRequest {
   /**
    * Required. The resource name of the desired metric:
@@ -471,7 +536,12 @@ export interface GetLogMetricRequestProtoMsg {
   typeUrl: "/google.logging.v2.GetLogMetricRequest";
   value: Uint8Array;
 }
-/** The parameters to GetLogMetric. */
+/**
+ * The parameters to GetLogMetric.
+ * @name GetLogMetricRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetLogMetricRequest
+ */
 export interface GetLogMetricRequestAmino {
   /**
    * Required. The resource name of the desired metric:
@@ -484,11 +554,21 @@ export interface GetLogMetricRequestAminoMsg {
   type: "/google.logging.v2.GetLogMetricRequest";
   value: GetLogMetricRequestAmino;
 }
-/** The parameters to GetLogMetric. */
+/**
+ * The parameters to GetLogMetric.
+ * @name GetLogMetricRequestSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetLogMetricRequest
+ */
 export interface GetLogMetricRequestSDKType {
   metric_name: string;
 }
-/** The parameters to CreateLogMetric. */
+/**
+ * The parameters to CreateLogMetric.
+ * @name CreateLogMetricRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateLogMetricRequest
+ */
 export interface CreateLogMetricRequest {
   /**
    * Required. The resource name of the project in which to create the metric:
@@ -508,7 +588,12 @@ export interface CreateLogMetricRequestProtoMsg {
   typeUrl: "/google.logging.v2.CreateLogMetricRequest";
   value: Uint8Array;
 }
-/** The parameters to CreateLogMetric. */
+/**
+ * The parameters to CreateLogMetric.
+ * @name CreateLogMetricRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateLogMetricRequest
+ */
 export interface CreateLogMetricRequestAmino {
   /**
    * Required. The resource name of the project in which to create the metric:
@@ -528,12 +613,22 @@ export interface CreateLogMetricRequestAminoMsg {
   type: "/google.logging.v2.CreateLogMetricRequest";
   value: CreateLogMetricRequestAmino;
 }
-/** The parameters to CreateLogMetric. */
+/**
+ * The parameters to CreateLogMetric.
+ * @name CreateLogMetricRequestSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateLogMetricRequest
+ */
 export interface CreateLogMetricRequestSDKType {
   parent: string;
   metric?: LogMetricSDKType;
 }
-/** The parameters to UpdateLogMetric. */
+/**
+ * The parameters to UpdateLogMetric.
+ * @name UpdateLogMetricRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateLogMetricRequest
+ */
 export interface UpdateLogMetricRequest {
   /**
    * Required. The resource name of the metric to update:
@@ -545,14 +640,21 @@ export interface UpdateLogMetricRequest {
    * does not exist in `[PROJECT_ID]`, then a new metric is created.
    */
   metricName: string;
-  /** Required. The updated metric. */
+  /**
+   * Required. The updated metric.
+  */
   metric?: LogMetric;
 }
 export interface UpdateLogMetricRequestProtoMsg {
   typeUrl: "/google.logging.v2.UpdateLogMetricRequest";
   value: Uint8Array;
 }
-/** The parameters to UpdateLogMetric. */
+/**
+ * The parameters to UpdateLogMetric.
+ * @name UpdateLogMetricRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateLogMetricRequest
+ */
 export interface UpdateLogMetricRequestAmino {
   /**
    * Required. The resource name of the metric to update:
@@ -564,19 +666,31 @@ export interface UpdateLogMetricRequestAmino {
    * does not exist in `[PROJECT_ID]`, then a new metric is created.
    */
   metric_name?: string;
-  /** Required. The updated metric. */
+  /**
+   * Required. The updated metric.
+  */
   metric?: LogMetricAmino;
 }
 export interface UpdateLogMetricRequestAminoMsg {
   type: "/google.logging.v2.UpdateLogMetricRequest";
   value: UpdateLogMetricRequestAmino;
 }
-/** The parameters to UpdateLogMetric. */
+/**
+ * The parameters to UpdateLogMetric.
+ * @name UpdateLogMetricRequestSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateLogMetricRequest
+ */
 export interface UpdateLogMetricRequestSDKType {
   metric_name: string;
   metric?: LogMetricSDKType;
 }
-/** The parameters to DeleteLogMetric. */
+/**
+ * The parameters to DeleteLogMetric.
+ * @name DeleteLogMetricRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteLogMetricRequest
+ */
 export interface DeleteLogMetricRequest {
   /**
    * Required. The resource name of the metric to delete:
@@ -589,7 +703,12 @@ export interface DeleteLogMetricRequestProtoMsg {
   typeUrl: "/google.logging.v2.DeleteLogMetricRequest";
   value: Uint8Array;
 }
-/** The parameters to DeleteLogMetric. */
+/**
+ * The parameters to DeleteLogMetric.
+ * @name DeleteLogMetricRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteLogMetricRequest
+ */
 export interface DeleteLogMetricRequestAmino {
   /**
    * Required. The resource name of the metric to delete:
@@ -602,7 +721,12 @@ export interface DeleteLogMetricRequestAminoMsg {
   type: "/google.logging.v2.DeleteLogMetricRequest";
   value: DeleteLogMetricRequestAmino;
 }
-/** The parameters to DeleteLogMetric. */
+/**
+ * The parameters to DeleteLogMetric.
+ * @name DeleteLogMetricRequestSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteLogMetricRequest
+ */
 export interface DeleteLogMetricRequestSDKType {
   metric_name: string;
 }
@@ -612,6 +736,11 @@ function createBaseLogMetric_LabelExtractorsEntry(): LogMetric_LabelExtractorsEn
     value: ""
   };
 }
+/**
+ * @name LogMetric_LabelExtractorsEntry
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.undefined
+ */
 export const LogMetric_LabelExtractorsEntry = {
   encode(message: LogMetric_LabelExtractorsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -713,6 +842,18 @@ function createBaseLogMetric(): LogMetric {
     version: 0
   };
 }
+/**
+ * Describes a logs-based metric. The value of the metric is the number of log
+ * entries that match a logs filter in a given time interval.
+ * 
+ * Logs-based metrics can also be used to extract values from logs and create a
+ * distribution of the values. The distribution records the statistics of the
+ * extracted values along with an optional histogram of the values as specified
+ * by the bucket options.
+ * @name LogMetric
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogMetric
+ */
 export const LogMetric = {
   typeUrl: "/google.logging.v2.LogMetric",
   encode(message: LogMetric, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -995,6 +1136,12 @@ function createBaseListLogMetricsRequest(): ListLogMetricsRequest {
     pageSize: 0
   };
 }
+/**
+ * The parameters to ListLogMetrics.
+ * @name ListLogMetricsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogMetricsRequest
+ */
 export const ListLogMetricsRequest = {
   typeUrl: "/google.logging.v2.ListLogMetricsRequest",
   encode(message: ListLogMetricsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1109,6 +1256,12 @@ function createBaseListLogMetricsResponse(): ListLogMetricsResponse {
     nextPageToken: ""
   };
 }
+/**
+ * Result returned from ListLogMetrics.
+ * @name ListLogMetricsResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogMetricsResponse
+ */
 export const ListLogMetricsResponse = {
   typeUrl: "/google.logging.v2.ListLogMetricsResponse",
   encode(message: ListLogMetricsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1217,6 +1370,12 @@ function createBaseGetLogMetricRequest(): GetLogMetricRequest {
     metricName: ""
   };
 }
+/**
+ * The parameters to GetLogMetric.
+ * @name GetLogMetricRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetLogMetricRequest
+ */
 export const GetLogMetricRequest = {
   typeUrl: "/google.logging.v2.GetLogMetricRequest",
   encode(message: GetLogMetricRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1301,6 +1460,12 @@ function createBaseCreateLogMetricRequest(): CreateLogMetricRequest {
     metric: undefined
   };
 }
+/**
+ * The parameters to CreateLogMetric.
+ * @name CreateLogMetricRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateLogMetricRequest
+ */
 export const CreateLogMetricRequest = {
   typeUrl: "/google.logging.v2.CreateLogMetricRequest",
   encode(message: CreateLogMetricRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1402,6 +1567,12 @@ function createBaseUpdateLogMetricRequest(): UpdateLogMetricRequest {
     metric: undefined
   };
 }
+/**
+ * The parameters to UpdateLogMetric.
+ * @name UpdateLogMetricRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateLogMetricRequest
+ */
 export const UpdateLogMetricRequest = {
   typeUrl: "/google.logging.v2.UpdateLogMetricRequest",
   encode(message: UpdateLogMetricRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1502,6 +1673,12 @@ function createBaseDeleteLogMetricRequest(): DeleteLogMetricRequest {
     metricName: ""
   };
 }
+/**
+ * The parameters to DeleteLogMetric.
+ * @name DeleteLogMetricRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteLogMetricRequest
+ */
 export const DeleteLogMetricRequest = {
   typeUrl: "/google.logging.v2.DeleteLogMetricRequest",
   encode(message: DeleteLogMetricRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

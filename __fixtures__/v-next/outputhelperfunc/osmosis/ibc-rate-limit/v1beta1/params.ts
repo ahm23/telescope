@@ -2,7 +2,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.ibcratelimit.v1beta1";
-/** Params defines the parameters for the ibc-rate-limit module. */
+/**
+ * Params defines the parameters for the ibc-rate-limit module.
+ * @name Params
+ * @package osmosis.ibcratelimit.v1beta1
+ * @see proto type: osmosis.ibcratelimit.v1beta1.Params
+ */
 export interface Params {
   contractAddress: string;
 }
@@ -10,7 +15,12 @@ export interface ParamsProtoMsg {
   typeUrl: "/osmosis.ibcratelimit.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params defines the parameters for the ibc-rate-limit module. */
+/**
+ * Params defines the parameters for the ibc-rate-limit module.
+ * @name ParamsAmino
+ * @package osmosis.ibcratelimit.v1beta1
+ * @see proto type: osmosis.ibcratelimit.v1beta1.Params
+ */
 export interface ParamsAmino {
   contract_address?: string;
 }
@@ -18,7 +28,12 @@ export interface ParamsAminoMsg {
   type: "osmosis/ibcratelimit/params";
   value: ParamsAmino;
 }
-/** Params defines the parameters for the ibc-rate-limit module. */
+/**
+ * Params defines the parameters for the ibc-rate-limit module.
+ * @name ParamsSDKType
+ * @package osmosis.ibcratelimit.v1beta1
+ * @see proto type: osmosis.ibcratelimit.v1beta1.Params
+ */
 export interface ParamsSDKType {
   contract_address: string;
 }
@@ -27,6 +42,12 @@ function createBaseParams(): Params {
     contractAddress: ""
   };
 }
+/**
+ * Params defines the parameters for the ibc-rate-limit module.
+ * @name Params
+ * @package osmosis.ibcratelimit.v1beta1
+ * @see proto type: osmosis.ibcratelimit.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.ibcratelimit.v1beta1.Params",
   aminoType: "osmosis/ibcratelimit/params",

@@ -4,7 +4,7 @@ import { QueryDeploymentsRequest, QueryDeploymentsResponse, QueryDeploymentReque
  * Deployments queries deployments
  * @name getDeployments
  * @package akash.deployment.v1beta1
- * @see protoservice: akash.deployment.v1beta1.Deployments
+ * @see proto service: akash.deployment.v1beta1.Deployments
  */
 export const getDeployments = buildQuery<QueryDeploymentsRequest, QueryDeploymentsResponse>({
   encode: QueryDeploymentsRequest.encode,
@@ -16,7 +16,7 @@ export const getDeployments = buildQuery<QueryDeploymentsRequest, QueryDeploymen
  * Deployment queries deployment details
  * @name getDeployment
  * @package akash.deployment.v1beta1
- * @see protoservice: akash.deployment.v1beta1.Deployment
+ * @see proto service: akash.deployment.v1beta1.Deployment
  */
 export const getDeployment = buildQuery<QueryDeploymentRequest, QueryDeploymentResponse>({
   encode: QueryDeploymentRequest.encode,
@@ -28,7 +28,7 @@ export const getDeployment = buildQuery<QueryDeploymentRequest, QueryDeploymentR
  * Group queries group details
  * @name getGroup
  * @package akash.deployment.v1beta1
- * @see protoservice: akash.deployment.v1beta1.Group
+ * @see proto service: akash.deployment.v1beta1.Group
  */
 export const getGroup = buildQuery<QueryGroupRequest, QueryGroupResponse>({
   encode: QueryGroupRequest.encode,

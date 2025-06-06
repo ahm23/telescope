@@ -7,7 +7,7 @@ import { getAccounts, getAccount, getCosmosAuthV1beta1Params, getModuleAccounts,
  * Since: cosmos-sdk 0.43
  * @name useGetAccounts
  * @package cosmos.auth.v1beta1
- * @see protoservice: cosmos.auth.v1beta1.Accounts
+ * @see proto service: cosmos.auth.v1beta1.Accounts
  */
 export const useGetAccounts = buildUseQuery<QueryAccountsRequest, QueryAccountsResponse>({
   builderQueryFn: getAccounts,
@@ -17,7 +17,7 @@ export const useGetAccounts = buildUseQuery<QueryAccountsRequest, QueryAccountsR
  * Account returns account details based on address.
  * @name useGetAccount
  * @package cosmos.auth.v1beta1
- * @see protoservice: cosmos.auth.v1beta1.Account
+ * @see proto service: cosmos.auth.v1beta1.Account
  */
 export const useGetAccount = buildUseQuery<QueryAccountRequest, QueryAccountResponse>({
   builderQueryFn: getAccount,
@@ -27,7 +27,7 @@ export const useGetAccount = buildUseQuery<QueryAccountRequest, QueryAccountResp
  * Params queries all parameters.
  * @name useGetCosmosAuthV1beta1Params
  * @package cosmos.auth.v1beta1
- * @see protoservice: cosmos.auth.v1beta1.Params
+ * @see proto service: cosmos.auth.v1beta1.Params
  */
 export const useGetCosmosAuthV1beta1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
   builderQueryFn: getCosmosAuthV1beta1Params,
@@ -37,7 +37,7 @@ export const useGetCosmosAuthV1beta1Params = buildUseQuery<QueryParamsRequest, Q
  * ModuleAccounts returns all the existing module accounts.
  * @name useGetModuleAccounts
  * @package cosmos.auth.v1beta1
- * @see protoservice: cosmos.auth.v1beta1.ModuleAccounts
+ * @see proto service: cosmos.auth.v1beta1.ModuleAccounts
  */
 export const useGetModuleAccounts = buildUseQuery<QueryModuleAccountsRequest, QueryModuleAccountsResponse>({
   builderQueryFn: getModuleAccounts,
@@ -47,7 +47,7 @@ export const useGetModuleAccounts = buildUseQuery<QueryModuleAccountsRequest, Qu
  * Bech32 queries bech32Prefix
  * @name useGetBech32Prefix
  * @package cosmos.auth.v1beta1
- * @see protoservice: cosmos.auth.v1beta1.Bech32Prefix
+ * @see proto service: cosmos.auth.v1beta1.Bech32Prefix
  */
 export const useGetBech32Prefix = buildUseQuery<Bech32PrefixRequest, Bech32PrefixResponse>({
   builderQueryFn: getBech32Prefix,
@@ -57,7 +57,7 @@ export const useGetBech32Prefix = buildUseQuery<Bech32PrefixRequest, Bech32Prefi
  * AddressBytesToString converts Account Address bytes to string
  * @name useGetAddressBytesToString
  * @package cosmos.auth.v1beta1
- * @see protoservice: cosmos.auth.v1beta1.AddressBytesToString
+ * @see proto service: cosmos.auth.v1beta1.AddressBytesToString
  */
 export const useGetAddressBytesToString = buildUseQuery<AddressBytesToStringRequest, AddressBytesToStringResponse>({
   builderQueryFn: getAddressBytesToString,
@@ -67,7 +67,7 @@ export const useGetAddressBytesToString = buildUseQuery<AddressBytesToStringRequ
  * AddressStringToBytes converts Address string to bytes
  * @name useGetAddressStringToBytes
  * @package cosmos.auth.v1beta1
- * @see protoservice: cosmos.auth.v1beta1.AddressStringToBytes
+ * @see proto service: cosmos.auth.v1beta1.AddressStringToBytes
  */
 export const useGetAddressStringToBytes = buildUseQuery<AddressStringToBytesRequest, AddressStringToBytesResponse>({
   builderQueryFn: getAddressStringToBytes,

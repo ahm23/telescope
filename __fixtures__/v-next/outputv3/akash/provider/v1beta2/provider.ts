@@ -2,7 +2,12 @@ import { Attribute, AttributeAmino, AttributeSDKType } from "../../base/v1beta2/
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 export const protobufPackage = "akash.provider.v1beta2";
-/** ProviderInfo */
+/**
+ * ProviderInfo
+ * @name ProviderInfo
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.ProviderInfo
+ */
 export interface ProviderInfo {
   email: string;
   website: string;
@@ -11,17 +16,32 @@ export interface ProviderInfoProtoMsg {
   typeUrl: "/akash.provider.v1beta2.ProviderInfo";
   value: Uint8Array;
 }
-/** ProviderInfo */
+/**
+ * ProviderInfo
+ * @name ProviderInfoAmino
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.ProviderInfo
+ */
 export interface ProviderInfoAmino {
   email: string;
   website: string;
 }
-/** ProviderInfo */
+/**
+ * ProviderInfo
+ * @name ProviderInfoSDKType
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.ProviderInfo
+ */
 export interface ProviderInfoSDKType {
   email: string;
   website: string;
 }
-/** MsgCreateProvider defines an SDK message for creating a provider */
+/**
+ * MsgCreateProvider defines an SDK message for creating a provider
+ * @name MsgCreateProvider
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgCreateProvider
+ */
 export interface MsgCreateProvider {
   owner: string;
   hostUri: string;
@@ -32,31 +52,61 @@ export interface MsgCreateProviderProtoMsg {
   typeUrl: "/akash.provider.v1beta2.MsgCreateProvider";
   value: Uint8Array;
 }
-/** MsgCreateProvider defines an SDK message for creating a provider */
+/**
+ * MsgCreateProvider defines an SDK message for creating a provider
+ * @name MsgCreateProviderAmino
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgCreateProvider
+ */
 export interface MsgCreateProviderAmino {
   owner: string;
   host_uri: string;
   attributes: AttributeAmino[];
   info: ProviderInfoAmino;
 }
-/** MsgCreateProvider defines an SDK message for creating a provider */
+/**
+ * MsgCreateProvider defines an SDK message for creating a provider
+ * @name MsgCreateProviderSDKType
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgCreateProvider
+ */
 export interface MsgCreateProviderSDKType {
   owner: string;
   host_uri: string;
   attributes: AttributeSDKType[];
   info: ProviderInfoSDKType;
 }
-/** MsgCreateProviderResponse defines the Msg/CreateProvider response type. */
+/**
+ * MsgCreateProviderResponse defines the Msg/CreateProvider response type.
+ * @name MsgCreateProviderResponse
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgCreateProviderResponse
+ */
 export interface MsgCreateProviderResponse {}
 export interface MsgCreateProviderResponseProtoMsg {
   typeUrl: "/akash.provider.v1beta2.MsgCreateProviderResponse";
   value: Uint8Array;
 }
-/** MsgCreateProviderResponse defines the Msg/CreateProvider response type. */
+/**
+ * MsgCreateProviderResponse defines the Msg/CreateProvider response type.
+ * @name MsgCreateProviderResponseAmino
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgCreateProviderResponse
+ */
 export interface MsgCreateProviderResponseAmino {}
-/** MsgCreateProviderResponse defines the Msg/CreateProvider response type. */
+/**
+ * MsgCreateProviderResponse defines the Msg/CreateProvider response type.
+ * @name MsgCreateProviderResponseSDKType
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgCreateProviderResponse
+ */
 export interface MsgCreateProviderResponseSDKType {}
-/** MsgUpdateProvider defines an SDK message for updating a provider */
+/**
+ * MsgUpdateProvider defines an SDK message for updating a provider
+ * @name MsgUpdateProvider
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgUpdateProvider
+ */
 export interface MsgUpdateProvider {
   owner: string;
   hostUri: string;
@@ -67,31 +117,61 @@ export interface MsgUpdateProviderProtoMsg {
   typeUrl: "/akash.provider.v1beta2.MsgUpdateProvider";
   value: Uint8Array;
 }
-/** MsgUpdateProvider defines an SDK message for updating a provider */
+/**
+ * MsgUpdateProvider defines an SDK message for updating a provider
+ * @name MsgUpdateProviderAmino
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgUpdateProvider
+ */
 export interface MsgUpdateProviderAmino {
   owner: string;
   host_uri: string;
   attributes: AttributeAmino[];
   info: ProviderInfoAmino;
 }
-/** MsgUpdateProvider defines an SDK message for updating a provider */
+/**
+ * MsgUpdateProvider defines an SDK message for updating a provider
+ * @name MsgUpdateProviderSDKType
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgUpdateProvider
+ */
 export interface MsgUpdateProviderSDKType {
   owner: string;
   host_uri: string;
   attributes: AttributeSDKType[];
   info: ProviderInfoSDKType;
 }
-/** MsgUpdateProviderResponse defines the Msg/UpdateProvider response type. */
+/**
+ * MsgUpdateProviderResponse defines the Msg/UpdateProvider response type.
+ * @name MsgUpdateProviderResponse
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgUpdateProviderResponse
+ */
 export interface MsgUpdateProviderResponse {}
 export interface MsgUpdateProviderResponseProtoMsg {
   typeUrl: "/akash.provider.v1beta2.MsgUpdateProviderResponse";
   value: Uint8Array;
 }
-/** MsgUpdateProviderResponse defines the Msg/UpdateProvider response type. */
+/**
+ * MsgUpdateProviderResponse defines the Msg/UpdateProvider response type.
+ * @name MsgUpdateProviderResponseAmino
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgUpdateProviderResponse
+ */
 export interface MsgUpdateProviderResponseAmino {}
-/** MsgUpdateProviderResponse defines the Msg/UpdateProvider response type. */
+/**
+ * MsgUpdateProviderResponse defines the Msg/UpdateProvider response type.
+ * @name MsgUpdateProviderResponseSDKType
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgUpdateProviderResponse
+ */
 export interface MsgUpdateProviderResponseSDKType {}
-/** MsgDeleteProvider defines an SDK message for deleting a provider */
+/**
+ * MsgDeleteProvider defines an SDK message for deleting a provider
+ * @name MsgDeleteProvider
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgDeleteProvider
+ */
 export interface MsgDeleteProvider {
   owner: string;
 }
@@ -99,25 +179,55 @@ export interface MsgDeleteProviderProtoMsg {
   typeUrl: "/akash.provider.v1beta2.MsgDeleteProvider";
   value: Uint8Array;
 }
-/** MsgDeleteProvider defines an SDK message for deleting a provider */
+/**
+ * MsgDeleteProvider defines an SDK message for deleting a provider
+ * @name MsgDeleteProviderAmino
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgDeleteProvider
+ */
 export interface MsgDeleteProviderAmino {
   owner: string;
 }
-/** MsgDeleteProvider defines an SDK message for deleting a provider */
+/**
+ * MsgDeleteProvider defines an SDK message for deleting a provider
+ * @name MsgDeleteProviderSDKType
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgDeleteProvider
+ */
 export interface MsgDeleteProviderSDKType {
   owner: string;
 }
-/** MsgDeleteProviderResponse defines the Msg/DeleteProvider response type. */
+/**
+ * MsgDeleteProviderResponse defines the Msg/DeleteProvider response type.
+ * @name MsgDeleteProviderResponse
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgDeleteProviderResponse
+ */
 export interface MsgDeleteProviderResponse {}
 export interface MsgDeleteProviderResponseProtoMsg {
   typeUrl: "/akash.provider.v1beta2.MsgDeleteProviderResponse";
   value: Uint8Array;
 }
-/** MsgDeleteProviderResponse defines the Msg/DeleteProvider response type. */
+/**
+ * MsgDeleteProviderResponse defines the Msg/DeleteProvider response type.
+ * @name MsgDeleteProviderResponseAmino
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgDeleteProviderResponse
+ */
 export interface MsgDeleteProviderResponseAmino {}
-/** MsgDeleteProviderResponse defines the Msg/DeleteProvider response type. */
+/**
+ * MsgDeleteProviderResponse defines the Msg/DeleteProvider response type.
+ * @name MsgDeleteProviderResponseSDKType
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgDeleteProviderResponse
+ */
 export interface MsgDeleteProviderResponseSDKType {}
-/** Provider stores owner and host details */
+/**
+ * Provider stores owner and host details
+ * @name Provider
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.Provider
+ */
 export interface Provider {
   owner: string;
   hostUri: string;
@@ -128,14 +238,24 @@ export interface ProviderProtoMsg {
   typeUrl: "/akash.provider.v1beta2.Provider";
   value: Uint8Array;
 }
-/** Provider stores owner and host details */
+/**
+ * Provider stores owner and host details
+ * @name ProviderAmino
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.Provider
+ */
 export interface ProviderAmino {
   owner: string;
   host_uri: string;
   attributes: AttributeAmino[];
   info: ProviderInfoAmino;
 }
-/** Provider stores owner and host details */
+/**
+ * Provider stores owner and host details
+ * @name ProviderSDKType
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.Provider
+ */
 export interface ProviderSDKType {
   owner: string;
   host_uri: string;
@@ -148,6 +268,12 @@ function createBaseProviderInfo(): ProviderInfo {
     website: ""
   };
 }
+/**
+ * ProviderInfo
+ * @name ProviderInfo
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.ProviderInfo
+ */
 export const ProviderInfo = {
   typeUrl: "/akash.provider.v1beta2.ProviderInfo",
   encode(message: ProviderInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -240,6 +366,12 @@ function createBaseMsgCreateProvider(): MsgCreateProvider {
     info: ProviderInfo.fromPartial({})
   };
 }
+/**
+ * MsgCreateProvider defines an SDK message for creating a provider
+ * @name MsgCreateProvider
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgCreateProvider
+ */
 export const MsgCreateProvider = {
   typeUrl: "/akash.provider.v1beta2.MsgCreateProvider",
   encode(message: MsgCreateProvider, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -363,6 +495,12 @@ export const MsgCreateProvider = {
 function createBaseMsgCreateProviderResponse(): MsgCreateProviderResponse {
   return {};
 }
+/**
+ * MsgCreateProviderResponse defines the Msg/CreateProvider response type.
+ * @name MsgCreateProviderResponse
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgCreateProviderResponse
+ */
 export const MsgCreateProviderResponse = {
   typeUrl: "/akash.provider.v1beta2.MsgCreateProviderResponse",
   encode(_: MsgCreateProviderResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -426,6 +564,12 @@ function createBaseMsgUpdateProvider(): MsgUpdateProvider {
     info: ProviderInfo.fromPartial({})
   };
 }
+/**
+ * MsgUpdateProvider defines an SDK message for updating a provider
+ * @name MsgUpdateProvider
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgUpdateProvider
+ */
 export const MsgUpdateProvider = {
   typeUrl: "/akash.provider.v1beta2.MsgUpdateProvider",
   encode(message: MsgUpdateProvider, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -549,6 +693,12 @@ export const MsgUpdateProvider = {
 function createBaseMsgUpdateProviderResponse(): MsgUpdateProviderResponse {
   return {};
 }
+/**
+ * MsgUpdateProviderResponse defines the Msg/UpdateProvider response type.
+ * @name MsgUpdateProviderResponse
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgUpdateProviderResponse
+ */
 export const MsgUpdateProviderResponse = {
   typeUrl: "/akash.provider.v1beta2.MsgUpdateProviderResponse",
   encode(_: MsgUpdateProviderResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -609,6 +759,12 @@ function createBaseMsgDeleteProvider(): MsgDeleteProvider {
     owner: ""
   };
 }
+/**
+ * MsgDeleteProvider defines an SDK message for deleting a provider
+ * @name MsgDeleteProvider
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgDeleteProvider
+ */
 export const MsgDeleteProvider = {
   typeUrl: "/akash.provider.v1beta2.MsgDeleteProvider",
   encode(message: MsgDeleteProvider, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -682,6 +838,12 @@ export const MsgDeleteProvider = {
 function createBaseMsgDeleteProviderResponse(): MsgDeleteProviderResponse {
   return {};
 }
+/**
+ * MsgDeleteProviderResponse defines the Msg/DeleteProvider response type.
+ * @name MsgDeleteProviderResponse
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.MsgDeleteProviderResponse
+ */
 export const MsgDeleteProviderResponse = {
   typeUrl: "/akash.provider.v1beta2.MsgDeleteProviderResponse",
   encode(_: MsgDeleteProviderResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -745,6 +907,12 @@ function createBaseProvider(): Provider {
     info: ProviderInfo.fromPartial({})
   };
 }
+/**
+ * Provider stores owner and host details
+ * @name Provider
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.Provider
+ */
 export const Provider = {
   typeUrl: "/akash.provider.v1beta2.Provider",
   encode(message: Provider, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

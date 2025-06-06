@@ -4,7 +4,7 @@ import { QueryTotalUnclaimedRequest, QueryTotalUnclaimedResponse, QueryParamsReq
  * TotalUnclaimed queries the total unclaimed tokens from the airdrop
  * @name getTotalUnclaimed
  * @package evmos.claims.v1
- * @see protoservice: evmos.claims.v1.TotalUnclaimed
+ * @see proto service: evmos.claims.v1.TotalUnclaimed
  */
 export const getTotalUnclaimed = buildQuery<QueryTotalUnclaimedRequest, QueryTotalUnclaimedResponse>({
   encode: QueryTotalUnclaimedRequest.encode,
@@ -16,7 +16,7 @@ export const getTotalUnclaimed = buildQuery<QueryTotalUnclaimedRequest, QueryTot
  * Params returns the claims module parameters
  * @name getEvmosClaimsV1Params
  * @package evmos.claims.v1
- * @see protoservice: evmos.claims.v1.Params
+ * @see proto service: evmos.claims.v1.Params
  */
 export const getEvmosClaimsV1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
@@ -28,7 +28,7 @@ export const getEvmosClaimsV1Params = buildQuery<QueryParamsRequest, QueryParams
  * ClaimsRecords returns all claims records
  * @name getClaimsRecords
  * @package evmos.claims.v1
- * @see protoservice: evmos.claims.v1.ClaimsRecords
+ * @see proto service: evmos.claims.v1.ClaimsRecords
  */
 export const getClaimsRecords = buildQuery<QueryClaimsRecordsRequest, QueryClaimsRecordsResponse>({
   encode: QueryClaimsRecordsRequest.encode,
@@ -40,7 +40,7 @@ export const getClaimsRecords = buildQuery<QueryClaimsRecordsRequest, QueryClaim
  * ClaimsRecord returns the claims record for a given address
  * @name getClaimsRecord
  * @package evmos.claims.v1
- * @see protoservice: evmos.claims.v1.ClaimsRecord
+ * @see proto service: evmos.claims.v1.ClaimsRecord
  */
 export const getClaimsRecord = buildQuery<QueryClaimsRecordRequest, QueryClaimsRecordResponse>({
   encode: QueryClaimsRecordRequest.encode,

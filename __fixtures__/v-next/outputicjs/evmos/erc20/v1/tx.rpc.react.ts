@@ -6,7 +6,7 @@ import { convertCoin, convertERC20 } from "./tx.rpc.func";
  * that is registered on the token mapping.
  * @name useConvertCoin
  * @package evmos.erc20.v1
- * @see protoservice: evmos.erc20.v1.ConvertCoin
+ * @see proto service: evmos.erc20.v1.ConvertCoin
  */
 export const useConvertCoin = buildUseMutation<MsgConvertCoin, Error>({
   builderMutationFn: convertCoin
@@ -16,7 +16,7 @@ export const useConvertCoin = buildUseMutation<MsgConvertCoin, Error>({
  * contract that is registered on the token mapping.
  * @name useConvertERC20
  * @package evmos.erc20.v1
- * @see protoservice: evmos.erc20.v1.ConvertERC20
+ * @see proto service: evmos.erc20.v1.ConvertERC20
  */
 export const useConvertERC20 = buildUseMutation<MsgConvertERC20, Error>({
   builderMutationFn: convertERC20

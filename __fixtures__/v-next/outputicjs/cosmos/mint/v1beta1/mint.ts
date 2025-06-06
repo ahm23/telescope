@@ -1,65 +1,117 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { Decimal } from "@interchainjs/math";
 import { DeepPartial } from "../../../helpers";
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name Minter
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.Minter
+ */
 export interface Minter {
-  /** current annual inflation rate */
+  /**
+   * current annual inflation rate
+  */
   inflation: string;
-  /** current annual expected provisions */
+  /**
+   * current annual expected provisions
+  */
   annualProvisions: string;
 }
 export interface MinterProtoMsg {
   typeUrl: "/cosmos.mint.v1beta1.Minter";
   value: Uint8Array;
 }
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name MinterAmino
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.Minter
+ */
 export interface MinterAmino {
-  /** current annual inflation rate */
+  /**
+   * current annual inflation rate
+  */
   inflation: string;
-  /** current annual expected provisions */
+  /**
+   * current annual expected provisions
+  */
   annual_provisions: string;
 }
 export interface MinterAminoMsg {
   type: "cosmos-sdk/Minter";
   value: MinterAmino;
 }
-/** Params holds parameters for the mint module. */
-export interface Params {
-  /** type of coin to mint */
+/**
+ * Params holds parameters for the mint module.
+ * @name CosmosMintV1beta1Params
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.Params
+ */
+export interface CosmosMintV1beta1Params {
+  /**
+   * type of coin to mint
+  */
   mintDenom: string;
-  /** maximum annual change in inflation rate */
+  /**
+   * maximum annual change in inflation rate
+  */
   inflationRateChange: string;
-  /** maximum inflation rate */
+  /**
+   * maximum inflation rate
+  */
   inflationMax: string;
-  /** minimum inflation rate */
+  /**
+   * minimum inflation rate
+  */
   inflationMin: string;
-  /** goal of percent bonded atoms */
+  /**
+   * goal of percent bonded atoms
+  */
   goalBonded: string;
-  /** expected blocks per year */
+  /**
+   * expected blocks per year
+  */
   blocksPerYear: bigint;
 }
-export interface ParamsProtoMsg {
+export interface CosmosMintV1beta1ParamsProtoMsg {
   typeUrl: "/cosmos.mint.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the mint module. */
-export interface ParamsAmino {
-  /** type of coin to mint */
+/**
+ * Params holds parameters for the mint module.
+ * @name CosmosMintV1beta1ParamsAmino
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.CosmosMintV1beta1Params
+ */
+export interface CosmosMintV1beta1ParamsAmino {
+  /**
+   * type of coin to mint
+  */
   mint_denom: string;
-  /** maximum annual change in inflation rate */
+  /**
+   * maximum annual change in inflation rate
+  */
   inflation_rate_change: string;
-  /** maximum inflation rate */
+  /**
+   * maximum inflation rate
+  */
   inflation_max: string;
-  /** minimum inflation rate */
+  /**
+   * minimum inflation rate
+  */
   inflation_min: string;
-  /** goal of percent bonded atoms */
+  /**
+   * goal of percent bonded atoms
+  */
   goal_bonded: string;
-  /** expected blocks per year */
+  /**
+   * expected blocks per year
+  */
   blocks_per_year: string;
 }
-export interface ParamsAminoMsg {
+export interface CosmosMintV1beta1ParamsAminoMsg {
   type: "cosmos-sdk/Params";
-  value: ParamsAmino;
+  value: CosmosMintV1beta1ParamsAmino;
 }
 function createBaseMinter(): Minter {
   return {
@@ -67,6 +119,12 @@ function createBaseMinter(): Minter {
     annualProvisions: ""
   };
 }
+/**
+ * Minter represents the minting state.
+ * @name Minter
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.Minter
+ */
 export const Minter = {
   typeUrl: "/cosmos.mint.v1beta1.Minter",
   aminoType: "cosmos-sdk/Minter",
@@ -143,7 +201,7 @@ export const Minter = {
     };
   }
 };
-function createBaseParams(): Params {
+function createBaseCosmosMintV1beta1Params(): CosmosMintV1beta1Params {
   return {
     mintDenom: "",
     inflationRateChange: "",
@@ -153,10 +211,16 @@ function createBaseParams(): Params {
     blocksPerYear: BigInt(0)
   };
 }
-export const Params = {
+/**
+ * Params holds parameters for the mint module.
+ * @name CosmosMintV1beta1Params
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.Params
+ */
+export const CosmosMintV1beta1Params = {
   typeUrl: "/cosmos.mint.v1beta1.Params",
   aminoType: "cosmos-sdk/Params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: CosmosMintV1beta1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.mintDenom !== "") {
       writer.uint32(10).string(message.mintDenom);
     }
@@ -177,10 +241,10 @@ export const Params = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): CosmosMintV1beta1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseCosmosMintV1beta1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -209,8 +273,8 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<CosmosMintV1beta1Params>): CosmosMintV1beta1Params {
+    const message = createBaseCosmosMintV1beta1Params();
     message.mintDenom = object.mintDenom ?? "";
     message.inflationRateChange = object.inflationRateChange ?? "";
     message.inflationMax = object.inflationMax ?? "";
@@ -219,8 +283,8 @@ export const Params = {
     message.blocksPerYear = object.blocksPerYear !== undefined && object.blocksPerYear !== null ? BigInt(object.blocksPerYear.toString()) : BigInt(0);
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: CosmosMintV1beta1ParamsAmino): CosmosMintV1beta1Params {
+    const message = createBaseCosmosMintV1beta1Params();
     if (object.mint_denom !== undefined && object.mint_denom !== null) {
       message.mintDenom = object.mint_denom;
     }
@@ -241,7 +305,7 @@ export const Params = {
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: CosmosMintV1beta1Params): CosmosMintV1beta1ParamsAmino {
     const obj: any = {};
     obj.mint_denom = message.mintDenom === "" ? undefined : message.mintDenom;
     obj.inflation_rate_change = message.inflationRateChange === "" ? undefined : message.inflationRateChange;
@@ -251,25 +315,25 @@ export const Params = {
     obj.blocks_per_year = message.blocksPerYear !== BigInt(0) ? message.blocksPerYear?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: CosmosMintV1beta1ParamsAminoMsg): CosmosMintV1beta1Params {
+    return CosmosMintV1beta1Params.fromAmino(object.value);
   },
-  toAminoMsg(message: Params): ParamsAminoMsg {
+  toAminoMsg(message: CosmosMintV1beta1Params): CosmosMintV1beta1ParamsAminoMsg {
     return {
       type: "cosmos-sdk/Params",
-      value: Params.toAmino(message)
+      value: CosmosMintV1beta1Params.toAmino(message)
     };
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: CosmosMintV1beta1ParamsProtoMsg): CosmosMintV1beta1Params {
+    return CosmosMintV1beta1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: CosmosMintV1beta1Params): Uint8Array {
+    return CosmosMintV1beta1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: CosmosMintV1beta1Params): CosmosMintV1beta1ParamsProtoMsg {
     return {
       typeUrl: "/cosmos.mint.v1beta1.Params",
-      value: Params.encode(message).finish()
+      value: CosmosMintV1beta1Params.encode(message).finish()
     };
   }
 };

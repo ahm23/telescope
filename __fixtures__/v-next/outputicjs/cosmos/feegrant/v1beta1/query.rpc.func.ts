@@ -4,7 +4,7 @@ import { QueryAllowanceRequest, QueryAllowanceResponse, QueryAllowancesRequest, 
  * Allowance returns fee granted to the grantee by the granter.
  * @name getAllowance
  * @package cosmos.feegrant.v1beta1
- * @see protoservice: cosmos.feegrant.v1beta1.Allowance
+ * @see proto service: cosmos.feegrant.v1beta1.Allowance
  */
 export const getAllowance = buildQuery<QueryAllowanceRequest, QueryAllowanceResponse>({
   encode: QueryAllowanceRequest.encode,
@@ -16,7 +16,7 @@ export const getAllowance = buildQuery<QueryAllowanceRequest, QueryAllowanceResp
  * Allowances returns all the grants for address.
  * @name getAllowances
  * @package cosmos.feegrant.v1beta1
- * @see protoservice: cosmos.feegrant.v1beta1.Allowances
+ * @see proto service: cosmos.feegrant.v1beta1.Allowances
  */
 export const getAllowances = buildQuery<QueryAllowancesRequest, QueryAllowancesResponse>({
   encode: QueryAllowancesRequest.encode,
@@ -29,7 +29,7 @@ export const getAllowances = buildQuery<QueryAllowancesRequest, QueryAllowancesR
  * Since v0.46
  * @name getAllowancesByGranter
  * @package cosmos.feegrant.v1beta1
- * @see protoservice: cosmos.feegrant.v1beta1.AllowancesByGranter
+ * @see proto service: cosmos.feegrant.v1beta1.AllowancesByGranter
  */
 export const getAllowancesByGranter = buildQuery<QueryAllowancesByGranterRequest, QueryAllowancesByGranterResponse>({
   encode: QueryAllowancesByGranterRequest.encode,

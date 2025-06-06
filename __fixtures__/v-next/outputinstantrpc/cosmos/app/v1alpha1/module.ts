@@ -2,7 +2,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "cosmos.app.v1alpha1";
-/** ModuleDescriptor describes an app module. */
+/**
+ * ModuleDescriptor describes an app module.
+ * @name ModuleDescriptor
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.ModuleDescriptor
+ */
 export interface ModuleDescriptor {
   /**
    * go_import names the package that should be imported by an app to load the
@@ -34,15 +39,27 @@ export interface ModuleDescriptorProtoMsg {
   typeUrl: "/cosmos.app.v1alpha1.ModuleDescriptor";
   value: Uint8Array;
 }
-/** ModuleDescriptor describes an app module. */
+/**
+ * ModuleDescriptor describes an app module.
+ * @name ModuleDescriptorSDKType
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.ModuleDescriptor
+ */
 export interface ModuleDescriptorSDKType {
   go_import: string;
   use_package: PackageReferenceSDKType[];
   can_migrate_from: MigrateFromInfoSDKType[];
 }
-/** PackageReference is a reference to a protobuf package used by a module. */
+/**
+ * PackageReference is a reference to a protobuf package used by a module.
+ * @name PackageReference
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.PackageReference
+ */
 export interface PackageReference {
-  /** name is the fully-qualified name of the package. */
+  /**
+   * name is the fully-qualified name of the package.
+  */
   name: string;
   /**
    * revision is the optional revision of the package that is being used.
@@ -87,7 +104,12 @@ export interface PackageReferenceProtoMsg {
   typeUrl: "/cosmos.app.v1alpha1.PackageReference";
   value: Uint8Array;
 }
-/** PackageReference is a reference to a protobuf package used by a module. */
+/**
+ * PackageReference is a reference to a protobuf package used by a module.
+ * @name PackageReferenceSDKType
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.PackageReference
+ */
 export interface PackageReferenceSDKType {
   name: string;
   revision: number;
@@ -95,6 +117,9 @@ export interface PackageReferenceSDKType {
 /**
  * MigrateFromInfo is information on a module version that a newer module
  * can migrate from.
+ * @name MigrateFromInfo
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.MigrateFromInfo
  */
 export interface MigrateFromInfo {
   /**
@@ -110,6 +135,9 @@ export interface MigrateFromInfoProtoMsg {
 /**
  * MigrateFromInfo is information on a module version that a newer module
  * can migrate from.
+ * @name MigrateFromInfoSDKType
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.MigrateFromInfo
  */
 export interface MigrateFromInfoSDKType {
   module: string;
@@ -121,6 +149,12 @@ function createBaseModuleDescriptor(): ModuleDescriptor {
     canMigrateFrom: []
   };
 }
+/**
+ * ModuleDescriptor describes an app module.
+ * @name ModuleDescriptor
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.ModuleDescriptor
+ */
 export const ModuleDescriptor = {
   typeUrl: "/cosmos.app.v1alpha1.ModuleDescriptor",
   encode(message: ModuleDescriptor, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -268,6 +302,12 @@ function createBasePackageReference(): PackageReference {
     revision: 0
   };
 }
+/**
+ * PackageReference is a reference to a protobuf package used by a module.
+ * @name PackageReference
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.PackageReference
+ */
 export const PackageReference = {
   typeUrl: "/cosmos.app.v1alpha1.PackageReference",
   encode(message: PackageReference, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -378,6 +418,13 @@ function createBaseMigrateFromInfo(): MigrateFromInfo {
     module: ""
   };
 }
+/**
+ * MigrateFromInfo is information on a module version that a newer module
+ * can migrate from.
+ * @name MigrateFromInfo
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.MigrateFromInfo
+ */
 export const MigrateFromInfo = {
   typeUrl: "/cosmos.app.v1alpha1.MigrateFromInfo",
   encode(message: MigrateFromInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

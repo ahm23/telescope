@@ -5,7 +5,7 @@ import { ListAllInterfacesRequest, ListAllInterfacesResponse, ListImplementation
  * registry.
  * @name getListAllInterfaces
  * @package cosmos.base.reflection.v1beta1
- * @see protoservice: cosmos.base.reflection.v1beta1.ListAllInterfaces
+ * @see proto service: cosmos.base.reflection.v1beta1.ListAllInterfaces
  */
 export const getListAllInterfaces = buildQuery<ListAllInterfacesRequest, ListAllInterfacesResponse>({
   encode: ListAllInterfacesRequest.encode,
@@ -18,7 +18,7 @@ export const getListAllInterfaces = buildQuery<ListAllInterfacesRequest, ListAll
  * interface.
  * @name getListImplementations
  * @package cosmos.base.reflection.v1beta1
- * @see protoservice: cosmos.base.reflection.v1beta1.ListImplementations
+ * @see proto service: cosmos.base.reflection.v1beta1.ListImplementations
  */
 export const getListImplementations = buildQuery<ListImplementationsRequest, ListImplementationsResponse>({
   encode: ListImplementationsRequest.encode,

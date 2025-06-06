@@ -4,7 +4,7 @@ import { QueryGaugeIdsRequest, QueryGaugeIdsResponse, QueryDistrInfoRequest, Que
  * GaugeIds takes the pool id and returns the matching gauge ids and durations
  * @name getGaugeIds
  * @package osmosis.poolincentives.v1beta1
- * @see protoservice: osmosis.poolincentives.v1beta1.GaugeIds
+ * @see proto service: osmosis.poolincentives.v1beta1.GaugeIds
  */
 export const getGaugeIds = buildQuery<QueryGaugeIdsRequest, QueryGaugeIdsResponse>({
   encode: QueryGaugeIdsRequest.encode,
@@ -16,7 +16,7 @@ export const getGaugeIds = buildQuery<QueryGaugeIdsRequest, QueryGaugeIdsRespons
  * DistrInfo returns the pool's matching gauge ids and weights.
  * @name getDistrInfo
  * @package osmosis.poolincentives.v1beta1
- * @see protoservice: osmosis.poolincentives.v1beta1.DistrInfo
+ * @see proto service: osmosis.poolincentives.v1beta1.DistrInfo
  */
 export const getDistrInfo = buildQuery<QueryDistrInfoRequest, QueryDistrInfoResponse>({
   encode: QueryDistrInfoRequest.encode,
@@ -28,7 +28,7 @@ export const getDistrInfo = buildQuery<QueryDistrInfoRequest, QueryDistrInfoResp
  * Params returns pool incentives params.
  * @name getOsmosisPoolincentivesV1beta1Params
  * @package osmosis.poolincentives.v1beta1
- * @see protoservice: osmosis.poolincentives.v1beta1.Params
+ * @see proto service: osmosis.poolincentives.v1beta1.Params
  */
 export const getOsmosisPoolincentivesV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
@@ -40,7 +40,7 @@ export const getOsmosisPoolincentivesV1beta1Params = buildQuery<QueryParamsReque
  * LockableDurations returns lock durations for pools.
  * @name getLockableDurations
  * @package osmosis.poolincentives.v1beta1
- * @see protoservice: osmosis.poolincentives.v1beta1.LockableDurations
+ * @see proto service: osmosis.poolincentives.v1beta1.LockableDurations
  */
 export const getLockableDurations = buildQuery<QueryLockableDurationsRequest, QueryLockableDurationsResponse>({
   encode: QueryLockableDurationsRequest.encode,
@@ -52,7 +52,7 @@ export const getLockableDurations = buildQuery<QueryLockableDurationsRequest, Qu
  * IncentivizedPools returns currently incentivized pools
  * @name getIncentivizedPools
  * @package osmosis.poolincentives.v1beta1
- * @see protoservice: osmosis.poolincentives.v1beta1.IncentivizedPools
+ * @see proto service: osmosis.poolincentives.v1beta1.IncentivizedPools
  */
 export const getIncentivizedPools = buildQuery<QueryIncentivizedPoolsRequest, QueryIncentivizedPoolsResponse>({
   encode: QueryIncentivizedPoolsRequest.encode,
@@ -64,7 +64,7 @@ export const getIncentivizedPools = buildQuery<QueryIncentivizedPoolsRequest, Qu
  * ExternalIncentiveGauges returns external incentive gauges.
  * @name getExternalIncentiveGauges
  * @package osmosis.poolincentives.v1beta1
- * @see protoservice: osmosis.poolincentives.v1beta1.ExternalIncentiveGauges
+ * @see proto service: osmosis.poolincentives.v1beta1.ExternalIncentiveGauges
  */
 export const getExternalIncentiveGauges = buildQuery<QueryExternalIncentiveGaugesRequest, QueryExternalIncentiveGaugesResponse>({
   encode: QueryExternalIncentiveGaugesRequest.encode,

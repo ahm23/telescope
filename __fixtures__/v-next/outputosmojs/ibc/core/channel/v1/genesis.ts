@@ -3,7 +3,12 @@ import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, DeepPartial } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
 export const protobufPackage = "ibc.core.channel.v1";
-/** GenesisState defines the ibc channel submodule's genesis state. */
+/**
+ * GenesisState defines the ibc channel submodule's genesis state.
+ * @name GenesisState
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.GenesisState
+ */
 export interface GenesisState {
   channels: IdentifiedChannel[];
   acknowledgements: PacketState[];
@@ -12,14 +17,21 @@ export interface GenesisState {
   sendSequences: PacketSequence[];
   recvSequences: PacketSequence[];
   ackSequences: PacketSequence[];
-  /** the sequence for the next generated channel identifier */
+  /**
+   * the sequence for the next generated channel identifier
+  */
   nextChannelSequence: bigint;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/ibc.core.channel.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the ibc channel submodule's genesis state. */
+/**
+ * GenesisState defines the ibc channel submodule's genesis state.
+ * @name GenesisStateSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.GenesisState
+ */
 export interface GenesisStateSDKType {
   channels: IdentifiedChannelSDKType[];
   acknowledgements: PacketStateSDKType[];
@@ -33,6 +45,9 @@ export interface GenesisStateSDKType {
 /**
  * PacketSequence defines the genesis type necessary to retrieve and store
  * next send and receive sequences.
+ * @name PacketSequence
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.PacketSequence
  */
 export interface PacketSequence {
   portId: string;
@@ -46,6 +61,9 @@ export interface PacketSequenceProtoMsg {
 /**
  * PacketSequence defines the genesis type necessary to retrieve and store
  * next send and receive sequences.
+ * @name PacketSequenceSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.PacketSequence
  */
 export interface PacketSequenceSDKType {
   port_id: string;
@@ -64,6 +82,12 @@ function createBaseGenesisState(): GenesisState {
     nextChannelSequence: BigInt(0)
   };
 }
+/**
+ * GenesisState defines the ibc channel submodule's genesis state.
+ * @name GenesisState
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/ibc.core.channel.v1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -342,6 +366,13 @@ function createBasePacketSequence(): PacketSequence {
     sequence: BigInt(0)
   };
 }
+/**
+ * PacketSequence defines the genesis type necessary to retrieve and store
+ * next send and receive sequences.
+ * @name PacketSequence
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.PacketSequence
+ */
 export const PacketSequence = {
   typeUrl: "/ibc.core.channel.v1.PacketSequence",
   encode(message: PacketSequence, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

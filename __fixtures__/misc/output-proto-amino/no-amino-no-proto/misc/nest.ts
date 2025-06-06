@@ -2,15 +2,35 @@ import { BinaryReader, BinaryWriter } from "../binary";
 import { isSet, DeepPartial } from "../helpers";
 import { JsonSafe } from "../json-safe";
 export const protobufPackage = "misc";
+/**
+ * @name TestNest
+ * @package misc
+ * @see proto type: misc.TestNest
+ */
 export interface TestNest {
   test: string;
 }
+/**
+ * @name TestNestSDKType
+ * @package misc
+ * @see proto type: misc.TestNest
+ */
 export interface TestNestSDKType {
   test: string;
 }
+/**
+ * @name TestNest_Graph
+ * @package misc
+ * @see proto type: misc.Graph
+ */
 export interface TestNest_Graph {
   name: string;
 }
+/**
+ * @name TestNest_GraphSDKType
+ * @package misc
+ * @see proto type: misc.Graph
+ */
 export interface TestNest_GraphSDKType {
   name: string;
 }
@@ -19,6 +39,11 @@ function createBaseTestNest(): TestNest {
     test: ""
   };
 }
+/**
+ * @name TestNest
+ * @package misc
+ * @see proto type: misc.TestNest
+ */
 export const TestNest = {
   typeUrl: "/misc.TestNest",
   encode(message: TestNest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -80,6 +105,11 @@ function createBaseTestNest_Graph(): TestNest_Graph {
     name: ""
   };
 }
+/**
+ * @name TestNest_Graph
+ * @package misc
+ * @see proto type: misc.Graph
+ */
 export const TestNest_Graph = {
   typeUrl: "/misc.Graph",
   encode(message: TestNest_Graph, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

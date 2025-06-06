@@ -4,18 +4,32 @@ import { BinaryReader, BinaryWriter } from "../../../binary.js";
 import { isSet, DeepPartial } from "../../../helpers.js";
 import { JsonSafe } from "../../../json-safe.js";
 export const protobufPackage = "cosmos.auth.v1beta1";
-/** GenesisState defines the auth module's genesis state. */
+/**
+ * GenesisState defines the auth module's genesis state.
+ * @name GenesisState
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the paramaters of the module. */
+  /**
+   * params defines all the paramaters of the module.
+  */
   params: Params;
-  /** accounts are the accounts present at genesis. */
+  /**
+   * accounts are the accounts present at genesis.
+  */
   accounts: Any[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.auth.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the auth module's genesis state. */
+/**
+ * GenesisState defines the auth module's genesis state.
+ * @name GenesisStateSDKType
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   accounts: AnySDKType[];
@@ -26,6 +40,12 @@ function createBaseGenesisState(): GenesisState {
     accounts: []
   };
 }
+/**
+ * GenesisState defines the auth module's genesis state.
+ * @name GenesisState
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.auth.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

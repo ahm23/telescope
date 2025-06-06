@@ -3,7 +3,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.txfees.v1beta1";
-/** GenesisState defines the txfees module's genesis state. */
+/**
+ * GenesisState defines the txfees module's genesis state.
+ * @name GenesisState
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.GenesisState
+ */
 export interface GenesisState {
   basedenom: string;
   feetokens: FeeToken[];
@@ -12,7 +17,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.txfees.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the txfees module's genesis state. */
+/**
+ * GenesisState defines the txfees module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   basedenom?: string;
   feetokens?: FeeTokenAmino[];
@@ -21,7 +31,12 @@ export interface GenesisStateAminoMsg {
   type: "osmosis/txfees/genesis-state";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the txfees module's genesis state. */
+/**
+ * GenesisState defines the txfees module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   basedenom: string;
   feetokens: FeeTokenSDKType[];
@@ -32,6 +47,12 @@ function createBaseGenesisState(): GenesisState {
     feetokens: []
   };
 }
+/**
+ * GenesisState defines the txfees module's genesis state.
+ * @name GenesisState
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.txfees.v1beta1.GenesisState",
   aminoType: "osmosis/txfees/genesis-state",

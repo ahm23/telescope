@@ -254,6 +254,9 @@ export function rollout_RolloutStatusToJSON(object: Rollout_RolloutStatus): stri
 /**
  * The full representation of a Service that is managed by
  * Google Service Management.
+ * @name ManagedService
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ManagedService
  */
 export interface ManagedService {
   /**
@@ -261,7 +264,9 @@ export interface ManagedService {
    * for naming requirements.
    */
   serviceName: string;
-  /** ID of the project that produces and owns this service. */
+  /**
+   * ID of the project that produces and owns this service.
+  */
   producerProjectId: string;
 }
 export interface ManagedServiceProtoMsg {
@@ -271,6 +276,9 @@ export interface ManagedServiceProtoMsg {
 /**
  * The full representation of a Service that is managed by
  * Google Service Management.
+ * @name ManagedServiceAmino
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ManagedService
  */
 export interface ManagedServiceAmino {
   /**
@@ -278,91 +286,155 @@ export interface ManagedServiceAmino {
    * for naming requirements.
    */
   service_name: string;
-  /** ID of the project that produces and owns this service. */
+  /**
+   * ID of the project that produces and owns this service.
+  */
   producer_project_id: string;
 }
 export interface ManagedServiceAminoMsg {
   type: "/google.api.servicemanagement.v1.ManagedService";
   value: ManagedServiceAmino;
 }
-/** The metadata associated with a long running operation resource. */
+/**
+ * The metadata associated with a long running operation resource.
+ * @name OperationMetadata
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.OperationMetadata
+ */
 export interface OperationMetadata {
   /**
    * The full name of the resources that this operation is directly
    * associated with.
    */
   resourceNames: string[];
-  /** Detailed status information for each step. The order is undetermined. */
+  /**
+   * Detailed status information for each step. The order is undetermined.
+  */
   steps: OperationMetadata_Step[];
-  /** Percentage of completion of this operation, ranging from 0 to 100. */
+  /**
+   * Percentage of completion of this operation, ranging from 0 to 100.
+  */
   progressPercentage: number;
-  /** The start time of the operation. */
+  /**
+   * The start time of the operation.
+  */
   startTime?: Date;
 }
 export interface OperationMetadataProtoMsg {
   typeUrl: "/google.api.servicemanagement.v1.OperationMetadata";
   value: Uint8Array;
 }
-/** The metadata associated with a long running operation resource. */
+/**
+ * The metadata associated with a long running operation resource.
+ * @name OperationMetadataAmino
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.OperationMetadata
+ */
 export interface OperationMetadataAmino {
   /**
    * The full name of the resources that this operation is directly
    * associated with.
    */
   resource_names: string[];
-  /** Detailed status information for each step. The order is undetermined. */
+  /**
+   * Detailed status information for each step. The order is undetermined.
+  */
   steps: OperationMetadata_StepAmino[];
-  /** Percentage of completion of this operation, ranging from 0 to 100. */
+  /**
+   * Percentage of completion of this operation, ranging from 0 to 100.
+  */
   progress_percentage: number;
-  /** The start time of the operation. */
+  /**
+   * The start time of the operation.
+  */
   start_time?: string;
 }
 export interface OperationMetadataAminoMsg {
   type: "/google.api.servicemanagement.v1.OperationMetadata";
   value: OperationMetadataAmino;
 }
-/** Represents the status of one operation step. */
+/**
+ * Represents the status of one operation step.
+ * @name OperationMetadata_Step
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.Step
+ */
 export interface OperationMetadata_Step {
-  /** The short description of the step. */
+  /**
+   * The short description of the step.
+  */
   description: string;
-  /** The status code. */
+  /**
+   * The status code.
+  */
   status: OperationMetadata_Status;
 }
 export interface OperationMetadata_StepProtoMsg {
   typeUrl: "/google.api.servicemanagement.v1.Step";
   value: Uint8Array;
 }
-/** Represents the status of one operation step. */
+/**
+ * Represents the status of one operation step.
+ * @name OperationMetadata_StepAmino
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.OperationMetadata_Step
+ */
 export interface OperationMetadata_StepAmino {
-  /** The short description of the step. */
+  /**
+   * The short description of the step.
+  */
   description: string;
-  /** The status code. */
+  /**
+   * The status code.
+  */
   status: OperationMetadata_Status;
 }
 export interface OperationMetadata_StepAminoMsg {
   type: "/google.api.servicemanagement.v1.Step";
   value: OperationMetadata_StepAmino;
 }
-/** Represents a diagnostic message (error or warning) */
+/**
+ * Represents a diagnostic message (error or warning)
+ * @name Diagnostic
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.Diagnostic
+ */
 export interface Diagnostic {
-  /** File name and line number of the error or warning. */
+  /**
+   * File name and line number of the error or warning.
+  */
   location: string;
-  /** The kind of diagnostic information provided. */
+  /**
+   * The kind of diagnostic information provided.
+  */
   kind: Diagnostic_Kind;
-  /** Message describing the error or warning. */
+  /**
+   * Message describing the error or warning.
+  */
   message: string;
 }
 export interface DiagnosticProtoMsg {
   typeUrl: "/google.api.servicemanagement.v1.Diagnostic";
   value: Uint8Array;
 }
-/** Represents a diagnostic message (error or warning) */
+/**
+ * Represents a diagnostic message (error or warning)
+ * @name DiagnosticAmino
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.Diagnostic
+ */
 export interface DiagnosticAmino {
-  /** File name and line number of the error or warning. */
+  /**
+   * File name and line number of the error or warning.
+  */
   location: string;
-  /** The kind of diagnostic information provided. */
+  /**
+   * The kind of diagnostic information provided.
+  */
   kind: Diagnostic_Kind;
-  /** Message describing the error or warning. */
+  /**
+   * Message describing the error or warning.
+  */
   message: string;
 }
 export interface DiagnosticAminoMsg {
@@ -372,6 +444,9 @@ export interface DiagnosticAminoMsg {
 /**
  * Represents a source file which is used to generate the service configuration
  * defined by `google.api.Service`.
+ * @name ConfigSource
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ConfigSource
  */
 export interface ConfigSource {
   /**
@@ -393,6 +468,9 @@ export interface ConfigSourceProtoMsg {
 /**
  * Represents a source file which is used to generate the service configuration
  * defined by `google.api.Service`.
+ * @name ConfigSourceAmino
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ConfigSource
  */
 export interface ConfigSourceAmino {
   /**
@@ -411,33 +489,60 @@ export interface ConfigSourceAminoMsg {
   type: "/google.api.servicemanagement.v1.ConfigSource";
   value: ConfigSourceAmino;
 }
-/** Generic specification of a source configuration file */
+/**
+ * Generic specification of a source configuration file
+ * @name ConfigFile
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ConfigFile
+ */
 export interface ConfigFile {
-  /** The file name of the configuration file (full or relative path). */
+  /**
+   * The file name of the configuration file (full or relative path).
+  */
   filePath: string;
-  /** The bytes that constitute the file. */
+  /**
+   * The bytes that constitute the file.
+  */
   fileContents: Uint8Array;
-  /** The type of configuration file this represents. */
+  /**
+   * The type of configuration file this represents.
+  */
   fileType: ConfigFile_FileType;
 }
 export interface ConfigFileProtoMsg {
   typeUrl: "/google.api.servicemanagement.v1.ConfigFile";
   value: Uint8Array;
 }
-/** Generic specification of a source configuration file */
+/**
+ * Generic specification of a source configuration file
+ * @name ConfigFileAmino
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ConfigFile
+ */
 export interface ConfigFileAmino {
-  /** The file name of the configuration file (full or relative path). */
+  /**
+   * The file name of the configuration file (full or relative path).
+  */
   file_path: string;
-  /** The bytes that constitute the file. */
+  /**
+   * The bytes that constitute the file.
+  */
   file_contents: string;
-  /** The type of configuration file this represents. */
+  /**
+   * The type of configuration file this represents.
+  */
   file_type: ConfigFile_FileType;
 }
 export interface ConfigFileAminoMsg {
   type: "/google.api.servicemanagement.v1.ConfigFile";
   value: ConfigFileAmino;
 }
-/** Represents a service configuration with its name and id. */
+/**
+ * Represents a service configuration with its name and id.
+ * @name ConfigRef
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ConfigRef
+ */
 export interface ConfigRef {
   /**
    * Resource name of a service config. It must have the following
@@ -449,7 +554,12 @@ export interface ConfigRefProtoMsg {
   typeUrl: "/google.api.servicemanagement.v1.ConfigRef";
   value: Uint8Array;
 }
-/** Represents a service configuration with its name and id. */
+/**
+ * Represents a service configuration with its name and id.
+ * @name ConfigRefAmino
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ConfigRef
+ */
 export interface ConfigRefAmino {
   /**
    * Resource name of a service config. It must have the following
@@ -466,6 +576,9 @@ export interface ConfigRefAminoMsg {
  * 
  * It contains a list of ConfigChanges based on the comparison between
  * two service configurations.
+ * @name ChangeReport
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ChangeReport
  */
 export interface ChangeReport {
   /**
@@ -486,6 +599,9 @@ export interface ChangeReportProtoMsg {
  * 
  * It contains a list of ConfigChanges based on the comparison between
  * two service configurations.
+ * @name ChangeReportAmino
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ChangeReport
  */
 export interface ChangeReportAmino {
   /**
@@ -505,6 +621,9 @@ export interface ChangeReportAminoMsg {
  * A rollout resource that defines how service configuration versions are pushed
  * to control plane systems. Typically, you create a new version of the
  * service config, and then create a Rollout to push the service config.
+ * @name Rollout
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.Rollout
  */
 export interface Rollout {
   /**
@@ -518,9 +637,13 @@ export interface Rollout {
    * An example of the generated rollout_id is '2016-02-16r1'
    */
   rolloutId: string;
-  /** Creation time of the rollout. Readonly. */
+  /**
+   * Creation time of the rollout. Readonly.
+  */
   createTime?: Date;
-  /** The user who created the Rollout. Readonly. */
+  /**
+   * The user who created the Rollout. Readonly.
+  */
   createdBy: string;
   /**
    * The status of this rollout. Readonly. In case of a failed rollout,
@@ -538,7 +661,9 @@ export interface Rollout {
    * Readonly.
    */
   deleteServiceStrategy?: Rollout_DeleteServiceStrategy;
-  /** The name of the service associated with this Rollout. */
+  /**
+   * The name of the service associated with this Rollout.
+  */
   serviceName: string;
 }
 export interface RolloutProtoMsg {
@@ -549,6 +674,9 @@ export interface RolloutProtoMsg {
  * A rollout resource that defines how service configuration versions are pushed
  * to control plane systems. Typically, you create a new version of the
  * service config, and then create a Rollout to push the service config.
+ * @name RolloutAmino
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.Rollout
  */
 export interface RolloutAmino {
   /**
@@ -562,9 +690,13 @@ export interface RolloutAmino {
    * An example of the generated rollout_id is '2016-02-16r1'
    */
   rollout_id: string;
-  /** Creation time of the rollout. Readonly. */
+  /**
+   * Creation time of the rollout. Readonly.
+  */
   create_time?: string;
-  /** The user who created the Rollout. Readonly. */
+  /**
+   * The user who created the Rollout. Readonly.
+  */
   created_by: string;
   /**
    * The status of this rollout. Readonly. In case of a failed rollout,
@@ -582,13 +714,20 @@ export interface RolloutAmino {
    * Readonly.
    */
   delete_service_strategy?: Rollout_DeleteServiceStrategyAmino;
-  /** The name of the service associated with this Rollout. */
+  /**
+   * The name of the service associated with this Rollout.
+  */
   service_name: string;
 }
 export interface RolloutAminoMsg {
   type: "/google.api.servicemanagement.v1.Rollout";
   value: RolloutAmino;
 }
+/**
+ * @name Rollout_TrafficPercentStrategy_PercentagesEntry
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.undefined
+ */
 export interface Rollout_TrafficPercentStrategy_PercentagesEntry {
   key: string;
   value: number;
@@ -597,6 +736,11 @@ export interface Rollout_TrafficPercentStrategy_PercentagesEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name Rollout_TrafficPercentStrategy_PercentagesEntryAmino
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.Rollout_TrafficPercentStrategy_PercentagesEntry
+ */
 export interface Rollout_TrafficPercentStrategy_PercentagesEntryAmino {
   key: string;
   value: number;
@@ -636,6 +780,9 @@ export interface Rollout_TrafficPercentStrategy_PercentagesEntryAminoMsg {
  *         }
  *       }
  *     }
+ * @name Rollout_TrafficPercentStrategy
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.TrafficPercentStrategy
  */
 export interface Rollout_TrafficPercentStrategy {
   /**
@@ -682,6 +829,9 @@ export interface Rollout_TrafficPercentStrategyProtoMsg {
  *         }
  *       }
  *     }
+ * @name Rollout_TrafficPercentStrategyAmino
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.Rollout_TrafficPercentStrategy
  */
 export interface Rollout_TrafficPercentStrategyAmino {
   /**
@@ -700,6 +850,9 @@ export interface Rollout_TrafficPercentStrategyAminoMsg {
 /**
  * Strategy used to delete a service. This strategy is a placeholder only
  * used by the system generated rollout to delete a service.
+ * @name Rollout_DeleteServiceStrategy
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.DeleteServiceStrategy
  */
 export interface Rollout_DeleteServiceStrategy {}
 export interface Rollout_DeleteServiceStrategyProtoMsg {
@@ -709,6 +862,9 @@ export interface Rollout_DeleteServiceStrategyProtoMsg {
 /**
  * Strategy used to delete a service. This strategy is a placeholder only
  * used by the system generated rollout to delete a service.
+ * @name Rollout_DeleteServiceStrategyAmino
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.Rollout_DeleteServiceStrategy
  */
 export interface Rollout_DeleteServiceStrategyAmino {}
 export interface Rollout_DeleteServiceStrategyAminoMsg {
@@ -721,6 +877,13 @@ function createBaseManagedService(): ManagedService {
     producerProjectId: ""
   };
 }
+/**
+ * The full representation of a Service that is managed by
+ * Google Service Management.
+ * @name ManagedService
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ManagedService
+ */
 export const ManagedService = {
   typeUrl: "/google.api.servicemanagement.v1.ManagedService",
   encode(message: ManagedService, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -798,6 +961,12 @@ function createBaseOperationMetadata(): OperationMetadata {
     startTime: undefined
   };
 }
+/**
+ * The metadata associated with a long running operation resource.
+ * @name OperationMetadata
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.OperationMetadata
+ */
 export const OperationMetadata = {
   typeUrl: "/google.api.servicemanagement.v1.OperationMetadata",
   encode(message: OperationMetadata, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -899,6 +1068,12 @@ function createBaseOperationMetadata_Step(): OperationMetadata_Step {
     status: 0
   };
 }
+/**
+ * Represents the status of one operation step.
+ * @name OperationMetadata_Step
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.Step
+ */
 export const OperationMetadata_Step = {
   typeUrl: "/google.api.servicemanagement.v1.Step",
   encode(message: OperationMetadata_Step, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -975,6 +1150,12 @@ function createBaseDiagnostic(): Diagnostic {
     message: ""
   };
 }
+/**
+ * Represents a diagnostic message (error or warning)
+ * @name Diagnostic
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.Diagnostic
+ */
 export const Diagnostic = {
   typeUrl: "/google.api.servicemanagement.v1.Diagnostic",
   encode(message: Diagnostic, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1061,6 +1242,13 @@ function createBaseConfigSource(): ConfigSource {
     files: []
   };
 }
+/**
+ * Represents a source file which is used to generate the service configuration
+ * defined by `google.api.Service`.
+ * @name ConfigSource
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ConfigSource
+ */
 export const ConfigSource = {
   typeUrl: "/google.api.servicemanagement.v1.ConfigSource",
   encode(message: ConfigSource, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1139,6 +1327,12 @@ function createBaseConfigFile(): ConfigFile {
     fileType: 0
   };
 }
+/**
+ * Generic specification of a source configuration file
+ * @name ConfigFile
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ConfigFile
+ */
 export const ConfigFile = {
   typeUrl: "/google.api.servicemanagement.v1.ConfigFile",
   encode(message: ConfigFile, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1224,6 +1418,12 @@ function createBaseConfigRef(): ConfigRef {
     name: ""
   };
 }
+/**
+ * Represents a service configuration with its name and id.
+ * @name ConfigRef
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ConfigRef
+ */
 export const ConfigRef = {
   typeUrl: "/google.api.servicemanagement.v1.ConfigRef",
   encode(message: ConfigRef, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1287,6 +1487,15 @@ function createBaseChangeReport(): ChangeReport {
     configChanges: []
   };
 }
+/**
+ * Change report associated with a particular service configuration.
+ * 
+ * It contains a list of ConfigChanges based on the comparison between
+ * two service configurations.
+ * @name ChangeReport
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.ChangeReport
+ */
 export const ChangeReport = {
   typeUrl: "/google.api.servicemanagement.v1.ChangeReport",
   encode(message: ChangeReport, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1358,6 +1567,14 @@ function createBaseRollout(): Rollout {
     serviceName: ""
   };
 }
+/**
+ * A rollout resource that defines how service configuration versions are pushed
+ * to control plane systems. Typically, you create a new version of the
+ * service config, and then create a Rollout to push the service config.
+ * @name Rollout
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.Rollout
+ */
 export const Rollout = {
   typeUrl: "/google.api.servicemanagement.v1.Rollout",
   encode(message: Rollout, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1488,6 +1705,11 @@ function createBaseRollout_TrafficPercentStrategy_PercentagesEntry(): Rollout_Tr
     value: 0
   };
 }
+/**
+ * @name Rollout_TrafficPercentStrategy_PercentagesEntry
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.undefined
+ */
 export const Rollout_TrafficPercentStrategy_PercentagesEntry = {
   encode(message: Rollout_TrafficPercentStrategy_PercentagesEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -1555,6 +1777,41 @@ function createBaseRollout_TrafficPercentStrategy(): Rollout_TrafficPercentStrat
     percentages: {}
   };
 }
+/**
+ * Strategy that specifies how clients of Google Service Controller want to
+ * send traffic to use different config versions. This is generally
+ * used by API proxy to split traffic based on your configured percentage for
+ * each config version.
+ * 
+ * One example of how to gradually rollout a new service configuration using
+ * this
+ * strategy:
+ * Day 1
+ * 
+ *     Rollout {
+ *       id: "example.googleapis.com/rollout_20160206"
+ *       traffic_percent_strategy {
+ *         percentages: {
+ *           "example.googleapis.com/20160201": 70.00
+ *           "example.googleapis.com/20160206": 30.00
+ *         }
+ *       }
+ *     }
+ * 
+ * Day 2
+ * 
+ *     Rollout {
+ *       id: "example.googleapis.com/rollout_20160207"
+ *       traffic_percent_strategy: {
+ *         percentages: {
+ *           "example.googleapis.com/20160206": 100.00
+ *         }
+ *       }
+ *     }
+ * @name Rollout_TrafficPercentStrategy
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.TrafficPercentStrategy
+ */
 export const Rollout_TrafficPercentStrategy = {
   typeUrl: "/google.api.servicemanagement.v1.TrafficPercentStrategy",
   encode(message: Rollout_TrafficPercentStrategy, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1639,6 +1896,13 @@ export const Rollout_TrafficPercentStrategy = {
 function createBaseRollout_DeleteServiceStrategy(): Rollout_DeleteServiceStrategy {
   return {};
 }
+/**
+ * Strategy used to delete a service. This strategy is a placeholder only
+ * used by the system generated rollout to delete a service.
+ * @name Rollout_DeleteServiceStrategy
+ * @package google.api.servicemanagement.v1
+ * @see proto type: google.api.servicemanagement.v1.DeleteServiceStrategy
+ */
 export const Rollout_DeleteServiceStrategy = {
   typeUrl: "/google.api.servicemanagement.v1.DeleteServiceStrategy",
   encode(_: Rollout_DeleteServiceStrategy, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

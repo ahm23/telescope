@@ -1,7 +1,12 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 export const protobufPackage = "cosmos.params.v1beta1";
-/** ParameterChangeProposal defines a proposal to change one or more parameters. */
+/**
+ * ParameterChangeProposal defines a proposal to change one or more parameters.
+ * @name ParameterChangeProposal
+ * @package cosmos.params.v1beta1
+ * @see proto type: cosmos.params.v1beta1.ParameterChangeProposal
+ */
 export interface ParameterChangeProposal {
   title: string;
   description: string;
@@ -11,13 +16,23 @@ export interface ParameterChangeProposalProtoMsg {
   typeUrl: "/cosmos.params.v1beta1.ParameterChangeProposal";
   value: Uint8Array;
 }
-/** ParameterChangeProposal defines a proposal to change one or more parameters. */
+/**
+ * ParameterChangeProposal defines a proposal to change one or more parameters.
+ * @name ParameterChangeProposalAmino
+ * @package cosmos.params.v1beta1
+ * @see proto type: cosmos.params.v1beta1.ParameterChangeProposal
+ */
 export interface ParameterChangeProposalAmino {
   title?: string;
   description?: string;
   changes?: ParamChangeAmino[];
 }
-/** ParameterChangeProposal defines a proposal to change one or more parameters. */
+/**
+ * ParameterChangeProposal defines a proposal to change one or more parameters.
+ * @name ParameterChangeProposalSDKType
+ * @package cosmos.params.v1beta1
+ * @see proto type: cosmos.params.v1beta1.ParameterChangeProposal
+ */
 export interface ParameterChangeProposalSDKType {
   title: string;
   description: string;
@@ -26,6 +41,9 @@ export interface ParameterChangeProposalSDKType {
 /**
  * ParamChange defines an individual parameter change, for use in
  * ParameterChangeProposal.
+ * @name ParamChange
+ * @package cosmos.params.v1beta1
+ * @see proto type: cosmos.params.v1beta1.ParamChange
  */
 export interface ParamChange {
   subspace: string;
@@ -39,6 +57,9 @@ export interface ParamChangeProtoMsg {
 /**
  * ParamChange defines an individual parameter change, for use in
  * ParameterChangeProposal.
+ * @name ParamChangeAmino
+ * @package cosmos.params.v1beta1
+ * @see proto type: cosmos.params.v1beta1.ParamChange
  */
 export interface ParamChangeAmino {
   subspace?: string;
@@ -48,6 +69,9 @@ export interface ParamChangeAmino {
 /**
  * ParamChange defines an individual parameter change, for use in
  * ParameterChangeProposal.
+ * @name ParamChangeSDKType
+ * @package cosmos.params.v1beta1
+ * @see proto type: cosmos.params.v1beta1.ParamChange
  */
 export interface ParamChangeSDKType {
   subspace: string;
@@ -61,6 +85,12 @@ function createBaseParameterChangeProposal(): ParameterChangeProposal {
     changes: []
   };
 }
+/**
+ * ParameterChangeProposal defines a proposal to change one or more parameters.
+ * @name ParameterChangeProposal
+ * @package cosmos.params.v1beta1
+ * @see proto type: cosmos.params.v1beta1.ParameterChangeProposal
+ */
 export const ParameterChangeProposal = {
   typeUrl: "/cosmos.params.v1beta1.ParameterChangeProposal",
   aminoType: "cosmos-sdk/ParameterChangeProposal",
@@ -173,6 +203,13 @@ function createBaseParamChange(): ParamChange {
     value: ""
   };
 }
+/**
+ * ParamChange defines an individual parameter change, for use in
+ * ParameterChangeProposal.
+ * @name ParamChange
+ * @package cosmos.params.v1beta1
+ * @see proto type: cosmos.params.v1beta1.ParamChange
+ */
 export const ParamChange = {
   typeUrl: "/cosmos.params.v1beta1.ParamChange",
   aminoType: "cosmos-sdk/ParamChange",

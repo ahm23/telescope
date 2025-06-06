@@ -4,7 +4,7 @@ import { QueryParamsRequest, QueryParamsResponse, QueryValidatorOutstandingRewar
  * Params queries params of the distribution module.
  * @name getCosmosDistributionV1beta1Params
  * @package cosmos.distribution.v1beta1
- * @see protoservice: cosmos.distribution.v1beta1.Params
+ * @see proto service: cosmos.distribution.v1beta1.Params
  */
 export const getCosmosDistributionV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
@@ -16,7 +16,7 @@ export const getCosmosDistributionV1beta1Params = buildQuery<QueryParamsRequest,
  * ValidatorOutstandingRewards queries rewards of a validator address.
  * @name getValidatorOutstandingRewards
  * @package cosmos.distribution.v1beta1
- * @see protoservice: cosmos.distribution.v1beta1.ValidatorOutstandingRewards
+ * @see proto service: cosmos.distribution.v1beta1.ValidatorOutstandingRewards
  */
 export const getValidatorOutstandingRewards = buildQuery<QueryValidatorOutstandingRewardsRequest, QueryValidatorOutstandingRewardsResponse>({
   encode: QueryValidatorOutstandingRewardsRequest.encode,
@@ -28,7 +28,7 @@ export const getValidatorOutstandingRewards = buildQuery<QueryValidatorOutstandi
  * ValidatorCommission queries accumulated commission for a validator.
  * @name getValidatorCommission
  * @package cosmos.distribution.v1beta1
- * @see protoservice: cosmos.distribution.v1beta1.ValidatorCommission
+ * @see proto service: cosmos.distribution.v1beta1.ValidatorCommission
  */
 export const getValidatorCommission = buildQuery<QueryValidatorCommissionRequest, QueryValidatorCommissionResponse>({
   encode: QueryValidatorCommissionRequest.encode,
@@ -40,7 +40,7 @@ export const getValidatorCommission = buildQuery<QueryValidatorCommissionRequest
  * ValidatorSlashes queries slash events of a validator.
  * @name getValidatorSlashes
  * @package cosmos.distribution.v1beta1
- * @see protoservice: cosmos.distribution.v1beta1.ValidatorSlashes
+ * @see proto service: cosmos.distribution.v1beta1.ValidatorSlashes
  */
 export const getValidatorSlashes = buildQuery<QueryValidatorSlashesRequest, QueryValidatorSlashesResponse>({
   encode: QueryValidatorSlashesRequest.encode,
@@ -52,7 +52,7 @@ export const getValidatorSlashes = buildQuery<QueryValidatorSlashesRequest, Quer
  * DelegationRewards queries the total rewards accrued by a delegation.
  * @name getDelegationRewards
  * @package cosmos.distribution.v1beta1
- * @see protoservice: cosmos.distribution.v1beta1.DelegationRewards
+ * @see proto service: cosmos.distribution.v1beta1.DelegationRewards
  */
 export const getDelegationRewards = buildQuery<QueryDelegationRewardsRequest, QueryDelegationRewardsResponse>({
   encode: QueryDelegationRewardsRequest.encode,
@@ -65,7 +65,7 @@ export const getDelegationRewards = buildQuery<QueryDelegationRewardsRequest, Qu
  * validator.
  * @name getDelegationTotalRewards
  * @package cosmos.distribution.v1beta1
- * @see protoservice: cosmos.distribution.v1beta1.DelegationTotalRewards
+ * @see proto service: cosmos.distribution.v1beta1.DelegationTotalRewards
  */
 export const getDelegationTotalRewards = buildQuery<QueryDelegationTotalRewardsRequest, QueryDelegationTotalRewardsResponse>({
   encode: QueryDelegationTotalRewardsRequest.encode,
@@ -77,7 +77,7 @@ export const getDelegationTotalRewards = buildQuery<QueryDelegationTotalRewardsR
  * DelegatorValidators queries the validators of a delegator.
  * @name getDelegatorValidators
  * @package cosmos.distribution.v1beta1
- * @see protoservice: cosmos.distribution.v1beta1.DelegatorValidators
+ * @see proto service: cosmos.distribution.v1beta1.DelegatorValidators
  */
 export const getDelegatorValidators = buildQuery<QueryDelegatorValidatorsRequest, QueryDelegatorValidatorsResponse>({
   encode: QueryDelegatorValidatorsRequest.encode,
@@ -89,7 +89,7 @@ export const getDelegatorValidators = buildQuery<QueryDelegatorValidatorsRequest
  * DelegatorWithdrawAddress queries withdraw address of a delegator.
  * @name getDelegatorWithdrawAddress
  * @package cosmos.distribution.v1beta1
- * @see protoservice: cosmos.distribution.v1beta1.DelegatorWithdrawAddress
+ * @see proto service: cosmos.distribution.v1beta1.DelegatorWithdrawAddress
  */
 export const getDelegatorWithdrawAddress = buildQuery<QueryDelegatorWithdrawAddressRequest, QueryDelegatorWithdrawAddressResponse>({
   encode: QueryDelegatorWithdrawAddressRequest.encode,
@@ -101,7 +101,7 @@ export const getDelegatorWithdrawAddress = buildQuery<QueryDelegatorWithdrawAddr
  * CommunityPool queries the community pool coins.
  * @name getCommunityPool
  * @package cosmos.distribution.v1beta1
- * @see protoservice: cosmos.distribution.v1beta1.CommunityPool
+ * @see proto service: cosmos.distribution.v1beta1.CommunityPool
  */
 export const getCommunityPool = buildQuery<QueryCommunityPoolRequest, QueryCommunityPoolResponse>({
   encode: QueryCommunityPoolRequest.encode,

@@ -55,7 +55,12 @@ export function tailLogEntriesResponse_SuppressionInfo_ReasonToJSON(object: Tail
       return "UNRECOGNIZED";
   }
 }
-/** The parameters to DeleteLog. */
+/**
+ * The parameters to DeleteLog.
+ * @name DeleteLogRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteLogRequest
+ */
 export interface DeleteLogRequest {
   /**
    * Required. The resource name of the log to delete:
@@ -78,7 +83,12 @@ export interface DeleteLogRequestProtoMsg {
   typeUrl: "/google.logging.v2.DeleteLogRequest";
   value: Uint8Array;
 }
-/** The parameters to DeleteLog. */
+/**
+ * The parameters to DeleteLog.
+ * @name DeleteLogRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteLogRequest
+ */
 export interface DeleteLogRequestAmino {
   /**
    * Required. The resource name of the log to delete:
@@ -101,10 +111,20 @@ export interface DeleteLogRequestAminoMsg {
   type: "/google.logging.v2.DeleteLogRequest";
   value: DeleteLogRequestAmino;
 }
-/** The parameters to DeleteLog. */
+/**
+ * The parameters to DeleteLog.
+ * @name DeleteLogRequestSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteLogRequest
+ */
 export interface DeleteLogRequestSDKType {
   log_name: string;
 }
+/**
+ * @name WriteLogEntriesRequest_LabelsEntry
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.undefined
+ */
 export interface WriteLogEntriesRequest_LabelsEntry {
   key: string;
   value: string;
@@ -113,6 +133,11 @@ export interface WriteLogEntriesRequest_LabelsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name WriteLogEntriesRequest_LabelsEntryAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesRequest_LabelsEntry
+ */
 export interface WriteLogEntriesRequest_LabelsEntryAmino {
   key?: string;
   value?: string;
@@ -121,11 +146,21 @@ export interface WriteLogEntriesRequest_LabelsEntryAminoMsg {
   type: string;
   value: WriteLogEntriesRequest_LabelsEntryAmino;
 }
+/**
+ * @name WriteLogEntriesRequest_LabelsEntrySDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.undefined
+ */
 export interface WriteLogEntriesRequest_LabelsEntrySDKType {
   key: string;
   value: string;
 }
-/** The parameters to WriteLogEntries. */
+/**
+ * The parameters to WriteLogEntries.
+ * @name WriteLogEntriesRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesRequest
+ */
 export interface WriteLogEntriesRequest {
   /**
    * Optional. A default log resource name that is assigned to all log entries
@@ -213,7 +248,12 @@ export interface WriteLogEntriesRequestProtoMsg {
   typeUrl: "/google.logging.v2.WriteLogEntriesRequest";
   value: Uint8Array;
 }
-/** The parameters to WriteLogEntries. */
+/**
+ * The parameters to WriteLogEntries.
+ * @name WriteLogEntriesRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesRequest
+ */
 export interface WriteLogEntriesRequestAmino {
   /**
    * Optional. A default log resource name that is assigned to all log entries
@@ -301,7 +341,12 @@ export interface WriteLogEntriesRequestAminoMsg {
   type: "/google.logging.v2.WriteLogEntriesRequest";
   value: WriteLogEntriesRequestAmino;
 }
-/** The parameters to WriteLogEntries. */
+/**
+ * The parameters to WriteLogEntries.
+ * @name WriteLogEntriesRequestSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesRequest
+ */
 export interface WriteLogEntriesRequestSDKType {
   log_name: string;
   resource?: MonitoredResourceSDKType;
@@ -312,20 +357,40 @@ export interface WriteLogEntriesRequestSDKType {
   partial_success: boolean;
   dry_run: boolean;
 }
-/** Result returned from WriteLogEntries. */
+/**
+ * Result returned from WriteLogEntries.
+ * @name WriteLogEntriesResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesResponse
+ */
 export interface WriteLogEntriesResponse {}
 export interface WriteLogEntriesResponseProtoMsg {
   typeUrl: "/google.logging.v2.WriteLogEntriesResponse";
   value: Uint8Array;
 }
-/** Result returned from WriteLogEntries. */
+/**
+ * Result returned from WriteLogEntries.
+ * @name WriteLogEntriesResponseAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesResponse
+ */
 export interface WriteLogEntriesResponseAmino {}
 export interface WriteLogEntriesResponseAminoMsg {
   type: "/google.logging.v2.WriteLogEntriesResponse";
   value: WriteLogEntriesResponseAmino;
 }
-/** Result returned from WriteLogEntries. */
+/**
+ * Result returned from WriteLogEntries.
+ * @name WriteLogEntriesResponseSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesResponse
+ */
 export interface WriteLogEntriesResponseSDKType {}
+/**
+ * @name WriteLogEntriesPartialErrors_LogEntryErrorsEntry
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.undefined
+ */
 export interface WriteLogEntriesPartialErrors_LogEntryErrorsEntry {
   key: number;
   value?: Status;
@@ -334,6 +399,11 @@ export interface WriteLogEntriesPartialErrors_LogEntryErrorsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name WriteLogEntriesPartialErrors_LogEntryErrorsEntryAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesPartialErrors_LogEntryErrorsEntry
+ */
 export interface WriteLogEntriesPartialErrors_LogEntryErrorsEntryAmino {
   key?: number;
   value?: StatusAmino;
@@ -342,11 +412,21 @@ export interface WriteLogEntriesPartialErrors_LogEntryErrorsEntryAminoMsg {
   type: string;
   value: WriteLogEntriesPartialErrors_LogEntryErrorsEntryAmino;
 }
+/**
+ * @name WriteLogEntriesPartialErrors_LogEntryErrorsEntrySDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.undefined
+ */
 export interface WriteLogEntriesPartialErrors_LogEntryErrorsEntrySDKType {
   key: number;
   value?: StatusSDKType;
 }
-/** Error details for WriteLogEntries with partial success. */
+/**
+ * Error details for WriteLogEntries with partial success.
+ * @name WriteLogEntriesPartialErrors
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesPartialErrors
+ */
 export interface WriteLogEntriesPartialErrors {
   /**
    * When `WriteLogEntriesRequest.partial_success` is true, records the error
@@ -364,7 +444,12 @@ export interface WriteLogEntriesPartialErrorsProtoMsg {
   typeUrl: "/google.logging.v2.WriteLogEntriesPartialErrors";
   value: Uint8Array;
 }
-/** Error details for WriteLogEntries with partial success. */
+/**
+ * Error details for WriteLogEntries with partial success.
+ * @name WriteLogEntriesPartialErrorsAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesPartialErrors
+ */
 export interface WriteLogEntriesPartialErrorsAmino {
   /**
    * When `WriteLogEntriesRequest.partial_success` is true, records the error
@@ -382,13 +467,23 @@ export interface WriteLogEntriesPartialErrorsAminoMsg {
   type: "/google.logging.v2.WriteLogEntriesPartialErrors";
   value: WriteLogEntriesPartialErrorsAmino;
 }
-/** Error details for WriteLogEntries with partial success. */
+/**
+ * Error details for WriteLogEntries with partial success.
+ * @name WriteLogEntriesPartialErrorsSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesPartialErrors
+ */
 export interface WriteLogEntriesPartialErrorsSDKType {
   log_entry_errors: {
     [key: number]: StatusSDKType;
   };
 }
-/** The parameters to `ListLogEntries`. */
+/**
+ * The parameters to `ListLogEntries`.
+ * @name ListLogEntriesRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogEntriesRequest
+ */
 export interface ListLogEntriesRequest {
   /**
    * Required. Names of one or more parent resources from which to
@@ -447,7 +542,12 @@ export interface ListLogEntriesRequestProtoMsg {
   typeUrl: "/google.logging.v2.ListLogEntriesRequest";
   value: Uint8Array;
 }
-/** The parameters to `ListLogEntries`. */
+/**
+ * The parameters to `ListLogEntries`.
+ * @name ListLogEntriesRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogEntriesRequest
+ */
 export interface ListLogEntriesRequestAmino {
   /**
    * Required. Names of one or more parent resources from which to
@@ -506,7 +606,12 @@ export interface ListLogEntriesRequestAminoMsg {
   type: "/google.logging.v2.ListLogEntriesRequest";
   value: ListLogEntriesRequestAmino;
 }
-/** The parameters to `ListLogEntries`. */
+/**
+ * The parameters to `ListLogEntries`.
+ * @name ListLogEntriesRequestSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogEntriesRequest
+ */
 export interface ListLogEntriesRequestSDKType {
   resource_names: string[];
   filter: string;
@@ -514,7 +619,12 @@ export interface ListLogEntriesRequestSDKType {
   page_size: number;
   page_token: string;
 }
-/** Result returned from `ListLogEntries`. */
+/**
+ * Result returned from `ListLogEntries`.
+ * @name ListLogEntriesResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogEntriesResponse
+ */
 export interface ListLogEntriesResponse {
   /**
    * A list of log entries.  If `entries` is empty, `nextPageToken` may still be
@@ -540,7 +650,12 @@ export interface ListLogEntriesResponseProtoMsg {
   typeUrl: "/google.logging.v2.ListLogEntriesResponse";
   value: Uint8Array;
 }
-/** Result returned from `ListLogEntries`. */
+/**
+ * Result returned from `ListLogEntries`.
+ * @name ListLogEntriesResponseAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogEntriesResponse
+ */
 export interface ListLogEntriesResponseAmino {
   /**
    * A list of log entries.  If `entries` is empty, `nextPageToken` may still be
@@ -566,12 +681,22 @@ export interface ListLogEntriesResponseAminoMsg {
   type: "/google.logging.v2.ListLogEntriesResponse";
   value: ListLogEntriesResponseAmino;
 }
-/** Result returned from `ListLogEntries`. */
+/**
+ * Result returned from `ListLogEntries`.
+ * @name ListLogEntriesResponseSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogEntriesResponse
+ */
 export interface ListLogEntriesResponseSDKType {
   entries: LogEntrySDKType[];
   next_page_token: string;
 }
-/** The parameters to ListMonitoredResourceDescriptors */
+/**
+ * The parameters to ListMonitoredResourceDescriptors
+ * @name ListMonitoredResourceDescriptorsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListMonitoredResourceDescriptorsRequest
+ */
 export interface ListMonitoredResourceDescriptorsRequest {
   /**
    * Optional. The maximum number of results to return from this request.
@@ -591,7 +716,12 @@ export interface ListMonitoredResourceDescriptorsRequestProtoMsg {
   typeUrl: "/google.logging.v2.ListMonitoredResourceDescriptorsRequest";
   value: Uint8Array;
 }
-/** The parameters to ListMonitoredResourceDescriptors */
+/**
+ * The parameters to ListMonitoredResourceDescriptors
+ * @name ListMonitoredResourceDescriptorsRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListMonitoredResourceDescriptorsRequest
+ */
 export interface ListMonitoredResourceDescriptorsRequestAmino {
   /**
    * Optional. The maximum number of results to return from this request.
@@ -611,14 +741,26 @@ export interface ListMonitoredResourceDescriptorsRequestAminoMsg {
   type: "/google.logging.v2.ListMonitoredResourceDescriptorsRequest";
   value: ListMonitoredResourceDescriptorsRequestAmino;
 }
-/** The parameters to ListMonitoredResourceDescriptors */
+/**
+ * The parameters to ListMonitoredResourceDescriptors
+ * @name ListMonitoredResourceDescriptorsRequestSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListMonitoredResourceDescriptorsRequest
+ */
 export interface ListMonitoredResourceDescriptorsRequestSDKType {
   page_size: number;
   page_token: string;
 }
-/** Result returned from ListMonitoredResourceDescriptors. */
+/**
+ * Result returned from ListMonitoredResourceDescriptors.
+ * @name ListMonitoredResourceDescriptorsResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListMonitoredResourceDescriptorsResponse
+ */
 export interface ListMonitoredResourceDescriptorsResponse {
-  /** A list of resource descriptors. */
+  /**
+   * A list of resource descriptors.
+  */
   resourceDescriptors: MonitoredResourceDescriptor[];
   /**
    * If there might be more results than those appearing in this response, then
@@ -631,9 +773,16 @@ export interface ListMonitoredResourceDescriptorsResponseProtoMsg {
   typeUrl: "/google.logging.v2.ListMonitoredResourceDescriptorsResponse";
   value: Uint8Array;
 }
-/** Result returned from ListMonitoredResourceDescriptors. */
+/**
+ * Result returned from ListMonitoredResourceDescriptors.
+ * @name ListMonitoredResourceDescriptorsResponseAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListMonitoredResourceDescriptorsResponse
+ */
 export interface ListMonitoredResourceDescriptorsResponseAmino {
-  /** A list of resource descriptors. */
+  /**
+   * A list of resource descriptors.
+  */
   resource_descriptors?: MonitoredResourceDescriptorAmino[];
   /**
    * If there might be more results than those appearing in this response, then
@@ -646,12 +795,22 @@ export interface ListMonitoredResourceDescriptorsResponseAminoMsg {
   type: "/google.logging.v2.ListMonitoredResourceDescriptorsResponse";
   value: ListMonitoredResourceDescriptorsResponseAmino;
 }
-/** Result returned from ListMonitoredResourceDescriptors. */
+/**
+ * Result returned from ListMonitoredResourceDescriptors.
+ * @name ListMonitoredResourceDescriptorsResponseSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListMonitoredResourceDescriptorsResponse
+ */
 export interface ListMonitoredResourceDescriptorsResponseSDKType {
   resource_descriptors: MonitoredResourceDescriptorSDKType[];
   next_page_token: string;
 }
-/** The parameters to ListLogs. */
+/**
+ * The parameters to ListLogs.
+ * @name ListLogsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogsRequest
+ */
 export interface ListLogsRequest {
   /**
    * Required. The resource name that owns the logs:
@@ -696,7 +855,12 @@ export interface ListLogsRequestProtoMsg {
   typeUrl: "/google.logging.v2.ListLogsRequest";
   value: Uint8Array;
 }
-/** The parameters to ListLogs. */
+/**
+ * The parameters to ListLogs.
+ * @name ListLogsRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogsRequest
+ */
 export interface ListLogsRequestAmino {
   /**
    * Required. The resource name that owns the logs:
@@ -741,14 +905,24 @@ export interface ListLogsRequestAminoMsg {
   type: "/google.logging.v2.ListLogsRequest";
   value: ListLogsRequestAmino;
 }
-/** The parameters to ListLogs. */
+/**
+ * The parameters to ListLogs.
+ * @name ListLogsRequestSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogsRequest
+ */
 export interface ListLogsRequestSDKType {
   parent: string;
   page_size: number;
   page_token: string;
   resource_names: string[];
 }
-/** Result returned from ListLogs. */
+/**
+ * Result returned from ListLogs.
+ * @name ListLogsResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogsResponse
+ */
 export interface ListLogsResponse {
   /**
    * A list of log names. For example,
@@ -767,7 +941,12 @@ export interface ListLogsResponseProtoMsg {
   typeUrl: "/google.logging.v2.ListLogsResponse";
   value: Uint8Array;
 }
-/** Result returned from ListLogs. */
+/**
+ * Result returned from ListLogs.
+ * @name ListLogsResponseAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogsResponse
+ */
 export interface ListLogsResponseAmino {
   /**
    * A list of log names. For example,
@@ -786,12 +965,22 @@ export interface ListLogsResponseAminoMsg {
   type: "/google.logging.v2.ListLogsResponse";
   value: ListLogsResponseAmino;
 }
-/** Result returned from ListLogs. */
+/**
+ * Result returned from ListLogs.
+ * @name ListLogsResponseSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogsResponse
+ */
 export interface ListLogsResponseSDKType {
   log_names: string[];
   next_page_token: string;
 }
-/** The parameters to `TailLogEntries`. */
+/**
+ * The parameters to `TailLogEntries`.
+ * @name TailLogEntriesRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.TailLogEntriesRequest
+ */
 export interface TailLogEntriesRequest {
   /**
    * Required. Name of a parent resource from which to retrieve log entries:
@@ -831,7 +1020,12 @@ export interface TailLogEntriesRequestProtoMsg {
   typeUrl: "/google.logging.v2.TailLogEntriesRequest";
   value: Uint8Array;
 }
-/** The parameters to `TailLogEntries`. */
+/**
+ * The parameters to `TailLogEntries`.
+ * @name TailLogEntriesRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.TailLogEntriesRequest
+ */
 export interface TailLogEntriesRequestAmino {
   /**
    * Required. Name of a parent resource from which to retrieve log entries:
@@ -871,13 +1065,23 @@ export interface TailLogEntriesRequestAminoMsg {
   type: "/google.logging.v2.TailLogEntriesRequest";
   value: TailLogEntriesRequestAmino;
 }
-/** The parameters to `TailLogEntries`. */
+/**
+ * The parameters to `TailLogEntries`.
+ * @name TailLogEntriesRequestSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.TailLogEntriesRequest
+ */
 export interface TailLogEntriesRequestSDKType {
   resource_names: string[];
   filter: string;
   buffer_window?: DurationSDKType;
 }
-/** Result returned from `TailLogEntries`. */
+/**
+ * Result returned from `TailLogEntries`.
+ * @name TailLogEntriesResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.TailLogEntriesResponse
+ */
 export interface TailLogEntriesResponse {
   /**
    * A list of log entries. Each response in the stream will order entries with
@@ -898,7 +1102,12 @@ export interface TailLogEntriesResponseProtoMsg {
   typeUrl: "/google.logging.v2.TailLogEntriesResponse";
   value: Uint8Array;
 }
-/** Result returned from `TailLogEntries`. */
+/**
+ * Result returned from `TailLogEntries`.
+ * @name TailLogEntriesResponseAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.TailLogEntriesResponse
+ */
 export interface TailLogEntriesResponseAmino {
   /**
    * A list of log entries. Each response in the stream will order entries with
@@ -919,34 +1128,62 @@ export interface TailLogEntriesResponseAminoMsg {
   type: "/google.logging.v2.TailLogEntriesResponse";
   value: TailLogEntriesResponseAmino;
 }
-/** Result returned from `TailLogEntries`. */
+/**
+ * Result returned from `TailLogEntries`.
+ * @name TailLogEntriesResponseSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.TailLogEntriesResponse
+ */
 export interface TailLogEntriesResponseSDKType {
   entries: LogEntrySDKType[];
   suppression_info: TailLogEntriesResponse_SuppressionInfoSDKType[];
 }
-/** Information about entries that were omitted from the session. */
+/**
+ * Information about entries that were omitted from the session.
+ * @name TailLogEntriesResponse_SuppressionInfo
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.SuppressionInfo
+ */
 export interface TailLogEntriesResponse_SuppressionInfo {
-  /** The reason that entries were omitted from the session. */
+  /**
+   * The reason that entries were omitted from the session.
+  */
   reason: TailLogEntriesResponse_SuppressionInfo_Reason;
-  /** A lower bound on the count of entries omitted due to `reason`. */
+  /**
+   * A lower bound on the count of entries omitted due to `reason`.
+  */
   suppressedCount: number;
 }
 export interface TailLogEntriesResponse_SuppressionInfoProtoMsg {
   typeUrl: "/google.logging.v2.SuppressionInfo";
   value: Uint8Array;
 }
-/** Information about entries that were omitted from the session. */
+/**
+ * Information about entries that were omitted from the session.
+ * @name TailLogEntriesResponse_SuppressionInfoAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.TailLogEntriesResponse_SuppressionInfo
+ */
 export interface TailLogEntriesResponse_SuppressionInfoAmino {
-  /** The reason that entries were omitted from the session. */
+  /**
+   * The reason that entries were omitted from the session.
+  */
   reason?: TailLogEntriesResponse_SuppressionInfo_Reason;
-  /** A lower bound on the count of entries omitted due to `reason`. */
+  /**
+   * A lower bound on the count of entries omitted due to `reason`.
+  */
   suppressed_count?: number;
 }
 export interface TailLogEntriesResponse_SuppressionInfoAminoMsg {
   type: "/google.logging.v2.SuppressionInfo";
   value: TailLogEntriesResponse_SuppressionInfoAmino;
 }
-/** Information about entries that were omitted from the session. */
+/**
+ * Information about entries that were omitted from the session.
+ * @name TailLogEntriesResponse_SuppressionInfoSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.SuppressionInfo
+ */
 export interface TailLogEntriesResponse_SuppressionInfoSDKType {
   reason: TailLogEntriesResponse_SuppressionInfo_Reason;
   suppressed_count: number;
@@ -956,6 +1193,12 @@ function createBaseDeleteLogRequest(): DeleteLogRequest {
     logName: ""
   };
 }
+/**
+ * The parameters to DeleteLog.
+ * @name DeleteLogRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteLogRequest
+ */
 export const DeleteLogRequest = {
   typeUrl: "/google.logging.v2.DeleteLogRequest",
   encode(message: DeleteLogRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1020,6 +1263,11 @@ function createBaseWriteLogEntriesRequest_LabelsEntry(): WriteLogEntriesRequest_
     value: ""
   };
 }
+/**
+ * @name WriteLogEntriesRequest_LabelsEntry
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.undefined
+ */
 export const WriteLogEntriesRequest_LabelsEntry = {
   encode(message: WriteLogEntriesRequest_LabelsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -1092,6 +1340,12 @@ function createBaseWriteLogEntriesRequest(): WriteLogEntriesRequest {
     dryRun: false
   };
 }
+/**
+ * The parameters to WriteLogEntries.
+ * @name WriteLogEntriesRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesRequest
+ */
 export const WriteLogEntriesRequest = {
   typeUrl: "/google.logging.v2.WriteLogEntriesRequest",
   encode(message: WriteLogEntriesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1235,6 +1489,12 @@ export const WriteLogEntriesRequest = {
 function createBaseWriteLogEntriesResponse(): WriteLogEntriesResponse {
   return {};
 }
+/**
+ * Result returned from WriteLogEntries.
+ * @name WriteLogEntriesResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesResponse
+ */
 export const WriteLogEntriesResponse = {
   typeUrl: "/google.logging.v2.WriteLogEntriesResponse",
   encode(_: WriteLogEntriesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1288,6 +1548,11 @@ function createBaseWriteLogEntriesPartialErrors_LogEntryErrorsEntry(): WriteLogE
     value: undefined
   };
 }
+/**
+ * @name WriteLogEntriesPartialErrors_LogEntryErrorsEntry
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.undefined
+ */
 export const WriteLogEntriesPartialErrors_LogEntryErrorsEntry = {
   encode(message: WriteLogEntriesPartialErrors_LogEntryErrorsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== 0) {
@@ -1357,6 +1622,12 @@ function createBaseWriteLogEntriesPartialErrors(): WriteLogEntriesPartialErrors 
     logEntryErrors: {}
   };
 }
+/**
+ * Error details for WriteLogEntries with partial success.
+ * @name WriteLogEntriesPartialErrors
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.WriteLogEntriesPartialErrors
+ */
 export const WriteLogEntriesPartialErrors = {
   typeUrl: "/google.logging.v2.WriteLogEntriesPartialErrors",
   encode(message: WriteLogEntriesPartialErrors, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1447,6 +1718,12 @@ function createBaseListLogEntriesRequest(): ListLogEntriesRequest {
     pageToken: ""
   };
 }
+/**
+ * The parameters to `ListLogEntries`.
+ * @name ListLogEntriesRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogEntriesRequest
+ */
 export const ListLogEntriesRequest = {
   typeUrl: "/google.logging.v2.ListLogEntriesRequest",
   encode(message: ListLogEntriesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1557,6 +1834,12 @@ function createBaseListLogEntriesResponse(): ListLogEntriesResponse {
     nextPageToken: ""
   };
 }
+/**
+ * Result returned from `ListLogEntries`.
+ * @name ListLogEntriesResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogEntriesResponse
+ */
 export const ListLogEntriesResponse = {
   typeUrl: "/google.logging.v2.ListLogEntriesResponse",
   encode(message: ListLogEntriesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1634,6 +1917,12 @@ function createBaseListMonitoredResourceDescriptorsRequest(): ListMonitoredResou
     pageToken: ""
   };
 }
+/**
+ * The parameters to ListMonitoredResourceDescriptors
+ * @name ListMonitoredResourceDescriptorsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListMonitoredResourceDescriptorsRequest
+ */
 export const ListMonitoredResourceDescriptorsRequest = {
   typeUrl: "/google.logging.v2.ListMonitoredResourceDescriptorsRequest",
   encode(message: ListMonitoredResourceDescriptorsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1709,6 +1998,12 @@ function createBaseListMonitoredResourceDescriptorsResponse(): ListMonitoredReso
     nextPageToken: ""
   };
 }
+/**
+ * Result returned from ListMonitoredResourceDescriptors.
+ * @name ListMonitoredResourceDescriptorsResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListMonitoredResourceDescriptorsResponse
+ */
 export const ListMonitoredResourceDescriptorsResponse = {
   typeUrl: "/google.logging.v2.ListMonitoredResourceDescriptorsResponse",
   encode(message: ListMonitoredResourceDescriptorsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1788,6 +2083,12 @@ function createBaseListLogsRequest(): ListLogsRequest {
     resourceNames: []
   };
 }
+/**
+ * The parameters to ListLogs.
+ * @name ListLogsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogsRequest
+ */
 export const ListLogsRequest = {
   typeUrl: "/google.logging.v2.ListLogsRequest",
   encode(message: ListLogsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1887,6 +2188,12 @@ function createBaseListLogsResponse(): ListLogsResponse {
     nextPageToken: ""
   };
 }
+/**
+ * Result returned from ListLogs.
+ * @name ListLogsResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListLogsResponse
+ */
 export const ListLogsResponse = {
   typeUrl: "/google.logging.v2.ListLogsResponse",
   encode(message: ListLogsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1965,6 +2272,12 @@ function createBaseTailLogEntriesRequest(): TailLogEntriesRequest {
     bufferWindow: undefined
   };
 }
+/**
+ * The parameters to `TailLogEntries`.
+ * @name TailLogEntriesRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.TailLogEntriesRequest
+ */
 export const TailLogEntriesRequest = {
   typeUrl: "/google.logging.v2.TailLogEntriesRequest",
   encode(message: TailLogEntriesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2055,6 +2368,12 @@ function createBaseTailLogEntriesResponse(): TailLogEntriesResponse {
     suppressionInfo: []
   };
 }
+/**
+ * Result returned from `TailLogEntries`.
+ * @name TailLogEntriesResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.TailLogEntriesResponse
+ */
 export const TailLogEntriesResponse = {
   typeUrl: "/google.logging.v2.TailLogEntriesResponse",
   encode(message: TailLogEntriesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2134,6 +2453,12 @@ function createBaseTailLogEntriesResponse_SuppressionInfo(): TailLogEntriesRespo
     suppressedCount: 0
   };
 }
+/**
+ * Information about entries that were omitted from the session.
+ * @name TailLogEntriesResponse_SuppressionInfo
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.SuppressionInfo
+ */
 export const TailLogEntriesResponse_SuppressionInfo = {
   typeUrl: "/google.logging.v2.SuppressionInfo",
   encode(message: TailLogEntriesResponse_SuppressionInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

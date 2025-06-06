@@ -5,7 +5,7 @@ import { getDeployments, getDeployment, getGroup } from "./query.rpc.func";
  * Deployments queries deployments
  * @name useGetDeployments
  * @package akash.deployment.v1beta2
- * @see protoservice: akash.deployment.v1beta2.Deployments
+ * @see proto service: akash.deployment.v1beta2.Deployments
  */
 export const useGetDeployments = buildUseQuery<QueryDeploymentsRequest, QueryDeploymentsResponse>({
   builderQueryFn: getDeployments,
@@ -15,7 +15,7 @@ export const useGetDeployments = buildUseQuery<QueryDeploymentsRequest, QueryDep
  * Deployment queries deployment details
  * @name useGetDeployment
  * @package akash.deployment.v1beta2
- * @see protoservice: akash.deployment.v1beta2.Deployment
+ * @see proto service: akash.deployment.v1beta2.Deployment
  */
 export const useGetDeployment = buildUseQuery<QueryDeploymentRequest, QueryDeploymentResponse>({
   builderQueryFn: getDeployment,
@@ -25,7 +25,7 @@ export const useGetDeployment = buildUseQuery<QueryDeploymentRequest, QueryDeplo
  * Group queries group details
  * @name useGetGroup
  * @package akash.deployment.v1beta2
- * @see protoservice: akash.deployment.v1beta2.Group
+ * @see proto service: akash.deployment.v1beta2.Group
  */
 export const useGetGroup = buildUseQuery<QueryGroupRequest, QueryGroupResponse>({
   builderQueryFn: getGroup,

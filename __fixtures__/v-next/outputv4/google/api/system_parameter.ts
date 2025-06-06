@@ -9,6 +9,9 @@ export const protobufPackage = "google.api";
  * system, not by an individual API. It is typically mapped to an HTTP header
  * and/or a URL query parameter. This configuration specifies which methods
  * change the names of the system parameters.
+ * @name SystemParameters
+ * @package google.api
+ * @see proto type: google.api.SystemParameters
  */
 export interface SystemParameters {
   /**
@@ -55,6 +58,9 @@ export interface SystemParametersProtoMsg {
  * system, not by an individual API. It is typically mapped to an HTTP header
  * and/or a URL query parameter. This configuration specifies which methods
  * change the names of the system parameters.
+ * @name SystemParametersSDKType
+ * @package google.api
+ * @see proto type: google.api.SystemParameters
  */
 export interface SystemParametersSDKType {
   rules: SystemParameterRuleSDKType[];
@@ -62,6 +68,9 @@ export interface SystemParametersSDKType {
 /**
  * Define a system parameter rule mapping system parameter definitions to
  * methods.
+ * @name SystemParameterRule
+ * @package google.api
+ * @see proto type: google.api.SystemParameterRule
  */
 export interface SystemParameterRule {
   /**
@@ -87,6 +96,9 @@ export interface SystemParameterRuleProtoMsg {
 /**
  * Define a system parameter rule mapping system parameter definitions to
  * methods.
+ * @name SystemParameterRuleSDKType
+ * @package google.api
+ * @see proto type: google.api.SystemParameterRule
  */
 export interface SystemParameterRuleSDKType {
   selector: string;
@@ -96,9 +108,14 @@ export interface SystemParameterRuleSDKType {
  * Define a parameter's name and location. The parameter may be passed as either
  * an HTTP header or a URL query parameter, and if both are passed the behavior
  * is implementation-dependent.
+ * @name SystemParameter
+ * @package google.api
+ * @see proto type: google.api.SystemParameter
  */
 export interface SystemParameter {
-  /** Define the name of the parameter, such as "api_key" . It is case sensitive. */
+  /**
+   * Define the name of the parameter, such as "api_key" . It is case sensitive.
+  */
   name: string;
   /**
    * Define the HTTP header name to use for the parameter. It is case
@@ -119,6 +136,9 @@ export interface SystemParameterProtoMsg {
  * Define a parameter's name and location. The parameter may be passed as either
  * an HTTP header or a URL query parameter, and if both are passed the behavior
  * is implementation-dependent.
+ * @name SystemParameterSDKType
+ * @package google.api
+ * @see proto type: google.api.SystemParameter
  */
 export interface SystemParameterSDKType {
   name: string;
@@ -130,6 +150,17 @@ function createBaseSystemParameters(): SystemParameters {
     rules: []
   };
 }
+/**
+ * ### System parameter configuration
+ * 
+ * A system parameter is a special kind of parameter defined by the API
+ * system, not by an individual API. It is typically mapped to an HTTP header
+ * and/or a URL query parameter. This configuration specifies which methods
+ * change the names of the system parameters.
+ * @name SystemParameters
+ * @package google.api
+ * @see proto type: google.api.SystemParameters
+ */
 export const SystemParameters = {
   typeUrl: "/google.api.SystemParameters",
   encode(message: SystemParameters, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -229,6 +260,13 @@ function createBaseSystemParameterRule(): SystemParameterRule {
     parameters: []
   };
 }
+/**
+ * Define a system parameter rule mapping system parameter definitions to
+ * methods.
+ * @name SystemParameterRule
+ * @package google.api
+ * @see proto type: google.api.SystemParameterRule
+ */
 export const SystemParameterRule = {
   typeUrl: "/google.api.SystemParameterRule",
   encode(message: SystemParameterRule, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -345,6 +383,14 @@ function createBaseSystemParameter(): SystemParameter {
     urlQueryParameter: ""
   };
 }
+/**
+ * Define a parameter's name and location. The parameter may be passed as either
+ * an HTTP header or a URL query parameter, and if both are passed the behavior
+ * is implementation-dependent.
+ * @name SystemParameter
+ * @package google.api
+ * @see proto type: google.api.SystemParameter
+ */
 export const SystemParameter = {
   typeUrl: "/google.api.SystemParameter",
   encode(message: SystemParameter, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

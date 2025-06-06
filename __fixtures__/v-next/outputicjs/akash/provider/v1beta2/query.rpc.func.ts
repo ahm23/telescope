@@ -4,7 +4,7 @@ import { QueryProvidersRequest, QueryProvidersResponse, QueryProviderRequest, Qu
  * Providers queries providers
  * @name getProviders
  * @package akash.provider.v1beta2
- * @see protoservice: akash.provider.v1beta2.Providers
+ * @see proto service: akash.provider.v1beta2.Providers
  */
 export const getProviders = buildQuery<QueryProvidersRequest, QueryProvidersResponse>({
   encode: QueryProvidersRequest.encode,
@@ -16,7 +16,7 @@ export const getProviders = buildQuery<QueryProvidersRequest, QueryProvidersResp
  * Provider queries provider details
  * @name getProvider
  * @package akash.provider.v1beta2
- * @see protoservice: akash.provider.v1beta2.Provider
+ * @see proto service: akash.provider.v1beta2.Provider
  */
 export const getProvider = buildQuery<QueryProviderRequest, QueryProviderResponse>({
   encode: QueryProviderRequest.encode,

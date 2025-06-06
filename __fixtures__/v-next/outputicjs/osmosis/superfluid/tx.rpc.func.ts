@@ -4,7 +4,7 @@ import { MsgSuperfluidDelegate, MsgSuperfluidUndelegate, MsgSuperfluidUnbondLock
  * Execute superfluid delegation for a lockup
  * @name superfluidDelegate
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidDelegate
+ * @see proto service: osmosis.superfluid.SuperfluidDelegate
  */
 export const superfluidDelegate = buildTx<MsgSuperfluidDelegate>({
   msg: MsgSuperfluidDelegate
@@ -13,7 +13,7 @@ export const superfluidDelegate = buildTx<MsgSuperfluidDelegate>({
  * Execute superfluid undelegation for a lockup
  * @name superfluidUndelegate
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidUndelegate
+ * @see proto service: osmosis.superfluid.SuperfluidUndelegate
  */
 export const superfluidUndelegate = buildTx<MsgSuperfluidUndelegate>({
   msg: MsgSuperfluidUndelegate
@@ -23,7 +23,7 @@ export const superfluidUndelegate = buildTx<MsgSuperfluidUndelegate>({
  * also unbond the underlying lock.
  * @name superfluidUnbondLock
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidUnbondLock
+ * @see proto service: osmosis.superfluid.SuperfluidUnbondLock
  */
 export const superfluidUnbondLock = buildTx<MsgSuperfluidUnbondLock>({
   msg: MsgSuperfluidUnbondLock
@@ -32,7 +32,7 @@ export const superfluidUnbondLock = buildTx<MsgSuperfluidUnbondLock>({
  * Execute lockup lock and superfluid delegation in a single msg
  * @name lockAndSuperfluidDelegate
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.LockAndSuperfluidDelegate
+ * @see proto service: osmosis.superfluid.LockAndSuperfluidDelegate
  */
 export const lockAndSuperfluidDelegate = buildTx<MsgLockAndSuperfluidDelegate>({
   msg: MsgLockAndSuperfluidDelegate
@@ -40,7 +40,7 @@ export const lockAndSuperfluidDelegate = buildTx<MsgLockAndSuperfluidDelegate>({
 /**
  * @name unPoolWhitelistedPool
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.UnPoolWhitelistedPool
+ * @see proto service: osmosis.superfluid.UnPoolWhitelistedPool
  */
 export const unPoolWhitelistedPool = buildTx<MsgUnPoolWhitelistedPool>({
   msg: MsgUnPoolWhitelistedPool

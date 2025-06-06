@@ -4,7 +4,7 @@ import { QueryEvidenceRequest, QueryEvidenceResponse, QueryAllEvidenceRequest, Q
  * Evidence queries evidence based on evidence hash.
  * @name getEvidence
  * @package cosmos.evidence.v1beta1
- * @see protoservice: cosmos.evidence.v1beta1.Evidence
+ * @see proto service: cosmos.evidence.v1beta1.Evidence
  */
 export const getEvidence = buildQuery<QueryEvidenceRequest, QueryEvidenceResponse>({
   encode: QueryEvidenceRequest.encode,
@@ -16,7 +16,7 @@ export const getEvidence = buildQuery<QueryEvidenceRequest, QueryEvidenceRespons
  * AllEvidence queries all evidence.
  * @name getAllEvidence
  * @package cosmos.evidence.v1beta1
- * @see protoservice: cosmos.evidence.v1beta1.AllEvidence
+ * @see proto service: cosmos.evidence.v1beta1.AllEvidence
  */
 export const getAllEvidence = buildQuery<QueryAllEvidenceRequest, QueryAllEvidenceResponse>({
   encode: QueryAllEvidenceRequest.encode,

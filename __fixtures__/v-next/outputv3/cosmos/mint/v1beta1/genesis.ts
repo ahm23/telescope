@@ -2,25 +2,48 @@ import { Minter, MinterAmino, MinterSDKType, Params, ParamsAmino, ParamsSDKType 
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 export const protobufPackage = "cosmos.mint.v1beta1";
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisState
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** minter is a space for holding current inflation information. */
+  /**
+   * minter is a space for holding current inflation information.
+  */
   minter: Minter;
-  /** params defines all the paramaters of the module. */
+  /**
+   * params defines all the paramaters of the module.
+  */
   params: Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.mint.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisStateAmino
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** minter is a space for holding current inflation information. */
+  /**
+   * minter is a space for holding current inflation information.
+  */
   minter?: MinterAmino;
-  /** params defines all the paramaters of the module. */
+  /**
+   * params defines all the paramaters of the module.
+  */
   params?: ParamsAmino;
 }
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisStateSDKType
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   minter: MinterSDKType;
   params: ParamsSDKType;
@@ -31,6 +54,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisState
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.mint.v1beta1.GenesisState",
   aminoType: "cosmos-sdk/GenesisState",

@@ -3,87 +3,145 @@ import { Timestamp } from "../../../google/protobuf/timestamp";
 import { Duration, DurationAmino } from "../../../google/protobuf/duration";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial, toTimestamp, fromTimestamp } from "../../../helpers";
-/** GenesisState define the claims module's genesis state. */
+/**
+ * GenesisState define the claims module's genesis state.
+ * @name GenesisState
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the parameters of the module. */
-  params: Params;
-  /** list of claim records with the corresponding airdrop recipient */
+  /**
+   * params defines all the parameters of the module.
+  */
+  params: EvmosClaimsV1Params;
+  /**
+   * list of claim records with the corresponding airdrop recipient
+  */
   claimsRecords: ClaimsRecordAddress[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/evmos.claims.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState define the claims module's genesis state. */
+/**
+ * GenesisState define the claims module's genesis state.
+ * @name GenesisStateAmino
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines all the parameters of the module. */
-  params: ParamsAmino;
-  /** list of claim records with the corresponding airdrop recipient */
+  /**
+   * params defines all the parameters of the module.
+  */
+  params: EvmosClaimsV1ParamsAmino;
+  /**
+   * list of claim records with the corresponding airdrop recipient
+  */
   claims_records: ClaimsRecordAddressAmino[];
 }
 export interface GenesisStateAminoMsg {
   type: "/evmos.claims.v1.GenesisState";
   value: GenesisStateAmino;
 }
-/** Params defines the claims module's parameters. */
-export interface Params {
-  /** enable claiming process */
+/**
+ * Params defines the claims module's parameters.
+ * @name EvmosClaimsV1Params
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.Params
+ */
+export interface EvmosClaimsV1Params {
+  /**
+   * enable claiming process
+  */
   enableClaims: boolean;
-  /** timestamp of the airdrop start */
+  /**
+   * timestamp of the airdrop start
+  */
   airdropStartTime: Date;
-  /** duration until decay of claimable tokens begin */
+  /**
+   * duration until decay of claimable tokens begin
+  */
   durationUntilDecay: Duration;
-  /** duration of the token claim decay period */
+  /**
+   * duration of the token claim decay period
+  */
   durationOfDecay: Duration;
-  /** denom of claimable coin */
+  /**
+   * denom of claimable coin
+  */
   claimsDenom: string;
   /**
    * list of authorized channel identifiers that can perform address
    * attestations via IBC.
    */
   authorizedChannels: string[];
-  /** list of channel identifiers from EVM compatible chains */
+  /**
+   * list of channel identifiers from EVM compatible chains
+  */
   evmChannels: string[];
 }
-export interface ParamsProtoMsg {
+export interface EvmosClaimsV1ParamsProtoMsg {
   typeUrl: "/evmos.claims.v1.Params";
   value: Uint8Array;
 }
-/** Params defines the claims module's parameters. */
-export interface ParamsAmino {
-  /** enable claiming process */
+/**
+ * Params defines the claims module's parameters.
+ * @name EvmosClaimsV1ParamsAmino
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.EvmosClaimsV1Params
+ */
+export interface EvmosClaimsV1ParamsAmino {
+  /**
+   * enable claiming process
+  */
   enable_claims: boolean;
-  /** timestamp of the airdrop start */
+  /**
+   * timestamp of the airdrop start
+  */
   airdrop_start_time: string;
-  /** duration until decay of claimable tokens begin */
+  /**
+   * duration until decay of claimable tokens begin
+  */
   duration_until_decay: DurationAmino;
-  /** duration of the token claim decay period */
+  /**
+   * duration of the token claim decay period
+  */
   duration_of_decay: DurationAmino;
-  /** denom of claimable coin */
+  /**
+   * denom of claimable coin
+  */
   claims_denom: string;
   /**
    * list of authorized channel identifiers that can perform address
    * attestations via IBC.
    */
   authorized_channels: string[];
-  /** list of channel identifiers from EVM compatible chains */
+  /**
+   * list of channel identifiers from EVM compatible chains
+  */
   evm_channels: string[];
 }
-export interface ParamsAminoMsg {
+export interface EvmosClaimsV1ParamsAminoMsg {
   type: "/evmos.claims.v1.Params";
-  value: ParamsAmino;
+  value: EvmosClaimsV1ParamsAmino;
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({}),
+    params: EvmosClaimsV1Params.fromPartial({}),
     claimsRecords: []
   };
 }
+/**
+ * GenesisState define the claims module's genesis state.
+ * @name GenesisState
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/evmos.claims.v1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      EvmosClaimsV1Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.claimsRecords) {
       ClaimsRecordAddress.encode(v!, writer.uint32(18).fork()).ldelim();
@@ -98,7 +156,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = EvmosClaimsV1Params.decode(reader, reader.uint32());
           break;
         case 2:
           message.claimsRecords.push(ClaimsRecordAddress.decode(reader, reader.uint32()));
@@ -112,21 +170,21 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? EvmosClaimsV1Params.fromPartial(object.params) : undefined;
     message.claimsRecords = object.claimsRecords?.map(e => ClaimsRecordAddress.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = EvmosClaimsV1Params.fromAmino(object.params);
     }
     message.claimsRecords = object.claims_records?.map(e => ClaimsRecordAddress.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? EvmosClaimsV1Params.toAmino(message.params) : undefined;
     if (message.claimsRecords) {
       obj.claims_records = message.claimsRecords.map(e => e ? ClaimsRecordAddress.toAmino(e) : undefined);
     } else {
@@ -150,7 +208,7 @@ export const GenesisState = {
     };
   }
 };
-function createBaseParams(): Params {
+function createBaseEvmosClaimsV1Params(): EvmosClaimsV1Params {
   return {
     enableClaims: false,
     airdropStartTime: new Date(),
@@ -161,9 +219,15 @@ function createBaseParams(): Params {
     evmChannels: []
   };
 }
-export const Params = {
+/**
+ * Params defines the claims module's parameters.
+ * @name EvmosClaimsV1Params
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.Params
+ */
+export const EvmosClaimsV1Params = {
   typeUrl: "/evmos.claims.v1.Params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: EvmosClaimsV1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.enableClaims === true) {
       writer.uint32(8).bool(message.enableClaims);
     }
@@ -187,10 +251,10 @@ export const Params = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): EvmosClaimsV1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseEvmosClaimsV1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -222,8 +286,8 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<EvmosClaimsV1Params>): EvmosClaimsV1Params {
+    const message = createBaseEvmosClaimsV1Params();
     message.enableClaims = object.enableClaims ?? false;
     message.airdropStartTime = object.airdropStartTime ?? undefined;
     message.durationUntilDecay = object.durationUntilDecay !== undefined && object.durationUntilDecay !== null ? Duration.fromPartial(object.durationUntilDecay) : undefined;
@@ -233,8 +297,8 @@ export const Params = {
     message.evmChannels = object.evmChannels?.map(e => e) || [];
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: EvmosClaimsV1ParamsAmino): EvmosClaimsV1Params {
+    const message = createBaseEvmosClaimsV1Params();
     if (object.enable_claims !== undefined && object.enable_claims !== null) {
       message.enableClaims = object.enable_claims;
     }
@@ -254,7 +318,7 @@ export const Params = {
     message.evmChannels = object.evm_channels?.map(e => e) || [];
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: EvmosClaimsV1Params): EvmosClaimsV1ParamsAmino {
     const obj: any = {};
     obj.enable_claims = message.enableClaims === false ? undefined : message.enableClaims;
     obj.airdrop_start_time = message.airdropStartTime ? Timestamp.toAmino(toTimestamp(message.airdropStartTime)) : undefined;
@@ -273,19 +337,19 @@ export const Params = {
     }
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: EvmosClaimsV1ParamsAminoMsg): EvmosClaimsV1Params {
+    return EvmosClaimsV1Params.fromAmino(object.value);
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: EvmosClaimsV1ParamsProtoMsg): EvmosClaimsV1Params {
+    return EvmosClaimsV1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: EvmosClaimsV1Params): Uint8Array {
+    return EvmosClaimsV1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: EvmosClaimsV1Params): EvmosClaimsV1ParamsProtoMsg {
     return {
       typeUrl: "/evmos.claims.v1.Params",
-      value: Params.encode(message).finish()
+      value: EvmosClaimsV1Params.encode(message).finish()
     };
   }
 };

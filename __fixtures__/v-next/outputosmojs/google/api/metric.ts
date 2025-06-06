@@ -142,9 +142,14 @@ export function metricDescriptor_ValueTypeToJSON(object: MetricDescriptor_ValueT
  * Defines a metric type and its schema. Once a metric descriptor is created,
  * deleting or altering it stops data collection and makes the metric type's
  * existing data unusable.
+ * @name MetricDescriptor
+ * @package google.api
+ * @see proto type: google.api.MetricDescriptor
  */
 export interface MetricDescriptor {
-  /** The resource name of the metric descriptor. */
+  /**
+   * The resource name of the metric descriptor.
+  */
   name: string;
   /**
    * The metric type, including its DNS name prefix. The type is not
@@ -281,7 +286,9 @@ export interface MetricDescriptor {
    *    (so a metric value `0.03` means "3 percent").
    */
   unit: string;
-  /** A detailed description of the metric, which can be used in documentation. */
+  /**
+   * A detailed description of the metric, which can be used in documentation.
+  */
   description: string;
   /**
    * A concise name for the metric, which can be displayed in user interfaces.
@@ -290,9 +297,13 @@ export interface MetricDescriptor {
    * associated with user-visible concepts, such as Quota.
    */
   displayName: string;
-  /** Optional. Metadata which can be used to guide usage of the metric. */
+  /**
+   * Optional. Metadata which can be used to guide usage of the metric.
+  */
   metadata?: MetricDescriptor_MetricDescriptorMetadata;
-  /** Optional. The launch stage of the metric definition. */
+  /**
+   * Optional. The launch stage of the metric definition.
+  */
   launchStage: LaunchStage;
   /**
    * Read-only. If present, then a [time
@@ -311,6 +322,9 @@ export interface MetricDescriptorProtoMsg {
  * Defines a metric type and its schema. Once a metric descriptor is created,
  * deleting or altering it stops data collection and makes the metric type's
  * existing data unusable.
+ * @name MetricDescriptorSDKType
+ * @package google.api
+ * @see proto type: google.api.MetricDescriptor
  */
 export interface MetricDescriptorSDKType {
   name: string;
@@ -325,10 +339,17 @@ export interface MetricDescriptorSDKType {
   launch_stage: LaunchStage;
   monitored_resource_types: string[];
 }
-/** Additional annotations that can be used to guide the usage of a metric. */
+/**
+ * Additional annotations that can be used to guide the usage of a metric.
+ * @name MetricDescriptor_MetricDescriptorMetadata
+ * @package google.api
+ * @see proto type: google.api.MetricDescriptorMetadata
+ */
 export interface MetricDescriptor_MetricDescriptorMetadata {
-  /** Deprecated. Must use the [MetricDescriptor.launch_stage][google.api.MetricDescriptor.launch_stage] instead. */
-  /** @deprecated */
+  /**
+   * Deprecated. Must use the [MetricDescriptor.launch_stage][google.api.MetricDescriptor.launch_stage] instead.
+   * @deprecated
+   */
   launchStage: LaunchStage;
   /**
    * The sampling period of metric data points. For metrics which are written
@@ -348,13 +369,25 @@ export interface MetricDescriptor_MetricDescriptorMetadataProtoMsg {
   typeUrl: "/google.api.MetricDescriptorMetadata";
   value: Uint8Array;
 }
-/** Additional annotations that can be used to guide the usage of a metric. */
+/**
+ * Additional annotations that can be used to guide the usage of a metric.
+ * @name MetricDescriptor_MetricDescriptorMetadataSDKType
+ * @package google.api
+ * @see proto type: google.api.MetricDescriptorMetadata
+ */
 export interface MetricDescriptor_MetricDescriptorMetadataSDKType {
-  /** @deprecated */
+  /**
+   * @deprecated
+  */
   launch_stage: LaunchStage;
   sample_period?: DurationSDKType;
   ingest_delay?: DurationSDKType;
 }
+/**
+ * @name Metric_LabelsEntry
+ * @package google.api
+ * @see proto type: google.api.undefined
+ */
 export interface Metric_LabelsEntry {
   key: string;
   value: string;
@@ -363,6 +396,11 @@ export interface Metric_LabelsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name Metric_LabelsEntrySDKType
+ * @package google.api
+ * @see proto type: google.api.undefined
+ */
 export interface Metric_LabelsEntrySDKType {
   key: string;
   value: string;
@@ -370,6 +408,9 @@ export interface Metric_LabelsEntrySDKType {
 /**
  * A specific metric, identified by specifying values for all of the
  * labels of a [`MetricDescriptor`][google.api.MetricDescriptor].
+ * @name Metric
+ * @package google.api
+ * @see proto type: google.api.Metric
  */
 export interface Metric {
   /**
@@ -392,6 +433,9 @@ export interface MetricProtoMsg {
 /**
  * A specific metric, identified by specifying values for all of the
  * labels of a [`MetricDescriptor`][google.api.MetricDescriptor].
+ * @name MetricSDKType
+ * @package google.api
+ * @see proto type: google.api.Metric
  */
 export interface MetricSDKType {
   type: string;
@@ -414,6 +458,14 @@ function createBaseMetricDescriptor(): MetricDescriptor {
     monitoredResourceTypes: []
   };
 }
+/**
+ * Defines a metric type and its schema. Once a metric descriptor is created,
+ * deleting or altering it stops data collection and makes the metric type's
+ * existing data unusable.
+ * @name MetricDescriptor
+ * @package google.api
+ * @see proto type: google.api.MetricDescriptor
+ */
 export const MetricDescriptor = {
   typeUrl: "/google.api.MetricDescriptor",
   encode(message: MetricDescriptor, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -684,6 +736,12 @@ function createBaseMetricDescriptor_MetricDescriptorMetadata(): MetricDescriptor
     ingestDelay: undefined
   };
 }
+/**
+ * Additional annotations that can be used to guide the usage of a metric.
+ * @name MetricDescriptor_MetricDescriptorMetadata
+ * @package google.api
+ * @see proto type: google.api.MetricDescriptorMetadata
+ */
 export const MetricDescriptor_MetricDescriptorMetadata = {
   typeUrl: "/google.api.MetricDescriptorMetadata",
   encode(message: MetricDescriptor_MetricDescriptorMetadata, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -805,6 +863,11 @@ function createBaseMetric_LabelsEntry(): Metric_LabelsEntry {
     value: ""
   };
 }
+/**
+ * @name Metric_LabelsEntry
+ * @package google.api
+ * @see proto type: google.api.undefined
+ */
 export const Metric_LabelsEntry = {
   encode(message: Metric_LabelsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -903,6 +966,13 @@ function createBaseMetric(): Metric {
     labels: {}
   };
 }
+/**
+ * A specific metric, identified by specifying values for all of the
+ * labels of a [`MetricDescriptor`][google.api.MetricDescriptor].
+ * @name Metric
+ * @package google.api
+ * @see proto type: google.api.Metric
+ */
 export const Metric = {
   typeUrl: "/google.api.Metric",
   encode(message: Metric, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

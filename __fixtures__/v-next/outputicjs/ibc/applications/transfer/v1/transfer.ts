@@ -3,6 +3,9 @@ import { DeepPartial } from "../../../../helpers";
 /**
  * DenomTrace contains the base denomination for ICS20 fungible tokens and the
  * source tracing information path.
+ * @name DenomTrace
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.DenomTrace
  */
 export interface DenomTrace {
   /**
@@ -10,7 +13,9 @@ export interface DenomTrace {
    * source of the fungible token.
    */
   path: string;
-  /** base denomination of the relayed fungible token. */
+  /**
+   * base denomination of the relayed fungible token.
+  */
   baseDenom: string;
 }
 export interface DenomTraceProtoMsg {
@@ -20,6 +25,9 @@ export interface DenomTraceProtoMsg {
 /**
  * DenomTrace contains the base denomination for ICS20 fungible tokens and the
  * source tracing information path.
+ * @name DenomTraceAmino
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.DenomTrace
  */
 export interface DenomTraceAmino {
   /**
@@ -27,7 +35,9 @@ export interface DenomTraceAmino {
    * source of the fungible token.
    */
   path: string;
-  /** base denomination of the relayed fungible token. */
+  /**
+   * base denomination of the relayed fungible token.
+  */
   base_denom: string;
 }
 export interface DenomTraceAminoMsg {
@@ -39,8 +49,11 @@ export interface DenomTraceAminoMsg {
  * NOTE: To prevent a single token from being transferred, set the
  * TransfersEnabled parameter to true and then set the bank module's SendEnabled
  * parameter for the denomination to false.
+ * @name IbcApplicationsTransferV1Params
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.Params
  */
-export interface Params {
+export interface IbcApplicationsTransferV1Params {
   /**
    * send_enabled enables or disables all cross-chain token transfers from this
    * chain.
@@ -52,7 +65,7 @@ export interface Params {
    */
   receiveEnabled: boolean;
 }
-export interface ParamsProtoMsg {
+export interface IbcApplicationsTransferV1ParamsProtoMsg {
   typeUrl: "/ibc.applications.transfer.v1.Params";
   value: Uint8Array;
 }
@@ -61,8 +74,11 @@ export interface ParamsProtoMsg {
  * NOTE: To prevent a single token from being transferred, set the
  * TransfersEnabled parameter to true and then set the bank module's SendEnabled
  * parameter for the denomination to false.
+ * @name IbcApplicationsTransferV1ParamsAmino
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.IbcApplicationsTransferV1Params
  */
-export interface ParamsAmino {
+export interface IbcApplicationsTransferV1ParamsAmino {
   /**
    * send_enabled enables or disables all cross-chain token transfers from this
    * chain.
@@ -74,9 +90,9 @@ export interface ParamsAmino {
    */
   receive_enabled: boolean;
 }
-export interface ParamsAminoMsg {
+export interface IbcApplicationsTransferV1ParamsAminoMsg {
   type: "cosmos-sdk/Params";
-  value: ParamsAmino;
+  value: IbcApplicationsTransferV1ParamsAmino;
 }
 function createBaseDenomTrace(): DenomTrace {
   return {
@@ -84,6 +100,13 @@ function createBaseDenomTrace(): DenomTrace {
     baseDenom: ""
   };
 }
+/**
+ * DenomTrace contains the base denomination for ICS20 fungible tokens and the
+ * source tracing information path.
+ * @name DenomTrace
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.DenomTrace
+ */
 export const DenomTrace = {
   typeUrl: "/ibc.applications.transfer.v1.DenomTrace",
   aminoType: "cosmos-sdk/DenomTrace",
@@ -160,16 +183,25 @@ export const DenomTrace = {
     };
   }
 };
-function createBaseParams(): Params {
+function createBaseIbcApplicationsTransferV1Params(): IbcApplicationsTransferV1Params {
   return {
     sendEnabled: false,
     receiveEnabled: false
   };
 }
-export const Params = {
+/**
+ * Params defines the set of IBC transfer parameters.
+ * NOTE: To prevent a single token from being transferred, set the
+ * TransfersEnabled parameter to true and then set the bank module's SendEnabled
+ * parameter for the denomination to false.
+ * @name IbcApplicationsTransferV1Params
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.Params
+ */
+export const IbcApplicationsTransferV1Params = {
   typeUrl: "/ibc.applications.transfer.v1.Params",
   aminoType: "cosmos-sdk/Params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: IbcApplicationsTransferV1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.sendEnabled === true) {
       writer.uint32(8).bool(message.sendEnabled);
     }
@@ -178,10 +210,10 @@ export const Params = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): IbcApplicationsTransferV1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseIbcApplicationsTransferV1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -198,14 +230,14 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<IbcApplicationsTransferV1Params>): IbcApplicationsTransferV1Params {
+    const message = createBaseIbcApplicationsTransferV1Params();
     message.sendEnabled = object.sendEnabled ?? false;
     message.receiveEnabled = object.receiveEnabled ?? false;
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: IbcApplicationsTransferV1ParamsAmino): IbcApplicationsTransferV1Params {
+    const message = createBaseIbcApplicationsTransferV1Params();
     if (object.send_enabled !== undefined && object.send_enabled !== null) {
       message.sendEnabled = object.send_enabled;
     }
@@ -214,31 +246,31 @@ export const Params = {
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: IbcApplicationsTransferV1Params): IbcApplicationsTransferV1ParamsAmino {
     const obj: any = {};
     obj.send_enabled = message.sendEnabled === false ? undefined : message.sendEnabled;
     obj.receive_enabled = message.receiveEnabled === false ? undefined : message.receiveEnabled;
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: IbcApplicationsTransferV1ParamsAminoMsg): IbcApplicationsTransferV1Params {
+    return IbcApplicationsTransferV1Params.fromAmino(object.value);
   },
-  toAminoMsg(message: Params): ParamsAminoMsg {
+  toAminoMsg(message: IbcApplicationsTransferV1Params): IbcApplicationsTransferV1ParamsAminoMsg {
     return {
       type: "cosmos-sdk/Params",
-      value: Params.toAmino(message)
+      value: IbcApplicationsTransferV1Params.toAmino(message)
     };
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: IbcApplicationsTransferV1ParamsProtoMsg): IbcApplicationsTransferV1Params {
+    return IbcApplicationsTransferV1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: IbcApplicationsTransferV1Params): Uint8Array {
+    return IbcApplicationsTransferV1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: IbcApplicationsTransferV1Params): IbcApplicationsTransferV1ParamsProtoMsg {
     return {
       typeUrl: "/ibc.applications.transfer.v1.Params",
-      value: Params.encode(message).finish()
+      value: IbcApplicationsTransferV1Params.encode(message).finish()
     };
   }
 };

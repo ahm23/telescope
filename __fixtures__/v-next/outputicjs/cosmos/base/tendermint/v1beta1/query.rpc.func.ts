@@ -4,7 +4,7 @@ import { GetNodeInfoRequest, GetNodeInfoResponse, GetSyncingRequest, GetSyncingR
  * GetNodeInfo queries the current node info.
  * @name getGetNodeInfo
  * @package cosmos.base.tendermint.v1beta1
- * @see protoservice: cosmos.base.tendermint.v1beta1.GetNodeInfo
+ * @see proto service: cosmos.base.tendermint.v1beta1.GetNodeInfo
  */
 export const getGetNodeInfo = buildQuery<GetNodeInfoRequest, GetNodeInfoResponse>({
   encode: GetNodeInfoRequest.encode,
@@ -16,7 +16,7 @@ export const getGetNodeInfo = buildQuery<GetNodeInfoRequest, GetNodeInfoResponse
  * GetSyncing queries node syncing.
  * @name getGetSyncing
  * @package cosmos.base.tendermint.v1beta1
- * @see protoservice: cosmos.base.tendermint.v1beta1.GetSyncing
+ * @see proto service: cosmos.base.tendermint.v1beta1.GetSyncing
  */
 export const getGetSyncing = buildQuery<GetSyncingRequest, GetSyncingResponse>({
   encode: GetSyncingRequest.encode,
@@ -28,7 +28,7 @@ export const getGetSyncing = buildQuery<GetSyncingRequest, GetSyncingResponse>({
  * GetLatestBlock returns the latest block.
  * @name getGetLatestBlock
  * @package cosmos.base.tendermint.v1beta1
- * @see protoservice: cosmos.base.tendermint.v1beta1.GetLatestBlock
+ * @see proto service: cosmos.base.tendermint.v1beta1.GetLatestBlock
  */
 export const getGetLatestBlock = buildQuery<GetLatestBlockRequest, GetLatestBlockResponse>({
   encode: GetLatestBlockRequest.encode,
@@ -40,7 +40,7 @@ export const getGetLatestBlock = buildQuery<GetLatestBlockRequest, GetLatestBloc
  * GetBlockByHeight queries block for given height.
  * @name getGetBlockByHeight
  * @package cosmos.base.tendermint.v1beta1
- * @see protoservice: cosmos.base.tendermint.v1beta1.GetBlockByHeight
+ * @see proto service: cosmos.base.tendermint.v1beta1.GetBlockByHeight
  */
 export const getGetBlockByHeight = buildQuery<GetBlockByHeightRequest, GetBlockByHeightResponse>({
   encode: GetBlockByHeightRequest.encode,
@@ -52,7 +52,7 @@ export const getGetBlockByHeight = buildQuery<GetBlockByHeightRequest, GetBlockB
  * GetLatestValidatorSet queries latest validator-set.
  * @name getGetLatestValidatorSet
  * @package cosmos.base.tendermint.v1beta1
- * @see protoservice: cosmos.base.tendermint.v1beta1.GetLatestValidatorSet
+ * @see proto service: cosmos.base.tendermint.v1beta1.GetLatestValidatorSet
  */
 export const getGetLatestValidatorSet = buildQuery<GetLatestValidatorSetRequest, GetLatestValidatorSetResponse>({
   encode: GetLatestValidatorSetRequest.encode,
@@ -64,7 +64,7 @@ export const getGetLatestValidatorSet = buildQuery<GetLatestValidatorSetRequest,
  * GetValidatorSetByHeight queries validator-set at a given height.
  * @name getGetValidatorSetByHeight
  * @package cosmos.base.tendermint.v1beta1
- * @see protoservice: cosmos.base.tendermint.v1beta1.GetValidatorSetByHeight
+ * @see proto service: cosmos.base.tendermint.v1beta1.GetValidatorSetByHeight
  */
 export const getGetValidatorSetByHeight = buildQuery<GetValidatorSetByHeightRequest, GetValidatorSetByHeightResponse>({
   encode: GetValidatorSetByHeightRequest.encode,

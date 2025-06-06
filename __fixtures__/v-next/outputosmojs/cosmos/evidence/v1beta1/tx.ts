@@ -6,6 +6,9 @@ export const protobufPackage = "cosmos.evidence.v1beta1";
 /**
  * MsgSubmitEvidence represents a message that supports submitting arbitrary
  * Evidence of misbehavior such as equivocation or counterfactual signing.
+ * @name MsgSubmitEvidence
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.MsgSubmitEvidence
  */
 export interface MsgSubmitEvidence {
   submitter: string;
@@ -18,21 +21,36 @@ export interface MsgSubmitEvidenceProtoMsg {
 /**
  * MsgSubmitEvidence represents a message that supports submitting arbitrary
  * Evidence of misbehavior such as equivocation or counterfactual signing.
+ * @name MsgSubmitEvidenceSDKType
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.MsgSubmitEvidence
  */
 export interface MsgSubmitEvidenceSDKType {
   submitter: string;
   evidence?: AnySDKType;
 }
-/** MsgSubmitEvidenceResponse defines the Msg/SubmitEvidence response type. */
+/**
+ * MsgSubmitEvidenceResponse defines the Msg/SubmitEvidence response type.
+ * @name MsgSubmitEvidenceResponse
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse
+ */
 export interface MsgSubmitEvidenceResponse {
-  /** hash defines the hash of the evidence. */
+  /**
+   * hash defines the hash of the evidence.
+  */
   hash: Uint8Array;
 }
 export interface MsgSubmitEvidenceResponseProtoMsg {
   typeUrl: "/cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse";
   value: Uint8Array;
 }
-/** MsgSubmitEvidenceResponse defines the Msg/SubmitEvidence response type. */
+/**
+ * MsgSubmitEvidenceResponse defines the Msg/SubmitEvidence response type.
+ * @name MsgSubmitEvidenceResponseSDKType
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse
+ */
 export interface MsgSubmitEvidenceResponseSDKType {
   hash: Uint8Array;
 }
@@ -42,6 +60,13 @@ function createBaseMsgSubmitEvidence(): MsgSubmitEvidence {
     evidence: undefined
   };
 }
+/**
+ * MsgSubmitEvidence represents a message that supports submitting arbitrary
+ * Evidence of misbehavior such as equivocation or counterfactual signing.
+ * @name MsgSubmitEvidence
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.MsgSubmitEvidence
+ */
 export const MsgSubmitEvidence = {
   typeUrl: "/cosmos.evidence.v1beta1.MsgSubmitEvidence",
   encode(message: MsgSubmitEvidence, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -152,6 +177,12 @@ function createBaseMsgSubmitEvidenceResponse(): MsgSubmitEvidenceResponse {
     hash: new Uint8Array()
   };
 }
+/**
+ * MsgSubmitEvidenceResponse defines the Msg/SubmitEvidence response type.
+ * @name MsgSubmitEvidenceResponse
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse
+ */
 export const MsgSubmitEvidenceResponse = {
   typeUrl: "/cosmos.evidence.v1beta1.MsgSubmitEvidenceResponse",
   encode(message: MsgSubmitEvidenceResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

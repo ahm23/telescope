@@ -10,6 +10,9 @@ export const protobufPackage = "osmosis.txfees.v1beta1";
  * calculator. It can be used to add a new denom to the whitelist It can also be
  * used to update the Pool to associate with the denom. If Pool ID is set to 0,
  * it will remove the denom from the whitelisted set.
+ * @name UpdateFeeTokenProposal
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.UpdateFeeTokenProposal
  */
 export interface UpdateFeeTokenProposal {
   $typeUrl?: "/osmosis.txfees.v1beta1.UpdateFeeTokenProposal";
@@ -27,6 +30,9 @@ export interface UpdateFeeTokenProposalProtoMsg {
  * calculator. It can be used to add a new denom to the whitelist It can also be
  * used to update the Pool to associate with the denom. If Pool ID is set to 0,
  * it will remove the denom from the whitelisted set.
+ * @name UpdateFeeTokenProposalAmino
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.UpdateFeeTokenProposal
  */
 export interface UpdateFeeTokenProposalAmino {
   title?: string;
@@ -43,6 +49,9 @@ export interface UpdateFeeTokenProposalAminoMsg {
  * calculator. It can be used to add a new denom to the whitelist It can also be
  * used to update the Pool to associate with the denom. If Pool ID is set to 0,
  * it will remove the denom from the whitelisted set.
+ * @name UpdateFeeTokenProposalSDKType
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.UpdateFeeTokenProposal
  */
 export interface UpdateFeeTokenProposalSDKType {
   $typeUrl?: "/osmosis.txfees.v1beta1.UpdateFeeTokenProposal";
@@ -58,6 +67,16 @@ function createBaseUpdateFeeTokenProposal(): UpdateFeeTokenProposal {
     feetoken: FeeToken.fromPartial({})
   };
 }
+/**
+ * UpdateFeeTokenProposal is a gov Content type for adding a new whitelisted fee
+ * token. It must specify a denom along with gamm pool ID to use as a spot price
+ * calculator. It can be used to add a new denom to the whitelist It can also be
+ * used to update the Pool to associate with the denom. If Pool ID is set to 0,
+ * it will remove the denom from the whitelisted set.
+ * @name UpdateFeeTokenProposal
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.UpdateFeeTokenProposal
+ */
 export const UpdateFeeTokenProposal = {
   typeUrl: "/osmosis.txfees.v1beta1.UpdateFeeTokenProposal",
   aminoType: "osmosis/txfees/update-fee-token-proposal",

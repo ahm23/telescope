@@ -88,7 +88,12 @@ export function storageTypeToJSON(object: StorageType): string {
       return "UNRECOGNIZED";
   }
 }
-/** ModuleSchemaDescriptor describe's a module's ORM schema. */
+/**
+ * ModuleSchemaDescriptor describe's a module's ORM schema.
+ * @name ModuleSchemaDescriptor
+ * @package cosmos.orm.v1alpha1
+ * @see proto type: cosmos.orm.v1alpha1.ModuleSchemaDescriptor
+ */
 export interface ModuleSchemaDescriptor {
   schemaFile: ModuleSchemaDescriptor_FileEntry[];
   /**
@@ -101,7 +106,12 @@ export interface ModuleSchemaDescriptorProtoMsg {
   typeUrl: "/cosmos.orm.v1alpha1.ModuleSchemaDescriptor";
   value: Uint8Array;
 }
-/** ModuleSchemaDescriptor describe's a module's ORM schema. */
+/**
+ * ModuleSchemaDescriptor describe's a module's ORM schema.
+ * @name ModuleSchemaDescriptorAmino
+ * @package cosmos.orm.v1alpha1
+ * @see proto type: cosmos.orm.v1alpha1.ModuleSchemaDescriptor
+ */
 export interface ModuleSchemaDescriptorAmino {
   schema_file?: ModuleSchemaDescriptor_FileEntryAmino[];
   /**
@@ -114,12 +124,22 @@ export interface ModuleSchemaDescriptorAminoMsg {
   type: "cosmos-sdk/ModuleSchemaDescriptor";
   value: ModuleSchemaDescriptorAmino;
 }
-/** ModuleSchemaDescriptor describe's a module's ORM schema. */
+/**
+ * ModuleSchemaDescriptor describe's a module's ORM schema.
+ * @name ModuleSchemaDescriptorSDKType
+ * @package cosmos.orm.v1alpha1
+ * @see proto type: cosmos.orm.v1alpha1.ModuleSchemaDescriptor
+ */
 export interface ModuleSchemaDescriptorSDKType {
   schema_file: ModuleSchemaDescriptor_FileEntrySDKType[];
   prefix: Uint8Array;
 }
-/** FileEntry describes an ORM file used in a module. */
+/**
+ * FileEntry describes an ORM file used in a module.
+ * @name ModuleSchemaDescriptor_FileEntry
+ * @package cosmos.orm.v1alpha1
+ * @see proto type: cosmos.orm.v1alpha1.FileEntry
+ */
 export interface ModuleSchemaDescriptor_FileEntry {
   /**
    * id is a prefix that will be varint encoded and prepended to all the
@@ -143,7 +163,12 @@ export interface ModuleSchemaDescriptor_FileEntryProtoMsg {
   typeUrl: "/cosmos.orm.v1alpha1.FileEntry";
   value: Uint8Array;
 }
-/** FileEntry describes an ORM file used in a module. */
+/**
+ * FileEntry describes an ORM file used in a module.
+ * @name ModuleSchemaDescriptor_FileEntryAmino
+ * @package cosmos.orm.v1alpha1
+ * @see proto type: cosmos.orm.v1alpha1.ModuleSchemaDescriptor_FileEntry
+ */
 export interface ModuleSchemaDescriptor_FileEntryAmino {
   /**
    * id is a prefix that will be varint encoded and prepended to all the
@@ -167,7 +192,12 @@ export interface ModuleSchemaDescriptor_FileEntryAminoMsg {
   type: "cosmos-sdk/FileEntry";
   value: ModuleSchemaDescriptor_FileEntryAmino;
 }
-/** FileEntry describes an ORM file used in a module. */
+/**
+ * FileEntry describes an ORM file used in a module.
+ * @name ModuleSchemaDescriptor_FileEntrySDKType
+ * @package cosmos.orm.v1alpha1
+ * @see proto type: cosmos.orm.v1alpha1.FileEntry
+ */
 export interface ModuleSchemaDescriptor_FileEntrySDKType {
   id: number;
   proto_file_name: string;
@@ -179,6 +209,12 @@ function createBaseModuleSchemaDescriptor(): ModuleSchemaDescriptor {
     prefix: new Uint8Array()
   };
 }
+/**
+ * ModuleSchemaDescriptor describe's a module's ORM schema.
+ * @name ModuleSchemaDescriptor
+ * @package cosmos.orm.v1alpha1
+ * @see proto type: cosmos.orm.v1alpha1.ModuleSchemaDescriptor
+ */
 export const ModuleSchemaDescriptor = {
   typeUrl: "/cosmos.orm.v1alpha1.ModuleSchemaDescriptor",
   aminoType: "cosmos-sdk/ModuleSchemaDescriptor",
@@ -317,6 +353,12 @@ function createBaseModuleSchemaDescriptor_FileEntry(): ModuleSchemaDescriptor_Fi
     storageType: 0
   };
 }
+/**
+ * FileEntry describes an ORM file used in a module.
+ * @name ModuleSchemaDescriptor_FileEntry
+ * @package cosmos.orm.v1alpha1
+ * @see proto type: cosmos.orm.v1alpha1.FileEntry
+ */
 export const ModuleSchemaDescriptor_FileEntry = {
   typeUrl: "/cosmos.orm.v1alpha1.FileEntry",
   aminoType: "cosmos-sdk/FileEntry",

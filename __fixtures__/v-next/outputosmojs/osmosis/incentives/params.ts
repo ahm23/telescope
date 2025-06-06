@@ -2,7 +2,12 @@ import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
 export const protobufPackage = "osmosis.incentives";
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name Params
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.Params
+ */
 export interface Params {
   /**
    * distr_epoch_identifier is what epoch type distribution will be triggered by
@@ -14,7 +19,12 @@ export interface ParamsProtoMsg {
   typeUrl: "/osmosis.incentives.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name ParamsSDKType
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.Params
+ */
 export interface ParamsSDKType {
   distr_epoch_identifier: string;
 }
@@ -23,6 +33,12 @@ function createBaseParams(): Params {
     distrEpochIdentifier: ""
   };
 }
+/**
+ * Params holds parameters for the incentives module
+ * @name Params
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.incentives.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -5,7 +5,7 @@ import { getDevFeeInfos, getDevFeeInfo, getEvmosFeesV1Params, getDevFeeInfosPerD
  * DevFeeInfos retrieves all registered contracts for fee distribution
  * @name useGetDevFeeInfos
  * @package evmos.fees.v1
- * @see protoservice: evmos.fees.v1.DevFeeInfos
+ * @see proto service: evmos.fees.v1.DevFeeInfos
  */
 export const useGetDevFeeInfos = buildUseQuery<QueryDevFeeInfosRequest, QueryDevFeeInfosResponse>({
   builderQueryFn: getDevFeeInfos,
@@ -15,7 +15,7 @@ export const useGetDevFeeInfos = buildUseQuery<QueryDevFeeInfosRequest, QueryDev
  * DevFeeInfo retrieves a registered contract for fee distribution
  * @name useGetDevFeeInfo
  * @package evmos.fees.v1
- * @see protoservice: evmos.fees.v1.DevFeeInfo
+ * @see proto service: evmos.fees.v1.DevFeeInfo
  */
 export const useGetDevFeeInfo = buildUseQuery<QueryDevFeeInfoRequest, QueryDevFeeInfoResponse>({
   builderQueryFn: getDevFeeInfo,
@@ -25,7 +25,7 @@ export const useGetDevFeeInfo = buildUseQuery<QueryDevFeeInfoRequest, QueryDevFe
  * Params retrieves the fees module params
  * @name useGetEvmosFeesV1Params
  * @package evmos.fees.v1
- * @see protoservice: evmos.fees.v1.Params
+ * @see proto service: evmos.fees.v1.Params
  */
 export const useGetEvmosFeesV1Params = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
   builderQueryFn: getEvmosFeesV1Params,
@@ -36,7 +36,7 @@ export const useGetEvmosFeesV1Params = buildUseQuery<QueryParamsRequest, QueryPa
  * registered for fee distribution
  * @name useGetDevFeeInfosPerDeployer
  * @package evmos.fees.v1
- * @see protoservice: evmos.fees.v1.DevFeeInfosPerDeployer
+ * @see proto service: evmos.fees.v1.DevFeeInfosPerDeployer
  */
 export const useGetDevFeeInfosPerDeployer = buildUseQuery<QueryDevFeeInfosPerDeployerRequest, QueryDevFeeInfosPerDeployerResponse>({
   builderQueryFn: getDevFeeInfosPerDeployer,

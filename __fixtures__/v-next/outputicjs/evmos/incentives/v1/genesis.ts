@@ -2,74 +2,128 @@ import { Incentive, IncentiveAmino, GasMeter, GasMeterAmino } from "./incentives
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 import { Decimal } from "@interchainjs/math";
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.GenesisState
+ */
 export interface GenesisState {
-  /** module parameters */
-  params: Params;
-  /** active incentives */
+  /**
+   * module parameters
+  */
+  params: EvmosIncentivesV1Params;
+  /**
+   * active incentives
+  */
   incentives: Incentive[];
-  /** active Gasmeters */
+  /**
+   * active Gasmeters
+  */
   gasMeters: GasMeter[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/evmos.incentives.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisStateAmino
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** module parameters */
-  params: ParamsAmino;
-  /** active incentives */
+  /**
+   * module parameters
+  */
+  params: EvmosIncentivesV1ParamsAmino;
+  /**
+   * active incentives
+  */
   incentives: IncentiveAmino[];
-  /** active Gasmeters */
+  /**
+   * active Gasmeters
+  */
   gas_meters: GasMeterAmino[];
 }
 export interface GenesisStateAminoMsg {
   type: "/evmos.incentives.v1.GenesisState";
   value: GenesisStateAmino;
 }
-/** Params defines the incentives module params */
-export interface Params {
-  /** parameter to enable incentives */
+/**
+ * Params defines the incentives module params
+ * @name EvmosIncentivesV1Params
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.Params
+ */
+export interface EvmosIncentivesV1Params {
+  /**
+   * parameter to enable incentives
+  */
   enableIncentives: boolean;
-  /** maximum percentage an incentive can allocate per denomination */
+  /**
+   * maximum percentage an incentive can allocate per denomination
+  */
   allocationLimit: string;
-  /** identifier for the epochs module hooks */
+  /**
+   * identifier for the epochs module hooks
+  */
   incentivesEpochIdentifier: string;
-  /** scaling factor for capping rewards */
+  /**
+   * scaling factor for capping rewards
+  */
   rewardScaler: string;
 }
-export interface ParamsProtoMsg {
+export interface EvmosIncentivesV1ParamsProtoMsg {
   typeUrl: "/evmos.incentives.v1.Params";
   value: Uint8Array;
 }
-/** Params defines the incentives module params */
-export interface ParamsAmino {
-  /** parameter to enable incentives */
+/**
+ * Params defines the incentives module params
+ * @name EvmosIncentivesV1ParamsAmino
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.EvmosIncentivesV1Params
+ */
+export interface EvmosIncentivesV1ParamsAmino {
+  /**
+   * parameter to enable incentives
+  */
   enable_incentives: boolean;
-  /** maximum percentage an incentive can allocate per denomination */
+  /**
+   * maximum percentage an incentive can allocate per denomination
+  */
   allocation_limit: string;
-  /** identifier for the epochs module hooks */
+  /**
+   * identifier for the epochs module hooks
+  */
   incentives_epoch_identifier: string;
-  /** scaling factor for capping rewards */
+  /**
+   * scaling factor for capping rewards
+  */
   reward_scaler: string;
 }
-export interface ParamsAminoMsg {
+export interface EvmosIncentivesV1ParamsAminoMsg {
   type: "/evmos.incentives.v1.Params";
-  value: ParamsAmino;
+  value: EvmosIncentivesV1ParamsAmino;
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({}),
+    params: EvmosIncentivesV1Params.fromPartial({}),
     incentives: [],
     gasMeters: []
   };
 }
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/evmos.incentives.v1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      EvmosIncentivesV1Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.incentives) {
       Incentive.encode(v!, writer.uint32(18).fork()).ldelim();
@@ -87,7 +141,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = EvmosIncentivesV1Params.decode(reader, reader.uint32());
           break;
         case 2:
           message.incentives.push(Incentive.decode(reader, reader.uint32()));
@@ -104,7 +158,7 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? EvmosIncentivesV1Params.fromPartial(object.params) : undefined;
     message.incentives = object.incentives?.map(e => Incentive.fromPartial(e)) || [];
     message.gasMeters = object.gasMeters?.map(e => GasMeter.fromPartial(e)) || [];
     return message;
@@ -112,7 +166,7 @@ export const GenesisState = {
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = EvmosIncentivesV1Params.fromAmino(object.params);
     }
     message.incentives = object.incentives?.map(e => Incentive.fromAmino(e)) || [];
     message.gasMeters = object.gas_meters?.map(e => GasMeter.fromAmino(e)) || [];
@@ -120,7 +174,7 @@ export const GenesisState = {
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? EvmosIncentivesV1Params.toAmino(message.params) : undefined;
     if (message.incentives) {
       obj.incentives = message.incentives.map(e => e ? Incentive.toAmino(e) : undefined);
     } else {
@@ -149,7 +203,7 @@ export const GenesisState = {
     };
   }
 };
-function createBaseParams(): Params {
+function createBaseEvmosIncentivesV1Params(): EvmosIncentivesV1Params {
   return {
     enableIncentives: false,
     allocationLimit: "",
@@ -157,9 +211,15 @@ function createBaseParams(): Params {
     rewardScaler: ""
   };
 }
-export const Params = {
+/**
+ * Params defines the incentives module params
+ * @name EvmosIncentivesV1Params
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.Params
+ */
+export const EvmosIncentivesV1Params = {
   typeUrl: "/evmos.incentives.v1.Params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: EvmosIncentivesV1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.enableIncentives === true) {
       writer.uint32(8).bool(message.enableIncentives);
     }
@@ -174,10 +234,10 @@ export const Params = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): EvmosIncentivesV1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseEvmosIncentivesV1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -200,16 +260,16 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<EvmosIncentivesV1Params>): EvmosIncentivesV1Params {
+    const message = createBaseEvmosIncentivesV1Params();
     message.enableIncentives = object.enableIncentives ?? false;
     message.allocationLimit = object.allocationLimit ?? "";
     message.incentivesEpochIdentifier = object.incentivesEpochIdentifier ?? "";
     message.rewardScaler = object.rewardScaler ?? "";
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: EvmosIncentivesV1ParamsAmino): EvmosIncentivesV1Params {
+    const message = createBaseEvmosIncentivesV1Params();
     if (object.enable_incentives !== undefined && object.enable_incentives !== null) {
       message.enableIncentives = object.enable_incentives;
     }
@@ -224,7 +284,7 @@ export const Params = {
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: EvmosIncentivesV1Params): EvmosIncentivesV1ParamsAmino {
     const obj: any = {};
     obj.enable_incentives = message.enableIncentives === false ? undefined : message.enableIncentives;
     obj.allocation_limit = message.allocationLimit === "" ? undefined : message.allocationLimit;
@@ -232,19 +292,19 @@ export const Params = {
     obj.reward_scaler = message.rewardScaler === "" ? undefined : message.rewardScaler;
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: EvmosIncentivesV1ParamsAminoMsg): EvmosIncentivesV1Params {
+    return EvmosIncentivesV1Params.fromAmino(object.value);
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: EvmosIncentivesV1ParamsProtoMsg): EvmosIncentivesV1Params {
+    return EvmosIncentivesV1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: EvmosIncentivesV1Params): Uint8Array {
+    return EvmosIncentivesV1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: EvmosIncentivesV1Params): EvmosIncentivesV1ParamsProtoMsg {
     return {
       typeUrl: "/evmos.incentives.v1.Params",
-      value: Params.encode(message).finish()
+      value: EvmosIncentivesV1Params.encode(message).finish()
     };
   }
 };

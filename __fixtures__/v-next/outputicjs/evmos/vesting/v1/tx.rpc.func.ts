@@ -5,7 +5,7 @@ import { MsgCreateClawbackVestingAccount, MsgClawback } from "./tx";
  * clawback and the configuration of vesting and lockup schedules.
  * @name createClawbackVestingAccount
  * @package evmos.vesting.v1
- * @see protoservice: evmos.vesting.v1.CreateClawbackVestingAccount
+ * @see proto service: evmos.vesting.v1.CreateClawbackVestingAccount
  */
 export const createClawbackVestingAccount = buildTx<MsgCreateClawbackVestingAccount>({
   msg: MsgCreateClawbackVestingAccount
@@ -14,7 +14,7 @@ export const createClawbackVestingAccount = buildTx<MsgCreateClawbackVestingAcco
  * Clawback removes the unvested tokens from a ClawbackVestingAccount.
  * @name clawback
  * @package evmos.vesting.v1
- * @see protoservice: evmos.vesting.v1.Clawback
+ * @see proto service: evmos.vesting.v1.Clawback
  */
 export const clawback = buildTx<MsgClawback>({
   msg: MsgClawback

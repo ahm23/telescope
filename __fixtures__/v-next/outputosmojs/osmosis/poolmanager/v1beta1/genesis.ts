@@ -4,7 +4,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial, isSet } from "../../../helpers";
 export const protobufPackage = "osmosis.poolmanager.v1beta1";
-/** Params holds parameters for the poolmanager module */
+/**
+ * Params holds parameters for the poolmanager module
+ * @name Params
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.Params
+ */
 export interface Params {
   poolCreationFee: Coin[];
 }
@@ -12,24 +17,45 @@ export interface ParamsProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the poolmanager module */
+/**
+ * Params holds parameters for the poolmanager module
+ * @name ParamsSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.Params
+ */
 export interface ParamsSDKType {
   pool_creation_fee: CoinSDKType[];
 }
-/** GenesisState defines the poolmanager module's genesis state. */
+/**
+ * GenesisState defines the poolmanager module's genesis state.
+ * @name GenesisState
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** the next_pool_id */
+  /**
+   * the next_pool_id
+  */
   nextPoolId: bigint;
-  /** params is the container of poolmanager parameters. */
+  /**
+   * params is the container of poolmanager parameters.
+  */
   params: Params;
-  /** pool_routes is the container of the mappings from pool id to pool type. */
+  /**
+   * pool_routes is the container of the mappings from pool id to pool type.
+  */
   poolRoutes: ModuleRoute[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the poolmanager module's genesis state. */
+/**
+ * GenesisState defines the poolmanager module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   next_pool_id: bigint;
   params: ParamsSDKType;
@@ -40,6 +66,12 @@ function createBaseParams(): Params {
     poolCreationFee: []
   };
 }
+/**
+ * Params holds parameters for the poolmanager module
+ * @name Params
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.poolmanager.v1beta1.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -146,6 +178,12 @@ function createBaseGenesisState(): GenesisState {
     poolRoutes: []
   };
 }
+/**
+ * GenesisState defines the poolmanager module's genesis state.
+ * @name GenesisState
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.poolmanager.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

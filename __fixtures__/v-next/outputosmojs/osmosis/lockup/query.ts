@@ -7,12 +7,27 @@ import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet, toTimestamp, fromTimestamp } from "../../helpers";
 export const protobufPackage = "osmosis.lockup";
+/**
+ * @name ModuleBalanceRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.ModuleBalanceRequest
+ */
 export interface ModuleBalanceRequest {}
 export interface ModuleBalanceRequestProtoMsg {
   typeUrl: "/osmosis.lockup.ModuleBalanceRequest";
   value: Uint8Array;
 }
+/**
+ * @name ModuleBalanceRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.ModuleBalanceRequest
+ */
 export interface ModuleBalanceRequestSDKType {}
+/**
+ * @name ModuleBalanceResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.ModuleBalanceResponse
+ */
 export interface ModuleBalanceResponse {
   coins: Coin[];
 }
@@ -20,15 +35,35 @@ export interface ModuleBalanceResponseProtoMsg {
   typeUrl: "/osmosis.lockup.ModuleBalanceResponse";
   value: Uint8Array;
 }
+/**
+ * @name ModuleBalanceResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.ModuleBalanceResponse
+ */
 export interface ModuleBalanceResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name ModuleLockedAmountRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.ModuleLockedAmountRequest
+ */
 export interface ModuleLockedAmountRequest {}
 export interface ModuleLockedAmountRequestProtoMsg {
   typeUrl: "/osmosis.lockup.ModuleLockedAmountRequest";
   value: Uint8Array;
 }
+/**
+ * @name ModuleLockedAmountRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.ModuleLockedAmountRequest
+ */
 export interface ModuleLockedAmountRequestSDKType {}
+/**
+ * @name ModuleLockedAmountResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.ModuleLockedAmountResponse
+ */
 export interface ModuleLockedAmountResponse {
   coins: Coin[];
 }
@@ -36,9 +71,19 @@ export interface ModuleLockedAmountResponseProtoMsg {
   typeUrl: "/osmosis.lockup.ModuleLockedAmountResponse";
   value: Uint8Array;
 }
+/**
+ * @name ModuleLockedAmountResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.ModuleLockedAmountResponse
+ */
 export interface ModuleLockedAmountResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name AccountUnlockableCoinsRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockableCoinsRequest
+ */
 export interface AccountUnlockableCoinsRequest {
   owner: string;
 }
@@ -46,9 +91,19 @@ export interface AccountUnlockableCoinsRequestProtoMsg {
   typeUrl: "/osmosis.lockup.AccountUnlockableCoinsRequest";
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockableCoinsRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockableCoinsRequest
+ */
 export interface AccountUnlockableCoinsRequestSDKType {
   owner: string;
 }
+/**
+ * @name AccountUnlockableCoinsResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockableCoinsResponse
+ */
 export interface AccountUnlockableCoinsResponse {
   coins: Coin[];
 }
@@ -56,9 +111,19 @@ export interface AccountUnlockableCoinsResponseProtoMsg {
   typeUrl: "/osmosis.lockup.AccountUnlockableCoinsResponse";
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockableCoinsResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockableCoinsResponse
+ */
 export interface AccountUnlockableCoinsResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name AccountUnlockingCoinsRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockingCoinsRequest
+ */
 export interface AccountUnlockingCoinsRequest {
   owner: string;
 }
@@ -66,9 +131,19 @@ export interface AccountUnlockingCoinsRequestProtoMsg {
   typeUrl: "/osmosis.lockup.AccountUnlockingCoinsRequest";
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockingCoinsRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockingCoinsRequest
+ */
 export interface AccountUnlockingCoinsRequestSDKType {
   owner: string;
 }
+/**
+ * @name AccountUnlockingCoinsResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockingCoinsResponse
+ */
 export interface AccountUnlockingCoinsResponse {
   coins: Coin[];
 }
@@ -76,9 +151,19 @@ export interface AccountUnlockingCoinsResponseProtoMsg {
   typeUrl: "/osmosis.lockup.AccountUnlockingCoinsResponse";
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockingCoinsResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockingCoinsResponse
+ */
 export interface AccountUnlockingCoinsResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name AccountLockedCoinsRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedCoinsRequest
+ */
 export interface AccountLockedCoinsRequest {
   owner: string;
 }
@@ -86,9 +171,19 @@ export interface AccountLockedCoinsRequestProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedCoinsRequest";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedCoinsRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedCoinsRequest
+ */
 export interface AccountLockedCoinsRequestSDKType {
   owner: string;
 }
+/**
+ * @name AccountLockedCoinsResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedCoinsResponse
+ */
 export interface AccountLockedCoinsResponse {
   coins: Coin[];
 }
@@ -96,9 +191,19 @@ export interface AccountLockedCoinsResponseProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedCoinsResponse";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedCoinsResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedCoinsResponse
+ */
 export interface AccountLockedCoinsResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name AccountLockedPastTimeRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeRequest
+ */
 export interface AccountLockedPastTimeRequest {
   owner: string;
   timestamp: Date;
@@ -107,10 +212,20 @@ export interface AccountLockedPastTimeRequestProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedPastTimeRequest";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeRequest
+ */
 export interface AccountLockedPastTimeRequestSDKType {
   owner: string;
   timestamp: Date;
 }
+/**
+ * @name AccountLockedPastTimeResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeResponse
+ */
 export interface AccountLockedPastTimeResponse {
   locks: PeriodLock[];
 }
@@ -118,9 +233,19 @@ export interface AccountLockedPastTimeResponseProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedPastTimeResponse";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeResponse
+ */
 export interface AccountLockedPastTimeResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyRequest {
   owner: string;
   timestamp: Date;
@@ -129,10 +254,20 @@ export interface AccountLockedPastTimeNotUnlockingOnlyRequestProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyRequestSDKType {
   owner: string;
   timestamp: Date;
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyResponse {
   locks: PeriodLock[];
 }
@@ -140,9 +275,19 @@ export interface AccountLockedPastTimeNotUnlockingOnlyResponseProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse
+ */
 export interface AccountLockedPastTimeNotUnlockingOnlyResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountUnlockedBeforeTimeRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockedBeforeTimeRequest
+ */
 export interface AccountUnlockedBeforeTimeRequest {
   owner: string;
   timestamp: Date;
@@ -151,10 +296,20 @@ export interface AccountUnlockedBeforeTimeRequestProtoMsg {
   typeUrl: "/osmosis.lockup.AccountUnlockedBeforeTimeRequest";
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockedBeforeTimeRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockedBeforeTimeRequest
+ */
 export interface AccountUnlockedBeforeTimeRequestSDKType {
   owner: string;
   timestamp: Date;
 }
+/**
+ * @name AccountUnlockedBeforeTimeResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockedBeforeTimeResponse
+ */
 export interface AccountUnlockedBeforeTimeResponse {
   locks: PeriodLock[];
 }
@@ -162,9 +317,19 @@ export interface AccountUnlockedBeforeTimeResponseProtoMsg {
   typeUrl: "/osmosis.lockup.AccountUnlockedBeforeTimeResponse";
   value: Uint8Array;
 }
+/**
+ * @name AccountUnlockedBeforeTimeResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockedBeforeTimeResponse
+ */
 export interface AccountUnlockedBeforeTimeResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedPastTimeDenomRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeDenomRequest
+ */
 export interface AccountLockedPastTimeDenomRequest {
   owner: string;
   timestamp: Date;
@@ -174,11 +339,21 @@ export interface AccountLockedPastTimeDenomRequestProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedPastTimeDenomRequest";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeDenomRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeDenomRequest
+ */
 export interface AccountLockedPastTimeDenomRequestSDKType {
   owner: string;
   timestamp: Date;
   denom: string;
 }
+/**
+ * @name AccountLockedPastTimeDenomResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeDenomResponse
+ */
 export interface AccountLockedPastTimeDenomResponse {
   locks: PeriodLock[];
 }
@@ -186,9 +361,19 @@ export interface AccountLockedPastTimeDenomResponseProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedPastTimeDenomResponse";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedPastTimeDenomResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeDenomResponse
+ */
 export interface AccountLockedPastTimeDenomResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name LockedDenomRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.LockedDenomRequest
+ */
 export interface LockedDenomRequest {
   denom: string;
   duration: Duration;
@@ -197,10 +382,20 @@ export interface LockedDenomRequestProtoMsg {
   typeUrl: "/osmosis.lockup.LockedDenomRequest";
   value: Uint8Array;
 }
+/**
+ * @name LockedDenomRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.LockedDenomRequest
+ */
 export interface LockedDenomRequestSDKType {
   denom: string;
   duration: DurationSDKType;
 }
+/**
+ * @name LockedDenomResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.LockedDenomResponse
+ */
 export interface LockedDenomResponse {
   amount: string;
 }
@@ -208,9 +403,19 @@ export interface LockedDenomResponseProtoMsg {
   typeUrl: "/osmosis.lockup.LockedDenomResponse";
   value: Uint8Array;
 }
+/**
+ * @name LockedDenomResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.LockedDenomResponse
+ */
 export interface LockedDenomResponseSDKType {
   amount: string;
 }
+/**
+ * @name LockedRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.LockedRequest
+ */
 export interface LockedRequest {
   lockId: bigint;
 }
@@ -218,9 +423,19 @@ export interface LockedRequestProtoMsg {
   typeUrl: "/osmosis.lockup.LockedRequest";
   value: Uint8Array;
 }
+/**
+ * @name LockedRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.LockedRequest
+ */
 export interface LockedRequestSDKType {
   lock_id: bigint;
 }
+/**
+ * @name LockedResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.LockedResponse
+ */
 export interface LockedResponse {
   lock?: PeriodLock;
 }
@@ -228,9 +443,19 @@ export interface LockedResponseProtoMsg {
   typeUrl: "/osmosis.lockup.LockedResponse";
   value: Uint8Array;
 }
+/**
+ * @name LockedResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.LockedResponse
+ */
 export interface LockedResponseSDKType {
   lock?: PeriodLockSDKType;
 }
+/**
+ * @name SyntheticLockupsByLockupIDRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.SyntheticLockupsByLockupIDRequest
+ */
 export interface SyntheticLockupsByLockupIDRequest {
   lockId: bigint;
 }
@@ -238,9 +463,19 @@ export interface SyntheticLockupsByLockupIDRequestProtoMsg {
   typeUrl: "/osmosis.lockup.SyntheticLockupsByLockupIDRequest";
   value: Uint8Array;
 }
+/**
+ * @name SyntheticLockupsByLockupIDRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.SyntheticLockupsByLockupIDRequest
+ */
 export interface SyntheticLockupsByLockupIDRequestSDKType {
   lock_id: bigint;
 }
+/**
+ * @name SyntheticLockupsByLockupIDResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.SyntheticLockupsByLockupIDResponse
+ */
 export interface SyntheticLockupsByLockupIDResponse {
   syntheticLocks: SyntheticLock[];
 }
@@ -248,9 +483,19 @@ export interface SyntheticLockupsByLockupIDResponseProtoMsg {
   typeUrl: "/osmosis.lockup.SyntheticLockupsByLockupIDResponse";
   value: Uint8Array;
 }
+/**
+ * @name SyntheticLockupsByLockupIDResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.SyntheticLockupsByLockupIDResponse
+ */
 export interface SyntheticLockupsByLockupIDResponseSDKType {
   synthetic_locks: SyntheticLockSDKType[];
 }
+/**
+ * @name AccountLockedLongerDurationRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationRequest
+ */
 export interface AccountLockedLongerDurationRequest {
   owner: string;
   duration: Duration;
@@ -259,10 +504,20 @@ export interface AccountLockedLongerDurationRequestProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedLongerDurationRequest";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationRequest
+ */
 export interface AccountLockedLongerDurationRequestSDKType {
   owner: string;
   duration: DurationSDKType;
 }
+/**
+ * @name AccountLockedLongerDurationResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationResponse
+ */
 export interface AccountLockedLongerDurationResponse {
   locks: PeriodLock[];
 }
@@ -270,9 +525,19 @@ export interface AccountLockedLongerDurationResponseProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedLongerDurationResponse";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationResponse
+ */
 export interface AccountLockedLongerDurationResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedDurationRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedDurationRequest
+ */
 export interface AccountLockedDurationRequest {
   owner: string;
   duration: Duration;
@@ -281,10 +546,20 @@ export interface AccountLockedDurationRequestProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedDurationRequest";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedDurationRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedDurationRequest
+ */
 export interface AccountLockedDurationRequestSDKType {
   owner: string;
   duration: DurationSDKType;
 }
+/**
+ * @name AccountLockedDurationResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedDurationResponse
+ */
 export interface AccountLockedDurationResponse {
   locks: PeriodLock[];
 }
@@ -292,9 +567,19 @@ export interface AccountLockedDurationResponseProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedDurationResponse";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedDurationResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedDurationResponse
+ */
 export interface AccountLockedDurationResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyRequest {
   owner: string;
   duration: Duration;
@@ -303,10 +588,20 @@ export interface AccountLockedLongerDurationNotUnlockingOnlyRequestProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyRequestSDKType {
   owner: string;
   duration: DurationSDKType;
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyResponse {
   locks: PeriodLock[];
 }
@@ -314,9 +609,19 @@ export interface AccountLockedLongerDurationNotUnlockingOnlyResponseProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse
+ */
 export interface AccountLockedLongerDurationNotUnlockingOnlyResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name AccountLockedLongerDurationDenomRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationDenomRequest
+ */
 export interface AccountLockedLongerDurationDenomRequest {
   owner: string;
   duration: Duration;
@@ -326,11 +631,21 @@ export interface AccountLockedLongerDurationDenomRequestProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedLongerDurationDenomRequest";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationDenomRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationDenomRequest
+ */
 export interface AccountLockedLongerDurationDenomRequestSDKType {
   owner: string;
   duration: DurationSDKType;
   denom: string;
 }
+/**
+ * @name AccountLockedLongerDurationDenomResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationDenomResponse
+ */
 export interface AccountLockedLongerDurationDenomResponse {
   locks: PeriodLock[];
 }
@@ -338,15 +653,35 @@ export interface AccountLockedLongerDurationDenomResponseProtoMsg {
   typeUrl: "/osmosis.lockup.AccountLockedLongerDurationDenomResponse";
   value: Uint8Array;
 }
+/**
+ * @name AccountLockedLongerDurationDenomResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationDenomResponse
+ */
 export interface AccountLockedLongerDurationDenomResponseSDKType {
   locks: PeriodLockSDKType[];
 }
+/**
+ * @name QueryParamsRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: "/osmosis.lockup.QueryParamsRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryParamsRequestSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
+/**
+ * @name QueryParamsResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
   params: Params;
 }
@@ -354,12 +689,22 @@ export interface QueryParamsResponseProtoMsg {
   typeUrl: "/osmosis.lockup.QueryParamsResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryParamsResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 function createBaseModuleBalanceRequest(): ModuleBalanceRequest {
   return {};
 }
+/**
+ * @name ModuleBalanceRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.ModuleBalanceRequest
+ */
 export const ModuleBalanceRequest = {
   typeUrl: "/osmosis.lockup.ModuleBalanceRequest",
   encode(_: ModuleBalanceRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -435,6 +780,11 @@ function createBaseModuleBalanceResponse(): ModuleBalanceResponse {
     coins: []
   };
 }
+/**
+ * @name ModuleBalanceResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.ModuleBalanceResponse
+ */
 export const ModuleBalanceResponse = {
   typeUrl: "/osmosis.lockup.ModuleBalanceResponse",
   encode(message: ModuleBalanceResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -537,6 +887,11 @@ export const ModuleBalanceResponse = {
 function createBaseModuleLockedAmountRequest(): ModuleLockedAmountRequest {
   return {};
 }
+/**
+ * @name ModuleLockedAmountRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.ModuleLockedAmountRequest
+ */
 export const ModuleLockedAmountRequest = {
   typeUrl: "/osmosis.lockup.ModuleLockedAmountRequest",
   encode(_: ModuleLockedAmountRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -612,6 +967,11 @@ function createBaseModuleLockedAmountResponse(): ModuleLockedAmountResponse {
     coins: []
   };
 }
+/**
+ * @name ModuleLockedAmountResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.ModuleLockedAmountResponse
+ */
 export const ModuleLockedAmountResponse = {
   typeUrl: "/osmosis.lockup.ModuleLockedAmountResponse",
   encode(message: ModuleLockedAmountResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -716,6 +1076,11 @@ function createBaseAccountUnlockableCoinsRequest(): AccountUnlockableCoinsReques
     owner: ""
   };
 }
+/**
+ * @name AccountUnlockableCoinsRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockableCoinsRequest
+ */
 export const AccountUnlockableCoinsRequest = {
   typeUrl: "/osmosis.lockup.AccountUnlockableCoinsRequest",
   encode(message: AccountUnlockableCoinsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -810,6 +1175,11 @@ function createBaseAccountUnlockableCoinsResponse(): AccountUnlockableCoinsRespo
     coins: []
   };
 }
+/**
+ * @name AccountUnlockableCoinsResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockableCoinsResponse
+ */
 export const AccountUnlockableCoinsResponse = {
   typeUrl: "/osmosis.lockup.AccountUnlockableCoinsResponse",
   encode(message: AccountUnlockableCoinsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -914,6 +1284,11 @@ function createBaseAccountUnlockingCoinsRequest(): AccountUnlockingCoinsRequest 
     owner: ""
   };
 }
+/**
+ * @name AccountUnlockingCoinsRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockingCoinsRequest
+ */
 export const AccountUnlockingCoinsRequest = {
   typeUrl: "/osmosis.lockup.AccountUnlockingCoinsRequest",
   encode(message: AccountUnlockingCoinsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1008,6 +1383,11 @@ function createBaseAccountUnlockingCoinsResponse(): AccountUnlockingCoinsRespons
     coins: []
   };
 }
+/**
+ * @name AccountUnlockingCoinsResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockingCoinsResponse
+ */
 export const AccountUnlockingCoinsResponse = {
   typeUrl: "/osmosis.lockup.AccountUnlockingCoinsResponse",
   encode(message: AccountUnlockingCoinsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1112,6 +1492,11 @@ function createBaseAccountLockedCoinsRequest(): AccountLockedCoinsRequest {
     owner: ""
   };
 }
+/**
+ * @name AccountLockedCoinsRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedCoinsRequest
+ */
 export const AccountLockedCoinsRequest = {
   typeUrl: "/osmosis.lockup.AccountLockedCoinsRequest",
   encode(message: AccountLockedCoinsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1206,6 +1591,11 @@ function createBaseAccountLockedCoinsResponse(): AccountLockedCoinsResponse {
     coins: []
   };
 }
+/**
+ * @name AccountLockedCoinsResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedCoinsResponse
+ */
 export const AccountLockedCoinsResponse = {
   typeUrl: "/osmosis.lockup.AccountLockedCoinsResponse",
   encode(message: AccountLockedCoinsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1311,6 +1701,11 @@ function createBaseAccountLockedPastTimeRequest(): AccountLockedPastTimeRequest 
     timestamp: new Date()
   };
 }
+/**
+ * @name AccountLockedPastTimeRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeRequest
+ */
 export const AccountLockedPastTimeRequest = {
   typeUrl: "/osmosis.lockup.AccountLockedPastTimeRequest",
   encode(message: AccountLockedPastTimeRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1421,6 +1816,11 @@ function createBaseAccountLockedPastTimeResponse(): AccountLockedPastTimeRespons
     locks: []
   };
 }
+/**
+ * @name AccountLockedPastTimeResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeResponse
+ */
 export const AccountLockedPastTimeResponse = {
   typeUrl: "/osmosis.lockup.AccountLockedPastTimeResponse",
   encode(message: AccountLockedPastTimeResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1526,6 +1926,11 @@ function createBaseAccountLockedPastTimeNotUnlockingOnlyRequest(): AccountLocked
     timestamp: new Date()
   };
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest
+ */
 export const AccountLockedPastTimeNotUnlockingOnlyRequest = {
   typeUrl: "/osmosis.lockup.AccountLockedPastTimeNotUnlockingOnlyRequest",
   encode(message: AccountLockedPastTimeNotUnlockingOnlyRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1636,6 +2041,11 @@ function createBaseAccountLockedPastTimeNotUnlockingOnlyResponse(): AccountLocke
     locks: []
   };
 }
+/**
+ * @name AccountLockedPastTimeNotUnlockingOnlyResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse
+ */
 export const AccountLockedPastTimeNotUnlockingOnlyResponse = {
   typeUrl: "/osmosis.lockup.AccountLockedPastTimeNotUnlockingOnlyResponse",
   encode(message: AccountLockedPastTimeNotUnlockingOnlyResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1741,6 +2151,11 @@ function createBaseAccountUnlockedBeforeTimeRequest(): AccountUnlockedBeforeTime
     timestamp: new Date()
   };
 }
+/**
+ * @name AccountUnlockedBeforeTimeRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockedBeforeTimeRequest
+ */
 export const AccountUnlockedBeforeTimeRequest = {
   typeUrl: "/osmosis.lockup.AccountUnlockedBeforeTimeRequest",
   encode(message: AccountUnlockedBeforeTimeRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1851,6 +2266,11 @@ function createBaseAccountUnlockedBeforeTimeResponse(): AccountUnlockedBeforeTim
     locks: []
   };
 }
+/**
+ * @name AccountUnlockedBeforeTimeResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountUnlockedBeforeTimeResponse
+ */
 export const AccountUnlockedBeforeTimeResponse = {
   typeUrl: "/osmosis.lockup.AccountUnlockedBeforeTimeResponse",
   encode(message: AccountUnlockedBeforeTimeResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1957,6 +2377,11 @@ function createBaseAccountLockedPastTimeDenomRequest(): AccountLockedPastTimeDen
     denom: ""
   };
 }
+/**
+ * @name AccountLockedPastTimeDenomRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeDenomRequest
+ */
 export const AccountLockedPastTimeDenomRequest = {
   typeUrl: "/osmosis.lockup.AccountLockedPastTimeDenomRequest",
   encode(message: AccountLockedPastTimeDenomRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2083,6 +2508,11 @@ function createBaseAccountLockedPastTimeDenomResponse(): AccountLockedPastTimeDe
     locks: []
   };
 }
+/**
+ * @name AccountLockedPastTimeDenomResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedPastTimeDenomResponse
+ */
 export const AccountLockedPastTimeDenomResponse = {
   typeUrl: "/osmosis.lockup.AccountLockedPastTimeDenomResponse",
   encode(message: AccountLockedPastTimeDenomResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2188,6 +2618,11 @@ function createBaseLockedDenomRequest(): LockedDenomRequest {
     duration: Duration.fromPartial({})
   };
 }
+/**
+ * @name LockedDenomRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.LockedDenomRequest
+ */
 export const LockedDenomRequest = {
   typeUrl: "/osmosis.lockup.LockedDenomRequest",
   encode(message: LockedDenomRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2298,6 +2733,11 @@ function createBaseLockedDenomResponse(): LockedDenomResponse {
     amount: ""
   };
 }
+/**
+ * @name LockedDenomResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.LockedDenomResponse
+ */
 export const LockedDenomResponse = {
   typeUrl: "/osmosis.lockup.LockedDenomResponse",
   encode(message: LockedDenomResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2392,6 +2832,11 @@ function createBaseLockedRequest(): LockedRequest {
     lockId: BigInt(0)
   };
 }
+/**
+ * @name LockedRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.LockedRequest
+ */
 export const LockedRequest = {
   typeUrl: "/osmosis.lockup.LockedRequest",
   encode(message: LockedRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2486,6 +2931,11 @@ function createBaseLockedResponse(): LockedResponse {
     lock: undefined
   };
 }
+/**
+ * @name LockedResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.LockedResponse
+ */
 export const LockedResponse = {
   typeUrl: "/osmosis.lockup.LockedResponse",
   encode(message: LockedResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2580,6 +3030,11 @@ function createBaseSyntheticLockupsByLockupIDRequest(): SyntheticLockupsByLockup
     lockId: BigInt(0)
   };
 }
+/**
+ * @name SyntheticLockupsByLockupIDRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.SyntheticLockupsByLockupIDRequest
+ */
 export const SyntheticLockupsByLockupIDRequest = {
   typeUrl: "/osmosis.lockup.SyntheticLockupsByLockupIDRequest",
   encode(message: SyntheticLockupsByLockupIDRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2674,6 +3129,11 @@ function createBaseSyntheticLockupsByLockupIDResponse(): SyntheticLockupsByLocku
     syntheticLocks: []
   };
 }
+/**
+ * @name SyntheticLockupsByLockupIDResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.SyntheticLockupsByLockupIDResponse
+ */
 export const SyntheticLockupsByLockupIDResponse = {
   typeUrl: "/osmosis.lockup.SyntheticLockupsByLockupIDResponse",
   encode(message: SyntheticLockupsByLockupIDResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2779,6 +3239,11 @@ function createBaseAccountLockedLongerDurationRequest(): AccountLockedLongerDura
     duration: Duration.fromPartial({})
   };
 }
+/**
+ * @name AccountLockedLongerDurationRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationRequest
+ */
 export const AccountLockedLongerDurationRequest = {
   typeUrl: "/osmosis.lockup.AccountLockedLongerDurationRequest",
   encode(message: AccountLockedLongerDurationRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2889,6 +3354,11 @@ function createBaseAccountLockedLongerDurationResponse(): AccountLockedLongerDur
     locks: []
   };
 }
+/**
+ * @name AccountLockedLongerDurationResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationResponse
+ */
 export const AccountLockedLongerDurationResponse = {
   typeUrl: "/osmosis.lockup.AccountLockedLongerDurationResponse",
   encode(message: AccountLockedLongerDurationResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2994,6 +3464,11 @@ function createBaseAccountLockedDurationRequest(): AccountLockedDurationRequest 
     duration: Duration.fromPartial({})
   };
 }
+/**
+ * @name AccountLockedDurationRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedDurationRequest
+ */
 export const AccountLockedDurationRequest = {
   typeUrl: "/osmosis.lockup.AccountLockedDurationRequest",
   encode(message: AccountLockedDurationRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3104,6 +3579,11 @@ function createBaseAccountLockedDurationResponse(): AccountLockedDurationRespons
     locks: []
   };
 }
+/**
+ * @name AccountLockedDurationResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedDurationResponse
+ */
 export const AccountLockedDurationResponse = {
   typeUrl: "/osmosis.lockup.AccountLockedDurationResponse",
   encode(message: AccountLockedDurationResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3209,6 +3689,11 @@ function createBaseAccountLockedLongerDurationNotUnlockingOnlyRequest(): Account
     duration: Duration.fromPartial({})
   };
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest
+ */
 export const AccountLockedLongerDurationNotUnlockingOnlyRequest = {
   typeUrl: "/osmosis.lockup.AccountLockedLongerDurationNotUnlockingOnlyRequest",
   encode(message: AccountLockedLongerDurationNotUnlockingOnlyRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3319,6 +3804,11 @@ function createBaseAccountLockedLongerDurationNotUnlockingOnlyResponse(): Accoun
     locks: []
   };
 }
+/**
+ * @name AccountLockedLongerDurationNotUnlockingOnlyResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse
+ */
 export const AccountLockedLongerDurationNotUnlockingOnlyResponse = {
   typeUrl: "/osmosis.lockup.AccountLockedLongerDurationNotUnlockingOnlyResponse",
   encode(message: AccountLockedLongerDurationNotUnlockingOnlyResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3425,6 +3915,11 @@ function createBaseAccountLockedLongerDurationDenomRequest(): AccountLockedLonge
     denom: ""
   };
 }
+/**
+ * @name AccountLockedLongerDurationDenomRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationDenomRequest
+ */
 export const AccountLockedLongerDurationDenomRequest = {
   typeUrl: "/osmosis.lockup.AccountLockedLongerDurationDenomRequest",
   encode(message: AccountLockedLongerDurationDenomRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3551,6 +4046,11 @@ function createBaseAccountLockedLongerDurationDenomResponse(): AccountLockedLong
     locks: []
   };
 }
+/**
+ * @name AccountLockedLongerDurationDenomResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.AccountLockedLongerDurationDenomResponse
+ */
 export const AccountLockedLongerDurationDenomResponse = {
   typeUrl: "/osmosis.lockup.AccountLockedLongerDurationDenomResponse",
   encode(message: AccountLockedLongerDurationDenomResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3653,6 +4153,11 @@ export const AccountLockedLongerDurationDenomResponse = {
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * @name QueryParamsRequest
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: "/osmosis.lockup.QueryParamsRequest",
   encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3728,6 +4233,11 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({})
   };
 }
+/**
+ * @name QueryParamsResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: "/osmosis.lockup.QueryParamsResponse",
   encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

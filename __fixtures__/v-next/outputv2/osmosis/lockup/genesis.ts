@@ -3,7 +3,12 @@ import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
 export const protobufPackage = "osmosis.lockup";
-/** GenesisState defines the lockup module's genesis state. */
+/**
+ * GenesisState defines the lockup module's genesis state.
+ * @name GenesisState
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.GenesisState
+ */
 export interface GenesisState {
   lastLockId: bigint;
   locks: PeriodLock[];
@@ -13,7 +18,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.lockup.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the lockup module's genesis state. */
+/**
+ * GenesisState defines the lockup module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.GenesisState
+ */
 export interface GenesisStateAmino {
   last_lock_id?: string;
   locks?: PeriodLockAmino[];
@@ -23,7 +33,12 @@ export interface GenesisStateAminoMsg {
   type: "osmosis/lockup/genesis-state";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the lockup module's genesis state. */
+/**
+ * GenesisState defines the lockup module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.GenesisState
+ */
 export interface GenesisStateSDKType {
   last_lock_id: bigint;
   locks: PeriodLockSDKType[];
@@ -36,6 +51,12 @@ function createBaseGenesisState(): GenesisState {
     syntheticLocks: []
   };
 }
+/**
+ * GenesisState defines the lockup module's genesis state.
+ * @name GenesisState
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.lockup.GenesisState",
   aminoType: "osmosis/lockup/genesis-state",

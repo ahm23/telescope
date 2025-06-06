@@ -6,7 +6,7 @@ import { createClawbackVestingAccount, clawback } from "./tx.rpc.func";
  * clawback and the configuration of vesting and lockup schedules.
  * @name useCreateClawbackVestingAccount
  * @package evmos.vesting.v1
- * @see protoservice: evmos.vesting.v1.CreateClawbackVestingAccount
+ * @see proto service: evmos.vesting.v1.CreateClawbackVestingAccount
  */
 export const useCreateClawbackVestingAccount = buildUseMutation<MsgCreateClawbackVestingAccount, Error>({
   builderMutationFn: createClawbackVestingAccount
@@ -15,7 +15,7 @@ export const useCreateClawbackVestingAccount = buildUseMutation<MsgCreateClawbac
  * Clawback removes the unvested tokens from a ClawbackVestingAccount.
  * @name useClawback
  * @package evmos.vesting.v1
- * @see protoservice: evmos.vesting.v1.Clawback
+ * @see proto service: evmos.vesting.v1.Clawback
  */
 export const useClawback = buildUseMutation<MsgClawback, Error>({
   builderMutationFn: clawback

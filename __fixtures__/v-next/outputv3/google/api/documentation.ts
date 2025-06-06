@@ -57,6 +57,9 @@ export const protobufPackage = "google.api";
  * <pre><code>&#40;== resource_for v1.shelves.books ==&#41;</code></pre>
  * The directive `suppress_warning` does not directly affect documentation
  * and is documented together with service config validation.
+ * @name Documentation
+ * @package google.api
+ * @see proto type: google.api.Documentation
  */
 export interface Documentation {
   /**
@@ -64,7 +67,9 @@ export interface Documentation {
    * plain text.
    */
   summary: string;
-  /** The top level pages for the documentation set. */
+  /**
+   * The top level pages for the documentation set.
+  */
   pages: Page[];
   /**
    * A list of documentation rules that apply to individual API elements.
@@ -72,7 +77,9 @@ export interface Documentation {
    * **NOTE:** All service configuration rules follow "last one wins" order.
    */
   rules: DocumentationRule[];
-  /** The URL to the root of documentation. */
+  /**
+   * The URL to the root of documentation.
+  */
   documentationRootUrl: string;
   /**
    * Specifies the service root url if the default one (the service name
@@ -158,6 +165,9 @@ export interface DocumentationProtoMsg {
  * <pre><code>&#40;== resource_for v1.shelves.books ==&#41;</code></pre>
  * The directive `suppress_warning` does not directly affect documentation
  * and is documented together with service config validation.
+ * @name DocumentationAmino
+ * @package google.api
+ * @see proto type: google.api.Documentation
  */
 export interface DocumentationAmino {
   /**
@@ -165,7 +175,9 @@ export interface DocumentationAmino {
    * plain text.
    */
   summary?: string;
-  /** The top level pages for the documentation set. */
+  /**
+   * The top level pages for the documentation set.
+  */
   pages?: PageAmino[];
   /**
    * A list of documentation rules that apply to individual API elements.
@@ -173,7 +185,9 @@ export interface DocumentationAmino {
    * **NOTE:** All service configuration rules follow "last one wins" order.
    */
   rules?: DocumentationRuleAmino[];
-  /** The URL to the root of documentation. */
+  /**
+   * The URL to the root of documentation.
+  */
   documentation_root_url?: string;
   /**
    * Specifies the service root url if the default one (the service name
@@ -255,6 +269,9 @@ export interface DocumentationAmino {
  * <pre><code>&#40;== resource_for v1.shelves.books ==&#41;</code></pre>
  * The directive `suppress_warning` does not directly affect documentation
  * and is documented together with service config validation.
+ * @name DocumentationSDKType
+ * @package google.api
+ * @see proto type: google.api.Documentation
  */
 export interface DocumentationSDKType {
   summary: string;
@@ -264,7 +281,12 @@ export interface DocumentationSDKType {
   service_root_url: string;
   overview: string;
 }
-/** A documentation rule provides information about individual API elements. */
+/**
+ * A documentation rule provides information about individual API elements.
+ * @name DocumentationRule
+ * @package google.api
+ * @see proto type: google.api.DocumentationRule
+ */
 export interface DocumentationRule {
   /**
    * The selector is a comma-separated list of patterns. Each pattern is a
@@ -275,7 +297,9 @@ export interface DocumentationRule {
    * applicable elements, the whole pattern "*" is used.
    */
   selector: string;
-  /** Description of the selected API(s). */
+  /**
+   * Description of the selected API(s).
+  */
   description: string;
   /**
    * Deprecation description of the selected element(s). It can be provided if
@@ -287,7 +311,12 @@ export interface DocumentationRuleProtoMsg {
   typeUrl: "/google.api.DocumentationRule";
   value: Uint8Array;
 }
-/** A documentation rule provides information about individual API elements. */
+/**
+ * A documentation rule provides information about individual API elements.
+ * @name DocumentationRuleAmino
+ * @package google.api
+ * @see proto type: google.api.DocumentationRule
+ */
 export interface DocumentationRuleAmino {
   /**
    * The selector is a comma-separated list of patterns. Each pattern is a
@@ -298,7 +327,9 @@ export interface DocumentationRuleAmino {
    * applicable elements, the whole pattern "*" is used.
    */
   selector?: string;
-  /** Description of the selected API(s). */
+  /**
+   * Description of the selected API(s).
+  */
   description?: string;
   /**
    * Deprecation description of the selected element(s). It can be provided if
@@ -306,7 +337,12 @@ export interface DocumentationRuleAmino {
    */
   deprecation_description?: string;
 }
-/** A documentation rule provides information about individual API elements. */
+/**
+ * A documentation rule provides information about individual API elements.
+ * @name DocumentationRuleSDKType
+ * @package google.api
+ * @see proto type: google.api.DocumentationRule
+ */
 export interface DocumentationRuleSDKType {
   selector: string;
   description: string;
@@ -315,6 +351,9 @@ export interface DocumentationRuleSDKType {
 /**
  * Represents a documentation page. A page can contain subpages to represent
  * nested documentation set structure.
+ * @name Page
+ * @package google.api
+ * @see proto type: google.api.Page
  */
 export interface Page {
   /**
@@ -352,6 +391,9 @@ export interface PageProtoMsg {
 /**
  * Represents a documentation page. A page can contain subpages to represent
  * nested documentation set structure.
+ * @name PageAmino
+ * @package google.api
+ * @see proto type: google.api.Page
  */
 export interface PageAmino {
   /**
@@ -385,6 +427,9 @@ export interface PageAmino {
 /**
  * Represents a documentation page. A page can contain subpages to represent
  * nested documentation set structure.
+ * @name PageSDKType
+ * @package google.api
+ * @see proto type: google.api.Page
  */
 export interface PageSDKType {
   name: string;
@@ -401,6 +446,66 @@ function createBaseDocumentation(): Documentation {
     overview: ""
   };
 }
+/**
+ * `Documentation` provides the information for describing a service.
+ * 
+ * Example:
+ * <pre><code>documentation:
+ *   summary: >
+ *     The Google Calendar API gives access
+ *     to most calendar features.
+ *   pages:
+ *   - name: Overview
+ *     content: &#40;== include google/foo/overview.md ==&#41;
+ *   - name: Tutorial
+ *     content: &#40;== include google/foo/tutorial.md ==&#41;
+ *     subpages;
+ *     - name: Java
+ *       content: &#40;== include google/foo/tutorial_java.md ==&#41;
+ *   rules:
+ *   - selector: google.calendar.Calendar.Get
+ *     description: >
+ *       ...
+ *   - selector: google.calendar.Calendar.Put
+ *     description: >
+ *       ...
+ * </code></pre>
+ * Documentation is provided in markdown syntax. In addition to
+ * standard markdown features, definition lists, tables and fenced
+ * code blocks are supported. Section headers can be provided and are
+ * interpreted relative to the section nesting of the context where
+ * a documentation fragment is embedded.
+ * 
+ * Documentation from the IDL is merged with documentation defined
+ * via the config at normalization time, where documentation provided
+ * by config rules overrides IDL provided.
+ * 
+ * A number of constructs specific to the API platform are supported
+ * in documentation text.
+ * 
+ * In order to reference a proto element, the following
+ * notation can be used:
+ * <pre><code>&#91;fully.qualified.proto.name]&#91;]</code></pre>
+ * To override the display text used for the link, this can be used:
+ * <pre><code>&#91;display text]&#91;fully.qualified.proto.name]</code></pre>
+ * Text can be excluded from doc using the following notation:
+ * <pre><code>&#40;-- internal comment --&#41;</code></pre>
+ * 
+ * A few directives are available in documentation. Note that
+ * directives must appear on a single line to be properly
+ * identified. The `include` directive includes a markdown file from
+ * an external source:
+ * <pre><code>&#40;== include path/to/file ==&#41;</code></pre>
+ * The `resource_for` directive marks a message to be the resource of
+ * a collection in REST view. If it is not specified, tools attempt
+ * to infer the resource from the operations in a collection:
+ * <pre><code>&#40;== resource_for v1.shelves.books ==&#41;</code></pre>
+ * The directive `suppress_warning` does not directly affect documentation
+ * and is documented together with service config validation.
+ * @name Documentation
+ * @package google.api
+ * @see proto type: google.api.Documentation
+ */
 export const Documentation = {
   typeUrl: "/google.api.Documentation",
   encode(message: Documentation, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -560,6 +665,12 @@ function createBaseDocumentationRule(): DocumentationRule {
     deprecationDescription: ""
   };
 }
+/**
+ * A documentation rule provides information about individual API elements.
+ * @name DocumentationRule
+ * @package google.api
+ * @see proto type: google.api.DocumentationRule
+ */
 export const DocumentationRule = {
   typeUrl: "/google.api.DocumentationRule",
   encode(message: DocumentationRule, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -665,6 +776,13 @@ function createBasePage(): Page {
     subpages: []
   };
 }
+/**
+ * Represents a documentation page. A page can contain subpages to represent
+ * nested documentation set structure.
+ * @name Page
+ * @package google.api
+ * @see proto type: google.api.Page
+ */
 export const Page = {
   typeUrl: "/google.api.Page",
   encode(message: Page, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -5,7 +5,7 @@ import { QueryParamsRequest, QueryParamsResponse, QuerySubspacesRequest, QuerySu
  * key.
  * @name getCosmosParamsV1beta1Params
  * @package cosmos.params.v1beta1
- * @see protoservice: cosmos.params.v1beta1.Params
+ * @see proto service: cosmos.params.v1beta1.Params
  */
 export const getCosmosParamsV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
@@ -17,7 +17,7 @@ export const getCosmosParamsV1beta1Params = buildQuery<QueryParamsRequest, Query
  * Subspaces queries for all registered subspaces and all keys for a subspace.
  * @name getSubspaces
  * @package cosmos.params.v1beta1
- * @see protoservice: cosmos.params.v1beta1.Subspaces
+ * @see proto service: cosmos.params.v1beta1.Subspaces
  */
 export const getSubspaces = buildQuery<QuerySubspacesRequest, QuerySubspacesResponse>({
   encode: QuerySubspacesRequest.encode,

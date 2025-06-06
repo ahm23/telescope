@@ -10,6 +10,9 @@ import { DeepPartial, toTimestamp, fromTimestamp, bytesFromBase64, base64FromByt
 /**
  * ClientState from Tendermint tracks the current validator set, latest height,
  * and a possible frozen height.
+ * @name ClientState
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.ClientState
  */
 export interface ClientState {
   chainId: string;
@@ -19,15 +22,25 @@ export interface ClientState {
    * submitted headers are valid for upgrade
    */
   trustingPeriod: Duration;
-  /** duration of the staking unbonding period */
+  /**
+   * duration of the staking unbonding period
+  */
   unbondingPeriod: Duration;
-  /** defines how much new (untrusted) header's Time can drift into the future. */
+  /**
+   * defines how much new (untrusted) header's Time can drift into the future.
+  */
   maxClockDrift: Duration;
-  /** Block height when the client was frozen due to a misbehaviour */
+  /**
+   * Block height when the client was frozen due to a misbehaviour
+  */
   frozenHeight: Height;
-  /** Latest height the client was updated to */
+  /**
+   * Latest height the client was updated to
+  */
   latestHeight: Height;
-  /** Proof specifications used in verifying counterparty state */
+  /**
+   * Proof specifications used in verifying counterparty state
+  */
   proofSpecs: ProofSpec[];
   /**
    * Path at which next upgraded client will be committed.
@@ -57,6 +70,9 @@ export interface ClientStateProtoMsg {
 /**
  * ClientState from Tendermint tracks the current validator set, latest height,
  * and a possible frozen height.
+ * @name ClientStateAmino
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.ClientState
  */
 export interface ClientStateAmino {
   chain_id: string;
@@ -66,15 +82,25 @@ export interface ClientStateAmino {
    * submitted headers are valid for upgrade
    */
   trusting_period: DurationAmino;
-  /** duration of the staking unbonding period */
+  /**
+   * duration of the staking unbonding period
+  */
   unbonding_period: DurationAmino;
-  /** defines how much new (untrusted) header's Time can drift into the future. */
+  /**
+   * defines how much new (untrusted) header's Time can drift into the future.
+  */
   max_clock_drift: DurationAmino;
-  /** Block height when the client was frozen due to a misbehaviour */
+  /**
+   * Block height when the client was frozen due to a misbehaviour
+  */
   frozen_height: HeightAmino;
-  /** Latest height the client was updated to */
+  /**
+   * Latest height the client was updated to
+  */
   latest_height: HeightAmino;
-  /** Proof specifications used in verifying counterparty state */
+  /**
+   * Proof specifications used in verifying counterparty state
+  */
   proof_specs: ProofSpecAmino[];
   /**
    * Path at which next upgraded client will be committed.
@@ -101,14 +127,21 @@ export interface ClientStateAminoMsg {
   type: "cosmos-sdk/ClientState";
   value: ClientStateAmino;
 }
-/** ConsensusState defines the consensus state from Tendermint. */
+/**
+ * ConsensusState defines the consensus state from Tendermint.
+ * @name ConsensusState
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.ConsensusState
+ */
 export interface ConsensusState {
   /**
    * timestamp that corresponds to the block height in which the ConsensusState
    * was stored.
    */
   timestamp: Date;
-  /** commitment root (i.e app hash) */
+  /**
+   * commitment root (i.e app hash)
+  */
   root: MerkleRoot;
   nextValidatorsHash: Uint8Array;
 }
@@ -116,14 +149,21 @@ export interface ConsensusStateProtoMsg {
   typeUrl: "/ibc.lightclients.tendermint.v1.ConsensusState";
   value: Uint8Array;
 }
-/** ConsensusState defines the consensus state from Tendermint. */
+/**
+ * ConsensusState defines the consensus state from Tendermint.
+ * @name ConsensusStateAmino
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.ConsensusState
+ */
 export interface ConsensusStateAmino {
   /**
    * timestamp that corresponds to the block height in which the ConsensusState
    * was stored.
    */
   timestamp: string;
-  /** commitment root (i.e app hash) */
+  /**
+   * commitment root (i.e app hash)
+  */
   root: MerkleRootAmino;
   next_validators_hash: string;
 }
@@ -134,6 +174,9 @@ export interface ConsensusStateAminoMsg {
 /**
  * Misbehaviour is a wrapper over two conflicting Headers
  * that implements Misbehaviour interface expected by ICS-02
+ * @name Misbehaviour
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.Misbehaviour
  */
 export interface Misbehaviour {
   clientId: string;
@@ -147,6 +190,9 @@ export interface MisbehaviourProtoMsg {
 /**
  * Misbehaviour is a wrapper over two conflicting Headers
  * that implements Misbehaviour interface expected by ICS-02
+ * @name MisbehaviourAmino
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.Misbehaviour
  */
 export interface MisbehaviourAmino {
   client_id: string;
@@ -170,6 +216,9 @@ export interface MisbehaviourAminoMsg {
  * current time in order to correctly verify, and the TrustedValidators must
  * hash to TrustedConsensusState.NextValidatorsHash since that is the last
  * trusted validator set at the TrustedHeight.
+ * @name Header
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.Header
  */
 export interface Header {
   signedHeader?: SignedHeader;
@@ -194,6 +243,9 @@ export interface HeaderProtoMsg {
  * current time in order to correctly verify, and the TrustedValidators must
  * hash to TrustedConsensusState.NextValidatorsHash since that is the last
  * trusted validator set at the TrustedHeight.
+ * @name HeaderAmino
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.Header
  */
 export interface HeaderAmino {
   signed_header?: SignedHeaderAmino;
@@ -208,6 +260,9 @@ export interface HeaderAminoMsg {
 /**
  * Fraction defines the protobuf message type for tmmath.Fraction that only
  * supports positive values.
+ * @name Fraction
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.Fraction
  */
 export interface Fraction {
   numerator: bigint;
@@ -220,6 +275,9 @@ export interface FractionProtoMsg {
 /**
  * Fraction defines the protobuf message type for tmmath.Fraction that only
  * supports positive values.
+ * @name FractionAmino
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.Fraction
  */
 export interface FractionAmino {
   numerator: string;
@@ -244,6 +302,13 @@ function createBaseClientState(): ClientState {
     allowUpdateAfterMisbehaviour: false
   };
 }
+/**
+ * ClientState from Tendermint tracks the current validator set, latest height,
+ * and a possible frozen height.
+ * @name ClientState
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.ClientState
+ */
 export const ClientState = {
   typeUrl: "/ibc.lightclients.tendermint.v1.ClientState",
   aminoType: "cosmos-sdk/ClientState",
@@ -430,6 +495,12 @@ function createBaseConsensusState(): ConsensusState {
     nextValidatorsHash: new Uint8Array()
   };
 }
+/**
+ * ConsensusState defines the consensus state from Tendermint.
+ * @name ConsensusState
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.ConsensusState
+ */
 export const ConsensusState = {
   typeUrl: "/ibc.lightclients.tendermint.v1.ConsensusState",
   aminoType: "cosmos-sdk/ConsensusState",
@@ -524,6 +595,13 @@ function createBaseMisbehaviour(): Misbehaviour {
     header2: undefined
   };
 }
+/**
+ * Misbehaviour is a wrapper over two conflicting Headers
+ * that implements Misbehaviour interface expected by ICS-02
+ * @name Misbehaviour
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.Misbehaviour
+ */
 export const Misbehaviour = {
   typeUrl: "/ibc.lightclients.tendermint.v1.Misbehaviour",
   aminoType: "cosmos-sdk/Misbehaviour",
@@ -619,6 +697,23 @@ function createBaseHeader(): Header {
     trustedValidators: undefined
   };
 }
+/**
+ * Header defines the Tendermint client consensus Header.
+ * It encapsulates all the information necessary to update from a trusted
+ * Tendermint ConsensusState. The inclusion of TrustedHeight and
+ * TrustedValidators allows this update to process correctly, so long as the
+ * ConsensusState for the TrustedHeight exists, this removes race conditions
+ * among relayers The SignedHeader and ValidatorSet are the new untrusted update
+ * fields for the client. The TrustedHeight is the height of a stored
+ * ConsensusState on the client that will be used to verify the new untrusted
+ * header. The Trusted ConsensusState must be within the unbonding period of
+ * current time in order to correctly verify, and the TrustedValidators must
+ * hash to TrustedConsensusState.NextValidatorsHash since that is the last
+ * trusted validator set at the TrustedHeight.
+ * @name Header
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.Header
+ */
 export const Header = {
   typeUrl: "/ibc.lightclients.tendermint.v1.Header",
   aminoType: "cosmos-sdk/Header",
@@ -723,6 +818,13 @@ function createBaseFraction(): Fraction {
     denominator: BigInt(0)
   };
 }
+/**
+ * Fraction defines the protobuf message type for tmmath.Fraction that only
+ * supports positive values.
+ * @name Fraction
+ * @package ibc.lightclients.tendermint.v1
+ * @see proto type: ibc.lightclients.tendermint.v1.Fraction
+ */
 export const Fraction = {
   typeUrl: "/ibc.lightclients.tendermint.v1.Fraction",
   aminoType: "cosmos-sdk/Fraction",

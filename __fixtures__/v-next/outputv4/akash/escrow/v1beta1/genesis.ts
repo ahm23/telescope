@@ -3,7 +3,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary.js";
 import { JsonSafe } from "../../../json-safe.js";
 import { DeepPartial, Exact } from "../../../helpers.js";
 export const protobufPackage = "akash.escrow.v1beta1";
-/** GenesisState defines the basic genesis state used by escrow module */
+/**
+ * GenesisState defines the basic genesis state used by escrow module
+ * @name GenesisState
+ * @package akash.escrow.v1beta1
+ * @see proto type: akash.escrow.v1beta1.GenesisState
+ */
 export interface GenesisState {
   accounts: Account[];
   payments: Payment[];
@@ -12,7 +17,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/akash.escrow.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the basic genesis state used by escrow module */
+/**
+ * GenesisState defines the basic genesis state used by escrow module
+ * @name GenesisStateSDKType
+ * @package akash.escrow.v1beta1
+ * @see proto type: akash.escrow.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   accounts: AccountSDKType[];
   payments: PaymentSDKType[];
@@ -23,6 +33,12 @@ function createBaseGenesisState(): GenesisState {
     payments: []
   };
 }
+/**
+ * GenesisState defines the basic genesis state used by escrow module
+ * @name GenesisState
+ * @package akash.escrow.v1beta1
+ * @see proto type: akash.escrow.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.escrow.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -165,7 +165,12 @@ export function operationStateToJSON(object: OperationState): string {
       return "UNRECOGNIZED";
   }
 }
-/** Describes a repository in which log entries are stored. */
+/**
+ * Describes a repository in which log entries are stored.
+ * @name LogBucket
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogBucket
+ */
 export interface LogBucket {
   /**
    * Output only. The resource name of the bucket.
@@ -183,14 +188,18 @@ export interface LogBucket {
    * After a bucket has been created, the location cannot be changed.
    */
   name: string;
-  /** Describes this bucket. */
+  /**
+   * Describes this bucket.
+  */
   description: string;
   /**
    * Output only. The creation timestamp of the bucket. This is not set for any of the
    * default buckets.
    */
   createTime?: Date;
-  /** Output only. The last update timestamp of the bucket. */
+  /**
+   * Output only. The last update timestamp of the bucket.
+  */
   updateTime?: Date;
   /**
    * Logs will be retained by default for this amount of time, after which they
@@ -206,7 +215,9 @@ export interface LogBucket {
    * may only be deleted if they are empty.
    */
   locked: boolean;
-  /** Output only. The bucket lifecycle state. */
+  /**
+   * Output only. The bucket lifecycle state.
+  */
   lifecycleState: LifecycleState;
   /**
    * Log entry field paths that are denied access in this bucket.
@@ -231,7 +242,12 @@ export interface LogBucketProtoMsg {
   typeUrl: "/google.logging.v2.LogBucket";
   value: Uint8Array;
 }
-/** Describes a repository in which log entries are stored. */
+/**
+ * Describes a repository in which log entries are stored.
+ * @name LogBucketAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogBucket
+ */
 export interface LogBucketAmino {
   /**
    * Output only. The resource name of the bucket.
@@ -249,14 +265,18 @@ export interface LogBucketAmino {
    * After a bucket has been created, the location cannot be changed.
    */
   name: string;
-  /** Describes this bucket. */
+  /**
+   * Describes this bucket.
+  */
   description: string;
   /**
    * Output only. The creation timestamp of the bucket. This is not set for any of the
    * default buckets.
    */
   create_time?: string;
-  /** Output only. The last update timestamp of the bucket. */
+  /**
+   * Output only. The last update timestamp of the bucket.
+  */
   update_time?: string;
   /**
    * Logs will be retained by default for this amount of time, after which they
@@ -272,7 +292,9 @@ export interface LogBucketAmino {
    * may only be deleted if they are empty.
    */
   locked: boolean;
-  /** Output only. The bucket lifecycle state. */
+  /**
+   * Output only. The bucket lifecycle state.
+  */
   lifecycle_state: LifecycleState;
   /**
    * Log entry field paths that are denied access in this bucket.
@@ -297,7 +319,12 @@ export interface LogBucketAminoMsg {
   type: "/google.logging.v2.LogBucket";
   value: LogBucketAmino;
 }
-/** Describes a view over log entries in a bucket. */
+/**
+ * Describes a view over log entries in a bucket.
+ * @name LogView
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogView
+ */
 export interface LogView {
   /**
    * The resource name of the view.
@@ -307,11 +334,17 @@ export interface LogView {
    *   `projects/my-project/locations/global/buckets/my-bucket/views/my-view`
    */
   name: string;
-  /** Describes this view. */
+  /**
+   * Describes this view.
+  */
   description: string;
-  /** Output only. The creation timestamp of the view. */
+  /**
+   * Output only. The creation timestamp of the view.
+  */
   createTime?: Date;
-  /** Output only. The last update timestamp of the view. */
+  /**
+   * Output only. The last update timestamp of the view.
+  */
   updateTime?: Date;
   /**
    * Filter that restricts which log entries in a bucket are visible in this
@@ -335,7 +368,12 @@ export interface LogViewProtoMsg {
   typeUrl: "/google.logging.v2.LogView";
   value: Uint8Array;
 }
-/** Describes a view over log entries in a bucket. */
+/**
+ * Describes a view over log entries in a bucket.
+ * @name LogViewAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogView
+ */
 export interface LogViewAmino {
   /**
    * The resource name of the view.
@@ -345,11 +383,17 @@ export interface LogViewAmino {
    *   `projects/my-project/locations/global/buckets/my-bucket/views/my-view`
    */
   name: string;
-  /** Describes this view. */
+  /**
+   * Describes this view.
+  */
   description: string;
-  /** Output only. The creation timestamp of the view. */
+  /**
+   * Output only. The creation timestamp of the view.
+  */
   create_time?: string;
-  /** Output only. The last update timestamp of the view. */
+  /**
+   * Output only. The last update timestamp of the view.
+  */
   update_time?: string;
   /**
    * Filter that restricts which log entries in a bucket are visible in this
@@ -379,6 +423,9 @@ export interface LogViewAminoMsg {
  * Pub/Sub topic or a Cloud Logging log bucket. A logs filter controls which log
  * entries are exported. The sink must be created within a project,
  * organization, billing account, or folder.
+ * @name LogSink
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogSink
  */
 export interface LogSink {
   /**
@@ -433,8 +480,10 @@ export interface LogSink {
    * it will not be exported.
    */
   exclusions: LogExclusion[];
-  /** Deprecated. This field is unused. */
-  /** @deprecated */
+  /**
+   * Deprecated. This field is unused.
+   * @deprecated
+   */
   outputVersionFormat: LogSink_VersionFormat;
   /**
    * Output only. An IAM identity&mdash;a service account or group&mdash;under which Cloud
@@ -476,7 +525,9 @@ export interface LogSink {
    *   resource.type=gce_instance
    */
   includeChildren: boolean;
-  /** Optional. Options that affect sinks exporting data to BigQuery. */
+  /**
+   * Optional. Options that affect sinks exporting data to BigQuery.
+  */
   bigqueryOptions?: BigQueryOptions;
   /**
    * Output only. The creation timestamp of the sink.
@@ -501,6 +552,9 @@ export interface LogSinkProtoMsg {
  * Pub/Sub topic or a Cloud Logging log bucket. A logs filter controls which log
  * entries are exported. The sink must be created within a project,
  * organization, billing account, or folder.
+ * @name LogSinkAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogSink
  */
 export interface LogSinkAmino {
   /**
@@ -555,8 +609,10 @@ export interface LogSinkAmino {
    * it will not be exported.
    */
   exclusions: LogExclusionAmino[];
-  /** Deprecated. This field is unused. */
-  /** @deprecated */
+  /**
+   * Deprecated. This field is unused.
+   * @deprecated
+   */
   output_version_format: LogSink_VersionFormat;
   /**
    * Output only. An IAM identity&mdash;a service account or group&mdash;under which Cloud
@@ -598,7 +654,9 @@ export interface LogSinkAmino {
    *   resource.type=gce_instance
    */
   include_children: boolean;
-  /** Optional. Options that affect sinks exporting data to BigQuery. */
+  /**
+   * Optional. Options that affect sinks exporting data to BigQuery.
+  */
   bigquery_options?: BigQueryOptionsAmino;
   /**
    * Output only. The creation timestamp of the sink.
@@ -617,7 +675,12 @@ export interface LogSinkAminoMsg {
   type: "/google.logging.v2.LogSink";
   value: LogSinkAmino;
 }
-/** Options that change functionality of a sink exporting data to BigQuery. */
+/**
+ * Options that change functionality of a sink exporting data to BigQuery.
+ * @name BigQueryOptions
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.BigQueryOptions
+ */
 export interface BigQueryOptions {
   /**
    * Optional. Whether to use [BigQuery's partition
@@ -645,7 +708,12 @@ export interface BigQueryOptionsProtoMsg {
   typeUrl: "/google.logging.v2.BigQueryOptions";
   value: Uint8Array;
 }
-/** Options that change functionality of a sink exporting data to BigQuery. */
+/**
+ * Options that change functionality of a sink exporting data to BigQuery.
+ * @name BigQueryOptionsAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.BigQueryOptions
+ */
 export interface BigQueryOptionsAmino {
   /**
    * Optional. Whether to use [BigQuery's partition
@@ -673,7 +741,12 @@ export interface BigQueryOptionsAminoMsg {
   type: "/google.logging.v2.BigQueryOptions";
   value: BigQueryOptionsAmino;
 }
-/** The parameters to `ListBuckets`. */
+/**
+ * The parameters to `ListBuckets`.
+ * @name ListBucketsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListBucketsRequest
+ */
 export interface ListBucketsRequest {
   /**
    * Required. The parent resource whose buckets are to be listed:
@@ -706,7 +779,12 @@ export interface ListBucketsRequestProtoMsg {
   typeUrl: "/google.logging.v2.ListBucketsRequest";
   value: Uint8Array;
 }
-/** The parameters to `ListBuckets`. */
+/**
+ * The parameters to `ListBuckets`.
+ * @name ListBucketsRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListBucketsRequest
+ */
 export interface ListBucketsRequestAmino {
   /**
    * Required. The parent resource whose buckets are to be listed:
@@ -739,9 +817,16 @@ export interface ListBucketsRequestAminoMsg {
   type: "/google.logging.v2.ListBucketsRequest";
   value: ListBucketsRequestAmino;
 }
-/** The response from ListBuckets. */
+/**
+ * The response from ListBuckets.
+ * @name ListBucketsResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListBucketsResponse
+ */
 export interface ListBucketsResponse {
-  /** A list of buckets. */
+  /**
+   * A list of buckets.
+  */
   buckets: LogBucket[];
   /**
    * If there might be more results than appear in this response, then
@@ -754,9 +839,16 @@ export interface ListBucketsResponseProtoMsg {
   typeUrl: "/google.logging.v2.ListBucketsResponse";
   value: Uint8Array;
 }
-/** The response from ListBuckets. */
+/**
+ * The response from ListBuckets.
+ * @name ListBucketsResponseAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListBucketsResponse
+ */
 export interface ListBucketsResponseAmino {
-  /** A list of buckets. */
+  /**
+   * A list of buckets.
+  */
   buckets: LogBucketAmino[];
   /**
    * If there might be more results than appear in this response, then
@@ -769,7 +861,12 @@ export interface ListBucketsResponseAminoMsg {
   type: "/google.logging.v2.ListBucketsResponse";
   value: ListBucketsResponseAmino;
 }
-/** The parameters to `CreateBucket`. */
+/**
+ * The parameters to `CreateBucket`.
+ * @name CreateBucketRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateBucketRequest
+ */
 export interface CreateBucketRequest {
   /**
    * Required. The resource in which to create the log bucket:
@@ -798,7 +895,12 @@ export interface CreateBucketRequestProtoMsg {
   typeUrl: "/google.logging.v2.CreateBucketRequest";
   value: Uint8Array;
 }
-/** The parameters to `CreateBucket`. */
+/**
+ * The parameters to `CreateBucket`.
+ * @name CreateBucketRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateBucketRequest
+ */
 export interface CreateBucketRequestAmino {
   /**
    * Required. The resource in which to create the log bucket:
@@ -827,7 +929,12 @@ export interface CreateBucketRequestAminoMsg {
   type: "/google.logging.v2.CreateBucketRequest";
   value: CreateBucketRequestAmino;
 }
-/** The parameters to `UpdateBucket`. */
+/**
+ * The parameters to `UpdateBucket`.
+ * @name UpdateBucketRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateBucketRequest
+ */
 export interface UpdateBucketRequest {
   /**
    * Required. The full resource name of the bucket to update.
@@ -842,7 +949,9 @@ export interface UpdateBucketRequest {
    *   `"projects/my-project/locations/global/buckets/my-bucket"`
    */
   name: string;
-  /** Required. The updated bucket. */
+  /**
+   * Required. The updated bucket.
+  */
   bucket?: LogBucket;
   /**
    * Required. Field mask that specifies the fields in `bucket` that need an update. A
@@ -860,7 +969,12 @@ export interface UpdateBucketRequestProtoMsg {
   typeUrl: "/google.logging.v2.UpdateBucketRequest";
   value: Uint8Array;
 }
-/** The parameters to `UpdateBucket`. */
+/**
+ * The parameters to `UpdateBucket`.
+ * @name UpdateBucketRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateBucketRequest
+ */
 export interface UpdateBucketRequestAmino {
   /**
    * Required. The full resource name of the bucket to update.
@@ -875,7 +989,9 @@ export interface UpdateBucketRequestAmino {
    *   `"projects/my-project/locations/global/buckets/my-bucket"`
    */
   name: string;
-  /** Required. The updated bucket. */
+  /**
+   * Required. The updated bucket.
+  */
   bucket?: LogBucketAmino;
   /**
    * Required. Field mask that specifies the fields in `bucket` that need an update. A
@@ -893,7 +1009,12 @@ export interface UpdateBucketRequestAminoMsg {
   type: "/google.logging.v2.UpdateBucketRequest";
   value: UpdateBucketRequestAmino;
 }
-/** The parameters to `GetBucket`. */
+/**
+ * The parameters to `GetBucket`.
+ * @name GetBucketRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetBucketRequest
+ */
 export interface GetBucketRequest {
   /**
    * Required. The resource name of the bucket:
@@ -913,7 +1034,12 @@ export interface GetBucketRequestProtoMsg {
   typeUrl: "/google.logging.v2.GetBucketRequest";
   value: Uint8Array;
 }
-/** The parameters to `GetBucket`. */
+/**
+ * The parameters to `GetBucket`.
+ * @name GetBucketRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetBucketRequest
+ */
 export interface GetBucketRequestAmino {
   /**
    * Required. The resource name of the bucket:
@@ -933,7 +1059,12 @@ export interface GetBucketRequestAminoMsg {
   type: "/google.logging.v2.GetBucketRequest";
   value: GetBucketRequestAmino;
 }
-/** The parameters to `DeleteBucket`. */
+/**
+ * The parameters to `DeleteBucket`.
+ * @name DeleteBucketRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteBucketRequest
+ */
 export interface DeleteBucketRequest {
   /**
    * Required. The full resource name of the bucket to delete.
@@ -953,7 +1084,12 @@ export interface DeleteBucketRequestProtoMsg {
   typeUrl: "/google.logging.v2.DeleteBucketRequest";
   value: Uint8Array;
 }
-/** The parameters to `DeleteBucket`. */
+/**
+ * The parameters to `DeleteBucket`.
+ * @name DeleteBucketRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteBucketRequest
+ */
 export interface DeleteBucketRequestAmino {
   /**
    * Required. The full resource name of the bucket to delete.
@@ -973,7 +1109,12 @@ export interface DeleteBucketRequestAminoMsg {
   type: "/google.logging.v2.DeleteBucketRequest";
   value: DeleteBucketRequestAmino;
 }
-/** The parameters to `UndeleteBucket`. */
+/**
+ * The parameters to `UndeleteBucket`.
+ * @name UndeleteBucketRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UndeleteBucketRequest
+ */
 export interface UndeleteBucketRequest {
   /**
    * Required. The full resource name of the bucket to undelete.
@@ -993,7 +1134,12 @@ export interface UndeleteBucketRequestProtoMsg {
   typeUrl: "/google.logging.v2.UndeleteBucketRequest";
   value: Uint8Array;
 }
-/** The parameters to `UndeleteBucket`. */
+/**
+ * The parameters to `UndeleteBucket`.
+ * @name UndeleteBucketRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UndeleteBucketRequest
+ */
 export interface UndeleteBucketRequestAmino {
   /**
    * Required. The full resource name of the bucket to undelete.
@@ -1013,7 +1159,12 @@ export interface UndeleteBucketRequestAminoMsg {
   type: "/google.logging.v2.UndeleteBucketRequest";
   value: UndeleteBucketRequestAmino;
 }
-/** The parameters to `ListViews`. */
+/**
+ * The parameters to `ListViews`.
+ * @name ListViewsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListViewsRequest
+ */
 export interface ListViewsRequest {
   /**
    * Required. The bucket whose views are to be listed:
@@ -1040,7 +1191,12 @@ export interface ListViewsRequestProtoMsg {
   typeUrl: "/google.logging.v2.ListViewsRequest";
   value: Uint8Array;
 }
-/** The parameters to `ListViews`. */
+/**
+ * The parameters to `ListViews`.
+ * @name ListViewsRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListViewsRequest
+ */
 export interface ListViewsRequestAmino {
   /**
    * Required. The bucket whose views are to be listed:
@@ -1067,9 +1223,16 @@ export interface ListViewsRequestAminoMsg {
   type: "/google.logging.v2.ListViewsRequest";
   value: ListViewsRequestAmino;
 }
-/** The response from ListViews. */
+/**
+ * The response from ListViews.
+ * @name ListViewsResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListViewsResponse
+ */
 export interface ListViewsResponse {
-  /** A list of views. */
+  /**
+   * A list of views.
+  */
   views: LogView[];
   /**
    * If there might be more results than appear in this response, then
@@ -1082,9 +1245,16 @@ export interface ListViewsResponseProtoMsg {
   typeUrl: "/google.logging.v2.ListViewsResponse";
   value: Uint8Array;
 }
-/** The response from ListViews. */
+/**
+ * The response from ListViews.
+ * @name ListViewsResponseAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListViewsResponse
+ */
 export interface ListViewsResponseAmino {
-  /** A list of views. */
+  /**
+   * A list of views.
+  */
   views: LogViewAmino[];
   /**
    * If there might be more results than appear in this response, then
@@ -1097,7 +1267,12 @@ export interface ListViewsResponseAminoMsg {
   type: "/google.logging.v2.ListViewsResponse";
   value: ListViewsResponseAmino;
 }
-/** The parameters to `CreateView`. */
+/**
+ * The parameters to `CreateView`.
+ * @name CreateViewRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateViewRequest
+ */
 export interface CreateViewRequest {
   /**
    * Required. The bucket in which to create the view
@@ -1109,16 +1284,25 @@ export interface CreateViewRequest {
    *   `"projects/my-project/locations/global/buckets/my-bucket"`
    */
   parent: string;
-  /** Required. The id to use for this view. */
+  /**
+   * Required. The id to use for this view.
+  */
   viewId: string;
-  /** Required. The new view. */
+  /**
+   * Required. The new view.
+  */
   view?: LogView;
 }
 export interface CreateViewRequestProtoMsg {
   typeUrl: "/google.logging.v2.CreateViewRequest";
   value: Uint8Array;
 }
-/** The parameters to `CreateView`. */
+/**
+ * The parameters to `CreateView`.
+ * @name CreateViewRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateViewRequest
+ */
 export interface CreateViewRequestAmino {
   /**
    * Required. The bucket in which to create the view
@@ -1130,16 +1314,25 @@ export interface CreateViewRequestAmino {
    *   `"projects/my-project/locations/global/buckets/my-bucket"`
    */
   parent: string;
-  /** Required. The id to use for this view. */
+  /**
+   * Required. The id to use for this view.
+  */
   view_id: string;
-  /** Required. The new view. */
+  /**
+   * Required. The new view.
+  */
   view?: LogViewAmino;
 }
 export interface CreateViewRequestAminoMsg {
   type: "/google.logging.v2.CreateViewRequest";
   value: CreateViewRequestAmino;
 }
-/** The parameters to `UpdateView`. */
+/**
+ * The parameters to `UpdateView`.
+ * @name UpdateViewRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateViewRequest
+ */
 export interface UpdateViewRequest {
   /**
    * Required. The full resource name of the view to update
@@ -1151,7 +1344,9 @@ export interface UpdateViewRequest {
    *   `"projects/my-project/locations/global/buckets/my-bucket/views/my-view"`
    */
   name: string;
-  /** Required. The updated view. */
+  /**
+   * Required. The updated view.
+  */
   view?: LogView;
   /**
    * Optional. Field mask that specifies the fields in `view` that need
@@ -1169,7 +1364,12 @@ export interface UpdateViewRequestProtoMsg {
   typeUrl: "/google.logging.v2.UpdateViewRequest";
   value: Uint8Array;
 }
-/** The parameters to `UpdateView`. */
+/**
+ * The parameters to `UpdateView`.
+ * @name UpdateViewRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateViewRequest
+ */
 export interface UpdateViewRequestAmino {
   /**
    * Required. The full resource name of the view to update
@@ -1181,7 +1381,9 @@ export interface UpdateViewRequestAmino {
    *   `"projects/my-project/locations/global/buckets/my-bucket/views/my-view"`
    */
   name: string;
-  /** Required. The updated view. */
+  /**
+   * Required. The updated view.
+  */
   view?: LogViewAmino;
   /**
    * Optional. Field mask that specifies the fields in `view` that need
@@ -1199,7 +1401,12 @@ export interface UpdateViewRequestAminoMsg {
   type: "/google.logging.v2.UpdateViewRequest";
   value: UpdateViewRequestAmino;
 }
-/** The parameters to `GetView`. */
+/**
+ * The parameters to `GetView`.
+ * @name GetViewRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetViewRequest
+ */
 export interface GetViewRequest {
   /**
    * Required. The resource name of the policy:
@@ -1216,7 +1423,12 @@ export interface GetViewRequestProtoMsg {
   typeUrl: "/google.logging.v2.GetViewRequest";
   value: Uint8Array;
 }
-/** The parameters to `GetView`. */
+/**
+ * The parameters to `GetView`.
+ * @name GetViewRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetViewRequest
+ */
 export interface GetViewRequestAmino {
   /**
    * Required. The resource name of the policy:
@@ -1233,7 +1445,12 @@ export interface GetViewRequestAminoMsg {
   type: "/google.logging.v2.GetViewRequest";
   value: GetViewRequestAmino;
 }
-/** The parameters to `DeleteView`. */
+/**
+ * The parameters to `DeleteView`.
+ * @name DeleteViewRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteViewRequest
+ */
 export interface DeleteViewRequest {
   /**
    * Required. The full resource name of the view to delete:
@@ -1250,7 +1467,12 @@ export interface DeleteViewRequestProtoMsg {
   typeUrl: "/google.logging.v2.DeleteViewRequest";
   value: Uint8Array;
 }
-/** The parameters to `DeleteView`. */
+/**
+ * The parameters to `DeleteView`.
+ * @name DeleteViewRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteViewRequest
+ */
 export interface DeleteViewRequestAmino {
   /**
    * Required. The full resource name of the view to delete:
@@ -1267,7 +1489,12 @@ export interface DeleteViewRequestAminoMsg {
   type: "/google.logging.v2.DeleteViewRequest";
   value: DeleteViewRequestAmino;
 }
-/** The parameters to `ListSinks`. */
+/**
+ * The parameters to `ListSinks`.
+ * @name ListSinksRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListSinksRequest
+ */
 export interface ListSinksRequest {
   /**
    * Required. The parent resource whose sinks are to be listed:
@@ -1296,7 +1523,12 @@ export interface ListSinksRequestProtoMsg {
   typeUrl: "/google.logging.v2.ListSinksRequest";
   value: Uint8Array;
 }
-/** The parameters to `ListSinks`. */
+/**
+ * The parameters to `ListSinks`.
+ * @name ListSinksRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListSinksRequest
+ */
 export interface ListSinksRequestAmino {
   /**
    * Required. The parent resource whose sinks are to be listed:
@@ -1325,9 +1557,16 @@ export interface ListSinksRequestAminoMsg {
   type: "/google.logging.v2.ListSinksRequest";
   value: ListSinksRequestAmino;
 }
-/** Result returned from `ListSinks`. */
+/**
+ * Result returned from `ListSinks`.
+ * @name ListSinksResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListSinksResponse
+ */
 export interface ListSinksResponse {
-  /** A list of sinks. */
+  /**
+   * A list of sinks.
+  */
   sinks: LogSink[];
   /**
    * If there might be more results than appear in this response, then
@@ -1340,9 +1579,16 @@ export interface ListSinksResponseProtoMsg {
   typeUrl: "/google.logging.v2.ListSinksResponse";
   value: Uint8Array;
 }
-/** Result returned from `ListSinks`. */
+/**
+ * Result returned from `ListSinks`.
+ * @name ListSinksResponseAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListSinksResponse
+ */
 export interface ListSinksResponseAmino {
-  /** A list of sinks. */
+  /**
+   * A list of sinks.
+  */
   sinks: LogSinkAmino[];
   /**
    * If there might be more results than appear in this response, then
@@ -1355,7 +1601,12 @@ export interface ListSinksResponseAminoMsg {
   type: "/google.logging.v2.ListSinksResponse";
   value: ListSinksResponseAmino;
 }
-/** The parameters to `GetSink`. */
+/**
+ * The parameters to `GetSink`.
+ * @name GetSinkRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetSinkRequest
+ */
 export interface GetSinkRequest {
   /**
    * Required. The resource name of the sink:
@@ -1375,7 +1626,12 @@ export interface GetSinkRequestProtoMsg {
   typeUrl: "/google.logging.v2.GetSinkRequest";
   value: Uint8Array;
 }
-/** The parameters to `GetSink`. */
+/**
+ * The parameters to `GetSink`.
+ * @name GetSinkRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetSinkRequest
+ */
 export interface GetSinkRequestAmino {
   /**
    * Required. The resource name of the sink:
@@ -1395,7 +1651,12 @@ export interface GetSinkRequestAminoMsg {
   type: "/google.logging.v2.GetSinkRequest";
   value: GetSinkRequestAmino;
 }
-/** The parameters to `CreateSink`. */
+/**
+ * The parameters to `CreateSink`.
+ * @name CreateSinkRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateSinkRequest
+ */
 export interface CreateSinkRequest {
   /**
    * Required. The resource in which to create the sink:
@@ -1435,7 +1696,12 @@ export interface CreateSinkRequestProtoMsg {
   typeUrl: "/google.logging.v2.CreateSinkRequest";
   value: Uint8Array;
 }
-/** The parameters to `CreateSink`. */
+/**
+ * The parameters to `CreateSink`.
+ * @name CreateSinkRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateSinkRequest
+ */
 export interface CreateSinkRequestAmino {
   /**
    * Required. The resource in which to create the sink:
@@ -1475,7 +1741,12 @@ export interface CreateSinkRequestAminoMsg {
   type: "/google.logging.v2.CreateSinkRequest";
   value: CreateSinkRequestAmino;
 }
-/** The parameters to `UpdateSink`. */
+/**
+ * The parameters to `UpdateSink`.
+ * @name UpdateSinkRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateSinkRequest
+ */
 export interface UpdateSinkRequest {
   /**
    * Required. The full resource name of the sink to update, including the parent
@@ -1534,7 +1805,12 @@ export interface UpdateSinkRequestProtoMsg {
   typeUrl: "/google.logging.v2.UpdateSinkRequest";
   value: Uint8Array;
 }
-/** The parameters to `UpdateSink`. */
+/**
+ * The parameters to `UpdateSink`.
+ * @name UpdateSinkRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateSinkRequest
+ */
 export interface UpdateSinkRequestAmino {
   /**
    * Required. The full resource name of the sink to update, including the parent
@@ -1593,7 +1869,12 @@ export interface UpdateSinkRequestAminoMsg {
   type: "/google.logging.v2.UpdateSinkRequest";
   value: UpdateSinkRequestAmino;
 }
-/** The parameters to `DeleteSink`. */
+/**
+ * The parameters to `DeleteSink`.
+ * @name DeleteSinkRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteSinkRequest
+ */
 export interface DeleteSinkRequest {
   /**
    * Required. The full resource name of the sink to delete, including the parent
@@ -1614,7 +1895,12 @@ export interface DeleteSinkRequestProtoMsg {
   typeUrl: "/google.logging.v2.DeleteSinkRequest";
   value: Uint8Array;
 }
-/** The parameters to `DeleteSink`. */
+/**
+ * The parameters to `DeleteSink`.
+ * @name DeleteSinkRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteSinkRequest
+ */
 export interface DeleteSinkRequestAmino {
   /**
    * Required. The full resource name of the sink to delete, including the parent
@@ -1641,6 +1927,9 @@ export interface DeleteSinkRequestAminoMsg {
  * use exclusions to reduce your chargeable logs. Note that exclusions on
  * organization-level and folder-level sinks don't apply to child resources.
  * Note also that you cannot modify the _Required sink or exclude logs from it.
+ * @name LogExclusion
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogExclusion
  */
 export interface LogExclusion {
   /**
@@ -1650,7 +1939,9 @@ export interface LogExclusion {
    * alphanumeric.
    */
   name: string;
-  /** Optional. A description of this exclusion. */
+  /**
+   * Optional. A description of this exclusion.
+  */
   description: string;
   /**
    * Required. An [advanced logs
@@ -1695,6 +1986,9 @@ export interface LogExclusionProtoMsg {
  * use exclusions to reduce your chargeable logs. Note that exclusions on
  * organization-level and folder-level sinks don't apply to child resources.
  * Note also that you cannot modify the _Required sink or exclude logs from it.
+ * @name LogExclusionAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogExclusion
  */
 export interface LogExclusionAmino {
   /**
@@ -1704,7 +1998,9 @@ export interface LogExclusionAmino {
    * alphanumeric.
    */
   name: string;
-  /** Optional. A description of this exclusion. */
+  /**
+   * Optional. A description of this exclusion.
+  */
   description: string;
   /**
    * Required. An [advanced logs
@@ -1743,7 +2039,12 @@ export interface LogExclusionAminoMsg {
   type: "/google.logging.v2.LogExclusion";
   value: LogExclusionAmino;
 }
-/** The parameters to `ListExclusions`. */
+/**
+ * The parameters to `ListExclusions`.
+ * @name ListExclusionsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListExclusionsRequest
+ */
 export interface ListExclusionsRequest {
   /**
    * Required. The parent resource whose exclusions are to be listed.
@@ -1772,7 +2073,12 @@ export interface ListExclusionsRequestProtoMsg {
   typeUrl: "/google.logging.v2.ListExclusionsRequest";
   value: Uint8Array;
 }
-/** The parameters to `ListExclusions`. */
+/**
+ * The parameters to `ListExclusions`.
+ * @name ListExclusionsRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListExclusionsRequest
+ */
 export interface ListExclusionsRequestAmino {
   /**
    * Required. The parent resource whose exclusions are to be listed.
@@ -1801,9 +2107,16 @@ export interface ListExclusionsRequestAminoMsg {
   type: "/google.logging.v2.ListExclusionsRequest";
   value: ListExclusionsRequestAmino;
 }
-/** Result returned from `ListExclusions`. */
+/**
+ * Result returned from `ListExclusions`.
+ * @name ListExclusionsResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListExclusionsResponse
+ */
 export interface ListExclusionsResponse {
-  /** A list of exclusions. */
+  /**
+   * A list of exclusions.
+  */
   exclusions: LogExclusion[];
   /**
    * If there might be more results than appear in this response, then
@@ -1816,9 +2129,16 @@ export interface ListExclusionsResponseProtoMsg {
   typeUrl: "/google.logging.v2.ListExclusionsResponse";
   value: Uint8Array;
 }
-/** Result returned from `ListExclusions`. */
+/**
+ * Result returned from `ListExclusions`.
+ * @name ListExclusionsResponseAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListExclusionsResponse
+ */
 export interface ListExclusionsResponseAmino {
-  /** A list of exclusions. */
+  /**
+   * A list of exclusions.
+  */
   exclusions: LogExclusionAmino[];
   /**
    * If there might be more results than appear in this response, then
@@ -1831,7 +2151,12 @@ export interface ListExclusionsResponseAminoMsg {
   type: "/google.logging.v2.ListExclusionsResponse";
   value: ListExclusionsResponseAmino;
 }
-/** The parameters to `GetExclusion`. */
+/**
+ * The parameters to `GetExclusion`.
+ * @name GetExclusionRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetExclusionRequest
+ */
 export interface GetExclusionRequest {
   /**
    * Required. The resource name of an existing exclusion:
@@ -1851,7 +2176,12 @@ export interface GetExclusionRequestProtoMsg {
   typeUrl: "/google.logging.v2.GetExclusionRequest";
   value: Uint8Array;
 }
-/** The parameters to `GetExclusion`. */
+/**
+ * The parameters to `GetExclusion`.
+ * @name GetExclusionRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetExclusionRequest
+ */
 export interface GetExclusionRequestAmino {
   /**
    * Required. The resource name of an existing exclusion:
@@ -1871,7 +2201,12 @@ export interface GetExclusionRequestAminoMsg {
   type: "/google.logging.v2.GetExclusionRequest";
   value: GetExclusionRequestAmino;
 }
-/** The parameters to `CreateExclusion`. */
+/**
+ * The parameters to `CreateExclusion`.
+ * @name CreateExclusionRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateExclusionRequest
+ */
 export interface CreateExclusionRequest {
   /**
    * Required. The parent resource in which to create the exclusion:
@@ -1897,7 +2232,12 @@ export interface CreateExclusionRequestProtoMsg {
   typeUrl: "/google.logging.v2.CreateExclusionRequest";
   value: Uint8Array;
 }
-/** The parameters to `CreateExclusion`. */
+/**
+ * The parameters to `CreateExclusion`.
+ * @name CreateExclusionRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateExclusionRequest
+ */
 export interface CreateExclusionRequestAmino {
   /**
    * Required. The parent resource in which to create the exclusion:
@@ -1923,7 +2263,12 @@ export interface CreateExclusionRequestAminoMsg {
   type: "/google.logging.v2.CreateExclusionRequest";
   value: CreateExclusionRequestAmino;
 }
-/** The parameters to `UpdateExclusion`. */
+/**
+ * The parameters to `UpdateExclusion`.
+ * @name UpdateExclusionRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateExclusionRequest
+ */
 export interface UpdateExclusionRequest {
   /**
    * Required. The resource name of the exclusion to update:
@@ -1958,7 +2303,12 @@ export interface UpdateExclusionRequestProtoMsg {
   typeUrl: "/google.logging.v2.UpdateExclusionRequest";
   value: Uint8Array;
 }
-/** The parameters to `UpdateExclusion`. */
+/**
+ * The parameters to `UpdateExclusion`.
+ * @name UpdateExclusionRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateExclusionRequest
+ */
 export interface UpdateExclusionRequestAmino {
   /**
    * Required. The resource name of the exclusion to update:
@@ -1993,7 +2343,12 @@ export interface UpdateExclusionRequestAminoMsg {
   type: "/google.logging.v2.UpdateExclusionRequest";
   value: UpdateExclusionRequestAmino;
 }
-/** The parameters to `DeleteExclusion`. */
+/**
+ * The parameters to `DeleteExclusion`.
+ * @name DeleteExclusionRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteExclusionRequest
+ */
 export interface DeleteExclusionRequest {
   /**
    * Required. The resource name of an existing exclusion to delete:
@@ -2013,7 +2368,12 @@ export interface DeleteExclusionRequestProtoMsg {
   typeUrl: "/google.logging.v2.DeleteExclusionRequest";
   value: Uint8Array;
 }
-/** The parameters to `DeleteExclusion`. */
+/**
+ * The parameters to `DeleteExclusion`.
+ * @name DeleteExclusionRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteExclusionRequest
+ */
 export interface DeleteExclusionRequestAmino {
   /**
    * Required. The resource name of an existing exclusion to delete:
@@ -2040,6 +2400,9 @@ export interface DeleteExclusionRequestAminoMsg {
  * See [Enabling CMEK for Log
  * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
  * more information.
+ * @name GetCmekSettingsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetCmekSettingsRequest
  */
 export interface GetCmekSettingsRequest {
   /**
@@ -2072,6 +2435,9 @@ export interface GetCmekSettingsRequestProtoMsg {
  * See [Enabling CMEK for Log
  * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
  * more information.
+ * @name GetCmekSettingsRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetCmekSettingsRequest
  */
 export interface GetCmekSettingsRequestAmino {
   /**
@@ -2104,6 +2470,9 @@ export interface GetCmekSettingsRequestAminoMsg {
  * See [Enabling CMEK for Log
  * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
  * more information.
+ * @name UpdateCmekSettingsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateCmekSettingsRequest
  */
 export interface UpdateCmekSettingsRequest {
   /**
@@ -2153,6 +2522,9 @@ export interface UpdateCmekSettingsRequestProtoMsg {
  * See [Enabling CMEK for Log
  * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
  * more information.
+ * @name UpdateCmekSettingsRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateCmekSettingsRequest
  */
 export interface UpdateCmekSettingsRequestAmino {
   /**
@@ -2206,9 +2578,14 @@ export interface UpdateCmekSettingsRequestAminoMsg {
  * See [Enabling CMEK for Log
  * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
  * more information.
+ * @name CmekSettings
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CmekSettings
  */
 export interface CmekSettings {
-  /** Output only. The resource name of the CMEK settings. */
+  /**
+   * Output only. The resource name of the CMEK settings.
+  */
   name: string;
   /**
    * The resource name for the configured Cloud KMS key.
@@ -2272,9 +2649,14 @@ export interface CmekSettingsProtoMsg {
  * See [Enabling CMEK for Log
  * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
  * more information.
+ * @name CmekSettingsAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CmekSettings
  */
 export interface CmekSettingsAmino {
-  /** Output only. The resource name of the CMEK settings. */
+  /**
+   * Output only. The resource name of the CMEK settings.
+  */
   name: string;
   /**
    * The resource name for the configured Cloud KMS key.
@@ -2334,6 +2716,9 @@ export interface CmekSettingsAminoMsg {
  * See [Enabling CMEK for Log
  * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
  * more information.
+ * @name GetSettingsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetSettingsRequest
  */
 export interface GetSettingsRequest {
   /**
@@ -2366,6 +2751,9 @@ export interface GetSettingsRequestProtoMsg {
  * See [Enabling CMEK for Log
  * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
  * more information.
+ * @name GetSettingsRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetSettingsRequest
  */
 export interface GetSettingsRequestAmino {
   /**
@@ -2398,6 +2786,9 @@ export interface GetSettingsRequestAminoMsg {
  * See [Enabling CMEK for Log
  * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
  * more information.
+ * @name UpdateSettingsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateSettingsRequest
  */
 export interface UpdateSettingsRequest {
   /**
@@ -2444,6 +2835,9 @@ export interface UpdateSettingsRequestProtoMsg {
  * See [Enabling CMEK for Log
  * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
  * more information.
+ * @name UpdateSettingsRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateSettingsRequest
  */
 export interface UpdateSettingsRequestAmino {
   /**
@@ -2486,9 +2880,14 @@ export interface UpdateSettingsRequestAminoMsg {
 /**
  * Describes the settings associated with a project, folder, organization,
  * billing account, or flexible resource.
+ * @name Settings
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.Settings
  */
 export interface Settings {
-  /** Output only. The resource name of the settings. */
+  /**
+   * Output only. The resource name of the settings.
+  */
   name: string;
   /**
    * Optional. The resource name for the configured Cloud KMS key.
@@ -2556,9 +2955,14 @@ export interface SettingsProtoMsg {
 /**
  * Describes the settings associated with a project, folder, organization,
  * billing account, or flexible resource.
+ * @name SettingsAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.Settings
  */
 export interface SettingsAmino {
-  /** Output only. The resource name of the settings. */
+  /**
+   * Output only. The resource name of the settings.
+  */
   name: string;
   /**
    * Optional. The resource name for the configured Cloud KMS key.
@@ -2623,7 +3027,12 @@ export interface SettingsAminoMsg {
   type: "/google.logging.v2.Settings";
   value: SettingsAmino;
 }
-/** The parameters to CopyLogEntries. */
+/**
+ * The parameters to CopyLogEntries.
+ * @name CopyLogEntriesRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CopyLogEntriesRequest
+ */
 export interface CopyLogEntriesRequest {
   /**
    * Required. Log bucket from which to copy log entries.
@@ -2638,14 +3047,21 @@ export interface CopyLogEntriesRequest {
    * than 20k characters. An empty filter matches all log entries.
    */
   filter: string;
-  /** Required. Destination to which to copy log entries. */
+  /**
+   * Required. Destination to which to copy log entries.
+  */
   destination: string;
 }
 export interface CopyLogEntriesRequestProtoMsg {
   typeUrl: "/google.logging.v2.CopyLogEntriesRequest";
   value: Uint8Array;
 }
-/** The parameters to CopyLogEntries. */
+/**
+ * The parameters to CopyLogEntries.
+ * @name CopyLogEntriesRequestAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CopyLogEntriesRequest
+ */
 export interface CopyLogEntriesRequestAmino {
   /**
    * Required. Log bucket from which to copy log entries.
@@ -2660,26 +3076,45 @@ export interface CopyLogEntriesRequestAmino {
    * than 20k characters. An empty filter matches all log entries.
    */
   filter: string;
-  /** Required. Destination to which to copy log entries. */
+  /**
+   * Required. Destination to which to copy log entries.
+  */
   destination: string;
 }
 export interface CopyLogEntriesRequestAminoMsg {
   type: "/google.logging.v2.CopyLogEntriesRequest";
   value: CopyLogEntriesRequestAmino;
 }
-/** Metadata for CopyLogEntries long running operations. */
+/**
+ * Metadata for CopyLogEntries long running operations.
+ * @name CopyLogEntriesMetadata
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CopyLogEntriesMetadata
+ */
 export interface CopyLogEntriesMetadata {
-  /** The create time of an operation. */
+  /**
+   * The create time of an operation.
+  */
   startTime?: Date;
-  /** The end time of an operation. */
+  /**
+   * The end time of an operation.
+  */
   endTime?: Date;
-  /** State of an operation. */
+  /**
+   * State of an operation.
+  */
   state: OperationState;
-  /** Identifies whether the user has requested cancellation of the operation. */
+  /**
+   * Identifies whether the user has requested cancellation of the operation.
+  */
   cancellationRequested: boolean;
-  /** CopyLogEntries RPC request. */
+  /**
+   * CopyLogEntries RPC request.
+  */
   request?: CopyLogEntriesRequest;
-  /** Estimated progress of the operation (0 - 100%). */
+  /**
+   * Estimated progress of the operation (0 - 100%).
+  */
   progress: number;
   /**
    * The IAM identity of a service account that must be granted access to the
@@ -2696,19 +3131,36 @@ export interface CopyLogEntriesMetadataProtoMsg {
   typeUrl: "/google.logging.v2.CopyLogEntriesMetadata";
   value: Uint8Array;
 }
-/** Metadata for CopyLogEntries long running operations. */
+/**
+ * Metadata for CopyLogEntries long running operations.
+ * @name CopyLogEntriesMetadataAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CopyLogEntriesMetadata
+ */
 export interface CopyLogEntriesMetadataAmino {
-  /** The create time of an operation. */
+  /**
+   * The create time of an operation.
+  */
   start_time?: string;
-  /** The end time of an operation. */
+  /**
+   * The end time of an operation.
+  */
   end_time?: string;
-  /** State of an operation. */
+  /**
+   * State of an operation.
+  */
   state: OperationState;
-  /** Identifies whether the user has requested cancellation of the operation. */
+  /**
+   * Identifies whether the user has requested cancellation of the operation.
+  */
   cancellation_requested: boolean;
-  /** CopyLogEntries RPC request. */
+  /**
+   * CopyLogEntries RPC request.
+  */
   request?: CopyLogEntriesRequestAmino;
-  /** Estimated progress of the operation (0 - 100%). */
+  /**
+   * Estimated progress of the operation (0 - 100%).
+  */
   progress: number;
   /**
    * The IAM identity of a service account that must be granted access to the
@@ -2725,18 +3177,32 @@ export interface CopyLogEntriesMetadataAminoMsg {
   type: "/google.logging.v2.CopyLogEntriesMetadata";
   value: CopyLogEntriesMetadataAmino;
 }
-/** Response type for CopyLogEntries long running operations. */
+/**
+ * Response type for CopyLogEntries long running operations.
+ * @name CopyLogEntriesResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CopyLogEntriesResponse
+ */
 export interface CopyLogEntriesResponse {
-  /** Number of log entries copied. */
+  /**
+   * Number of log entries copied.
+  */
   logEntriesCopiedCount: bigint;
 }
 export interface CopyLogEntriesResponseProtoMsg {
   typeUrl: "/google.logging.v2.CopyLogEntriesResponse";
   value: Uint8Array;
 }
-/** Response type for CopyLogEntries long running operations. */
+/**
+ * Response type for CopyLogEntries long running operations.
+ * @name CopyLogEntriesResponseAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CopyLogEntriesResponse
+ */
 export interface CopyLogEntriesResponseAmino {
-  /** Number of log entries copied. */
+  /**
+   * Number of log entries copied.
+  */
   log_entries_copied_count: string;
 }
 export interface CopyLogEntriesResponseAminoMsg {
@@ -2756,6 +3222,12 @@ function createBaseLogBucket(): LogBucket {
     cmekSettings: undefined
   };
 }
+/**
+ * Describes a repository in which log entries are stored.
+ * @name LogBucket
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogBucket
+ */
 export const LogBucket = {
   typeUrl: "/google.logging.v2.LogBucket",
   encode(message: LogBucket, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2913,6 +3385,12 @@ function createBaseLogView(): LogView {
     filter: ""
   };
 }
+/**
+ * Describes a view over log entries in a bucket.
+ * @name LogView
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogView
+ */
 export const LogView = {
   typeUrl: "/google.logging.v2.LogView",
   encode(message: LogView, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3031,6 +3509,16 @@ function createBaseLogSink(): LogSink {
     updateTime: undefined
   };
 }
+/**
+ * Describes a sink used to export log entries to one of the following
+ * destinations in any project: a Cloud Storage bucket, a BigQuery dataset, a
+ * Pub/Sub topic or a Cloud Logging log bucket. A logs filter controls which log
+ * entries are exported. The sink must be created within a project,
+ * organization, billing account, or folder.
+ * @name LogSink
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogSink
+ */
 export const LogSink = {
   typeUrl: "/google.logging.v2.LogSink",
   encode(message: LogSink, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3218,6 +3706,12 @@ function createBaseBigQueryOptions(): BigQueryOptions {
     usesTimestampColumnPartitioning: false
   };
 }
+/**
+ * Options that change functionality of a sink exporting data to BigQuery.
+ * @name BigQueryOptions
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.BigQueryOptions
+ */
 export const BigQueryOptions = {
   typeUrl: "/google.logging.v2.BigQueryOptions",
   encode(message: BigQueryOptions, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3294,6 +3788,12 @@ function createBaseListBucketsRequest(): ListBucketsRequest {
     pageSize: 0
   };
 }
+/**
+ * The parameters to `ListBuckets`.
+ * @name ListBucketsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListBucketsRequest
+ */
 export const ListBucketsRequest = {
   typeUrl: "/google.logging.v2.ListBucketsRequest",
   encode(message: ListBucketsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3380,6 +3880,12 @@ function createBaseListBucketsResponse(): ListBucketsResponse {
     nextPageToken: ""
   };
 }
+/**
+ * The response from ListBuckets.
+ * @name ListBucketsResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListBucketsResponse
+ */
 export const ListBucketsResponse = {
   typeUrl: "/google.logging.v2.ListBucketsResponse",
   encode(message: ListBucketsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3458,6 +3964,12 @@ function createBaseCreateBucketRequest(): CreateBucketRequest {
     bucket: undefined
   };
 }
+/**
+ * The parameters to `CreateBucket`.
+ * @name CreateBucketRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateBucketRequest
+ */
 export const CreateBucketRequest = {
   typeUrl: "/google.logging.v2.CreateBucketRequest",
   encode(message: CreateBucketRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3545,6 +4057,12 @@ function createBaseUpdateBucketRequest(): UpdateBucketRequest {
     updateMask: undefined
   };
 }
+/**
+ * The parameters to `UpdateBucket`.
+ * @name UpdateBucketRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateBucketRequest
+ */
 export const UpdateBucketRequest = {
   typeUrl: "/google.logging.v2.UpdateBucketRequest",
   encode(message: UpdateBucketRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3630,6 +4148,12 @@ function createBaseGetBucketRequest(): GetBucketRequest {
     name: ""
   };
 }
+/**
+ * The parameters to `GetBucket`.
+ * @name GetBucketRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetBucketRequest
+ */
 export const GetBucketRequest = {
   typeUrl: "/google.logging.v2.GetBucketRequest",
   encode(message: GetBucketRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3693,6 +4217,12 @@ function createBaseDeleteBucketRequest(): DeleteBucketRequest {
     name: ""
   };
 }
+/**
+ * The parameters to `DeleteBucket`.
+ * @name DeleteBucketRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteBucketRequest
+ */
 export const DeleteBucketRequest = {
   typeUrl: "/google.logging.v2.DeleteBucketRequest",
   encode(message: DeleteBucketRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3756,6 +4286,12 @@ function createBaseUndeleteBucketRequest(): UndeleteBucketRequest {
     name: ""
   };
 }
+/**
+ * The parameters to `UndeleteBucket`.
+ * @name UndeleteBucketRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UndeleteBucketRequest
+ */
 export const UndeleteBucketRequest = {
   typeUrl: "/google.logging.v2.UndeleteBucketRequest",
   encode(message: UndeleteBucketRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3821,6 +4357,12 @@ function createBaseListViewsRequest(): ListViewsRequest {
     pageSize: 0
   };
 }
+/**
+ * The parameters to `ListViews`.
+ * @name ListViewsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListViewsRequest
+ */
 export const ListViewsRequest = {
   typeUrl: "/google.logging.v2.ListViewsRequest",
   encode(message: ListViewsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3907,6 +4449,12 @@ function createBaseListViewsResponse(): ListViewsResponse {
     nextPageToken: ""
   };
 }
+/**
+ * The response from ListViews.
+ * @name ListViewsResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListViewsResponse
+ */
 export const ListViewsResponse = {
   typeUrl: "/google.logging.v2.ListViewsResponse",
   encode(message: ListViewsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -3985,6 +4533,12 @@ function createBaseCreateViewRequest(): CreateViewRequest {
     view: undefined
   };
 }
+/**
+ * The parameters to `CreateView`.
+ * @name CreateViewRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateViewRequest
+ */
 export const CreateViewRequest = {
   typeUrl: "/google.logging.v2.CreateViewRequest",
   encode(message: CreateViewRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -4072,6 +4626,12 @@ function createBaseUpdateViewRequest(): UpdateViewRequest {
     updateMask: undefined
   };
 }
+/**
+ * The parameters to `UpdateView`.
+ * @name UpdateViewRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateViewRequest
+ */
 export const UpdateViewRequest = {
   typeUrl: "/google.logging.v2.UpdateViewRequest",
   encode(message: UpdateViewRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -4157,6 +4717,12 @@ function createBaseGetViewRequest(): GetViewRequest {
     name: ""
   };
 }
+/**
+ * The parameters to `GetView`.
+ * @name GetViewRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetViewRequest
+ */
 export const GetViewRequest = {
   typeUrl: "/google.logging.v2.GetViewRequest",
   encode(message: GetViewRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -4220,6 +4786,12 @@ function createBaseDeleteViewRequest(): DeleteViewRequest {
     name: ""
   };
 }
+/**
+ * The parameters to `DeleteView`.
+ * @name DeleteViewRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteViewRequest
+ */
 export const DeleteViewRequest = {
   typeUrl: "/google.logging.v2.DeleteViewRequest",
   encode(message: DeleteViewRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -4285,6 +4857,12 @@ function createBaseListSinksRequest(): ListSinksRequest {
     pageSize: 0
   };
 }
+/**
+ * The parameters to `ListSinks`.
+ * @name ListSinksRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListSinksRequest
+ */
 export const ListSinksRequest = {
   typeUrl: "/google.logging.v2.ListSinksRequest",
   encode(message: ListSinksRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -4371,6 +4949,12 @@ function createBaseListSinksResponse(): ListSinksResponse {
     nextPageToken: ""
   };
 }
+/**
+ * Result returned from `ListSinks`.
+ * @name ListSinksResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListSinksResponse
+ */
 export const ListSinksResponse = {
   typeUrl: "/google.logging.v2.ListSinksResponse",
   encode(message: ListSinksResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -4447,6 +5031,12 @@ function createBaseGetSinkRequest(): GetSinkRequest {
     sinkName: ""
   };
 }
+/**
+ * The parameters to `GetSink`.
+ * @name GetSinkRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetSinkRequest
+ */
 export const GetSinkRequest = {
   typeUrl: "/google.logging.v2.GetSinkRequest",
   encode(message: GetSinkRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -4512,6 +5102,12 @@ function createBaseCreateSinkRequest(): CreateSinkRequest {
     uniqueWriterIdentity: false
   };
 }
+/**
+ * The parameters to `CreateSink`.
+ * @name CreateSinkRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateSinkRequest
+ */
 export const CreateSinkRequest = {
   typeUrl: "/google.logging.v2.CreateSinkRequest",
   encode(message: CreateSinkRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -4600,6 +5196,12 @@ function createBaseUpdateSinkRequest(): UpdateSinkRequest {
     updateMask: undefined
   };
 }
+/**
+ * The parameters to `UpdateSink`.
+ * @name UpdateSinkRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateSinkRequest
+ */
 export const UpdateSinkRequest = {
   typeUrl: "/google.logging.v2.UpdateSinkRequest",
   encode(message: UpdateSinkRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -4696,6 +5298,12 @@ function createBaseDeleteSinkRequest(): DeleteSinkRequest {
     sinkName: ""
   };
 }
+/**
+ * The parameters to `DeleteSink`.
+ * @name DeleteSinkRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteSinkRequest
+ */
 export const DeleteSinkRequest = {
   typeUrl: "/google.logging.v2.DeleteSinkRequest",
   encode(message: DeleteSinkRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -4764,6 +5372,16 @@ function createBaseLogExclusion(): LogExclusion {
     updateTime: undefined
   };
 }
+/**
+ * Specifies a set of log entries that are filtered out by a sink. If
+ * your Google Cloud resource receives a large volume of log entries, you can
+ * use exclusions to reduce your chargeable logs. Note that exclusions on
+ * organization-level and folder-level sinks don't apply to child resources.
+ * Note also that you cannot modify the _Required sink or exclude logs from it.
+ * @name LogExclusion
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogExclusion
+ */
 export const LogExclusion = {
   typeUrl: "/google.logging.v2.LogExclusion",
   encode(message: LogExclusion, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -4884,6 +5502,12 @@ function createBaseListExclusionsRequest(): ListExclusionsRequest {
     pageSize: 0
   };
 }
+/**
+ * The parameters to `ListExclusions`.
+ * @name ListExclusionsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListExclusionsRequest
+ */
 export const ListExclusionsRequest = {
   typeUrl: "/google.logging.v2.ListExclusionsRequest",
   encode(message: ListExclusionsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -4970,6 +5594,12 @@ function createBaseListExclusionsResponse(): ListExclusionsResponse {
     nextPageToken: ""
   };
 }
+/**
+ * Result returned from `ListExclusions`.
+ * @name ListExclusionsResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.ListExclusionsResponse
+ */
 export const ListExclusionsResponse = {
   typeUrl: "/google.logging.v2.ListExclusionsResponse",
   encode(message: ListExclusionsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -5046,6 +5676,12 @@ function createBaseGetExclusionRequest(): GetExclusionRequest {
     name: ""
   };
 }
+/**
+ * The parameters to `GetExclusion`.
+ * @name GetExclusionRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetExclusionRequest
+ */
 export const GetExclusionRequest = {
   typeUrl: "/google.logging.v2.GetExclusionRequest",
   encode(message: GetExclusionRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -5110,6 +5746,12 @@ function createBaseCreateExclusionRequest(): CreateExclusionRequest {
     exclusion: undefined
   };
 }
+/**
+ * The parameters to `CreateExclusion`.
+ * @name CreateExclusionRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CreateExclusionRequest
+ */
 export const CreateExclusionRequest = {
   typeUrl: "/google.logging.v2.CreateExclusionRequest",
   encode(message: CreateExclusionRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -5186,6 +5828,12 @@ function createBaseUpdateExclusionRequest(): UpdateExclusionRequest {
     updateMask: undefined
   };
 }
+/**
+ * The parameters to `UpdateExclusion`.
+ * @name UpdateExclusionRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateExclusionRequest
+ */
 export const UpdateExclusionRequest = {
   typeUrl: "/google.logging.v2.UpdateExclusionRequest",
   encode(message: UpdateExclusionRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -5271,6 +5919,12 @@ function createBaseDeleteExclusionRequest(): DeleteExclusionRequest {
     name: ""
   };
 }
+/**
+ * The parameters to `DeleteExclusion`.
+ * @name DeleteExclusionRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.DeleteExclusionRequest
+ */
 export const DeleteExclusionRequest = {
   typeUrl: "/google.logging.v2.DeleteExclusionRequest",
   encode(message: DeleteExclusionRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -5334,6 +5988,17 @@ function createBaseGetCmekSettingsRequest(): GetCmekSettingsRequest {
     name: ""
   };
 }
+/**
+ * The parameters to
+ * [GetCmekSettings][google.logging.v2.ConfigServiceV2.GetCmekSettings].
+ * 
+ * See [Enabling CMEK for Log
+ * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
+ * more information.
+ * @name GetCmekSettingsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetCmekSettingsRequest
+ */
 export const GetCmekSettingsRequest = {
   typeUrl: "/google.logging.v2.GetCmekSettingsRequest",
   encode(message: GetCmekSettingsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -5399,6 +6064,17 @@ function createBaseUpdateCmekSettingsRequest(): UpdateCmekSettingsRequest {
     updateMask: undefined
   };
 }
+/**
+ * The parameters to
+ * [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings].
+ * 
+ * See [Enabling CMEK for Log
+ * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
+ * more information.
+ * @name UpdateCmekSettingsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateCmekSettingsRequest
+ */
 export const UpdateCmekSettingsRequest = {
   typeUrl: "/google.logging.v2.UpdateCmekSettingsRequest",
   encode(message: UpdateCmekSettingsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -5486,6 +6162,21 @@ function createBaseCmekSettings(): CmekSettings {
     serviceAccountId: ""
   };
 }
+/**
+ * Describes the customer-managed encryption key (CMEK) settings associated with
+ * a project, folder, organization, billing account, or flexible resource.
+ * 
+ * Note: CMEK for the Log Router can currently only be configured for Google
+ * Cloud organizations. Once configured, it applies to all projects and folders
+ * in the Google Cloud organization.
+ * 
+ * See [Enabling CMEK for Log
+ * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
+ * more information.
+ * @name CmekSettings
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CmekSettings
+ */
 export const CmekSettings = {
   typeUrl: "/google.logging.v2.CmekSettings",
   encode(message: CmekSettings, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -5571,6 +6262,17 @@ function createBaseGetSettingsRequest(): GetSettingsRequest {
     name: ""
   };
 }
+/**
+ * The parameters to
+ * [GetSettings][google.logging.v2.ConfigServiceV2.GetSettings].
+ * 
+ * See [Enabling CMEK for Log
+ * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
+ * more information.
+ * @name GetSettingsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.GetSettingsRequest
+ */
 export const GetSettingsRequest = {
   typeUrl: "/google.logging.v2.GetSettingsRequest",
   encode(message: GetSettingsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -5636,6 +6338,17 @@ function createBaseUpdateSettingsRequest(): UpdateSettingsRequest {
     updateMask: undefined
   };
 }
+/**
+ * The parameters to
+ * [UpdateSettings][google.logging.v2.ConfigServiceV2.UpdateSettings].
+ * 
+ * See [Enabling CMEK for Log
+ * Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
+ * more information.
+ * @name UpdateSettingsRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.UpdateSettingsRequest
+ */
 export const UpdateSettingsRequest = {
   typeUrl: "/google.logging.v2.UpdateSettingsRequest",
   encode(message: UpdateSettingsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -5725,6 +6438,13 @@ function createBaseSettings(): Settings {
     disableDefaultSink: false
   };
 }
+/**
+ * Describes the settings associated with a project, folder, organization,
+ * billing account, or flexible resource.
+ * @name Settings
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.Settings
+ */
 export const Settings = {
   typeUrl: "/google.logging.v2.Settings",
   encode(message: Settings, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -5834,6 +6554,12 @@ function createBaseCopyLogEntriesRequest(): CopyLogEntriesRequest {
     destination: ""
   };
 }
+/**
+ * The parameters to CopyLogEntries.
+ * @name CopyLogEntriesRequest
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CopyLogEntriesRequest
+ */
 export const CopyLogEntriesRequest = {
   typeUrl: "/google.logging.v2.CopyLogEntriesRequest",
   encode(message: CopyLogEntriesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -5925,6 +6651,12 @@ function createBaseCopyLogEntriesMetadata(): CopyLogEntriesMetadata {
     writerIdentity: ""
   };
 }
+/**
+ * Metadata for CopyLogEntries long running operations.
+ * @name CopyLogEntriesMetadata
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CopyLogEntriesMetadata
+ */
 export const CopyLogEntriesMetadata = {
   typeUrl: "/google.logging.v2.CopyLogEntriesMetadata",
   encode(message: CopyLogEntriesMetadata, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -6054,6 +6786,12 @@ function createBaseCopyLogEntriesResponse(): CopyLogEntriesResponse {
     logEntriesCopiedCount: BigInt(0)
   };
 }
+/**
+ * Response type for CopyLogEntries long running operations.
+ * @name CopyLogEntriesResponse
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.CopyLogEntriesResponse
+ */
 export const CopyLogEntriesResponse = {
   typeUrl: "/google.logging.v2.CopyLogEntriesResponse",
   encode(message: CopyLogEntriesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

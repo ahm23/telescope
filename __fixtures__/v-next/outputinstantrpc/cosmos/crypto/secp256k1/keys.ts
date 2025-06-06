@@ -8,6 +8,9 @@ export const protobufPackage = "cosmos.crypto.secp256k1";
  * if the y-coordinate is the lexicographically largest of the two associated with
  * the x-coordinate. Otherwise the first byte is a 0x03.
  * This prefix is followed with the x-coordinate.
+ * @name PubKey
+ * @package cosmos.crypto.secp256k1
+ * @see proto type: cosmos.crypto.secp256k1.PubKey
  */
 export interface PubKey {
   key: Uint8Array;
@@ -22,11 +25,19 @@ export interface PubKeyProtoMsg {
  * if the y-coordinate is the lexicographically largest of the two associated with
  * the x-coordinate. Otherwise the first byte is a 0x03.
  * This prefix is followed with the x-coordinate.
+ * @name PubKeySDKType
+ * @package cosmos.crypto.secp256k1
+ * @see proto type: cosmos.crypto.secp256k1.PubKey
  */
 export interface PubKeySDKType {
   key: Uint8Array;
 }
-/** PrivKey defines a secp256k1 private key. */
+/**
+ * PrivKey defines a secp256k1 private key.
+ * @name PrivKey
+ * @package cosmos.crypto.secp256k1
+ * @see proto type: cosmos.crypto.secp256k1.PrivKey
+ */
 export interface PrivKey {
   key: Uint8Array;
 }
@@ -34,7 +45,12 @@ export interface PrivKeyProtoMsg {
   typeUrl: "/cosmos.crypto.secp256k1.PrivKey";
   value: Uint8Array;
 }
-/** PrivKey defines a secp256k1 private key. */
+/**
+ * PrivKey defines a secp256k1 private key.
+ * @name PrivKeySDKType
+ * @package cosmos.crypto.secp256k1
+ * @see proto type: cosmos.crypto.secp256k1.PrivKey
+ */
 export interface PrivKeySDKType {
   key: Uint8Array;
 }
@@ -43,6 +59,16 @@ function createBasePubKey(): PubKey {
     key: new Uint8Array()
   };
 }
+/**
+ * PubKey defines a secp256k1 public key
+ * Key is the compressed form of the pubkey. The first byte depends is a 0x02 byte
+ * if the y-coordinate is the lexicographically largest of the two associated with
+ * the x-coordinate. Otherwise the first byte is a 0x03.
+ * This prefix is followed with the x-coordinate.
+ * @name PubKey
+ * @package cosmos.crypto.secp256k1
+ * @see proto type: cosmos.crypto.secp256k1.PubKey
+ */
 export const PubKey = {
   typeUrl: "/cosmos.crypto.secp256k1.PubKey",
   encode(message: PubKey, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -137,6 +163,12 @@ function createBasePrivKey(): PrivKey {
     key: new Uint8Array()
   };
 }
+/**
+ * PrivKey defines a secp256k1 private key.
+ * @name PrivKey
+ * @package cosmos.crypto.secp256k1
+ * @see proto type: cosmos.crypto.secp256k1.PrivKey
+ */
 export const PrivKey = {
   typeUrl: "/cosmos.crypto.secp256k1.PrivKey",
   encode(message: PrivKey, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

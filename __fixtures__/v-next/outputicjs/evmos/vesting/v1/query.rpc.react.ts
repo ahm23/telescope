@@ -5,7 +5,7 @@ import { getBalances } from "./query.rpc.func";
  * Retrieves the unvested, vested and locked tokens for a vesting account
  * @name useGetBalances
  * @package evmos.vesting.v1
- * @see protoservice: evmos.vesting.v1.Balances
+ * @see proto service: evmos.vesting.v1.Balances
  */
 export const useGetBalances = buildUseQuery<QueryBalancesRequest, QueryBalancesResponse>({
   builderQueryFn: getBalances,

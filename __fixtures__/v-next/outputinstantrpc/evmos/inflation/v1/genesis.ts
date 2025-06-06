@@ -3,24 +3,44 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "evmos.inflation.v1";
-/** GenesisState defines the inflation module's genesis state. */
+/**
+ * GenesisState defines the inflation module's genesis state.
+ * @name GenesisState
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the paramaters of the module. */
+  /**
+   * params defines all the paramaters of the module.
+  */
   params: Params;
-  /** amount of past periods, based on the epochs per period param */
+  /**
+   * amount of past periods, based on the epochs per period param
+  */
   period: bigint;
-  /** inflation epoch identifier */
+  /**
+   * inflation epoch identifier
+  */
   epochIdentifier: string;
-  /** number of epochs after which inflation is recalculated */
+  /**
+   * number of epochs after which inflation is recalculated
+  */
   epochsPerPeriod: bigint;
-  /** number of epochs that have passed while inflation is disabled */
+  /**
+   * number of epochs that have passed while inflation is disabled
+  */
   skippedEpochs: bigint;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/evmos.inflation.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the inflation module's genesis state. */
+/**
+ * GenesisState defines the inflation module's genesis state.
+ * @name GenesisStateSDKType
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   period: bigint;
@@ -28,22 +48,40 @@ export interface GenesisStateSDKType {
   epochs_per_period: bigint;
   skipped_epochs: bigint;
 }
-/** Params holds parameters for the inflation module. */
+/**
+ * Params holds parameters for the inflation module.
+ * @name Params
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.Params
+ */
 export interface Params {
-  /** type of coin to mint */
+  /**
+   * type of coin to mint
+  */
   mintDenom: string;
-  /** variables to calculate exponential inflation */
+  /**
+   * variables to calculate exponential inflation
+  */
   exponentialCalculation: ExponentialCalculation;
-  /** inflation distribution of the minted denom */
+  /**
+   * inflation distribution of the minted denom
+  */
   inflationDistribution: InflationDistribution;
-  /** parameter to enable inflation and halt increasing the skipped_epochs */
+  /**
+   * parameter to enable inflation and halt increasing the skipped_epochs
+  */
   enableInflation: boolean;
 }
 export interface ParamsProtoMsg {
   typeUrl: "/evmos.inflation.v1.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the inflation module. */
+/**
+ * Params holds parameters for the inflation module.
+ * @name ParamsSDKType
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.Params
+ */
 export interface ParamsSDKType {
   mint_denom: string;
   exponential_calculation: ExponentialCalculationSDKType;
@@ -59,6 +97,12 @@ function createBaseGenesisState(): GenesisState {
     skippedEpochs: BigInt(0)
   };
 }
+/**
+ * GenesisState defines the inflation module's genesis state.
+ * @name GenesisState
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/evmos.inflation.v1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -222,6 +266,12 @@ function createBaseParams(): Params {
     enableInflation: false
   };
 }
+/**
+ * Params holds parameters for the inflation module.
+ * @name Params
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.Params
+ */
 export const Params = {
   typeUrl: "/evmos.inflation.v1.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

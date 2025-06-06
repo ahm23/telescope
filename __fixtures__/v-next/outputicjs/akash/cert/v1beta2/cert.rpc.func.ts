@@ -4,7 +4,7 @@ import { MsgCreateCertificate, MsgRevokeCertificate } from "./cert";
  * CreateCertificate defines a method to create new certificate given proper inputs.
  * @name createCertificate
  * @package akash.cert.v1beta2
- * @see protoservice: akash.cert.v1beta2.CreateCertificate
+ * @see proto service: akash.cert.v1beta2.CreateCertificate
  */
 export const createCertificate = buildTx<MsgCreateCertificate>({
   msg: MsgCreateCertificate
@@ -13,7 +13,7 @@ export const createCertificate = buildTx<MsgCreateCertificate>({
  * RevokeCertificate defines a method to revoke the certificate
  * @name revokeCertificate
  * @package akash.cert.v1beta2
- * @see protoservice: akash.cert.v1beta2.RevokeCertificate
+ * @see proto service: akash.cert.v1beta2.RevokeCertificate
  */
 export const revokeCertificate = buildTx<MsgRevokeCertificate>({
   msg: MsgRevokeCertificate

@@ -9,75 +9,124 @@ import { JsonSafe } from "../json-safe";
 import { toUtf8, fromBase64, fromUtf8, toBase64 } from "@cosmjs/encoding";
 import { encodePubkey, decodePubkey } from "@cosmjs/proto-signing";
 export const protobufPackage = "misc";
+/**
+ * @name EncodingTestForDontOmit
+ * @package misc
+ * @see proto type: misc.EncodingTestForDontOmit
+ */
 export interface EncodingTestForDontOmit {
-  /** scalar */
+  /**
+   * scalar
+  */
   str: string;
   dOStr: string;
   b: boolean;
   dOB: boolean;
   num: number;
   dONum: number;
-  /** bigint */
+  /**
+   * bigint
+  */
   big: bigint;
   dOBig: bigint;
-  /** protoType */
+  /**
+   * protoType
+  */
   proto?: AccessConfig;
   dOProto: AccessConfig;
-  /** anyType */
+  /**
+   * anyType
+  */
   auth?: Any;
   dOAuth: Any;
-  /** bytes */
+  /**
+   * bytes
+  */
   salt: Uint8Array;
   dOSalt: Uint8Array;
-  /** raw bytes */
+  /**
+   * raw bytes
+  */
   raw: Uint8Array;
   dORaw: Uint8Array;
-  /** wasm bytes */
+  /**
+   * wasm bytes
+  */
   wasm: Uint8Array;
   dOWasm: Uint8Array;
-  /** enum */
+  /**
+   * enum
+  */
   opt: VoteOption;
   dOOpt: VoteOption;
-  /** duration */
+  /**
+   * duration
+  */
   period?: Duration;
   dOPeriod: Duration;
-  /** timestamp */
+  /**
+   * timestamp
+  */
   date?: Date;
   dODate: Date;
-  /** pubkey */
+  /**
+   * pubkey
+  */
   pubkey?: Any;
   dOPubkey: Any;
-  /** array scalar */
+  /**
+   * array scalar
+  */
   nums: number[];
   dONums: number[];
-  /** array bigint */
+  /**
+   * array bigint
+  */
   bigs: bigint[];
   dOBigs: bigint[];
-  /** array bytes */
+  /**
+   * array bytes
+  */
   salts: Uint8Array[];
   dOSalts: Uint8Array[];
-  /** array raw bytes */
+  /**
+   * array raw bytes
+  */
   raws: Uint8Array[];
   dORaws: Uint8Array[];
-  /** array wasm bytes */
+  /**
+   * array wasm bytes
+  */
   wasms: Uint8Array[];
   dOWasms: Uint8Array[];
-  /** array enum */
+  /**
+   * array enum
+  */
   opts: VoteOption[];
   dOOpts: VoteOption[];
-  /** array duration */
+  /**
+   * array duration
+  */
   periods: Duration[];
   dOPeriods: Duration[];
-  /** array protoType */
+  /**
+   * array protoType
+  */
   protos: AccessConfig[];
   dOProtos: AccessConfig[];
-  /** array anyType */
+  /**
+   * array anyType
+  */
   auths: Any[];
   dOAuths: Any[];
-  /** dec */
+  /**
+   * dec
+  */
   dec: string;
   dODec: string;
-  /** array dec */
+  /**
+   * array dec
+  */
   decs: string[];
   dODecs: string[];
 }
@@ -85,6 +134,11 @@ export interface EncodingTestForDontOmitProtoMsg {
   typeUrl: "/misc.EncodingTestForDontOmit";
   value: Uint8Array;
 }
+/**
+ * @name EncodingTestForDontOmitSDKType
+ * @package misc
+ * @see proto type: misc.EncodingTestForDontOmit
+ */
 export interface EncodingTestForDontOmitSDKType {
   str: string;
   d_o_str: string;
@@ -135,75 +189,124 @@ export interface EncodingTestForDontOmitSDKType {
   decs: string[];
   d_o_decs: string[];
 }
+/**
+ * @name EncodingTestForOmit
+ * @package misc
+ * @see proto type: misc.EncodingTestForOmit
+ */
 export interface EncodingTestForOmit {
-  /** scalar */
+  /**
+   * scalar
+  */
   str: string;
   oStr: string;
   b: boolean;
   oB: boolean;
   num: number;
   oNum: number;
-  /** bigint */
+  /**
+   * bigint
+  */
   big: bigint;
   oBig: bigint;
-  /** protoType */
+  /**
+   * protoType
+  */
   proto?: AccessConfig;
   oProto: AccessConfig;
-  /** anyType */
+  /**
+   * anyType
+  */
   auth?: Any;
   oAuth: Any;
-  /** bytes */
+  /**
+   * bytes
+  */
   salt: Uint8Array;
   oSalt: Uint8Array;
-  /** raw bytes */
+  /**
+   * raw bytes
+  */
   raw: Uint8Array;
   oRaw: Uint8Array;
-  /** wasm bytes */
+  /**
+   * wasm bytes
+  */
   wasm: Uint8Array;
   oWasm: Uint8Array;
-  /** enum */
+  /**
+   * enum
+  */
   opt: VoteOption;
   oOpt: VoteOption;
-  /** duration */
+  /**
+   * duration
+  */
   period?: Duration;
   oPeriod: Duration;
-  /** timestamp */
+  /**
+   * timestamp
+  */
   date?: Date;
   oDate: Date;
-  /** pubkey */
+  /**
+   * pubkey
+  */
   pubkey?: Any;
   oPubkey: Any;
-  /** array scalar */
+  /**
+   * array scalar
+  */
   nums: number[];
   oNums: number[];
-  /** array bigint */
+  /**
+   * array bigint
+  */
   bigs: bigint[];
   oBigs: bigint[];
-  /** array bytes */
+  /**
+   * array bytes
+  */
   salts: Uint8Array[];
   oSalts: Uint8Array[];
-  /** array raw bytes */
+  /**
+   * array raw bytes
+  */
   raws: Uint8Array[];
   oRaws: Uint8Array[];
-  /** array wasm bytes */
+  /**
+   * array wasm bytes
+  */
   wasms: Uint8Array[];
   oWasms: Uint8Array[];
-  /** array enum */
+  /**
+   * array enum
+  */
   opts: VoteOption[];
   oOpts: VoteOption[];
-  /** array duration */
+  /**
+   * array duration
+  */
   periods: Duration[];
   oPeriods: Duration[];
-  /** array protoType */
+  /**
+   * array protoType
+  */
   protos: AccessConfig[];
   oProtos: AccessConfig[];
-  /** array anyType */
+  /**
+   * array anyType
+  */
   auths: Any[];
   oAuths: Any[];
-  /** dec */
+  /**
+   * dec
+  */
   dec: string;
   oDec: string;
-  /** array dec */
+  /**
+   * array dec
+  */
   decs: string[];
   oDecs: string[];
 }
@@ -211,6 +314,11 @@ export interface EncodingTestForOmitProtoMsg {
   typeUrl: "/misc.EncodingTestForOmit";
   value: Uint8Array;
 }
+/**
+ * @name EncodingTestForOmitSDKType
+ * @package misc
+ * @see proto type: misc.EncodingTestForOmit
+ */
 export interface EncodingTestForOmitSDKType {
   str: string;
   o_str: string;
@@ -313,6 +421,11 @@ function createBaseEncodingTestForDontOmit(): EncodingTestForDontOmit {
     dODecs: []
   };
 }
+/**
+ * @name EncodingTestForDontOmit
+ * @package misc
+ * @see proto type: misc.EncodingTestForDontOmit
+ */
 export const EncodingTestForDontOmit = {
   typeUrl: "/misc.EncodingTestForDontOmit",
   encode(message: EncodingTestForDontOmit, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1474,6 +1587,11 @@ function createBaseEncodingTestForOmit(): EncodingTestForOmit {
     oDecs: []
   };
 }
+/**
+ * @name EncodingTestForOmit
+ * @package misc
+ * @see proto type: misc.EncodingTestForOmit
+ */
 export const EncodingTestForOmit = {
   typeUrl: "/misc.EncodingTestForOmit",
   encode(message: EncodingTestForOmit, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

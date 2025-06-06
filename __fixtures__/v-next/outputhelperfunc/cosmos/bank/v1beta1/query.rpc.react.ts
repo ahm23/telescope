@@ -10,7 +10,7 @@ import { getBalance, getAllBalances, getSpendableBalances, getTotalSupply, getSu
  * Balance queries the balance of a single coin for a single account.
  * @name useGetBalance
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.Balance
+ * @see proto service: cosmos.bank.v1beta1.Balance
  */
 export const useGetBalance = buildUseQuery<QueryBalanceRequest, QueryBalanceResponse>({
   builderQueryFn: getBalance,
@@ -20,7 +20,7 @@ export const useGetBalance = buildUseQuery<QueryBalanceRequest, QueryBalanceResp
  * AllBalances queries the balance of all coins for a single account.
  * @name useGetAllBalances
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.AllBalances
+ * @see proto service: cosmos.bank.v1beta1.AllBalances
  */
 export const useGetAllBalances = buildUseQuery<QueryAllBalancesRequest, QueryAllBalancesResponse>({
   builderQueryFn: getAllBalances,
@@ -31,7 +31,7 @@ export const useGetAllBalances = buildUseQuery<QueryAllBalancesRequest, QueryAll
  * account.
  * @name useGetSpendableBalances
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.SpendableBalances
+ * @see proto service: cosmos.bank.v1beta1.SpendableBalances
  */
 export const useGetSpendableBalances = buildUseQuery<QuerySpendableBalancesRequest, QuerySpendableBalancesResponse>({
   builderQueryFn: getSpendableBalances,
@@ -41,7 +41,7 @@ export const useGetSpendableBalances = buildUseQuery<QuerySpendableBalancesReque
  * TotalSupply queries the total supply of all coins.
  * @name useGetTotalSupply
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.TotalSupply
+ * @see proto service: cosmos.bank.v1beta1.TotalSupply
  */
 export const useGetTotalSupply = buildUseQuery<QueryTotalSupplyRequest, QueryTotalSupplyResponse>({
   builderQueryFn: getTotalSupply,
@@ -51,7 +51,7 @@ export const useGetTotalSupply = buildUseQuery<QueryTotalSupplyRequest, QueryTot
  * SupplyOf queries the supply of a single coin.
  * @name useGetSupplyOf
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.SupplyOf
+ * @see proto service: cosmos.bank.v1beta1.SupplyOf
  */
 export const useGetSupplyOf = buildUseQuery<QuerySupplyOfRequest, QuerySupplyOfResponse>({
   builderQueryFn: getSupplyOf,
@@ -61,7 +61,7 @@ export const useGetSupplyOf = buildUseQuery<QuerySupplyOfRequest, QuerySupplyOfR
  * Params queries the parameters of x/bank module.
  * @name useGetParams
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.Params
+ * @see proto service: cosmos.bank.v1beta1.Params
  */
 export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
   builderQueryFn: getParams,
@@ -71,7 +71,7 @@ export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsRespons
  * DenomsMetadata queries the client metadata of a given coin denomination.
  * @name useGetDenomMetadata
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.DenomMetadata
+ * @see proto service: cosmos.bank.v1beta1.DenomMetadata
  */
 export const useGetDenomMetadata = buildUseQuery<QueryDenomMetadataRequest, QueryDenomMetadataResponse>({
   builderQueryFn: getDenomMetadata,
@@ -82,7 +82,7 @@ export const useGetDenomMetadata = buildUseQuery<QueryDenomMetadataRequest, Quer
  * denominations.
  * @name useGetDenomsMetadata
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.DenomsMetadata
+ * @see proto service: cosmos.bank.v1beta1.DenomsMetadata
  */
 export const useGetDenomsMetadata = buildUseQuery<QueryDenomsMetadataRequest, QueryDenomsMetadataResponse>({
   builderQueryFn: getDenomsMetadata,
@@ -93,7 +93,7 @@ export const useGetDenomsMetadata = buildUseQuery<QueryDenomsMetadataRequest, Qu
  * denomination.
  * @name useGetDenomOwners
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.DenomOwners
+ * @see proto service: cosmos.bank.v1beta1.DenomOwners
  */
 export const useGetDenomOwners = buildUseQuery<QueryDenomOwnersRequest, QueryDenomOwnersResponse>({
   builderQueryFn: getDenomOwners,

@@ -7,7 +7,7 @@ import { getAccounts, getPayments } from "./query.rpc.func";
  * Accounts queries all accounts
  * @name useGetAccounts
  * @package akash.escrow.v1beta2
- * @see protoservice: akash.escrow.v1beta2.Accounts
+ * @see proto service: akash.escrow.v1beta2.Accounts
  */
 export const useGetAccounts = buildUseQuery<QueryAccountsRequest, QueryAccountsResponse>({
   builderQueryFn: getAccounts,
@@ -19,7 +19,7 @@ export const useGetAccounts = buildUseQuery<QueryAccountsRequest, QueryAccountsR
  * Payments queries all payments
  * @name useGetPayments
  * @package akash.escrow.v1beta2
- * @see protoservice: akash.escrow.v1beta2.Payments
+ * @see proto service: akash.escrow.v1beta2.Payments
  */
 export const useGetPayments = buildUseQuery<QueryPaymentsRequest, QueryPaymentsResponse>({
   builderQueryFn: getPayments,

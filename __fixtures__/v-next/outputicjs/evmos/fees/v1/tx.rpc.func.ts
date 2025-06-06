@@ -5,7 +5,7 @@ import { MsgRegisterDevFeeInfo, MsgCancelDevFeeInfo, MsgUpdateDevFeeInfo } from 
  * receiving transaction fees
  * @name registerDevFeeInfo
  * @package evmos.fees.v1
- * @see protoservice: evmos.fees.v1.RegisterDevFeeInfo
+ * @see proto service: evmos.fees.v1.RegisterDevFeeInfo
  */
 export const registerDevFeeInfo = buildTx<MsgRegisterDevFeeInfo>({
   msg: MsgRegisterDevFeeInfo
@@ -15,7 +15,7 @@ export const registerDevFeeInfo = buildTx<MsgRegisterDevFeeInfo>({
  * and stop receiving transaction fees
  * @name cancelDevFeeInfo
  * @package evmos.fees.v1
- * @see protoservice: evmos.fees.v1.CancelDevFeeInfo
+ * @see proto service: evmos.fees.v1.CancelDevFeeInfo
  */
 export const cancelDevFeeInfo = buildTx<MsgCancelDevFeeInfo>({
   msg: MsgCancelDevFeeInfo
@@ -24,7 +24,7 @@ export const cancelDevFeeInfo = buildTx<MsgCancelDevFeeInfo>({
  * UpdateDevFeeInfo is used by a deployer to update the withdraw address
  * @name updateDevFeeInfo
  * @package evmos.fees.v1
- * @see protoservice: evmos.fees.v1.UpdateDevFeeInfo
+ * @see proto service: evmos.fees.v1.UpdateDevFeeInfo
  */
 export const updateDevFeeInfo = buildTx<MsgUpdateDevFeeInfo>({
   msg: MsgUpdateDevFeeInfo

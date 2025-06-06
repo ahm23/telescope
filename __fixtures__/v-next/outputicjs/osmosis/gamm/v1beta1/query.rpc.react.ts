@@ -4,7 +4,7 @@ import { getPools, getNumPools, getTotalLiquidity, getPoolsWithFilter, getPool, 
 /**
  * @name useGetPools
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.Pools
+ * @see proto service: osmosis.gamm.v1beta1.Pools
  */
 export const useGetPools = buildUseQuery<QueryPoolsRequest, QueryPoolsResponse>({
   builderQueryFn: getPools,
@@ -13,7 +13,7 @@ export const useGetPools = buildUseQuery<QueryPoolsRequest, QueryPoolsResponse>(
 /**
  * @name useGetNumPools
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.NumPools
+ * @see proto service: osmosis.gamm.v1beta1.NumPools
  */
 export const useGetNumPools = buildUseQuery<QueryNumPoolsRequest, QueryNumPoolsResponse>({
   builderQueryFn: getNumPools,
@@ -22,7 +22,7 @@ export const useGetNumPools = buildUseQuery<QueryNumPoolsRequest, QueryNumPoolsR
 /**
  * @name useGetTotalLiquidity
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.TotalLiquidity
+ * @see proto service: osmosis.gamm.v1beta1.TotalLiquidity
  */
 export const useGetTotalLiquidity = buildUseQuery<QueryTotalLiquidityRequest, QueryTotalLiquidityResponse>({
   builderQueryFn: getTotalLiquidity,
@@ -33,7 +33,7 @@ export const useGetTotalLiquidity = buildUseQuery<QueryTotalLiquidityRequest, Qu
  * parameters
  * @name useGetPoolsWithFilter
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.PoolsWithFilter
+ * @see proto service: osmosis.gamm.v1beta1.PoolsWithFilter
  */
 export const useGetPoolsWithFilter = buildUseQuery<QueryPoolsWithFilterRequest, QueryPoolsWithFilterResponse>({
   builderQueryFn: getPoolsWithFilter,
@@ -43,7 +43,7 @@ export const useGetPoolsWithFilter = buildUseQuery<QueryPoolsWithFilterRequest, 
  * Per Pool gRPC Endpoints
  * @name useGetPool
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.Pool
+ * @see proto service: osmosis.gamm.v1beta1.Pool
  */
 export const useGetPool = buildUseQuery<QueryPoolRequest, QueryPoolResponse>({
   builderQueryFn: getPool,
@@ -55,7 +55,7 @@ export const useGetPool = buildUseQuery<QueryPoolRequest, QueryPoolResponse>({
  * Errors if the pool is failed to be type caseted.
  * @name useGetPoolType
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.PoolType
+ * @see proto service: osmosis.gamm.v1beta1.PoolType
  */
 export const useGetPoolType = buildUseQuery<QueryPoolTypeRequest, QueryPoolTypeResponse>({
   builderQueryFn: getPoolType,
@@ -66,7 +66,7 @@ export const useGetPoolType = buildUseQuery<QueryPoolTypeRequest, QueryPoolTypeR
  * get and tokens needed to provide
  * @name useGetCalcJoinPoolNoSwapShares
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.CalcJoinPoolNoSwapShares
+ * @see proto service: osmosis.gamm.v1beta1.CalcJoinPoolNoSwapShares
  */
 export const useGetCalcJoinPoolNoSwapShares = buildUseQuery<QueryCalcJoinPoolNoSwapSharesRequest, QueryCalcJoinPoolNoSwapSharesResponse>({
   builderQueryFn: getCalcJoinPoolNoSwapShares,
@@ -75,7 +75,7 @@ export const useGetCalcJoinPoolNoSwapShares = buildUseQuery<QueryCalcJoinPoolNoS
 /**
  * @name useGetCalcJoinPoolShares
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.CalcJoinPoolShares
+ * @see proto service: osmosis.gamm.v1beta1.CalcJoinPoolShares
  */
 export const useGetCalcJoinPoolShares = buildUseQuery<QueryCalcJoinPoolSharesRequest, QueryCalcJoinPoolSharesResponse>({
   builderQueryFn: getCalcJoinPoolShares,
@@ -84,7 +84,7 @@ export const useGetCalcJoinPoolShares = buildUseQuery<QueryCalcJoinPoolSharesReq
 /**
  * @name useGetCalcExitPoolCoinsFromShares
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.CalcExitPoolCoinsFromShares
+ * @see proto service: osmosis.gamm.v1beta1.CalcExitPoolCoinsFromShares
  */
 export const useGetCalcExitPoolCoinsFromShares = buildUseQuery<QueryCalcExitPoolCoinsFromSharesRequest, QueryCalcExitPoolCoinsFromSharesResponse>({
   builderQueryFn: getCalcExitPoolCoinsFromShares,
@@ -93,7 +93,7 @@ export const useGetCalcExitPoolCoinsFromShares = buildUseQuery<QueryCalcExitPool
 /**
  * @name useGetPoolParams
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.PoolParams
+ * @see proto service: osmosis.gamm.v1beta1.PoolParams
  */
 export const useGetPoolParams = buildUseQuery<QueryPoolParamsRequest, QueryPoolParamsResponse>({
   builderQueryFn: getPoolParams,
@@ -102,7 +102,7 @@ export const useGetPoolParams = buildUseQuery<QueryPoolParamsRequest, QueryPoolP
 /**
  * @name useGetTotalPoolLiquidity
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.TotalPoolLiquidity
+ * @see proto service: osmosis.gamm.v1beta1.TotalPoolLiquidity
  */
 export const useGetTotalPoolLiquidity = buildUseQuery<QueryTotalPoolLiquidityRequest, QueryTotalPoolLiquidityResponse>({
   builderQueryFn: getTotalPoolLiquidity,
@@ -111,7 +111,7 @@ export const useGetTotalPoolLiquidity = buildUseQuery<QueryTotalPoolLiquidityReq
 /**
  * @name useGetTotalShares
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.TotalShares
+ * @see proto service: osmosis.gamm.v1beta1.TotalShares
  */
 export const useGetTotalShares = buildUseQuery<QueryTotalSharesRequest, QueryTotalSharesResponse>({
   builderQueryFn: getTotalShares,
@@ -122,7 +122,7 @@ export const useGetTotalShares = buildUseQuery<QueryTotalSharesRequest, QueryTot
  * a base denomination and a quote denomination.
  * @name useGetSpotPrice
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.SpotPrice
+ * @see proto service: osmosis.gamm.v1beta1.SpotPrice
  * @deprecated
  */
 export const useGetSpotPrice = buildUseQuery<QuerySpotPriceRequest, QuerySpotPriceResponse>({
@@ -133,7 +133,7 @@ export const useGetSpotPrice = buildUseQuery<QuerySpotPriceRequest, QuerySpotPri
  * Estimate the swap.
  * @name useGetEstimateSwapExactAmountIn
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.EstimateSwapExactAmountIn
+ * @see proto service: osmosis.gamm.v1beta1.EstimateSwapExactAmountIn
  */
 export const useGetEstimateSwapExactAmountIn = buildUseQuery<QuerySwapExactAmountInRequest, QuerySwapExactAmountInResponse>({
   builderQueryFn: getEstimateSwapExactAmountIn,
@@ -142,7 +142,7 @@ export const useGetEstimateSwapExactAmountIn = buildUseQuery<QuerySwapExactAmoun
 /**
  * @name useGetEstimateSwapExactAmountOut
  * @package osmosis.gamm.v1beta1
- * @see protoservice: osmosis.gamm.v1beta1.EstimateSwapExactAmountOut
+ * @see proto service: osmosis.gamm.v1beta1.EstimateSwapExactAmountOut
  */
 export const useGetEstimateSwapExactAmountOut = buildUseQuery<QuerySwapExactAmountOutRequest, QuerySwapExactAmountOutResponse>({
   builderQueryFn: getEstimateSwapExactAmountOut,

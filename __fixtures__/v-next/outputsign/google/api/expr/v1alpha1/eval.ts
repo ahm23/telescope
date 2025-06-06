@@ -7,9 +7,14 @@ export const protobufPackage = "google.api.expr.v1alpha1";
  * The state of an evaluation.
  * 
  * Can represent an inital, partial, or completed state of evaluation.
+ * @name EvalState
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.EvalState
  */
 export interface EvalState {
-  /** The unique values referenced in this message. */
+  /**
+   * The unique values referenced in this message.
+  */
   values: ExprValue[];
   /**
    * An ordered list of results.
@@ -27,9 +32,14 @@ export interface EvalStateProtoMsg {
  * The state of an evaluation.
  * 
  * Can represent an inital, partial, or completed state of evaluation.
+ * @name EvalStateAmino
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.EvalState
  */
 export interface EvalStateAmino {
-  /** The unique values referenced in this message. */
+  /**
+   * The unique values referenced in this message.
+  */
   values?: ExprValueAmino[];
   /**
    * An ordered list of results.
@@ -47,41 +57,74 @@ export interface EvalStateAminoMsg {
  * The state of an evaluation.
  * 
  * Can represent an inital, partial, or completed state of evaluation.
+ * @name EvalStateSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.EvalState
  */
 export interface EvalStateSDKType {
   values: ExprValueSDKType[];
   results: EvalState_ResultSDKType[];
 }
-/** A single evalution result. */
+/**
+ * A single evalution result.
+ * @name EvalState_Result
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Result
+ */
 export interface EvalState_Result {
-  /** The id of the expression this result if for. */
+  /**
+   * The id of the expression this result if for.
+  */
   expr: bigint;
-  /** The index in `values` of the resulting value. */
+  /**
+   * The index in `values` of the resulting value.
+  */
   value: bigint;
 }
 export interface EvalState_ResultProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.Result";
   value: Uint8Array;
 }
-/** A single evalution result. */
+/**
+ * A single evalution result.
+ * @name EvalState_ResultAmino
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.EvalState_Result
+ */
 export interface EvalState_ResultAmino {
-  /** The id of the expression this result if for. */
+  /**
+   * The id of the expression this result if for.
+  */
   expr?: string;
-  /** The index in `values` of the resulting value. */
+  /**
+   * The index in `values` of the resulting value.
+  */
   value?: string;
 }
 export interface EvalState_ResultAminoMsg {
   type: "/google.api.expr.v1alpha1.Result";
   value: EvalState_ResultAmino;
 }
-/** A single evalution result. */
+/**
+ * A single evalution result.
+ * @name EvalState_ResultSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Result
+ */
 export interface EvalState_ResultSDKType {
   expr: bigint;
   value: bigint;
 }
-/** The value of an evaluated expression. */
+/**
+ * The value of an evaluated expression.
+ * @name ExprValue
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprValue
+ */
 export interface ExprValue {
-  /** A concrete value. */
+  /**
+   * A concrete value.
+  */
   value?: Value;
   /**
    * The set of errors in the critical path of evalution.
@@ -134,9 +177,16 @@ export interface ExprValueProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.ExprValue";
   value: Uint8Array;
 }
-/** The value of an evaluated expression. */
+/**
+ * The value of an evaluated expression.
+ * @name ExprValueAmino
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprValue
+ */
 export interface ExprValueAmino {
-  /** A concrete value. */
+  /**
+   * A concrete value.
+  */
   value?: ValueAmino;
   /**
    * The set of errors in the critical path of evalution.
@@ -189,7 +239,12 @@ export interface ExprValueAminoMsg {
   type: "/google.api.expr.v1alpha1.ExprValue";
   value: ExprValueAmino;
 }
-/** The value of an evaluated expression. */
+/**
+ * The value of an evaluated expression.
+ * @name ExprValueSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprValue
+ */
 export interface ExprValueSDKType {
   value?: ValueSDKType;
   error?: ErrorSetSDKType;
@@ -199,9 +254,14 @@ export interface ExprValueSDKType {
  * A set of errors.
  * 
  * The errors included depend on the context. See `ExprValue.error`.
+ * @name ErrorSet
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ErrorSet
  */
 export interface ErrorSet {
-  /** The errors in the set. */
+  /**
+   * The errors in the set.
+  */
   errors: Status[];
 }
 export interface ErrorSetProtoMsg {
@@ -212,9 +272,14 @@ export interface ErrorSetProtoMsg {
  * A set of errors.
  * 
  * The errors included depend on the context. See `ExprValue.error`.
+ * @name ErrorSetAmino
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ErrorSet
  */
 export interface ErrorSetAmino {
-  /** The errors in the set. */
+  /**
+   * The errors in the set.
+  */
   errors?: StatusAmino[];
 }
 export interface ErrorSetAminoMsg {
@@ -225,6 +290,9 @@ export interface ErrorSetAminoMsg {
  * A set of errors.
  * 
  * The errors included depend on the context. See `ExprValue.error`.
+ * @name ErrorSetSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ErrorSet
  */
 export interface ErrorSetSDKType {
   errors: StatusSDKType[];
@@ -233,9 +301,14 @@ export interface ErrorSetSDKType {
  * A set of expressions for which the value is unknown.
  * 
  * The unknowns included depend on the context. See `ExprValue.unknown`.
+ * @name UnknownSet
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.UnknownSet
  */
 export interface UnknownSet {
-  /** The ids of the expressions with unknown values. */
+  /**
+   * The ids of the expressions with unknown values.
+  */
   exprs: bigint[];
 }
 export interface UnknownSetProtoMsg {
@@ -246,9 +319,14 @@ export interface UnknownSetProtoMsg {
  * A set of expressions for which the value is unknown.
  * 
  * The unknowns included depend on the context. See `ExprValue.unknown`.
+ * @name UnknownSetAmino
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.UnknownSet
  */
 export interface UnknownSetAmino {
-  /** The ids of the expressions with unknown values. */
+  /**
+   * The ids of the expressions with unknown values.
+  */
   exprs?: string[];
 }
 export interface UnknownSetAminoMsg {
@@ -259,6 +337,9 @@ export interface UnknownSetAminoMsg {
  * A set of expressions for which the value is unknown.
  * 
  * The unknowns included depend on the context. See `ExprValue.unknown`.
+ * @name UnknownSetSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.UnknownSet
  */
 export interface UnknownSetSDKType {
   exprs: bigint[];
@@ -269,6 +350,14 @@ function createBaseEvalState(): EvalState {
     results: []
   };
 }
+/**
+ * The state of an evaluation.
+ * 
+ * Can represent an inital, partial, or completed state of evaluation.
+ * @name EvalState
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.EvalState
+ */
 export const EvalState = {
   typeUrl: "/google.api.expr.v1alpha1.EvalState",
   encode(message: EvalState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -348,6 +437,12 @@ function createBaseEvalState_Result(): EvalState_Result {
     value: BigInt(0)
   };
 }
+/**
+ * A single evalution result.
+ * @name EvalState_Result
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Result
+ */
 export const EvalState_Result = {
   typeUrl: "/google.api.expr.v1alpha1.Result",
   encode(message: EvalState_Result, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -428,6 +523,12 @@ function createBaseExprValue(): ExprValue {
     unknown: undefined
   };
 }
+/**
+ * The value of an evaluated expression.
+ * @name ExprValue
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprValue
+ */
 export const ExprValue = {
   typeUrl: "/google.api.expr.v1alpha1.ExprValue",
   encode(message: ExprValue, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -519,6 +620,14 @@ function createBaseErrorSet(): ErrorSet {
     errors: []
   };
 }
+/**
+ * A set of errors.
+ * 
+ * The errors included depend on the context. See `ExprValue.error`.
+ * @name ErrorSet
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ErrorSet
+ */
 export const ErrorSet = {
   typeUrl: "/google.api.expr.v1alpha1.ErrorSet",
   encode(message: ErrorSet, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -584,6 +693,14 @@ function createBaseUnknownSet(): UnknownSet {
     exprs: []
   };
 }
+/**
+ * A set of expressions for which the value is unknown.
+ * 
+ * The unknowns included depend on the context. See `ExprValue.unknown`.
+ * @name UnknownSet
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.UnknownSet
+ */
 export const UnknownSet = {
   typeUrl: "/google.api.expr.v1alpha1.UnknownSet",
   encode(message: UnknownSet, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

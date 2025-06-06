@@ -4,9 +4,16 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.tokenfactory.v1beta1";
-/** GenesisState defines the tokenfactory module's genesis state. */
+/**
+ * GenesisState defines the tokenfactory module's genesis state.
+ * @name GenesisState
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines the paramaters of the module. */
+  /**
+   * params defines the paramaters of the module.
+  */
   params: Params;
   factoryDenoms: GenesisDenom[];
 }
@@ -14,9 +21,16 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.tokenfactory.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the tokenfactory module's genesis state. */
+/**
+ * GenesisState defines the tokenfactory module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines the paramaters of the module. */
+  /**
+   * params defines the paramaters of the module.
+  */
   params?: ParamsAmino;
   factory_denoms?: GenesisDenomAmino[];
 }
@@ -24,7 +38,12 @@ export interface GenesisStateAminoMsg {
   type: "osmosis/tokenfactory/genesis-state";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the tokenfactory module's genesis state. */
+/**
+ * GenesisState defines the tokenfactory module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   factory_denoms: GenesisDenomSDKType[];
@@ -33,6 +52,9 @@ export interface GenesisStateSDKType {
  * GenesisDenom defines a tokenfactory denom that is defined within genesis
  * state. The structure contains DenomAuthorityMetadata which defines the
  * denom's admin.
+ * @name GenesisDenom
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisDenom
  */
 export interface GenesisDenom {
   denom: string;
@@ -46,6 +68,9 @@ export interface GenesisDenomProtoMsg {
  * GenesisDenom defines a tokenfactory denom that is defined within genesis
  * state. The structure contains DenomAuthorityMetadata which defines the
  * denom's admin.
+ * @name GenesisDenomAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisDenom
  */
 export interface GenesisDenomAmino {
   denom?: string;
@@ -59,6 +84,9 @@ export interface GenesisDenomAminoMsg {
  * GenesisDenom defines a tokenfactory denom that is defined within genesis
  * state. The structure contains DenomAuthorityMetadata which defines the
  * denom's admin.
+ * @name GenesisDenomSDKType
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisDenom
  */
 export interface GenesisDenomSDKType {
   denom: string;
@@ -70,6 +98,12 @@ function createBaseGenesisState(): GenesisState {
     factoryDenoms: []
   };
 }
+/**
+ * GenesisState defines the tokenfactory module's genesis state.
+ * @name GenesisState
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.GenesisState",
   aminoType: "osmosis/tokenfactory/genesis-state",
@@ -188,6 +222,14 @@ function createBaseGenesisDenom(): GenesisDenom {
     authorityMetadata: DenomAuthorityMetadata.fromPartial({})
   };
 }
+/**
+ * GenesisDenom defines a tokenfactory denom that is defined within genesis
+ * state. The structure contains DenomAuthorityMetadata which defines the
+ * denom's admin.
+ * @name GenesisDenom
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisDenom
+ */
 export const GenesisDenom = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.GenesisDenom",
   aminoType: "osmosis/tokenfactory/genesis-denom",

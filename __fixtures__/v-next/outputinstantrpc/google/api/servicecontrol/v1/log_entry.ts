@@ -7,6 +7,11 @@ import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, DeepPartial, toTimestamp, fromTimestamp, isObject } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
 export const protobufPackage = "google.api.servicecontrol.v1";
+/**
+ * @name LogEntry_LabelsEntry
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.undefined
+ */
 export interface LogEntry_LabelsEntry {
   key: string;
   value: string;
@@ -15,11 +20,21 @@ export interface LogEntry_LabelsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name LogEntry_LabelsEntrySDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.undefined
+ */
 export interface LogEntry_LabelsEntrySDKType {
   key: string;
   value: string;
 }
-/** An individual log entry. */
+/**
+ * An individual log entry.
+ * @name LogEntry
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.LogEntry
+ */
 export interface LogEntry {
   /**
    * Required. The log to which this log entry belongs. Examples: `"syslog"`,
@@ -66,7 +81,9 @@ export interface LogEntry {
    * [AuditLog][google.cloud.audit.AuditLog].
    */
   protoPayload?: Any;
-  /** The log entry payload, represented as a Unicode string (UTF-8). */
+  /**
+   * The log entry payload, represented as a Unicode string (UTF-8).
+  */
   textPayload?: string;
   /**
    * The log entry payload, represented as a structure that
@@ -88,7 +105,12 @@ export interface LogEntryProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.LogEntry";
   value: Uint8Array;
 }
-/** An individual log entry. */
+/**
+ * An individual log entry.
+ * @name LogEntrySDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.LogEntry
+ */
 export interface LogEntrySDKType {
   name: string;
   timestamp?: Date;
@@ -108,6 +130,9 @@ export interface LogEntrySDKType {
 /**
  * Additional information about a potentially long-running operation with which
  * a log entry is associated.
+ * @name LogEntryOperation
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.LogEntryOperation
  */
 export interface LogEntryOperation {
   /**
@@ -121,9 +146,13 @@ export interface LogEntryOperation {
    * `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
    */
   producer: string;
-  /** Optional. Set this to True if this is the first log entry in the operation. */
+  /**
+   * Optional. Set this to True if this is the first log entry in the operation.
+  */
   first: boolean;
-  /** Optional. Set this to True if this is the last log entry in the operation. */
+  /**
+   * Optional. Set this to True if this is the last log entry in the operation.
+  */
   last: boolean;
 }
 export interface LogEntryOperationProtoMsg {
@@ -133,6 +162,9 @@ export interface LogEntryOperationProtoMsg {
 /**
  * Additional information about a potentially long-running operation with which
  * a log entry is associated.
+ * @name LogEntryOperationSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.LogEntryOperation
  */
 export interface LogEntryOperationSDKType {
   id: string;
@@ -143,6 +175,9 @@ export interface LogEntryOperationSDKType {
 /**
  * Additional information about the source code location that produced the log
  * entry.
+ * @name LogEntrySourceLocation
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.LogEntrySourceLocation
  */
 export interface LogEntrySourceLocation {
   /**
@@ -172,6 +207,9 @@ export interface LogEntrySourceLocationProtoMsg {
 /**
  * Additional information about the source code location that produced the log
  * entry.
+ * @name LogEntrySourceLocationSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.LogEntrySourceLocation
  */
 export interface LogEntrySourceLocationSDKType {
   file: string;
@@ -184,6 +222,11 @@ function createBaseLogEntry_LabelsEntry(): LogEntry_LabelsEntry {
     value: ""
   };
 }
+/**
+ * @name LogEntry_LabelsEntry
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.undefined
+ */
 export const LogEntry_LabelsEntry = {
   encode(message: LogEntry_LabelsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== undefined) {
@@ -292,6 +335,12 @@ function createBaseLogEntry(): LogEntry {
     sourceLocation: undefined
   };
 }
+/**
+ * An individual log entry.
+ * @name LogEntry
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.LogEntry
+ */
 export const LogEntry = {
   typeUrl: "/google.api.servicecontrol.v1.LogEntry",
   encode(message: LogEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -617,6 +666,13 @@ function createBaseLogEntryOperation(): LogEntryOperation {
     last: false
   };
 }
+/**
+ * Additional information about a potentially long-running operation with which
+ * a log entry is associated.
+ * @name LogEntryOperation
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.LogEntryOperation
+ */
 export const LogEntryOperation = {
   typeUrl: "/google.api.servicecontrol.v1.LogEntryOperation",
   encode(message: LogEntryOperation, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -755,6 +811,13 @@ function createBaseLogEntrySourceLocation(): LogEntrySourceLocation {
     function: ""
   };
 }
+/**
+ * Additional information about the source code location that produced the log
+ * entry.
+ * @name LogEntrySourceLocation
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.LogEntrySourceLocation
+ */
 export const LogEntrySourceLocation = {
   typeUrl: "/google.api.servicecontrol.v1.LogEntrySourceLocation",
   encode(message: LogEntrySourceLocation, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

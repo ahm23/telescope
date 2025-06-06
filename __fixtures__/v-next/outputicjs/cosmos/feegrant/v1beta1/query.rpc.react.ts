@@ -5,7 +5,7 @@ import { getAllowance, getAllowances, getAllowancesByGranter } from "./query.rpc
  * Allowance returns fee granted to the grantee by the granter.
  * @name useGetAllowance
  * @package cosmos.feegrant.v1beta1
- * @see protoservice: cosmos.feegrant.v1beta1.Allowance
+ * @see proto service: cosmos.feegrant.v1beta1.Allowance
  */
 export const useGetAllowance = buildUseQuery<QueryAllowanceRequest, QueryAllowanceResponse>({
   builderQueryFn: getAllowance,
@@ -15,7 +15,7 @@ export const useGetAllowance = buildUseQuery<QueryAllowanceRequest, QueryAllowan
  * Allowances returns all the grants for address.
  * @name useGetAllowances
  * @package cosmos.feegrant.v1beta1
- * @see protoservice: cosmos.feegrant.v1beta1.Allowances
+ * @see proto service: cosmos.feegrant.v1beta1.Allowances
  */
 export const useGetAllowances = buildUseQuery<QueryAllowancesRequest, QueryAllowancesResponse>({
   builderQueryFn: getAllowances,
@@ -26,7 +26,7 @@ export const useGetAllowances = buildUseQuery<QueryAllowancesRequest, QueryAllow
  * Since v0.46
  * @name useGetAllowancesByGranter
  * @package cosmos.feegrant.v1beta1
- * @see protoservice: cosmos.feegrant.v1beta1.AllowancesByGranter
+ * @see proto service: cosmos.feegrant.v1beta1.AllowancesByGranter
  */
 export const useGetAllowancesByGranter = buildUseQuery<QueryAllowancesByGranterRequest, QueryAllowancesByGranterResponse>({
   builderQueryFn: getAllowancesByGranter,

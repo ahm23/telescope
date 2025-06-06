@@ -6,7 +6,7 @@ import { MsgUnjail } from "./tx";
  * and rewards again.
  * @name unjail
  * @package cosmos.slashing.v1beta1
- * @see protoservice: cosmos.slashing.v1beta1.Unjail
+ * @see proto service: cosmos.slashing.v1beta1.Unjail
  */
 export const unjail = buildTx<MsgUnjail>({
   msg: MsgUnjail

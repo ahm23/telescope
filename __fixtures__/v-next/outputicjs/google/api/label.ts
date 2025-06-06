@@ -41,26 +41,48 @@ export function labelDescriptor_ValueTypeToJSON(object: LabelDescriptor_ValueTyp
       return "UNRECOGNIZED";
   }
 }
-/** A description of a label. */
+/**
+ * A description of a label.
+ * @name LabelDescriptor
+ * @package google.api
+ * @see proto type: google.api.LabelDescriptor
+ */
 export interface LabelDescriptor {
-  /** The label key. */
+  /**
+   * The label key.
+  */
   key: string;
-  /** The type of data that can be assigned to the label. */
+  /**
+   * The type of data that can be assigned to the label.
+  */
   valueType: LabelDescriptor_ValueType;
-  /** A human-readable description for the label. */
+  /**
+   * A human-readable description for the label.
+  */
   description: string;
 }
 export interface LabelDescriptorProtoMsg {
   typeUrl: "/google.api.LabelDescriptor";
   value: Uint8Array;
 }
-/** A description of a label. */
+/**
+ * A description of a label.
+ * @name LabelDescriptorAmino
+ * @package google.api
+ * @see proto type: google.api.LabelDescriptor
+ */
 export interface LabelDescriptorAmino {
-  /** The label key. */
+  /**
+   * The label key.
+  */
   key: string;
-  /** The type of data that can be assigned to the label. */
+  /**
+   * The type of data that can be assigned to the label.
+  */
   value_type: LabelDescriptor_ValueType;
-  /** A human-readable description for the label. */
+  /**
+   * A human-readable description for the label.
+  */
   description: string;
 }
 export interface LabelDescriptorAminoMsg {
@@ -74,6 +96,12 @@ function createBaseLabelDescriptor(): LabelDescriptor {
     description: ""
   };
 }
+/**
+ * A description of a label.
+ * @name LabelDescriptor
+ * @package google.api
+ * @see proto type: google.api.LabelDescriptor
+ */
 export const LabelDescriptor = {
   typeUrl: "/google.api.LabelDescriptor",
   encode(message: LabelDescriptor, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

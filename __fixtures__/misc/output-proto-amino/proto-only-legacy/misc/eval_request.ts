@@ -60,6 +60,11 @@ export function voteOptionToJSON(object: VoteOption): string {
       return "UNRECOGNIZED";
   }
 }
+/**
+ * @name EvalRequest_BindingsEntry
+ * @package misc
+ * @see proto type: misc.undefined
+ */
 export interface EvalRequest_BindingsEntry {
   key: string;
   value?: ExprValue;
@@ -68,10 +73,20 @@ export interface EvalRequest_BindingsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name EvalRequest_BindingsEntrySDKType
+ * @package misc
+ * @see proto type: misc.undefined
+ */
 export interface EvalRequest_BindingsEntrySDKType {
   key: string;
   value?: ExprValueSDKType;
 }
+/**
+ * @name EvalRequest_RefsEntry
+ * @package misc
+ * @see proto type: misc.undefined
+ */
 export interface EvalRequest_RefsEntry {
   key: string;
   value?: IdRef;
@@ -80,10 +95,20 @@ export interface EvalRequest_RefsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name EvalRequest_RefsEntrySDKType
+ * @package misc
+ * @see proto type: misc.undefined
+ */
 export interface EvalRequest_RefsEntrySDKType {
   key: string;
   value?: IdRefSDKType;
 }
+/**
+ * @name EvalRequest
+ * @package misc
+ * @see proto type: misc.EvalRequest
+ */
 export interface EvalRequest {
   /**
    * Bindings for the external variables.  The types SHOULD be compatible
@@ -99,13 +124,17 @@ export interface EvalRequest {
   testString: string;
   testBool: boolean;
   instantiatePermission?: AccessConfig;
-  /** [(gogoproto.nullable) = false] wouldn't work in this case */
+  /**
+   * [(gogoproto.nullable) = false] wouldn't work in this case
+  */
   id?: string;
   name?: string;
   testArray: string[];
   opt: FeatureSet_Utf8Validation;
   graph?: TestNest_Graph;
-  /** deprecated option */
+  /**
+   * deprecated option
+  */
   deprecated?: string;
   falseDeprecated: string;
 }
@@ -113,6 +142,11 @@ export interface EvalRequestProtoMsg {
   typeUrl: "/misc.EvalRequest";
   value: Uint8Array;
 }
+/**
+ * @name EvalRequestSDKType
+ * @package misc
+ * @see proto type: misc.EvalRequest
+ */
 export interface EvalRequestSDKType {
   bindings: {
     [key: string]: ExprValueSDKType;
@@ -132,6 +166,11 @@ export interface EvalRequestSDKType {
   deprecated?: string;
   false_deprecated: string;
 }
+/**
+ * @name AccessConfig
+ * @package misc
+ * @see proto type: misc.AccessConfig
+ */
 export interface AccessConfig {
   sender: string;
 }
@@ -139,17 +178,34 @@ export interface AccessConfigProtoMsg {
   typeUrl: "/misc.AccessConfig";
   value: Uint8Array;
 }
+/**
+ * @name AccessConfigSDKType
+ * @package misc
+ * @see proto type: misc.AccessConfig
+ */
 export interface AccessConfigSDKType {
   sender: string;
 }
+/**
+ * @name GenericAuthorization
+ * @package misc
+ * @see proto type: misc.GenericAuthorization
+ */
 export interface GenericAuthorization {
-  /** Msg, identified by it's type URL, to grant unrestricted permissions to execute */
+  /**
+   * Msg, identified by it's type URL, to grant unrestricted permissions to execute
+  */
   msg: string;
 }
 export interface GenericAuthorizationProtoMsg {
   typeUrl: "/misc.GenericAuthorization";
   value: Uint8Array;
 }
+/**
+ * @name GenericAuthorizationSDKType
+ * @package misc
+ * @see proto type: misc.GenericAuthorization
+ */
 export interface GenericAuthorizationSDKType {
   msg: string;
 }
@@ -159,6 +215,11 @@ function createBaseEvalRequest_BindingsEntry(): EvalRequest_BindingsEntry {
     value: undefined
   };
 }
+/**
+ * @name EvalRequest_BindingsEntry
+ * @package misc
+ * @see proto type: misc.undefined
+ */
 export const EvalRequest_BindingsEntry = {
   encode(message: EvalRequest_BindingsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -240,6 +301,11 @@ function createBaseEvalRequest_RefsEntry(): EvalRequest_RefsEntry {
     value: undefined
   };
 }
+/**
+ * @name EvalRequest_RefsEntry
+ * @package misc
+ * @see proto type: misc.undefined
+ */
 export const EvalRequest_RefsEntry = {
   encode(message: EvalRequest_RefsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -332,6 +398,11 @@ function createBaseEvalRequest(): EvalRequest {
     falseDeprecated: ""
   };
 }
+/**
+ * @name EvalRequest
+ * @package misc
+ * @see proto type: misc.EvalRequest
+ */
 export const EvalRequest = {
   typeUrl: "/misc.EvalRequest",
   encode(message: EvalRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -637,6 +708,11 @@ function createBaseAccessConfig(): AccessConfig {
     sender: ""
   };
 }
+/**
+ * @name AccessConfig
+ * @package misc
+ * @see proto type: misc.AccessConfig
+ */
 export const AccessConfig = {
   typeUrl: "/misc.AccessConfig",
   encode(message: AccessConfig, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -710,6 +786,11 @@ function createBaseGenericAuthorization(): GenericAuthorization {
     msg: ""
   };
 }
+/**
+ * @name GenericAuthorization
+ * @package misc
+ * @see proto type: misc.GenericAuthorization
+ */
 export const GenericAuthorization = {
   typeUrl: "/misc.GenericAuthorization",
   encode(message: GenericAuthorization, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

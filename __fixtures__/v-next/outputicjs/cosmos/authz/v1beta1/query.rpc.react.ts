@@ -5,7 +5,7 @@ import { getGrants, getGranterGrants, getGranteeGrants } from "./query.rpc.func"
  * Returns list of `Authorization`, granted to the grantee by the granter.
  * @name useGetGrants
  * @package cosmos.authz.v1beta1
- * @see protoservice: cosmos.authz.v1beta1.Grants
+ * @see proto service: cosmos.authz.v1beta1.Grants
  */
 export const useGetGrants = buildUseQuery<QueryGrantsRequest, QueryGrantsResponse>({
   builderQueryFn: getGrants,
@@ -17,7 +17,7 @@ export const useGetGrants = buildUseQuery<QueryGrantsRequest, QueryGrantsRespons
  * Since: cosmos-sdk 0.46
  * @name useGetGranterGrants
  * @package cosmos.authz.v1beta1
- * @see protoservice: cosmos.authz.v1beta1.GranterGrants
+ * @see proto service: cosmos.authz.v1beta1.GranterGrants
  */
 export const useGetGranterGrants = buildUseQuery<QueryGranterGrantsRequest, QueryGranterGrantsResponse>({
   builderQueryFn: getGranterGrants,
@@ -29,7 +29,7 @@ export const useGetGranterGrants = buildUseQuery<QueryGranterGrantsRequest, Quer
  * Since: cosmos-sdk 0.46
  * @name useGetGranteeGrants
  * @package cosmos.authz.v1beta1
- * @see protoservice: cosmos.authz.v1beta1.GranteeGrants
+ * @see proto service: cosmos.authz.v1beta1.GranteeGrants
  */
 export const useGetGranteeGrants = buildUseQuery<QueryGranteeGrantsRequest, QueryGranteeGrantsResponse>({
   builderQueryFn: getGranteeGrants,

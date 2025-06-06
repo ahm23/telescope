@@ -4,7 +4,7 @@ import { QueryProposalRequest, QueryProposalResponse, QueryProposalsRequest, Que
  * Proposal queries proposal details based on ProposalID.
  * @name getProposal
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.Proposal
+ * @see proto service: cosmos.gov.v1.Proposal
  */
 export const getProposal = buildQuery<QueryProposalRequest, QueryProposalResponse>({
   encode: QueryProposalRequest.encode,
@@ -16,7 +16,7 @@ export const getProposal = buildQuery<QueryProposalRequest, QueryProposalRespons
  * Proposals queries all proposals based on given status.
  * @name getProposals
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.Proposals
+ * @see proto service: cosmos.gov.v1.Proposals
  */
 export const getProposals = buildQuery<QueryProposalsRequest, QueryProposalsResponse>({
   encode: QueryProposalsRequest.encode,
@@ -28,7 +28,7 @@ export const getProposals = buildQuery<QueryProposalsRequest, QueryProposalsResp
  * Vote queries voted information based on proposalID, voterAddr.
  * @name getVote
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.Vote
+ * @see proto service: cosmos.gov.v1.Vote
  */
 export const getVote = buildQuery<QueryVoteRequest, QueryVoteResponse>({
   encode: QueryVoteRequest.encode,
@@ -40,7 +40,7 @@ export const getVote = buildQuery<QueryVoteRequest, QueryVoteResponse>({
  * Votes queries votes of a given proposal.
  * @name getVotes
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.Votes
+ * @see proto service: cosmos.gov.v1.Votes
  */
 export const getVotes = buildQuery<QueryVotesRequest, QueryVotesResponse>({
   encode: QueryVotesRequest.encode,
@@ -52,7 +52,7 @@ export const getVotes = buildQuery<QueryVotesRequest, QueryVotesResponse>({
  * Params queries all parameters of the gov module.
  * @name getCosmosGovV1Params
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.Params
+ * @see proto service: cosmos.gov.v1.Params
  */
 export const getCosmosGovV1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
@@ -64,7 +64,7 @@ export const getCosmosGovV1Params = buildQuery<QueryParamsRequest, QueryParamsRe
  * Deposit queries single deposit information based proposalID, depositAddr.
  * @name getDeposit
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.Deposit
+ * @see proto service: cosmos.gov.v1.Deposit
  */
 export const getDeposit = buildQuery<QueryDepositRequest, QueryDepositResponse>({
   encode: QueryDepositRequest.encode,
@@ -76,7 +76,7 @@ export const getDeposit = buildQuery<QueryDepositRequest, QueryDepositResponse>(
  * Deposits queries all deposits of a single proposal.
  * @name getDeposits
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.Deposits
+ * @see proto service: cosmos.gov.v1.Deposits
  */
 export const getDeposits = buildQuery<QueryDepositsRequest, QueryDepositsResponse>({
   encode: QueryDepositsRequest.encode,
@@ -88,7 +88,7 @@ export const getDeposits = buildQuery<QueryDepositsRequest, QueryDepositsRespons
  * TallyResult queries the tally of a proposal vote.
  * @name getTallyResult
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.TallyResult
+ * @see proto service: cosmos.gov.v1.TallyResult
  */
 export const getTallyResult = buildQuery<QueryTallyResultRequest, QueryTallyResultResponse>({
   encode: QueryTallyResultRequest.encode,

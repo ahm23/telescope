@@ -6,7 +6,7 @@ import { MsgSoftwareUpgrade, MsgCancelUpgrade } from "./tx";
  * Since: cosmos-sdk 0.46
  * @name softwareUpgrade
  * @package cosmos.upgrade.v1beta1
- * @see protoservice: cosmos.upgrade.v1beta1.SoftwareUpgrade
+ * @see proto service: cosmos.upgrade.v1beta1.SoftwareUpgrade
  */
 export const softwareUpgrade = buildTx<MsgSoftwareUpgrade>({
   msg: MsgSoftwareUpgrade
@@ -18,7 +18,7 @@ export const softwareUpgrade = buildTx<MsgSoftwareUpgrade>({
  * Since: cosmos-sdk 0.46
  * @name cancelUpgrade
  * @package cosmos.upgrade.v1beta1
- * @see protoservice: cosmos.upgrade.v1beta1.CancelUpgrade
+ * @see proto service: cosmos.upgrade.v1beta1.CancelUpgrade
  */
 export const cancelUpgrade = buildTx<MsgCancelUpgrade>({
   msg: MsgCancelUpgrade

@@ -6,7 +6,7 @@ import { QueryFeeTokensRequest, QueryFeeTokensResponse, QueryDenomSpotPriceReque
  * query endpoint
  * @name getFeeTokens
  * @package osmosis.txfees.v1beta1
- * @see protoservice: osmosis.txfees.v1beta1.FeeTokens
+ * @see proto service: osmosis.txfees.v1beta1.FeeTokens
  */
 export const getFeeTokens = buildQuery<QueryFeeTokensRequest, QueryFeeTokensResponse>({
   encode: QueryFeeTokensRequest.encode,
@@ -18,7 +18,7 @@ export const getFeeTokens = buildQuery<QueryFeeTokensRequest, QueryFeeTokensResp
  * DenomSpotPrice returns all spot prices by each registered token denom.
  * @name getDenomSpotPrice
  * @package osmosis.txfees.v1beta1
- * @see protoservice: osmosis.txfees.v1beta1.DenomSpotPrice
+ * @see proto service: osmosis.txfees.v1beta1.DenomSpotPrice
  */
 export const getDenomSpotPrice = buildQuery<QueryDenomSpotPriceRequest, QueryDenomSpotPriceResponse>({
   encode: QueryDenomSpotPriceRequest.encode,
@@ -30,7 +30,7 @@ export const getDenomSpotPrice = buildQuery<QueryDenomSpotPriceRequest, QueryDen
  * Returns the poolID for a specified denom input.
  * @name getDenomPoolId
  * @package osmosis.txfees.v1beta1
- * @see protoservice: osmosis.txfees.v1beta1.DenomPoolId
+ * @see proto service: osmosis.txfees.v1beta1.DenomPoolId
  */
 export const getDenomPoolId = buildQuery<QueryDenomPoolIdRequest, QueryDenomPoolIdResponse>({
   encode: QueryDenomPoolIdRequest.encode,
@@ -42,7 +42,7 @@ export const getDenomPoolId = buildQuery<QueryDenomPoolIdRequest, QueryDenomPool
  * Returns a list of all base denom tokens and their corresponding pools.
  * @name getBaseDenom
  * @package osmosis.txfees.v1beta1
- * @see protoservice: osmosis.txfees.v1beta1.BaseDenom
+ * @see proto service: osmosis.txfees.v1beta1.BaseDenom
  */
 export const getBaseDenom = buildQuery<QueryBaseDenomRequest, QueryBaseDenomResponse>({
   encode: QueryBaseDenomRequest.encode,

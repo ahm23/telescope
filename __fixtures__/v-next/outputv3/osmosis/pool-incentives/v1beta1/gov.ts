@@ -10,6 +10,9 @@ export const protobufPackage = "osmosis.poolincentives.v1beta1";
  * gauge according to weight/total_weight. The incentives are put in the fee
  * pool and it is allocated to gauges and community pool by the DistrRecords
  * configuration. Note that gaugeId=0 represents the community pool.
+ * @name ReplacePoolIncentivesProposal
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.ReplacePoolIncentivesProposal
  */
 export interface ReplacePoolIncentivesProposal {
   $typeUrl?: "/osmosis.poolincentives.v1beta1.ReplacePoolIncentivesProposal";
@@ -29,6 +32,9 @@ export interface ReplacePoolIncentivesProposalProtoMsg {
  * gauge according to weight/total_weight. The incentives are put in the fee
  * pool and it is allocated to gauges and community pool by the DistrRecords
  * configuration. Note that gaugeId=0 represents the community pool.
+ * @name ReplacePoolIncentivesProposalAmino
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.ReplacePoolIncentivesProposal
  */
 export interface ReplacePoolIncentivesProposalAmino {
   title?: string;
@@ -43,6 +49,9 @@ export interface ReplacePoolIncentivesProposalAmino {
  * gauge according to weight/total_weight. The incentives are put in the fee
  * pool and it is allocated to gauges and community pool by the DistrRecords
  * configuration. Note that gaugeId=0 represents the community pool.
+ * @name ReplacePoolIncentivesProposalSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.ReplacePoolIncentivesProposal
  */
 export interface ReplacePoolIncentivesProposalSDKType {
   $typeUrl?: "/osmosis.poolincentives.v1beta1.ReplacePoolIncentivesProposal";
@@ -58,6 +67,9 @@ export interface ReplacePoolIncentivesProposalSDKType {
  * This would delete Gauge 1, Edit Gauge 2, and Add Gauge 3
  * The result DistrRecords in state would be:
  * [(Gauge 0, 5), (Gauge 2, 4), (Gauge 3, 10)]
+ * @name UpdatePoolIncentivesProposal
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.UpdatePoolIncentivesProposal
  */
 export interface UpdatePoolIncentivesProposal {
   $typeUrl?: "/osmosis.poolincentives.v1beta1.UpdatePoolIncentivesProposal";
@@ -77,6 +89,9 @@ export interface UpdatePoolIncentivesProposalProtoMsg {
  * This would delete Gauge 1, Edit Gauge 2, and Add Gauge 3
  * The result DistrRecords in state would be:
  * [(Gauge 0, 5), (Gauge 2, 4), (Gauge 3, 10)]
+ * @name UpdatePoolIncentivesProposalAmino
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.UpdatePoolIncentivesProposal
  */
 export interface UpdatePoolIncentivesProposalAmino {
   title?: string;
@@ -91,6 +106,9 @@ export interface UpdatePoolIncentivesProposalAmino {
  * This would delete Gauge 1, Edit Gauge 2, and Add Gauge 3
  * The result DistrRecords in state would be:
  * [(Gauge 0, 5), (Gauge 2, 4), (Gauge 3, 10)]
+ * @name UpdatePoolIncentivesProposalSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.UpdatePoolIncentivesProposal
  */
 export interface UpdatePoolIncentivesProposalSDKType {
   $typeUrl?: "/osmosis.poolincentives.v1beta1.UpdatePoolIncentivesProposal";
@@ -106,6 +124,18 @@ function createBaseReplacePoolIncentivesProposal(): ReplacePoolIncentivesProposa
     records: []
   };
 }
+/**
+ * ReplacePoolIncentivesProposal is a gov Content type for updating the pool
+ * incentives. If a ReplacePoolIncentivesProposal passes, the proposal’s records
+ * override the existing DistrRecords set in the module. Each record has a
+ * specified gauge id and weight, and the incentives are distributed to each
+ * gauge according to weight/total_weight. The incentives are put in the fee
+ * pool and it is allocated to gauges and community pool by the DistrRecords
+ * configuration. Note that gaugeId=0 represents the community pool.
+ * @name ReplacePoolIncentivesProposal
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.ReplacePoolIncentivesProposal
+ */
 export const ReplacePoolIncentivesProposal = {
   typeUrl: "/osmosis.poolincentives.v1beta1.ReplacePoolIncentivesProposal",
   aminoType: "osmosis/poolincentives/replace-pool-incentives-proposal",
@@ -219,6 +249,18 @@ function createBaseUpdatePoolIncentivesProposal(): UpdatePoolIncentivesProposal 
     records: []
   };
 }
+/**
+ * For example: if the existing DistrRecords were:
+ * [(Gauge 0, 5), (Gauge 1, 6), (Gauge 2, 6)]
+ * An UpdatePoolIncentivesProposal includes
+ * [(Gauge 1, 0), (Gauge 2, 4), (Gauge 3, 10)]
+ * This would delete Gauge 1, Edit Gauge 2, and Add Gauge 3
+ * The result DistrRecords in state would be:
+ * [(Gauge 0, 5), (Gauge 2, 4), (Gauge 3, 10)]
+ * @name UpdatePoolIncentivesProposal
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.UpdatePoolIncentivesProposal
+ */
 export const UpdatePoolIncentivesProposal = {
   typeUrl: "/osmosis.poolincentives.v1beta1.UpdatePoolIncentivesProposal",
   aminoType: "osmosis/poolincentives/update-pool-incentives-proposal",

@@ -1,18 +1,32 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { Decimal } from "@interchainjs/math";
 import { DeepPartial } from "../../../helpers";
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name Minter
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.Minter
+ */
 export interface Minter {
-  /** epoch_provisions represent rewards for the current epoch. */
+  /**
+   * epoch_provisions represent rewards for the current epoch.
+  */
   epochProvisions: string;
 }
 export interface MinterProtoMsg {
   typeUrl: "/osmosis.mint.v1beta1.Minter";
   value: Uint8Array;
 }
-/** Minter represents the minting state. */
+/**
+ * Minter represents the minting state.
+ * @name MinterAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.Minter
+ */
 export interface MinterAmino {
-  /** epoch_provisions represent rewards for the current epoch. */
+  /**
+   * epoch_provisions represent rewards for the current epoch.
+  */
   epoch_provisions: string;
 }
 export interface MinterAminoMsg {
@@ -23,6 +37,9 @@ export interface MinterAminoMsg {
  * WeightedAddress represents an address with a weight assigned to it.
  * The weight is used to determine the proportion of the total minted
  * tokens to be minted to the address.
+ * @name WeightedAddress
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.WeightedAddress
  */
 export interface WeightedAddress {
   address: string;
@@ -36,6 +53,9 @@ export interface WeightedAddressProtoMsg {
  * WeightedAddress represents an address with a weight assigned to it.
  * The weight is used to determine the proportion of the total minted
  * tokens to be minted to the address.
+ * @name WeightedAddressAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.WeightedAddress
  */
 export interface WeightedAddressAmino {
   address: string;
@@ -49,6 +69,9 @@ export interface WeightedAddressAminoMsg {
  * DistributionProportions defines the distribution proportions of the minted
  * denom. In other words, defines which stakeholders will receive the minted
  * denoms and how much.
+ * @name DistributionProportions
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.DistributionProportions
  */
 export interface DistributionProportions {
   /**
@@ -80,6 +103,9 @@ export interface DistributionProportionsProtoMsg {
  * DistributionProportions defines the distribution proportions of the minted
  * denom. In other words, defines which stakeholders will receive the minted
  * denoms and how much.
+ * @name DistributionProportionsAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.DistributionProportions
  */
 export interface DistributionProportionsAmino {
   /**
@@ -107,13 +133,24 @@ export interface DistributionProportionsAminoMsg {
   type: "osmosis/mint/distribution-proportions";
   value: DistributionProportionsAmino;
 }
-/** Params holds parameters for the x/mint module. */
-export interface Params {
-  /** mint_denom is the denom of the coin to mint. */
+/**
+ * Params holds parameters for the x/mint module.
+ * @name OsmosisMintV1beta1Params
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.Params
+ */
+export interface OsmosisMintV1beta1Params {
+  /**
+   * mint_denom is the denom of the coin to mint.
+  */
   mintDenom: string;
-  /** genesis_epoch_provisions epoch provisions from the first epoch. */
+  /**
+   * genesis_epoch_provisions epoch provisions from the first epoch.
+  */
   genesisEpochProvisions: string;
-  /** epoch_identifier mint epoch identifier e.g. (day, week). */
+  /**
+   * epoch_identifier mint epoch identifier e.g. (day, week).
+  */
   epochIdentifier: string;
   /**
    * reduction_period_in_epochs the number of epochs it takes
@@ -144,17 +181,28 @@ export interface Params {
    */
   mintingRewardsDistributionStartEpoch: bigint;
 }
-export interface ParamsProtoMsg {
+export interface OsmosisMintV1beta1ParamsProtoMsg {
   typeUrl: "/osmosis.mint.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the x/mint module. */
-export interface ParamsAmino {
-  /** mint_denom is the denom of the coin to mint. */
+/**
+ * Params holds parameters for the x/mint module.
+ * @name OsmosisMintV1beta1ParamsAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.OsmosisMintV1beta1Params
+ */
+export interface OsmosisMintV1beta1ParamsAmino {
+  /**
+   * mint_denom is the denom of the coin to mint.
+  */
   mint_denom: string;
-  /** genesis_epoch_provisions epoch provisions from the first epoch. */
+  /**
+   * genesis_epoch_provisions epoch provisions from the first epoch.
+  */
   genesis_epoch_provisions: string;
-  /** epoch_identifier mint epoch identifier e.g. (day, week). */
+  /**
+   * epoch_identifier mint epoch identifier e.g. (day, week).
+  */
   epoch_identifier: string;
   /**
    * reduction_period_in_epochs the number of epochs it takes
@@ -185,15 +233,21 @@ export interface ParamsAmino {
    */
   minting_rewards_distribution_start_epoch: string;
 }
-export interface ParamsAminoMsg {
+export interface OsmosisMintV1beta1ParamsAminoMsg {
   type: "osmosis/mint/params";
-  value: ParamsAmino;
+  value: OsmosisMintV1beta1ParamsAmino;
 }
 function createBaseMinter(): Minter {
   return {
     epochProvisions: ""
   };
 }
+/**
+ * Minter represents the minting state.
+ * @name Minter
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.Minter
+ */
 export const Minter = {
   typeUrl: "/osmosis.mint.v1beta1.Minter",
   aminoType: "osmosis/mint/minter",
@@ -265,6 +319,14 @@ function createBaseWeightedAddress(): WeightedAddress {
     weight: ""
   };
 }
+/**
+ * WeightedAddress represents an address with a weight assigned to it.
+ * The weight is used to determine the proportion of the total minted
+ * tokens to be minted to the address.
+ * @name WeightedAddress
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.WeightedAddress
+ */
 export const WeightedAddress = {
   typeUrl: "/osmosis.mint.v1beta1.WeightedAddress",
   aminoType: "osmosis/mint/weighted-address",
@@ -349,6 +411,14 @@ function createBaseDistributionProportions(): DistributionProportions {
     communityPool: ""
   };
 }
+/**
+ * DistributionProportions defines the distribution proportions of the minted
+ * denom. In other words, defines which stakeholders will receive the minted
+ * denoms and how much.
+ * @name DistributionProportions
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.DistributionProportions
+ */
 export const DistributionProportions = {
   typeUrl: "/osmosis.mint.v1beta1.DistributionProportions",
   aminoType: "osmosis/mint/distribution-proportions",
@@ -447,7 +517,7 @@ export const DistributionProportions = {
     };
   }
 };
-function createBaseParams(): Params {
+function createBaseOsmosisMintV1beta1Params(): OsmosisMintV1beta1Params {
   return {
     mintDenom: "",
     genesisEpochProvisions: "",
@@ -459,10 +529,16 @@ function createBaseParams(): Params {
     mintingRewardsDistributionStartEpoch: BigInt(0)
   };
 }
-export const Params = {
+/**
+ * Params holds parameters for the x/mint module.
+ * @name OsmosisMintV1beta1Params
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.Params
+ */
+export const OsmosisMintV1beta1Params = {
   typeUrl: "/osmosis.mint.v1beta1.Params",
   aminoType: "osmosis/mint/params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: OsmosisMintV1beta1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.mintDenom !== "") {
       writer.uint32(10).string(message.mintDenom);
     }
@@ -489,10 +565,10 @@ export const Params = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): OsmosisMintV1beta1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseOsmosisMintV1beta1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -527,8 +603,8 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<OsmosisMintV1beta1Params>): OsmosisMintV1beta1Params {
+    const message = createBaseOsmosisMintV1beta1Params();
     message.mintDenom = object.mintDenom ?? "";
     message.genesisEpochProvisions = object.genesisEpochProvisions ?? "";
     message.epochIdentifier = object.epochIdentifier ?? "";
@@ -539,8 +615,8 @@ export const Params = {
     message.mintingRewardsDistributionStartEpoch = object.mintingRewardsDistributionStartEpoch !== undefined && object.mintingRewardsDistributionStartEpoch !== null ? BigInt(object.mintingRewardsDistributionStartEpoch.toString()) : BigInt(0);
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: OsmosisMintV1beta1ParamsAmino): OsmosisMintV1beta1Params {
+    const message = createBaseOsmosisMintV1beta1Params();
     if (object.mint_denom !== undefined && object.mint_denom !== null) {
       message.mintDenom = object.mint_denom;
     }
@@ -565,7 +641,7 @@ export const Params = {
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: OsmosisMintV1beta1Params): OsmosisMintV1beta1ParamsAmino {
     const obj: any = {};
     obj.mint_denom = message.mintDenom === "" ? undefined : message.mintDenom;
     obj.genesis_epoch_provisions = message.genesisEpochProvisions === "" ? undefined : message.genesisEpochProvisions;
@@ -581,25 +657,25 @@ export const Params = {
     obj.minting_rewards_distribution_start_epoch = message.mintingRewardsDistributionStartEpoch !== BigInt(0) ? message.mintingRewardsDistributionStartEpoch?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: OsmosisMintV1beta1ParamsAminoMsg): OsmosisMintV1beta1Params {
+    return OsmosisMintV1beta1Params.fromAmino(object.value);
   },
-  toAminoMsg(message: Params): ParamsAminoMsg {
+  toAminoMsg(message: OsmosisMintV1beta1Params): OsmosisMintV1beta1ParamsAminoMsg {
     return {
       type: "osmosis/mint/params",
-      value: Params.toAmino(message)
+      value: OsmosisMintV1beta1Params.toAmino(message)
     };
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: OsmosisMintV1beta1ParamsProtoMsg): OsmosisMintV1beta1Params {
+    return OsmosisMintV1beta1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: OsmosisMintV1beta1Params): Uint8Array {
+    return OsmosisMintV1beta1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: OsmosisMintV1beta1Params): OsmosisMintV1beta1ParamsProtoMsg {
     return {
       typeUrl: "/osmosis.mint.v1beta1.Params",
-      value: Params.encode(message).finish()
+      value: OsmosisMintV1beta1Params.encode(message).finish()
     };
   }
 };

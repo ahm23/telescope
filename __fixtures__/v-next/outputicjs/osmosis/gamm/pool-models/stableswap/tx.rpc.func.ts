@@ -3,7 +3,7 @@ import { MsgCreateStableswapPool, MsgStableSwapAdjustScalingFactors } from "./tx
 /**
  * @name createStableswapPool
  * @package osmosis.gamm.poolmodels.stableswap.v1beta1
- * @see protoservice: osmosis.gamm.poolmodels.stableswap.v1beta1.CreateStableswapPool
+ * @see proto service: osmosis.gamm.poolmodels.stableswap.v1beta1.CreateStableswapPool
  */
 export const createStableswapPool = buildTx<MsgCreateStableswapPool>({
   msg: MsgCreateStableswapPool
@@ -11,7 +11,7 @@ export const createStableswapPool = buildTx<MsgCreateStableswapPool>({
 /**
  * @name stableSwapAdjustScalingFactors
  * @package osmosis.gamm.poolmodels.stableswap.v1beta1
- * @see protoservice: osmosis.gamm.poolmodels.stableswap.v1beta1.StableSwapAdjustScalingFactors
+ * @see proto service: osmosis.gamm.poolmodels.stableswap.v1beta1.StableSwapAdjustScalingFactors
  */
 export const stableSwapAdjustScalingFactors = buildTx<MsgStableSwapAdjustScalingFactors>({
   msg: MsgStableSwapAdjustScalingFactors

@@ -4,7 +4,7 @@ import { QueryParamsRequest, QueryParamsResponse, QueryInflationRequest, QueryIn
  * Params returns the total set of minting parameters.
  * @name getCosmosMintV1beta1Params
  * @package cosmos.mint.v1beta1
- * @see protoservice: cosmos.mint.v1beta1.Params
+ * @see proto service: cosmos.mint.v1beta1.Params
  */
 export const getCosmosMintV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
@@ -16,7 +16,7 @@ export const getCosmosMintV1beta1Params = buildQuery<QueryParamsRequest, QueryPa
  * Inflation returns the current minting inflation value.
  * @name getInflation
  * @package cosmos.mint.v1beta1
- * @see protoservice: cosmos.mint.v1beta1.Inflation
+ * @see proto service: cosmos.mint.v1beta1.Inflation
  */
 export const getInflation = buildQuery<QueryInflationRequest, QueryInflationResponse>({
   encode: QueryInflationRequest.encode,
@@ -28,7 +28,7 @@ export const getInflation = buildQuery<QueryInflationRequest, QueryInflationResp
  * AnnualProvisions current minting annual provisions value.
  * @name getAnnualProvisions
  * @package cosmos.mint.v1beta1
- * @see protoservice: cosmos.mint.v1beta1.AnnualProvisions
+ * @see proto service: cosmos.mint.v1beta1.AnnualProvisions
  */
 export const getAnnualProvisions = buildQuery<QueryAnnualProvisionsRequest, QueryAnnualProvisionsResponse>({
   encode: QueryAnnualProvisionsRequest.encode,

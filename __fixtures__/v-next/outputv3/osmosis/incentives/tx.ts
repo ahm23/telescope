@@ -4,7 +4,12 @@ import { Timestamp, TimestampAmino, TimestampSDKType } from "../../google/protob
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { toTimestamp, fromTimestamp, isSet, DeepPartial } from "../../helpers";
 export const protobufPackage = "osmosis.incentives";
-/** MsgCreateGauge creates a gague to distribute rewards to users */
+/**
+ * MsgCreateGauge creates a gague to distribute rewards to users
+ * @name MsgCreateGauge
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgCreateGauge
+ */
 export interface MsgCreateGauge {
   /**
    * is_perpetual shows if it's a perpetual or non-perpetual gauge
@@ -14,16 +19,22 @@ export interface MsgCreateGauge {
    * refilled
    */
   isPerpetual: boolean;
-  /** owner is the address of gauge creator */
+  /**
+   * owner is the address of gauge creator
+  */
   owner: string;
   /**
    * distribute_to show which lock the gauge should distribute to by time
    * duration or by timestamp
    */
   distributeTo: QueryCondition;
-  /** coins are coin(s) to be distributed by the gauge */
+  /**
+   * coins are coin(s) to be distributed by the gauge
+  */
   coins: Coin[];
-  /** start_time is the distribution start time */
+  /**
+   * start_time is the distribution start time
+  */
   startTime: Date;
   /**
    * num_epochs_paid_over is the number of epochs distribution will be completed
@@ -35,7 +46,12 @@ export interface MsgCreateGaugeProtoMsg {
   typeUrl: "/osmosis.incentives.MsgCreateGauge";
   value: Uint8Array;
 }
-/** MsgCreateGauge creates a gague to distribute rewards to users */
+/**
+ * MsgCreateGauge creates a gague to distribute rewards to users
+ * @name MsgCreateGaugeAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgCreateGauge
+ */
 export interface MsgCreateGaugeAmino {
   /**
    * is_perpetual shows if it's a perpetual or non-perpetual gauge
@@ -45,16 +61,22 @@ export interface MsgCreateGaugeAmino {
    * refilled
    */
   is_perpetual?: boolean;
-  /** owner is the address of gauge creator */
+  /**
+   * owner is the address of gauge creator
+  */
   owner?: string;
   /**
    * distribute_to show which lock the gauge should distribute to by time
    * duration or by timestamp
    */
   distribute_to?: QueryConditionAmino;
-  /** coins are coin(s) to be distributed by the gauge */
+  /**
+   * coins are coin(s) to be distributed by the gauge
+  */
   coins?: CoinAmino[];
-  /** start_time is the distribution start time */
+  /**
+   * start_time is the distribution start time
+  */
   start_time?: string;
   /**
    * num_epochs_paid_over is the number of epochs distribution will be completed
@@ -62,7 +84,12 @@ export interface MsgCreateGaugeAmino {
    */
   num_epochs_paid_over?: string;
 }
-/** MsgCreateGauge creates a gague to distribute rewards to users */
+/**
+ * MsgCreateGauge creates a gague to distribute rewards to users
+ * @name MsgCreateGaugeSDKType
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgCreateGauge
+ */
 export interface MsgCreateGaugeSDKType {
   is_perpetual: boolean;
   owner: string;
@@ -71,47 +98,104 @@ export interface MsgCreateGaugeSDKType {
   start_time: Date;
   num_epochs_paid_over: bigint;
 }
+/**
+ * @name MsgCreateGaugeResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgCreateGaugeResponse
+ */
 export interface MsgCreateGaugeResponse {}
 export interface MsgCreateGaugeResponseProtoMsg {
   typeUrl: "/osmosis.incentives.MsgCreateGaugeResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgCreateGaugeResponseAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgCreateGaugeResponse
+ */
 export interface MsgCreateGaugeResponseAmino {}
+/**
+ * @name MsgCreateGaugeResponseSDKType
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgCreateGaugeResponse
+ */
 export interface MsgCreateGaugeResponseSDKType {}
-/** MsgAddToGauge adds coins to a previously created gauge */
+/**
+ * MsgAddToGauge adds coins to a previously created gauge
+ * @name MsgAddToGauge
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgAddToGauge
+ */
 export interface MsgAddToGauge {
-  /** owner is the gauge owner's address */
+  /**
+   * owner is the gauge owner's address
+  */
   owner: string;
-  /** gauge_id is the ID of gauge that rewards are getting added to */
+  /**
+   * gauge_id is the ID of gauge that rewards are getting added to
+  */
   gaugeId: bigint;
-  /** rewards are the coin(s) to add to gauge */
+  /**
+   * rewards are the coin(s) to add to gauge
+  */
   rewards: Coin[];
 }
 export interface MsgAddToGaugeProtoMsg {
   typeUrl: "/osmosis.incentives.MsgAddToGauge";
   value: Uint8Array;
 }
-/** MsgAddToGauge adds coins to a previously created gauge */
+/**
+ * MsgAddToGauge adds coins to a previously created gauge
+ * @name MsgAddToGaugeAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgAddToGauge
+ */
 export interface MsgAddToGaugeAmino {
-  /** owner is the gauge owner's address */
+  /**
+   * owner is the gauge owner's address
+  */
   owner?: string;
-  /** gauge_id is the ID of gauge that rewards are getting added to */
+  /**
+   * gauge_id is the ID of gauge that rewards are getting added to
+  */
   gauge_id?: string;
-  /** rewards are the coin(s) to add to gauge */
+  /**
+   * rewards are the coin(s) to add to gauge
+  */
   rewards?: CoinAmino[];
 }
-/** MsgAddToGauge adds coins to a previously created gauge */
+/**
+ * MsgAddToGauge adds coins to a previously created gauge
+ * @name MsgAddToGaugeSDKType
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgAddToGauge
+ */
 export interface MsgAddToGaugeSDKType {
   owner: string;
   gauge_id: bigint;
   rewards: CoinSDKType[];
 }
+/**
+ * @name MsgAddToGaugeResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgAddToGaugeResponse
+ */
 export interface MsgAddToGaugeResponse {}
 export interface MsgAddToGaugeResponseProtoMsg {
   typeUrl: "/osmosis.incentives.MsgAddToGaugeResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgAddToGaugeResponseAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgAddToGaugeResponse
+ */
 export interface MsgAddToGaugeResponseAmino {}
+/**
+ * @name MsgAddToGaugeResponseSDKType
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgAddToGaugeResponse
+ */
 export interface MsgAddToGaugeResponseSDKType {}
 function createBaseMsgCreateGauge(): MsgCreateGauge {
   return {
@@ -123,6 +207,12 @@ function createBaseMsgCreateGauge(): MsgCreateGauge {
     numEpochsPaidOver: BigInt(0)
   };
 }
+/**
+ * MsgCreateGauge creates a gague to distribute rewards to users
+ * @name MsgCreateGauge
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgCreateGauge
+ */
 export const MsgCreateGauge = {
   typeUrl: "/osmosis.incentives.MsgCreateGauge",
   aminoType: "osmosis/incentives/create-gauge",
@@ -277,6 +367,11 @@ export const MsgCreateGauge = {
 function createBaseMsgCreateGaugeResponse(): MsgCreateGaugeResponse {
   return {};
 }
+/**
+ * @name MsgCreateGaugeResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgCreateGaugeResponse
+ */
 export const MsgCreateGaugeResponse = {
   typeUrl: "/osmosis.incentives.MsgCreateGaugeResponse",
   aminoType: "osmosis/incentives/create-gauge-response",
@@ -340,6 +435,12 @@ function createBaseMsgAddToGauge(): MsgAddToGauge {
     rewards: []
   };
 }
+/**
+ * MsgAddToGauge adds coins to a previously created gauge
+ * @name MsgAddToGauge
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgAddToGauge
+ */
 export const MsgAddToGauge = {
   typeUrl: "/osmosis.incentives.MsgAddToGauge",
   aminoType: "osmosis/incentives/add-to-gauge",
@@ -450,6 +551,11 @@ export const MsgAddToGauge = {
 function createBaseMsgAddToGaugeResponse(): MsgAddToGaugeResponse {
   return {};
 }
+/**
+ * @name MsgAddToGaugeResponse
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.MsgAddToGaugeResponse
+ */
 export const MsgAddToGaugeResponse = {
   typeUrl: "/osmosis.incentives.MsgAddToGaugeResponse",
   aminoType: "osmosis/incentives/add-to-gauge-response",

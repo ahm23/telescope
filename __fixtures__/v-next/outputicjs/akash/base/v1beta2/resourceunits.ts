@@ -5,6 +5,9 @@ import { DeepPartial } from "../../../helpers";
 /**
  * ResourceUnits describes all available resources types for deployment/node etc
  * if field is nil resource is not present in the given data-structure
+ * @name ResourceUnits
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.ResourceUnits
  */
 export interface ResourceUnits {
   cpu?: CPU;
@@ -19,6 +22,9 @@ export interface ResourceUnitsProtoMsg {
 /**
  * ResourceUnits describes all available resources types for deployment/node etc
  * if field is nil resource is not present in the given data-structure
+ * @name ResourceUnitsAmino
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.ResourceUnits
  */
 export interface ResourceUnitsAmino {
   cpu?: CPUAmino;
@@ -38,6 +44,13 @@ function createBaseResourceUnits(): ResourceUnits {
     endpoints: []
   };
 }
+/**
+ * ResourceUnits describes all available resources types for deployment/node etc
+ * if field is nil resource is not present in the given data-structure
+ * @name ResourceUnits
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.ResourceUnits
+ */
 export const ResourceUnits = {
   typeUrl: "/akash.base.v1beta2.ResourceUnits",
   encode(message: ResourceUnits, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

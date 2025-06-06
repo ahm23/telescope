@@ -20,6 +20,9 @@ export const protobufPackage = "google.api";
  *       - selector: google.calendar.Delegate
  *         oauth:
  *           canonical_scopes: https://www.googleapis.com/auth/calendar.read
+ * @name Authentication
+ * @package google.api
+ * @see proto type: google.api.Authentication
  */
 export interface Authentication {
   /**
@@ -28,7 +31,9 @@ export interface Authentication {
    * **NOTE:** All service configuration rules follow "last one wins" order.
    */
   rules: AuthenticationRule[];
-  /** Defines a set of authentication providers that a service supports. */
+  /**
+   * Defines a set of authentication providers that a service supports.
+  */
   providers: AuthProvider[];
 }
 export interface AuthenticationProtoMsg {
@@ -54,6 +59,9 @@ export interface AuthenticationProtoMsg {
  *       - selector: google.calendar.Delegate
  *         oauth:
  *           canonical_scopes: https://www.googleapis.com/auth/calendar.read
+ * @name AuthenticationAmino
+ * @package google.api
+ * @see proto type: google.api.Authentication
  */
 export interface AuthenticationAmino {
   /**
@@ -62,7 +70,9 @@ export interface AuthenticationAmino {
    * **NOTE:** All service configuration rules follow "last one wins" order.
    */
   rules?: AuthenticationRuleAmino[];
-  /** Defines a set of authentication providers that a service supports. */
+  /**
+   * Defines a set of authentication providers that a service supports.
+  */
   providers?: AuthProviderAmino[];
 }
 /**
@@ -84,6 +94,9 @@ export interface AuthenticationAmino {
  *       - selector: google.calendar.Delegate
  *         oauth:
  *           canonical_scopes: https://www.googleapis.com/auth/calendar.read
+ * @name AuthenticationSDKType
+ * @package google.api
+ * @see proto type: google.api.Authentication
  */
 export interface AuthenticationSDKType {
   rules: AuthenticationRuleSDKType[];
@@ -99,6 +112,9 @@ export interface AuthenticationSDKType {
  * 
  * If a method doesn't have any auth requirements, request credentials will be
  * ignored.
+ * @name AuthenticationRule
+ * @package google.api
+ * @see proto type: google.api.AuthenticationRule
  */
 export interface AuthenticationRule {
   /**
@@ -107,14 +123,18 @@ export interface AuthenticationRule {
    * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
    */
   selector: string;
-  /** The requirements for OAuth credentials. */
+  /**
+   * The requirements for OAuth credentials.
+  */
   oauth?: OAuthRequirements;
   /**
    * If true, the service accepts API keys without any other credential.
    * This flag only applies to HTTP and gRPC requests.
    */
   allowWithoutCredential: boolean;
-  /** Requirements for additional authentication providers. */
+  /**
+   * Requirements for additional authentication providers.
+  */
   requirements: AuthRequirement[];
 }
 export interface AuthenticationRuleProtoMsg {
@@ -131,6 +151,9 @@ export interface AuthenticationRuleProtoMsg {
  * 
  * If a method doesn't have any auth requirements, request credentials will be
  * ignored.
+ * @name AuthenticationRuleAmino
+ * @package google.api
+ * @see proto type: google.api.AuthenticationRule
  */
 export interface AuthenticationRuleAmino {
   /**
@@ -139,14 +162,18 @@ export interface AuthenticationRuleAmino {
    * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
    */
   selector?: string;
-  /** The requirements for OAuth credentials. */
+  /**
+   * The requirements for OAuth credentials.
+  */
   oauth?: OAuthRequirementsAmino;
   /**
    * If true, the service accepts API keys without any other credential.
    * This flag only applies to HTTP and gRPC requests.
    */
   allow_without_credential?: boolean;
-  /** Requirements for additional authentication providers. */
+  /**
+   * Requirements for additional authentication providers.
+  */
   requirements?: AuthRequirementAmino[];
 }
 /**
@@ -159,6 +186,9 @@ export interface AuthenticationRuleAmino {
  * 
  * If a method doesn't have any auth requirements, request credentials will be
  * ignored.
+ * @name AuthenticationRuleSDKType
+ * @package google.api
+ * @see proto type: google.api.AuthenticationRule
  */
 export interface AuthenticationRuleSDKType {
   selector: string;
@@ -166,11 +196,20 @@ export interface AuthenticationRuleSDKType {
   allow_without_credential: boolean;
   requirements: AuthRequirementSDKType[];
 }
-/** Specifies a location to extract JWT from an API request. */
+/**
+ * Specifies a location to extract JWT from an API request.
+ * @name JwtLocation
+ * @package google.api
+ * @see proto type: google.api.JwtLocation
+ */
 export interface JwtLocation {
-  /** Specifies HTTP header name to extract JWT token. */
+  /**
+   * Specifies HTTP header name to extract JWT token.
+  */
   header?: string;
-  /** Specifies URL query parameter name to extract JWT token. */
+  /**
+   * Specifies URL query parameter name to extract JWT token.
+  */
   query?: string;
   /**
    * The value prefix. The value format is "value_prefix{token}"
@@ -188,11 +227,20 @@ export interface JwtLocationProtoMsg {
   typeUrl: "/google.api.JwtLocation";
   value: Uint8Array;
 }
-/** Specifies a location to extract JWT from an API request. */
+/**
+ * Specifies a location to extract JWT from an API request.
+ * @name JwtLocationAmino
+ * @package google.api
+ * @see proto type: google.api.JwtLocation
+ */
 export interface JwtLocationAmino {
-  /** Specifies HTTP header name to extract JWT token. */
+  /**
+   * Specifies HTTP header name to extract JWT token.
+  */
   header?: string;
-  /** Specifies URL query parameter name to extract JWT token. */
+  /**
+   * Specifies URL query parameter name to extract JWT token.
+  */
   query?: string;
   /**
    * The value prefix. The value format is "value_prefix{token}"
@@ -206,7 +254,12 @@ export interface JwtLocationAmino {
    */
   value_prefix?: string;
 }
-/** Specifies a location to extract JWT from an API request. */
+/**
+ * Specifies a location to extract JWT from an API request.
+ * @name JwtLocationSDKType
+ * @package google.api
+ * @see proto type: google.api.JwtLocation
+ */
 export interface JwtLocationSDKType {
   header?: string;
   query?: string;
@@ -216,6 +269,9 @@ export interface JwtLocationSDKType {
  * Configuration for an authentication provider, including support for
  * [JSON Web Token
  * (JWT)](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32).
+ * @name AuthProvider
+ * @package google.api
+ * @see proto type: google.api.AuthProvider
  */
 export interface AuthProvider {
   /**
@@ -303,6 +359,9 @@ export interface AuthProviderProtoMsg {
  * Configuration for an authentication provider, including support for
  * [JSON Web Token
  * (JWT)](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32).
+ * @name AuthProviderAmino
+ * @package google.api
+ * @see proto type: google.api.AuthProvider
  */
 export interface AuthProviderAmino {
   /**
@@ -386,6 +445,9 @@ export interface AuthProviderAmino {
  * Configuration for an authentication provider, including support for
  * [JSON Web Token
  * (JWT)](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32).
+ * @name AuthProviderSDKType
+ * @package google.api
+ * @see proto type: google.api.AuthProvider
  */
 export interface AuthProviderSDKType {
   id: string;
@@ -414,6 +476,9 @@ export interface AuthProviderSDKType {
  * Please note that even though each of the canonical scopes is enough for a
  * request to be accepted and passed to the backend, a request can still fail
  * due to the backend requiring additional scopes or permissions.
+ * @name OAuthRequirements
+ * @package google.api
+ * @see proto type: google.api.OAuthRequirements
  */
 export interface OAuthRequirements {
   /**
@@ -450,6 +515,9 @@ export interface OAuthRequirementsProtoMsg {
  * Please note that even though each of the canonical scopes is enough for a
  * request to be accepted and passed to the backend, a request can still fail
  * due to the backend requiring additional scopes or permissions.
+ * @name OAuthRequirementsAmino
+ * @package google.api
+ * @see proto type: google.api.OAuthRequirements
  */
 export interface OAuthRequirementsAmino {
   /**
@@ -482,6 +550,9 @@ export interface OAuthRequirementsAmino {
  * Please note that even though each of the canonical scopes is enough for a
  * request to be accepted and passed to the backend, a request can still fail
  * due to the backend requiring additional scopes or permissions.
+ * @name OAuthRequirementsSDKType
+ * @package google.api
+ * @see proto type: google.api.OAuthRequirements
  */
 export interface OAuthRequirementsSDKType {
   canonical_scopes: string;
@@ -490,6 +561,9 @@ export interface OAuthRequirementsSDKType {
  * User-defined authentication requirements, including support for
  * [JSON Web Token
  * (JWT)](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32).
+ * @name AuthRequirement
+ * @package google.api
+ * @see proto type: google.api.AuthRequirement
  */
 export interface AuthRequirement {
   /**
@@ -528,6 +602,9 @@ export interface AuthRequirementProtoMsg {
  * User-defined authentication requirements, including support for
  * [JSON Web Token
  * (JWT)](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32).
+ * @name AuthRequirementAmino
+ * @package google.api
+ * @see proto type: google.api.AuthRequirement
  */
 export interface AuthRequirementAmino {
   /**
@@ -562,6 +639,9 @@ export interface AuthRequirementAmino {
  * User-defined authentication requirements, including support for
  * [JSON Web Token
  * (JWT)](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32).
+ * @name AuthRequirementSDKType
+ * @package google.api
+ * @see proto type: google.api.AuthRequirement
  */
 export interface AuthRequirementSDKType {
   provider_id: string;
@@ -573,6 +653,29 @@ function createBaseAuthentication(): Authentication {
     providers: []
   };
 }
+/**
+ * `Authentication` defines the authentication configuration for API methods
+ * provided by an API service.
+ * 
+ * Example:
+ * 
+ *     name: calendar.googleapis.com
+ *     authentication:
+ *       providers:
+ *       - id: google_calendar_auth
+ *         jwks_uri: https://www.googleapis.com/oauth2/v1/certs
+ *         issuer: https://securetoken.google.com
+ *       rules:
+ *       - selector: "*"
+ *         requirements:
+ *           provider_id: google_calendar_auth
+ *       - selector: google.calendar.Delegate
+ *         oauth:
+ *           canonical_scopes: https://www.googleapis.com/auth/calendar.read
+ * @name Authentication
+ * @package google.api
+ * @see proto type: google.api.Authentication
+ */
 export const Authentication = {
   typeUrl: "/google.api.Authentication",
   encode(message: Authentication, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -677,6 +780,20 @@ function createBaseAuthenticationRule(): AuthenticationRule {
     requirements: []
   };
 }
+/**
+ * Authentication rules for the service.
+ * 
+ * By default, if a method has any authentication requirements, every request
+ * must include a valid credential matching one of the requirements.
+ * It's an error to include more than one kind of credential in a single
+ * request.
+ * 
+ * If a method doesn't have any auth requirements, request credentials will be
+ * ignored.
+ * @name AuthenticationRule
+ * @package google.api
+ * @see proto type: google.api.AuthenticationRule
+ */
 export const AuthenticationRule = {
   typeUrl: "/google.api.AuthenticationRule",
   encode(message: AuthenticationRule, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -804,6 +921,12 @@ function createBaseJwtLocation(): JwtLocation {
     valuePrefix: ""
   };
 }
+/**
+ * Specifies a location to extract JWT from an API request.
+ * @name JwtLocation
+ * @package google.api
+ * @see proto type: google.api.JwtLocation
+ */
 export const JwtLocation = {
   typeUrl: "/google.api.JwtLocation",
   encode(message: JwtLocation, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -912,6 +1035,14 @@ function createBaseAuthProvider(): AuthProvider {
     jwtLocations: []
   };
 }
+/**
+ * Configuration for an authentication provider, including support for
+ * [JSON Web Token
+ * (JWT)](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32).
+ * @name AuthProvider
+ * @package google.api
+ * @see proto type: google.api.AuthProvider
+ */
 export const AuthProvider = {
   typeUrl: "/google.api.AuthProvider",
   encode(message: AuthProvider, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1063,6 +1194,29 @@ function createBaseOAuthRequirements(): OAuthRequirements {
     canonicalScopes: ""
   };
 }
+/**
+ * OAuth scopes are a way to define data and permissions on data. For example,
+ * there are scopes defined for "Read-only access to Google Calendar" and
+ * "Access to Cloud Platform". Users can consent to a scope for an application,
+ * giving it permission to access that data on their behalf.
+ * 
+ * OAuth scope specifications should be fairly coarse grained; a user will need
+ * to see and understand the text description of what your scope means.
+ * 
+ * In most cases: use one or at most two OAuth scopes for an entire family of
+ * products. If your product has multiple APIs, you should probably be sharing
+ * the OAuth scope across all of those APIs.
+ * 
+ * When you need finer grained OAuth consent screens: talk with your product
+ * management about how developers will use them in practice.
+ * 
+ * Please note that even though each of the canonical scopes is enough for a
+ * request to be accepted and passed to the backend, a request can still fail
+ * due to the backend requiring additional scopes or permissions.
+ * @name OAuthRequirements
+ * @package google.api
+ * @see proto type: google.api.OAuthRequirements
+ */
 export const OAuthRequirements = {
   typeUrl: "/google.api.OAuthRequirements",
   encode(message: OAuthRequirements, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1139,6 +1293,14 @@ function createBaseAuthRequirement(): AuthRequirement {
     audiences: ""
   };
 }
+/**
+ * User-defined authentication requirements, including support for
+ * [JSON Web Token
+ * (JWT)](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32).
+ * @name AuthRequirement
+ * @package google.api
+ * @see proto type: google.api.AuthRequirement
+ */
 export const AuthRequirement = {
   typeUrl: "/google.api.AuthRequirement",
   encode(message: AuthRequirement, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

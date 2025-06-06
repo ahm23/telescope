@@ -5,31 +5,50 @@ import { toTimestamp, fromTimestamp, isSet, DeepPartial } from "../../../helpers
 import { GlobalDecoderRegistry } from "../../../registry";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.claim.v1beta1";
-/** Params defines the claim module's parameters. */
+/**
+ * Params defines the claim module's parameters.
+ * @name Params
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.Params
+ */
 export interface Params {
   airdropStartTime: Date;
   durationUntilDecay: Duration;
   durationOfDecay: Duration;
-  /** denom of claimable asset */
+  /**
+   * denom of claimable asset
+  */
   claimDenom: string;
 }
 export interface ParamsProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params defines the claim module's parameters. */
+/**
+ * Params defines the claim module's parameters.
+ * @name ParamsAmino
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.Params
+ */
 export interface ParamsAmino {
   airdrop_start_time?: string;
   duration_until_decay?: DurationAmino;
   duration_of_decay?: DurationAmino;
-  /** denom of claimable asset */
+  /**
+   * denom of claimable asset
+  */
   claim_denom?: string;
 }
 export interface ParamsAminoMsg {
   type: "osmosis/claim/params";
   value: ParamsAmino;
 }
-/** Params defines the claim module's parameters. */
+/**
+ * Params defines the claim module's parameters.
+ * @name ParamsSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.Params
+ */
 export interface ParamsSDKType {
   airdrop_start_time: Date;
   duration_until_decay: DurationSDKType;
@@ -44,6 +63,12 @@ function createBaseParams(): Params {
     claimDenom: ""
   };
 }
+/**
+ * Params defines the claim module's parameters.
+ * @name Params
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.claim.v1beta1.Params",
   aminoType: "osmosis/claim/params",

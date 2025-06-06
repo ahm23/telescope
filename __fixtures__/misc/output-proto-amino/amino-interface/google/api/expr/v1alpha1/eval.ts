@@ -3,41 +3,79 @@ import { JsonSafe } from "../../../../json-safe";
 import { DeepPartial, isSet } from "../../../../helpers";
 import { GlobalDecoderRegistry } from "../../../../registry";
 export const protobufPackage = "google.api.expr.v1alpha1";
+/**
+ * @name ExprValue
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprValue
+ */
 export interface ExprValue {
-  /** The ids of the expressions with unknown values. */
+  /**
+   * The ids of the expressions with unknown values.
+  */
   exprs: IdRef[];
 }
 export interface ExprValueProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.ExprValue";
   value: Uint8Array;
 }
+/**
+ * @name ExprValueAmino
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprValue
+ */
 export interface ExprValueAmino {
-  /** The ids of the expressions with unknown values. */
+  /**
+   * The ids of the expressions with unknown values.
+  */
   exprs?: IdRefAmino[];
 }
 export interface ExprValueAminoMsg {
   type: "/google.api.expr.v1alpha1.ExprValue";
   value: ExprValueAmino;
 }
+/**
+ * @name ExprValueSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprValue
+ */
 export interface ExprValueSDKType {
   exprs: IdRefSDKType[];
 }
+/**
+ * @name IdRef
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.IdRef
+ */
 export interface IdRef {
-  /** The expression id. */
+  /**
+   * The expression id.
+  */
   id: number;
 }
 export interface IdRefProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.IdRef";
   value: Uint8Array;
 }
+/**
+ * @name IdRefAmino
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.IdRef
+ */
 export interface IdRefAmino {
-  /** The expression id. */
+  /**
+   * The expression id.
+  */
   id?: number;
 }
 export interface IdRefAminoMsg {
   type: "/google.api.expr.v1alpha1.IdRef";
   value: IdRefAmino;
 }
+/**
+ * @name IdRefSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.IdRef
+ */
 export interface IdRefSDKType {
   id: number;
 }
@@ -46,6 +84,11 @@ function createBaseExprValue(): ExprValue {
     exprs: []
   };
 }
+/**
+ * @name ExprValue
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprValue
+ */
 export const ExprValue = {
   typeUrl: "/google.api.expr.v1alpha1.ExprValue",
   is(o: any): o is ExprValue {
@@ -154,6 +197,11 @@ function createBaseIdRef(): IdRef {
     id: 0
   };
 }
+/**
+ * @name IdRef
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.IdRef
+ */
 export const IdRef = {
   typeUrl: "/google.api.expr.v1alpha1.IdRef",
   is(o: any): o is IdRef {

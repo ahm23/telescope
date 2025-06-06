@@ -3,16 +3,28 @@ import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, DeepPartial } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
 export const protobufPackage = "ibc.lightclients.localhost.v2";
-/** ClientState defines the 09-localhost client state */
+/**
+ * ClientState defines the 09-localhost client state
+ * @name ClientState
+ * @package ibc.lightclients.localhost.v2
+ * @see proto type: ibc.lightclients.localhost.v2.ClientState
+ */
 export interface ClientState {
-  /** the latest block height */
+  /**
+   * the latest block height
+  */
   latestHeight: Height;
 }
 export interface ClientStateProtoMsg {
   typeUrl: "/ibc.lightclients.localhost.v2.ClientState";
   value: Uint8Array;
 }
-/** ClientState defines the 09-localhost client state */
+/**
+ * ClientState defines the 09-localhost client state
+ * @name ClientStateSDKType
+ * @package ibc.lightclients.localhost.v2
+ * @see proto type: ibc.lightclients.localhost.v2.ClientState
+ */
 export interface ClientStateSDKType {
   latest_height: HeightSDKType;
 }
@@ -21,6 +33,12 @@ function createBaseClientState(): ClientState {
     latestHeight: Height.fromPartial({})
   };
 }
+/**
+ * ClientState defines the 09-localhost client state
+ * @name ClientState
+ * @package ibc.lightclients.localhost.v2
+ * @see proto type: ibc.lightclients.localhost.v2.ClientState
+ */
 export const ClientState = {
   typeUrl: "/ibc.lightclients.localhost.v2.ClientState",
   encode(message: ClientState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

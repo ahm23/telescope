@@ -4,7 +4,7 @@ import { QueryClientStateRequest, QueryClientStateResponse, QueryClientStatesReq
  * ClientState queries an IBC light client.
  * @name getClientState
  * @package ibc.core.client.v1
- * @see protoservice: ibc.core.client.v1.ClientState
+ * @see proto service: ibc.core.client.v1.ClientState
  */
 export const getClientState = buildQuery<QueryClientStateRequest, QueryClientStateResponse>({
   encode: QueryClientStateRequest.encode,
@@ -16,7 +16,7 @@ export const getClientState = buildQuery<QueryClientStateRequest, QueryClientSta
  * ClientStates queries all the IBC light clients of a chain.
  * @name getClientStates
  * @package ibc.core.client.v1
- * @see protoservice: ibc.core.client.v1.ClientStates
+ * @see proto service: ibc.core.client.v1.ClientStates
  */
 export const getClientStates = buildQuery<QueryClientStatesRequest, QueryClientStatesResponse>({
   encode: QueryClientStatesRequest.encode,
@@ -29,7 +29,7 @@ export const getClientStates = buildQuery<QueryClientStatesRequest, QueryClientS
  * a given height.
  * @name getConsensusState
  * @package ibc.core.client.v1
- * @see protoservice: ibc.core.client.v1.ConsensusState
+ * @see proto service: ibc.core.client.v1.ConsensusState
  */
 export const getConsensusState = buildQuery<QueryConsensusStateRequest, QueryConsensusStateResponse>({
   encode: QueryConsensusStateRequest.encode,
@@ -42,7 +42,7 @@ export const getConsensusState = buildQuery<QueryConsensusStateRequest, QueryCon
  * client.
  * @name getConsensusStates
  * @package ibc.core.client.v1
- * @see protoservice: ibc.core.client.v1.ConsensusStates
+ * @see proto service: ibc.core.client.v1.ConsensusStates
  */
 export const getConsensusStates = buildQuery<QueryConsensusStatesRequest, QueryConsensusStatesResponse>({
   encode: QueryConsensusStatesRequest.encode,
@@ -54,7 +54,7 @@ export const getConsensusStates = buildQuery<QueryConsensusStatesRequest, QueryC
  * Status queries the status of an IBC client.
  * @name getClientStatus
  * @package ibc.core.client.v1
- * @see protoservice: ibc.core.client.v1.ClientStatus
+ * @see proto service: ibc.core.client.v1.ClientStatus
  */
 export const getClientStatus = buildQuery<QueryClientStatusRequest, QueryClientStatusResponse>({
   encode: QueryClientStatusRequest.encode,
@@ -66,7 +66,7 @@ export const getClientStatus = buildQuery<QueryClientStatusRequest, QueryClientS
  * ClientParams queries all parameters of the ibc client.
  * @name getClientParams
  * @package ibc.core.client.v1
- * @see protoservice: ibc.core.client.v1.ClientParams
+ * @see proto service: ibc.core.client.v1.ClientParams
  */
 export const getClientParams = buildQuery<QueryClientParamsRequest, QueryClientParamsResponse>({
   encode: QueryClientParamsRequest.encode,
@@ -78,7 +78,7 @@ export const getClientParams = buildQuery<QueryClientParamsRequest, QueryClientP
  * UpgradedClientState queries an Upgraded IBC light client.
  * @name getUpgradedClientState
  * @package ibc.core.client.v1
- * @see protoservice: ibc.core.client.v1.UpgradedClientState
+ * @see proto service: ibc.core.client.v1.UpgradedClientState
  */
 export const getUpgradedClientState = buildQuery<QueryUpgradedClientStateRequest, QueryUpgradedClientStateResponse>({
   encode: QueryUpgradedClientStateRequest.encode,
@@ -90,7 +90,7 @@ export const getUpgradedClientState = buildQuery<QueryUpgradedClientStateRequest
  * UpgradedConsensusState queries an Upgraded IBC consensus state.
  * @name getUpgradedConsensusState
  * @package ibc.core.client.v1
- * @see protoservice: ibc.core.client.v1.UpgradedConsensusState
+ * @see proto service: ibc.core.client.v1.UpgradedConsensusState
  */
 export const getUpgradedConsensusState = buildQuery<QueryUpgradedConsensusStateRequest, QueryUpgradedConsensusStateResponse>({
   encode: QueryUpgradedConsensusStateRequest.encode,

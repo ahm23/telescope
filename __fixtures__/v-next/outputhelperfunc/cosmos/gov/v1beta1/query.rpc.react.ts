@@ -9,7 +9,7 @@ import { getProposal, getProposals, helperVote, helperVotes, getParams, checkDep
  * Proposal queries proposal details based on ProposalID.
  * @name useGetProposal
  * @package cosmos.gov.v1beta1
- * @see protoservice: cosmos.gov.v1beta1.Proposal
+ * @see proto service: cosmos.gov.v1beta1.Proposal
  */
 export const useGetProposal = buildUseQuery<QueryProposalRequest, QueryProposalResponse>({
   builderQueryFn: getProposal,
@@ -19,7 +19,7 @@ export const useGetProposal = buildUseQuery<QueryProposalRequest, QueryProposalR
  * Proposals queries all proposals based on given status.
  * @name useGetProposals
  * @package cosmos.gov.v1beta1
- * @see protoservice: cosmos.gov.v1beta1.Proposals
+ * @see proto service: cosmos.gov.v1beta1.Proposals
  */
 export const useGetProposals = buildUseQuery<QueryProposalsRequest, QueryProposalsResponse>({
   builderQueryFn: getProposals,
@@ -29,7 +29,7 @@ export const useGetProposals = buildUseQuery<QueryProposalsRequest, QueryProposa
  * Vote queries voted information based on proposalID, voterAddr.
  * @name useHelperVote
  * @package cosmos.gov.v1beta1
- * @see protoservice: cosmos.gov.v1beta1.Vote
+ * @see proto service: cosmos.gov.v1beta1.Vote
  */
 export const useHelperVote = buildUseQuery<QueryVoteRequest, QueryVoteResponse>({
   builderQueryFn: helperVote,
@@ -39,7 +39,7 @@ export const useHelperVote = buildUseQuery<QueryVoteRequest, QueryVoteResponse>(
  * Votes queries votes of a given proposal.
  * @name useHelperVotes
  * @package cosmos.gov.v1beta1
- * @see protoservice: cosmos.gov.v1beta1.Votes
+ * @see proto service: cosmos.gov.v1beta1.Votes
  */
 export const useHelperVotes = buildUseQuery<QueryVotesRequest, QueryVotesResponse>({
   builderQueryFn: helperVotes,
@@ -49,7 +49,7 @@ export const useHelperVotes = buildUseQuery<QueryVotesRequest, QueryVotesRespons
  * Params queries all parameters of the gov module.
  * @name useGetParams
  * @package cosmos.gov.v1beta1
- * @see protoservice: cosmos.gov.v1beta1.Params
+ * @see proto service: cosmos.gov.v1beta1.Params
  */
 export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
   builderQueryFn: getParams,
@@ -59,7 +59,7 @@ export const useGetParams = buildUseQuery<QueryParamsRequest, QueryParamsRespons
  * Deposit queries single deposit information based proposalID, depositAddr.
  * @name useCheckDeposit
  * @package cosmos.gov.v1beta1
- * @see protoservice: cosmos.gov.v1beta1.Deposit
+ * @see proto service: cosmos.gov.v1beta1.Deposit
  */
 export const useCheckDeposit = buildUseQuery<QueryDepositRequest, QueryDepositResponse>({
   builderQueryFn: checkDeposit,
@@ -69,7 +69,7 @@ export const useCheckDeposit = buildUseQuery<QueryDepositRequest, QueryDepositRe
  * Deposits queries all deposits of a single proposal.
  * @name useGoOverDeposits
  * @package cosmos.gov.v1beta1
- * @see protoservice: cosmos.gov.v1beta1.Deposits
+ * @see proto service: cosmos.gov.v1beta1.Deposits
  */
 export const useGoOverDeposits = buildUseQuery<QueryDepositsRequest, QueryDepositsResponse>({
   builderQueryFn: goOverDeposits,
@@ -79,7 +79,7 @@ export const useGoOverDeposits = buildUseQuery<QueryDepositsRequest, QueryDeposi
  * TallyResult queries the tally of a proposal vote.
  * @name useGetTallyResult
  * @package cosmos.gov.v1beta1
- * @see protoservice: cosmos.gov.v1beta1.TallyResult
+ * @see proto service: cosmos.gov.v1beta1.TallyResult
  */
 export const useGetTallyResult = buildUseQuery<QueryTallyResultRequest, QueryTallyResultResponse>({
   builderQueryFn: getTallyResult,

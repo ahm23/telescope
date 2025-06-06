@@ -32,6 +32,9 @@ export const protobufPackage = "google.api";
  *       - monitored_resource: library.googleapis.com/branch
  *         logs:
  *         - activity_history
+ * @name Logging
+ * @package google.api
+ * @see proto type: google.api.Logging
  */
 export interface Logging {
   /**
@@ -83,6 +86,9 @@ export interface LoggingProtoMsg {
  *       - monitored_resource: library.googleapis.com/branch
  *         logs:
  *         - activity_history
+ * @name LoggingAmino
+ * @package google.api
+ * @see proto type: google.api.Logging
  */
 export interface LoggingAmino {
   /**
@@ -134,6 +140,9 @@ export interface LoggingAminoMsg {
  *       - monitored_resource: library.googleapis.com/branch
  *         logs:
  *         - activity_history
+ * @name LoggingSDKType
+ * @package google.api
+ * @see proto type: google.api.Logging
  */
 export interface LoggingSDKType {
   producer_destinations: Logging_LoggingDestinationSDKType[];
@@ -142,6 +151,9 @@ export interface LoggingSDKType {
 /**
  * Configuration of a specific logging destination (the producer project
  * or the consumer project).
+ * @name Logging_LoggingDestination
+ * @package google.api
+ * @see proto type: google.api.LoggingDestination
  */
 export interface Logging_LoggingDestination {
   /**
@@ -164,6 +176,9 @@ export interface Logging_LoggingDestinationProtoMsg {
 /**
  * Configuration of a specific logging destination (the producer project
  * or the consumer project).
+ * @name Logging_LoggingDestinationAmino
+ * @package google.api
+ * @see proto type: google.api.Logging_LoggingDestination
  */
 export interface Logging_LoggingDestinationAmino {
   /**
@@ -186,6 +201,9 @@ export interface Logging_LoggingDestinationAminoMsg {
 /**
  * Configuration of a specific logging destination (the producer project
  * or the consumer project).
+ * @name Logging_LoggingDestinationSDKType
+ * @package google.api
+ * @see proto type: google.api.LoggingDestination
  */
 export interface Logging_LoggingDestinationSDKType {
   monitored_resource: string;
@@ -197,6 +215,40 @@ function createBaseLogging(): Logging {
     consumerDestinations: []
   };
 }
+/**
+ * Logging configuration of the service.
+ * 
+ * The following example shows how to configure logs to be sent to the
+ * producer and consumer projects. In the example, the `activity_history`
+ * log is sent to both the producer and consumer projects, whereas the
+ * `purchase_history` log is only sent to the producer project.
+ * 
+ *     monitored_resources:
+ *     - type: library.googleapis.com/branch
+ *       labels:
+ *       - key: /city
+ *         description: The city where the library branch is located in.
+ *       - key: /name
+ *         description: The name of the branch.
+ *     logs:
+ *     - name: activity_history
+ *       labels:
+ *       - key: /customer_id
+ *     - name: purchase_history
+ *     logging:
+ *       producer_destinations:
+ *       - monitored_resource: library.googleapis.com/branch
+ *         logs:
+ *         - activity_history
+ *         - purchase_history
+ *       consumer_destinations:
+ *       - monitored_resource: library.googleapis.com/branch
+ *         logs:
+ *         - activity_history
+ * @name Logging
+ * @package google.api
+ * @see proto type: google.api.Logging
+ */
 export const Logging = {
   typeUrl: "/google.api.Logging",
   encode(message: Logging, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -316,6 +368,13 @@ function createBaseLogging_LoggingDestination(): Logging_LoggingDestination {
     logs: []
   };
 }
+/**
+ * Configuration of a specific logging destination (the producer project
+ * or the consumer project).
+ * @name Logging_LoggingDestination
+ * @package google.api
+ * @see proto type: google.api.LoggingDestination
+ */
 export const Logging_LoggingDestination = {
   typeUrl: "/google.api.LoggingDestination",
   encode(message: Logging_LoggingDestination, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

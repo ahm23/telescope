@@ -4,6 +4,9 @@ import { DeepPartial } from "../../../helpers";
 /**
  * DepositDeploymentAuthorization allows the grantee to deposit up to spend_limit coins from
  * the granter's account for a deployment.
+ * @name DepositDeploymentAuthorization
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.DepositDeploymentAuthorization
  */
 export interface DepositDeploymentAuthorization {
   /**
@@ -19,6 +22,9 @@ export interface DepositDeploymentAuthorizationProtoMsg {
 /**
  * DepositDeploymentAuthorization allows the grantee to deposit up to spend_limit coins from
  * the granter's account for a deployment.
+ * @name DepositDeploymentAuthorizationAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.DepositDeploymentAuthorization
  */
 export interface DepositDeploymentAuthorizationAmino {
   /**
@@ -36,6 +42,13 @@ function createBaseDepositDeploymentAuthorization(): DepositDeploymentAuthorizat
     spendLimit: Coin.fromPartial({})
   };
 }
+/**
+ * DepositDeploymentAuthorization allows the grantee to deposit up to spend_limit coins from
+ * the granter's account for a deployment.
+ * @name DepositDeploymentAuthorization
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.DepositDeploymentAuthorization
+ */
 export const DepositDeploymentAuthorization = {
   typeUrl: "/akash.deployment.v1beta1.DepositDeploymentAuthorization",
   encode(message: DepositDeploymentAuthorization, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

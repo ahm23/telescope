@@ -3,9 +3,16 @@ import { Duration, DurationAmino, DurationSDKType } from "../../../google/protob
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 export const protobufPackage = "osmosis.poolincentives.v1beta1";
-/** GenesisState defines the pool incentives module's genesis state. */
+/**
+ * GenesisState defines the pool incentives module's genesis state.
+ * @name GenesisState
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the paramaters of the module. */
+  /**
+   * params defines all the paramaters of the module.
+  */
   params: Params;
   lockableDurations: Duration[];
   distrInfo?: DistrInfo;
@@ -15,9 +22,16 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.poolincentives.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the pool incentives module's genesis state. */
+/**
+ * GenesisState defines the pool incentives module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines all the paramaters of the module. */
+  /**
+   * params defines all the paramaters of the module.
+  */
   params?: ParamsAmino;
   lockable_durations?: DurationAmino[];
   distr_info?: DistrInfoAmino;
@@ -27,7 +41,12 @@ export interface GenesisStateAminoMsg {
   type: "osmosis/poolincentives/genesis-state";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the pool incentives module's genesis state. */
+/**
+ * GenesisState defines the pool incentives module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   lockable_durations: DurationSDKType[];
@@ -42,6 +61,12 @@ function createBaseGenesisState(): GenesisState {
     poolToGauges: undefined
   };
 }
+/**
+ * GenesisState defines the pool incentives module's genesis state.
+ * @name GenesisState
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.poolincentives.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

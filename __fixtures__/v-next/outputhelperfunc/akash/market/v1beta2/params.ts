@@ -4,7 +4,12 @@ import { GlobalDecoderRegistry } from "../../../registry";
 import { isSet, DeepPartial, Exact } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "akash.market.v1beta2";
-/** Params is the params for the x/market module */
+/**
+ * Params is the params for the x/market module
+ * @name Params
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Params
+ */
 export interface Params {
   bidMinDeposit: Coin;
   orderMaxBids: number;
@@ -13,7 +18,12 @@ export interface ParamsProtoMsg {
   typeUrl: "/akash.market.v1beta2.Params";
   value: Uint8Array;
 }
-/** Params is the params for the x/market module */
+/**
+ * Params is the params for the x/market module
+ * @name ParamsAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Params
+ */
 export interface ParamsAmino {
   bid_min_deposit: CoinAmino;
   order_max_bids: number;
@@ -22,7 +32,12 @@ export interface ParamsAminoMsg {
   type: "akash/market/v1beta2/params";
   value: ParamsAmino;
 }
-/** Params is the params for the x/market module */
+/**
+ * Params is the params for the x/market module
+ * @name ParamsSDKType
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Params
+ */
 export interface ParamsSDKType {
   bid_min_deposit: CoinSDKType;
   order_max_bids: number;
@@ -33,6 +48,12 @@ function createBaseParams(): Params {
     orderMaxBids: 0
   };
 }
+/**
+ * Params is the params for the x/market module
+ * @name Params
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Params
+ */
 export const Params = {
   typeUrl: "/akash.market.v1beta2.Params",
   aminoType: "akash/market/v1beta2/params",

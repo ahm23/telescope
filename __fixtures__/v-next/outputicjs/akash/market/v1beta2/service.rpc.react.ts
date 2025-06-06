@@ -6,7 +6,7 @@ import { createBid, closeBid, withdrawLease, createLease, closeLease } from "./s
  * CreateBid defines a method to create a bid given proper inputs.
  * @name useCreateBid
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.CreateBid
+ * @see proto service: akash.market.v1beta2.CreateBid
  */
 export const useCreateBid = buildUseMutation<MsgCreateBid, Error>({
   builderMutationFn: createBid
@@ -15,7 +15,7 @@ export const useCreateBid = buildUseMutation<MsgCreateBid, Error>({
  * CloseBid defines a method to close a bid given proper inputs.
  * @name useCloseBid
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.CloseBid
+ * @see proto service: akash.market.v1beta2.CloseBid
  */
 export const useCloseBid = buildUseMutation<MsgCloseBid, Error>({
   builderMutationFn: closeBid
@@ -24,7 +24,7 @@ export const useCloseBid = buildUseMutation<MsgCloseBid, Error>({
  * WithdrawLease withdraws accrued funds from the lease payment
  * @name useWithdrawLease
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.WithdrawLease
+ * @see proto service: akash.market.v1beta2.WithdrawLease
  */
 export const useWithdrawLease = buildUseMutation<MsgWithdrawLease, Error>({
   builderMutationFn: withdrawLease
@@ -33,7 +33,7 @@ export const useWithdrawLease = buildUseMutation<MsgWithdrawLease, Error>({
  * CreateLease creates a new lease
  * @name useCreateLease
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.CreateLease
+ * @see proto service: akash.market.v1beta2.CreateLease
  */
 export const useCreateLease = buildUseMutation<MsgCreateLease, Error>({
   builderMutationFn: createLease
@@ -42,7 +42,7 @@ export const useCreateLease = buildUseMutation<MsgCreateLease, Error>({
  * CloseLease defines a method to close an order given proper inputs.
  * @name useCloseLease
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.CloseLease
+ * @see proto service: akash.market.v1beta2.CloseLease
  */
 export const useCloseLease = buildUseMutation<MsgCloseLease, Error>({
   builderMutationFn: closeLease

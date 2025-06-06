@@ -6,7 +6,7 @@ import { registerDevFeeInfo, cancelDevFeeInfo, updateDevFeeInfo } from "./tx.rpc
  * receiving transaction fees
  * @name useRegisterDevFeeInfo
  * @package evmos.fees.v1
- * @see protoservice: evmos.fees.v1.RegisterDevFeeInfo
+ * @see proto service: evmos.fees.v1.RegisterDevFeeInfo
  */
 export const useRegisterDevFeeInfo = buildUseMutation<MsgRegisterDevFeeInfo, Error>({
   builderMutationFn: registerDevFeeInfo
@@ -16,7 +16,7 @@ export const useRegisterDevFeeInfo = buildUseMutation<MsgRegisterDevFeeInfo, Err
  * and stop receiving transaction fees
  * @name useCancelDevFeeInfo
  * @package evmos.fees.v1
- * @see protoservice: evmos.fees.v1.CancelDevFeeInfo
+ * @see proto service: evmos.fees.v1.CancelDevFeeInfo
  */
 export const useCancelDevFeeInfo = buildUseMutation<MsgCancelDevFeeInfo, Error>({
   builderMutationFn: cancelDevFeeInfo
@@ -25,7 +25,7 @@ export const useCancelDevFeeInfo = buildUseMutation<MsgCancelDevFeeInfo, Error>(
  * UpdateDevFeeInfo is used by a deployer to update the withdraw address
  * @name useUpdateDevFeeInfo
  * @package evmos.fees.v1
- * @see protoservice: evmos.fees.v1.UpdateDevFeeInfo
+ * @see proto service: evmos.fees.v1.UpdateDevFeeInfo
  */
 export const useUpdateDevFeeInfo = buildUseMutation<MsgUpdateDevFeeInfo, Error>({
   builderMutationFn: updateDevFeeInfo

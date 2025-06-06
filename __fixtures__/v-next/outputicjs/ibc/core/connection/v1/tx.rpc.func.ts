@@ -4,7 +4,7 @@ import { MsgConnectionOpenInit, MsgConnectionOpenTry, MsgConnectionOpenAck, MsgC
  * ConnectionOpenInit defines a rpc handler method for MsgConnectionOpenInit.
  * @name connectionOpenInit
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ConnectionOpenInit
+ * @see proto service: ibc.core.connection.v1.ConnectionOpenInit
  */
 export const connectionOpenInit = buildTx<MsgConnectionOpenInit>({
   msg: MsgConnectionOpenInit
@@ -13,7 +13,7 @@ export const connectionOpenInit = buildTx<MsgConnectionOpenInit>({
  * ConnectionOpenTry defines a rpc handler method for MsgConnectionOpenTry.
  * @name connectionOpenTry
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ConnectionOpenTry
+ * @see proto service: ibc.core.connection.v1.ConnectionOpenTry
  */
 export const connectionOpenTry = buildTx<MsgConnectionOpenTry>({
   msg: MsgConnectionOpenTry
@@ -22,7 +22,7 @@ export const connectionOpenTry = buildTx<MsgConnectionOpenTry>({
  * ConnectionOpenAck defines a rpc handler method for MsgConnectionOpenAck.
  * @name connectionOpenAck
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ConnectionOpenAck
+ * @see proto service: ibc.core.connection.v1.ConnectionOpenAck
  */
 export const connectionOpenAck = buildTx<MsgConnectionOpenAck>({
   msg: MsgConnectionOpenAck
@@ -32,7 +32,7 @@ export const connectionOpenAck = buildTx<MsgConnectionOpenAck>({
  * MsgConnectionOpenConfirm.
  * @name connectionOpenConfirm
  * @package ibc.core.connection.v1
- * @see protoservice: ibc.core.connection.v1.ConnectionOpenConfirm
+ * @see proto service: ibc.core.connection.v1.ConnectionOpenConfirm
  */
 export const connectionOpenConfirm = buildTx<MsgConnectionOpenConfirm>({
   msg: MsgConnectionOpenConfirm

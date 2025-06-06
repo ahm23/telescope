@@ -9,6 +9,9 @@ export const protobufPackage = "osmosis.gamm.poolmodels.stableswap.v1beta1";
  * governance in the future. This params are not managed by the chain
  * governance. Instead they will be managed by the token holders of the pool.
  * The pool's token holders are specified in future_pool_governor.
+ * @name PoolParams
+ * @package osmosis.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.stableswap.v1beta1.PoolParams
  */
 export interface PoolParams {
   swapFee: string;
@@ -23,12 +26,20 @@ export interface PoolParamsProtoMsg {
  * governance in the future. This params are not managed by the chain
  * governance. Instead they will be managed by the token holders of the pool.
  * The pool's token holders are specified in future_pool_governor.
+ * @name PoolParamsSDKType
+ * @package osmosis.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.stableswap.v1beta1.PoolParams
  */
 export interface PoolParamsSDKType {
   swap_fee: string;
   exit_fee: string;
 }
-/** Pool is the stableswap Pool struct */
+/**
+ * Pool is the stableswap Pool struct
+ * @name Pool
+ * @package osmosis.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.stableswap.v1beta1.Pool
+ */
 export interface Pool {
   address: string;
   id: bigint;
@@ -44,20 +55,33 @@ export interface Pool {
    * would need to be locked up to count in governance. 0w means no lockup.
    */
   futurePoolGovernor: string;
-  /** sum of all LP shares */
+  /**
+   * sum of all LP shares
+  */
   totalShares: Coin;
-  /** assets in the pool */
+  /**
+   * assets in the pool
+  */
   poolLiquidity: Coin[];
-  /** for calculation amognst assets with different precisions */
+  /**
+   * for calculation amognst assets with different precisions
+  */
   scalingFactors: bigint[];
-  /** scaling_factor_controller is the address can adjust pool scaling factors */
+  /**
+   * scaling_factor_controller is the address can adjust pool scaling factors
+  */
   scalingFactorController: string;
 }
 export interface PoolProtoMsg {
   typeUrl: "/osmosis.gamm.poolmodels.stableswap.v1beta1.Pool";
   value: Uint8Array;
 }
-/** Pool is the stableswap Pool struct */
+/**
+ * Pool is the stableswap Pool struct
+ * @name PoolSDKType
+ * @package osmosis.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.stableswap.v1beta1.Pool
+ */
 export interface PoolSDKType {
   address: string;
   id: bigint;
@@ -74,6 +98,15 @@ function createBasePoolParams(): PoolParams {
     exitFee: ""
   };
 }
+/**
+ * PoolParams defined the parameters that will be managed by the pool
+ * governance in the future. This params are not managed by the chain
+ * governance. Instead they will be managed by the token holders of the pool.
+ * The pool's token holders are specified in future_pool_governor.
+ * @name PoolParams
+ * @package osmosis.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.stableswap.v1beta1.PoolParams
+ */
 export const PoolParams = {
   typeUrl: "/osmosis.gamm.poolmodels.stableswap.v1beta1.PoolParams",
   encode(message: PoolParams, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -191,6 +224,12 @@ function createBasePool(): Pool {
     scalingFactorController: ""
   };
 }
+/**
+ * Pool is the stableswap Pool struct
+ * @name Pool
+ * @package osmosis.gamm.poolmodels.stableswap.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.stableswap.v1beta1.Pool
+ */
 export const Pool = {
   typeUrl: "/osmosis.gamm.poolmodels.stableswap.v1beta1.Pool",
   encode(message: Pool, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

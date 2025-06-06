@@ -3,9 +3,16 @@ import { Decimal } from "@cosmjs/math";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "akash.inflation.v1beta2";
-/** Params defines the parameters for the x/deployment package */
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name Params
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.Params
+ */
 export interface Params {
-  /** InflationDecayFactor is the number of years it takes inflation to halve. */
+  /**
+   * InflationDecayFactor is the number of years it takes inflation to halve.
+  */
   inflationDecayFactor: string;
   /**
    * InitialInflation is the rate at which inflation starts at genesis.
@@ -22,9 +29,16 @@ export interface ParamsProtoMsg {
   typeUrl: "/akash.inflation.v1beta2.Params";
   value: Uint8Array;
 }
-/** Params defines the parameters for the x/deployment package */
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name ParamsAmino
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.Params
+ */
 export interface ParamsAmino {
-  /** InflationDecayFactor is the number of years it takes inflation to halve. */
+  /**
+   * InflationDecayFactor is the number of years it takes inflation to halve.
+  */
   inflation_decay_factor: string;
   /**
    * InitialInflation is the rate at which inflation starts at genesis.
@@ -41,7 +55,12 @@ export interface ParamsAminoMsg {
   type: "/akash.inflation.v1beta2.Params";
   value: ParamsAmino;
 }
-/** Params defines the parameters for the x/deployment package */
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name ParamsSDKType
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.Params
+ */
 export interface ParamsSDKType {
   inflation_decay_factor: string;
   initial_inflation: string;
@@ -54,6 +73,12 @@ function createBaseParams(): Params {
     variance: ""
   };
 }
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name Params
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.Params
+ */
 export const Params = {
   typeUrl: "/akash.inflation.v1beta2.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

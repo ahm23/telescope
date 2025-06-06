@@ -2,7 +2,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, bytesFromBase64, base64FromBytes, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "cosmos.crypto.secp256r1";
-/** PubKey defines a secp256r1 ECDSA public key. */
+/**
+ * PubKey defines a secp256r1 ECDSA public key.
+ * @name PubKey
+ * @package cosmos.crypto.secp256r1
+ * @see proto type: cosmos.crypto.secp256r1.PubKey
+ */
 export interface PubKey {
   /**
    * Point on secp256r1 curve in a compressed representation as specified in section
@@ -14,7 +19,12 @@ export interface PubKeyProtoMsg {
   typeUrl: "/cosmos.crypto.secp256r1.PubKey";
   value: Uint8Array;
 }
-/** PubKey defines a secp256r1 ECDSA public key. */
+/**
+ * PubKey defines a secp256r1 ECDSA public key.
+ * @name PubKeyAmino
+ * @package cosmos.crypto.secp256r1
+ * @see proto type: cosmos.crypto.secp256r1.PubKey
+ */
 export interface PubKeyAmino {
   /**
    * Point on secp256r1 curve in a compressed representation as specified in section
@@ -26,29 +36,53 @@ export interface PubKeyAminoMsg {
   type: "cosmos-sdk/PubKey";
   value: PubKeyAmino;
 }
-/** PubKey defines a secp256r1 ECDSA public key. */
+/**
+ * PubKey defines a secp256r1 ECDSA public key.
+ * @name PubKeySDKType
+ * @package cosmos.crypto.secp256r1
+ * @see proto type: cosmos.crypto.secp256r1.PubKey
+ */
 export interface PubKeySDKType {
   key: Uint8Array;
 }
-/** PrivKey defines a secp256r1 ECDSA private key. */
+/**
+ * PrivKey defines a secp256r1 ECDSA private key.
+ * @name PrivKey
+ * @package cosmos.crypto.secp256r1
+ * @see proto type: cosmos.crypto.secp256r1.PrivKey
+ */
 export interface PrivKey {
-  /** secret number serialized using big-endian encoding */
+  /**
+   * secret number serialized using big-endian encoding
+  */
   secret: Uint8Array;
 }
 export interface PrivKeyProtoMsg {
   typeUrl: "/cosmos.crypto.secp256r1.PrivKey";
   value: Uint8Array;
 }
-/** PrivKey defines a secp256r1 ECDSA private key. */
+/**
+ * PrivKey defines a secp256r1 ECDSA private key.
+ * @name PrivKeyAmino
+ * @package cosmos.crypto.secp256r1
+ * @see proto type: cosmos.crypto.secp256r1.PrivKey
+ */
 export interface PrivKeyAmino {
-  /** secret number serialized using big-endian encoding */
+  /**
+   * secret number serialized using big-endian encoding
+  */
   secret?: string;
 }
 export interface PrivKeyAminoMsg {
   type: "cosmos-sdk/PrivKey";
   value: PrivKeyAmino;
 }
-/** PrivKey defines a secp256r1 ECDSA private key. */
+/**
+ * PrivKey defines a secp256r1 ECDSA private key.
+ * @name PrivKeySDKType
+ * @package cosmos.crypto.secp256r1
+ * @see proto type: cosmos.crypto.secp256r1.PrivKey
+ */
 export interface PrivKeySDKType {
   secret: Uint8Array;
 }
@@ -57,6 +91,12 @@ function createBasePubKey(): PubKey {
     key: new Uint8Array()
   };
 }
+/**
+ * PubKey defines a secp256r1 ECDSA public key.
+ * @name PubKey
+ * @package cosmos.crypto.secp256r1
+ * @see proto type: cosmos.crypto.secp256r1.PubKey
+ */
 export const PubKey = {
   typeUrl: "/cosmos.crypto.secp256r1.PubKey",
   aminoType: "cosmos-sdk/PubKey",
@@ -162,6 +202,12 @@ function createBasePrivKey(): PrivKey {
     secret: new Uint8Array()
   };
 }
+/**
+ * PrivKey defines a secp256r1 ECDSA private key.
+ * @name PrivKey
+ * @package cosmos.crypto.secp256r1
+ * @see proto type: cosmos.crypto.secp256r1.PrivKey
+ */
 export const PrivKey = {
   typeUrl: "/cosmos.crypto.secp256r1.PrivKey",
   aminoType: "cosmos-sdk/PrivKey",

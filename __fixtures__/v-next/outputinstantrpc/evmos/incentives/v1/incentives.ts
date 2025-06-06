@@ -7,17 +7,30 @@ export const protobufPackage = "evmos.incentives.v1";
 /**
  * Incentive defines an instance that organizes distribution conditions for a
  * given smart contract
+ * @name Incentive
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.Incentive
  */
 export interface Incentive {
-  /** contract address */
+  /**
+   * contract address
+  */
   contract: string;
-  /** denoms and percentage of rewards to be allocated */
+  /**
+   * denoms and percentage of rewards to be allocated
+  */
   allocations: DecCoin[];
-  /** number of remaining epochs */
+  /**
+   * number of remaining epochs
+  */
   epochs: number;
-  /** distribution start time */
+  /**
+   * distribution start time
+  */
   startTime: Date;
-  /** cumulative gas spent by all gasmeters of the incentive during the epoch */
+  /**
+   * cumulative gas spent by all gasmeters of the incentive during the epoch
+  */
   totalGas: bigint;
 }
 export interface IncentiveProtoMsg {
@@ -27,6 +40,9 @@ export interface IncentiveProtoMsg {
 /**
  * Incentive defines an instance that organizes distribution conditions for a
  * given smart contract
+ * @name IncentiveSDKType
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.Incentive
  */
 export interface IncentiveSDKType {
   contract: string;
@@ -35,43 +51,79 @@ export interface IncentiveSDKType {
   start_time: Date;
   total_gas: bigint;
 }
-/** GasMeter tracks the cumulative gas spent per participant in one epoch */
+/**
+ * GasMeter tracks the cumulative gas spent per participant in one epoch
+ * @name GasMeter
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.GasMeter
+ */
 export interface GasMeter {
-  /** hex address of the incentivized contract */
+  /**
+   * hex address of the incentivized contract
+  */
   contract: string;
-  /** participant address that interacts with the incentive */
+  /**
+   * participant address that interacts with the incentive
+  */
   participant: string;
-  /** cumulative gas spent during the epoch */
+  /**
+   * cumulative gas spent during the epoch
+  */
   cumulativeGas: bigint;
 }
 export interface GasMeterProtoMsg {
   typeUrl: "/evmos.incentives.v1.GasMeter";
   value: Uint8Array;
 }
-/** GasMeter tracks the cumulative gas spent per participant in one epoch */
+/**
+ * GasMeter tracks the cumulative gas spent per participant in one epoch
+ * @name GasMeterSDKType
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.GasMeter
+ */
 export interface GasMeterSDKType {
   contract: string;
   participant: string;
   cumulative_gas: bigint;
 }
-/** RegisterIncentiveProposal is a gov Content type to register an incentive */
+/**
+ * RegisterIncentiveProposal is a gov Content type to register an incentive
+ * @name RegisterIncentiveProposal
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.RegisterIncentiveProposal
+ */
 export interface RegisterIncentiveProposal {
-  /** title of the proposal */
+  /**
+   * title of the proposal
+  */
   title: string;
-  /** proposal description */
+  /**
+   * proposal description
+  */
   description: string;
-  /** contract address */
+  /**
+   * contract address
+  */
   contract: string;
-  /** denoms and percentage of rewards to be allocated */
+  /**
+   * denoms and percentage of rewards to be allocated
+  */
   allocations: DecCoin[];
-  /** number of remaining epochs */
+  /**
+   * number of remaining epochs
+  */
   epochs: number;
 }
 export interface RegisterIncentiveProposalProtoMsg {
   typeUrl: "/evmos.incentives.v1.RegisterIncentiveProposal";
   value: Uint8Array;
 }
-/** RegisterIncentiveProposal is a gov Content type to register an incentive */
+/**
+ * RegisterIncentiveProposal is a gov Content type to register an incentive
+ * @name RegisterIncentiveProposalSDKType
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.RegisterIncentiveProposal
+ */
 export interface RegisterIncentiveProposalSDKType {
   title: string;
   description: string;
@@ -79,20 +131,36 @@ export interface RegisterIncentiveProposalSDKType {
   allocations: DecCoinSDKType[];
   epochs: number;
 }
-/** CancelIncentiveProposal is a gov Content type to cancel an incentive */
+/**
+ * CancelIncentiveProposal is a gov Content type to cancel an incentive
+ * @name CancelIncentiveProposal
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.CancelIncentiveProposal
+ */
 export interface CancelIncentiveProposal {
-  /** title of the proposal */
+  /**
+   * title of the proposal
+  */
   title: string;
-  /** proposal description */
+  /**
+   * proposal description
+  */
   description: string;
-  /** contract address */
+  /**
+   * contract address
+  */
   contract: string;
 }
 export interface CancelIncentiveProposalProtoMsg {
   typeUrl: "/evmos.incentives.v1.CancelIncentiveProposal";
   value: Uint8Array;
 }
-/** CancelIncentiveProposal is a gov Content type to cancel an incentive */
+/**
+ * CancelIncentiveProposal is a gov Content type to cancel an incentive
+ * @name CancelIncentiveProposalSDKType
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.CancelIncentiveProposal
+ */
 export interface CancelIncentiveProposalSDKType {
   title: string;
   description: string;
@@ -107,6 +175,13 @@ function createBaseIncentive(): Incentive {
     totalGas: BigInt(0)
   };
 }
+/**
+ * Incentive defines an instance that organizes distribution conditions for a
+ * given smart contract
+ * @name Incentive
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.Incentive
+ */
 export const Incentive = {
   typeUrl: "/evmos.incentives.v1.Incentive",
   encode(message: Incentive, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -273,6 +348,12 @@ function createBaseGasMeter(): GasMeter {
     cumulativeGas: BigInt(0)
   };
 }
+/**
+ * GasMeter tracks the cumulative gas spent per participant in one epoch
+ * @name GasMeter
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.GasMeter
+ */
 export const GasMeter = {
   typeUrl: "/evmos.incentives.v1.GasMeter",
   encode(message: GasMeter, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -399,6 +480,12 @@ function createBaseRegisterIncentiveProposal(): RegisterIncentiveProposal {
     epochs: 0
   };
 }
+/**
+ * RegisterIncentiveProposal is a gov Content type to register an incentive
+ * @name RegisterIncentiveProposal
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.RegisterIncentiveProposal
+ */
 export const RegisterIncentiveProposal = {
   typeUrl: "/evmos.incentives.v1.RegisterIncentiveProposal",
   encode(message: RegisterIncentiveProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -563,6 +650,12 @@ function createBaseCancelIncentiveProposal(): CancelIncentiveProposal {
     contract: ""
   };
 }
+/**
+ * CancelIncentiveProposal is a gov Content type to cancel an incentive
+ * @name CancelIncentiveProposal
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.CancelIncentiveProposal
+ */
 export const CancelIncentiveProposal = {
   typeUrl: "/evmos.incentives.v1.CancelIncentiveProposal",
   encode(message: CancelIncentiveProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

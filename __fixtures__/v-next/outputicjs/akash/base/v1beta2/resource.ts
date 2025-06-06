@@ -2,7 +2,12 @@ import { ResourceValue, ResourceValueAmino } from "./resourcevalue";
 import { Attribute, AttributeAmino } from "./attribute";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** CPU stores resource units and cpu config attributes */
+/**
+ * CPU stores resource units and cpu config attributes
+ * @name CPU
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.CPU
+ */
 export interface CPU {
   units: ResourceValue;
   attributes: Attribute[];
@@ -11,7 +16,12 @@ export interface CPUProtoMsg {
   typeUrl: "/akash.base.v1beta2.CPU";
   value: Uint8Array;
 }
-/** CPU stores resource units and cpu config attributes */
+/**
+ * CPU stores resource units and cpu config attributes
+ * @name CPUAmino
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.CPU
+ */
 export interface CPUAmino {
   units: ResourceValueAmino;
   attributes: AttributeAmino[];
@@ -20,7 +30,12 @@ export interface CPUAminoMsg {
   type: "/akash.base.v1beta2.CPU";
   value: CPUAmino;
 }
-/** Memory stores resource quantity and memory attributes */
+/**
+ * Memory stores resource quantity and memory attributes
+ * @name Memory
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.Memory
+ */
 export interface Memory {
   quantity: ResourceValue;
   attributes: Attribute[];
@@ -29,7 +44,12 @@ export interface MemoryProtoMsg {
   typeUrl: "/akash.base.v1beta2.Memory";
   value: Uint8Array;
 }
-/** Memory stores resource quantity and memory attributes */
+/**
+ * Memory stores resource quantity and memory attributes
+ * @name MemoryAmino
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.Memory
+ */
 export interface MemoryAmino {
   quantity: ResourceValueAmino;
   attributes: AttributeAmino[];
@@ -38,7 +58,12 @@ export interface MemoryAminoMsg {
   type: "/akash.base.v1beta2.Memory";
   value: MemoryAmino;
 }
-/** Storage stores resource quantity and storage attributes */
+/**
+ * Storage stores resource quantity and storage attributes
+ * @name Storage
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.Storage
+ */
 export interface Storage {
   name: string;
   quantity: ResourceValue;
@@ -48,7 +73,12 @@ export interface StorageProtoMsg {
   typeUrl: "/akash.base.v1beta2.Storage";
   value: Uint8Array;
 }
-/** Storage stores resource quantity and storage attributes */
+/**
+ * Storage stores resource quantity and storage attributes
+ * @name StorageAmino
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.Storage
+ */
 export interface StorageAmino {
   name: string;
   quantity: ResourceValueAmino;
@@ -64,6 +94,12 @@ function createBaseCPU(): CPU {
     attributes: []
   };
 }
+/**
+ * CPU stores resource units and cpu config attributes
+ * @name CPU
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.CPU
+ */
 export const CPU = {
   typeUrl: "/akash.base.v1beta2.CPU",
   encode(message: CPU, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -141,6 +177,12 @@ function createBaseMemory(): Memory {
     attributes: []
   };
 }
+/**
+ * Memory stores resource quantity and memory attributes
+ * @name Memory
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.Memory
+ */
 export const Memory = {
   typeUrl: "/akash.base.v1beta2.Memory",
   encode(message: Memory, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -219,6 +261,12 @@ function createBaseStorage(): Storage {
     attributes: []
   };
 }
+/**
+ * Storage stores resource quantity and storage attributes
+ * @name Storage
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.Storage
+ */
 export const Storage = {
   typeUrl: "/akash.base.v1beta2.Storage",
   encode(message: Storage, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -10,7 +10,7 @@ import { getBalance, getAllBalances, getSpendableBalances, getTotalSupply, getSu
  * Balance queries the balance of a single coin for a single account.
  * @name useGetBalance
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.Balance
+ * @see proto service: cosmos.bank.v1beta1.Balance
  */
 export const useGetBalance = buildUseVueQuery<QueryBalanceRequest, QueryBalanceResponse>({
   builderQueryFn: getBalance,
@@ -20,7 +20,7 @@ export const useGetBalance = buildUseVueQuery<QueryBalanceRequest, QueryBalanceR
  * AllBalances queries the balance of all coins for a single account.
  * @name useGetAllBalances
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.AllBalances
+ * @see proto service: cosmos.bank.v1beta1.AllBalances
  */
 export const useGetAllBalances = buildUseVueQuery<QueryAllBalancesRequest, QueryAllBalancesResponse>({
   builderQueryFn: getAllBalances,
@@ -31,7 +31,7 @@ export const useGetAllBalances = buildUseVueQuery<QueryAllBalancesRequest, Query
  * account.
  * @name useGetSpendableBalances
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.SpendableBalances
+ * @see proto service: cosmos.bank.v1beta1.SpendableBalances
  */
 export const useGetSpendableBalances = buildUseVueQuery<QuerySpendableBalancesRequest, QuerySpendableBalancesResponse>({
   builderQueryFn: getSpendableBalances,
@@ -41,7 +41,7 @@ export const useGetSpendableBalances = buildUseVueQuery<QuerySpendableBalancesRe
  * TotalSupply queries the total supply of all coins.
  * @name useGetTotalSupply
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.TotalSupply
+ * @see proto service: cosmos.bank.v1beta1.TotalSupply
  */
 export const useGetTotalSupply = buildUseVueQuery<QueryTotalSupplyRequest, QueryTotalSupplyResponse>({
   builderQueryFn: getTotalSupply,
@@ -51,7 +51,7 @@ export const useGetTotalSupply = buildUseVueQuery<QueryTotalSupplyRequest, Query
  * SupplyOf queries the supply of a single coin.
  * @name useGetSupplyOf
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.SupplyOf
+ * @see proto service: cosmos.bank.v1beta1.SupplyOf
  */
 export const useGetSupplyOf = buildUseVueQuery<QuerySupplyOfRequest, QuerySupplyOfResponse>({
   builderQueryFn: getSupplyOf,
@@ -61,7 +61,7 @@ export const useGetSupplyOf = buildUseVueQuery<QuerySupplyOfRequest, QuerySupply
  * Params queries the parameters of x/bank module.
  * @name useGetParams
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.Params
+ * @see proto service: cosmos.bank.v1beta1.Params
  */
 export const useGetParams = buildUseVueQuery<QueryParamsRequest, QueryParamsResponse>({
   builderQueryFn: getParams,
@@ -71,7 +71,7 @@ export const useGetParams = buildUseVueQuery<QueryParamsRequest, QueryParamsResp
  * DenomsMetadata queries the client metadata of a given coin denomination.
  * @name useGetDenomMetadata
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.DenomMetadata
+ * @see proto service: cosmos.bank.v1beta1.DenomMetadata
  */
 export const useGetDenomMetadata = buildUseVueQuery<QueryDenomMetadataRequest, QueryDenomMetadataResponse>({
   builderQueryFn: getDenomMetadata,
@@ -82,7 +82,7 @@ export const useGetDenomMetadata = buildUseVueQuery<QueryDenomMetadataRequest, Q
  * denominations.
  * @name useGetDenomsMetadata
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.DenomsMetadata
+ * @see proto service: cosmos.bank.v1beta1.DenomsMetadata
  */
 export const useGetDenomsMetadata = buildUseVueQuery<QueryDenomsMetadataRequest, QueryDenomsMetadataResponse>({
   builderQueryFn: getDenomsMetadata,
@@ -93,7 +93,7 @@ export const useGetDenomsMetadata = buildUseVueQuery<QueryDenomsMetadataRequest,
  * denomination.
  * @name useGetDenomOwners
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.DenomOwners
+ * @see proto service: cosmos.bank.v1beta1.DenomOwners
  */
 export const useGetDenomOwners = buildUseVueQuery<QueryDenomOwnersRequest, QueryDenomOwnersResponse>({
   builderQueryFn: getDenomOwners,

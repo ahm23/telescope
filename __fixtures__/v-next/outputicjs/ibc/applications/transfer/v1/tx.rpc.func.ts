@@ -4,7 +4,7 @@ import { MsgTransfer } from "./tx";
  * Transfer defines a rpc handler method for MsgTransfer.
  * @name transfer
  * @package ibc.applications.transfer.v1
- * @see protoservice: ibc.applications.transfer.v1.Transfer
+ * @see proto service: ibc.applications.transfer.v1.Transfer
  */
 export const transfer = buildTx<MsgTransfer>({
   msg: MsgTransfer

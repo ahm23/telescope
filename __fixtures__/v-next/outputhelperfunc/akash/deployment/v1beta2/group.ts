@@ -61,7 +61,12 @@ export function group_StateToJSON(object: Group_State): string {
       return "UNRECOGNIZED";
   }
 }
-/** Group stores group id, state and specifications of group */
+/**
+ * Group stores group id, state and specifications of group
+ * @name Group
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Group
+ */
 export interface Group {
   groupId: GroupID;
   state: Group_State;
@@ -72,7 +77,12 @@ export interface GroupProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.Group";
   value: Uint8Array;
 }
-/** Group stores group id, state and specifications of group */
+/**
+ * Group stores group id, state and specifications of group
+ * @name GroupAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Group
+ */
 export interface GroupAmino {
   group_id: GroupIDAmino;
   state: Group_State;
@@ -83,7 +93,12 @@ export interface GroupAminoMsg {
   type: "akash/deployment/v1beta2/group";
   value: GroupAmino;
 }
-/** Group stores group id, state and specifications of group */
+/**
+ * Group stores group id, state and specifications of group
+ * @name GroupSDKType
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Group
+ */
 export interface GroupSDKType {
   group_id: GroupIDSDKType;
   state: Group_State;
@@ -98,6 +113,12 @@ function createBaseGroup(): Group {
     createdAt: BigInt(0)
   };
 }
+/**
+ * Group stores group id, state and specifications of group
+ * @name Group
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Group
+ */
 export const Group = {
   typeUrl: "/akash.deployment.v1beta2.Group",
   aminoType: "akash/deployment/v1beta2/group",

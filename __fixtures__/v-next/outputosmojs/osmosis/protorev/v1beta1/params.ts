@@ -2,18 +2,32 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.protorev.v1beta1";
-/** Params defines the parameters for the module. */
+/**
+ * Params defines the parameters for the module.
+ * @name Params
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.Params
+ */
 export interface Params {
-  /** Boolean whether the protorev module is enabled. */
+  /**
+   * Boolean whether the protorev module is enabled.
+  */
   enabled: boolean;
-  /** The admin account (settings manager) of the protorev module. */
+  /**
+   * The admin account (settings manager) of the protorev module.
+  */
   admin: string;
 }
 export interface ParamsProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params defines the parameters for the module. */
+/**
+ * Params defines the parameters for the module.
+ * @name ParamsSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.Params
+ */
 export interface ParamsSDKType {
   enabled: boolean;
   admin: string;
@@ -24,6 +38,12 @@ function createBaseParams(): Params {
     admin: ""
   };
 }
+/**
+ * Params defines the parameters for the module.
+ * @name Params
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.protorev.v1beta1.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

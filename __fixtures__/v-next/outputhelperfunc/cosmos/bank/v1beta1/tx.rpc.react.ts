@@ -9,7 +9,7 @@ import { send, multiSend } from "./tx.rpc.func";
  * Send defines a method for sending coins from one account to another account.
  * @name useSend
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.Send
+ * @see proto service: cosmos.bank.v1beta1.Send
  */
 export const useSend = buildUseMutation<MsgSend, Error>({
   builderMutationFn: send
@@ -18,7 +18,7 @@ export const useSend = buildUseMutation<MsgSend, Error>({
  * MultiSend defines a method for sending coins from some accounts to other accounts.
  * @name useMultiSend
  * @package cosmos.bank.v1beta1
- * @see protoservice: cosmos.bank.v1beta1.MultiSend
+ * @see proto service: cosmos.bank.v1beta1.MultiSend
  */
 export const useMultiSend = buildUseMutation<MsgMultiSend, Error>({
   builderMutationFn: multiSend

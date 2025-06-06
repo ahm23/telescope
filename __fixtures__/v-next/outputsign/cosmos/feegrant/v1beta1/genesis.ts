@@ -2,7 +2,12 @@ import { Grant, GrantAmino, GrantSDKType } from "./feegrant";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 export const protobufPackage = "cosmos.feegrant.v1beta1";
-/** GenesisState contains a set of fee allowances, persisted from the store */
+/**
+ * GenesisState contains a set of fee allowances, persisted from the store
+ * @name GenesisState
+ * @package cosmos.feegrant.v1beta1
+ * @see proto type: cosmos.feegrant.v1beta1.GenesisState
+ */
 export interface GenesisState {
   allowances: Grant[];
 }
@@ -10,7 +15,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.feegrant.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState contains a set of fee allowances, persisted from the store */
+/**
+ * GenesisState contains a set of fee allowances, persisted from the store
+ * @name GenesisStateAmino
+ * @package cosmos.feegrant.v1beta1
+ * @see proto type: cosmos.feegrant.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   allowances?: GrantAmino[];
 }
@@ -18,7 +28,12 @@ export interface GenesisStateAminoMsg {
   type: "cosmos-sdk/GenesisState";
   value: GenesisStateAmino;
 }
-/** GenesisState contains a set of fee allowances, persisted from the store */
+/**
+ * GenesisState contains a set of fee allowances, persisted from the store
+ * @name GenesisStateSDKType
+ * @package cosmos.feegrant.v1beta1
+ * @see proto type: cosmos.feegrant.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   allowances: GrantSDKType[];
 }
@@ -27,6 +42,12 @@ function createBaseGenesisState(): GenesisState {
     allowances: []
   };
 }
+/**
+ * GenesisState contains a set of fee allowances, persisted from the store
+ * @name GenesisState
+ * @package cosmos.feegrant.v1beta1
+ * @see proto type: cosmos.feegrant.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.feegrant.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -5,7 +5,7 @@ import { QueryParamsRequest, QueryParamsResponse } from "./query";
  * parameters.
  * @name getOsmosisIbcratelimitV1beta1Params
  * @package osmosis.ibcratelimit.v1beta1
- * @see protoservice: osmosis.ibcratelimit.v1beta1.Params
+ * @see proto service: osmosis.ibcratelimit.v1beta1.Params
  */
 export const getOsmosisIbcratelimitV1beta1Params = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,

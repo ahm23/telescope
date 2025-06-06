@@ -12,18 +12,27 @@ export const protobufPackage = "google.api.servicecontrol.v1";
  * * the minimum and maximum of the samples
  * * the sum-squared-deviation of the samples, used to compute variance
  * * a histogram of the values of the sample points
+ * @name Distribution
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.Distribution
  */
 export interface Distribution {
-  /** The total number of samples in the distribution. Must be >= 0. */
+  /**
+   * The total number of samples in the distribution. Must be >= 0.
+  */
   count: bigint;
   /**
    * The arithmetic mean of the samples in the distribution. If `count` is
    * zero then this field must be zero.
    */
   mean: number;
-  /** The minimum of the population of values. Ignored if `count` is zero. */
+  /**
+   * The minimum of the population of values. Ignored if `count` is zero.
+  */
   minimum: number;
-  /** The maximum of the population of values. Ignored if `count` is zero. */
+  /**
+   * The maximum of the population of values. Ignored if `count` is zero.
+  */
   maximum: number;
   /**
    * The sum of squared deviations from the mean:
@@ -46,13 +55,21 @@ export interface Distribution {
    * Any suffix of trailing zeros may be omitted.
    */
   bucketCounts: bigint[];
-  /** Buckets with constant width. */
+  /**
+   * Buckets with constant width.
+  */
   linearBuckets?: Distribution_LinearBuckets;
-  /** Buckets with exponentially growing width. */
+  /**
+   * Buckets with exponentially growing width.
+  */
   exponentialBuckets?: Distribution_ExponentialBuckets;
-  /** Buckets with arbitrary user-provided width. */
+  /**
+   * Buckets with arbitrary user-provided width.
+  */
   explicitBuckets?: Distribution_ExplicitBuckets;
-  /** Example points. Must be in increasing order of `value` field. */
+  /**
+   * Example points. Must be in increasing order of `value` field.
+  */
   exemplars: Distribution_Exemplar[];
 }
 export interface DistributionProtoMsg {
@@ -68,6 +85,9 @@ export interface DistributionProtoMsg {
  * * the minimum and maximum of the samples
  * * the sum-squared-deviation of the samples, used to compute variance
  * * a histogram of the values of the sample points
+ * @name DistributionSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.Distribution
  */
 export interface DistributionSDKType {
   count: bigint;
@@ -81,7 +101,12 @@ export interface DistributionSDKType {
   explicit_buckets?: Distribution_ExplicitBucketsSDKType;
   exemplars: Distribution_ExemplarSDKType[];
 }
-/** Describing buckets with constant width. */
+/**
+ * Describing buckets with constant width.
+ * @name Distribution_LinearBuckets
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.LinearBuckets
+ */
 export interface Distribution_LinearBuckets {
   /**
    * The number of finite buckets. With the underflow and overflow buckets,
@@ -107,13 +132,23 @@ export interface Distribution_LinearBucketsProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.LinearBuckets";
   value: Uint8Array;
 }
-/** Describing buckets with constant width. */
+/**
+ * Describing buckets with constant width.
+ * @name Distribution_LinearBucketsSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.LinearBuckets
+ */
 export interface Distribution_LinearBucketsSDKType {
   num_finite_buckets: number;
   width: number;
   offset: number;
 }
-/** Describing buckets with exponentially growing width. */
+/**
+ * Describing buckets with exponentially growing width.
+ * @name Distribution_ExponentialBuckets
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ExponentialBuckets
+ */
 export interface Distribution_ExponentialBuckets {
   /**
    * The number of finite buckets. With the underflow and overflow buckets,
@@ -140,13 +175,23 @@ export interface Distribution_ExponentialBucketsProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.ExponentialBuckets";
   value: Uint8Array;
 }
-/** Describing buckets with exponentially growing width. */
+/**
+ * Describing buckets with exponentially growing width.
+ * @name Distribution_ExponentialBucketsSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ExponentialBuckets
+ */
 export interface Distribution_ExponentialBucketsSDKType {
   num_finite_buckets: number;
   growth_factor: number;
   scale: number;
 }
-/** Describing buckets with arbitrary user-provided width. */
+/**
+ * Describing buckets with arbitrary user-provided width.
+ * @name Distribution_ExplicitBuckets
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ExplicitBuckets
+ */
 export interface Distribution_ExplicitBuckets {
   /**
    * 'bound' is a list of strictly increasing boundaries between
@@ -171,7 +216,12 @@ export interface Distribution_ExplicitBucketsProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.ExplicitBuckets";
   value: Uint8Array;
 }
-/** Describing buckets with arbitrary user-provided width. */
+/**
+ * Describing buckets with arbitrary user-provided width.
+ * @name Distribution_ExplicitBucketsSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ExplicitBuckets
+ */
 export interface Distribution_ExplicitBucketsSDKType {
   bounds: number[];
 }
@@ -189,6 +239,19 @@ function createBaseDistribution(): Distribution {
     exemplars: []
   };
 }
+/**
+ * Distribution represents a frequency distribution of double-valued sample
+ * points. It contains the size of the population of sample points plus
+ * additional optional information:
+ * 
+ * * the arithmetic mean of the samples
+ * * the minimum and maximum of the samples
+ * * the sum-squared-deviation of the samples, used to compute variance
+ * * a histogram of the values of the sample points
+ * @name Distribution
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.Distribution
+ */
 export const Distribution = {
   typeUrl: "/google.api.servicecontrol.v1.Distribution",
   encode(message: Distribution, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -460,6 +523,12 @@ function createBaseDistribution_LinearBuckets(): Distribution_LinearBuckets {
     offset: 0
   };
 }
+/**
+ * Describing buckets with constant width.
+ * @name Distribution_LinearBuckets
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.LinearBuckets
+ */
 export const Distribution_LinearBuckets = {
   typeUrl: "/google.api.servicecontrol.v1.LinearBuckets",
   encode(message: Distribution_LinearBuckets, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -582,6 +651,12 @@ function createBaseDistribution_ExponentialBuckets(): Distribution_ExponentialBu
     scale: 0
   };
 }
+/**
+ * Describing buckets with exponentially growing width.
+ * @name Distribution_ExponentialBuckets
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ExponentialBuckets
+ */
 export const Distribution_ExponentialBuckets = {
   typeUrl: "/google.api.servicecontrol.v1.ExponentialBuckets",
   encode(message: Distribution_ExponentialBuckets, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -702,6 +777,12 @@ function createBaseDistribution_ExplicitBuckets(): Distribution_ExplicitBuckets 
     bounds: []
   };
 }
+/**
+ * Describing buckets with arbitrary user-provided width.
+ * @name Distribution_ExplicitBuckets
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ExplicitBuckets
+ */
 export const Distribution_ExplicitBuckets = {
   typeUrl: "/google.api.servicecontrol.v1.ExplicitBuckets",
   encode(message: Distribution_ExplicitBuckets, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

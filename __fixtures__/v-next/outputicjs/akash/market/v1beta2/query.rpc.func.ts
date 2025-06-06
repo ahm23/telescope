@@ -4,7 +4,7 @@ import { QueryOrdersRequest, QueryOrdersResponse, QueryOrderRequest, QueryOrderR
  * Orders queries orders with filters
  * @name getOrders
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.Orders
+ * @see proto service: akash.market.v1beta2.Orders
  */
 export const getOrders = buildQuery<QueryOrdersRequest, QueryOrdersResponse>({
   encode: QueryOrdersRequest.encode,
@@ -16,7 +16,7 @@ export const getOrders = buildQuery<QueryOrdersRequest, QueryOrdersResponse>({
  * Order queries order details
  * @name getOrder
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.Order
+ * @see proto service: akash.market.v1beta2.Order
  */
 export const getOrder = buildQuery<QueryOrderRequest, QueryOrderResponse>({
   encode: QueryOrderRequest.encode,
@@ -28,7 +28,7 @@ export const getOrder = buildQuery<QueryOrderRequest, QueryOrderResponse>({
  * Bids queries bids with filters
  * @name getBids
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.Bids
+ * @see proto service: akash.market.v1beta2.Bids
  */
 export const getBids = buildQuery<QueryBidsRequest, QueryBidsResponse>({
   encode: QueryBidsRequest.encode,
@@ -40,7 +40,7 @@ export const getBids = buildQuery<QueryBidsRequest, QueryBidsResponse>({
  * Bid queries bid details
  * @name getBid
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.Bid
+ * @see proto service: akash.market.v1beta2.Bid
  */
 export const getBid = buildQuery<QueryBidRequest, QueryBidResponse>({
   encode: QueryBidRequest.encode,
@@ -52,7 +52,7 @@ export const getBid = buildQuery<QueryBidRequest, QueryBidResponse>({
  * Leases queries leases with filters
  * @name getLeases
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.Leases
+ * @see proto service: akash.market.v1beta2.Leases
  */
 export const getLeases = buildQuery<QueryLeasesRequest, QueryLeasesResponse>({
   encode: QueryLeasesRequest.encode,
@@ -64,7 +64,7 @@ export const getLeases = buildQuery<QueryLeasesRequest, QueryLeasesResponse>({
  * Lease queries lease details
  * @name getLease
  * @package akash.market.v1beta2
- * @see protoservice: akash.market.v1beta2.Lease
+ * @see proto service: akash.market.v1beta2.Lease
  */
 export const getLease = buildQuery<QueryLeaseRequest, QueryLeaseResponse>({
   encode: QueryLeaseRequest.encode,

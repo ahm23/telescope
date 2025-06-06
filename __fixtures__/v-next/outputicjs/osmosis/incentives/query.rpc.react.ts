@@ -5,7 +5,7 @@ import { getModuleToDistributeCoins, getGaugeByID, getGauges, getActiveGauges, g
  * ModuleToDistributeCoins returns coins that are going to be distributed
  * @name useGetModuleToDistributeCoins
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.ModuleToDistributeCoins
+ * @see proto service: osmosis.incentives.ModuleToDistributeCoins
  */
 export const useGetModuleToDistributeCoins = buildUseQuery<ModuleToDistributeCoinsRequest, ModuleToDistributeCoinsResponse>({
   builderQueryFn: getModuleToDistributeCoins,
@@ -15,7 +15,7 @@ export const useGetModuleToDistributeCoins = buildUseQuery<ModuleToDistributeCoi
  * GaugeByID returns gauges by their respective ID
  * @name useGetGaugeByID
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.GaugeByID
+ * @see proto service: osmosis.incentives.GaugeByID
  */
 export const useGetGaugeByID = buildUseQuery<GaugeByIDRequest, GaugeByIDResponse>({
   builderQueryFn: getGaugeByID,
@@ -25,7 +25,7 @@ export const useGetGaugeByID = buildUseQuery<GaugeByIDRequest, GaugeByIDResponse
  * Gauges returns both upcoming and active gauges
  * @name useGetGauges
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.Gauges
+ * @see proto service: osmosis.incentives.Gauges
  */
 export const useGetGauges = buildUseQuery<GaugesRequest, GaugesResponse>({
   builderQueryFn: getGauges,
@@ -35,7 +35,7 @@ export const useGetGauges = buildUseQuery<GaugesRequest, GaugesResponse>({
  * ActiveGauges returns active gauges
  * @name useGetActiveGauges
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.ActiveGauges
+ * @see proto service: osmosis.incentives.ActiveGauges
  */
 export const useGetActiveGauges = buildUseQuery<ActiveGaugesRequest, ActiveGaugesResponse>({
   builderQueryFn: getActiveGauges,
@@ -45,7 +45,7 @@ export const useGetActiveGauges = buildUseQuery<ActiveGaugesRequest, ActiveGauge
  * ActiveGaugesPerDenom returns active gauges by denom
  * @name useGetActiveGaugesPerDenom
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.ActiveGaugesPerDenom
+ * @see proto service: osmosis.incentives.ActiveGaugesPerDenom
  */
 export const useGetActiveGaugesPerDenom = buildUseQuery<ActiveGaugesPerDenomRequest, ActiveGaugesPerDenomResponse>({
   builderQueryFn: getActiveGaugesPerDenom,
@@ -55,7 +55,7 @@ export const useGetActiveGaugesPerDenom = buildUseQuery<ActiveGaugesPerDenomRequ
  * Returns scheduled gauges that have not yet occured
  * @name useGetUpcomingGauges
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.UpcomingGauges
+ * @see proto service: osmosis.incentives.UpcomingGauges
  */
 export const useGetUpcomingGauges = buildUseQuery<UpcomingGaugesRequest, UpcomingGaugesResponse>({
   builderQueryFn: getUpcomingGauges,
@@ -66,7 +66,7 @@ export const useGetUpcomingGauges = buildUseQuery<UpcomingGaugesRequest, Upcomin
  * by denom
  * @name useGetUpcomingGaugesPerDenom
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.UpcomingGaugesPerDenom
+ * @see proto service: osmosis.incentives.UpcomingGaugesPerDenom
  */
 export const useGetUpcomingGaugesPerDenom = buildUseQuery<UpcomingGaugesPerDenomRequest, UpcomingGaugesPerDenomResponse>({
   builderQueryFn: getUpcomingGaugesPerDenom,
@@ -78,7 +78,7 @@ export const useGetUpcomingGaugesPerDenom = buildUseQuery<UpcomingGaugesPerDenom
  * for which they want to find the associated rewards
  * @name useGetRewardsEst
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.RewardsEst
+ * @see proto service: osmosis.incentives.RewardsEst
  */
 export const useGetRewardsEst = buildUseQuery<RewardsEstRequest, RewardsEstResponse>({
   builderQueryFn: getRewardsEst,
@@ -89,7 +89,7 @@ export const useGetRewardsEst = buildUseQuery<RewardsEstRequest, RewardsEstRespo
  * incentives for
  * @name useGetLockableDurations
  * @package osmosis.incentives
- * @see protoservice: osmosis.incentives.LockableDurations
+ * @see proto service: osmosis.incentives.LockableDurations
  */
 export const useGetLockableDurations = buildUseQuery<QueryLockableDurationsRequest, QueryLockableDurationsResponse>({
   builderQueryFn: getLockableDurations,

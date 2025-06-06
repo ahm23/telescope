@@ -4,7 +4,7 @@ import { MsgSubmitProposal, MsgExecLegacyContent, MsgVote, MsgVoteWeighted, MsgD
  * SubmitProposal defines a method to create new proposal given a content.
  * @name submitProposal
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.SubmitProposal
+ * @see proto service: cosmos.gov.v1.SubmitProposal
  */
 export const submitProposal = buildTx<MsgSubmitProposal>({
   msg: MsgSubmitProposal
@@ -14,7 +14,7 @@ export const submitProposal = buildTx<MsgSubmitProposal>({
  * to execute a legacy content-based proposal.
  * @name execLegacyContent
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.ExecLegacyContent
+ * @see proto service: cosmos.gov.v1.ExecLegacyContent
  */
 export const execLegacyContent = buildTx<MsgExecLegacyContent>({
   msg: MsgExecLegacyContent
@@ -23,7 +23,7 @@ export const execLegacyContent = buildTx<MsgExecLegacyContent>({
  * Vote defines a method to add a vote on a specific proposal.
  * @name vote
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.Vote
+ * @see proto service: cosmos.gov.v1.Vote
  */
 export const vote = buildTx<MsgVote>({
   msg: MsgVote
@@ -32,7 +32,7 @@ export const vote = buildTx<MsgVote>({
  * VoteWeighted defines a method to add a weighted vote on a specific proposal.
  * @name voteWeighted
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.VoteWeighted
+ * @see proto service: cosmos.gov.v1.VoteWeighted
  */
 export const voteWeighted = buildTx<MsgVoteWeighted>({
   msg: MsgVoteWeighted
@@ -41,7 +41,7 @@ export const voteWeighted = buildTx<MsgVoteWeighted>({
  * Deposit defines a method to add deposit on a specific proposal.
  * @name deposit
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.Deposit
+ * @see proto service: cosmos.gov.v1.Deposit
  */
 export const deposit = buildTx<MsgDeposit>({
   msg: MsgDeposit

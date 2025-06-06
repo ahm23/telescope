@@ -5,7 +5,7 @@ import { getModuleBalance, getModuleLockedAmount, getAccountUnlockableCoins, get
  * Return full balance of the module
  * @name useGetModuleBalance
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.ModuleBalance
+ * @see proto service: osmosis.lockup.ModuleBalance
  */
 export const useGetModuleBalance = buildUseQuery<ModuleBalanceRequest, ModuleBalanceResponse>({
   builderQueryFn: getModuleBalance,
@@ -15,7 +15,7 @@ export const useGetModuleBalance = buildUseQuery<ModuleBalanceRequest, ModuleBal
  * Return locked balance of the module
  * @name useGetModuleLockedAmount
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.ModuleLockedAmount
+ * @see proto service: osmosis.lockup.ModuleLockedAmount
  */
 export const useGetModuleLockedAmount = buildUseQuery<ModuleLockedAmountRequest, ModuleLockedAmountResponse>({
   builderQueryFn: getModuleLockedAmount,
@@ -25,7 +25,7 @@ export const useGetModuleLockedAmount = buildUseQuery<ModuleLockedAmountRequest,
  * Returns unlockable coins which are not withdrawn yet
  * @name useGetAccountUnlockableCoins
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.AccountUnlockableCoins
+ * @see proto service: osmosis.lockup.AccountUnlockableCoins
  */
 export const useGetAccountUnlockableCoins = buildUseQuery<AccountUnlockableCoinsRequest, AccountUnlockableCoinsResponse>({
   builderQueryFn: getAccountUnlockableCoins,
@@ -35,7 +35,7 @@ export const useGetAccountUnlockableCoins = buildUseQuery<AccountUnlockableCoins
  * Returns unlocking coins
  * @name useGetAccountUnlockingCoins
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.AccountUnlockingCoins
+ * @see proto service: osmosis.lockup.AccountUnlockingCoins
  */
 export const useGetAccountUnlockingCoins = buildUseQuery<AccountUnlockingCoinsRequest, AccountUnlockingCoinsResponse>({
   builderQueryFn: getAccountUnlockingCoins,
@@ -45,7 +45,7 @@ export const useGetAccountUnlockingCoins = buildUseQuery<AccountUnlockingCoinsRe
  * Return a locked coins that can't be withdrawn
  * @name useGetAccountLockedCoins
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.AccountLockedCoins
+ * @see proto service: osmosis.lockup.AccountLockedCoins
  */
 export const useGetAccountLockedCoins = buildUseQuery<AccountLockedCoinsRequest, AccountLockedCoinsResponse>({
   builderQueryFn: getAccountLockedCoins,
@@ -55,7 +55,7 @@ export const useGetAccountLockedCoins = buildUseQuery<AccountLockedCoinsRequest,
  * Returns locked records of an account with unlock time beyond timestamp
  * @name useGetAccountLockedPastTime
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.AccountLockedPastTime
+ * @see proto service: osmosis.lockup.AccountLockedPastTime
  */
 export const useGetAccountLockedPastTime = buildUseQuery<AccountLockedPastTimeRequest, AccountLockedPastTimeResponse>({
   builderQueryFn: getAccountLockedPastTime,
@@ -66,7 +66,7 @@ export const useGetAccountLockedPastTime = buildUseQuery<AccountLockedPastTimeRe
  * excluding tokens started unlocking
  * @name useGetAccountLockedPastTimeNotUnlockingOnly
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.AccountLockedPastTimeNotUnlockingOnly
+ * @see proto service: osmosis.lockup.AccountLockedPastTimeNotUnlockingOnly
  */
 export const useGetAccountLockedPastTimeNotUnlockingOnly = buildUseQuery<AccountLockedPastTimeNotUnlockingOnlyRequest, AccountLockedPastTimeNotUnlockingOnlyResponse>({
   builderQueryFn: getAccountLockedPastTimeNotUnlockingOnly,
@@ -76,7 +76,7 @@ export const useGetAccountLockedPastTimeNotUnlockingOnly = buildUseQuery<Account
  * Returns unlocked records with unlock time before timestamp
  * @name useGetAccountUnlockedBeforeTime
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.AccountUnlockedBeforeTime
+ * @see proto service: osmosis.lockup.AccountUnlockedBeforeTime
  */
 export const useGetAccountUnlockedBeforeTime = buildUseQuery<AccountUnlockedBeforeTimeRequest, AccountUnlockedBeforeTimeResponse>({
   builderQueryFn: getAccountUnlockedBeforeTime,
@@ -86,7 +86,7 @@ export const useGetAccountUnlockedBeforeTime = buildUseQuery<AccountUnlockedBefo
  * Returns lock records by address, timestamp, denom
  * @name useGetAccountLockedPastTimeDenom
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.AccountLockedPastTimeDenom
+ * @see proto service: osmosis.lockup.AccountLockedPastTimeDenom
  */
 export const useGetAccountLockedPastTimeDenom = buildUseQuery<AccountLockedPastTimeDenomRequest, AccountLockedPastTimeDenomResponse>({
   builderQueryFn: getAccountLockedPastTimeDenom,
@@ -96,7 +96,7 @@ export const useGetAccountLockedPastTimeDenom = buildUseQuery<AccountLockedPastT
  * Returns total locked per denom with longer past given time
  * @name useGetLockedDenom
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.LockedDenom
+ * @see proto service: osmosis.lockup.LockedDenom
  */
 export const useGetLockedDenom = buildUseQuery<LockedDenomRequest, LockedDenomResponse>({
   builderQueryFn: getLockedDenom,
@@ -106,7 +106,7 @@ export const useGetLockedDenom = buildUseQuery<LockedDenomRequest, LockedDenomRe
  * Returns lock record by id
  * @name useGetLockedByID
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.LockedByID
+ * @see proto service: osmosis.lockup.LockedByID
  */
 export const useGetLockedByID = buildUseQuery<LockedRequest, LockedResponse>({
   builderQueryFn: getLockedByID,
@@ -116,7 +116,7 @@ export const useGetLockedByID = buildUseQuery<LockedRequest, LockedResponse>({
  * Returns synthetic lockups by native lockup id
  * @name useGetSyntheticLockupsByLockupID
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.SyntheticLockupsByLockupID
+ * @see proto service: osmosis.lockup.SyntheticLockupsByLockupID
  */
 export const useGetSyntheticLockupsByLockupID = buildUseQuery<SyntheticLockupsByLockupIDRequest, SyntheticLockupsByLockupIDResponse>({
   builderQueryFn: getSyntheticLockupsByLockupID,
@@ -126,7 +126,7 @@ export const useGetSyntheticLockupsByLockupID = buildUseQuery<SyntheticLockupsBy
  * Returns account locked records with longer duration
  * @name useGetAccountLockedLongerDuration
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.AccountLockedLongerDuration
+ * @see proto service: osmosis.lockup.AccountLockedLongerDuration
  */
 export const useGetAccountLockedLongerDuration = buildUseQuery<AccountLockedLongerDurationRequest, AccountLockedLongerDurationResponse>({
   builderQueryFn: getAccountLockedLongerDuration,
@@ -136,7 +136,7 @@ export const useGetAccountLockedLongerDuration = buildUseQuery<AccountLockedLong
  * Returns account locked records with a specific duration
  * @name useGetAccountLockedDuration
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.AccountLockedDuration
+ * @see proto service: osmosis.lockup.AccountLockedDuration
  */
 export const useGetAccountLockedDuration = buildUseQuery<AccountLockedDurationRequest, AccountLockedDurationResponse>({
   builderQueryFn: getAccountLockedDuration,
@@ -147,7 +147,7 @@ export const useGetAccountLockedDuration = buildUseQuery<AccountLockedDurationRe
  * started unlocking
  * @name useGetAccountLockedLongerDurationNotUnlockingOnly
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.AccountLockedLongerDurationNotUnlockingOnly
+ * @see proto service: osmosis.lockup.AccountLockedLongerDurationNotUnlockingOnly
  */
 export const useGetAccountLockedLongerDurationNotUnlockingOnly = buildUseQuery<AccountLockedLongerDurationNotUnlockingOnlyRequest, AccountLockedLongerDurationNotUnlockingOnlyResponse>({
   builderQueryFn: getAccountLockedLongerDurationNotUnlockingOnly,
@@ -157,7 +157,7 @@ export const useGetAccountLockedLongerDurationNotUnlockingOnly = buildUseQuery<A
  * Returns account's locked records for a denom with longer duration
  * @name useGetAccountLockedLongerDurationDenom
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.AccountLockedLongerDurationDenom
+ * @see proto service: osmosis.lockup.AccountLockedLongerDurationDenom
  */
 export const useGetAccountLockedLongerDurationDenom = buildUseQuery<AccountLockedLongerDurationDenomRequest, AccountLockedLongerDurationDenomResponse>({
   builderQueryFn: getAccountLockedLongerDurationDenom,
@@ -167,7 +167,7 @@ export const useGetAccountLockedLongerDurationDenom = buildUseQuery<AccountLocke
  * Params returns lockup params.
  * @name useGetOsmosisLockupParams
  * @package osmosis.lockup
- * @see protoservice: osmosis.lockup.Params
+ * @see proto service: osmosis.lockup.Params
  */
 export const useGetOsmosisLockupParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
   builderQueryFn: getOsmosisLockupParams,

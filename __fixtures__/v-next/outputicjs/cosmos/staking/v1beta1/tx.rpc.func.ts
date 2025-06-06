@@ -4,7 +4,7 @@ import { MsgCreateValidator, MsgEditValidator, MsgDelegate, MsgBeginRedelegate, 
  * CreateValidator defines a method for creating a new validator.
  * @name createValidator
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.CreateValidator
+ * @see proto service: cosmos.staking.v1beta1.CreateValidator
  */
 export const createValidator = buildTx<MsgCreateValidator>({
   msg: MsgCreateValidator
@@ -13,7 +13,7 @@ export const createValidator = buildTx<MsgCreateValidator>({
  * EditValidator defines a method for editing an existing validator.
  * @name editValidator
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.EditValidator
+ * @see proto service: cosmos.staking.v1beta1.EditValidator
  */
 export const editValidator = buildTx<MsgEditValidator>({
   msg: MsgEditValidator
@@ -23,7 +23,7 @@ export const editValidator = buildTx<MsgEditValidator>({
  * from a delegator to a validator.
  * @name delegate
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.Delegate
+ * @see proto service: cosmos.staking.v1beta1.Delegate
  */
 export const delegate = buildTx<MsgDelegate>({
   msg: MsgDelegate
@@ -33,7 +33,7 @@ export const delegate = buildTx<MsgDelegate>({
  * of coins from a delegator and source validator to a destination validator.
  * @name beginRedelegate
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.BeginRedelegate
+ * @see proto service: cosmos.staking.v1beta1.BeginRedelegate
  */
 export const beginRedelegate = buildTx<MsgBeginRedelegate>({
   msg: MsgBeginRedelegate
@@ -43,7 +43,7 @@ export const beginRedelegate = buildTx<MsgBeginRedelegate>({
  * delegate and a validator.
  * @name undelegate
  * @package cosmos.staking.v1beta1
- * @see protoservice: cosmos.staking.v1beta1.Undelegate
+ * @see proto service: cosmos.staking.v1beta1.Undelegate
  */
 export const undelegate = buildTx<MsgUndelegate>({
   msg: MsgUndelegate

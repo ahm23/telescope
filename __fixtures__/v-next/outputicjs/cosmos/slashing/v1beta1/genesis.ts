@@ -1,10 +1,17 @@
-import { Params, ParamsAmino, ValidatorSigningInfo, ValidatorSigningInfoAmino } from "./slashing";
+import { ValidatorSigningInfo, ValidatorSigningInfoAmino, CosmosSlashingV1beta1Params, CosmosSlashingV1beta1ParamsAmino } from "./slashing";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState defines the slashing module's genesis state. */
+/**
+ * GenesisState defines the slashing module's genesis state.
+ * @name GenesisState
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the paramaters of related to deposit. */
-  params: Params;
+  /**
+   * params defines all the paramaters of related to deposit.
+  */
+  params: CosmosSlashingV1beta1Params;
   /**
    * signing_infos represents a map between validator addresses and their
    * signing infos.
@@ -20,10 +27,17 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.slashing.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the slashing module's genesis state. */
+/**
+ * GenesisState defines the slashing module's genesis state.
+ * @name GenesisStateAmino
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines all the paramaters of related to deposit. */
-  params: ParamsAmino;
+  /**
+   * params defines all the paramaters of related to deposit.
+  */
+  params: CosmosSlashingV1beta1ParamsAmino;
   /**
    * signing_infos represents a map between validator addresses and their
    * signing infos.
@@ -39,22 +53,40 @@ export interface GenesisStateAminoMsg {
   type: "cosmos-sdk/GenesisState";
   value: GenesisStateAmino;
 }
-/** SigningInfo stores validator signing info of corresponding address. */
+/**
+ * SigningInfo stores validator signing info of corresponding address.
+ * @name SigningInfo
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.SigningInfo
+ */
 export interface SigningInfo {
-  /** address is the validator address. */
+  /**
+   * address is the validator address.
+  */
   address: string;
-  /** validator_signing_info represents the signing info of this validator. */
+  /**
+   * validator_signing_info represents the signing info of this validator.
+  */
   validatorSigningInfo: ValidatorSigningInfo;
 }
 export interface SigningInfoProtoMsg {
   typeUrl: "/cosmos.slashing.v1beta1.SigningInfo";
   value: Uint8Array;
 }
-/** SigningInfo stores validator signing info of corresponding address. */
+/**
+ * SigningInfo stores validator signing info of corresponding address.
+ * @name SigningInfoAmino
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.SigningInfo
+ */
 export interface SigningInfoAmino {
-  /** address is the validator address. */
+  /**
+   * address is the validator address.
+  */
   address: string;
-  /** validator_signing_info represents the signing info of this validator. */
+  /**
+   * validator_signing_info represents the signing info of this validator.
+  */
   validator_signing_info: ValidatorSigningInfoAmino;
 }
 export interface SigningInfoAminoMsg {
@@ -64,11 +96,18 @@ export interface SigningInfoAminoMsg {
 /**
  * ValidatorMissedBlocks contains array of missed blocks of corresponding
  * address.
+ * @name ValidatorMissedBlocks
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.ValidatorMissedBlocks
  */
 export interface ValidatorMissedBlocks {
-  /** address is the validator address. */
+  /**
+   * address is the validator address.
+  */
   address: string;
-  /** missed_blocks is an array of missed blocks by the validator. */
+  /**
+   * missed_blocks is an array of missed blocks by the validator.
+  */
   missedBlocks: MissedBlock[];
 }
 export interface ValidatorMissedBlocksProtoMsg {
@@ -78,33 +117,58 @@ export interface ValidatorMissedBlocksProtoMsg {
 /**
  * ValidatorMissedBlocks contains array of missed blocks of corresponding
  * address.
+ * @name ValidatorMissedBlocksAmino
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.ValidatorMissedBlocks
  */
 export interface ValidatorMissedBlocksAmino {
-  /** address is the validator address. */
+  /**
+   * address is the validator address.
+  */
   address: string;
-  /** missed_blocks is an array of missed blocks by the validator. */
+  /**
+   * missed_blocks is an array of missed blocks by the validator.
+  */
   missed_blocks: MissedBlockAmino[];
 }
 export interface ValidatorMissedBlocksAminoMsg {
   type: "cosmos-sdk/ValidatorMissedBlocks";
   value: ValidatorMissedBlocksAmino;
 }
-/** MissedBlock contains height and missed status as boolean. */
+/**
+ * MissedBlock contains height and missed status as boolean.
+ * @name MissedBlock
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.MissedBlock
+ */
 export interface MissedBlock {
-  /** index is the height at which the block was missed. */
+  /**
+   * index is the height at which the block was missed.
+  */
   index: bigint;
-  /** missed is the missed status. */
+  /**
+   * missed is the missed status.
+  */
   missed: boolean;
 }
 export interface MissedBlockProtoMsg {
   typeUrl: "/cosmos.slashing.v1beta1.MissedBlock";
   value: Uint8Array;
 }
-/** MissedBlock contains height and missed status as boolean. */
+/**
+ * MissedBlock contains height and missed status as boolean.
+ * @name MissedBlockAmino
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.MissedBlock
+ */
 export interface MissedBlockAmino {
-  /** index is the height at which the block was missed. */
+  /**
+   * index is the height at which the block was missed.
+  */
   index: string;
-  /** missed is the missed status. */
+  /**
+   * missed is the missed status.
+  */
   missed: boolean;
 }
 export interface MissedBlockAminoMsg {
@@ -113,17 +177,23 @@ export interface MissedBlockAminoMsg {
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({}),
+    params: CosmosSlashingV1beta1Params.fromPartial({}),
     signingInfos: [],
     missedBlocks: []
   };
 }
+/**
+ * GenesisState defines the slashing module's genesis state.
+ * @name GenesisState
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.slashing.v1beta1.GenesisState",
   aminoType: "cosmos-sdk/GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      CosmosSlashingV1beta1Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.signingInfos) {
       SigningInfo.encode(v!, writer.uint32(18).fork()).ldelim();
@@ -141,7 +211,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = CosmosSlashingV1beta1Params.decode(reader, reader.uint32());
           break;
         case 2:
           message.signingInfos.push(SigningInfo.decode(reader, reader.uint32()));
@@ -158,7 +228,7 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? CosmosSlashingV1beta1Params.fromPartial(object.params) : undefined;
     message.signingInfos = object.signingInfos?.map(e => SigningInfo.fromPartial(e)) || [];
     message.missedBlocks = object.missedBlocks?.map(e => ValidatorMissedBlocks.fromPartial(e)) || [];
     return message;
@@ -166,7 +236,7 @@ export const GenesisState = {
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = CosmosSlashingV1beta1Params.fromAmino(object.params);
     }
     message.signingInfos = object.signing_infos?.map(e => SigningInfo.fromAmino(e)) || [];
     message.missedBlocks = object.missed_blocks?.map(e => ValidatorMissedBlocks.fromAmino(e)) || [];
@@ -174,7 +244,7 @@ export const GenesisState = {
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? CosmosSlashingV1beta1Params.toAmino(message.params) : undefined;
     if (message.signingInfos) {
       obj.signing_infos = message.signingInfos.map(e => e ? SigningInfo.toAmino(e) : undefined);
     } else {
@@ -215,6 +285,12 @@ function createBaseSigningInfo(): SigningInfo {
     validatorSigningInfo: ValidatorSigningInfo.fromPartial({})
   };
 }
+/**
+ * SigningInfo stores validator signing info of corresponding address.
+ * @name SigningInfo
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.SigningInfo
+ */
 export const SigningInfo = {
   typeUrl: "/cosmos.slashing.v1beta1.SigningInfo",
   aminoType: "cosmos-sdk/SigningInfo",
@@ -297,6 +373,13 @@ function createBaseValidatorMissedBlocks(): ValidatorMissedBlocks {
     missedBlocks: []
   };
 }
+/**
+ * ValidatorMissedBlocks contains array of missed blocks of corresponding
+ * address.
+ * @name ValidatorMissedBlocks
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.ValidatorMissedBlocks
+ */
 export const ValidatorMissedBlocks = {
   typeUrl: "/cosmos.slashing.v1beta1.ValidatorMissedBlocks",
   aminoType: "cosmos-sdk/ValidatorMissedBlocks",
@@ -381,6 +464,12 @@ function createBaseMissedBlock(): MissedBlock {
     missed: false
   };
 }
+/**
+ * MissedBlock contains height and missed status as boolean.
+ * @name MissedBlock
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.MissedBlock
+ */
 export const MissedBlock = {
   typeUrl: "/cosmos.slashing.v1beta1.MissedBlock",
   aminoType: "cosmos-sdk/MissedBlock",

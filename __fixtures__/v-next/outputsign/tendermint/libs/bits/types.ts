@@ -1,6 +1,11 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 export const protobufPackage = "tendermint.libs.bits";
+/**
+ * @name BitArray
+ * @package tendermint.libs.bits
+ * @see proto type: tendermint.libs.bits.BitArray
+ */
 export interface BitArray {
   bits: bigint;
   elems: bigint[];
@@ -9,6 +14,11 @@ export interface BitArrayProtoMsg {
   typeUrl: "/tendermint.libs.bits.BitArray";
   value: Uint8Array;
 }
+/**
+ * @name BitArrayAmino
+ * @package tendermint.libs.bits
+ * @see proto type: tendermint.libs.bits.BitArray
+ */
 export interface BitArrayAmino {
   bits?: string;
   elems?: string[];
@@ -17,6 +27,11 @@ export interface BitArrayAminoMsg {
   type: "/tendermint.libs.bits.BitArray";
   value: BitArrayAmino;
 }
+/**
+ * @name BitArraySDKType
+ * @package tendermint.libs.bits
+ * @see proto type: tendermint.libs.bits.BitArray
+ */
 export interface BitArraySDKType {
   bits: bigint;
   elems: bigint[];
@@ -27,6 +42,11 @@ function createBaseBitArray(): BitArray {
     elems: []
   };
 }
+/**
+ * @name BitArray
+ * @package tendermint.libs.bits
+ * @see proto type: tendermint.libs.bits.BitArray
+ */
 export const BitArray = {
   typeUrl: "/tendermint.libs.bits.BitArray",
   encode(message: BitArray, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

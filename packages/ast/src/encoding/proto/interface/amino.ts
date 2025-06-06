@@ -1,6 +1,6 @@
 import * as t from '@babel/types';
 import { ProtoType, ProtoField, ProtoEnum } from '@cosmology/types';
-import { identifier, tsPropertySignature, makeCommentBlock } from '../../../utils';
+import { identifier, tsPropertySignature, CommentBlockBuilder } from '../../../utils';
 import { ProtoParseContext } from '../../context';
 
 import {
@@ -126,20 +126,15 @@ export const createAminoType = (
                         isOptional
                     );
 
-                    const comments = [];
-                    if (field.comment) {
-                        comments.push(
-                            makeCommentBlock(field.comment)
-                        );
+                    const commentBlock = new CommentBlockBuilder()
+                    .addLine(field.comment)
+                    .addLine(field.options?.deprecated ? '@deprecated' : null)
+                    .build();
+
+                    if (commentBlock) {
+                        propSig.leadingComments = [commentBlock];
                     }
-                    if (field.options?.deprecated) {
-                        comments.push(
-                            makeCommentBlock('@deprecated')
-                        );
-                    }
-                    if (comments.length) {
-                        propSig.leadingComments = comments;
-                    }
+
 
                     m.push(propSig)
                     return m;
@@ -148,18 +143,16 @@ export const createAminoType = (
         ));
     }
 
-    const comments = [];
+    const commentBlock = new CommentBlockBuilder()
+    .addLine(proto.comment)
+    .addLine(`@name ${AminoName}`)
+    .addLine(`@package ${context.ref.proto.package}`)
+    .addLine(`@see proto type: ${context.ref.proto.package}.${name}`)
+    .addLine(proto.options?.deprecated ? '@deprecated' : null)
+    .build();
 
-    if (proto.comment) {
-        comments.push(makeCommentBlock(proto.comment));
-    }
-
-    if (proto.options?.deprecated) {
-        comments.push(makeCommentBlock('@deprecated'));
-    }
-
-    if (comments.length) {
-        declaration.leadingComments = comments;
+    if (commentBlock) {
+        declaration.leadingComments = [commentBlock];
     }
 
 

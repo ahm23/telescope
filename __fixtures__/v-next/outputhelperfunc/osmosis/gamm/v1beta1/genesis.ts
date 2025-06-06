@@ -11,7 +11,12 @@ import { JsonSafe } from "../../../json-safe";
 import { DeepPartial, isSet } from "../../../helpers";
 import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "osmosis.gamm.v1beta1";
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name Params
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.Params
+ */
 export interface Params {
   poolCreationFee: Coin[];
 }
@@ -19,7 +24,12 @@ export interface ParamsProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name ParamsAmino
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.Params
+ */
 export interface ParamsAmino {
   pool_creation_fee?: CoinAmino[];
 }
@@ -27,14 +37,26 @@ export interface ParamsAminoMsg {
   type: "osmosis/gamm/params";
   value: ParamsAmino;
 }
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name ParamsSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.Params
+ */
 export interface ParamsSDKType {
   pool_creation_fee: CoinSDKType[];
 }
-/** GenesisState defines the gamm module's genesis state. */
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisState
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.GenesisState
+ */
 export interface GenesisState {
   pools: (Pool1 | Pool2 | Any)[] | Any[];
-  /** will be renamed to next_pool_id in an upcoming version */
+  /**
+   * will be renamed to next_pool_id in an upcoming version
+  */
   nextPoolNumber: bigint;
   params: Params;
 }
@@ -45,10 +67,17 @@ export interface GenesisStateProtoMsg {
 export type GenesisStateEncoded = Omit<GenesisState, "pools"> & {
   pools: (Pool1ProtoMsg | Pool2ProtoMsg | AnyProtoMsg)[];
 };
-/** GenesisState defines the gamm module's genesis state. */
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   pools?: AnyAmino[];
-  /** will be renamed to next_pool_id in an upcoming version */
+  /**
+   * will be renamed to next_pool_id in an upcoming version
+  */
   next_pool_number?: string;
   params?: ParamsAmino;
 }
@@ -56,7 +85,12 @@ export interface GenesisStateAminoMsg {
   type: "osmosis/gamm/genesis-state";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the gamm module's genesis state. */
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   pools: (Pool1SDKType | Pool2SDKType | AnySDKType)[];
   next_pool_number: bigint;
@@ -67,6 +101,12 @@ function createBaseParams(): Params {
     poolCreationFee: []
   };
 }
+/**
+ * Params holds parameters for the incentives module
+ * @name Params
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.gamm.v1beta1.Params",
   aminoType: "osmosis/gamm/params",
@@ -189,6 +229,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisState
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.gamm.v1beta1.GenesisState",
   aminoType: "osmosis/gamm/genesis-state",

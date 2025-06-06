@@ -3,7 +3,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial } from "../../../helpers";
 export const protobufPackage = "osmosis.tokenfactory.v1beta1";
-/** Params defines the parameters for the tokenfactory module. */
+/**
+ * Params defines the parameters for the tokenfactory module.
+ * @name Params
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.Params
+ */
 export interface Params {
   denomCreationFee: Coin[];
 }
@@ -11,7 +16,12 @@ export interface ParamsProtoMsg {
   typeUrl: "/osmosis.tokenfactory.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params defines the parameters for the tokenfactory module. */
+/**
+ * Params defines the parameters for the tokenfactory module.
+ * @name ParamsAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.Params
+ */
 export interface ParamsAmino {
   denom_creation_fee?: CoinAmino[];
 }
@@ -19,7 +29,12 @@ export interface ParamsAminoMsg {
   type: "osmosis/tokenfactory/params";
   value: ParamsAmino;
 }
-/** Params defines the parameters for the tokenfactory module. */
+/**
+ * Params defines the parameters for the tokenfactory module.
+ * @name ParamsSDKType
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.Params
+ */
 export interface ParamsSDKType {
   denom_creation_fee: CoinSDKType[];
 }
@@ -28,6 +43,12 @@ function createBaseParams(): Params {
     denomCreationFee: []
   };
 }
+/**
+ * Params defines the parameters for the tokenfactory module.
+ * @name Params
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.Params",
   aminoType: "osmosis/tokenfactory/params",

@@ -3,7 +3,7 @@ import { RequestEcho, ResponseEcho, RequestFlush, ResponseFlush, RequestInfo, Re
 /**
  * @name getEcho
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.Echo
+ * @see proto service: tendermint.abci.Echo
  */
 export const getEcho = buildQuery<RequestEcho, ResponseEcho>({
   encode: RequestEcho.encode,
@@ -14,7 +14,7 @@ export const getEcho = buildQuery<RequestEcho, ResponseEcho>({
 /**
  * @name getFlush
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.Flush
+ * @see proto service: tendermint.abci.Flush
  */
 export const getFlush = buildQuery<RequestFlush, ResponseFlush>({
   encode: RequestFlush.encode,
@@ -25,7 +25,7 @@ export const getFlush = buildQuery<RequestFlush, ResponseFlush>({
 /**
  * @name getInfo
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.Info
+ * @see proto service: tendermint.abci.Info
  */
 export const getInfo = buildQuery<RequestInfo, ResponseInfo>({
   encode: RequestInfo.encode,
@@ -36,7 +36,7 @@ export const getInfo = buildQuery<RequestInfo, ResponseInfo>({
 /**
  * @name getSetOption
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.SetOption
+ * @see proto service: tendermint.abci.SetOption
  */
 export const getSetOption = buildQuery<RequestSetOption, ResponseSetOption>({
   encode: RequestSetOption.encode,
@@ -47,7 +47,7 @@ export const getSetOption = buildQuery<RequestSetOption, ResponseSetOption>({
 /**
  * @name getDeliverTx
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.DeliverTx
+ * @see proto service: tendermint.abci.DeliverTx
  */
 export const getDeliverTx = buildQuery<RequestDeliverTx, ResponseDeliverTx>({
   encode: RequestDeliverTx.encode,
@@ -58,7 +58,7 @@ export const getDeliverTx = buildQuery<RequestDeliverTx, ResponseDeliverTx>({
 /**
  * @name getCheckTx
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.CheckTx
+ * @see proto service: tendermint.abci.CheckTx
  */
 export const getCheckTx = buildQuery<RequestCheckTx, ResponseCheckTx>({
   encode: RequestCheckTx.encode,
@@ -69,7 +69,7 @@ export const getCheckTx = buildQuery<RequestCheckTx, ResponseCheckTx>({
 /**
  * @name getQuery
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.Query
+ * @see proto service: tendermint.abci.Query
  */
 export const getQuery = buildQuery<RequestQuery, ResponseQuery>({
   encode: RequestQuery.encode,
@@ -80,7 +80,7 @@ export const getQuery = buildQuery<RequestQuery, ResponseQuery>({
 /**
  * @name getCommit
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.Commit
+ * @see proto service: tendermint.abci.Commit
  */
 export const getCommit = buildQuery<RequestCommit, ResponseCommit>({
   encode: RequestCommit.encode,
@@ -91,7 +91,7 @@ export const getCommit = buildQuery<RequestCommit, ResponseCommit>({
 /**
  * @name getInitChain
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.InitChain
+ * @see proto service: tendermint.abci.InitChain
  */
 export const getInitChain = buildQuery<RequestInitChain, ResponseInitChain>({
   encode: RequestInitChain.encode,
@@ -102,7 +102,7 @@ export const getInitChain = buildQuery<RequestInitChain, ResponseInitChain>({
 /**
  * @name getBeginBlock
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.BeginBlock
+ * @see proto service: tendermint.abci.BeginBlock
  */
 export const getBeginBlock = buildQuery<RequestBeginBlock, ResponseBeginBlock>({
   encode: RequestBeginBlock.encode,
@@ -113,7 +113,7 @@ export const getBeginBlock = buildQuery<RequestBeginBlock, ResponseBeginBlock>({
 /**
  * @name getEndBlock
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.EndBlock
+ * @see proto service: tendermint.abci.EndBlock
  */
 export const getEndBlock = buildQuery<RequestEndBlock, ResponseEndBlock>({
   encode: RequestEndBlock.encode,
@@ -124,7 +124,7 @@ export const getEndBlock = buildQuery<RequestEndBlock, ResponseEndBlock>({
 /**
  * @name getListSnapshots
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.ListSnapshots
+ * @see proto service: tendermint.abci.ListSnapshots
  */
 export const getListSnapshots = buildQuery<RequestListSnapshots, ResponseListSnapshots>({
   encode: RequestListSnapshots.encode,
@@ -135,7 +135,7 @@ export const getListSnapshots = buildQuery<RequestListSnapshots, ResponseListSna
 /**
  * @name getOfferSnapshot
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.OfferSnapshot
+ * @see proto service: tendermint.abci.OfferSnapshot
  */
 export const getOfferSnapshot = buildQuery<RequestOfferSnapshot, ResponseOfferSnapshot>({
   encode: RequestOfferSnapshot.encode,
@@ -146,7 +146,7 @@ export const getOfferSnapshot = buildQuery<RequestOfferSnapshot, ResponseOfferSn
 /**
  * @name getLoadSnapshotChunk
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.LoadSnapshotChunk
+ * @see proto service: tendermint.abci.LoadSnapshotChunk
  */
 export const getLoadSnapshotChunk = buildQuery<RequestLoadSnapshotChunk, ResponseLoadSnapshotChunk>({
   encode: RequestLoadSnapshotChunk.encode,
@@ -157,7 +157,7 @@ export const getLoadSnapshotChunk = buildQuery<RequestLoadSnapshotChunk, Respons
 /**
  * @name getApplySnapshotChunk
  * @package tendermint.abci
- * @see protoservice: tendermint.abci.ApplySnapshotChunk
+ * @see proto service: tendermint.abci.ApplySnapshotChunk
  */
 export const getApplySnapshotChunk = buildQuery<RequestApplySnapshotChunk, ResponseApplySnapshotChunk>({
   encode: RequestApplySnapshotChunk.encode,

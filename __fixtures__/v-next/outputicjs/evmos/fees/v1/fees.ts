@@ -3,11 +3,18 @@ import { DeepPartial } from "../../../helpers";
 /**
  * DevFeeInfo defines an instance that organizes fee distribution conditions
  * for the owner of a given smart contract
+ * @name DevFeeInfo
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.DevFeeInfo
  */
 export interface DevFeeInfo {
-  /** hex address of registered contract */
+  /**
+   * hex address of registered contract
+  */
   contractAddress: string;
-  /** bech32 address of contract deployer */
+  /**
+   * bech32 address of contract deployer
+  */
   deployerAddress: string;
   /**
    * bech32 address of account receiving the transaction fees
@@ -22,11 +29,18 @@ export interface DevFeeInfoProtoMsg {
 /**
  * DevFeeInfo defines an instance that organizes fee distribution conditions
  * for the owner of a given smart contract
+ * @name DevFeeInfoAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.DevFeeInfo
  */
 export interface DevFeeInfoAmino {
-  /** hex address of registered contract */
+  /**
+   * hex address of registered contract
+  */
   contract_address: string;
-  /** bech32 address of contract deployer */
+  /**
+   * bech32 address of contract deployer
+  */
   deployer_address: string;
   /**
    * bech32 address of account receiving the transaction fees
@@ -45,6 +59,13 @@ function createBaseDevFeeInfo(): DevFeeInfo {
     withdrawAddress: ""
   };
 }
+/**
+ * DevFeeInfo defines an instance that organizes fee distribution conditions
+ * for the owner of a given smart contract
+ * @name DevFeeInfo
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.DevFeeInfo
+ */
 export const DevFeeInfo = {
   typeUrl: "/evmos.fees.v1.DevFeeInfo",
   encode(message: DevFeeInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

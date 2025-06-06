@@ -4,7 +4,12 @@ import { GlobalDecoderRegistry } from "../../../registry";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "cosmos.crisis.v1beta1";
-/** GenesisState defines the crisis module's genesis state. */
+/**
+ * GenesisState defines the crisis module's genesis state.
+ * @name GenesisState
+ * @package cosmos.crisis.v1beta1
+ * @see proto type: cosmos.crisis.v1beta1.GenesisState
+ */
 export interface GenesisState {
   /**
    * constant_fee is the fee used to verify the invariant in the crisis
@@ -16,7 +21,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.crisis.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the crisis module's genesis state. */
+/**
+ * GenesisState defines the crisis module's genesis state.
+ * @name GenesisStateAmino
+ * @package cosmos.crisis.v1beta1
+ * @see proto type: cosmos.crisis.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   /**
    * constant_fee is the fee used to verify the invariant in the crisis
@@ -28,7 +38,12 @@ export interface GenesisStateAminoMsg {
   type: "cosmos-sdk/GenesisState";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the crisis module's genesis state. */
+/**
+ * GenesisState defines the crisis module's genesis state.
+ * @name GenesisStateSDKType
+ * @package cosmos.crisis.v1beta1
+ * @see proto type: cosmos.crisis.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   constant_fee: CoinSDKType;
 }
@@ -37,6 +52,12 @@ function createBaseGenesisState(): GenesisState {
     constantFee: Coin.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the crisis module's genesis state.
+ * @name GenesisState
+ * @package cosmos.crisis.v1beta1
+ * @see proto type: cosmos.crisis.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.crisis.v1beta1.GenesisState",
   aminoType: "cosmos-sdk/GenesisState",

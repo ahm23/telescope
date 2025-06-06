@@ -60,18 +60,27 @@ export function stateToJSON(object: State): string {
  * separate one.
  * NOTE: there must only be 2 defined ConnectionEnds to establish
  * a connection between two chains.
+ * @name ConnectionEnd
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.ConnectionEnd
  */
 export interface ConnectionEnd {
-  /** client associated with this connection. */
+  /**
+   * client associated with this connection.
+  */
   clientId: string;
   /**
    * IBC version which can be utilised to determine encodings or protocols for
    * channels or packets utilising this connection.
    */
   versions: Version[];
-  /** current state of the connection end. */
+  /**
+   * current state of the connection end.
+  */
   state: State;
-  /** counterparty chain associated with this connection. */
+  /**
+   * counterparty chain associated with this connection.
+  */
   counterparty: Counterparty;
   /**
    * delay period that must pass before a consensus state can be used for
@@ -89,18 +98,27 @@ export interface ConnectionEndProtoMsg {
  * separate one.
  * NOTE: there must only be 2 defined ConnectionEnds to establish
  * a connection between two chains.
+ * @name ConnectionEndAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.ConnectionEnd
  */
 export interface ConnectionEndAmino {
-  /** client associated with this connection. */
+  /**
+   * client associated with this connection.
+  */
   client_id: string;
   /**
    * IBC version which can be utilised to determine encodings or protocols for
    * channels or packets utilising this connection.
    */
   versions: VersionAmino[];
-  /** current state of the connection end. */
+  /**
+   * current state of the connection end.
+  */
   state: State;
-  /** counterparty chain associated with this connection. */
+  /**
+   * counterparty chain associated with this connection.
+  */
   counterparty: CounterpartyAmino;
   /**
    * delay period that must pass before a consensus state can be used for
@@ -116,22 +134,35 @@ export interface ConnectionEndAminoMsg {
 /**
  * IdentifiedConnection defines a connection with additional connection
  * identifier field.
+ * @name IdentifiedConnection
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.IdentifiedConnection
  */
 export interface IdentifiedConnection {
-  /** connection identifier. */
+  /**
+   * connection identifier.
+  */
   id: string;
-  /** client associated with this connection. */
+  /**
+   * client associated with this connection.
+  */
   clientId: string;
   /**
    * IBC version which can be utilised to determine encodings or protocols for
    * channels or packets utilising this connection
    */
   versions: Version[];
-  /** current state of the connection end. */
+  /**
+   * current state of the connection end.
+  */
   state: State;
-  /** counterparty chain associated with this connection. */
+  /**
+   * counterparty chain associated with this connection.
+  */
   counterparty: Counterparty;
-  /** delay period associated with this connection. */
+  /**
+   * delay period associated with this connection.
+  */
   delayPeriod: bigint;
 }
 export interface IdentifiedConnectionProtoMsg {
@@ -141,29 +172,47 @@ export interface IdentifiedConnectionProtoMsg {
 /**
  * IdentifiedConnection defines a connection with additional connection
  * identifier field.
+ * @name IdentifiedConnectionAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.IdentifiedConnection
  */
 export interface IdentifiedConnectionAmino {
-  /** connection identifier. */
+  /**
+   * connection identifier.
+  */
   id: string;
-  /** client associated with this connection. */
+  /**
+   * client associated with this connection.
+  */
   client_id: string;
   /**
    * IBC version which can be utilised to determine encodings or protocols for
    * channels or packets utilising this connection
    */
   versions: VersionAmino[];
-  /** current state of the connection end. */
+  /**
+   * current state of the connection end.
+  */
   state: State;
-  /** counterparty chain associated with this connection. */
+  /**
+   * counterparty chain associated with this connection.
+  */
   counterparty: CounterpartyAmino;
-  /** delay period associated with this connection. */
+  /**
+   * delay period associated with this connection.
+  */
   delay_period: string;
 }
 export interface IdentifiedConnectionAminoMsg {
   type: "cosmos-sdk/IdentifiedConnection";
   value: IdentifiedConnectionAmino;
 }
-/** Counterparty defines the counterparty chain associated with a connection end. */
+/**
+ * Counterparty defines the counterparty chain associated with a connection end.
+ * @name Counterparty
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.Counterparty
+ */
 export interface Counterparty {
   /**
    * identifies the client on the counterparty chain associated with a given
@@ -175,14 +224,21 @@ export interface Counterparty {
    * given connection.
    */
   connectionId: string;
-  /** commitment merkle prefix of the counterparty chain. */
+  /**
+   * commitment merkle prefix of the counterparty chain.
+  */
   prefix: MerklePrefix;
 }
 export interface CounterpartyProtoMsg {
   typeUrl: "/ibc.core.connection.v1.Counterparty";
   value: Uint8Array;
 }
-/** Counterparty defines the counterparty chain associated with a connection end. */
+/**
+ * Counterparty defines the counterparty chain associated with a connection end.
+ * @name CounterpartyAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.Counterparty
+ */
 export interface CounterpartyAmino {
   /**
    * identifies the client on the counterparty chain associated with a given
@@ -194,47 +250,81 @@ export interface CounterpartyAmino {
    * given connection.
    */
   connection_id: string;
-  /** commitment merkle prefix of the counterparty chain. */
+  /**
+   * commitment merkle prefix of the counterparty chain.
+  */
   prefix: MerklePrefixAmino;
 }
 export interface CounterpartyAminoMsg {
   type: "cosmos-sdk/Counterparty";
   value: CounterpartyAmino;
 }
-/** ClientPaths define all the connection paths for a client state. */
+/**
+ * ClientPaths define all the connection paths for a client state.
+ * @name ClientPaths
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.ClientPaths
+ */
 export interface ClientPaths {
-  /** list of connection paths */
+  /**
+   * list of connection paths
+  */
   paths: string[];
 }
 export interface ClientPathsProtoMsg {
   typeUrl: "/ibc.core.connection.v1.ClientPaths";
   value: Uint8Array;
 }
-/** ClientPaths define all the connection paths for a client state. */
+/**
+ * ClientPaths define all the connection paths for a client state.
+ * @name ClientPathsAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.ClientPaths
+ */
 export interface ClientPathsAmino {
-  /** list of connection paths */
+  /**
+   * list of connection paths
+  */
   paths: string[];
 }
 export interface ClientPathsAminoMsg {
   type: "cosmos-sdk/ClientPaths";
   value: ClientPathsAmino;
 }
-/** ConnectionPaths define all the connection paths for a given client state. */
+/**
+ * ConnectionPaths define all the connection paths for a given client state.
+ * @name ConnectionPaths
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.ConnectionPaths
+ */
 export interface ConnectionPaths {
-  /** client state unique identifier */
+  /**
+   * client state unique identifier
+  */
   clientId: string;
-  /** list of connection paths */
+  /**
+   * list of connection paths
+  */
   paths: string[];
 }
 export interface ConnectionPathsProtoMsg {
   typeUrl: "/ibc.core.connection.v1.ConnectionPaths";
   value: Uint8Array;
 }
-/** ConnectionPaths define all the connection paths for a given client state. */
+/**
+ * ConnectionPaths define all the connection paths for a given client state.
+ * @name ConnectionPathsAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.ConnectionPaths
+ */
 export interface ConnectionPathsAmino {
-  /** client state unique identifier */
+  /**
+   * client state unique identifier
+  */
   client_id: string;
-  /** list of connection paths */
+  /**
+   * list of connection paths
+  */
   paths: string[];
 }
 export interface ConnectionPathsAminoMsg {
@@ -244,11 +334,18 @@ export interface ConnectionPathsAminoMsg {
 /**
  * Version defines the versioning scheme used to negotiate the IBC verison in
  * the connection handshake.
+ * @name Version
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.Version
  */
 export interface Version {
-  /** unique version identifier */
+  /**
+   * unique version identifier
+  */
   identifier: string;
-  /** list of features compatible with the specified identifier */
+  /**
+   * list of features compatible with the specified identifier
+  */
   features: string[];
 }
 export interface VersionProtoMsg {
@@ -258,19 +355,31 @@ export interface VersionProtoMsg {
 /**
  * Version defines the versioning scheme used to negotiate the IBC verison in
  * the connection handshake.
+ * @name VersionAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.Version
  */
 export interface VersionAmino {
-  /** unique version identifier */
+  /**
+   * unique version identifier
+  */
   identifier: string;
-  /** list of features compatible with the specified identifier */
+  /**
+   * list of features compatible with the specified identifier
+  */
   features: string[];
 }
 export interface VersionAminoMsg {
   type: "cosmos-sdk/Version";
   value: VersionAmino;
 }
-/** Params defines the set of Connection parameters. */
-export interface Params {
+/**
+ * Params defines the set of Connection parameters.
+ * @name IbcCoreConnectionV1Params
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.Params
+ */
+export interface IbcCoreConnectionV1Params {
   /**
    * maximum expected time per block (in nanoseconds), used to enforce block delay. This parameter should reflect the
    * largest amount of time that the chain might reasonably take to produce the next block under normal operating
@@ -278,12 +387,17 @@ export interface Params {
    */
   maxExpectedTimePerBlock: bigint;
 }
-export interface ParamsProtoMsg {
+export interface IbcCoreConnectionV1ParamsProtoMsg {
   typeUrl: "/ibc.core.connection.v1.Params";
   value: Uint8Array;
 }
-/** Params defines the set of Connection parameters. */
-export interface ParamsAmino {
+/**
+ * Params defines the set of Connection parameters.
+ * @name IbcCoreConnectionV1ParamsAmino
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.IbcCoreConnectionV1Params
+ */
+export interface IbcCoreConnectionV1ParamsAmino {
   /**
    * maximum expected time per block (in nanoseconds), used to enforce block delay. This parameter should reflect the
    * largest amount of time that the chain might reasonably take to produce the next block under normal operating
@@ -291,9 +405,9 @@ export interface ParamsAmino {
    */
   max_expected_time_per_block: string;
 }
-export interface ParamsAminoMsg {
+export interface IbcCoreConnectionV1ParamsAminoMsg {
   type: "cosmos-sdk/Params";
-  value: ParamsAmino;
+  value: IbcCoreConnectionV1ParamsAmino;
 }
 function createBaseConnectionEnd(): ConnectionEnd {
   return {
@@ -304,6 +418,15 @@ function createBaseConnectionEnd(): ConnectionEnd {
     delayPeriod: BigInt(0)
   };
 }
+/**
+ * ConnectionEnd defines a stateful object on a chain connected to another
+ * separate one.
+ * NOTE: there must only be 2 defined ConnectionEnds to establish
+ * a connection between two chains.
+ * @name ConnectionEnd
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.ConnectionEnd
+ */
 export const ConnectionEnd = {
   typeUrl: "/ibc.core.connection.v1.ConnectionEnd",
   aminoType: "cosmos-sdk/ConnectionEnd",
@@ -425,6 +548,13 @@ function createBaseIdentifiedConnection(): IdentifiedConnection {
     delayPeriod: BigInt(0)
   };
 }
+/**
+ * IdentifiedConnection defines a connection with additional connection
+ * identifier field.
+ * @name IdentifiedConnection
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.IdentifiedConnection
+ */
 export const IdentifiedConnection = {
   typeUrl: "/ibc.core.connection.v1.IdentifiedConnection",
   aminoType: "cosmos-sdk/IdentifiedConnection",
@@ -554,6 +684,12 @@ function createBaseCounterparty(): Counterparty {
     prefix: MerklePrefix.fromPartial({})
   };
 }
+/**
+ * Counterparty defines the counterparty chain associated with a connection end.
+ * @name Counterparty
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.Counterparty
+ */
 export const Counterparty = {
   typeUrl: "/ibc.core.connection.v1.Counterparty",
   aminoType: "cosmos-sdk/Counterparty",
@@ -646,6 +782,12 @@ function createBaseClientPaths(): ClientPaths {
     paths: []
   };
 }
+/**
+ * ClientPaths define all the connection paths for a client state.
+ * @name ClientPaths
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.ClientPaths
+ */
 export const ClientPaths = {
   typeUrl: "/ibc.core.connection.v1.ClientPaths",
   aminoType: "cosmos-sdk/ClientPaths",
@@ -719,6 +861,12 @@ function createBaseConnectionPaths(): ConnectionPaths {
     paths: []
   };
 }
+/**
+ * ConnectionPaths define all the connection paths for a given client state.
+ * @name ConnectionPaths
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.ConnectionPaths
+ */
 export const ConnectionPaths = {
   typeUrl: "/ibc.core.connection.v1.ConnectionPaths",
   aminoType: "cosmos-sdk/ConnectionPaths",
@@ -803,6 +951,13 @@ function createBaseVersion(): Version {
     features: []
   };
 }
+/**
+ * Version defines the versioning scheme used to negotiate the IBC verison in
+ * the connection handshake.
+ * @name Version
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.Version
+ */
 export const Version = {
   typeUrl: "/ibc.core.connection.v1.Version",
   aminoType: "cosmos-sdk/Version",
@@ -881,24 +1036,30 @@ export const Version = {
     };
   }
 };
-function createBaseParams(): Params {
+function createBaseIbcCoreConnectionV1Params(): IbcCoreConnectionV1Params {
   return {
     maxExpectedTimePerBlock: BigInt(0)
   };
 }
-export const Params = {
+/**
+ * Params defines the set of Connection parameters.
+ * @name IbcCoreConnectionV1Params
+ * @package ibc.core.connection.v1
+ * @see proto type: ibc.core.connection.v1.Params
+ */
+export const IbcCoreConnectionV1Params = {
   typeUrl: "/ibc.core.connection.v1.Params",
   aminoType: "cosmos-sdk/Params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: IbcCoreConnectionV1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.maxExpectedTimePerBlock !== BigInt(0)) {
       writer.uint32(8).uint64(message.maxExpectedTimePerBlock);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): IbcCoreConnectionV1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseIbcCoreConnectionV1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -912,42 +1073,42 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<IbcCoreConnectionV1Params>): IbcCoreConnectionV1Params {
+    const message = createBaseIbcCoreConnectionV1Params();
     message.maxExpectedTimePerBlock = object.maxExpectedTimePerBlock !== undefined && object.maxExpectedTimePerBlock !== null ? BigInt(object.maxExpectedTimePerBlock.toString()) : BigInt(0);
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: IbcCoreConnectionV1ParamsAmino): IbcCoreConnectionV1Params {
+    const message = createBaseIbcCoreConnectionV1Params();
     if (object.max_expected_time_per_block !== undefined && object.max_expected_time_per_block !== null) {
       message.maxExpectedTimePerBlock = BigInt(object.max_expected_time_per_block);
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: IbcCoreConnectionV1Params): IbcCoreConnectionV1ParamsAmino {
     const obj: any = {};
     obj.max_expected_time_per_block = message.maxExpectedTimePerBlock !== BigInt(0) ? message.maxExpectedTimePerBlock?.toString() : undefined;
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: IbcCoreConnectionV1ParamsAminoMsg): IbcCoreConnectionV1Params {
+    return IbcCoreConnectionV1Params.fromAmino(object.value);
   },
-  toAminoMsg(message: Params): ParamsAminoMsg {
+  toAminoMsg(message: IbcCoreConnectionV1Params): IbcCoreConnectionV1ParamsAminoMsg {
     return {
       type: "cosmos-sdk/Params",
-      value: Params.toAmino(message)
+      value: IbcCoreConnectionV1Params.toAmino(message)
     };
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: IbcCoreConnectionV1ParamsProtoMsg): IbcCoreConnectionV1Params {
+    return IbcCoreConnectionV1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: IbcCoreConnectionV1Params): Uint8Array {
+    return IbcCoreConnectionV1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: IbcCoreConnectionV1Params): IbcCoreConnectionV1ParamsProtoMsg {
     return {
       typeUrl: "/ibc.core.connection.v1.Params",
-      value: Params.encode(message).finish()
+      value: IbcCoreConnectionV1Params.encode(message).finish()
     };
   }
 };

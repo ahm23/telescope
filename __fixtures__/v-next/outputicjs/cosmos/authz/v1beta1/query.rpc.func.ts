@@ -4,7 +4,7 @@ import { QueryGrantsRequest, QueryGrantsResponse, QueryGranterGrantsRequest, Que
  * Returns list of `Authorization`, granted to the grantee by the granter.
  * @name getGrants
  * @package cosmos.authz.v1beta1
- * @see protoservice: cosmos.authz.v1beta1.Grants
+ * @see proto service: cosmos.authz.v1beta1.Grants
  */
 export const getGrants = buildQuery<QueryGrantsRequest, QueryGrantsResponse>({
   encode: QueryGrantsRequest.encode,
@@ -18,7 +18,7 @@ export const getGrants = buildQuery<QueryGrantsRequest, QueryGrantsResponse>({
  * Since: cosmos-sdk 0.46
  * @name getGranterGrants
  * @package cosmos.authz.v1beta1
- * @see protoservice: cosmos.authz.v1beta1.GranterGrants
+ * @see proto service: cosmos.authz.v1beta1.GranterGrants
  */
 export const getGranterGrants = buildQuery<QueryGranterGrantsRequest, QueryGranterGrantsResponse>({
   encode: QueryGranterGrantsRequest.encode,
@@ -32,7 +32,7 @@ export const getGranterGrants = buildQuery<QueryGranterGrantsRequest, QueryGrant
  * Since: cosmos-sdk 0.46
  * @name getGranteeGrants
  * @package cosmos.authz.v1beta1
- * @see protoservice: cosmos.authz.v1beta1.GranteeGrants
+ * @see proto service: cosmos.authz.v1beta1.GranteeGrants
  */
 export const getGranteeGrants = buildQuery<QueryGranteeGrantsRequest, QueryGranteeGrantsResponse>({
   encode: QueryGranteeGrantsRequest.encode,

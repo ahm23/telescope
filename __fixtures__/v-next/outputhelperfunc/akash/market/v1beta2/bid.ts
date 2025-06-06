@@ -61,7 +61,12 @@ export function bid_StateToJSON(object: Bid_State): string {
       return "UNRECOGNIZED";
   }
 }
-/** MsgCreateBid defines an SDK message for creating Bid */
+/**
+ * MsgCreateBid defines an SDK message for creating Bid
+ * @name MsgCreateBid
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateBid
+ */
 export interface MsgCreateBid {
   order: OrderID;
   provider: string;
@@ -72,7 +77,12 @@ export interface MsgCreateBidProtoMsg {
   typeUrl: "/akash.market.v1beta2.MsgCreateBid";
   value: Uint8Array;
 }
-/** MsgCreateBid defines an SDK message for creating Bid */
+/**
+ * MsgCreateBid defines an SDK message for creating Bid
+ * @name MsgCreateBidAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateBid
+ */
 export interface MsgCreateBidAmino {
   order: OrderIDAmino;
   provider: string;
@@ -83,28 +93,53 @@ export interface MsgCreateBidAminoMsg {
   type: "akash/market/v1beta2/testonly-create-bid";
   value: MsgCreateBidAmino;
 }
-/** MsgCreateBid defines an SDK message for creating Bid */
+/**
+ * MsgCreateBid defines an SDK message for creating Bid
+ * @name MsgCreateBidSDKType
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateBid
+ */
 export interface MsgCreateBidSDKType {
   order: OrderIDSDKType;
   provider: string;
   price: DecCoinSDKType;
   deposit: CoinSDKType;
 }
-/** MsgCreateBidResponse defines the Msg/CreateBid response type. */
+/**
+ * MsgCreateBidResponse defines the Msg/CreateBid response type.
+ * @name MsgCreateBidResponse
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateBidResponse
+ */
 export interface MsgCreateBidResponse {}
 export interface MsgCreateBidResponseProtoMsg {
   typeUrl: "/akash.market.v1beta2.MsgCreateBidResponse";
   value: Uint8Array;
 }
-/** MsgCreateBidResponse defines the Msg/CreateBid response type. */
+/**
+ * MsgCreateBidResponse defines the Msg/CreateBid response type.
+ * @name MsgCreateBidResponseAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateBidResponse
+ */
 export interface MsgCreateBidResponseAmino {}
 export interface MsgCreateBidResponseAminoMsg {
   type: "akash/market/v1beta2/testonly-create-bid-response";
   value: MsgCreateBidResponseAmino;
 }
-/** MsgCreateBidResponse defines the Msg/CreateBid response type. */
+/**
+ * MsgCreateBidResponse defines the Msg/CreateBid response type.
+ * @name MsgCreateBidResponseSDKType
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateBidResponse
+ */
 export interface MsgCreateBidResponseSDKType {}
-/** MsgCloseBid defines an SDK message for closing bid */
+/**
+ * MsgCloseBid defines an SDK message for closing bid
+ * @name MsgCloseBid
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseBid
+ */
 export interface MsgCloseBid {
   bidId: BidID;
 }
@@ -112,7 +147,12 @@ export interface MsgCloseBidProtoMsg {
   typeUrl: "/akash.market.v1beta2.MsgCloseBid";
   value: Uint8Array;
 }
-/** MsgCloseBid defines an SDK message for closing bid */
+/**
+ * MsgCloseBid defines an SDK message for closing bid
+ * @name MsgCloseBidAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseBid
+ */
 export interface MsgCloseBidAmino {
   bid_id: BidIDAmino;
 }
@@ -120,27 +160,50 @@ export interface MsgCloseBidAminoMsg {
   type: "akash/market/v1beta2/testonly-close-bid";
   value: MsgCloseBidAmino;
 }
-/** MsgCloseBid defines an SDK message for closing bid */
+/**
+ * MsgCloseBid defines an SDK message for closing bid
+ * @name MsgCloseBidSDKType
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseBid
+ */
 export interface MsgCloseBidSDKType {
   bid_id: BidIDSDKType;
 }
-/** MsgCloseBidResponse defines the Msg/CloseBid response type. */
+/**
+ * MsgCloseBidResponse defines the Msg/CloseBid response type.
+ * @name MsgCloseBidResponse
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseBidResponse
+ */
 export interface MsgCloseBidResponse {}
 export interface MsgCloseBidResponseProtoMsg {
   typeUrl: "/akash.market.v1beta2.MsgCloseBidResponse";
   value: Uint8Array;
 }
-/** MsgCloseBidResponse defines the Msg/CloseBid response type. */
+/**
+ * MsgCloseBidResponse defines the Msg/CloseBid response type.
+ * @name MsgCloseBidResponseAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseBidResponse
+ */
 export interface MsgCloseBidResponseAmino {}
 export interface MsgCloseBidResponseAminoMsg {
   type: "akash/market/v1beta2/testonly-close-bid-response";
   value: MsgCloseBidResponseAmino;
 }
-/** MsgCloseBidResponse defines the Msg/CloseBid response type. */
+/**
+ * MsgCloseBidResponse defines the Msg/CloseBid response type.
+ * @name MsgCloseBidResponseSDKType
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseBidResponse
+ */
 export interface MsgCloseBidResponseSDKType {}
 /**
  * BidID stores owner and all other seq numbers
  * A successful bid becomes a Lease(ID).
+ * @name BidID
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.BidID
  */
 export interface BidID {
   owner: string;
@@ -156,6 +219,9 @@ export interface BidIDProtoMsg {
 /**
  * BidID stores owner and all other seq numbers
  * A successful bid becomes a Lease(ID).
+ * @name BidIDAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.BidID
  */
 export interface BidIDAmino {
   owner: string;
@@ -171,6 +237,9 @@ export interface BidIDAminoMsg {
 /**
  * BidID stores owner and all other seq numbers
  * A successful bid becomes a Lease(ID).
+ * @name BidIDSDKType
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.BidID
  */
 export interface BidIDSDKType {
   owner: string;
@@ -179,7 +248,12 @@ export interface BidIDSDKType {
   oseq: number;
   provider: string;
 }
-/** Bid stores BidID, state of bid and price */
+/**
+ * Bid stores BidID, state of bid and price
+ * @name Bid
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Bid
+ */
 export interface Bid {
   bidId: BidID;
   state: Bid_State;
@@ -190,7 +264,12 @@ export interface BidProtoMsg {
   typeUrl: "/akash.market.v1beta2.Bid";
   value: Uint8Array;
 }
-/** Bid stores BidID, state of bid and price */
+/**
+ * Bid stores BidID, state of bid and price
+ * @name BidAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Bid
+ */
 export interface BidAmino {
   bid_id: BidIDAmino;
   state: Bid_State;
@@ -201,14 +280,24 @@ export interface BidAminoMsg {
   type: "akash/market/v1beta2/bid";
   value: BidAmino;
 }
-/** Bid stores BidID, state of bid and price */
+/**
+ * Bid stores BidID, state of bid and price
+ * @name BidSDKType
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Bid
+ */
 export interface BidSDKType {
   bid_id: BidIDSDKType;
   state: Bid_State;
   price: DecCoinSDKType;
   created_at: bigint;
 }
-/** BidFilters defines flags for bid list filter */
+/**
+ * BidFilters defines flags for bid list filter
+ * @name BidFilters
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.BidFilters
+ */
 export interface BidFilters {
   owner: string;
   dseq: bigint;
@@ -221,7 +310,12 @@ export interface BidFiltersProtoMsg {
   typeUrl: "/akash.market.v1beta2.BidFilters";
   value: Uint8Array;
 }
-/** BidFilters defines flags for bid list filter */
+/**
+ * BidFilters defines flags for bid list filter
+ * @name BidFiltersAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.BidFilters
+ */
 export interface BidFiltersAmino {
   owner: string;
   dseq: string;
@@ -234,7 +328,12 @@ export interface BidFiltersAminoMsg {
   type: "akash/market/v1beta2/bid-filters";
   value: BidFiltersAmino;
 }
-/** BidFilters defines flags for bid list filter */
+/**
+ * BidFilters defines flags for bid list filter
+ * @name BidFiltersSDKType
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.BidFilters
+ */
 export interface BidFiltersSDKType {
   owner: string;
   dseq: bigint;
@@ -251,6 +350,12 @@ function createBaseMsgCreateBid(): MsgCreateBid {
     deposit: Coin.fromPartial({})
   };
 }
+/**
+ * MsgCreateBid defines an SDK message for creating Bid
+ * @name MsgCreateBid
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateBid
+ */
 export const MsgCreateBid = {
   typeUrl: "/akash.market.v1beta2.MsgCreateBid",
   aminoType: "akash/market/v1beta2/testonly-create-bid",
@@ -415,6 +520,12 @@ export const MsgCreateBid = {
 function createBaseMsgCreateBidResponse(): MsgCreateBidResponse {
   return {};
 }
+/**
+ * MsgCreateBidResponse defines the Msg/CreateBid response type.
+ * @name MsgCreateBidResponse
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateBidResponse
+ */
 export const MsgCreateBidResponse = {
   typeUrl: "/akash.market.v1beta2.MsgCreateBidResponse",
   aminoType: "akash/market/v1beta2/testonly-create-bid-response",
@@ -502,6 +613,12 @@ function createBaseMsgCloseBid(): MsgCloseBid {
     bidId: BidID.fromPartial({})
   };
 }
+/**
+ * MsgCloseBid defines an SDK message for closing bid
+ * @name MsgCloseBid
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseBid
+ */
 export const MsgCloseBid = {
   typeUrl: "/akash.market.v1beta2.MsgCloseBid",
   aminoType: "akash/market/v1beta2/testonly-close-bid",
@@ -612,6 +729,12 @@ export const MsgCloseBid = {
 function createBaseMsgCloseBidResponse(): MsgCloseBidResponse {
   return {};
 }
+/**
+ * MsgCloseBidResponse defines the Msg/CloseBid response type.
+ * @name MsgCloseBidResponse
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseBidResponse
+ */
 export const MsgCloseBidResponse = {
   typeUrl: "/akash.market.v1beta2.MsgCloseBidResponse",
   aminoType: "akash/market/v1beta2/testonly-close-bid-response",
@@ -703,6 +826,13 @@ function createBaseBidID(): BidID {
     provider: ""
   };
 }
+/**
+ * BidID stores owner and all other seq numbers
+ * A successful bid becomes a Lease(ID).
+ * @name BidID
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.BidID
+ */
 export const BidID = {
   typeUrl: "/akash.market.v1beta2.BidID",
   aminoType: "akash/market/v1beta2/bid-i-d",
@@ -877,6 +1007,12 @@ function createBaseBid(): Bid {
     createdAt: BigInt(0)
   };
 }
+/**
+ * Bid stores BidID, state of bid and price
+ * @name Bid
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Bid
+ */
 export const Bid = {
   typeUrl: "/akash.market.v1beta2.Bid",
   aminoType: "akash/market/v1beta2/bid",
@@ -1047,6 +1183,12 @@ function createBaseBidFilters(): BidFilters {
     state: ""
   };
 }
+/**
+ * BidFilters defines flags for bid list filter
+ * @name BidFilters
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.BidFilters
+ */
 export const BidFilters = {
   typeUrl: "/akash.market.v1beta2.BidFilters",
   aminoType: "akash/market/v1beta2/bid-filters",

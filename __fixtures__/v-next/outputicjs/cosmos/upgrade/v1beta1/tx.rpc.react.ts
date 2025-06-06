@@ -7,7 +7,7 @@ import { softwareUpgrade, cancelUpgrade } from "./tx.rpc.func";
  * Since: cosmos-sdk 0.46
  * @name useSoftwareUpgrade
  * @package cosmos.upgrade.v1beta1
- * @see protoservice: cosmos.upgrade.v1beta1.SoftwareUpgrade
+ * @see proto service: cosmos.upgrade.v1beta1.SoftwareUpgrade
  */
 export const useSoftwareUpgrade = buildUseMutation<MsgSoftwareUpgrade, Error>({
   builderMutationFn: softwareUpgrade
@@ -19,7 +19,7 @@ export const useSoftwareUpgrade = buildUseMutation<MsgSoftwareUpgrade, Error>({
  * Since: cosmos-sdk 0.46
  * @name useCancelUpgrade
  * @package cosmos.upgrade.v1beta1
- * @see protoservice: cosmos.upgrade.v1beta1.CancelUpgrade
+ * @see proto service: cosmos.upgrade.v1beta1.CancelUpgrade
  */
 export const useCancelUpgrade = buildUseMutation<MsgCancelUpgrade, Error>({
   builderMutationFn: cancelUpgrade

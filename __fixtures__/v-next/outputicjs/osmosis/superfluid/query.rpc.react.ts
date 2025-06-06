@@ -5,7 +5,7 @@ import { getOsmosisSuperfluidParams, getAssetType, getAllAssets, getAssetMultipl
  * Params returns the total set of superfluid parameters.
  * @name useGetOsmosisSuperfluidParams
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.Params
+ * @see proto service: osmosis.superfluid.Params
  */
 export const useGetOsmosisSuperfluidParams = buildUseQuery<QueryParamsRequest, QueryParamsResponse>({
   builderQueryFn: getOsmosisSuperfluidParams,
@@ -16,7 +16,7 @@ export const useGetOsmosisSuperfluidParams = buildUseQuery<QueryParamsRequest, Q
  * share.
  * @name useGetAssetType
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.AssetType
+ * @see proto service: osmosis.superfluid.AssetType
  */
 export const useGetAssetType = buildUseQuery<AssetTypeRequest, AssetTypeResponse>({
   builderQueryFn: getAssetType,
@@ -26,7 +26,7 @@ export const useGetAssetType = buildUseQuery<AssetTypeRequest, AssetTypeResponse
  * Returns all registered superfluid assets.
  * @name useGetAllAssets
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.AllAssets
+ * @see proto service: osmosis.superfluid.AllAssets
  */
 export const useGetAllAssets = buildUseQuery<AllAssetsRequest, AllAssetsResponse>({
   builderQueryFn: getAllAssets,
@@ -36,7 +36,7 @@ export const useGetAllAssets = buildUseQuery<AllAssetsRequest, AllAssetsResponse
  * Returns the osmo equivalent multiplier used in the most recent epoch.
  * @name useGetAssetMultiplier
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.AssetMultiplier
+ * @see proto service: osmosis.superfluid.AssetMultiplier
  */
 export const useGetAssetMultiplier = buildUseQuery<AssetMultiplierRequest, AssetMultiplierResponse>({
   builderQueryFn: getAssetMultiplier,
@@ -46,7 +46,7 @@ export const useGetAssetMultiplier = buildUseQuery<AssetMultiplierRequest, Asset
  * Returns all superfluid intermediary accounts.
  * @name useGetAllIntermediaryAccounts
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.AllIntermediaryAccounts
+ * @see proto service: osmosis.superfluid.AllIntermediaryAccounts
  */
 export const useGetAllIntermediaryAccounts = buildUseQuery<AllIntermediaryAccountsRequest, AllIntermediaryAccountsResponse>({
   builderQueryFn: getAllIntermediaryAccounts,
@@ -56,7 +56,7 @@ export const useGetAllIntermediaryAccounts = buildUseQuery<AllIntermediaryAccoun
  * Returns intermediary account connected to a superfluid staked lock by id
  * @name useGetConnectedIntermediaryAccount
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.ConnectedIntermediaryAccount
+ * @see proto service: osmosis.superfluid.ConnectedIntermediaryAccount
  */
 export const useGetConnectedIntermediaryAccount = buildUseQuery<ConnectedIntermediaryAccountRequest, ConnectedIntermediaryAccountResponse>({
   builderQueryFn: getConnectedIntermediaryAccount,
@@ -66,7 +66,7 @@ export const useGetConnectedIntermediaryAccount = buildUseQuery<ConnectedInterme
  * Returns the amount of delegations of specific denom for all validators
  * @name useGetTotalDelegationByValidatorForDenom
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.TotalDelegationByValidatorForDenom
+ * @see proto service: osmosis.superfluid.TotalDelegationByValidatorForDenom
  */
 export const useGetTotalDelegationByValidatorForDenom = buildUseQuery<QueryTotalDelegationByValidatorForDenomRequest, QueryTotalDelegationByValidatorForDenomResponse>({
   builderQueryFn: getTotalDelegationByValidatorForDenom,
@@ -77,7 +77,7 @@ export const useGetTotalDelegationByValidatorForDenom = buildUseQuery<QueryTotal
  * Response is denominated in uosmo.
  * @name useGetTotalSuperfluidDelegations
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.TotalSuperfluidDelegations
+ * @see proto service: osmosis.superfluid.TotalSuperfluidDelegations
  */
 export const useGetTotalSuperfluidDelegations = buildUseQuery<TotalSuperfluidDelegationsRequest, TotalSuperfluidDelegationsResponse>({
   builderQueryFn: getTotalSuperfluidDelegations,
@@ -88,7 +88,7 @@ export const useGetTotalSuperfluidDelegations = buildUseQuery<TotalSuperfluidDel
  * triplet
  * @name useGetSuperfluidDelegationAmount
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidDelegationAmount
+ * @see proto service: osmosis.superfluid.SuperfluidDelegationAmount
  */
 export const useGetSuperfluidDelegationAmount = buildUseQuery<SuperfluidDelegationAmountRequest, SuperfluidDelegationAmountResponse>({
   builderQueryFn: getSuperfluidDelegationAmount,
@@ -98,7 +98,7 @@ export const useGetSuperfluidDelegationAmount = buildUseQuery<SuperfluidDelegati
  * Returns all the delegated superfluid poistions for a specific delegator.
  * @name useGetSuperfluidDelegationsByDelegator
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidDelegationsByDelegator
+ * @see proto service: osmosis.superfluid.SuperfluidDelegationsByDelegator
  */
 export const useGetSuperfluidDelegationsByDelegator = buildUseQuery<SuperfluidDelegationsByDelegatorRequest, SuperfluidDelegationsByDelegatorResponse>({
   builderQueryFn: getSuperfluidDelegationsByDelegator,
@@ -108,7 +108,7 @@ export const useGetSuperfluidDelegationsByDelegator = buildUseQuery<SuperfluidDe
  * Returns all the undelegating superfluid poistions for a specific delegator.
  * @name useGetSuperfluidUndelegationsByDelegator
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidUndelegationsByDelegator
+ * @see proto service: osmosis.superfluid.SuperfluidUndelegationsByDelegator
  */
 export const useGetSuperfluidUndelegationsByDelegator = buildUseQuery<SuperfluidUndelegationsByDelegatorRequest, SuperfluidUndelegationsByDelegatorResponse>({
   builderQueryFn: getSuperfluidUndelegationsByDelegator,
@@ -119,7 +119,7 @@ export const useGetSuperfluidUndelegationsByDelegator = buildUseQuery<Superfluid
  * validator
  * @name useGetSuperfluidDelegationsByValidatorDenom
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.SuperfluidDelegationsByValidatorDenom
+ * @see proto service: osmosis.superfluid.SuperfluidDelegationsByValidatorDenom
  */
 export const useGetSuperfluidDelegationsByValidatorDenom = buildUseQuery<SuperfluidDelegationsByValidatorDenomRequest, SuperfluidDelegationsByValidatorDenomResponse>({
   builderQueryFn: getSuperfluidDelegationsByValidatorDenom,
@@ -131,7 +131,7 @@ export const useGetSuperfluidDelegationsByValidatorDenom = buildUseQuery<Superfl
  * lead rounding errors from the true delegated amount
  * @name useGetEstimateSuperfluidDelegatedAmountByValidatorDenom
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenom
+ * @see proto service: osmosis.superfluid.EstimateSuperfluidDelegatedAmountByValidatorDenom
  */
 export const useGetEstimateSuperfluidDelegatedAmountByValidatorDenom = buildUseQuery<EstimateSuperfluidDelegatedAmountByValidatorDenomRequest, EstimateSuperfluidDelegatedAmountByValidatorDenomResponse>({
   builderQueryFn: getEstimateSuperfluidDelegatedAmountByValidatorDenom,
@@ -141,7 +141,7 @@ export const useGetEstimateSuperfluidDelegatedAmountByValidatorDenom = buildUseQ
  * Returns the specified delegations for a specific delegator
  * @name useGetTotalDelegationByDelegator
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.TotalDelegationByDelegator
+ * @see proto service: osmosis.superfluid.TotalDelegationByDelegator
  */
 export const useGetTotalDelegationByDelegator = buildUseQuery<QueryTotalDelegationByDelegatorRequest, QueryTotalDelegationByDelegatorResponse>({
   builderQueryFn: getTotalDelegationByDelegator,
@@ -151,7 +151,7 @@ export const useGetTotalDelegationByDelegator = buildUseQuery<QueryTotalDelegati
  * Returns a list of whitelisted pool ids to unpool.
  * @name useGetUnpoolWhitelist
  * @package osmosis.superfluid
- * @see protoservice: osmosis.superfluid.UnpoolWhitelist
+ * @see proto service: osmosis.superfluid.UnpoolWhitelist
  */
 export const useGetUnpoolWhitelist = buildUseQuery<QueryUnpoolWhitelistRequest, QueryUnpoolWhitelistResponse>({
   builderQueryFn: getUnpoolWhitelist,

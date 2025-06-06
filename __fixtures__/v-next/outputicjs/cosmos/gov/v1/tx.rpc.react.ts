@@ -5,7 +5,7 @@ import { submitProposal, execLegacyContent, vote, voteWeighted, deposit } from "
  * SubmitProposal defines a method to create new proposal given a content.
  * @name useSubmitProposal
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.SubmitProposal
+ * @see proto service: cosmos.gov.v1.SubmitProposal
  */
 export const useSubmitProposal = buildUseMutation<MsgSubmitProposal, Error>({
   builderMutationFn: submitProposal
@@ -15,7 +15,7 @@ export const useSubmitProposal = buildUseMutation<MsgSubmitProposal, Error>({
  * to execute a legacy content-based proposal.
  * @name useExecLegacyContent
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.ExecLegacyContent
+ * @see proto service: cosmos.gov.v1.ExecLegacyContent
  */
 export const useExecLegacyContent = buildUseMutation<MsgExecLegacyContent, Error>({
   builderMutationFn: execLegacyContent
@@ -24,7 +24,7 @@ export const useExecLegacyContent = buildUseMutation<MsgExecLegacyContent, Error
  * Vote defines a method to add a vote on a specific proposal.
  * @name useVote
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.Vote
+ * @see proto service: cosmos.gov.v1.Vote
  */
 export const useVote = buildUseMutation<MsgVote, Error>({
   builderMutationFn: vote
@@ -33,7 +33,7 @@ export const useVote = buildUseMutation<MsgVote, Error>({
  * VoteWeighted defines a method to add a weighted vote on a specific proposal.
  * @name useVoteWeighted
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.VoteWeighted
+ * @see proto service: cosmos.gov.v1.VoteWeighted
  */
 export const useVoteWeighted = buildUseMutation<MsgVoteWeighted, Error>({
   builderMutationFn: voteWeighted
@@ -42,7 +42,7 @@ export const useVoteWeighted = buildUseMutation<MsgVoteWeighted, Error>({
  * Deposit defines a method to add deposit on a specific proposal.
  * @name useDeposit
  * @package cosmos.gov.v1
- * @see protoservice: cosmos.gov.v1.Deposit
+ * @see proto service: cosmos.gov.v1.Deposit
  */
 export const useDeposit = buildUseMutation<MsgDeposit, Error>({
   builderMutationFn: deposit

@@ -4,7 +4,7 @@ import { createStableswapPool, stableSwapAdjustScalingFactors } from "./tx.rpc.f
 /**
  * @name useCreateStableswapPool
  * @package osmosis.gamm.poolmodels.stableswap.v1beta1
- * @see protoservice: osmosis.gamm.poolmodels.stableswap.v1beta1.CreateStableswapPool
+ * @see proto service: osmosis.gamm.poolmodels.stableswap.v1beta1.CreateStableswapPool
  */
 export const useCreateStableswapPool = buildUseMutation<MsgCreateStableswapPool, Error>({
   builderMutationFn: createStableswapPool
@@ -12,7 +12,7 @@ export const useCreateStableswapPool = buildUseMutation<MsgCreateStableswapPool,
 /**
  * @name useStableSwapAdjustScalingFactors
  * @package osmosis.gamm.poolmodels.stableswap.v1beta1
- * @see protoservice: osmosis.gamm.poolmodels.stableswap.v1beta1.StableSwapAdjustScalingFactors
+ * @see proto service: osmosis.gamm.poolmodels.stableswap.v1beta1.StableSwapAdjustScalingFactors
  */
 export const useStableSwapAdjustScalingFactors = buildUseMutation<MsgStableSwapAdjustScalingFactors, Error>({
   builderMutationFn: stableSwapAdjustScalingFactors

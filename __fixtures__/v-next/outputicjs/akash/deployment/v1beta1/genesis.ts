@@ -1,9 +1,14 @@
 import { Deployment, DeploymentAmino } from "./deployment";
 import { Group, GroupAmino } from "./group";
-import { Params, ParamsAmino } from "./params";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisDeployment defines the basic genesis state used by deployment module */
+import { AkashDeploymentV1beta1Params, AkashDeploymentV1beta1ParamsAmino } from "./params";
+/**
+ * GenesisDeployment defines the basic genesis state used by deployment module
+ * @name GenesisDeployment
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisDeployment
+ */
 export interface GenesisDeployment {
   deployment: Deployment;
   groups: Group[];
@@ -12,7 +17,12 @@ export interface GenesisDeploymentProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.GenesisDeployment";
   value: Uint8Array;
 }
-/** GenesisDeployment defines the basic genesis state used by deployment module */
+/**
+ * GenesisDeployment defines the basic genesis state used by deployment module
+ * @name GenesisDeploymentAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisDeployment
+ */
 export interface GenesisDeploymentAmino {
   deployment: DeploymentAmino;
   groups: GroupAmino[];
@@ -21,19 +31,29 @@ export interface GenesisDeploymentAminoMsg {
   type: "/akash.deployment.v1beta1.GenesisDeployment";
   value: GenesisDeploymentAmino;
 }
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisState
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisState
+ */
 export interface GenesisState {
   deployments: GenesisDeployment[];
-  params: Params;
+  params: AkashDeploymentV1beta1Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisStateAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   deployments: GenesisDeploymentAmino[];
-  params: ParamsAmino;
+  params: AkashDeploymentV1beta1ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
   type: "/akash.deployment.v1beta1.GenesisState";
@@ -45,6 +65,12 @@ function createBaseGenesisDeployment(): GenesisDeployment {
     groups: []
   };
 }
+/**
+ * GenesisDeployment defines the basic genesis state used by deployment module
+ * @name GenesisDeployment
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisDeployment
+ */
 export const GenesisDeployment = {
   typeUrl: "/akash.deployment.v1beta1.GenesisDeployment",
   encode(message: GenesisDeployment, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -119,9 +145,15 @@ export const GenesisDeployment = {
 function createBaseGenesisState(): GenesisState {
   return {
     deployments: [],
-    params: Params.fromPartial({})
+    params: AkashDeploymentV1beta1Params.fromPartial({})
   };
 }
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisState
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.deployment.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -129,7 +161,7 @@ export const GenesisState = {
       GenesisDeployment.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(18).fork()).ldelim();
+      AkashDeploymentV1beta1Params.encode(message.params, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
@@ -144,7 +176,7 @@ export const GenesisState = {
           message.deployments.push(GenesisDeployment.decode(reader, reader.uint32()));
           break;
         case 2:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = AkashDeploymentV1beta1Params.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -156,14 +188,14 @@ export const GenesisState = {
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
     message.deployments = object.deployments?.map(e => GenesisDeployment.fromPartial(e)) || [];
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? AkashDeploymentV1beta1Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     message.deployments = object.deployments?.map(e => GenesisDeployment.fromAmino(e)) || [];
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = AkashDeploymentV1beta1Params.fromAmino(object.params);
     }
     return message;
   },
@@ -174,7 +206,7 @@ export const GenesisState = {
     } else {
       obj.deployments = message.deployments;
     }
-    obj.params = message.params ? Params.toAmino(message.params) : Params.toAmino(Params.fromPartial({}));
+    obj.params = message.params ? AkashDeploymentV1beta1Params.toAmino(message.params) : AkashDeploymentV1beta1Params.toAmino(AkashDeploymentV1beta1Params.fromPartial({}));
     return obj;
   },
   fromAminoMsg(object: GenesisStateAminoMsg): GenesisState {

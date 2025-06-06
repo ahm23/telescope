@@ -4,7 +4,7 @@ import { MsgCreateProvider, MsgUpdateProvider, MsgDeleteProvider } from "./provi
  * CreateProvider defines a method that creates a provider given the proper inputs
  * @name createProvider
  * @package akash.provider.v1beta1
- * @see protoservice: akash.provider.v1beta1.CreateProvider
+ * @see proto service: akash.provider.v1beta1.CreateProvider
  */
 export const createProvider = buildTx<MsgCreateProvider>({
   msg: MsgCreateProvider
@@ -13,7 +13,7 @@ export const createProvider = buildTx<MsgCreateProvider>({
  * UpdateProvider defines a method that updates a provider given the proper inputs
  * @name updateProvider
  * @package akash.provider.v1beta1
- * @see protoservice: akash.provider.v1beta1.UpdateProvider
+ * @see proto service: akash.provider.v1beta1.UpdateProvider
  */
 export const updateProvider = buildTx<MsgUpdateProvider>({
   msg: MsgUpdateProvider
@@ -22,7 +22,7 @@ export const updateProvider = buildTx<MsgUpdateProvider>({
  * DeleteProvider defines a method that deletes a provider given the proper inputs
  * @name deleteProvider
  * @package akash.provider.v1beta1
- * @see protoservice: akash.provider.v1beta1.DeleteProvider
+ * @see proto service: akash.provider.v1beta1.DeleteProvider
  */
 export const deleteProvider = buildTx<MsgDeleteProvider>({
   msg: MsgDeleteProvider

@@ -4,7 +4,7 @@ import { QueryAppVersionRequest, QueryAppVersionResponse } from "./query";
  * AppVersion queries an IBC Port and determines the appropriate application version to be used
  * @name getAppVersion
  * @package ibc.core.port.v1
- * @see protoservice: ibc.core.port.v1.AppVersion
+ * @see proto service: ibc.core.port.v1.AppVersion
  */
 export const getAppVersion = buildQuery<QueryAppVersionRequest, QueryAppVersionResponse>({
   encode: QueryAppVersionRequest.encode,

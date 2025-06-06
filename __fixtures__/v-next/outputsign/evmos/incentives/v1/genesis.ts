@@ -3,69 +3,127 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 import { Decimal } from "@cosmjs/math";
 export const protobufPackage = "evmos.incentives.v1";
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.GenesisState
+ */
 export interface GenesisState {
-  /** module parameters */
+  /**
+   * module parameters
+  */
   params: Params;
-  /** active incentives */
+  /**
+   * active incentives
+  */
   incentives: Incentive[];
-  /** active Gasmeters */
+  /**
+   * active Gasmeters
+  */
   gasMeters: GasMeter[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/evmos.incentives.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisStateAmino
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** module parameters */
+  /**
+   * module parameters
+  */
   params?: ParamsAmino;
-  /** active incentives */
+  /**
+   * active incentives
+  */
   incentives?: IncentiveAmino[];
-  /** active Gasmeters */
+  /**
+   * active Gasmeters
+  */
   gas_meters?: GasMeterAmino[];
 }
 export interface GenesisStateAminoMsg {
   type: "/evmos.incentives.v1.GenesisState";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisStateSDKType
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   incentives: IncentiveSDKType[];
   gas_meters: GasMeterSDKType[];
 }
-/** Params defines the incentives module params */
+/**
+ * Params defines the incentives module params
+ * @name Params
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.Params
+ */
 export interface Params {
-  /** parameter to enable incentives */
+  /**
+   * parameter to enable incentives
+  */
   enableIncentives: boolean;
-  /** maximum percentage an incentive can allocate per denomination */
+  /**
+   * maximum percentage an incentive can allocate per denomination
+  */
   allocationLimit: string;
-  /** identifier for the epochs module hooks */
+  /**
+   * identifier for the epochs module hooks
+  */
   incentivesEpochIdentifier: string;
-  /** scaling factor for capping rewards */
+  /**
+   * scaling factor for capping rewards
+  */
   rewardScaler: string;
 }
 export interface ParamsProtoMsg {
   typeUrl: "/evmos.incentives.v1.Params";
   value: Uint8Array;
 }
-/** Params defines the incentives module params */
+/**
+ * Params defines the incentives module params
+ * @name ParamsAmino
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.Params
+ */
 export interface ParamsAmino {
-  /** parameter to enable incentives */
+  /**
+   * parameter to enable incentives
+  */
   enable_incentives?: boolean;
-  /** maximum percentage an incentive can allocate per denomination */
+  /**
+   * maximum percentage an incentive can allocate per denomination
+  */
   allocation_limit?: string;
-  /** identifier for the epochs module hooks */
+  /**
+   * identifier for the epochs module hooks
+  */
   incentives_epoch_identifier?: string;
-  /** scaling factor for capping rewards */
+  /**
+   * scaling factor for capping rewards
+  */
   reward_scaler?: string;
 }
 export interface ParamsAminoMsg {
   type: "/evmos.incentives.v1.Params";
   value: ParamsAmino;
 }
-/** Params defines the incentives module params */
+/**
+ * Params defines the incentives module params
+ * @name ParamsSDKType
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.Params
+ */
 export interface ParamsSDKType {
   enable_incentives: boolean;
   allocation_limit: string;
@@ -79,6 +137,12 @@ function createBaseGenesisState(): GenesisState {
     gasMeters: []
   };
 }
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/evmos.incentives.v1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -173,6 +237,12 @@ function createBaseParams(): Params {
     rewardScaler: ""
   };
 }
+/**
+ * Params defines the incentives module params
+ * @name Params
+ * @package evmos.incentives.v1
+ * @see proto type: evmos.incentives.v1.Params
+ */
 export const Params = {
   typeUrl: "/evmos.incentives.v1.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

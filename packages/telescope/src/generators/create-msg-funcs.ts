@@ -195,12 +195,8 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
       });
 
       bundler.writeAst(prog, filename);
-<<<<<<< Updated upstream
       bundler.addExportObjToBundle(c.ref.proto.package, localname, exportedTypeNames, true);
       if(reactAsts.length) {
-=======
-      if (reactAsts.length) {
->>>>>>> Stashed changes
         bundler.writeAst(progReact, filenameReact);
         bundler.addExportObjToBundle(c.ref.proto.package, localnameReact, exportedTypeNamesReact, true);
       }

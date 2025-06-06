@@ -73,6 +73,19 @@ export const makeAliasName = (ctx: { package: string; name: string }) => {
 };
 
 /**
+ * make alias name with the full package with package at the end.
+ * e.g. cosmos.bank.v1beta1.getBalance -> getBalanceCosmosBankV1Beta1
+ * @param ctx context
+ * @returns alias name
+ */
+export const makeAliasNameWithPackageAtEnd = (ctx: {
+  package: string;
+  name: string;
+}) => {
+  return camel(`${ctx.name}_${camel(ctx.package.replace(/\./g, "_"))}`);
+};
+
+/**
  * make alias name with a prefix.
  * @param prefix prefix
  * @param makeAliasName function to make alias name
@@ -339,8 +352,8 @@ export function getHelperFuncName(
     funcBodyFn === "unchanged"
       ? (ctx: AliasNameMappersContext) => ctx.name
       : funcBodyFn === "get"
-      ? (ctx: AliasNameMappersContext) => camel("get_" + camel(ctx.name))
-      : funcBodyFn;
+        ? (ctx: AliasNameMappersContext) => camel("get_" + camel(ctx.name))
+        : funcBodyFn;
 
   return {
     creator: camel(

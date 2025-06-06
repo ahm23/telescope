@@ -28,6 +28,16 @@ export declare const makeAliasName: (ctx: {
     name: string;
 }) => string;
 /**
+ * make alias name with the full package with package at the end.
+ * e.g. cosmos.bank.v1beta1.getBalance -> getBalanceCosmosBankV1Beta1
+ * @param ctx context
+ * @returns alias name
+ */
+export declare const makeAliasNameWithPackageAtEnd: (ctx: {
+    package: string;
+    name: string;
+}) => any;
+/**
  * make alias name with a prefix.
  * @param prefix prefix
  * @param makeAliasName function to make alias name

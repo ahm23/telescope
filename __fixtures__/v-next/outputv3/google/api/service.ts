@@ -58,11 +58,11 @@ export interface Service {
   name: string;
   /**
    * The product title for this service.
-  */
+   */
   title: string;
   /**
    * The Google project that owns this service.
-  */
+   */
   producerProjectId: string;
   /**
    * A unique ID for a specific instance of this message, typically assigned
@@ -102,31 +102,31 @@ export interface Service {
   enums: Enum[];
   /**
    * Additional API documentation.
-  */
+   */
   documentation?: Documentation;
   /**
    * API backend configuration.
-  */
+   */
   backend?: Backend;
   /**
    * HTTP configuration.
-  */
+   */
   http?: Http;
   /**
    * Quota configuration.
-  */
+   */
   quota?: Quota;
   /**
    * Auth configuration.
-  */
+   */
   authentication?: Authentication;
   /**
    * Context configuration.
-  */
+   */
   context?: Context;
   /**
    * Configuration controlling usage of this service.
-  */
+   */
   usage?: Usage;
   /**
    * Configuration for network endpoints.  If this is empty, then an endpoint
@@ -136,15 +136,15 @@ export interface Service {
   endpoints: Endpoint[];
   /**
    * Configuration for the service control plane.
-  */
+   */
   control?: Control;
   /**
    * Defines the logs used by this service.
-  */
+   */
   logs: LogDescriptor[];
   /**
    * Defines the metrics used by this service.
-  */
+   */
   metrics: MetricDescriptor[];
   /**
    * Defines the monitored resources used by this service. This is required
@@ -153,23 +153,23 @@ export interface Service {
   monitoredResources: MonitoredResourceDescriptor[];
   /**
    * Billing configuration.
-  */
+   */
   billing?: Billing;
   /**
    * Logging configuration.
-  */
+   */
   logging?: Logging;
   /**
    * Monitoring configuration.
-  */
+   */
   monitoring?: Monitoring;
   /**
    * System parameter configuration.
-  */
+   */
   systemParameters?: SystemParameters;
   /**
    * Output only. The source information for this configuration if available.
-  */
+   */
   sourceInfo?: SourceInfo;
   /**
    * Obsolete. Do not use.
@@ -221,11 +221,11 @@ export interface ServiceAmino {
   name?: string;
   /**
    * The product title for this service.
-  */
+   */
   title?: string;
   /**
    * The Google project that owns this service.
-  */
+   */
   producer_project_id?: string;
   /**
    * A unique ID for a specific instance of this message, typically assigned
@@ -265,31 +265,31 @@ export interface ServiceAmino {
   enums?: EnumAmino[];
   /**
    * Additional API documentation.
-  */
+   */
   documentation?: DocumentationAmino;
   /**
    * API backend configuration.
-  */
+   */
   backend?: BackendAmino;
   /**
    * HTTP configuration.
-  */
+   */
   http?: HttpAmino;
   /**
    * Quota configuration.
-  */
+   */
   quota?: QuotaAmino;
   /**
    * Auth configuration.
-  */
+   */
   authentication?: AuthenticationAmino;
   /**
    * Context configuration.
-  */
+   */
   context?: ContextAmino;
   /**
    * Configuration controlling usage of this service.
-  */
+   */
   usage?: UsageAmino;
   /**
    * Configuration for network endpoints.  If this is empty, then an endpoint
@@ -299,15 +299,15 @@ export interface ServiceAmino {
   endpoints?: EndpointAmino[];
   /**
    * Configuration for the service control plane.
-  */
+   */
   control?: ControlAmino;
   /**
    * Defines the logs used by this service.
-  */
+   */
   logs?: LogDescriptorAmino[];
   /**
    * Defines the metrics used by this service.
-  */
+   */
   metrics?: MetricDescriptorAmino[];
   /**
    * Defines the monitored resources used by this service. This is required
@@ -316,23 +316,23 @@ export interface ServiceAmino {
   monitored_resources?: MonitoredResourceDescriptorAmino[];
   /**
    * Billing configuration.
-  */
+   */
   billing?: BillingAmino;
   /**
    * Logging configuration.
-  */
+   */
   logging?: LoggingAmino;
   /**
    * Monitoring configuration.
-  */
+   */
   monitoring?: MonitoringAmino;
   /**
    * System parameter configuration.
-  */
+   */
   system_parameters?: SystemParametersAmino;
   /**
    * Output only. The source information for this configuration if available.
-  */
+   */
   source_info?: SourceInfoAmino;
   /**
    * Obsolete. Do not use.
@@ -397,7 +397,7 @@ export interface ServiceSDKType {
   source_info?: SourceInfoSDKType;
   /**
    * @deprecated
-  */
+   */
   config_version?: UInt32ValueSDKType;
 }
 function createBaseService(): Service {

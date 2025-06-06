@@ -13,11 +13,11 @@ import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../../helpe
 export interface QueryChannelRequest {
   /**
    * port unique identifier
-  */
+   */
   portId: string;
   /**
    * channel unique identifier
-  */
+   */
   channelId: string;
 }
 export interface QueryChannelRequestProtoMsg {
@@ -33,11 +33,11 @@ export interface QueryChannelRequestProtoMsg {
 export interface QueryChannelRequestAmino {
   /**
    * port unique identifier
-  */
+   */
   port_id: string;
   /**
    * channel unique identifier
-  */
+   */
   channel_id: string;
 }
 export interface QueryChannelRequestAminoMsg {
@@ -55,15 +55,15 @@ export interface QueryChannelRequestAminoMsg {
 export interface QueryChannelResponse {
   /**
    * channel associated with the request identifiers
-  */
+   */
   channel?: Channel;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryChannelResponseProtoMsg {
@@ -81,15 +81,15 @@ export interface QueryChannelResponseProtoMsg {
 export interface QueryChannelResponseAmino {
   /**
    * channel associated with the request identifiers
-  */
+   */
   channel?: ChannelAmino;
   /**
    * merkle proof of existence
-  */
+   */
   proof: string;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proof_height: HeightAmino;
 }
 export interface QueryChannelResponseAminoMsg {
@@ -105,7 +105,7 @@ export interface QueryChannelResponseAminoMsg {
 export interface QueryChannelsRequest {
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryChannelsRequestProtoMsg {
@@ -121,7 +121,7 @@ export interface QueryChannelsRequestProtoMsg {
 export interface QueryChannelsRequestAmino {
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryChannelsRequestAminoMsg {
@@ -137,15 +137,15 @@ export interface QueryChannelsRequestAminoMsg {
 export interface QueryChannelsResponse {
   /**
    * list of stored channels of the chain.
-  */
+   */
   channels: IdentifiedChannel[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponse;
   /**
    * query block height
-  */
+   */
   height: Height;
 }
 export interface QueryChannelsResponseProtoMsg {
@@ -161,15 +161,15 @@ export interface QueryChannelsResponseProtoMsg {
 export interface QueryChannelsResponseAmino {
   /**
    * list of stored channels of the chain.
-  */
+   */
   channels: IdentifiedChannelAmino[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponseAmino;
   /**
    * query block height
-  */
+   */
   height: HeightAmino;
 }
 export interface QueryChannelsResponseAminoMsg {
@@ -186,11 +186,11 @@ export interface QueryChannelsResponseAminoMsg {
 export interface QueryConnectionChannelsRequest {
   /**
    * connection unique identifier
-  */
+   */
   connection: string;
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryConnectionChannelsRequestProtoMsg {
@@ -207,11 +207,11 @@ export interface QueryConnectionChannelsRequestProtoMsg {
 export interface QueryConnectionChannelsRequestAmino {
   /**
    * connection unique identifier
-  */
+   */
   connection: string;
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryConnectionChannelsRequestAminoMsg {
@@ -228,15 +228,15 @@ export interface QueryConnectionChannelsRequestAminoMsg {
 export interface QueryConnectionChannelsResponse {
   /**
    * list of channels associated with a connection.
-  */
+   */
   channels: IdentifiedChannel[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponse;
   /**
    * query block height
-  */
+   */
   height: Height;
 }
 export interface QueryConnectionChannelsResponseProtoMsg {
@@ -253,15 +253,15 @@ export interface QueryConnectionChannelsResponseProtoMsg {
 export interface QueryConnectionChannelsResponseAmino {
   /**
    * list of channels associated with a connection.
-  */
+   */
   channels: IdentifiedChannelAmino[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponseAmino;
   /**
    * query block height
-  */
+   */
   height: HeightAmino;
 }
 export interface QueryConnectionChannelsResponseAminoMsg {
@@ -278,11 +278,11 @@ export interface QueryConnectionChannelsResponseAminoMsg {
 export interface QueryChannelClientStateRequest {
   /**
    * port unique identifier
-  */
+   */
   portId: string;
   /**
    * channel unique identifier
-  */
+   */
   channelId: string;
 }
 export interface QueryChannelClientStateRequestProtoMsg {
@@ -299,11 +299,11 @@ export interface QueryChannelClientStateRequestProtoMsg {
 export interface QueryChannelClientStateRequestAmino {
   /**
    * port unique identifier
-  */
+   */
   port_id: string;
   /**
    * channel unique identifier
-  */
+   */
   channel_id: string;
 }
 export interface QueryChannelClientStateRequestAminoMsg {
@@ -320,15 +320,15 @@ export interface QueryChannelClientStateRequestAminoMsg {
 export interface QueryChannelClientStateResponse {
   /**
    * client state associated with the channel
-  */
+   */
   identifiedClientState?: IdentifiedClientState;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryChannelClientStateResponseProtoMsg {
@@ -345,15 +345,15 @@ export interface QueryChannelClientStateResponseProtoMsg {
 export interface QueryChannelClientStateResponseAmino {
   /**
    * client state associated with the channel
-  */
+   */
   identified_client_state?: IdentifiedClientStateAmino;
   /**
    * merkle proof of existence
-  */
+   */
   proof: string;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proof_height: HeightAmino;
 }
 export interface QueryChannelClientStateResponseAminoMsg {
@@ -370,19 +370,19 @@ export interface QueryChannelClientStateResponseAminoMsg {
 export interface QueryChannelConsensusStateRequest {
   /**
    * port unique identifier
-  */
+   */
   portId: string;
   /**
    * channel unique identifier
-  */
+   */
   channelId: string;
   /**
    * revision number of the consensus state
-  */
+   */
   revisionNumber: bigint;
   /**
    * revision height of the consensus state
-  */
+   */
   revisionHeight: bigint;
 }
 export interface QueryChannelConsensusStateRequestProtoMsg {
@@ -399,19 +399,19 @@ export interface QueryChannelConsensusStateRequestProtoMsg {
 export interface QueryChannelConsensusStateRequestAmino {
   /**
    * port unique identifier
-  */
+   */
   port_id: string;
   /**
    * channel unique identifier
-  */
+   */
   channel_id: string;
   /**
    * revision number of the consensus state
-  */
+   */
   revision_number: string;
   /**
    * revision height of the consensus state
-  */
+   */
   revision_height: string;
 }
 export interface QueryChannelConsensusStateRequestAminoMsg {
@@ -428,19 +428,19 @@ export interface QueryChannelConsensusStateRequestAminoMsg {
 export interface QueryChannelConsensusStateResponse {
   /**
    * consensus state associated with the channel
-  */
+   */
   consensusState?: Any;
   /**
    * client ID associated with the consensus state
-  */
+   */
   clientId: string;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryChannelConsensusStateResponseProtoMsg {
@@ -457,19 +457,19 @@ export interface QueryChannelConsensusStateResponseProtoMsg {
 export interface QueryChannelConsensusStateResponseAmino {
   /**
    * consensus state associated with the channel
-  */
+   */
   consensus_state?: AnyAmino;
   /**
    * client ID associated with the consensus state
-  */
+   */
   client_id: string;
   /**
    * merkle proof of existence
-  */
+   */
   proof: string;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proof_height: HeightAmino;
 }
 export interface QueryChannelConsensusStateResponseAminoMsg {
@@ -486,15 +486,15 @@ export interface QueryChannelConsensusStateResponseAminoMsg {
 export interface QueryPacketCommitmentRequest {
   /**
    * port unique identifier
-  */
+   */
   portId: string;
   /**
    * channel unique identifier
-  */
+   */
   channelId: string;
   /**
    * packet sequence
-  */
+   */
   sequence: bigint;
 }
 export interface QueryPacketCommitmentRequestProtoMsg {
@@ -511,15 +511,15 @@ export interface QueryPacketCommitmentRequestProtoMsg {
 export interface QueryPacketCommitmentRequestAmino {
   /**
    * port unique identifier
-  */
+   */
   port_id: string;
   /**
    * channel unique identifier
-  */
+   */
   channel_id: string;
   /**
    * packet sequence
-  */
+   */
   sequence: string;
 }
 export interface QueryPacketCommitmentRequestAminoMsg {
@@ -537,15 +537,15 @@ export interface QueryPacketCommitmentRequestAminoMsg {
 export interface QueryPacketCommitmentResponse {
   /**
    * packet associated with the request fields
-  */
+   */
   commitment: Uint8Array;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryPacketCommitmentResponseProtoMsg {
@@ -563,15 +563,15 @@ export interface QueryPacketCommitmentResponseProtoMsg {
 export interface QueryPacketCommitmentResponseAmino {
   /**
    * packet associated with the request fields
-  */
+   */
   commitment: string;
   /**
    * merkle proof of existence
-  */
+   */
   proof: string;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proof_height: HeightAmino;
 }
 export interface QueryPacketCommitmentResponseAminoMsg {
@@ -588,15 +588,15 @@ export interface QueryPacketCommitmentResponseAminoMsg {
 export interface QueryPacketCommitmentsRequest {
   /**
    * port unique identifier
-  */
+   */
   portId: string;
   /**
    * channel unique identifier
-  */
+   */
   channelId: string;
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryPacketCommitmentsRequestProtoMsg {
@@ -613,15 +613,15 @@ export interface QueryPacketCommitmentsRequestProtoMsg {
 export interface QueryPacketCommitmentsRequestAmino {
   /**
    * port unique identifier
-  */
+   */
   port_id: string;
   /**
    * channel unique identifier
-  */
+   */
   channel_id: string;
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryPacketCommitmentsRequestAminoMsg {
@@ -639,11 +639,11 @@ export interface QueryPacketCommitmentsResponse {
   commitments: PacketState[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponse;
   /**
    * query block height
-  */
+   */
   height: Height;
 }
 export interface QueryPacketCommitmentsResponseProtoMsg {
@@ -661,11 +661,11 @@ export interface QueryPacketCommitmentsResponseAmino {
   commitments: PacketStateAmino[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponseAmino;
   /**
    * query block height
-  */
+   */
   height: HeightAmino;
 }
 export interface QueryPacketCommitmentsResponseAminoMsg {
@@ -682,15 +682,15 @@ export interface QueryPacketCommitmentsResponseAminoMsg {
 export interface QueryPacketReceiptRequest {
   /**
    * port unique identifier
-  */
+   */
   portId: string;
   /**
    * channel unique identifier
-  */
+   */
   channelId: string;
   /**
    * packet sequence
-  */
+   */
   sequence: bigint;
 }
 export interface QueryPacketReceiptRequestProtoMsg {
@@ -707,15 +707,15 @@ export interface QueryPacketReceiptRequestProtoMsg {
 export interface QueryPacketReceiptRequestAmino {
   /**
    * port unique identifier
-  */
+   */
   port_id: string;
   /**
    * channel unique identifier
-  */
+   */
   channel_id: string;
   /**
    * packet sequence
-  */
+   */
   sequence: string;
 }
 export interface QueryPacketReceiptRequestAminoMsg {
@@ -733,15 +733,15 @@ export interface QueryPacketReceiptRequestAminoMsg {
 export interface QueryPacketReceiptResponse {
   /**
    * success flag for if receipt exists
-  */
+   */
   received: boolean;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryPacketReceiptResponseProtoMsg {
@@ -759,15 +759,15 @@ export interface QueryPacketReceiptResponseProtoMsg {
 export interface QueryPacketReceiptResponseAmino {
   /**
    * success flag for if receipt exists
-  */
+   */
   received: boolean;
   /**
    * merkle proof of existence
-  */
+   */
   proof: string;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proof_height: HeightAmino;
 }
 export interface QueryPacketReceiptResponseAminoMsg {
@@ -784,15 +784,15 @@ export interface QueryPacketReceiptResponseAminoMsg {
 export interface QueryPacketAcknowledgementRequest {
   /**
    * port unique identifier
-  */
+   */
   portId: string;
   /**
    * channel unique identifier
-  */
+   */
   channelId: string;
   /**
    * packet sequence
-  */
+   */
   sequence: bigint;
 }
 export interface QueryPacketAcknowledgementRequestProtoMsg {
@@ -809,15 +809,15 @@ export interface QueryPacketAcknowledgementRequestProtoMsg {
 export interface QueryPacketAcknowledgementRequestAmino {
   /**
    * port unique identifier
-  */
+   */
   port_id: string;
   /**
    * channel unique identifier
-  */
+   */
   channel_id: string;
   /**
    * packet sequence
-  */
+   */
   sequence: string;
 }
 export interface QueryPacketAcknowledgementRequestAminoMsg {
@@ -835,15 +835,15 @@ export interface QueryPacketAcknowledgementRequestAminoMsg {
 export interface QueryPacketAcknowledgementResponse {
   /**
    * packet associated with the request fields
-  */
+   */
   acknowledgement: Uint8Array;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryPacketAcknowledgementResponseProtoMsg {
@@ -861,15 +861,15 @@ export interface QueryPacketAcknowledgementResponseProtoMsg {
 export interface QueryPacketAcknowledgementResponseAmino {
   /**
    * packet associated with the request fields
-  */
+   */
   acknowledgement: string;
   /**
    * merkle proof of existence
-  */
+   */
   proof: string;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proof_height: HeightAmino;
 }
 export interface QueryPacketAcknowledgementResponseAminoMsg {
@@ -886,19 +886,19 @@ export interface QueryPacketAcknowledgementResponseAminoMsg {
 export interface QueryPacketAcknowledgementsRequest {
   /**
    * port unique identifier
-  */
+   */
   portId: string;
   /**
    * channel unique identifier
-  */
+   */
   channelId: string;
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequest;
   /**
    * list of packet sequences
-  */
+   */
   packetCommitmentSequences: bigint[];
 }
 export interface QueryPacketAcknowledgementsRequestProtoMsg {
@@ -915,19 +915,19 @@ export interface QueryPacketAcknowledgementsRequestProtoMsg {
 export interface QueryPacketAcknowledgementsRequestAmino {
   /**
    * port unique identifier
-  */
+   */
   port_id: string;
   /**
    * channel unique identifier
-  */
+   */
   channel_id: string;
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequestAmino;
   /**
    * list of packet sequences
-  */
+   */
   packet_commitment_sequences: string[];
 }
 export interface QueryPacketAcknowledgementsRequestAminoMsg {
@@ -945,11 +945,11 @@ export interface QueryPacketAcknowledgementsResponse {
   acknowledgements: PacketState[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponse;
   /**
    * query block height
-  */
+   */
   height: Height;
 }
 export interface QueryPacketAcknowledgementsResponseProtoMsg {
@@ -967,11 +967,11 @@ export interface QueryPacketAcknowledgementsResponseAmino {
   acknowledgements: PacketStateAmino[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponseAmino;
   /**
    * query block height
-  */
+   */
   height: HeightAmino;
 }
 export interface QueryPacketAcknowledgementsResponseAminoMsg {
@@ -988,15 +988,15 @@ export interface QueryPacketAcknowledgementsResponseAminoMsg {
 export interface QueryUnreceivedPacketsRequest {
   /**
    * port unique identifier
-  */
+   */
   portId: string;
   /**
    * channel unique identifier
-  */
+   */
   channelId: string;
   /**
    * list of packet sequences
-  */
+   */
   packetCommitmentSequences: bigint[];
 }
 export interface QueryUnreceivedPacketsRequestProtoMsg {
@@ -1013,15 +1013,15 @@ export interface QueryUnreceivedPacketsRequestProtoMsg {
 export interface QueryUnreceivedPacketsRequestAmino {
   /**
    * port unique identifier
-  */
+   */
   port_id: string;
   /**
    * channel unique identifier
-  */
+   */
   channel_id: string;
   /**
    * list of packet sequences
-  */
+   */
   packet_commitment_sequences: string[];
 }
 export interface QueryUnreceivedPacketsRequestAminoMsg {
@@ -1038,11 +1038,11 @@ export interface QueryUnreceivedPacketsRequestAminoMsg {
 export interface QueryUnreceivedPacketsResponse {
   /**
    * list of unreceived packet sequences
-  */
+   */
   sequences: bigint[];
   /**
    * query block height
-  */
+   */
   height: Height;
 }
 export interface QueryUnreceivedPacketsResponseProtoMsg {
@@ -1059,11 +1059,11 @@ export interface QueryUnreceivedPacketsResponseProtoMsg {
 export interface QueryUnreceivedPacketsResponseAmino {
   /**
    * list of unreceived packet sequences
-  */
+   */
   sequences: string[];
   /**
    * query block height
-  */
+   */
   height: HeightAmino;
 }
 export interface QueryUnreceivedPacketsResponseAminoMsg {
@@ -1080,15 +1080,15 @@ export interface QueryUnreceivedPacketsResponseAminoMsg {
 export interface QueryUnreceivedAcksRequest {
   /**
    * port unique identifier
-  */
+   */
   portId: string;
   /**
    * channel unique identifier
-  */
+   */
   channelId: string;
   /**
    * list of acknowledgement sequences
-  */
+   */
   packetAckSequences: bigint[];
 }
 export interface QueryUnreceivedAcksRequestProtoMsg {
@@ -1105,15 +1105,15 @@ export interface QueryUnreceivedAcksRequestProtoMsg {
 export interface QueryUnreceivedAcksRequestAmino {
   /**
    * port unique identifier
-  */
+   */
   port_id: string;
   /**
    * channel unique identifier
-  */
+   */
   channel_id: string;
   /**
    * list of acknowledgement sequences
-  */
+   */
   packet_ack_sequences: string[];
 }
 export interface QueryUnreceivedAcksRequestAminoMsg {
@@ -1130,11 +1130,11 @@ export interface QueryUnreceivedAcksRequestAminoMsg {
 export interface QueryUnreceivedAcksResponse {
   /**
    * list of unreceived acknowledgement sequences
-  */
+   */
   sequences: bigint[];
   /**
    * query block height
-  */
+   */
   height: Height;
 }
 export interface QueryUnreceivedAcksResponseProtoMsg {
@@ -1151,11 +1151,11 @@ export interface QueryUnreceivedAcksResponseProtoMsg {
 export interface QueryUnreceivedAcksResponseAmino {
   /**
    * list of unreceived acknowledgement sequences
-  */
+   */
   sequences: string[];
   /**
    * query block height
-  */
+   */
   height: HeightAmino;
 }
 export interface QueryUnreceivedAcksResponseAminoMsg {
@@ -1172,11 +1172,11 @@ export interface QueryUnreceivedAcksResponseAminoMsg {
 export interface QueryNextSequenceReceiveRequest {
   /**
    * port unique identifier
-  */
+   */
   portId: string;
   /**
    * channel unique identifier
-  */
+   */
   channelId: string;
 }
 export interface QueryNextSequenceReceiveRequestProtoMsg {
@@ -1193,11 +1193,11 @@ export interface QueryNextSequenceReceiveRequestProtoMsg {
 export interface QueryNextSequenceReceiveRequestAmino {
   /**
    * port unique identifier
-  */
+   */
   port_id: string;
   /**
    * channel unique identifier
-  */
+   */
   channel_id: string;
 }
 export interface QueryNextSequenceReceiveRequestAminoMsg {
@@ -1214,15 +1214,15 @@ export interface QueryNextSequenceReceiveRequestAminoMsg {
 export interface QueryNextSequenceReceiveResponse {
   /**
    * next sequence receive number
-  */
+   */
   nextSequenceReceive: bigint;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryNextSequenceReceiveResponseProtoMsg {
@@ -1239,15 +1239,15 @@ export interface QueryNextSequenceReceiveResponseProtoMsg {
 export interface QueryNextSequenceReceiveResponseAmino {
   /**
    * next sequence receive number
-  */
+   */
   next_sequence_receive: string;
   /**
    * merkle proof of existence
-  */
+   */
   proof: string;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proof_height: HeightAmino;
 }
 export interface QueryNextSequenceReceiveResponseAminoMsg {

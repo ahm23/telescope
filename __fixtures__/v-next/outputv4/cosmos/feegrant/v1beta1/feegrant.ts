@@ -22,7 +22,7 @@ export interface BasicAllowance {
   spendLimit: Coin[];
   /**
    * expiration specifies an optional time when this allowance expires
-  */
+   */
   expiration?: Date;
 }
 export interface BasicAllowanceProtoMsg {
@@ -50,7 +50,7 @@ export interface BasicAllowanceSDKType {
 export interface PeriodicAllowance {
   /**
    * basic specifies a struct of `BasicAllowance`
-  */
+   */
   basic: BasicAllowance;
   /**
    * period specifies the time duration in which period_spend_limit coins can
@@ -64,7 +64,7 @@ export interface PeriodicAllowance {
   periodSpendLimit: Coin[];
   /**
    * period_can_spend is the number of coins left to be spent before the period_reset time
-  */
+   */
   periodCanSpend: Coin[];
   /**
    * period_reset is the time at which this period resets and a new one begins,
@@ -100,11 +100,11 @@ export interface PeriodicAllowanceSDKType {
 export interface AllowedMsgAllowance {
   /**
    * allowance can be any of basic and periodic fee allowance.
-  */
+   */
   allowance?: Any;
   /**
    * allowed_messages are the messages for which the grantee has the access.
-  */
+   */
   allowedMessages: string[];
 }
 export interface AllowedMsgAllowanceProtoMsg {
@@ -130,15 +130,15 @@ export interface AllowedMsgAllowanceSDKType {
 export interface Grant {
   /**
    * granter is the address of the user granting an allowance of their funds.
-  */
+   */
   granter: string;
   /**
    * grantee is the address of the user being granted an allowance of another user's funds.
-  */
+   */
   grantee: string;
   /**
    * allowance can be any of basic, periodic, allowed fee allowance.
-  */
+   */
   allowance?: Any;
 }
 export interface GrantProtoMsg {

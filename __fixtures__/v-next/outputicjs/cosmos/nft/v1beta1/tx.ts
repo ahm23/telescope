@@ -9,19 +9,19 @@ import { DeepPartial } from "../../../helpers";
 export interface MsgSend {
   /**
    * class_id defines the unique identifier of the nft classification, similar to the contract address of ERC721
-  */
+   */
   classId: string;
   /**
    * id defines the unique identification of nft
-  */
+   */
   id: string;
   /**
    * sender is the address of the owner of nft
-  */
+   */
   sender: string;
   /**
    * receiver is the receiver address of nft
-  */
+   */
   receiver: string;
 }
 export interface MsgSendProtoMsg {
@@ -37,19 +37,19 @@ export interface MsgSendProtoMsg {
 export interface MsgSendAmino {
   /**
    * class_id defines the unique identifier of the nft classification, similar to the contract address of ERC721
-  */
+   */
   class_id: string;
   /**
    * id defines the unique identification of nft
-  */
+   */
   id: string;
   /**
    * sender is the address of the owner of nft
-  */
+   */
   sender: string;
   /**
    * receiver is the receiver address of nft
-  */
+   */
   receiver: string;
 }
 export interface MsgSendAminoMsg {

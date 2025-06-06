@@ -12,11 +12,11 @@ export const protobufPackage = "osmosis.protorev.v1beta1";
 export interface MsgSetHotRoutes {
   /**
    * admin is the account that is authorized to set the hot routes.
-  */
+   */
   admin: string;
   /**
    * hot_routes is the list of hot routes to set.
-  */
+   */
   hotRoutes: TokenPairArbRoutes[];
 }
 export interface MsgSetHotRoutesProtoMsg {
@@ -60,7 +60,7 @@ export interface MsgSetHotRoutesResponseSDKType {}
 export interface MsgSetDeveloperAccount {
   /**
    * admin is the account that is authorized to set the developer account.
-  */
+   */
   admin: string;
   /**
    * developer_account is the account that will receive a portion of the profits
@@ -111,11 +111,11 @@ export interface MsgSetDeveloperAccountResponseSDKType {}
 export interface MsgSetPoolWeights {
   /**
    * admin is the account that is authorized to set the pool weights.
-  */
+   */
   admin: string;
   /**
    * pool_weights is the list of pool weights to set.
-  */
+   */
   poolWeights: PoolWeights;
 }
 export interface MsgSetPoolWeightsProtoMsg {
@@ -159,7 +159,7 @@ export interface MsgSetPoolWeightsResponseSDKType {}
 export interface MsgSetMaxPoolPointsPerTx {
   /**
    * admin is the account that is authorized to set the max pool points per tx.
-  */
+   */
   admin: string;
   /**
    * max_pool_points_per_tx is the maximum number of pool points that can be
@@ -264,11 +264,11 @@ export interface MsgSetMaxPoolPointsPerBlockResponseSDKType {}
 export interface MsgSetBaseDenoms {
   /**
    * admin is the account that is authorized to set the base denoms.
-  */
+   */
   admin: string;
   /**
    * base_denoms is the list of base denoms to set.
-  */
+   */
   baseDenoms: BaseDenom[];
 }
 export interface MsgSetBaseDenomsProtoMsg {

@@ -32,7 +32,7 @@ export interface ModuleToDistributeCoinsRequestAminoMsg {
 export interface ModuleToDistributeCoinsResponse {
   /**
    * Coins that have yet to be distributed
-  */
+   */
   coins: Coin[];
 }
 export interface ModuleToDistributeCoinsResponseProtoMsg {
@@ -47,7 +47,7 @@ export interface ModuleToDistributeCoinsResponseProtoMsg {
 export interface ModuleToDistributeCoinsResponseAmino {
   /**
    * Coins that have yet to be distributed
-  */
+   */
   coins: CoinAmino[];
 }
 export interface ModuleToDistributeCoinsResponseAminoMsg {
@@ -62,7 +62,7 @@ export interface ModuleToDistributeCoinsResponseAminoMsg {
 export interface GaugeByIDRequest {
   /**
    * Gague ID being queried
-  */
+   */
   id: bigint;
 }
 export interface GaugeByIDRequestProtoMsg {
@@ -77,7 +77,7 @@ export interface GaugeByIDRequestProtoMsg {
 export interface GaugeByIDRequestAmino {
   /**
    * Gague ID being queried
-  */
+   */
   id: string;
 }
 export interface GaugeByIDRequestAminoMsg {
@@ -92,7 +92,7 @@ export interface GaugeByIDRequestAminoMsg {
 export interface GaugeByIDResponse {
   /**
    * Gauge that corresponds to provided gague ID
-  */
+   */
   gauge?: Gauge;
 }
 export interface GaugeByIDResponseProtoMsg {
@@ -107,7 +107,7 @@ export interface GaugeByIDResponseProtoMsg {
 export interface GaugeByIDResponseAmino {
   /**
    * Gauge that corresponds to provided gague ID
-  */
+   */
   gauge?: GaugeAmino;
 }
 export interface GaugeByIDResponseAminoMsg {
@@ -122,7 +122,7 @@ export interface GaugeByIDResponseAminoMsg {
 export interface GaugesRequest {
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface GaugesRequestProtoMsg {
@@ -137,7 +137,7 @@ export interface GaugesRequestProtoMsg {
 export interface GaugesRequestAmino {
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface GaugesRequestAminoMsg {
@@ -152,11 +152,11 @@ export interface GaugesRequestAminoMsg {
 export interface GaugesResponse {
   /**
    * Upcoming and active gauges
-  */
+   */
   data: Gauge[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface GaugesResponseProtoMsg {
@@ -171,11 +171,11 @@ export interface GaugesResponseProtoMsg {
 export interface GaugesResponseAmino {
   /**
    * Upcoming and active gauges
-  */
+   */
   data: GaugeAmino[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface GaugesResponseAminoMsg {
@@ -190,7 +190,7 @@ export interface GaugesResponseAminoMsg {
 export interface ActiveGaugesRequest {
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface ActiveGaugesRequestProtoMsg {
@@ -205,7 +205,7 @@ export interface ActiveGaugesRequestProtoMsg {
 export interface ActiveGaugesRequestAmino {
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface ActiveGaugesRequestAminoMsg {
@@ -220,11 +220,11 @@ export interface ActiveGaugesRequestAminoMsg {
 export interface ActiveGaugesResponse {
   /**
    * Active gagues only
-  */
+   */
   data: Gauge[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface ActiveGaugesResponseProtoMsg {
@@ -239,11 +239,11 @@ export interface ActiveGaugesResponseProtoMsg {
 export interface ActiveGaugesResponseAmino {
   /**
    * Active gagues only
-  */
+   */
   data: GaugeAmino[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface ActiveGaugesResponseAminoMsg {
@@ -258,11 +258,11 @@ export interface ActiveGaugesResponseAminoMsg {
 export interface ActiveGaugesPerDenomRequest {
   /**
    * Desired denom when querying active gagues
-  */
+   */
   denom: string;
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface ActiveGaugesPerDenomRequestProtoMsg {
@@ -277,11 +277,11 @@ export interface ActiveGaugesPerDenomRequestProtoMsg {
 export interface ActiveGaugesPerDenomRequestAmino {
   /**
    * Desired denom when querying active gagues
-  */
+   */
   denom: string;
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface ActiveGaugesPerDenomRequestAminoMsg {
@@ -296,11 +296,11 @@ export interface ActiveGaugesPerDenomRequestAminoMsg {
 export interface ActiveGaugesPerDenomResponse {
   /**
    * Active gagues that match denom in query
-  */
+   */
   data: Gauge[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface ActiveGaugesPerDenomResponseProtoMsg {
@@ -315,11 +315,11 @@ export interface ActiveGaugesPerDenomResponseProtoMsg {
 export interface ActiveGaugesPerDenomResponseAmino {
   /**
    * Active gagues that match denom in query
-  */
+   */
   data: GaugeAmino[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface ActiveGaugesPerDenomResponseAminoMsg {
@@ -334,7 +334,7 @@ export interface ActiveGaugesPerDenomResponseAminoMsg {
 export interface UpcomingGaugesRequest {
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface UpcomingGaugesRequestProtoMsg {
@@ -349,7 +349,7 @@ export interface UpcomingGaugesRequestProtoMsg {
 export interface UpcomingGaugesRequestAmino {
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface UpcomingGaugesRequestAminoMsg {
@@ -364,11 +364,11 @@ export interface UpcomingGaugesRequestAminoMsg {
 export interface UpcomingGaugesResponse {
   /**
    * Gauges whose distribution is upcoming
-  */
+   */
   data: Gauge[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface UpcomingGaugesResponseProtoMsg {
@@ -383,11 +383,11 @@ export interface UpcomingGaugesResponseProtoMsg {
 export interface UpcomingGaugesResponseAmino {
   /**
    * Gauges whose distribution is upcoming
-  */
+   */
   data: GaugeAmino[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface UpcomingGaugesResponseAminoMsg {
@@ -402,11 +402,11 @@ export interface UpcomingGaugesResponseAminoMsg {
 export interface UpcomingGaugesPerDenomRequest {
   /**
    * Filter for upcoming gagues that match specific denom
-  */
+   */
   denom: string;
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface UpcomingGaugesPerDenomRequestProtoMsg {
@@ -421,11 +421,11 @@ export interface UpcomingGaugesPerDenomRequestProtoMsg {
 export interface UpcomingGaugesPerDenomRequestAmino {
   /**
    * Filter for upcoming gagues that match specific denom
-  */
+   */
   denom: string;
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface UpcomingGaugesPerDenomRequestAminoMsg {
@@ -440,11 +440,11 @@ export interface UpcomingGaugesPerDenomRequestAminoMsg {
 export interface UpcomingGaugesPerDenomResponse {
   /**
    * Upcoming gagues that match denom in query
-  */
+   */
   upcomingGauges: Gauge[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface UpcomingGaugesPerDenomResponseProtoMsg {
@@ -459,11 +459,11 @@ export interface UpcomingGaugesPerDenomResponseProtoMsg {
 export interface UpcomingGaugesPerDenomResponseAmino {
   /**
    * Upcoming gagues that match denom in query
-  */
+   */
   upcoming_gauges: GaugeAmino[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface UpcomingGaugesPerDenomResponseAminoMsg {
@@ -478,11 +478,11 @@ export interface UpcomingGaugesPerDenomResponseAminoMsg {
 export interface RewardsEstRequest {
   /**
    * Address that is being queried for future estimated rewards
-  */
+   */
   owner: string;
   /**
    * Lock IDs included in future reward estimation
-  */
+   */
   lockIds: bigint[];
   /**
    * Upper time limit of reward estimation
@@ -502,11 +502,11 @@ export interface RewardsEstRequestProtoMsg {
 export interface RewardsEstRequestAmino {
   /**
    * Address that is being queried for future estimated rewards
-  */
+   */
   owner: string;
   /**
    * Lock IDs included in future reward estimation
-  */
+   */
   lock_ids: string[];
   /**
    * Upper time limit of reward estimation
@@ -578,7 +578,7 @@ export interface QueryLockableDurationsRequestAminoMsg {
 export interface QueryLockableDurationsResponse {
   /**
    * Time durations that users can lock coins for in order to recieve rewards
-  */
+   */
   lockableDurations: Duration[];
 }
 export interface QueryLockableDurationsResponseProtoMsg {
@@ -593,7 +593,7 @@ export interface QueryLockableDurationsResponseProtoMsg {
 export interface QueryLockableDurationsResponseAmino {
   /**
    * Time durations that users can lock coins for in order to recieve rewards
-  */
+   */
   lockable_durations: DurationAmino[];
 }
 export interface QueryLockableDurationsResponseAminoMsg {

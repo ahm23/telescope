@@ -97,7 +97,7 @@ export interface LogEntry {
   protoPayload?: Any;
   /**
    * The log entry payload, represented as a Unicode string (UTF-8).
-  */
+   */
   textPayload?: string;
   /**
    * The log entry payload, represented as a structure that
@@ -173,7 +173,7 @@ export interface LogEntryAmino {
   proto_payload?: AnyAmino;
   /**
    * The log entry payload, represented as a Unicode string (UTF-8).
-  */
+   */
   text_payload?: string;
   /**
    * The log entry payload, represented as a structure that
@@ -238,11 +238,11 @@ export interface LogEntryOperation {
   producer: string;
   /**
    * Optional. Set this to True if this is the first log entry in the operation.
-  */
+   */
   first: boolean;
   /**
    * Optional. Set this to True if this is the last log entry in the operation.
-  */
+   */
   last: boolean;
 }
 export interface LogEntryOperationProtoMsg {
@@ -270,11 +270,11 @@ export interface LogEntryOperationAmino {
   producer?: string;
   /**
    * Optional. Set this to True if this is the first log entry in the operation.
-  */
+   */
   first?: boolean;
   /**
    * Optional. Set this to True if this is the last log entry in the operation.
-  */
+   */
   last?: boolean;
 }
 export interface LogEntryOperationAminoMsg {

@@ -12,11 +12,11 @@ export const protobufPackage = "cosmos.mint.v1beta1";
 export interface GenesisState {
   /**
    * minter is a space for holding current inflation information.
-  */
+   */
   minter: Minter;
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: Params;
 }
 export interface GenesisStateProtoMsg {

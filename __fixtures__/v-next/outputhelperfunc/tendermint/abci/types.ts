@@ -702,11 +702,11 @@ export interface RequestListSnapshotsSDKType {}
 export interface RequestOfferSnapshot {
   /**
    * snapshot offered by peers
-  */
+   */
   snapshot?: Snapshot;
   /**
    * light client-verified app hash for snapshot height
-  */
+   */
   appHash: Uint8Array;
 }
 export interface RequestOfferSnapshotProtoMsg {
@@ -722,11 +722,11 @@ export interface RequestOfferSnapshotProtoMsg {
 export interface RequestOfferSnapshotAmino {
   /**
    * snapshot offered by peers
-  */
+   */
   snapshot?: SnapshotAmino;
   /**
    * light client-verified app hash for snapshot height
-  */
+   */
   app_hash?: string;
 }
 export interface RequestOfferSnapshotAminoMsg {
@@ -1049,7 +1049,7 @@ export interface ResponseSetOption {
   code: number;
   /**
    * bytes data = 2;
-  */
+   */
   log: string;
   info: string;
 }
@@ -1067,7 +1067,7 @@ export interface ResponseSetOptionAmino {
   code?: number;
   /**
    * bytes data = 2;
-  */
+   */
   log?: string;
   info?: string;
 }
@@ -1133,11 +1133,11 @@ export interface ResponseQuery {
   code: number;
   /**
    * bytes data = 2; // use "value" instead.
-  */
+   */
   log: string;
   /**
    * nondeterministic
-  */
+   */
   info: string;
   index: bigint;
   key: Uint8Array;
@@ -1159,11 +1159,11 @@ export interface ResponseQueryAmino {
   code?: number;
   /**
    * bytes data = 2; // use "value" instead.
-  */
+   */
   log?: string;
   /**
    * nondeterministic
-  */
+   */
   info?: string;
   index?: string;
   key?: string;
@@ -1234,11 +1234,11 @@ export interface ResponseCheckTx {
   data: Uint8Array;
   /**
    * nondeterministic
-  */
+   */
   log: string;
   /**
    * nondeterministic
-  */
+   */
   info: string;
   gasWanted: bigint;
   gasUsed: bigint;
@@ -1259,11 +1259,11 @@ export interface ResponseCheckTxAmino {
   data?: string;
   /**
    * nondeterministic
-  */
+   */
   log?: string;
   /**
    * nondeterministic
-  */
+   */
   info?: string;
   gas_wanted?: string;
   gas_used?: string;
@@ -1299,11 +1299,11 @@ export interface ResponseDeliverTx {
   data: Uint8Array;
   /**
    * nondeterministic
-  */
+   */
   log: string;
   /**
    * nondeterministic
-  */
+   */
   info: string;
   gasWanted: bigint;
   gasUsed: bigint;
@@ -1324,11 +1324,11 @@ export interface ResponseDeliverTxAmino {
   data?: string;
   /**
    * nondeterministic
-  */
+   */
   log?: string;
   /**
    * nondeterministic
-  */
+   */
   info?: string;
   gas_wanted?: string;
   gas_used?: string;
@@ -1400,7 +1400,7 @@ export interface ResponseEndBlockSDKType {
 export interface ResponseCommit {
   /**
    * reserve 1
-  */
+   */
   data: Uint8Array;
   retainHeight: bigint;
 }
@@ -1416,7 +1416,7 @@ export interface ResponseCommitProtoMsg {
 export interface ResponseCommitAmino {
   /**
    * reserve 1
-  */
+   */
   data?: string;
   retain_height?: string;
 }
@@ -1538,11 +1538,11 @@ export interface ResponseApplySnapshotChunk {
   result: ResponseApplySnapshotChunk_Result;
   /**
    * Chunks to refetch and reapply
-  */
+   */
   refetchChunks: number[];
   /**
    * Chunk senders to reject and ban
-  */
+   */
   rejectSenders: string[];
 }
 export interface ResponseApplySnapshotChunkProtoMsg {
@@ -1558,11 +1558,11 @@ export interface ResponseApplySnapshotChunkAmino {
   result?: ResponseApplySnapshotChunk_Result;
   /**
    * Chunks to refetch and reapply
-  */
+   */
   refetch_chunks?: number[];
   /**
    * Chunk senders to reject and ban
-  */
+   */
   reject_senders?: string[];
 }
 export interface ResponseApplySnapshotChunkAminoMsg {
@@ -1635,11 +1635,11 @@ export interface ConsensusParamsSDKType {
 export interface BlockParams {
   /**
    * Note: must be greater than 0
-  */
+   */
   maxBytes: bigint;
   /**
    * Note: must be greater or equal to -1
-  */
+   */
   maxGas: bigint;
 }
 export interface BlockParamsProtoMsg {
@@ -1655,11 +1655,11 @@ export interface BlockParamsProtoMsg {
 export interface BlockParamsAmino {
   /**
    * Note: must be greater than 0
-  */
+   */
   max_bytes?: string;
   /**
    * Note: must be greater or equal to -1
-  */
+   */
   max_gas?: string;
 }
 export interface BlockParamsAminoMsg {
@@ -1766,7 +1766,7 @@ export interface EventAttribute {
   value: Uint8Array;
   /**
    * nondeterministic
-  */
+   */
   index: boolean;
 }
 export interface EventAttributeProtoMsg {
@@ -1784,7 +1784,7 @@ export interface EventAttributeAmino {
   value?: string;
   /**
    * nondeterministic
-  */
+   */
   index?: boolean;
 }
 export interface EventAttributeAminoMsg {
@@ -1861,11 +1861,11 @@ export interface TxResultSDKType {
 export interface Validator {
   /**
    * The first 20 bytes of SHA256(public key)
-  */
+   */
   address: Uint8Array;
   /**
    * PubKey pub_key = 2 [(gogoproto.nullable)=false];
-  */
+   */
   power: bigint;
 }
 export interface ValidatorProtoMsg {
@@ -1881,11 +1881,11 @@ export interface ValidatorProtoMsg {
 export interface ValidatorAmino {
   /**
    * The first 20 bytes of SHA256(public key)
-  */
+   */
   address?: string;
   /**
    * PubKey pub_key = 2 [(gogoproto.nullable)=false];
-  */
+   */
   power?: string;
 }
 export interface ValidatorAminoMsg {
@@ -1987,15 +1987,15 @@ export interface Evidence {
   type: EvidenceType;
   /**
    * The offending validator
-  */
+   */
   validator: Validator;
   /**
    * The height when the offense occurred
-  */
+   */
   height: bigint;
   /**
    * The corresponding time where the offense occurred
-  */
+   */
   time: Date;
   /**
    * Total voting power of the validator set in case the ABCI application does
@@ -2017,15 +2017,15 @@ export interface EvidenceAmino {
   type?: EvidenceType;
   /**
    * The offending validator
-  */
+   */
   validator?: ValidatorAmino;
   /**
    * The height when the offense occurred
-  */
+   */
   height?: string;
   /**
    * The corresponding time where the offense occurred
-  */
+   */
   time?: string;
   /**
    * Total voting power of the validator set in case the ABCI application does
@@ -2058,23 +2058,23 @@ export interface EvidenceSDKType {
 export interface Snapshot {
   /**
    * The height at which the snapshot was taken
-  */
+   */
   height: bigint;
   /**
    * The application-specific snapshot format
-  */
+   */
   format: number;
   /**
    * Number of chunks in the snapshot
-  */
+   */
   chunks: number;
   /**
    * Arbitrary snapshot hash, equal only if identical
-  */
+   */
   hash: Uint8Array;
   /**
    * Arbitrary application metadata
-  */
+   */
   metadata: Uint8Array;
 }
 export interface SnapshotProtoMsg {
@@ -2089,23 +2089,23 @@ export interface SnapshotProtoMsg {
 export interface SnapshotAmino {
   /**
    * The height at which the snapshot was taken
-  */
+   */
   height?: string;
   /**
    * The application-specific snapshot format
-  */
+   */
   format?: number;
   /**
    * Number of chunks in the snapshot
-  */
+   */
   chunks?: number;
   /**
    * Arbitrary snapshot hash, equal only if identical
-  */
+   */
   hash?: string;
   /**
    * Arbitrary application metadata
-  */
+   */
   metadata?: string;
 }
 export interface SnapshotAminoMsg {

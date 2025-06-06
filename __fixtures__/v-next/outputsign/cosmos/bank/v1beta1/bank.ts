@@ -211,7 +211,7 @@ export interface SupplySDKType {
 export interface DenomUnit {
   /**
    * denom represents the string name of the given denom unit (e.g uatom).
-  */
+   */
   denom: string;
   /**
    * exponent represents power of 10 exponent that one must
@@ -223,7 +223,7 @@ export interface DenomUnit {
   exponent: number;
   /**
    * aliases is a list of string aliases for the given denom
-  */
+   */
   aliases: string[];
 }
 export interface DenomUnitProtoMsg {
@@ -240,7 +240,7 @@ export interface DenomUnitProtoMsg {
 export interface DenomUnitAmino {
   /**
    * denom represents the string name of the given denom unit (e.g uatom).
-  */
+   */
   denom?: string;
   /**
    * exponent represents power of 10 exponent that one must
@@ -252,7 +252,7 @@ export interface DenomUnitAmino {
   exponent?: number;
   /**
    * aliases is a list of string aliases for the given denom
-  */
+   */
   aliases?: string[];
 }
 export interface DenomUnitAminoMsg {
@@ -282,11 +282,11 @@ export interface Metadata {
   description: string;
   /**
    * denom_units represents the list of DenomUnit's for a given coin
-  */
+   */
   denomUnits: DenomUnit[];
   /**
    * base represents the base denom (should be the DenomUnit with exponent = 0).
-  */
+   */
   base: string;
   /**
    * display indicates the suggested denom that should be
@@ -335,11 +335,11 @@ export interface MetadataAmino {
   description?: string;
   /**
    * denom_units represents the list of DenomUnit's for a given coin
-  */
+   */
   denom_units?: DenomUnitAmino[];
   /**
    * base represents the base denom (should be the DenomUnit with exponent = 0).
-  */
+   */
   base?: string;
   /**
    * display indicates the suggested denom that should be

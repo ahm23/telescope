@@ -59,7 +59,7 @@ export interface SnapshotSDKType {
 export interface Metadata {
   /**
    * SHA-256 chunk hashes
-  */
+   */
   chunkHashes: Uint8Array[];
 }
 export interface MetadataProtoMsg {
@@ -75,7 +75,7 @@ export interface MetadataProtoMsg {
 export interface MetadataAmino {
   /**
    * SHA-256 chunk hashes
-  */
+   */
   chunk_hashes?: string[];
 }
 export interface MetadataAminoMsg {
@@ -187,11 +187,11 @@ export interface SnapshotIAVLItem {
   value: Uint8Array;
   /**
    * version is block height
-  */
+   */
   version: bigint;
   /**
    * height is depth of the tree.
-  */
+   */
   height: number;
 }
 export interface SnapshotIAVLItemProtoMsg {
@@ -209,11 +209,11 @@ export interface SnapshotIAVLItemAmino {
   value?: string;
   /**
    * version is block height
-  */
+   */
   version?: string;
   /**
    * height is depth of the tree.
-  */
+   */
   height?: number;
 }
 export interface SnapshotIAVLItemAminoMsg {

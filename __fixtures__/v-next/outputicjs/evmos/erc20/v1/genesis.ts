@@ -10,11 +10,11 @@ import { DeepPartial } from "../../../helpers";
 export interface GenesisState {
   /**
    * module parameters
-  */
+   */
   params: EvmosErc20V1Params;
   /**
    * registered token pairs
-  */
+   */
   tokenPairs: TokenPair[];
 }
 export interface GenesisStateProtoMsg {
@@ -30,11 +30,11 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * module parameters
-  */
+   */
   params: EvmosErc20V1ParamsAmino;
   /**
    * registered token pairs
-  */
+   */
   token_pairs: TokenPairAmino[];
 }
 export interface GenesisStateAminoMsg {
@@ -50,7 +50,7 @@ export interface GenesisStateAminoMsg {
 export interface EvmosErc20V1Params {
   /**
    * parameter to enable the conversion of Cosmos coins <--> ERC20 tokens.
-  */
+   */
   enableErc20: boolean;
   /**
    * parameter to enable the EVM hook that converts an ERC20 token to a Cosmos
@@ -72,7 +72,7 @@ export interface EvmosErc20V1ParamsProtoMsg {
 export interface EvmosErc20V1ParamsAmino {
   /**
    * parameter to enable the conversion of Cosmos coins <--> ERC20 tokens.
-  */
+   */
   enable_erc20: boolean;
   /**
    * parameter to enable the EVM hook that converts an ERC20 token to a Cosmos

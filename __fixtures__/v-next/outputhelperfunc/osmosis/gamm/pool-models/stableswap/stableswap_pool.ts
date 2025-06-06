@@ -76,19 +76,19 @@ export interface Pool {
   futurePoolGovernor: string;
   /**
    * sum of all LP shares
-  */
+   */
   totalShares: Coin;
   /**
    * assets in the pool
-  */
+   */
   poolLiquidity: Coin[];
   /**
    * for calculation amognst assets with different precisions
-  */
+   */
   scalingFactors: bigint[];
   /**
    * scaling_factor_controller is the address can adjust pool scaling factors
-  */
+   */
   scalingFactorController: string;
 }
 export interface PoolProtoMsg {
@@ -118,19 +118,19 @@ export interface PoolAmino {
   future_pool_governor?: string;
   /**
    * sum of all LP shares
-  */
+   */
   total_shares?: CoinAmino;
   /**
    * assets in the pool
-  */
+   */
   pool_liquidity?: CoinAmino[];
   /**
    * for calculation amognst assets with different precisions
-  */
+   */
   scaling_factors?: string[];
   /**
    * scaling_factor_controller is the address can adjust pool scaling factors
-  */
+   */
   scaling_factor_controller?: string;
 }
 export interface PoolAminoMsg {

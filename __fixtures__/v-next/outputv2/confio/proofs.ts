@@ -258,7 +258,7 @@ export interface ExistenceProofSDKType {
 export interface NonExistenceProof {
   /**
    * TODO: remove this as unnecessary??? we prove a range
-  */
+   */
   key: Uint8Array;
   left?: ExistenceProof;
   right?: ExistenceProof;
@@ -278,7 +278,7 @@ export interface NonExistenceProofProtoMsg {
 export interface NonExistenceProofAmino {
   /**
    * TODO: remove this as unnecessary??? we prove a range
-  */
+   */
   key?: string;
   left?: ExistenceProofAmino;
   right?: ExistenceProofAmino;
@@ -545,11 +545,11 @@ export interface ProofSpec {
   innerSpec?: InnerSpec;
   /**
    * max_depth (if > 0) is the maximum number of InnerOps allowed (mainly for fixed-depth tries)
-  */
+   */
   maxDepth: number;
   /**
    * min_depth (if > 0) is the minimum number of InnerOps allowed (mainly for fixed-depth tries)
-  */
+   */
   minDepth: number;
 }
 export interface ProofSpecProtoMsg {
@@ -580,11 +580,11 @@ export interface ProofSpecAmino {
   inner_spec?: InnerSpecAmino;
   /**
    * max_depth (if > 0) is the maximum number of InnerOps allowed (mainly for fixed-depth tries)
-  */
+   */
   max_depth?: number;
   /**
    * min_depth (if > 0) is the minimum number of InnerOps allowed (mainly for fixed-depth tries)
-  */
+   */
   min_depth?: number;
 }
 export interface ProofSpecAminoMsg {
@@ -637,11 +637,11 @@ export interface InnerSpec {
   maxPrefixLength: number;
   /**
    * empty child is the prehash image that is used when one child is nil (eg. 20 bytes of 0)
-  */
+   */
   emptyChild: Uint8Array;
   /**
    * hash is the algorithm that must be used for each InnerOp
-  */
+   */
   hash: HashOp;
 }
 export interface InnerSpecProtoMsg {
@@ -673,11 +673,11 @@ export interface InnerSpecAmino {
   max_prefix_length?: number;
   /**
    * empty child is the prehash image that is used when one child is nil (eg. 20 bytes of 0)
-  */
+   */
   empty_child?: string;
   /**
    * hash is the algorithm that must be used for each InnerOp
-  */
+   */
   hash?: HashOp;
 }
 export interface InnerSpecAminoMsg {
@@ -862,7 +862,7 @@ export interface CompressedExistenceProof {
   leaf?: LeafOp;
   /**
    * these are indexes into the lookup_inners table in CompressedBatchProof
-  */
+   */
   path: number[];
 }
 export interface CompressedExistenceProofProtoMsg {
@@ -880,7 +880,7 @@ export interface CompressedExistenceProofAmino {
   leaf?: LeafOpAmino;
   /**
    * these are indexes into the lookup_inners table in CompressedBatchProof
-  */
+   */
   path?: number[];
 }
 export interface CompressedExistenceProofAminoMsg {
@@ -906,7 +906,7 @@ export interface CompressedExistenceProofSDKType {
 export interface CompressedNonExistenceProof {
   /**
    * TODO: remove this as unnecessary??? we prove a range
-  */
+   */
   key: Uint8Array;
   left?: CompressedExistenceProof;
   right?: CompressedExistenceProof;
@@ -923,7 +923,7 @@ export interface CompressedNonExistenceProofProtoMsg {
 export interface CompressedNonExistenceProofAmino {
   /**
    * TODO: remove this as unnecessary??? we prove a range
-  */
+   */
   key?: string;
   left?: CompressedExistenceProofAmino;
   right?: CompressedExistenceProofAmino;

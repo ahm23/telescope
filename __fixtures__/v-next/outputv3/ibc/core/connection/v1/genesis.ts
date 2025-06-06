@@ -13,7 +13,7 @@ export interface GenesisState {
   clientConnectionPaths: ConnectionPaths[];
   /**
    * the sequence for the next generated connection identifier
-  */
+   */
   nextConnectionSequence: bigint;
   params: Params;
 }
@@ -32,7 +32,7 @@ export interface GenesisStateAmino {
   client_connection_paths?: ConnectionPathsAmino[];
   /**
    * the sequence for the next generated connection identifier
-  */
+   */
   next_connection_sequence?: string;
   params?: ParamsAmino;
 }

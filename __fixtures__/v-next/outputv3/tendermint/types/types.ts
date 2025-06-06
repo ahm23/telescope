@@ -208,50 +208,50 @@ export interface BlockIDSDKType {
 export interface Header {
   /**
    * basic block info
-  */
+   */
   version: Consensus;
   chainId: string;
   height: bigint;
   time: Date;
   /**
    * prev block info
-  */
+   */
   lastBlockId: BlockID;
   /**
    * hashes of block data
-  */
+   */
   lastCommitHash: Uint8Array;
   /**
    * transactions
-  */
+   */
   dataHash: Uint8Array;
   /**
    * hashes from the app output from the prev block
-  */
+   */
   validatorsHash: Uint8Array;
   /**
    * validators for the next block
-  */
+   */
   nextValidatorsHash: Uint8Array;
   /**
    * consensus params for current block
-  */
+   */
   consensusHash: Uint8Array;
   /**
    * state after txs from the previous block
-  */
+   */
   appHash: Uint8Array;
   /**
    * root hash of all results from the txs from the previous block
-  */
+   */
   lastResultsHash: Uint8Array;
   /**
    * consensus info
-  */
+   */
   evidenceHash: Uint8Array;
   /**
    * original proposer of the block
-  */
+   */
   proposerAddress: Uint8Array;
 }
 export interface HeaderProtoMsg {
@@ -267,50 +267,50 @@ export interface HeaderProtoMsg {
 export interface HeaderAmino {
   /**
    * basic block info
-  */
+   */
   version?: ConsensusAmino;
   chain_id?: string;
   height?: string;
   time?: string;
   /**
    * prev block info
-  */
+   */
   last_block_id?: BlockIDAmino;
   /**
    * hashes of block data
-  */
+   */
   last_commit_hash?: string;
   /**
    * transactions
-  */
+   */
   data_hash?: string;
   /**
    * hashes from the app output from the prev block
-  */
+   */
   validators_hash?: string;
   /**
    * validators for the next block
-  */
+   */
   next_validators_hash?: string;
   /**
    * consensus params for current block
-  */
+   */
   consensus_hash?: string;
   /**
    * state after txs from the previous block
-  */
+   */
   app_hash?: string;
   /**
    * root hash of all results from the txs from the previous block
-  */
+   */
   last_results_hash?: string;
   /**
    * consensus info
-  */
+   */
   evidence_hash?: string;
   /**
    * original proposer of the block
-  */
+   */
   proposer_address?: string;
 }
 /**
@@ -389,7 +389,7 @@ export interface Vote {
   round: number;
   /**
    * zero if vote is nil.
-  */
+   */
   blockId: BlockID;
   timestamp: Date;
   validatorAddress: Uint8Array;
@@ -413,7 +413,7 @@ export interface VoteAmino {
   round?: number;
   /**
    * zero if vote is nil.
-  */
+   */
   block_id?: BlockIDAmino;
   timestamp?: string;
   validator_address?: string;

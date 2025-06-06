@@ -17,7 +17,7 @@ export interface MsgSubmitProposal {
   proposer: string;
   /**
    * metadata is any arbitrary metadata attached to the proposal.
-  */
+   */
   metadata: string;
 }
 export interface MsgSubmitProposalProtoMsg {
@@ -37,7 +37,7 @@ export interface MsgSubmitProposalAmino {
   proposer?: string;
   /**
    * metadata is any arbitrary metadata attached to the proposal.
-  */
+   */
   metadata?: string;
 }
 export interface MsgSubmitProposalAminoMsg {
@@ -102,11 +102,11 @@ export interface MsgSubmitProposalResponseSDKType {
 export interface MsgExecLegacyContent {
   /**
    * content is the proposal's content.
-  */
+   */
   content?: Any;
   /**
    * authority must be the gov module address.
-  */
+   */
   authority: string;
 }
 export interface MsgExecLegacyContentProtoMsg {
@@ -123,11 +123,11 @@ export interface MsgExecLegacyContentProtoMsg {
 export interface MsgExecLegacyContentAmino {
   /**
    * content is the proposal's content.
-  */
+   */
   content?: AnyAmino;
   /**
    * authority must be the gov module address.
-  */
+   */
   authority?: string;
 }
 export interface MsgExecLegacyContentAminoMsg {

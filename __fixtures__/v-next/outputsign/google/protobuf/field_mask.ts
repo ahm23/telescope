@@ -208,7 +208,7 @@ export const protobufPackage = "google.protobuf";
 export interface FieldMask {
   /**
    * The set of field mask paths.
-  */
+   */
   paths: string[];
 }
 export interface FieldMaskProtoMsg {
@@ -422,7 +422,7 @@ export interface FieldMaskProtoMsg {
 export interface FieldMaskAmino {
   /**
    * The set of field mask paths.
-  */
+   */
   paths?: string[];
 }
 export interface FieldMaskAminoMsg {

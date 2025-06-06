@@ -30,7 +30,7 @@ export interface QueryParamsRequestSDKType {}
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -74,7 +74,7 @@ export interface QueryInflationRequestSDKType {}
 export interface QueryInflationResponse {
   /**
    * inflation is the current minting inflation value.
-  */
+   */
   inflation: Uint8Array;
 }
 export interface QueryInflationResponseProtoMsg {
@@ -121,7 +121,7 @@ export interface QueryAnnualProvisionsRequestSDKType {}
 export interface QueryAnnualProvisionsResponse {
   /**
    * annual_provisions is the current minting annual provisions value.
-  */
+   */
   annualProvisions: Uint8Array;
 }
 export interface QueryAnnualProvisionsResponseProtoMsg {

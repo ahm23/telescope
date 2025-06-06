@@ -10,7 +10,7 @@ import { DeepPartial } from "../../../helpers";
 export interface AkashInflationV1beta2Params {
   /**
    * InflationDecayFactor is the number of years it takes inflation to halve.
-  */
+   */
   inflationDecayFactor: string;
   /**
    * InitialInflation is the rate at which inflation starts at genesis.
@@ -36,7 +36,7 @@ export interface AkashInflationV1beta2ParamsProtoMsg {
 export interface AkashInflationV1beta2ParamsAmino {
   /**
    * InflationDecayFactor is the number of years it takes inflation to halve.
-  */
+   */
   inflation_decay_factor: string;
   /**
    * InitialInflation is the rate at which inflation starts at genesis.

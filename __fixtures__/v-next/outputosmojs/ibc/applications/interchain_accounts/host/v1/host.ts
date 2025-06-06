@@ -12,11 +12,11 @@ export const protobufPackage = "ibc.applications.interchain_accounts.host.v1";
 export interface Params {
   /**
    * host_enabled enables or disables the host submodule.
-  */
+   */
   hostEnabled: boolean;
   /**
    * allow_messages defines a list of sdk message typeURLs allowed to be executed on a host chain.
-  */
+   */
   allowMessages: string[];
 }
 export interface ParamsProtoMsg {

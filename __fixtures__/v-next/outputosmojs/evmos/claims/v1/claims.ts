@@ -67,15 +67,15 @@ export function actionToJSON(object: Action): string {
 export interface Claim {
   /**
    * action enum
-  */
+   */
   action: Action;
   /**
    * true if the action has been completed
-  */
+   */
   completed: boolean;
   /**
    * claimable token amount for the action. Zero if completed
-  */
+   */
   claimableAmount: string;
 }
 export interface ClaimProtoMsg {
@@ -103,15 +103,15 @@ export interface ClaimSDKType {
 export interface ClaimsRecordAddress {
   /**
    * bech32 or hex address of claim user
-  */
+   */
   address: string;
   /**
    * total initial claimable amount for the user
-  */
+   */
   initialClaimableAmount: string;
   /**
    * slice of the available actions completed
-  */
+   */
   actionsCompleted: boolean[];
 }
 export interface ClaimsRecordAddressProtoMsg {
@@ -139,11 +139,11 @@ export interface ClaimsRecordAddressSDKType {
 export interface ClaimsRecord {
   /**
    * total initial claimable amount for the user
-  */
+   */
   initialClaimableAmount: string;
   /**
    * slice of the available actions completed
-  */
+   */
   actionsCompleted: boolean[];
 }
 export interface ClaimsRecordProtoMsg {

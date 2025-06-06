@@ -13,11 +13,11 @@ export const protobufPackage = "cosmos.staking.v1beta1";
 export interface QueryValidatorsRequest {
   /**
    * status enables to query for validators matching a given status.
-  */
+   */
   status: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryValidatorsRequestProtoMsg {
@@ -43,11 +43,11 @@ export interface QueryValidatorsRequestSDKType {
 export interface QueryValidatorsResponse {
   /**
    * validators contains all the queried validators.
-  */
+   */
   validators: Validator[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryValidatorsResponseProtoMsg {
@@ -73,7 +73,7 @@ export interface QueryValidatorsResponseSDKType {
 export interface QueryValidatorRequest {
   /**
    * validator_addr defines the validator address to query for.
-  */
+   */
   validatorAddr: string;
 }
 export interface QueryValidatorRequestProtoMsg {
@@ -98,7 +98,7 @@ export interface QueryValidatorRequestSDKType {
 export interface QueryValidatorResponse {
   /**
    * validator defines the the validator info.
-  */
+   */
   validator: Validator;
 }
 export interface QueryValidatorResponseProtoMsg {
@@ -124,11 +124,11 @@ export interface QueryValidatorResponseSDKType {
 export interface QueryValidatorDelegationsRequest {
   /**
    * validator_addr defines the validator address to query for.
-  */
+   */
   validatorAddr: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryValidatorDelegationsRequestProtoMsg {
@@ -157,7 +157,7 @@ export interface QueryValidatorDelegationsResponse {
   delegationResponses: DelegationResponse[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryValidatorDelegationsResponseProtoMsg {
@@ -185,11 +185,11 @@ export interface QueryValidatorDelegationsResponseSDKType {
 export interface QueryValidatorUnbondingDelegationsRequest {
   /**
    * validator_addr defines the validator address to query for.
-  */
+   */
   validatorAddr: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryValidatorUnbondingDelegationsRequestProtoMsg {
@@ -218,7 +218,7 @@ export interface QueryValidatorUnbondingDelegationsResponse {
   unbondingResponses: UnbondingDelegation[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryValidatorUnbondingDelegationsResponseProtoMsg {
@@ -245,11 +245,11 @@ export interface QueryValidatorUnbondingDelegationsResponseSDKType {
 export interface QueryDelegationRequest {
   /**
    * delegator_addr defines the delegator address to query for.
-  */
+   */
   delegatorAddr: string;
   /**
    * validator_addr defines the validator address to query for.
-  */
+   */
   validatorAddr: string;
 }
 export interface QueryDelegationRequestProtoMsg {
@@ -275,7 +275,7 @@ export interface QueryDelegationRequestSDKType {
 export interface QueryDelegationResponse {
   /**
    * delegation_responses defines the delegation info of a delegation.
-  */
+   */
   delegationResponse?: DelegationResponse;
 }
 export interface QueryDelegationResponseProtoMsg {
@@ -301,11 +301,11 @@ export interface QueryDelegationResponseSDKType {
 export interface QueryUnbondingDelegationRequest {
   /**
    * delegator_addr defines the delegator address to query for.
-  */
+   */
   delegatorAddr: string;
   /**
    * validator_addr defines the validator address to query for.
-  */
+   */
   validatorAddr: string;
 }
 export interface QueryUnbondingDelegationRequestProtoMsg {
@@ -333,7 +333,7 @@ export interface QueryUnbondingDelegationRequestSDKType {
 export interface QueryUnbondingDelegationResponse {
   /**
    * unbond defines the unbonding information of a delegation.
-  */
+   */
   unbond: UnbondingDelegation;
 }
 export interface QueryUnbondingDelegationResponseProtoMsg {
@@ -360,11 +360,11 @@ export interface QueryUnbondingDelegationResponseSDKType {
 export interface QueryDelegatorDelegationsRequest {
   /**
    * delegator_addr defines the delegator address to query for.
-  */
+   */
   delegatorAddr: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryDelegatorDelegationsRequestProtoMsg {
@@ -392,11 +392,11 @@ export interface QueryDelegatorDelegationsRequestSDKType {
 export interface QueryDelegatorDelegationsResponse {
   /**
    * delegation_responses defines all the delegations' info of a delegator.
-  */
+   */
   delegationResponses: DelegationResponse[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryDelegatorDelegationsResponseProtoMsg {
@@ -424,11 +424,11 @@ export interface QueryDelegatorDelegationsResponseSDKType {
 export interface QueryDelegatorUnbondingDelegationsRequest {
   /**
    * delegator_addr defines the delegator address to query for.
-  */
+   */
   delegatorAddr: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryDelegatorUnbondingDelegationsRequestProtoMsg {
@@ -457,7 +457,7 @@ export interface QueryDelegatorUnbondingDelegationsResponse {
   unbondingResponses: UnbondingDelegation[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryDelegatorUnbondingDelegationsResponseProtoMsg {
@@ -485,19 +485,19 @@ export interface QueryDelegatorUnbondingDelegationsResponseSDKType {
 export interface QueryRedelegationsRequest {
   /**
    * delegator_addr defines the delegator address to query for.
-  */
+   */
   delegatorAddr: string;
   /**
    * src_validator_addr defines the validator address to redelegate from.
-  */
+   */
   srcValidatorAddr: string;
   /**
    * dst_validator_addr defines the validator address to redelegate to.
-  */
+   */
   dstValidatorAddr: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryRedelegationsRequestProtoMsg {
@@ -528,7 +528,7 @@ export interface QueryRedelegationsResponse {
   redelegationResponses: RedelegationResponse[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryRedelegationsResponseProtoMsg {
@@ -556,11 +556,11 @@ export interface QueryRedelegationsResponseSDKType {
 export interface QueryDelegatorValidatorsRequest {
   /**
    * delegator_addr defines the delegator address to query for.
-  */
+   */
   delegatorAddr: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryDelegatorValidatorsRequestProtoMsg {
@@ -588,11 +588,11 @@ export interface QueryDelegatorValidatorsRequestSDKType {
 export interface QueryDelegatorValidatorsResponse {
   /**
    * validators defines the the validators' info of a delegator.
-  */
+   */
   validators: Validator[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryDelegatorValidatorsResponseProtoMsg {
@@ -620,11 +620,11 @@ export interface QueryDelegatorValidatorsResponseSDKType {
 export interface QueryDelegatorValidatorRequest {
   /**
    * delegator_addr defines the delegator address to query for.
-  */
+   */
   delegatorAddr: string;
   /**
    * validator_addr defines the validator address to query for.
-  */
+   */
   validatorAddr: string;
 }
 export interface QueryDelegatorValidatorRequestProtoMsg {
@@ -652,7 +652,7 @@ export interface QueryDelegatorValidatorRequestSDKType {
 export interface QueryDelegatorValidatorResponse {
   /**
    * validator defines the the validator info.
-  */
+   */
   validator: Validator;
 }
 export interface QueryDelegatorValidatorResponseProtoMsg {
@@ -679,7 +679,7 @@ export interface QueryDelegatorValidatorResponseSDKType {
 export interface QueryHistoricalInfoRequest {
   /**
    * height defines at which height to query the historical info.
-  */
+   */
   height: bigint;
 }
 export interface QueryHistoricalInfoRequestProtoMsg {
@@ -706,7 +706,7 @@ export interface QueryHistoricalInfoRequestSDKType {
 export interface QueryHistoricalInfoResponse {
   /**
    * hist defines the historical info at the given height.
-  */
+   */
   hist?: HistoricalInfo;
 }
 export interface QueryHistoricalInfoResponseProtoMsg {
@@ -750,7 +750,7 @@ export interface QueryPoolRequestSDKType {}
 export interface QueryPoolResponse {
   /**
    * pool defines the pool info.
-  */
+   */
   pool: Pool;
 }
 export interface QueryPoolResponseProtoMsg {
@@ -793,7 +793,7 @@ export interface QueryParamsRequestSDKType {}
 export interface QueryParamsResponse {
   /**
    * params holds all the parameters of this module.
-  */
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {

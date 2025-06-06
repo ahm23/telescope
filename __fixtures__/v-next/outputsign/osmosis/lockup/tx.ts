@@ -148,7 +148,7 @@ export interface MsgBeginUnlocking {
   iD: bigint;
   /**
    * Amount of unlocking coins. Unlock all if not set.
-  */
+   */
   coins: Coin[];
 }
 export interface MsgBeginUnlockingProtoMsg {
@@ -165,7 +165,7 @@ export interface MsgBeginUnlockingAmino {
   ID?: string;
   /**
    * Amount of unlocking coins. Unlock all if not set.
-  */
+   */
   coins?: CoinAmino[];
 }
 export interface MsgBeginUnlockingAminoMsg {
@@ -310,7 +310,7 @@ export interface MsgForceUnlock {
   iD: bigint;
   /**
    * Amount of unlocking coins. Unlock all if not set.
-  */
+   */
   coins: Coin[];
 }
 export interface MsgForceUnlockProtoMsg {
@@ -329,7 +329,7 @@ export interface MsgForceUnlockAmino {
   ID?: string;
   /**
    * Amount of unlocking coins. Unlock all if not set.
-  */
+   */
   coins?: CoinAmino[];
 }
 export interface MsgForceUnlockAminoMsg {

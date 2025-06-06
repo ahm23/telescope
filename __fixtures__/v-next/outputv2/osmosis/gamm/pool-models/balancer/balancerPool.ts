@@ -31,7 +31,7 @@ export interface SmoothWeightChangeParams {
   startTime: Date;
   /**
    * Duration for the weights to change over
-  */
+   */
   duration: Duration;
   /**
    * The initial pool weights. These are copied from the pool's settings
@@ -78,7 +78,7 @@ export interface SmoothWeightChangeParamsAmino {
   start_time?: string;
   /**
    * Duration for the weights to change over
-  */
+   */
   duration?: DurationAmino;
   /**
    * The initial pool weights. These are copied from the pool's settings
@@ -189,7 +189,7 @@ export interface PoolAsset {
   token: Coin;
   /**
    * Weight that is not normalized. This weight must be less than 2^50
-  */
+   */
   weight: string;
 }
 export interface PoolAssetProtoMsg {
@@ -213,7 +213,7 @@ export interface PoolAssetAmino {
   token?: CoinAmino;
   /**
    * Weight that is not normalized. This weight must be less than 2^50
-  */
+   */
   weight?: string;
 }
 export interface PoolAssetAminoMsg {
@@ -257,7 +257,7 @@ export interface Pool {
   futurePoolGovernor: string;
   /**
    * sum of all LP tokens sent out
-  */
+   */
   totalShares: Coin;
   /**
    * These are assumed to be sorted by denomiation.
@@ -266,7 +266,7 @@ export interface Pool {
   poolAssets: PoolAsset[];
   /**
    * sum of all non-normalized pool weights
-  */
+   */
   totalWeight: string;
 }
 export interface PoolProtoMsg {
@@ -296,7 +296,7 @@ export interface PoolAmino {
   future_pool_governor?: string;
   /**
    * sum of all LP tokens sent out
-  */
+   */
   total_shares?: CoinAmino;
   /**
    * These are assumed to be sorted by denomiation.
@@ -305,7 +305,7 @@ export interface PoolAmino {
   pool_assets?: PoolAssetAmino[];
   /**
    * sum of all non-normalized pool weights
-  */
+   */
   total_weight?: string;
 }
 export interface PoolAminoMsg {

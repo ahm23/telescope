@@ -363,35 +363,35 @@ export interface CheckedExprSDKType {
 export interface Type {
   /**
    * Dynamic type.
-  */
+   */
   dyn?: Empty;
   /**
    * Null value.
-  */
+   */
   null?: NullValue;
   /**
    * Primitive types: `true`, `1u`, `-2.0`, `'string'`, `b'bytes'`.
-  */
+   */
   primitive?: Type_PrimitiveType;
   /**
    * Wrapper of a primitive type, e.g. `google.protobuf.Int64Value`.
-  */
+   */
   wrapper?: Type_PrimitiveType;
   /**
    * Well-known protobuf type such as `google.protobuf.Timestamp`.
-  */
+   */
   wellKnown?: Type_WellKnownType;
   /**
    * Parameterized list with elements of `list_type`, e.g. `list<timestamp>`.
-  */
+   */
   listType?: Type_ListType;
   /**
    * Parameterized map with typed keys and values.
-  */
+   */
   mapType?: Type_MapType;
   /**
    * Function type.
-  */
+   */
   function?: Type_FunctionType;
   /**
    * Protocol buffer message type.
@@ -425,7 +425,7 @@ export interface Type {
   error?: Empty;
   /**
    * Abstract, application defined type.
-  */
+   */
   abstractType?: Type_AbstractType;
 }
 export interface TypeProtoMsg {
@@ -441,35 +441,35 @@ export interface TypeProtoMsg {
 export interface TypeAmino {
   /**
    * Dynamic type.
-  */
+   */
   dyn?: EmptyAmino;
   /**
    * Null value.
-  */
+   */
   null?: NullValue;
   /**
    * Primitive types: `true`, `1u`, `-2.0`, `'string'`, `b'bytes'`.
-  */
+   */
   primitive?: Type_PrimitiveType;
   /**
    * Wrapper of a primitive type, e.g. `google.protobuf.Int64Value`.
-  */
+   */
   wrapper?: Type_PrimitiveType;
   /**
    * Well-known protobuf type such as `google.protobuf.Timestamp`.
-  */
+   */
   well_known?: Type_WellKnownType;
   /**
    * Parameterized list with elements of `list_type`, e.g. `list<timestamp>`.
-  */
+   */
   list_type?: Type_ListTypeAmino;
   /**
    * Parameterized map with typed keys and values.
-  */
+   */
   map_type?: Type_MapTypeAmino;
   /**
    * Function type.
-  */
+   */
   function?: Type_FunctionTypeAmino;
   /**
    * Protocol buffer message type.
@@ -503,7 +503,7 @@ export interface TypeAmino {
   error?: EmptyAmino;
   /**
    * Abstract, application defined type.
-  */
+   */
   abstract_type?: Type_AbstractTypeAmino;
 }
 export interface TypeAminoMsg {
@@ -540,7 +540,7 @@ export interface TypeSDKType {
 export interface Type_ListType {
   /**
    * The element type.
-  */
+   */
   elemType?: Type;
 }
 export interface Type_ListTypeProtoMsg {
@@ -556,7 +556,7 @@ export interface Type_ListTypeProtoMsg {
 export interface Type_ListTypeAmino {
   /**
    * The element type.
-  */
+   */
   elem_type?: TypeAmino;
 }
 export interface Type_ListTypeAminoMsg {
@@ -581,11 +581,11 @@ export interface Type_ListTypeSDKType {
 export interface Type_MapType {
   /**
    * The type of the key.
-  */
+   */
   keyType?: Type;
   /**
    * The type of the value.
-  */
+   */
   valueType?: Type;
 }
 export interface Type_MapTypeProtoMsg {
@@ -601,11 +601,11 @@ export interface Type_MapTypeProtoMsg {
 export interface Type_MapTypeAmino {
   /**
    * The type of the key.
-  */
+   */
   key_type?: TypeAmino;
   /**
    * The type of the value.
-  */
+   */
   value_type?: TypeAmino;
 }
 export interface Type_MapTypeAminoMsg {
@@ -631,11 +631,11 @@ export interface Type_MapTypeSDKType {
 export interface Type_FunctionType {
   /**
    * Result type of the function.
-  */
+   */
   resultType?: Type;
   /**
    * Argument types of the function.
-  */
+   */
   argTypes: Type[];
 }
 export interface Type_FunctionTypeProtoMsg {
@@ -651,11 +651,11 @@ export interface Type_FunctionTypeProtoMsg {
 export interface Type_FunctionTypeAmino {
   /**
    * Result type of the function.
-  */
+   */
   result_type?: TypeAmino;
   /**
    * Argument types of the function.
-  */
+   */
   arg_types?: TypeAmino[];
 }
 export interface Type_FunctionTypeAminoMsg {
@@ -681,11 +681,11 @@ export interface Type_FunctionTypeSDKType {
 export interface Type_AbstractType {
   /**
    * The fully qualified name of this abstract type.
-  */
+   */
   name: string;
   /**
    * Parameter types for this abstract type.
-  */
+   */
   parameterTypes: Type[];
 }
 export interface Type_AbstractTypeProtoMsg {
@@ -701,11 +701,11 @@ export interface Type_AbstractTypeProtoMsg {
 export interface Type_AbstractTypeAmino {
   /**
    * The fully qualified name of this abstract type.
-  */
+   */
   name?: string;
   /**
    * Parameter types for this abstract type.
-  */
+   */
   parameter_types?: TypeAmino[];
 }
 export interface Type_AbstractTypeAminoMsg {
@@ -745,11 +745,11 @@ export interface Decl {
   name: string;
   /**
    * Identifier declaration.
-  */
+   */
   ident?: Decl_IdentDecl;
   /**
    * Function declaration.
-  */
+   */
   function?: Decl_FunctionDecl;
 }
 export interface DeclProtoMsg {
@@ -779,11 +779,11 @@ export interface DeclAmino {
   name?: string;
   /**
    * Identifier declaration.
-  */
+   */
   ident?: Decl_IdentDeclAmino;
   /**
    * Function declaration.
-  */
+   */
   function?: Decl_FunctionDeclAmino;
 }
 export interface DeclAminoMsg {
@@ -818,7 +818,7 @@ export interface DeclSDKType {
 export interface Decl_IdentDecl {
   /**
    * Required. The type of the identifier.
-  */
+   */
   type?: Type;
   /**
    * The constant value of the identifier. If not specified, the identifier
@@ -827,7 +827,7 @@ export interface Decl_IdentDecl {
   value?: Constant;
   /**
    * Documentation string for the identifier.
-  */
+   */
   doc: string;
 }
 export interface Decl_IdentDeclProtoMsg {
@@ -848,7 +848,7 @@ export interface Decl_IdentDeclProtoMsg {
 export interface Decl_IdentDeclAmino {
   /**
    * Required. The type of the identifier.
-  */
+   */
   type?: TypeAmino;
   /**
    * The constant value of the identifier. If not specified, the identifier
@@ -857,7 +857,7 @@ export interface Decl_IdentDeclAmino {
   value?: ConstantAmino;
   /**
    * Documentation string for the identifier.
-  */
+   */
   doc?: string;
 }
 export interface Decl_IdentDeclAminoMsg {
@@ -893,7 +893,7 @@ export interface Decl_IdentDeclSDKType {
 export interface Decl_FunctionDecl {
   /**
    * Required. List of function overloads, must contain at least one overload.
-  */
+   */
   overloads: Decl_FunctionDecl_Overload[];
 }
 export interface Decl_FunctionDeclProtoMsg {
@@ -913,7 +913,7 @@ export interface Decl_FunctionDeclProtoMsg {
 export interface Decl_FunctionDeclAmino {
   /**
    * Required. List of function overloads, must contain at least one overload.
-  */
+   */
   overloads?: Decl_FunctionDecl_OverloadAmino[];
 }
 export interface Decl_FunctionDeclAminoMsg {
@@ -992,7 +992,7 @@ export interface Decl_FunctionDecl_Overload {
   isInstanceFunction: boolean;
   /**
    * Documentation string for the overload.
-  */
+   */
   doc: string;
 }
 export interface Decl_FunctionDecl_OverloadProtoMsg {
@@ -1058,7 +1058,7 @@ export interface Decl_FunctionDecl_OverloadAmino {
   is_instance_function?: boolean;
   /**
    * Documentation string for the overload.
-  */
+   */
   doc?: string;
 }
 export interface Decl_FunctionDecl_OverloadAminoMsg {
@@ -1097,7 +1097,7 @@ export interface Decl_FunctionDecl_OverloadSDKType {
 export interface Reference {
   /**
    * The fully qualified name of the declaration.
-  */
+   */
   name: string;
   /**
    * For references to functions, this is a list of `Overload.overload_id`
@@ -1129,7 +1129,7 @@ export interface ReferenceProtoMsg {
 export interface ReferenceAmino {
   /**
    * The fully qualified name of the declaration.
-  */
+   */
   name?: string;
   /**
    * For references to functions, this is a list of `Overload.overload_id`

@@ -12,23 +12,23 @@ export const protobufPackage = "google.api.expr.v1beta1";
 export interface Decl {
   /**
    * The id of the declaration.
-  */
+   */
   id: number;
   /**
    * The name of the declaration.
-  */
+   */
   name: string;
   /**
    * The documentation string for the declaration.
-  */
+   */
   doc: string;
   /**
    * An identifier declaration.
-  */
+   */
   ident?: IdentDecl;
   /**
    * A function declaration.
-  */
+   */
   function?: FunctionDecl;
 }
 export interface DeclProtoMsg {
@@ -44,23 +44,23 @@ export interface DeclProtoMsg {
 export interface DeclAmino {
   /**
    * The id of the declaration.
-  */
+   */
   id?: number;
   /**
    * The name of the declaration.
-  */
+   */
   name?: string;
   /**
    * The documentation string for the declaration.
-  */
+   */
   doc?: string;
   /**
    * An identifier declaration.
-  */
+   */
   ident?: IdentDeclAmino;
   /**
    * A function declaration.
-  */
+   */
   function?: FunctionDeclAmino;
 }
 export interface DeclAminoMsg {
@@ -92,11 +92,11 @@ export interface DeclSDKType {
 export interface DeclType {
   /**
    * The expression id of the declared type, if applicable.
-  */
+   */
   id: number;
   /**
    * The type name, e.g. 'int', 'my.type.Type' or 'T'
-  */
+   */
   type: string;
   /**
    * An ordered list of type parameters, e.g. `<string, int>`.
@@ -120,11 +120,11 @@ export interface DeclTypeProtoMsg {
 export interface DeclTypeAmino {
   /**
    * The expression id of the declared type, if applicable.
-  */
+   */
   id?: number;
   /**
    * The type name, e.g. 'int', 'my.type.Type' or 'T'
-  */
+   */
   type?: string;
   /**
    * An ordered list of type parameters, e.g. `<string, int>`.
@@ -159,11 +159,11 @@ export interface DeclTypeSDKType {
 export interface IdentDecl {
   /**
    * Optional type of the identifier.
-  */
+   */
   type?: DeclType;
   /**
    * Optional value of the identifier.
-  */
+   */
   value?: Expr;
 }
 export interface IdentDeclProtoMsg {
@@ -179,11 +179,11 @@ export interface IdentDeclProtoMsg {
 export interface IdentDeclAmino {
   /**
    * Optional type of the identifier.
-  */
+   */
   type?: DeclTypeAmino;
   /**
    * Optional value of the identifier.
-  */
+   */
   value?: ExprAmino;
 }
 export interface IdentDeclAminoMsg {
@@ -209,15 +209,15 @@ export interface IdentDeclSDKType {
 export interface FunctionDecl {
   /**
    * The function arguments.
-  */
+   */
   args: IdentDecl[];
   /**
    * Optional declared return type.
-  */
+   */
   returnType?: DeclType;
   /**
    * If the first argument of the function is the receiver.
-  */
+   */
   receiverFunction: boolean;
 }
 export interface FunctionDeclProtoMsg {
@@ -233,15 +233,15 @@ export interface FunctionDeclProtoMsg {
 export interface FunctionDeclAmino {
   /**
    * The function arguments.
-  */
+   */
   args?: IdentDeclAmino[];
   /**
    * Optional declared return type.
-  */
+   */
   return_type?: DeclTypeAmino;
   /**
    * If the first argument of the function is the receiver.
-  */
+   */
   receiver_function?: boolean;
 }
 export interface FunctionDeclAminoMsg {

@@ -36,7 +36,7 @@ export interface QueryConfigRequestSDKType {}
 export interface QueryConfigResponse {
   /**
    * config is the current app config.
-  */
+   */
   config?: Config;
 }
 export interface QueryConfigResponseProtoMsg {
@@ -52,7 +52,7 @@ export interface QueryConfigResponseProtoMsg {
 export interface QueryConfigResponseAmino {
   /**
    * config is the current app config.
-  */
+   */
   config?: ConfigAmino;
 }
 /**

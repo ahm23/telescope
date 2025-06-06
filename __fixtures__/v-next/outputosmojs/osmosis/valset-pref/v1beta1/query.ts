@@ -12,7 +12,7 @@ export const protobufPackage = "osmosis.valsetpref.v1beta1";
 export interface UserValidatorPreferencesRequest {
   /**
    * user account address
-  */
+   */
   address: string;
 }
 export interface UserValidatorPreferencesRequestProtoMsg {

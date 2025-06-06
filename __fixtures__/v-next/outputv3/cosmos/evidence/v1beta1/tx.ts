@@ -51,7 +51,7 @@ export interface MsgSubmitEvidenceSDKType {
 export interface MsgSubmitEvidenceResponse {
   /**
    * hash defines the hash of the evidence.
-  */
+   */
   hash: Uint8Array;
 }
 export interface MsgSubmitEvidenceResponseProtoMsg {
@@ -67,7 +67,7 @@ export interface MsgSubmitEvidenceResponseProtoMsg {
 export interface MsgSubmitEvidenceResponseAmino {
   /**
    * hash defines the hash of the evidence.
-  */
+   */
   hash?: string;
 }
 /**

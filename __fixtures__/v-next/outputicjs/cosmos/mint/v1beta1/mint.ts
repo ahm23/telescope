@@ -10,11 +10,11 @@ import { DeepPartial } from "../../../helpers";
 export interface Minter {
   /**
    * current annual inflation rate
-  */
+   */
   inflation: string;
   /**
    * current annual expected provisions
-  */
+   */
   annualProvisions: string;
 }
 export interface MinterProtoMsg {
@@ -30,11 +30,11 @@ export interface MinterProtoMsg {
 export interface MinterAmino {
   /**
    * current annual inflation rate
-  */
+   */
   inflation: string;
   /**
    * current annual expected provisions
-  */
+   */
   annual_provisions: string;
 }
 export interface MinterAminoMsg {
@@ -50,27 +50,27 @@ export interface MinterAminoMsg {
 export interface CosmosMintV1beta1Params {
   /**
    * type of coin to mint
-  */
+   */
   mintDenom: string;
   /**
    * maximum annual change in inflation rate
-  */
+   */
   inflationRateChange: string;
   /**
    * maximum inflation rate
-  */
+   */
   inflationMax: string;
   /**
    * minimum inflation rate
-  */
+   */
   inflationMin: string;
   /**
    * goal of percent bonded atoms
-  */
+   */
   goalBonded: string;
   /**
    * expected blocks per year
-  */
+   */
   blocksPerYear: bigint;
 }
 export interface CosmosMintV1beta1ParamsProtoMsg {
@@ -86,27 +86,27 @@ export interface CosmosMintV1beta1ParamsProtoMsg {
 export interface CosmosMintV1beta1ParamsAmino {
   /**
    * type of coin to mint
-  */
+   */
   mint_denom: string;
   /**
    * maximum annual change in inflation rate
-  */
+   */
   inflation_rate_change: string;
   /**
    * maximum inflation rate
-  */
+   */
   inflation_max: string;
   /**
    * minimum inflation rate
-  */
+   */
   inflation_min: string;
   /**
    * goal of percent bonded atoms
-  */
+   */
   goal_bonded: string;
   /**
    * expected blocks per year
-  */
+   */
   blocks_per_year: string;
 }
 export interface CosmosMintV1beta1ParamsAminoMsg {

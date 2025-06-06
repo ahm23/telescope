@@ -97,15 +97,15 @@ export interface HistoricalInfoSDKType {
 export interface CommissionRates {
   /**
    * rate is the commission rate charged to delegators, as a fraction.
-  */
+   */
   rate: string;
   /**
    * max_rate defines the maximum commission rate which validator can ever charge, as a fraction.
-  */
+   */
   maxRate: string;
   /**
    * max_change_rate defines the maximum daily increase of the validator commission, as a fraction.
-  */
+   */
   maxChangeRate: string;
 }
 export interface CommissionRatesProtoMsg {
@@ -133,11 +133,11 @@ export interface CommissionRatesSDKType {
 export interface Commission {
   /**
    * commission_rates defines the initial commission rates to be used for creating a validator.
-  */
+   */
   commissionRates: CommissionRates;
   /**
    * update_time is the last time the commission rate was changed.
-  */
+   */
   updateTime: Date;
 }
 export interface CommissionProtoMsg {
@@ -163,23 +163,23 @@ export interface CommissionSDKType {
 export interface Description {
   /**
    * moniker defines a human-readable name for the validator.
-  */
+   */
   moniker: string;
   /**
    * identity defines an optional identity signature (ex. UPort or Keybase).
-  */
+   */
   identity: string;
   /**
    * website defines an optional website link.
-  */
+   */
   website: string;
   /**
    * security_contact defines an optional email for security contact.
-  */
+   */
   securityContact: string;
   /**
    * details define other optional details.
-  */
+   */
   details: string;
 }
 export interface DescriptionProtoMsg {
@@ -215,47 +215,47 @@ export interface DescriptionSDKType {
 export interface Validator {
   /**
    * operator_address defines the address of the validator's operator; bech encoded in JSON.
-  */
+   */
   operatorAddress: string;
   /**
    * consensus_pubkey is the consensus public key of the validator, as a Protobuf Any.
-  */
+   */
   consensusPubkey?: Any;
   /**
    * jailed defined whether the validator has been jailed from bonded status or not.
-  */
+   */
   jailed: boolean;
   /**
    * status is the validator status (bonded/unbonding/unbonded).
-  */
+   */
   status: BondStatus;
   /**
    * tokens define the delegated tokens (incl. self-delegation).
-  */
+   */
   tokens: string;
   /**
    * delegator_shares defines total shares issued to a validator's delegators.
-  */
+   */
   delegatorShares: string;
   /**
    * description defines the description terms for the validator.
-  */
+   */
   description: Description;
   /**
    * unbonding_height defines, if unbonding, the height at which this validator has begun unbonding.
-  */
+   */
   unbondingHeight: bigint;
   /**
    * unbonding_time defines, if unbonding, the min time for the validator to complete unbonding.
-  */
+   */
   unbondingTime: Date;
   /**
    * commission defines the commission parameters.
-  */
+   */
   commission: Commission;
   /**
    * min_self_delegation is the validator's self declared minimum self delegation.
-  */
+   */
   minSelfDelegation: string;
 }
 export interface ValidatorProtoMsg {
@@ -425,15 +425,15 @@ export interface DVVTripletsSDKType {
 export interface Delegation {
   /**
    * delegator_address is the bech32-encoded address of the delegator.
-  */
+   */
   delegatorAddress: string;
   /**
    * validator_address is the bech32-encoded address of the validator.
-  */
+   */
   validatorAddress: string;
   /**
    * shares define the delegation shares received.
-  */
+   */
   shares: string;
 }
 export interface DelegationProtoMsg {
@@ -463,15 +463,15 @@ export interface DelegationSDKType {
 export interface UnbondingDelegation {
   /**
    * delegator_address is the bech32-encoded address of the delegator.
-  */
+   */
   delegatorAddress: string;
   /**
    * validator_address is the bech32-encoded address of the validator.
-  */
+   */
   validatorAddress: string;
   /**
    * entries are the unbonding delegation entries.
-  */
+   */
   entries: UnbondingDelegationEntry[];
 }
 export interface UnbondingDelegationProtoMsg {
@@ -499,19 +499,19 @@ export interface UnbondingDelegationSDKType {
 export interface UnbondingDelegationEntry {
   /**
    * creation_height is the height which the unbonding took place.
-  */
+   */
   creationHeight: bigint;
   /**
    * completion_time is the unix time for unbonding completion.
-  */
+   */
   completionTime: Date;
   /**
    * initial_balance defines the tokens initially scheduled to receive at completion.
-  */
+   */
   initialBalance: string;
   /**
    * balance defines the tokens to receive at completion.
-  */
+   */
   balance: string;
 }
 export interface UnbondingDelegationEntryProtoMsg {
@@ -539,19 +539,19 @@ export interface UnbondingDelegationEntrySDKType {
 export interface RedelegationEntry {
   /**
    * creation_height  defines the height which the redelegation took place.
-  */
+   */
   creationHeight: bigint;
   /**
    * completion_time defines the unix time for redelegation completion.
-  */
+   */
   completionTime: Date;
   /**
    * initial_balance defines the initial balance when redelegation started.
-  */
+   */
   initialBalance: string;
   /**
    * shares_dst is the amount of destination-validator shares created by redelegation.
-  */
+   */
   sharesDst: string;
 }
 export interface RedelegationEntryProtoMsg {
@@ -580,19 +580,19 @@ export interface RedelegationEntrySDKType {
 export interface Redelegation {
   /**
    * delegator_address is the bech32-encoded address of the delegator.
-  */
+   */
   delegatorAddress: string;
   /**
    * validator_src_address is the validator redelegation source operator address.
-  */
+   */
   validatorSrcAddress: string;
   /**
    * validator_dst_address is the validator redelegation destination operator address.
-  */
+   */
   validatorDstAddress: string;
   /**
    * entries are the redelegation entries.
-  */
+   */
   entries: RedelegationEntry[];
 }
 export interface RedelegationProtoMsg {
@@ -621,27 +621,27 @@ export interface RedelegationSDKType {
 export interface Params {
   /**
    * unbonding_time is the time duration of unbonding.
-  */
+   */
   unbondingTime: Duration;
   /**
    * max_validators is the maximum number of validators.
-  */
+   */
   maxValidators: number;
   /**
    * max_entries is the max entries for either unbonding delegation or redelegation (per pair/trio).
-  */
+   */
   maxEntries: number;
   /**
    * historical_entries is the number of historical entries to persist.
-  */
+   */
   historicalEntries: number;
   /**
    * bond_denom defines the bondable coin denomination.
-  */
+   */
   bondDenom: string;
   /**
    * min_commission_rate is the chain-wide minimum commission rate that a validator can charge their delegators
-  */
+   */
   minCommissionRate: string;
 }
 export interface ParamsProtoMsg {

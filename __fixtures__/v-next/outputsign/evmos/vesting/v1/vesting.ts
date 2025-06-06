@@ -20,19 +20,19 @@ export interface ClawbackVestingAccount {
   baseVestingAccount?: BaseVestingAccount;
   /**
    * funder_address specifies the account which can perform clawback
-  */
+   */
   funderAddress: string;
   /**
    * start_time defines the time at which the vesting period begins
-  */
+   */
   startTime: Date;
   /**
    * lockup_periods defines the unlocking schedule relative to the start_time
-  */
+   */
   lockupPeriods: Period[];
   /**
    * vesting_periods defines the vesting schedule relative to the start_time
-  */
+   */
   vestingPeriods: Period[];
 }
 export interface ClawbackVestingAccountProtoMsg {
@@ -56,19 +56,19 @@ export interface ClawbackVestingAccountAmino {
   base_vesting_account?: BaseVestingAccountAmino;
   /**
    * funder_address specifies the account which can perform clawback
-  */
+   */
   funder_address?: string;
   /**
    * start_time defines the time at which the vesting period begins
-  */
+   */
   start_time?: string;
   /**
    * lockup_periods defines the unlocking schedule relative to the start_time
-  */
+   */
   lockup_periods?: PeriodAmino[];
   /**
    * vesting_periods defines the vesting schedule relative to the start_time
-  */
+   */
   vesting_periods?: PeriodAmino[];
 }
 export interface ClawbackVestingAccountAminoMsg {

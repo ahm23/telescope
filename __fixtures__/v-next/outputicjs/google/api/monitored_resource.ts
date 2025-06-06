@@ -52,7 +52,7 @@ export interface MonitoredResourceDescriptor {
   labels: LabelDescriptor[];
   /**
    * Optional. The launch stage of the monitored resource definition.
-  */
+   */
   launchStage: LaunchStage;
 }
 export interface MonitoredResourceDescriptorProtoMsg {
@@ -108,7 +108,7 @@ export interface MonitoredResourceDescriptorAmino {
   labels: LabelDescriptorAmino[];
   /**
    * Optional. The launch stage of the monitored resource definition.
-  */
+   */
   launch_stage: LaunchStage;
 }
 export interface MonitoredResourceDescriptorAminoMsg {
@@ -270,7 +270,7 @@ export interface MonitoredResourceMetadata {
   systemLabels?: Struct;
   /**
    * Output only. A map of user-defined metadata labels.
-  */
+   */
   userLabels: {
     [key: string]: string;
   };
@@ -306,7 +306,7 @@ export interface MonitoredResourceMetadataAmino {
   system_labels?: StructAmino;
   /**
    * Output only. A map of user-defined metadata labels.
-  */
+   */
   user_labels: {
     [key: string]: string;
   };

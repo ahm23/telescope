@@ -12,7 +12,7 @@ export const protobufPackage = "google.api";
 export interface SourceInfo {
   /**
    * All files used during config generation.
-  */
+   */
   sourceFiles: Any[];
 }
 export interface SourceInfoProtoMsg {

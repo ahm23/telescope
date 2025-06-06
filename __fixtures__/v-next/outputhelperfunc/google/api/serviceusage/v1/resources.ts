@@ -90,7 +90,7 @@ export interface Service {
   config?: ServiceConfig;
   /**
    * Whether or not the service has been enabled for use by the consumer.
-  */
+   */
   state: State;
 }
 export interface ServiceProtoMsg {
@@ -127,7 +127,7 @@ export interface ServiceAmino {
   config?: ServiceConfigAmino;
   /**
    * Whether or not the service has been enabled for use by the consumer.
-  */
+   */
   state?: State;
 }
 export interface ServiceAminoMsg {
@@ -162,7 +162,7 @@ export interface ServiceConfig {
   name: string;
   /**
    * The product title for this service.
-  */
+   */
   title: string;
   /**
    * A list of API interfaces exported by this service. Contains only the names,
@@ -176,15 +176,15 @@ export interface ServiceConfig {
   documentation?: Documentation;
   /**
    * Quota configuration.
-  */
+   */
   quota?: Quota;
   /**
    * Auth configuration. Contains only the OAuth rules.
-  */
+   */
   authentication?: Authentication;
   /**
    * Configuration controlling usage of this service.
-  */
+   */
   usage?: Usage;
   /**
    * Configuration for network endpoints. Contains only the names and aliases
@@ -222,7 +222,7 @@ export interface ServiceConfigAmino {
   name?: string;
   /**
    * The product title for this service.
-  */
+   */
   title?: string;
   /**
    * A list of API interfaces exported by this service. Contains only the names,
@@ -236,15 +236,15 @@ export interface ServiceConfigAmino {
   documentation?: DocumentationAmino;
   /**
    * Quota configuration.
-  */
+   */
   quota?: QuotaAmino;
   /**
    * Auth configuration. Contains only the OAuth rules.
-  */
+   */
   authentication?: AuthenticationAmino;
   /**
    * Configuration controlling usage of this service.
-  */
+   */
   usage?: UsageAmino;
   /**
    * Configuration for network endpoints. Contains only the names and aliases

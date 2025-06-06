@@ -15,11 +15,11 @@ export const protobufPackage = "cosmos.distribution.v1beta1";
 export interface DelegatorWithdrawInfo {
   /**
    * delegator_address is the address of the delegator.
-  */
+   */
   delegatorAddress: string;
   /**
    * withdraw_address is the address to withdraw the delegation rewards to.
-  */
+   */
   withdrawAddress: string;
 }
 export interface DelegatorWithdrawInfoProtoMsg {
@@ -37,11 +37,11 @@ export interface DelegatorWithdrawInfoProtoMsg {
 export interface DelegatorWithdrawInfoAmino {
   /**
    * delegator_address is the address of the delegator.
-  */
+   */
   delegator_address?: string;
   /**
    * withdraw_address is the address to withdraw the delegation rewards to.
-  */
+   */
   withdraw_address?: string;
 }
 export interface DelegatorWithdrawInfoAminoMsg {
@@ -69,11 +69,11 @@ export interface DelegatorWithdrawInfoSDKType {
 export interface ValidatorOutstandingRewardsRecord {
   /**
    * validator_address is the address of the validator.
-  */
+   */
   validatorAddress: string;
   /**
    * outstanding_rewards represents the oustanding rewards of a validator.
-  */
+   */
   outstandingRewards: DecCoin[];
 }
 export interface ValidatorOutstandingRewardsRecordProtoMsg {
@@ -89,11 +89,11 @@ export interface ValidatorOutstandingRewardsRecordProtoMsg {
 export interface ValidatorOutstandingRewardsRecordAmino {
   /**
    * validator_address is the address of the validator.
-  */
+   */
   validator_address?: string;
   /**
    * outstanding_rewards represents the oustanding rewards of a validator.
-  */
+   */
   outstanding_rewards?: DecCoinAmino[];
 }
 export interface ValidatorOutstandingRewardsRecordAminoMsg {
@@ -120,11 +120,11 @@ export interface ValidatorOutstandingRewardsRecordSDKType {
 export interface ValidatorAccumulatedCommissionRecord {
   /**
    * validator_address is the address of the validator.
-  */
+   */
   validatorAddress: string;
   /**
    * accumulated is the accumulated commission of a validator.
-  */
+   */
   accumulated: ValidatorAccumulatedCommission;
 }
 export interface ValidatorAccumulatedCommissionRecordProtoMsg {
@@ -141,11 +141,11 @@ export interface ValidatorAccumulatedCommissionRecordProtoMsg {
 export interface ValidatorAccumulatedCommissionRecordAmino {
   /**
    * validator_address is the address of the validator.
-  */
+   */
   validator_address?: string;
   /**
    * accumulated is the accumulated commission of a validator.
-  */
+   */
   accumulated?: ValidatorAccumulatedCommissionAmino;
 }
 export interface ValidatorAccumulatedCommissionRecordAminoMsg {
@@ -173,15 +173,15 @@ export interface ValidatorAccumulatedCommissionRecordSDKType {
 export interface ValidatorHistoricalRewardsRecord {
   /**
    * validator_address is the address of the validator.
-  */
+   */
   validatorAddress: string;
   /**
    * period defines the period the historical rewards apply to.
-  */
+   */
   period: bigint;
   /**
    * rewards defines the historical rewards of a validator.
-  */
+   */
   rewards: ValidatorHistoricalRewards;
 }
 export interface ValidatorHistoricalRewardsRecordProtoMsg {
@@ -198,15 +198,15 @@ export interface ValidatorHistoricalRewardsRecordProtoMsg {
 export interface ValidatorHistoricalRewardsRecordAmino {
   /**
    * validator_address is the address of the validator.
-  */
+   */
   validator_address?: string;
   /**
    * period defines the period the historical rewards apply to.
-  */
+   */
   period?: string;
   /**
    * rewards defines the historical rewards of a validator.
-  */
+   */
   rewards?: ValidatorHistoricalRewardsAmino;
 }
 export interface ValidatorHistoricalRewardsRecordAminoMsg {
@@ -234,11 +234,11 @@ export interface ValidatorHistoricalRewardsRecordSDKType {
 export interface ValidatorCurrentRewardsRecord {
   /**
    * validator_address is the address of the validator.
-  */
+   */
   validatorAddress: string;
   /**
    * rewards defines the current rewards of a validator.
-  */
+   */
   rewards: ValidatorCurrentRewards;
 }
 export interface ValidatorCurrentRewardsRecordProtoMsg {
@@ -254,11 +254,11 @@ export interface ValidatorCurrentRewardsRecordProtoMsg {
 export interface ValidatorCurrentRewardsRecordAmino {
   /**
    * validator_address is the address of the validator.
-  */
+   */
   validator_address?: string;
   /**
    * rewards defines the current rewards of a validator.
-  */
+   */
   rewards?: ValidatorCurrentRewardsAmino;
 }
 export interface ValidatorCurrentRewardsRecordAminoMsg {
@@ -284,15 +284,15 @@ export interface ValidatorCurrentRewardsRecordSDKType {
 export interface DelegatorStartingInfoRecord {
   /**
    * delegator_address is the address of the delegator.
-  */
+   */
   delegatorAddress: string;
   /**
    * validator_address is the address of the validator.
-  */
+   */
   validatorAddress: string;
   /**
    * starting_info defines the starting info of a delegator.
-  */
+   */
   startingInfo: DelegatorStartingInfo;
 }
 export interface DelegatorStartingInfoRecordProtoMsg {
@@ -308,15 +308,15 @@ export interface DelegatorStartingInfoRecordProtoMsg {
 export interface DelegatorStartingInfoRecordAmino {
   /**
    * delegator_address is the address of the delegator.
-  */
+   */
   delegator_address?: string;
   /**
    * validator_address is the address of the validator.
-  */
+   */
   validator_address?: string;
   /**
    * starting_info defines the starting info of a delegator.
-  */
+   */
   starting_info?: DelegatorStartingInfoAmino;
 }
 export interface DelegatorStartingInfoRecordAminoMsg {
@@ -343,19 +343,19 @@ export interface DelegatorStartingInfoRecordSDKType {
 export interface ValidatorSlashEventRecord {
   /**
    * validator_address is the address of the validator.
-  */
+   */
   validatorAddress: string;
   /**
    * height defines the block height at which the slash event occured.
-  */
+   */
   height: bigint;
   /**
    * period is the period of the slash event.
-  */
+   */
   period: bigint;
   /**
    * validator_slash_event describes the slash event.
-  */
+   */
   validatorSlashEvent: ValidatorSlashEvent;
 }
 export interface ValidatorSlashEventRecordProtoMsg {
@@ -371,19 +371,19 @@ export interface ValidatorSlashEventRecordProtoMsg {
 export interface ValidatorSlashEventRecordAmino {
   /**
    * validator_address is the address of the validator.
-  */
+   */
   validator_address?: string;
   /**
    * height defines the block height at which the slash event occured.
-  */
+   */
   height?: string;
   /**
    * period is the period of the slash event.
-  */
+   */
   period?: string;
   /**
    * validator_slash_event describes the slash event.
-  */
+   */
   validator_slash_event?: ValidatorSlashEventAmino;
 }
 export interface ValidatorSlashEventRecordAminoMsg {
@@ -411,43 +411,43 @@ export interface ValidatorSlashEventRecordSDKType {
 export interface GenesisState {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: Params;
   /**
    * fee_pool defines the fee pool at genesis.
-  */
+   */
   feePool: FeePool;
   /**
    * fee_pool defines the delegator withdraw infos at genesis.
-  */
+   */
   delegatorWithdrawInfos: DelegatorWithdrawInfo[];
   /**
    * fee_pool defines the previous proposer at genesis.
-  */
+   */
   previousProposer: string;
   /**
    * fee_pool defines the outstanding rewards of all validators at genesis.
-  */
+   */
   outstandingRewards: ValidatorOutstandingRewardsRecord[];
   /**
    * fee_pool defines the accumulated commisions of all validators at genesis.
-  */
+   */
   validatorAccumulatedCommissions: ValidatorAccumulatedCommissionRecord[];
   /**
    * fee_pool defines the historical rewards of all validators at genesis.
-  */
+   */
   validatorHistoricalRewards: ValidatorHistoricalRewardsRecord[];
   /**
    * fee_pool defines the current rewards of all validators at genesis.
-  */
+   */
   validatorCurrentRewards: ValidatorCurrentRewardsRecord[];
   /**
    * fee_pool defines the delegator starting infos at genesis.
-  */
+   */
   delegatorStartingInfos: DelegatorStartingInfoRecord[];
   /**
    * fee_pool defines the validator slash events at genesis.
-  */
+   */
   validatorSlashEvents: ValidatorSlashEventRecord[];
 }
 export interface GenesisStateProtoMsg {
@@ -463,43 +463,43 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params?: ParamsAmino;
   /**
    * fee_pool defines the fee pool at genesis.
-  */
+   */
   fee_pool?: FeePoolAmino;
   /**
    * fee_pool defines the delegator withdraw infos at genesis.
-  */
+   */
   delegator_withdraw_infos?: DelegatorWithdrawInfoAmino[];
   /**
    * fee_pool defines the previous proposer at genesis.
-  */
+   */
   previous_proposer?: string;
   /**
    * fee_pool defines the outstanding rewards of all validators at genesis.
-  */
+   */
   outstanding_rewards?: ValidatorOutstandingRewardsRecordAmino[];
   /**
    * fee_pool defines the accumulated commisions of all validators at genesis.
-  */
+   */
   validator_accumulated_commissions?: ValidatorAccumulatedCommissionRecordAmino[];
   /**
    * fee_pool defines the historical rewards of all validators at genesis.
-  */
+   */
   validator_historical_rewards?: ValidatorHistoricalRewardsRecordAmino[];
   /**
    * fee_pool defines the current rewards of all validators at genesis.
-  */
+   */
   validator_current_rewards?: ValidatorCurrentRewardsRecordAmino[];
   /**
    * fee_pool defines the delegator starting infos at genesis.
-  */
+   */
   delegator_starting_infos?: DelegatorStartingInfoRecordAmino[];
   /**
    * fee_pool defines the validator slash events at genesis.
-  */
+   */
   validator_slash_events?: ValidatorSlashEventRecordAmino[];
 }
 export interface GenesisStateAminoMsg {

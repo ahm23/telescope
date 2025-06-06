@@ -250,27 +250,27 @@ export function syntaxToJSON(object: Syntax): string {
 export interface Type {
   /**
    * The fully qualified message name.
-  */
+   */
   name: string;
   /**
    * The list of fields.
-  */
+   */
   fields: Field[];
   /**
    * The list of types appearing in `oneof` definitions in this type.
-  */
+   */
   oneofs: string[];
   /**
    * The protocol buffer options.
-  */
+   */
   options: Option[];
   /**
    * The source context.
-  */
+   */
   sourceContext?: SourceContext;
   /**
    * The source syntax.
-  */
+   */
   syntax: Syntax;
 }
 export interface TypeProtoMsg {
@@ -286,27 +286,27 @@ export interface TypeProtoMsg {
 export interface TypeAmino {
   /**
    * The fully qualified message name.
-  */
+   */
   name?: string;
   /**
    * The list of fields.
-  */
+   */
   fields?: FieldAmino[];
   /**
    * The list of types appearing in `oneof` definitions in this type.
-  */
+   */
   oneofs?: string[];
   /**
    * The protocol buffer options.
-  */
+   */
   options?: OptionAmino[];
   /**
    * The source context.
-  */
+   */
   source_context?: SourceContextAmino;
   /**
    * The source syntax.
-  */
+   */
   syntax?: Syntax;
 }
 /**
@@ -332,19 +332,19 @@ export interface TypeSDKType {
 export interface Field {
   /**
    * The field type.
-  */
+   */
   kind: Field_Kind;
   /**
    * The field cardinality.
-  */
+   */
   cardinality: Field_Cardinality;
   /**
    * The field number.
-  */
+   */
   number: number;
   /**
    * The field name.
-  */
+   */
   name: string;
   /**
    * The field type URL, without the scheme, for message or enumeration
@@ -358,19 +358,19 @@ export interface Field {
   oneofIndex: number;
   /**
    * Whether to use alternative packed wire representation.
-  */
+   */
   packed: boolean;
   /**
    * The protocol buffer options.
-  */
+   */
   options: Option[];
   /**
    * The field JSON name.
-  */
+   */
   jsonName: string;
   /**
    * The string value of the default value of this field. Proto2 syntax only.
-  */
+   */
   defaultValue: string;
 }
 export interface FieldProtoMsg {
@@ -386,19 +386,19 @@ export interface FieldProtoMsg {
 export interface FieldAmino {
   /**
    * The field type.
-  */
+   */
   kind?: Field_Kind;
   /**
    * The field cardinality.
-  */
+   */
   cardinality?: Field_Cardinality;
   /**
    * The field number.
-  */
+   */
   number?: number;
   /**
    * The field name.
-  */
+   */
   name?: string;
   /**
    * The field type URL, without the scheme, for message or enumeration
@@ -412,19 +412,19 @@ export interface FieldAmino {
   oneof_index?: number;
   /**
    * Whether to use alternative packed wire representation.
-  */
+   */
   packed?: boolean;
   /**
    * The protocol buffer options.
-  */
+   */
   options?: OptionAmino[];
   /**
    * The field JSON name.
-  */
+   */
   json_name?: string;
   /**
    * The string value of the default value of this field. Proto2 syntax only.
-  */
+   */
   default_value?: string;
 }
 /**
@@ -454,23 +454,23 @@ export interface FieldSDKType {
 export interface Enum {
   /**
    * Enum type name.
-  */
+   */
   name: string;
   /**
    * Enum value definitions.
-  */
+   */
   enumvalue: EnumValue[];
   /**
    * Protocol buffer options.
-  */
+   */
   options: Option[];
   /**
    * The source context.
-  */
+   */
   sourceContext?: SourceContext;
   /**
    * The source syntax.
-  */
+   */
   syntax: Syntax;
 }
 export interface EnumProtoMsg {
@@ -486,23 +486,23 @@ export interface EnumProtoMsg {
 export interface EnumAmino {
   /**
    * Enum type name.
-  */
+   */
   name?: string;
   /**
    * Enum value definitions.
-  */
+   */
   enumvalue?: EnumValueAmino[];
   /**
    * Protocol buffer options.
-  */
+   */
   options?: OptionAmino[];
   /**
    * The source context.
-  */
+   */
   source_context?: SourceContextAmino;
   /**
    * The source syntax.
-  */
+   */
   syntax?: Syntax;
 }
 /**
@@ -527,15 +527,15 @@ export interface EnumSDKType {
 export interface EnumValue {
   /**
    * Enum value name.
-  */
+   */
   name: string;
   /**
    * Enum value number.
-  */
+   */
   number: number;
   /**
    * Protocol buffer options.
-  */
+   */
   options: Option[];
 }
 export interface EnumValueProtoMsg {
@@ -551,15 +551,15 @@ export interface EnumValueProtoMsg {
 export interface EnumValueAmino {
   /**
    * Enum value name.
-  */
+   */
   name?: string;
   /**
    * Enum value number.
-  */
+   */
   number?: number;
   /**
    * Protocol buffer options.
-  */
+   */
   options?: OptionAmino[];
 }
 /**

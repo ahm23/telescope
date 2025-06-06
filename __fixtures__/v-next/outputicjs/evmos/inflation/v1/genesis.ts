@@ -10,23 +10,23 @@ import { DeepPartial } from "../../../helpers";
 export interface GenesisState {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: EvmosInflationV1Params;
   /**
    * amount of past periods, based on the epochs per period param
-  */
+   */
   period: bigint;
   /**
    * inflation epoch identifier
-  */
+   */
   epochIdentifier: string;
   /**
    * number of epochs after which inflation is recalculated
-  */
+   */
   epochsPerPeriod: bigint;
   /**
    * number of epochs that have passed while inflation is disabled
-  */
+   */
   skippedEpochs: bigint;
 }
 export interface GenesisStateProtoMsg {
@@ -42,23 +42,23 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: EvmosInflationV1ParamsAmino;
   /**
    * amount of past periods, based on the epochs per period param
-  */
+   */
   period: string;
   /**
    * inflation epoch identifier
-  */
+   */
   epoch_identifier: string;
   /**
    * number of epochs after which inflation is recalculated
-  */
+   */
   epochs_per_period: string;
   /**
    * number of epochs that have passed while inflation is disabled
-  */
+   */
   skipped_epochs: string;
 }
 export interface GenesisStateAminoMsg {
@@ -74,19 +74,19 @@ export interface GenesisStateAminoMsg {
 export interface EvmosInflationV1Params {
   /**
    * type of coin to mint
-  */
+   */
   mintDenom: string;
   /**
    * variables to calculate exponential inflation
-  */
+   */
   exponentialCalculation: ExponentialCalculation;
   /**
    * inflation distribution of the minted denom
-  */
+   */
   inflationDistribution: InflationDistribution;
   /**
    * parameter to enable inflation and halt increasing the skipped_epochs
-  */
+   */
   enableInflation: boolean;
 }
 export interface EvmosInflationV1ParamsProtoMsg {
@@ -102,19 +102,19 @@ export interface EvmosInflationV1ParamsProtoMsg {
 export interface EvmosInflationV1ParamsAmino {
   /**
    * type of coin to mint
-  */
+   */
   mint_denom: string;
   /**
    * variables to calculate exponential inflation
-  */
+   */
   exponential_calculation: ExponentialCalculationAmino;
   /**
    * inflation distribution of the minted denom
-  */
+   */
   inflation_distribution: InflationDistributionAmino;
   /**
    * parameter to enable inflation and halt increasing the skipped_epochs
-  */
+   */
   enable_inflation: boolean;
 }
 export interface EvmosInflationV1ParamsAminoMsg {

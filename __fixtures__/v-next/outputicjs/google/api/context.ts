@@ -122,11 +122,11 @@ export interface ContextRule {
   selector: string;
   /**
    * A list of full type names of requested contexts.
-  */
+   */
   requested: string[];
   /**
    * A list of full type names of provided contexts.
-  */
+   */
   provided: string[];
   /**
    * A list of full type names or extension IDs of extensions allowed in grpc
@@ -159,11 +159,11 @@ export interface ContextRuleAmino {
   selector: string;
   /**
    * A list of full type names of requested contexts.
-  */
+   */
   requested: string[];
   /**
    * A list of full type names of provided contexts.
-  */
+   */
   provided: string[];
   /**
    * A list of full type names or extension IDs of extensions allowed in grpc

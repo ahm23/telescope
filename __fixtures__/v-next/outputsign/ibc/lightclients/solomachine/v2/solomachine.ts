@@ -108,11 +108,11 @@ export function dataTypeToJSON(object: DataType): string {
 export interface ClientState {
   /**
    * latest sequence of the client state
-  */
+   */
   sequence: bigint;
   /**
    * frozen sequence of the solo machine
-  */
+   */
   isFrozen: boolean;
   consensusState?: ConsensusState;
   /**
@@ -135,11 +135,11 @@ export interface ClientStateProtoMsg {
 export interface ClientStateAmino {
   /**
    * latest sequence of the client state
-  */
+   */
   sequence?: string;
   /**
    * frozen sequence of the solo machine
-  */
+   */
   is_frozen?: boolean;
   consensus_state?: ConsensusStateAmino;
   /**
@@ -176,7 +176,7 @@ export interface ClientStateSDKType {
 export interface ConsensusState {
   /**
    * public key of the solo machine
-  */
+   */
   publicKey?: Any;
   /**
    * diversifier allows the same public key to be re-used across different solo
@@ -201,7 +201,7 @@ export interface ConsensusStateProtoMsg {
 export interface ConsensusStateAmino {
   /**
    * public key of the solo machine
-  */
+   */
   public_key?: AnyAmino;
   /**
    * diversifier allows the same public key to be re-used across different solo
@@ -237,7 +237,7 @@ export interface ConsensusStateSDKType {
 export interface Header {
   /**
    * sequence to update solo machine public key at
-  */
+   */
   sequence: bigint;
   timestamp: bigint;
   signature: Uint8Array;
@@ -257,7 +257,7 @@ export interface HeaderProtoMsg {
 export interface HeaderAmino {
   /**
    * sequence to update solo machine public key at
-  */
+   */
   sequence?: string;
   timestamp?: string;
   signature?: string;
@@ -428,11 +428,11 @@ export interface SignBytes {
   diversifier: string;
   /**
    * type of the data used
-  */
+   */
   dataType: DataType;
   /**
    * marshaled data
-  */
+   */
   data: Uint8Array;
 }
 export interface SignBytesProtoMsg {
@@ -451,11 +451,11 @@ export interface SignBytesAmino {
   diversifier?: string;
   /**
    * type of the data used
-  */
+   */
   data_type?: DataType;
   /**
    * marshaled data
-  */
+   */
   data?: string;
 }
 export interface SignBytesAminoMsg {
@@ -484,11 +484,11 @@ export interface SignBytesSDKType {
 export interface HeaderData {
   /**
    * header public key
-  */
+   */
   newPubKey?: Any;
   /**
    * header diversifier
-  */
+   */
   newDiversifier: string;
 }
 export interface HeaderDataProtoMsg {
@@ -504,11 +504,11 @@ export interface HeaderDataProtoMsg {
 export interface HeaderDataAmino {
   /**
    * header public key
-  */
+   */
   new_pub_key?: AnyAmino;
   /**
    * header diversifier
-  */
+   */
   new_diversifier?: string;
 }
 export interface HeaderDataAminoMsg {

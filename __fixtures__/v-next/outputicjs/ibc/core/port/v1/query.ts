@@ -10,23 +10,23 @@ import { DeepPartial } from "../../../../helpers";
 export interface QueryAppVersionRequest {
   /**
    * port unique identifier
-  */
+   */
   portId: string;
   /**
    * connection unique identifier
-  */
+   */
   connectionId: string;
   /**
    * whether the channel is ordered or unordered
-  */
+   */
   ordering: Order;
   /**
    * counterparty channel end
-  */
+   */
   counterparty?: Counterparty;
   /**
    * proposed version
-  */
+   */
   proposedVersion: string;
 }
 export interface QueryAppVersionRequestProtoMsg {
@@ -42,23 +42,23 @@ export interface QueryAppVersionRequestProtoMsg {
 export interface QueryAppVersionRequestAmino {
   /**
    * port unique identifier
-  */
+   */
   port_id: string;
   /**
    * connection unique identifier
-  */
+   */
   connection_id: string;
   /**
    * whether the channel is ordered or unordered
-  */
+   */
   ordering: Order;
   /**
    * counterparty channel end
-  */
+   */
   counterparty?: CounterpartyAmino;
   /**
    * proposed version
-  */
+   */
   proposed_version: string;
 }
 export interface QueryAppVersionRequestAminoMsg {
@@ -74,11 +74,11 @@ export interface QueryAppVersionRequestAminoMsg {
 export interface QueryAppVersionResponse {
   /**
    * port id associated with the request identifiers
-  */
+   */
   portId: string;
   /**
    * supported app version
-  */
+   */
   version: string;
 }
 export interface QueryAppVersionResponseProtoMsg {
@@ -94,11 +94,11 @@ export interface QueryAppVersionResponseProtoMsg {
 export interface QueryAppVersionResponseAmino {
   /**
    * port id associated with the request identifiers
-  */
+   */
   port_id: string;
   /**
    * supported app version
-  */
+   */
   version: string;
 }
 export interface QueryAppVersionResponseAminoMsg {

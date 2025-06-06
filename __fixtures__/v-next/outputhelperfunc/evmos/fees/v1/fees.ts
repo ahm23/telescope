@@ -12,11 +12,11 @@ export const protobufPackage = "evmos.fees.v1";
 export interface DevFeeInfo {
   /**
    * hex address of registered contract
-  */
+   */
   contractAddress: string;
   /**
    * bech32 address of contract deployer
-  */
+   */
   deployerAddress: string;
   /**
    * bech32 address of account receiving the transaction fees
@@ -38,11 +38,11 @@ export interface DevFeeInfoProtoMsg {
 export interface DevFeeInfoAmino {
   /**
    * hex address of registered contract
-  */
+   */
   contract_address?: string;
   /**
    * bech32 address of contract deployer
-  */
+   */
   deployer_address?: string;
   /**
    * bech32 address of account receiving the transaction fees

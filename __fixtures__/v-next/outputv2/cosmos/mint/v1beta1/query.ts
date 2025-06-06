@@ -41,7 +41,7 @@ export interface QueryParamsRequestSDKType {}
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -57,7 +57,7 @@ export interface QueryParamsResponseProtoMsg {
 export interface QueryParamsResponseAmino {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
@@ -112,7 +112,7 @@ export interface QueryInflationRequestSDKType {}
 export interface QueryInflationResponse {
   /**
    * inflation is the current minting inflation value.
-  */
+   */
   inflation: Uint8Array;
 }
 export interface QueryInflationResponseProtoMsg {
@@ -129,7 +129,7 @@ export interface QueryInflationResponseProtoMsg {
 export interface QueryInflationResponseAmino {
   /**
    * inflation is the current minting inflation value.
-  */
+   */
   inflation?: string;
 }
 export interface QueryInflationResponseAminoMsg {
@@ -188,7 +188,7 @@ export interface QueryAnnualProvisionsRequestSDKType {}
 export interface QueryAnnualProvisionsResponse {
   /**
    * annual_provisions is the current minting annual provisions value.
-  */
+   */
   annualProvisions: Uint8Array;
 }
 export interface QueryAnnualProvisionsResponseProtoMsg {
@@ -205,7 +205,7 @@ export interface QueryAnnualProvisionsResponseProtoMsg {
 export interface QueryAnnualProvisionsResponseAmino {
   /**
    * annual_provisions is the current minting annual provisions value.
-  */
+   */
   annual_provisions?: string;
 }
 export interface QueryAnnualProvisionsResponseAminoMsg {

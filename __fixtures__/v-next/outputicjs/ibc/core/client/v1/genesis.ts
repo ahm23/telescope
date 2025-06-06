@@ -10,24 +10,24 @@ import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../../helpe
 export interface GenesisState {
   /**
    * client states with their corresponding identifiers
-  */
+   */
   clients: IdentifiedClientState[];
   /**
    * consensus states from each client
-  */
+   */
   clientsConsensus: ClientConsensusStates[];
   /**
    * metadata from each client
-  */
+   */
   clientsMetadata: IdentifiedGenesisMetadata[];
   params: IbcCoreClientV1Params;
   /**
    * create localhost on initialization
-  */
+   */
   createLocalhost: boolean;
   /**
    * the sequence for the next generated client identifier
-  */
+   */
   nextClientSequence: bigint;
 }
 export interface GenesisStateProtoMsg {
@@ -43,24 +43,24 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * client states with their corresponding identifiers
-  */
+   */
   clients: IdentifiedClientStateAmino[];
   /**
    * consensus states from each client
-  */
+   */
   clients_consensus: ClientConsensusStatesAmino[];
   /**
    * metadata from each client
-  */
+   */
   clients_metadata: IdentifiedGenesisMetadataAmino[];
   params: IbcCoreClientV1ParamsAmino;
   /**
    * create localhost on initialization
-  */
+   */
   create_localhost: boolean;
   /**
    * the sequence for the next generated client identifier
-  */
+   */
   next_client_sequence: string;
 }
 export interface GenesisStateAminoMsg {
@@ -77,11 +77,11 @@ export interface GenesisStateAminoMsg {
 export interface GenesisMetadata {
   /**
    * store key of metadata without clientID-prefix
-  */
+   */
   key: Uint8Array;
   /**
    * metadata value
-  */
+   */
   value: Uint8Array;
 }
 export interface GenesisMetadataProtoMsg {
@@ -98,11 +98,11 @@ export interface GenesisMetadataProtoMsg {
 export interface GenesisMetadataAmino {
   /**
    * store key of metadata without clientID-prefix
-  */
+   */
   key: string;
   /**
    * metadata value
-  */
+   */
   value: string;
 }
 export interface GenesisMetadataAminoMsg {

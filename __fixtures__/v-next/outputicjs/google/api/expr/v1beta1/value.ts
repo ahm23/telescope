@@ -14,51 +14,51 @@ import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../../helpe
 export interface Value {
   /**
    * Null value.
-  */
+   */
   nullValue?: NullValue;
   /**
    * Boolean value.
-  */
+   */
   boolValue?: boolean;
   /**
    * Signed integer value.
-  */
+   */
   int64Value?: bigint;
   /**
    * Unsigned integer value.
-  */
+   */
   uint64Value?: bigint;
   /**
    * Floating point value.
-  */
+   */
   doubleValue?: number;
   /**
    * UTF-8 string value.
-  */
+   */
   stringValue?: string;
   /**
    * Byte string value.
-  */
+   */
   bytesValue?: Uint8Array;
   /**
    * An enum value.
-  */
+   */
   enumValue?: EnumValue;
   /**
    * The proto message backing an object value.
-  */
+   */
   objectValue?: Any;
   /**
    * Map value.
-  */
+   */
   mapValue?: MapValue;
   /**
    * List value.
-  */
+   */
   listValue?: ListValue;
   /**
    * A Type value represented by the fully qualified name of the type.
-  */
+   */
   typeValue?: string;
 }
 export interface ValueProtoMsg {
@@ -77,51 +77,51 @@ export interface ValueProtoMsg {
 export interface ValueAmino {
   /**
    * Null value.
-  */
+   */
   null_value?: NullValue;
   /**
    * Boolean value.
-  */
+   */
   bool_value?: boolean;
   /**
    * Signed integer value.
-  */
+   */
   int64_value?: string;
   /**
    * Unsigned integer value.
-  */
+   */
   uint64_value?: string;
   /**
    * Floating point value.
-  */
+   */
   double_value?: number;
   /**
    * UTF-8 string value.
-  */
+   */
   string_value?: string;
   /**
    * Byte string value.
-  */
+   */
   bytes_value?: string;
   /**
    * An enum value.
-  */
+   */
   enum_value?: EnumValueAmino;
   /**
    * The proto message backing an object value.
-  */
+   */
   object_value?: AnyAmino;
   /**
    * Map value.
-  */
+   */
   map_value?: MapValueAmino;
   /**
    * List value.
-  */
+   */
   list_value?: ListValueAmino;
   /**
    * A Type value represented by the fully qualified name of the type.
-  */
+   */
   type_value?: string;
 }
 export interface ValueAminoMsg {
@@ -137,11 +137,11 @@ export interface ValueAminoMsg {
 export interface EnumValue {
   /**
    * The fully qualified name of the enum type.
-  */
+   */
   type: string;
   /**
    * The value of the enum.
-  */
+   */
   value: number;
 }
 export interface EnumValueProtoMsg {
@@ -157,11 +157,11 @@ export interface EnumValueProtoMsg {
 export interface EnumValueAmino {
   /**
    * The fully qualified name of the enum type.
-  */
+   */
   type: string;
   /**
    * The value of the enum.
-  */
+   */
   value: number;
 }
 export interface EnumValueAminoMsg {
@@ -180,7 +180,7 @@ export interface EnumValueAminoMsg {
 export interface ListValue {
   /**
    * The ordered values in the list.
-  */
+   */
   values: Value[];
 }
 export interface ListValueProtoMsg {
@@ -199,7 +199,7 @@ export interface ListValueProtoMsg {
 export interface ListValueAmino {
   /**
    * The ordered values in the list.
-  */
+   */
   values: ValueAmino[];
 }
 export interface ListValueAminoMsg {
@@ -266,7 +266,7 @@ export interface MapValue_Entry {
   key?: Value;
   /**
    * The value.
-  */
+   */
   value?: Value;
 }
 export interface MapValue_EntryProtoMsg {
@@ -289,7 +289,7 @@ export interface MapValue_EntryAmino {
   key?: ValueAmino;
   /**
    * The value.
-  */
+   */
   value?: ValueAmino;
 }
 export interface MapValue_EntryAminoMsg {

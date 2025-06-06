@@ -66,19 +66,19 @@ export function issueDetails_SeverityToJSON(object: IssueDetails_Severity): stri
 export interface ParseRequest {
   /**
    * Required. Source text in CEL syntax.
-  */
+   */
   celSource: string;
   /**
    * Tag for version of CEL syntax, for future use.
-  */
+   */
   syntaxVersion: string;
   /**
    * File or resource for source text, used in [SourceInfo][google.api.SourceInfo].
-  */
+   */
   sourceLocation: string;
   /**
    * Prevent macro expansion.  See "Macros" in Language Defiinition.
-  */
+   */
   disableMacros: boolean;
 }
 export interface ParseRequestProtoMsg {
@@ -94,19 +94,19 @@ export interface ParseRequestProtoMsg {
 export interface ParseRequestAmino {
   /**
    * Required. Source text in CEL syntax.
-  */
+   */
   cel_source?: string;
   /**
    * Tag for version of CEL syntax, for future use.
-  */
+   */
   syntax_version?: string;
   /**
    * File or resource for source text, used in [SourceInfo][google.api.SourceInfo].
-  */
+   */
   source_location?: string;
   /**
    * Prevent macro expansion.  See "Macros" in Language Defiinition.
-  */
+   */
   disable_macros?: boolean;
 }
 /**
@@ -130,11 +130,11 @@ export interface ParseRequestSDKType {
 export interface ParseResponse {
   /**
    * The parsed representation, or unset if parsing failed.
-  */
+   */
   parsedExpr?: ParsedExpr;
   /**
    * Any number of issues with [StatusDetails][] as the details.
-  */
+   */
   issues: Status[];
 }
 export interface ParseResponseProtoMsg {
@@ -150,11 +150,11 @@ export interface ParseResponseProtoMsg {
 export interface ParseResponseAmino {
   /**
    * The parsed representation, or unset if parsing failed.
-  */
+   */
   parsed_expr?: ParsedExprAmino;
   /**
    * Any number of issues with [StatusDetails][] as the details.
-  */
+   */
   issues?: StatusAmino[];
 }
 /**
@@ -176,7 +176,7 @@ export interface ParseResponseSDKType {
 export interface CheckRequest {
   /**
    * Required. The parsed representation of the CEL program.
-  */
+   */
   parsedExpr?: ParsedExpr;
   /**
    * Declarations of types for external variables and functions.
@@ -209,7 +209,7 @@ export interface CheckRequestProtoMsg {
 export interface CheckRequestAmino {
   /**
    * Required. The parsed representation of the CEL program.
-  */
+   */
   parsed_expr?: ParsedExprAmino;
   /**
    * Declarations of types for external variables and functions.
@@ -250,11 +250,11 @@ export interface CheckRequestSDKType {
 export interface CheckResponse {
   /**
    * The annotated representation, or unset if checking failed.
-  */
+   */
   checkedExpr?: CheckedExpr;
   /**
    * Any number of issues with [StatusDetails][] as the details.
-  */
+   */
   issues: Status[];
 }
 export interface CheckResponseProtoMsg {
@@ -270,11 +270,11 @@ export interface CheckResponseProtoMsg {
 export interface CheckResponseAmino {
   /**
    * The annotated representation, or unset if checking failed.
-  */
+   */
   checked_expr?: CheckedExprAmino;
   /**
    * Any number of issues with [StatusDetails][] as the details.
-  */
+   */
   issues?: StatusAmino[];
 }
 /**
@@ -327,11 +327,11 @@ export interface EvalRequest_BindingsEntrySDKType {
 export interface EvalRequest {
   /**
    * Evaluate based on the parsed representation.
-  */
+   */
   parsedExpr?: ParsedExpr;
   /**
    * Evaluate based on the checked representation.
-  */
+   */
   checkedExpr?: CheckedExpr;
   /**
    * Bindings for the external variables.  The types SHOULD be compatible
@@ -342,7 +342,7 @@ export interface EvalRequest {
   };
   /**
    * SHOULD be the same container as used in [CheckRequest][google.api.expr.conformance.v1alpha1.CheckRequest], if checked.
-  */
+   */
   container: string;
 }
 export interface EvalRequestProtoMsg {
@@ -358,11 +358,11 @@ export interface EvalRequestProtoMsg {
 export interface EvalRequestAmino {
   /**
    * Evaluate based on the parsed representation.
-  */
+   */
   parsed_expr?: ParsedExprAmino;
   /**
    * Evaluate based on the checked representation.
-  */
+   */
   checked_expr?: CheckedExprAmino;
   /**
    * Bindings for the external variables.  The types SHOULD be compatible
@@ -373,7 +373,7 @@ export interface EvalRequestAmino {
   };
   /**
    * SHOULD be the same container as used in [CheckRequest][google.api.expr.conformance.v1alpha1.CheckRequest], if checked.
-  */
+   */
   container?: string;
 }
 /**
@@ -399,7 +399,7 @@ export interface EvalRequestSDKType {
 export interface EvalResponse {
   /**
    * The execution result, or unset if execution couldn't start.
-  */
+   */
   result?: ExprValue;
   /**
    * Any number of issues with [StatusDetails][] as the details.
@@ -422,7 +422,7 @@ export interface EvalResponseProtoMsg {
 export interface EvalResponseAmino {
   /**
    * The execution result, or unset if execution couldn't start.
-  */
+   */
   result?: ExprValueAmino;
   /**
    * Any number of issues with [StatusDetails][] as the details.
@@ -453,15 +453,15 @@ export interface EvalResponseSDKType {
 export interface IssueDetails {
   /**
    * The severity of the issue.
-  */
+   */
   severity: IssueDetails_Severity;
   /**
    * Position in the source, if known.
-  */
+   */
   position?: SourcePosition;
   /**
    * Expression ID from [Expr][], 0 if unknown.
-  */
+   */
   id: bigint;
 }
 export interface IssueDetailsProtoMsg {
@@ -479,15 +479,15 @@ export interface IssueDetailsProtoMsg {
 export interface IssueDetailsAmino {
   /**
    * The severity of the issue.
-  */
+   */
   severity?: IssueDetails_Severity;
   /**
    * Position in the source, if known.
-  */
+   */
   position?: SourcePositionAmino;
   /**
    * Expression ID from [Expr][], 0 if unknown.
-  */
+   */
   id?: string;
 }
 /**

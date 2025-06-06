@@ -91,7 +91,7 @@ export interface ModuleDescriptorSDKType {
 export interface PackageReference {
   /**
    * name is the fully-qualified name of the package.
-  */
+   */
   name: string;
   /**
    * revision is the optional revision of the package that is being used.
@@ -145,7 +145,7 @@ export interface PackageReferenceProtoMsg {
 export interface PackageReferenceAmino {
   /**
    * name is the fully-qualified name of the package.
-  */
+   */
   name?: string;
   /**
    * revision is the optional revision of the package that is being used.

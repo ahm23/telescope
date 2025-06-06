@@ -80,23 +80,23 @@ export interface InflationDistributionAminoMsg {
 export interface ExponentialCalculation {
   /**
    * initial value
-  */
+   */
   a: string;
   /**
    * reduction factor
-  */
+   */
   r: string;
   /**
    * long term inflation
-  */
+   */
   c: string;
   /**
    * bonding target
-  */
+   */
   bondingTarget: string;
   /**
    * max variance
-  */
+   */
   maxVariance: string;
 }
 export interface ExponentialCalculationProtoMsg {
@@ -116,23 +116,23 @@ export interface ExponentialCalculationProtoMsg {
 export interface ExponentialCalculationAmino {
   /**
    * initial value
-  */
+   */
   a: string;
   /**
    * reduction factor
-  */
+   */
   r: string;
   /**
    * long term inflation
-  */
+   */
   c: string;
   /**
    * bonding target
-  */
+   */
   bonding_target: string;
   /**
    * max variance
-  */
+   */
   max_variance: string;
 }
 export interface ExponentialCalculationAminoMsg {

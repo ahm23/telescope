@@ -12,11 +12,11 @@ export const protobufPackage = "evmos.fees.v1";
 export interface GenesisState {
   /**
    * module parameters
-  */
+   */
   params: Params;
   /**
    * active registered contracts
-  */
+   */
   devFeeInfos: DevFeeInfo[];
 }
 export interface GenesisStateProtoMsg {
@@ -32,11 +32,11 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * module parameters
-  */
+   */
   params?: ParamsAmino;
   /**
    * active registered contracts
-  */
+   */
   dev_fee_infos?: DevFeeInfoAmino[];
 }
 /**
@@ -58,7 +58,7 @@ export interface GenesisStateSDKType {
 export interface Params {
   /**
    * parameter to enable fees
-  */
+   */
   enableFees: boolean;
   /**
    * developer_shares defines the proportion of the transaction fees to be
@@ -77,7 +77,7 @@ export interface Params {
   addrDerivationCostCreate: bigint;
   /**
    * min_gas_price defines the minimum gas price value for cosmos and eth transactions
-  */
+   */
   minGasPrice: string;
 }
 export interface ParamsProtoMsg {
@@ -93,7 +93,7 @@ export interface ParamsProtoMsg {
 export interface ParamsAmino {
   /**
    * parameter to enable fees
-  */
+   */
   enable_fees?: boolean;
   /**
    * developer_shares defines the proportion of the transaction fees to be
@@ -112,7 +112,7 @@ export interface ParamsAmino {
   addr_derivation_cost_create?: string;
   /**
    * min_gas_price defines the minimum gas price value for cosmos and eth transactions
-  */
+   */
   min_gas_price?: string;
 }
 /**

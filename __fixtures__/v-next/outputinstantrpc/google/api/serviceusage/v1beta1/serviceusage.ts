@@ -193,7 +193,7 @@ export interface ListServicesRequestSDKType {
 export interface ListServicesResponse {
   /**
    * The available services for the requested project.
-  */
+   */
   services: Service[];
   /**
    * Token that can be passed to `ListServices` to resume a paginated
@@ -282,7 +282,7 @@ export interface ListConsumerQuotaMetricsRequest {
   parent: string;
   /**
    * Requested size of the next page of data.
-  */
+   */
   pageSize: number;
   /**
    * Token identifying which result to start with; returned by a previous list
@@ -291,7 +291,7 @@ export interface ListConsumerQuotaMetricsRequest {
   pageToken: string;
   /**
    * Specifies the level of detail for quota information in the response.
-  */
+   */
   view: QuotaView;
 }
 export interface ListConsumerQuotaMetricsRequestProtoMsg {
@@ -319,7 +319,7 @@ export interface ListConsumerQuotaMetricsRequestSDKType {
 export interface ListConsumerQuotaMetricsResponse {
   /**
    * Quota settings for the consumer, organized by quota metric.
-  */
+   */
   metrics: ConsumerQuotaMetric[];
   /**
    * Token identifying which result to start with; returned by a previous list
@@ -357,7 +357,7 @@ export interface GetConsumerQuotaMetricRequest {
   name: string;
   /**
    * Specifies the level of detail for quota information in the response.
-  */
+   */
   view: QuotaView;
 }
 export interface GetConsumerQuotaMetricRequestProtoMsg {
@@ -390,7 +390,7 @@ export interface GetConsumerQuotaLimitRequest {
   name: string;
   /**
    * Specifies the level of detail for quota information in the response.
-  */
+   */
   view: QuotaView;
 }
 export interface GetConsumerQuotaLimitRequestProtoMsg {
@@ -424,7 +424,7 @@ export interface CreateAdminOverrideRequest {
   parent: string;
   /**
    * The admin override to create.
-  */
+   */
   override?: QuotaOverride;
   /**
    * Whether to force the creation of the quota override.
@@ -571,7 +571,7 @@ export interface ListAdminOverridesRequest {
   parent: string;
   /**
    * Requested size of the next page of data.
-  */
+   */
   pageSize: number;
   /**
    * Token identifying which result to start with; returned by a previous list
@@ -603,7 +603,7 @@ export interface ListAdminOverridesRequestSDKType {
 export interface ListAdminOverridesResponse {
   /**
    * Admin overrides on this limit.
-  */
+   */
   overrides: QuotaOverride[];
   /**
    * Token identifying which result to start with; returned by a previous list
@@ -634,7 +634,7 @@ export interface ListAdminOverridesResponseSDKType {
 export interface BatchCreateAdminOverridesResponse {
   /**
    * The overrides that were created.
-  */
+   */
   overrides: QuotaOverride[];
 }
 export interface BatchCreateAdminOverridesResponseProtoMsg {
@@ -666,7 +666,7 @@ export interface ImportAdminOverridesRequest {
   parent: string;
   /**
    * The import data is specified in the request message itself
-  */
+   */
   inlineSource?: OverrideInlineSource;
   /**
    * Whether to force the creation of the quota overrides.
@@ -707,7 +707,7 @@ export interface ImportAdminOverridesRequestSDKType {
 export interface ImportAdminOverridesResponse {
   /**
    * The overrides that were created from the imported data.
-  */
+   */
   overrides: QuotaOverride[];
 }
 export interface ImportAdminOverridesResponseProtoMsg {
@@ -762,7 +762,7 @@ export interface CreateConsumerOverrideRequest {
   parent: string;
   /**
    * The override to create.
-  */
+   */
   override?: QuotaOverride;
   /**
    * Whether to force the creation of the quota override.
@@ -909,7 +909,7 @@ export interface ListConsumerOverridesRequest {
   parent: string;
   /**
    * Requested size of the next page of data.
-  */
+   */
   pageSize: number;
   /**
    * Token identifying which result to start with; returned by a previous list
@@ -941,7 +941,7 @@ export interface ListConsumerOverridesRequestSDKType {
 export interface ListConsumerOverridesResponse {
   /**
    * Consumer overrides on this limit.
-  */
+   */
   overrides: QuotaOverride[];
   /**
    * Token identifying which result to start with; returned by a previous list
@@ -972,7 +972,7 @@ export interface ListConsumerOverridesResponseSDKType {
 export interface BatchCreateConsumerOverridesResponse {
   /**
    * The overrides that were created.
-  */
+   */
   overrides: QuotaOverride[];
 }
 export interface BatchCreateConsumerOverridesResponseProtoMsg {
@@ -1004,7 +1004,7 @@ export interface ImportConsumerOverridesRequest {
   parent: string;
   /**
    * The import data is specified in the request message itself
-  */
+   */
   inlineSource?: OverrideInlineSource;
   /**
    * Whether to force the creation of the quota overrides.
@@ -1045,7 +1045,7 @@ export interface ImportConsumerOverridesRequestSDKType {
 export interface ImportConsumerOverridesResponse {
   /**
    * The overrides that were created from the imported data.
-  */
+   */
   overrides: QuotaOverride[];
 }
 export interface ImportConsumerOverridesResponseProtoMsg {
@@ -1092,7 +1092,7 @@ export interface ImportConsumerOverridesMetadataSDKType {}
 export interface ImportAdminQuotaPoliciesResponse {
   /**
    * The policies that were created from the imported data.
-  */
+   */
   policies: AdminQuotaPolicy[];
 }
 export interface ImportAdminQuotaPoliciesResponseProtoMsg {
@@ -1242,7 +1242,7 @@ export interface GetServiceIdentityResponse {
   identity?: ServiceIdentity;
   /**
    * Service identity state.
-  */
+   */
   state: GetServiceIdentityResponse_IdentityState;
 }
 export interface GetServiceIdentityResponseProtoMsg {

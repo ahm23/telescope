@@ -11,7 +11,7 @@ export const protobufPackage = "evmos.vesting.v1";
 export interface QueryBalancesRequest {
   /**
    * address of the clawback vesting account
-  */
+   */
   address: string;
 }
 export interface QueryBalancesRequestProtoMsg {
@@ -27,7 +27,7 @@ export interface QueryBalancesRequestProtoMsg {
 export interface QueryBalancesRequestAmino {
   /**
    * address of the clawback vesting account
-  */
+   */
   address?: string;
 }
 /**
@@ -49,15 +49,15 @@ export interface QueryBalancesRequestSDKType {
 export interface QueryBalancesResponse {
   /**
    * current amount of locked tokens
-  */
+   */
   locked: Coin[];
   /**
    * current amount of unvested tokens
-  */
+   */
   unvested: Coin[];
   /**
    * current amount of vested tokens
-  */
+   */
   vested: Coin[];
 }
 export interface QueryBalancesResponseProtoMsg {
@@ -74,15 +74,15 @@ export interface QueryBalancesResponseProtoMsg {
 export interface QueryBalancesResponseAmino {
   /**
    * current amount of locked tokens
-  */
+   */
   locked?: CoinAmino[];
   /**
    * current amount of unvested tokens
-  */
+   */
   unvested?: CoinAmino[];
   /**
    * current amount of vested tokens
-  */
+   */
   vested?: CoinAmino[];
 }
 /**

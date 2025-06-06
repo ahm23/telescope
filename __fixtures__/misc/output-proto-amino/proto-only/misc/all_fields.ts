@@ -15,7 +15,7 @@ export const protobufPackage = "misc";
 export interface EncodingTestForDontOmit {
   /**
    * scalar
-  */
+   */
   str: string;
   dOStr: string;
   b: boolean;
@@ -24,107 +24,107 @@ export interface EncodingTestForDontOmit {
   dONum: number;
   /**
    * bigint
-  */
+   */
   big: bigint;
   dOBig: bigint;
   /**
    * protoType
-  */
+   */
   proto?: AccessConfig;
   dOProto: AccessConfig;
   /**
    * anyType
-  */
+   */
   auth?: Any;
   dOAuth: Any;
   /**
    * bytes
-  */
+   */
   salt: Uint8Array;
   dOSalt: Uint8Array;
   /**
    * raw bytes
-  */
+   */
   raw: Uint8Array;
   dORaw: Uint8Array;
   /**
    * wasm bytes
-  */
+   */
   wasm: Uint8Array;
   dOWasm: Uint8Array;
   /**
    * enum
-  */
+   */
   opt: VoteOption;
   dOOpt: VoteOption;
   /**
    * duration
-  */
+   */
   period?: Duration;
   dOPeriod: Duration;
   /**
    * timestamp
-  */
+   */
   date?: Date;
   dODate: Date;
   /**
    * pubkey
-  */
+   */
   pubkey?: Any;
   dOPubkey: Any;
   /**
    * array scalar
-  */
+   */
   nums: number[];
   dONums: number[];
   /**
    * array bigint
-  */
+   */
   bigs: bigint[];
   dOBigs: bigint[];
   /**
    * array bytes
-  */
+   */
   salts: Uint8Array[];
   dOSalts: Uint8Array[];
   /**
    * array raw bytes
-  */
+   */
   raws: Uint8Array[];
   dORaws: Uint8Array[];
   /**
    * array wasm bytes
-  */
+   */
   wasms: Uint8Array[];
   dOWasms: Uint8Array[];
   /**
    * array enum
-  */
+   */
   opts: VoteOption[];
   dOOpts: VoteOption[];
   /**
    * array duration
-  */
+   */
   periods: Duration[];
   dOPeriods: Duration[];
   /**
    * array protoType
-  */
+   */
   protos: AccessConfig[];
   dOProtos: AccessConfig[];
   /**
    * array anyType
-  */
+   */
   auths: Any[];
   dOAuths: Any[];
   /**
    * dec
-  */
+   */
   dec: string;
   dODec: string;
   /**
    * array dec
-  */
+   */
   decs: string[];
   dODecs: string[];
 }
@@ -195,7 +195,7 @@ export interface EncodingTestForDontOmitSDKType {
 export interface EncodingTestForOmit {
   /**
    * scalar
-  */
+   */
   str: string;
   oStr: string;
   b: boolean;
@@ -204,107 +204,107 @@ export interface EncodingTestForOmit {
   oNum: number;
   /**
    * bigint
-  */
+   */
   big: bigint;
   oBig: bigint;
   /**
    * protoType
-  */
+   */
   proto?: AccessConfig;
   oProto: AccessConfig;
   /**
    * anyType
-  */
+   */
   auth?: Any;
   oAuth: Any;
   /**
    * bytes
-  */
+   */
   salt: Uint8Array;
   oSalt: Uint8Array;
   /**
    * raw bytes
-  */
+   */
   raw: Uint8Array;
   oRaw: Uint8Array;
   /**
    * wasm bytes
-  */
+   */
   wasm: Uint8Array;
   oWasm: Uint8Array;
   /**
    * enum
-  */
+   */
   opt: VoteOption;
   oOpt: VoteOption;
   /**
    * duration
-  */
+   */
   period?: Duration;
   oPeriod: Duration;
   /**
    * timestamp
-  */
+   */
   date?: Date;
   oDate: Date;
   /**
    * pubkey
-  */
+   */
   pubkey?: Any;
   oPubkey: Any;
   /**
    * array scalar
-  */
+   */
   nums: number[];
   oNums: number[];
   /**
    * array bigint
-  */
+   */
   bigs: bigint[];
   oBigs: bigint[];
   /**
    * array bytes
-  */
+   */
   salts: Uint8Array[];
   oSalts: Uint8Array[];
   /**
    * array raw bytes
-  */
+   */
   raws: Uint8Array[];
   oRaws: Uint8Array[];
   /**
    * array wasm bytes
-  */
+   */
   wasms: Uint8Array[];
   oWasms: Uint8Array[];
   /**
    * array enum
-  */
+   */
   opts: VoteOption[];
   oOpts: VoteOption[];
   /**
    * array duration
-  */
+   */
   periods: Duration[];
   oPeriods: Duration[];
   /**
    * array protoType
-  */
+   */
   protos: AccessConfig[];
   oProtos: AccessConfig[];
   /**
    * array anyType
-  */
+   */
   auths: Any[];
   oAuths: Any[];
   /**
    * dec
-  */
+   */
   dec: string;
   oDec: string;
   /**
    * array dec
-  */
+   */
   decs: string[];
   oDecs: string[];
 }

@@ -59,7 +59,7 @@ export const protobufPackage = "google.api";
 export interface Quota {
   /**
    * List of `QuotaLimit` definitions for the service.
-  */
+   */
   limits: QuotaLimit[];
   /**
    * List of `MetricRule` definitions, each one mapping a selected method to one
@@ -128,7 +128,7 @@ export interface QuotaProtoMsg {
 export interface QuotaAmino {
   /**
    * List of `QuotaLimit` definitions for the service.
-  */
+   */
   limits?: QuotaLimitAmino[];
   /**
    * List of `MetricRule` definitions, each one mapping a selected method to one

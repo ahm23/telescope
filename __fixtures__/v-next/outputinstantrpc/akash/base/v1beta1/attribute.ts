@@ -38,11 +38,11 @@ export interface AttributeSDKType {
 export interface SignedBy {
   /**
    * all_of all keys in this list must have signed attributes
-  */
+   */
   allOf: string[];
   /**
    * any_of at least of of the keys from the list must have signed attributes
-  */
+   */
   anyOf: string[];
 }
 export interface SignedByProtoMsg {
@@ -71,11 +71,11 @@ export interface SignedBySDKType {
 export interface PlacementRequirements {
   /**
    * SignedBy list of keys that tenants expect to have signatures from
-  */
+   */
   signedBy: SignedBy;
   /**
    * Attribute list of attributes tenant expects from the provider
-  */
+   */
   attributes: Attribute[];
 }
 export interface PlacementRequirementsProtoMsg {

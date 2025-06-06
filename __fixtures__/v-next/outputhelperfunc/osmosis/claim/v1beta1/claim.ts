@@ -57,11 +57,11 @@ export function actionToJSON(object: Action): string {
 export interface ClaimRecord {
   /**
    * address of claim user
-  */
+   */
   address: string;
   /**
    * total initial claimable amount for the user
-  */
+   */
   initialClaimableAmount: Coin[];
   /**
    * true if action is completed
@@ -82,11 +82,11 @@ export interface ClaimRecordProtoMsg {
 export interface ClaimRecordAmino {
   /**
    * address of claim user
-  */
+   */
   address?: string;
   /**
    * total initial claimable amount for the user
-  */
+   */
   initial_claimable_amount?: CoinAmino[];
   /**
    * true if action is completed

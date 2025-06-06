@@ -126,7 +126,7 @@ export interface EvalRequest {
   instantiatePermission?: AccessConfig;
   /**
    * [(gogoproto.nullable) = false] wouldn't work in this case
-  */
+   */
   id?: string;
   name?: string;
   testArray: string[];
@@ -134,7 +134,7 @@ export interface EvalRequest {
   graph?: TestNest_Graph;
   /**
    * deprecated option
-  */
+   */
   deprecated?: string;
   falseDeprecated: string;
 }
@@ -194,7 +194,7 @@ export interface AccessConfigSDKType {
 export interface GenericAuthorization {
   /**
    * Msg, identified by it's type URL, to grant unrestricted permissions to execute
-  */
+   */
   msg: string;
 }
 export interface GenericAuthorizationProtoMsg {

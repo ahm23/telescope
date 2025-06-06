@@ -13,7 +13,7 @@ export const protobufPackage = "osmosis.tokenfactory.v1beta1";
 export interface GenesisState {
   /**
    * params defines the paramaters of the module.
-  */
+   */
   params: Params;
   factoryDenoms: GenesisDenom[];
 }
@@ -30,7 +30,7 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * params defines the paramaters of the module.
-  */
+   */
   params?: ParamsAmino;
   factory_denoms?: GenesisDenomAmino[];
 }

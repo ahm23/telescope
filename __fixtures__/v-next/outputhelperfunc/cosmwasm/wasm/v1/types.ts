@@ -226,15 +226,15 @@ export interface ParamsSDKType {
 export interface CodeInfo {
   /**
    * CodeHash is the unique identifier created by wasmvm
-  */
+   */
   codeHash: Uint8Array;
   /**
    * Creator address who initially stored the code
-  */
+   */
   creator: string;
   /**
    * InstantiateConfig access control to apply on contract creation, optional
-  */
+   */
   instantiateConfig: AccessConfig;
 }
 export interface CodeInfoProtoMsg {
@@ -250,15 +250,15 @@ export interface CodeInfoProtoMsg {
 export interface CodeInfoAmino {
   /**
    * CodeHash is the unique identifier created by wasmvm
-  */
+   */
   code_hash?: string;
   /**
    * Creator address who initially stored the code
-  */
+   */
   creator?: string;
   /**
    * InstantiateConfig access control to apply on contract creation, optional
-  */
+   */
   instantiate_config?: AccessConfigAmino;
 }
 export interface CodeInfoAminoMsg {
@@ -285,19 +285,19 @@ export interface CodeInfoSDKType {
 export interface ContractInfo {
   /**
    * CodeID is the reference to the stored Wasm code
-  */
+   */
   codeId: bigint;
   /**
    * Creator address who initially instantiated the contract
-  */
+   */
   creator: string;
   /**
    * Admin is an optional address that can execute migrations
-  */
+   */
   admin: string;
   /**
    * Label is optional metadata to be stored with a contract instance.
-  */
+   */
   label: string;
   /**
    * Created Tx position when the contract was instantiated.
@@ -332,19 +332,19 @@ export type ContractInfoEncoded = Omit<ContractInfo, "extension"> & {
 export interface ContractInfoAmino {
   /**
    * CodeID is the reference to the stored Wasm code
-  */
+   */
   code_id?: string;
   /**
    * Creator address who initially instantiated the contract
-  */
+   */
   creator?: string;
   /**
    * Admin is an optional address that can execute migrations
-  */
+   */
   admin?: string;
   /**
    * Label is optional metadata to be stored with a contract instance.
-  */
+   */
   label?: string;
   /**
    * Created Tx position when the contract was instantiated.
@@ -388,11 +388,11 @@ export interface ContractCodeHistoryEntry {
   operation: ContractCodeHistoryOperationType;
   /**
    * CodeID is the reference to the stored WASM code
-  */
+   */
   codeId: bigint;
   /**
    * Updated Tx position when the operation was executed.
-  */
+   */
   updated?: AbsoluteTxPosition;
   msg: Uint8Array;
 }
@@ -410,11 +410,11 @@ export interface ContractCodeHistoryEntryAmino {
   operation?: ContractCodeHistoryOperationType;
   /**
    * CodeID is the reference to the stored WASM code
-  */
+   */
   code_id?: string;
   /**
    * Updated Tx position when the operation was executed.
-  */
+   */
   updated?: AbsoluteTxPositionAmino;
   msg?: any;
 }
@@ -444,7 +444,7 @@ export interface ContractCodeHistoryEntrySDKType {
 export interface AbsoluteTxPosition {
   /**
    * BlockHeight is the block the contract was created at
-  */
+   */
   blockHeight: bigint;
   /**
    * TxIndex is a monotonic counter within the block (actual transaction index,
@@ -466,7 +466,7 @@ export interface AbsoluteTxPositionProtoMsg {
 export interface AbsoluteTxPositionAmino {
   /**
    * BlockHeight is the block the contract was created at
-  */
+   */
   block_height?: string;
   /**
    * TxIndex is a monotonic counter within the block (actual transaction index,
@@ -498,11 +498,11 @@ export interface AbsoluteTxPositionSDKType {
 export interface Model {
   /**
    * hex-encode key to read it better (this is often ascii)
-  */
+   */
   key: Uint8Array;
   /**
    * base64-encode raw value
-  */
+   */
   value: Uint8Array;
 }
 export interface ModelProtoMsg {
@@ -518,11 +518,11 @@ export interface ModelProtoMsg {
 export interface ModelAmino {
   /**
    * hex-encode key to read it better (this is often ascii)
-  */
+   */
   key?: string;
   /**
    * base64-encode raw value
-  */
+   */
   value?: string;
 }
 export interface ModelAminoMsg {

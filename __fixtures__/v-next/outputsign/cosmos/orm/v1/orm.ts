@@ -10,11 +10,11 @@ export const protobufPackage = "cosmos.orm.v1";
 export interface TableDescriptor {
   /**
    * primary_key defines the primary key for the table.
-  */
+   */
   primaryKey?: PrimaryKeyDescriptor;
   /**
    * index defines one or more secondary indexes.
-  */
+   */
   index: SecondaryIndexDescriptor[];
   /**
    * id is a non-zero integer ID that must be unique within the
@@ -36,11 +36,11 @@ export interface TableDescriptorProtoMsg {
 export interface TableDescriptorAmino {
   /**
    * primary_key defines the primary key for the table.
-  */
+   */
   primary_key?: PrimaryKeyDescriptorAmino;
   /**
    * index defines one or more secondary indexes.
-  */
+   */
   index?: SecondaryIndexDescriptorAmino[];
   /**
    * id is a non-zero integer ID that must be unique within the
@@ -203,7 +203,7 @@ export interface SecondaryIndexDescriptor {
   id: number;
   /**
    * unique specifies that this an unique index.
-  */
+   */
   unique: boolean;
 }
 export interface SecondaryIndexDescriptorProtoMsg {
@@ -237,7 +237,7 @@ export interface SecondaryIndexDescriptorAmino {
   id?: number;
   /**
    * unique specifies that this an unique index.
-  */
+   */
   unique?: boolean;
 }
 export interface SecondaryIndexDescriptorAminoMsg {

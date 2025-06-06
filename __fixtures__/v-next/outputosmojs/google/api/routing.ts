@@ -757,7 +757,7 @@ export interface RoutingRuleSDKType {
 export interface RoutingParameter {
   /**
    * A request field to extract the header key-value pair from.
-  */
+   */
   field: string;
   /**
    * A pattern matching the key-value field. Optional.

@@ -12,23 +12,23 @@ export const protobufPackage = "evmos.inflation.v1";
 export interface GenesisState {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: Params;
   /**
    * amount of past periods, based on the epochs per period param
-  */
+   */
   period: bigint;
   /**
    * inflation epoch identifier
-  */
+   */
   epochIdentifier: string;
   /**
    * number of epochs after which inflation is recalculated
-  */
+   */
   epochsPerPeriod: bigint;
   /**
    * number of epochs that have passed while inflation is disabled
-  */
+   */
   skippedEpochs: bigint;
 }
 export interface GenesisStateProtoMsg {
@@ -57,19 +57,19 @@ export interface GenesisStateSDKType {
 export interface Params {
   /**
    * type of coin to mint
-  */
+   */
   mintDenom: string;
   /**
    * variables to calculate exponential inflation
-  */
+   */
   exponentialCalculation: ExponentialCalculation;
   /**
    * inflation distribution of the minted denom
-  */
+   */
   inflationDistribution: InflationDistribution;
   /**
    * parameter to enable inflation and halt increasing the skipped_epochs
-  */
+   */
   enableInflation: boolean;
 }
 export interface ParamsProtoMsg {

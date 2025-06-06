@@ -74,7 +74,7 @@ export interface Code {
   codeBytes: Uint8Array;
   /**
    * Pinned to wasmvm cache
-  */
+   */
   pinned: boolean;
 }
 export interface CodeProtoMsg {

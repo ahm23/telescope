@@ -13,7 +13,7 @@ export const protobufPackage = "google.protobuf";
 export interface DoubleValue {
   /**
    * The double value.
-  */
+   */
   value: number;
 }
 export interface DoubleValueProtoMsg {
@@ -42,7 +42,7 @@ export interface DoubleValueSDKType {
 export interface FloatValue {
   /**
    * The float value.
-  */
+   */
   value: number;
 }
 export interface FloatValueProtoMsg {
@@ -71,7 +71,7 @@ export interface FloatValueSDKType {
 export interface Int64Value {
   /**
    * The int64 value.
-  */
+   */
   value: bigint;
 }
 export interface Int64ValueProtoMsg {
@@ -100,7 +100,7 @@ export interface Int64ValueSDKType {
 export interface UInt64Value {
   /**
    * The uint64 value.
-  */
+   */
   value: bigint;
 }
 export interface UInt64ValueProtoMsg {
@@ -129,7 +129,7 @@ export interface UInt64ValueSDKType {
 export interface Int32Value {
   /**
    * The int32 value.
-  */
+   */
   value: number;
 }
 export interface Int32ValueProtoMsg {
@@ -158,7 +158,7 @@ export interface Int32ValueSDKType {
 export interface UInt32Value {
   /**
    * The uint32 value.
-  */
+   */
   value: number;
 }
 export interface UInt32ValueProtoMsg {
@@ -187,7 +187,7 @@ export interface UInt32ValueSDKType {
 export interface BoolValue {
   /**
    * The bool value.
-  */
+   */
   value: boolean;
 }
 export interface BoolValueProtoMsg {
@@ -216,7 +216,7 @@ export interface BoolValueSDKType {
 export interface StringValue {
   /**
    * The string value.
-  */
+   */
   value: string;
 }
 export interface StringValueProtoMsg {
@@ -245,7 +245,7 @@ export interface StringValueSDKType {
 export interface BytesValue {
   /**
    * The bytes value.
-  */
+   */
   value: Uint8Array;
 }
 export interface BytesValueProtoMsg {

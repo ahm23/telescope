@@ -81,11 +81,11 @@ export interface SourceInfoSDKType {
 export interface SourcePosition {
   /**
    * The soucre location name (e.g. file name).
-  */
+   */
   location: string;
   /**
    * The character offset.
-  */
+   */
   offset: number;
   /**
    * The 1-based index of the starting line in the source text

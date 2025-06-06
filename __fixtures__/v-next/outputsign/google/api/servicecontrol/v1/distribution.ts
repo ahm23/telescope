@@ -18,7 +18,7 @@ export const protobufPackage = "google.api.servicecontrol.v1";
 export interface Distribution {
   /**
    * The total number of samples in the distribution. Must be >= 0.
-  */
+   */
   count: bigint;
   /**
    * The arithmetic mean of the samples in the distribution. If `count` is
@@ -27,11 +27,11 @@ export interface Distribution {
   mean: number;
   /**
    * The minimum of the population of values. Ignored if `count` is zero.
-  */
+   */
   minimum: number;
   /**
    * The maximum of the population of values. Ignored if `count` is zero.
-  */
+   */
   maximum: number;
   /**
    * The sum of squared deviations from the mean:
@@ -56,19 +56,19 @@ export interface Distribution {
   bucketCounts: bigint[];
   /**
    * Buckets with constant width.
-  */
+   */
   linearBuckets?: Distribution_LinearBuckets;
   /**
    * Buckets with exponentially growing width.
-  */
+   */
   exponentialBuckets?: Distribution_ExponentialBuckets;
   /**
    * Buckets with arbitrary user-provided width.
-  */
+   */
   explicitBuckets?: Distribution_ExplicitBuckets;
   /**
    * Example points. Must be in increasing order of `value` field.
-  */
+   */
   exemplars: Distribution_Exemplar[];
 }
 export interface DistributionProtoMsg {
@@ -91,7 +91,7 @@ export interface DistributionProtoMsg {
 export interface DistributionAmino {
   /**
    * The total number of samples in the distribution. Must be >= 0.
-  */
+   */
   count?: string;
   /**
    * The arithmetic mean of the samples in the distribution. If `count` is
@@ -100,11 +100,11 @@ export interface DistributionAmino {
   mean?: number;
   /**
    * The minimum of the population of values. Ignored if `count` is zero.
-  */
+   */
   minimum?: number;
   /**
    * The maximum of the population of values. Ignored if `count` is zero.
-  */
+   */
   maximum?: number;
   /**
    * The sum of squared deviations from the mean:
@@ -129,19 +129,19 @@ export interface DistributionAmino {
   bucket_counts?: string[];
   /**
    * Buckets with constant width.
-  */
+   */
   linear_buckets?: Distribution_LinearBucketsAmino;
   /**
    * Buckets with exponentially growing width.
-  */
+   */
   exponential_buckets?: Distribution_ExponentialBucketsAmino;
   /**
    * Buckets with arbitrary user-provided width.
-  */
+   */
   explicit_buckets?: Distribution_ExplicitBucketsAmino;
   /**
    * Example points. Must be in increasing order of `value` field.
-  */
+   */
   exemplars?: Distribution_ExemplarAmino[];
 }
 export interface DistributionAminoMsg {

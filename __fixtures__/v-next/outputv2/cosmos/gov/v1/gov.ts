@@ -245,7 +245,7 @@ export interface Proposal {
   votingEndTime?: Date;
   /**
    * metadata is any arbitrary metadata attached to the proposal.
-  */
+   */
   metadata: string;
 }
 export interface ProposalProtoMsg {
@@ -275,7 +275,7 @@ export interface ProposalAmino {
   voting_end_time?: string;
   /**
    * metadata is any arbitrary metadata attached to the proposal.
-  */
+   */
   metadata?: string;
 }
 export interface ProposalAminoMsg {
@@ -357,7 +357,7 @@ export interface Vote {
   options: WeightedVoteOption[];
   /**
    * metadata is any  arbitrary metadata to attached to the vote.
-  */
+   */
   metadata: string;
 }
 export interface VoteProtoMsg {
@@ -377,7 +377,7 @@ export interface VoteAmino {
   options?: WeightedVoteOptionAmino[];
   /**
    * metadata is any  arbitrary metadata to attached to the vote.
-  */
+   */
   metadata?: string;
 }
 export interface VoteAminoMsg {
@@ -406,7 +406,7 @@ export interface VoteSDKType {
 export interface DepositParams {
   /**
    * Minimum deposit for a proposal to enter voting period.
-  */
+   */
   minDeposit: Coin[];
   /**
    * Maximum period for Atom holders to deposit on a proposal. Initial value: 2
@@ -427,7 +427,7 @@ export interface DepositParamsProtoMsg {
 export interface DepositParamsAmino {
   /**
    * Minimum deposit for a proposal to enter voting period.
-  */
+   */
   min_deposit?: CoinAmino[];
   /**
    * Maximum period for Atom holders to deposit on a proposal. Initial value: 2
@@ -458,7 +458,7 @@ export interface DepositParamsSDKType {
 export interface VotingParams {
   /**
    * Length of the voting period.
-  */
+   */
   votingPeriod?: Duration;
 }
 export interface VotingParamsProtoMsg {
@@ -474,7 +474,7 @@ export interface VotingParamsProtoMsg {
 export interface VotingParamsAmino {
   /**
    * Length of the voting period.
-  */
+   */
   voting_period?: DurationAmino;
 }
 export interface VotingParamsAminoMsg {
@@ -504,7 +504,7 @@ export interface TallyParams {
   quorum: string;
   /**
    * Minimum proportion of Yes votes for proposal to pass. Default value: 0.5.
-  */
+   */
   threshold: string;
   /**
    * Minimum value of Veto votes to Total votes ratio for proposal to be
@@ -530,7 +530,7 @@ export interface TallyParamsAmino {
   quorum?: string;
   /**
    * Minimum proportion of Yes votes for proposal to pass. Default value: 0.5.
-  */
+   */
   threshold?: string;
   /**
    * Minimum value of Veto votes to Total votes ratio for proposal to be

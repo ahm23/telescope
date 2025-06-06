@@ -14,7 +14,7 @@ export const protobufPackage = "cosmos.authz.v1beta1";
 export interface GenericAuthorization {
   /**
    * Msg, identified by it's type URL, to grant unrestricted permissions to execute
-  */
+   */
   msg: string;
 }
 export interface GenericAuthorizationProtoMsg {
@@ -101,7 +101,7 @@ export interface GrantAuthorizationSDKType {
 export interface GrantQueueItem {
   /**
    * msg_type_urls contains the list of TypeURL of a sdk.Msg.
-  */
+   */
   msgTypeUrls: string[];
 }
 export interface GrantQueueItemProtoMsg {

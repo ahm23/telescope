@@ -69,7 +69,7 @@ export function stateToJSON(object: State): string {
 export interface ConnectionEnd {
   /**
    * client associated with this connection.
-  */
+   */
   clientId: string;
   /**
    * IBC version which can be utilised to determine encodings or protocols for
@@ -78,11 +78,11 @@ export interface ConnectionEnd {
   versions: Version[];
   /**
    * current state of the connection end.
-  */
+   */
   state: State;
   /**
    * counterparty chain associated with this connection.
-  */
+   */
   counterparty: Counterparty;
   /**
    * delay period that must pass before a consensus state can be used for
@@ -121,11 +121,11 @@ export interface ConnectionEndSDKType {
 export interface IdentifiedConnection {
   /**
    * connection identifier.
-  */
+   */
   id: string;
   /**
    * client associated with this connection.
-  */
+   */
   clientId: string;
   /**
    * IBC version which can be utilised to determine encodings or protocols for
@@ -134,15 +134,15 @@ export interface IdentifiedConnection {
   versions: Version[];
   /**
    * current state of the connection end.
-  */
+   */
   state: State;
   /**
    * counterparty chain associated with this connection.
-  */
+   */
   counterparty: Counterparty;
   /**
    * delay period associated with this connection.
-  */
+   */
   delayPeriod: bigint;
 }
 export interface IdentifiedConnectionProtoMsg {
@@ -183,7 +183,7 @@ export interface Counterparty {
   connectionId: string;
   /**
    * commitment merkle prefix of the counterparty chain.
-  */
+   */
   prefix: MerklePrefix;
 }
 export interface CounterpartyProtoMsg {
@@ -210,7 +210,7 @@ export interface CounterpartySDKType {
 export interface ClientPaths {
   /**
    * list of connection paths
-  */
+   */
   paths: string[];
 }
 export interface ClientPathsProtoMsg {
@@ -235,11 +235,11 @@ export interface ClientPathsSDKType {
 export interface ConnectionPaths {
   /**
    * client state unique identifier
-  */
+   */
   clientId: string;
   /**
    * list of connection paths
-  */
+   */
   paths: string[];
 }
 export interface ConnectionPathsProtoMsg {
@@ -266,11 +266,11 @@ export interface ConnectionPathsSDKType {
 export interface Version {
   /**
    * unique version identifier
-  */
+   */
   identifier: string;
   /**
    * list of features compatible with the specified identifier
-  */
+   */
   features: string[];
 }
 export interface VersionProtoMsg {

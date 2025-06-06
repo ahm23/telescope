@@ -16,11 +16,11 @@ export const protobufPackage = "osmosis.incentives";
 export interface GenesisState {
   /**
    * params are all the parameters of the module
-  */
+   */
   params: Params;
   /**
    * gauges are all gauges that should exist at genesis
-  */
+   */
   gauges: Gauge[];
   /**
    * lockable_durations are all lockup durations that gauges can be locked for
@@ -47,11 +47,11 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * params are all the parameters of the module
-  */
+   */
   params?: ParamsAmino;
   /**
    * gauges are all gauges that should exist at genesis
-  */
+   */
   gauges?: GaugeAmino[];
   /**
    * lockable_durations are all lockup durations that gauges can be locked for

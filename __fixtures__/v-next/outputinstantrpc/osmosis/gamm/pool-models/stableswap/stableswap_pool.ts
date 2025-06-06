@@ -57,19 +57,19 @@ export interface Pool {
   futurePoolGovernor: string;
   /**
    * sum of all LP shares
-  */
+   */
   totalShares: Coin;
   /**
    * assets in the pool
-  */
+   */
   poolLiquidity: Coin[];
   /**
    * for calculation amognst assets with different precisions
-  */
+   */
   scalingFactors: bigint[];
   /**
    * scaling_factor_controller is the address can adjust pool scaling factors
-  */
+   */
   scalingFactorController: string;
 }
 export interface PoolProtoMsg {

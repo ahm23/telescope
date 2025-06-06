@@ -19,15 +19,15 @@ export const protobufPackage = "ibc.core.types.v1";
 export interface GenesisState {
   /**
    * ICS002 - Clients genesis state
-  */
+   */
   clientGenesis: GenesisState1;
   /**
    * ICS003 - Connections genesis state
-  */
+   */
   connectionGenesis: GenesisState2;
   /**
    * ICS004 - Channel genesis state
-  */
+   */
   channelGenesis: GenesisState3;
 }
 export interface GenesisStateProtoMsg {
@@ -43,15 +43,15 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * ICS002 - Clients genesis state
-  */
+   */
   client_genesis?: GenesisState1Amino;
   /**
    * ICS003 - Connections genesis state
-  */
+   */
   connection_genesis?: GenesisState2Amino;
   /**
    * ICS004 - Channel genesis state
-  */
+   */
   channel_genesis?: GenesisState3Amino;
 }
 export interface GenesisStateAminoMsg {

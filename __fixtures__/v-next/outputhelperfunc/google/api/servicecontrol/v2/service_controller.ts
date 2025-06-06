@@ -29,15 +29,15 @@ export interface CheckRequest {
   serviceConfigId: string;
   /**
    * Describes attributes about the operation being executed by the service.
-  */
+   */
   attributes?: AttributeContext;
   /**
    * Describes the resources and the policies applied to each resource.
-  */
+   */
   resources: ResourceInfo[];
   /**
    * Optional. Contains a comma-separated list of flags.
-  */
+   */
   flags: string;
 }
 export interface CheckRequestProtoMsg {
@@ -68,15 +68,15 @@ export interface CheckRequestAmino {
   service_config_id?: string;
   /**
    * Describes attributes about the operation being executed by the service.
-  */
+   */
   attributes?: AttributeContextAmino;
   /**
    * Describes the resources and the policies applied to each resource.
-  */
+   */
   resources?: ResourceInfoAmino[];
   /**
    * Optional. Contains a comma-separated list of flags.
-  */
+   */
   flags?: string;
 }
 export interface CheckRequestAminoMsg {
@@ -105,11 +105,11 @@ export interface CheckRequestSDKType {
 export interface ResourceInfo {
   /**
    * The name of the resource referenced in the request.
-  */
+   */
   name: string;
   /**
    * The resource type in the format of "{service}/{kind}".
-  */
+   */
   type: string;
   /**
    * The resource permission needed for this request.
@@ -147,11 +147,11 @@ export interface ResourceInfoProtoMsg {
 export interface ResourceInfoAmino {
   /**
    * The name of the resource referenced in the request.
-  */
+   */
   name?: string;
   /**
    * The resource type in the format of "{service}/{kind}".
-  */
+   */
   type?: string;
   /**
    * The resource permission needed for this request.
@@ -243,7 +243,7 @@ export interface CheckResponse {
   status?: Status;
   /**
    * Returns a set of request contexts generated from the `CheckRequest`.
-  */
+   */
   headers: {
     [key: string]: string;
   };
@@ -267,7 +267,7 @@ export interface CheckResponseAmino {
   status?: StatusAmino;
   /**
    * Returns a set of request contexts generated from the `CheckRequest`.
-  */
+   */
   headers?: {
     [key: string]: string;
   };

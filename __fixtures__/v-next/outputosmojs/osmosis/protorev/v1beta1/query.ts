@@ -32,7 +32,7 @@ export interface QueryParamsRequestSDKType {}
 export interface QueryParamsResponse {
   /**
    * params holds all the parameters of this module.
-  */
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -78,7 +78,7 @@ export interface QueryGetProtoRevNumberOfTradesRequestSDKType {}
 export interface QueryGetProtoRevNumberOfTradesResponse {
   /**
    * number_of_trades is the number of trades the module has executed
-  */
+   */
   numberOfTrades: string;
 }
 export interface QueryGetProtoRevNumberOfTradesResponseProtoMsg {
@@ -105,7 +105,7 @@ export interface QueryGetProtoRevNumberOfTradesResponseSDKType {
 export interface QueryGetProtoRevProfitsByDenomRequest {
   /**
    * denom is the denom to query profits by
-  */
+   */
   denom: string;
 }
 export interface QueryGetProtoRevProfitsByDenomRequestProtoMsg {
@@ -132,7 +132,7 @@ export interface QueryGetProtoRevProfitsByDenomRequestSDKType {
 export interface QueryGetProtoRevProfitsByDenomResponse {
   /**
    * profit is the profits of the module by the selected denom
-  */
+   */
   profit?: Coin;
 }
 export interface QueryGetProtoRevProfitsByDenomResponseProtoMsg {
@@ -179,7 +179,7 @@ export interface QueryGetProtoRevAllProfitsRequestSDKType {}
 export interface QueryGetProtoRevAllProfitsResponse {
   /**
    * profits is a list of all of the profits from the module
-  */
+   */
   profits: Coin[];
 }
 export interface QueryGetProtoRevAllProfitsResponseProtoMsg {
@@ -206,7 +206,7 @@ export interface QueryGetProtoRevAllProfitsResponseSDKType {
 export interface QueryGetProtoRevStatisticsByRouteRequest {
   /**
    * route is the set of pool ids to query statistics by i.e. 1,2,3
-  */
+   */
   route: bigint[];
 }
 export interface QueryGetProtoRevStatisticsByRouteRequestProtoMsg {
@@ -377,7 +377,7 @@ export interface QueryGetProtoRevAdminAccountRequestSDKType {}
 export interface QueryGetProtoRevAdminAccountResponse {
   /**
    * admin_account is the admin account of the module
-  */
+   */
   adminAccount: string;
 }
 export interface QueryGetProtoRevAdminAccountResponseProtoMsg {
@@ -424,7 +424,7 @@ export interface QueryGetProtoRevDeveloperAccountRequestSDKType {}
 export interface QueryGetProtoRevDeveloperAccountResponse {
   /**
    * developer_account is the developer account of the module
-  */
+   */
   developerAccount: string;
 }
 export interface QueryGetProtoRevDeveloperAccountResponseProtoMsg {
@@ -471,7 +471,7 @@ export interface QueryGetProtoRevPoolWeightsRequestSDKType {}
 export interface QueryGetProtoRevPoolWeightsResponse {
   /**
    * pool_weights is a list of all of the pool weights
-  */
+   */
   poolWeights: PoolWeights;
 }
 export interface QueryGetProtoRevPoolWeightsResponseProtoMsg {
@@ -614,7 +614,7 @@ export interface QueryGetProtoRevBaseDenomsRequestSDKType {}
 export interface QueryGetProtoRevBaseDenomsResponse {
   /**
    * base_denoms is a list of all of the base denoms and step sizes
-  */
+   */
   baseDenoms: BaseDenom[];
 }
 export interface QueryGetProtoRevBaseDenomsResponseProtoMsg {
@@ -661,7 +661,7 @@ export interface QueryGetProtoRevEnabledRequestSDKType {}
 export interface QueryGetProtoRevEnabledResponse {
   /**
    * enabled is whether the module is enabled
-  */
+   */
   enabled: boolean;
 }
 export interface QueryGetProtoRevEnabledResponseProtoMsg {

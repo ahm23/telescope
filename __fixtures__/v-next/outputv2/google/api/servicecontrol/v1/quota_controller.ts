@@ -190,7 +190,7 @@ export interface AllocateQuotaRequest {
   serviceName: string;
   /**
    * Operation that describes the quota allocation.
-  */
+   */
   allocateOperation?: QuotaOperation;
   /**
    * Specifies which version of service configuration should be used to process
@@ -219,7 +219,7 @@ export interface AllocateQuotaRequestAmino {
   service_name?: string;
   /**
    * Operation that describes the quota allocation.
-  */
+   */
   allocate_operation?: QuotaOperationAmino;
   /**
    * Specifies which version of service configuration should be used to process
@@ -322,7 +322,7 @@ export interface QuotaOperation {
   consumerId: string;
   /**
    * Labels describing the operation.
-  */
+   */
   labels: {
     [key: string]: string;
   };
@@ -343,7 +343,7 @@ export interface QuotaOperation {
   quotaMetrics: MetricValueSet[];
   /**
    * Quota mode for this operation.
-  */
+   */
   quotaMode: QuotaOperation_QuotaMode;
 }
 export interface QuotaOperationProtoMsg {
@@ -394,7 +394,7 @@ export interface QuotaOperationAmino {
   consumer_id?: string;
   /**
    * Labels describing the operation.
-  */
+   */
   labels?: {
     [key: string]: string;
   };
@@ -415,7 +415,7 @@ export interface QuotaOperationAmino {
   quota_metrics?: MetricValueSetAmino[];
   /**
    * Quota mode for this operation.
-  */
+   */
   quota_mode?: QuotaOperation_QuotaMode;
 }
 export interface QuotaOperationAminoMsg {
@@ -452,7 +452,7 @@ export interface AllocateQuotaResponse {
   operationId: string;
   /**
    * Indicates the decision of the allocate.
-  */
+   */
   allocateErrors: QuotaError[];
   /**
    * Quota metrics to indicate the result of allocation. Depending on the
@@ -469,7 +469,7 @@ export interface AllocateQuotaResponse {
   quotaMetrics: MetricValueSet[];
   /**
    * ID of the actual config used to process the request.
-  */
+   */
   serviceConfigId: string;
 }
 export interface AllocateQuotaResponseProtoMsg {
@@ -490,7 +490,7 @@ export interface AllocateQuotaResponseAmino {
   operation_id?: string;
   /**
    * Indicates the decision of the allocate.
-  */
+   */
   allocate_errors?: QuotaErrorAmino[];
   /**
    * Quota metrics to indicate the result of allocation. Depending on the
@@ -507,7 +507,7 @@ export interface AllocateQuotaResponseAmino {
   quota_metrics?: MetricValueSetAmino[];
   /**
    * ID of the actual config used to process the request.
-  */
+   */
   service_config_id?: string;
 }
 export interface AllocateQuotaResponseAminoMsg {
@@ -535,7 +535,7 @@ export interface AllocateQuotaResponseSDKType {
 export interface QuotaError {
   /**
    * Error code.
-  */
+   */
   code: QuotaError_Code;
   /**
    * Subject to whom this error applies. See the specific enum for more details
@@ -545,7 +545,7 @@ export interface QuotaError {
   subject: string;
   /**
    * Free-form text that provides details on the cause of the error.
-  */
+   */
   description: string;
   /**
    * Contains additional information about the quota error.
@@ -566,7 +566,7 @@ export interface QuotaErrorProtoMsg {
 export interface QuotaErrorAmino {
   /**
    * Error code.
-  */
+   */
   code?: QuotaError_Code;
   /**
    * Subject to whom this error applies. See the specific enum for more details
@@ -576,7 +576,7 @@ export interface QuotaErrorAmino {
   subject?: string;
   /**
    * Free-form text that provides details on the cause of the error.
-  */
+   */
   description?: string;
   /**
    * Contains additional information about the quota error.

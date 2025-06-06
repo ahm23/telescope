@@ -13,11 +13,11 @@ export const protobufPackage = "ibc.lightclients.solomachine.v3";
 export interface ClientState {
   /**
    * latest sequence of the client state
-  */
+   */
   sequence: bigint;
   /**
    * frozen sequence of the solo machine
-  */
+   */
   isFrozen: boolean;
   consensusState?: ConsensusState;
 }
@@ -48,7 +48,7 @@ export interface ClientStateSDKType {
 export interface ConsensusState {
   /**
    * public key of the solo machine
-  */
+   */
   publicKey?: Any;
   /**
    * diversifier allows the same public key to be re-used across different solo
@@ -196,23 +196,23 @@ export interface TimestampedSignatureDataSDKType {
 export interface SignBytes {
   /**
    * the sequence number
-  */
+   */
   sequence: bigint;
   /**
    * the proof timestamp
-  */
+   */
   timestamp: bigint;
   /**
    * the public key diversifier
-  */
+   */
   diversifier: string;
   /**
    * the standardised path bytes
-  */
+   */
   path: Uint8Array;
   /**
    * the marshaled data bytes
-  */
+   */
   data: Uint8Array;
 }
 export interface SignBytesProtoMsg {
@@ -241,11 +241,11 @@ export interface SignBytesSDKType {
 export interface HeaderData {
   /**
    * header public key
-  */
+   */
   newPubKey?: Any;
   /**
    * header diversifier
-  */
+   */
   newDiversifier: string;
 }
 export interface HeaderDataProtoMsg {

@@ -54,7 +54,7 @@ export interface PubKeySDKType {
 export interface PrivKey {
   /**
    * secret number serialized using big-endian encoding
-  */
+   */
   secret: Uint8Array;
 }
 export interface PrivKeyProtoMsg {
@@ -70,7 +70,7 @@ export interface PrivKeyProtoMsg {
 export interface PrivKeyAmino {
   /**
    * secret number serialized using big-endian encoding
-  */
+   */
   secret?: string;
 }
 export interface PrivKeyAminoMsg {

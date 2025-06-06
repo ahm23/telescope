@@ -767,7 +767,7 @@ export interface RoutingRuleAminoMsg {
 export interface RoutingParameter {
   /**
    * A request field to extract the header key-value pair from.
-  */
+   */
   field: string;
   /**
    * A pattern matching the key-value field. Optional.
@@ -840,7 +840,7 @@ export interface RoutingParameterProtoMsg {
 export interface RoutingParameterAmino {
   /**
    * A request field to extract the header key-value pair from.
-  */
+   */
   field: string;
   /**
    * A pattern matching the key-value field. Optional.

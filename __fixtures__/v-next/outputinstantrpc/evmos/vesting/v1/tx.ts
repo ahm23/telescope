@@ -18,19 +18,19 @@ export interface MsgCreateClawbackVestingAccount {
   fromAddress: string;
   /**
    * to_address specifies the account to receive the funds
-  */
+   */
   toAddress: string;
   /**
    * start_time defines the time at which the vesting period begins
-  */
+   */
   startTime: Date;
   /**
    * lockup_periods defines the unlocking schedule relative to the start_time
-  */
+   */
   lockupPeriods: Period[];
   /**
    * vesting_periods defines thevesting schedule relative to the start_time
-  */
+   */
   vestingPeriods: Period[];
   /**
    * merge specifies a the creation mechanism for existing
@@ -89,11 +89,11 @@ export interface MsgCreateClawbackVestingAccountResponseSDKType {}
 export interface MsgClawback {
   /**
    * funder_address is the address which funded the account
-  */
+   */
   funderAddress: string;
   /**
    * account_address is the address of the ClawbackVestingAccount to claw back from.
-  */
+   */
   accountAddress: string;
   /**
    * dest_address specifies where the clawed-back tokens should be transferred

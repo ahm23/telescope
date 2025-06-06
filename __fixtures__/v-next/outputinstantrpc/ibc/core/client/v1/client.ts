@@ -14,11 +14,11 @@ export const protobufPackage = "ibc.core.client.v1";
 export interface IdentifiedClientState {
   /**
    * client identifier
-  */
+   */
   clientId: string;
   /**
    * client state
-  */
+   */
   clientState?: Any;
 }
 export interface IdentifiedClientStateProtoMsg {
@@ -46,11 +46,11 @@ export interface IdentifiedClientStateSDKType {
 export interface ConsensusStateWithHeight {
   /**
    * consensus state height
-  */
+   */
   height: Height;
   /**
    * consensus state
-  */
+   */
   consensusState?: Any;
 }
 export interface ConsensusStateWithHeightProtoMsg {
@@ -78,11 +78,11 @@ export interface ConsensusStateWithHeightSDKType {
 export interface ClientConsensusStates {
   /**
    * client identifier
-  */
+   */
   clientId: string;
   /**
    * consensus states and their heights associated with the client
-  */
+   */
   consensusStates: ConsensusStateWithHeight[];
 }
 export interface ClientConsensusStatesProtoMsg {
@@ -112,15 +112,15 @@ export interface ClientConsensusStatesSDKType {
 export interface ClientUpdateProposal {
   /**
    * the title of the update proposal
-  */
+   */
   title: string;
   /**
    * the description of the proposal
-  */
+   */
   description: string;
   /**
    * the client identifier for the client to be updated if the proposal passes
-  */
+   */
   subjectClientId: string;
   /**
    * the substitute client identifier for the client standing in for the subject
@@ -203,11 +203,11 @@ export interface UpgradeProposalSDKType {
 export interface Height {
   /**
    * the revision that the client is currently on
-  */
+   */
   revisionNumber: bigint;
   /**
    * the height within the given revision
-  */
+   */
   revisionHeight: bigint;
 }
 export interface HeightProtoMsg {
@@ -242,7 +242,7 @@ export interface HeightSDKType {
 export interface Params {
   /**
    * allowed_clients defines the list of allowed client state types.
-  */
+   */
   allowedClients: string[];
 }
 export interface ParamsProtoMsg {

@@ -73,7 +73,7 @@ export interface PeriodLock {
   endTime: Date;
   /**
    * Coins are the tokens locked within the lock, kept in the module account.
-  */
+   */
   coins: Coin[];
 }
 export interface PeriodLockProtoMsg {
@@ -115,7 +115,7 @@ export interface PeriodLockAmino {
   end_time: string;
   /**
    * Coins are the tokens locked within the lock, kept in the module account.
-  */
+   */
   coins: CoinAmino[];
 }
 export interface PeriodLockAminoMsg {
@@ -133,11 +133,11 @@ export interface PeriodLockAminoMsg {
 export interface QueryCondition {
   /**
    * LockQueryType is a type of lock query, ByLockDuration | ByLockTime
-  */
+   */
   lockQueryType: LockQueryType;
   /**
    * Denom represents the token denomination we are looking to lock up
-  */
+   */
   denom: string;
   /**
    * Duration is used to query locks with longer duration than the specified
@@ -167,11 +167,11 @@ export interface QueryConditionProtoMsg {
 export interface QueryConditionAmino {
   /**
    * LockQueryType is a type of lock query, ByLockDuration | ByLockTime
-  */
+   */
   lock_query_type: LockQueryType;
   /**
    * Denom represents the token denomination we are looking to lock up
-  */
+   */
   denom: string;
   /**
    * Duration is used to query locks with longer duration than the specified

@@ -516,11 +516,11 @@ export interface RequestListSnapshotsSDKType {}
 export interface RequestOfferSnapshot {
   /**
    * snapshot offered by peers
-  */
+   */
   snapshot?: Snapshot;
   /**
    * light client-verified app hash for snapshot height
-  */
+   */
   appHash: Uint8Array;
 }
 export interface RequestOfferSnapshotProtoMsg {
@@ -735,7 +735,7 @@ export interface ResponseSetOption {
   code: number;
   /**
    * bytes data = 2;
-  */
+   */
   log: string;
   info: string;
 }
@@ -787,11 +787,11 @@ export interface ResponseQuery {
   code: number;
   /**
    * bytes data = 2; // use "value" instead.
-  */
+   */
   log: string;
   /**
    * nondeterministic
-  */
+   */
   info: string;
   index: bigint;
   key: Uint8Array;
@@ -850,11 +850,11 @@ export interface ResponseCheckTx {
   data: Uint8Array;
   /**
    * nondeterministic
-  */
+   */
   log: string;
   /**
    * nondeterministic
-  */
+   */
   info: string;
   gasWanted: bigint;
   gasUsed: bigint;
@@ -890,11 +890,11 @@ export interface ResponseDeliverTx {
   data: Uint8Array;
   /**
    * nondeterministic
-  */
+   */
   log: string;
   /**
    * nondeterministic
-  */
+   */
   info: string;
   gasWanted: bigint;
   gasUsed: bigint;
@@ -952,7 +952,7 @@ export interface ResponseEndBlockSDKType {
 export interface ResponseCommit {
   /**
    * reserve 1
-  */
+   */
   data: Uint8Array;
   retainHeight: bigint;
 }
@@ -1038,11 +1038,11 @@ export interface ResponseApplySnapshotChunk {
   result: ResponseApplySnapshotChunk_Result;
   /**
    * Chunks to refetch and reapply
-  */
+   */
   refetchChunks: number[];
   /**
    * Chunk senders to reject and ban
-  */
+   */
   rejectSenders: string[];
 }
 export interface ResponseApplySnapshotChunkProtoMsg {
@@ -1098,11 +1098,11 @@ export interface ConsensusParamsSDKType {
 export interface BlockParams {
   /**
    * Note: must be greater than 0
-  */
+   */
   maxBytes: bigint;
   /**
    * Note: must be greater or equal to -1
-  */
+   */
   maxGas: bigint;
 }
 export interface BlockParamsProtoMsg {
@@ -1180,7 +1180,7 @@ export interface EventAttribute {
   value: Uint8Array;
   /**
    * nondeterministic
-  */
+   */
   index: boolean;
 }
 export interface EventAttributeProtoMsg {
@@ -1239,11 +1239,11 @@ export interface TxResultSDKType {
 export interface Validator {
   /**
    * The first 20 bytes of SHA256(public key)
-  */
+   */
   address: Uint8Array;
   /**
    * PubKey pub_key = 2 [(gogoproto.nullable)=false];
-  */
+   */
   power: bigint;
 }
 export interface ValidatorProtoMsg {
@@ -1317,15 +1317,15 @@ export interface Evidence {
   type: EvidenceType;
   /**
    * The offending validator
-  */
+   */
   validator: Validator;
   /**
    * The height when the offense occurred
-  */
+   */
   height: bigint;
   /**
    * The corresponding time where the offense occurred
-  */
+   */
   time: Date;
   /**
    * Total voting power of the validator set in case the ABCI application does
@@ -1358,23 +1358,23 @@ export interface EvidenceSDKType {
 export interface Snapshot {
   /**
    * The height at which the snapshot was taken
-  */
+   */
   height: bigint;
   /**
    * The application-specific snapshot format
-  */
+   */
   format: number;
   /**
    * Number of chunks in the snapshot
-  */
+   */
   chunks: number;
   /**
    * Arbitrary snapshot hash, equal only if identical
-  */
+   */
   hash: Uint8Array;
   /**
    * Arbitrary application metadata
-  */
+   */
   metadata: Uint8Array;
 }
 export interface SnapshotProtoMsg {

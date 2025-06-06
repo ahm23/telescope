@@ -12,23 +12,23 @@ export const protobufPackage = "ibc.core.port.v1";
 export interface QueryAppVersionRequest {
   /**
    * port unique identifier
-  */
+   */
   portId: string;
   /**
    * connection unique identifier
-  */
+   */
   connectionId: string;
   /**
    * whether the channel is ordered or unordered
-  */
+   */
   ordering: Order;
   /**
    * counterparty channel end
-  */
+   */
   counterparty?: Counterparty;
   /**
    * proposed version
-  */
+   */
   proposedVersion: string;
 }
 export interface QueryAppVersionRequestProtoMsg {
@@ -57,11 +57,11 @@ export interface QueryAppVersionRequestSDKType {
 export interface QueryAppVersionResponse {
   /**
    * port id associated with the request identifiers
-  */
+   */
   portId: string;
   /**
    * supported app version
-  */
+   */
   version: string;
 }
 export interface QueryAppVersionResponseProtoMsg {

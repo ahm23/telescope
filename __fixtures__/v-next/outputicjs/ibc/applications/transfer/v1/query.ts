@@ -12,7 +12,7 @@ import { DeepPartial } from "../../../../helpers";
 export interface QueryDenomTraceRequest {
   /**
    * hash (in hex format) of the denomination trace information.
-  */
+   */
   hash: string;
 }
 export interface QueryDenomTraceRequestProtoMsg {
@@ -29,7 +29,7 @@ export interface QueryDenomTraceRequestProtoMsg {
 export interface QueryDenomTraceRequestAmino {
   /**
    * hash (in hex format) of the denomination trace information.
-  */
+   */
   hash: string;
 }
 export interface QueryDenomTraceRequestAminoMsg {
@@ -46,7 +46,7 @@ export interface QueryDenomTraceRequestAminoMsg {
 export interface QueryDenomTraceResponse {
   /**
    * denom_trace returns the requested denomination trace information.
-  */
+   */
   denomTrace?: DenomTrace;
 }
 export interface QueryDenomTraceResponseProtoMsg {
@@ -63,7 +63,7 @@ export interface QueryDenomTraceResponseProtoMsg {
 export interface QueryDenomTraceResponseAmino {
   /**
    * denom_trace returns the requested denomination trace information.
-  */
+   */
   denom_trace?: DenomTraceAmino;
 }
 export interface QueryDenomTraceResponseAminoMsg {
@@ -80,7 +80,7 @@ export interface QueryDenomTraceResponseAminoMsg {
 export interface QueryDenomTracesRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryDenomTracesRequestProtoMsg {
@@ -97,7 +97,7 @@ export interface QueryDenomTracesRequestProtoMsg {
 export interface QueryDenomTracesRequestAmino {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryDenomTracesRequestAminoMsg {
@@ -114,11 +114,11 @@ export interface QueryDenomTracesRequestAminoMsg {
 export interface QueryDenomTracesResponse {
   /**
    * denom_traces returns all denominations trace information.
-  */
+   */
   denomTraces: DenomTrace[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryDenomTracesResponseProtoMsg {
@@ -135,11 +135,11 @@ export interface QueryDenomTracesResponseProtoMsg {
 export interface QueryDenomTracesResponseAmino {
   /**
    * denom_traces returns all denominations trace information.
-  */
+   */
   denom_traces: DenomTraceAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryDenomTracesResponseAminoMsg {
@@ -177,7 +177,7 @@ export interface QueryParamsRequestAminoMsg {
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params?: IbcApplicationsTransferV1Params;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -193,7 +193,7 @@ export interface QueryParamsResponseProtoMsg {
 export interface QueryParamsResponseAmino {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params?: IbcApplicationsTransferV1ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {

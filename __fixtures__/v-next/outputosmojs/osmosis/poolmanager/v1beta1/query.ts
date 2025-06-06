@@ -343,7 +343,7 @@ export interface SpotPriceRequestSDKType {
 export interface SpotPriceResponse {
   /**
    * String of the Dec. Ex) 10.203uatom
-  */
+   */
   spotPrice: string;
 }
 export interface SpotPriceResponseProtoMsg {

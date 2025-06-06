@@ -14,7 +14,7 @@ export const protobufPackage = "evmos.erc20.v1";
 export interface QueryTokenPairsRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryTokenPairsRequestProtoMsg {
@@ -31,7 +31,7 @@ export interface QueryTokenPairsRequestProtoMsg {
 export interface QueryTokenPairsRequestAmino {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryTokenPairsRequestAminoMsg {
@@ -59,7 +59,7 @@ export interface QueryTokenPairsResponse {
   tokenPairs: TokenPair[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryTokenPairsResponseProtoMsg {
@@ -77,7 +77,7 @@ export interface QueryTokenPairsResponseAmino {
   token_pairs?: TokenPairAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryTokenPairsResponseAminoMsg {

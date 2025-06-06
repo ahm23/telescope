@@ -92,7 +92,7 @@ export interface QueryPoolResponseSDKType {
 export interface QueryPoolsRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryPoolsRequestProtoMsg {
@@ -108,7 +108,7 @@ export interface QueryPoolsRequestProtoMsg {
 export interface QueryPoolsRequestAmino {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryPoolsRequestAminoMsg {
@@ -133,7 +133,7 @@ export interface QueryPoolsResponse {
   pools: (Pool1 | Pool2 | Any)[] | Any[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryPoolsResponseProtoMsg {
@@ -152,7 +152,7 @@ export interface QueryPoolsResponseAmino {
   pools?: AnyAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryPoolsResponseAminoMsg {
@@ -807,7 +807,7 @@ export interface QueryPoolsWithFilterResponse {
   pools: (Pool1 | Pool2 | Any)[] | Any[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryPoolsWithFilterResponseProtoMsg {
@@ -826,7 +826,7 @@ export interface QueryPoolsWithFilterResponseAmino {
   pools?: AnyAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryPoolsWithFilterResponseAminoMsg {
@@ -853,7 +853,7 @@ export interface QueryPoolsWithFilterResponseSDKType {
 export interface QuerySpotPriceResponse {
   /**
    * String of the Dec. Ex) 10.203uatom
-  */
+   */
   spotPrice: string;
 }
 export interface QuerySpotPriceResponseProtoMsg {
@@ -871,7 +871,7 @@ export interface QuerySpotPriceResponseProtoMsg {
 export interface QuerySpotPriceResponseAmino {
   /**
    * String of the Dec. Ex) 10.203uatom
-  */
+   */
   spot_price?: string;
 }
 export interface QuerySpotPriceResponseAminoMsg {
@@ -898,7 +898,7 @@ export interface QuerySpotPriceResponseSDKType {
 export interface QuerySwapExactAmountInRequest {
   /**
    * TODO: CHANGE THIS TO RESERVED IN A PATCH RELEASE
-  */
+   */
   sender: string;
   poolId: bigint;
   tokenIn: string;
@@ -917,7 +917,7 @@ export interface QuerySwapExactAmountInRequestProtoMsg {
 export interface QuerySwapExactAmountInRequestAmino {
   /**
    * TODO: CHANGE THIS TO RESERVED IN A PATCH RELEASE
-  */
+   */
   sender?: string;
   pool_id?: string;
   token_in?: string;
@@ -980,7 +980,7 @@ export interface QuerySwapExactAmountInResponseSDKType {
 export interface QuerySwapExactAmountOutRequest {
   /**
    * TODO: CHANGE THIS TO RESERVED IN A PATCH RELEASE
-  */
+   */
   sender: string;
   poolId: bigint;
   routes: SwapAmountOutRoute[];
@@ -999,7 +999,7 @@ export interface QuerySwapExactAmountOutRequestProtoMsg {
 export interface QuerySwapExactAmountOutRequestAmino {
   /**
    * TODO: CHANGE THIS TO RESERVED IN A PATCH RELEASE
-  */
+   */
   sender?: string;
   pool_id?: string;
   routes?: SwapAmountOutRouteAmino[];

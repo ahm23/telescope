@@ -77,7 +77,7 @@ export interface QueryParamsResponseSDKType {
 export interface QuerySigningInfoRequest {
   /**
    * cons_address is the address to query signing info of
-  */
+   */
   consAddress: string;
 }
 export interface QuerySigningInfoRequestProtoMsg {
@@ -94,7 +94,7 @@ export interface QuerySigningInfoRequestProtoMsg {
 export interface QuerySigningInfoRequestAmino {
   /**
    * cons_address is the address to query signing info of
-  */
+   */
   cons_address?: string;
 }
 export interface QuerySigningInfoRequestAminoMsg {
@@ -121,7 +121,7 @@ export interface QuerySigningInfoRequestSDKType {
 export interface QuerySigningInfoResponse {
   /**
    * val_signing_info is the signing info of requested val cons address
-  */
+   */
   valSigningInfo: ValidatorSigningInfo;
 }
 export interface QuerySigningInfoResponseProtoMsg {
@@ -138,7 +138,7 @@ export interface QuerySigningInfoResponseProtoMsg {
 export interface QuerySigningInfoResponseAmino {
   /**
    * val_signing_info is the signing info of requested val cons address
-  */
+   */
   val_signing_info?: ValidatorSigningInfoAmino;
 }
 export interface QuerySigningInfoResponseAminoMsg {
@@ -203,7 +203,7 @@ export interface QuerySigningInfosRequestSDKType {
 export interface QuerySigningInfosResponse {
   /**
    * info is the signing info of all validators
-  */
+   */
   info: ValidatorSigningInfo[];
   pagination?: PageResponse;
 }
@@ -221,7 +221,7 @@ export interface QuerySigningInfosResponseProtoMsg {
 export interface QuerySigningInfosResponseAmino {
   /**
    * info is the signing info of all validators
-  */
+   */
   info?: ValidatorSigningInfoAmino[];
   pagination?: PageResponseAmino;
 }

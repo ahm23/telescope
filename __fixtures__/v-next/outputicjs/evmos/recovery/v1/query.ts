@@ -32,7 +32,7 @@ export interface QueryParamsRequestAminoMsg {
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: EvmosRecoveryV1Params;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -48,7 +48,7 @@ export interface QueryParamsResponseProtoMsg {
 export interface QueryParamsResponseAmino {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: EvmosRecoveryV1ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {

@@ -40,7 +40,7 @@ export interface QuerySpotPriceRequestSDKType {
 export interface QuerySpotPriceResponse {
   /**
    * String of the Dec. Ex) 10.203uatom
-  */
+   */
   spotPrice: string;
 }
 export interface QuerySpotPriceResponseProtoMsg {

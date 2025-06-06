@@ -14,11 +14,11 @@ export const protobufPackage = "cosmwasm.wasm.v1";
 export interface MsgStoreCode {
   /**
    * Sender is the that actor that signed the messages
-  */
+   */
   sender: string;
   /**
    * WASMByteCode can be raw or gzip compressed
-  */
+   */
   wasmByteCode: Uint8Array;
   /**
    * InstantiatePermission access control to apply on contract creation,
@@ -50,7 +50,7 @@ export interface MsgStoreCodeSDKType {
 export interface MsgStoreCodeResponse {
   /**
    * CodeID is the reference to the stored WASM code
-  */
+   */
   codeId: bigint;
 }
 export interface MsgStoreCodeResponseProtoMsg {
@@ -76,27 +76,27 @@ export interface MsgStoreCodeResponseSDKType {
 export interface MsgInstantiateContract {
   /**
    * Sender is the that actor that signed the messages
-  */
+   */
   sender: string;
   /**
    * Admin is an optional address that can execute migrations
-  */
+   */
   admin: string;
   /**
    * CodeID is the reference to the stored WASM code
-  */
+   */
   codeId: bigint;
   /**
    * Label is optional metadata to be stored with a contract instance.
-  */
+   */
   label: string;
   /**
    * Msg json encoded message to be passed to the contract on instantiation
-  */
+   */
   msg: Uint8Array;
   /**
    * Funds coins that are transferred to the contract on instantiation
-  */
+   */
   funds: Coin[];
 }
 export interface MsgInstantiateContractProtoMsg {
@@ -127,11 +127,11 @@ export interface MsgInstantiateContractSDKType {
 export interface MsgInstantiateContractResponse {
   /**
    * Address is the bech32 address of the new contract instance.
-  */
+   */
   address: string;
   /**
    * Data contains base64-encoded bytes to returned from the contract
-  */
+   */
   data: Uint8Array;
 }
 export interface MsgInstantiateContractResponseProtoMsg {
@@ -157,19 +157,19 @@ export interface MsgInstantiateContractResponseSDKType {
 export interface MsgExecuteContract {
   /**
    * Sender is the that actor that signed the messages
-  */
+   */
   sender: string;
   /**
    * Contract is the address of the smart contract
-  */
+   */
   contract: string;
   /**
    * Msg json encoded message to be passed to the contract
-  */
+   */
   msg: Uint8Array;
   /**
    * Funds coins that are transferred to the contract on execution
-  */
+   */
   funds: Coin[];
 }
 export interface MsgExecuteContractProtoMsg {
@@ -197,7 +197,7 @@ export interface MsgExecuteContractSDKType {
 export interface MsgExecuteContractResponse {
   /**
    * Data contains base64-encoded bytes to returned from the contract
-  */
+   */
   data: Uint8Array;
 }
 export interface MsgExecuteContractResponseProtoMsg {
@@ -222,19 +222,19 @@ export interface MsgExecuteContractResponseSDKType {
 export interface MsgMigrateContract {
   /**
    * Sender is the that actor that signed the messages
-  */
+   */
   sender: string;
   /**
    * Contract is the address of the smart contract
-  */
+   */
   contract: string;
   /**
    * CodeID references the new WASM code
-  */
+   */
   codeId: bigint;
   /**
    * Msg json encoded message to be passed to the contract on migration
-  */
+   */
   msg: Uint8Array;
 }
 export interface MsgMigrateContractProtoMsg {
@@ -288,15 +288,15 @@ export interface MsgMigrateContractResponseSDKType {
 export interface MsgUpdateAdmin {
   /**
    * Sender is the that actor that signed the messages
-  */
+   */
   sender: string;
   /**
    * NewAdmin address to be set
-  */
+   */
   newAdmin: string;
   /**
    * Contract is the address of the smart contract
-  */
+   */
   contract: string;
 }
 export interface MsgUpdateAdminProtoMsg {
@@ -341,11 +341,11 @@ export interface MsgUpdateAdminResponseSDKType {}
 export interface MsgClearAdmin {
   /**
    * Sender is the that actor that signed the messages
-  */
+   */
   sender: string;
   /**
    * Contract is the address of the smart contract
-  */
+   */
   contract: string;
 }
 export interface MsgClearAdminProtoMsg {

@@ -31,7 +31,7 @@ export interface QueryParamsRequestSDKType {}
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {

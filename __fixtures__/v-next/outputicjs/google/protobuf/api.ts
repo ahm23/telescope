@@ -24,11 +24,11 @@ export interface Api {
   name: string;
   /**
    * The methods of this interface, in unspecified order.
-  */
+   */
   methods: Method[];
   /**
    * Any metadata attached to the interface.
-  */
+   */
   options: Option[];
   /**
    * A version string for this interface. If specified, must have the form
@@ -59,11 +59,11 @@ export interface Api {
   sourceContext?: SourceContext;
   /**
    * Included interfaces. See [Mixin][].
-  */
+   */
   mixins: Mixin[];
   /**
    * The source syntax of the service.
-  */
+   */
   syntax: Syntax;
 }
 export interface ApiProtoMsg {
@@ -92,11 +92,11 @@ export interface ApiAmino {
   name: string;
   /**
    * The methods of this interface, in unspecified order.
-  */
+   */
   methods: MethodAmino[];
   /**
    * Any metadata attached to the interface.
-  */
+   */
   options: OptionAmino[];
   /**
    * A version string for this interface. If specified, must have the form
@@ -127,11 +127,11 @@ export interface ApiAmino {
   source_context?: SourceContextAmino;
   /**
    * Included interfaces. See [Mixin][].
-  */
+   */
   mixins: MixinAmino[];
   /**
    * The source syntax of the service.
-  */
+   */
   syntax: Syntax;
 }
 export interface ApiAminoMsg {
@@ -147,31 +147,31 @@ export interface ApiAminoMsg {
 export interface Method {
   /**
    * The simple name of this method.
-  */
+   */
   name: string;
   /**
    * A URL of the input message type.
-  */
+   */
   requestTypeUrl: string;
   /**
    * If true, the request is streamed.
-  */
+   */
   requestStreaming: boolean;
   /**
    * The URL of the output message type.
-  */
+   */
   responseTypeUrl: string;
   /**
    * If true, the response is streamed.
-  */
+   */
   responseStreaming: boolean;
   /**
    * Any metadata attached to the method.
-  */
+   */
   options: Option[];
   /**
    * The source syntax of this method.
-  */
+   */
   syntax: Syntax;
 }
 export interface MethodProtoMsg {
@@ -187,31 +187,31 @@ export interface MethodProtoMsg {
 export interface MethodAmino {
   /**
    * The simple name of this method.
-  */
+   */
   name: string;
   /**
    * A URL of the input message type.
-  */
+   */
   request_type_url: string;
   /**
    * If true, the request is streamed.
-  */
+   */
   request_streaming: boolean;
   /**
    * The URL of the output message type.
-  */
+   */
   response_type_url: string;
   /**
    * If true, the response is streamed.
-  */
+   */
   response_streaming: boolean;
   /**
    * Any metadata attached to the method.
-  */
+   */
   options: OptionAmino[];
   /**
    * The source syntax of this method.
-  */
+   */
   syntax: Syntax;
 }
 export interface MethodAminoMsg {
@@ -304,7 +304,7 @@ export interface MethodAminoMsg {
 export interface Mixin {
   /**
    * The fully qualified name of the interface which is included.
-  */
+   */
   name: string;
   /**
    * If non-empty specifies a path under which inherited HTTP paths
@@ -402,7 +402,7 @@ export interface MixinProtoMsg {
 export interface MixinAmino {
   /**
    * The fully qualified name of the interface which is included.
-  */
+   */
   name: string;
   /**
    * If non-empty specifies a path under which inherited HTTP paths

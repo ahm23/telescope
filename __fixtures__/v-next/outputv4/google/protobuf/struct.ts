@@ -72,7 +72,7 @@ export interface Struct_FieldsEntrySDKType {
 export interface Struct {
   /**
    * Unordered map of dynamically typed values.
-  */
+   */
   fields: {
     [key: string]: Value;
   };
@@ -113,27 +113,27 @@ export interface StructSDKType {
 export interface Value {
   /**
    * Represents a null value.
-  */
+   */
   nullValue?: NullValue;
   /**
    * Represents a double value.
-  */
+   */
   numberValue?: number;
   /**
    * Represents a string value.
-  */
+   */
   stringValue?: string;
   /**
    * Represents a boolean value.
-  */
+   */
   boolValue?: boolean;
   /**
    * Represents a structured value.
-  */
+   */
   structValue?: Struct;
   /**
    * Represents a repeated `Value`.
-  */
+   */
   listValue?: ListValue;
 }
 export interface ValueProtoMsg {
@@ -170,7 +170,7 @@ export interface ValueSDKType {
 export interface ListValue {
   /**
    * Repeated field of dynamically typed values.
-  */
+   */
   values: Value[];
 }
 export interface ListValueProtoMsg {

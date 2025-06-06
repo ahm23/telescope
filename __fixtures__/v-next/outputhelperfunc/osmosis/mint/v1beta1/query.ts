@@ -42,7 +42,7 @@ export interface QueryParamsRequestSDKType {}
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -58,7 +58,7 @@ export interface QueryParamsResponseProtoMsg {
 export interface QueryParamsResponseAmino {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
@@ -116,7 +116,7 @@ export interface QueryEpochProvisionsRequestSDKType {}
 export interface QueryEpochProvisionsResponse {
   /**
    * epoch_provisions is the current minting per epoch provisions value.
-  */
+   */
   epochProvisions: Uint8Array;
 }
 export interface QueryEpochProvisionsResponseProtoMsg {
@@ -133,7 +133,7 @@ export interface QueryEpochProvisionsResponseProtoMsg {
 export interface QueryEpochProvisionsResponseAmino {
   /**
    * epoch_provisions is the current minting per epoch provisions value.
-  */
+   */
   epoch_provisions?: string;
 }
 export interface QueryEpochProvisionsResponseAminoMsg {

@@ -10,11 +10,11 @@ import { DeepPartial } from "../../../helpers";
 export interface GenesisState {
   /**
    * minter is a space for holding current inflation information.
-  */
+   */
   minter: Minter;
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: CosmosMintV1beta1Params;
 }
 export interface GenesisStateProtoMsg {
@@ -30,11 +30,11 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * minter is a space for holding current inflation information.
-  */
+   */
   minter: MinterAmino;
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: CosmosMintV1beta1ParamsAmino;
 }
 export interface GenesisStateAminoMsg {

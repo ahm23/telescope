@@ -69,7 +69,7 @@ export interface Documentation {
   summary: string;
   /**
    * The top level pages for the documentation set.
-  */
+   */
   pages: Page[];
   /**
    * A list of documentation rules that apply to individual API elements.
@@ -79,7 +79,7 @@ export interface Documentation {
   rules: DocumentationRule[];
   /**
    * The URL to the root of documentation.
-  */
+   */
   documentationRootUrl: string;
   /**
    * Specifies the service root url if the default one (the service name
@@ -177,7 +177,7 @@ export interface DocumentationAmino {
   summary?: string;
   /**
    * The top level pages for the documentation set.
-  */
+   */
   pages?: PageAmino[];
   /**
    * A list of documentation rules that apply to individual API elements.
@@ -187,7 +187,7 @@ export interface DocumentationAmino {
   rules?: DocumentationRuleAmino[];
   /**
    * The URL to the root of documentation.
-  */
+   */
   documentation_root_url?: string;
   /**
    * Specifies the service root url if the default one (the service name
@@ -303,7 +303,7 @@ export interface DocumentationRule {
   selector: string;
   /**
    * Description of the selected API(s).
-  */
+   */
   description: string;
   /**
    * Deprecation description of the selected element(s). It can be provided if
@@ -333,7 +333,7 @@ export interface DocumentationRuleAmino {
   selector?: string;
   /**
    * Description of the selected API(s).
-  */
+   */
   description?: string;
   /**
    * Deprecation description of the selected element(s). It can be provided if

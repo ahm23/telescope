@@ -11,7 +11,7 @@ import { OsmosisTokenfactoryV1beta1Params, OsmosisTokenfactoryV1beta1ParamsAmino
 export interface GenesisState {
   /**
    * params defines the paramaters of the module.
-  */
+   */
   params: OsmosisTokenfactoryV1beta1Params;
   factoryDenoms: GenesisDenom[];
 }
@@ -28,7 +28,7 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * params defines the paramaters of the module.
-  */
+   */
   params: OsmosisTokenfactoryV1beta1ParamsAmino;
   factory_denoms: GenesisDenomAmino[];
 }

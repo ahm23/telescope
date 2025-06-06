@@ -18,15 +18,15 @@ export const protobufPackage = "osmosis.concentratedliquidity.v1beta1";
 export interface FullTick {
   /**
    * pool id associated with the tick.
-  */
+   */
   poolId: bigint;
   /**
    * tick's index.
-  */
+   */
   tickIndex: bigint;
   /**
    * tick's info.
-  */
+   */
   info: TickInfo;
 }
 export interface FullTickProtoMsg {
@@ -55,17 +55,17 @@ export interface FullTickSDKType {
 export interface PoolData {
   /**
    * pool struct
-  */
+   */
   pool?: Any;
   /**
    * pool's ticks
-  */
+   */
   ticks: FullTick[];
   feeAccumulator: AccumObject;
   incentivesAccumulators: AccumObject[];
   /**
    * incentive records to be set
-  */
+   */
   incentiveRecords: IncentiveRecord[];
 }
 export interface PoolDataProtoMsg {
@@ -95,11 +95,11 @@ export interface PoolDataSDKType {
 export interface GenesisState {
   /**
    * params are all the parameters of the module
-  */
+   */
   params: Params;
   /**
    * pool data containining serialized pool struct and ticks.
-  */
+   */
   poolData: PoolData[];
   positions: Position[];
   nextPositionId: bigint;
@@ -128,7 +128,7 @@ export interface GenesisStateSDKType {
 export interface AccumObject {
   /**
    * Accumulator's name (pulled from AccumulatorContent)
-  */
+   */
   name: string;
   accumContent?: AccumulatorContent;
 }

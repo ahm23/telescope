@@ -15,11 +15,11 @@ export const protobufPackage = "ibc.applications.fee.v1";
 export interface QueryIncentivizedPacketsRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
   /**
    * block height at which to query
-  */
+   */
   queryHeight: bigint;
 }
 export interface QueryIncentivizedPacketsRequestProtoMsg {
@@ -45,11 +45,11 @@ export interface QueryIncentivizedPacketsRequestSDKType {
 export interface QueryIncentivizedPacketsResponse {
   /**
    * list of identified fees for incentivized packets
-  */
+   */
   incentivizedPackets: IdentifiedPacketFees[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryIncentivizedPacketsResponseProtoMsg {
@@ -75,7 +75,7 @@ export interface QueryIncentivizedPacketsResponseSDKType {
 export interface QueryIncentivizedPacketRequest {
   /**
    * block height at which to query
-  */
+   */
   queryHeight: bigint;
 }
 export interface QueryIncentivizedPacketRequestProtoMsg {
@@ -100,7 +100,7 @@ export interface QueryIncentivizedPacketRequestSDKType {
 export interface QueryIncentivizedPacketResponse {
   /**
    * the identified fees for the incentivized packet
-  */
+   */
   incentivizedPacket: IdentifiedPacketFees;
 }
 export interface QueryIncentivizedPacketResponseProtoMsg {
@@ -126,13 +126,13 @@ export interface QueryIncentivizedPacketResponseSDKType {
 export interface QueryIncentivizedPacketsForChannelRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
   portId: string;
   channelId: string;
   /**
    * Height to query at
-  */
+   */
   queryHeight: bigint;
 }
 export interface QueryIncentivizedPacketsForChannelRequestProtoMsg {
@@ -161,11 +161,11 @@ export interface QueryIncentivizedPacketsForChannelRequestSDKType {
 export interface QueryIncentivizedPacketsForChannelResponse {
   /**
    * Map of all incentivized_packets
-  */
+   */
   incentivizedPackets: IdentifiedPacketFees[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryIncentivizedPacketsForChannelResponseProtoMsg {
@@ -209,7 +209,7 @@ export interface QueryTotalRecvFeesRequestSDKType {}
 export interface QueryTotalRecvFeesResponse {
   /**
    * the total packet receive fees
-  */
+   */
   recvFees: Coin[];
 }
 export interface QueryTotalRecvFeesResponseProtoMsg {
@@ -252,7 +252,7 @@ export interface QueryTotalAckFeesRequestSDKType {}
 export interface QueryTotalAckFeesResponse {
   /**
    * the total packet acknowledgement fees
-  */
+   */
   ackFees: Coin[];
 }
 export interface QueryTotalAckFeesResponseProtoMsg {
@@ -295,7 +295,7 @@ export interface QueryTotalTimeoutFeesRequestSDKType {}
 export interface QueryTotalTimeoutFeesResponse {
   /**
    * the total packet timeout fees
-  */
+   */
   timeoutFees: Coin[];
 }
 export interface QueryTotalTimeoutFeesResponseProtoMsg {
@@ -320,11 +320,11 @@ export interface QueryTotalTimeoutFeesResponseSDKType {
 export interface QueryPayeeRequest {
   /**
    * unique channel identifier
-  */
+   */
   channelId: string;
   /**
    * the relayer address to which the distribution address is registered
-  */
+   */
   relayer: string;
 }
 export interface QueryPayeeRequestProtoMsg {
@@ -350,7 +350,7 @@ export interface QueryPayeeRequestSDKType {
 export interface QueryPayeeResponse {
   /**
    * the payee address to which packet fees are paid out
-  */
+   */
   payeeAddress: string;
 }
 export interface QueryPayeeResponseProtoMsg {
@@ -375,11 +375,11 @@ export interface QueryPayeeResponseSDKType {
 export interface QueryCounterpartyPayeeRequest {
   /**
    * unique channel identifier
-  */
+   */
   channelId: string;
   /**
    * the relayer address to which the counterparty is registered
-  */
+   */
   relayer: string;
 }
 export interface QueryCounterpartyPayeeRequestProtoMsg {
@@ -405,7 +405,7 @@ export interface QueryCounterpartyPayeeRequestSDKType {
 export interface QueryCounterpartyPayeeResponse {
   /**
    * the counterparty payee address used to compensate forward relaying
-  */
+   */
   counterpartyPayee: string;
 }
 export interface QueryCounterpartyPayeeResponseProtoMsg {
@@ -430,11 +430,11 @@ export interface QueryCounterpartyPayeeResponseSDKType {
 export interface QueryFeeEnabledChannelsRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
   /**
    * block height at which to query
-  */
+   */
   queryHeight: bigint;
 }
 export interface QueryFeeEnabledChannelsRequestProtoMsg {
@@ -460,11 +460,11 @@ export interface QueryFeeEnabledChannelsRequestSDKType {
 export interface QueryFeeEnabledChannelsResponse {
   /**
    * list of fee enabled channels
-  */
+   */
   feeEnabledChannels: FeeEnabledChannel[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryFeeEnabledChannelsResponseProtoMsg {
@@ -490,11 +490,11 @@ export interface QueryFeeEnabledChannelsResponseSDKType {
 export interface QueryFeeEnabledChannelRequest {
   /**
    * unique port identifier
-  */
+   */
   portId: string;
   /**
    * unique channel identifier
-  */
+   */
   channelId: string;
 }
 export interface QueryFeeEnabledChannelRequestProtoMsg {
@@ -520,7 +520,7 @@ export interface QueryFeeEnabledChannelRequestSDKType {
 export interface QueryFeeEnabledChannelResponse {
   /**
    * boolean flag representing the fee enabled channel status
-  */
+   */
   feeEnabled: boolean;
 }
 export interface QueryFeeEnabledChannelResponseProtoMsg {

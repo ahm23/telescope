@@ -13,23 +13,23 @@ export const protobufPackage = "cosmos.base.abci.v1beta1";
 export interface TxResponse {
   /**
    * The block height
-  */
+   */
   height: bigint;
   /**
    * The transaction hash.
-  */
+   */
   txhash: string;
   /**
    * Namespace for the Code
-  */
+   */
   codespace: string;
   /**
    * Response code.
-  */
+   */
   code: number;
   /**
    * Result bytes, if any.
-  */
+   */
   data: string;
   /**
    * The output of the application's logger (raw string). May be
@@ -38,23 +38,23 @@ export interface TxResponse {
   rawLog: string;
   /**
    * The output of the application's logger (typed). May be non-deterministic.
-  */
+   */
   logs: ABCIMessageLog[];
   /**
    * Additional information. May be non-deterministic.
-  */
+   */
   info: string;
   /**
    * Amount of gas requested for transaction.
-  */
+   */
   gasWanted: bigint;
   /**
    * Amount of gas consumed by transaction.
-  */
+   */
   gasUsed: bigint;
   /**
    * The request transaction bytes.
-  */
+   */
   tx?: Any;
   /**
    * Time of the previous block. For heights > 1, it's the weighted median of
@@ -86,23 +86,23 @@ export interface TxResponseProtoMsg {
 export interface TxResponseAmino {
   /**
    * The block height
-  */
+   */
   height?: string;
   /**
    * The transaction hash.
-  */
+   */
   txhash?: string;
   /**
    * Namespace for the Code
-  */
+   */
   codespace?: string;
   /**
    * Response code.
-  */
+   */
   code?: number;
   /**
    * Result bytes, if any.
-  */
+   */
   data?: string;
   /**
    * The output of the application's logger (raw string). May be
@@ -111,23 +111,23 @@ export interface TxResponseAmino {
   raw_log?: string;
   /**
    * The output of the application's logger (typed). May be non-deterministic.
-  */
+   */
   logs?: ABCIMessageLogAmino[];
   /**
    * Additional information. May be non-deterministic.
-  */
+   */
   info?: string;
   /**
    * Amount of gas requested for transaction.
-  */
+   */
   gas_wanted?: string;
   /**
    * Amount of gas consumed by transaction.
-  */
+   */
   gas_used?: string;
   /**
    * The request transaction bytes.
-  */
+   */
   tx?: AnyAmino;
   /**
    * Time of the previous block. For heights > 1, it's the weighted median of
@@ -311,11 +311,11 @@ export interface AttributeSDKType {
 export interface GasInfo {
   /**
    * GasWanted is the maximum units of work we allow this tx to perform.
-  */
+   */
   gasWanted: bigint;
   /**
    * GasUsed is the amount of gas actually consumed.
-  */
+   */
   gasUsed: bigint;
 }
 export interface GasInfoProtoMsg {
@@ -331,11 +331,11 @@ export interface GasInfoProtoMsg {
 export interface GasInfoAmino {
   /**
    * GasWanted is the maximum units of work we allow this tx to perform.
-  */
+   */
   gas_wanted?: string;
   /**
    * GasUsed is the amount of gas actually consumed.
-  */
+   */
   gas_used?: string;
 }
 export interface GasInfoAminoMsg {
@@ -369,7 +369,7 @@ export interface Result {
   data: Uint8Array;
   /**
    * Log contains the log information from message or handler execution.
-  */
+   */
   log: string;
   /**
    * Events contains a slice of Event objects that were emitted during message
@@ -404,7 +404,7 @@ export interface ResultAmino {
   data?: string;
   /**
    * Log contains the log information from message or handler execution.
-  */
+   */
   log?: string;
   /**
    * Events contains a slice of Event objects that were emitted during message
@@ -431,7 +431,7 @@ export interface ResultAminoMsg {
 export interface ResultSDKType {
   /**
    * @deprecated
-  */
+   */
   data: Uint8Array;
   log: string;
   events: EventSDKType[];
@@ -580,7 +580,7 @@ export interface TxMsgDataAminoMsg {
 export interface TxMsgDataSDKType {
   /**
    * @deprecated
-  */
+   */
   data: MsgDataSDKType[];
   msg_responses: AnySDKType[];
 }
@@ -593,27 +593,27 @@ export interface TxMsgDataSDKType {
 export interface SearchTxsResult {
   /**
    * Count of all txs
-  */
+   */
   totalCount: bigint;
   /**
    * Count of txs in current page
-  */
+   */
   count: bigint;
   /**
    * Index of current page, start from 1
-  */
+   */
   pageNumber: bigint;
   /**
    * Count of total pages
-  */
+   */
   pageTotal: bigint;
   /**
    * Max count txs per page
-  */
+   */
   limit: bigint;
   /**
    * List of txs in current page
-  */
+   */
   txs: TxResponse[];
 }
 export interface SearchTxsResultProtoMsg {
@@ -629,27 +629,27 @@ export interface SearchTxsResultProtoMsg {
 export interface SearchTxsResultAmino {
   /**
    * Count of all txs
-  */
+   */
   total_count?: string;
   /**
    * Count of txs in current page
-  */
+   */
   count?: string;
   /**
    * Index of current page, start from 1
-  */
+   */
   page_number?: string;
   /**
    * Count of total pages
-  */
+   */
   page_total?: string;
   /**
    * Max count txs per page
-  */
+   */
   limit?: string;
   /**
    * List of txs in current page
-  */
+   */
   txs?: TxResponseAmino[];
 }
 export interface SearchTxsResultAminoMsg {

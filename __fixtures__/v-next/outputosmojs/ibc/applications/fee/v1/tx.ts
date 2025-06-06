@@ -12,19 +12,19 @@ export const protobufPackage = "ibc.applications.fee.v1";
 export interface MsgRegisterPayee {
   /**
    * unique port identifier
-  */
+   */
   portId: string;
   /**
    * unique channel identifier
-  */
+   */
   channelId: string;
   /**
    * the relayer address
-  */
+   */
   relayer: string;
   /**
    * the payee address
-  */
+   */
   payee: string;
 }
 export interface MsgRegisterPayeeProtoMsg {
@@ -70,19 +70,19 @@ export interface MsgRegisterPayeeResponseSDKType {}
 export interface MsgRegisterCounterpartyPayee {
   /**
    * unique port identifier
-  */
+   */
   portId: string;
   /**
    * unique channel identifier
-  */
+   */
   channelId: string;
   /**
    * the relayer address
-  */
+   */
   relayer: string;
   /**
    * the counterparty payee address
-  */
+   */
   counterpartyPayee: string;
 }
 export interface MsgRegisterCounterpartyPayeeProtoMsg {
@@ -130,23 +130,23 @@ export interface MsgRegisterCounterpartyPayeeResponseSDKType {}
 export interface MsgPayPacketFee {
   /**
    * fee encapsulates the recv, ack and timeout fees associated with an IBC packet
-  */
+   */
   fee: Fee;
   /**
    * the source port unique identifier
-  */
+   */
   sourcePortId: string;
   /**
    * the source channel unique identifer
-  */
+   */
   sourceChannelId: string;
   /**
    * account address to refund fee if necessary
-  */
+   */
   signer: string;
   /**
    * optional list of relayers permitted to the receive packet fees
-  */
+   */
   relayers: string[];
 }
 export interface MsgPayPacketFeeProtoMsg {
@@ -196,7 +196,7 @@ export interface MsgPayPacketFeeResponseSDKType {}
 export interface MsgPayPacketFeeAsync {
   /**
    * the packet fee associated with a particular IBC packet
-  */
+   */
   packetFee: PacketFee;
 }
 export interface MsgPayPacketFeeAsyncProtoMsg {

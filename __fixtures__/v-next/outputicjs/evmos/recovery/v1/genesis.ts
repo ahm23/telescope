@@ -10,7 +10,7 @@ import { DeepPartial } from "../../../helpers";
 export interface GenesisState {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: EvmosRecoveryV1Params;
 }
 export interface GenesisStateProtoMsg {
@@ -26,7 +26,7 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: EvmosRecoveryV1ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
@@ -42,11 +42,11 @@ export interface GenesisStateAminoMsg {
 export interface EvmosRecoveryV1Params {
   /**
    * enable recovery IBC middleware
-  */
+   */
   enableRecovery: boolean;
   /**
    * duration added to timeout timestamp for balances recovered via IBC packets
-  */
+   */
   packetTimeoutDuration: Duration;
 }
 export interface EvmosRecoveryV1ParamsProtoMsg {
@@ -62,11 +62,11 @@ export interface EvmosRecoveryV1ParamsProtoMsg {
 export interface EvmosRecoveryV1ParamsAmino {
   /**
    * enable recovery IBC middleware
-  */
+   */
   enable_recovery: boolean;
   /**
    * duration added to timeout timestamp for balances recovered via IBC packets
-  */
+   */
   packet_timeout_duration: DurationAmino;
 }
 export interface EvmosRecoveryV1ParamsAminoMsg {

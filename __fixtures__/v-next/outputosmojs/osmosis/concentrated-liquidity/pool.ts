@@ -12,16 +12,16 @@ export const protobufPackage = "osmosis.concentratedliquidity.v1beta1";
 export interface Pool {
   /**
    * pool's address holding all liquidity tokens.
-  */
+   */
   address: string;
   /**
    * address holding the incentives liquidity.
-  */
+   */
   incentivesAddress: string;
   id: bigint;
   /**
    * Amount of total liquidity
-  */
+   */
   currentTickLiquidity: string;
   token0: string;
   token1: string;
@@ -35,7 +35,7 @@ export interface Pool {
   exponentAtPriceOne: string;
   /**
    * swap_fee is the ratio that is charged on the amount of token in.
-  */
+   */
   swapFee: string;
   /**
    * last_liquidity_update is the last time either the pool liquidity or the

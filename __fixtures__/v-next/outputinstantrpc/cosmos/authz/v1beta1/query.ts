@@ -15,11 +15,11 @@ export interface QueryGrantsRequest {
   grantee: string;
   /**
    * Optional, msg_type_url, when set, will query only grants matching given msg type.
-  */
+   */
   msgTypeUrl: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryGrantsRequestProtoMsg {
@@ -47,11 +47,11 @@ export interface QueryGrantsRequestSDKType {
 export interface QueryGrantsResponse {
   /**
    * authorizations is a list of grants granted for grantee by granter.
-  */
+   */
   grants: Grant[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryGrantsResponseProtoMsg {
@@ -78,7 +78,7 @@ export interface QueryGranterGrantsRequest {
   granter: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryGranterGrantsRequestProtoMsg {
@@ -104,11 +104,11 @@ export interface QueryGranterGrantsRequestSDKType {
 export interface QueryGranterGrantsResponse {
   /**
    * grants is a list of grants granted by the granter.
-  */
+   */
   grants: GrantAuthorization[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryGranterGrantsResponseProtoMsg {
@@ -135,7 +135,7 @@ export interface QueryGranteeGrantsRequest {
   grantee: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryGranteeGrantsRequestProtoMsg {
@@ -161,11 +161,11 @@ export interface QueryGranteeGrantsRequestSDKType {
 export interface QueryGranteeGrantsResponse {
   /**
    * grants is a list of grants granted to the grantee.
-  */
+   */
   grants: GrantAuthorization[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryGranteeGrantsResponseProtoMsg {

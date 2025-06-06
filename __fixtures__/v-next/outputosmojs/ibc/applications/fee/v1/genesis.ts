@@ -12,23 +12,23 @@ export const protobufPackage = "ibc.applications.fee.v1";
 export interface GenesisState {
   /**
    * list of identified packet fees
-  */
+   */
   identifiedFees: IdentifiedPacketFees[];
   /**
    * list of fee enabled channels
-  */
+   */
   feeEnabledChannels: FeeEnabledChannel[];
   /**
    * list of registered payees
-  */
+   */
   registeredPayees: RegisteredPayee[];
   /**
    * list of registered counterparty payees
-  */
+   */
   registeredCounterpartyPayees: RegisteredCounterpartyPayee[];
   /**
    * list of forward relayer addresses
-  */
+   */
   forwardRelayers: ForwardRelayerAddress[];
 }
 export interface GenesisStateProtoMsg {
@@ -57,11 +57,11 @@ export interface GenesisStateSDKType {
 export interface FeeEnabledChannel {
   /**
    * unique port identifier
-  */
+   */
   portId: string;
   /**
    * unique channel identifier
-  */
+   */
   channelId: string;
 }
 export interface FeeEnabledChannelProtoMsg {
@@ -87,15 +87,15 @@ export interface FeeEnabledChannelSDKType {
 export interface RegisteredPayee {
   /**
    * unique channel identifier
-  */
+   */
   channelId: string;
   /**
    * the relayer address
-  */
+   */
   relayer: string;
   /**
    * the payee address
-  */
+   */
   payee: string;
 }
 export interface RegisteredPayeeProtoMsg {
@@ -123,15 +123,15 @@ export interface RegisteredPayeeSDKType {
 export interface RegisteredCounterpartyPayee {
   /**
    * unique channel identifier
-  */
+   */
   channelId: string;
   /**
    * the relayer address
-  */
+   */
   relayer: string;
   /**
    * the counterparty payee address
-  */
+   */
   counterpartyPayee: string;
 }
 export interface RegisteredCounterpartyPayeeProtoMsg {
@@ -159,7 +159,7 @@ export interface RegisteredCounterpartyPayeeSDKType {
 export interface ForwardRelayerAddress {
   /**
    * the forward relayer address
-  */
+   */
   address: string;
 }
 export interface ForwardRelayerAddressProtoMsg {

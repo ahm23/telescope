@@ -14,11 +14,11 @@ export const protobufPackage = "google.api.expr.v1alpha1";
 export interface ParsedExpr {
   /**
    * The parsed expression.
-  */
+   */
   expr?: Expr;
   /**
    * The source info derived from input that generated the parsed `expr`.
-  */
+   */
   sourceInfo?: SourceInfo;
 }
 export interface ParsedExprProtoMsg {
@@ -64,31 +64,31 @@ export interface Expr {
   id: bigint;
   /**
    * A literal expression.
-  */
+   */
   constExpr?: Constant;
   /**
    * An identifier expression.
-  */
+   */
   identExpr?: Expr_Ident;
   /**
    * A field selection expression, e.g. `request.auth`.
-  */
+   */
   selectExpr?: Expr_Select;
   /**
    * A call expression, including calls to predefined functions and operators.
-  */
+   */
   callExpr?: Expr_Call;
   /**
    * A list creation expression.
-  */
+   */
   listExpr?: Expr_CreateList;
   /**
    * A map or message creation expression.
-  */
+   */
   structExpr?: Expr_CreateStruct;
   /**
    * A comprehension expression.
-  */
+   */
   comprehensionExpr?: Expr_Comprehension;
 }
 export interface ExprProtoMsg {
@@ -212,11 +212,11 @@ export interface Expr_Call {
   target?: Expr;
   /**
    * Required. The name of the function or method being called.
-  */
+   */
   function: string;
   /**
    * The arguments.
-  */
+   */
   args: Expr[];
 }
 export interface Expr_CallProtoMsg {
@@ -248,7 +248,7 @@ export interface Expr_CallSDKType {
 export interface Expr_CreateList {
   /**
    * The elements part of the list.
-  */
+   */
   elements: Expr[];
 }
 export interface Expr_CreateListProtoMsg {
@@ -285,7 +285,7 @@ export interface Expr_CreateStruct {
   messageName: string;
   /**
    * The entries in the creation expression.
-  */
+   */
   entries: Expr_CreateStruct_Entry[];
 }
 export interface Expr_CreateStructProtoMsg {
@@ -321,15 +321,15 @@ export interface Expr_CreateStruct_Entry {
   id: bigint;
   /**
    * The field key for a message creator statement.
-  */
+   */
   fieldKey?: string;
   /**
    * The key expression for a map creation statement.
-  */
+   */
   mapKey?: Expr;
   /**
    * Required. The value assigned to the key.
-  */
+   */
   value?: Expr;
 }
 export interface Expr_CreateStruct_EntryProtoMsg {
@@ -382,19 +382,19 @@ export interface Expr_CreateStruct_EntrySDKType {
 export interface Expr_Comprehension {
   /**
    * The name of the iteration variable.
-  */
+   */
   iterVar: string;
   /**
    * The range over which var iterates.
-  */
+   */
   iterRange?: Expr;
   /**
    * The name of the variable used for accumulation of the result.
-  */
+   */
   accuVar: string;
   /**
    * The initial value of the accumulator.
-  */
+   */
   accuInit?: Expr;
   /**
    * An expression which can contain iter_var and accu_var.
@@ -481,31 +481,31 @@ export interface Expr_ComprehensionSDKType {
 export interface Constant {
   /**
    * null value.
-  */
+   */
   nullValue?: NullValue;
   /**
    * boolean value.
-  */
+   */
   boolValue?: boolean;
   /**
    * int64 value.
-  */
+   */
   int64Value?: bigint;
   /**
    * uint64 value.
-  */
+   */
   uint64Value?: bigint;
   /**
    * double value.
-  */
+   */
   doubleValue?: number;
   /**
    * string value.
-  */
+   */
   stringValue?: string;
   /**
    * bytes value.
-  */
+   */
   bytesValue?: Uint8Array;
   /**
    * protobuf.Duration value.
@@ -554,11 +554,11 @@ export interface ConstantSDKType {
   bytes_value?: Uint8Array;
   /**
    * @deprecated
-  */
+   */
   duration_value?: DurationSDKType;
   /**
    * @deprecated
-  */
+   */
   timestamp_value?: Date;
 }
 /**
@@ -614,7 +614,7 @@ export interface SourceInfo_MacroCallsEntrySDKType {
 export interface SourceInfo {
   /**
    * The syntax version of the source, e.g. `cel1`.
-  */
+   */
   syntaxVersion: string;
   /**
    * The location name. All position information attached to an expression is
@@ -684,11 +684,11 @@ export interface SourceInfoSDKType {
 export interface SourcePosition {
   /**
    * The soucre location name (e.g. file name).
-  */
+   */
   location: string;
   /**
    * The UTF-8 code unit offset.
-  */
+   */
   offset: number;
   /**
    * The 1-based index of the starting line in the source text

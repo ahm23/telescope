@@ -21,7 +21,7 @@ export interface ValidatorPreference {
   valOperAddress: string;
   /**
    * weight is decimal between 0 and 1, and they all sum to 1.
-  */
+   */
   weight: string;
 }
 export interface ValidatorPreferenceProtoMsg {
@@ -54,7 +54,7 @@ export interface ValidatorPreferenceSDKType {
 export interface ValidatorSetPreferences {
   /**
    * preference holds {valAddr, weight} for the user who created it.
-  */
+   */
   preferences: ValidatorPreference[];
 }
 export interface ValidatorSetPreferencesProtoMsg {

@@ -14,7 +14,7 @@ export interface OsmosisClaimV1beta1Params {
   durationOfDecay: Duration;
   /**
    * denom of claimable asset
-  */
+   */
   claimDenom: string;
 }
 export interface OsmosisClaimV1beta1ParamsProtoMsg {
@@ -33,7 +33,7 @@ export interface OsmosisClaimV1beta1ParamsAmino {
   duration_of_decay: DurationAmino;
   /**
    * denom of claimable asset
-  */
+   */
   claim_denom: string;
 }
 export interface OsmosisClaimV1beta1ParamsAminoMsg {

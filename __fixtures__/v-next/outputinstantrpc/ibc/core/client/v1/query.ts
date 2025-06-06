@@ -15,7 +15,7 @@ export const protobufPackage = "ibc.core.client.v1";
 export interface QueryClientStateRequest {
   /**
    * client state unique identifier
-  */
+   */
   clientId: string;
 }
 export interface QueryClientStateRequestProtoMsg {
@@ -43,15 +43,15 @@ export interface QueryClientStateRequestSDKType {
 export interface QueryClientStateResponse {
   /**
    * client state associated with the request identifier
-  */
+   */
   clientState?: Any;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryClientStateResponseProtoMsg {
@@ -81,7 +81,7 @@ export interface QueryClientStateResponseSDKType {
 export interface QueryClientStatesRequest {
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryClientStatesRequestProtoMsg {
@@ -108,11 +108,11 @@ export interface QueryClientStatesRequestSDKType {
 export interface QueryClientStatesResponse {
   /**
    * list of stored ClientStates of the chain.
-  */
+   */
   clientStates: IdentifiedClientState[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryClientStatesResponseProtoMsg {
@@ -141,15 +141,15 @@ export interface QueryClientStatesResponseSDKType {
 export interface QueryConsensusStateRequest {
   /**
    * client identifier
-  */
+   */
   clientId: string;
   /**
    * consensus state revision number
-  */
+   */
   revisionNumber: bigint;
   /**
    * consensus state revision height
-  */
+   */
   revisionHeight: bigint;
   /**
    * latest_height overrrides the height field and queries the latest stored
@@ -185,15 +185,15 @@ export interface QueryConsensusStateRequestSDKType {
 export interface QueryConsensusStateResponse {
   /**
    * consensus state associated with the client identifier at the given height
-  */
+   */
   consensusState?: Any;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryConsensusStateResponseProtoMsg {
@@ -222,11 +222,11 @@ export interface QueryConsensusStateResponseSDKType {
 export interface QueryConsensusStatesRequest {
   /**
    * client identifier
-  */
+   */
   clientId: string;
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryConsensusStatesRequestProtoMsg {
@@ -254,11 +254,11 @@ export interface QueryConsensusStatesRequestSDKType {
 export interface QueryConsensusStatesResponse {
   /**
    * consensus states associated with the identifier
-  */
+   */
   consensusStates: ConsensusStateWithHeight[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryConsensusStatesResponseProtoMsg {
@@ -286,7 +286,7 @@ export interface QueryConsensusStatesResponseSDKType {
 export interface QueryClientStatusRequest {
   /**
    * client unique identifier
-  */
+   */
   clientId: string;
 }
 export interface QueryClientStatusRequestProtoMsg {
@@ -357,7 +357,7 @@ export interface QueryClientParamsRequestSDKType {}
 export interface QueryClientParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params?: Params;
 }
 export interface QueryClientParamsResponseProtoMsg {
@@ -404,7 +404,7 @@ export interface QueryUpgradedClientStateRequestSDKType {}
 export interface QueryUpgradedClientStateResponse {
   /**
    * client state associated with the request identifier
-  */
+   */
   upgradedClientState?: Any;
 }
 export interface QueryUpgradedClientStateResponseProtoMsg {
@@ -451,7 +451,7 @@ export interface QueryUpgradedConsensusStateRequestSDKType {}
 export interface QueryUpgradedConsensusStateResponse {
   /**
    * Consensus state associated with the request identifier
-  */
+   */
   upgradedConsensusState?: Any;
 }
 export interface QueryUpgradedConsensusStateResponseProtoMsg {

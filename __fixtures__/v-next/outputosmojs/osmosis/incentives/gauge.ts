@@ -17,7 +17,7 @@ export const protobufPackage = "osmosis.incentives";
 export interface Gauge {
   /**
    * id is the unique ID of a Gauge
-  */
+   */
   id: bigint;
   /**
    * is_perpetual is a flag to show if it's a perpetual or non-perpetual gauge
@@ -39,7 +39,7 @@ export interface Gauge {
   coins: Coin[];
   /**
    * start_time is the distribution start time
-  */
+   */
   startTime: Date;
   /**
    * num_epochs_paid_over is the number of total epochs distribution will be
@@ -53,7 +53,7 @@ export interface Gauge {
   filledEpochs: bigint;
   /**
    * distributed_coins are coins that have been distributed already
-  */
+   */
   distributedCoins: Coin[];
 }
 export interface GaugeProtoMsg {
@@ -86,7 +86,7 @@ export interface GaugeSDKType {
 export interface LockableDurationsInfo {
   /**
    * List of incentivised durations that gauges will pay out to
-  */
+   */
   lockableDurations: Duration[];
 }
 export interface LockableDurationsInfoProtoMsg {

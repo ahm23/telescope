@@ -16,51 +16,51 @@ export const protobufPackage = "google.api.expr.v1beta1";
 export interface Value {
   /**
    * Null value.
-  */
+   */
   nullValue?: NullValue;
   /**
    * Boolean value.
-  */
+   */
   boolValue?: boolean;
   /**
    * Signed integer value.
-  */
+   */
   int64Value?: bigint;
   /**
    * Unsigned integer value.
-  */
+   */
   uint64Value?: bigint;
   /**
    * Floating point value.
-  */
+   */
   doubleValue?: number;
   /**
    * UTF-8 string value.
-  */
+   */
   stringValue?: string;
   /**
    * Byte string value.
-  */
+   */
   bytesValue?: Uint8Array;
   /**
    * An enum value.
-  */
+   */
   enumValue?: EnumValue;
   /**
    * The proto message backing an object value.
-  */
+   */
   objectValue?: Any;
   /**
    * Map value.
-  */
+   */
   mapValue?: MapValue;
   /**
    * List value.
-  */
+   */
   listValue?: ListValue;
   /**
    * A Type value represented by the fully qualified name of the type.
-  */
+   */
   typeValue?: string;
 }
 export interface ValueProtoMsg {
@@ -99,11 +99,11 @@ export interface ValueSDKType {
 export interface EnumValue {
   /**
    * The fully qualified name of the enum type.
-  */
+   */
   type: string;
   /**
    * The value of the enum.
-  */
+   */
   value: number;
 }
 export interface EnumValueProtoMsg {
@@ -132,7 +132,7 @@ export interface EnumValueSDKType {
 export interface ListValue {
   /**
    * The ordered values in the list.
-  */
+   */
   values: Value[];
 }
 export interface ListValueProtoMsg {
@@ -201,7 +201,7 @@ export interface MapValue_Entry {
   key?: Value;
   /**
    * The value.
-  */
+   */
   value?: Value;
 }
 export interface MapValue_EntryProtoMsg {

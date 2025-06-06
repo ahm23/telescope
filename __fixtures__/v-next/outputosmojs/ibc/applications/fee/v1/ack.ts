@@ -11,15 +11,15 @@ export const protobufPackage = "ibc.applications.fee.v1";
 export interface IncentivizedAcknowledgement {
   /**
    * the underlying app acknowledgement bytes
-  */
+   */
   appAcknowledgement: Uint8Array;
   /**
    * the relayer address which submits the recv packet message
-  */
+   */
   forwardRelayerAddress: string;
   /**
    * success flag of the base application callback
-  */
+   */
   underlyingAppSuccess: boolean;
 }
 export interface IncentivizedAcknowledgementProtoMsg {

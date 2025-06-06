@@ -19,7 +19,7 @@ export interface MsgCreateDeployment {
   deposit: Coin;
   /**
    * Depositor pays for the deposit
-  */
+   */
   depositor: string;
 }
 export interface MsgCreateDeploymentProtoMsg {
@@ -39,7 +39,7 @@ export interface MsgCreateDeploymentAmino {
   deposit: CoinAmino;
   /**
    * Depositor pays for the deposit
-  */
+   */
   depositor: string;
 }
 export interface MsgCreateDeploymentAminoMsg {
@@ -99,7 +99,7 @@ export interface MsgDepositDeployment {
   amount: Coin;
   /**
    * Depositor pays for the deposit
-  */
+   */
   depositor: string;
 }
 export interface MsgDepositDeploymentProtoMsg {
@@ -117,7 +117,7 @@ export interface MsgDepositDeploymentAmino {
   amount: CoinAmino;
   /**
    * Depositor pays for the deposit
-  */
+   */
   depositor: string;
 }
 export interface MsgDepositDeploymentAminoMsg {

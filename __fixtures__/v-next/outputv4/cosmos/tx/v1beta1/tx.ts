@@ -15,7 +15,7 @@ export const protobufPackage = "cosmos.tx.v1beta1";
 export interface Tx {
   /**
    * body is the processable content of the transaction
-  */
+   */
   body?: TxBody;
   /**
    * auth_info is the authorization related content of the transaction,
@@ -116,7 +116,7 @@ export interface SignDoc {
   chainId: string;
   /**
    * account_number is the account number of the account in state
-  */
+   */
   accountNumber: bigint;
 }
 export interface SignDocProtoMsg {
@@ -152,7 +152,7 @@ export interface SignDocDirectAux {
   bodyBytes: Uint8Array;
   /**
    * public_key is the public key of the signing account.
-  */
+   */
   publicKey?: Any;
   /**
    * chain_id is the identifier of the chain this transaction targets.
@@ -162,11 +162,11 @@ export interface SignDocDirectAux {
   chainId: string;
   /**
    * account_number is the account number of the account in state.
-  */
+   */
   accountNumber: bigint;
   /**
    * sequence is the sequence number of the signing account.
-  */
+   */
   sequence: bigint;
   /**
    * Tip is the optional tip used for meta-transactions. It should be left
@@ -349,11 +349,11 @@ export interface SignerInfoSDKType {
 export interface ModeInfo {
   /**
    * single represents a single signer
-  */
+   */
   single?: ModeInfo_Single;
   /**
    * multi represents a nested multisig signer
-  */
+   */
   multi?: ModeInfo_Multi;
 }
 export interface ModeInfoProtoMsg {
@@ -381,7 +381,7 @@ export interface ModeInfoSDKType {
 export interface ModeInfo_Single {
   /**
    * mode is the signing mode of the single signer
-  */
+   */
   mode: SignMode;
 }
 export interface ModeInfo_SingleProtoMsg {
@@ -408,7 +408,7 @@ export interface ModeInfo_SingleSDKType {
 export interface ModeInfo_Multi {
   /**
    * bitarray specifies which keys within the multisig are signing
-  */
+   */
   bitarray?: CompactBitArray;
   /**
    * mode_infos is the corresponding modes of the signers of the multisig
@@ -441,7 +441,7 @@ export interface ModeInfo_MultiSDKType {
 export interface Fee {
   /**
    * amount is the amount of coins to be paid as a fee
-  */
+   */
   amount: Coin[];
   /**
    * gas_limit is the maximum gas that can be used in transaction processing
@@ -490,11 +490,11 @@ export interface FeeSDKType {
 export interface Tip {
   /**
    * amount is the amount of the tip
-  */
+   */
   amount: Coin[];
   /**
    * tipper is the address of the account paying for the tip
-  */
+   */
   tipper: string;
 }
 export interface TipProtoMsg {
@@ -539,11 +539,11 @@ export interface AuxSignerData {
   signDoc?: SignDocDirectAux;
   /**
    * mode is the signing mode of the single signer
-  */
+   */
   mode: SignMode;
   /**
    * sig is the signature of the sign doc.
-  */
+   */
   sig: Uint8Array;
 }
 export interface AuxSignerDataProtoMsg {

@@ -66,23 +66,23 @@ export interface MetricValue {
   endTime?: Date;
   /**
    * A boolean value.
-  */
+   */
   boolValue?: boolean;
   /**
    * A signed 64-bit integer value.
-  */
+   */
   int64Value?: bigint;
   /**
    * A double precision floating point value.
-  */
+   */
   doubleValue?: number;
   /**
    * A text string value.
-  */
+   */
   stringValue?: string;
   /**
    * A distribution value.
-  */
+   */
   distributionValue?: Distribution;
 }
 export interface MetricValueProtoMsg {
@@ -121,23 +121,23 @@ export interface MetricValueAmino {
   end_time?: string;
   /**
    * A boolean value.
-  */
+   */
   bool_value?: boolean;
   /**
    * A signed 64-bit integer value.
-  */
+   */
   int64_value?: string;
   /**
    * A double precision floating point value.
-  */
+   */
   double_value?: number;
   /**
    * A text string value.
-  */
+   */
   string_value?: string;
   /**
    * A distribution value.
-  */
+   */
   distribution_value?: DistributionAmino;
 }
 /**
@@ -169,11 +169,11 @@ export interface MetricValueSDKType {
 export interface MetricValueSet {
   /**
    * The metric name defined in the service configuration.
-  */
+   */
   metricName: string;
   /**
    * The values in this metric.
-  */
+   */
   metricValues: MetricValue[];
 }
 export interface MetricValueSetProtoMsg {
@@ -191,11 +191,11 @@ export interface MetricValueSetProtoMsg {
 export interface MetricValueSetAmino {
   /**
    * The metric name defined in the service configuration.
-  */
+   */
   metric_name?: string;
   /**
    * The values in this metric.
-  */
+   */
   metric_values?: MetricValueAmino[];
 }
 /**

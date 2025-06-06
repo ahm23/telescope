@@ -85,7 +85,7 @@ export interface CheckRequest {
   serviceName: string;
   /**
    * The operation to be checked.
-  */
+   */
   operation?: Operation;
   /**
    * Specifies which version of service configuration should be used to process
@@ -134,15 +134,15 @@ export interface CheckResponse {
   checkErrors: CheckError[];
   /**
    * The actual config id used to process the request.
-  */
+   */
   serviceConfigId: string;
   /**
    * The current service rollout id used to process the request.
-  */
+   */
   serviceRolloutId: string;
   /**
    * Feedback data returned from the server during processing a Check request.
-  */
+   */
   checkInfo?: CheckResponse_CheckInfo;
 }
 export interface CheckResponseProtoMsg {
@@ -177,7 +177,7 @@ export interface CheckResponse_CheckInfo {
   unusedArguments: string[];
   /**
    * Consumer info of this check.
-  */
+   */
   consumerInfo?: CheckResponse_ConsumerInfo;
 }
 export interface CheckResponse_CheckInfoProtoMsg {
@@ -316,11 +316,11 @@ export interface ReportResponse {
   reportErrors: ReportResponse_ReportError[];
   /**
    * The actual config id used to process the request.
-  */
+   */
   serviceConfigId: string;
   /**
    * The current service rollout id used to process the request.
-  */
+   */
   serviceRolloutId: string;
 }
 export interface ReportResponseProtoMsg {

@@ -11,7 +11,7 @@ export const protobufPackage = "evmos.fees.v1";
 export interface MsgRegisterDevFeeInfo {
   /**
    * contract hex address
-  */
+   */
   contractAddress: string;
   /**
    * bech32 address of message sender, must be the same as the origin EOA
@@ -20,7 +20,7 @@ export interface MsgRegisterDevFeeInfo {
   deployerAddress: string;
   /**
    * bech32 address of account receiving the transaction fees
-  */
+   */
   withdrawAddress: string;
   /**
    * array of nonces from the address path, where the last nonce is
@@ -75,11 +75,11 @@ export interface MsgRegisterDevFeeInfoResponseSDKType {}
 export interface MsgCancelDevFeeInfo {
   /**
    * contract hex address
-  */
+   */
   contractAddress: string;
   /**
    * deployer bech32 address
-  */
+   */
   deployerAddress: string;
 }
 export interface MsgCancelDevFeeInfoProtoMsg {
@@ -125,15 +125,15 @@ export interface MsgCancelDevFeeInfoResponseSDKType {}
 export interface MsgUpdateDevFeeInfo {
   /**
    * contract hex address
-  */
+   */
   contractAddress: string;
   /**
    * deployer bech32 address
-  */
+   */
   deployerAddress: string;
   /**
    * new withdraw bech32 address for receiving the transaction fees
-  */
+   */
   withdrawAddress: string;
 }
 export interface MsgUpdateDevFeeInfoProtoMsg {

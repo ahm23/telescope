@@ -12,15 +12,15 @@ export const protobufPackage = "osmosis.protorev.v1beta1";
 export interface TokenPairArbRoutes {
   /**
    * Stores all of the possible hot paths for a given pair of tokens
-  */
+   */
   arbRoutes: Route[];
   /**
    * Token denomination of the first asset
-  */
+   */
   tokenIn: string;
   /**
    * Token denomination of the second asset
-  */
+   */
   tokenOut: string;
 }
 export interface TokenPairArbRoutesProtoMsg {
@@ -79,15 +79,15 @@ export interface RouteSDKType {
 export interface Trade {
   /**
    * The pool id of the pool that is traded on
-  */
+   */
   pool: bigint;
   /**
    * The denom of the token that is traded
-  */
+   */
   tokenIn: string;
   /**
    * The denom of the token that is received
-  */
+   */
   tokenOut: string;
 }
 export interface TradeProtoMsg {
@@ -115,7 +115,7 @@ export interface TradeSDKType {
 export interface RouteStatistics {
   /**
    * profits is the total profit from all trades on this route
-  */
+   */
   profits: Coin[];
   /**
    * number_of_trades is the number of trades the module has executed using this
@@ -124,7 +124,7 @@ export interface RouteStatistics {
   numberOfTrades: string;
   /**
    * route is the route that was used (pool ids along the arbitrage route)
-  */
+   */
   route: bigint[];
 }
 export interface RouteStatisticsProtoMsg {
@@ -156,15 +156,15 @@ export interface RouteStatisticsSDKType {
 export interface PoolWeights {
   /**
    * The weight of a stableswap pool
-  */
+   */
   stableWeight: bigint;
   /**
    * The weight of a balancer pool
-  */
+   */
   balancerWeight: bigint;
   /**
    * The weight of a concentrated pool
-  */
+   */
   concentratedWeight: bigint;
 }
 export interface PoolWeightsProtoMsg {
@@ -197,7 +197,7 @@ export interface PoolWeightsSDKType {
 export interface BaseDenom {
   /**
    * The denom i.e. name of the base denom (ex. uosmo)
-  */
+   */
   denom: string;
   /**
    * The step size of the binary search that is used to find the optimal swap

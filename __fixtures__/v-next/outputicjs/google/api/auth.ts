@@ -32,7 +32,7 @@ export interface Authentication {
   rules: AuthenticationRule[];
   /**
    * Defines a set of authentication providers that a service supports.
-  */
+   */
   providers: AuthProvider[];
 }
 export interface AuthenticationProtoMsg {
@@ -71,7 +71,7 @@ export interface AuthenticationAmino {
   rules: AuthenticationRuleAmino[];
   /**
    * Defines a set of authentication providers that a service supports.
-  */
+   */
   providers: AuthProviderAmino[];
 }
 export interface AuthenticationAminoMsg {
@@ -101,7 +101,7 @@ export interface AuthenticationRule {
   selector: string;
   /**
    * The requirements for OAuth credentials.
-  */
+   */
   oauth?: OAuthRequirements;
   /**
    * If true, the service accepts API keys without any other credential.
@@ -110,7 +110,7 @@ export interface AuthenticationRule {
   allowWithoutCredential: boolean;
   /**
    * Requirements for additional authentication providers.
-  */
+   */
   requirements: AuthRequirement[];
 }
 export interface AuthenticationRuleProtoMsg {
@@ -140,7 +140,7 @@ export interface AuthenticationRuleAmino {
   selector: string;
   /**
    * The requirements for OAuth credentials.
-  */
+   */
   oauth?: OAuthRequirementsAmino;
   /**
    * If true, the service accepts API keys without any other credential.
@@ -149,7 +149,7 @@ export interface AuthenticationRuleAmino {
   allow_without_credential: boolean;
   /**
    * Requirements for additional authentication providers.
-  */
+   */
   requirements: AuthRequirementAmino[];
 }
 export interface AuthenticationRuleAminoMsg {
@@ -165,11 +165,11 @@ export interface AuthenticationRuleAminoMsg {
 export interface JwtLocation {
   /**
    * Specifies HTTP header name to extract JWT token.
-  */
+   */
   header?: string;
   /**
    * Specifies URL query parameter name to extract JWT token.
-  */
+   */
   query?: string;
   /**
    * The value prefix. The value format is "value_prefix{token}"
@@ -196,11 +196,11 @@ export interface JwtLocationProtoMsg {
 export interface JwtLocationAmino {
   /**
    * Specifies HTTP header name to extract JWT token.
-  */
+   */
   header?: string;
   /**
    * Specifies URL query parameter name to extract JWT token.
-  */
+   */
   query?: string;
   /**
    * The value prefix. The value format is "value_prefix{token}"

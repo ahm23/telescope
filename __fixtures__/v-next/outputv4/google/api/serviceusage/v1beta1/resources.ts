@@ -189,7 +189,7 @@ export interface Service {
   config?: ServiceConfig;
   /**
    * Whether or not the service has been enabled for use by the consumer.
-  */
+   */
   state: State;
 }
 export interface ServiceProtoMsg {
@@ -224,7 +224,7 @@ export interface ServiceConfig {
   name: string;
   /**
    * The product title for this service.
-  */
+   */
   title: string;
   /**
    * A list of API interfaces exported by this service. Contains only the names,
@@ -238,15 +238,15 @@ export interface ServiceConfig {
   documentation?: Documentation;
   /**
    * Quota configuration.
-  */
+   */
   quota?: Quota;
   /**
    * Auth configuration. Contains only the OAuth rules.
-  */
+   */
   authentication?: Authentication;
   /**
    * Configuration controlling usage of this service.
-  */
+   */
   usage?: Usage;
   /**
    * Configuration for network endpoints. Contains only the names and aliases
@@ -345,7 +345,7 @@ export interface ConsumerQuotaMetric {
   displayName: string;
   /**
    * The consumer quota for each quota limit defined on the metric.
-  */
+   */
   consumerQuotaLimits: ConsumerQuotaLimit[];
   /**
    * The quota limits targeting the descendant containers of the
@@ -361,7 +361,7 @@ export interface ConsumerQuotaMetric {
   descendantConsumerQuotaLimits: ConsumerQuotaLimit[];
   /**
    * The units in which the metric value is reported.
-  */
+   */
   unit: string;
 }
 export interface ConsumerQuotaMetricProtoMsg {
@@ -417,11 +417,11 @@ export interface ConsumerQuotaLimit {
   unit: string;
   /**
    * Whether this limit is precise or imprecise.
-  */
+   */
   isPrecise: boolean;
   /**
    * Whether admin overrides are allowed on this limit
-  */
+   */
   allowsAdminOverrides: boolean;
   /**
    * Summary of the enforced quota buckets, organized by quota dimension,
@@ -489,15 +489,15 @@ export interface QuotaBucket {
   defaultLimit: bigint;
   /**
    * Producer override on this quota bucket.
-  */
+   */
   producerOverride?: QuotaOverride;
   /**
    * Consumer override on this quota bucket.
-  */
+   */
   consumerOverride?: QuotaOverride;
   /**
    * Admin override on this quota bucket.
-  */
+   */
   adminOverride?: QuotaOverride;
   /**
    * The dimensions of this quota bucket.

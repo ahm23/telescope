@@ -33,7 +33,7 @@ export interface QueryCurrentPlanRequestSDKType {}
 export interface QueryCurrentPlanResponse {
   /**
    * plan is the current upgrade plan.
-  */
+   */
   plan?: Plan;
 }
 export interface QueryCurrentPlanResponseProtoMsg {
@@ -60,7 +60,7 @@ export interface QueryCurrentPlanResponseSDKType {
 export interface QueryAppliedPlanRequest {
   /**
    * name is the name of the applied plan to query for.
-  */
+   */
   name: string;
 }
 export interface QueryAppliedPlanRequestProtoMsg {
@@ -87,7 +87,7 @@ export interface QueryAppliedPlanRequestSDKType {
 export interface QueryAppliedPlanResponse {
   /**
    * height is the block height at which the plan was applied.
-  */
+   */
   height: bigint;
 }
 export interface QueryAppliedPlanResponseProtoMsg {
@@ -145,7 +145,7 @@ export interface QueryUpgradedConsensusStateRequestSDKType {
 export interface QueryUpgradedConsensusStateResponse {
   /**
    * Since: cosmos-sdk 0.43
-  */
+   */
   upgradedConsensusState: Uint8Array;
 }
 export interface QueryUpgradedConsensusStateResponseProtoMsg {
@@ -208,7 +208,7 @@ export interface QueryModuleVersionsRequestSDKType {
 export interface QueryModuleVersionsResponse {
   /**
    * module_versions is a list of module names with their consensus versions.
-  */
+   */
   moduleVersions: ModuleVersion[];
 }
 export interface QueryModuleVersionsResponseProtoMsg {

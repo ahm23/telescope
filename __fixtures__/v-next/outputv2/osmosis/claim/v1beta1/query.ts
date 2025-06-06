@@ -43,7 +43,7 @@ export interface QueryModuleAccountBalanceRequestSDKType {}
 export interface QueryModuleAccountBalanceResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   moduleAccountBalance: Coin[];
 }
 export interface QueryModuleAccountBalanceResponseProtoMsg {
@@ -59,7 +59,7 @@ export interface QueryModuleAccountBalanceResponseProtoMsg {
 export interface QueryModuleAccountBalanceResponseAmino {
   /**
    * params defines the parameters of the module.
-  */
+   */
   moduleAccountBalance?: CoinAmino[];
 }
 export interface QueryModuleAccountBalanceResponseAminoMsg {
@@ -113,7 +113,7 @@ export interface QueryParamsRequestSDKType {}
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -129,7 +129,7 @@ export interface QueryParamsResponseProtoMsg {
 export interface QueryParamsResponseAmino {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {

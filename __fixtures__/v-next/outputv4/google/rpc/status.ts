@@ -18,7 +18,7 @@ export const protobufPackage = "google.rpc";
 export interface Status {
   /**
    * The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code].
-  */
+   */
   code: number;
   /**
    * A developer-facing error message, which should be in English. Any

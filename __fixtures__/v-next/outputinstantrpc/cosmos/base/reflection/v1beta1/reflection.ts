@@ -29,7 +29,7 @@ export interface ListAllInterfacesRequestSDKType {}
 export interface ListAllInterfacesResponse {
   /**
    * interface_names is an array of all the registered interfaces.
-  */
+   */
   interfaceNames: string[];
 }
 export interface ListAllInterfacesResponseProtoMsg {
@@ -55,7 +55,7 @@ export interface ListAllInterfacesResponseSDKType {
 export interface ListImplementationsRequest {
   /**
    * interface_name defines the interface to query the implementations for.
-  */
+   */
   interfaceName: string;
 }
 export interface ListImplementationsRequestProtoMsg {

@@ -12,24 +12,24 @@ export const protobufPackage = "ibc.core.client.v1";
 export interface GenesisState {
   /**
    * client states with their corresponding identifiers
-  */
+   */
   clients: IdentifiedClientState[];
   /**
    * consensus states from each client
-  */
+   */
   clientsConsensus: ClientConsensusStates[];
   /**
    * metadata from each client
-  */
+   */
   clientsMetadata: IdentifiedGenesisMetadata[];
   params: Params;
   /**
    * create localhost on initialization
-  */
+   */
   createLocalhost: boolean;
   /**
    * the sequence for the next generated client identifier
-  */
+   */
   nextClientSequence: bigint;
 }
 export interface GenesisStateProtoMsg {
@@ -60,11 +60,11 @@ export interface GenesisStateSDKType {
 export interface GenesisMetadata {
   /**
    * store key of metadata without clientID-prefix
-  */
+   */
   key: Uint8Array;
   /**
    * metadata value
-  */
+   */
   value: Uint8Array;
 }
 export interface GenesisMetadataProtoMsg {

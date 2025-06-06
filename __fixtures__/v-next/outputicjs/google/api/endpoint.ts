@@ -24,7 +24,7 @@ import { DeepPartial } from "../../helpers";
 export interface Endpoint {
   /**
    * The canonical name of this endpoint.
-  */
+   */
   name: string;
   /**
    * Unimplemented. Dot not use.
@@ -83,7 +83,7 @@ export interface EndpointProtoMsg {
 export interface EndpointAmino {
   /**
    * The canonical name of this endpoint.
-  */
+   */
   name: string;
   /**
    * Unimplemented. Dot not use.

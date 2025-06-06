@@ -9,7 +9,7 @@ import { DeepPartial } from "../../../helpers";
 export interface MsgRegisterDevFeeInfo {
   /**
    * contract hex address
-  */
+   */
   contractAddress: string;
   /**
    * bech32 address of message sender, must be the same as the origin EOA
@@ -18,7 +18,7 @@ export interface MsgRegisterDevFeeInfo {
   deployerAddress: string;
   /**
    * bech32 address of account receiving the transaction fees
-  */
+   */
   withdrawAddress: string;
   /**
    * array of nonces from the address path, where the last nonce is
@@ -40,7 +40,7 @@ export interface MsgRegisterDevFeeInfoProtoMsg {
 export interface MsgRegisterDevFeeInfoAmino {
   /**
    * contract hex address
-  */
+   */
   contract_address: string;
   /**
    * bech32 address of message sender, must be the same as the origin EOA
@@ -49,7 +49,7 @@ export interface MsgRegisterDevFeeInfoAmino {
   deployer_address: string;
   /**
    * bech32 address of account receiving the transaction fees
-  */
+   */
   withdraw_address: string;
   /**
    * array of nonces from the address path, where the last nonce is
@@ -96,11 +96,11 @@ export interface MsgRegisterDevFeeInfoResponseAminoMsg {
 export interface MsgCancelDevFeeInfo {
   /**
    * contract hex address
-  */
+   */
   contractAddress: string;
   /**
    * deployer bech32 address
-  */
+   */
   deployerAddress: string;
 }
 export interface MsgCancelDevFeeInfoProtoMsg {
@@ -117,11 +117,11 @@ export interface MsgCancelDevFeeInfoProtoMsg {
 export interface MsgCancelDevFeeInfoAmino {
   /**
    * contract hex address
-  */
+   */
   contract_address: string;
   /**
    * deployer bech32 address
-  */
+   */
   deployer_address: string;
 }
 export interface MsgCancelDevFeeInfoAminoMsg {
@@ -160,15 +160,15 @@ export interface MsgCancelDevFeeInfoResponseAminoMsg {
 export interface MsgUpdateDevFeeInfo {
   /**
    * contract hex address
-  */
+   */
   contractAddress: string;
   /**
    * deployer bech32 address
-  */
+   */
   deployerAddress: string;
   /**
    * new withdraw bech32 address for receiving the transaction fees
-  */
+   */
   withdrawAddress: string;
 }
 export interface MsgUpdateDevFeeInfoProtoMsg {
@@ -185,15 +185,15 @@ export interface MsgUpdateDevFeeInfoProtoMsg {
 export interface MsgUpdateDevFeeInfoAmino {
   /**
    * contract hex address
-  */
+   */
   contract_address: string;
   /**
    * deployer bech32 address
-  */
+   */
   deployer_address: string;
   /**
    * new withdraw bech32 address for receiving the transaction fees
-  */
+   */
   withdraw_address: string;
 }
 export interface MsgUpdateDevFeeInfoAminoMsg {

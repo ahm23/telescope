@@ -11,11 +11,11 @@ export const protobufPackage = "evmos.erc20.v1";
 export interface GenesisState {
   /**
    * module parameters
-  */
+   */
   params: Params;
   /**
    * registered token pairs
-  */
+   */
   tokenPairs: TokenPair[];
 }
 export interface GenesisStateProtoMsg {
@@ -31,11 +31,11 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * module parameters
-  */
+   */
   params?: ParamsAmino;
   /**
    * registered token pairs
-  */
+   */
   token_pairs?: TokenPairAmino[];
 }
 export interface GenesisStateAminoMsg {
@@ -61,7 +61,7 @@ export interface GenesisStateSDKType {
 export interface Params {
   /**
    * parameter to enable the conversion of Cosmos coins <--> ERC20 tokens.
-  */
+   */
   enableErc20: boolean;
   /**
    * parameter to enable the EVM hook that converts an ERC20 token to a Cosmos
@@ -83,7 +83,7 @@ export interface ParamsProtoMsg {
 export interface ParamsAmino {
   /**
    * parameter to enable the conversion of Cosmos coins <--> ERC20 tokens.
-  */
+   */
   enable_erc20?: boolean;
   /**
    * parameter to enable the EVM hook that converts an ERC20 token to a Cosmos

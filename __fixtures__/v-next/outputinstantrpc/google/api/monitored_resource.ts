@@ -54,7 +54,7 @@ export interface MonitoredResourceDescriptor {
   labels: LabelDescriptor[];
   /**
    * Optional. The launch stage of the monitored resource definition.
-  */
+   */
   launchStage: LaunchStage;
 }
 export interface MonitoredResourceDescriptorProtoMsg {
@@ -216,7 +216,7 @@ export interface MonitoredResourceMetadata {
   systemLabels?: Struct;
   /**
    * Output only. A map of user-defined metadata labels.
-  */
+   */
   userLabels: {
     [key: string]: string;
   };

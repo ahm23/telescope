@@ -13,23 +13,23 @@ export const protobufPackage = "evmos.incentives.v1";
 export interface Incentive {
   /**
    * contract address
-  */
+   */
   contract: string;
   /**
    * denoms and percentage of rewards to be allocated
-  */
+   */
   allocations: DecCoin[];
   /**
    * number of remaining epochs
-  */
+   */
   epochs: number;
   /**
    * distribution start time
-  */
+   */
   startTime: Date;
   /**
    * cumulative gas spent by all gasmeters of the incentive during the epoch
-  */
+   */
   totalGas: bigint;
 }
 export interface IncentiveProtoMsg {
@@ -46,23 +46,23 @@ export interface IncentiveProtoMsg {
 export interface IncentiveAmino {
   /**
    * contract address
-  */
+   */
   contract?: string;
   /**
    * denoms and percentage of rewards to be allocated
-  */
+   */
   allocations?: DecCoinAmino[];
   /**
    * number of remaining epochs
-  */
+   */
   epochs?: number;
   /**
    * distribution start time
-  */
+   */
   start_time?: string;
   /**
    * cumulative gas spent by all gasmeters of the incentive during the epoch
-  */
+   */
   total_gas?: string;
 }
 export interface IncentiveAminoMsg {
@@ -92,15 +92,15 @@ export interface IncentiveSDKType {
 export interface GasMeter {
   /**
    * hex address of the incentivized contract
-  */
+   */
   contract: string;
   /**
    * participant address that interacts with the incentive
-  */
+   */
   participant: string;
   /**
    * cumulative gas spent during the epoch
-  */
+   */
   cumulativeGas: bigint;
 }
 export interface GasMeterProtoMsg {
@@ -116,15 +116,15 @@ export interface GasMeterProtoMsg {
 export interface GasMeterAmino {
   /**
    * hex address of the incentivized contract
-  */
+   */
   contract?: string;
   /**
    * participant address that interacts with the incentive
-  */
+   */
   participant?: string;
   /**
    * cumulative gas spent during the epoch
-  */
+   */
   cumulative_gas?: string;
 }
 export interface GasMeterAminoMsg {
@@ -151,23 +151,23 @@ export interface GasMeterSDKType {
 export interface RegisterIncentiveProposal {
   /**
    * title of the proposal
-  */
+   */
   title: string;
   /**
    * proposal description
-  */
+   */
   description: string;
   /**
    * contract address
-  */
+   */
   contract: string;
   /**
    * denoms and percentage of rewards to be allocated
-  */
+   */
   allocations: DecCoin[];
   /**
    * number of remaining epochs
-  */
+   */
   epochs: number;
 }
 export interface RegisterIncentiveProposalProtoMsg {
@@ -183,23 +183,23 @@ export interface RegisterIncentiveProposalProtoMsg {
 export interface RegisterIncentiveProposalAmino {
   /**
    * title of the proposal
-  */
+   */
   title?: string;
   /**
    * proposal description
-  */
+   */
   description?: string;
   /**
    * contract address
-  */
+   */
   contract?: string;
   /**
    * denoms and percentage of rewards to be allocated
-  */
+   */
   allocations?: DecCoinAmino[];
   /**
    * number of remaining epochs
-  */
+   */
   epochs?: number;
 }
 export interface RegisterIncentiveProposalAminoMsg {
@@ -228,15 +228,15 @@ export interface RegisterIncentiveProposalSDKType {
 export interface CancelIncentiveProposal {
   /**
    * title of the proposal
-  */
+   */
   title: string;
   /**
    * proposal description
-  */
+   */
   description: string;
   /**
    * contract address
-  */
+   */
   contract: string;
 }
 export interface CancelIncentiveProposalProtoMsg {
@@ -252,15 +252,15 @@ export interface CancelIncentiveProposalProtoMsg {
 export interface CancelIncentiveProposalAmino {
   /**
    * title of the proposal
-  */
+   */
   title?: string;
   /**
    * proposal description
-  */
+   */
   description?: string;
   /**
    * contract address
-  */
+   */
   contract?: string;
 }
 export interface CancelIncentiveProposalAminoMsg {

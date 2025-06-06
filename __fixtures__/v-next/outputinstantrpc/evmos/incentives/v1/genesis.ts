@@ -13,15 +13,15 @@ export const protobufPackage = "evmos.incentives.v1";
 export interface GenesisState {
   /**
    * module parameters
-  */
+   */
   params: Params;
   /**
    * active incentives
-  */
+   */
   incentives: Incentive[];
   /**
    * active Gasmeters
-  */
+   */
   gasMeters: GasMeter[];
 }
 export interface GenesisStateProtoMsg {
@@ -48,19 +48,19 @@ export interface GenesisStateSDKType {
 export interface Params {
   /**
    * parameter to enable incentives
-  */
+   */
   enableIncentives: boolean;
   /**
    * maximum percentage an incentive can allocate per denomination
-  */
+   */
   allocationLimit: string;
   /**
    * identifier for the epochs module hooks
-  */
+   */
   incentivesEpochIdentifier: string;
   /**
    * scaling factor for capping rewards
-  */
+   */
   rewardScaler: string;
 }
 export interface ParamsProtoMsg {

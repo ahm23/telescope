@@ -13,7 +13,7 @@ export const protobufPackage = "ibc.core.client.v1";
 export interface MsgCreateClient {
   /**
    * light client state
-  */
+   */
   clientState?: Any;
   /**
    * consensus state associated with the client that corresponds to a given
@@ -22,7 +22,7 @@ export interface MsgCreateClient {
   consensusState?: Any;
   /**
    * signer address
-  */
+   */
   signer: string;
 }
 export interface MsgCreateClientProtoMsg {
@@ -38,7 +38,7 @@ export interface MsgCreateClientProtoMsg {
 export interface MsgCreateClientAmino {
   /**
    * light client state
-  */
+   */
   client_state?: AnyAmino;
   /**
    * consensus state associated with the client that corresponds to a given
@@ -47,7 +47,7 @@ export interface MsgCreateClientAmino {
   consensus_state?: AnyAmino;
   /**
    * signer address
-  */
+   */
   signer?: string;
 }
 export interface MsgCreateClientAminoMsg {
@@ -104,15 +104,15 @@ export interface MsgCreateClientResponseSDKType {}
 export interface MsgUpdateClient {
   /**
    * client unique identifier
-  */
+   */
   clientId: string;
   /**
    * header to update the light client
-  */
+   */
   header?: Any;
   /**
    * signer address
-  */
+   */
   signer: string;
 }
 export interface MsgUpdateClientProtoMsg {
@@ -129,15 +129,15 @@ export interface MsgUpdateClientProtoMsg {
 export interface MsgUpdateClientAmino {
   /**
    * client unique identifier
-  */
+   */
   client_id?: string;
   /**
    * header to update the light client
-  */
+   */
   header?: AnyAmino;
   /**
    * signer address
-  */
+   */
   signer?: string;
 }
 export interface MsgUpdateClientAminoMsg {
@@ -195,11 +195,11 @@ export interface MsgUpdateClientResponseSDKType {}
 export interface MsgUpgradeClient {
   /**
    * client unique identifier
-  */
+   */
   clientId: string;
   /**
    * upgraded client state
-  */
+   */
   clientState?: Any;
   /**
    * upgraded consensus state, only contains enough information to serve as a
@@ -208,15 +208,15 @@ export interface MsgUpgradeClient {
   consensusState?: Any;
   /**
    * proof that old chain committed to new client
-  */
+   */
   proofUpgradeClient: Uint8Array;
   /**
    * proof that old chain committed to new consensus state
-  */
+   */
   proofUpgradeConsensusState: Uint8Array;
   /**
    * signer address
-  */
+   */
   signer: string;
 }
 export interface MsgUpgradeClientProtoMsg {
@@ -233,11 +233,11 @@ export interface MsgUpgradeClientProtoMsg {
 export interface MsgUpgradeClientAmino {
   /**
    * client unique identifier
-  */
+   */
   client_id?: string;
   /**
    * upgraded client state
-  */
+   */
   client_state?: AnyAmino;
   /**
    * upgraded consensus state, only contains enough information to serve as a
@@ -246,15 +246,15 @@ export interface MsgUpgradeClientAmino {
   consensus_state?: AnyAmino;
   /**
    * proof that old chain committed to new client
-  */
+   */
   proof_upgrade_client?: string;
   /**
    * proof that old chain committed to new consensus state
-  */
+   */
   proof_upgrade_consensus_state?: string;
   /**
    * signer address
-  */
+   */
   signer?: string;
 }
 export interface MsgUpgradeClientAminoMsg {
@@ -315,15 +315,15 @@ export interface MsgUpgradeClientResponseSDKType {}
 export interface MsgSubmitMisbehaviour {
   /**
    * client unique identifier
-  */
+   */
   clientId: string;
   /**
    * misbehaviour used for freezing the light client
-  */
+   */
   misbehaviour?: Any;
   /**
    * signer address
-  */
+   */
   signer: string;
 }
 export interface MsgSubmitMisbehaviourProtoMsg {
@@ -340,15 +340,15 @@ export interface MsgSubmitMisbehaviourProtoMsg {
 export interface MsgSubmitMisbehaviourAmino {
   /**
    * client unique identifier
-  */
+   */
   client_id?: string;
   /**
    * misbehaviour used for freezing the light client
-  */
+   */
   misbehaviour?: AnyAmino;
   /**
    * signer address
-  */
+   */
   signer?: string;
 }
 export interface MsgSubmitMisbehaviourAminoMsg {

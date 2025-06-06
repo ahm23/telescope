@@ -12,7 +12,7 @@ export const protobufPackage = "cosmos.staking.v1beta1";
 export interface GenesisState {
   /**
    * params defines all the paramaters of related to deposit.
-  */
+   */
   params: Params;
   /**
    * last_total_power tracks the total amounts of bonded tokens recorded during
@@ -26,19 +26,19 @@ export interface GenesisState {
   lastValidatorPowers: LastValidatorPower[];
   /**
    * delegations defines the validator set at genesis.
-  */
+   */
   validators: Validator[];
   /**
    * delegations defines the delegations active at genesis.
-  */
+   */
   delegations: Delegation[];
   /**
    * unbonding_delegations defines the unbonding delegations active at genesis.
-  */
+   */
   unbondingDelegations: UnbondingDelegation[];
   /**
    * redelegations defines the redelegations active at genesis.
-  */
+   */
   redelegations: Redelegation[];
   exported: boolean;
 }
@@ -71,11 +71,11 @@ export interface GenesisStateSDKType {
 export interface LastValidatorPower {
   /**
    * address is the address of the validator.
-  */
+   */
   address: string;
   /**
    * power defines the power of the validator.
-  */
+   */
   power: bigint;
 }
 export interface LastValidatorPowerProtoMsg {

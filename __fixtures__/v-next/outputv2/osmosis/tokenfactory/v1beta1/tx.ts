@@ -22,7 +22,7 @@ export interface MsgCreateDenom {
   sender: string;
   /**
    * subdenom can be up to 44 "alphanumeric" characters long.
-  */
+   */
   subdenom: string;
 }
 export interface MsgCreateDenomProtoMsg {
@@ -47,7 +47,7 @@ export interface MsgCreateDenomAmino {
   sender?: string;
   /**
    * subdenom can be up to 44 "alphanumeric" characters long.
-  */
+   */
   subdenom?: string;
 }
 export interface MsgCreateDenomAminoMsg {

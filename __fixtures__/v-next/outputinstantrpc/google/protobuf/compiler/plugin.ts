@@ -50,7 +50,7 @@ export interface CodeGeneratorRequest {
   fileToGenerate: string[];
   /**
    * The generator parameter passed on the command-line.
-  */
+   */
   parameter: string;
   /**
    * FileDescriptorProtos for all files in files_to_generate and everything
@@ -71,7 +71,7 @@ export interface CodeGeneratorRequest {
   protoFile: FileDescriptorProto[];
   /**
    * The version number of protocol compiler.
-  */
+   */
   compilerVersion?: Version;
 }
 export interface CodeGeneratorRequestProtoMsg {
@@ -187,7 +187,7 @@ export interface CodeGeneratorResponse_File {
   insertionPoint: string;
   /**
    * The file contents.
-  */
+   */
   content: string;
 }
 export interface CodeGeneratorResponse_FileProtoMsg {

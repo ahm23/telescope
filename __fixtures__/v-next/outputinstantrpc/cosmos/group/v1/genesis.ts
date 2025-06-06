@@ -17,11 +17,11 @@ export interface GenesisState {
   groupSeq: bigint;
   /**
    * groups is the list of groups info.
-  */
+   */
   groups: GroupInfo[];
   /**
    * group_members is the list of groups members.
-  */
+   */
   groupMembers: GroupMember[];
   /**
    * group_policy_seq is the group policy table orm.Sequence,
@@ -30,7 +30,7 @@ export interface GenesisState {
   groupPolicySeq: bigint;
   /**
    * group_policies is the list of group policies info.
-  */
+   */
   groupPolicies: GroupPolicyInfo[];
   /**
    * proposal_seq is the proposal table orm.Sequence,
@@ -39,11 +39,11 @@ export interface GenesisState {
   proposalSeq: bigint;
   /**
    * proposals is the list of proposals.
-  */
+   */
   proposals: Proposal[];
   /**
    * votes is the list of votes.
-  */
+   */
   votes: Vote[];
 }
 export interface GenesisStateProtoMsg {

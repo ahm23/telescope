@@ -360,19 +360,19 @@ export interface HttpRule {
   get?: string;
   /**
    * Maps to HTTP PUT. Used for replacing a resource.
-  */
+   */
   put?: string;
   /**
    * Maps to HTTP POST. Used for creating a resource or performing an action.
-  */
+   */
   post?: string;
   /**
    * Maps to HTTP DELETE. Used for deleting a resource.
-  */
+   */
   delete?: string;
   /**
    * Maps to HTTP PATCH. Used for updating a resource.
-  */
+   */
   patch?: string;
   /**
    * The custom pattern is used for specifying an HTTP method that is not
@@ -698,19 +698,19 @@ export interface HttpRuleAmino {
   get?: string;
   /**
    * Maps to HTTP PUT. Used for replacing a resource.
-  */
+   */
   put?: string;
   /**
    * Maps to HTTP POST. Used for creating a resource or performing an action.
-  */
+   */
   post?: string;
   /**
    * Maps to HTTP DELETE. Used for deleting a resource.
-  */
+   */
   delete?: string;
   /**
    * Maps to HTTP PATCH. Used for updating a resource.
-  */
+   */
   patch?: string;
   /**
    * The custom pattern is used for specifying an HTTP method that is not
@@ -1043,11 +1043,11 @@ export interface HttpRuleSDKType {
 export interface CustomHttpPattern {
   /**
    * The name of this custom HTTP verb.
-  */
+   */
   kind: string;
   /**
    * The path matched by this custom verb.
-  */
+   */
   path: string;
 }
 export interface CustomHttpPatternProtoMsg {
@@ -1063,11 +1063,11 @@ export interface CustomHttpPatternProtoMsg {
 export interface CustomHttpPatternAmino {
   /**
    * The name of this custom HTTP verb.
-  */
+   */
   kind?: string;
   /**
    * The path matched by this custom verb.
-  */
+   */
   path?: string;
 }
 export interface CustomHttpPatternAminoMsg {

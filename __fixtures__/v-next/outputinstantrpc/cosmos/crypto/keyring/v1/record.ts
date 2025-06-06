@@ -13,27 +13,27 @@ export const protobufPackage = "cosmos.crypto.keyring.v1";
 export interface Record {
   /**
    * name represents a name of Record
-  */
+   */
   name: string;
   /**
    * pub_key represents a public key in any format
-  */
+   */
   pubKey?: Any;
   /**
    * local stores the public information about a locally stored key
-  */
+   */
   local?: Record_Local;
   /**
    * ledger stores the public information about a Ledger key
-  */
+   */
   ledger?: Record_Ledger;
   /**
    * Multi does not store any information.
-  */
+   */
   multi?: Record_Multi;
   /**
    * Offline does not store any information.
-  */
+   */
   offline?: Record_Offline;
 }
 export interface RecordProtoMsg {

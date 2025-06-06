@@ -71,7 +71,7 @@ export function poolTypeToJSON(object: PoolType): string {
 export interface ModuleRoute {
   /**
    * pool_type specifies the type of the pool
-  */
+   */
   poolType: PoolType;
   poolId?: bigint;
 }

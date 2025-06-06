@@ -93,7 +93,7 @@ export class CommentBlockBuilder {
         if (this.lines.length === 1) {
             return {
                 type: "CommentBlock",
-                value: `*\n * ${cleanComment(this.lines[0])}\n`,
+                value: `*\n * ${cleanComment(this.lines[0])}\n `,
                 start: null,
                 end: null,
                 loc: null,

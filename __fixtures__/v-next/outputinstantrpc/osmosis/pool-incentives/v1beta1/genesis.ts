@@ -13,7 +13,7 @@ export const protobufPackage = "osmosis.poolincentives.v1beta1";
 export interface GenesisState {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: Params;
   lockableDurations: Duration[];
   distrInfo?: DistrInfo;

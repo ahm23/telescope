@@ -17,7 +17,7 @@ export interface GenesisState {
   ackSequences: PacketSequence[];
   /**
    * the sequence for the next generated channel identifier
-  */
+   */
   nextChannelSequence: bigint;
 }
 export interface GenesisStateProtoMsg {
@@ -40,7 +40,7 @@ export interface GenesisStateAmino {
   ack_sequences: PacketSequenceAmino[];
   /**
    * the sequence for the next generated channel identifier
-  */
+   */
   next_channel_sequence: string;
 }
 export interface GenesisStateAminoMsg {

@@ -36,7 +36,7 @@ export interface GenesisState {
   pools: Any[];
   /**
    * will be renamed to next_pool_id in an upcoming version
-  */
+   */
   nextPoolNumber: bigint;
   params: Params;
 }

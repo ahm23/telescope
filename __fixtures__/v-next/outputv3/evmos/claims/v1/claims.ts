@@ -67,15 +67,15 @@ export function actionToJSON(object: Action): string {
 export interface Claim {
   /**
    * action enum
-  */
+   */
   action: Action;
   /**
    * true if the action has been completed
-  */
+   */
   completed: boolean;
   /**
    * claimable token amount for the action. Zero if completed
-  */
+   */
   claimableAmount: string;
 }
 export interface ClaimProtoMsg {
@@ -92,15 +92,15 @@ export interface ClaimProtoMsg {
 export interface ClaimAmino {
   /**
    * action enum
-  */
+   */
   action?: Action;
   /**
    * true if the action has been completed
-  */
+   */
   completed?: boolean;
   /**
    * claimable token amount for the action. Zero if completed
-  */
+   */
   claimable_amount?: string;
 }
 /**
@@ -124,15 +124,15 @@ export interface ClaimSDKType {
 export interface ClaimsRecordAddress {
   /**
    * bech32 or hex address of claim user
-  */
+   */
   address: string;
   /**
    * total initial claimable amount for the user
-  */
+   */
   initialClaimableAmount: string;
   /**
    * slice of the available actions completed
-  */
+   */
   actionsCompleted: boolean[];
 }
 export interface ClaimsRecordAddressProtoMsg {
@@ -148,15 +148,15 @@ export interface ClaimsRecordAddressProtoMsg {
 export interface ClaimsRecordAddressAmino {
   /**
    * bech32 or hex address of claim user
-  */
+   */
   address?: string;
   /**
    * total initial claimable amount for the user
-  */
+   */
   initial_claimable_amount?: string;
   /**
    * slice of the available actions completed
-  */
+   */
   actions_completed?: boolean[];
 }
 /**
@@ -180,11 +180,11 @@ export interface ClaimsRecordAddressSDKType {
 export interface ClaimsRecord {
   /**
    * total initial claimable amount for the user
-  */
+   */
   initialClaimableAmount: string;
   /**
    * slice of the available actions completed
-  */
+   */
   actionsCompleted: boolean[];
 }
 export interface ClaimsRecordProtoMsg {
@@ -201,11 +201,11 @@ export interface ClaimsRecordProtoMsg {
 export interface ClaimsRecordAmino {
   /**
    * total initial claimable amount for the user
-  */
+   */
   initial_claimable_amount?: string;
   /**
    * slice of the available actions completed
-  */
+   */
   actions_completed?: boolean[];
 }
 /**

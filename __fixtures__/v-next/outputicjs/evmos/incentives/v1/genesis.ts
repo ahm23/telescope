@@ -11,15 +11,15 @@ import { Decimal } from "@interchainjs/math";
 export interface GenesisState {
   /**
    * module parameters
-  */
+   */
   params: EvmosIncentivesV1Params;
   /**
    * active incentives
-  */
+   */
   incentives: Incentive[];
   /**
    * active Gasmeters
-  */
+   */
   gasMeters: GasMeter[];
 }
 export interface GenesisStateProtoMsg {
@@ -35,15 +35,15 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * module parameters
-  */
+   */
   params: EvmosIncentivesV1ParamsAmino;
   /**
    * active incentives
-  */
+   */
   incentives: IncentiveAmino[];
   /**
    * active Gasmeters
-  */
+   */
   gas_meters: GasMeterAmino[];
 }
 export interface GenesisStateAminoMsg {
@@ -59,19 +59,19 @@ export interface GenesisStateAminoMsg {
 export interface EvmosIncentivesV1Params {
   /**
    * parameter to enable incentives
-  */
+   */
   enableIncentives: boolean;
   /**
    * maximum percentage an incentive can allocate per denomination
-  */
+   */
   allocationLimit: string;
   /**
    * identifier for the epochs module hooks
-  */
+   */
   incentivesEpochIdentifier: string;
   /**
    * scaling factor for capping rewards
-  */
+   */
   rewardScaler: string;
 }
 export interface EvmosIncentivesV1ParamsProtoMsg {
@@ -87,19 +87,19 @@ export interface EvmosIncentivesV1ParamsProtoMsg {
 export interface EvmosIncentivesV1ParamsAmino {
   /**
    * parameter to enable incentives
-  */
+   */
   enable_incentives: boolean;
   /**
    * maximum percentage an incentive can allocate per denomination
-  */
+   */
   allocation_limit: string;
   /**
    * identifier for the epochs module hooks
-  */
+   */
   incentives_epoch_identifier: string;
   /**
    * scaling factor for capping rewards
-  */
+   */
   reward_scaler: string;
 }
 export interface EvmosIncentivesV1ParamsAminoMsg {

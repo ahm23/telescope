@@ -12,7 +12,7 @@ export const protobufPackage = "ibc.applications.interchain_accounts.controller.
 export interface Params {
   /**
    * controller_enabled enables or disables the controller submodule.
-  */
+   */
   controllerEnabled: boolean;
 }
 export interface ParamsProtoMsg {

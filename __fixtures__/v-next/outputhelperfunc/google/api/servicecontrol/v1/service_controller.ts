@@ -87,7 +87,7 @@ export interface CheckRequest {
   serviceName: string;
   /**
    * The operation to be checked.
-  */
+   */
   operation?: Operation;
   /**
    * Specifies which version of service configuration should be used to process
@@ -120,7 +120,7 @@ export interface CheckRequestAmino {
   service_name?: string;
   /**
    * The operation to be checked.
-  */
+   */
   operation?: OperationAmino;
   /**
    * Specifies which version of service configuration should be used to process
@@ -169,15 +169,15 @@ export interface CheckResponse {
   checkErrors: CheckError[];
   /**
    * The actual config id used to process the request.
-  */
+   */
   serviceConfigId: string;
   /**
    * The current service rollout id used to process the request.
-  */
+   */
   serviceRolloutId: string;
   /**
    * Feedback data returned from the server during processing a Check request.
-  */
+   */
   checkInfo?: CheckResponse_CheckInfo;
 }
 export interface CheckResponseProtoMsg {
@@ -207,15 +207,15 @@ export interface CheckResponseAmino {
   check_errors?: CheckErrorAmino[];
   /**
    * The actual config id used to process the request.
-  */
+   */
   service_config_id?: string;
   /**
    * The current service rollout id used to process the request.
-  */
+   */
   service_rollout_id?: string;
   /**
    * Feedback data returned from the server during processing a Check request.
-  */
+   */
   check_info?: CheckResponse_CheckInfoAmino;
 }
 export interface CheckResponseAminoMsg {
@@ -250,7 +250,7 @@ export interface CheckResponse_CheckInfo {
   unusedArguments: string[];
   /**
    * Consumer info of this check.
-  */
+   */
   consumerInfo?: CheckResponse_ConsumerInfo;
 }
 export interface CheckResponse_CheckInfoProtoMsg {
@@ -272,7 +272,7 @@ export interface CheckResponse_CheckInfoAmino {
   unused_arguments?: string[];
   /**
    * Consumer info of this check.
-  */
+   */
   consumer_info?: CheckResponse_ConsumerInfoAmino;
 }
 export interface CheckResponse_CheckInfoAminoMsg {
@@ -485,11 +485,11 @@ export interface ReportResponse {
   reportErrors: ReportResponse_ReportError[];
   /**
    * The actual config id used to process the request.
-  */
+   */
   serviceConfigId: string;
   /**
    * The current service rollout id used to process the request.
-  */
+   */
   serviceRolloutId: string;
 }
 export interface ReportResponseProtoMsg {
@@ -522,11 +522,11 @@ export interface ReportResponseAmino {
   report_errors?: ReportResponse_ReportErrorAmino[];
   /**
    * The actual config id used to process the request.
-  */
+   */
   service_config_id?: string;
   /**
    * The current service rollout id used to process the request.
-  */
+   */
   service_rollout_id?: string;
 }
 export interface ReportResponseAminoMsg {

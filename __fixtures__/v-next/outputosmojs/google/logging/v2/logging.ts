@@ -459,7 +459,7 @@ export interface ListMonitoredResourceDescriptorsRequestSDKType {
 export interface ListMonitoredResourceDescriptorsResponse {
   /**
    * A list of resource descriptors.
-  */
+   */
   resourceDescriptors: MonitoredResourceDescriptor[];
   /**
    * If there might be more results than those appearing in this response, then
@@ -679,11 +679,11 @@ export interface TailLogEntriesResponseSDKType {
 export interface TailLogEntriesResponse_SuppressionInfo {
   /**
    * The reason that entries were omitted from the session.
-  */
+   */
   reason: TailLogEntriesResponse_SuppressionInfo_Reason;
   /**
    * A lower bound on the count of entries omitted due to `reason`.
-  */
+   */
   suppressedCount: number;
 }
 export interface TailLogEntriesResponse_SuppressionInfoProtoMsg {

@@ -13,11 +13,11 @@ export const protobufPackage = "osmosis.valsetpref.v1beta1";
 export interface MsgSetValidatorSetPreference {
   /**
    * delegator is the user who is trying to create a validator-set.
-  */
+   */
   delegator: string;
   /**
    * list of {valAddr, weight} to delegate to
-  */
+   */
   preferences: ValidatorPreference[];
 }
 export interface MsgSetValidatorSetPreferenceProtoMsg {
@@ -60,7 +60,7 @@ export interface MsgSetValidatorSetPreferenceResponseSDKType {}
 export interface MsgDelegateToValidatorSet {
   /**
    * delegator is the user who is trying to delegate.
-  */
+   */
   delegator: string;
   /**
    * the amount of tokens the user is trying to delegate.
@@ -109,7 +109,7 @@ export interface MsgDelegateToValidatorSetResponseSDKType {}
 export interface MsgUndelegateFromValidatorSet {
   /**
    * delegator is the user who is trying to undelegate.
-  */
+   */
   delegator: string;
   /**
    * the amount the user wants to undelegate
@@ -157,11 +157,11 @@ export interface MsgUndelegateFromValidatorSetResponseSDKType {}
 export interface MsgRedelegateValidatorSet {
   /**
    * delegator is the user who is trying to create a validator-set.
-  */
+   */
   delegator: string;
   /**
    * list of {valAddr, weight} to delegate to
-  */
+   */
   preferences: ValidatorPreference[];
 }
 export interface MsgRedelegateValidatorSetProtoMsg {
@@ -203,7 +203,7 @@ export interface MsgRedelegateValidatorSetResponseSDKType {}
 export interface MsgWithdrawDelegationRewards {
   /**
    * delegator is the user who is trying to claim staking rewards.
-  */
+   */
   delegator: string;
 }
 export interface MsgWithdrawDelegationRewardsProtoMsg {
@@ -247,11 +247,11 @@ export interface MsgWithdrawDelegationRewardsResponseSDKType {}
 export interface MsgDelegateBondedTokens {
   /**
    * delegator is the user who is trying to force unbond osmo and delegate.
-  */
+   */
   delegator: string;
   /**
    * lockup id of osmo in the pool
-  */
+   */
   lockID: bigint;
 }
 export interface MsgDelegateBondedTokensProtoMsg {

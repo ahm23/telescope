@@ -10,7 +10,7 @@ import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../helpers"
 export interface GenesisState {
   /**
    * params defines all the paramaters of related to deposit.
-  */
+   */
   params: CosmosStakingV1beta1Params;
   /**
    * last_total_power tracks the total amounts of bonded tokens recorded during
@@ -24,19 +24,19 @@ export interface GenesisState {
   lastValidatorPowers: LastValidatorPower[];
   /**
    * delegations defines the validator set at genesis.
-  */
+   */
   validators: Validator[];
   /**
    * delegations defines the delegations active at genesis.
-  */
+   */
   delegations: Delegation[];
   /**
    * unbonding_delegations defines the unbonding delegations active at genesis.
-  */
+   */
   unbondingDelegations: UnbondingDelegation[];
   /**
    * redelegations defines the redelegations active at genesis.
-  */
+   */
   redelegations: Redelegation[];
   exported: boolean;
 }
@@ -53,7 +53,7 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * params defines all the paramaters of related to deposit.
-  */
+   */
   params: CosmosStakingV1beta1ParamsAmino;
   /**
    * last_total_power tracks the total amounts of bonded tokens recorded during
@@ -67,19 +67,19 @@ export interface GenesisStateAmino {
   last_validator_powers: LastValidatorPowerAmino[];
   /**
    * delegations defines the validator set at genesis.
-  */
+   */
   validators: ValidatorAmino[];
   /**
    * delegations defines the delegations active at genesis.
-  */
+   */
   delegations: DelegationAmino[];
   /**
    * unbonding_delegations defines the unbonding delegations active at genesis.
-  */
+   */
   unbonding_delegations: UnbondingDelegationAmino[];
   /**
    * redelegations defines the redelegations active at genesis.
-  */
+   */
   redelegations: RedelegationAmino[];
   exported: boolean;
 }
@@ -96,11 +96,11 @@ export interface GenesisStateAminoMsg {
 export interface LastValidatorPower {
   /**
    * address is the address of the validator.
-  */
+   */
   address: string;
   /**
    * power defines the power of the validator.
-  */
+   */
   power: bigint;
 }
 export interface LastValidatorPowerProtoMsg {
@@ -116,11 +116,11 @@ export interface LastValidatorPowerProtoMsg {
 export interface LastValidatorPowerAmino {
   /**
    * address is the address of the validator.
-  */
+   */
   address: string;
   /**
    * power defines the power of the validator.
-  */
+   */
   power: string;
 }
 export interface LastValidatorPowerAminoMsg {

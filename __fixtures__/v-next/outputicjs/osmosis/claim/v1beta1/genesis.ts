@@ -12,15 +12,15 @@ import { OsmosisClaimV1beta1Params, OsmosisClaimV1beta1ParamsAmino } from "./par
 export interface GenesisState {
   /**
    * balance of the claim module's account
-  */
+   */
   moduleAccountBalance: Coin;
   /**
    * params defines all the parameters of the module.
-  */
+   */
   params: OsmosisClaimV1beta1Params;
   /**
    * list of claim records, one for every airdrop recipient
-  */
+   */
   claimRecords: ClaimRecord[];
 }
 export interface GenesisStateProtoMsg {
@@ -36,15 +36,15 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * balance of the claim module's account
-  */
+   */
   module_account_balance: CoinAmino;
   /**
    * params defines all the parameters of the module.
-  */
+   */
   params: OsmosisClaimV1beta1ParamsAmino;
   /**
    * list of claim records, one for every airdrop recipient
-  */
+   */
   claim_records: ClaimRecordAmino[];
 }
 export interface GenesisStateAminoMsg {

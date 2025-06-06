@@ -12,7 +12,7 @@ export const protobufPackage = "cosmos.group.v1";
 export interface EventCreateGroup {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   groupId: bigint;
 }
 export interface EventCreateGroupProtoMsg {
@@ -37,7 +37,7 @@ export interface EventCreateGroupSDKType {
 export interface EventUpdateGroup {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   groupId: bigint;
 }
 export interface EventUpdateGroupProtoMsg {
@@ -62,7 +62,7 @@ export interface EventUpdateGroupSDKType {
 export interface EventCreateGroupPolicy {
   /**
    * address is the account address of the group policy.
-  */
+   */
   address: string;
 }
 export interface EventCreateGroupPolicyProtoMsg {
@@ -87,7 +87,7 @@ export interface EventCreateGroupPolicySDKType {
 export interface EventUpdateGroupPolicy {
   /**
    * address is the account address of the group policy.
-  */
+   */
   address: string;
 }
 export interface EventUpdateGroupPolicyProtoMsg {
@@ -112,7 +112,7 @@ export interface EventUpdateGroupPolicySDKType {
 export interface EventSubmitProposal {
   /**
    * proposal_id is the unique ID of the proposal.
-  */
+   */
   proposalId: bigint;
 }
 export interface EventSubmitProposalProtoMsg {
@@ -137,7 +137,7 @@ export interface EventSubmitProposalSDKType {
 export interface EventWithdrawProposal {
   /**
    * proposal_id is the unique ID of the proposal.
-  */
+   */
   proposalId: bigint;
 }
 export interface EventWithdrawProposalProtoMsg {
@@ -162,7 +162,7 @@ export interface EventWithdrawProposalSDKType {
 export interface EventVote {
   /**
    * proposal_id is the unique ID of the proposal.
-  */
+   */
   proposalId: bigint;
 }
 export interface EventVoteProtoMsg {
@@ -187,11 +187,11 @@ export interface EventVoteSDKType {
 export interface EventExec {
   /**
    * proposal_id is the unique ID of the proposal.
-  */
+   */
   proposalId: bigint;
   /**
    * result is the proposal execution result.
-  */
+   */
   result: ProposalExecutorResult;
 }
 export interface EventExecProtoMsg {
@@ -217,11 +217,11 @@ export interface EventExecSDKType {
 export interface EventLeaveGroup {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   groupId: bigint;
   /**
    * address is the account address of the group member.
-  */
+   */
   address: string;
 }
 export interface EventLeaveGroupProtoMsg {

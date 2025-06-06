@@ -14,11 +14,11 @@ export const protobufPackage = "evmos.claims.v1";
 export interface GenesisState {
   /**
    * params defines all the parameters of the module.
-  */
+   */
   params: Params;
   /**
    * list of claim records with the corresponding airdrop recipient
-  */
+   */
   claimsRecords: ClaimsRecordAddress[];
 }
 export interface GenesisStateProtoMsg {
@@ -44,23 +44,23 @@ export interface GenesisStateSDKType {
 export interface Params {
   /**
    * enable claiming process
-  */
+   */
   enableClaims: boolean;
   /**
    * timestamp of the airdrop start
-  */
+   */
   airdropStartTime: Date;
   /**
    * duration until decay of claimable tokens begin
-  */
+   */
   durationUntilDecay: Duration;
   /**
    * duration of the token claim decay period
-  */
+   */
   durationOfDecay: Duration;
   /**
    * denom of claimable coin
-  */
+   */
   claimsDenom: string;
   /**
    * list of authorized channel identifiers that can perform address
@@ -69,7 +69,7 @@ export interface Params {
   authorizedChannels: string[];
   /**
    * list of channel identifiers from EVM compatible chains
-  */
+   */
   evmChannels: string[];
 }
 export interface ParamsProtoMsg {

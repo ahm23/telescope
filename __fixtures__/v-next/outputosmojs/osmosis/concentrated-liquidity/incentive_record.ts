@@ -29,7 +29,7 @@ export interface IncentiveRecord {
   incentiveCreatorAddr: string;
   /**
    * incentive record body holds necessary
-  */
+   */
   incentiveRecordBody: IncentiveRecordBody;
   /**
    * min_uptime is the minimum uptime required for liquidity to qualify for this
@@ -68,15 +68,15 @@ export interface IncentiveRecordSDKType {
 export interface IncentiveRecordBody {
   /**
    * remaining_amount is the total amount of incentives to be distributed
-  */
+   */
   remainingAmount: string;
   /**
    * emission_rate is the incentive emission rate per second
-  */
+   */
   emissionRate: string;
   /**
    * start_time is the time when the incentive starts distributing
-  */
+   */
   startTime: Date;
 }
 export interface IncentiveRecordBodyProtoMsg {

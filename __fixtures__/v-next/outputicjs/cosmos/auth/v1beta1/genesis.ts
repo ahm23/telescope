@@ -11,11 +11,11 @@ import { CosmosAuthV1beta1Params, CosmosAuthV1beta1ParamsAmino } from "./auth";
 export interface GenesisState {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: CosmosAuthV1beta1Params;
   /**
    * accounts are the accounts present at genesis.
-  */
+   */
   accounts: Any[];
 }
 export interface GenesisStateProtoMsg {
@@ -31,11 +31,11 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: CosmosAuthV1beta1ParamsAmino;
   /**
    * accounts are the accounts present at genesis.
-  */
+   */
   accounts: AnyAmino[];
 }
 export interface GenesisStateAminoMsg {

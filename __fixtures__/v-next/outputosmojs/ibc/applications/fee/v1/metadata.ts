@@ -12,11 +12,11 @@ export const protobufPackage = "ibc.applications.fee.v1";
 export interface Metadata {
   /**
    * fee_version defines the ICS29 fee version
-  */
+   */
   feeVersion: string;
   /**
    * app_version defines the underlying application version, which may or may not be a JSON encoded bytestring
-  */
+   */
   appVersion: string;
 }
 export interface MetadataProtoMsg {

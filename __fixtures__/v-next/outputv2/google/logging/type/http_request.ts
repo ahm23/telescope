@@ -14,7 +14,7 @@ export const protobufPackage = "google.logging.type";
 export interface HttpRequest {
   /**
    * The request method. Examples: `"GET"`, `"HEAD"`, `"PUT"`, `"POST"`.
-  */
+   */
   requestMethod: string;
   /**
    * The scheme (http, https), the host name, the path and the query
@@ -68,7 +68,7 @@ export interface HttpRequest {
   latency?: Duration;
   /**
    * Whether or not a cache lookup was attempted.
-  */
+   */
   cacheLookup: boolean;
   /**
    * Whether or not an entity was served from cache
@@ -88,7 +88,7 @@ export interface HttpRequest {
   cacheFillBytes: bigint;
   /**
    * Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket"
-  */
+   */
   protocol: string;
 }
 export interface HttpRequestProtoMsg {
@@ -106,7 +106,7 @@ export interface HttpRequestProtoMsg {
 export interface HttpRequestAmino {
   /**
    * The request method. Examples: `"GET"`, `"HEAD"`, `"PUT"`, `"POST"`.
-  */
+   */
   request_method?: string;
   /**
    * The scheme (http, https), the host name, the path and the query
@@ -160,7 +160,7 @@ export interface HttpRequestAmino {
   latency?: DurationAmino;
   /**
    * Whether or not a cache lookup was attempted.
-  */
+   */
   cache_lookup?: boolean;
   /**
    * Whether or not an entity was served from cache
@@ -180,7 +180,7 @@ export interface HttpRequestAmino {
   cache_fill_bytes?: string;
   /**
    * Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket"
-  */
+   */
   protocol?: string;
 }
 export interface HttpRequestAminoMsg {

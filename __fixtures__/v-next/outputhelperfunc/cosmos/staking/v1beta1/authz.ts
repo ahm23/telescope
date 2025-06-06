@@ -79,11 +79,11 @@ export interface StakeAuthorization {
   allowList?: StakeAuthorization_Validators;
   /**
    * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
-  */
+   */
   denyList?: StakeAuthorization_Validators;
   /**
    * authorization_type defines one of AuthorizationType.
-  */
+   */
   authorizationType: AuthorizationType;
 }
 export interface StakeAuthorizationProtoMsg {
@@ -111,11 +111,11 @@ export interface StakeAuthorizationAmino {
   allow_list?: StakeAuthorization_ValidatorsAmino;
   /**
    * deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
-  */
+   */
   deny_list?: StakeAuthorization_ValidatorsAmino;
   /**
    * authorization_type defines one of AuthorizationType.
-  */
+   */
   authorization_type?: AuthorizationType;
 }
 export interface StakeAuthorizationAminoMsg {

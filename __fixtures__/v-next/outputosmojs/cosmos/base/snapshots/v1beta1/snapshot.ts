@@ -41,7 +41,7 @@ export interface SnapshotSDKType {
 export interface Metadata {
   /**
    * SHA-256 chunk hashes
-  */
+   */
   chunkHashes: Uint8Array[];
 }
 export interface MetadataProtoMsg {
@@ -122,11 +122,11 @@ export interface SnapshotIAVLItem {
   value: Uint8Array;
   /**
    * version is block height
-  */
+   */
   version: bigint;
   /**
    * height is depth of the tree.
-  */
+   */
   height: number;
 }
 export interface SnapshotIAVLItemProtoMsg {

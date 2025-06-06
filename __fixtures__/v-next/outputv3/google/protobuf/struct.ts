@@ -81,7 +81,7 @@ export interface Struct_FieldsEntrySDKType {
 export interface Struct {
   /**
    * Unordered map of dynamically typed values.
-  */
+   */
   fields: {
     [key: string]: Value;
   };
@@ -106,7 +106,7 @@ export interface StructProtoMsg {
 export interface StructAmino {
   /**
    * Unordered map of dynamically typed values.
-  */
+   */
   fields?: {
     [key: string]: ValueAmino;
   };
@@ -143,27 +143,27 @@ export interface StructSDKType {
 export interface Value {
   /**
    * Represents a null value.
-  */
+   */
   nullValue?: NullValue;
   /**
    * Represents a double value.
-  */
+   */
   numberValue?: number;
   /**
    * Represents a string value.
-  */
+   */
   stringValue?: string;
   /**
    * Represents a boolean value.
-  */
+   */
   boolValue?: boolean;
   /**
    * Represents a structured value.
-  */
+   */
   structValue?: Struct;
   /**
    * Represents a repeated `Value`.
-  */
+   */
   listValue?: ListValue;
 }
 export interface ValueProtoMsg {
@@ -184,27 +184,27 @@ export interface ValueProtoMsg {
 export interface ValueAmino {
   /**
    * Represents a null value.
-  */
+   */
   null_value?: NullValue;
   /**
    * Represents a double value.
-  */
+   */
   number_value?: number;
   /**
    * Represents a string value.
-  */
+   */
   string_value?: string;
   /**
    * Represents a boolean value.
-  */
+   */
   bool_value?: boolean;
   /**
    * Represents a structured value.
-  */
+   */
   struct_value?: StructAmino;
   /**
    * Represents a repeated `Value`.
-  */
+   */
   list_value?: ListValueAmino;
 }
 /**
@@ -237,7 +237,7 @@ export interface ValueSDKType {
 export interface ListValue {
   /**
    * Repeated field of dynamically typed values.
-  */
+   */
   values: Value[];
 }
 export interface ListValueProtoMsg {
@@ -255,7 +255,7 @@ export interface ListValueProtoMsg {
 export interface ListValueAmino {
   /**
    * Repeated field of dynamically typed values.
-  */
+   */
   values?: ValueAmino[];
 }
 /**

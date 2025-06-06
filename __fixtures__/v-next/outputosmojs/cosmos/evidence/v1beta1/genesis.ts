@@ -12,7 +12,7 @@ export const protobufPackage = "cosmos.evidence.v1beta1";
 export interface GenesisState {
   /**
    * evidence defines all the evidence at genesis.
-  */
+   */
   evidence: Any[];
 }
 export interface GenesisStateProtoMsg {

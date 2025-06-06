@@ -108,11 +108,11 @@ export function dataTypeToJSON(object: DataType): string {
 export interface ClientState {
   /**
    * latest sequence of the client state
-  */
+   */
   sequence: bigint;
   /**
    * frozen sequence of the solo machine
-  */
+   */
   frozenSequence: bigint;
   consensusState?: ConsensusState;
   /**
@@ -149,7 +149,7 @@ export interface ClientStateSDKType {
 export interface ConsensusState {
   /**
    * public key of the solo machine
-  */
+   */
   publicKey?: Any;
   /**
    * diversifier allows the same public key to be re-used across different solo
@@ -185,7 +185,7 @@ export interface ConsensusStateSDKType {
 export interface Header {
   /**
    * sequence to update solo machine public key at
-  */
+   */
   sequence: bigint;
   timestamp: bigint;
   signature: Uint8Array;
@@ -307,11 +307,11 @@ export interface SignBytes {
   diversifier: string;
   /**
    * type of the data used
-  */
+   */
   dataType: DataType;
   /**
    * marshaled data
-  */
+   */
   data: Uint8Array;
 }
 export interface SignBytesProtoMsg {
@@ -340,11 +340,11 @@ export interface SignBytesSDKType {
 export interface HeaderData {
   /**
    * header public key
-  */
+   */
   newPubKey?: Any;
   /**
    * header diversifier
-  */
+   */
   newDiversifier: string;
 }
 export interface HeaderDataProtoMsg {

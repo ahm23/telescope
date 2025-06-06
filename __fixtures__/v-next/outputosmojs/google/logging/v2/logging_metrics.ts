@@ -231,7 +231,7 @@ export interface LogMetricSDKType {
   update_time?: Date;
   /**
    * @deprecated
-  */
+   */
   version: LogMetric_ApiVersion;
 }
 /**
@@ -285,7 +285,7 @@ export interface ListLogMetricsRequestSDKType {
 export interface ListLogMetricsResponse {
   /**
    * A list of logs-based metrics.
-  */
+   */
   metrics: LogMetric[];
   /**
    * If there might be more results than appear in this response, then
@@ -389,7 +389,7 @@ export interface UpdateLogMetricRequest {
   metricName: string;
   /**
    * Required. The updated metric.
-  */
+   */
   metric?: LogMetric;
 }
 export interface UpdateLogMetricRequestProtoMsg {

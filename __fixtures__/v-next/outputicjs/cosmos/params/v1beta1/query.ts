@@ -10,11 +10,11 @@ import { DeepPartial } from "../../../helpers";
 export interface QueryParamsRequest {
   /**
    * subspace defines the module to query the parameter for.
-  */
+   */
   subspace: string;
   /**
    * key defines the key of the parameter in the subspace.
-  */
+   */
   key: string;
 }
 export interface QueryParamsRequestProtoMsg {
@@ -30,11 +30,11 @@ export interface QueryParamsRequestProtoMsg {
 export interface QueryParamsRequestAmino {
   /**
    * subspace defines the module to query the parameter for.
-  */
+   */
   subspace: string;
   /**
    * key defines the key of the parameter in the subspace.
-  */
+   */
   key: string;
 }
 export interface QueryParamsRequestAminoMsg {
@@ -50,7 +50,7 @@ export interface QueryParamsRequestAminoMsg {
 export interface QueryParamsResponse {
   /**
    * param defines the queried parameter.
-  */
+   */
   param: ParamChange;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -66,7 +66,7 @@ export interface QueryParamsResponseProtoMsg {
 export interface QueryParamsResponseAmino {
   /**
    * param defines the queried parameter.
-  */
+   */
   param: ParamChangeAmino;
 }
 export interface QueryParamsResponseAminoMsg {

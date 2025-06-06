@@ -17,11 +17,11 @@ export interface GenesisState {
   groupSeq: bigint;
   /**
    * groups is the list of groups info.
-  */
+   */
   groups: GroupInfo[];
   /**
    * group_members is the list of groups members.
-  */
+   */
   groupMembers: GroupMember[];
   /**
    * group_policy_seq is the group policy table orm.Sequence,
@@ -30,7 +30,7 @@ export interface GenesisState {
   groupPolicySeq: bigint;
   /**
    * group_policies is the list of group policies info.
-  */
+   */
   groupPolicies: GroupPolicyInfo[];
   /**
    * proposal_seq is the proposal table orm.Sequence,
@@ -39,11 +39,11 @@ export interface GenesisState {
   proposalSeq: bigint;
   /**
    * proposals is the list of proposals.
-  */
+   */
   proposals: Proposal[];
   /**
    * votes is the list of votes.
-  */
+   */
   votes: Vote[];
 }
 export interface GenesisStateProtoMsg {
@@ -64,11 +64,11 @@ export interface GenesisStateAmino {
   group_seq?: string;
   /**
    * groups is the list of groups info.
-  */
+   */
   groups?: GroupInfoAmino[];
   /**
    * group_members is the list of groups members.
-  */
+   */
   group_members?: GroupMemberAmino[];
   /**
    * group_policy_seq is the group policy table orm.Sequence,
@@ -77,7 +77,7 @@ export interface GenesisStateAmino {
   group_policy_seq?: string;
   /**
    * group_policies is the list of group policies info.
-  */
+   */
   group_policies?: GroupPolicyInfoAmino[];
   /**
    * proposal_seq is the proposal table orm.Sequence,
@@ -86,11 +86,11 @@ export interface GenesisStateAmino {
   proposal_seq?: string;
   /**
    * proposals is the list of proposals.
-  */
+   */
   proposals?: ProposalAmino[];
   /**
    * votes is the list of votes.
-  */
+   */
   votes?: VoteAmino[];
 }
 export interface GenesisStateAminoMsg {

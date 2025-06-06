@@ -50,7 +50,7 @@ export interface GenesisState {
   pools: (Pool1 | Pool2 | Any)[] | Any[];
   /**
    * will be renamed to next_pool_id in an upcoming version
-  */
+   */
   nextPoolNumber: bigint;
   params: Params;
 }
@@ -71,7 +71,7 @@ export interface GenesisStateAmino {
   pools?: AnyAmino[];
   /**
    * will be renamed to next_pool_id in an upcoming version
-  */
+   */
   next_pool_number?: string;
   params?: ParamsAmino;
 }

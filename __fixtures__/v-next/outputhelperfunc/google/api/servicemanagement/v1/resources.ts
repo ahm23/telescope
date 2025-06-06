@@ -273,7 +273,7 @@ export interface ManagedService {
   serviceName: string;
   /**
    * ID of the project that produces and owns this service.
-  */
+   */
   producerProjectId: string;
 }
 export interface ManagedServiceProtoMsg {
@@ -295,7 +295,7 @@ export interface ManagedServiceAmino {
   service_name?: string;
   /**
    * ID of the project that produces and owns this service.
-  */
+   */
   producer_project_id?: string;
 }
 export interface ManagedServiceAminoMsg {
@@ -327,15 +327,15 @@ export interface OperationMetadata {
   resourceNames: string[];
   /**
    * Detailed status information for each step. The order is undetermined.
-  */
+   */
   steps: OperationMetadata_Step[];
   /**
    * Percentage of completion of this operation, ranging from 0 to 100.
-  */
+   */
   progressPercentage: number;
   /**
    * The start time of the operation.
-  */
+   */
   startTime?: Date;
 }
 export interface OperationMetadataProtoMsg {
@@ -356,15 +356,15 @@ export interface OperationMetadataAmino {
   resource_names?: string[];
   /**
    * Detailed status information for each step. The order is undetermined.
-  */
+   */
   steps?: OperationMetadata_StepAmino[];
   /**
    * Percentage of completion of this operation, ranging from 0 to 100.
-  */
+   */
   progress_percentage?: number;
   /**
    * The start time of the operation.
-  */
+   */
   start_time?: string;
 }
 export interface OperationMetadataAminoMsg {
@@ -392,11 +392,11 @@ export interface OperationMetadataSDKType {
 export interface OperationMetadata_Step {
   /**
    * The short description of the step.
-  */
+   */
   description: string;
   /**
    * The status code.
-  */
+   */
   status: OperationMetadata_Status;
 }
 export interface OperationMetadata_StepProtoMsg {
@@ -412,11 +412,11 @@ export interface OperationMetadata_StepProtoMsg {
 export interface OperationMetadata_StepAmino {
   /**
    * The short description of the step.
-  */
+   */
   description?: string;
   /**
    * The status code.
-  */
+   */
   status?: OperationMetadata_Status;
 }
 export interface OperationMetadata_StepAminoMsg {
@@ -442,15 +442,15 @@ export interface OperationMetadata_StepSDKType {
 export interface Diagnostic {
   /**
    * File name and line number of the error or warning.
-  */
+   */
   location: string;
   /**
    * The kind of diagnostic information provided.
-  */
+   */
   kind: Diagnostic_Kind;
   /**
    * Message describing the error or warning.
-  */
+   */
   message: string;
 }
 export interface DiagnosticProtoMsg {
@@ -466,15 +466,15 @@ export interface DiagnosticProtoMsg {
 export interface DiagnosticAmino {
   /**
    * File name and line number of the error or warning.
-  */
+   */
   location?: string;
   /**
    * The kind of diagnostic information provided.
-  */
+   */
   kind?: Diagnostic_Kind;
   /**
    * Message describing the error or warning.
-  */
+   */
   message?: string;
 }
 export interface DiagnosticAminoMsg {
@@ -560,15 +560,15 @@ export interface ConfigSourceSDKType {
 export interface ConfigFile {
   /**
    * The file name of the configuration file (full or relative path).
-  */
+   */
   filePath: string;
   /**
    * The bytes that constitute the file.
-  */
+   */
   fileContents: Uint8Array;
   /**
    * The type of configuration file this represents.
-  */
+   */
   fileType: ConfigFile_FileType;
 }
 export interface ConfigFileProtoMsg {
@@ -584,15 +584,15 @@ export interface ConfigFileProtoMsg {
 export interface ConfigFileAmino {
   /**
    * The file name of the configuration file (full or relative path).
-  */
+   */
   file_path?: string;
   /**
    * The bytes that constitute the file.
-  */
+   */
   file_contents?: string;
   /**
    * The type of configuration file this represents.
-  */
+   */
   file_type?: ConfigFile_FileType;
 }
 export interface ConfigFileAminoMsg {
@@ -733,11 +733,11 @@ export interface Rollout {
   rolloutId: string;
   /**
    * Creation time of the rollout. Readonly.
-  */
+   */
   createTime?: Date;
   /**
    * The user who created the Rollout. Readonly.
-  */
+   */
   createdBy: string;
   /**
    * The status of this rollout. Readonly. In case of a failed rollout,
@@ -757,7 +757,7 @@ export interface Rollout {
   deleteServiceStrategy?: Rollout_DeleteServiceStrategy;
   /**
    * The name of the service associated with this Rollout.
-  */
+   */
   serviceName: string;
 }
 export interface RolloutProtoMsg {
@@ -786,11 +786,11 @@ export interface RolloutAmino {
   rollout_id?: string;
   /**
    * Creation time of the rollout. Readonly.
-  */
+   */
   create_time?: string;
   /**
    * The user who created the Rollout. Readonly.
-  */
+   */
   created_by?: string;
   /**
    * The status of this rollout. Readonly. In case of a failed rollout,
@@ -810,7 +810,7 @@ export interface RolloutAmino {
   delete_service_strategy?: Rollout_DeleteServiceStrategyAmino;
   /**
    * The name of the service associated with this Rollout.
-  */
+   */
   service_name?: string;
 }
 export interface RolloutAminoMsg {

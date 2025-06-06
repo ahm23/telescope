@@ -15,7 +15,7 @@ export const protobufPackage = "evmos.fees.v1";
 export interface QueryDevFeeInfosRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryDevFeeInfosRequestProtoMsg {
@@ -32,7 +32,7 @@ export interface QueryDevFeeInfosRequestProtoMsg {
 export interface QueryDevFeeInfosRequestAmino {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryDevFeeInfosRequestAminoMsg {
@@ -60,7 +60,7 @@ export interface QueryDevFeeInfosResponse {
   fees: DevFeeInfo[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryDevFeeInfosResponseProtoMsg {
@@ -78,7 +78,7 @@ export interface QueryDevFeeInfosResponseAmino {
   fees?: DevFeeInfoAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryDevFeeInfosResponseAminoMsg {
@@ -106,7 +106,7 @@ export interface QueryDevFeeInfosResponseSDKType {
 export interface QueryDevFeeInfoRequest {
   /**
    * contract identifier is the hex contract address of a contract
-  */
+   */
   contractAddress: string;
 }
 export interface QueryDevFeeInfoRequestProtoMsg {
@@ -123,7 +123,7 @@ export interface QueryDevFeeInfoRequestProtoMsg {
 export interface QueryDevFeeInfoRequestAmino {
   /**
    * contract identifier is the hex contract address of a contract
-  */
+   */
   contract_address?: string;
 }
 export interface QueryDevFeeInfoRequestAminoMsg {
@@ -255,11 +255,11 @@ export interface QueryParamsResponseSDKType {
 export interface QueryDevFeeInfosPerDeployerRequest {
   /**
    * deployer bech32 address
-  */
+   */
   deployerAddress: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryDevFeeInfosPerDeployerRequestProtoMsg {
@@ -276,11 +276,11 @@ export interface QueryDevFeeInfosPerDeployerRequestProtoMsg {
 export interface QueryDevFeeInfosPerDeployerRequestAmino {
   /**
    * deployer bech32 address
-  */
+   */
   deployer_address?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryDevFeeInfosPerDeployerRequestAminoMsg {
@@ -309,7 +309,7 @@ export interface QueryDevFeeInfosPerDeployerResponse {
   fees: DevFeeInfo[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryDevFeeInfosPerDeployerResponseProtoMsg {
@@ -327,7 +327,7 @@ export interface QueryDevFeeInfosPerDeployerResponseAmino {
   fees?: DevFeeInfoAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryDevFeeInfosPerDeployerResponseAminoMsg {

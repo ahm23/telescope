@@ -12,11 +12,11 @@ export const protobufPackage = "cosmos.capability.v1beta1";
 export interface GenesisOwners {
   /**
    * index is the index of the capability owner.
-  */
+   */
   index: bigint;
   /**
    * index_owners are the owners at the given index.
-  */
+   */
   indexOwners: CapabilityOwners;
 }
 export interface GenesisOwnersProtoMsg {
@@ -32,11 +32,11 @@ export interface GenesisOwnersProtoMsg {
 export interface GenesisOwnersAmino {
   /**
    * index is the index of the capability owner.
-  */
+   */
   index?: string;
   /**
    * index_owners are the owners at the given index.
-  */
+   */
   index_owners?: CapabilityOwnersAmino;
 }
 export interface GenesisOwnersAminoMsg {
@@ -62,7 +62,7 @@ export interface GenesisOwnersSDKType {
 export interface GenesisState {
   /**
    * index is the capability global index.
-  */
+   */
   index: bigint;
   /**
    * owners represents a map from index to owners of the capability index
@@ -83,7 +83,7 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * index is the capability global index.
-  */
+   */
   index?: string;
   /**
    * owners represents a map from index to owners of the capability index

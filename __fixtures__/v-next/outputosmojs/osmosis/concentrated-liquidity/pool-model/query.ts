@@ -103,7 +103,7 @@ export interface QueryPositionByIdResponseSDKType {
 export interface QueryPoolsRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryPoolsRequestProtoMsg {
@@ -128,7 +128,7 @@ export interface QueryPoolsResponse {
   pools: Any[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryPoolsResponseProtoMsg {

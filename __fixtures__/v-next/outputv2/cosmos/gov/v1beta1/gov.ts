@@ -411,7 +411,7 @@ export interface Vote {
   option: VoteOption;
   /**
    * Since: cosmos-sdk 0.43
-  */
+   */
   options: WeightedVoteOption[];
 }
 export interface VoteProtoMsg {
@@ -437,7 +437,7 @@ export interface VoteAmino {
   option?: VoteOption;
   /**
    * Since: cosmos-sdk 0.43
-  */
+   */
   options?: WeightedVoteOptionAmino[];
 }
 export interface VoteAminoMsg {
@@ -456,7 +456,7 @@ export interface VoteSDKType {
   voter: string;
   /**
    * @deprecated
-  */
+   */
   option: VoteOption;
   options: WeightedVoteOptionSDKType[];
 }
@@ -469,7 +469,7 @@ export interface VoteSDKType {
 export interface DepositParams {
   /**
    * Minimum deposit for a proposal to enter voting period.
-  */
+   */
   minDeposit: Coin[];
   /**
    * Maximum period for Atom holders to deposit on a proposal. Initial value: 2
@@ -490,7 +490,7 @@ export interface DepositParamsProtoMsg {
 export interface DepositParamsAmino {
   /**
    * Minimum deposit for a proposal to enter voting period.
-  */
+   */
   min_deposit?: CoinAmino[];
   /**
    * Maximum period for Atom holders to deposit on a proposal. Initial value: 2
@@ -521,7 +521,7 @@ export interface DepositParamsSDKType {
 export interface VotingParams {
   /**
    * Length of the voting period.
-  */
+   */
   votingPeriod: Duration;
 }
 export interface VotingParamsProtoMsg {
@@ -537,7 +537,7 @@ export interface VotingParamsProtoMsg {
 export interface VotingParamsAmino {
   /**
    * Length of the voting period.
-  */
+   */
   voting_period?: DurationAmino;
 }
 export interface VotingParamsAminoMsg {
@@ -567,7 +567,7 @@ export interface TallyParams {
   quorum: Uint8Array;
   /**
    * Minimum proportion of Yes votes for proposal to pass. Default value: 0.5.
-  */
+   */
   threshold: Uint8Array;
   /**
    * Minimum value of Veto votes to Total votes ratio for proposal to be
@@ -593,7 +593,7 @@ export interface TallyParamsAmino {
   quorum?: string;
   /**
    * Minimum proportion of Yes votes for proposal to pass. Default value: 0.5.
-  */
+   */
   threshold?: string;
   /**
    * Minimum value of Veto votes to Total votes ratio for proposal to be

@@ -29,7 +29,7 @@ export interface ParamsSDKType {}
 export interface GenesisState {
   /**
    * params is the container of cosmwasmpool parameters.
-  */
+   */
   params: Params;
 }
 export interface GenesisStateProtoMsg {

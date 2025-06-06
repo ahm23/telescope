@@ -202,7 +202,7 @@ export function checkError_CodeToJSON(object: CheckError_Code): string {
 export interface CheckError {
   /**
    * The error code.
-  */
+   */
   code: CheckError_Code;
   /**
    * Subject to whom this error applies. See the specific code enum for more
@@ -215,7 +215,7 @@ export interface CheckError {
   subject: string;
   /**
    * Free-form text providing details on the error cause of the error.
-  */
+   */
   detail: string;
   /**
    * Contains public information about the check error. If available,
@@ -238,7 +238,7 @@ export interface CheckErrorProtoMsg {
 export interface CheckErrorAmino {
   /**
    * The error code.
-  */
+   */
   code?: CheckError_Code;
   /**
    * Subject to whom this error applies. See the specific code enum for more
@@ -251,7 +251,7 @@ export interface CheckErrorAmino {
   subject?: string;
   /**
    * Free-form text providing details on the error cause of the error.
-  */
+   */
   detail?: string;
   /**
    * Contains public information about the check error. If available,

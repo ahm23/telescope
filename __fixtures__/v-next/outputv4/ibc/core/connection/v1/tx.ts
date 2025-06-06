@@ -83,11 +83,11 @@ export interface MsgConnectionOpenTry {
   proofInit: Uint8Array;
   /**
    * proof of client state included in message
-  */
+   */
   proofClient: Uint8Array;
   /**
    * proof of client consensus state
-  */
+   */
   proofConsensus: Uint8Array;
   consensusHeight: Height;
   signer: string;
@@ -155,11 +155,11 @@ export interface MsgConnectionOpenAck {
   proofTry: Uint8Array;
   /**
    * proof of client state included in message
-  */
+   */
   proofClient: Uint8Array;
   /**
    * proof of client consensus state
-  */
+   */
   proofConsensus: Uint8Array;
   consensusHeight: Height;
   signer: string;
@@ -216,7 +216,7 @@ export interface MsgConnectionOpenConfirm {
   connectionId: string;
   /**
    * proof for the change of the connection state on Chain A: `INIT -> OPEN`
-  */
+   */
   proofAck: Uint8Array;
   proofHeight: Height;
   signer: string;

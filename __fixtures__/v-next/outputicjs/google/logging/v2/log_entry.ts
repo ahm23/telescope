@@ -86,7 +86,7 @@ export interface LogEntry {
   protoPayload?: Any;
   /**
    * The log entry payload, represented as a Unicode string (UTF-8).
-  */
+   */
   textPayload?: string;
   /**
    * The log entry payload, represented as a structure that is
@@ -109,11 +109,11 @@ export interface LogEntry {
   timestamp?: Date;
   /**
    * Output only. The time the log entry was received by Logging.
-  */
+   */
   receiveTimestamp?: Date;
   /**
    * Optional. The severity of the log entry. The default value is `LogSeverity.DEFAULT`.
-  */
+   */
   severity: LogSeverity;
   /**
    * Optional. A unique identifier for the log entry. If you provide a value, then
@@ -185,7 +185,7 @@ export interface LogEntry {
   traceSampled: boolean;
   /**
    * Optional. Source code location information associated with the log entry, if any.
-  */
+   */
   sourceLocation?: LogEntrySourceLocation;
   /**
    * Optional. Information indicating this LogEntry is part of a sequence of multiple log
@@ -251,7 +251,7 @@ export interface LogEntryAmino {
   proto_payload?: AnyAmino;
   /**
    * The log entry payload, represented as a Unicode string (UTF-8).
-  */
+   */
   text_payload?: string;
   /**
    * The log entry payload, represented as a structure that is
@@ -274,11 +274,11 @@ export interface LogEntryAmino {
   timestamp?: string;
   /**
    * Output only. The time the log entry was received by Logging.
-  */
+   */
   receive_timestamp?: string;
   /**
    * Optional. The severity of the log entry. The default value is `LogSeverity.DEFAULT`.
-  */
+   */
   severity: LogSeverity;
   /**
    * Optional. A unique identifier for the log entry. If you provide a value, then
@@ -350,7 +350,7 @@ export interface LogEntryAmino {
   trace_sampled: boolean;
   /**
    * Optional. Source code location information associated with the log entry, if any.
-  */
+   */
   source_location?: LogEntrySourceLocationAmino;
   /**
    * Optional. Information indicating this LogEntry is part of a sequence of multiple log
@@ -383,11 +383,11 @@ export interface LogEntryOperation {
   producer: string;
   /**
    * Optional. Set this to True if this is the first log entry in the operation.
-  */
+   */
   first: boolean;
   /**
    * Optional. Set this to True if this is the last log entry in the operation.
-  */
+   */
   last: boolean;
 }
 export interface LogEntryOperationProtoMsg {
@@ -415,11 +415,11 @@ export interface LogEntryOperationAmino {
   producer: string;
   /**
    * Optional. Set this to True if this is the first log entry in the operation.
-  */
+   */
   first: boolean;
   /**
    * Optional. Set this to True if this is the last log entry in the operation.
-  */
+   */
   last: boolean;
 }
 export interface LogEntryOperationAminoMsg {
@@ -513,7 +513,7 @@ export interface LogSplit {
   index: number;
   /**
    * The total number of log entries that the original LogEntry was split into.
-  */
+   */
   totalSplits: number;
 }
 export interface LogSplitProtoMsg {
@@ -543,7 +543,7 @@ export interface LogSplitAmino {
   index: number;
   /**
    * The total number of log entries that the original LogEntry was split into.
-  */
+   */
   total_splits: number;
 }
 export interface LogSplitAminoMsg {

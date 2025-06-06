@@ -15,7 +15,7 @@ export const protobufPackage = "evmos.incentives.v1";
 export interface QueryIncentivesRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryIncentivesRequestProtoMsg {
@@ -32,7 +32,7 @@ export interface QueryIncentivesRequestProtoMsg {
 export interface QueryIncentivesRequestAmino {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 /**
@@ -56,7 +56,7 @@ export interface QueryIncentivesResponse {
   incentives: Incentive[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryIncentivesResponseProtoMsg {
@@ -74,7 +74,7 @@ export interface QueryIncentivesResponseAmino {
   incentives?: IncentiveAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 /**
@@ -97,7 +97,7 @@ export interface QueryIncentivesResponseSDKType {
 export interface QueryIncentiveRequest {
   /**
    * contract identifier is the hex contract address of a contract
-  */
+   */
   contract: string;
 }
 export interface QueryIncentiveRequestProtoMsg {
@@ -113,7 +113,7 @@ export interface QueryIncentiveRequestProtoMsg {
 export interface QueryIncentiveRequestAmino {
   /**
    * contract identifier is the hex contract address of a contract
-  */
+   */
   contract?: string;
 }
 /**
@@ -169,11 +169,11 @@ export interface QueryIncentiveResponseSDKType {
 export interface QueryGasMetersRequest {
   /**
    * contract is the hex contract address of a incentivized smart contract
-  */
+   */
   contract: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryGasMetersRequestProtoMsg {
@@ -190,11 +190,11 @@ export interface QueryGasMetersRequestProtoMsg {
 export interface QueryGasMetersRequestAmino {
   /**
    * contract is the hex contract address of a incentivized smart contract
-  */
+   */
   contract?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 /**
@@ -219,7 +219,7 @@ export interface QueryGasMetersResponse {
   gasMeters: GasMeter[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryGasMetersResponseProtoMsg {
@@ -237,7 +237,7 @@ export interface QueryGasMetersResponseAmino {
   gas_meters?: GasMeterAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 /**
@@ -260,11 +260,11 @@ export interface QueryGasMetersResponseSDKType {
 export interface QueryGasMeterRequest {
   /**
    * contract identifier is the hex contract address of a contract
-  */
+   */
   contract: string;
   /**
    * participant identifier is the hex address of a user
-  */
+   */
   participant: string;
 }
 export interface QueryGasMeterRequestProtoMsg {
@@ -280,11 +280,11 @@ export interface QueryGasMeterRequestProtoMsg {
 export interface QueryGasMeterRequestAmino {
   /**
    * contract identifier is the hex contract address of a contract
-  */
+   */
   contract?: string;
   /**
    * participant identifier is the hex address of a user
-  */
+   */
   participant?: string;
 }
 /**
@@ -341,7 +341,7 @@ export interface QueryGasMeterResponseSDKType {
 export interface QueryAllocationMetersRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryAllocationMetersRequestProtoMsg {
@@ -358,7 +358,7 @@ export interface QueryAllocationMetersRequestProtoMsg {
 export interface QueryAllocationMetersRequestAmino {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 /**
@@ -382,7 +382,7 @@ export interface QueryAllocationMetersResponse {
   allocationMeters: DecCoin[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryAllocationMetersResponseProtoMsg {
@@ -400,7 +400,7 @@ export interface QueryAllocationMetersResponseAmino {
   allocation_meters?: DecCoinAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 /**
@@ -424,7 +424,7 @@ export interface QueryAllocationMetersResponseSDKType {
 export interface QueryAllocationMeterRequest {
   /**
    * denom is the coin denom to query an allocation meter for.
-  */
+   */
   denom: string;
 }
 export interface QueryAllocationMeterRequestProtoMsg {
@@ -441,7 +441,7 @@ export interface QueryAllocationMeterRequestProtoMsg {
 export interface QueryAllocationMeterRequestAmino {
   /**
    * denom is the coin denom to query an allocation meter for.
-  */
+   */
   denom?: string;
 }
 /**

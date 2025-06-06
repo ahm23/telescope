@@ -12,7 +12,7 @@ export const protobufPackage = "ibc.lightclients.localhost.v2";
 export interface ClientState {
   /**
    * the latest block height
-  */
+   */
   latestHeight: Height;
 }
 export interface ClientStateProtoMsg {

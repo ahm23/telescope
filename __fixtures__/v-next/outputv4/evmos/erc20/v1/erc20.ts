@@ -54,19 +54,19 @@ export function ownerToJSON(object: Owner): string {
 export interface TokenPair {
   /**
    * address of ERC20 contract token
-  */
+   */
   erc20Address: string;
   /**
    * cosmos base denomination to be mapped to
-  */
+   */
   denom: string;
   /**
    * shows token mapping enable status
-  */
+   */
   enabled: boolean;
   /**
    * ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address)
-  */
+   */
   contractOwner: Owner;
 }
 export interface TokenPairProtoMsg {
@@ -96,15 +96,15 @@ export interface TokenPairSDKType {
 export interface RegisterCoinProposal {
   /**
    * title of the proposal
-  */
+   */
   title: string;
   /**
    * proposal description
-  */
+   */
   description: string;
   /**
    * metadata of the native Cosmos coin
-  */
+   */
   metadata: Metadata;
 }
 export interface RegisterCoinProposalProtoMsg {
@@ -133,15 +133,15 @@ export interface RegisterCoinProposalSDKType {
 export interface RegisterERC20Proposal {
   /**
    * title of the proposal
-  */
+   */
   title: string;
   /**
    * proposal description
-  */
+   */
   description: string;
   /**
    * contract address of ERC20 token
-  */
+   */
   erc20address: string;
 }
 export interface RegisterERC20ProposalProtoMsg {
@@ -170,11 +170,11 @@ export interface RegisterERC20ProposalSDKType {
 export interface ToggleTokenConversionProposal {
   /**
    * title of the proposal
-  */
+   */
   title: string;
   /**
    * proposal description
-  */
+   */
   description: string;
   /**
    * token identifier can be either the hex contract address of the ERC20 or the

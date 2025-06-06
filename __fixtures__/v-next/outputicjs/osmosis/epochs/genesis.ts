@@ -12,7 +12,7 @@ import { toTimestamp, fromTimestamp, DeepPartial } from "../../helpers";
 export interface EpochInfo {
   /**
    * identifier is a unique reference to this particular timer.
-  */
+   */
   identifier: string;
   /**
    * start_time is the time at which the timer first ever ticks.
@@ -79,7 +79,7 @@ export interface EpochInfoProtoMsg {
 export interface EpochInfoAmino {
   /**
    * identifier is a unique reference to this particular timer.
-  */
+   */
   identifier: string;
   /**
    * start_time is the time at which the timer first ever ticks.

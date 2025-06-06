@@ -23,7 +23,7 @@ export interface MsgCreateGauge {
   isPerpetual: boolean;
   /**
    * owner is the address of gauge creator
-  */
+   */
   owner: string;
   /**
    * distribute_to show which lock the gauge should distribute to by time
@@ -32,11 +32,11 @@ export interface MsgCreateGauge {
   distributeTo: QueryCondition;
   /**
    * coins are coin(s) to be distributed by the gauge
-  */
+   */
   coins: Coin[];
   /**
    * start_time is the distribution start time
-  */
+   */
   startTime: Date;
   /**
    * num_epochs_paid_over is the number of epochs distribution will be completed
@@ -65,7 +65,7 @@ export interface MsgCreateGaugeAmino {
   is_perpetual?: boolean;
   /**
    * owner is the address of gauge creator
-  */
+   */
   owner?: string;
   /**
    * distribute_to show which lock the gauge should distribute to by time
@@ -74,11 +74,11 @@ export interface MsgCreateGaugeAmino {
   distribute_to?: QueryConditionAmino;
   /**
    * coins are coin(s) to be distributed by the gauge
-  */
+   */
   coins?: CoinAmino[];
   /**
    * start_time is the distribution start time
-  */
+   */
   start_time?: string;
   /**
    * num_epochs_paid_over is the number of epochs distribution will be completed
@@ -139,15 +139,15 @@ export interface MsgCreateGaugeResponseSDKType {}
 export interface MsgAddToGauge {
   /**
    * owner is the gauge owner's address
-  */
+   */
   owner: string;
   /**
    * gauge_id is the ID of gauge that rewards are getting added to
-  */
+   */
   gaugeId: bigint;
   /**
    * rewards are the coin(s) to add to gauge
-  */
+   */
   rewards: Coin[];
 }
 export interface MsgAddToGaugeProtoMsg {
@@ -163,15 +163,15 @@ export interface MsgAddToGaugeProtoMsg {
 export interface MsgAddToGaugeAmino {
   /**
    * owner is the gauge owner's address
-  */
+   */
   owner?: string;
   /**
    * gauge_id is the ID of gauge that rewards are getting added to
-  */
+   */
   gauge_id?: string;
   /**
    * rewards are the coin(s) to add to gauge
-  */
+   */
   rewards?: CoinAmino[];
 }
 export interface MsgAddToGaugeAminoMsg {

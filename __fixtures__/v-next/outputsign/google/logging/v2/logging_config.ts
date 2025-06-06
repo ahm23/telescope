@@ -194,7 +194,7 @@ export interface LogBucket {
   name: string;
   /**
    * Describes this bucket.
-  */
+   */
   description: string;
   /**
    * Output only. The creation timestamp of the bucket. This is not set for any of the
@@ -203,7 +203,7 @@ export interface LogBucket {
   createTime?: Date;
   /**
    * Output only. The last update timestamp of the bucket.
-  */
+   */
   updateTime?: Date;
   /**
    * Logs will be retained by default for this amount of time, after which they
@@ -221,7 +221,7 @@ export interface LogBucket {
   locked: boolean;
   /**
    * Output only. The bucket lifecycle state.
-  */
+   */
   lifecycleState: LifecycleState;
   /**
    * Log entry field paths that are denied access in this bucket.
@@ -271,7 +271,7 @@ export interface LogBucketAmino {
   name?: string;
   /**
    * Describes this bucket.
-  */
+   */
   description?: string;
   /**
    * Output only. The creation timestamp of the bucket. This is not set for any of the
@@ -280,7 +280,7 @@ export interface LogBucketAmino {
   create_time?: string;
   /**
    * Output only. The last update timestamp of the bucket.
-  */
+   */
   update_time?: string;
   /**
    * Logs will be retained by default for this amount of time, after which they
@@ -298,7 +298,7 @@ export interface LogBucketAmino {
   locked?: boolean;
   /**
    * Output only. The bucket lifecycle state.
-  */
+   */
   lifecycle_state?: LifecycleState;
   /**
    * Log entry field paths that are denied access in this bucket.
@@ -357,15 +357,15 @@ export interface LogView {
   name: string;
   /**
    * Describes this view.
-  */
+   */
   description: string;
   /**
    * Output only. The creation timestamp of the view.
-  */
+   */
   createTime?: Date;
   /**
    * Output only. The last update timestamp of the view.
-  */
+   */
   updateTime?: Date;
   /**
    * Filter that restricts which log entries in a bucket are visible in this
@@ -406,15 +406,15 @@ export interface LogViewAmino {
   name?: string;
   /**
    * Describes this view.
-  */
+   */
   description?: string;
   /**
    * Output only. The creation timestamp of the view.
-  */
+   */
   create_time?: string;
   /**
    * Output only. The last update timestamp of the view.
-  */
+   */
   update_time?: string;
   /**
    * Filter that restricts which log entries in a bucket are visible in this
@@ -561,7 +561,7 @@ export interface LogSink {
   includeChildren: boolean;
   /**
    * Optional. Options that affect sinks exporting data to BigQuery.
-  */
+   */
   bigqueryOptions?: BigQueryOptions;
   /**
    * Output only. The creation timestamp of the sink.
@@ -690,7 +690,7 @@ export interface LogSinkAmino {
   include_children?: boolean;
   /**
    * Optional. Options that affect sinks exporting data to BigQuery.
-  */
+   */
   bigquery_options?: BigQueryOptionsAmino;
   /**
    * Output only. The creation timestamp of the sink.
@@ -728,7 +728,7 @@ export interface LogSinkSDKType {
   exclusions: LogExclusionSDKType[];
   /**
    * @deprecated
-  */
+   */
   output_version_format: LogSink_VersionFormat;
   writer_identity: string;
   include_children: boolean;
@@ -908,7 +908,7 @@ export interface ListBucketsRequestSDKType {
 export interface ListBucketsResponse {
   /**
    * A list of buckets.
-  */
+   */
   buckets: LogBucket[];
   /**
    * If there might be more results than appear in this response, then
@@ -930,7 +930,7 @@ export interface ListBucketsResponseProtoMsg {
 export interface ListBucketsResponseAmino {
   /**
    * A list of buckets.
-  */
+   */
   buckets?: LogBucketAmino[];
   /**
    * If there might be more results than appear in this response, then
@@ -1054,7 +1054,7 @@ export interface UpdateBucketRequest {
   name: string;
   /**
    * Required. The updated bucket.
-  */
+   */
   bucket?: LogBucket;
   /**
    * Required. Field mask that specifies the fields in `bucket` that need an update. A
@@ -1094,7 +1094,7 @@ export interface UpdateBucketRequestAmino {
   name?: string;
   /**
    * Required. The updated bucket.
-  */
+   */
   bucket?: LogBucketAmino;
   /**
    * Required. Field mask that specifies the fields in `bucket` that need an update. A
@@ -1384,7 +1384,7 @@ export interface ListViewsRequestSDKType {
 export interface ListViewsResponse {
   /**
    * A list of views.
-  */
+   */
   views: LogView[];
   /**
    * If there might be more results than appear in this response, then
@@ -1406,7 +1406,7 @@ export interface ListViewsResponseProtoMsg {
 export interface ListViewsResponseAmino {
   /**
    * A list of views.
-  */
+   */
   views?: LogViewAmino[];
   /**
    * If there might be more results than appear in this response, then
@@ -1448,11 +1448,11 @@ export interface CreateViewRequest {
   parent: string;
   /**
    * Required. The id to use for this view.
-  */
+   */
   viewId: string;
   /**
    * Required. The new view.
-  */
+   */
   view?: LogView;
 }
 export interface CreateViewRequestProtoMsg {
@@ -1478,11 +1478,11 @@ export interface CreateViewRequestAmino {
   parent?: string;
   /**
    * Required. The id to use for this view.
-  */
+   */
   view_id?: string;
   /**
    * Required. The new view.
-  */
+   */
   view?: LogViewAmino;
 }
 export interface CreateViewRequestAminoMsg {
@@ -1519,7 +1519,7 @@ export interface UpdateViewRequest {
   name: string;
   /**
    * Required. The updated view.
-  */
+   */
   view?: LogView;
   /**
    * Optional. Field mask that specifies the fields in `view` that need
@@ -1556,7 +1556,7 @@ export interface UpdateViewRequestAmino {
   name?: string;
   /**
    * Required. The updated view.
-  */
+   */
   view?: LogViewAmino;
   /**
    * Optional. Field mask that specifies the fields in `view` that need
@@ -1779,7 +1779,7 @@ export interface ListSinksRequestSDKType {
 export interface ListSinksResponse {
   /**
    * A list of sinks.
-  */
+   */
   sinks: LogSink[];
   /**
    * If there might be more results than appear in this response, then
@@ -1801,7 +1801,7 @@ export interface ListSinksResponseProtoMsg {
 export interface ListSinksResponseAmino {
   /**
    * A list of sinks.
-  */
+   */
   sinks?: LogSinkAmino[];
   /**
    * If there might be more results than appear in this response, then
@@ -2205,7 +2205,7 @@ export interface LogExclusion {
   name: string;
   /**
    * Optional. A description of this exclusion.
-  */
+   */
   description: string;
   /**
    * Required. An [advanced logs
@@ -2264,7 +2264,7 @@ export interface LogExclusionAmino {
   name?: string;
   /**
    * Optional. A description of this exclusion.
-  */
+   */
   description?: string;
   /**
    * Required. An [advanced logs
@@ -2409,7 +2409,7 @@ export interface ListExclusionsRequestSDKType {
 export interface ListExclusionsResponse {
   /**
    * A list of exclusions.
-  */
+   */
   exclusions: LogExclusion[];
   /**
    * If there might be more results than appear in this response, then
@@ -2431,7 +2431,7 @@ export interface ListExclusionsResponseProtoMsg {
 export interface ListExclusionsResponseAmino {
   /**
    * A list of exclusions.
-  */
+   */
   exclusions?: LogExclusionAmino[];
   /**
    * If there might be more results than appear in this response, then
@@ -2957,7 +2957,7 @@ export interface UpdateCmekSettingsRequestSDKType {
 export interface CmekSettings {
   /**
    * Output only. The resource name of the CMEK settings.
-  */
+   */
   name: string;
   /**
    * The resource name for the configured Cloud KMS key.
@@ -3028,7 +3028,7 @@ export interface CmekSettingsProtoMsg {
 export interface CmekSettingsAmino {
   /**
    * Output only. The resource name of the CMEK settings.
-  */
+   */
   name?: string;
   /**
    * The resource name for the configured Cloud KMS key.
@@ -3309,7 +3309,7 @@ export interface UpdateSettingsRequestSDKType {
 export interface Settings {
   /**
    * Output only. The resource name of the settings.
-  */
+   */
   name: string;
   /**
    * Optional. The resource name for the configured Cloud KMS key.
@@ -3384,7 +3384,7 @@ export interface SettingsProtoMsg {
 export interface SettingsAmino {
   /**
    * Output only. The resource name of the settings.
-  */
+   */
   name?: string;
   /**
    * Optional. The resource name for the configured Cloud KMS key.
@@ -3485,7 +3485,7 @@ export interface CopyLogEntriesRequest {
   filter: string;
   /**
    * Required. Destination to which to copy log entries.
-  */
+   */
   destination: string;
 }
 export interface CopyLogEntriesRequestProtoMsg {
@@ -3514,7 +3514,7 @@ export interface CopyLogEntriesRequestAmino {
   filter?: string;
   /**
    * Required. Destination to which to copy log entries.
-  */
+   */
   destination?: string;
 }
 export interface CopyLogEntriesRequestAminoMsg {
@@ -3541,27 +3541,27 @@ export interface CopyLogEntriesRequestSDKType {
 export interface CopyLogEntriesMetadata {
   /**
    * The create time of an operation.
-  */
+   */
   startTime?: Date;
   /**
    * The end time of an operation.
-  */
+   */
   endTime?: Date;
   /**
    * State of an operation.
-  */
+   */
   state: OperationState;
   /**
    * Identifies whether the user has requested cancellation of the operation.
-  */
+   */
   cancellationRequested: boolean;
   /**
    * CopyLogEntries RPC request.
-  */
+   */
   request?: CopyLogEntriesRequest;
   /**
    * Estimated progress of the operation (0 - 100%).
-  */
+   */
   progress: number;
   /**
    * The IAM identity of a service account that must be granted access to the
@@ -3587,27 +3587,27 @@ export interface CopyLogEntriesMetadataProtoMsg {
 export interface CopyLogEntriesMetadataAmino {
   /**
    * The create time of an operation.
-  */
+   */
   start_time?: string;
   /**
    * The end time of an operation.
-  */
+   */
   end_time?: string;
   /**
    * State of an operation.
-  */
+   */
   state?: OperationState;
   /**
    * Identifies whether the user has requested cancellation of the operation.
-  */
+   */
   cancellation_requested?: boolean;
   /**
    * CopyLogEntries RPC request.
-  */
+   */
   request?: CopyLogEntriesRequestAmino;
   /**
    * Estimated progress of the operation (0 - 100%).
-  */
+   */
   progress?: number;
   /**
    * The IAM identity of a service account that must be granted access to the
@@ -3648,7 +3648,7 @@ export interface CopyLogEntriesMetadataSDKType {
 export interface CopyLogEntriesResponse {
   /**
    * Number of log entries copied.
-  */
+   */
   logEntriesCopiedCount: bigint;
 }
 export interface CopyLogEntriesResponseProtoMsg {
@@ -3664,7 +3664,7 @@ export interface CopyLogEntriesResponseProtoMsg {
 export interface CopyLogEntriesResponseAmino {
   /**
    * Number of log entries copied.
-  */
+   */
   log_entries_copied_count?: string;
 }
 export interface CopyLogEntriesResponseAminoMsg {

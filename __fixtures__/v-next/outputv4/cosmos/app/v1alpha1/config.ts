@@ -18,7 +18,7 @@ export const protobufPackage = "cosmos.app.v1alpha1";
 export interface Config {
   /**
    * modules are the module configurations for the app.
-  */
+   */
   modules: ModuleConfig[];
 }
 export interface ConfigProtoMsg {

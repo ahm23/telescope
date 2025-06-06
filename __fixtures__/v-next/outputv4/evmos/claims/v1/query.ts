@@ -36,7 +36,7 @@ export interface QueryTotalUnclaimedRequestSDKType {}
 export interface QueryTotalUnclaimedResponse {
   /**
    * coins defines the unclaimed coins
-  */
+   */
   coins: Coin[];
 }
 export interface QueryTotalUnclaimedResponseProtoMsg {
@@ -80,7 +80,7 @@ export interface QueryParamsRequestSDKType {}
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -106,7 +106,7 @@ export interface QueryParamsResponseSDKType {
 export interface QueryClaimsRecordsRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryClaimsRecordsRequestProtoMsg {
@@ -133,11 +133,11 @@ export interface QueryClaimsRecordsRequestSDKType {
 export interface QueryClaimsRecordsResponse {
   /**
    * claims defines all claims records
-  */
+   */
   claims: ClaimsRecordAddress[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryClaimsRecordsResponseProtoMsg {
@@ -165,7 +165,7 @@ export interface QueryClaimsRecordsResponseSDKType {
 export interface QueryClaimsRecordRequest {
   /**
    * address defines the user to query claims record for
-  */
+   */
   address: string;
 }
 export interface QueryClaimsRecordRequestProtoMsg {
@@ -192,11 +192,11 @@ export interface QueryClaimsRecordRequestSDKType {
 export interface QueryClaimsRecordResponse {
   /**
    * total initial claimable amount for the user
-  */
+   */
   initialClaimableAmount: string;
   /**
    * the claims of the user
-  */
+   */
   claims: Claim[];
 }
 export interface QueryClaimsRecordResponseProtoMsg {

@@ -12,7 +12,7 @@ export const protobufPackage = "osmosis.tokenfactory.v1beta1";
 export interface DenomAuthorityMetadata {
   /**
    * Can be empty for no admin, or a valid osmosis address
-  */
+   */
   admin: string;
 }
 export interface DenomAuthorityMetadataProtoMsg {
@@ -30,7 +30,7 @@ export interface DenomAuthorityMetadataProtoMsg {
 export interface DenomAuthorityMetadataAmino {
   /**
    * Can be empty for no admin, or a valid osmosis address
-  */
+   */
   admin?: string;
 }
 export interface DenomAuthorityMetadataAminoMsg {

@@ -15,7 +15,7 @@ export const protobufPackage = "google.api.expr.v1beta1";
 export interface EvalState {
   /**
    * The unique values referenced in this message.
-  */
+   */
   values: ExprValue[];
   /**
    * An ordered list of results.
@@ -50,11 +50,11 @@ export interface EvalStateSDKType {
 export interface EvalState_Result {
   /**
    * The expression this result is for.
-  */
+   */
   expr?: IdRef;
   /**
    * The index in `values` of the resulting value.
-  */
+   */
   value: number;
 }
 export interface EvalState_ResultProtoMsg {
@@ -80,7 +80,7 @@ export interface EvalState_ResultSDKType {
 export interface ExprValue {
   /**
    * A concrete value.
-  */
+   */
   value?: Value;
   /**
    * The set of errors in the critical path of evalution.
@@ -155,7 +155,7 @@ export interface ExprValueSDKType {
 export interface ErrorSet {
   /**
    * The errors in the set.
-  */
+   */
   errors: Status[];
 }
 export interface ErrorSetProtoMsg {
@@ -184,7 +184,7 @@ export interface ErrorSetSDKType {
 export interface UnknownSet {
   /**
    * The ids of the expressions with unknown values.
-  */
+   */
   exprs: IdRef[];
 }
 export interface UnknownSetProtoMsg {
@@ -211,7 +211,7 @@ export interface UnknownSetSDKType {
 export interface IdRef {
   /**
    * The expression id.
-  */
+   */
   id: number;
 }
 export interface IdRefProtoMsg {

@@ -13,11 +13,11 @@ import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../../helpe
 export interface StoreKVPair {
   /**
    * the store key for the KVStore this pair originates from
-  */
+   */
   storeKey: string;
   /**
    * true indicates a delete operation, false indicates a set operation
-  */
+   */
   delete: boolean;
   key: Uint8Array;
   value: Uint8Array;
@@ -39,11 +39,11 @@ export interface StoreKVPairProtoMsg {
 export interface StoreKVPairAmino {
   /**
    * the store key for the KVStore this pair originates from
-  */
+   */
   store_key: string;
   /**
    * true indicates a delete operation, false indicates a set operation
-  */
+   */
   delete: boolean;
   key: string;
   value: string;

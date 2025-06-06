@@ -80,7 +80,7 @@ export interface Code {
   codeBytes: Uint8Array;
   /**
    * Pinned to wasmvm cache
-  */
+   */
   pinned: boolean;
 }
 export interface CodeProtoMsg {
@@ -99,7 +99,7 @@ export interface CodeAmino {
   code_bytes: string;
   /**
    * Pinned to wasmvm cache
-  */
+   */
   pinned: boolean;
 }
 export interface CodeAminoMsg {

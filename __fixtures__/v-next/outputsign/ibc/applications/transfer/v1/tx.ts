@@ -14,23 +14,23 @@ export const protobufPackage = "ibc.applications.transfer.v1";
 export interface MsgTransfer {
   /**
    * the port on which the packet will be sent
-  */
+   */
   sourcePort: string;
   /**
    * the channel by which the packet will be sent
-  */
+   */
   sourceChannel: string;
   /**
    * the tokens to be transferred
-  */
+   */
   token: Coin;
   /**
    * the sender address
-  */
+   */
   sender: string;
   /**
    * the recipient address on the destination chain
-  */
+   */
   receiver: string;
   /**
    * Timeout height relative to the current block height.
@@ -58,23 +58,23 @@ export interface MsgTransferProtoMsg {
 export interface MsgTransferAmino {
   /**
    * the port on which the packet will be sent
-  */
+   */
   source_port?: string;
   /**
    * the channel by which the packet will be sent
-  */
+   */
   source_channel?: string;
   /**
    * the tokens to be transferred
-  */
+   */
   token?: CoinAmino;
   /**
    * the sender address
-  */
+   */
   sender?: string;
   /**
    * the recipient address on the destination chain
-  */
+   */
   receiver?: string;
   /**
    * Timeout height relative to the current block height.

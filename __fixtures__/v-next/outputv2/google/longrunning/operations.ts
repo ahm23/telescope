@@ -34,7 +34,7 @@ export interface Operation {
   done: boolean;
   /**
    * The error result of the operation in case of failure or cancellation.
-  */
+   */
   error?: Status;
   /**
    * The normal response of the operation in case of success.  If the original
@@ -81,7 +81,7 @@ export interface OperationAmino {
   done?: boolean;
   /**
    * The error result of the operation in case of failure or cancellation.
-  */
+   */
   error?: StatusAmino;
   /**
    * The normal response of the operation in case of success.  If the original
@@ -122,7 +122,7 @@ export interface OperationSDKType {
 export interface GetOperationRequest {
   /**
    * The name of the operation resource.
-  */
+   */
   name: string;
 }
 export interface GetOperationRequestProtoMsg {
@@ -138,7 +138,7 @@ export interface GetOperationRequestProtoMsg {
 export interface GetOperationRequestAmino {
   /**
    * The name of the operation resource.
-  */
+   */
   name?: string;
 }
 export interface GetOperationRequestAminoMsg {
@@ -163,19 +163,19 @@ export interface GetOperationRequestSDKType {
 export interface ListOperationsRequest {
   /**
    * The name of the operation's parent resource.
-  */
+   */
   name: string;
   /**
    * The standard list filter.
-  */
+   */
   filter: string;
   /**
    * The standard list page size.
-  */
+   */
   pageSize: number;
   /**
    * The standard list page token.
-  */
+   */
   pageToken: string;
 }
 export interface ListOperationsRequestProtoMsg {
@@ -191,19 +191,19 @@ export interface ListOperationsRequestProtoMsg {
 export interface ListOperationsRequestAmino {
   /**
    * The name of the operation's parent resource.
-  */
+   */
   name?: string;
   /**
    * The standard list filter.
-  */
+   */
   filter?: string;
   /**
    * The standard list page size.
-  */
+   */
   page_size?: number;
   /**
    * The standard list page token.
-  */
+   */
   page_token?: string;
 }
 export interface ListOperationsRequestAminoMsg {
@@ -231,11 +231,11 @@ export interface ListOperationsRequestSDKType {
 export interface ListOperationsResponse {
   /**
    * A list of operations that matches the specified filter in the request.
-  */
+   */
   operations: Operation[];
   /**
    * The standard List next-page token.
-  */
+   */
   nextPageToken: string;
 }
 export interface ListOperationsResponseProtoMsg {
@@ -251,11 +251,11 @@ export interface ListOperationsResponseProtoMsg {
 export interface ListOperationsResponseAmino {
   /**
    * A list of operations that matches the specified filter in the request.
-  */
+   */
   operations?: OperationAmino[];
   /**
    * The standard List next-page token.
-  */
+   */
   next_page_token?: string;
 }
 export interface ListOperationsResponseAminoMsg {
@@ -281,7 +281,7 @@ export interface ListOperationsResponseSDKType {
 export interface CancelOperationRequest {
   /**
    * The name of the operation resource to be cancelled.
-  */
+   */
   name: string;
 }
 export interface CancelOperationRequestProtoMsg {
@@ -297,7 +297,7 @@ export interface CancelOperationRequestProtoMsg {
 export interface CancelOperationRequestAmino {
   /**
    * The name of the operation resource to be cancelled.
-  */
+   */
   name?: string;
 }
 export interface CancelOperationRequestAminoMsg {
@@ -322,7 +322,7 @@ export interface CancelOperationRequestSDKType {
 export interface DeleteOperationRequest {
   /**
    * The name of the operation resource to be deleted.
-  */
+   */
   name: string;
 }
 export interface DeleteOperationRequestProtoMsg {
@@ -338,7 +338,7 @@ export interface DeleteOperationRequestProtoMsg {
 export interface DeleteOperationRequestAmino {
   /**
    * The name of the operation resource to be deleted.
-  */
+   */
   name?: string;
 }
 export interface DeleteOperationRequestAminoMsg {
@@ -363,7 +363,7 @@ export interface DeleteOperationRequestSDKType {
 export interface WaitOperationRequest {
   /**
    * The name of the operation resource to wait on.
-  */
+   */
   name: string;
   /**
    * The maximum duration to wait before timing out. If left blank, the wait
@@ -385,7 +385,7 @@ export interface WaitOperationRequestProtoMsg {
 export interface WaitOperationRequestAmino {
   /**
    * The name of the operation resource to wait on.
-  */
+   */
   name?: string;
   /**
    * The maximum duration to wait before timing out. If left blank, the wait

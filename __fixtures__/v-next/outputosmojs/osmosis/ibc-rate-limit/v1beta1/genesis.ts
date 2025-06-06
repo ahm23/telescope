@@ -12,7 +12,7 @@ export const protobufPackage = "osmosis.ibcratelimit.v1beta1";
 export interface GenesisState {
   /**
    * params are all the parameters of the module
-  */
+   */
   params: Params;
 }
 export interface GenesisStateProtoMsg {

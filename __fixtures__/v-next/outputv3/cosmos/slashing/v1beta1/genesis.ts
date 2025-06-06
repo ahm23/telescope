@@ -11,7 +11,7 @@ export const protobufPackage = "cosmos.slashing.v1beta1";
 export interface GenesisState {
   /**
    * params defines all the paramaters of related to deposit.
-  */
+   */
   params: Params;
   /**
    * signing_infos represents a map between validator addresses and their
@@ -37,7 +37,7 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * params defines all the paramaters of related to deposit.
-  */
+   */
   params?: ParamsAmino;
   /**
    * signing_infos represents a map between validator addresses and their
@@ -70,11 +70,11 @@ export interface GenesisStateSDKType {
 export interface SigningInfo {
   /**
    * address is the validator address.
-  */
+   */
   address: string;
   /**
    * validator_signing_info represents the signing info of this validator.
-  */
+   */
   validatorSigningInfo: ValidatorSigningInfo;
 }
 export interface SigningInfoProtoMsg {
@@ -90,11 +90,11 @@ export interface SigningInfoProtoMsg {
 export interface SigningInfoAmino {
   /**
    * address is the validator address.
-  */
+   */
   address?: string;
   /**
    * validator_signing_info represents the signing info of this validator.
-  */
+   */
   validator_signing_info?: ValidatorSigningInfoAmino;
 }
 /**
@@ -117,11 +117,11 @@ export interface SigningInfoSDKType {
 export interface ValidatorMissedBlocks {
   /**
    * address is the validator address.
-  */
+   */
   address: string;
   /**
    * missed_blocks is an array of missed blocks by the validator.
-  */
+   */
   missedBlocks: MissedBlock[];
 }
 export interface ValidatorMissedBlocksProtoMsg {
@@ -138,11 +138,11 @@ export interface ValidatorMissedBlocksProtoMsg {
 export interface ValidatorMissedBlocksAmino {
   /**
    * address is the validator address.
-  */
+   */
   address?: string;
   /**
    * missed_blocks is an array of missed blocks by the validator.
-  */
+   */
   missed_blocks?: MissedBlockAmino[];
 }
 /**
@@ -165,11 +165,11 @@ export interface ValidatorMissedBlocksSDKType {
 export interface MissedBlock {
   /**
    * index is the height at which the block was missed.
-  */
+   */
   index: bigint;
   /**
    * missed is the missed status.
-  */
+   */
   missed: boolean;
 }
 export interface MissedBlockProtoMsg {
@@ -185,11 +185,11 @@ export interface MissedBlockProtoMsg {
 export interface MissedBlockAmino {
   /**
    * index is the height at which the block was missed.
-  */
+   */
   index?: string;
   /**
    * missed is the missed status.
-  */
+   */
   missed?: boolean;
 }
 /**

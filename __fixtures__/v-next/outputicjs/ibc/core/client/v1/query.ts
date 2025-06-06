@@ -13,7 +13,7 @@ import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../../helpe
 export interface QueryClientStateRequest {
   /**
    * client state unique identifier
-  */
+   */
   clientId: string;
 }
 export interface QueryClientStateRequestProtoMsg {
@@ -30,7 +30,7 @@ export interface QueryClientStateRequestProtoMsg {
 export interface QueryClientStateRequestAmino {
   /**
    * client state unique identifier
-  */
+   */
   client_id: string;
 }
 export interface QueryClientStateRequestAminoMsg {
@@ -48,15 +48,15 @@ export interface QueryClientStateRequestAminoMsg {
 export interface QueryClientStateResponse {
   /**
    * client state associated with the request identifier
-  */
+   */
   clientState?: Any;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryClientStateResponseProtoMsg {
@@ -74,15 +74,15 @@ export interface QueryClientStateResponseProtoMsg {
 export interface QueryClientStateResponseAmino {
   /**
    * client state associated with the request identifier
-  */
+   */
   client_state?: AnyAmino;
   /**
    * merkle proof of existence
-  */
+   */
   proof: string;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proof_height: HeightAmino;
 }
 export interface QueryClientStateResponseAminoMsg {
@@ -99,7 +99,7 @@ export interface QueryClientStateResponseAminoMsg {
 export interface QueryClientStatesRequest {
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryClientStatesRequestProtoMsg {
@@ -116,7 +116,7 @@ export interface QueryClientStatesRequestProtoMsg {
 export interface QueryClientStatesRequestAmino {
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryClientStatesRequestAminoMsg {
@@ -133,11 +133,11 @@ export interface QueryClientStatesRequestAminoMsg {
 export interface QueryClientStatesResponse {
   /**
    * list of stored ClientStates of the chain.
-  */
+   */
   clientStates: IdentifiedClientState[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryClientStatesResponseProtoMsg {
@@ -154,11 +154,11 @@ export interface QueryClientStatesResponseProtoMsg {
 export interface QueryClientStatesResponseAmino {
   /**
    * list of stored ClientStates of the chain.
-  */
+   */
   client_states: IdentifiedClientStateAmino[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryClientStatesResponseAminoMsg {
@@ -176,15 +176,15 @@ export interface QueryClientStatesResponseAminoMsg {
 export interface QueryConsensusStateRequest {
   /**
    * client identifier
-  */
+   */
   clientId: string;
   /**
    * consensus state revision number
-  */
+   */
   revisionNumber: bigint;
   /**
    * consensus state revision height
-  */
+   */
   revisionHeight: bigint;
   /**
    * latest_height overrrides the height field and queries the latest stored
@@ -207,15 +207,15 @@ export interface QueryConsensusStateRequestProtoMsg {
 export interface QueryConsensusStateRequestAmino {
   /**
    * client identifier
-  */
+   */
   client_id: string;
   /**
    * consensus state revision number
-  */
+   */
   revision_number: string;
   /**
    * consensus state revision height
-  */
+   */
   revision_height: string;
   /**
    * latest_height overrrides the height field and queries the latest stored
@@ -237,15 +237,15 @@ export interface QueryConsensusStateRequestAminoMsg {
 export interface QueryConsensusStateResponse {
   /**
    * consensus state associated with the client identifier at the given height
-  */
+   */
   consensusState?: Any;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryConsensusStateResponseProtoMsg {
@@ -262,15 +262,15 @@ export interface QueryConsensusStateResponseProtoMsg {
 export interface QueryConsensusStateResponseAmino {
   /**
    * consensus state associated with the client identifier at the given height
-  */
+   */
   consensus_state?: AnyAmino;
   /**
    * merkle proof of existence
-  */
+   */
   proof: string;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proof_height: HeightAmino;
 }
 export interface QueryConsensusStateResponseAminoMsg {
@@ -287,11 +287,11 @@ export interface QueryConsensusStateResponseAminoMsg {
 export interface QueryConsensusStatesRequest {
   /**
    * client identifier
-  */
+   */
   clientId: string;
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryConsensusStatesRequestProtoMsg {
@@ -308,11 +308,11 @@ export interface QueryConsensusStatesRequestProtoMsg {
 export interface QueryConsensusStatesRequestAmino {
   /**
    * client identifier
-  */
+   */
   client_id: string;
   /**
    * pagination request
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryConsensusStatesRequestAminoMsg {
@@ -329,11 +329,11 @@ export interface QueryConsensusStatesRequestAminoMsg {
 export interface QueryConsensusStatesResponse {
   /**
    * consensus states associated with the identifier
-  */
+   */
   consensusStates: ConsensusStateWithHeight[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryConsensusStatesResponseProtoMsg {
@@ -350,11 +350,11 @@ export interface QueryConsensusStatesResponseProtoMsg {
 export interface QueryConsensusStatesResponseAmino {
   /**
    * consensus states associated with the identifier
-  */
+   */
   consensus_states: ConsensusStateWithHeightAmino[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryConsensusStatesResponseAminoMsg {
@@ -371,7 +371,7 @@ export interface QueryConsensusStatesResponseAminoMsg {
 export interface QueryClientStatusRequest {
   /**
    * client unique identifier
-  */
+   */
   clientId: string;
 }
 export interface QueryClientStatusRequestProtoMsg {
@@ -388,7 +388,7 @@ export interface QueryClientStatusRequestProtoMsg {
 export interface QueryClientStatusRequestAmino {
   /**
    * client unique identifier
-  */
+   */
   client_id: string;
 }
 export interface QueryClientStatusRequestAminoMsg {
@@ -457,7 +457,7 @@ export interface QueryClientParamsRequestAminoMsg {
 export interface QueryClientParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params?: IbcCoreClientV1Params;
 }
 export interface QueryClientParamsResponseProtoMsg {
@@ -474,7 +474,7 @@ export interface QueryClientParamsResponseProtoMsg {
 export interface QueryClientParamsResponseAmino {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params?: IbcCoreClientV1ParamsAmino;
 }
 export interface QueryClientParamsResponseAminoMsg {
@@ -515,7 +515,7 @@ export interface QueryUpgradedClientStateRequestAminoMsg {
 export interface QueryUpgradedClientStateResponse {
   /**
    * client state associated with the request identifier
-  */
+   */
   upgradedClientState?: Any;
 }
 export interface QueryUpgradedClientStateResponseProtoMsg {
@@ -532,7 +532,7 @@ export interface QueryUpgradedClientStateResponseProtoMsg {
 export interface QueryUpgradedClientStateResponseAmino {
   /**
    * client state associated with the request identifier
-  */
+   */
   upgraded_client_state?: AnyAmino;
 }
 export interface QueryUpgradedClientStateResponseAminoMsg {
@@ -573,7 +573,7 @@ export interface QueryUpgradedConsensusStateRequestAminoMsg {
 export interface QueryUpgradedConsensusStateResponse {
   /**
    * Consensus state associated with the request identifier
-  */
+   */
   upgradedConsensusState?: Any;
 }
 export interface QueryUpgradedConsensusStateResponseProtoMsg {
@@ -590,7 +590,7 @@ export interface QueryUpgradedConsensusStateResponseProtoMsg {
 export interface QueryUpgradedConsensusStateResponseAmino {
   /**
    * Consensus state associated with the request identifier
-  */
+   */
   upgraded_consensus_state?: AnyAmino;
 }
 export interface QueryUpgradedConsensusStateResponseAminoMsg {

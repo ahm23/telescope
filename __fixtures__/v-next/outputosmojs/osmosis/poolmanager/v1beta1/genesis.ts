@@ -35,15 +35,15 @@ export interface ParamsSDKType {
 export interface GenesisState {
   /**
    * the next_pool_id
-  */
+   */
   nextPoolId: bigint;
   /**
    * params is the container of poolmanager parameters.
-  */
+   */
   params: Params;
   /**
    * pool_routes is the container of the mappings from pool id to pool type.
-  */
+   */
   poolRoutes: ModuleRoute[];
 }
 export interface GenesisStateProtoMsg {

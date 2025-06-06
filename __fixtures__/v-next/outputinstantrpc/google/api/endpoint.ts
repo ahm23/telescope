@@ -26,7 +26,7 @@ export const protobufPackage = "google.api";
 export interface Endpoint {
   /**
    * The canonical name of this endpoint.
-  */
+   */
   name: string;
   /**
    * Unimplemented. Dot not use.
@@ -86,7 +86,7 @@ export interface EndpointSDKType {
   name: string;
   /**
    * @deprecated
-  */
+   */
   aliases: string[];
   target: string;
   allow_cors: boolean;

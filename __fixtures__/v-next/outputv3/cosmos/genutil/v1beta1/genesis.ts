@@ -10,7 +10,7 @@ export const protobufPackage = "cosmos.genutil.v1beta1";
 export interface GenesisState {
   /**
    * gen_txs defines the genesis transactions.
-  */
+   */
   genTxs: Uint8Array[];
 }
 export interface GenesisStateProtoMsg {
@@ -26,7 +26,7 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * gen_txs defines the genesis transactions.
-  */
+   */
   gen_txs: string[];
 }
 /**

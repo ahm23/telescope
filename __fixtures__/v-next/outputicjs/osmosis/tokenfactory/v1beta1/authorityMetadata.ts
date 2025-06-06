@@ -11,7 +11,7 @@ import { DeepPartial } from "../../../helpers";
 export interface DenomAuthorityMetadata {
   /**
    * Can be empty for no admin, or a valid osmosis address
-  */
+   */
   admin: string;
 }
 export interface DenomAuthorityMetadataProtoMsg {
@@ -29,7 +29,7 @@ export interface DenomAuthorityMetadataProtoMsg {
 export interface DenomAuthorityMetadataAmino {
   /**
    * Can be empty for no admin, or a valid osmosis address
-  */
+   */
   admin: string;
 }
 export interface DenomAuthorityMetadataAminoMsg {

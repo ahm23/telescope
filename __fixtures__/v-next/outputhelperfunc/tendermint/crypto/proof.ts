@@ -52,11 +52,11 @@ export interface ProofSDKType {
 export interface ValueOp {
   /**
    * Encoded in ProofOp.Key.
-  */
+   */
   key: Uint8Array;
   /**
    * To encode in ProofOp.Data
-  */
+   */
   proof?: Proof;
 }
 export interface ValueOpProtoMsg {
@@ -71,11 +71,11 @@ export interface ValueOpProtoMsg {
 export interface ValueOpAmino {
   /**
    * Encoded in ProofOp.Key.
-  */
+   */
   key?: string;
   /**
    * To encode in ProofOp.Data
-  */
+   */
   proof?: ProofAmino;
 }
 export interface ValueOpAminoMsg {

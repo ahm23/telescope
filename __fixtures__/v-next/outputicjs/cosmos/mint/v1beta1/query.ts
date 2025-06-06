@@ -32,7 +32,7 @@ export interface QueryParamsRequestAminoMsg {
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: CosmosMintV1beta1Params;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -48,7 +48,7 @@ export interface QueryParamsResponseProtoMsg {
 export interface QueryParamsResponseAmino {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: CosmosMintV1beta1ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
@@ -87,7 +87,7 @@ export interface QueryInflationRequestAminoMsg {
 export interface QueryInflationResponse {
   /**
    * inflation is the current minting inflation value.
-  */
+   */
   inflation: Uint8Array;
 }
 export interface QueryInflationResponseProtoMsg {
@@ -104,7 +104,7 @@ export interface QueryInflationResponseProtoMsg {
 export interface QueryInflationResponseAmino {
   /**
    * inflation is the current minting inflation value.
-  */
+   */
   inflation: string;
 }
 export interface QueryInflationResponseAminoMsg {
@@ -145,7 +145,7 @@ export interface QueryAnnualProvisionsRequestAminoMsg {
 export interface QueryAnnualProvisionsResponse {
   /**
    * annual_provisions is the current minting annual provisions value.
-  */
+   */
   annualProvisions: Uint8Array;
 }
 export interface QueryAnnualProvisionsResponseProtoMsg {
@@ -162,7 +162,7 @@ export interface QueryAnnualProvisionsResponseProtoMsg {
 export interface QueryAnnualProvisionsResponseAmino {
   /**
    * annual_provisions is the current minting annual provisions value.
-  */
+   */
   annual_provisions: string;
 }
 export interface QueryAnnualProvisionsResponseAminoMsg {

@@ -15,7 +15,7 @@ export interface Params {
   durationOfDecay: Duration;
   /**
    * denom of claimable asset
-  */
+   */
   claimDenom: string;
 }
 export interface ParamsProtoMsg {
@@ -34,7 +34,7 @@ export interface ParamsAmino {
   duration_of_decay?: DurationAmino;
   /**
    * denom of claimable asset
-  */
+   */
   claim_denom?: string;
 }
 /**

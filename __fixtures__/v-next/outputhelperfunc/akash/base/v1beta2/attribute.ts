@@ -53,11 +53,11 @@ export interface AttributeSDKType {
 export interface SignedBy {
   /**
    * all_of all keys in this list must have signed attributes
-  */
+   */
   allOf: string[];
   /**
    * any_of at least of of the keys from the list must have signed attributes
-  */
+   */
   anyOf: string[];
 }
 export interface SignedByProtoMsg {
@@ -76,11 +76,11 @@ export interface SignedByProtoMsg {
 export interface SignedByAmino {
   /**
    * all_of all keys in this list must have signed attributes
-  */
+   */
   all_of: string[];
   /**
    * any_of at least of of the keys from the list must have signed attributes
-  */
+   */
   any_of: string[];
 }
 export interface SignedByAminoMsg {
@@ -109,11 +109,11 @@ export interface SignedBySDKType {
 export interface PlacementRequirements {
   /**
    * SignedBy list of keys that tenants expect to have signatures from
-  */
+   */
   signedBy: SignedBy;
   /**
    * Attribute list of attributes tenant expects from the provider
-  */
+   */
   attributes: Attribute[];
 }
 export interface PlacementRequirementsProtoMsg {
@@ -129,11 +129,11 @@ export interface PlacementRequirementsProtoMsg {
 export interface PlacementRequirementsAmino {
   /**
    * SignedBy list of keys that tenants expect to have signatures from
-  */
+   */
   signed_by: SignedByAmino;
   /**
    * Attribute list of attributes tenant expects from the provider
-  */
+   */
   attributes: AttributeAmino[];
 }
 export interface PlacementRequirementsAminoMsg {

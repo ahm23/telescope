@@ -52,7 +52,7 @@ export function getServiceConfigRequest_ConfigViewToJSON(object: GetServiceConfi
 export interface ListServicesRequest {
   /**
    * Include services produced by the specified project.
-  */
+   */
   producerProjectId: string;
   /**
    * The max number of items to include in the response list. Page size is 50
@@ -87,7 +87,7 @@ export interface ListServicesRequestProtoMsg {
 export interface ListServicesRequestAmino {
   /**
    * Include services produced by the specified project.
-  */
+   */
   producer_project_id?: string;
   /**
    * The max number of items to include in the response list. Page size is 50
@@ -125,7 +125,7 @@ export interface ListServicesRequestSDKType {
   page_token: string;
   /**
    * @deprecated
-  */
+   */
   consumer_id: string;
 }
 /**
@@ -137,11 +137,11 @@ export interface ListServicesRequestSDKType {
 export interface ListServicesResponse {
   /**
    * The returned services will only have the name field set.
-  */
+   */
   services: ManagedService[];
   /**
    * Token that can be passed to `ListServices` to resume a paginated query.
-  */
+   */
   nextPageToken: string;
 }
 export interface ListServicesResponseProtoMsg {
@@ -157,11 +157,11 @@ export interface ListServicesResponseProtoMsg {
 export interface ListServicesResponseAmino {
   /**
    * The returned services will only have the name field set.
-  */
+   */
   services?: ManagedServiceAmino[];
   /**
    * Token that can be passed to `ListServices` to resume a paginated query.
-  */
+   */
   next_page_token?: string;
 }
 export interface ListServicesResponseAminoMsg {
@@ -230,7 +230,7 @@ export interface GetServiceRequestSDKType {
 export interface CreateServiceRequest {
   /**
    * Required. Initial values for the service resource.
-  */
+   */
   service?: ManagedService;
 }
 export interface CreateServiceRequestProtoMsg {
@@ -246,7 +246,7 @@ export interface CreateServiceRequestProtoMsg {
 export interface CreateServiceRequestAmino {
   /**
    * Required. Initial values for the service resource.
-  */
+   */
   service?: ManagedServiceAmino;
 }
 export interface CreateServiceRequestAminoMsg {
@@ -357,7 +357,7 @@ export interface UndeleteServiceRequestSDKType {
 export interface UndeleteServiceResponse {
   /**
    * Revived service resource.
-  */
+   */
   service?: ManagedService;
 }
 export interface UndeleteServiceResponseProtoMsg {
@@ -373,7 +373,7 @@ export interface UndeleteServiceResponseProtoMsg {
 export interface UndeleteServiceResponseAmino {
   /**
    * Revived service resource.
-  */
+   */
   service?: ManagedServiceAmino;
 }
 export interface UndeleteServiceResponseAminoMsg {
@@ -472,7 +472,7 @@ export interface ListServiceConfigsRequest {
   serviceName: string;
   /**
    * The token of the page to retrieve.
-  */
+   */
   pageToken: string;
   /**
    * The max number of items to include in the response list. Page size is 50
@@ -498,7 +498,7 @@ export interface ListServiceConfigsRequestAmino {
   service_name?: string;
   /**
    * The token of the page to retrieve.
-  */
+   */
   page_token?: string;
   /**
    * The max number of items to include in the response list. Page size is 50
@@ -530,11 +530,11 @@ export interface ListServiceConfigsRequestSDKType {
 export interface ListServiceConfigsResponse {
   /**
    * The list of service configuration resources.
-  */
+   */
   serviceConfigs: Service[];
   /**
    * The token of the next page of results.
-  */
+   */
   nextPageToken: string;
 }
 export interface ListServiceConfigsResponseProtoMsg {
@@ -550,11 +550,11 @@ export interface ListServiceConfigsResponseProtoMsg {
 export interface ListServiceConfigsResponseAmino {
   /**
    * The list of service configuration resources.
-  */
+   */
   service_configs?: ServiceAmino[];
   /**
    * The token of the next page of results.
-  */
+   */
   next_page_token?: string;
 }
 export interface ListServiceConfigsResponseAminoMsg {
@@ -585,7 +585,7 @@ export interface CreateServiceConfigRequest {
   serviceName: string;
   /**
    * Required. The service configuration resource.
-  */
+   */
   serviceConfig?: Service;
 }
 export interface CreateServiceConfigRequestProtoMsg {
@@ -606,7 +606,7 @@ export interface CreateServiceConfigRequestAmino {
   service_name?: string;
   /**
    * Required. The service configuration resource.
-  */
+   */
   service_config?: ServiceAmino;
 }
 export interface CreateServiceConfigRequestAminoMsg {
@@ -637,7 +637,7 @@ export interface SubmitConfigSourceRequest {
   serviceName: string;
   /**
    * Required. The source configuration for the service.
-  */
+   */
   configSource?: ConfigSource;
   /**
    * Optional. If set, this will result in the generation of a
@@ -664,7 +664,7 @@ export interface SubmitConfigSourceRequestAmino {
   service_name?: string;
   /**
    * Required. The source configuration for the service.
-  */
+   */
   config_source?: ConfigSourceAmino;
   /**
    * Optional. If set, this will result in the generation of a
@@ -697,7 +697,7 @@ export interface SubmitConfigSourceRequestSDKType {
 export interface SubmitConfigSourceResponse {
   /**
    * The generated service configuration.
-  */
+   */
   serviceConfig?: Service;
 }
 export interface SubmitConfigSourceResponseProtoMsg {
@@ -713,7 +713,7 @@ export interface SubmitConfigSourceResponseProtoMsg {
 export interface SubmitConfigSourceResponseAmino {
   /**
    * The generated service configuration.
-  */
+   */
   service_config?: ServiceAmino;
 }
 export interface SubmitConfigSourceResponseAminoMsg {
@@ -743,7 +743,7 @@ export interface CreateServiceRolloutRequest {
   serviceName: string;
   /**
    * Required. The rollout resource. The `service_name` field is output only.
-  */
+   */
   rollout?: Rollout;
 }
 export interface CreateServiceRolloutRequestProtoMsg {
@@ -764,7 +764,7 @@ export interface CreateServiceRolloutRequestAmino {
   service_name?: string;
   /**
    * Required. The rollout resource. The `service_name` field is output only.
-  */
+   */
   rollout?: RolloutAmino;
 }
 export interface CreateServiceRolloutRequestAminoMsg {
@@ -795,7 +795,7 @@ export interface ListServiceRolloutsRequest {
   serviceName: string;
   /**
    * The token of the page to retrieve.
-  */
+   */
   pageToken: string;
   /**
    * The max number of items to include in the response list. Page size is 50
@@ -832,7 +832,7 @@ export interface ListServiceRolloutsRequestAmino {
   service_name?: string;
   /**
    * The token of the page to retrieve.
-  */
+   */
   page_token?: string;
   /**
    * The max number of items to include in the response list. Page size is 50
@@ -876,11 +876,11 @@ export interface ListServiceRolloutsRequestSDKType {
 export interface ListServiceRolloutsResponse {
   /**
    * The list of rollout resources.
-  */
+   */
   rollouts: Rollout[];
   /**
    * The token of the next page of results.
-  */
+   */
   nextPageToken: string;
 }
 export interface ListServiceRolloutsResponseProtoMsg {
@@ -896,11 +896,11 @@ export interface ListServiceRolloutsResponseProtoMsg {
 export interface ListServiceRolloutsResponseAmino {
   /**
    * The list of rollout resources.
-  */
+   */
   rollouts?: RolloutAmino[];
   /**
    * The token of the next page of results.
-  */
+   */
   next_page_token?: string;
 }
 export interface ListServiceRolloutsResponseAminoMsg {
@@ -931,7 +931,7 @@ export interface GetServiceRolloutRequest {
   serviceName: string;
   /**
    * Required. The id of the rollout resource.
-  */
+   */
   rolloutId: string;
 }
 export interface GetServiceRolloutRequestProtoMsg {
@@ -952,7 +952,7 @@ export interface GetServiceRolloutRequestAmino {
   service_name?: string;
   /**
    * Required. The id of the rollout resource.
-  */
+   */
   rollout_id?: string;
 }
 export interface GetServiceRolloutRequestAminoMsg {
@@ -1044,11 +1044,11 @@ export interface GenerateConfigReportRequestSDKType {
 export interface GenerateConfigReportResponse {
   /**
    * Name of the service this report belongs to.
-  */
+   */
   serviceName: string;
   /**
    * ID of the service configuration this report belongs to.
-  */
+   */
   id: string;
   /**
    * list of ChangeReport, each corresponding to comparison between two
@@ -1075,11 +1075,11 @@ export interface GenerateConfigReportResponseProtoMsg {
 export interface GenerateConfigReportResponseAmino {
   /**
    * Name of the service this report belongs to.
-  */
+   */
   service_name?: string;
   /**
    * ID of the service configuration this report belongs to.
-  */
+   */
   id?: string;
   /**
    * list of ChangeReport, each corresponding to comparison between two

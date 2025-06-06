@@ -11,7 +11,7 @@ export const protobufPackage = "osmosis.mint.v1beta1";
 export interface Minter {
   /**
    * epoch_provisions represent rewards for the current epoch.
-  */
+   */
   epochProvisions: string;
 }
 export interface MinterProtoMsg {
@@ -27,7 +27,7 @@ export interface MinterProtoMsg {
 export interface MinterAmino {
   /**
    * epoch_provisions represent rewards for the current epoch.
-  */
+   */
   epoch_provisions?: string;
 }
 /**
@@ -166,15 +166,15 @@ export interface DistributionProportionsSDKType {
 export interface Params {
   /**
    * mint_denom is the denom of the coin to mint.
-  */
+   */
   mintDenom: string;
   /**
    * genesis_epoch_provisions epoch provisions from the first epoch.
-  */
+   */
   genesisEpochProvisions: string;
   /**
    * epoch_identifier mint epoch identifier e.g. (day, week).
-  */
+   */
   epochIdentifier: string;
   /**
    * reduction_period_in_epochs the number of epochs it takes
@@ -218,15 +218,15 @@ export interface ParamsProtoMsg {
 export interface ParamsAmino {
   /**
    * mint_denom is the denom of the coin to mint.
-  */
+   */
   mint_denom?: string;
   /**
    * genesis_epoch_provisions epoch provisions from the first epoch.
-  */
+   */
   genesis_epoch_provisions?: string;
   /**
    * epoch_identifier mint epoch identifier e.g. (day, week).
-  */
+   */
   epoch_identifier?: string;
   /**
    * reduction_period_in_epochs the number of epochs it takes

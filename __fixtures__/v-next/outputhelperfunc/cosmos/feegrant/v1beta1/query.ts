@@ -14,11 +14,11 @@ export const protobufPackage = "cosmos.feegrant.v1beta1";
 export interface QueryAllowanceRequest {
   /**
    * granter is the address of the user granting an allowance of their funds.
-  */
+   */
   granter: string;
   /**
    * grantee is the address of the user being granted an allowance of another user's funds.
-  */
+   */
   grantee: string;
 }
 export interface QueryAllowanceRequestProtoMsg {
@@ -34,11 +34,11 @@ export interface QueryAllowanceRequestProtoMsg {
 export interface QueryAllowanceRequestAmino {
   /**
    * granter is the address of the user granting an allowance of their funds.
-  */
+   */
   granter?: string;
   /**
    * grantee is the address of the user being granted an allowance of another user's funds.
-  */
+   */
   grantee?: string;
 }
 export interface QueryAllowanceRequestAminoMsg {
@@ -64,7 +64,7 @@ export interface QueryAllowanceRequestSDKType {
 export interface QueryAllowanceResponse {
   /**
    * allowance is a allowance granted for grantee by granter.
-  */
+   */
   allowance?: Grant;
 }
 export interface QueryAllowanceResponseProtoMsg {
@@ -80,7 +80,7 @@ export interface QueryAllowanceResponseProtoMsg {
 export interface QueryAllowanceResponseAmino {
   /**
    * allowance is a allowance granted for grantee by granter.
-  */
+   */
   allowance?: GrantAmino;
 }
 export interface QueryAllowanceResponseAminoMsg {
@@ -106,7 +106,7 @@ export interface QueryAllowancesRequest {
   grantee: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryAllowancesRequestProtoMsg {
@@ -123,7 +123,7 @@ export interface QueryAllowancesRequestAmino {
   grantee?: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryAllowancesRequestAminoMsg {
@@ -149,11 +149,11 @@ export interface QueryAllowancesRequestSDKType {
 export interface QueryAllowancesResponse {
   /**
    * allowances are allowance's granted for grantee by granter.
-  */
+   */
   allowances: Grant[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryAllowancesResponseProtoMsg {
@@ -169,11 +169,11 @@ export interface QueryAllowancesResponseProtoMsg {
 export interface QueryAllowancesResponseAmino {
   /**
    * allowances are allowance's granted for grantee by granter.
-  */
+   */
   allowances?: GrantAmino[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryAllowancesResponseAminoMsg {
@@ -200,7 +200,7 @@ export interface QueryAllowancesByGranterRequest {
   granter: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryAllowancesByGranterRequestProtoMsg {
@@ -217,7 +217,7 @@ export interface QueryAllowancesByGranterRequestAmino {
   granter?: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryAllowancesByGranterRequestAminoMsg {
@@ -243,11 +243,11 @@ export interface QueryAllowancesByGranterRequestSDKType {
 export interface QueryAllowancesByGranterResponse {
   /**
    * allowances that have been issued by the granter.
-  */
+   */
   allowances: Grant[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryAllowancesByGranterResponseProtoMsg {
@@ -263,11 +263,11 @@ export interface QueryAllowancesByGranterResponseProtoMsg {
 export interface QueryAllowancesByGranterResponseAmino {
   /**
    * allowances that have been issued by the granter.
-  */
+   */
   allowances?: GrantAmino[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryAllowancesByGranterResponseAminoMsg {

@@ -9,15 +9,15 @@ import { DeepPartial } from "../../../helpers";
 export interface EventGrant {
   /**
    * Msg type URL for which an autorization is granted
-  */
+   */
   msgTypeUrl: string;
   /**
    * Granter account address
-  */
+   */
   granter: string;
   /**
    * Grantee account address
-  */
+   */
   grantee: string;
 }
 export interface EventGrantProtoMsg {
@@ -33,15 +33,15 @@ export interface EventGrantProtoMsg {
 export interface EventGrantAmino {
   /**
    * Msg type URL for which an autorization is granted
-  */
+   */
   msg_type_url: string;
   /**
    * Granter account address
-  */
+   */
   granter: string;
   /**
    * Grantee account address
-  */
+   */
   grantee: string;
 }
 export interface EventGrantAminoMsg {
@@ -57,15 +57,15 @@ export interface EventGrantAminoMsg {
 export interface EventRevoke {
   /**
    * Msg type URL for which an autorization is revoked
-  */
+   */
   msgTypeUrl: string;
   /**
    * Granter account address
-  */
+   */
   granter: string;
   /**
    * Grantee account address
-  */
+   */
   grantee: string;
 }
 export interface EventRevokeProtoMsg {
@@ -81,15 +81,15 @@ export interface EventRevokeProtoMsg {
 export interface EventRevokeAmino {
   /**
    * Msg type URL for which an autorization is revoked
-  */
+   */
   msg_type_url: string;
   /**
    * Granter account address
-  */
+   */
   granter: string;
   /**
    * Grantee account address
-  */
+   */
   grantee: string;
 }
 export interface EventRevokeAminoMsg {

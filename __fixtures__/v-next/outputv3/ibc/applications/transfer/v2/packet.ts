@@ -12,19 +12,19 @@ export const protobufPackage = "ibc.applications.transfer.v2";
 export interface FungibleTokenPacketData {
   /**
    * the token denomination to be transferred
-  */
+   */
   denom: string;
   /**
    * the token amount to be transferred
-  */
+   */
   amount: string;
   /**
    * the sender address
-  */
+   */
   sender: string;
   /**
    * the recipient address on the destination chain
-  */
+   */
   receiver: string;
 }
 export interface FungibleTokenPacketDataProtoMsg {
@@ -42,19 +42,19 @@ export interface FungibleTokenPacketDataProtoMsg {
 export interface FungibleTokenPacketDataAmino {
   /**
    * the token denomination to be transferred
-  */
+   */
   denom?: string;
   /**
    * the token amount to be transferred
-  */
+   */
   amount?: string;
   /**
    * the sender address
-  */
+   */
   sender?: string;
   /**
    * the recipient address on the destination chain
-  */
+   */
   receiver?: string;
 }
 /**

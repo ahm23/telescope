@@ -152,7 +152,7 @@ export interface EvalRequest {
   instantiatePermission?: MiscAccessConfig;
   /**
    * [(gogoproto.nullable) = false] wouldn't work in this case
-  */
+   */
   id?: string;
   name?: string;
   testArray: string[];
@@ -160,7 +160,7 @@ export interface EvalRequest {
   graph?: TestNest_Graph;
   /**
    * deprecated option
-  */
+   */
   deprecated?: string;
   falseDeprecated: string;
 }
@@ -190,7 +190,7 @@ export interface EvalRequestAmino {
   instantiate_permission?: MiscAccessConfigAmino;
   /**
    * [(gogoproto.nullable) = false] wouldn't work in this case
-  */
+   */
   id?: string;
   name?: string;
   test_array?: string[];
@@ -198,7 +198,7 @@ export interface EvalRequestAmino {
   graph?: TestNest_GraphAmino;
   /**
    * deprecated option
-  */
+   */
   deprecated?: string;
   false_deprecated?: string;
 }
@@ -270,7 +270,7 @@ export interface MiscAccessConfigSDKType {
 export interface MiscGenericAuthorization {
   /**
    * Msg, identified by it's type URL, to grant unrestricted permissions to execute
-  */
+   */
   msg: string;
 }
 export interface MiscGenericAuthorizationProtoMsg {
@@ -285,7 +285,7 @@ export interface MiscGenericAuthorizationProtoMsg {
 export interface MiscGenericAuthorizationAmino {
   /**
    * Msg, identified by it's type URL, to grant unrestricted permissions to execute
-  */
+   */
   msg?: string;
 }
 export interface MiscGenericAuthorizationAminoMsg {

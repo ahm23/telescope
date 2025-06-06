@@ -26,23 +26,23 @@ export interface ClientState {
   trustingPeriod: Duration;
   /**
    * duration of the staking unbonding period
-  */
+   */
   unbondingPeriod: Duration;
   /**
    * defines how much new (untrusted) header's Time can drift into the future.
-  */
+   */
   maxClockDrift: Duration;
   /**
    * Block height when the client was frozen due to a misbehaviour
-  */
+   */
   frozenHeight: Height;
   /**
    * Latest height the client was updated to
-  */
+   */
   latestHeight: Height;
   /**
    * Proof specifications used in verifying counterparty state
-  */
+   */
   proofSpecs: ProofSpec[];
   /**
    * Path at which next upgraded client will be committed.
@@ -103,7 +103,7 @@ export interface ConsensusState {
   timestamp: Date;
   /**
    * commitment root (i.e app hash)
-  */
+   */
   root: MerkleRoot;
   nextValidatorsHash: Uint8Array;
 }

@@ -81,7 +81,7 @@ export function property_PropertyTypeToJSON(object: Property_PropertyType): stri
 export interface ProjectProperties {
   /**
    * List of per consumer project-specific properties.
-  */
+   */
   properties: Property[];
 }
 export interface ProjectPropertiesProtoMsg {
@@ -130,15 +130,15 @@ export interface ProjectPropertiesSDKType {
 export interface Property {
   /**
    * The name of the property (a.k.a key).
-  */
+   */
   name: string;
   /**
    * The type of this property.
-  */
+   */
   type: Property_PropertyType;
   /**
    * The description of the property
-  */
+   */
   description: string;
 }
 export interface PropertyProtoMsg {

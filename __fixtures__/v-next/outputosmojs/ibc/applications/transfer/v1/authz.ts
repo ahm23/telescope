@@ -12,19 +12,19 @@ export const protobufPackage = "ibc.applications.transfer.v1";
 export interface Allocation {
   /**
    * the port on which the packet will be sent
-  */
+   */
   sourcePort: string;
   /**
    * the channel by which the packet will be sent
-  */
+   */
   sourceChannel: string;
   /**
    * spend limitation on the channel
-  */
+   */
   spendLimit: Coin[];
   /**
    * allow list of receivers, an empty allow list permits any receiver address
-  */
+   */
   allowList: string[];
 }
 export interface AllocationProtoMsg {
@@ -53,7 +53,7 @@ export interface AllocationSDKType {
 export interface TransferAuthorization {
   /**
    * port and channel amounts
-  */
+   */
   allocations: Allocation[];
 }
 export interface TransferAuthorizationProtoMsg {

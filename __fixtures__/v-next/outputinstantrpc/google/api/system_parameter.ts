@@ -115,7 +115,7 @@ export interface SystemParameterRuleSDKType {
 export interface SystemParameter {
   /**
    * Define the name of the parameter, such as "api_key" . It is case sensitive.
-  */
+   */
   name: string;
   /**
    * Define the HTTP header name to use for the parameter. It is case

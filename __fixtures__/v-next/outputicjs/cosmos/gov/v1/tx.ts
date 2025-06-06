@@ -22,7 +22,7 @@ export interface MsgSubmitProposal {
   proposer: string;
   /**
    * metadata is any arbitrary metadata attached to the proposal.
-  */
+   */
   metadata: string;
 }
 export interface MsgSubmitProposalProtoMsg {
@@ -45,7 +45,7 @@ export interface MsgSubmitProposalAmino {
   proposer: string;
   /**
    * metadata is any arbitrary metadata attached to the proposal.
-  */
+   */
   metadata: string;
 }
 export interface MsgSubmitProposalAminoMsg {
@@ -88,11 +88,11 @@ export interface MsgSubmitProposalResponseAminoMsg {
 export interface MsgExecLegacyContent {
   /**
    * content is the proposal's content.
-  */
+   */
   content?: TextProposal | RegisterIncentiveProposal | ClientUpdateProposal | UpgradeProposal | ReplacePoolIncentivesProposal | UpdatePoolIncentivesProposal | SetSuperfluidAssetsProposal | RemoveSuperfluidAssetsProposal | UpdateUnpoolWhiteListProposal | UpdateFeeTokenProposal | Any | undefined;
   /**
    * authority must be the gov module address.
-  */
+   */
   authority: string;
 }
 export interface MsgExecLegacyContentProtoMsg {
@@ -102,7 +102,7 @@ export interface MsgExecLegacyContentProtoMsg {
 export type MsgExecLegacyContentEncoded = Omit<MsgExecLegacyContent, "content"> & {
   /**
    * content is the proposal's content.
-  */
+   */
   content?: TextProposalProtoMsg | RegisterIncentiveProposalProtoMsg | ClientUpdateProposalProtoMsg | UpgradeProposalProtoMsg | ReplacePoolIncentivesProposalProtoMsg | UpdatePoolIncentivesProposalProtoMsg | SetSuperfluidAssetsProposalProtoMsg | RemoveSuperfluidAssetsProposalProtoMsg | UpdateUnpoolWhiteListProposalProtoMsg | UpdateFeeTokenProposalProtoMsg | AnyProtoMsg | undefined;
 };
 /**
@@ -115,11 +115,11 @@ export type MsgExecLegacyContentEncoded = Omit<MsgExecLegacyContent, "content"> 
 export interface MsgExecLegacyContentAmino {
   /**
    * content is the proposal's content.
-  */
+   */
   content?: AnyAmino;
   /**
    * authority must be the gov module address.
-  */
+   */
   authority: string;
 }
 export interface MsgExecLegacyContentAminoMsg {

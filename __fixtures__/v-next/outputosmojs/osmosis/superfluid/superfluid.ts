@@ -78,12 +78,12 @@ export interface SuperfluidAssetSDKType {
 export interface SuperfluidIntermediaryAccount {
   /**
    * Denom indicates the denom of the superfluid asset.
-  */
+   */
   denom: string;
   valAddr: string;
   /**
    * perpetual gauge for rewards distribution
-  */
+   */
   gaugeId: bigint;
 }
 export interface SuperfluidIntermediaryAccountProtoMsg {
@@ -119,7 +119,7 @@ export interface OsmoEquivalentMultiplierRecord {
   epochNumber: bigint;
   /**
    * superfluid asset denom, can be LP token or native token
-  */
+   */
   denom: string;
   multiplier: string;
 }

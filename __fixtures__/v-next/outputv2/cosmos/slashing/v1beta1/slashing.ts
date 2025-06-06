@@ -15,7 +15,7 @@ export interface ValidatorSigningInfo {
   address: string;
   /**
    * Height at which validator was first a candidate OR was unjailed
-  */
+   */
   startHeight: bigint;
   /**
    * Index which is incremented each time the validator was a bonded
@@ -25,7 +25,7 @@ export interface ValidatorSigningInfo {
   indexOffset: bigint;
   /**
    * Timestamp until which the validator is jailed due to liveness downtime.
-  */
+   */
   jailedUntil: Date;
   /**
    * Whether or not a validator has been tombstoned (killed out of validator set). It is set
@@ -53,7 +53,7 @@ export interface ValidatorSigningInfoAmino {
   address?: string;
   /**
    * Height at which validator was first a candidate OR was unjailed
-  */
+   */
   start_height?: string;
   /**
    * Index which is incremented each time the validator was a bonded
@@ -63,7 +63,7 @@ export interface ValidatorSigningInfoAmino {
   index_offset?: string;
   /**
    * Timestamp until which the validator is jailed due to liveness downtime.
-  */
+   */
   jailed_until?: string;
   /**
    * Whether or not a validator has been tombstoned (killed out of validator set). It is set

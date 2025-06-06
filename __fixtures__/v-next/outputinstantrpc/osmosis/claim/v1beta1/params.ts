@@ -16,7 +16,7 @@ export interface Params {
   durationOfDecay: Duration;
   /**
    * denom of claimable asset
-  */
+   */
   claimDenom: string;
 }
 export interface ParamsProtoMsg {

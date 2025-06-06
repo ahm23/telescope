@@ -17,7 +17,7 @@ export const protobufPackage = "cosmos.auth.v1beta1";
 export interface QueryAccountsRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryAccountsRequestProtoMsg {
@@ -35,7 +35,7 @@ export interface QueryAccountsRequestProtoMsg {
 export interface QueryAccountsRequestAmino {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryAccountsRequestAminoMsg {
@@ -64,11 +64,11 @@ export interface QueryAccountsRequestSDKType {
 export interface QueryAccountsResponse {
   /**
    * accounts are the existing accounts
-  */
+   */
   accounts: (BaseAccount | Any)[] | Any[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryAccountsResponseProtoMsg {
@@ -78,7 +78,7 @@ export interface QueryAccountsResponseProtoMsg {
 export type QueryAccountsResponseEncoded = Omit<QueryAccountsResponse, "accounts"> & {
   /**
    * accounts are the existing accounts
-  */
+   */
   accounts: (BaseAccountProtoMsg | AnyProtoMsg)[];
 };
 /**
@@ -92,11 +92,11 @@ export type QueryAccountsResponseEncoded = Omit<QueryAccountsResponse, "accounts
 export interface QueryAccountsResponseAmino {
   /**
    * accounts are the existing accounts
-  */
+   */
   accounts?: AnyAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryAccountsResponseAminoMsg {
@@ -124,7 +124,7 @@ export interface QueryAccountsResponseSDKType {
 export interface QueryAccountRequest {
   /**
    * address defines the address to query for.
-  */
+   */
   address: string;
 }
 export interface QueryAccountRequestProtoMsg {
@@ -140,7 +140,7 @@ export interface QueryAccountRequestProtoMsg {
 export interface QueryAccountRequestAmino {
   /**
    * address defines the address to query for.
-  */
+   */
   address?: string;
 }
 export interface QueryAccountRequestAminoMsg {
@@ -194,7 +194,7 @@ export interface QueryModuleAccountsRequestSDKType {}
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -210,7 +210,7 @@ export interface QueryParamsResponseProtoMsg {
 export interface QueryParamsResponseAmino {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
@@ -235,7 +235,7 @@ export interface QueryParamsResponseSDKType {
 export interface QueryAccountResponse {
   /**
    * account defines the account of the corresponding address.
-  */
+   */
   account?: BaseAccount | Any | undefined;
 }
 export interface QueryAccountResponseProtoMsg {
@@ -245,7 +245,7 @@ export interface QueryAccountResponseProtoMsg {
 export type QueryAccountResponseEncoded = Omit<QueryAccountResponse, "account"> & {
   /**
    * account defines the account of the corresponding address.
-  */
+   */
   account?: BaseAccountProtoMsg | AnyProtoMsg | undefined;
 };
 /**
@@ -257,7 +257,7 @@ export type QueryAccountResponseEncoded = Omit<QueryAccountResponse, "account"> 
 export interface QueryAccountResponseAmino {
   /**
    * account defines the account of the corresponding address.
-  */
+   */
   account?: AnyAmino;
 }
 export interface QueryAccountResponseAminoMsg {

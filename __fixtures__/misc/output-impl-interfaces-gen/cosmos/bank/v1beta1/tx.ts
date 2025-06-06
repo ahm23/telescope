@@ -14,19 +14,19 @@ export const protobufPackage = "cosmos.bank.v1beta1";
 export interface MsgInstantiateContract2 {
   /**
    * CodeID is the reference to the stored WASM code
-  */
+   */
   codeId: bigint;
   /**
    * Label is optional metadata to be stored with a contract instance.
-  */
+   */
   label: string;
   /**
    * Funds coins that are transferred to the contract on instantiation
-  */
+   */
   funds: Coin[];
   /**
    * Salt is an arbitrary value provided by the sender. Size can be 1 to 64.
-  */
+   */
   salt: Uint8Array;
   /**
    * FixMsg include the msg value into the hash for the predictable address.
@@ -50,19 +50,19 @@ export interface MsgInstantiateContract2ProtoMsg {
 export interface MsgInstantiateContract2Amino {
   /**
    * CodeID is the reference to the stored WASM code
-  */
+   */
   code_id?: string;
   /**
    * Label is optional metadata to be stored with a contract instance.
-  */
+   */
   label?: string;
   /**
    * Funds coins that are transferred to the contract on instantiation
-  */
+   */
   funds: CoinAmino[];
   /**
    * Salt is an arbitrary value provided by the sender. Size can be 1 to 64.
-  */
+   */
   salt?: string;
   /**
    * FixMsg include the msg value into the hash for the predictable address.

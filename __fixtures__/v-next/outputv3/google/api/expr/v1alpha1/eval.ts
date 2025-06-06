@@ -14,7 +14,7 @@ export const protobufPackage = "google.api.expr.v1alpha1";
 export interface EvalState {
   /**
    * The unique values referenced in this message.
-  */
+   */
   values: ExprValue[];
   /**
    * An ordered list of results.
@@ -39,7 +39,7 @@ export interface EvalStateProtoMsg {
 export interface EvalStateAmino {
   /**
    * The unique values referenced in this message.
-  */
+   */
   values?: ExprValueAmino[];
   /**
    * An ordered list of results.
@@ -70,11 +70,11 @@ export interface EvalStateSDKType {
 export interface EvalState_Result {
   /**
    * The id of the expression this result if for.
-  */
+   */
   expr: bigint;
   /**
    * The index in `values` of the resulting value.
-  */
+   */
   value: bigint;
 }
 export interface EvalState_ResultProtoMsg {
@@ -90,11 +90,11 @@ export interface EvalState_ResultProtoMsg {
 export interface EvalState_ResultAmino {
   /**
    * The id of the expression this result if for.
-  */
+   */
   expr?: string;
   /**
    * The index in `values` of the resulting value.
-  */
+   */
   value?: string;
 }
 /**
@@ -116,7 +116,7 @@ export interface EvalState_ResultSDKType {
 export interface ExprValue {
   /**
    * A concrete value.
-  */
+   */
   value?: Value;
   /**
    * The set of errors in the critical path of evalution.
@@ -178,7 +178,7 @@ export interface ExprValueProtoMsg {
 export interface ExprValueAmino {
   /**
    * A concrete value.
-  */
+   */
   value?: ValueAmino;
   /**
    * The set of errors in the critical path of evalution.
@@ -249,7 +249,7 @@ export interface ExprValueSDKType {
 export interface ErrorSet {
   /**
    * The errors in the set.
-  */
+   */
   errors: Status[];
 }
 export interface ErrorSetProtoMsg {
@@ -267,7 +267,7 @@ export interface ErrorSetProtoMsg {
 export interface ErrorSetAmino {
   /**
    * The errors in the set.
-  */
+   */
   errors?: StatusAmino[];
 }
 /**
@@ -292,7 +292,7 @@ export interface ErrorSetSDKType {
 export interface UnknownSet {
   /**
    * The ids of the expressions with unknown values.
-  */
+   */
   exprs: bigint[];
 }
 export interface UnknownSetProtoMsg {
@@ -310,7 +310,7 @@ export interface UnknownSetProtoMsg {
 export interface UnknownSetAmino {
   /**
    * The ids of the expressions with unknown values.
-  */
+   */
   exprs?: string[];
 }
 /**

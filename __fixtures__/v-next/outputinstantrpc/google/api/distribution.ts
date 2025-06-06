@@ -77,7 +77,7 @@ export interface Distribution {
   bucketCounts: bigint[];
   /**
    * Must be in increasing order of `value` field.
-  */
+   */
   exemplars: Distribution_Exemplar[];
 }
 export interface DistributionProtoMsg {
@@ -121,11 +121,11 @@ export interface DistributionSDKType {
 export interface Distribution_Range {
   /**
    * The minimum of the population values.
-  */
+   */
   min: number;
   /**
    * The maximum of the population values.
-  */
+   */
   max: number;
 }
 export interface Distribution_RangeProtoMsg {
@@ -165,15 +165,15 @@ export interface Distribution_RangeSDKType {
 export interface Distribution_BucketOptions {
   /**
    * The linear bucket.
-  */
+   */
   linearBuckets?: Distribution_BucketOptions_Linear;
   /**
    * The exponential buckets.
-  */
+   */
   exponentialBuckets?: Distribution_BucketOptions_Exponential;
   /**
    * The explicit buckets.
-  */
+   */
   explicitBuckets?: Distribution_BucketOptions_Explicit;
 }
 export interface Distribution_BucketOptionsProtoMsg {
@@ -222,15 +222,15 @@ export interface Distribution_BucketOptionsSDKType {
 export interface Distribution_BucketOptions_Linear {
   /**
    * Must be greater than 0.
-  */
+   */
   numFiniteBuckets: number;
   /**
    * Must be greater than 0.
-  */
+   */
   width: number;
   /**
    * Lower bound of the first bucket.
-  */
+   */
   offset: number;
 }
 export interface Distribution_BucketOptions_LinearProtoMsg {
@@ -273,15 +273,15 @@ export interface Distribution_BucketOptions_LinearSDKType {
 export interface Distribution_BucketOptions_Exponential {
   /**
    * Must be greater than 0.
-  */
+   */
   numFiniteBuckets: number;
   /**
    * Must be greater than 1.
-  */
+   */
   growthFactor: number;
   /**
    * Must be greater than 0.
-  */
+   */
   scale: number;
 }
 export interface Distribution_BucketOptions_ExponentialProtoMsg {
@@ -326,7 +326,7 @@ export interface Distribution_BucketOptions_ExponentialSDKType {
 export interface Distribution_BucketOptions_Explicit {
   /**
    * The values must be monotonically increasing.
-  */
+   */
   bounds: number[];
 }
 export interface Distribution_BucketOptions_ExplicitProtoMsg {
@@ -370,7 +370,7 @@ export interface Distribution_Exemplar {
   value: number;
   /**
    * The observation (sampling) time of the above value.
-  */
+   */
   timestamp?: Date;
   /**
    * Contextual information about the example value. Examples are:

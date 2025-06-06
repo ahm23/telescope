@@ -12,15 +12,15 @@ export const protobufPackage = "ibc.applications.fee.v1";
 export interface Fee {
   /**
    * the packet receive fee
-  */
+   */
   recvFee: Coin[];
   /**
    * the packet acknowledgement fee
-  */
+   */
   ackFee: Coin[];
   /**
    * the packet timeout fee
-  */
+   */
   timeoutFee: Coin[];
 }
 export interface FeeProtoMsg {
@@ -47,15 +47,15 @@ export interface FeeSDKType {
 export interface PacketFee {
   /**
    * fee encapsulates the recv, ack and timeout fees associated with an IBC packet
-  */
+   */
   fee: Fee;
   /**
    * the refund address for unspent fees
-  */
+   */
   refundAddress: string;
   /**
    * optional list of relayers permitted to receive fees
-  */
+   */
   relayers: string[];
 }
 export interface PacketFeeProtoMsg {
@@ -82,7 +82,7 @@ export interface PacketFeeSDKType {
 export interface PacketFees {
   /**
    * list of packet fees
-  */
+   */
   packetFees: PacketFee[];
 }
 export interface PacketFeesProtoMsg {
@@ -107,7 +107,7 @@ export interface PacketFeesSDKType {
 export interface IdentifiedPacketFees {
   /**
    * list of packet fees
-  */
+   */
   packetFees: PacketFee[];
 }
 export interface IdentifiedPacketFeesProtoMsg {

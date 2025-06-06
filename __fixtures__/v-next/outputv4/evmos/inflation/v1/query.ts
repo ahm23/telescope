@@ -32,7 +32,7 @@ export interface QueryPeriodRequestSDKType {}
 export interface QueryPeriodResponse {
   /**
    * period is the current minting per epoch provision value.
-  */
+   */
   period: bigint;
 }
 export interface QueryPeriodResponseProtoMsg {
@@ -78,7 +78,7 @@ export interface QueryEpochMintProvisionRequestSDKType {}
 export interface QueryEpochMintProvisionResponse {
   /**
    * epoch_mint_provision is the current minting per epoch provision value.
-  */
+   */
   epochMintProvision: DecCoin;
 }
 export interface QueryEpochMintProvisionResponseProtoMsg {
@@ -125,7 +125,7 @@ export interface QuerySkippedEpochsRequestSDKType {}
 export interface QuerySkippedEpochsResponse {
   /**
    * number of epochs that the inflation module has been disabled.
-  */
+   */
   skippedEpochs: bigint;
 }
 export interface QuerySkippedEpochsResponseProtoMsg {
@@ -172,7 +172,7 @@ export interface QueryCirculatingSupplyRequestSDKType {}
 export interface QueryCirculatingSupplyResponse {
   /**
    * total amount of coins in circulation
-  */
+   */
   circulatingSupply: DecCoin;
 }
 export interface QueryCirculatingSupplyResponseProtoMsg {
@@ -219,7 +219,7 @@ export interface QueryInflationRateRequestSDKType {}
 export interface QueryInflationRateResponse {
   /**
    * rate by which the total supply increases within one period
-  */
+   */
   inflationRate: string;
 }
 export interface QueryInflationRateResponseProtoMsg {
@@ -263,7 +263,7 @@ export interface QueryParamsRequestSDKType {}
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {

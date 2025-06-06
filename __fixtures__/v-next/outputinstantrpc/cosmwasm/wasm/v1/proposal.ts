@@ -14,23 +14,23 @@ export const protobufPackage = "cosmwasm.wasm.v1";
 export interface StoreCodeProposal {
   /**
    * Title is a short summary
-  */
+   */
   title: string;
   /**
    * Description is a human readable text
-  */
+   */
   description: string;
   /**
    * RunAs is the address that is passed to the contract's environment as sender
-  */
+   */
   runAs: string;
   /**
    * WASMByteCode can be raw or gzip compressed
-  */
+   */
   wasmByteCode: Uint8Array;
   /**
    * InstantiatePermission to apply on contract creation, optional
-  */
+   */
   instantiatePermission?: AccessConfig;
 }
 export interface StoreCodeProposalProtoMsg {
@@ -60,35 +60,35 @@ export interface StoreCodeProposalSDKType {
 export interface InstantiateContractProposal {
   /**
    * Title is a short summary
-  */
+   */
   title: string;
   /**
    * Description is a human readable text
-  */
+   */
   description: string;
   /**
    * RunAs is the address that is passed to the contract's environment as sender
-  */
+   */
   runAs: string;
   /**
    * Admin is an optional address that can execute migrations
-  */
+   */
   admin: string;
   /**
    * CodeID is the reference to the stored WASM code
-  */
+   */
   codeId: bigint;
   /**
    * Label is optional metadata to be stored with a constract instance.
-  */
+   */
   label: string;
   /**
    * Msg json encoded message to be passed to the contract on instantiation
-  */
+   */
   msg: Uint8Array;
   /**
    * Funds coins that are transferred to the contract on instantiation
-  */
+   */
   funds: Coin[];
 }
 export interface InstantiateContractProposalProtoMsg {
@@ -121,23 +121,23 @@ export interface InstantiateContractProposalSDKType {
 export interface MigrateContractProposal {
   /**
    * Title is a short summary
-  */
+   */
   title: string;
   /**
    * Description is a human readable text
-  */
+   */
   description: string;
   /**
    * Contract is the address of the smart contract
-  */
+   */
   contract: string;
   /**
    * CodeID references the new WASM codesudo
-  */
+   */
   codeId: bigint;
   /**
    * Msg json encoded message to be passed to the contract on migration
-  */
+   */
   msg: Uint8Array;
 }
 export interface MigrateContractProposalProtoMsg {
@@ -166,19 +166,19 @@ export interface MigrateContractProposalSDKType {
 export interface SudoContractProposal {
   /**
    * Title is a short summary
-  */
+   */
   title: string;
   /**
    * Description is a human readable text
-  */
+   */
   description: string;
   /**
    * Contract is the address of the smart contract
-  */
+   */
   contract: string;
   /**
    * Msg json encoded message to be passed to the contract as sudo
-  */
+   */
   msg: Uint8Array;
 }
 export interface SudoContractProposalProtoMsg {
@@ -207,27 +207,27 @@ export interface SudoContractProposalSDKType {
 export interface ExecuteContractProposal {
   /**
    * Title is a short summary
-  */
+   */
   title: string;
   /**
    * Description is a human readable text
-  */
+   */
   description: string;
   /**
    * RunAs is the address that is passed to the contract's environment as sender
-  */
+   */
   runAs: string;
   /**
    * Contract is the address of the smart contract
-  */
+   */
   contract: string;
   /**
    * Msg json encoded message to be passed to the contract as execute
-  */
+   */
   msg: Uint8Array;
   /**
    * Funds coins that are transferred to the contract on instantiation
-  */
+   */
   funds: Coin[];
 }
 export interface ExecuteContractProposalProtoMsg {
@@ -258,19 +258,19 @@ export interface ExecuteContractProposalSDKType {
 export interface UpdateAdminProposal {
   /**
    * Title is a short summary
-  */
+   */
   title: string;
   /**
    * Description is a human readable text
-  */
+   */
   description: string;
   /**
    * NewAdmin address to be set
-  */
+   */
   newAdmin: string;
   /**
    * Contract is the address of the smart contract
-  */
+   */
   contract: string;
 }
 export interface UpdateAdminProposalProtoMsg {
@@ -299,15 +299,15 @@ export interface UpdateAdminProposalSDKType {
 export interface ClearAdminProposal {
   /**
    * Title is a short summary
-  */
+   */
   title: string;
   /**
    * Description is a human readable text
-  */
+   */
   description: string;
   /**
    * Contract is the address of the smart contract
-  */
+   */
   contract: string;
 }
 export interface ClearAdminProposalProtoMsg {
@@ -336,15 +336,15 @@ export interface ClearAdminProposalSDKType {
 export interface PinCodesProposal {
   /**
    * Title is a short summary
-  */
+   */
   title: string;
   /**
    * Description is a human readable text
-  */
+   */
   description: string;
   /**
    * CodeIDs references the new WASM codes
-  */
+   */
   codeIds: bigint[];
 }
 export interface PinCodesProposalProtoMsg {
@@ -373,15 +373,15 @@ export interface PinCodesProposalSDKType {
 export interface UnpinCodesProposal {
   /**
    * Title is a short summary
-  */
+   */
   title: string;
   /**
    * Description is a human readable text
-  */
+   */
   description: string;
   /**
    * CodeIDs references the WASM codes
-  */
+   */
   codeIds: bigint[];
 }
 export interface UnpinCodesProposalProtoMsg {

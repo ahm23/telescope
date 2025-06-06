@@ -96,7 +96,7 @@ export interface ConfigChange {
   newValue: string;
   /**
    * The type for this change, either ADDED, REMOVED, or MODIFIED.
-  */
+   */
   changeType: ChangeType;
   /**
    * Collection of advice provided for this change, useful for determining the
@@ -144,7 +144,7 @@ export interface ConfigChangeAmino {
   new_value: string;
   /**
    * The type for this change, either ADDED, REMOVED, or MODIFIED.
-  */
+   */
   change_type: ChangeType;
   /**
    * Collection of advice provided for this change, useful for determining the

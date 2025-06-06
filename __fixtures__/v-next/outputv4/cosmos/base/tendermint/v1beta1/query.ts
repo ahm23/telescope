@@ -17,7 +17,7 @@ export interface GetValidatorSetByHeightRequest {
   height: bigint;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface GetValidatorSetByHeightRequestProtoMsg {
@@ -45,7 +45,7 @@ export interface GetValidatorSetByHeightResponse {
   validators: Validator[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface GetValidatorSetByHeightResponseProtoMsg {
@@ -72,7 +72,7 @@ export interface GetValidatorSetByHeightResponseSDKType {
 export interface GetLatestValidatorSetRequest {
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface GetLatestValidatorSetRequestProtoMsg {
@@ -99,7 +99,7 @@ export interface GetLatestValidatorSetResponse {
   validators: Validator[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface GetLatestValidatorSetResponseProtoMsg {
@@ -331,7 +331,7 @@ export interface VersionInfo {
   buildDeps: Module[];
   /**
    * Since: cosmos-sdk 0.43
-  */
+   */
   cosmosSdkVersion: string;
 }
 export interface VersionInfoProtoMsg {
@@ -363,15 +363,15 @@ export interface VersionInfoSDKType {
 export interface Module {
   /**
    * module path
-  */
+   */
   path: string;
   /**
    * module version
-  */
+   */
   version: string;
   /**
    * checksum
-  */
+   */
   sum: string;
 }
 export interface ModuleProtoMsg {

@@ -116,11 +116,11 @@ export function broadcastModeToJSON(object: BroadcastMode): string {
 export interface GetTxsEventRequest {
   /**
    * events is the list of transaction event type.
-  */
+   */
   events: string[];
   /**
    * pagination defines a pagination for the request.
-  */
+   */
   pagination?: PageRequest;
   orderBy: OrderBy;
 }
@@ -138,11 +138,11 @@ export interface GetTxsEventRequestProtoMsg {
 export interface GetTxsEventRequestAmino {
   /**
    * events is the list of transaction event type.
-  */
+   */
   events?: string[];
   /**
    * pagination defines a pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
   order_by?: OrderBy;
 }
@@ -172,15 +172,15 @@ export interface GetTxsEventRequestSDKType {
 export interface GetTxsEventResponse {
   /**
    * txs is the list of queried transactions.
-  */
+   */
   txs: Tx[];
   /**
    * tx_responses is the list of queried TxResponses.
-  */
+   */
   txResponses: TxResponse[];
   /**
    * pagination defines a pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface GetTxsEventResponseProtoMsg {
@@ -197,15 +197,15 @@ export interface GetTxsEventResponseProtoMsg {
 export interface GetTxsEventResponseAmino {
   /**
    * txs is the list of queried transactions.
-  */
+   */
   txs?: TxAmino[];
   /**
    * tx_responses is the list of queried TxResponses.
-  */
+   */
   tx_responses?: TxResponseAmino[];
   /**
    * pagination defines a pagination for the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface GetTxsEventResponseAminoMsg {
@@ -234,7 +234,7 @@ export interface GetTxsEventResponseSDKType {
 export interface BroadcastTxRequest {
   /**
    * tx_bytes is the raw transaction.
-  */
+   */
   txBytes: Uint8Array;
   mode: BroadcastMode;
 }
@@ -252,7 +252,7 @@ export interface BroadcastTxRequestProtoMsg {
 export interface BroadcastTxRequestAmino {
   /**
    * tx_bytes is the raw transaction.
-  */
+   */
   tx_bytes?: string;
   mode?: BroadcastMode;
 }
@@ -281,7 +281,7 @@ export interface BroadcastTxRequestSDKType {
 export interface BroadcastTxResponse {
   /**
    * tx_response is the queried TxResponses.
-  */
+   */
   txResponse?: TxResponse;
 }
 export interface BroadcastTxResponseProtoMsg {
@@ -298,7 +298,7 @@ export interface BroadcastTxResponseProtoMsg {
 export interface BroadcastTxResponseAmino {
   /**
    * tx_response is the queried TxResponses.
-  */
+   */
   tx_response?: TxResponseAmino;
 }
 export interface BroadcastTxResponseAminoMsg {
@@ -375,7 +375,7 @@ export interface SimulateRequestAminoMsg {
 export interface SimulateRequestSDKType {
   /**
    * @deprecated
-  */
+   */
   tx?: TxSDKType;
   tx_bytes: Uint8Array;
 }
@@ -389,11 +389,11 @@ export interface SimulateRequestSDKType {
 export interface SimulateResponse {
   /**
    * gas_info is the information about gas used in the simulation.
-  */
+   */
   gasInfo?: GasInfo;
   /**
    * result is the result of the simulation.
-  */
+   */
   result?: Result;
 }
 export interface SimulateResponseProtoMsg {
@@ -410,11 +410,11 @@ export interface SimulateResponseProtoMsg {
 export interface SimulateResponseAmino {
   /**
    * gas_info is the information about gas used in the simulation.
-  */
+   */
   gas_info?: GasInfoAmino;
   /**
    * result is the result of the simulation.
-  */
+   */
   result?: ResultAmino;
 }
 export interface SimulateResponseAminoMsg {
@@ -442,7 +442,7 @@ export interface SimulateResponseSDKType {
 export interface GetTxRequest {
   /**
    * hash is the tx hash to query, encoded as a hex string.
-  */
+   */
   hash: string;
 }
 export interface GetTxRequestProtoMsg {
@@ -459,7 +459,7 @@ export interface GetTxRequestProtoMsg {
 export interface GetTxRequestAmino {
   /**
    * hash is the tx hash to query, encoded as a hex string.
-  */
+   */
   hash?: string;
 }
 export interface GetTxRequestAminoMsg {
@@ -485,11 +485,11 @@ export interface GetTxRequestSDKType {
 export interface GetTxResponse {
   /**
    * tx is the queried transaction.
-  */
+   */
   tx?: Tx;
   /**
    * tx_response is the queried TxResponses.
-  */
+   */
   txResponse?: TxResponse;
 }
 export interface GetTxResponseProtoMsg {
@@ -505,11 +505,11 @@ export interface GetTxResponseProtoMsg {
 export interface GetTxResponseAmino {
   /**
    * tx is the queried transaction.
-  */
+   */
   tx?: TxAmino;
   /**
    * tx_response is the queried TxResponses.
-  */
+   */
   tx_response?: TxResponseAmino;
 }
 export interface GetTxResponseAminoMsg {
@@ -538,11 +538,11 @@ export interface GetTxResponseSDKType {
 export interface GetBlockWithTxsRequest {
   /**
    * height is the height of the block to query.
-  */
+   */
   height: bigint;
   /**
    * pagination defines a pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface GetBlockWithTxsRequestProtoMsg {
@@ -561,11 +561,11 @@ export interface GetBlockWithTxsRequestProtoMsg {
 export interface GetBlockWithTxsRequestAmino {
   /**
    * height is the height of the block to query.
-  */
+   */
   height?: string;
   /**
    * pagination defines a pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface GetBlockWithTxsRequestAminoMsg {
@@ -596,13 +596,13 @@ export interface GetBlockWithTxsRequestSDKType {
 export interface GetBlockWithTxsResponse {
   /**
    * txs are the transactions in the block.
-  */
+   */
   txs: Tx[];
   blockId?: BlockID;
   block?: Block;
   /**
    * pagination defines a pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface GetBlockWithTxsResponseProtoMsg {
@@ -620,13 +620,13 @@ export interface GetBlockWithTxsResponseProtoMsg {
 export interface GetBlockWithTxsResponseAmino {
   /**
    * txs are the transactions in the block.
-  */
+   */
   txs?: TxAmino[];
   block_id?: BlockIDAmino;
   block?: BlockAmino;
   /**
    * pagination defines a pagination for the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface GetBlockWithTxsResponseAminoMsg {

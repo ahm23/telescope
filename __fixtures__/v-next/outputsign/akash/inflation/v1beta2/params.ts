@@ -11,7 +11,7 @@ export const protobufPackage = "akash.inflation.v1beta2";
 export interface Params {
   /**
    * InflationDecayFactor is the number of years it takes inflation to halve.
-  */
+   */
   inflationDecayFactor: string;
   /**
    * InitialInflation is the rate at which inflation starts at genesis.
@@ -37,7 +37,7 @@ export interface ParamsProtoMsg {
 export interface ParamsAmino {
   /**
    * InflationDecayFactor is the number of years it takes inflation to halve.
-  */
+   */
   inflation_decay_factor: string;
   /**
    * InitialInflation is the rate at which inflation starts at genesis.

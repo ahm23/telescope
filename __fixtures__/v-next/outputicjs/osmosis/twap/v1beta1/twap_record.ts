@@ -18,15 +18,15 @@ export interface TwapRecord {
   poolId: bigint;
   /**
    * Lexicographically smaller denom of the pair
-  */
+   */
   asset0Denom: string;
   /**
    * Lexicographically larger denom of the pair
-  */
+   */
   asset1Denom: string;
   /**
    * height this record corresponds to, for debugging purposes
-  */
+   */
   height: bigint;
   /**
    * This field should only exist until we have a global registry in the state
@@ -68,15 +68,15 @@ export interface TwapRecordAmino {
   pool_id: string;
   /**
    * Lexicographically smaller denom of the pair
-  */
+   */
   asset0_denom: string;
   /**
    * Lexicographically larger denom of the pair
-  */
+   */
   asset1_denom: string;
   /**
    * height this record corresponds to, for debugging purposes
-  */
+   */
   height: string;
   /**
    * This field should only exist until we have a global registry in the state

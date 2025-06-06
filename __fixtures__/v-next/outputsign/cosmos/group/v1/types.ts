@@ -227,19 +227,19 @@ export function proposalExecutorResultToJSON(object: ProposalExecutorResult): st
 export interface Member {
   /**
    * address is the member's account address.
-  */
+   */
   address: string;
   /**
    * weight is the member's voting weight that should be greater than 0.
-  */
+   */
   weight: string;
   /**
    * metadata is any arbitrary metadata to attached to the member.
-  */
+   */
   metadata: string;
   /**
    * added_at is a timestamp specifying when a member was added.
-  */
+   */
   addedAt: Date;
 }
 export interface MemberProtoMsg {
@@ -256,19 +256,19 @@ export interface MemberProtoMsg {
 export interface MemberAmino {
   /**
    * address is the member's account address.
-  */
+   */
   address?: string;
   /**
    * weight is the member's voting weight that should be greater than 0.
-  */
+   */
   weight?: string;
   /**
    * metadata is any arbitrary metadata to attached to the member.
-  */
+   */
   metadata?: string;
   /**
    * added_at is a timestamp specifying when a member was added.
-  */
+   */
   added_at?: string;
 }
 export interface MemberAminoMsg {
@@ -297,7 +297,7 @@ export interface MemberSDKType {
 export interface Members {
   /**
    * members is the list of members.
-  */
+   */
   members: Member[];
 }
 export interface MembersProtoMsg {
@@ -313,7 +313,7 @@ export interface MembersProtoMsg {
 export interface MembersAmino {
   /**
    * members is the list of members.
-  */
+   */
   members?: MemberAmino[];
 }
 export interface MembersAminoMsg {
@@ -338,11 +338,11 @@ export interface MembersSDKType {
 export interface ThresholdDecisionPolicy {
   /**
    * threshold is the minimum weighted sum of yes votes that must be met or exceeded for a proposal to succeed.
-  */
+   */
   threshold: string;
   /**
    * windows defines the different windows for voting and execution.
-  */
+   */
   windows?: DecisionPolicyWindows;
 }
 export interface ThresholdDecisionPolicyProtoMsg {
@@ -358,11 +358,11 @@ export interface ThresholdDecisionPolicyProtoMsg {
 export interface ThresholdDecisionPolicyAmino {
   /**
    * threshold is the minimum weighted sum of yes votes that must be met or exceeded for a proposal to succeed.
-  */
+   */
   threshold?: string;
   /**
    * windows defines the different windows for voting and execution.
-  */
+   */
   windows?: DecisionPolicyWindowsAmino;
 }
 export interface ThresholdDecisionPolicyAminoMsg {
@@ -388,11 +388,11 @@ export interface ThresholdDecisionPolicySDKType {
 export interface PercentageDecisionPolicy {
   /**
    * percentage is the minimum percentage the weighted sum of yes votes must meet for a proposal to succeed.
-  */
+   */
   percentage: string;
   /**
    * windows defines the different windows for voting and execution.
-  */
+   */
   windows?: DecisionPolicyWindows;
 }
 export interface PercentageDecisionPolicyProtoMsg {
@@ -408,11 +408,11 @@ export interface PercentageDecisionPolicyProtoMsg {
 export interface PercentageDecisionPolicyAmino {
   /**
    * percentage is the minimum percentage the weighted sum of yes votes must meet for a proposal to succeed.
-  */
+   */
   percentage?: string;
   /**
    * windows defines the different windows for voting and execution.
-  */
+   */
   windows?: DecisionPolicyWindowsAmino;
 }
 export interface PercentageDecisionPolicyAminoMsg {
@@ -510,15 +510,15 @@ export interface DecisionPolicyWindowsSDKType {
 export interface GroupInfo {
   /**
    * id is the unique ID of the group.
-  */
+   */
   id: bigint;
   /**
    * admin is the account address of the group's admin.
-  */
+   */
   admin: string;
   /**
    * metadata is any arbitrary metadata to attached to the group.
-  */
+   */
   metadata: string;
   /**
    * version is used to track changes to a group's membership structure that
@@ -529,11 +529,11 @@ export interface GroupInfo {
   version: bigint;
   /**
    * total_weight is the sum of the group members' weights.
-  */
+   */
   totalWeight: string;
   /**
    * created_at is a timestamp specifying when a group was created.
-  */
+   */
   createdAt: Date;
 }
 export interface GroupInfoProtoMsg {
@@ -549,15 +549,15 @@ export interface GroupInfoProtoMsg {
 export interface GroupInfoAmino {
   /**
    * id is the unique ID of the group.
-  */
+   */
   id?: string;
   /**
    * admin is the account address of the group's admin.
-  */
+   */
   admin?: string;
   /**
    * metadata is any arbitrary metadata to attached to the group.
-  */
+   */
   metadata?: string;
   /**
    * version is used to track changes to a group's membership structure that
@@ -568,11 +568,11 @@ export interface GroupInfoAmino {
   version?: string;
   /**
    * total_weight is the sum of the group members' weights.
-  */
+   */
   total_weight?: string;
   /**
    * created_at is a timestamp specifying when a group was created.
-  */
+   */
   created_at?: string;
 }
 export interface GroupInfoAminoMsg {
@@ -602,11 +602,11 @@ export interface GroupInfoSDKType {
 export interface GroupMember {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   groupId: bigint;
   /**
    * member is the member data.
-  */
+   */
   member?: Member;
 }
 export interface GroupMemberProtoMsg {
@@ -622,11 +622,11 @@ export interface GroupMemberProtoMsg {
 export interface GroupMemberAmino {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   group_id?: string;
   /**
    * member is the member data.
-  */
+   */
   member?: MemberAmino;
 }
 export interface GroupMemberAminoMsg {
@@ -652,19 +652,19 @@ export interface GroupMemberSDKType {
 export interface GroupPolicyInfo {
   /**
    * address is the account address of group policy.
-  */
+   */
   address: string;
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   groupId: bigint;
   /**
    * admin is the account address of the group admin.
-  */
+   */
   admin: string;
   /**
    * metadata is any arbitrary metadata to attached to the group policy.
-  */
+   */
   metadata: string;
   /**
    * version is used to track changes to a group's GroupPolicyInfo structure that
@@ -673,11 +673,11 @@ export interface GroupPolicyInfo {
   version: bigint;
   /**
    * decision_policy specifies the group policy's decision policy.
-  */
+   */
   decisionPolicy?: Any;
   /**
    * created_at is a timestamp specifying when a group policy was created.
-  */
+   */
   createdAt: Date;
 }
 export interface GroupPolicyInfoProtoMsg {
@@ -693,19 +693,19 @@ export interface GroupPolicyInfoProtoMsg {
 export interface GroupPolicyInfoAmino {
   /**
    * address is the account address of group policy.
-  */
+   */
   address?: string;
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   group_id?: string;
   /**
    * admin is the account address of the group admin.
-  */
+   */
   admin?: string;
   /**
    * metadata is any arbitrary metadata to attached to the group policy.
-  */
+   */
   metadata?: string;
   /**
    * version is used to track changes to a group's GroupPolicyInfo structure that
@@ -714,11 +714,11 @@ export interface GroupPolicyInfoAmino {
   version?: string;
   /**
    * decision_policy specifies the group policy's decision policy.
-  */
+   */
   decision_policy?: AnyAmino;
   /**
    * created_at is a timestamp specifying when a group policy was created.
-  */
+   */
   created_at?: string;
 }
 export interface GroupPolicyInfoAminoMsg {
@@ -752,23 +752,23 @@ export interface GroupPolicyInfoSDKType {
 export interface Proposal {
   /**
    * id is the unique id of the proposal.
-  */
+   */
   id: bigint;
   /**
    * address is the account address of group policy.
-  */
+   */
   address: string;
   /**
    * metadata is any arbitrary metadata to attached to the proposal.
-  */
+   */
   metadata: string;
   /**
    * proposers are the account addresses of the proposers.
-  */
+   */
   proposers: string[];
   /**
    * submit_time is a timestamp specifying when a proposal was submitted.
-  */
+   */
   submitTime: Date;
   /**
    * group_version tracks the version of the group that this proposal corresponds to.
@@ -782,7 +782,7 @@ export interface Proposal {
   groupPolicyVersion: bigint;
   /**
    * status represents the high level position in the life cycle of the proposal. Initial value is Submitted.
-  */
+   */
   status: ProposalStatus;
   /**
    * result is the final result based on the votes and election rule. Initial value is unfinalized.
@@ -806,11 +806,11 @@ export interface Proposal {
   votingPeriodEnd: Date;
   /**
    * executor_result is the final result based on the votes and election rule. Initial value is NotRun.
-  */
+   */
   executorResult: ProposalExecutorResult;
   /**
    * messages is a list of Msgs that will be executed if the proposal passes.
-  */
+   */
   messages: Any[];
 }
 export interface ProposalProtoMsg {
@@ -829,23 +829,23 @@ export interface ProposalProtoMsg {
 export interface ProposalAmino {
   /**
    * id is the unique id of the proposal.
-  */
+   */
   id?: string;
   /**
    * address is the account address of group policy.
-  */
+   */
   address?: string;
   /**
    * metadata is any arbitrary metadata to attached to the proposal.
-  */
+   */
   metadata?: string;
   /**
    * proposers are the account addresses of the proposers.
-  */
+   */
   proposers?: string[];
   /**
    * submit_time is a timestamp specifying when a proposal was submitted.
-  */
+   */
   submit_time?: string;
   /**
    * group_version tracks the version of the group that this proposal corresponds to.
@@ -859,7 +859,7 @@ export interface ProposalAmino {
   group_policy_version?: string;
   /**
    * status represents the high level position in the life cycle of the proposal. Initial value is Submitted.
-  */
+   */
   status?: ProposalStatus;
   /**
    * result is the final result based on the votes and election rule. Initial value is unfinalized.
@@ -883,11 +883,11 @@ export interface ProposalAmino {
   voting_period_end?: string;
   /**
    * executor_result is the final result based on the votes and election rule. Initial value is NotRun.
-  */
+   */
   executor_result?: ProposalExecutorResult;
   /**
    * messages is a list of Msgs that will be executed if the proposal passes.
-  */
+   */
   messages?: AnyAmino[];
 }
 export interface ProposalAminoMsg {
@@ -927,19 +927,19 @@ export interface ProposalSDKType {
 export interface TallyResult {
   /**
    * yes_count is the weighted sum of yes votes.
-  */
+   */
   yesCount: string;
   /**
    * abstain_count is the weighted sum of abstainers.
-  */
+   */
   abstainCount: string;
   /**
    * no is the weighted sum of no votes.
-  */
+   */
   noCount: string;
   /**
    * no_with_veto_count is the weighted sum of veto.
-  */
+   */
   noWithVetoCount: string;
 }
 export interface TallyResultProtoMsg {
@@ -955,19 +955,19 @@ export interface TallyResultProtoMsg {
 export interface TallyResultAmino {
   /**
    * yes_count is the weighted sum of yes votes.
-  */
+   */
   yes_count?: string;
   /**
    * abstain_count is the weighted sum of abstainers.
-  */
+   */
   abstain_count?: string;
   /**
    * no is the weighted sum of no votes.
-  */
+   */
   no_count?: string;
   /**
    * no_with_veto_count is the weighted sum of veto.
-  */
+   */
   no_with_veto_count?: string;
 }
 export interface TallyResultAminoMsg {
@@ -995,23 +995,23 @@ export interface TallyResultSDKType {
 export interface Vote {
   /**
    * proposal is the unique ID of the proposal.
-  */
+   */
   proposalId: bigint;
   /**
    * voter is the account address of the voter.
-  */
+   */
   voter: string;
   /**
    * option is the voter's choice on the proposal.
-  */
+   */
   option: VoteOption;
   /**
    * metadata is any arbitrary metadata to attached to the vote.
-  */
+   */
   metadata: string;
   /**
    * submit_time is the timestamp when the vote was submitted.
-  */
+   */
   submitTime: Date;
 }
 export interface VoteProtoMsg {
@@ -1027,23 +1027,23 @@ export interface VoteProtoMsg {
 export interface VoteAmino {
   /**
    * proposal is the unique ID of the proposal.
-  */
+   */
   proposal_id?: string;
   /**
    * voter is the account address of the voter.
-  */
+   */
   voter?: string;
   /**
    * option is the voter's choice on the proposal.
-  */
+   */
   option?: VoteOption;
   /**
    * metadata is any arbitrary metadata to attached to the vote.
-  */
+   */
   metadata?: string;
   /**
    * submit_time is the timestamp when the vote was submitted.
-  */
+   */
   submit_time?: string;
 }
 export interface VoteAminoMsg {

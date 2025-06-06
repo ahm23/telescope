@@ -16,7 +16,7 @@ export interface DenomTrace {
   path: string;
   /**
    * base denomination of the relayed fungible token.
-  */
+   */
   baseDenom: string;
 }
 export interface DenomTraceProtoMsg {
@@ -38,7 +38,7 @@ export interface DenomTraceAmino {
   path?: string;
   /**
    * base denomination of the relayed fungible token.
-  */
+   */
   base_denom?: string;
 }
 /**

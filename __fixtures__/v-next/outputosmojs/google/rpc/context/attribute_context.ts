@@ -49,11 +49,11 @@ export interface AttributeContext {
   destination?: AttributeContext_Peer;
   /**
    * Represents a network request, such as an HTTP request.
-  */
+   */
   request?: AttributeContext_Request;
   /**
    * Represents a network response, such as an HTTP response.
-  */
+   */
   response?: AttributeContext_Response;
   /**
    * Represents a target resource that is involved with a network activity.
@@ -63,11 +63,11 @@ export interface AttributeContext {
   resource?: AttributeContext_Resource;
   /**
    * Represents an API operation that is involved to a network activity.
-  */
+   */
   api?: AttributeContext_Api;
   /**
    * Supports extensions for advanced use cases, such as logs and metrics.
-  */
+   */
   extensions: Any[];
 }
 export interface AttributeContextProtoMsg {
@@ -140,15 +140,15 @@ export interface AttributeContext_Peer_LabelsEntrySDKType {
 export interface AttributeContext_Peer {
   /**
    * The IP address of the peer.
-  */
+   */
   ip: string;
   /**
    * The network port of the peer.
-  */
+   */
   port: bigint;
   /**
    * The labels associated with the peer.
-  */
+   */
   labels: {
     [key: string]: string;
   };
@@ -365,7 +365,7 @@ export interface AttributeContext_Request {
   id: string;
   /**
    * The HTTP request method, such as `GET`, `POST`.
-  */
+   */
   method: string;
   /**
    * The HTTP request headers. If multiple headers share the same key, they
@@ -377,15 +377,15 @@ export interface AttributeContext_Request {
   };
   /**
    * The HTTP URL path.
-  */
+   */
   path: string;
   /**
    * The HTTP request `Host` header value.
-  */
+   */
   host: string;
   /**
    * The HTTP URL scheme, such as `http` and `https`.
-  */
+   */
   scheme: string;
   /**
    * The HTTP URL query in the format of `name1=value1&name2=value2`, as it
@@ -399,7 +399,7 @@ export interface AttributeContext_Request {
   time?: Date;
   /**
    * The HTTP request size in bytes. If unknown, it must be -1.
-  */
+   */
   size: bigint;
   /**
    * The network protocol used with the request, such as "http/1.1",
@@ -479,11 +479,11 @@ export interface AttributeContext_Response_HeadersEntrySDKType {
 export interface AttributeContext_Response {
   /**
    * The HTTP response status code, such as `200` and `404`.
-  */
+   */
   code: bigint;
   /**
    * The HTTP response size in bytes. If unknown, it must be -1.
-  */
+   */
   size: bigint;
   /**
    * The HTTP response headers. If multiple headers share the same key, they
@@ -634,7 +634,7 @@ export interface AttributeContext_Resource {
   };
   /**
    * Mutable. The display name set by clients. Must be <= 63 characters.
-  */
+   */
   displayName: string;
   /**
    * Output only. The timestamp when the resource was created. This may

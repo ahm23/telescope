@@ -13,7 +13,7 @@ export const protobufPackage = "cosmos.evidence.v1beta1";
 export interface QueryEvidenceRequest {
   /**
    * evidence_hash defines the hash of the requested evidence.
-  */
+   */
   evidenceHash: Uint8Array;
 }
 export interface QueryEvidenceRequestProtoMsg {
@@ -29,7 +29,7 @@ export interface QueryEvidenceRequestProtoMsg {
 export interface QueryEvidenceRequestAmino {
   /**
    * evidence_hash defines the hash of the requested evidence.
-  */
+   */
   evidence_hash?: string;
 }
 export interface QueryEvidenceRequestAminoMsg {
@@ -54,7 +54,7 @@ export interface QueryEvidenceRequestSDKType {
 export interface QueryEvidenceResponse {
   /**
    * evidence returns the requested evidence.
-  */
+   */
   evidence?: Any;
 }
 export interface QueryEvidenceResponseProtoMsg {
@@ -70,7 +70,7 @@ export interface QueryEvidenceResponseProtoMsg {
 export interface QueryEvidenceResponseAmino {
   /**
    * evidence returns the requested evidence.
-  */
+   */
   evidence?: AnyAmino;
 }
 export interface QueryEvidenceResponseAminoMsg {
@@ -96,7 +96,7 @@ export interface QueryEvidenceResponseSDKType {
 export interface QueryAllEvidenceRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryAllEvidenceRequestProtoMsg {
@@ -113,7 +113,7 @@ export interface QueryAllEvidenceRequestProtoMsg {
 export interface QueryAllEvidenceRequestAmino {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryAllEvidenceRequestAminoMsg {
@@ -140,11 +140,11 @@ export interface QueryAllEvidenceRequestSDKType {
 export interface QueryAllEvidenceResponse {
   /**
    * evidence returns all evidences.
-  */
+   */
   evidence: Any[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryAllEvidenceResponseProtoMsg {
@@ -161,11 +161,11 @@ export interface QueryAllEvidenceResponseProtoMsg {
 export interface QueryAllEvidenceResponseAmino {
   /**
    * evidence returns all evidences.
-  */
+   */
   evidence?: AnyAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryAllEvidenceResponseAminoMsg {

@@ -33,7 +33,7 @@ export interface QueryParamsRequestAminoMsg {
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: OsmosisTokenfactoryV1beta1Params;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -49,7 +49,7 @@ export interface QueryParamsResponseProtoMsg {
 export interface QueryParamsResponseAmino {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: OsmosisTokenfactoryV1beta1ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {

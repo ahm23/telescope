@@ -112,7 +112,7 @@ export interface EnableServiceRequestAminoMsg {
 export interface EnableServiceResponse {
   /**
    * The new state of the service after enabling.
-  */
+   */
   service?: Service;
 }
 export interface EnableServiceResponseProtoMsg {
@@ -130,7 +130,7 @@ export interface EnableServiceResponseProtoMsg {
 export interface EnableServiceResponseAmino {
   /**
    * The new state of the service after enabling.
-  */
+   */
   service?: ServiceAmino;
 }
 export interface EnableServiceResponseAminoMsg {
@@ -164,7 +164,7 @@ export interface DisableServiceRequest {
   disableDependentServices: boolean;
   /**
    * Defines the behavior for checking service usage when disabling a service.
-  */
+   */
   checkIfServiceHasUsage: DisableServiceRequest_CheckIfServiceHasUsage;
 }
 export interface DisableServiceRequestProtoMsg {
@@ -198,7 +198,7 @@ export interface DisableServiceRequestAmino {
   disable_dependent_services: boolean;
   /**
    * Defines the behavior for checking service usage when disabling a service.
-  */
+   */
   check_if_service_has_usage: DisableServiceRequest_CheckIfServiceHasUsage;
 }
 export interface DisableServiceRequestAminoMsg {
@@ -216,7 +216,7 @@ export interface DisableServiceRequestAminoMsg {
 export interface DisableServiceResponse {
   /**
    * The new state of the service after disabling.
-  */
+   */
   service?: Service;
 }
 export interface DisableServiceResponseProtoMsg {
@@ -234,7 +234,7 @@ export interface DisableServiceResponseProtoMsg {
 export interface DisableServiceResponseAmino {
   /**
    * The new state of the service after disabling.
-  */
+   */
   service?: ServiceAmino;
 }
 export interface DisableServiceResponseAminoMsg {
@@ -360,7 +360,7 @@ export interface ListServicesRequestAminoMsg {
 export interface ListServicesResponse {
   /**
    * The available services for the requested project.
-  */
+   */
   services: Service[];
   /**
    * Token that can be passed to `ListServices` to resume a paginated
@@ -381,7 +381,7 @@ export interface ListServicesResponseProtoMsg {
 export interface ListServicesResponseAmino {
   /**
    * The available services for the requested project.
-  */
+   */
   services: ServiceAmino[];
   /**
    * Token that can be passed to `ListServices` to resume a paginated
@@ -474,7 +474,7 @@ export interface BatchEnableServicesRequestAminoMsg {
 export interface BatchEnableServicesResponse {
   /**
    * The new state of the services after enabling.
-  */
+   */
   services: Service[];
   /**
    * If allow_partial_success is true, and one or more services could not be
@@ -497,7 +497,7 @@ export interface BatchEnableServicesResponseProtoMsg {
 export interface BatchEnableServicesResponseAmino {
   /**
    * The new state of the services after enabling.
-  */
+   */
   services: ServiceAmino[];
   /**
    * If allow_partial_success is true, and one or more services could not be
@@ -518,11 +518,11 @@ export interface BatchEnableServicesResponseAminoMsg {
 export interface BatchEnableServicesResponse_EnableFailure {
   /**
    * The service id of a service that could not be enabled.
-  */
+   */
   serviceId: string;
   /**
    * An error message describing why the service could not be enabled.
-  */
+   */
   errorMessage: string;
 }
 export interface BatchEnableServicesResponse_EnableFailureProtoMsg {
@@ -538,11 +538,11 @@ export interface BatchEnableServicesResponse_EnableFailureProtoMsg {
 export interface BatchEnableServicesResponse_EnableFailureAmino {
   /**
    * The service id of a service that could not be enabled.
-  */
+   */
   service_id: string;
   /**
    * An error message describing why the service could not be enabled.
-  */
+   */
   error_message: string;
 }
 export interface BatchEnableServicesResponse_EnableFailureAminoMsg {
@@ -616,7 +616,7 @@ export interface BatchGetServicesRequestAminoMsg {
 export interface BatchGetServicesResponse {
   /**
    * The requested Service states.
-  */
+   */
   services: Service[];
 }
 export interface BatchGetServicesResponseProtoMsg {
@@ -632,7 +632,7 @@ export interface BatchGetServicesResponseProtoMsg {
 export interface BatchGetServicesResponseAmino {
   /**
    * The requested Service states.
-  */
+   */
   services: ServiceAmino[];
 }
 export interface BatchGetServicesResponseAminoMsg {

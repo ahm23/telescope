@@ -14,11 +14,11 @@ export const protobufPackage = "cosmos.bank.v1beta1";
 export interface QueryBalanceRequest {
   /**
    * address is the address to query balances for.
-  */
+   */
   address: string;
   /**
    * denom is the coin denom to query balances for.
-  */
+   */
   denom: string;
 }
 export interface QueryBalanceRequestProtoMsg {
@@ -34,11 +34,11 @@ export interface QueryBalanceRequestProtoMsg {
 export interface QueryBalanceRequestAmino {
   /**
    * address is the address to query balances for.
-  */
+   */
   address?: string;
   /**
    * denom is the coin denom to query balances for.
-  */
+   */
   denom?: string;
 }
 export interface QueryBalanceRequestAminoMsg {
@@ -64,7 +64,7 @@ export interface QueryBalanceRequestSDKType {
 export interface QueryBalanceResponse {
   /**
    * balance is the balance of the coin.
-  */
+   */
   balance?: Coin;
 }
 export interface QueryBalanceResponseProtoMsg {
@@ -80,7 +80,7 @@ export interface QueryBalanceResponseProtoMsg {
 export interface QueryBalanceResponseAmino {
   /**
    * balance is the balance of the coin.
-  */
+   */
   balance?: CoinAmino;
 }
 export interface QueryBalanceResponseAminoMsg {
@@ -105,11 +105,11 @@ export interface QueryBalanceResponseSDKType {
 export interface QueryAllBalancesRequest {
   /**
    * address is the address to query balances for.
-  */
+   */
   address: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryAllBalancesRequestProtoMsg {
@@ -125,11 +125,11 @@ export interface QueryAllBalancesRequestProtoMsg {
 export interface QueryAllBalancesRequestAmino {
   /**
    * address is the address to query balances for.
-  */
+   */
   address?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryAllBalancesRequestAminoMsg {
@@ -156,11 +156,11 @@ export interface QueryAllBalancesRequestSDKType {
 export interface QueryAllBalancesResponse {
   /**
    * balances is the balances of all the coins.
-  */
+   */
   balances: Coin[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryAllBalancesResponseProtoMsg {
@@ -177,11 +177,11 @@ export interface QueryAllBalancesResponseProtoMsg {
 export interface QueryAllBalancesResponseAmino {
   /**
    * balances is the balances of all the coins.
-  */
+   */
   balances?: CoinAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryAllBalancesResponseAminoMsg {
@@ -209,11 +209,11 @@ export interface QueryAllBalancesResponseSDKType {
 export interface QuerySpendableBalancesRequest {
   /**
    * address is the address to query spendable balances for.
-  */
+   */
   address: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QuerySpendableBalancesRequestProtoMsg {
@@ -230,11 +230,11 @@ export interface QuerySpendableBalancesRequestProtoMsg {
 export interface QuerySpendableBalancesRequestAmino {
   /**
    * address is the address to query spendable balances for.
-  */
+   */
   address?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QuerySpendableBalancesRequestAminoMsg {
@@ -262,11 +262,11 @@ export interface QuerySpendableBalancesRequestSDKType {
 export interface QuerySpendableBalancesResponse {
   /**
    * balances is the spendable balances of all the coins.
-  */
+   */
   balances: Coin[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QuerySpendableBalancesResponseProtoMsg {
@@ -283,11 +283,11 @@ export interface QuerySpendableBalancesResponseProtoMsg {
 export interface QuerySpendableBalancesResponseAmino {
   /**
    * balances is the spendable balances of all the coins.
-  */
+   */
   balances?: CoinAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QuerySpendableBalancesResponseAminoMsg {
@@ -363,7 +363,7 @@ export interface QueryTotalSupplyRequestSDKType {
 export interface QueryTotalSupplyResponse {
   /**
    * supply is the supply of the coins
-  */
+   */
   supply: Coin[];
   /**
    * pagination defines the pagination in the response.
@@ -386,7 +386,7 @@ export interface QueryTotalSupplyResponseProtoMsg {
 export interface QueryTotalSupplyResponseAmino {
   /**
    * supply is the supply of the coins
-  */
+   */
   supply?: CoinAmino[];
   /**
    * pagination defines the pagination in the response.
@@ -419,7 +419,7 @@ export interface QueryTotalSupplyResponseSDKType {
 export interface QuerySupplyOfRequest {
   /**
    * denom is the coin denom to query balances for.
-  */
+   */
   denom: string;
 }
 export interface QuerySupplyOfRequestProtoMsg {
@@ -435,7 +435,7 @@ export interface QuerySupplyOfRequestProtoMsg {
 export interface QuerySupplyOfRequestAmino {
   /**
    * denom is the coin denom to query balances for.
-  */
+   */
   denom?: string;
 }
 export interface QuerySupplyOfRequestAminoMsg {
@@ -460,7 +460,7 @@ export interface QuerySupplyOfRequestSDKType {
 export interface QuerySupplyOfResponse {
   /**
    * amount is the supply of the coin.
-  */
+   */
   amount: Coin;
 }
 export interface QuerySupplyOfResponseProtoMsg {
@@ -476,7 +476,7 @@ export interface QuerySupplyOfResponseProtoMsg {
 export interface QuerySupplyOfResponseAmino {
   /**
    * amount is the supply of the coin.
-  */
+   */
   amount?: CoinAmino;
 }
 export interface QuerySupplyOfResponseAminoMsg {
@@ -565,7 +565,7 @@ export interface QueryParamsResponseSDKType {
 export interface QueryDenomsMetadataRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryDenomsMetadataRequestProtoMsg {
@@ -581,7 +581,7 @@ export interface QueryDenomsMetadataRequestProtoMsg {
 export interface QueryDenomsMetadataRequestAmino {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryDenomsMetadataRequestAminoMsg {
@@ -607,11 +607,11 @@ export interface QueryDenomsMetadataRequestSDKType {
 export interface QueryDenomsMetadataResponse {
   /**
    * metadata provides the client information for all the registered tokens.
-  */
+   */
   metadatas: Metadata[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryDenomsMetadataResponseProtoMsg {
@@ -628,11 +628,11 @@ export interface QueryDenomsMetadataResponseProtoMsg {
 export interface QueryDenomsMetadataResponseAmino {
   /**
    * metadata provides the client information for all the registered tokens.
-  */
+   */
   metadatas?: MetadataAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryDenomsMetadataResponseAminoMsg {
@@ -659,7 +659,7 @@ export interface QueryDenomsMetadataResponseSDKType {
 export interface QueryDenomMetadataRequest {
   /**
    * denom is the coin denom to query the metadata for.
-  */
+   */
   denom: string;
 }
 export interface QueryDenomMetadataRequestProtoMsg {
@@ -675,7 +675,7 @@ export interface QueryDenomMetadataRequestProtoMsg {
 export interface QueryDenomMetadataRequestAmino {
   /**
    * denom is the coin denom to query the metadata for.
-  */
+   */
   denom?: string;
 }
 export interface QueryDenomMetadataRequestAminoMsg {
@@ -701,7 +701,7 @@ export interface QueryDenomMetadataRequestSDKType {
 export interface QueryDenomMetadataResponse {
   /**
    * metadata describes and provides all the client information for the requested token.
-  */
+   */
   metadata: Metadata;
 }
 export interface QueryDenomMetadataResponseProtoMsg {
@@ -718,7 +718,7 @@ export interface QueryDenomMetadataResponseProtoMsg {
 export interface QueryDenomMetadataResponseAmino {
   /**
    * metadata describes and provides all the client information for the requested token.
-  */
+   */
   metadata?: MetadataAmino;
 }
 export interface QueryDenomMetadataResponseAminoMsg {
@@ -746,11 +746,11 @@ export interface QueryDenomMetadataResponseSDKType {
 export interface QueryDenomOwnersRequest {
   /**
    * denom defines the coin denomination to query all account holders for.
-  */
+   */
   denom: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryDenomOwnersRequestProtoMsg {
@@ -768,11 +768,11 @@ export interface QueryDenomOwnersRequestProtoMsg {
 export interface QueryDenomOwnersRequestAmino {
   /**
    * denom defines the coin denomination to query all account holders for.
-  */
+   */
   denom?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryDenomOwnersRequestAminoMsg {
@@ -802,11 +802,11 @@ export interface QueryDenomOwnersRequestSDKType {
 export interface DenomOwner {
   /**
    * address defines the address that owns a particular denomination.
-  */
+   */
   address: string;
   /**
    * balance is the balance of the denominated coin for an account.
-  */
+   */
   balance: Coin;
 }
 export interface DenomOwnerProtoMsg {
@@ -824,11 +824,11 @@ export interface DenomOwnerProtoMsg {
 export interface DenomOwnerAmino {
   /**
    * address defines the address that owns a particular denomination.
-  */
+   */
   address?: string;
   /**
    * balance is the balance of the denominated coin for an account.
-  */
+   */
   balance?: CoinAmino;
 }
 export interface DenomOwnerAminoMsg {
@@ -857,7 +857,7 @@ export interface QueryDenomOwnersResponse {
   denomOwners: DenomOwner[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryDenomOwnersResponseProtoMsg {
@@ -874,7 +874,7 @@ export interface QueryDenomOwnersResponseAmino {
   denom_owners?: DenomOwnerAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryDenomOwnersResponseAminoMsg {

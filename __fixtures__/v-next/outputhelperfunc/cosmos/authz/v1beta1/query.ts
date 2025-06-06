@@ -16,11 +16,11 @@ export interface QueryGrantsRequest {
   grantee: string;
   /**
    * Optional, msg_type_url, when set, will query only grants matching given msg type.
-  */
+   */
   msgTypeUrl: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryGrantsRequestProtoMsg {
@@ -38,11 +38,11 @@ export interface QueryGrantsRequestAmino {
   grantee?: string;
   /**
    * Optional, msg_type_url, when set, will query only grants matching given msg type.
-  */
+   */
   msg_type_url?: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryGrantsRequestAminoMsg {
@@ -70,11 +70,11 @@ export interface QueryGrantsRequestSDKType {
 export interface QueryGrantsResponse {
   /**
    * authorizations is a list of grants granted for grantee by granter.
-  */
+   */
   grants: Grant[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryGrantsResponseProtoMsg {
@@ -90,11 +90,11 @@ export interface QueryGrantsResponseProtoMsg {
 export interface QueryGrantsResponseAmino {
   /**
    * authorizations is a list of grants granted for grantee by granter.
-  */
+   */
   grants?: GrantAmino[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryGrantsResponseAminoMsg {
@@ -121,7 +121,7 @@ export interface QueryGranterGrantsRequest {
   granter: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryGranterGrantsRequestProtoMsg {
@@ -138,7 +138,7 @@ export interface QueryGranterGrantsRequestAmino {
   granter?: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryGranterGrantsRequestAminoMsg {
@@ -164,11 +164,11 @@ export interface QueryGranterGrantsRequestSDKType {
 export interface QueryGranterGrantsResponse {
   /**
    * grants is a list of grants granted by the granter.
-  */
+   */
   grants: GrantAuthorization[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryGranterGrantsResponseProtoMsg {
@@ -184,11 +184,11 @@ export interface QueryGranterGrantsResponseProtoMsg {
 export interface QueryGranterGrantsResponseAmino {
   /**
    * grants is a list of grants granted by the granter.
-  */
+   */
   grants?: GrantAuthorizationAmino[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryGranterGrantsResponseAminoMsg {
@@ -215,7 +215,7 @@ export interface QueryGranteeGrantsRequest {
   grantee: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryGranteeGrantsRequestProtoMsg {
@@ -232,7 +232,7 @@ export interface QueryGranteeGrantsRequestAmino {
   grantee?: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryGranteeGrantsRequestAminoMsg {
@@ -258,11 +258,11 @@ export interface QueryGranteeGrantsRequestSDKType {
 export interface QueryGranteeGrantsResponse {
   /**
    * grants is a list of grants granted to the grantee.
-  */
+   */
   grants: GrantAuthorization[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryGranteeGrantsResponseProtoMsg {
@@ -278,11 +278,11 @@ export interface QueryGranteeGrantsResponseProtoMsg {
 export interface QueryGranteeGrantsResponseAmino {
   /**
    * grants is a list of grants granted to the grantee.
-  */
+   */
   grants?: GrantAuthorizationAmino[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryGranteeGrantsResponseAminoMsg {

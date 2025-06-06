@@ -14,11 +14,11 @@ export const protobufPackage = "osmosis.protorev.v1beta1";
 export interface GenesisState {
   /**
    * Parameters for the protorev module.
-  */
+   */
   params: Params;
   /**
    * Token pair arb routes for the protorev module (hot routes).
-  */
+   */
   tokenPairArbRoutes: TokenPairArbRoutes[];
   /**
    * The base denominations being used to create cyclic arbitrage routes via the
@@ -32,19 +32,19 @@ export interface GenesisState {
   poolWeights: PoolWeights;
   /**
    * The number of days since module genesis.
-  */
+   */
   daysSinceModuleGenesis: bigint;
   /**
    * The fees the developer account has accumulated over time.
-  */
+   */
   developerFees: Coin[];
   /**
    * The latest block height that the module has processed.
-  */
+   */
   latestBlockHeight: bigint;
   /**
    * The developer account address of the module.
-  */
+   */
   developerAddress: string;
   /**
    * Max pool points per block i.e. the maximum compute time (in ms)
@@ -58,7 +58,7 @@ export interface GenesisState {
   maxPoolPointsPerTx: bigint;
   /**
    * The number of pool points that have been consumed in the current block.
-  */
+   */
   pointCountForBlock: bigint;
 }
 export interface GenesisStateProtoMsg {

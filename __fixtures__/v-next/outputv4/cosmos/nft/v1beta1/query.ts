@@ -289,7 +289,7 @@ export interface QueryClassResponseSDKType {
 export interface QueryClassesRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryClassesRequestProtoMsg {

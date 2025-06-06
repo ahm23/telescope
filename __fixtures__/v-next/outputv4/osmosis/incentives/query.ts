@@ -30,7 +30,7 @@ export interface ModuleToDistributeCoinsRequestSDKType {}
 export interface ModuleToDistributeCoinsResponse {
   /**
    * Coins that have yet to be distributed
-  */
+   */
   coins: Coin[];
 }
 export interface ModuleToDistributeCoinsResponseProtoMsg {
@@ -53,7 +53,7 @@ export interface ModuleToDistributeCoinsResponseSDKType {
 export interface GaugeByIDRequest {
   /**
    * Gague ID being queried
-  */
+   */
   id: bigint;
 }
 export interface GaugeByIDRequestProtoMsg {
@@ -76,7 +76,7 @@ export interface GaugeByIDRequestSDKType {
 export interface GaugeByIDResponse {
   /**
    * Gauge that corresponds to provided gague ID
-  */
+   */
   gauge?: Gauge;
 }
 export interface GaugeByIDResponseProtoMsg {
@@ -99,7 +99,7 @@ export interface GaugeByIDResponseSDKType {
 export interface GaugesRequest {
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface GaugesRequestProtoMsg {
@@ -122,11 +122,11 @@ export interface GaugesRequestSDKType {
 export interface GaugesResponse {
   /**
    * Upcoming and active gauges
-  */
+   */
   data: Gauge[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface GaugesResponseProtoMsg {
@@ -150,7 +150,7 @@ export interface GaugesResponseSDKType {
 export interface ActiveGaugesRequest {
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface ActiveGaugesRequestProtoMsg {
@@ -173,11 +173,11 @@ export interface ActiveGaugesRequestSDKType {
 export interface ActiveGaugesResponse {
   /**
    * Active gagues only
-  */
+   */
   data: Gauge[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface ActiveGaugesResponseProtoMsg {
@@ -201,11 +201,11 @@ export interface ActiveGaugesResponseSDKType {
 export interface ActiveGaugesPerDenomRequest {
   /**
    * Desired denom when querying active gagues
-  */
+   */
   denom: string;
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface ActiveGaugesPerDenomRequestProtoMsg {
@@ -229,11 +229,11 @@ export interface ActiveGaugesPerDenomRequestSDKType {
 export interface ActiveGaugesPerDenomResponse {
   /**
    * Active gagues that match denom in query
-  */
+   */
   data: Gauge[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface ActiveGaugesPerDenomResponseProtoMsg {
@@ -257,7 +257,7 @@ export interface ActiveGaugesPerDenomResponseSDKType {
 export interface UpcomingGaugesRequest {
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface UpcomingGaugesRequestProtoMsg {
@@ -280,11 +280,11 @@ export interface UpcomingGaugesRequestSDKType {
 export interface UpcomingGaugesResponse {
   /**
    * Gauges whose distribution is upcoming
-  */
+   */
   data: Gauge[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface UpcomingGaugesResponseProtoMsg {
@@ -308,11 +308,11 @@ export interface UpcomingGaugesResponseSDKType {
 export interface UpcomingGaugesPerDenomRequest {
   /**
    * Filter for upcoming gagues that match specific denom
-  */
+   */
   denom: string;
   /**
    * Pagination defines pagination for the request
-  */
+   */
   pagination?: PageRequest;
 }
 export interface UpcomingGaugesPerDenomRequestProtoMsg {
@@ -336,11 +336,11 @@ export interface UpcomingGaugesPerDenomRequestSDKType {
 export interface UpcomingGaugesPerDenomResponse {
   /**
    * Upcoming gagues that match denom in query
-  */
+   */
   upcomingGauges: Gauge[];
   /**
    * Pagination defines pagination for the response
-  */
+   */
   pagination?: PageResponse;
 }
 export interface UpcomingGaugesPerDenomResponseProtoMsg {
@@ -364,11 +364,11 @@ export interface UpcomingGaugesPerDenomResponseSDKType {
 export interface RewardsEstRequest {
   /**
    * Address that is being queried for future estimated rewards
-  */
+   */
   owner: string;
   /**
    * Lock IDs included in future reward estimation
-  */
+   */
   lockIds: bigint[];
   /**
    * Upper time limit of reward estimation
@@ -438,7 +438,7 @@ export interface QueryLockableDurationsRequestSDKType {}
 export interface QueryLockableDurationsResponse {
   /**
    * Time durations that users can lock coins for in order to recieve rewards
-  */
+   */
   lockableDurations: Duration[];
 }
 export interface QueryLockableDurationsResponseProtoMsg {

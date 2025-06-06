@@ -13,7 +13,7 @@ export const protobufPackage = "google.protobuf";
 export interface DoubleValue {
   /**
    * The double value.
-  */
+   */
   value: number;
 }
 export interface DoubleValueProtoMsg {
@@ -31,7 +31,7 @@ export interface DoubleValueProtoMsg {
 export interface DoubleValueAmino {
   /**
    * The double value.
-  */
+   */
   value?: number;
 }
 export interface DoubleValueAminoMsg {
@@ -60,7 +60,7 @@ export interface DoubleValueSDKType {
 export interface FloatValue {
   /**
    * The float value.
-  */
+   */
   value: number;
 }
 export interface FloatValueProtoMsg {
@@ -78,7 +78,7 @@ export interface FloatValueProtoMsg {
 export interface FloatValueAmino {
   /**
    * The float value.
-  */
+   */
   value?: number;
 }
 export interface FloatValueAminoMsg {
@@ -107,7 +107,7 @@ export interface FloatValueSDKType {
 export interface Int64Value {
   /**
    * The int64 value.
-  */
+   */
   value: bigint;
 }
 export interface Int64ValueProtoMsg {
@@ -125,7 +125,7 @@ export interface Int64ValueProtoMsg {
 export interface Int64ValueAmino {
   /**
    * The int64 value.
-  */
+   */
   value?: string;
 }
 export interface Int64ValueAminoMsg {
@@ -154,7 +154,7 @@ export interface Int64ValueSDKType {
 export interface UInt64Value {
   /**
    * The uint64 value.
-  */
+   */
   value: bigint;
 }
 export interface UInt64ValueProtoMsg {
@@ -172,7 +172,7 @@ export interface UInt64ValueProtoMsg {
 export interface UInt64ValueAmino {
   /**
    * The uint64 value.
-  */
+   */
   value?: string;
 }
 export interface UInt64ValueAminoMsg {
@@ -201,7 +201,7 @@ export interface UInt64ValueSDKType {
 export interface Int32Value {
   /**
    * The int32 value.
-  */
+   */
   value: number;
 }
 export interface Int32ValueProtoMsg {
@@ -219,7 +219,7 @@ export interface Int32ValueProtoMsg {
 export interface Int32ValueAmino {
   /**
    * The int32 value.
-  */
+   */
   value?: number;
 }
 export interface Int32ValueAminoMsg {
@@ -248,7 +248,7 @@ export interface Int32ValueSDKType {
 export interface UInt32Value {
   /**
    * The uint32 value.
-  */
+   */
   value: number;
 }
 export interface UInt32ValueProtoMsg {
@@ -266,7 +266,7 @@ export interface UInt32ValueProtoMsg {
 export interface UInt32ValueAmino {
   /**
    * The uint32 value.
-  */
+   */
   value?: number;
 }
 export interface UInt32ValueAminoMsg {
@@ -295,7 +295,7 @@ export interface UInt32ValueSDKType {
 export interface BoolValue {
   /**
    * The bool value.
-  */
+   */
   value: boolean;
 }
 export interface BoolValueProtoMsg {
@@ -313,7 +313,7 @@ export interface BoolValueProtoMsg {
 export interface BoolValueAmino {
   /**
    * The bool value.
-  */
+   */
   value?: boolean;
 }
 export interface BoolValueAminoMsg {
@@ -342,7 +342,7 @@ export interface BoolValueSDKType {
 export interface StringValue {
   /**
    * The string value.
-  */
+   */
   value: string;
 }
 export interface StringValueProtoMsg {
@@ -360,7 +360,7 @@ export interface StringValueProtoMsg {
 export interface StringValueAmino {
   /**
    * The string value.
-  */
+   */
   value?: string;
 }
 export interface StringValueAminoMsg {
@@ -389,7 +389,7 @@ export interface StringValueSDKType {
 export interface BytesValue {
   /**
    * The bytes value.
-  */
+   */
   value: Uint8Array;
 }
 export interface BytesValueProtoMsg {
@@ -407,7 +407,7 @@ export interface BytesValueProtoMsg {
 export interface BytesValueAmino {
   /**
    * The bytes value.
-  */
+   */
   value?: string;
 }
 export interface BytesValueAminoMsg {

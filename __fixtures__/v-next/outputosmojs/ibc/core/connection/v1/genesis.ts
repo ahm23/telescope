@@ -14,7 +14,7 @@ export interface GenesisState {
   clientConnectionPaths: ConnectionPaths[];
   /**
    * the sequence for the next generated connection identifier
-  */
+   */
   nextConnectionSequence: bigint;
   params: Params;
 }

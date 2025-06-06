@@ -13,11 +13,11 @@ export const protobufPackage = "cosmos.auth.v1beta1";
 export interface GenesisState {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: Params;
   /**
    * accounts are the accounts present at genesis.
-  */
+   */
   accounts: Any[];
 }
 export interface GenesisStateProtoMsg {
@@ -33,11 +33,11 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params?: ParamsAmino;
   /**
    * accounts are the accounts present at genesis.
-  */
+   */
   accounts?: AnyAmino[];
 }
 export interface GenesisStateAminoMsg {

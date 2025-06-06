@@ -66,23 +66,23 @@ export interface InflationDistributionSDKType {
 export interface ExponentialCalculation {
   /**
    * initial value
-  */
+   */
   a: string;
   /**
    * reduction factor
-  */
+   */
   r: string;
   /**
    * long term inflation
-  */
+   */
   c: string;
   /**
    * bonding target
-  */
+   */
   bondingTarget: string;
   /**
    * max variance
-  */
+   */
   maxVariance: string;
 }
 export interface ExponentialCalculationProtoMsg {

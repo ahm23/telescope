@@ -101,13 +101,13 @@ export interface PlanSDKType {
   name: string;
   /**
    * @deprecated
-  */
+   */
   time: Date;
   height: bigint;
   info: string;
   /**
    * @deprecated
-  */
+   */
   upgraded_client_state?: AnySDKType;
 }
 /**
@@ -216,11 +216,11 @@ export interface CancelSoftwareUpgradeProposalSDKType {
 export interface ModuleVersion {
   /**
    * name of the app module
-  */
+   */
   name: string;
   /**
    * consensus version of the app module
-  */
+   */
   version: bigint;
 }
 export interface ModuleVersionProtoMsg {
@@ -238,11 +238,11 @@ export interface ModuleVersionProtoMsg {
 export interface ModuleVersionAmino {
   /**
    * name of the app module
-  */
+   */
   name?: string;
   /**
    * consensus version of the app module
-  */
+   */
   version?: string;
 }
 /**

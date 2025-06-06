@@ -335,7 +335,7 @@ export interface QueryClassResponseAminoMsg {
 export interface QueryClassesRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryClassesRequestProtoMsg {
@@ -351,7 +351,7 @@ export interface QueryClassesRequestProtoMsg {
 export interface QueryClassesRequestAmino {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryClassesRequestAminoMsg {

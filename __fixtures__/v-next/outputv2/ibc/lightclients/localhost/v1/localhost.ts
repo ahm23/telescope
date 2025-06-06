@@ -13,11 +13,11 @@ export const protobufPackage = "ibc.lightclients.localhost.v1";
 export interface ClientState {
   /**
    * self chain ID
-  */
+   */
   chainId: string;
   /**
    * self latest block height
-  */
+   */
   height: Height;
 }
 export interface ClientStateProtoMsg {
@@ -34,11 +34,11 @@ export interface ClientStateProtoMsg {
 export interface ClientStateAmino {
   /**
    * self chain ID
-  */
+   */
   chain_id?: string;
   /**
    * self latest block height
-  */
+   */
   height?: HeightAmino;
 }
 export interface ClientStateAminoMsg {

@@ -9,7 +9,7 @@ import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../helpers"
 export interface MsgIBCSend {
   /**
    * the channel by which the packet will be sent
-  */
+   */
   channel: string;
   /**
    * Timeout height relative to the current block height.
@@ -40,7 +40,7 @@ export interface MsgIBCSendProtoMsg {
 export interface MsgIBCSendAmino {
   /**
    * the channel by which the packet will be sent
-  */
+   */
   channel: string;
   /**
    * Timeout height relative to the current block height.

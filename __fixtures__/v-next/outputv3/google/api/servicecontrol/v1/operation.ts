@@ -99,7 +99,7 @@ export interface Operation {
   operationId: string;
   /**
    * Fully qualified name of the operation. Reserved for future use.
-  */
+   */
   operationName: string;
   /**
    * Identity of the consumer who is using the service.
@@ -118,7 +118,7 @@ export interface Operation {
   consumerId: string;
   /**
    * Required. Start time of the operation.
-  */
+   */
   startTime?: Date;
   /**
    * End time of the operation.
@@ -164,15 +164,15 @@ export interface Operation {
   metricValueSets: MetricValueSet[];
   /**
    * Represents information to be logged.
-  */
+   */
   logEntries: LogEntry[];
   /**
    * DO NOT USE. This is an experimental field.
-  */
+   */
   importance: Operation_Importance;
   /**
    * Unimplemented.
-  */
+   */
   extensions: Any[];
 }
 export interface OperationProtoMsg {
@@ -200,7 +200,7 @@ export interface OperationAmino {
   operation_id?: string;
   /**
    * Fully qualified name of the operation. Reserved for future use.
-  */
+   */
   operation_name?: string;
   /**
    * Identity of the consumer who is using the service.
@@ -219,7 +219,7 @@ export interface OperationAmino {
   consumer_id?: string;
   /**
    * Required. Start time of the operation.
-  */
+   */
   start_time?: string;
   /**
    * End time of the operation.
@@ -265,15 +265,15 @@ export interface OperationAmino {
   metric_value_sets?: MetricValueSetAmino[];
   /**
    * Represents information to be logged.
-  */
+   */
   log_entries?: LogEntryAmino[];
   /**
    * DO NOT USE. This is an experimental field.
-  */
+   */
   importance?: Operation_Importance;
   /**
    * Unimplemented.
-  */
+   */
   extensions?: AnyAmino[];
 }
 /**

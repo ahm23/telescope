@@ -67,7 +67,7 @@ export function stateToJSON(object: State): string {
 export interface ConnectionEnd {
   /**
    * client associated with this connection.
-  */
+   */
   clientId: string;
   /**
    * IBC version which can be utilised to determine encodings or protocols for
@@ -76,11 +76,11 @@ export interface ConnectionEnd {
   versions: Version[];
   /**
    * current state of the connection end.
-  */
+   */
   state: State;
   /**
    * counterparty chain associated with this connection.
-  */
+   */
   counterparty: Counterparty;
   /**
    * delay period that must pass before a consensus state can be used for
@@ -105,7 +105,7 @@ export interface ConnectionEndProtoMsg {
 export interface ConnectionEndAmino {
   /**
    * client associated with this connection.
-  */
+   */
   client_id: string;
   /**
    * IBC version which can be utilised to determine encodings or protocols for
@@ -114,11 +114,11 @@ export interface ConnectionEndAmino {
   versions: VersionAmino[];
   /**
    * current state of the connection end.
-  */
+   */
   state: State;
   /**
    * counterparty chain associated with this connection.
-  */
+   */
   counterparty: CounterpartyAmino;
   /**
    * delay period that must pass before a consensus state can be used for
@@ -141,11 +141,11 @@ export interface ConnectionEndAminoMsg {
 export interface IdentifiedConnection {
   /**
    * connection identifier.
-  */
+   */
   id: string;
   /**
    * client associated with this connection.
-  */
+   */
   clientId: string;
   /**
    * IBC version which can be utilised to determine encodings or protocols for
@@ -154,15 +154,15 @@ export interface IdentifiedConnection {
   versions: Version[];
   /**
    * current state of the connection end.
-  */
+   */
   state: State;
   /**
    * counterparty chain associated with this connection.
-  */
+   */
   counterparty: Counterparty;
   /**
    * delay period associated with this connection.
-  */
+   */
   delayPeriod: bigint;
 }
 export interface IdentifiedConnectionProtoMsg {
@@ -179,11 +179,11 @@ export interface IdentifiedConnectionProtoMsg {
 export interface IdentifiedConnectionAmino {
   /**
    * connection identifier.
-  */
+   */
   id: string;
   /**
    * client associated with this connection.
-  */
+   */
   client_id: string;
   /**
    * IBC version which can be utilised to determine encodings or protocols for
@@ -192,15 +192,15 @@ export interface IdentifiedConnectionAmino {
   versions: VersionAmino[];
   /**
    * current state of the connection end.
-  */
+   */
   state: State;
   /**
    * counterparty chain associated with this connection.
-  */
+   */
   counterparty: CounterpartyAmino;
   /**
    * delay period associated with this connection.
-  */
+   */
   delay_period: string;
 }
 export interface IdentifiedConnectionAminoMsg {
@@ -226,7 +226,7 @@ export interface Counterparty {
   connectionId: string;
   /**
    * commitment merkle prefix of the counterparty chain.
-  */
+   */
   prefix: MerklePrefix;
 }
 export interface CounterpartyProtoMsg {
@@ -252,7 +252,7 @@ export interface CounterpartyAmino {
   connection_id: string;
   /**
    * commitment merkle prefix of the counterparty chain.
-  */
+   */
   prefix: MerklePrefixAmino;
 }
 export interface CounterpartyAminoMsg {
@@ -268,7 +268,7 @@ export interface CounterpartyAminoMsg {
 export interface ClientPaths {
   /**
    * list of connection paths
-  */
+   */
   paths: string[];
 }
 export interface ClientPathsProtoMsg {
@@ -284,7 +284,7 @@ export interface ClientPathsProtoMsg {
 export interface ClientPathsAmino {
   /**
    * list of connection paths
-  */
+   */
   paths: string[];
 }
 export interface ClientPathsAminoMsg {
@@ -300,11 +300,11 @@ export interface ClientPathsAminoMsg {
 export interface ConnectionPaths {
   /**
    * client state unique identifier
-  */
+   */
   clientId: string;
   /**
    * list of connection paths
-  */
+   */
   paths: string[];
 }
 export interface ConnectionPathsProtoMsg {
@@ -320,11 +320,11 @@ export interface ConnectionPathsProtoMsg {
 export interface ConnectionPathsAmino {
   /**
    * client state unique identifier
-  */
+   */
   client_id: string;
   /**
    * list of connection paths
-  */
+   */
   paths: string[];
 }
 export interface ConnectionPathsAminoMsg {
@@ -341,11 +341,11 @@ export interface ConnectionPathsAminoMsg {
 export interface Version {
   /**
    * unique version identifier
-  */
+   */
   identifier: string;
   /**
    * list of features compatible with the specified identifier
-  */
+   */
   features: string[];
 }
 export interface VersionProtoMsg {
@@ -362,11 +362,11 @@ export interface VersionProtoMsg {
 export interface VersionAmino {
   /**
    * unique version identifier
-  */
+   */
   identifier: string;
   /**
    * list of features compatible with the specified identifier
-  */
+   */
   features: string[];
 }
 export interface VersionAminoMsg {

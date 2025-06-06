@@ -12,15 +12,15 @@ export const protobufPackage = "cosmos.feegrant.v1beta1";
 export interface MsgGrantAllowance {
   /**
    * granter is the address of the user granting an allowance of their funds.
-  */
+   */
   granter: string;
   /**
    * grantee is the address of the user being granted an allowance of another user's funds.
-  */
+   */
   grantee: string;
   /**
    * allowance can be any of basic, periodic, allowed fee allowance.
-  */
+   */
   allowance?: Any;
 }
 export interface MsgGrantAllowanceProtoMsg {
@@ -37,15 +37,15 @@ export interface MsgGrantAllowanceProtoMsg {
 export interface MsgGrantAllowanceAmino {
   /**
    * granter is the address of the user granting an allowance of their funds.
-  */
+   */
   granter?: string;
   /**
    * grantee is the address of the user being granted an allowance of another user's funds.
-  */
+   */
   grantee?: string;
   /**
    * allowance can be any of basic, periodic, allowed fee allowance.
-  */
+   */
   allowance?: AnyAmino;
 }
 export interface MsgGrantAllowanceAminoMsg {
@@ -102,11 +102,11 @@ export interface MsgGrantAllowanceResponseSDKType {}
 export interface MsgRevokeAllowance {
   /**
    * granter is the address of the user granting an allowance of their funds.
-  */
+   */
   granter: string;
   /**
    * grantee is the address of the user being granted an allowance of another user's funds.
-  */
+   */
   grantee: string;
 }
 export interface MsgRevokeAllowanceProtoMsg {
@@ -122,11 +122,11 @@ export interface MsgRevokeAllowanceProtoMsg {
 export interface MsgRevokeAllowanceAmino {
   /**
    * granter is the address of the user granting an allowance of their funds.
-  */
+   */
   granter?: string;
   /**
    * grantee is the address of the user being granted an allowance of another user's funds.
-  */
+   */
   grantee?: string;
 }
 export interface MsgRevokeAllowanceAminoMsg {

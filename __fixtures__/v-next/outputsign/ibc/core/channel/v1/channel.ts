@@ -123,15 +123,15 @@ export function orderToJSON(object: Order): string {
 export interface Channel {
   /**
    * current state of the channel end
-  */
+   */
   state: State;
   /**
    * whether the channel is ordered or unordered
-  */
+   */
   ordering: Order;
   /**
    * counterparty channel end
-  */
+   */
   counterparty: Counterparty;
   /**
    * list of connection identifiers, in order, along which packets sent on
@@ -140,7 +140,7 @@ export interface Channel {
   connectionHops: string[];
   /**
    * opaque channel version, which is agreed upon during the handshake
-  */
+   */
   version: string;
 }
 export interface ChannelProtoMsg {
@@ -158,15 +158,15 @@ export interface ChannelProtoMsg {
 export interface ChannelAmino {
   /**
    * current state of the channel end
-  */
+   */
   state?: State;
   /**
    * whether the channel is ordered or unordered
-  */
+   */
   ordering?: Order;
   /**
    * counterparty channel end
-  */
+   */
   counterparty?: CounterpartyAmino;
   /**
    * list of connection identifiers, in order, along which packets sent on
@@ -175,7 +175,7 @@ export interface ChannelAmino {
   connection_hops?: string[];
   /**
    * opaque channel version, which is agreed upon during the handshake
-  */
+   */
   version?: string;
 }
 export interface ChannelAminoMsg {
@@ -207,15 +207,15 @@ export interface ChannelSDKType {
 export interface IdentifiedChannel {
   /**
    * current state of the channel end
-  */
+   */
   state: State;
   /**
    * whether the channel is ordered or unordered
-  */
+   */
   ordering: Order;
   /**
    * counterparty channel end
-  */
+   */
   counterparty: Counterparty;
   /**
    * list of connection identifiers, in order, along which packets sent on
@@ -224,15 +224,15 @@ export interface IdentifiedChannel {
   connectionHops: string[];
   /**
    * opaque channel version, which is agreed upon during the handshake
-  */
+   */
   version: string;
   /**
    * port identifier
-  */
+   */
   portId: string;
   /**
    * channel identifier
-  */
+   */
   channelId: string;
 }
 export interface IdentifiedChannelProtoMsg {
@@ -249,15 +249,15 @@ export interface IdentifiedChannelProtoMsg {
 export interface IdentifiedChannelAmino {
   /**
    * current state of the channel end
-  */
+   */
   state?: State;
   /**
    * whether the channel is ordered or unordered
-  */
+   */
   ordering?: Order;
   /**
    * counterparty channel end
-  */
+   */
   counterparty?: CounterpartyAmino;
   /**
    * list of connection identifiers, in order, along which packets sent on
@@ -266,15 +266,15 @@ export interface IdentifiedChannelAmino {
   connection_hops?: string[];
   /**
    * opaque channel version, which is agreed upon during the handshake
-  */
+   */
   version?: string;
   /**
    * port identifier
-  */
+   */
   port_id?: string;
   /**
    * channel identifier
-  */
+   */
   channel_id?: string;
 }
 export interface IdentifiedChannelAminoMsg {
@@ -306,11 +306,11 @@ export interface IdentifiedChannelSDKType {
 export interface Counterparty {
   /**
    * port on the counterparty chain which owns the other end of the channel.
-  */
+   */
   portId: string;
   /**
    * channel end on the counterparty chain
-  */
+   */
   channelId: string;
 }
 export interface CounterpartyProtoMsg {
@@ -326,11 +326,11 @@ export interface CounterpartyProtoMsg {
 export interface CounterpartyAmino {
   /**
    * port on the counterparty chain which owns the other end of the channel.
-  */
+   */
   port_id?: string;
   /**
    * channel end on the counterparty chain
-  */
+   */
   channel_id?: string;
 }
 export interface CounterpartyAminoMsg {
@@ -362,31 +362,31 @@ export interface Packet {
   sequence: bigint;
   /**
    * identifies the port on the sending chain.
-  */
+   */
   sourcePort: string;
   /**
    * identifies the channel end on the sending chain.
-  */
+   */
   sourceChannel: string;
   /**
    * identifies the port on the receiving chain.
-  */
+   */
   destinationPort: string;
   /**
    * identifies the channel end on the receiving chain.
-  */
+   */
   destinationChannel: string;
   /**
    * actual opaque bytes transferred directly to the application module
-  */
+   */
   data: Uint8Array;
   /**
    * block height after which the packet times out
-  */
+   */
   timeoutHeight: Height;
   /**
    * block timestamp (in nanoseconds) after which the packet times out
-  */
+   */
   timeoutTimestamp: bigint;
 }
 export interface PacketProtoMsg {
@@ -408,31 +408,31 @@ export interface PacketAmino {
   sequence?: string;
   /**
    * identifies the port on the sending chain.
-  */
+   */
   source_port?: string;
   /**
    * identifies the channel end on the sending chain.
-  */
+   */
   source_channel?: string;
   /**
    * identifies the port on the receiving chain.
-  */
+   */
   destination_port?: string;
   /**
    * identifies the channel end on the receiving chain.
-  */
+   */
   destination_channel?: string;
   /**
    * actual opaque bytes transferred directly to the application module
-  */
+   */
   data?: string;
   /**
    * block height after which the packet times out
-  */
+   */
   timeout_height?: HeightAmino;
   /**
    * block timestamp (in nanoseconds) after which the packet times out
-  */
+   */
   timeout_timestamp?: string;
 }
 export interface PacketAminoMsg {
@@ -467,19 +467,19 @@ export interface PacketSDKType {
 export interface PacketState {
   /**
    * channel port identifier.
-  */
+   */
   portId: string;
   /**
    * channel unique identifier.
-  */
+   */
   channelId: string;
   /**
    * packet sequence.
-  */
+   */
   sequence: bigint;
   /**
    * embedded data that represents packet state.
-  */
+   */
   data: Uint8Array;
 }
 export interface PacketStateProtoMsg {
@@ -498,19 +498,19 @@ export interface PacketStateProtoMsg {
 export interface PacketStateAmino {
   /**
    * channel port identifier.
-  */
+   */
   port_id?: string;
   /**
    * channel unique identifier.
-  */
+   */
   channel_id?: string;
   /**
    * packet sequence.
-  */
+   */
   sequence?: string;
   /**
    * embedded data that represents packet state.
-  */
+   */
   data?: string;
 }
 export interface PacketStateAminoMsg {

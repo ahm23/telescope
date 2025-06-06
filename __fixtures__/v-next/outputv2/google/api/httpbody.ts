@@ -54,11 +54,11 @@ export const protobufPackage = "google.api";
 export interface HttpBody {
   /**
    * The HTTP Content-Type header value specifying the content type of the body.
-  */
+   */
   contentType: string;
   /**
    * The HTTP request/response body as raw binary.
-  */
+   */
   data: Uint8Array;
   /**
    * Application specific response metadata. Must be set in the first response
@@ -121,11 +121,11 @@ export interface HttpBodyProtoMsg {
 export interface HttpBodyAmino {
   /**
    * The HTTP Content-Type header value specifying the content type of the body.
-  */
+   */
   content_type?: string;
   /**
    * The HTTP request/response body as raw binary.
-  */
+   */
   data?: string;
   /**
    * Application specific response metadata. Must be set in the first response

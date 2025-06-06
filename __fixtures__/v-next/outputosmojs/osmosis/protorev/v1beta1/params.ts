@@ -11,11 +11,11 @@ export const protobufPackage = "osmosis.protorev.v1beta1";
 export interface Params {
   /**
    * Boolean whether the protorev module is enabled.
-  */
+   */
   enabled: boolean;
   /**
    * The admin account (settings manager) of the protorev module.
-  */
+   */
   admin: string;
 }
 export interface ParamsProtoMsg {

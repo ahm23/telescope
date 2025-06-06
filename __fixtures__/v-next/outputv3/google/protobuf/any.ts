@@ -119,7 +119,7 @@ export interface Any {
   typeUrl: string;
   /**
    * Must be a valid serialized protocol buffer of the above specified type.
-  */
+   */
   value: Uint8Array;
 }
 export interface AnyProtoMsg {
@@ -243,7 +243,7 @@ export interface AnyAmino {
   type: string;
   /**
    * Must be a valid serialized protocol buffer of the above specified type.
-  */
+   */
   value: any;
 }
 /**

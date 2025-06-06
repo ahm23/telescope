@@ -90,7 +90,7 @@ export interface Operation {
   operationId: string;
   /**
    * Fully qualified name of the operation. Reserved for future use.
-  */
+   */
   operationName: string;
   /**
    * Identity of the consumer who is using the service.
@@ -109,7 +109,7 @@ export interface Operation {
   consumerId: string;
   /**
    * Required. Start time of the operation.
-  */
+   */
   startTime?: Date;
   /**
    * End time of the operation.
@@ -155,15 +155,15 @@ export interface Operation {
   metricValueSets: MetricValueSet[];
   /**
    * Represents information to be logged.
-  */
+   */
   logEntries: LogEntry[];
   /**
    * DO NOT USE. This is an experimental field.
-  */
+   */
   importance: Operation_Importance;
   /**
    * Unimplemented.
-  */
+   */
   extensions: Any[];
 }
 export interface OperationProtoMsg {

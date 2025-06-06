@@ -12,11 +12,11 @@ export const protobufPackage = "cosmos.mint.v1beta1";
 export interface Minter {
   /**
    * current annual inflation rate
-  */
+   */
   inflation: string;
   /**
    * current annual expected provisions
-  */
+   */
   annualProvisions: string;
 }
 export interface MinterProtoMsg {
@@ -42,27 +42,27 @@ export interface MinterSDKType {
 export interface Params {
   /**
    * type of coin to mint
-  */
+   */
   mintDenom: string;
   /**
    * maximum annual change in inflation rate
-  */
+   */
   inflationRateChange: string;
   /**
    * maximum inflation rate
-  */
+   */
   inflationMax: string;
   /**
    * minimum inflation rate
-  */
+   */
   inflationMin: string;
   /**
    * goal of percent bonded atoms
-  */
+   */
   goalBonded: string;
   /**
    * expected blocks per year
-  */
+   */
   blocksPerYear: bigint;
 }
 export interface ParamsProtoMsg {

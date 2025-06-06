@@ -14,11 +14,11 @@ export const protobufPackage = "evmos.claims.v1";
 export interface GenesisState {
   /**
    * params defines all the parameters of the module.
-  */
+   */
   params: Params;
   /**
    * list of claim records with the corresponding airdrop recipient
-  */
+   */
   claimsRecords: ClaimsRecordAddress[];
 }
 export interface GenesisStateProtoMsg {
@@ -34,11 +34,11 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * params defines all the parameters of the module.
-  */
+   */
   params?: ParamsAmino;
   /**
    * list of claim records with the corresponding airdrop recipient
-  */
+   */
   claims_records?: ClaimsRecordAddressAmino[];
 }
 export interface GenesisStateAminoMsg {
@@ -64,23 +64,23 @@ export interface GenesisStateSDKType {
 export interface Params {
   /**
    * enable claiming process
-  */
+   */
   enableClaims: boolean;
   /**
    * timestamp of the airdrop start
-  */
+   */
   airdropStartTime: Date;
   /**
    * duration until decay of claimable tokens begin
-  */
+   */
   durationUntilDecay: Duration;
   /**
    * duration of the token claim decay period
-  */
+   */
   durationOfDecay: Duration;
   /**
    * denom of claimable coin
-  */
+   */
   claimsDenom: string;
   /**
    * list of authorized channel identifiers that can perform address
@@ -89,7 +89,7 @@ export interface Params {
   authorizedChannels: string[];
   /**
    * list of channel identifiers from EVM compatible chains
-  */
+   */
   evmChannels: string[];
 }
 export interface ParamsProtoMsg {
@@ -105,23 +105,23 @@ export interface ParamsProtoMsg {
 export interface ParamsAmino {
   /**
    * enable claiming process
-  */
+   */
   enable_claims?: boolean;
   /**
    * timestamp of the airdrop start
-  */
+   */
   airdrop_start_time?: string;
   /**
    * duration until decay of claimable tokens begin
-  */
+   */
   duration_until_decay?: DurationAmino;
   /**
    * duration of the token claim decay period
-  */
+   */
   duration_of_decay?: DurationAmino;
   /**
    * denom of claimable coin
-  */
+   */
   claims_denom?: string;
   /**
    * list of authorized channel identifiers that can perform address
@@ -130,7 +130,7 @@ export interface ParamsAmino {
   authorized_channels?: string[];
   /**
    * list of channel identifiers from EVM compatible chains
-  */
+   */
   evm_channels?: string[];
 }
 export interface ParamsAminoMsg {

@@ -11,7 +11,7 @@ import { DeepPartial } from "../../../helpers";
 export interface GenesisState {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: OsmosisPoolincentivesV1beta1Params;
   lockableDurations: Duration[];
   distrInfo?: DistrInfo;
@@ -30,7 +30,7 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: OsmosisPoolincentivesV1beta1ParamsAmino;
   lockable_durations: DurationAmino[];
   distr_info?: DistrInfoAmino;

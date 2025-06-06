@@ -23,7 +23,7 @@ export const protobufPackage = "google.rpc";
 export interface RetryInfo {
   /**
    * Clients should wait at least this long between retrying the same request.
-  */
+   */
   retryDelay?: Duration;
 }
 export interface RetryInfoProtoMsg {
@@ -51,7 +51,7 @@ export interface RetryInfoProtoMsg {
 export interface RetryInfoAmino {
   /**
    * Clients should wait at least this long between retrying the same request.
-  */
+   */
   retry_delay?: DurationAmino;
 }
 /**
@@ -84,11 +84,11 @@ export interface RetryInfoSDKType {
 export interface DebugInfo {
   /**
    * The stack trace entries indicating where the error occurred.
-  */
+   */
   stackEntries: string[];
   /**
    * Additional debugging information provided by the server.
-  */
+   */
   detail: string;
 }
 export interface DebugInfoProtoMsg {
@@ -104,11 +104,11 @@ export interface DebugInfoProtoMsg {
 export interface DebugInfoAmino {
   /**
    * The stack trace entries indicating where the error occurred.
-  */
+   */
   stack_entries?: string[];
   /**
    * Additional debugging information provided by the server.
-  */
+   */
   detail?: string;
 }
 /**
@@ -140,7 +140,7 @@ export interface DebugInfoSDKType {
 export interface QuotaFailure {
   /**
    * Describes all quota violations.
-  */
+   */
   violations: QuotaFailure_Violation[];
 }
 export interface QuotaFailureProtoMsg {
@@ -166,7 +166,7 @@ export interface QuotaFailureProtoMsg {
 export interface QuotaFailureAmino {
   /**
    * Describes all quota violations.
-  */
+   */
   violations?: QuotaFailure_ViolationAmino[];
 }
 /**
@@ -457,7 +457,7 @@ export interface ErrorInfoSDKType {
 export interface PreconditionFailure {
   /**
    * Describes all precondition violations.
-  */
+   */
   violations: PreconditionFailure_Violation[];
 }
 export interface PreconditionFailureProtoMsg {
@@ -477,7 +477,7 @@ export interface PreconditionFailureProtoMsg {
 export interface PreconditionFailureAmino {
   /**
    * Describes all precondition violations.
-  */
+   */
   violations?: PreconditionFailure_ViolationAmino[];
 }
 /**
@@ -572,7 +572,7 @@ export interface PreconditionFailure_ViolationSDKType {
 export interface BadRequest {
   /**
    * Describes all violations in a client request.
-  */
+   */
   fieldViolations: BadRequest_FieldViolation[];
 }
 export interface BadRequestProtoMsg {
@@ -589,7 +589,7 @@ export interface BadRequestProtoMsg {
 export interface BadRequestAmino {
   /**
    * Describes all violations in a client request.
-  */
+   */
   field_violations?: BadRequest_FieldViolationAmino[];
 }
 /**
@@ -617,7 +617,7 @@ export interface BadRequest_FieldViolation {
   field: string;
   /**
    * A description of why the request element is bad.
-  */
+   */
   description: string;
 }
 export interface BadRequest_FieldViolationProtoMsg {
@@ -639,7 +639,7 @@ export interface BadRequest_FieldViolationAmino {
   field?: string;
   /**
    * A description of why the request element is bad.
-  */
+   */
   description?: string;
 }
 /**
@@ -798,7 +798,7 @@ export interface ResourceInfoSDKType {
 export interface Help {
   /**
    * URL(s) pointing to additional information on handling the current error.
-  */
+   */
   links: Help_Link[];
 }
 export interface HelpProtoMsg {
@@ -818,7 +818,7 @@ export interface HelpProtoMsg {
 export interface HelpAmino {
   /**
    * URL(s) pointing to additional information on handling the current error.
-  */
+   */
   links?: Help_LinkAmino[];
 }
 /**
@@ -843,11 +843,11 @@ export interface HelpSDKType {
 export interface Help_Link {
   /**
    * Describes what the link offers.
-  */
+   */
   description: string;
   /**
    * The URL of the link.
-  */
+   */
   url: string;
 }
 export interface Help_LinkProtoMsg {
@@ -863,11 +863,11 @@ export interface Help_LinkProtoMsg {
 export interface Help_LinkAmino {
   /**
    * Describes what the link offers.
-  */
+   */
   description?: string;
   /**
    * The URL of the link.
-  */
+   */
   url?: string;
 }
 /**
@@ -896,7 +896,7 @@ export interface LocalizedMessage {
   locale: string;
   /**
    * The localized error message in the above locale.
-  */
+   */
   message: string;
 }
 export interface LocalizedMessageProtoMsg {
@@ -919,7 +919,7 @@ export interface LocalizedMessageAmino {
   locale?: string;
   /**
    * The localized error message in the above locale.
-  */
+   */
   message?: string;
 }
 /**

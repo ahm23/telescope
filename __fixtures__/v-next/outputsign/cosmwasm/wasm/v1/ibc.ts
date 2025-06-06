@@ -10,7 +10,7 @@ export const protobufPackage = "cosmwasm.wasm.v1";
 export interface MsgIBCSend {
   /**
    * the channel by which the packet will be sent
-  */
+   */
   channel: string;
   /**
    * Timeout height relative to the current block height.
@@ -41,7 +41,7 @@ export interface MsgIBCSendProtoMsg {
 export interface MsgIBCSendAmino {
   /**
    * the channel by which the packet will be sent
-  */
+   */
   channel?: string;
   /**
    * Timeout height relative to the current block height.

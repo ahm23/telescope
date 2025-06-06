@@ -13,7 +13,7 @@ export const protobufPackage = "cosmos.evidence.v1beta1";
 export interface QueryEvidenceRequest {
   /**
    * evidence_hash defines the hash of the requested evidence.
-  */
+   */
   evidenceHash: Uint8Array;
 }
 export interface QueryEvidenceRequestProtoMsg {
@@ -38,7 +38,7 @@ export interface QueryEvidenceRequestSDKType {
 export interface QueryEvidenceResponse {
   /**
    * evidence returns the requested evidence.
-  */
+   */
   evidence?: Any;
 }
 export interface QueryEvidenceResponseProtoMsg {
@@ -64,7 +64,7 @@ export interface QueryEvidenceResponseSDKType {
 export interface QueryAllEvidenceRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryAllEvidenceRequestProtoMsg {
@@ -91,11 +91,11 @@ export interface QueryAllEvidenceRequestSDKType {
 export interface QueryAllEvidenceResponse {
   /**
    * evidence returns all evidences.
-  */
+   */
   evidence: Any[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryAllEvidenceResponseProtoMsg {

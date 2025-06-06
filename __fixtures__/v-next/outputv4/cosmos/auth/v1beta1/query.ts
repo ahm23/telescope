@@ -16,7 +16,7 @@ export const protobufPackage = "cosmos.auth.v1beta1";
 export interface QueryAccountsRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryAccountsRequestProtoMsg {
@@ -45,11 +45,11 @@ export interface QueryAccountsRequestSDKType {
 export interface QueryAccountsResponse {
   /**
    * accounts are the existing accounts
-  */
+   */
   accounts: Any[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryAccountsResponseProtoMsg {
@@ -77,7 +77,7 @@ export interface QueryAccountsResponseSDKType {
 export interface QueryAccountRequest {
   /**
    * address defines the address to query for.
-  */
+   */
   address: string;
 }
 export interface QueryAccountRequestProtoMsg {
@@ -120,7 +120,7 @@ export interface QueryModuleAccountsRequestSDKType {}
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -145,7 +145,7 @@ export interface QueryParamsResponseSDKType {
 export interface QueryAccountResponse {
   /**
    * account defines the account of the corresponding address.
-  */
+   */
   account?: Any;
 }
 export interface QueryAccountResponseProtoMsg {

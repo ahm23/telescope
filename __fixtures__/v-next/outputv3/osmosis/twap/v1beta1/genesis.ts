@@ -46,11 +46,11 @@ export interface ParamsSDKType {
 export interface GenesisState {
   /**
    * twaps is the collection of all twap records.
-  */
+   */
   twaps: TwapRecord[];
   /**
    * params is the container of twap parameters.
-  */
+   */
   params: Params;
 }
 export interface GenesisStateProtoMsg {
@@ -66,11 +66,11 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * twaps is the collection of all twap records.
-  */
+   */
   twaps?: TwapRecordAmino[];
   /**
    * params is the container of twap parameters.
-  */
+   */
   params?: ParamsAmino;
 }
 /**

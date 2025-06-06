@@ -213,7 +213,7 @@ export interface Proposal {
   votingEndTime?: Date;
   /**
    * metadata is any arbitrary metadata attached to the proposal.
-  */
+   */
   metadata: string;
 }
 export interface ProposalProtoMsg {
@@ -279,7 +279,7 @@ export interface Vote {
   options: WeightedVoteOption[];
   /**
    * metadata is any  arbitrary metadata to attached to the vote.
-  */
+   */
   metadata: string;
 }
 export interface VoteProtoMsg {
@@ -308,7 +308,7 @@ export interface VoteSDKType {
 export interface DepositParams {
   /**
    * Minimum deposit for a proposal to enter voting period.
-  */
+   */
   minDeposit: Coin[];
   /**
    * Maximum period for Atom holders to deposit on a proposal. Initial value: 2
@@ -339,7 +339,7 @@ export interface DepositParamsSDKType {
 export interface VotingParams {
   /**
    * Length of the voting period.
-  */
+   */
   votingPeriod?: Duration;
 }
 export interface VotingParamsProtoMsg {
@@ -369,7 +369,7 @@ export interface TallyParams {
   quorum: string;
   /**
    * Minimum proportion of Yes votes for proposal to pass. Default value: 0.5.
-  */
+   */
   threshold: string;
   /**
    * Minimum value of Veto votes to Total votes ratio for proposal to be

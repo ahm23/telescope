@@ -13,7 +13,7 @@ export const protobufPackage = "cosmos.group.v1";
 export interface QueryGroupInfoRequest {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   groupId: bigint;
 }
 export interface QueryGroupInfoRequestProtoMsg {
@@ -29,7 +29,7 @@ export interface QueryGroupInfoRequestProtoMsg {
 export interface QueryGroupInfoRequestAmino {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   group_id?: string;
 }
 export interface QueryGroupInfoRequestAminoMsg {
@@ -54,7 +54,7 @@ export interface QueryGroupInfoRequestSDKType {
 export interface QueryGroupInfoResponse {
   /**
    * info is the GroupInfo for the group.
-  */
+   */
   info?: GroupInfo;
 }
 export interface QueryGroupInfoResponseProtoMsg {
@@ -70,7 +70,7 @@ export interface QueryGroupInfoResponseProtoMsg {
 export interface QueryGroupInfoResponseAmino {
   /**
    * info is the GroupInfo for the group.
-  */
+   */
   info?: GroupInfoAmino;
 }
 export interface QueryGroupInfoResponseAminoMsg {
@@ -95,7 +95,7 @@ export interface QueryGroupInfoResponseSDKType {
 export interface QueryGroupPolicyInfoRequest {
   /**
    * address is the account address of the group policy.
-  */
+   */
   address: string;
 }
 export interface QueryGroupPolicyInfoRequestProtoMsg {
@@ -111,7 +111,7 @@ export interface QueryGroupPolicyInfoRequestProtoMsg {
 export interface QueryGroupPolicyInfoRequestAmino {
   /**
    * address is the account address of the group policy.
-  */
+   */
   address?: string;
 }
 export interface QueryGroupPolicyInfoRequestAminoMsg {
@@ -136,7 +136,7 @@ export interface QueryGroupPolicyInfoRequestSDKType {
 export interface QueryGroupPolicyInfoResponse {
   /**
    * info is the GroupPolicyInfo for the group policy.
-  */
+   */
   info?: GroupPolicyInfo;
 }
 export interface QueryGroupPolicyInfoResponseProtoMsg {
@@ -152,7 +152,7 @@ export interface QueryGroupPolicyInfoResponseProtoMsg {
 export interface QueryGroupPolicyInfoResponseAmino {
   /**
    * info is the GroupPolicyInfo for the group policy.
-  */
+   */
   info?: GroupPolicyInfoAmino;
 }
 export interface QueryGroupPolicyInfoResponseAminoMsg {
@@ -177,11 +177,11 @@ export interface QueryGroupPolicyInfoResponseSDKType {
 export interface QueryGroupMembersRequest {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   groupId: bigint;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryGroupMembersRequestProtoMsg {
@@ -197,11 +197,11 @@ export interface QueryGroupMembersRequestProtoMsg {
 export interface QueryGroupMembersRequestAmino {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   group_id?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryGroupMembersRequestAminoMsg {
@@ -227,11 +227,11 @@ export interface QueryGroupMembersRequestSDKType {
 export interface QueryGroupMembersResponse {
   /**
    * members are the members of the group with given group_id.
-  */
+   */
   members: GroupMember[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryGroupMembersResponseProtoMsg {
@@ -247,11 +247,11 @@ export interface QueryGroupMembersResponseProtoMsg {
 export interface QueryGroupMembersResponseAmino {
   /**
    * members are the members of the group with given group_id.
-  */
+   */
   members?: GroupMemberAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryGroupMembersResponseAminoMsg {
@@ -277,11 +277,11 @@ export interface QueryGroupMembersResponseSDKType {
 export interface QueryGroupsByAdminRequest {
   /**
    * admin is the account address of a group's admin.
-  */
+   */
   admin: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryGroupsByAdminRequestProtoMsg {
@@ -297,11 +297,11 @@ export interface QueryGroupsByAdminRequestProtoMsg {
 export interface QueryGroupsByAdminRequestAmino {
   /**
    * admin is the account address of a group's admin.
-  */
+   */
   admin?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryGroupsByAdminRequestAminoMsg {
@@ -327,11 +327,11 @@ export interface QueryGroupsByAdminRequestSDKType {
 export interface QueryGroupsByAdminResponse {
   /**
    * groups are the groups info with the provided admin.
-  */
+   */
   groups: GroupInfo[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryGroupsByAdminResponseProtoMsg {
@@ -347,11 +347,11 @@ export interface QueryGroupsByAdminResponseProtoMsg {
 export interface QueryGroupsByAdminResponseAmino {
   /**
    * groups are the groups info with the provided admin.
-  */
+   */
   groups?: GroupInfoAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryGroupsByAdminResponseAminoMsg {
@@ -377,11 +377,11 @@ export interface QueryGroupsByAdminResponseSDKType {
 export interface QueryGroupPoliciesByGroupRequest {
   /**
    * group_id is the unique ID of the group policy's group.
-  */
+   */
   groupId: bigint;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryGroupPoliciesByGroupRequestProtoMsg {
@@ -397,11 +397,11 @@ export interface QueryGroupPoliciesByGroupRequestProtoMsg {
 export interface QueryGroupPoliciesByGroupRequestAmino {
   /**
    * group_id is the unique ID of the group policy's group.
-  */
+   */
   group_id?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryGroupPoliciesByGroupRequestAminoMsg {
@@ -427,11 +427,11 @@ export interface QueryGroupPoliciesByGroupRequestSDKType {
 export interface QueryGroupPoliciesByGroupResponse {
   /**
    * group_policies are the group policies info associated with the provided group.
-  */
+   */
   groupPolicies: GroupPolicyInfo[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryGroupPoliciesByGroupResponseProtoMsg {
@@ -447,11 +447,11 @@ export interface QueryGroupPoliciesByGroupResponseProtoMsg {
 export interface QueryGroupPoliciesByGroupResponseAmino {
   /**
    * group_policies are the group policies info associated with the provided group.
-  */
+   */
   group_policies?: GroupPolicyInfoAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryGroupPoliciesByGroupResponseAminoMsg {
@@ -477,11 +477,11 @@ export interface QueryGroupPoliciesByGroupResponseSDKType {
 export interface QueryGroupPoliciesByAdminRequest {
   /**
    * admin is the admin address of the group policy.
-  */
+   */
   admin: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryGroupPoliciesByAdminRequestProtoMsg {
@@ -497,11 +497,11 @@ export interface QueryGroupPoliciesByAdminRequestProtoMsg {
 export interface QueryGroupPoliciesByAdminRequestAmino {
   /**
    * admin is the admin address of the group policy.
-  */
+   */
   admin?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryGroupPoliciesByAdminRequestAminoMsg {
@@ -527,11 +527,11 @@ export interface QueryGroupPoliciesByAdminRequestSDKType {
 export interface QueryGroupPoliciesByAdminResponse {
   /**
    * group_policies are the group policies info with provided admin.
-  */
+   */
   groupPolicies: GroupPolicyInfo[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryGroupPoliciesByAdminResponseProtoMsg {
@@ -547,11 +547,11 @@ export interface QueryGroupPoliciesByAdminResponseProtoMsg {
 export interface QueryGroupPoliciesByAdminResponseAmino {
   /**
    * group_policies are the group policies info with provided admin.
-  */
+   */
   group_policies?: GroupPolicyInfoAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryGroupPoliciesByAdminResponseAminoMsg {
@@ -577,7 +577,7 @@ export interface QueryGroupPoliciesByAdminResponseSDKType {
 export interface QueryProposalRequest {
   /**
    * proposal_id is the unique ID of a proposal.
-  */
+   */
   proposalId: bigint;
 }
 export interface QueryProposalRequestProtoMsg {
@@ -593,7 +593,7 @@ export interface QueryProposalRequestProtoMsg {
 export interface QueryProposalRequestAmino {
   /**
    * proposal_id is the unique ID of a proposal.
-  */
+   */
   proposal_id?: string;
 }
 export interface QueryProposalRequestAminoMsg {
@@ -618,7 +618,7 @@ export interface QueryProposalRequestSDKType {
 export interface QueryProposalResponse {
   /**
    * proposal is the proposal info.
-  */
+   */
   proposal?: Proposal;
 }
 export interface QueryProposalResponseProtoMsg {
@@ -634,7 +634,7 @@ export interface QueryProposalResponseProtoMsg {
 export interface QueryProposalResponseAmino {
   /**
    * proposal is the proposal info.
-  */
+   */
   proposal?: ProposalAmino;
 }
 export interface QueryProposalResponseAminoMsg {
@@ -659,11 +659,11 @@ export interface QueryProposalResponseSDKType {
 export interface QueryProposalsByGroupPolicyRequest {
   /**
    * address is the account address of the group policy related to proposals.
-  */
+   */
   address: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryProposalsByGroupPolicyRequestProtoMsg {
@@ -679,11 +679,11 @@ export interface QueryProposalsByGroupPolicyRequestProtoMsg {
 export interface QueryProposalsByGroupPolicyRequestAmino {
   /**
    * address is the account address of the group policy related to proposals.
-  */
+   */
   address?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryProposalsByGroupPolicyRequestAminoMsg {
@@ -709,11 +709,11 @@ export interface QueryProposalsByGroupPolicyRequestSDKType {
 export interface QueryProposalsByGroupPolicyResponse {
   /**
    * proposals are the proposals with given group policy.
-  */
+   */
   proposals: Proposal[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryProposalsByGroupPolicyResponseProtoMsg {
@@ -729,11 +729,11 @@ export interface QueryProposalsByGroupPolicyResponseProtoMsg {
 export interface QueryProposalsByGroupPolicyResponseAmino {
   /**
    * proposals are the proposals with given group policy.
-  */
+   */
   proposals?: ProposalAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryProposalsByGroupPolicyResponseAminoMsg {
@@ -759,11 +759,11 @@ export interface QueryProposalsByGroupPolicyResponseSDKType {
 export interface QueryVoteByProposalVoterRequest {
   /**
    * proposal_id is the unique ID of a proposal.
-  */
+   */
   proposalId: bigint;
   /**
    * voter is a proposal voter account address.
-  */
+   */
   voter: string;
 }
 export interface QueryVoteByProposalVoterRequestProtoMsg {
@@ -779,11 +779,11 @@ export interface QueryVoteByProposalVoterRequestProtoMsg {
 export interface QueryVoteByProposalVoterRequestAmino {
   /**
    * proposal_id is the unique ID of a proposal.
-  */
+   */
   proposal_id?: string;
   /**
    * voter is a proposal voter account address.
-  */
+   */
   voter?: string;
 }
 export interface QueryVoteByProposalVoterRequestAminoMsg {
@@ -809,7 +809,7 @@ export interface QueryVoteByProposalVoterRequestSDKType {
 export interface QueryVoteByProposalVoterResponse {
   /**
    * vote is the vote with given proposal_id and voter.
-  */
+   */
   vote?: Vote;
 }
 export interface QueryVoteByProposalVoterResponseProtoMsg {
@@ -825,7 +825,7 @@ export interface QueryVoteByProposalVoterResponseProtoMsg {
 export interface QueryVoteByProposalVoterResponseAmino {
   /**
    * vote is the vote with given proposal_id and voter.
-  */
+   */
   vote?: VoteAmino;
 }
 export interface QueryVoteByProposalVoterResponseAminoMsg {
@@ -850,11 +850,11 @@ export interface QueryVoteByProposalVoterResponseSDKType {
 export interface QueryVotesByProposalRequest {
   /**
    * proposal_id is the unique ID of a proposal.
-  */
+   */
   proposalId: bigint;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryVotesByProposalRequestProtoMsg {
@@ -870,11 +870,11 @@ export interface QueryVotesByProposalRequestProtoMsg {
 export interface QueryVotesByProposalRequestAmino {
   /**
    * proposal_id is the unique ID of a proposal.
-  */
+   */
   proposal_id?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryVotesByProposalRequestAminoMsg {
@@ -900,11 +900,11 @@ export interface QueryVotesByProposalRequestSDKType {
 export interface QueryVotesByProposalResponse {
   /**
    * votes are the list of votes for given proposal_id.
-  */
+   */
   votes: Vote[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryVotesByProposalResponseProtoMsg {
@@ -920,11 +920,11 @@ export interface QueryVotesByProposalResponseProtoMsg {
 export interface QueryVotesByProposalResponseAmino {
   /**
    * votes are the list of votes for given proposal_id.
-  */
+   */
   votes?: VoteAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryVotesByProposalResponseAminoMsg {
@@ -950,11 +950,11 @@ export interface QueryVotesByProposalResponseSDKType {
 export interface QueryVotesByVoterRequest {
   /**
    * voter is a proposal voter account address.
-  */
+   */
   voter: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryVotesByVoterRequestProtoMsg {
@@ -970,11 +970,11 @@ export interface QueryVotesByVoterRequestProtoMsg {
 export interface QueryVotesByVoterRequestAmino {
   /**
    * voter is a proposal voter account address.
-  */
+   */
   voter?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryVotesByVoterRequestAminoMsg {
@@ -1000,11 +1000,11 @@ export interface QueryVotesByVoterRequestSDKType {
 export interface QueryVotesByVoterResponse {
   /**
    * votes are the list of votes by given voter.
-  */
+   */
   votes: Vote[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryVotesByVoterResponseProtoMsg {
@@ -1020,11 +1020,11 @@ export interface QueryVotesByVoterResponseProtoMsg {
 export interface QueryVotesByVoterResponseAmino {
   /**
    * votes are the list of votes by given voter.
-  */
+   */
   votes?: VoteAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryVotesByVoterResponseAminoMsg {
@@ -1050,11 +1050,11 @@ export interface QueryVotesByVoterResponseSDKType {
 export interface QueryGroupsByMemberRequest {
   /**
    * address is the group member address.
-  */
+   */
   address: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryGroupsByMemberRequestProtoMsg {
@@ -1070,11 +1070,11 @@ export interface QueryGroupsByMemberRequestProtoMsg {
 export interface QueryGroupsByMemberRequestAmino {
   /**
    * address is the group member address.
-  */
+   */
   address?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryGroupsByMemberRequestAminoMsg {
@@ -1100,11 +1100,11 @@ export interface QueryGroupsByMemberRequestSDKType {
 export interface QueryGroupsByMemberResponse {
   /**
    * groups are the groups info with the provided group member.
-  */
+   */
   groups: GroupInfo[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryGroupsByMemberResponseProtoMsg {
@@ -1120,11 +1120,11 @@ export interface QueryGroupsByMemberResponseProtoMsg {
 export interface QueryGroupsByMemberResponseAmino {
   /**
    * groups are the groups info with the provided group member.
-  */
+   */
   groups?: GroupInfoAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryGroupsByMemberResponseAminoMsg {
@@ -1150,7 +1150,7 @@ export interface QueryGroupsByMemberResponseSDKType {
 export interface QueryTallyResultRequest {
   /**
    * proposal_id is the unique id of a proposal.
-  */
+   */
   proposalId: bigint;
 }
 export interface QueryTallyResultRequestProtoMsg {
@@ -1166,7 +1166,7 @@ export interface QueryTallyResultRequestProtoMsg {
 export interface QueryTallyResultRequestAmino {
   /**
    * proposal_id is the unique id of a proposal.
-  */
+   */
   proposal_id?: string;
 }
 export interface QueryTallyResultRequestAminoMsg {
@@ -1191,7 +1191,7 @@ export interface QueryTallyResultRequestSDKType {
 export interface QueryTallyResultResponse {
   /**
    * tally defines the requested tally.
-  */
+   */
   tally: TallyResult;
 }
 export interface QueryTallyResultResponseProtoMsg {
@@ -1207,7 +1207,7 @@ export interface QueryTallyResultResponseProtoMsg {
 export interface QueryTallyResultResponseAmino {
   /**
    * tally defines the requested tally.
-  */
+   */
   tally?: TallyResultAmino;
 }
 export interface QueryTallyResultResponseAminoMsg {

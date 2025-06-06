@@ -188,7 +188,7 @@ export interface AllocateQuotaRequest {
   serviceName: string;
   /**
    * Operation that describes the quota allocation.
-  */
+   */
   allocateOperation?: QuotaOperation;
   /**
    * Specifies which version of service configuration should be used to process
@@ -278,7 +278,7 @@ export interface QuotaOperation {
   consumerId: string;
   /**
    * Labels describing the operation.
-  */
+   */
   labels: {
     [key: string]: string;
   };
@@ -299,7 +299,7 @@ export interface QuotaOperation {
   quotaMetrics: MetricValueSet[];
   /**
    * Quota mode for this operation.
-  */
+   */
   quotaMode: QuotaOperation_QuotaMode;
 }
 export interface QuotaOperationProtoMsg {
@@ -336,7 +336,7 @@ export interface AllocateQuotaResponse {
   operationId: string;
   /**
    * Indicates the decision of the allocate.
-  */
+   */
   allocateErrors: QuotaError[];
   /**
    * Quota metrics to indicate the result of allocation. Depending on the
@@ -353,7 +353,7 @@ export interface AllocateQuotaResponse {
   quotaMetrics: MetricValueSet[];
   /**
    * ID of the actual config used to process the request.
-  */
+   */
   serviceConfigId: string;
 }
 export interface AllocateQuotaResponseProtoMsg {
@@ -381,7 +381,7 @@ export interface AllocateQuotaResponseSDKType {
 export interface QuotaError {
   /**
    * Error code.
-  */
+   */
   code: QuotaError_Code;
   /**
    * Subject to whom this error applies. See the specific enum for more details
@@ -391,7 +391,7 @@ export interface QuotaError {
   subject: string;
   /**
    * Free-form text that provides details on the cause of the error.
-  */
+   */
   description: string;
   /**
    * Contains additional information about the quota error.

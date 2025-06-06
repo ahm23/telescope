@@ -12,7 +12,7 @@ export const protobufPackage = "cosmos.gov.v1beta1";
 export interface QueryProposalRequest {
   /**
    * proposal_id defines the unique id of the proposal.
-  */
+   */
   proposalId: bigint;
 }
 export interface QueryProposalRequestProtoMsg {
@@ -28,7 +28,7 @@ export interface QueryProposalRequestProtoMsg {
 export interface QueryProposalRequestAmino {
   /**
    * proposal_id defines the unique id of the proposal.
-  */
+   */
   proposal_id?: string;
 }
 /**
@@ -80,19 +80,19 @@ export interface QueryProposalResponseSDKType {
 export interface QueryProposalsRequest {
   /**
    * proposal_status defines the status of the proposals.
-  */
+   */
   proposalStatus: ProposalStatus;
   /**
    * voter defines the voter address for the proposals.
-  */
+   */
   voter: string;
   /**
    * depositor defines the deposit addresses from the proposals.
-  */
+   */
   depositor: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryProposalsRequestProtoMsg {
@@ -108,19 +108,19 @@ export interface QueryProposalsRequestProtoMsg {
 export interface QueryProposalsRequestAmino {
   /**
    * proposal_status defines the status of the proposals.
-  */
+   */
   proposal_status?: ProposalStatus;
   /**
    * voter defines the voter address for the proposals.
-  */
+   */
   voter?: string;
   /**
    * depositor defines the deposit addresses from the proposals.
-  */
+   */
   depositor?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 /**
@@ -146,7 +146,7 @@ export interface QueryProposalsResponse {
   proposals: Proposal[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryProposalsResponseProtoMsg {
@@ -164,7 +164,7 @@ export interface QueryProposalsResponseAmino {
   proposals?: ProposalAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 /**
@@ -187,11 +187,11 @@ export interface QueryProposalsResponseSDKType {
 export interface QueryVoteRequest {
   /**
    * proposal_id defines the unique id of the proposal.
-  */
+   */
   proposalId: bigint;
   /**
    * voter defines the oter address for the proposals.
-  */
+   */
   voter: string;
 }
 export interface QueryVoteRequestProtoMsg {
@@ -207,11 +207,11 @@ export interface QueryVoteRequestProtoMsg {
 export interface QueryVoteRequestAmino {
   /**
    * proposal_id defines the unique id of the proposal.
-  */
+   */
   proposal_id?: string;
   /**
    * voter defines the oter address for the proposals.
-  */
+   */
   voter?: string;
 }
 /**
@@ -233,7 +233,7 @@ export interface QueryVoteRequestSDKType {
 export interface QueryVoteResponse {
   /**
    * vote defined the queried vote.
-  */
+   */
   vote: Vote;
 }
 export interface QueryVoteResponseProtoMsg {
@@ -249,7 +249,7 @@ export interface QueryVoteResponseProtoMsg {
 export interface QueryVoteResponseAmino {
   /**
    * vote defined the queried vote.
-  */
+   */
   vote?: VoteAmino;
 }
 /**
@@ -270,11 +270,11 @@ export interface QueryVoteResponseSDKType {
 export interface QueryVotesRequest {
   /**
    * proposal_id defines the unique id of the proposal.
-  */
+   */
   proposalId: bigint;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryVotesRequestProtoMsg {
@@ -290,11 +290,11 @@ export interface QueryVotesRequestProtoMsg {
 export interface QueryVotesRequestAmino {
   /**
    * proposal_id defines the unique id of the proposal.
-  */
+   */
   proposal_id?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 /**
@@ -316,11 +316,11 @@ export interface QueryVotesRequestSDKType {
 export interface QueryVotesResponse {
   /**
    * votes defined the queried votes.
-  */
+   */
   votes: Vote[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryVotesResponseProtoMsg {
@@ -336,11 +336,11 @@ export interface QueryVotesResponseProtoMsg {
 export interface QueryVotesResponseAmino {
   /**
    * votes defined the queried votes.
-  */
+   */
   votes?: VoteAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 /**
@@ -401,15 +401,15 @@ export interface QueryParamsRequestSDKType {
 export interface QueryParamsResponse {
   /**
    * voting_params defines the parameters related to voting.
-  */
+   */
   votingParams: VotingParams;
   /**
    * deposit_params defines the parameters related to deposit.
-  */
+   */
   depositParams: DepositParams;
   /**
    * tally_params defines the parameters related to tally.
-  */
+   */
   tallyParams: TallyParams;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -425,15 +425,15 @@ export interface QueryParamsResponseProtoMsg {
 export interface QueryParamsResponseAmino {
   /**
    * voting_params defines the parameters related to voting.
-  */
+   */
   voting_params?: VotingParamsAmino;
   /**
    * deposit_params defines the parameters related to deposit.
-  */
+   */
   deposit_params?: DepositParamsAmino;
   /**
    * tally_params defines the parameters related to tally.
-  */
+   */
   tally_params?: TallyParamsAmino;
 }
 /**
@@ -456,11 +456,11 @@ export interface QueryParamsResponseSDKType {
 export interface QueryDepositRequest {
   /**
    * proposal_id defines the unique id of the proposal.
-  */
+   */
   proposalId: bigint;
   /**
    * depositor defines the deposit addresses from the proposals.
-  */
+   */
   depositor: string;
 }
 export interface QueryDepositRequestProtoMsg {
@@ -476,11 +476,11 @@ export interface QueryDepositRequestProtoMsg {
 export interface QueryDepositRequestAmino {
   /**
    * proposal_id defines the unique id of the proposal.
-  */
+   */
   proposal_id?: string;
   /**
    * depositor defines the deposit addresses from the proposals.
-  */
+   */
   depositor?: string;
 }
 /**
@@ -502,7 +502,7 @@ export interface QueryDepositRequestSDKType {
 export interface QueryDepositResponse {
   /**
    * deposit defines the requested deposit.
-  */
+   */
   deposit: Deposit;
 }
 export interface QueryDepositResponseProtoMsg {
@@ -518,7 +518,7 @@ export interface QueryDepositResponseProtoMsg {
 export interface QueryDepositResponseAmino {
   /**
    * deposit defines the requested deposit.
-  */
+   */
   deposit?: DepositAmino;
 }
 /**
@@ -539,11 +539,11 @@ export interface QueryDepositResponseSDKType {
 export interface QueryDepositsRequest {
   /**
    * proposal_id defines the unique id of the proposal.
-  */
+   */
   proposalId: bigint;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryDepositsRequestProtoMsg {
@@ -559,11 +559,11 @@ export interface QueryDepositsRequestProtoMsg {
 export interface QueryDepositsRequestAmino {
   /**
    * proposal_id defines the unique id of the proposal.
-  */
+   */
   proposal_id?: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 /**
@@ -586,7 +586,7 @@ export interface QueryDepositsResponse {
   deposits: Deposit[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryDepositsResponseProtoMsg {
@@ -603,7 +603,7 @@ export interface QueryDepositsResponseAmino {
   deposits?: DepositAmino[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 /**
@@ -625,7 +625,7 @@ export interface QueryDepositsResponseSDKType {
 export interface QueryTallyResultRequest {
   /**
    * proposal_id defines the unique id of the proposal.
-  */
+   */
   proposalId: bigint;
 }
 export interface QueryTallyResultRequestProtoMsg {
@@ -641,7 +641,7 @@ export interface QueryTallyResultRequestProtoMsg {
 export interface QueryTallyResultRequestAmino {
   /**
    * proposal_id defines the unique id of the proposal.
-  */
+   */
   proposal_id?: string;
 }
 /**
@@ -662,7 +662,7 @@ export interface QueryTallyResultRequestSDKType {
 export interface QueryTallyResultResponse {
   /**
    * tally defines the requested tally.
-  */
+   */
   tally: TallyResult;
 }
 export interface QueryTallyResultResponseProtoMsg {
@@ -678,7 +678,7 @@ export interface QueryTallyResultResponseProtoMsg {
 export interface QueryTallyResultResponseAmino {
   /**
    * tally defines the requested tally.
-  */
+   */
   tally?: TallyResultAmino;
 }
 /**

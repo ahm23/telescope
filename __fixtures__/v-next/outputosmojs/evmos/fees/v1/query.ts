@@ -15,7 +15,7 @@ export const protobufPackage = "evmos.fees.v1";
 export interface QueryDevFeeInfosRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryDevFeeInfosRequestProtoMsg {
@@ -43,7 +43,7 @@ export interface QueryDevFeeInfosResponse {
   fees: DevFeeInfo[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryDevFeeInfosResponseProtoMsg {
@@ -71,7 +71,7 @@ export interface QueryDevFeeInfosResponseSDKType {
 export interface QueryDevFeeInfoRequest {
   /**
    * contract identifier is the hex contract address of a contract
-  */
+   */
   contractAddress: string;
 }
 export interface QueryDevFeeInfoRequestProtoMsg {
@@ -164,11 +164,11 @@ export interface QueryParamsResponseSDKType {
 export interface QueryDevFeeInfosPerDeployerRequest {
   /**
    * deployer bech32 address
-  */
+   */
   deployerAddress: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryDevFeeInfosPerDeployerRequestProtoMsg {
@@ -197,7 +197,7 @@ export interface QueryDevFeeInfosPerDeployerResponse {
   fees: DevFeeInfo[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryDevFeeInfosPerDeployerResponseProtoMsg {

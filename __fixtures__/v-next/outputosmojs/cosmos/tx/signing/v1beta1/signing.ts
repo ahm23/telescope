@@ -97,7 +97,7 @@ export function signModeToJSON(object: SignMode): string {
 export interface SignatureDescriptors {
   /**
    * signatures are the signature descriptors
-  */
+   */
   signatures: SignatureDescriptor[];
 }
 export interface SignatureDescriptorsProtoMsg {
@@ -125,7 +125,7 @@ export interface SignatureDescriptorsSDKType {
 export interface SignatureDescriptor {
   /**
    * public_key is the public key of the signer
-  */
+   */
   publicKey?: Any;
   data?: SignatureDescriptor_Data;
   /**
@@ -162,11 +162,11 @@ export interface SignatureDescriptorSDKType {
 export interface SignatureDescriptor_Data {
   /**
    * single represents a single signer
-  */
+   */
   single?: SignatureDescriptor_Data_Single;
   /**
    * multi represents a multisig signer
-  */
+   */
   multi?: SignatureDescriptor_Data_Multi;
 }
 export interface SignatureDescriptor_DataProtoMsg {
@@ -192,11 +192,11 @@ export interface SignatureDescriptor_DataSDKType {
 export interface SignatureDescriptor_Data_Single {
   /**
    * mode is the signing mode of the single signer
-  */
+   */
   mode: SignMode;
   /**
    * signature is the raw signature bytes
-  */
+   */
   signature: Uint8Array;
 }
 export interface SignatureDescriptor_Data_SingleProtoMsg {
@@ -222,11 +222,11 @@ export interface SignatureDescriptor_Data_SingleSDKType {
 export interface SignatureDescriptor_Data_Multi {
   /**
    * bitarray specifies which keys within the multisig are signing
-  */
+   */
   bitarray?: CompactBitArray;
   /**
    * signatures is the signatures of the multi-signature
-  */
+   */
   signatures: SignatureDescriptor_Data[];
 }
 export interface SignatureDescriptor_Data_MultiProtoMsg {

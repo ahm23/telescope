@@ -17,23 +17,23 @@ export interface AppDescriptor {
   authn?: AuthnDescriptor;
   /**
    * chain provides the chain descriptor
-  */
+   */
   chain?: ChainDescriptor;
   /**
    * codec provides metadata information regarding codec related types
-  */
+   */
   codec?: CodecDescriptor;
   /**
    * configuration provides metadata information regarding the sdk.Config type
-  */
+   */
   configuration?: ConfigurationDescriptor;
   /**
    * query_services provides metadata information regarding the available queriable endpoints
-  */
+   */
   queryServices?: QueryServicesDescriptor;
   /**
    * tx provides metadata information regarding how to send transactions to the given application
-  */
+   */
   tx?: TxDescriptor;
 }
 export interface AppDescriptorProtoMsg {
@@ -54,23 +54,23 @@ export interface AppDescriptorAmino {
   authn?: AuthnDescriptorAmino;
   /**
    * chain provides the chain descriptor
-  */
+   */
   chain?: ChainDescriptorAmino;
   /**
    * codec provides metadata information regarding codec related types
-  */
+   */
   codec?: CodecDescriptorAmino;
   /**
    * configuration provides metadata information regarding the sdk.Config type
-  */
+   */
   configuration?: ConfigurationDescriptorAmino;
   /**
    * query_services provides metadata information regarding the available queriable endpoints
-  */
+   */
   query_services?: QueryServicesDescriptorAmino;
   /**
    * tx provides metadata information regarding how to send transactions to the given application
-  */
+   */
   tx?: TxDescriptorAmino;
 }
 export interface AppDescriptorAminoMsg {
@@ -106,7 +106,7 @@ export interface TxDescriptor {
   fullname: string;
   /**
    * msgs lists the accepted application messages (sdk.Msg)
-  */
+   */
   msgs: MsgDescriptor[];
 }
 export interface TxDescriptorProtoMsg {
@@ -128,7 +128,7 @@ export interface TxDescriptorAmino {
   fullname?: string;
   /**
    * msgs lists the accepted application messages (sdk.Msg)
-  */
+   */
   msgs?: MsgDescriptorAmino[];
 }
 export interface TxDescriptorAminoMsg {
@@ -155,7 +155,7 @@ export interface TxDescriptorSDKType {
 export interface AuthnDescriptor {
   /**
    * sign_modes defines the supported signature algorithm
-  */
+   */
   signModes: SigningModeDescriptor[];
 }
 export interface AuthnDescriptorProtoMsg {
@@ -172,7 +172,7 @@ export interface AuthnDescriptorProtoMsg {
 export interface AuthnDescriptorAmino {
   /**
    * sign_modes defines the supported signature algorithm
-  */
+   */
   sign_modes?: SigningModeDescriptorAmino[];
 }
 export interface AuthnDescriptorAminoMsg {
@@ -201,11 +201,11 @@ export interface AuthnDescriptorSDKType {
 export interface SigningModeDescriptor {
   /**
    * name defines the unique name of the signing mode
-  */
+   */
   name: string;
   /**
    * number is the unique int32 identifier for the sign_mode enum
-  */
+   */
   number: number;
   /**
    * authn_info_provider_method_fullname defines the fullname of the method to call to get
@@ -229,11 +229,11 @@ export interface SigningModeDescriptorProtoMsg {
 export interface SigningModeDescriptorAmino {
   /**
    * name defines the unique name of the signing mode
-  */
+   */
   name?: string;
   /**
    * number is the unique int32 identifier for the sign_mode enum
-  */
+   */
   number?: number;
   /**
    * authn_info_provider_method_fullname defines the fullname of the method to call to get
@@ -268,7 +268,7 @@ export interface SigningModeDescriptorSDKType {
 export interface ChainDescriptor {
   /**
    * id is the chain id
-  */
+   */
   id: string;
 }
 export interface ChainDescriptorProtoMsg {
@@ -284,7 +284,7 @@ export interface ChainDescriptorProtoMsg {
 export interface ChainDescriptorAmino {
   /**
    * id is the chain id
-  */
+   */
   id?: string;
 }
 export interface ChainDescriptorAminoMsg {
@@ -309,7 +309,7 @@ export interface ChainDescriptorSDKType {
 export interface CodecDescriptor {
   /**
    * interfaces is a list of the registerted interfaces descriptors
-  */
+   */
   interfaces: InterfaceDescriptor[];
 }
 export interface CodecDescriptorProtoMsg {
@@ -325,7 +325,7 @@ export interface CodecDescriptorProtoMsg {
 export interface CodecDescriptorAmino {
   /**
    * interfaces is a list of the registerted interfaces descriptors
-  */
+   */
   interfaces?: InterfaceDescriptorAmino[];
 }
 export interface CodecDescriptorAminoMsg {
@@ -350,7 +350,7 @@ export interface CodecDescriptorSDKType {
 export interface InterfaceDescriptor {
   /**
    * fullname is the name of the interface
-  */
+   */
   fullname: string;
   /**
    * interface_accepting_messages contains information regarding the proto messages which contain the interface as
@@ -359,7 +359,7 @@ export interface InterfaceDescriptor {
   interfaceAcceptingMessages: InterfaceAcceptingMessageDescriptor[];
   /**
    * interface_implementers is a list of the descriptors of the interface implementers
-  */
+   */
   interfaceImplementers: InterfaceImplementerDescriptor[];
 }
 export interface InterfaceDescriptorProtoMsg {
@@ -375,7 +375,7 @@ export interface InterfaceDescriptorProtoMsg {
 export interface InterfaceDescriptorAmino {
   /**
    * fullname is the name of the interface
-  */
+   */
   fullname?: string;
   /**
    * interface_accepting_messages contains information regarding the proto messages which contain the interface as
@@ -384,7 +384,7 @@ export interface InterfaceDescriptorAmino {
   interface_accepting_messages?: InterfaceAcceptingMessageDescriptorAmino[];
   /**
    * interface_implementers is a list of the descriptors of the interface implementers
-  */
+   */
   interface_implementers?: InterfaceImplementerDescriptorAmino[];
 }
 export interface InterfaceDescriptorAminoMsg {
@@ -411,7 +411,7 @@ export interface InterfaceDescriptorSDKType {
 export interface InterfaceImplementerDescriptor {
   /**
    * fullname is the protobuf queryable name of the interface implementer
-  */
+   */
   fullname: string;
   /**
    * type_url defines the type URL used when marshalling the type as any
@@ -434,7 +434,7 @@ export interface InterfaceImplementerDescriptorProtoMsg {
 export interface InterfaceImplementerDescriptorAmino {
   /**
    * fullname is the protobuf queryable name of the interface implementer
-  */
+   */
   fullname?: string;
   /**
    * type_url defines the type URL used when marshalling the type as any
@@ -468,7 +468,7 @@ export interface InterfaceImplementerDescriptorSDKType {
 export interface InterfaceAcceptingMessageDescriptor {
   /**
    * fullname is the protobuf fullname of the type containing the interface
-  */
+   */
   fullname: string;
   /**
    * field_descriptor_names is a list of the protobuf name (not fullname) of the field
@@ -491,7 +491,7 @@ export interface InterfaceAcceptingMessageDescriptorProtoMsg {
 export interface InterfaceAcceptingMessageDescriptorAmino {
   /**
    * fullname is the protobuf fullname of the type containing the interface
-  */
+   */
   fullname?: string;
   /**
    * field_descriptor_names is a list of the protobuf name (not fullname) of the field
@@ -524,7 +524,7 @@ export interface InterfaceAcceptingMessageDescriptorSDKType {
 export interface ConfigurationDescriptor {
   /**
    * bech32_account_address_prefix is the account address prefix
-  */
+   */
   bech32AccountAddressPrefix: string;
 }
 export interface ConfigurationDescriptorProtoMsg {
@@ -540,7 +540,7 @@ export interface ConfigurationDescriptorProtoMsg {
 export interface ConfigurationDescriptorAmino {
   /**
    * bech32_account_address_prefix is the account address prefix
-  */
+   */
   bech32_account_address_prefix?: string;
 }
 export interface ConfigurationDescriptorAminoMsg {
@@ -565,7 +565,7 @@ export interface ConfigurationDescriptorSDKType {
 export interface MsgDescriptor {
   /**
    * msg_type_url contains the TypeURL of a sdk.Msg.
-  */
+   */
   msgTypeUrl: string;
 }
 export interface MsgDescriptorProtoMsg {
@@ -581,7 +581,7 @@ export interface MsgDescriptorProtoMsg {
 export interface MsgDescriptorAmino {
   /**
    * msg_type_url contains the TypeURL of a sdk.Msg.
-  */
+   */
   msg_type_url?: string;
 }
 export interface MsgDescriptorAminoMsg {
@@ -635,7 +635,7 @@ export interface GetAuthnDescriptorRequestSDKType {}
 export interface GetAuthnDescriptorResponse {
   /**
    * authn describes how to authenticate to the application when sending transactions
-  */
+   */
   authn?: AuthnDescriptor;
 }
 export interface GetAuthnDescriptorResponseProtoMsg {
@@ -651,7 +651,7 @@ export interface GetAuthnDescriptorResponseProtoMsg {
 export interface GetAuthnDescriptorResponseAmino {
   /**
    * authn describes how to authenticate to the application when sending transactions
-  */
+   */
   authn?: AuthnDescriptorAmino;
 }
 export interface GetAuthnDescriptorResponseAminoMsg {
@@ -705,7 +705,7 @@ export interface GetChainDescriptorRequestSDKType {}
 export interface GetChainDescriptorResponse {
   /**
    * chain describes application chain information
-  */
+   */
   chain?: ChainDescriptor;
 }
 export interface GetChainDescriptorResponseProtoMsg {
@@ -721,7 +721,7 @@ export interface GetChainDescriptorResponseProtoMsg {
 export interface GetChainDescriptorResponseAmino {
   /**
    * chain describes application chain information
-  */
+   */
   chain?: ChainDescriptorAmino;
 }
 export interface GetChainDescriptorResponseAminoMsg {
@@ -775,7 +775,7 @@ export interface GetCodecDescriptorRequestSDKType {}
 export interface GetCodecDescriptorResponse {
   /**
    * codec describes the application codec such as registered interfaces and implementations
-  */
+   */
   codec?: CodecDescriptor;
 }
 export interface GetCodecDescriptorResponseProtoMsg {
@@ -791,7 +791,7 @@ export interface GetCodecDescriptorResponseProtoMsg {
 export interface GetCodecDescriptorResponseAmino {
   /**
    * codec describes the application codec such as registered interfaces and implementations
-  */
+   */
   codec?: CodecDescriptorAmino;
 }
 export interface GetCodecDescriptorResponseAminoMsg {
@@ -845,7 +845,7 @@ export interface GetConfigurationDescriptorRequestSDKType {}
 export interface GetConfigurationDescriptorResponse {
   /**
    * config describes the application's sdk.Config
-  */
+   */
   config?: ConfigurationDescriptor;
 }
 export interface GetConfigurationDescriptorResponseProtoMsg {
@@ -861,7 +861,7 @@ export interface GetConfigurationDescriptorResponseProtoMsg {
 export interface GetConfigurationDescriptorResponseAmino {
   /**
    * config describes the application's sdk.Config
-  */
+   */
   config?: ConfigurationDescriptorAmino;
 }
 export interface GetConfigurationDescriptorResponseAminoMsg {
@@ -915,7 +915,7 @@ export interface GetQueryServicesDescriptorRequestSDKType {}
 export interface GetQueryServicesDescriptorResponse {
   /**
    * queries provides information on the available queryable services
-  */
+   */
   queries?: QueryServicesDescriptor;
 }
 export interface GetQueryServicesDescriptorResponseProtoMsg {
@@ -931,7 +931,7 @@ export interface GetQueryServicesDescriptorResponseProtoMsg {
 export interface GetQueryServicesDescriptorResponseAmino {
   /**
    * queries provides information on the available queryable services
-  */
+   */
   queries?: QueryServicesDescriptorAmino;
 }
 export interface GetQueryServicesDescriptorResponseAminoMsg {
@@ -1028,7 +1028,7 @@ export interface GetTxDescriptorResponseSDKType {
 export interface QueryServicesDescriptor {
   /**
    * query_services is a list of cosmos-sdk QueryServiceDescriptor
-  */
+   */
   queryServices: QueryServiceDescriptor[];
 }
 export interface QueryServicesDescriptorProtoMsg {
@@ -1044,7 +1044,7 @@ export interface QueryServicesDescriptorProtoMsg {
 export interface QueryServicesDescriptorAmino {
   /**
    * query_services is a list of cosmos-sdk QueryServiceDescriptor
-  */
+   */
   query_services?: QueryServiceDescriptorAmino[];
 }
 export interface QueryServicesDescriptorAminoMsg {
@@ -1069,15 +1069,15 @@ export interface QueryServicesDescriptorSDKType {
 export interface QueryServiceDescriptor {
   /**
    * fullname is the protobuf fullname of the service descriptor
-  */
+   */
   fullname: string;
   /**
    * is_module describes if this service is actually exposed by an application's module
-  */
+   */
   isModule: boolean;
   /**
    * methods provides a list of query service methods
-  */
+   */
   methods: QueryMethodDescriptor[];
 }
 export interface QueryServiceDescriptorProtoMsg {
@@ -1093,15 +1093,15 @@ export interface QueryServiceDescriptorProtoMsg {
 export interface QueryServiceDescriptorAmino {
   /**
    * fullname is the protobuf fullname of the service descriptor
-  */
+   */
   fullname?: string;
   /**
    * is_module describes if this service is actually exposed by an application's module
-  */
+   */
   is_module?: boolean;
   /**
    * methods provides a list of query service methods
-  */
+   */
   methods?: QueryMethodDescriptorAmino[];
 }
 export interface QueryServiceDescriptorAminoMsg {
@@ -1130,7 +1130,7 @@ export interface QueryServiceDescriptorSDKType {
 export interface QueryMethodDescriptor {
   /**
    * name is the protobuf name (not fullname) of the method
-  */
+   */
   name: string;
   /**
    * full_query_path is the path that can be used to query
@@ -1153,7 +1153,7 @@ export interface QueryMethodDescriptorProtoMsg {
 export interface QueryMethodDescriptorAmino {
   /**
    * name is the protobuf name (not fullname) of the method
-  */
+   */
   name?: string;
   /**
    * full_query_path is the path that can be used to query

@@ -10,7 +10,7 @@ export const protobufPackage = "google.api.expr.v1alpha1";
 export interface ExprValue {
   /**
    * The ids of the expressions with unknown values.
-  */
+   */
   exprs: IdRef[];
 }
 export interface ExprValueProtoMsg {
@@ -33,7 +33,7 @@ export interface ExprValueSDKType {
 export interface IdRef {
   /**
    * The expression id.
-  */
+   */
   id: number;
 }
 export interface IdRefProtoMsg {

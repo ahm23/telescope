@@ -15,7 +15,7 @@ export const protobufPackage = "cosmwasm.wasm.v1";
 export interface QueryContractInfoRequest {
   /**
    * address is the address of the contract to query
-  */
+   */
   address: string;
 }
 export interface QueryContractInfoRequestProtoMsg {
@@ -42,7 +42,7 @@ export interface QueryContractInfoRequestSDKType {
 export interface QueryContractInfoResponse {
   /**
    * address is the address of the contract
-  */
+   */
   address: string;
   contractInfo: ContractInfo;
 }
@@ -71,11 +71,11 @@ export interface QueryContractInfoResponseSDKType {
 export interface QueryContractHistoryRequest {
   /**
    * address is the address of the contract to query
-  */
+   */
   address: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryContractHistoryRequestProtoMsg {
@@ -104,7 +104,7 @@ export interface QueryContractHistoryResponse {
   entries: ContractCodeHistoryEntry[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryContractHistoryResponseProtoMsg {
@@ -132,11 +132,11 @@ export interface QueryContractHistoryResponseSDKType {
 export interface QueryContractsByCodeRequest {
   /**
    * grpc-gateway_out does not support Go style CodID
-  */
+   */
   codeId: bigint;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryContractsByCodeRequestProtoMsg {
@@ -164,11 +164,11 @@ export interface QueryContractsByCodeRequestSDKType {
 export interface QueryContractsByCodeResponse {
   /**
    * contracts are a set of contract addresses
-  */
+   */
   contracts: string[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryContractsByCodeResponseProtoMsg {
@@ -196,11 +196,11 @@ export interface QueryContractsByCodeResponseSDKType {
 export interface QueryAllContractStateRequest {
   /**
    * address is the address of the contract
-  */
+   */
   address: string;
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryAllContractStateRequestProtoMsg {
@@ -229,7 +229,7 @@ export interface QueryAllContractStateResponse {
   models: Model[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryAllContractStateResponseProtoMsg {
@@ -257,7 +257,7 @@ export interface QueryAllContractStateResponseSDKType {
 export interface QueryRawContractStateRequest {
   /**
    * address is the address of the contract
-  */
+   */
   address: string;
   queryData: Uint8Array;
 }
@@ -286,7 +286,7 @@ export interface QueryRawContractStateRequestSDKType {
 export interface QueryRawContractStateResponse {
   /**
    * Data contains the raw store data
-  */
+   */
   data: Uint8Array;
 }
 export interface QueryRawContractStateResponseProtoMsg {
@@ -313,11 +313,11 @@ export interface QueryRawContractStateResponseSDKType {
 export interface QuerySmartContractStateRequest {
   /**
    * address is the address of the contract
-  */
+   */
   address: string;
   /**
    * QueryData contains the query data passed to the contract
-  */
+   */
   queryData: Uint8Array;
 }
 export interface QuerySmartContractStateRequestProtoMsg {
@@ -345,7 +345,7 @@ export interface QuerySmartContractStateRequestSDKType {
 export interface QuerySmartContractStateResponse {
   /**
    * Data contains the json data returned from the smart contract
-  */
+   */
   data: Uint8Array;
 }
 export interface QuerySmartContractStateResponseProtoMsg {
@@ -371,7 +371,7 @@ export interface QuerySmartContractStateResponseSDKType {
 export interface QueryCodeRequest {
   /**
    * grpc-gateway_out does not support Go style CodID
-  */
+   */
   codeId: bigint;
 }
 export interface QueryCodeRequestProtoMsg {
@@ -446,7 +446,7 @@ export interface QueryCodeResponseSDKType {
 export interface QueryCodesRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryCodesRequestProtoMsg {
@@ -472,7 +472,7 @@ export interface QueryCodesResponse {
   codeInfos: CodeInfoResponse[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryCodesResponseProtoMsg {
@@ -499,7 +499,7 @@ export interface QueryCodesResponseSDKType {
 export interface QueryPinnedCodesRequest {
   /**
    * pagination defines an optional pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface QueryPinnedCodesRequestProtoMsg {
@@ -527,7 +527,7 @@ export interface QueryPinnedCodesResponse {
   codeIds: bigint[];
   /**
    * pagination defines the pagination in the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface QueryPinnedCodesResponseProtoMsg {

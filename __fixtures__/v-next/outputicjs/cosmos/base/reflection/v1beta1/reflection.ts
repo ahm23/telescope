@@ -31,7 +31,7 @@ export interface ListAllInterfacesRequestAminoMsg {
 export interface ListAllInterfacesResponse {
   /**
    * interface_names is an array of all the registered interfaces.
-  */
+   */
   interfaceNames: string[];
 }
 export interface ListAllInterfacesResponseProtoMsg {
@@ -47,7 +47,7 @@ export interface ListAllInterfacesResponseProtoMsg {
 export interface ListAllInterfacesResponseAmino {
   /**
    * interface_names is an array of all the registered interfaces.
-  */
+   */
   interface_names: string[];
 }
 export interface ListAllInterfacesResponseAminoMsg {
@@ -64,7 +64,7 @@ export interface ListAllInterfacesResponseAminoMsg {
 export interface ListImplementationsRequest {
   /**
    * interface_name defines the interface to query the implementations for.
-  */
+   */
   interfaceName: string;
 }
 export interface ListImplementationsRequestProtoMsg {
@@ -81,7 +81,7 @@ export interface ListImplementationsRequestProtoMsg {
 export interface ListImplementationsRequestAmino {
   /**
    * interface_name defines the interface to query the implementations for.
-  */
+   */
   interface_name: string;
 }
 export interface ListImplementationsRequestAminoMsg {

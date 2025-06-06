@@ -14,15 +14,15 @@ export const protobufPackage = "osmosis.claim.v1beta1";
 export interface GenesisState {
   /**
    * balance of the claim module's account
-  */
+   */
   moduleAccountBalance: Coin;
   /**
    * params defines all the parameters of the module.
-  */
+   */
   params: Params;
   /**
    * list of claim records, one for every airdrop recipient
-  */
+   */
   claimRecords: ClaimRecord[];
 }
 export interface GenesisStateProtoMsg {
@@ -38,15 +38,15 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * balance of the claim module's account
-  */
+   */
   module_account_balance?: CoinAmino;
   /**
    * params defines all the parameters of the module.
-  */
+   */
   params?: ParamsAmino;
   /**
    * list of claim records, one for every airdrop recipient
-  */
+   */
   claim_records?: ClaimRecordAmino[];
 }
 export interface GenesisStateAminoMsg {

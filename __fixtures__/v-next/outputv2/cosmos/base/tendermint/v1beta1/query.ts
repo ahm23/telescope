@@ -17,7 +17,7 @@ export interface GetValidatorSetByHeightRequest {
   height: bigint;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface GetValidatorSetByHeightRequestProtoMsg {
@@ -34,7 +34,7 @@ export interface GetValidatorSetByHeightRequestAmino {
   height?: string;
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface GetValidatorSetByHeightRequestAminoMsg {
@@ -62,7 +62,7 @@ export interface GetValidatorSetByHeightResponse {
   validators: Validator[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface GetValidatorSetByHeightResponseProtoMsg {
@@ -80,7 +80,7 @@ export interface GetValidatorSetByHeightResponseAmino {
   validators?: ValidatorAmino[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface GetValidatorSetByHeightResponseAminoMsg {
@@ -107,7 +107,7 @@ export interface GetValidatorSetByHeightResponseSDKType {
 export interface GetLatestValidatorSetRequest {
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequest;
 }
 export interface GetLatestValidatorSetRequestProtoMsg {
@@ -123,7 +123,7 @@ export interface GetLatestValidatorSetRequestProtoMsg {
 export interface GetLatestValidatorSetRequestAmino {
   /**
    * pagination defines an pagination for the request.
-  */
+   */
   pagination?: PageRequestAmino;
 }
 export interface GetLatestValidatorSetRequestAminoMsg {
@@ -150,7 +150,7 @@ export interface GetLatestValidatorSetResponse {
   validators: Validator[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponse;
 }
 export interface GetLatestValidatorSetResponseProtoMsg {
@@ -168,7 +168,7 @@ export interface GetLatestValidatorSetResponseAmino {
   validators?: ValidatorAmino[];
   /**
    * pagination defines an pagination for the response.
-  */
+   */
   pagination?: PageResponseAmino;
 }
 export interface GetLatestValidatorSetResponseAminoMsg {
@@ -517,7 +517,7 @@ export interface VersionInfo {
   buildDeps: Module[];
   /**
    * Since: cosmos-sdk 0.43
-  */
+   */
   cosmosSdkVersion: string;
 }
 export interface VersionInfoProtoMsg {
@@ -540,7 +540,7 @@ export interface VersionInfoAmino {
   build_deps?: ModuleAmino[];
   /**
    * Since: cosmos-sdk 0.43
-  */
+   */
   cosmos_sdk_version?: string;
 }
 export interface VersionInfoAminoMsg {
@@ -572,15 +572,15 @@ export interface VersionInfoSDKType {
 export interface Module {
   /**
    * module path
-  */
+   */
   path: string;
   /**
    * module version
-  */
+   */
   version: string;
   /**
    * checksum
-  */
+   */
   sum: string;
 }
 export interface ModuleProtoMsg {
@@ -596,15 +596,15 @@ export interface ModuleProtoMsg {
 export interface ModuleAmino {
   /**
    * module path
-  */
+   */
   path?: string;
   /**
    * module version
-  */
+   */
   version?: string;
   /**
    * checksum
-  */
+   */
   sum?: string;
 }
 export interface ModuleAminoMsg {

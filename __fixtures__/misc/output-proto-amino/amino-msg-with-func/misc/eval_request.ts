@@ -153,7 +153,7 @@ export interface EvalRequest {
   instantiatePermission?: AccessConfig;
   /**
    * [(gogoproto.nullable) = false] wouldn't work in this case
-  */
+   */
   id?: string;
   name?: string;
   testArray: string[];
@@ -161,7 +161,7 @@ export interface EvalRequest {
   graph?: TestNest_Graph;
   /**
    * deprecated option
-  */
+   */
   deprecated?: string;
   falseDeprecated: string;
 }
@@ -191,7 +191,7 @@ export interface EvalRequestAmino {
   instantiate_permission?: AccessConfigAmino;
   /**
    * [(gogoproto.nullable) = false] wouldn't work in this case
-  */
+   */
   id?: string;
   name?: string;
   test_array?: string[];
@@ -199,7 +199,7 @@ export interface EvalRequestAmino {
   graph?: TestNest_GraphAmino;
   /**
    * deprecated option
-  */
+   */
   deprecated?: string;
   false_deprecated?: string;
 }
@@ -271,7 +271,7 @@ export interface AccessConfigSDKType {
 export interface GenericAuthorization {
   /**
    * Msg, identified by it's type URL, to grant unrestricted permissions to execute
-  */
+   */
   msg: string;
 }
 export interface GenericAuthorizationProtoMsg {
@@ -286,7 +286,7 @@ export interface GenericAuthorizationProtoMsg {
 export interface GenericAuthorizationAmino {
   /**
    * Msg, identified by it's type URL, to grant unrestricted permissions to execute
-  */
+   */
   msg?: string;
 }
 export interface GenericAuthorizationAminoMsg {

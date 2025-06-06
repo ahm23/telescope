@@ -55,11 +55,11 @@ export function actionToJSON(object: Action): string {
 export interface ClaimRecord {
   /**
    * address of claim user
-  */
+   */
   address: string;
   /**
    * total initial claimable amount for the user
-  */
+   */
   initialClaimableAmount: Coin[];
   /**
    * true if action is completed

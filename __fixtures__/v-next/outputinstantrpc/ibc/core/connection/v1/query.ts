@@ -16,7 +16,7 @@ export const protobufPackage = "ibc.core.connection.v1";
 export interface QueryConnectionRequest {
   /**
    * connection unique identifier
-  */
+   */
   connectionId: string;
 }
 export interface QueryConnectionRequestProtoMsg {
@@ -44,15 +44,15 @@ export interface QueryConnectionRequestSDKType {
 export interface QueryConnectionResponse {
   /**
    * connection associated with the request identifier
-  */
+   */
   connection?: ConnectionEnd;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryConnectionResponseProtoMsg {
@@ -106,15 +106,15 @@ export interface QueryConnectionsRequestSDKType {
 export interface QueryConnectionsResponse {
   /**
    * list of stored connections of the chain.
-  */
+   */
   connections: IdentifiedConnection[];
   /**
    * pagination response
-  */
+   */
   pagination?: PageResponse;
   /**
    * query block height
-  */
+   */
   height: Height;
 }
 export interface QueryConnectionsResponseProtoMsg {
@@ -143,7 +143,7 @@ export interface QueryConnectionsResponseSDKType {
 export interface QueryClientConnectionsRequest {
   /**
    * client identifier associated with a connection
-  */
+   */
   clientId: string;
 }
 export interface QueryClientConnectionsRequestProtoMsg {
@@ -170,15 +170,15 @@ export interface QueryClientConnectionsRequestSDKType {
 export interface QueryClientConnectionsResponse {
   /**
    * slice of all the connection paths associated with a client.
-  */
+   */
   connectionPaths: string[];
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was generated
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryClientConnectionsResponseProtoMsg {
@@ -207,7 +207,7 @@ export interface QueryClientConnectionsResponseSDKType {
 export interface QueryConnectionClientStateRequest {
   /**
    * connection identifier
-  */
+   */
   connectionId: string;
 }
 export interface QueryConnectionClientStateRequestProtoMsg {
@@ -234,15 +234,15 @@ export interface QueryConnectionClientStateRequestSDKType {
 export interface QueryConnectionClientStateResponse {
   /**
    * client state associated with the channel
-  */
+   */
   identifiedClientState?: IdentifiedClientState;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryConnectionClientStateResponseProtoMsg {
@@ -271,7 +271,7 @@ export interface QueryConnectionClientStateResponseSDKType {
 export interface QueryConnectionConsensusStateRequest {
   /**
    * connection identifier
-  */
+   */
   connectionId: string;
   revisionNumber: bigint;
   revisionHeight: bigint;
@@ -302,19 +302,19 @@ export interface QueryConnectionConsensusStateRequestSDKType {
 export interface QueryConnectionConsensusStateResponse {
   /**
    * consensus state associated with the channel
-  */
+   */
   consensusState?: Any;
   /**
    * client ID associated with the consensus state
-  */
+   */
   clientId: string;
   /**
    * merkle proof of existence
-  */
+   */
   proof: Uint8Array;
   /**
    * height at which the proof was retrieved
-  */
+   */
   proofHeight: Height;
 }
 export interface QueryConnectionConsensusStateResponseProtoMsg {

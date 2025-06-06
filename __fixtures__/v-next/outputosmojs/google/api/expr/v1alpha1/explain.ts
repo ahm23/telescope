@@ -53,11 +53,11 @@ export interface ExplainSDKType {
 export interface Explain_ExprStep {
   /**
    * ID of corresponding Expr node.
-  */
+   */
   id: bigint;
   /**
    * Index of the value in the values list.
-  */
+   */
   valueIndex: number;
 }
 export interface Explain_ExprStepProtoMsg {

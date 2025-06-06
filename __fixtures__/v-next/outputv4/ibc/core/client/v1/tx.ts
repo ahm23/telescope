@@ -12,7 +12,7 @@ export const protobufPackage = "ibc.core.client.v1";
 export interface MsgCreateClient {
   /**
    * light client state
-  */
+   */
   clientState?: Any;
   /**
    * consensus state associated with the client that corresponds to a given
@@ -21,7 +21,7 @@ export interface MsgCreateClient {
   consensusState?: Any;
   /**
    * signer address
-  */
+   */
   signer: string;
 }
 export interface MsgCreateClientProtoMsg {
@@ -67,15 +67,15 @@ export interface MsgCreateClientResponseSDKType {}
 export interface MsgUpdateClient {
   /**
    * client unique identifier
-  */
+   */
   clientId: string;
   /**
    * header to update the light client
-  */
+   */
   header?: Any;
   /**
    * signer address
-  */
+   */
   signer: string;
 }
 export interface MsgUpdateClientProtoMsg {
@@ -122,11 +122,11 @@ export interface MsgUpdateClientResponseSDKType {}
 export interface MsgUpgradeClient {
   /**
    * client unique identifier
-  */
+   */
   clientId: string;
   /**
    * upgraded client state
-  */
+   */
   clientState?: Any;
   /**
    * upgraded consensus state, only contains enough information to serve as a
@@ -135,15 +135,15 @@ export interface MsgUpgradeClient {
   consensusState?: Any;
   /**
    * proof that old chain committed to new client
-  */
+   */
   proofUpgradeClient: Uint8Array;
   /**
    * proof that old chain committed to new consensus state
-  */
+   */
   proofUpgradeConsensusState: Uint8Array;
   /**
    * signer address
-  */
+   */
   signer: string;
 }
 export interface MsgUpgradeClientProtoMsg {
@@ -193,15 +193,15 @@ export interface MsgUpgradeClientResponseSDKType {}
 export interface MsgSubmitMisbehaviour {
   /**
    * client unique identifier
-  */
+   */
   clientId: string;
   /**
    * misbehaviour used for freezing the light client
-  */
+   */
   misbehaviour?: Any;
   /**
    * signer address
-  */
+   */
   signer: string;
 }
 export interface MsgSubmitMisbehaviourProtoMsg {

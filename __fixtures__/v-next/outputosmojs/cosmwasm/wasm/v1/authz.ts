@@ -15,7 +15,7 @@ export const protobufPackage = "cosmwasm.wasm.v1";
 export interface ContractExecutionAuthorization {
   /**
    * Grants for contract executions
-  */
+   */
   grants: ContractGrant[];
 }
 export interface ContractExecutionAuthorizationProtoMsg {
@@ -42,7 +42,7 @@ export interface ContractExecutionAuthorizationSDKType {
 export interface ContractMigrationAuthorization {
   /**
    * Grants for contract migrations
-  */
+   */
   grants: ContractGrant[];
 }
 export interface ContractMigrationAuthorizationProtoMsg {
@@ -69,7 +69,7 @@ export interface ContractMigrationAuthorizationSDKType {
 export interface ContractGrant {
   /**
    * Contract is the bech32 address of the smart contract
-  */
+   */
   contract: string;
   /**
    * Limit defines execution limits that are enforced and updated when the grant
@@ -109,7 +109,7 @@ export interface ContractGrantSDKType {
 export interface MaxCallsLimit {
   /**
    * Remaining number that is decremented on each execution
-  */
+   */
   remaining: bigint;
 }
 export interface MaxCallsLimitProtoMsg {
@@ -136,7 +136,7 @@ export interface MaxCallsLimitSDKType {
 export interface MaxFundsLimit {
   /**
    * Amounts is the maximal amount of tokens transferable to the contract.
-  */
+   */
   amounts: Coin[];
 }
 export interface MaxFundsLimitProtoMsg {
@@ -164,11 +164,11 @@ export interface MaxFundsLimitSDKType {
 export interface CombinedLimit {
   /**
    * Remaining number that is decremented on each execution
-  */
+   */
   callsRemaining: bigint;
   /**
    * Amounts is the maximal amount of tokens transferable to the contract.
-  */
+   */
   amounts: Coin[];
 }
 export interface CombinedLimitProtoMsg {
@@ -220,7 +220,7 @@ export interface AllowAllMessagesFilterSDKType {}
 export interface AcceptedMessageKeysFilter {
   /**
    * Messages is the list of unique keys
-  */
+   */
   keys: string[];
 }
 export interface AcceptedMessageKeysFilterProtoMsg {
@@ -249,7 +249,7 @@ export interface AcceptedMessageKeysFilterSDKType {
 export interface AcceptedMessagesFilter {
   /**
    * Messages is the list of raw contract messages
-  */
+   */
   messages: Uint8Array[];
 }
 export interface AcceptedMessagesFilterProtoMsg {

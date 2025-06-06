@@ -58,23 +58,23 @@ export interface MetricValue {
   endTime?: Date;
   /**
    * A boolean value.
-  */
+   */
   boolValue?: boolean;
   /**
    * A signed 64-bit integer value.
-  */
+   */
   int64Value?: bigint;
   /**
    * A double precision floating point value.
-  */
+   */
   doubleValue?: number;
   /**
    * A text string value.
-  */
+   */
   stringValue?: string;
   /**
    * A distribution value.
-  */
+   */
   distributionValue?: Distribution;
 }
 export interface MetricValueProtoMsg {
@@ -110,11 +110,11 @@ export interface MetricValueSDKType {
 export interface MetricValueSet {
   /**
    * The metric name defined in the service configuration.
-  */
+   */
   metricName: string;
   /**
    * The values in this metric.
-  */
+   */
   metricValues: MetricValue[];
 }
 export interface MetricValueSetProtoMsg {

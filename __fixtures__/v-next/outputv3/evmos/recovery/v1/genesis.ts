@@ -11,7 +11,7 @@ export const protobufPackage = "evmos.recovery.v1";
 export interface GenesisState {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params: Params;
 }
 export interface GenesisStateProtoMsg {
@@ -27,7 +27,7 @@ export interface GenesisStateProtoMsg {
 export interface GenesisStateAmino {
   /**
    * params defines all the paramaters of the module.
-  */
+   */
   params?: ParamsAmino;
 }
 /**
@@ -48,11 +48,11 @@ export interface GenesisStateSDKType {
 export interface Params {
   /**
    * enable recovery IBC middleware
-  */
+   */
   enableRecovery: boolean;
   /**
    * duration added to timeout timestamp for balances recovered via IBC packets
-  */
+   */
   packetTimeoutDuration: Duration;
 }
 export interface ParamsProtoMsg {
@@ -68,11 +68,11 @@ export interface ParamsProtoMsg {
 export interface ParamsAmino {
   /**
    * enable recovery IBC middleware
-  */
+   */
   enable_recovery?: boolean;
   /**
    * duration added to timeout timestamp for balances recovered via IBC packets
-  */
+   */
   packet_timeout_duration?: DurationAmino;
 }
 /**

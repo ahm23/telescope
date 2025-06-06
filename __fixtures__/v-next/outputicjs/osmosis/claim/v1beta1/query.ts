@@ -34,7 +34,7 @@ export interface QueryModuleAccountBalanceRequestAminoMsg {
 export interface QueryModuleAccountBalanceResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   moduleAccountBalance: Coin[];
 }
 export interface QueryModuleAccountBalanceResponseProtoMsg {
@@ -50,7 +50,7 @@ export interface QueryModuleAccountBalanceResponseProtoMsg {
 export interface QueryModuleAccountBalanceResponseAmino {
   /**
    * params defines the parameters of the module.
-  */
+   */
   moduleAccountBalance: CoinAmino[];
 }
 export interface QueryModuleAccountBalanceResponseAminoMsg {
@@ -88,7 +88,7 @@ export interface QueryParamsRequestAminoMsg {
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: OsmosisClaimV1beta1Params;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -104,7 +104,7 @@ export interface QueryParamsResponseProtoMsg {
 export interface QueryParamsResponseAmino {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: OsmosisClaimV1beta1ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {

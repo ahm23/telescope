@@ -10,7 +10,7 @@ import { DeepPartial } from "../../../helpers";
 export interface EventCreateGroup {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   groupId: bigint;
 }
 export interface EventCreateGroupProtoMsg {
@@ -26,7 +26,7 @@ export interface EventCreateGroupProtoMsg {
 export interface EventCreateGroupAmino {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   group_id: string;
 }
 export interface EventCreateGroupAminoMsg {
@@ -42,7 +42,7 @@ export interface EventCreateGroupAminoMsg {
 export interface EventUpdateGroup {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   groupId: bigint;
 }
 export interface EventUpdateGroupProtoMsg {
@@ -58,7 +58,7 @@ export interface EventUpdateGroupProtoMsg {
 export interface EventUpdateGroupAmino {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   group_id: string;
 }
 export interface EventUpdateGroupAminoMsg {
@@ -74,7 +74,7 @@ export interface EventUpdateGroupAminoMsg {
 export interface EventCreateGroupPolicy {
   /**
    * address is the account address of the group policy.
-  */
+   */
   address: string;
 }
 export interface EventCreateGroupPolicyProtoMsg {
@@ -90,7 +90,7 @@ export interface EventCreateGroupPolicyProtoMsg {
 export interface EventCreateGroupPolicyAmino {
   /**
    * address is the account address of the group policy.
-  */
+   */
   address: string;
 }
 export interface EventCreateGroupPolicyAminoMsg {
@@ -106,7 +106,7 @@ export interface EventCreateGroupPolicyAminoMsg {
 export interface EventUpdateGroupPolicy {
   /**
    * address is the account address of the group policy.
-  */
+   */
   address: string;
 }
 export interface EventUpdateGroupPolicyProtoMsg {
@@ -122,7 +122,7 @@ export interface EventUpdateGroupPolicyProtoMsg {
 export interface EventUpdateGroupPolicyAmino {
   /**
    * address is the account address of the group policy.
-  */
+   */
   address: string;
 }
 export interface EventUpdateGroupPolicyAminoMsg {
@@ -138,7 +138,7 @@ export interface EventUpdateGroupPolicyAminoMsg {
 export interface EventSubmitProposal {
   /**
    * proposal_id is the unique ID of the proposal.
-  */
+   */
   proposalId: bigint;
 }
 export interface EventSubmitProposalProtoMsg {
@@ -154,7 +154,7 @@ export interface EventSubmitProposalProtoMsg {
 export interface EventSubmitProposalAmino {
   /**
    * proposal_id is the unique ID of the proposal.
-  */
+   */
   proposal_id: string;
 }
 export interface EventSubmitProposalAminoMsg {
@@ -170,7 +170,7 @@ export interface EventSubmitProposalAminoMsg {
 export interface EventWithdrawProposal {
   /**
    * proposal_id is the unique ID of the proposal.
-  */
+   */
   proposalId: bigint;
 }
 export interface EventWithdrawProposalProtoMsg {
@@ -186,7 +186,7 @@ export interface EventWithdrawProposalProtoMsg {
 export interface EventWithdrawProposalAmino {
   /**
    * proposal_id is the unique ID of the proposal.
-  */
+   */
   proposal_id: string;
 }
 export interface EventWithdrawProposalAminoMsg {
@@ -202,7 +202,7 @@ export interface EventWithdrawProposalAminoMsg {
 export interface EventVote {
   /**
    * proposal_id is the unique ID of the proposal.
-  */
+   */
   proposalId: bigint;
 }
 export interface EventVoteProtoMsg {
@@ -218,7 +218,7 @@ export interface EventVoteProtoMsg {
 export interface EventVoteAmino {
   /**
    * proposal_id is the unique ID of the proposal.
-  */
+   */
   proposal_id: string;
 }
 export interface EventVoteAminoMsg {
@@ -234,11 +234,11 @@ export interface EventVoteAminoMsg {
 export interface EventExec {
   /**
    * proposal_id is the unique ID of the proposal.
-  */
+   */
   proposalId: bigint;
   /**
    * result is the proposal execution result.
-  */
+   */
   result: ProposalExecutorResult;
 }
 export interface EventExecProtoMsg {
@@ -254,11 +254,11 @@ export interface EventExecProtoMsg {
 export interface EventExecAmino {
   /**
    * proposal_id is the unique ID of the proposal.
-  */
+   */
   proposal_id: string;
   /**
    * result is the proposal execution result.
-  */
+   */
   result: ProposalExecutorResult;
 }
 export interface EventExecAminoMsg {
@@ -274,11 +274,11 @@ export interface EventExecAminoMsg {
 export interface EventLeaveGroup {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   groupId: bigint;
   /**
    * address is the account address of the group member.
-  */
+   */
   address: string;
 }
 export interface EventLeaveGroupProtoMsg {
@@ -294,11 +294,11 @@ export interface EventLeaveGroupProtoMsg {
 export interface EventLeaveGroupAmino {
   /**
    * group_id is the unique ID of the group.
-  */
+   */
   group_id: string;
   /**
    * address is the account address of the group member.
-  */
+   */
   address: string;
 }
 export interface EventLeaveGroupAminoMsg {

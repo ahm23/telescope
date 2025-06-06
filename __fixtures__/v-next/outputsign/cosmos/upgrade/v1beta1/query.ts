@@ -44,7 +44,7 @@ export interface QueryCurrentPlanRequestSDKType {}
 export interface QueryCurrentPlanResponse {
   /**
    * plan is the current upgrade plan.
-  */
+   */
   plan?: Plan;
 }
 export interface QueryCurrentPlanResponseProtoMsg {
@@ -61,7 +61,7 @@ export interface QueryCurrentPlanResponseProtoMsg {
 export interface QueryCurrentPlanResponseAmino {
   /**
    * plan is the current upgrade plan.
-  */
+   */
   plan?: PlanAmino;
 }
 export interface QueryCurrentPlanResponseAminoMsg {
@@ -88,7 +88,7 @@ export interface QueryCurrentPlanResponseSDKType {
 export interface QueryAppliedPlanRequest {
   /**
    * name is the name of the applied plan to query for.
-  */
+   */
   name: string;
 }
 export interface QueryAppliedPlanRequestProtoMsg {
@@ -105,7 +105,7 @@ export interface QueryAppliedPlanRequestProtoMsg {
 export interface QueryAppliedPlanRequestAmino {
   /**
    * name is the name of the applied plan to query for.
-  */
+   */
   name?: string;
 }
 export interface QueryAppliedPlanRequestAminoMsg {
@@ -132,7 +132,7 @@ export interface QueryAppliedPlanRequestSDKType {
 export interface QueryAppliedPlanResponse {
   /**
    * height is the block height at which the plan was applied.
-  */
+   */
   height: bigint;
 }
 export interface QueryAppliedPlanResponseProtoMsg {
@@ -149,7 +149,7 @@ export interface QueryAppliedPlanResponseProtoMsg {
 export interface QueryAppliedPlanResponseAmino {
   /**
    * height is the block height at which the plan was applied.
-  */
+   */
   height?: string;
 }
 export interface QueryAppliedPlanResponseAminoMsg {
@@ -226,7 +226,7 @@ export interface QueryUpgradedConsensusStateRequestSDKType {
 export interface QueryUpgradedConsensusStateResponse {
   /**
    * Since: cosmos-sdk 0.43
-  */
+   */
   upgradedConsensusState: Uint8Array;
 }
 export interface QueryUpgradedConsensusStateResponseProtoMsg {
@@ -244,7 +244,7 @@ export interface QueryUpgradedConsensusStateResponseProtoMsg {
 export interface QueryUpgradedConsensusStateResponseAmino {
   /**
    * Since: cosmos-sdk 0.43
-  */
+   */
   upgraded_consensus_state?: string;
 }
 export interface QueryUpgradedConsensusStateResponseAminoMsg {
@@ -328,7 +328,7 @@ export interface QueryModuleVersionsRequestSDKType {
 export interface QueryModuleVersionsResponse {
   /**
    * module_versions is a list of module names with their consensus versions.
-  */
+   */
   moduleVersions: ModuleVersion[];
 }
 export interface QueryModuleVersionsResponseProtoMsg {
@@ -347,7 +347,7 @@ export interface QueryModuleVersionsResponseProtoMsg {
 export interface QueryModuleVersionsResponseAmino {
   /**
    * module_versions is a list of module names with their consensus versions.
-  */
+   */
   module_versions?: ModuleVersionAmino[];
 }
 export interface QueryModuleVersionsResponseAminoMsg {

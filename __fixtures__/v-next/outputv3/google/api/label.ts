@@ -52,15 +52,15 @@ export function labelDescriptor_ValueTypeToJSON(object: LabelDescriptor_ValueTyp
 export interface LabelDescriptor {
   /**
    * The label key.
-  */
+   */
   key: string;
   /**
    * The type of data that can be assigned to the label.
-  */
+   */
   valueType: LabelDescriptor_ValueType;
   /**
    * A human-readable description for the label.
-  */
+   */
   description: string;
 }
 export interface LabelDescriptorProtoMsg {
@@ -76,15 +76,15 @@ export interface LabelDescriptorProtoMsg {
 export interface LabelDescriptorAmino {
   /**
    * The label key.
-  */
+   */
   key?: string;
   /**
    * The type of data that can be assigned to the label.
-  */
+   */
   value_type?: LabelDescriptor_ValueType;
   /**
    * A human-readable description for the label.
-  */
+   */
   description?: string;
 }
 /**

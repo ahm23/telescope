@@ -9,10 +9,12 @@ exports[`GenesisState interface 1`] = `
  */
 export interface GenesisStateAmino {
   /**
-   * params defines all the paramaters of the module. */
+   * params defines all the paramaters of the module.
+   */
   params?: ParamsAmino;
   /**
-   * accounts are the accounts present at genesis. */
+   * accounts are the accounts present at genesis.
+   */
   accounts?: AnyAmino[];
 }"
 `;
@@ -202,10 +204,12 @@ export interface QueryGrantsRequestAmino {
   granter?: string;
   grantee?: string;
   /**
-   * Optional, msg_type_url, when set, will query only grants matching given msg type. */
+   * Optional, msg_type_url, when set, will query only grants matching given msg type.
+   */
   msg_type_url?: string;
   /**
-   * pagination defines an pagination for the request. */
+   * pagination defines an pagination for the request.
+   */
   pagination?: PageRequestAmino;
 }"
 `;
@@ -232,14 +236,16 @@ export interface EvalRequestAmino {
   test_bool?: boolean;
   instantiate_permission?: AccessConfigAmino;
   /**
-   * [(gogoproto.nullable) = false] wouldn't work in this case */
+   * [(gogoproto.nullable) = false] wouldn't work in this case
+   */
   id?: string;
   name?: string;
   test_array?: string[];
   opt: FeatureSet_Utf8Validation;
   graph?: TestNest_GraphAmino;
   /**
-   * deprecated option */
+   * deprecated option
+   */
   deprecated?: string;
   false_deprecated?: string;
 }"

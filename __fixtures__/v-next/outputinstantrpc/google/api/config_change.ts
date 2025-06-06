@@ -98,7 +98,7 @@ export interface ConfigChange {
   newValue: string;
   /**
    * The type for this change, either ADDED, REMOVED, or MODIFIED.
-  */
+   */
   changeType: ChangeType;
   /**
    * Collection of advice provided for this change, useful for determining the

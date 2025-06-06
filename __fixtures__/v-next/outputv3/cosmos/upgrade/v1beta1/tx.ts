@@ -13,11 +13,11 @@ export const protobufPackage = "cosmos.upgrade.v1beta1";
 export interface MsgSoftwareUpgrade {
   /**
    * authority is the address of the governance account.
-  */
+   */
   authority: string;
   /**
    * plan is the upgrade plan.
-  */
+   */
   plan: Plan;
 }
 export interface MsgSoftwareUpgradeProtoMsg {
@@ -35,11 +35,11 @@ export interface MsgSoftwareUpgradeProtoMsg {
 export interface MsgSoftwareUpgradeAmino {
   /**
    * authority is the address of the governance account.
-  */
+   */
   authority?: string;
   /**
    * plan is the upgrade plan.
-  */
+   */
   plan?: PlanAmino;
 }
 /**
@@ -96,7 +96,7 @@ export interface MsgSoftwareUpgradeResponseSDKType {}
 export interface MsgCancelUpgrade {
   /**
    * authority is the address of the governance account.
-  */
+   */
   authority: string;
 }
 export interface MsgCancelUpgradeProtoMsg {
@@ -114,7 +114,7 @@ export interface MsgCancelUpgradeProtoMsg {
 export interface MsgCancelUpgradeAmino {
   /**
    * authority is the address of the governance account.
-  */
+   */
   authority?: string;
 }
 /**

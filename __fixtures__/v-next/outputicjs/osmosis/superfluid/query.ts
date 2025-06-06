@@ -34,7 +34,7 @@ export interface QueryParamsRequestAminoMsg {
 export interface QueryParamsResponse {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: OsmosisSuperfluidParams;
 }
 export interface QueryParamsResponseProtoMsg {
@@ -49,7 +49,7 @@ export interface QueryParamsResponseProtoMsg {
 export interface QueryParamsResponseAmino {
   /**
    * params defines the parameters of the module.
-  */
+   */
   params: OsmosisSuperfluidParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {

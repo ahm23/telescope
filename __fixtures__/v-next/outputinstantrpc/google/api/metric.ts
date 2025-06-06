@@ -149,7 +149,7 @@ export function metricDescriptor_ValueTypeToJSON(object: MetricDescriptor_ValueT
 export interface MetricDescriptor {
   /**
    * The resource name of the metric descriptor.
-  */
+   */
   name: string;
   /**
    * The metric type, including its DNS name prefix. The type is not
@@ -288,7 +288,7 @@ export interface MetricDescriptor {
   unit: string;
   /**
    * A detailed description of the metric, which can be used in documentation.
-  */
+   */
   description: string;
   /**
    * A concise name for the metric, which can be displayed in user interfaces.
@@ -299,11 +299,11 @@ export interface MetricDescriptor {
   displayName: string;
   /**
    * Optional. Metadata which can be used to guide usage of the metric.
-  */
+   */
   metadata?: MetricDescriptor_MetricDescriptorMetadata;
   /**
    * Optional. The launch stage of the metric definition.
-  */
+   */
   launchStage: LaunchStage;
   /**
    * Read-only. If present, then a [time
@@ -378,7 +378,7 @@ export interface MetricDescriptor_MetricDescriptorMetadataProtoMsg {
 export interface MetricDescriptor_MetricDescriptorMetadataSDKType {
   /**
    * @deprecated
-  */
+   */
   launch_stage: LaunchStage;
   sample_period?: DurationSDKType;
   ingest_delay?: DurationSDKType;

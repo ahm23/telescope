@@ -449,19 +449,19 @@ export interface FileDescriptorSetSDKType {
 export interface FileDescriptorProto {
   /**
    * file name, relative to root of source tree
-  */
+   */
   name: string;
   /**
    * e.g. "foo", "foo.bar", etc.
-  */
+   */
   package: string;
   /**
    * Names of files imported by this file.
-  */
+   */
   dependency: string[];
   /**
    * Indexes of the public imported files in the dependency list above.
-  */
+   */
   publicDependency: number[];
   /**
    * Indexes of the weak imported files in the dependency list.
@@ -470,7 +470,7 @@ export interface FileDescriptorProto {
   weakDependency: number[];
   /**
    * All top-level definitions in this file.
-  */
+   */
   messageType: DescriptorProto[];
   enumType: EnumDescriptorProto[];
   service: ServiceDescriptorProto[];
@@ -502,19 +502,19 @@ export interface FileDescriptorProtoProtoMsg {
 export interface FileDescriptorProtoAmino {
   /**
    * file name, relative to root of source tree
-  */
+   */
   name?: string;
   /**
    * e.g. "foo", "foo.bar", etc.
-  */
+   */
   package?: string;
   /**
    * Names of files imported by this file.
-  */
+   */
   dependency?: string[];
   /**
    * Indexes of the public imported files in the dependency list above.
-  */
+   */
   public_dependency?: number[];
   /**
    * Indexes of the weak imported files in the dependency list.
@@ -523,7 +523,7 @@ export interface FileDescriptorProtoAmino {
   weak_dependency?: number[];
   /**
    * All top-level definitions in this file.
-  */
+   */
   message_type?: DescriptorProtoAmino[];
   enum_type?: EnumDescriptorProtoAmino[];
   service?: ServiceDescriptorProtoAmino[];
@@ -644,11 +644,11 @@ export interface DescriptorProtoSDKType {
 export interface DescriptorProto_ExtensionRange {
   /**
    * Inclusive.
-  */
+   */
   start: number;
   /**
    * Exclusive.
-  */
+   */
   end: number;
   options?: ExtensionRangeOptions;
 }
@@ -664,11 +664,11 @@ export interface DescriptorProto_ExtensionRangeProtoMsg {
 export interface DescriptorProto_ExtensionRangeAmino {
   /**
    * Inclusive.
-  */
+   */
   start?: number;
   /**
    * Exclusive.
-  */
+   */
   end?: number;
   options?: ExtensionRangeOptionsAmino;
 }
@@ -697,11 +697,11 @@ export interface DescriptorProto_ExtensionRangeSDKType {
 export interface DescriptorProto_ReservedRange {
   /**
    * Inclusive.
-  */
+   */
   start: number;
   /**
    * Exclusive.
-  */
+   */
   end: number;
 }
 export interface DescriptorProto_ReservedRangeProtoMsg {
@@ -719,11 +719,11 @@ export interface DescriptorProto_ReservedRangeProtoMsg {
 export interface DescriptorProto_ReservedRangeAmino {
   /**
    * Inclusive.
-  */
+   */
   start?: number;
   /**
    * Exclusive.
-  */
+   */
   end?: number;
 }
 export interface DescriptorProto_ReservedRangeAminoMsg {
@@ -750,7 +750,7 @@ export interface DescriptorProto_ReservedRangeSDKType {
 export interface ExtensionRangeOptions {
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpretedOption: UninterpretedOption[];
 }
 export interface ExtensionRangeOptionsProtoMsg {
@@ -765,7 +765,7 @@ export interface ExtensionRangeOptionsProtoMsg {
 export interface ExtensionRangeOptionsAmino {
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpreted_option?: UninterpretedOptionAmino[];
 }
 export interface ExtensionRangeOptionsAminoMsg {
@@ -1023,11 +1023,11 @@ export interface EnumDescriptorProtoSDKType {
 export interface EnumDescriptorProto_EnumReservedRange {
   /**
    * Inclusive.
-  */
+   */
   start: number;
   /**
    * Inclusive.
-  */
+   */
   end: number;
 }
 export interface EnumDescriptorProto_EnumReservedRangeProtoMsg {
@@ -1048,11 +1048,11 @@ export interface EnumDescriptorProto_EnumReservedRangeProtoMsg {
 export interface EnumDescriptorProto_EnumReservedRangeAmino {
   /**
    * Inclusive.
-  */
+   */
   start?: number;
   /**
    * Inclusive.
-  */
+   */
   end?: number;
 }
 export interface EnumDescriptorProto_EnumReservedRangeAminoMsg {
@@ -1173,11 +1173,11 @@ export interface MethodDescriptorProto {
   options?: MethodOptions;
   /**
    * Identifies if client streams multiple client messages
-  */
+   */
   clientStreaming: boolean;
   /**
    * Identifies if server streams multiple server messages
-  */
+   */
   serverStreaming: boolean;
 }
 export interface MethodDescriptorProtoProtoMsg {
@@ -1201,11 +1201,11 @@ export interface MethodDescriptorProtoAmino {
   options?: MethodOptionsAmino;
   /**
    * Identifies if client streams multiple client messages
-  */
+   */
   client_streaming?: boolean;
   /**
    * Identifies if server streams multiple server messages
-  */
+   */
   server_streaming?: boolean;
 }
 export interface MethodDescriptorProtoAminoMsg {
@@ -1314,7 +1314,7 @@ export interface FileOptions {
   objcClassPrefix: string;
   /**
    * Namespace for generated classes; defaults to the package.
-  */
+   */
   csharpNamespace: string;
   /**
    * By default Swift generators will take the proto package and CamelCase it
@@ -1444,7 +1444,7 @@ export interface FileOptionsAmino {
   objc_class_prefix?: string;
   /**
    * Namespace for generated classes; defaults to the package.
-  */
+   */
   csharp_namespace?: string;
   /**
    * By default Swift generators will take the proto package and CamelCase it
@@ -1497,7 +1497,7 @@ export interface FileOptionsSDKType {
   java_multiple_files: boolean;
   /**
    * @deprecated
-  */
+   */
   java_generate_equals_and_hash: boolean;
   java_string_check_utf8: boolean;
   optimize_for: FileOptions_OptimizeMode;
@@ -1583,7 +1583,7 @@ export interface MessageOptions {
   mapEntry: boolean;
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpretedOption: UninterpretedOption[];
 }
 export interface MessageOptionsProtoMsg {
@@ -1656,7 +1656,7 @@ export interface MessageOptionsAmino {
   map_entry?: boolean;
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpreted_option?: UninterpretedOptionAmino[];
 }
 export interface MessageOptionsAminoMsg {
@@ -1750,11 +1750,11 @@ export interface FieldOptions {
   deprecated: boolean;
   /**
    * For Google-internal migration only. Do not use.
-  */
+   */
   weak: boolean;
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpretedOption: UninterpretedOption[];
 }
 export interface FieldOptionsProtoMsg {
@@ -1836,11 +1836,11 @@ export interface FieldOptionsAmino {
   deprecated?: boolean;
   /**
    * For Google-internal migration only. Do not use.
-  */
+   */
   weak?: boolean;
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpreted_option?: UninterpretedOptionAmino[];
 }
 export interface FieldOptionsAminoMsg {
@@ -1869,7 +1869,7 @@ export interface FieldOptionsSDKType {
 export interface OneofOptions {
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpretedOption: UninterpretedOption[];
 }
 export interface OneofOptionsProtoMsg {
@@ -1884,7 +1884,7 @@ export interface OneofOptionsProtoMsg {
 export interface OneofOptionsAmino {
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpreted_option?: UninterpretedOptionAmino[];
 }
 export interface OneofOptionsAminoMsg {
@@ -1919,7 +1919,7 @@ export interface EnumOptions {
   deprecated: boolean;
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpretedOption: UninterpretedOption[];
 }
 export interface EnumOptionsProtoMsg {
@@ -1946,7 +1946,7 @@ export interface EnumOptionsAmino {
   deprecated?: boolean;
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpreted_option?: UninterpretedOptionAmino[];
 }
 export interface EnumOptionsAminoMsg {
@@ -1978,7 +1978,7 @@ export interface EnumValueOptions {
   deprecated: boolean;
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpretedOption: UninterpretedOption[];
 }
 export interface EnumValueOptionsProtoMsg {
@@ -2000,7 +2000,7 @@ export interface EnumValueOptionsAmino {
   deprecated?: boolean;
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpreted_option?: UninterpretedOptionAmino[];
 }
 export interface EnumValueOptionsAminoMsg {
@@ -2031,7 +2031,7 @@ export interface ServiceOptions {
   deprecated: boolean;
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpretedOption: UninterpretedOption[];
 }
 export interface ServiceOptionsProtoMsg {
@@ -2053,7 +2053,7 @@ export interface ServiceOptionsAmino {
   deprecated?: boolean;
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpreted_option?: UninterpretedOptionAmino[];
 }
 export interface ServiceOptionsAminoMsg {
@@ -2085,7 +2085,7 @@ export interface MethodOptions {
   idempotencyLevel: MethodOptions_IdempotencyLevel;
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpretedOption: UninterpretedOption[];
 }
 export interface MethodOptionsProtoMsg {
@@ -2108,7 +2108,7 @@ export interface MethodOptionsAmino {
   idempotency_level?: MethodOptions_IdempotencyLevel;
   /**
    * The parser stores options it doesn't recognize here. See above.
-  */
+   */
   uninterpreted_option?: UninterpretedOptionAmino[];
 }
 export interface MethodOptionsAminoMsg {
@@ -2647,7 +2647,7 @@ export interface GeneratedCodeInfo_Annotation {
   path: number[];
   /**
    * Identifies the filesystem path to the original source .proto.
-  */
+   */
   sourceFile: string;
   /**
    * Identifies the starting offset in bytes in the generated code
@@ -2678,7 +2678,7 @@ export interface GeneratedCodeInfo_AnnotationAmino {
   path?: number[];
   /**
    * Identifies the filesystem path to the original source .proto.
-  */
+   */
   source_file?: string;
   /**
    * Identifies the starting offset in bytes in the generated code

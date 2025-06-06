@@ -17,11 +17,11 @@ export interface MsgConvertCoin {
   coin: Coin;
   /**
    * recipient hex address to receive ERC20 token
-  */
+   */
   receiver: string;
   /**
    * cosmos bech32 address from the owner of the given Cosmos coins
-  */
+   */
   sender: string;
 }
 export interface MsgConvertCoinProtoMsg {
@@ -42,11 +42,11 @@ export interface MsgConvertCoinAmino {
   coin?: CoinAmino;
   /**
    * recipient hex address to receive ERC20 token
-  */
+   */
   receiver?: string;
   /**
    * cosmos bech32 address from the owner of the given Cosmos coins
-  */
+   */
   sender?: string;
 }
 export interface MsgConvertCoinAminoMsg {
@@ -103,19 +103,19 @@ export interface MsgConvertCoinResponseSDKType {}
 export interface MsgConvertERC20 {
   /**
    * ERC20 token contract address registered in a token pair
-  */
+   */
   contractAddress: string;
   /**
    * amount of ERC20 tokens to convert
-  */
+   */
   amount: string;
   /**
    * bech32 address to receive native Cosmos coins
-  */
+   */
   receiver: string;
   /**
    * sender hex address from the owner of the given ERC20 tokens
-  */
+   */
   sender: string;
 }
 export interface MsgConvertERC20ProtoMsg {
@@ -132,19 +132,19 @@ export interface MsgConvertERC20ProtoMsg {
 export interface MsgConvertERC20Amino {
   /**
    * ERC20 token contract address registered in a token pair
-  */
+   */
   contract_address?: string;
   /**
    * amount of ERC20 tokens to convert
-  */
+   */
   amount?: string;
   /**
    * bech32 address to receive native Cosmos coins
-  */
+   */
   receiver?: string;
   /**
    * sender hex address from the owner of the given ERC20 tokens
-  */
+   */
   sender?: string;
 }
 export interface MsgConvertERC20AminoMsg {

@@ -1,31 +1,55 @@
-import { Params, ParamsAmino } from "./mint";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../helpers";
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+import { OsmosisMintV1beta1Params, OsmosisMintV1beta1ParamsAmino } from "./mint";
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: "/osmosis.mint.v1beta1.QueryParamsRequest";
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
   type: "osmosis/mint/query-params-request";
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params defines the parameters of the module. */
-  params: Params;
+  /**
+   * params defines the parameters of the module.
+   */
+  params: OsmosisMintV1beta1Params;
 }
 export interface QueryParamsResponseProtoMsg {
   typeUrl: "/osmosis.mint.v1beta1.QueryParamsResponse";
   value: Uint8Array;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
-  /** params defines the parameters of the module. */
-  params: ParamsAmino;
+  /**
+   * params defines the parameters of the module.
+   */
+  params: OsmosisMintV1beta1ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
   type: "osmosis/mint/query-params-response";
@@ -34,6 +58,9 @@ export interface QueryParamsResponseAminoMsg {
 /**
  * QueryEpochProvisionsRequest is the request type for the
  * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsRequest
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.QueryEpochProvisionsRequest
  */
 export interface QueryEpochProvisionsRequest {}
 export interface QueryEpochProvisionsRequestProtoMsg {
@@ -43,6 +70,9 @@ export interface QueryEpochProvisionsRequestProtoMsg {
 /**
  * QueryEpochProvisionsRequest is the request type for the
  * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsRequestAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.QueryEpochProvisionsRequest
  */
 export interface QueryEpochProvisionsRequestAmino {}
 export interface QueryEpochProvisionsRequestAminoMsg {
@@ -52,9 +82,14 @@ export interface QueryEpochProvisionsRequestAminoMsg {
 /**
  * QueryEpochProvisionsResponse is the response type for the
  * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsResponse
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.QueryEpochProvisionsResponse
  */
 export interface QueryEpochProvisionsResponse {
-  /** epoch_provisions is the current minting per epoch provisions value. */
+  /**
+   * epoch_provisions is the current minting per epoch provisions value.
+   */
   epochProvisions: Uint8Array;
 }
 export interface QueryEpochProvisionsResponseProtoMsg {
@@ -64,9 +99,14 @@ export interface QueryEpochProvisionsResponseProtoMsg {
 /**
  * QueryEpochProvisionsResponse is the response type for the
  * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsResponseAmino
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.QueryEpochProvisionsResponse
  */
 export interface QueryEpochProvisionsResponseAmino {
-  /** epoch_provisions is the current minting per epoch provisions value. */
+  /**
+   * epoch_provisions is the current minting per epoch provisions value.
+   */
   epoch_provisions: string;
 }
 export interface QueryEpochProvisionsResponseAminoMsg {
@@ -76,6 +116,12 @@ export interface QueryEpochProvisionsResponseAminoMsg {
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: "/osmosis.mint.v1beta1.QueryParamsRequest",
   aminoType: "osmosis/mint/query-params-request",
@@ -132,15 +178,21 @@ export const QueryParamsRequest = {
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
-    params: Params.fromPartial({})
+    params: OsmosisMintV1beta1Params.fromPartial({})
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: "/osmosis.mint.v1beta1.QueryParamsResponse",
   aminoType: "osmosis/mint/query-params-response",
   encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      OsmosisMintV1beta1Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
@@ -152,7 +204,7 @@ export const QueryParamsResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = OsmosisMintV1beta1Params.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -163,19 +215,19 @@ export const QueryParamsResponse = {
   },
   fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? OsmosisMintV1beta1Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: QueryParamsResponseAmino): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = OsmosisMintV1beta1Params.fromAmino(object.params);
     }
     return message;
   },
   toAmino(message: QueryParamsResponse): QueryParamsResponseAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? OsmosisMintV1beta1Params.toAmino(message.params) : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryParamsResponseAminoMsg): QueryParamsResponse {
@@ -203,6 +255,13 @@ export const QueryParamsResponse = {
 function createBaseQueryEpochProvisionsRequest(): QueryEpochProvisionsRequest {
   return {};
 }
+/**
+ * QueryEpochProvisionsRequest is the request type for the
+ * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsRequest
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.QueryEpochProvisionsRequest
+ */
 export const QueryEpochProvisionsRequest = {
   typeUrl: "/osmosis.mint.v1beta1.QueryEpochProvisionsRequest",
   aminoType: "osmosis/mint/query-epoch-provisions-request",
@@ -262,6 +321,13 @@ function createBaseQueryEpochProvisionsResponse(): QueryEpochProvisionsResponse 
     epochProvisions: new Uint8Array()
   };
 }
+/**
+ * QueryEpochProvisionsResponse is the response type for the
+ * Query/EpochProvisions RPC method.
+ * @name QueryEpochProvisionsResponse
+ * @package osmosis.mint.v1beta1
+ * @see proto type: osmosis.mint.v1beta1.QueryEpochProvisionsResponse
+ */
 export const QueryEpochProvisionsResponse = {
   typeUrl: "/osmosis.mint.v1beta1.QueryEpochProvisionsResponse",
   aminoType: "osmosis/mint/query-epoch-provisions-response",

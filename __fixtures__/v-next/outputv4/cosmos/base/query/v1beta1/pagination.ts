@@ -10,6 +10,9 @@ export const protobufPackage = "cosmos.base.query.v1beta1";
  *          Foo some_parameter = 1;
  *          PageRequest pagination = 2;
  *  }
+ * @name PageRequest
+ * @package cosmos.base.query.v1beta1
+ * @see proto type: cosmos.base.query.v1beta1.PageRequest
  */
 export interface PageRequest {
   /**
@@ -55,6 +58,9 @@ export interface PageRequestProtoMsg {
  *          Foo some_parameter = 1;
  *          PageRequest pagination = 2;
  *  }
+ * @name PageRequestSDKType
+ * @package cosmos.base.query.v1beta1
+ * @see proto type: cosmos.base.query.v1beta1.PageRequest
  */
 export interface PageRequestSDKType {
   key: Uint8Array;
@@ -71,6 +77,9 @@ export interface PageRequestSDKType {
  *          repeated Bar results = 1;
  *          PageResponse page = 2;
  *  }
+ * @name PageResponse
+ * @package cosmos.base.query.v1beta1
+ * @see proto type: cosmos.base.query.v1beta1.PageResponse
  */
 export interface PageResponse {
   /**
@@ -97,6 +106,9 @@ export interface PageResponseProtoMsg {
  *          repeated Bar results = 1;
  *          PageResponse page = 2;
  *  }
+ * @name PageResponseSDKType
+ * @package cosmos.base.query.v1beta1
+ * @see proto type: cosmos.base.query.v1beta1.PageResponse
  */
 export interface PageResponseSDKType {
   next_key: Uint8Array;
@@ -111,6 +123,18 @@ function createBasePageRequest(): PageRequest {
     reverse: false
   };
 }
+/**
+ * PageRequest is to be embedded in gRPC request messages for efficient
+ * pagination. Ex:
+ * 
+ *  message SomeRequest {
+ *          Foo some_parameter = 1;
+ *          PageRequest pagination = 2;
+ *  }
+ * @name PageRequest
+ * @package cosmos.base.query.v1beta1
+ * @see proto type: cosmos.base.query.v1beta1.PageRequest
+ */
 export const PageRequest = {
   typeUrl: "/cosmos.base.query.v1beta1.PageRequest",
   encode(message: PageRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -274,6 +298,18 @@ function createBasePageResponse(): PageResponse {
     total: BigInt(0)
   };
 }
+/**
+ * PageResponse is to be embedded in gRPC response messages where the
+ * corresponding request message has used PageRequest.
+ * 
+ *  message SomeResponse {
+ *          repeated Bar results = 1;
+ *          PageResponse page = 2;
+ *  }
+ * @name PageResponse
+ * @package cosmos.base.query.v1beta1
+ * @see proto type: cosmos.base.query.v1beta1.PageResponse
+ */
 export const PageResponse = {
   typeUrl: "/cosmos.base.query.v1beta1.PageResponse",
   encode(message: PageResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -1,6 +1,11 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** EventSend is emitted on Msg/Send */
+/**
+ * EventSend is emitted on Msg/Send
+ * @name EventSend
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.EventSend
+ */
 export interface EventSend {
   classId: string;
   id: string;
@@ -11,7 +16,12 @@ export interface EventSendProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.EventSend";
   value: Uint8Array;
 }
-/** EventSend is emitted on Msg/Send */
+/**
+ * EventSend is emitted on Msg/Send
+ * @name EventSendAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.EventSend
+ */
 export interface EventSendAmino {
   class_id: string;
   id: string;
@@ -22,7 +32,12 @@ export interface EventSendAminoMsg {
   type: "cosmos-sdk/EventSend";
   value: EventSendAmino;
 }
-/** EventMint is emitted on Mint */
+/**
+ * EventMint is emitted on Mint
+ * @name EventMint
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.EventMint
+ */
 export interface EventMint {
   classId: string;
   id: string;
@@ -32,7 +47,12 @@ export interface EventMintProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.EventMint";
   value: Uint8Array;
 }
-/** EventMint is emitted on Mint */
+/**
+ * EventMint is emitted on Mint
+ * @name EventMintAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.EventMint
+ */
 export interface EventMintAmino {
   class_id: string;
   id: string;
@@ -42,7 +62,12 @@ export interface EventMintAminoMsg {
   type: "cosmos-sdk/EventMint";
   value: EventMintAmino;
 }
-/** EventBurn is emitted on Burn */
+/**
+ * EventBurn is emitted on Burn
+ * @name EventBurn
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.EventBurn
+ */
 export interface EventBurn {
   classId: string;
   id: string;
@@ -52,7 +77,12 @@ export interface EventBurnProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.EventBurn";
   value: Uint8Array;
 }
-/** EventBurn is emitted on Burn */
+/**
+ * EventBurn is emitted on Burn
+ * @name EventBurnAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.EventBurn
+ */
 export interface EventBurnAmino {
   class_id: string;
   id: string;
@@ -70,6 +100,12 @@ function createBaseEventSend(): EventSend {
     receiver: ""
   };
 }
+/**
+ * EventSend is emitted on Msg/Send
+ * @name EventSend
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.EventSend
+ */
 export const EventSend = {
   typeUrl: "/cosmos.nft.v1beta1.EventSend",
   aminoType: "cosmos-sdk/EventSend",
@@ -175,6 +211,12 @@ function createBaseEventMint(): EventMint {
     owner: ""
   };
 }
+/**
+ * EventMint is emitted on Mint
+ * @name EventMint
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.EventMint
+ */
 export const EventMint = {
   typeUrl: "/cosmos.nft.v1beta1.EventMint",
   aminoType: "cosmos-sdk/EventMint",
@@ -269,6 +311,12 @@ function createBaseEventBurn(): EventBurn {
     owner: ""
   };
 }
+/**
+ * EventBurn is emitted on Burn
+ * @name EventBurn
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.EventBurn
+ */
 export const EventBurn = {
   typeUrl: "/cosmos.nft.v1beta1.EventBurn",
   aminoType: "cosmos-sdk/EventBurn",

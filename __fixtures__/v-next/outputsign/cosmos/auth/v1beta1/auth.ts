@@ -6,6 +6,9 @@ export const protobufPackage = "cosmos.auth.v1beta1";
  * BaseAccount defines a base account type. It contains all the necessary fields
  * for basic account functionality. Any custom account type should extend this
  * type for additional functionality (e.g. vesting).
+ * @name BaseAccount
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.BaseAccount
  */
 export interface BaseAccount {
   address: string;
@@ -21,6 +24,9 @@ export interface BaseAccountProtoMsg {
  * BaseAccount defines a base account type. It contains all the necessary fields
  * for basic account functionality. Any custom account type should extend this
  * type for additional functionality (e.g. vesting).
+ * @name BaseAccountAmino
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.BaseAccount
  */
 export interface BaseAccountAmino {
   address?: string;
@@ -36,6 +42,9 @@ export interface BaseAccountAminoMsg {
  * BaseAccount defines a base account type. It contains all the necessary fields
  * for basic account functionality. Any custom account type should extend this
  * type for additional functionality (e.g. vesting).
+ * @name BaseAccountSDKType
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.BaseAccount
  */
 export interface BaseAccountSDKType {
   address: string;
@@ -43,7 +52,12 @@ export interface BaseAccountSDKType {
   account_number: bigint;
   sequence: bigint;
 }
-/** ModuleAccount defines an account for modules that holds coins on a pool. */
+/**
+ * ModuleAccount defines an account for modules that holds coins on a pool.
+ * @name ModuleAccount
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.ModuleAccount
+ */
 export interface ModuleAccount {
   baseAccount?: BaseAccount;
   name: string;
@@ -53,7 +67,12 @@ export interface ModuleAccountProtoMsg {
   typeUrl: "/cosmos.auth.v1beta1.ModuleAccount";
   value: Uint8Array;
 }
-/** ModuleAccount defines an account for modules that holds coins on a pool. */
+/**
+ * ModuleAccount defines an account for modules that holds coins on a pool.
+ * @name ModuleAccountAmino
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.ModuleAccount
+ */
 export interface ModuleAccountAmino {
   base_account?: BaseAccountAmino;
   name?: string;
@@ -63,13 +82,23 @@ export interface ModuleAccountAminoMsg {
   type: "cosmos-sdk/ModuleAccount";
   value: ModuleAccountAmino;
 }
-/** ModuleAccount defines an account for modules that holds coins on a pool. */
+/**
+ * ModuleAccount defines an account for modules that holds coins on a pool.
+ * @name ModuleAccountSDKType
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.ModuleAccount
+ */
 export interface ModuleAccountSDKType {
   base_account?: BaseAccountSDKType;
   name: string;
   permissions: string[];
 }
-/** Params defines the parameters for the auth module. */
+/**
+ * Params defines the parameters for the auth module.
+ * @name Params
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.Params
+ */
 export interface Params {
   maxMemoCharacters: bigint;
   txSigLimit: bigint;
@@ -81,7 +110,12 @@ export interface ParamsProtoMsg {
   typeUrl: "/cosmos.auth.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params defines the parameters for the auth module. */
+/**
+ * Params defines the parameters for the auth module.
+ * @name ParamsAmino
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.Params
+ */
 export interface ParamsAmino {
   max_memo_characters?: string;
   tx_sig_limit?: string;
@@ -93,7 +127,12 @@ export interface ParamsAminoMsg {
   type: "cosmos-sdk/Params";
   value: ParamsAmino;
 }
-/** Params defines the parameters for the auth module. */
+/**
+ * Params defines the parameters for the auth module.
+ * @name ParamsSDKType
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.Params
+ */
 export interface ParamsSDKType {
   max_memo_characters: bigint;
   tx_sig_limit: bigint;
@@ -109,6 +148,14 @@ function createBaseBaseAccount(): BaseAccount {
     sequence: BigInt(0)
   };
 }
+/**
+ * BaseAccount defines a base account type. It contains all the necessary fields
+ * for basic account functionality. Any custom account type should extend this
+ * type for additional functionality (e.g. vesting).
+ * @name BaseAccount
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.BaseAccount
+ */
 export const BaseAccount = {
   typeUrl: "/cosmos.auth.v1beta1.BaseAccount",
   encode(message: BaseAccount, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -219,6 +266,12 @@ function createBaseModuleAccount(): ModuleAccount {
     permissions: []
   };
 }
+/**
+ * ModuleAccount defines an account for modules that holds coins on a pool.
+ * @name ModuleAccount
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.ModuleAccount
+ */
 export const ModuleAccount = {
   typeUrl: "/cosmos.auth.v1beta1.ModuleAccount",
   encode(message: ModuleAccount, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -318,6 +371,12 @@ function createBaseParams(): Params {
     sigVerifyCostSecp256k1: BigInt(0)
   };
 }
+/**
+ * Params defines the parameters for the auth module.
+ * @name Params
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/cosmos.auth.v1beta1.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

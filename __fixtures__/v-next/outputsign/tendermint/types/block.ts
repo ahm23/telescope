@@ -3,6 +3,11 @@ import { EvidenceList, EvidenceListAmino, EvidenceListSDKType } from "./evidence
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { DeepPartial } from "../../helpers";
 export const protobufPackage = "tendermint.types";
+/**
+ * @name Block
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Block
+ */
 export interface Block {
   header: Header;
   data: Data;
@@ -13,6 +18,11 @@ export interface BlockProtoMsg {
   typeUrl: "/tendermint.types.Block";
   value: Uint8Array;
 }
+/**
+ * @name BlockAmino
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Block
+ */
 export interface BlockAmino {
   header?: HeaderAmino;
   data?: DataAmino;
@@ -23,6 +33,11 @@ export interface BlockAminoMsg {
   type: "/tendermint.types.Block";
   value: BlockAmino;
 }
+/**
+ * @name BlockSDKType
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Block
+ */
 export interface BlockSDKType {
   header: HeaderSDKType;
   data: DataSDKType;
@@ -37,6 +52,11 @@ function createBaseBlock(): Block {
     lastCommit: undefined
   };
 }
+/**
+ * @name Block
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Block
+ */
 export const Block = {
   typeUrl: "/tendermint.types.Block",
   encode(message: Block, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

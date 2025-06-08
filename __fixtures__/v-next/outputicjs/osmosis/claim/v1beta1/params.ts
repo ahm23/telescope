@@ -2,31 +2,45 @@ import { Timestamp } from "../../../google/protobuf/timestamp";
 import { Duration, DurationAmino } from "../../../google/protobuf/duration";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { toTimestamp, fromTimestamp, DeepPartial } from "../../../helpers";
-/** Params defines the claim module's parameters. */
-export interface Params {
+/**
+ * Params defines the claim module's parameters.
+ * @name OsmosisClaimV1beta1Params
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.Params
+ */
+export interface OsmosisClaimV1beta1Params {
   airdropStartTime: Date;
   durationUntilDecay: Duration;
   durationOfDecay: Duration;
-  /** denom of claimable asset */
+  /**
+   * denom of claimable asset
+   */
   claimDenom: string;
 }
-export interface ParamsProtoMsg {
+export interface OsmosisClaimV1beta1ParamsProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params defines the claim module's parameters. */
-export interface ParamsAmino {
+/**
+ * Params defines the claim module's parameters.
+ * @name OsmosisClaimV1beta1ParamsAmino
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.OsmosisClaimV1beta1Params
+ */
+export interface OsmosisClaimV1beta1ParamsAmino {
   airdrop_start_time: string;
   duration_until_decay: DurationAmino;
   duration_of_decay: DurationAmino;
-  /** denom of claimable asset */
+  /**
+   * denom of claimable asset
+   */
   claim_denom: string;
 }
-export interface ParamsAminoMsg {
+export interface OsmosisClaimV1beta1ParamsAminoMsg {
   type: "osmosis/claim/params";
-  value: ParamsAmino;
+  value: OsmosisClaimV1beta1ParamsAmino;
 }
-function createBaseParams(): Params {
+function createBaseOsmosisClaimV1beta1Params(): OsmosisClaimV1beta1Params {
   return {
     airdropStartTime: new Date(),
     durationUntilDecay: Duration.fromPartial({}),
@@ -34,10 +48,16 @@ function createBaseParams(): Params {
     claimDenom: ""
   };
 }
-export const Params = {
+/**
+ * Params defines the claim module's parameters.
+ * @name OsmosisClaimV1beta1Params
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.Params
+ */
+export const OsmosisClaimV1beta1Params = {
   typeUrl: "/osmosis.claim.v1beta1.Params",
   aminoType: "osmosis/claim/params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: OsmosisClaimV1beta1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.airdropStartTime !== undefined) {
       Timestamp.encode(toTimestamp(message.airdropStartTime), writer.uint32(10).fork()).ldelim();
     }
@@ -52,10 +72,10 @@ export const Params = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): OsmosisClaimV1beta1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseOsmosisClaimV1beta1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -78,16 +98,16 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<OsmosisClaimV1beta1Params>): OsmosisClaimV1beta1Params {
+    const message = createBaseOsmosisClaimV1beta1Params();
     message.airdropStartTime = object.airdropStartTime ?? undefined;
     message.durationUntilDecay = object.durationUntilDecay !== undefined && object.durationUntilDecay !== null ? Duration.fromPartial(object.durationUntilDecay) : undefined;
     message.durationOfDecay = object.durationOfDecay !== undefined && object.durationOfDecay !== null ? Duration.fromPartial(object.durationOfDecay) : undefined;
     message.claimDenom = object.claimDenom ?? "";
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: OsmosisClaimV1beta1ParamsAmino): OsmosisClaimV1beta1Params {
+    const message = createBaseOsmosisClaimV1beta1Params();
     if (object.airdrop_start_time !== undefined && object.airdrop_start_time !== null) {
       message.airdropStartTime = fromTimestamp(Timestamp.fromAmino(object.airdrop_start_time));
     }
@@ -102,7 +122,7 @@ export const Params = {
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: OsmosisClaimV1beta1Params): OsmosisClaimV1beta1ParamsAmino {
     const obj: any = {};
     obj.airdrop_start_time = message.airdropStartTime ? Timestamp.toAmino(toTimestamp(message.airdropStartTime)) : undefined;
     obj.duration_until_decay = message.durationUntilDecay ? Duration.toAmino(message.durationUntilDecay) : undefined;
@@ -110,25 +130,25 @@ export const Params = {
     obj.claim_denom = message.claimDenom === "" ? undefined : message.claimDenom;
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: OsmosisClaimV1beta1ParamsAminoMsg): OsmosisClaimV1beta1Params {
+    return OsmosisClaimV1beta1Params.fromAmino(object.value);
   },
-  toAminoMsg(message: Params): ParamsAminoMsg {
+  toAminoMsg(message: OsmosisClaimV1beta1Params): OsmosisClaimV1beta1ParamsAminoMsg {
     return {
       type: "osmosis/claim/params",
-      value: Params.toAmino(message)
+      value: OsmosisClaimV1beta1Params.toAmino(message)
     };
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: OsmosisClaimV1beta1ParamsProtoMsg): OsmosisClaimV1beta1Params {
+    return OsmosisClaimV1beta1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: OsmosisClaimV1beta1Params): Uint8Array {
+    return OsmosisClaimV1beta1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: OsmosisClaimV1beta1Params): OsmosisClaimV1beta1ParamsProtoMsg {
     return {
       typeUrl: "/osmosis.claim.v1beta1.Params",
-      value: Params.encode(message).finish()
+      value: OsmosisClaimV1beta1Params.encode(message).finish()
     };
   }
 };

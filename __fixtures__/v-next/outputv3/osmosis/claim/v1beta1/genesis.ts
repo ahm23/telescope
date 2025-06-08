@@ -4,29 +4,56 @@ import { ClaimRecord, ClaimRecordAmino, ClaimRecordSDKType } from "./claim";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 export const protobufPackage = "osmosis.claim.v1beta1";
-/** GenesisState defines the claim module's genesis state. */
+/**
+ * GenesisState defines the claim module's genesis state.
+ * @name GenesisState
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** balance of the claim module's account */
+  /**
+   * balance of the claim module's account
+   */
   moduleAccountBalance: Coin;
-  /** params defines all the parameters of the module. */
+  /**
+   * params defines all the parameters of the module.
+   */
   params: Params;
-  /** list of claim records, one for every airdrop recipient */
+  /**
+   * list of claim records, one for every airdrop recipient
+   */
   claimRecords: ClaimRecord[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the claim module's genesis state. */
+/**
+ * GenesisState defines the claim module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** balance of the claim module's account */
+  /**
+   * balance of the claim module's account
+   */
   module_account_balance?: CoinAmino;
-  /** params defines all the parameters of the module. */
+  /**
+   * params defines all the parameters of the module.
+   */
   params?: ParamsAmino;
-  /** list of claim records, one for every airdrop recipient */
+  /**
+   * list of claim records, one for every airdrop recipient
+   */
   claim_records?: ClaimRecordAmino[];
 }
-/** GenesisState defines the claim module's genesis state. */
+/**
+ * GenesisState defines the claim module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   module_account_balance: CoinSDKType;
   params: ParamsSDKType;
@@ -39,6 +66,12 @@ function createBaseGenesisState(): GenesisState {
     claimRecords: []
   };
 }
+/**
+ * GenesisState defines the claim module's genesis state.
+ * @name GenesisState
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.claim.v1beta1.GenesisState",
   aminoType: "osmosis/claim/genesis-state",

@@ -4,7 +4,12 @@ import { Params, ParamsAmino, ParamsSDKType } from "./params";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 export const protobufPackage = "akash.market.v1beta2";
-/** GenesisState defines the basic genesis state used by market module */
+/**
+ * GenesisState defines the basic genesis state used by market module
+ * @name GenesisState
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.GenesisState
+ */
 export interface GenesisState {
   orders: Order[];
   leases: Lease[];
@@ -14,13 +19,23 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/akash.market.v1beta2.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the basic genesis state used by market module */
+/**
+ * GenesisState defines the basic genesis state used by market module
+ * @name GenesisStateAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.GenesisState
+ */
 export interface GenesisStateAmino {
   orders: OrderAmino[];
   leases: LeaseAmino[];
   params: ParamsAmino;
 }
-/** GenesisState defines the basic genesis state used by market module */
+/**
+ * GenesisState defines the basic genesis state used by market module
+ * @name GenesisStateSDKType
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.GenesisState
+ */
 export interface GenesisStateSDKType {
   orders: OrderSDKType[];
   leases: LeaseSDKType[];
@@ -33,6 +48,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the basic genesis state used by market module
+ * @name GenesisState
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.market.v1beta2.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

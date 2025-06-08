@@ -1,6 +1,11 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { DeepPartial } from "../../helpers";
 export const protobufPackage = "osmosis.lockup";
+/**
+ * @name Params
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.Params
+ */
 export interface Params {
   forceUnlockAllowedAddresses: string[];
 }
@@ -8,9 +13,19 @@ export interface ParamsProtoMsg {
   typeUrl: "/osmosis.lockup.Params";
   value: Uint8Array;
 }
+/**
+ * @name ParamsAmino
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.Params
+ */
 export interface ParamsAmino {
   force_unlock_allowed_addresses?: string[];
 }
+/**
+ * @name ParamsSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.Params
+ */
 export interface ParamsSDKType {
   force_unlock_allowed_addresses: string[];
 }
@@ -19,6 +34,11 @@ function createBaseParams(): Params {
     forceUnlockAllowedAddresses: []
   };
 }
+/**
+ * @name Params
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.lockup.Params",
   aminoType: "osmosis/lockup/params",

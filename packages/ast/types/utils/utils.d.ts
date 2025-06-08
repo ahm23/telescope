@@ -5,6 +5,27 @@ declare const BILLION: t.NumericLiteral;
 export { BILLION };
 export declare const cleanComment: (str: any) => any;
 export declare const makeCommentBlock: (comment: string) => t.CommentBlock;
+export declare class CommentBlockBuilder {
+    private lines;
+    /**
+     * Add a line to the comment block
+     * If the line contains newlines, it will be split into multiple lines
+     */
+    addLine(line: string): this;
+    /**
+     * Add multiple lines to the comment block
+     * If any line contains newlines, it will be split into multiple lines
+     */
+    addLines(lines: string[]): this;
+    /**
+     * Clear all lines from the comment block
+     */
+    clear(): this;
+    /**
+     * Build the comment block AST node
+     */
+    build(): t.CommentBlock | null;
+}
 export declare const renderNameSafely: (name: any) => any;
 export declare const getProtoFieldTypeName: (context: ProtoParseContext, field: ProtoField) => any;
 export declare const recursiveNamespace: (names: any, moduleBlockBody: any) => any;

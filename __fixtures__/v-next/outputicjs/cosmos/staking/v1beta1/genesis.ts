@@ -1,10 +1,17 @@
-import { Params, ParamsAmino, Validator, ValidatorAmino, Delegation, DelegationAmino, UnbondingDelegation, UnbondingDelegationAmino, Redelegation, RedelegationAmino } from "./staking";
+import { Validator, ValidatorAmino, Delegation, DelegationAmino, UnbondingDelegation, UnbondingDelegationAmino, Redelegation, RedelegationAmino, CosmosStakingV1beta1Params, CosmosStakingV1beta1ParamsAmino } from "./staking";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../helpers";
-/** GenesisState defines the staking module's genesis state. */
+/**
+ * GenesisState defines the staking module's genesis state.
+ * @name GenesisState
+ * @package cosmos.staking.v1beta1
+ * @see proto type: cosmos.staking.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the paramaters of related to deposit. */
-  params: Params;
+  /**
+   * params defines all the paramaters of related to deposit.
+   */
+  params: CosmosStakingV1beta1Params;
   /**
    * last_total_power tracks the total amounts of bonded tokens recorded during
    * the previous end block.
@@ -15,13 +22,21 @@ export interface GenesisState {
    * of the last-block's bonded validators.
    */
   lastValidatorPowers: LastValidatorPower[];
-  /** delegations defines the validator set at genesis. */
+  /**
+   * delegations defines the validator set at genesis.
+   */
   validators: Validator[];
-  /** delegations defines the delegations active at genesis. */
+  /**
+   * delegations defines the delegations active at genesis.
+   */
   delegations: Delegation[];
-  /** unbonding_delegations defines the unbonding delegations active at genesis. */
+  /**
+   * unbonding_delegations defines the unbonding delegations active at genesis.
+   */
   unbondingDelegations: UnbondingDelegation[];
-  /** redelegations defines the redelegations active at genesis. */
+  /**
+   * redelegations defines the redelegations active at genesis.
+   */
   redelegations: Redelegation[];
   exported: boolean;
 }
@@ -29,10 +44,17 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.staking.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the staking module's genesis state. */
+/**
+ * GenesisState defines the staking module's genesis state.
+ * @name GenesisStateAmino
+ * @package cosmos.staking.v1beta1
+ * @see proto type: cosmos.staking.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines all the paramaters of related to deposit. */
-  params: ParamsAmino;
+  /**
+   * params defines all the paramaters of related to deposit.
+   */
+  params: CosmosStakingV1beta1ParamsAmino;
   /**
    * last_total_power tracks the total amounts of bonded tokens recorded during
    * the previous end block.
@@ -43,13 +65,21 @@ export interface GenesisStateAmino {
    * of the last-block's bonded validators.
    */
   last_validator_powers: LastValidatorPowerAmino[];
-  /** delegations defines the validator set at genesis. */
+  /**
+   * delegations defines the validator set at genesis.
+   */
   validators: ValidatorAmino[];
-  /** delegations defines the delegations active at genesis. */
+  /**
+   * delegations defines the delegations active at genesis.
+   */
   delegations: DelegationAmino[];
-  /** unbonding_delegations defines the unbonding delegations active at genesis. */
+  /**
+   * unbonding_delegations defines the unbonding delegations active at genesis.
+   */
   unbonding_delegations: UnbondingDelegationAmino[];
-  /** redelegations defines the redelegations active at genesis. */
+  /**
+   * redelegations defines the redelegations active at genesis.
+   */
   redelegations: RedelegationAmino[];
   exported: boolean;
 }
@@ -57,22 +87,40 @@ export interface GenesisStateAminoMsg {
   type: "cosmos-sdk/GenesisState";
   value: GenesisStateAmino;
 }
-/** LastValidatorPower required for validator set update logic. */
+/**
+ * LastValidatorPower required for validator set update logic.
+ * @name LastValidatorPower
+ * @package cosmos.staking.v1beta1
+ * @see proto type: cosmos.staking.v1beta1.LastValidatorPower
+ */
 export interface LastValidatorPower {
-  /** address is the address of the validator. */
+  /**
+   * address is the address of the validator.
+   */
   address: string;
-  /** power defines the power of the validator. */
+  /**
+   * power defines the power of the validator.
+   */
   power: bigint;
 }
 export interface LastValidatorPowerProtoMsg {
   typeUrl: "/cosmos.staking.v1beta1.LastValidatorPower";
   value: Uint8Array;
 }
-/** LastValidatorPower required for validator set update logic. */
+/**
+ * LastValidatorPower required for validator set update logic.
+ * @name LastValidatorPowerAmino
+ * @package cosmos.staking.v1beta1
+ * @see proto type: cosmos.staking.v1beta1.LastValidatorPower
+ */
 export interface LastValidatorPowerAmino {
-  /** address is the address of the validator. */
+  /**
+   * address is the address of the validator.
+   */
   address: string;
-  /** power defines the power of the validator. */
+  /**
+   * power defines the power of the validator.
+   */
   power: string;
 }
 export interface LastValidatorPowerAminoMsg {
@@ -81,7 +129,7 @@ export interface LastValidatorPowerAminoMsg {
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({}),
+    params: CosmosStakingV1beta1Params.fromPartial({}),
     lastTotalPower: new Uint8Array(),
     lastValidatorPowers: [],
     validators: [],
@@ -91,12 +139,18 @@ function createBaseGenesisState(): GenesisState {
     exported: false
   };
 }
+/**
+ * GenesisState defines the staking module's genesis state.
+ * @name GenesisState
+ * @package cosmos.staking.v1beta1
+ * @see proto type: cosmos.staking.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.staking.v1beta1.GenesisState",
   aminoType: "cosmos-sdk/GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      CosmosStakingV1beta1Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     if (message.lastTotalPower.length !== 0) {
       writer.uint32(18).bytes(message.lastTotalPower);
@@ -129,7 +183,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = CosmosStakingV1beta1Params.decode(reader, reader.uint32());
           break;
         case 2:
           message.lastTotalPower = reader.bytes();
@@ -161,7 +215,7 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? CosmosStakingV1beta1Params.fromPartial(object.params) : undefined;
     message.lastTotalPower = object.lastTotalPower ?? new Uint8Array();
     message.lastValidatorPowers = object.lastValidatorPowers?.map(e => LastValidatorPower.fromPartial(e)) || [];
     message.validators = object.validators?.map(e => Validator.fromPartial(e)) || [];
@@ -174,7 +228,7 @@ export const GenesisState = {
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = CosmosStakingV1beta1Params.fromAmino(object.params);
     }
     if (object.last_total_power !== undefined && object.last_total_power !== null) {
       message.lastTotalPower = bytesFromBase64(object.last_total_power);
@@ -191,7 +245,7 @@ export const GenesisState = {
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? CosmosStakingV1beta1Params.toAmino(message.params) : undefined;
     obj.last_total_power = message.lastTotalPower ? base64FromBytes(message.lastTotalPower) : undefined;
     if (message.lastValidatorPowers) {
       obj.last_validator_powers = message.lastValidatorPowers.map(e => e ? LastValidatorPower.toAmino(e) : undefined);
@@ -249,6 +303,12 @@ function createBaseLastValidatorPower(): LastValidatorPower {
     power: BigInt(0)
   };
 }
+/**
+ * LastValidatorPower required for validator set update logic.
+ * @name LastValidatorPower
+ * @package cosmos.staking.v1beta1
+ * @see proto type: cosmos.staking.v1beta1.LastValidatorPower
+ */
 export const LastValidatorPower = {
   typeUrl: "/cosmos.staking.v1beta1.LastValidatorPower",
   aminoType: "cosmos-sdk/LastValidatorPower",

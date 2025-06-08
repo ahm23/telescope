@@ -5,14 +5,29 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial, isSet } from "../../../helpers";
 export const protobufPackage = "osmosis.poolmanager.v1beta1";
-/** =============================== Params */
+/**
+ * =============================== Params
+ * @name ParamsRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.ParamsRequest
+ */
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.ParamsRequest";
   value: Uint8Array;
 }
-/** =============================== Params */
+/**
+ * =============================== Params
+ * @name ParamsRequestSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestSDKType {}
+/**
+ * @name ParamsResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.ParamsResponse
+ */
 export interface ParamsResponse {
   params: Params;
 }
@@ -20,10 +35,20 @@ export interface ParamsResponseProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.ParamsResponse";
   value: Uint8Array;
 }
+/**
+ * @name ParamsResponseSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseSDKType {
   params: ParamsSDKType;
 }
-/** =============================== EstimateSwapExactAmountIn */
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name EstimateSwapExactAmountInRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest
+ */
 export interface EstimateSwapExactAmountInRequest {
   poolId: bigint;
   tokenIn: string;
@@ -33,12 +58,22 @@ export interface EstimateSwapExactAmountInRequestProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest";
   value: Uint8Array;
 }
-/** =============================== EstimateSwapExactAmountIn */
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name EstimateSwapExactAmountInRequestSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest
+ */
 export interface EstimateSwapExactAmountInRequestSDKType {
   pool_id: bigint;
   token_in: string;
   routes: SwapAmountInRouteSDKType[];
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountInRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountInRequest
+ */
 export interface EstimateSinglePoolSwapExactAmountInRequest {
   poolId: bigint;
   tokenIn: string;
@@ -48,11 +83,21 @@ export interface EstimateSinglePoolSwapExactAmountInRequestProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountInRequest";
   value: Uint8Array;
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountInRequestSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountInRequest
+ */
 export interface EstimateSinglePoolSwapExactAmountInRequestSDKType {
   pool_id: bigint;
   token_in: string;
   token_out_denom: string;
 }
+/**
+ * @name EstimateSwapExactAmountInResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInResponse
+ */
 export interface EstimateSwapExactAmountInResponse {
   tokenOutAmount: string;
 }
@@ -60,10 +105,20 @@ export interface EstimateSwapExactAmountInResponseProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInResponse";
   value: Uint8Array;
 }
+/**
+ * @name EstimateSwapExactAmountInResponseSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInResponse
+ */
 export interface EstimateSwapExactAmountInResponseSDKType {
   token_out_amount: string;
 }
-/** =============================== EstimateSwapExactAmountOut */
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name EstimateSwapExactAmountOutRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest
+ */
 export interface EstimateSwapExactAmountOutRequest {
   poolId: bigint;
   routes: SwapAmountOutRoute[];
@@ -73,12 +128,22 @@ export interface EstimateSwapExactAmountOutRequestProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest";
   value: Uint8Array;
 }
-/** =============================== EstimateSwapExactAmountOut */
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name EstimateSwapExactAmountOutRequestSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest
+ */
 export interface EstimateSwapExactAmountOutRequestSDKType {
   pool_id: bigint;
   routes: SwapAmountOutRouteSDKType[];
   token_out: string;
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountOutRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountOutRequest
+ */
 export interface EstimateSinglePoolSwapExactAmountOutRequest {
   poolId: bigint;
   tokenInDenom: string;
@@ -88,11 +153,21 @@ export interface EstimateSinglePoolSwapExactAmountOutRequestProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountOutRequest";
   value: Uint8Array;
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountOutRequestSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountOutRequest
+ */
 export interface EstimateSinglePoolSwapExactAmountOutRequestSDKType {
   pool_id: bigint;
   token_in_denom: string;
   token_out: string;
 }
+/**
+ * @name EstimateSwapExactAmountOutResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutResponse
+ */
 export interface EstimateSwapExactAmountOutResponse {
   tokenInAmount: string;
 }
@@ -100,17 +175,37 @@ export interface EstimateSwapExactAmountOutResponseProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutResponse";
   value: Uint8Array;
 }
+/**
+ * @name EstimateSwapExactAmountOutResponseSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutResponse
+ */
 export interface EstimateSwapExactAmountOutResponseSDKType {
   token_in_amount: string;
 }
-/** =============================== NumPools */
+/**
+ * =============================== NumPools
+ * @name NumPoolsRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.NumPoolsRequest
+ */
 export interface NumPoolsRequest {}
 export interface NumPoolsRequestProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.NumPoolsRequest";
   value: Uint8Array;
 }
-/** =============================== NumPools */
+/**
+ * =============================== NumPools
+ * @name NumPoolsRequestSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.NumPoolsRequest
+ */
 export interface NumPoolsRequestSDKType {}
+/**
+ * @name NumPoolsResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.NumPoolsResponse
+ */
 export interface NumPoolsResponse {
   numPools: bigint;
 }
@@ -118,10 +213,20 @@ export interface NumPoolsResponseProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.NumPoolsResponse";
   value: Uint8Array;
 }
+/**
+ * @name NumPoolsResponseSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.NumPoolsResponse
+ */
 export interface NumPoolsResponseSDKType {
   num_pools: bigint;
 }
-/** =============================== Pool */
+/**
+ * =============================== Pool
+ * @name PoolRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.PoolRequest
+ */
 export interface PoolRequest {
   poolId: bigint;
 }
@@ -129,10 +234,20 @@ export interface PoolRequestProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.PoolRequest";
   value: Uint8Array;
 }
-/** =============================== Pool */
+/**
+ * =============================== Pool
+ * @name PoolRequestSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.PoolRequest
+ */
 export interface PoolRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name PoolResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.PoolResponse
+ */
 export interface PoolResponse {
   pool?: Any;
 }
@@ -140,10 +255,20 @@ export interface PoolResponseProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.PoolResponse";
   value: Uint8Array;
 }
+/**
+ * @name PoolResponseSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.PoolResponse
+ */
 export interface PoolResponseSDKType {
   pool?: AnySDKType;
 }
-/** =============================== AllPools */
+/**
+ * =============================== AllPools
+ * @name AllPoolsRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.AllPoolsRequest
+ */
 export interface AllPoolsRequest {
   poolId: bigint;
 }
@@ -151,10 +276,20 @@ export interface AllPoolsRequestProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.AllPoolsRequest";
   value: Uint8Array;
 }
-/** =============================== AllPools */
+/**
+ * =============================== AllPools
+ * @name AllPoolsRequestSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.AllPoolsRequest
+ */
 export interface AllPoolsRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name AllPoolsResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.AllPoolsResponse
+ */
 export interface AllPoolsResponse {
   pools: Any[];
 }
@@ -162,12 +297,20 @@ export interface AllPoolsResponseProtoMsg {
   typeUrl: "/osmosis.poolmanager.v1beta1.AllPoolsResponse";
   value: Uint8Array;
 }
+/**
+ * @name AllPoolsResponseSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.AllPoolsResponse
+ */
 export interface AllPoolsResponseSDKType {
   pools: AnySDKType[];
 }
 /**
  * SpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name SpotPriceRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.SpotPriceRequest
  */
 export interface SpotPriceRequest {
   poolId: bigint;
@@ -181,6 +324,9 @@ export interface SpotPriceRequestProtoMsg {
 /**
  * SpotPriceRequest defines the gRPC request structure for a SpotPrice
  * query.
+ * @name SpotPriceRequestSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.SpotPriceRequest
  */
 export interface SpotPriceRequestSDKType {
   pool_id: bigint;
@@ -190,9 +336,14 @@ export interface SpotPriceRequestSDKType {
 /**
  * SpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name SpotPriceResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.SpotPriceResponse
  */
 export interface SpotPriceResponse {
-  /** String of the Dec. Ex) 10.203uatom */
+  /**
+   * String of the Dec. Ex) 10.203uatom
+   */
   spotPrice: string;
 }
 export interface SpotPriceResponseProtoMsg {
@@ -202,6 +353,9 @@ export interface SpotPriceResponseProtoMsg {
 /**
  * SpotPriceResponse defines the gRPC response structure for a SpotPrice
  * query.
+ * @name SpotPriceResponseSDKType
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.SpotPriceResponse
  */
 export interface SpotPriceResponseSDKType {
   spot_price: string;
@@ -209,6 +363,12 @@ export interface SpotPriceResponseSDKType {
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
+/**
+ * =============================== Params
+ * @name ParamsRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.ParamsRequest
+ */
 export const ParamsRequest = {
   typeUrl: "/osmosis.poolmanager.v1beta1.ParamsRequest",
   encode(_: ParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -284,6 +444,11 @@ function createBaseParamsResponse(): ParamsResponse {
     params: Params.fromPartial({})
   };
 }
+/**
+ * @name ParamsResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.ParamsResponse
+ */
 export const ParamsResponse = {
   typeUrl: "/osmosis.poolmanager.v1beta1.ParamsResponse",
   encode(message: ParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -380,6 +545,12 @@ function createBaseEstimateSwapExactAmountInRequest(): EstimateSwapExactAmountIn
     routes: []
   };
 }
+/**
+ * =============================== EstimateSwapExactAmountIn
+ * @name EstimateSwapExactAmountInRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest
+ */
 export const EstimateSwapExactAmountInRequest = {
   typeUrl: "/osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInRequest",
   encode(message: EstimateSwapExactAmountInRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -518,6 +689,11 @@ function createBaseEstimateSinglePoolSwapExactAmountInRequest(): EstimateSingleP
     tokenOutDenom: ""
   };
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountInRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountInRequest
+ */
 export const EstimateSinglePoolSwapExactAmountInRequest = {
   typeUrl: "/osmosis.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountInRequest",
   encode(message: EstimateSinglePoolSwapExactAmountInRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -644,6 +820,11 @@ function createBaseEstimateSwapExactAmountInResponse(): EstimateSwapExactAmountI
     tokenOutAmount: ""
   };
 }
+/**
+ * @name EstimateSwapExactAmountInResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInResponse
+ */
 export const EstimateSwapExactAmountInResponse = {
   typeUrl: "/osmosis.poolmanager.v1beta1.EstimateSwapExactAmountInResponse",
   encode(message: EstimateSwapExactAmountInResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -740,6 +921,12 @@ function createBaseEstimateSwapExactAmountOutRequest(): EstimateSwapExactAmountO
     tokenOut: ""
   };
 }
+/**
+ * =============================== EstimateSwapExactAmountOut
+ * @name EstimateSwapExactAmountOutRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest
+ */
 export const EstimateSwapExactAmountOutRequest = {
   typeUrl: "/osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutRequest",
   encode(message: EstimateSwapExactAmountOutRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -878,6 +1065,11 @@ function createBaseEstimateSinglePoolSwapExactAmountOutRequest(): EstimateSingle
     tokenOut: ""
   };
 }
+/**
+ * @name EstimateSinglePoolSwapExactAmountOutRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountOutRequest
+ */
 export const EstimateSinglePoolSwapExactAmountOutRequest = {
   typeUrl: "/osmosis.poolmanager.v1beta1.EstimateSinglePoolSwapExactAmountOutRequest",
   encode(message: EstimateSinglePoolSwapExactAmountOutRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1004,6 +1196,11 @@ function createBaseEstimateSwapExactAmountOutResponse(): EstimateSwapExactAmount
     tokenInAmount: ""
   };
 }
+/**
+ * @name EstimateSwapExactAmountOutResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutResponse
+ */
 export const EstimateSwapExactAmountOutResponse = {
   typeUrl: "/osmosis.poolmanager.v1beta1.EstimateSwapExactAmountOutResponse",
   encode(message: EstimateSwapExactAmountOutResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1096,6 +1293,12 @@ export const EstimateSwapExactAmountOutResponse = {
 function createBaseNumPoolsRequest(): NumPoolsRequest {
   return {};
 }
+/**
+ * =============================== NumPools
+ * @name NumPoolsRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.NumPoolsRequest
+ */
 export const NumPoolsRequest = {
   typeUrl: "/osmosis.poolmanager.v1beta1.NumPoolsRequest",
   encode(_: NumPoolsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1171,6 +1374,11 @@ function createBaseNumPoolsResponse(): NumPoolsResponse {
     numPools: BigInt(0)
   };
 }
+/**
+ * @name NumPoolsResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.NumPoolsResponse
+ */
 export const NumPoolsResponse = {
   typeUrl: "/osmosis.poolmanager.v1beta1.NumPoolsResponse",
   encode(message: NumPoolsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1265,6 +1473,12 @@ function createBasePoolRequest(): PoolRequest {
     poolId: BigInt(0)
   };
 }
+/**
+ * =============================== Pool
+ * @name PoolRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.PoolRequest
+ */
 export const PoolRequest = {
   typeUrl: "/osmosis.poolmanager.v1beta1.PoolRequest",
   encode(message: PoolRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1359,6 +1573,11 @@ function createBasePoolResponse(): PoolResponse {
     pool: undefined
   };
 }
+/**
+ * @name PoolResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.PoolResponse
+ */
 export const PoolResponse = {
   typeUrl: "/osmosis.poolmanager.v1beta1.PoolResponse",
   encode(message: PoolResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1453,6 +1672,12 @@ function createBaseAllPoolsRequest(): AllPoolsRequest {
     poolId: BigInt(0)
   };
 }
+/**
+ * =============================== AllPools
+ * @name AllPoolsRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.AllPoolsRequest
+ */
 export const AllPoolsRequest = {
   typeUrl: "/osmosis.poolmanager.v1beta1.AllPoolsRequest",
   encode(message: AllPoolsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1547,6 +1772,11 @@ function createBaseAllPoolsResponse(): AllPoolsResponse {
     pools: []
   };
 }
+/**
+ * @name AllPoolsResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.AllPoolsResponse
+ */
 export const AllPoolsResponse = {
   typeUrl: "/osmosis.poolmanager.v1beta1.AllPoolsResponse",
   encode(message: AllPoolsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1653,6 +1883,13 @@ function createBaseSpotPriceRequest(): SpotPriceRequest {
     quoteAssetDenom: ""
   };
 }
+/**
+ * SpotPriceRequest defines the gRPC request structure for a SpotPrice
+ * query.
+ * @name SpotPriceRequest
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.SpotPriceRequest
+ */
 export const SpotPriceRequest = {
   typeUrl: "/osmosis.poolmanager.v1beta1.SpotPriceRequest",
   encode(message: SpotPriceRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1779,6 +2016,13 @@ function createBaseSpotPriceResponse(): SpotPriceResponse {
     spotPrice: ""
   };
 }
+/**
+ * SpotPriceResponse defines the gRPC response structure for a SpotPrice
+ * query.
+ * @name SpotPriceResponse
+ * @package osmosis.poolmanager.v1beta1
+ * @see proto type: osmosis.poolmanager.v1beta1.SpotPriceResponse
+ */
 export const SpotPriceResponse = {
   typeUrl: "/osmosis.poolmanager.v1beta1.SpotPriceResponse",
   encode(message: SpotPriceResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -5,30 +5,55 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial, isSet } from "../../../helpers";
 export const protobufPackage = "osmosis.protorev.v1beta1";
-/** QueryParamsRequest is request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.QueryParamsRequest";
   value: Uint8Array;
 }
-/** QueryParamsRequest is request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params holds all the parameters of this module. */
+  /**
+   * params holds all the parameters of this module.
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.QueryParamsResponse";
   value: Uint8Array;
 }
-/** QueryParamsResponse is response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 /**
  * QueryGetProtoRevNumberOfTradesRequest is request type for the
  * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest
  */
 export interface QueryGetProtoRevNumberOfTradesRequest {}
 export interface QueryGetProtoRevNumberOfTradesRequestProtoMsg {
@@ -38,14 +63,22 @@ export interface QueryGetProtoRevNumberOfTradesRequestProtoMsg {
 /**
  * QueryGetProtoRevNumberOfTradesRequest is request type for the
  * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest
  */
 export interface QueryGetProtoRevNumberOfTradesRequestSDKType {}
 /**
  * QueryGetProtoRevNumberOfTradesResponse is response type for the
  * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse
  */
 export interface QueryGetProtoRevNumberOfTradesResponse {
-  /** number_of_trades is the number of trades the module has executed */
+  /**
+   * number_of_trades is the number of trades the module has executed
+   */
   numberOfTrades: string;
 }
 export interface QueryGetProtoRevNumberOfTradesResponseProtoMsg {
@@ -55,6 +88,9 @@ export interface QueryGetProtoRevNumberOfTradesResponseProtoMsg {
 /**
  * QueryGetProtoRevNumberOfTradesResponse is response type for the
  * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse
  */
 export interface QueryGetProtoRevNumberOfTradesResponseSDKType {
   number_of_trades: string;
@@ -62,9 +98,14 @@ export interface QueryGetProtoRevNumberOfTradesResponseSDKType {
 /**
  * QueryGetProtoRevProfitsByDenomRequest is request type for the
  * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest
  */
 export interface QueryGetProtoRevProfitsByDenomRequest {
-  /** denom is the denom to query profits by */
+  /**
+   * denom is the denom to query profits by
+   */
   denom: string;
 }
 export interface QueryGetProtoRevProfitsByDenomRequestProtoMsg {
@@ -74,6 +115,9 @@ export interface QueryGetProtoRevProfitsByDenomRequestProtoMsg {
 /**
  * QueryGetProtoRevProfitsByDenomRequest is request type for the
  * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest
  */
 export interface QueryGetProtoRevProfitsByDenomRequestSDKType {
   denom: string;
@@ -81,9 +125,14 @@ export interface QueryGetProtoRevProfitsByDenomRequestSDKType {
 /**
  * QueryGetProtoRevProfitsByDenomResponse is response type for the
  * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse
  */
 export interface QueryGetProtoRevProfitsByDenomResponse {
-  /** profit is the profits of the module by the selected denom */
+  /**
+   * profit is the profits of the module by the selected denom
+   */
   profit?: Coin;
 }
 export interface QueryGetProtoRevProfitsByDenomResponseProtoMsg {
@@ -93,6 +142,9 @@ export interface QueryGetProtoRevProfitsByDenomResponseProtoMsg {
 /**
  * QueryGetProtoRevProfitsByDenomResponse is response type for the
  * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse
  */
 export interface QueryGetProtoRevProfitsByDenomResponseSDKType {
   profit?: CoinSDKType;
@@ -100,6 +152,9 @@ export interface QueryGetProtoRevProfitsByDenomResponseSDKType {
 /**
  * QueryGetProtoRevAllProfitsRequest is request type for the
  * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest
  */
 export interface QueryGetProtoRevAllProfitsRequest {}
 export interface QueryGetProtoRevAllProfitsRequestProtoMsg {
@@ -109,14 +164,22 @@ export interface QueryGetProtoRevAllProfitsRequestProtoMsg {
 /**
  * QueryGetProtoRevAllProfitsRequest is request type for the
  * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest
  */
 export interface QueryGetProtoRevAllProfitsRequestSDKType {}
 /**
  * QueryGetProtoRevAllProfitsResponse is response type for the
  * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse
  */
 export interface QueryGetProtoRevAllProfitsResponse {
-  /** profits is a list of all of the profits from the module */
+  /**
+   * profits is a list of all of the profits from the module
+   */
   profits: Coin[];
 }
 export interface QueryGetProtoRevAllProfitsResponseProtoMsg {
@@ -126,6 +189,9 @@ export interface QueryGetProtoRevAllProfitsResponseProtoMsg {
 /**
  * QueryGetProtoRevAllProfitsResponse is response type for the
  * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse
  */
 export interface QueryGetProtoRevAllProfitsResponseSDKType {
   profits: CoinSDKType[];
@@ -133,9 +199,14 @@ export interface QueryGetProtoRevAllProfitsResponseSDKType {
 /**
  * QueryGetProtoRevStatisticsByPoolRequest is request type for the
  * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest
  */
 export interface QueryGetProtoRevStatisticsByRouteRequest {
-  /** route is the set of pool ids to query statistics by i.e. 1,2,3 */
+  /**
+   * route is the set of pool ids to query statistics by i.e. 1,2,3
+   */
   route: bigint[];
 }
 export interface QueryGetProtoRevStatisticsByRouteRequestProtoMsg {
@@ -145,6 +216,9 @@ export interface QueryGetProtoRevStatisticsByRouteRequestProtoMsg {
 /**
  * QueryGetProtoRevStatisticsByPoolRequest is request type for the
  * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest
  */
 export interface QueryGetProtoRevStatisticsByRouteRequestSDKType {
   route: bigint[];
@@ -152,6 +226,9 @@ export interface QueryGetProtoRevStatisticsByRouteRequestSDKType {
 /**
  * QueryGetProtoRevStatisticsByRouteResponse is response type for the
  * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse
  */
 export interface QueryGetProtoRevStatisticsByRouteResponse {
   /**
@@ -167,6 +244,9 @@ export interface QueryGetProtoRevStatisticsByRouteResponseProtoMsg {
 /**
  * QueryGetProtoRevStatisticsByRouteResponse is response type for the
  * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse
  */
 export interface QueryGetProtoRevStatisticsByRouteResponseSDKType {
   statistics: RouteStatisticsSDKType;
@@ -174,6 +254,9 @@ export interface QueryGetProtoRevStatisticsByRouteResponseSDKType {
 /**
  * QueryGetProtoRevAllRouteStatisticsRequest is request type for the
  * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest
  */
 export interface QueryGetProtoRevAllRouteStatisticsRequest {}
 export interface QueryGetProtoRevAllRouteStatisticsRequestProtoMsg {
@@ -183,11 +266,17 @@ export interface QueryGetProtoRevAllRouteStatisticsRequestProtoMsg {
 /**
  * QueryGetProtoRevAllRouteStatisticsRequest is request type for the
  * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest
  */
 export interface QueryGetProtoRevAllRouteStatisticsRequestSDKType {}
 /**
  * QueryGetProtoRevAllRouteStatisticsResponse is response type for the
  * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse
  */
 export interface QueryGetProtoRevAllRouteStatisticsResponse {
   /**
@@ -203,6 +292,9 @@ export interface QueryGetProtoRevAllRouteStatisticsResponseProtoMsg {
 /**
  * QueryGetProtoRevAllRouteStatisticsResponse is response type for the
  * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse
  */
 export interface QueryGetProtoRevAllRouteStatisticsResponseSDKType {
   statistics: RouteStatisticsSDKType[];
@@ -210,6 +302,9 @@ export interface QueryGetProtoRevAllRouteStatisticsResponseSDKType {
 /**
  * QueryGetProtoRevTokenPairArbRoutesRequest is request type for the
  * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest
  */
 export interface QueryGetProtoRevTokenPairArbRoutesRequest {}
 export interface QueryGetProtoRevTokenPairArbRoutesRequestProtoMsg {
@@ -219,11 +314,17 @@ export interface QueryGetProtoRevTokenPairArbRoutesRequestProtoMsg {
 /**
  * QueryGetProtoRevTokenPairArbRoutesRequest is request type for the
  * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest
  */
 export interface QueryGetProtoRevTokenPairArbRoutesRequestSDKType {}
 /**
  * QueryGetProtoRevTokenPairArbRoutesResponse is response type for the
  * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse
  */
 export interface QueryGetProtoRevTokenPairArbRoutesResponse {
   /**
@@ -239,6 +340,9 @@ export interface QueryGetProtoRevTokenPairArbRoutesResponseProtoMsg {
 /**
  * QueryGetProtoRevTokenPairArbRoutesResponse is response type for the
  * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse
  */
 export interface QueryGetProtoRevTokenPairArbRoutesResponseSDKType {
   routes: TokenPairArbRoutesSDKType[];
@@ -246,6 +350,9 @@ export interface QueryGetProtoRevTokenPairArbRoutesResponseSDKType {
 /**
  * QueryGetProtoRevAdminAccountRequest is request type for the
  * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest
  */
 export interface QueryGetProtoRevAdminAccountRequest {}
 export interface QueryGetProtoRevAdminAccountRequestProtoMsg {
@@ -255,14 +362,22 @@ export interface QueryGetProtoRevAdminAccountRequestProtoMsg {
 /**
  * QueryGetProtoRevAdminAccountRequest is request type for the
  * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest
  */
 export interface QueryGetProtoRevAdminAccountRequestSDKType {}
 /**
  * QueryGetProtoRevAdminAccountResponse is response type for the
  * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse
  */
 export interface QueryGetProtoRevAdminAccountResponse {
-  /** admin_account is the admin account of the module */
+  /**
+   * admin_account is the admin account of the module
+   */
   adminAccount: string;
 }
 export interface QueryGetProtoRevAdminAccountResponseProtoMsg {
@@ -272,6 +387,9 @@ export interface QueryGetProtoRevAdminAccountResponseProtoMsg {
 /**
  * QueryGetProtoRevAdminAccountResponse is response type for the
  * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse
  */
 export interface QueryGetProtoRevAdminAccountResponseSDKType {
   admin_account: string;
@@ -279,6 +397,9 @@ export interface QueryGetProtoRevAdminAccountResponseSDKType {
 /**
  * QueryGetProtoRevDeveloperAccountRequest is request type for the
  * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest
  */
 export interface QueryGetProtoRevDeveloperAccountRequest {}
 export interface QueryGetProtoRevDeveloperAccountRequestProtoMsg {
@@ -288,14 +409,22 @@ export interface QueryGetProtoRevDeveloperAccountRequestProtoMsg {
 /**
  * QueryGetProtoRevDeveloperAccountRequest is request type for the
  * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest
  */
 export interface QueryGetProtoRevDeveloperAccountRequestSDKType {}
 /**
  * QueryGetProtoRevDeveloperAccountResponse is response type for the
  * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse
  */
 export interface QueryGetProtoRevDeveloperAccountResponse {
-  /** developer_account is the developer account of the module */
+  /**
+   * developer_account is the developer account of the module
+   */
   developerAccount: string;
 }
 export interface QueryGetProtoRevDeveloperAccountResponseProtoMsg {
@@ -305,6 +434,9 @@ export interface QueryGetProtoRevDeveloperAccountResponseProtoMsg {
 /**
  * QueryGetProtoRevDeveloperAccountResponse is response type for the
  * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse
  */
 export interface QueryGetProtoRevDeveloperAccountResponseSDKType {
   developer_account: string;
@@ -312,6 +444,9 @@ export interface QueryGetProtoRevDeveloperAccountResponseSDKType {
 /**
  * QueryGetProtoRevPoolWeightsRequest is request type for the
  * Query/GetProtoRevPoolWeights RPC method.
+ * @name QueryGetProtoRevPoolWeightsRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsRequest
  */
 export interface QueryGetProtoRevPoolWeightsRequest {}
 export interface QueryGetProtoRevPoolWeightsRequestProtoMsg {
@@ -321,14 +456,22 @@ export interface QueryGetProtoRevPoolWeightsRequestProtoMsg {
 /**
  * QueryGetProtoRevPoolWeightsRequest is request type for the
  * Query/GetProtoRevPoolWeights RPC method.
+ * @name QueryGetProtoRevPoolWeightsRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsRequest
  */
 export interface QueryGetProtoRevPoolWeightsRequestSDKType {}
 /**
  * QueryGetProtoRevPoolWeightsResponse is response type for the
  * Query/GetProtoRevPoolWeights RPC method.
+ * @name QueryGetProtoRevPoolWeightsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsResponse
  */
 export interface QueryGetProtoRevPoolWeightsResponse {
-  /** pool_weights is a list of all of the pool weights */
+  /**
+   * pool_weights is a list of all of the pool weights
+   */
   poolWeights: PoolWeights;
 }
 export interface QueryGetProtoRevPoolWeightsResponseProtoMsg {
@@ -338,6 +481,9 @@ export interface QueryGetProtoRevPoolWeightsResponseProtoMsg {
 /**
  * QueryGetProtoRevPoolWeightsResponse is response type for the
  * Query/GetProtoRevPoolWeights RPC method.
+ * @name QueryGetProtoRevPoolWeightsResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsResponse
  */
 export interface QueryGetProtoRevPoolWeightsResponseSDKType {
   pool_weights: PoolWeightsSDKType;
@@ -345,6 +491,9 @@ export interface QueryGetProtoRevPoolWeightsResponseSDKType {
 /**
  * QueryGetProtoRevMaxPoolPointsPerBlockRequest is request type for the
  * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest
  */
 export interface QueryGetProtoRevMaxPoolPointsPerBlockRequest {}
 export interface QueryGetProtoRevMaxPoolPointsPerBlockRequestProtoMsg {
@@ -354,11 +503,17 @@ export interface QueryGetProtoRevMaxPoolPointsPerBlockRequestProtoMsg {
 /**
  * QueryGetProtoRevMaxPoolPointsPerBlockRequest is request type for the
  * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest
  */
 export interface QueryGetProtoRevMaxPoolPointsPerBlockRequestSDKType {}
 /**
  * QueryGetProtoRevMaxPoolPointsPerBlockResponse is response type for the
  * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse
  */
 export interface QueryGetProtoRevMaxPoolPointsPerBlockResponse {
   /**
@@ -374,6 +529,9 @@ export interface QueryGetProtoRevMaxPoolPointsPerBlockResponseProtoMsg {
 /**
  * QueryGetProtoRevMaxPoolPointsPerBlockResponse is response type for the
  * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse
  */
 export interface QueryGetProtoRevMaxPoolPointsPerBlockResponseSDKType {
   max_pool_points_per_block: bigint;
@@ -381,6 +539,9 @@ export interface QueryGetProtoRevMaxPoolPointsPerBlockResponseSDKType {
 /**
  * QueryGetProtoRevMaxPoolPointsPerTxRequest is request type for the
  * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest
  */
 export interface QueryGetProtoRevMaxPoolPointsPerTxRequest {}
 export interface QueryGetProtoRevMaxPoolPointsPerTxRequestProtoMsg {
@@ -390,11 +551,17 @@ export interface QueryGetProtoRevMaxPoolPointsPerTxRequestProtoMsg {
 /**
  * QueryGetProtoRevMaxPoolPointsPerTxRequest is request type for the
  * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest
  */
 export interface QueryGetProtoRevMaxPoolPointsPerTxRequestSDKType {}
 /**
  * QueryGetProtoRevMaxPoolPointsPerTxResponse is response type for the
  * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse
  */
 export interface QueryGetProtoRevMaxPoolPointsPerTxResponse {
   /**
@@ -410,6 +577,9 @@ export interface QueryGetProtoRevMaxPoolPointsPerTxResponseProtoMsg {
 /**
  * QueryGetProtoRevMaxPoolPointsPerTxResponse is response type for the
  * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse
  */
 export interface QueryGetProtoRevMaxPoolPointsPerTxResponseSDKType {
   max_pool_points_per_tx: bigint;
@@ -417,6 +587,9 @@ export interface QueryGetProtoRevMaxPoolPointsPerTxResponseSDKType {
 /**
  * QueryGetProtoRevBaseDenomsRequest is request type for the
  * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest
  */
 export interface QueryGetProtoRevBaseDenomsRequest {}
 export interface QueryGetProtoRevBaseDenomsRequestProtoMsg {
@@ -426,14 +599,22 @@ export interface QueryGetProtoRevBaseDenomsRequestProtoMsg {
 /**
  * QueryGetProtoRevBaseDenomsRequest is request type for the
  * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest
  */
 export interface QueryGetProtoRevBaseDenomsRequestSDKType {}
 /**
  * QueryGetProtoRevBaseDenomsResponse is response type for the
  * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse
  */
 export interface QueryGetProtoRevBaseDenomsResponse {
-  /** base_denoms is a list of all of the base denoms and step sizes */
+  /**
+   * base_denoms is a list of all of the base denoms and step sizes
+   */
   baseDenoms: BaseDenom[];
 }
 export interface QueryGetProtoRevBaseDenomsResponseProtoMsg {
@@ -443,6 +624,9 @@ export interface QueryGetProtoRevBaseDenomsResponseProtoMsg {
 /**
  * QueryGetProtoRevBaseDenomsResponse is response type for the
  * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse
  */
 export interface QueryGetProtoRevBaseDenomsResponseSDKType {
   base_denoms: BaseDenomSDKType[];
@@ -450,6 +634,9 @@ export interface QueryGetProtoRevBaseDenomsResponseSDKType {
 /**
  * QueryGetProtoRevEnabledRequest is request type for the
  * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevEnabledRequest
  */
 export interface QueryGetProtoRevEnabledRequest {}
 export interface QueryGetProtoRevEnabledRequestProtoMsg {
@@ -459,14 +646,22 @@ export interface QueryGetProtoRevEnabledRequestProtoMsg {
 /**
  * QueryGetProtoRevEnabledRequest is request type for the
  * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledRequestSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevEnabledRequest
  */
 export interface QueryGetProtoRevEnabledRequestSDKType {}
 /**
  * QueryGetProtoRevEnabledResponse is response type for the
  * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevEnabledResponse
  */
 export interface QueryGetProtoRevEnabledResponse {
-  /** enabled is whether the module is enabled */
+  /**
+   * enabled is whether the module is enabled
+   */
   enabled: boolean;
 }
 export interface QueryGetProtoRevEnabledResponseProtoMsg {
@@ -476,6 +671,9 @@ export interface QueryGetProtoRevEnabledResponseProtoMsg {
 /**
  * QueryGetProtoRevEnabledResponse is response type for the
  * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevEnabledResponse
  */
 export interface QueryGetProtoRevEnabledResponseSDKType {
   enabled: boolean;
@@ -483,6 +681,12 @@ export interface QueryGetProtoRevEnabledResponseSDKType {
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryParamsRequest",
   encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -558,6 +762,12 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({})
   };
 }
+/**
+ * QueryParamsResponse is response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryParamsResponse",
   encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -650,6 +860,13 @@ export const QueryParamsResponse = {
 function createBaseQueryGetProtoRevNumberOfTradesRequest(): QueryGetProtoRevNumberOfTradesRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevNumberOfTradesRequest is request type for the
+ * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest
+ */
 export const QueryGetProtoRevNumberOfTradesRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevNumberOfTradesRequest",
   encode(_: QueryGetProtoRevNumberOfTradesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -725,6 +942,13 @@ function createBaseQueryGetProtoRevNumberOfTradesResponse(): QueryGetProtoRevNum
     numberOfTrades: ""
   };
 }
+/**
+ * QueryGetProtoRevNumberOfTradesResponse is response type for the
+ * Query/GetProtoRevNumberOfTrades RPC method.
+ * @name QueryGetProtoRevNumberOfTradesResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse
+ */
 export const QueryGetProtoRevNumberOfTradesResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevNumberOfTradesResponse",
   encode(message: QueryGetProtoRevNumberOfTradesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -819,6 +1043,13 @@ function createBaseQueryGetProtoRevProfitsByDenomRequest(): QueryGetProtoRevProf
     denom: ""
   };
 }
+/**
+ * QueryGetProtoRevProfitsByDenomRequest is request type for the
+ * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest
+ */
 export const QueryGetProtoRevProfitsByDenomRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevProfitsByDenomRequest",
   encode(message: QueryGetProtoRevProfitsByDenomRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -913,6 +1144,13 @@ function createBaseQueryGetProtoRevProfitsByDenomResponse(): QueryGetProtoRevPro
     profit: undefined
   };
 }
+/**
+ * QueryGetProtoRevProfitsByDenomResponse is response type for the
+ * Query/GetProtoRevProfitsByDenom RPC method.
+ * @name QueryGetProtoRevProfitsByDenomResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse
+ */
 export const QueryGetProtoRevProfitsByDenomResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevProfitsByDenomResponse",
   encode(message: QueryGetProtoRevProfitsByDenomResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1005,6 +1243,13 @@ export const QueryGetProtoRevProfitsByDenomResponse = {
 function createBaseQueryGetProtoRevAllProfitsRequest(): QueryGetProtoRevAllProfitsRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevAllProfitsRequest is request type for the
+ * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest
+ */
 export const QueryGetProtoRevAllProfitsRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevAllProfitsRequest",
   encode(_: QueryGetProtoRevAllProfitsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1080,6 +1325,13 @@ function createBaseQueryGetProtoRevAllProfitsResponse(): QueryGetProtoRevAllProf
     profits: []
   };
 }
+/**
+ * QueryGetProtoRevAllProfitsResponse is response type for the
+ * Query/GetProtoRevAllProfits RPC method.
+ * @name QueryGetProtoRevAllProfitsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse
+ */
 export const QueryGetProtoRevAllProfitsResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevAllProfitsResponse",
   encode(message: QueryGetProtoRevAllProfitsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1184,6 +1436,13 @@ function createBaseQueryGetProtoRevStatisticsByRouteRequest(): QueryGetProtoRevS
     route: []
   };
 }
+/**
+ * QueryGetProtoRevStatisticsByPoolRequest is request type for the
+ * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest
+ */
 export const QueryGetProtoRevStatisticsByRouteRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteRequest",
   encode(message: QueryGetProtoRevStatisticsByRouteRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1297,6 +1556,13 @@ function createBaseQueryGetProtoRevStatisticsByRouteResponse(): QueryGetProtoRev
     statistics: RouteStatistics.fromPartial({})
   };
 }
+/**
+ * QueryGetProtoRevStatisticsByRouteResponse is response type for the
+ * Query/GetProtoRevStatisticsByRoute RPC method.
+ * @name QueryGetProtoRevStatisticsByRouteResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse
+ */
 export const QueryGetProtoRevStatisticsByRouteResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevStatisticsByRouteResponse",
   encode(message: QueryGetProtoRevStatisticsByRouteResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1389,6 +1655,13 @@ export const QueryGetProtoRevStatisticsByRouteResponse = {
 function createBaseQueryGetProtoRevAllRouteStatisticsRequest(): QueryGetProtoRevAllRouteStatisticsRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevAllRouteStatisticsRequest is request type for the
+ * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest
+ */
 export const QueryGetProtoRevAllRouteStatisticsRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsRequest",
   encode(_: QueryGetProtoRevAllRouteStatisticsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1464,6 +1737,13 @@ function createBaseQueryGetProtoRevAllRouteStatisticsResponse(): QueryGetProtoRe
     statistics: []
   };
 }
+/**
+ * QueryGetProtoRevAllRouteStatisticsResponse is response type for the
+ * Query/GetProtoRevAllRouteStatistics RPC method.
+ * @name QueryGetProtoRevAllRouteStatisticsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse
+ */
 export const QueryGetProtoRevAllRouteStatisticsResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevAllRouteStatisticsResponse",
   encode(message: QueryGetProtoRevAllRouteStatisticsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1566,6 +1846,13 @@ export const QueryGetProtoRevAllRouteStatisticsResponse = {
 function createBaseQueryGetProtoRevTokenPairArbRoutesRequest(): QueryGetProtoRevTokenPairArbRoutesRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevTokenPairArbRoutesRequest is request type for the
+ * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest
+ */
 export const QueryGetProtoRevTokenPairArbRoutesRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesRequest",
   encode(_: QueryGetProtoRevTokenPairArbRoutesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1641,6 +1928,13 @@ function createBaseQueryGetProtoRevTokenPairArbRoutesResponse(): QueryGetProtoRe
     routes: []
   };
 }
+/**
+ * QueryGetProtoRevTokenPairArbRoutesResponse is response type for the
+ * Query/GetProtoRevTokenPairArbRoutes RPC method.
+ * @name QueryGetProtoRevTokenPairArbRoutesResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse
+ */
 export const QueryGetProtoRevTokenPairArbRoutesResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevTokenPairArbRoutesResponse",
   encode(message: QueryGetProtoRevTokenPairArbRoutesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1743,6 +2037,13 @@ export const QueryGetProtoRevTokenPairArbRoutesResponse = {
 function createBaseQueryGetProtoRevAdminAccountRequest(): QueryGetProtoRevAdminAccountRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevAdminAccountRequest is request type for the
+ * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest
+ */
 export const QueryGetProtoRevAdminAccountRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevAdminAccountRequest",
   encode(_: QueryGetProtoRevAdminAccountRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1818,6 +2119,13 @@ function createBaseQueryGetProtoRevAdminAccountResponse(): QueryGetProtoRevAdmin
     adminAccount: ""
   };
 }
+/**
+ * QueryGetProtoRevAdminAccountResponse is response type for the
+ * Query/GetProtoRevAdminAccount RPC method.
+ * @name QueryGetProtoRevAdminAccountResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse
+ */
 export const QueryGetProtoRevAdminAccountResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevAdminAccountResponse",
   encode(message: QueryGetProtoRevAdminAccountResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1910,6 +2218,13 @@ export const QueryGetProtoRevAdminAccountResponse = {
 function createBaseQueryGetProtoRevDeveloperAccountRequest(): QueryGetProtoRevDeveloperAccountRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevDeveloperAccountRequest is request type for the
+ * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest
+ */
 export const QueryGetProtoRevDeveloperAccountRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevDeveloperAccountRequest",
   encode(_: QueryGetProtoRevDeveloperAccountRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1985,6 +2300,13 @@ function createBaseQueryGetProtoRevDeveloperAccountResponse(): QueryGetProtoRevD
     developerAccount: ""
   };
 }
+/**
+ * QueryGetProtoRevDeveloperAccountResponse is response type for the
+ * Query/GetProtoRevDeveloperAccount RPC method.
+ * @name QueryGetProtoRevDeveloperAccountResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse
+ */
 export const QueryGetProtoRevDeveloperAccountResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevDeveloperAccountResponse",
   encode(message: QueryGetProtoRevDeveloperAccountResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2077,6 +2399,13 @@ export const QueryGetProtoRevDeveloperAccountResponse = {
 function createBaseQueryGetProtoRevPoolWeightsRequest(): QueryGetProtoRevPoolWeightsRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevPoolWeightsRequest is request type for the
+ * Query/GetProtoRevPoolWeights RPC method.
+ * @name QueryGetProtoRevPoolWeightsRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsRequest
+ */
 export const QueryGetProtoRevPoolWeightsRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsRequest",
   encode(_: QueryGetProtoRevPoolWeightsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2152,6 +2481,13 @@ function createBaseQueryGetProtoRevPoolWeightsResponse(): QueryGetProtoRevPoolWe
     poolWeights: PoolWeights.fromPartial({})
   };
 }
+/**
+ * QueryGetProtoRevPoolWeightsResponse is response type for the
+ * Query/GetProtoRevPoolWeights RPC method.
+ * @name QueryGetProtoRevPoolWeightsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsResponse
+ */
 export const QueryGetProtoRevPoolWeightsResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevPoolWeightsResponse",
   encode(message: QueryGetProtoRevPoolWeightsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2244,6 +2580,13 @@ export const QueryGetProtoRevPoolWeightsResponse = {
 function createBaseQueryGetProtoRevMaxPoolPointsPerBlockRequest(): QueryGetProtoRevMaxPoolPointsPerBlockRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevMaxPoolPointsPerBlockRequest is request type for the
+ * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest
+ */
 export const QueryGetProtoRevMaxPoolPointsPerBlockRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockRequest",
   encode(_: QueryGetProtoRevMaxPoolPointsPerBlockRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2319,6 +2662,13 @@ function createBaseQueryGetProtoRevMaxPoolPointsPerBlockResponse(): QueryGetProt
     maxPoolPointsPerBlock: BigInt(0)
   };
 }
+/**
+ * QueryGetProtoRevMaxPoolPointsPerBlockResponse is response type for the
+ * Query/GetProtoRevMaxPoolPointsPerBlock RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerBlockResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse
+ */
 export const QueryGetProtoRevMaxPoolPointsPerBlockResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerBlockResponse",
   encode(message: QueryGetProtoRevMaxPoolPointsPerBlockResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2411,6 +2761,13 @@ export const QueryGetProtoRevMaxPoolPointsPerBlockResponse = {
 function createBaseQueryGetProtoRevMaxPoolPointsPerTxRequest(): QueryGetProtoRevMaxPoolPointsPerTxRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevMaxPoolPointsPerTxRequest is request type for the
+ * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest
+ */
 export const QueryGetProtoRevMaxPoolPointsPerTxRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxRequest",
   encode(_: QueryGetProtoRevMaxPoolPointsPerTxRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2486,6 +2843,13 @@ function createBaseQueryGetProtoRevMaxPoolPointsPerTxResponse(): QueryGetProtoRe
     maxPoolPointsPerTx: BigInt(0)
   };
 }
+/**
+ * QueryGetProtoRevMaxPoolPointsPerTxResponse is response type for the
+ * Query/GetProtoRevMaxPoolPointsPerTx RPC method.
+ * @name QueryGetProtoRevMaxPoolPointsPerTxResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse
+ */
 export const QueryGetProtoRevMaxPoolPointsPerTxResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevMaxPoolPointsPerTxResponse",
   encode(message: QueryGetProtoRevMaxPoolPointsPerTxResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2578,6 +2942,13 @@ export const QueryGetProtoRevMaxPoolPointsPerTxResponse = {
 function createBaseQueryGetProtoRevBaseDenomsRequest(): QueryGetProtoRevBaseDenomsRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevBaseDenomsRequest is request type for the
+ * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest
+ */
 export const QueryGetProtoRevBaseDenomsRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevBaseDenomsRequest",
   encode(_: QueryGetProtoRevBaseDenomsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2653,6 +3024,13 @@ function createBaseQueryGetProtoRevBaseDenomsResponse(): QueryGetProtoRevBaseDen
     baseDenoms: []
   };
 }
+/**
+ * QueryGetProtoRevBaseDenomsResponse is response type for the
+ * Query/GetProtoRevBaseDenoms RPC method.
+ * @name QueryGetProtoRevBaseDenomsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse
+ */
 export const QueryGetProtoRevBaseDenomsResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevBaseDenomsResponse",
   encode(message: QueryGetProtoRevBaseDenomsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2755,6 +3133,13 @@ export const QueryGetProtoRevBaseDenomsResponse = {
 function createBaseQueryGetProtoRevEnabledRequest(): QueryGetProtoRevEnabledRequest {
   return {};
 }
+/**
+ * QueryGetProtoRevEnabledRequest is request type for the
+ * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledRequest
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevEnabledRequest
+ */
 export const QueryGetProtoRevEnabledRequest = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevEnabledRequest",
   encode(_: QueryGetProtoRevEnabledRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2830,6 +3215,13 @@ function createBaseQueryGetProtoRevEnabledResponse(): QueryGetProtoRevEnabledRes
     enabled: false
   };
 }
+/**
+ * QueryGetProtoRevEnabledResponse is response type for the
+ * Query/GetProtoRevEnabled RPC method.
+ * @name QueryGetProtoRevEnabledResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.QueryGetProtoRevEnabledResponse
+ */
 export const QueryGetProtoRevEnabledResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.QueryGetProtoRevEnabledResponse",
   encode(message: QueryGetProtoRevEnabledResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

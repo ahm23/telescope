@@ -10,75 +10,124 @@ import { JsonSafe } from "../json-safe";
 import { toUtf8, fromBase64, fromUtf8, toBase64 } from "@cosmjs/encoding";
 import { encodePubkey, decodePubkey } from "@cosmjs/proto-signing";
 export const protobufPackage = "misc";
+/**
+ * @name EncodingTestForDontOmit
+ * @package misc
+ * @see proto type: misc.EncodingTestForDontOmit
+ */
 export interface EncodingTestForDontOmit {
-  /** scalar */
+  /**
+   * scalar
+   */
   str: string;
   dOStr: string;
   b: boolean;
   dOB: boolean;
   num: number;
   dONum: number;
-  /** bigint */
+  /**
+   * bigint
+   */
   big: bigint;
   dOBig: bigint;
-  /** protoType */
+  /**
+   * protoType
+   */
   proto?: AccessConfig;
   dOProto: AccessConfig;
-  /** anyType */
+  /**
+   * anyType
+   */
   auth?: GenericAuthorization | Any | undefined;
   dOAuth: GenericAuthorization | Any | undefined;
-  /** bytes */
+  /**
+   * bytes
+   */
   salt: Uint8Array;
   dOSalt: Uint8Array;
-  /** raw bytes */
+  /**
+   * raw bytes
+   */
   raw: Uint8Array;
   dORaw: Uint8Array;
-  /** wasm bytes */
+  /**
+   * wasm bytes
+   */
   wasm: Uint8Array;
   dOWasm: Uint8Array;
-  /** enum */
+  /**
+   * enum
+   */
   opt: VoteOption;
   dOOpt: VoteOption;
-  /** duration */
+  /**
+   * duration
+   */
   period?: Duration;
   dOPeriod: Duration;
-  /** timestamp */
+  /**
+   * timestamp
+   */
   date?: Date;
   dODate: Date;
-  /** pubkey */
+  /**
+   * pubkey
+   */
   pubkey?: Any | undefined;
   dOPubkey: Any | undefined;
-  /** array scalar */
+  /**
+   * array scalar
+   */
   nums: number[];
   dONums: number[];
-  /** array bigint */
+  /**
+   * array bigint
+   */
   bigs: bigint[];
   dOBigs: bigint[];
-  /** array bytes */
+  /**
+   * array bytes
+   */
   salts: Uint8Array[];
   dOSalts: Uint8Array[];
-  /** array raw bytes */
+  /**
+   * array raw bytes
+   */
   raws: Uint8Array[];
   dORaws: Uint8Array[];
-  /** array wasm bytes */
+  /**
+   * array wasm bytes
+   */
   wasms: Uint8Array[];
   dOWasms: Uint8Array[];
-  /** array enum */
+  /**
+   * array enum
+   */
   opts: VoteOption[];
   dOOpts: VoteOption[];
-  /** array duration */
+  /**
+   * array duration
+   */
   periods: Duration[];
   dOPeriods: Duration[];
-  /** array protoType */
+  /**
+   * array protoType
+   */
   protos: AccessConfig[];
   dOProtos: AccessConfig[];
-  /** array anyType */
+  /**
+   * array anyType
+   */
   auths: (GenericAuthorization | Any)[] | Any[];
   dOAuths: (GenericAuthorization | Any)[] | Any[];
-  /** dec */
+  /**
+   * dec
+   */
   dec: string;
   dODec: string;
-  /** array dec */
+  /**
+   * array dec
+   */
   decs: string[];
   dODecs: string[];
 }
@@ -87,82 +136,140 @@ export interface EncodingTestForDontOmitProtoMsg {
   value: Uint8Array;
 }
 export type EncodingTestForDontOmitEncoded = Omit<EncodingTestForDontOmit, "auth" | "dOAuth" | "pubkey" | "dOPubkey" | "auths" | "dOAuths"> & {
-  /** anyType */auth?: GenericAuthorizationProtoMsg | AnyProtoMsg | undefined;
+  /**
+   * anyType
+   */
+  auth?: GenericAuthorizationProtoMsg | AnyProtoMsg | undefined;
   dOAuth?: GenericAuthorizationProtoMsg | AnyProtoMsg | undefined;
-  /** pubkey */pubkey?: AnyProtoMsg | undefined;
+  /**
+   * pubkey
+   */
+  pubkey?: AnyProtoMsg | undefined;
   dOPubkey?: AnyProtoMsg | undefined;
-  /** array anyType */auths: (GenericAuthorizationProtoMsg | AnyProtoMsg)[];
+  /**
+   * array anyType
+   */
+  auths: (GenericAuthorizationProtoMsg | AnyProtoMsg)[];
   dOAuths: (GenericAuthorizationProtoMsg | AnyProtoMsg)[];
 };
+/**
+ * @name EncodingTestForDontOmitAmino
+ * @package misc
+ * @see proto type: misc.EncodingTestForDontOmit
+ */
 export interface EncodingTestForDontOmitAmino {
-  /** scalar */
+  /**
+   * scalar
+   */
   str?: string;
   d_o_str: string;
   b?: boolean;
   d_o_b: boolean;
   num?: number;
   d_o_num: number;
-  /** bigint */
+  /**
+   * bigint
+   */
   big?: string;
   d_o_big: string;
-  /** protoType */
+  /**
+   * protoType
+   */
   proto?: AccessConfigAmino;
   d_o_proto: AccessConfigAmino;
-  /** anyType */
+  /**
+   * anyType
+   */
   auth?: AnyAmino;
   d_o_auth: AnyAmino;
-  /** bytes */
+  /**
+   * bytes
+   */
   salt?: string;
   d_o_salt: string;
-  /** raw bytes */
+  /**
+   * raw bytes
+   */
   raw?: any;
   d_o_raw: any;
-  /** wasm bytes */
+  /**
+   * wasm bytes
+   */
   wasm?: string;
   d_o_wasm: string;
-  /** enum */
+  /**
+   * enum
+   */
   opt?: VoteOption;
   d_o_opt: VoteOption;
-  /** duration */
+  /**
+   * duration
+   */
   period?: DurationAmino;
   d_o_period: DurationAmino;
-  /** timestamp */
+  /**
+   * timestamp
+   */
   date?: string;
   d_o_date: string;
-  /** pubkey */
+  /**
+   * pubkey
+   */
   pubkey?: AnyAmino;
   d_o_pubkey: AnyAmino;
-  /** array scalar */
+  /**
+   * array scalar
+   */
   nums?: number[];
   d_o_nums: number[];
-  /** array bigint */
+  /**
+   * array bigint
+   */
   bigs?: string[];
   d_o_bigs: string[];
-  /** array bytes */
+  /**
+   * array bytes
+   */
   salts?: string[];
   d_o_salts: string[];
-  /** array raw bytes */
+  /**
+   * array raw bytes
+   */
   raws?: any[];
   d_o_raws: any[];
-  /** array wasm bytes */
+  /**
+   * array wasm bytes
+   */
   wasms?: string[];
   d_o_wasms: string[];
-  /** array enum */
+  /**
+   * array enum
+   */
   opts?: VoteOption[];
   d_o_opts: VoteOption[];
-  /** array duration */
+  /**
+   * array duration
+   */
   periods?: DurationAmino[];
   d_o_periods: DurationAmino[];
-  /** array protoType */
+  /**
+   * array protoType
+   */
   protos?: AccessConfigAmino[];
   d_o_protos: AccessConfigAmino[];
-  /** array anyType */
+  /**
+   * array anyType
+   */
   auths?: AnyAmino[];
   d_o_auths: AnyAmino[];
-  /** dec */
+  /**
+   * dec
+   */
   dec?: string;
   d_o_dec: string;
-  /** array dec */
+  /**
+   * array dec
+   */
   decs?: string[];
   d_o_decs: string[];
 }
@@ -170,6 +277,11 @@ export interface EncodingTestForDontOmitAminoMsg {
   type: "/misc.EncodingTestForDontOmit";
   value: EncodingTestForDontOmitAmino;
 }
+/**
+ * @name EncodingTestForDontOmitSDKType
+ * @package misc
+ * @see proto type: misc.EncodingTestForDontOmit
+ */
 export interface EncodingTestForDontOmitSDKType {
   str: string;
   d_o_str: string;
@@ -220,75 +332,124 @@ export interface EncodingTestForDontOmitSDKType {
   decs: string[];
   d_o_decs: string[];
 }
+/**
+ * @name EncodingTestForOmit
+ * @package misc
+ * @see proto type: misc.EncodingTestForOmit
+ */
 export interface EncodingTestForOmit {
-  /** scalar */
+  /**
+   * scalar
+   */
   str: string;
   oStr: string;
   b: boolean;
   oB: boolean;
   num: number;
   oNum: number;
-  /** bigint */
+  /**
+   * bigint
+   */
   big: bigint;
   oBig: bigint;
-  /** protoType */
+  /**
+   * protoType
+   */
   proto?: AccessConfig;
   oProto: AccessConfig;
-  /** anyType */
+  /**
+   * anyType
+   */
   auth?: GenericAuthorization | Any | undefined;
   oAuth: GenericAuthorization | Any | undefined;
-  /** bytes */
+  /**
+   * bytes
+   */
   salt: Uint8Array;
   oSalt: Uint8Array;
-  /** raw bytes */
+  /**
+   * raw bytes
+   */
   raw: Uint8Array;
   oRaw: Uint8Array;
-  /** wasm bytes */
+  /**
+   * wasm bytes
+   */
   wasm: Uint8Array;
   oWasm: Uint8Array;
-  /** enum */
+  /**
+   * enum
+   */
   opt: VoteOption;
   oOpt: VoteOption;
-  /** duration */
+  /**
+   * duration
+   */
   period?: Duration;
   oPeriod: Duration;
-  /** timestamp */
+  /**
+   * timestamp
+   */
   date?: Date;
   oDate: Date;
-  /** pubkey */
+  /**
+   * pubkey
+   */
   pubkey?: Any | undefined;
   oPubkey: Any | undefined;
-  /** array scalar */
+  /**
+   * array scalar
+   */
   nums: number[];
   oNums: number[];
-  /** array bigint */
+  /**
+   * array bigint
+   */
   bigs: bigint[];
   oBigs: bigint[];
-  /** array bytes */
+  /**
+   * array bytes
+   */
   salts: Uint8Array[];
   oSalts: Uint8Array[];
-  /** array raw bytes */
+  /**
+   * array raw bytes
+   */
   raws: Uint8Array[];
   oRaws: Uint8Array[];
-  /** array wasm bytes */
+  /**
+   * array wasm bytes
+   */
   wasms: Uint8Array[];
   oWasms: Uint8Array[];
-  /** array enum */
+  /**
+   * array enum
+   */
   opts: VoteOption[];
   oOpts: VoteOption[];
-  /** array duration */
+  /**
+   * array duration
+   */
   periods: Duration[];
   oPeriods: Duration[];
-  /** array protoType */
+  /**
+   * array protoType
+   */
   protos: AccessConfig[];
   oProtos: AccessConfig[];
-  /** array anyType */
+  /**
+   * array anyType
+   */
   auths: (GenericAuthorization | Any)[] | Any[];
   oAuths: (GenericAuthorization | Any)[] | Any[];
-  /** dec */
+  /**
+   * dec
+   */
   dec: string;
   oDec: string;
-  /** array dec */
+  /**
+   * array dec
+   */
   decs: string[];
   oDecs: string[];
 }
@@ -297,82 +458,140 @@ export interface EncodingTestForOmitProtoMsg {
   value: Uint8Array;
 }
 export type EncodingTestForOmitEncoded = Omit<EncodingTestForOmit, "auth" | "oAuth" | "pubkey" | "oPubkey" | "auths" | "oAuths"> & {
-  /** anyType */auth?: GenericAuthorizationProtoMsg | AnyProtoMsg | undefined;
+  /**
+   * anyType
+   */
+  auth?: GenericAuthorizationProtoMsg | AnyProtoMsg | undefined;
   oAuth?: GenericAuthorizationProtoMsg | AnyProtoMsg | undefined;
-  /** pubkey */pubkey?: AnyProtoMsg | undefined;
+  /**
+   * pubkey
+   */
+  pubkey?: AnyProtoMsg | undefined;
   oPubkey?: AnyProtoMsg | undefined;
-  /** array anyType */auths: (GenericAuthorizationProtoMsg | AnyProtoMsg)[];
+  /**
+   * array anyType
+   */
+  auths: (GenericAuthorizationProtoMsg | AnyProtoMsg)[];
   oAuths: (GenericAuthorizationProtoMsg | AnyProtoMsg)[];
 };
+/**
+ * @name EncodingTestForOmitAmino
+ * @package misc
+ * @see proto type: misc.EncodingTestForOmit
+ */
 export interface EncodingTestForOmitAmino {
-  /** scalar */
+  /**
+   * scalar
+   */
   str: string;
   o_str?: string;
   b: boolean;
   o_b?: boolean;
   num: number;
   o_num?: number;
-  /** bigint */
+  /**
+   * bigint
+   */
   big: string;
   o_big?: string;
-  /** protoType */
+  /**
+   * protoType
+   */
   proto: AccessConfigAmino;
   o_proto?: AccessConfigAmino;
-  /** anyType */
+  /**
+   * anyType
+   */
   auth: AnyAmino;
   o_auth?: AnyAmino;
-  /** bytes */
+  /**
+   * bytes
+   */
   salt: string;
   o_salt?: string;
-  /** raw bytes */
+  /**
+   * raw bytes
+   */
   raw: any;
   o_raw?: any;
-  /** wasm bytes */
+  /**
+   * wasm bytes
+   */
   wasm: string;
   o_wasm?: string;
-  /** enum */
+  /**
+   * enum
+   */
   opt: VoteOption;
   o_opt?: VoteOption;
-  /** duration */
+  /**
+   * duration
+   */
   period: DurationAmino;
   o_period?: DurationAmino;
-  /** timestamp */
+  /**
+   * timestamp
+   */
   date: string;
   o_date?: string;
-  /** pubkey */
+  /**
+   * pubkey
+   */
   pubkey: AnyAmino;
   o_pubkey?: AnyAmino;
-  /** array scalar */
+  /**
+   * array scalar
+   */
   nums: number[];
   o_nums?: number[];
-  /** array bigint */
+  /**
+   * array bigint
+   */
   bigs: string[];
   o_bigs?: string[];
-  /** array bytes */
+  /**
+   * array bytes
+   */
   salts: string[];
   o_salts?: string[];
-  /** array raw bytes */
+  /**
+   * array raw bytes
+   */
   raws: any[];
   o_raws?: any[];
-  /** array wasm bytes */
+  /**
+   * array wasm bytes
+   */
   wasms: string[];
   o_wasms?: string[];
-  /** array enum */
+  /**
+   * array enum
+   */
   opts: VoteOption[];
   o_opts?: VoteOption[];
-  /** array duration */
+  /**
+   * array duration
+   */
   periods: DurationAmino[];
   o_periods?: DurationAmino[];
-  /** array protoType */
+  /**
+   * array protoType
+   */
   protos: AccessConfigAmino[];
   o_protos?: AccessConfigAmino[];
-  /** array anyType */
+  /**
+   * array anyType
+   */
   auths: AnyAmino[];
   o_auths?: AnyAmino[];
-  /** dec */
+  /**
+   * dec
+   */
   dec: string;
   o_dec?: string;
-  /** array dec */
+  /**
+   * array dec
+   */
   decs: string[];
   o_decs?: string[];
 }
@@ -380,6 +599,11 @@ export interface EncodingTestForOmitAminoMsg {
   type: "/misc.EncodingTestForOmit";
   value: EncodingTestForOmitAmino;
 }
+/**
+ * @name EncodingTestForOmitSDKType
+ * @package misc
+ * @see proto type: misc.EncodingTestForOmit
+ */
 export interface EncodingTestForOmitSDKType {
   str: string;
   o_str: string;
@@ -482,6 +706,11 @@ function createBaseEncodingTestForDontOmit(): EncodingTestForDontOmit {
     dODecs: []
   };
 }
+/**
+ * @name EncodingTestForDontOmit
+ * @package misc
+ * @see proto type: misc.EncodingTestForDontOmit
+ */
 export const EncodingTestForDontOmit = {
   typeUrl: "/misc.EncodingTestForDontOmit",
   is(o: any): o is EncodingTestForDontOmit {
@@ -1656,6 +1885,11 @@ function createBaseEncodingTestForOmit(): EncodingTestForOmit {
     oDecs: []
   };
 }
+/**
+ * @name EncodingTestForOmit
+ * @package misc
+ * @see proto type: misc.EncodingTestForOmit
+ */
 export const EncodingTestForOmit = {
   typeUrl: "/misc.EncodingTestForOmit",
   is(o: any): o is EncodingTestForOmit {

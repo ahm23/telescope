@@ -4,7 +4,12 @@ import { GlobalDecoderRegistry } from "../../../registry";
 import { isSet, DeepPartial, Exact } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "akash.inflation.v1beta2";
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisState
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.GenesisState
+ */
 export interface GenesisState {
   params: Params;
 }
@@ -12,7 +17,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/akash.inflation.v1beta2.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisStateAmino
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.GenesisState
+ */
 export interface GenesisStateAmino {
   params: ParamsAmino;
 }
@@ -20,7 +30,12 @@ export interface GenesisStateAminoMsg {
   type: "akash/inflation/v1beta2/genesis-state";
   value: GenesisStateAmino;
 }
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisStateSDKType
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
 }
@@ -29,6 +44,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({})
   };
 }
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisState
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.inflation.v1beta2.GenesisState",
   aminoType: "akash/inflation/v1beta2/genesis-state",

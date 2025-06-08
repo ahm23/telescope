@@ -5,11 +5,18 @@ export const protobufPackage = "evmos.fees.v1";
 /**
  * DevFeeInfo defines an instance that organizes fee distribution conditions
  * for the owner of a given smart contract
+ * @name DevFeeInfo
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.DevFeeInfo
  */
 export interface DevFeeInfo {
-  /** hex address of registered contract */
+  /**
+   * hex address of registered contract
+   */
   contractAddress: string;
-  /** bech32 address of contract deployer */
+  /**
+   * bech32 address of contract deployer
+   */
   deployerAddress: string;
   /**
    * bech32 address of account receiving the transaction fees
@@ -24,6 +31,9 @@ export interface DevFeeInfoProtoMsg {
 /**
  * DevFeeInfo defines an instance that organizes fee distribution conditions
  * for the owner of a given smart contract
+ * @name DevFeeInfoSDKType
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.DevFeeInfo
  */
 export interface DevFeeInfoSDKType {
   contract_address: string;
@@ -37,6 +47,13 @@ function createBaseDevFeeInfo(): DevFeeInfo {
     withdrawAddress: ""
   };
 }
+/**
+ * DevFeeInfo defines an instance that organizes fee distribution conditions
+ * for the owner of a given smart contract
+ * @name DevFeeInfo
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.DevFeeInfo
+ */
 export const DevFeeInfo = {
   typeUrl: "/evmos.fees.v1.DevFeeInfo",
   encode(message: DevFeeInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

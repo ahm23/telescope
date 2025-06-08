@@ -5,6 +5,11 @@ import { toTimestamp, fromTimestamp, isSet, DeepPartial } from "../../../helpers
 import { JsonSafe } from "../../../json-safe";
 import { Decimal } from "@cosmjs/math";
 export const protobufPackage = "osmosis.twap.v1beta1";
+/**
+ * @name ArithmeticTwapRequest
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapRequest
+ */
 export interface ArithmeticTwapRequest {
   poolId: bigint;
   baseAsset: string;
@@ -16,6 +21,11 @@ export interface ArithmeticTwapRequestProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapRequest";
   value: Uint8Array;
 }
+/**
+ * @name ArithmeticTwapRequestAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapRequest
+ */
 export interface ArithmeticTwapRequestAmino {
   pool_id?: string;
   base_asset?: string;
@@ -27,6 +37,11 @@ export interface ArithmeticTwapRequestAminoMsg {
   type: "osmosis/twap/arithmetic-twap-request";
   value: ArithmeticTwapRequestAmino;
 }
+/**
+ * @name ArithmeticTwapRequestSDKType
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapRequest
+ */
 export interface ArithmeticTwapRequestSDKType {
   pool_id: bigint;
   base_asset: string;
@@ -34,6 +49,11 @@ export interface ArithmeticTwapRequestSDKType {
   start_time: Date;
   end_time?: Date;
 }
+/**
+ * @name ArithmeticTwapResponse
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapResponse
+ */
 export interface ArithmeticTwapResponse {
   arithmeticTwap: string;
 }
@@ -41,6 +61,11 @@ export interface ArithmeticTwapResponseProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapResponse";
   value: Uint8Array;
 }
+/**
+ * @name ArithmeticTwapResponseAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapResponse
+ */
 export interface ArithmeticTwapResponseAmino {
   arithmetic_twap?: string;
 }
@@ -48,9 +73,19 @@ export interface ArithmeticTwapResponseAminoMsg {
   type: "osmosis/twap/arithmetic-twap-response";
   value: ArithmeticTwapResponseAmino;
 }
+/**
+ * @name ArithmeticTwapResponseSDKType
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapResponse
+ */
 export interface ArithmeticTwapResponseSDKType {
   arithmetic_twap: string;
 }
+/**
+ * @name ArithmeticTwapToNowRequest
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowRequest
+ */
 export interface ArithmeticTwapToNowRequest {
   poolId: bigint;
   baseAsset: string;
@@ -61,6 +96,11 @@ export interface ArithmeticTwapToNowRequestProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapToNowRequest";
   value: Uint8Array;
 }
+/**
+ * @name ArithmeticTwapToNowRequestAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowRequest
+ */
 export interface ArithmeticTwapToNowRequestAmino {
   pool_id?: string;
   base_asset?: string;
@@ -71,12 +111,22 @@ export interface ArithmeticTwapToNowRequestAminoMsg {
   type: "osmosis/twap/arithmetic-twap-to-now-request";
   value: ArithmeticTwapToNowRequestAmino;
 }
+/**
+ * @name ArithmeticTwapToNowRequestSDKType
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowRequest
+ */
 export interface ArithmeticTwapToNowRequestSDKType {
   pool_id: bigint;
   base_asset: string;
   quote_asset: string;
   start_time: Date;
 }
+/**
+ * @name ArithmeticTwapToNowResponse
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowResponse
+ */
 export interface ArithmeticTwapToNowResponse {
   arithmeticTwap: string;
 }
@@ -84,6 +134,11 @@ export interface ArithmeticTwapToNowResponseProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapToNowResponse";
   value: Uint8Array;
 }
+/**
+ * @name ArithmeticTwapToNowResponseAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowResponse
+ */
 export interface ArithmeticTwapToNowResponseAmino {
   arithmetic_twap?: string;
 }
@@ -91,20 +146,45 @@ export interface ArithmeticTwapToNowResponseAminoMsg {
   type: "osmosis/twap/arithmetic-twap-to-now-response";
   value: ArithmeticTwapToNowResponseAmino;
 }
+/**
+ * @name ArithmeticTwapToNowResponseSDKType
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowResponse
+ */
 export interface ArithmeticTwapToNowResponseSDKType {
   arithmetic_twap: string;
 }
+/**
+ * @name ParamsRequest
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsRequest
+ */
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.ParamsRequest";
   value: Uint8Array;
 }
+/**
+ * @name ParamsRequestAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestAmino {}
 export interface ParamsRequestAminoMsg {
   type: "osmosis/twap/params-request";
   value: ParamsRequestAmino;
 }
+/**
+ * @name ParamsRequestSDKType
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestSDKType {}
+/**
+ * @name ParamsResponse
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsResponse
+ */
 export interface ParamsResponse {
   params: Params;
 }
@@ -112,6 +192,11 @@ export interface ParamsResponseProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.ParamsResponse";
   value: Uint8Array;
 }
+/**
+ * @name ParamsResponseAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseAmino {
   params?: ParamsAmino;
 }
@@ -119,6 +204,11 @@ export interface ParamsResponseAminoMsg {
   type: "osmosis/twap/params-response";
   value: ParamsResponseAmino;
 }
+/**
+ * @name ParamsResponseSDKType
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseSDKType {
   params: ParamsSDKType;
 }
@@ -131,6 +221,11 @@ function createBaseArithmeticTwapRequest(): ArithmeticTwapRequest {
     endTime: undefined
   };
 }
+/**
+ * @name ArithmeticTwapRequest
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapRequest
+ */
 export const ArithmeticTwapRequest = {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapRequest",
   aminoType: "osmosis/twap/arithmetic-twap-request",
@@ -283,6 +378,11 @@ function createBaseArithmeticTwapResponse(): ArithmeticTwapResponse {
     arithmeticTwap: ""
   };
 }
+/**
+ * @name ArithmeticTwapResponse
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapResponse
+ */
 export const ArithmeticTwapResponse = {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapResponse",
   aminoType: "osmosis/twap/arithmetic-twap-response",
@@ -376,6 +476,11 @@ function createBaseArithmeticTwapToNowRequest(): ArithmeticTwapToNowRequest {
     startTime: new Date()
   };
 }
+/**
+ * @name ArithmeticTwapToNowRequest
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowRequest
+ */
 export const ArithmeticTwapToNowRequest = {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapToNowRequest",
   aminoType: "osmosis/twap/arithmetic-twap-to-now-request",
@@ -513,6 +618,11 @@ function createBaseArithmeticTwapToNowResponse(): ArithmeticTwapToNowResponse {
     arithmeticTwap: ""
   };
 }
+/**
+ * @name ArithmeticTwapToNowResponse
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ArithmeticTwapToNowResponse
+ */
 export const ArithmeticTwapToNowResponse = {
   typeUrl: "/osmosis.twap.v1beta1.ArithmeticTwapToNowResponse",
   aminoType: "osmosis/twap/arithmetic-twap-to-now-response",
@@ -601,6 +711,11 @@ export const ArithmeticTwapToNowResponse = {
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
+/**
+ * @name ParamsRequest
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsRequest
+ */
 export const ParamsRequest = {
   typeUrl: "/osmosis.twap.v1beta1.ParamsRequest",
   aminoType: "osmosis/twap/params-request",
@@ -675,6 +790,11 @@ function createBaseParamsResponse(): ParamsResponse {
     params: Params.fromPartial({})
   };
 }
+/**
+ * @name ParamsResponse
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.ParamsResponse
+ */
 export const ParamsResponse = {
   typeUrl: "/osmosis.twap.v1beta1.ParamsResponse",
   aminoType: "osmosis/twap/params-response",

@@ -10,14 +10,23 @@ import { Decimal } from "@interchainjs/math";
  * given SDK today. Would rather we optimize for readability and correctness,
  * than an optimal state storage format. The system bottleneck is elsewhere for
  * now.
+ * @name TwapRecord
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.TwapRecord
  */
 export interface TwapRecord {
   poolId: bigint;
-  /** Lexicographically smaller denom of the pair */
+  /**
+   * Lexicographically smaller denom of the pair
+   */
   asset0Denom: string;
-  /** Lexicographically larger denom of the pair */
+  /**
+   * Lexicographically larger denom of the pair
+   */
   asset1Denom: string;
-  /** height this record corresponds to, for debugging purposes */
+  /**
+   * height this record corresponds to, for debugging purposes
+   */
   height: bigint;
   /**
    * This field should only exist until we have a global registry in the state
@@ -51,14 +60,23 @@ export interface TwapRecordProtoMsg {
  * given SDK today. Would rather we optimize for readability and correctness,
  * than an optimal state storage format. The system bottleneck is elsewhere for
  * now.
+ * @name TwapRecordAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.TwapRecord
  */
 export interface TwapRecordAmino {
   pool_id: string;
-  /** Lexicographically smaller denom of the pair */
+  /**
+   * Lexicographically smaller denom of the pair
+   */
   asset0_denom: string;
-  /** Lexicographically larger denom of the pair */
+  /**
+   * Lexicographically larger denom of the pair
+   */
   asset1_denom: string;
-  /** height this record corresponds to, for debugging purposes */
+  /**
+   * height this record corresponds to, for debugging purposes
+   */
   height: string;
   /**
    * This field should only exist until we have a global registry in the state
@@ -98,6 +116,18 @@ function createBaseTwapRecord(): TwapRecord {
     lastErrorTime: new Date()
   };
 }
+/**
+ * A TWAP record should be indexed in state by pool_id, (asset pair), timestamp
+ * The asset pair assets should be lexicographically sorted.
+ * Technically (pool_id, asset_0_denom, asset_1_denom, height) do not need to
+ * appear in the struct however we view this as the wrong performance tradeoff
+ * given SDK today. Would rather we optimize for readability and correctness,
+ * than an optimal state storage format. The system bottleneck is elsewhere for
+ * now.
+ * @name TwapRecord
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.TwapRecord
+ */
 export const TwapRecord = {
   typeUrl: "/osmosis.twap.v1beta1.TwapRecord",
   aminoType: "osmosis/twap/twap-record",

@@ -6,28 +6,45 @@ import { Pool as Pool2 } from "../pool-models/stableswap/stableswap_pool";
 import { PoolProtoMsg as Pool2ProtoMsg } from "../pool-models/stableswap/stableswap_pool";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** Params holds parameters for the incentives module */
-export interface Params {
+/**
+ * Params holds parameters for the incentives module
+ * @name OsmosisGammV1beta1Params
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.Params
+ */
+export interface OsmosisGammV1beta1Params {
   poolCreationFee: Coin[];
 }
-export interface ParamsProtoMsg {
+export interface OsmosisGammV1beta1ParamsProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the incentives module */
-export interface ParamsAmino {
+/**
+ * Params holds parameters for the incentives module
+ * @name OsmosisGammV1beta1ParamsAmino
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.OsmosisGammV1beta1Params
+ */
+export interface OsmosisGammV1beta1ParamsAmino {
   pool_creation_fee: CoinAmino[];
 }
-export interface ParamsAminoMsg {
+export interface OsmosisGammV1beta1ParamsAminoMsg {
   type: "osmosis/gamm/params";
-  value: ParamsAmino;
+  value: OsmosisGammV1beta1ParamsAmino;
 }
-/** GenesisState defines the gamm module's genesis state. */
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisState
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.GenesisState
+ */
 export interface GenesisState {
   pools: (Pool1 | Pool2 | Any)[] | Any[];
-  /** will be renamed to next_pool_id in an upcoming version */
+  /**
+   * will be renamed to next_pool_id in an upcoming version
+   */
   nextPoolNumber: bigint;
-  params: Params;
+  params: OsmosisGammV1beta1Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.GenesisState";
@@ -36,35 +53,48 @@ export interface GenesisStateProtoMsg {
 export type GenesisStateEncoded = Omit<GenesisState, "pools"> & {
   pools: (Pool1ProtoMsg | Pool2ProtoMsg | AnyProtoMsg)[];
 };
-/** GenesisState defines the gamm module's genesis state. */
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   pools: AnyAmino[];
-  /** will be renamed to next_pool_id in an upcoming version */
+  /**
+   * will be renamed to next_pool_id in an upcoming version
+   */
   next_pool_number: string;
-  params: ParamsAmino;
+  params: OsmosisGammV1beta1ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
   type: "osmosis/gamm/genesis-state";
   value: GenesisStateAmino;
 }
-function createBaseParams(): Params {
+function createBaseOsmosisGammV1beta1Params(): OsmosisGammV1beta1Params {
   return {
     poolCreationFee: []
   };
 }
-export const Params = {
+/**
+ * Params holds parameters for the incentives module
+ * @name OsmosisGammV1beta1Params
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.Params
+ */
+export const OsmosisGammV1beta1Params = {
   typeUrl: "/osmosis.gamm.v1beta1.Params",
   aminoType: "osmosis/gamm/params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: OsmosisGammV1beta1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.poolCreationFee) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): OsmosisGammV1beta1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseOsmosisGammV1beta1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -78,17 +108,17 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<OsmosisGammV1beta1Params>): OsmosisGammV1beta1Params {
+    const message = createBaseOsmosisGammV1beta1Params();
     message.poolCreationFee = object.poolCreationFee?.map(e => Coin.fromPartial(e)) || [];
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: OsmosisGammV1beta1ParamsAmino): OsmosisGammV1beta1Params {
+    const message = createBaseOsmosisGammV1beta1Params();
     message.poolCreationFee = object.pool_creation_fee?.map(e => Coin.fromAmino(e)) || [];
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: OsmosisGammV1beta1Params): OsmosisGammV1beta1ParamsAmino {
     const obj: any = {};
     if (message.poolCreationFee) {
       obj.pool_creation_fee = message.poolCreationFee.map(e => e ? Coin.toAmino(e) : undefined);
@@ -97,25 +127,25 @@ export const Params = {
     }
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: OsmosisGammV1beta1ParamsAminoMsg): OsmosisGammV1beta1Params {
+    return OsmosisGammV1beta1Params.fromAmino(object.value);
   },
-  toAminoMsg(message: Params): ParamsAminoMsg {
+  toAminoMsg(message: OsmosisGammV1beta1Params): OsmosisGammV1beta1ParamsAminoMsg {
     return {
       type: "osmosis/gamm/params",
-      value: Params.toAmino(message)
+      value: OsmosisGammV1beta1Params.toAmino(message)
     };
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: OsmosisGammV1beta1ParamsProtoMsg): OsmosisGammV1beta1Params {
+    return OsmosisGammV1beta1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: OsmosisGammV1beta1Params): Uint8Array {
+    return OsmosisGammV1beta1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: OsmosisGammV1beta1Params): OsmosisGammV1beta1ParamsProtoMsg {
     return {
       typeUrl: "/osmosis.gamm.v1beta1.Params",
-      value: Params.encode(message).finish()
+      value: OsmosisGammV1beta1Params.encode(message).finish()
     };
   }
 };
@@ -123,9 +153,15 @@ function createBaseGenesisState(): GenesisState {
   return {
     pools: [],
     nextPoolNumber: BigInt(0),
-    params: Params.fromPartial({})
+    params: OsmosisGammV1beta1Params.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisState
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.gamm.v1beta1.GenesisState",
   aminoType: "osmosis/gamm/genesis-state",
@@ -137,7 +173,7 @@ export const GenesisState = {
       writer.uint32(16).uint64(message.nextPoolNumber);
     }
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(26).fork()).ldelim();
+      OsmosisGammV1beta1Params.encode(message.params, writer.uint32(26).fork()).ldelim();
     }
     return writer;
   },
@@ -155,7 +191,7 @@ export const GenesisState = {
           message.nextPoolNumber = reader.uint64();
           break;
         case 3:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = OsmosisGammV1beta1Params.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -168,7 +204,7 @@ export const GenesisState = {
     const message = createBaseGenesisState();
     message.pools = object.pools?.map(e => Any.fromPartial(e)) || [];
     message.nextPoolNumber = object.nextPoolNumber !== undefined && object.nextPoolNumber !== null ? BigInt(object.nextPoolNumber.toString()) : BigInt(0);
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? OsmosisGammV1beta1Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
@@ -178,7 +214,7 @@ export const GenesisState = {
       message.nextPoolNumber = BigInt(object.next_pool_number);
     }
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = OsmosisGammV1beta1Params.fromAmino(object.params);
     }
     return message;
   },
@@ -190,7 +226,7 @@ export const GenesisState = {
       obj.pools = message.pools;
     }
     obj.next_pool_number = message.nextPoolNumber !== BigInt(0) ? message.nextPoolNumber?.toString() : undefined;
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? OsmosisGammV1beta1Params.toAmino(message.params) : undefined;
     return obj;
   },
   fromAminoMsg(object: GenesisStateAminoMsg): GenesisState {

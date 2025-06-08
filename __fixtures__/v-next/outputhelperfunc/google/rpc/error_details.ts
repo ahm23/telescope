@@ -18,9 +18,14 @@ export const protobufPackage = "google.rpc";
  * the delay between retries based on `retry_delay`, until either a maximum
  * number of retries have been reached or a maximum retry delay cap has been
  * reached.
+ * @name RetryInfo
+ * @package google.rpc
+ * @see proto type: google.rpc.RetryInfo
  */
 export interface RetryInfo {
-  /** Clients should wait at least this long between retrying the same request. */
+  /**
+   * Clients should wait at least this long between retrying the same request.
+   */
   retryDelay?: Duration;
 }
 export interface RetryInfoProtoMsg {
@@ -41,9 +46,14 @@ export interface RetryInfoProtoMsg {
  * the delay between retries based on `retry_delay`, until either a maximum
  * number of retries have been reached or a maximum retry delay cap has been
  * reached.
+ * @name RetryInfoAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.RetryInfo
  */
 export interface RetryInfoAmino {
-  /** Clients should wait at least this long between retrying the same request. */
+  /**
+   * Clients should wait at least this long between retrying the same request.
+   */
   retry_delay?: DurationAmino;
 }
 export interface RetryInfoAminoMsg {
@@ -64,33 +74,59 @@ export interface RetryInfoAminoMsg {
  * the delay between retries based on `retry_delay`, until either a maximum
  * number of retries have been reached or a maximum retry delay cap has been
  * reached.
+ * @name RetryInfoSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.RetryInfo
  */
 export interface RetryInfoSDKType {
   retry_delay?: DurationSDKType;
 }
-/** Describes additional debugging info. */
+/**
+ * Describes additional debugging info.
+ * @name DebugInfo
+ * @package google.rpc
+ * @see proto type: google.rpc.DebugInfo
+ */
 export interface DebugInfo {
-  /** The stack trace entries indicating where the error occurred. */
+  /**
+   * The stack trace entries indicating where the error occurred.
+   */
   stackEntries: string[];
-  /** Additional debugging information provided by the server. */
+  /**
+   * Additional debugging information provided by the server.
+   */
   detail: string;
 }
 export interface DebugInfoProtoMsg {
   typeUrl: "/google.rpc.DebugInfo";
   value: Uint8Array;
 }
-/** Describes additional debugging info. */
+/**
+ * Describes additional debugging info.
+ * @name DebugInfoAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.DebugInfo
+ */
 export interface DebugInfoAmino {
-  /** The stack trace entries indicating where the error occurred. */
+  /**
+   * The stack trace entries indicating where the error occurred.
+   */
   stack_entries?: string[];
-  /** Additional debugging information provided by the server. */
+  /**
+   * Additional debugging information provided by the server.
+   */
   detail?: string;
 }
 export interface DebugInfoAminoMsg {
   type: "/google.rpc.DebugInfo";
   value: DebugInfoAmino;
 }
-/** Describes additional debugging info. */
+/**
+ * Describes additional debugging info.
+ * @name DebugInfoSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.DebugInfo
+ */
 export interface DebugInfoSDKType {
   stack_entries: string[];
   detail: string;
@@ -107,9 +143,14 @@ export interface DebugInfoSDKType {
  * 
  * Also see RetryInfo and Help types for other details about handling a
  * quota failure.
+ * @name QuotaFailure
+ * @package google.rpc
+ * @see proto type: google.rpc.QuotaFailure
  */
 export interface QuotaFailure {
-  /** Describes all quota violations. */
+  /**
+   * Describes all quota violations.
+   */
   violations: QuotaFailure_Violation[];
 }
 export interface QuotaFailureProtoMsg {
@@ -128,9 +169,14 @@ export interface QuotaFailureProtoMsg {
  * 
  * Also see RetryInfo and Help types for other details about handling a
  * quota failure.
+ * @name QuotaFailureAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.QuotaFailure
  */
 export interface QuotaFailureAmino {
-  /** Describes all quota violations. */
+  /**
+   * Describes all quota violations.
+   */
   violations?: QuotaFailure_ViolationAmino[];
 }
 export interface QuotaFailureAminoMsg {
@@ -149,6 +195,9 @@ export interface QuotaFailureAminoMsg {
  * 
  * Also see RetryInfo and Help types for other details about handling a
  * quota failure.
+ * @name QuotaFailureSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.QuotaFailure
  */
 export interface QuotaFailureSDKType {
   violations: QuotaFailure_ViolationSDKType[];
@@ -156,6 +205,9 @@ export interface QuotaFailureSDKType {
 /**
  * A message type used to describe a single quota violation.  For example, a
  * daily quota or a custom quota that was exceeded.
+ * @name QuotaFailure_Violation
+ * @package google.rpc
+ * @see proto type: google.rpc.Violation
  */
 export interface QuotaFailure_Violation {
   /**
@@ -182,6 +234,9 @@ export interface QuotaFailure_ViolationProtoMsg {
 /**
  * A message type used to describe a single quota violation.  For example, a
  * daily quota or a custom quota that was exceeded.
+ * @name QuotaFailure_ViolationAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.QuotaFailure_Violation
  */
 export interface QuotaFailure_ViolationAmino {
   /**
@@ -208,11 +263,19 @@ export interface QuotaFailure_ViolationAminoMsg {
 /**
  * A message type used to describe a single quota violation.  For example, a
  * daily quota or a custom quota that was exceeded.
+ * @name QuotaFailure_ViolationSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.Violation
  */
 export interface QuotaFailure_ViolationSDKType {
   subject: string;
   description: string;
 }
+/**
+ * @name ErrorInfo_MetadataEntry
+ * @package google.rpc
+ * @see proto type: google.rpc.undefined
+ */
 export interface ErrorInfo_MetadataEntry {
   key: string;
   value: string;
@@ -221,6 +284,11 @@ export interface ErrorInfo_MetadataEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name ErrorInfo_MetadataEntryAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.ErrorInfo_MetadataEntry
+ */
 export interface ErrorInfo_MetadataEntryAmino {
   key?: string;
   value?: string;
@@ -229,6 +297,11 @@ export interface ErrorInfo_MetadataEntryAminoMsg {
   type: string;
   value: ErrorInfo_MetadataEntryAmino;
 }
+/**
+ * @name ErrorInfo_MetadataEntrySDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.undefined
+ */
 export interface ErrorInfo_MetadataEntrySDKType {
   key: string;
   value: string;
@@ -258,6 +331,9 @@ export interface ErrorInfo_MetadataEntrySDKType {
  *         "availableRegions": "us-central1,us-east2"
  *       }
  *     }
+ * @name ErrorInfo
+ * @package google.rpc
+ * @see proto type: google.rpc.ErrorInfo
  */
 export interface ErrorInfo {
   /**
@@ -319,6 +395,9 @@ export interface ErrorInfoProtoMsg {
  *         "availableRegions": "us-central1,us-east2"
  *       }
  *     }
+ * @name ErrorInfoAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.ErrorInfo
  */
 export interface ErrorInfoAmino {
   /**
@@ -380,6 +459,9 @@ export interface ErrorInfoAminoMsg {
  *         "availableRegions": "us-central1,us-east2"
  *       }
  *     }
+ * @name ErrorInfoSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.ErrorInfo
  */
 export interface ErrorInfoSDKType {
   reason: string;
@@ -394,9 +476,14 @@ export interface ErrorInfoSDKType {
  * For example, if an RPC failed because it required the Terms of Service to be
  * acknowledged, it could list the terms of service violation in the
  * PreconditionFailure message.
+ * @name PreconditionFailure
+ * @package google.rpc
+ * @see proto type: google.rpc.PreconditionFailure
  */
 export interface PreconditionFailure {
-  /** Describes all precondition violations. */
+  /**
+   * Describes all precondition violations.
+   */
   violations: PreconditionFailure_Violation[];
 }
 export interface PreconditionFailureProtoMsg {
@@ -409,9 +496,14 @@ export interface PreconditionFailureProtoMsg {
  * For example, if an RPC failed because it required the Terms of Service to be
  * acknowledged, it could list the terms of service violation in the
  * PreconditionFailure message.
+ * @name PreconditionFailureAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.PreconditionFailure
  */
 export interface PreconditionFailureAmino {
-  /** Describes all precondition violations. */
+  /**
+   * Describes all precondition violations.
+   */
   violations?: PreconditionFailure_ViolationAmino[];
 }
 export interface PreconditionFailureAminoMsg {
@@ -424,11 +516,19 @@ export interface PreconditionFailureAminoMsg {
  * For example, if an RPC failed because it required the Terms of Service to be
  * acknowledged, it could list the terms of service violation in the
  * PreconditionFailure message.
+ * @name PreconditionFailureSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.PreconditionFailure
  */
 export interface PreconditionFailureSDKType {
   violations: PreconditionFailure_ViolationSDKType[];
 }
-/** A message type used to describe a single precondition failure. */
+/**
+ * A message type used to describe a single precondition failure.
+ * @name PreconditionFailure_Violation
+ * @package google.rpc
+ * @see proto type: google.rpc.Violation
+ */
 export interface PreconditionFailure_Violation {
   /**
    * The type of PreconditionFailure. We recommend using a service-specific
@@ -454,7 +554,12 @@ export interface PreconditionFailure_ViolationProtoMsg {
   typeUrl: "/google.rpc.Violation";
   value: Uint8Array;
 }
-/** A message type used to describe a single precondition failure. */
+/**
+ * A message type used to describe a single precondition failure.
+ * @name PreconditionFailure_ViolationAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.PreconditionFailure_Violation
+ */
 export interface PreconditionFailure_ViolationAmino {
   /**
    * The type of PreconditionFailure. We recommend using a service-specific
@@ -480,7 +585,12 @@ export interface PreconditionFailure_ViolationAminoMsg {
   type: "/google.rpc.Violation";
   value: PreconditionFailure_ViolationAmino;
 }
-/** A message type used to describe a single precondition failure. */
+/**
+ * A message type used to describe a single precondition failure.
+ * @name PreconditionFailure_ViolationSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.Violation
+ */
 export interface PreconditionFailure_ViolationSDKType {
   type: string;
   subject: string;
@@ -489,9 +599,14 @@ export interface PreconditionFailure_ViolationSDKType {
 /**
  * Describes violations in a client request. This error type focuses on the
  * syntactic aspects of the request.
+ * @name BadRequest
+ * @package google.rpc
+ * @see proto type: google.rpc.BadRequest
  */
 export interface BadRequest {
-  /** Describes all violations in a client request. */
+  /**
+   * Describes all violations in a client request.
+   */
   fieldViolations: BadRequest_FieldViolation[];
 }
 export interface BadRequestProtoMsg {
@@ -501,9 +616,14 @@ export interface BadRequestProtoMsg {
 /**
  * Describes violations in a client request. This error type focuses on the
  * syntactic aspects of the request.
+ * @name BadRequestAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.BadRequest
  */
 export interface BadRequestAmino {
-  /** Describes all violations in a client request. */
+  /**
+   * Describes all violations in a client request.
+   */
   field_violations?: BadRequest_FieldViolationAmino[];
 }
 export interface BadRequestAminoMsg {
@@ -513,11 +633,19 @@ export interface BadRequestAminoMsg {
 /**
  * Describes violations in a client request. This error type focuses on the
  * syntactic aspects of the request.
+ * @name BadRequestSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.BadRequest
  */
 export interface BadRequestSDKType {
   field_violations: BadRequest_FieldViolationSDKType[];
 }
-/** A message type used to describe a single bad request field. */
+/**
+ * A message type used to describe a single bad request field.
+ * @name BadRequest_FieldViolation
+ * @package google.rpc
+ * @see proto type: google.rpc.FieldViolation
+ */
 export interface BadRequest_FieldViolation {
   /**
    * A path leading to a field in the request body. The value will be a
@@ -525,14 +653,21 @@ export interface BadRequest_FieldViolation {
    * field. E.g., "field_violations.field" would identify this field.
    */
   field: string;
-  /** A description of why the request element is bad. */
+  /**
+   * A description of why the request element is bad.
+   */
   description: string;
 }
 export interface BadRequest_FieldViolationProtoMsg {
   typeUrl: "/google.rpc.FieldViolation";
   value: Uint8Array;
 }
-/** A message type used to describe a single bad request field. */
+/**
+ * A message type used to describe a single bad request field.
+ * @name BadRequest_FieldViolationAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.BadRequest_FieldViolation
+ */
 export interface BadRequest_FieldViolationAmino {
   /**
    * A path leading to a field in the request body. The value will be a
@@ -540,14 +675,21 @@ export interface BadRequest_FieldViolationAmino {
    * field. E.g., "field_violations.field" would identify this field.
    */
   field?: string;
-  /** A description of why the request element is bad. */
+  /**
+   * A description of why the request element is bad.
+   */
   description?: string;
 }
 export interface BadRequest_FieldViolationAminoMsg {
   type: "/google.rpc.FieldViolation";
   value: BadRequest_FieldViolationAmino;
 }
-/** A message type used to describe a single bad request field. */
+/**
+ * A message type used to describe a single bad request field.
+ * @name BadRequest_FieldViolationSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.FieldViolation
+ */
 export interface BadRequest_FieldViolationSDKType {
   field: string;
   description: string;
@@ -555,6 +697,9 @@ export interface BadRequest_FieldViolationSDKType {
 /**
  * Contains metadata about the request that clients can attach when filing a bug
  * or providing other forms of feedback.
+ * @name RequestInfo
+ * @package google.rpc
+ * @see proto type: google.rpc.RequestInfo
  */
 export interface RequestInfo {
   /**
@@ -575,6 +720,9 @@ export interface RequestInfoProtoMsg {
 /**
  * Contains metadata about the request that clients can attach when filing a bug
  * or providing other forms of feedback.
+ * @name RequestInfoAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.RequestInfo
  */
 export interface RequestInfoAmino {
   /**
@@ -595,12 +743,20 @@ export interface RequestInfoAminoMsg {
 /**
  * Contains metadata about the request that clients can attach when filing a bug
  * or providing other forms of feedback.
+ * @name RequestInfoSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.RequestInfo
  */
 export interface RequestInfoSDKType {
   request_id: string;
   serving_data: string;
 }
-/** Describes the resource that is being accessed. */
+/**
+ * Describes the resource that is being accessed.
+ * @name ResourceInfo
+ * @package google.rpc
+ * @see proto type: google.rpc.ResourceInfo
+ */
 export interface ResourceInfo {
   /**
    * A name for the type of resource being accessed, e.g. "sql table",
@@ -631,7 +787,12 @@ export interface ResourceInfoProtoMsg {
   typeUrl: "/google.rpc.ResourceInfo";
   value: Uint8Array;
 }
-/** Describes the resource that is being accessed. */
+/**
+ * Describes the resource that is being accessed.
+ * @name ResourceInfoAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.ResourceInfo
+ */
 export interface ResourceInfoAmino {
   /**
    * A name for the type of resource being accessed, e.g. "sql table",
@@ -662,7 +823,12 @@ export interface ResourceInfoAminoMsg {
   type: "/google.rpc.ResourceInfo";
   value: ResourceInfoAmino;
 }
-/** Describes the resource that is being accessed. */
+/**
+ * Describes the resource that is being accessed.
+ * @name ResourceInfoSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.ResourceInfo
+ */
 export interface ResourceInfoSDKType {
   resource_type: string;
   resource_name: string;
@@ -675,9 +841,14 @@ export interface ResourceInfoSDKType {
  * For example, if a quota check failed with an error indicating the calling
  * project hasn't enabled the accessed service, this can contain a URL pointing
  * directly to the right place in the developer console to flip the bit.
+ * @name Help
+ * @package google.rpc
+ * @see proto type: google.rpc.Help
  */
 export interface Help {
-  /** URL(s) pointing to additional information on handling the current error. */
+  /**
+   * URL(s) pointing to additional information on handling the current error.
+   */
   links: Help_Link[];
 }
 export interface HelpProtoMsg {
@@ -690,9 +861,14 @@ export interface HelpProtoMsg {
  * For example, if a quota check failed with an error indicating the calling
  * project hasn't enabled the accessed service, this can contain a URL pointing
  * directly to the right place in the developer console to flip the bit.
+ * @name HelpAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.Help
  */
 export interface HelpAmino {
-  /** URL(s) pointing to additional information on handling the current error. */
+  /**
+   * URL(s) pointing to additional information on handling the current error.
+   */
   links?: Help_LinkAmino[];
 }
 export interface HelpAminoMsg {
@@ -705,33 +881,59 @@ export interface HelpAminoMsg {
  * For example, if a quota check failed with an error indicating the calling
  * project hasn't enabled the accessed service, this can contain a URL pointing
  * directly to the right place in the developer console to flip the bit.
+ * @name HelpSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.Help
  */
 export interface HelpSDKType {
   links: Help_LinkSDKType[];
 }
-/** Describes a URL link. */
+/**
+ * Describes a URL link.
+ * @name Help_Link
+ * @package google.rpc
+ * @see proto type: google.rpc.Link
+ */
 export interface Help_Link {
-  /** Describes what the link offers. */
+  /**
+   * Describes what the link offers.
+   */
   description: string;
-  /** The URL of the link. */
+  /**
+   * The URL of the link.
+   */
   url: string;
 }
 export interface Help_LinkProtoMsg {
   typeUrl: "/google.rpc.Link";
   value: Uint8Array;
 }
-/** Describes a URL link. */
+/**
+ * Describes a URL link.
+ * @name Help_LinkAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.Help_Link
+ */
 export interface Help_LinkAmino {
-  /** Describes what the link offers. */
+  /**
+   * Describes what the link offers.
+   */
   description?: string;
-  /** The URL of the link. */
+  /**
+   * The URL of the link.
+   */
   url?: string;
 }
 export interface Help_LinkAminoMsg {
   type: "/google.rpc.Link";
   value: Help_LinkAmino;
 }
-/** Describes a URL link. */
+/**
+ * Describes a URL link.
+ * @name Help_LinkSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.Link
+ */
 export interface Help_LinkSDKType {
   description: string;
   url: string;
@@ -739,6 +941,9 @@ export interface Help_LinkSDKType {
 /**
  * Provides a localized error message that is safe to return to the user
  * which can be attached to an RPC error.
+ * @name LocalizedMessage
+ * @package google.rpc
+ * @see proto type: google.rpc.LocalizedMessage
  */
 export interface LocalizedMessage {
   /**
@@ -747,7 +952,9 @@ export interface LocalizedMessage {
    * Examples are: "en-US", "fr-CH", "es-MX"
    */
   locale: string;
-  /** The localized error message in the above locale. */
+  /**
+   * The localized error message in the above locale.
+   */
   message: string;
 }
 export interface LocalizedMessageProtoMsg {
@@ -757,6 +964,9 @@ export interface LocalizedMessageProtoMsg {
 /**
  * Provides a localized error message that is safe to return to the user
  * which can be attached to an RPC error.
+ * @name LocalizedMessageAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.LocalizedMessage
  */
 export interface LocalizedMessageAmino {
   /**
@@ -765,7 +975,9 @@ export interface LocalizedMessageAmino {
    * Examples are: "en-US", "fr-CH", "es-MX"
    */
   locale?: string;
-  /** The localized error message in the above locale. */
+  /**
+   * The localized error message in the above locale.
+   */
   message?: string;
 }
 export interface LocalizedMessageAminoMsg {
@@ -775,6 +987,9 @@ export interface LocalizedMessageAminoMsg {
 /**
  * Provides a localized error message that is safe to return to the user
  * which can be attached to an RPC error.
+ * @name LocalizedMessageSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.LocalizedMessage
  */
 export interface LocalizedMessageSDKType {
   locale: string;
@@ -785,6 +1000,24 @@ function createBaseRetryInfo(): RetryInfo {
     retryDelay: undefined
   };
 }
+/**
+ * Describes when the clients can retry a failed request. Clients could ignore
+ * the recommendation here or retry when this information is missing from error
+ * responses.
+ * 
+ * It's always recommended that clients should use exponential backoff when
+ * retrying.
+ * 
+ * Clients should wait until `retry_delay` amount of time has passed since
+ * receiving the error response before retrying.  If retrying requests also
+ * fail, clients should use an exponential backoff scheme to gradually increase
+ * the delay between retries based on `retry_delay`, until either a maximum
+ * number of retries have been reached or a maximum retry delay cap has been
+ * reached.
+ * @name RetryInfo
+ * @package google.rpc
+ * @see proto type: google.rpc.RetryInfo
+ */
 export const RetryInfo = {
   typeUrl: "/google.rpc.RetryInfo",
   is(o: any): o is RetryInfo {
@@ -886,6 +1119,12 @@ function createBaseDebugInfo(): DebugInfo {
     detail: ""
   };
 }
+/**
+ * Describes additional debugging info.
+ * @name DebugInfo
+ * @package google.rpc
+ * @see proto type: google.rpc.DebugInfo
+ */
 export const DebugInfo = {
   typeUrl: "/google.rpc.DebugInfo",
   is(o: any): o is DebugInfo {
@@ -1010,6 +1249,22 @@ function createBaseQuotaFailure(): QuotaFailure {
     violations: []
   };
 }
+/**
+ * Describes how a quota check failed.
+ * 
+ * For example if a daily limit was exceeded for the calling project,
+ * a service could respond with a QuotaFailure detail containing the project
+ * id and the description of the quota limit that was exceeded.  If the
+ * calling project hasn't enabled the service in the developer console, then
+ * a service could respond with the project id and set `service_disabled`
+ * to true.
+ * 
+ * Also see RetryInfo and Help types for other details about handling a
+ * quota failure.
+ * @name QuotaFailure
+ * @package google.rpc
+ * @see proto type: google.rpc.QuotaFailure
+ */
 export const QuotaFailure = {
   typeUrl: "/google.rpc.QuotaFailure",
   is(o: any): o is QuotaFailure {
@@ -1124,6 +1379,13 @@ function createBaseQuotaFailure_Violation(): QuotaFailure_Violation {
     description: ""
   };
 }
+/**
+ * A message type used to describe a single quota violation.  For example, a
+ * daily quota or a custom quota that was exceeded.
+ * @name QuotaFailure_Violation
+ * @package google.rpc
+ * @see proto type: google.rpc.Violation
+ */
 export const QuotaFailure_Violation = {
   typeUrl: "/google.rpc.Violation",
   is(o: any): o is QuotaFailure_Violation {
@@ -1239,6 +1501,11 @@ function createBaseErrorInfo_MetadataEntry(): ErrorInfo_MetadataEntry {
     value: ""
   };
 }
+/**
+ * @name ErrorInfo_MetadataEntry
+ * @package google.rpc
+ * @see proto type: google.rpc.undefined
+ */
 export const ErrorInfo_MetadataEntry = {
   encode(message: ErrorInfo_MetadataEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== undefined) {
@@ -1339,6 +1606,35 @@ function createBaseErrorInfo(): ErrorInfo {
     metadata: {}
   };
 }
+/**
+ * Describes the cause of the error with structured details.
+ * 
+ * Example of an error when contacting the "pubsub.googleapis.com" API when it
+ * is not enabled:
+ * 
+ *     { "reason": "API_DISABLED"
+ *       "domain": "googleapis.com"
+ *       "metadata": {
+ *         "resource": "projects/123",
+ *         "service": "pubsub.googleapis.com"
+ *       }
+ *     }
+ * 
+ * This response indicates that the pubsub.googleapis.com API is not enabled.
+ * 
+ * Example of an error that is returned when attempting to create a Spanner
+ * instance in a region that is out of stock:
+ * 
+ *     { "reason": "STOCKOUT"
+ *       "domain": "spanner.googleapis.com",
+ *       "metadata": {
+ *         "availableRegions": "us-central1,us-east2"
+ *       }
+ *     }
+ * @name ErrorInfo
+ * @package google.rpc
+ * @see proto type: google.rpc.ErrorInfo
+ */
 export const ErrorInfo = {
   typeUrl: "/google.rpc.ErrorInfo",
   is(o: any): o is ErrorInfo {
@@ -1517,6 +1813,16 @@ function createBasePreconditionFailure(): PreconditionFailure {
     violations: []
   };
 }
+/**
+ * Describes what preconditions have failed.
+ * 
+ * For example, if an RPC failed because it required the Terms of Service to be
+ * acknowledged, it could list the terms of service violation in the
+ * PreconditionFailure message.
+ * @name PreconditionFailure
+ * @package google.rpc
+ * @see proto type: google.rpc.PreconditionFailure
+ */
 export const PreconditionFailure = {
   typeUrl: "/google.rpc.PreconditionFailure",
   is(o: any): o is PreconditionFailure {
@@ -1632,6 +1938,12 @@ function createBasePreconditionFailure_Violation(): PreconditionFailure_Violatio
     description: ""
   };
 }
+/**
+ * A message type used to describe a single precondition failure.
+ * @name PreconditionFailure_Violation
+ * @package google.rpc
+ * @see proto type: google.rpc.Violation
+ */
 export const PreconditionFailure_Violation = {
   typeUrl: "/google.rpc.Violation",
   is(o: any): o is PreconditionFailure_Violation {
@@ -1762,6 +2074,13 @@ function createBaseBadRequest(): BadRequest {
     fieldViolations: []
   };
 }
+/**
+ * Describes violations in a client request. This error type focuses on the
+ * syntactic aspects of the request.
+ * @name BadRequest
+ * @package google.rpc
+ * @see proto type: google.rpc.BadRequest
+ */
 export const BadRequest = {
   typeUrl: "/google.rpc.BadRequest",
   is(o: any): o is BadRequest {
@@ -1876,6 +2195,12 @@ function createBaseBadRequest_FieldViolation(): BadRequest_FieldViolation {
     description: ""
   };
 }
+/**
+ * A message type used to describe a single bad request field.
+ * @name BadRequest_FieldViolation
+ * @package google.rpc
+ * @see proto type: google.rpc.FieldViolation
+ */
 export const BadRequest_FieldViolation = {
   typeUrl: "/google.rpc.FieldViolation",
   is(o: any): o is BadRequest_FieldViolation {
@@ -1991,6 +2316,13 @@ function createBaseRequestInfo(): RequestInfo {
     servingData: ""
   };
 }
+/**
+ * Contains metadata about the request that clients can attach when filing a bug
+ * or providing other forms of feedback.
+ * @name RequestInfo
+ * @package google.rpc
+ * @see proto type: google.rpc.RequestInfo
+ */
 export const RequestInfo = {
   typeUrl: "/google.rpc.RequestInfo",
   is(o: any): o is RequestInfo {
@@ -2108,6 +2440,12 @@ function createBaseResourceInfo(): ResourceInfo {
     description: ""
   };
 }
+/**
+ * Describes the resource that is being accessed.
+ * @name ResourceInfo
+ * @package google.rpc
+ * @see proto type: google.rpc.ResourceInfo
+ */
 export const ResourceInfo = {
   typeUrl: "/google.rpc.ResourceInfo",
   is(o: any): o is ResourceInfo {
@@ -2254,6 +2592,16 @@ function createBaseHelp(): Help {
     links: []
   };
 }
+/**
+ * Provides links to documentation or for performing an out of band action.
+ * 
+ * For example, if a quota check failed with an error indicating the calling
+ * project hasn't enabled the accessed service, this can contain a URL pointing
+ * directly to the right place in the developer console to flip the bit.
+ * @name Help
+ * @package google.rpc
+ * @see proto type: google.rpc.Help
+ */
 export const Help = {
   typeUrl: "/google.rpc.Help",
   is(o: any): o is Help {
@@ -2368,6 +2716,12 @@ function createBaseHelp_Link(): Help_Link {
     url: ""
   };
 }
+/**
+ * Describes a URL link.
+ * @name Help_Link
+ * @package google.rpc
+ * @see proto type: google.rpc.Link
+ */
 export const Help_Link = {
   typeUrl: "/google.rpc.Link",
   is(o: any): o is Help_Link {
@@ -2483,6 +2837,13 @@ function createBaseLocalizedMessage(): LocalizedMessage {
     message: ""
   };
 }
+/**
+ * Provides a localized error message that is safe to return to the user
+ * which can be attached to an RPC error.
+ * @name LocalizedMessage
+ * @package google.rpc
+ * @see proto type: google.rpc.LocalizedMessage
+ */
 export const LocalizedMessage = {
   typeUrl: "/google.rpc.LocalizedMessage",
   is(o: any): o is LocalizedMessage {

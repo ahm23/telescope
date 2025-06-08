@@ -8,6 +8,9 @@ export const protobufPackage = "akash.base.v1beta2";
 /**
  * ResourceUnits describes all available resources types for deployment/node etc
  * if field is nil resource is not present in the given data-structure
+ * @name ResourceUnits
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.ResourceUnits
  */
 export interface ResourceUnits {
   cpu?: CPU;
@@ -22,6 +25,9 @@ export interface ResourceUnitsProtoMsg {
 /**
  * ResourceUnits describes all available resources types for deployment/node etc
  * if field is nil resource is not present in the given data-structure
+ * @name ResourceUnitsAmino
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.ResourceUnits
  */
 export interface ResourceUnitsAmino {
   cpu?: CPUAmino;
@@ -36,6 +42,9 @@ export interface ResourceUnitsAminoMsg {
 /**
  * ResourceUnits describes all available resources types for deployment/node etc
  * if field is nil resource is not present in the given data-structure
+ * @name ResourceUnitsSDKType
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.ResourceUnits
  */
 export interface ResourceUnitsSDKType {
   cpu?: CPUSDKType;
@@ -51,6 +60,13 @@ function createBaseResourceUnits(): ResourceUnits {
     endpoints: []
   };
 }
+/**
+ * ResourceUnits describes all available resources types for deployment/node etc
+ * if field is nil resource is not present in the given data-structure
+ * @name ResourceUnits
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.ResourceUnits
+ */
 export const ResourceUnits = {
   typeUrl: "/akash.base.v1beta2.ResourceUnits",
   aminoType: "akash/base/v1beta2/resource-units",

@@ -2,7 +2,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial, Exact } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "akash.deployment.v1beta2";
-/** GroupID stores owner, deployment sequence number and group sequence number */
+/**
+ * GroupID stores owner, deployment sequence number and group sequence number
+ * @name GroupID
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GroupID
+ */
 export interface GroupID {
   owner: string;
   dseq: bigint;
@@ -12,7 +17,12 @@ export interface GroupIDProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.GroupID";
   value: Uint8Array;
 }
-/** GroupID stores owner, deployment sequence number and group sequence number */
+/**
+ * GroupID stores owner, deployment sequence number and group sequence number
+ * @name GroupIDAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GroupID
+ */
 export interface GroupIDAmino {
   owner: string;
   dseq: string;
@@ -22,7 +32,12 @@ export interface GroupIDAminoMsg {
   type: "akash/deployment/v1beta2/group-i-d";
   value: GroupIDAmino;
 }
-/** GroupID stores owner, deployment sequence number and group sequence number */
+/**
+ * GroupID stores owner, deployment sequence number and group sequence number
+ * @name GroupIDSDKType
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GroupID
+ */
 export interface GroupIDSDKType {
   owner: string;
   dseq: bigint;
@@ -35,6 +50,12 @@ function createBaseGroupID(): GroupID {
     gseq: 0
   };
 }
+/**
+ * GroupID stores owner, deployment sequence number and group sequence number
+ * @name GroupID
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GroupID
+ */
 export const GroupID = {
   typeUrl: "/akash.deployment.v1beta2.GroupID",
   aminoType: "akash/deployment/v1beta2/group-i-d",

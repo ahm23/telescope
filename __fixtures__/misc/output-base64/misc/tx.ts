@@ -6,6 +6,9 @@ export const protobufPackage = "misc";
 /**
  * MsgGrant is a request type for Grant method. It declares authorization to the grantee
  * on behalf of the granter with the provided expiration time.
+ * @name InputMsg
+ * @package misc
+ * @see proto type: misc.InputMsg
  */
 export interface InputMsg {
   dOTests: EncodingTestForDontOmit;
@@ -18,6 +21,9 @@ export interface InputMsgProtoMsg {
 /**
  * MsgGrant is a request type for Grant method. It declares authorization to the grantee
  * on behalf of the granter with the provided expiration time.
+ * @name InputMsgAmino
+ * @package misc
+ * @see proto type: misc.InputMsg
  */
 export interface InputMsgAmino {
   d_o_tests?: EncodingTestForDontOmitAmino;
@@ -30,24 +36,42 @@ export interface InputMsgAminoMsg {
 /**
  * MsgGrant is a request type for Grant method. It declares authorization to the grantee
  * on behalf of the granter with the provided expiration time.
+ * @name InputMsgSDKType
+ * @package misc
+ * @see proto type: misc.InputMsg
  */
 export interface InputMsgSDKType {
   d_o_tests: EncodingTestForDontOmitSDKType;
   o_tests: EncodingTestForOmitSDKType;
 }
-/** MsgGrantResponse defines the Msg/MsgGrant response type. */
+/**
+ * MsgGrantResponse defines the Msg/MsgGrant response type.
+ * @name MsgResponse
+ * @package misc
+ * @see proto type: misc.MsgResponse
+ */
 export interface MsgResponse {}
 export interface MsgResponseProtoMsg {
   typeUrl: "/misc.MsgResponse";
   value: Uint8Array;
 }
-/** MsgGrantResponse defines the Msg/MsgGrant response type. */
+/**
+ * MsgGrantResponse defines the Msg/MsgGrant response type.
+ * @name MsgResponseAmino
+ * @package misc
+ * @see proto type: misc.MsgResponse
+ */
 export interface MsgResponseAmino {}
 export interface MsgResponseAminoMsg {
   type: "/misc.MsgResponse";
   value: MsgResponseAmino;
 }
-/** MsgGrantResponse defines the Msg/MsgGrant response type. */
+/**
+ * MsgGrantResponse defines the Msg/MsgGrant response type.
+ * @name MsgResponseSDKType
+ * @package misc
+ * @see proto type: misc.MsgResponse
+ */
 export interface MsgResponseSDKType {}
 function createBaseInputMsg(): InputMsg {
   return {
@@ -55,6 +79,13 @@ function createBaseInputMsg(): InputMsg {
     oTests: EncodingTestForOmit.fromPartial({})
   };
 }
+/**
+ * MsgGrant is a request type for Grant method. It declares authorization to the grantee
+ * on behalf of the granter with the provided expiration time.
+ * @name InputMsg
+ * @package misc
+ * @see proto type: misc.InputMsg
+ */
 export const InputMsg = {
   typeUrl: "/misc.InputMsg",
   encode(message: InputMsg, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -161,6 +192,12 @@ export const InputMsg = {
 function createBaseMsgResponse(): MsgResponse {
   return {};
 }
+/**
+ * MsgGrantResponse defines the Msg/MsgGrant response type.
+ * @name MsgResponse
+ * @package misc
+ * @see proto type: misc.MsgResponse
+ */
 export const MsgResponse = {
   typeUrl: "/misc.MsgResponse",
   encode(_: MsgResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

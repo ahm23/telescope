@@ -109,11 +109,18 @@ export function broadcastModeToJSON(object: BroadcastMode): string {
 /**
  * GetTxsEventRequest is the request type for the Service.TxsByEvents
  * RPC method.
+ * @name GetTxsEventRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventRequest
  */
 export interface GetTxsEventRequest {
-  /** events is the list of transaction event type. */
+  /**
+   * events is the list of transaction event type.
+   */
   events: string[];
-  /** pagination defines a pagination for the request. */
+  /**
+   * pagination defines a pagination for the request.
+   */
   pagination?: PageRequest;
   orderBy: OrderBy;
 }
@@ -124,11 +131,18 @@ export interface GetTxsEventRequestProtoMsg {
 /**
  * GetTxsEventRequest is the request type for the Service.TxsByEvents
  * RPC method.
+ * @name GetTxsEventRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventRequest
  */
 export interface GetTxsEventRequestAmino {
-  /** events is the list of transaction event type. */
+  /**
+   * events is the list of transaction event type.
+   */
   events?: string[];
-  /** pagination defines a pagination for the request. */
+  /**
+   * pagination defines a pagination for the request.
+   */
   pagination?: PageRequestAmino;
   order_by?: OrderBy;
 }
@@ -139,6 +153,9 @@ export interface GetTxsEventRequestAminoMsg {
 /**
  * GetTxsEventRequest is the request type for the Service.TxsByEvents
  * RPC method.
+ * @name GetTxsEventRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventRequest
  */
 export interface GetTxsEventRequestSDKType {
   events: string[];
@@ -148,13 +165,22 @@ export interface GetTxsEventRequestSDKType {
 /**
  * GetTxsEventResponse is the response type for the Service.TxsByEvents
  * RPC method.
+ * @name GetTxsEventResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventResponse
  */
 export interface GetTxsEventResponse {
-  /** txs is the list of queried transactions. */
+  /**
+   * txs is the list of queried transactions.
+   */
   txs: Tx[];
-  /** tx_responses is the list of queried TxResponses. */
+  /**
+   * tx_responses is the list of queried TxResponses.
+   */
   txResponses: TxResponse[];
-  /** pagination defines a pagination for the response. */
+  /**
+   * pagination defines a pagination for the response.
+   */
   pagination?: PageResponse;
 }
 export interface GetTxsEventResponseProtoMsg {
@@ -164,13 +190,22 @@ export interface GetTxsEventResponseProtoMsg {
 /**
  * GetTxsEventResponse is the response type for the Service.TxsByEvents
  * RPC method.
+ * @name GetTxsEventResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventResponse
  */
 export interface GetTxsEventResponseAmino {
-  /** txs is the list of queried transactions. */
+  /**
+   * txs is the list of queried transactions.
+   */
   txs?: TxAmino[];
-  /** tx_responses is the list of queried TxResponses. */
+  /**
+   * tx_responses is the list of queried TxResponses.
+   */
   tx_responses?: TxResponseAmino[];
-  /** pagination defines a pagination for the response. */
+  /**
+   * pagination defines a pagination for the response.
+   */
   pagination?: PageResponseAmino;
 }
 export interface GetTxsEventResponseAminoMsg {
@@ -180,6 +215,9 @@ export interface GetTxsEventResponseAminoMsg {
 /**
  * GetTxsEventResponse is the response type for the Service.TxsByEvents
  * RPC method.
+ * @name GetTxsEventResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventResponse
  */
 export interface GetTxsEventResponseSDKType {
   txs: TxSDKType[];
@@ -189,9 +227,14 @@ export interface GetTxsEventResponseSDKType {
 /**
  * BroadcastTxRequest is the request type for the Service.BroadcastTxRequest
  * RPC method.
+ * @name BroadcastTxRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxRequest
  */
 export interface BroadcastTxRequest {
-  /** tx_bytes is the raw transaction. */
+  /**
+   * tx_bytes is the raw transaction.
+   */
   txBytes: Uint8Array;
   mode: BroadcastMode;
 }
@@ -202,9 +245,14 @@ export interface BroadcastTxRequestProtoMsg {
 /**
  * BroadcastTxRequest is the request type for the Service.BroadcastTxRequest
  * RPC method.
+ * @name BroadcastTxRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxRequest
  */
 export interface BroadcastTxRequestAmino {
-  /** tx_bytes is the raw transaction. */
+  /**
+   * tx_bytes is the raw transaction.
+   */
   tx_bytes?: string;
   mode?: BroadcastMode;
 }
@@ -215,6 +263,9 @@ export interface BroadcastTxRequestAminoMsg {
 /**
  * BroadcastTxRequest is the request type for the Service.BroadcastTxRequest
  * RPC method.
+ * @name BroadcastTxRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxRequest
  */
 export interface BroadcastTxRequestSDKType {
   tx_bytes: Uint8Array;
@@ -223,9 +274,14 @@ export interface BroadcastTxRequestSDKType {
 /**
  * BroadcastTxResponse is the response type for the
  * Service.BroadcastTx method.
+ * @name BroadcastTxResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxResponse
  */
 export interface BroadcastTxResponse {
-  /** tx_response is the queried TxResponses. */
+  /**
+   * tx_response is the queried TxResponses.
+   */
   txResponse?: TxResponse;
 }
 export interface BroadcastTxResponseProtoMsg {
@@ -235,9 +291,14 @@ export interface BroadcastTxResponseProtoMsg {
 /**
  * BroadcastTxResponse is the response type for the
  * Service.BroadcastTx method.
+ * @name BroadcastTxResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxResponse
  */
 export interface BroadcastTxResponseAmino {
-  /** tx_response is the queried TxResponses. */
+  /**
+   * tx_response is the queried TxResponses.
+   */
   tx_response?: TxResponseAmino;
 }
 export interface BroadcastTxResponseAminoMsg {
@@ -247,6 +308,9 @@ export interface BroadcastTxResponseAminoMsg {
 /**
  * BroadcastTxResponse is the response type for the
  * Service.BroadcastTx method.
+ * @name BroadcastTxResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxResponse
  */
 export interface BroadcastTxResponseSDKType {
   tx_response?: TxResponseSDKType;
@@ -254,13 +318,16 @@ export interface BroadcastTxResponseSDKType {
 /**
  * SimulateRequest is the request type for the Service.Simulate
  * RPC method.
+ * @name SimulateRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateRequest
  */
 export interface SimulateRequest {
   /**
    * tx is the transaction to simulate.
    * Deprecated. Send raw tx bytes instead.
+   * @deprecated
    */
-  /** @deprecated */
   tx?: Tx;
   /**
    * tx_bytes is the raw transaction.
@@ -276,13 +343,16 @@ export interface SimulateRequestProtoMsg {
 /**
  * SimulateRequest is the request type for the Service.Simulate
  * RPC method.
+ * @name SimulateRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateRequest
  */
 export interface SimulateRequestAmino {
   /**
    * tx is the transaction to simulate.
    * Deprecated. Send raw tx bytes instead.
+   * @deprecated
    */
-  /** @deprecated */
   tx?: TxAmino;
   /**
    * tx_bytes is the raw transaction.
@@ -298,20 +368,32 @@ export interface SimulateRequestAminoMsg {
 /**
  * SimulateRequest is the request type for the Service.Simulate
  * RPC method.
+ * @name SimulateRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateRequest
  */
 export interface SimulateRequestSDKType {
-  /** @deprecated */
+  /**
+   * @deprecated
+   */
   tx?: TxSDKType;
   tx_bytes: Uint8Array;
 }
 /**
  * SimulateResponse is the response type for the
  * Service.SimulateRPC method.
+ * @name SimulateResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateResponse
  */
 export interface SimulateResponse {
-  /** gas_info is the information about gas used in the simulation. */
+  /**
+   * gas_info is the information about gas used in the simulation.
+   */
   gasInfo?: GasInfo;
-  /** result is the result of the simulation. */
+  /**
+   * result is the result of the simulation.
+   */
   result?: Result;
 }
 export interface SimulateResponseProtoMsg {
@@ -321,11 +403,18 @@ export interface SimulateResponseProtoMsg {
 /**
  * SimulateResponse is the response type for the
  * Service.SimulateRPC method.
+ * @name SimulateResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateResponse
  */
 export interface SimulateResponseAmino {
-  /** gas_info is the information about gas used in the simulation. */
+  /**
+   * gas_info is the information about gas used in the simulation.
+   */
   gas_info?: GasInfoAmino;
-  /** result is the result of the simulation. */
+  /**
+   * result is the result of the simulation.
+   */
   result?: ResultAmino;
 }
 export interface SimulateResponseAminoMsg {
@@ -335,6 +424,9 @@ export interface SimulateResponseAminoMsg {
 /**
  * SimulateResponse is the response type for the
  * Service.SimulateRPC method.
+ * @name SimulateResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateResponse
  */
 export interface SimulateResponseSDKType {
   gas_info?: GasInfoSDKType;
@@ -343,9 +435,14 @@ export interface SimulateResponseSDKType {
 /**
  * GetTxRequest is the request type for the Service.GetTx
  * RPC method.
+ * @name GetTxRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxRequest
  */
 export interface GetTxRequest {
-  /** hash is the tx hash to query, encoded as a hex string. */
+  /**
+   * hash is the tx hash to query, encoded as a hex string.
+   */
   hash: string;
 }
 export interface GetTxRequestProtoMsg {
@@ -355,9 +452,14 @@ export interface GetTxRequestProtoMsg {
 /**
  * GetTxRequest is the request type for the Service.GetTx
  * RPC method.
+ * @name GetTxRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxRequest
  */
 export interface GetTxRequestAmino {
-  /** hash is the tx hash to query, encoded as a hex string. */
+  /**
+   * hash is the tx hash to query, encoded as a hex string.
+   */
   hash?: string;
 }
 export interface GetTxRequestAminoMsg {
@@ -367,33 +469,59 @@ export interface GetTxRequestAminoMsg {
 /**
  * GetTxRequest is the request type for the Service.GetTx
  * RPC method.
+ * @name GetTxRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxRequest
  */
 export interface GetTxRequestSDKType {
   hash: string;
 }
-/** GetTxResponse is the response type for the Service.GetTx method. */
+/**
+ * GetTxResponse is the response type for the Service.GetTx method.
+ * @name GetTxResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxResponse
+ */
 export interface GetTxResponse {
-  /** tx is the queried transaction. */
+  /**
+   * tx is the queried transaction.
+   */
   tx?: Tx;
-  /** tx_response is the queried TxResponses. */
+  /**
+   * tx_response is the queried TxResponses.
+   */
   txResponse?: TxResponse;
 }
 export interface GetTxResponseProtoMsg {
   typeUrl: "/cosmos.tx.v1beta1.GetTxResponse";
   value: Uint8Array;
 }
-/** GetTxResponse is the response type for the Service.GetTx method. */
+/**
+ * GetTxResponse is the response type for the Service.GetTx method.
+ * @name GetTxResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxResponse
+ */
 export interface GetTxResponseAmino {
-  /** tx is the queried transaction. */
+  /**
+   * tx is the queried transaction.
+   */
   tx?: TxAmino;
-  /** tx_response is the queried TxResponses. */
+  /**
+   * tx_response is the queried TxResponses.
+   */
   tx_response?: TxResponseAmino;
 }
 export interface GetTxResponseAminoMsg {
   type: "cosmos-sdk/GetTxResponse";
   value: GetTxResponseAmino;
 }
-/** GetTxResponse is the response type for the Service.GetTx method. */
+/**
+ * GetTxResponse is the response type for the Service.GetTx method.
+ * @name GetTxResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxResponse
+ */
 export interface GetTxResponseSDKType {
   tx?: TxSDKType;
   tx_response?: TxResponseSDKType;
@@ -403,11 +531,18 @@ export interface GetTxResponseSDKType {
  * RPC method.
  * 
  * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsRequest
  */
 export interface GetBlockWithTxsRequest {
-  /** height is the height of the block to query. */
+  /**
+   * height is the height of the block to query.
+   */
   height: bigint;
-  /** pagination defines a pagination for the request. */
+  /**
+   * pagination defines a pagination for the request.
+   */
   pagination?: PageRequest;
 }
 export interface GetBlockWithTxsRequestProtoMsg {
@@ -419,11 +554,18 @@ export interface GetBlockWithTxsRequestProtoMsg {
  * RPC method.
  * 
  * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsRequestAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsRequest
  */
 export interface GetBlockWithTxsRequestAmino {
-  /** height is the height of the block to query. */
+  /**
+   * height is the height of the block to query.
+   */
   height?: string;
-  /** pagination defines a pagination for the request. */
+  /**
+   * pagination defines a pagination for the request.
+   */
   pagination?: PageRequestAmino;
 }
 export interface GetBlockWithTxsRequestAminoMsg {
@@ -435,6 +577,9 @@ export interface GetBlockWithTxsRequestAminoMsg {
  * RPC method.
  * 
  * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsRequestSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsRequest
  */
 export interface GetBlockWithTxsRequestSDKType {
   height: bigint;
@@ -444,13 +589,20 @@ export interface GetBlockWithTxsRequestSDKType {
  * GetBlockWithTxsResponse is the response type for the Service.GetBlockWithTxs method.
  * 
  * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsResponse
  */
 export interface GetBlockWithTxsResponse {
-  /** txs are the transactions in the block. */
+  /**
+   * txs are the transactions in the block.
+   */
   txs: Tx[];
   blockId?: BlockID;
   block?: Block;
-  /** pagination defines a pagination for the response. */
+  /**
+   * pagination defines a pagination for the response.
+   */
   pagination?: PageResponse;
 }
 export interface GetBlockWithTxsResponseProtoMsg {
@@ -461,13 +613,20 @@ export interface GetBlockWithTxsResponseProtoMsg {
  * GetBlockWithTxsResponse is the response type for the Service.GetBlockWithTxs method.
  * 
  * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsResponseAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsResponse
  */
 export interface GetBlockWithTxsResponseAmino {
-  /** txs are the transactions in the block. */
+  /**
+   * txs are the transactions in the block.
+   */
   txs?: TxAmino[];
   block_id?: BlockIDAmino;
   block?: BlockAmino;
-  /** pagination defines a pagination for the response. */
+  /**
+   * pagination defines a pagination for the response.
+   */
   pagination?: PageResponseAmino;
 }
 export interface GetBlockWithTxsResponseAminoMsg {
@@ -478,6 +637,9 @@ export interface GetBlockWithTxsResponseAminoMsg {
  * GetBlockWithTxsResponse is the response type for the Service.GetBlockWithTxs method.
  * 
  * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsResponseSDKType
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsResponse
  */
 export interface GetBlockWithTxsResponseSDKType {
   txs: TxSDKType[];
@@ -492,6 +654,13 @@ function createBaseGetTxsEventRequest(): GetTxsEventRequest {
     orderBy: 0
   };
 }
+/**
+ * GetTxsEventRequest is the request type for the Service.TxsByEvents
+ * RPC method.
+ * @name GetTxsEventRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventRequest
+ */
 export const GetTxsEventRequest = {
   typeUrl: "/cosmos.tx.v1beta1.GetTxsEventRequest",
   encode(message: GetTxsEventRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -589,6 +758,13 @@ function createBaseGetTxsEventResponse(): GetTxsEventResponse {
     pagination: undefined
   };
 }
+/**
+ * GetTxsEventResponse is the response type for the Service.TxsByEvents
+ * RPC method.
+ * @name GetTxsEventResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxsEventResponse
+ */
 export const GetTxsEventResponse = {
   typeUrl: "/cosmos.tx.v1beta1.GetTxsEventResponse",
   encode(message: GetTxsEventResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -687,6 +863,13 @@ function createBaseBroadcastTxRequest(): BroadcastTxRequest {
     mode: 0
   };
 }
+/**
+ * BroadcastTxRequest is the request type for the Service.BroadcastTxRequest
+ * RPC method.
+ * @name BroadcastTxRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxRequest
+ */
 export const BroadcastTxRequest = {
   typeUrl: "/cosmos.tx.v1beta1.BroadcastTxRequest",
   encode(message: BroadcastTxRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -767,6 +950,13 @@ function createBaseBroadcastTxResponse(): BroadcastTxResponse {
     txResponse: undefined
   };
 }
+/**
+ * BroadcastTxResponse is the response type for the
+ * Service.BroadcastTx method.
+ * @name BroadcastTxResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.BroadcastTxResponse
+ */
 export const BroadcastTxResponse = {
   typeUrl: "/cosmos.tx.v1beta1.BroadcastTxResponse",
   encode(message: BroadcastTxResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -839,6 +1029,13 @@ function createBaseSimulateRequest(): SimulateRequest {
     txBytes: new Uint8Array()
   };
 }
+/**
+ * SimulateRequest is the request type for the Service.Simulate
+ * RPC method.
+ * @name SimulateRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateRequest
+ */
 export const SimulateRequest = {
   typeUrl: "/cosmos.tx.v1beta1.SimulateRequest",
   encode(message: SimulateRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -922,6 +1119,13 @@ function createBaseSimulateResponse(): SimulateResponse {
     result: undefined
   };
 }
+/**
+ * SimulateResponse is the response type for the
+ * Service.SimulateRPC method.
+ * @name SimulateResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SimulateResponse
+ */
 export const SimulateResponse = {
   typeUrl: "/cosmos.tx.v1beta1.SimulateResponse",
   encode(message: SimulateResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1006,6 +1210,13 @@ function createBaseGetTxRequest(): GetTxRequest {
     hash: ""
   };
 }
+/**
+ * GetTxRequest is the request type for the Service.GetTx
+ * RPC method.
+ * @name GetTxRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxRequest
+ */
 export const GetTxRequest = {
   typeUrl: "/cosmos.tx.v1beta1.GetTxRequest",
   encode(message: GetTxRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1076,6 +1287,12 @@ function createBaseGetTxResponse(): GetTxResponse {
     txResponse: undefined
   };
 }
+/**
+ * GetTxResponse is the response type for the Service.GetTx method.
+ * @name GetTxResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetTxResponse
+ */
 export const GetTxResponse = {
   typeUrl: "/cosmos.tx.v1beta1.GetTxResponse",
   encode(message: GetTxResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1161,6 +1378,15 @@ function createBaseGetBlockWithTxsRequest(): GetBlockWithTxsRequest {
     pagination: undefined
   };
 }
+/**
+ * GetBlockWithTxsRequest is the request type for the Service.GetBlockWithTxs
+ * RPC method.
+ * 
+ * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsRequest
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsRequest
+ */
 export const GetBlockWithTxsRequest = {
   typeUrl: "/cosmos.tx.v1beta1.GetBlockWithTxsRequest",
   encode(message: GetBlockWithTxsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1248,6 +1474,14 @@ function createBaseGetBlockWithTxsResponse(): GetBlockWithTxsResponse {
     pagination: undefined
   };
 }
+/**
+ * GetBlockWithTxsResponse is the response type for the Service.GetBlockWithTxs method.
+ * 
+ * Since: cosmos-sdk 0.45.2
+ * @name GetBlockWithTxsResponse
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.GetBlockWithTxsResponse
+ */
 export const GetBlockWithTxsResponse = {
   typeUrl: "/cosmos.tx.v1beta1.GetBlockWithTxsResponse",
   encode(message: GetBlockWithTxsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

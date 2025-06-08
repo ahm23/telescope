@@ -1,6 +1,11 @@
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { DeepPartial } from "../../../../helpers";
 export const protobufPackage = "google.api.expr.v1beta1";
+/**
+ * @name SourceInfo_PositionsEntry
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.undefined
+ */
 export interface SourceInfo_PositionsEntry {
   key: number;
   value: number;
@@ -9,6 +14,11 @@ export interface SourceInfo_PositionsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name SourceInfo_PositionsEntryAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.SourceInfo_PositionsEntry
+ */
 export interface SourceInfo_PositionsEntryAmino {
   key?: number;
   value?: number;
@@ -17,11 +27,21 @@ export interface SourceInfo_PositionsEntryAminoMsg {
   type: string;
   value: SourceInfo_PositionsEntryAmino;
 }
+/**
+ * @name SourceInfo_PositionsEntrySDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.undefined
+ */
 export interface SourceInfo_PositionsEntrySDKType {
   key: number;
   value: number;
 }
-/** Source information collected at parse time. */
+/**
+ * Source information collected at parse time.
+ * @name SourceInfo
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.SourceInfo
+ */
 export interface SourceInfo {
   /**
    * The location name. All position information attached to an expression is
@@ -51,7 +71,12 @@ export interface SourceInfoProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.SourceInfo";
   value: Uint8Array;
 }
-/** Source information collected at parse time. */
+/**
+ * Source information collected at parse time.
+ * @name SourceInfoAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.SourceInfo
+ */
 export interface SourceInfoAmino {
   /**
    * The location name. All position information attached to an expression is
@@ -81,7 +106,12 @@ export interface SourceInfoAminoMsg {
   type: "/google.api.expr.v1beta1.SourceInfo";
   value: SourceInfoAmino;
 }
-/** Source information collected at parse time. */
+/**
+ * Source information collected at parse time.
+ * @name SourceInfoSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.SourceInfo
+ */
 export interface SourceInfoSDKType {
   location: string;
   line_offsets: number[];
@@ -89,11 +119,20 @@ export interface SourceInfoSDKType {
     [key: number]: number;
   };
 }
-/** A specific position in source. */
+/**
+ * A specific position in source.
+ * @name SourcePosition
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.SourcePosition
+ */
 export interface SourcePosition {
-  /** The soucre location name (e.g. file name). */
+  /**
+   * The soucre location name (e.g. file name).
+   */
   location: string;
-  /** The character offset. */
+  /**
+   * The character offset.
+   */
   offset: number;
   /**
    * The 1-based index of the starting line in the source text
@@ -110,11 +149,20 @@ export interface SourcePositionProtoMsg {
   typeUrl: "/google.api.expr.v1beta1.SourcePosition";
   value: Uint8Array;
 }
-/** A specific position in source. */
+/**
+ * A specific position in source.
+ * @name SourcePositionAmino
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.SourcePosition
+ */
 export interface SourcePositionAmino {
-  /** The soucre location name (e.g. file name). */
+  /**
+   * The soucre location name (e.g. file name).
+   */
   location?: string;
-  /** The character offset. */
+  /**
+   * The character offset.
+   */
   offset?: number;
   /**
    * The 1-based index of the starting line in the source text
@@ -131,7 +179,12 @@ export interface SourcePositionAminoMsg {
   type: "/google.api.expr.v1beta1.SourcePosition";
   value: SourcePositionAmino;
 }
-/** A specific position in source. */
+/**
+ * A specific position in source.
+ * @name SourcePositionSDKType
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.SourcePosition
+ */
 export interface SourcePositionSDKType {
   location: string;
   offset: number;
@@ -144,6 +197,11 @@ function createBaseSourceInfo_PositionsEntry(): SourceInfo_PositionsEntry {
     value: 0
   };
 }
+/**
+ * @name SourceInfo_PositionsEntry
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.undefined
+ */
 export const SourceInfo_PositionsEntry = {
   encode(message: SourceInfo_PositionsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== 0) {
@@ -213,6 +271,12 @@ function createBaseSourceInfo(): SourceInfo {
     positions: {}
   };
 }
+/**
+ * Source information collected at parse time.
+ * @name SourceInfo
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.SourceInfo
+ */
 export const SourceInfo = {
   typeUrl: "/google.api.expr.v1beta1.SourceInfo",
   encode(message: SourceInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -335,6 +399,12 @@ function createBaseSourcePosition(): SourcePosition {
     column: 0
   };
 }
+/**
+ * A specific position in source.
+ * @name SourcePosition
+ * @package google.api.expr.v1beta1
+ * @see proto type: google.api.expr.v1beta1.SourcePosition
+ */
 export const SourcePosition = {
   typeUrl: "/google.api.expr.v1beta1.SourcePosition",
   encode(message: SourcePosition, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

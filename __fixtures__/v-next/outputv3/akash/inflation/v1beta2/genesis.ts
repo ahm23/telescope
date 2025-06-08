@@ -2,7 +2,12 @@ import { Params, ParamsAmino, ParamsSDKType } from "./params";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 export const protobufPackage = "akash.inflation.v1beta2";
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisState
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.GenesisState
+ */
 export interface GenesisState {
   params: Params;
 }
@@ -10,11 +15,21 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/akash.inflation.v1beta2.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisStateAmino
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.GenesisState
+ */
 export interface GenesisStateAmino {
   params: ParamsAmino;
 }
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisStateSDKType
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
 }
@@ -23,6 +38,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({})
   };
 }
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisState
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.inflation.v1beta2.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

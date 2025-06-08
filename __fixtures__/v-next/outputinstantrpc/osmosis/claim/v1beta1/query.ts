@@ -5,48 +5,97 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial, isSet } from "../../../helpers";
 export const protobufPackage = "osmosis.claim.v1beta1";
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryModuleAccountBalanceRequest
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryModuleAccountBalanceRequest
+ */
 export interface QueryModuleAccountBalanceRequest {}
 export interface QueryModuleAccountBalanceRequestProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.QueryModuleAccountBalanceRequest";
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryModuleAccountBalanceRequestSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryModuleAccountBalanceRequest
+ */
 export interface QueryModuleAccountBalanceRequestSDKType {}
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryModuleAccountBalanceResponse
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryModuleAccountBalanceResponse
+ */
 export interface QueryModuleAccountBalanceResponse {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   moduleAccountBalance: Coin[];
 }
 export interface QueryModuleAccountBalanceResponseProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.QueryModuleAccountBalanceResponse";
   value: Uint8Array;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryModuleAccountBalanceResponseSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryModuleAccountBalanceResponse
+ */
 export interface QueryModuleAccountBalanceResponseSDKType {
   moduleAccountBalance: CoinSDKType[];
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.QueryParamsRequest";
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.QueryParamsResponse";
   value: Uint8Array;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
+/**
+ * @name QueryClaimRecordRequest
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryClaimRecordRequest
+ */
 export interface QueryClaimRecordRequest {
   address: string;
 }
@@ -54,9 +103,19 @@ export interface QueryClaimRecordRequestProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.QueryClaimRecordRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryClaimRecordRequestSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryClaimRecordRequest
+ */
 export interface QueryClaimRecordRequestSDKType {
   address: string;
 }
+/**
+ * @name QueryClaimRecordResponse
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryClaimRecordResponse
+ */
 export interface QueryClaimRecordResponse {
   claimRecord: ClaimRecord;
 }
@@ -64,9 +123,19 @@ export interface QueryClaimRecordResponseProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.QueryClaimRecordResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryClaimRecordResponseSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryClaimRecordResponse
+ */
 export interface QueryClaimRecordResponseSDKType {
   claim_record: ClaimRecordSDKType;
 }
+/**
+ * @name QueryClaimableForActionRequest
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryClaimableForActionRequest
+ */
 export interface QueryClaimableForActionRequest {
   address: string;
   action: Action;
@@ -75,10 +144,20 @@ export interface QueryClaimableForActionRequestProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.QueryClaimableForActionRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryClaimableForActionRequestSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryClaimableForActionRequest
+ */
 export interface QueryClaimableForActionRequestSDKType {
   address: string;
   action: Action;
 }
+/**
+ * @name QueryClaimableForActionResponse
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryClaimableForActionResponse
+ */
 export interface QueryClaimableForActionResponse {
   coins: Coin[];
 }
@@ -86,9 +165,19 @@ export interface QueryClaimableForActionResponseProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.QueryClaimableForActionResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryClaimableForActionResponseSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryClaimableForActionResponse
+ */
 export interface QueryClaimableForActionResponseSDKType {
   coins: CoinSDKType[];
 }
+/**
+ * @name QueryTotalClaimableRequest
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryTotalClaimableRequest
+ */
 export interface QueryTotalClaimableRequest {
   address: string;
 }
@@ -96,9 +185,19 @@ export interface QueryTotalClaimableRequestProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.QueryTotalClaimableRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryTotalClaimableRequestSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryTotalClaimableRequest
+ */
 export interface QueryTotalClaimableRequestSDKType {
   address: string;
 }
+/**
+ * @name QueryTotalClaimableResponse
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryTotalClaimableResponse
+ */
 export interface QueryTotalClaimableResponse {
   coins: Coin[];
 }
@@ -106,12 +205,23 @@ export interface QueryTotalClaimableResponseProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.QueryTotalClaimableResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryTotalClaimableResponseSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryTotalClaimableResponse
+ */
 export interface QueryTotalClaimableResponseSDKType {
   coins: CoinSDKType[];
 }
 function createBaseQueryModuleAccountBalanceRequest(): QueryModuleAccountBalanceRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryModuleAccountBalanceRequest
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryModuleAccountBalanceRequest
+ */
 export const QueryModuleAccountBalanceRequest = {
   typeUrl: "/osmosis.claim.v1beta1.QueryModuleAccountBalanceRequest",
   encode(_: QueryModuleAccountBalanceRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -188,6 +298,12 @@ function createBaseQueryModuleAccountBalanceResponse(): QueryModuleAccountBalanc
     moduleAccountBalance: []
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryModuleAccountBalanceResponse
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryModuleAccountBalanceResponse
+ */
 export const QueryModuleAccountBalanceResponse = {
   typeUrl: "/osmosis.claim.v1beta1.QueryModuleAccountBalanceResponse",
   encode(message: QueryModuleAccountBalanceResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -290,6 +406,12 @@ export const QueryModuleAccountBalanceResponse = {
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: "/osmosis.claim.v1beta1.QueryParamsRequest",
   encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -366,6 +488,12 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({})
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: "/osmosis.claim.v1beta1.QueryParamsResponse",
   encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -462,6 +590,11 @@ function createBaseQueryClaimRecordRequest(): QueryClaimRecordRequest {
     address: ""
   };
 }
+/**
+ * @name QueryClaimRecordRequest
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryClaimRecordRequest
+ */
 export const QueryClaimRecordRequest = {
   typeUrl: "/osmosis.claim.v1beta1.QueryClaimRecordRequest",
   encode(message: QueryClaimRecordRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -556,6 +689,11 @@ function createBaseQueryClaimRecordResponse(): QueryClaimRecordResponse {
     claimRecord: ClaimRecord.fromPartial({})
   };
 }
+/**
+ * @name QueryClaimRecordResponse
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryClaimRecordResponse
+ */
 export const QueryClaimRecordResponse = {
   typeUrl: "/osmosis.claim.v1beta1.QueryClaimRecordResponse",
   encode(message: QueryClaimRecordResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -653,6 +791,11 @@ function createBaseQueryClaimableForActionRequest(): QueryClaimableForActionRequ
     action: 0
   };
 }
+/**
+ * @name QueryClaimableForActionRequest
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryClaimableForActionRequest
+ */
 export const QueryClaimableForActionRequest = {
   typeUrl: "/osmosis.claim.v1beta1.QueryClaimableForActionRequest",
   encode(message: QueryClaimableForActionRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -763,6 +906,11 @@ function createBaseQueryClaimableForActionResponse(): QueryClaimableForActionRes
     coins: []
   };
 }
+/**
+ * @name QueryClaimableForActionResponse
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryClaimableForActionResponse
+ */
 export const QueryClaimableForActionResponse = {
   typeUrl: "/osmosis.claim.v1beta1.QueryClaimableForActionResponse",
   encode(message: QueryClaimableForActionResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -867,6 +1015,11 @@ function createBaseQueryTotalClaimableRequest(): QueryTotalClaimableRequest {
     address: ""
   };
 }
+/**
+ * @name QueryTotalClaimableRequest
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryTotalClaimableRequest
+ */
 export const QueryTotalClaimableRequest = {
   typeUrl: "/osmosis.claim.v1beta1.QueryTotalClaimableRequest",
   encode(message: QueryTotalClaimableRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -961,6 +1114,11 @@ function createBaseQueryTotalClaimableResponse(): QueryTotalClaimableResponse {
     coins: []
   };
 }
+/**
+ * @name QueryTotalClaimableResponse
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.QueryTotalClaimableResponse
+ */
 export const QueryTotalClaimableResponse = {
   typeUrl: "/osmosis.claim.v1beta1.QueryTotalClaimableResponse",
   encode(message: QueryTotalClaimableResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

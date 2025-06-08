@@ -44,7 +44,12 @@ export function endpoint_KindToJSON(object: Endpoint_Kind): string {
       return "UNRECOGNIZED";
   }
 }
-/** Endpoint describes a publicly accessible IP service */
+/**
+ * Endpoint describes a publicly accessible IP service
+ * @name Endpoint
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.Endpoint
+ */
 export interface Endpoint {
   kind: Endpoint_Kind;
   sequenceNumber: number;
@@ -53,7 +58,12 @@ export interface EndpointProtoMsg {
   typeUrl: "/akash.base.v1beta2.Endpoint";
   value: Uint8Array;
 }
-/** Endpoint describes a publicly accessible IP service */
+/**
+ * Endpoint describes a publicly accessible IP service
+ * @name EndpointAmino
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.Endpoint
+ */
 export interface EndpointAmino {
   kind?: Endpoint_Kind;
   sequence_number: number;
@@ -62,7 +72,12 @@ export interface EndpointAminoMsg {
   type: "akash/base/v1beta2/endpoint";
   value: EndpointAmino;
 }
-/** Endpoint describes a publicly accessible IP service */
+/**
+ * Endpoint describes a publicly accessible IP service
+ * @name EndpointSDKType
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.Endpoint
+ */
 export interface EndpointSDKType {
   kind: Endpoint_Kind;
   sequence_number: number;
@@ -73,6 +88,12 @@ function createBaseEndpoint(): Endpoint {
     sequenceNumber: 0
   };
 }
+/**
+ * Endpoint describes a publicly accessible IP service
+ * @name Endpoint
+ * @package akash.base.v1beta2
+ * @see proto type: akash.base.v1beta2.Endpoint
+ */
 export const Endpoint = {
   typeUrl: "/akash.base.v1beta2.Endpoint",
   aminoType: "akash/base/v1beta2/endpoint",

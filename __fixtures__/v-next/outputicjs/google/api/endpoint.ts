@@ -17,9 +17,14 @@ import { DeepPartial } from "../../helpers";
  *       # allowed to proceed.
  *     - name: library-example.googleapis.com
  *       allow_cors: true
+ * @name Endpoint
+ * @package google.api
+ * @see proto type: google.api.Endpoint
  */
 export interface Endpoint {
-  /** The canonical name of this endpoint. */
+  /**
+   * The canonical name of this endpoint.
+   */
   name: string;
   /**
    * Unimplemented. Dot not use.
@@ -29,8 +34,8 @@ export interface Endpoint {
    * aliases.
    * 
    * Additional names that this endpoint will be hosted on.
+   * @deprecated
    */
-  /** @deprecated */
   aliases: string[];
   /**
    * The specification of an Internet routable address of API frontend that will
@@ -71,9 +76,14 @@ export interface EndpointProtoMsg {
  *       # allowed to proceed.
  *     - name: library-example.googleapis.com
  *       allow_cors: true
+ * @name EndpointAmino
+ * @package google.api
+ * @see proto type: google.api.Endpoint
  */
 export interface EndpointAmino {
-  /** The canonical name of this endpoint. */
+  /**
+   * The canonical name of this endpoint.
+   */
   name: string;
   /**
    * Unimplemented. Dot not use.
@@ -83,8 +93,8 @@ export interface EndpointAmino {
    * aliases.
    * 
    * Additional names that this endpoint will be hosted on.
+   * @deprecated
    */
-  /** @deprecated */
   aliases: string[];
   /**
    * The specification of an Internet routable address of API frontend that will
@@ -116,6 +126,27 @@ function createBaseEndpoint(): Endpoint {
     allowCors: false
   };
 }
+/**
+ * `Endpoint` describes a network endpoint of a service that serves a set of
+ * APIs. It is commonly known as a service endpoint. A service may expose
+ * any number of service endpoints, and all service endpoints share the same
+ * service definition, such as quota limits and monitoring metrics.
+ * 
+ * Example service configuration:
+ * 
+ *     name: library-example.googleapis.com
+ *     endpoints:
+ *       # Below entry makes 'google.example.library.v1.Library'
+ *       # API be served from endpoint address library-example.googleapis.com.
+ *       # It also allows HTTP OPTIONS calls to be passed to the backend, for
+ *       # it to decide whether the subsequent cross-origin request is
+ *       # allowed to proceed.
+ *     - name: library-example.googleapis.com
+ *       allow_cors: true
+ * @name Endpoint
+ * @package google.api
+ * @see proto type: google.api.Endpoint
+ */
 export const Endpoint = {
   typeUrl: "/google.api.Endpoint",
   encode(message: Endpoint, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

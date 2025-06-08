@@ -3,6 +3,11 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.poolincentives.v1beta1";
+/**
+ * @name Params
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.Params
+ */
 export interface Params {
   /**
    * minted_denom is the denomination of the coin expected to be minted by the
@@ -16,9 +21,19 @@ export interface ParamsProtoMsg {
   typeUrl: "/osmosis.poolincentives.v1beta1.Params";
   value: Uint8Array;
 }
+/**
+ * @name ParamsSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.Params
+ */
 export interface ParamsSDKType {
   minted_denom: string;
 }
+/**
+ * @name LockableDurationsInfo
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.LockableDurationsInfo
+ */
 export interface LockableDurationsInfo {
   lockableDurations: Duration[];
 }
@@ -26,9 +41,19 @@ export interface LockableDurationsInfoProtoMsg {
   typeUrl: "/osmosis.poolincentives.v1beta1.LockableDurationsInfo";
   value: Uint8Array;
 }
+/**
+ * @name LockableDurationsInfoSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.LockableDurationsInfo
+ */
 export interface LockableDurationsInfoSDKType {
   lockable_durations: DurationSDKType[];
 }
+/**
+ * @name DistrInfo
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrInfo
+ */
 export interface DistrInfo {
   totalWeight: string;
   records: DistrRecord[];
@@ -37,10 +62,20 @@ export interface DistrInfoProtoMsg {
   typeUrl: "/osmosis.poolincentives.v1beta1.DistrInfo";
   value: Uint8Array;
 }
+/**
+ * @name DistrInfoSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrInfo
+ */
 export interface DistrInfoSDKType {
   total_weight: string;
   records: DistrRecordSDKType[];
 }
+/**
+ * @name DistrRecord
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrRecord
+ */
 export interface DistrRecord {
   gaugeId: bigint;
   weight: string;
@@ -49,10 +84,20 @@ export interface DistrRecordProtoMsg {
   typeUrl: "/osmosis.poolincentives.v1beta1.DistrRecord";
   value: Uint8Array;
 }
+/**
+ * @name DistrRecordSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrRecord
+ */
 export interface DistrRecordSDKType {
   gauge_id: bigint;
   weight: string;
 }
+/**
+ * @name PoolToGauge
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauge
+ */
 export interface PoolToGauge {
   poolId: bigint;
   gaugeId: bigint;
@@ -62,11 +107,21 @@ export interface PoolToGaugeProtoMsg {
   typeUrl: "/osmosis.poolincentives.v1beta1.PoolToGauge";
   value: Uint8Array;
 }
+/**
+ * @name PoolToGaugeSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauge
+ */
 export interface PoolToGaugeSDKType {
   pool_id: bigint;
   gauge_id: bigint;
   duration: DurationSDKType;
 }
+/**
+ * @name PoolToGauges
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauges
+ */
 export interface PoolToGauges {
   poolToGauge: PoolToGauge[];
 }
@@ -74,6 +129,11 @@ export interface PoolToGaugesProtoMsg {
   typeUrl: "/osmosis.poolincentives.v1beta1.PoolToGauges";
   value: Uint8Array;
 }
+/**
+ * @name PoolToGaugesSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauges
+ */
 export interface PoolToGaugesSDKType {
   pool_to_gauge: PoolToGaugeSDKType[];
 }
@@ -82,6 +142,11 @@ function createBaseParams(): Params {
     mintedDenom: ""
   };
 }
+/**
+ * @name Params
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.poolincentives.v1beta1.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -176,6 +241,11 @@ function createBaseLockableDurationsInfo(): LockableDurationsInfo {
     lockableDurations: []
   };
 }
+/**
+ * @name LockableDurationsInfo
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.LockableDurationsInfo
+ */
 export const LockableDurationsInfo = {
   typeUrl: "/osmosis.poolincentives.v1beta1.LockableDurationsInfo",
   encode(message: LockableDurationsInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -281,6 +351,11 @@ function createBaseDistrInfo(): DistrInfo {
     records: []
   };
 }
+/**
+ * @name DistrInfo
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrInfo
+ */
 export const DistrInfo = {
   typeUrl: "/osmosis.poolincentives.v1beta1.DistrInfo",
   encode(message: DistrInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -402,6 +477,11 @@ function createBaseDistrRecord(): DistrRecord {
     weight: ""
   };
 }
+/**
+ * @name DistrRecord
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrRecord
+ */
 export const DistrRecord = {
   typeUrl: "/osmosis.poolincentives.v1beta1.DistrRecord",
   encode(message: DistrRecord, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -514,6 +594,11 @@ function createBasePoolToGauge(): PoolToGauge {
     duration: Duration.fromPartial({})
   };
 }
+/**
+ * @name PoolToGauge
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauge
+ */
 export const PoolToGauge = {
   typeUrl: "/osmosis.poolincentives.v1beta1.PoolToGauge",
   encode(message: PoolToGauge, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -640,6 +725,11 @@ function createBasePoolToGauges(): PoolToGauges {
     poolToGauge: []
   };
 }
+/**
+ * @name PoolToGauges
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauges
+ */
 export const PoolToGauges = {
   typeUrl: "/osmosis.poolincentives.v1beta1.PoolToGauges",
   encode(message: PoolToGauges, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

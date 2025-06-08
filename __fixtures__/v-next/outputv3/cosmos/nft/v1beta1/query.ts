@@ -3,7 +3,12 @@ import { NFT, NFTAmino, NFTSDKType, Class, ClassAmino, ClassSDKType } from "./nf
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 export const protobufPackage = "cosmos.nft.v1beta1";
-/** QueryBalanceRequest is the request type for the Query/Balance RPC method */
+/**
+ * QueryBalanceRequest is the request type for the Query/Balance RPC method
+ * @name QueryBalanceRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryBalanceRequest
+ */
 export interface QueryBalanceRequest {
   classId: string;
   owner: string;
@@ -12,17 +17,32 @@ export interface QueryBalanceRequestProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QueryBalanceRequest";
   value: Uint8Array;
 }
-/** QueryBalanceRequest is the request type for the Query/Balance RPC method */
+/**
+ * QueryBalanceRequest is the request type for the Query/Balance RPC method
+ * @name QueryBalanceRequestAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryBalanceRequest
+ */
 export interface QueryBalanceRequestAmino {
   class_id?: string;
   owner?: string;
 }
-/** QueryBalanceRequest is the request type for the Query/Balance RPC method */
+/**
+ * QueryBalanceRequest is the request type for the Query/Balance RPC method
+ * @name QueryBalanceRequestSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryBalanceRequest
+ */
 export interface QueryBalanceRequestSDKType {
   class_id: string;
   owner: string;
 }
-/** QueryBalanceResponse is the response type for the Query/Balance RPC method */
+/**
+ * QueryBalanceResponse is the response type for the Query/Balance RPC method
+ * @name QueryBalanceResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryBalanceResponse
+ */
 export interface QueryBalanceResponse {
   amount: bigint;
 }
@@ -30,15 +50,30 @@ export interface QueryBalanceResponseProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QueryBalanceResponse";
   value: Uint8Array;
 }
-/** QueryBalanceResponse is the response type for the Query/Balance RPC method */
+/**
+ * QueryBalanceResponse is the response type for the Query/Balance RPC method
+ * @name QueryBalanceResponseAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryBalanceResponse
+ */
 export interface QueryBalanceResponseAmino {
   amount?: string;
 }
-/** QueryBalanceResponse is the response type for the Query/Balance RPC method */
+/**
+ * QueryBalanceResponse is the response type for the Query/Balance RPC method
+ * @name QueryBalanceResponseSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryBalanceResponse
+ */
 export interface QueryBalanceResponseSDKType {
   amount: bigint;
 }
-/** QueryOwnerRequest is the request type for the Query/Owner RPC method */
+/**
+ * QueryOwnerRequest is the request type for the Query/Owner RPC method
+ * @name QueryOwnerRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryOwnerRequest
+ */
 export interface QueryOwnerRequest {
   classId: string;
   id: string;
@@ -47,17 +82,32 @@ export interface QueryOwnerRequestProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QueryOwnerRequest";
   value: Uint8Array;
 }
-/** QueryOwnerRequest is the request type for the Query/Owner RPC method */
+/**
+ * QueryOwnerRequest is the request type for the Query/Owner RPC method
+ * @name QueryOwnerRequestAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryOwnerRequest
+ */
 export interface QueryOwnerRequestAmino {
   class_id?: string;
   id?: string;
 }
-/** QueryOwnerRequest is the request type for the Query/Owner RPC method */
+/**
+ * QueryOwnerRequest is the request type for the Query/Owner RPC method
+ * @name QueryOwnerRequestSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryOwnerRequest
+ */
 export interface QueryOwnerRequestSDKType {
   class_id: string;
   id: string;
 }
-/** QueryOwnerResponse is the response type for the Query/Owner RPC method */
+/**
+ * QueryOwnerResponse is the response type for the Query/Owner RPC method
+ * @name QueryOwnerResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryOwnerResponse
+ */
 export interface QueryOwnerResponse {
   owner: string;
 }
@@ -65,15 +115,30 @@ export interface QueryOwnerResponseProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QueryOwnerResponse";
   value: Uint8Array;
 }
-/** QueryOwnerResponse is the response type for the Query/Owner RPC method */
+/**
+ * QueryOwnerResponse is the response type for the Query/Owner RPC method
+ * @name QueryOwnerResponseAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryOwnerResponse
+ */
 export interface QueryOwnerResponseAmino {
   owner?: string;
 }
-/** QueryOwnerResponse is the response type for the Query/Owner RPC method */
+/**
+ * QueryOwnerResponse is the response type for the Query/Owner RPC method
+ * @name QueryOwnerResponseSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryOwnerResponse
+ */
 export interface QueryOwnerResponseSDKType {
   owner: string;
 }
-/** QuerySupplyRequest is the request type for the Query/Supply RPC method */
+/**
+ * QuerySupplyRequest is the request type for the Query/Supply RPC method
+ * @name QuerySupplyRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QuerySupplyRequest
+ */
 export interface QuerySupplyRequest {
   classId: string;
 }
@@ -81,15 +146,30 @@ export interface QuerySupplyRequestProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QuerySupplyRequest";
   value: Uint8Array;
 }
-/** QuerySupplyRequest is the request type for the Query/Supply RPC method */
+/**
+ * QuerySupplyRequest is the request type for the Query/Supply RPC method
+ * @name QuerySupplyRequestAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QuerySupplyRequest
+ */
 export interface QuerySupplyRequestAmino {
   class_id?: string;
 }
-/** QuerySupplyRequest is the request type for the Query/Supply RPC method */
+/**
+ * QuerySupplyRequest is the request type for the Query/Supply RPC method
+ * @name QuerySupplyRequestSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QuerySupplyRequest
+ */
 export interface QuerySupplyRequestSDKType {
   class_id: string;
 }
-/** QuerySupplyResponse is the response type for the Query/Supply RPC method */
+/**
+ * QuerySupplyResponse is the response type for the Query/Supply RPC method
+ * @name QuerySupplyResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QuerySupplyResponse
+ */
 export interface QuerySupplyResponse {
   amount: bigint;
 }
@@ -97,15 +177,30 @@ export interface QuerySupplyResponseProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QuerySupplyResponse";
   value: Uint8Array;
 }
-/** QuerySupplyResponse is the response type for the Query/Supply RPC method */
+/**
+ * QuerySupplyResponse is the response type for the Query/Supply RPC method
+ * @name QuerySupplyResponseAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QuerySupplyResponse
+ */
 export interface QuerySupplyResponseAmino {
   amount?: string;
 }
-/** QuerySupplyResponse is the response type for the Query/Supply RPC method */
+/**
+ * QuerySupplyResponse is the response type for the Query/Supply RPC method
+ * @name QuerySupplyResponseSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QuerySupplyResponse
+ */
 export interface QuerySupplyResponseSDKType {
   amount: bigint;
 }
-/** QueryNFTstRequest is the request type for the Query/NFTs RPC method */
+/**
+ * QueryNFTstRequest is the request type for the Query/NFTs RPC method
+ * @name QueryNFTsRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTsRequest
+ */
 export interface QueryNFTsRequest {
   classId: string;
   owner: string;
@@ -115,19 +210,34 @@ export interface QueryNFTsRequestProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QueryNFTsRequest";
   value: Uint8Array;
 }
-/** QueryNFTstRequest is the request type for the Query/NFTs RPC method */
+/**
+ * QueryNFTstRequest is the request type for the Query/NFTs RPC method
+ * @name QueryNFTsRequestAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTsRequest
+ */
 export interface QueryNFTsRequestAmino {
   class_id?: string;
   owner?: string;
   pagination?: PageRequestAmino;
 }
-/** QueryNFTstRequest is the request type for the Query/NFTs RPC method */
+/**
+ * QueryNFTstRequest is the request type for the Query/NFTs RPC method
+ * @name QueryNFTsRequestSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTsRequest
+ */
 export interface QueryNFTsRequestSDKType {
   class_id: string;
   owner: string;
   pagination?: PageRequestSDKType;
 }
-/** QueryNFTsResponse is the response type for the Query/NFTs RPC methods */
+/**
+ * QueryNFTsResponse is the response type for the Query/NFTs RPC methods
+ * @name QueryNFTsResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTsResponse
+ */
 export interface QueryNFTsResponse {
   nfts: NFT[];
   pagination?: PageResponse;
@@ -136,17 +246,32 @@ export interface QueryNFTsResponseProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QueryNFTsResponse";
   value: Uint8Array;
 }
-/** QueryNFTsResponse is the response type for the Query/NFTs RPC methods */
+/**
+ * QueryNFTsResponse is the response type for the Query/NFTs RPC methods
+ * @name QueryNFTsResponseAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTsResponse
+ */
 export interface QueryNFTsResponseAmino {
   nfts?: NFTAmino[];
   pagination?: PageResponseAmino;
 }
-/** QueryNFTsResponse is the response type for the Query/NFTs RPC methods */
+/**
+ * QueryNFTsResponse is the response type for the Query/NFTs RPC methods
+ * @name QueryNFTsResponseSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTsResponse
+ */
 export interface QueryNFTsResponseSDKType {
   nfts: NFTSDKType[];
   pagination?: PageResponseSDKType;
 }
-/** QueryNFTRequest is the request type for the Query/NFT RPC method */
+/**
+ * QueryNFTRequest is the request type for the Query/NFT RPC method
+ * @name QueryNFTRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTRequest
+ */
 export interface QueryNFTRequest {
   classId: string;
   id: string;
@@ -155,17 +280,32 @@ export interface QueryNFTRequestProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QueryNFTRequest";
   value: Uint8Array;
 }
-/** QueryNFTRequest is the request type for the Query/NFT RPC method */
+/**
+ * QueryNFTRequest is the request type for the Query/NFT RPC method
+ * @name QueryNFTRequestAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTRequest
+ */
 export interface QueryNFTRequestAmino {
   class_id?: string;
   id?: string;
 }
-/** QueryNFTRequest is the request type for the Query/NFT RPC method */
+/**
+ * QueryNFTRequest is the request type for the Query/NFT RPC method
+ * @name QueryNFTRequestSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTRequest
+ */
 export interface QueryNFTRequestSDKType {
   class_id: string;
   id: string;
 }
-/** QueryNFTResponse is the response type for the Query/NFT RPC method */
+/**
+ * QueryNFTResponse is the response type for the Query/NFT RPC method
+ * @name QueryNFTResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTResponse
+ */
 export interface QueryNFTResponse {
   nft?: NFT;
 }
@@ -173,15 +313,30 @@ export interface QueryNFTResponseProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QueryNFTResponse";
   value: Uint8Array;
 }
-/** QueryNFTResponse is the response type for the Query/NFT RPC method */
+/**
+ * QueryNFTResponse is the response type for the Query/NFT RPC method
+ * @name QueryNFTResponseAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTResponse
+ */
 export interface QueryNFTResponseAmino {
   nft?: NFTAmino;
 }
-/** QueryNFTResponse is the response type for the Query/NFT RPC method */
+/**
+ * QueryNFTResponse is the response type for the Query/NFT RPC method
+ * @name QueryNFTResponseSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTResponse
+ */
 export interface QueryNFTResponseSDKType {
   nft?: NFTSDKType;
 }
-/** QueryClassRequest is the request type for the Query/Class RPC method */
+/**
+ * QueryClassRequest is the request type for the Query/Class RPC method
+ * @name QueryClassRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassRequest
+ */
 export interface QueryClassRequest {
   classId: string;
 }
@@ -189,15 +344,30 @@ export interface QueryClassRequestProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QueryClassRequest";
   value: Uint8Array;
 }
-/** QueryClassRequest is the request type for the Query/Class RPC method */
+/**
+ * QueryClassRequest is the request type for the Query/Class RPC method
+ * @name QueryClassRequestAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassRequest
+ */
 export interface QueryClassRequestAmino {
   class_id?: string;
 }
-/** QueryClassRequest is the request type for the Query/Class RPC method */
+/**
+ * QueryClassRequest is the request type for the Query/Class RPC method
+ * @name QueryClassRequestSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassRequest
+ */
 export interface QueryClassRequestSDKType {
   class_id: string;
 }
-/** QueryClassResponse is the response type for the Query/Class RPC method */
+/**
+ * QueryClassResponse is the response type for the Query/Class RPC method
+ * @name QueryClassResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassResponse
+ */
 export interface QueryClassResponse {
   class?: Class;
 }
@@ -205,33 +375,67 @@ export interface QueryClassResponseProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QueryClassResponse";
   value: Uint8Array;
 }
-/** QueryClassResponse is the response type for the Query/Class RPC method */
+/**
+ * QueryClassResponse is the response type for the Query/Class RPC method
+ * @name QueryClassResponseAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassResponse
+ */
 export interface QueryClassResponseAmino {
   class?: ClassAmino;
 }
-/** QueryClassResponse is the response type for the Query/Class RPC method */
+/**
+ * QueryClassResponse is the response type for the Query/Class RPC method
+ * @name QueryClassResponseSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassResponse
+ */
 export interface QueryClassResponseSDKType {
   class?: ClassSDKType;
 }
-/** QueryClassesRequest is the request type for the Query/Classes RPC method */
+/**
+ * QueryClassesRequest is the request type for the Query/Classes RPC method
+ * @name QueryClassesRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassesRequest
+ */
 export interface QueryClassesRequest {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequest;
 }
 export interface QueryClassesRequestProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QueryClassesRequest";
   value: Uint8Array;
 }
-/** QueryClassesRequest is the request type for the Query/Classes RPC method */
+/**
+ * QueryClassesRequest is the request type for the Query/Classes RPC method
+ * @name QueryClassesRequestAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassesRequest
+ */
 export interface QueryClassesRequestAmino {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequestAmino;
 }
-/** QueryClassesRequest is the request type for the Query/Classes RPC method */
+/**
+ * QueryClassesRequest is the request type for the Query/Classes RPC method
+ * @name QueryClassesRequestSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassesRequest
+ */
 export interface QueryClassesRequestSDKType {
   pagination?: PageRequestSDKType;
 }
-/** QueryClassesResponse is the response type for the Query/Classes RPC method */
+/**
+ * QueryClassesResponse is the response type for the Query/Classes RPC method
+ * @name QueryClassesResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassesResponse
+ */
 export interface QueryClassesResponse {
   classes: Class[];
   pagination?: PageResponse;
@@ -240,12 +444,22 @@ export interface QueryClassesResponseProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.QueryClassesResponse";
   value: Uint8Array;
 }
-/** QueryClassesResponse is the response type for the Query/Classes RPC method */
+/**
+ * QueryClassesResponse is the response type for the Query/Classes RPC method
+ * @name QueryClassesResponseAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassesResponse
+ */
 export interface QueryClassesResponseAmino {
   classes?: ClassAmino[];
   pagination?: PageResponseAmino;
 }
-/** QueryClassesResponse is the response type for the Query/Classes RPC method */
+/**
+ * QueryClassesResponse is the response type for the Query/Classes RPC method
+ * @name QueryClassesResponseSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassesResponse
+ */
 export interface QueryClassesResponseSDKType {
   classes: ClassSDKType[];
   pagination?: PageResponseSDKType;
@@ -256,6 +470,12 @@ function createBaseQueryBalanceRequest(): QueryBalanceRequest {
     owner: ""
   };
 }
+/**
+ * QueryBalanceRequest is the request type for the Query/Balance RPC method
+ * @name QueryBalanceRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryBalanceRequest
+ */
 export const QueryBalanceRequest = {
   typeUrl: "/cosmos.nft.v1beta1.QueryBalanceRequest",
   aminoType: "cosmos-sdk/QueryBalanceRequest",
@@ -346,6 +566,12 @@ function createBaseQueryBalanceResponse(): QueryBalanceResponse {
     amount: BigInt(0)
   };
 }
+/**
+ * QueryBalanceResponse is the response type for the Query/Balance RPC method
+ * @name QueryBalanceResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryBalanceResponse
+ */
 export const QueryBalanceResponse = {
   typeUrl: "/cosmos.nft.v1beta1.QueryBalanceResponse",
   aminoType: "cosmos-sdk/QueryBalanceResponse",
@@ -425,6 +651,12 @@ function createBaseQueryOwnerRequest(): QueryOwnerRequest {
     id: ""
   };
 }
+/**
+ * QueryOwnerRequest is the request type for the Query/Owner RPC method
+ * @name QueryOwnerRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryOwnerRequest
+ */
 export const QueryOwnerRequest = {
   typeUrl: "/cosmos.nft.v1beta1.QueryOwnerRequest",
   aminoType: "cosmos-sdk/QueryOwnerRequest",
@@ -515,6 +747,12 @@ function createBaseQueryOwnerResponse(): QueryOwnerResponse {
     owner: ""
   };
 }
+/**
+ * QueryOwnerResponse is the response type for the Query/Owner RPC method
+ * @name QueryOwnerResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryOwnerResponse
+ */
 export const QueryOwnerResponse = {
   typeUrl: "/cosmos.nft.v1beta1.QueryOwnerResponse",
   aminoType: "cosmos-sdk/QueryOwnerResponse",
@@ -591,6 +829,12 @@ function createBaseQuerySupplyRequest(): QuerySupplyRequest {
     classId: ""
   };
 }
+/**
+ * QuerySupplyRequest is the request type for the Query/Supply RPC method
+ * @name QuerySupplyRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QuerySupplyRequest
+ */
 export const QuerySupplyRequest = {
   typeUrl: "/cosmos.nft.v1beta1.QuerySupplyRequest",
   aminoType: "cosmos-sdk/QuerySupplyRequest",
@@ -667,6 +911,12 @@ function createBaseQuerySupplyResponse(): QuerySupplyResponse {
     amount: BigInt(0)
   };
 }
+/**
+ * QuerySupplyResponse is the response type for the Query/Supply RPC method
+ * @name QuerySupplyResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QuerySupplyResponse
+ */
 export const QuerySupplyResponse = {
   typeUrl: "/cosmos.nft.v1beta1.QuerySupplyResponse",
   aminoType: "cosmos-sdk/QuerySupplyResponse",
@@ -747,6 +997,12 @@ function createBaseQueryNFTsRequest(): QueryNFTsRequest {
     pagination: undefined
   };
 }
+/**
+ * QueryNFTstRequest is the request type for the Query/NFTs RPC method
+ * @name QueryNFTsRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTsRequest
+ */
 export const QueryNFTsRequest = {
   typeUrl: "/cosmos.nft.v1beta1.QueryNFTsRequest",
   aminoType: "cosmos-sdk/QueryNFTsRequest",
@@ -854,6 +1110,12 @@ function createBaseQueryNFTsResponse(): QueryNFTsResponse {
     pagination: undefined
   };
 }
+/**
+ * QueryNFTsResponse is the response type for the Query/NFTs RPC methods
+ * @name QueryNFTsResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTsResponse
+ */
 export const QueryNFTsResponse = {
   typeUrl: "/cosmos.nft.v1beta1.QueryNFTsResponse",
   aminoType: "cosmos-sdk/QueryNFTsResponse",
@@ -953,6 +1215,12 @@ function createBaseQueryNFTRequest(): QueryNFTRequest {
     id: ""
   };
 }
+/**
+ * QueryNFTRequest is the request type for the Query/NFT RPC method
+ * @name QueryNFTRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTRequest
+ */
 export const QueryNFTRequest = {
   typeUrl: "/cosmos.nft.v1beta1.QueryNFTRequest",
   aminoType: "cosmos-sdk/QueryNFTRequest",
@@ -1043,6 +1311,12 @@ function createBaseQueryNFTResponse(): QueryNFTResponse {
     nft: undefined
   };
 }
+/**
+ * QueryNFTResponse is the response type for the Query/NFT RPC method
+ * @name QueryNFTResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryNFTResponse
+ */
 export const QueryNFTResponse = {
   typeUrl: "/cosmos.nft.v1beta1.QueryNFTResponse",
   aminoType: "cosmos-sdk/QueryNFTResponse",
@@ -1121,6 +1395,12 @@ function createBaseQueryClassRequest(): QueryClassRequest {
     classId: ""
   };
 }
+/**
+ * QueryClassRequest is the request type for the Query/Class RPC method
+ * @name QueryClassRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassRequest
+ */
 export const QueryClassRequest = {
   typeUrl: "/cosmos.nft.v1beta1.QueryClassRequest",
   aminoType: "cosmos-sdk/QueryClassRequest",
@@ -1197,6 +1477,12 @@ function createBaseQueryClassResponse(): QueryClassResponse {
     class: undefined
   };
 }
+/**
+ * QueryClassResponse is the response type for the Query/Class RPC method
+ * @name QueryClassResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassResponse
+ */
 export const QueryClassResponse = {
   typeUrl: "/cosmos.nft.v1beta1.QueryClassResponse",
   aminoType: "cosmos-sdk/QueryClassResponse",
@@ -1275,6 +1561,12 @@ function createBaseQueryClassesRequest(): QueryClassesRequest {
     pagination: undefined
   };
 }
+/**
+ * QueryClassesRequest is the request type for the Query/Classes RPC method
+ * @name QueryClassesRequest
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassesRequest
+ */
 export const QueryClassesRequest = {
   typeUrl: "/cosmos.nft.v1beta1.QueryClassesRequest",
   aminoType: "cosmos-sdk/QueryClassesRequest",
@@ -1354,6 +1646,12 @@ function createBaseQueryClassesResponse(): QueryClassesResponse {
     pagination: undefined
   };
 }
+/**
+ * QueryClassesResponse is the response type for the Query/Classes RPC method
+ * @name QueryClassesResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.QueryClassesResponse
+ */
 export const QueryClassesResponse = {
   typeUrl: "/cosmos.nft.v1beta1.QueryClassesResponse",
   aminoType: "cosmos-sdk/QueryClassesResponse",

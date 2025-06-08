@@ -5,7 +5,12 @@ import { Group, GroupAmino } from "./group";
 import { Account, AccountAmino } from "../../escrow/v1beta2/types";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** QueryDeploymentsRequest is request type for the Query/Deployments RPC method */
+/**
+ * QueryDeploymentsRequest is request type for the Query/Deployments RPC method
+ * @name QueryDeploymentsRequest
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryDeploymentsRequest
+ */
 export interface QueryDeploymentsRequest {
   filters: DeploymentFilters;
   pagination?: PageRequest;
@@ -14,7 +19,12 @@ export interface QueryDeploymentsRequestProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.QueryDeploymentsRequest";
   value: Uint8Array;
 }
-/** QueryDeploymentsRequest is request type for the Query/Deployments RPC method */
+/**
+ * QueryDeploymentsRequest is request type for the Query/Deployments RPC method
+ * @name QueryDeploymentsRequestAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryDeploymentsRequest
+ */
 export interface QueryDeploymentsRequestAmino {
   filters: DeploymentFiltersAmino;
   pagination?: PageRequestAmino;
@@ -23,7 +33,12 @@ export interface QueryDeploymentsRequestAminoMsg {
   type: "/akash.deployment.v1beta2.QueryDeploymentsRequest";
   value: QueryDeploymentsRequestAmino;
 }
-/** QueryDeploymentsResponse is response type for the Query/Deployments RPC method */
+/**
+ * QueryDeploymentsResponse is response type for the Query/Deployments RPC method
+ * @name QueryDeploymentsResponse
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryDeploymentsResponse
+ */
 export interface QueryDeploymentsResponse {
   deployments: QueryDeploymentResponse[];
   pagination?: PageResponse;
@@ -32,7 +47,12 @@ export interface QueryDeploymentsResponseProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.QueryDeploymentsResponse";
   value: Uint8Array;
 }
-/** QueryDeploymentsResponse is response type for the Query/Deployments RPC method */
+/**
+ * QueryDeploymentsResponse is response type for the Query/Deployments RPC method
+ * @name QueryDeploymentsResponseAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryDeploymentsResponse
+ */
 export interface QueryDeploymentsResponseAmino {
   deployments: QueryDeploymentResponseAmino[];
   pagination?: PageResponseAmino;
@@ -41,7 +61,12 @@ export interface QueryDeploymentsResponseAminoMsg {
   type: "/akash.deployment.v1beta2.QueryDeploymentsResponse";
   value: QueryDeploymentsResponseAmino;
 }
-/** QueryDeploymentRequest is request type for the Query/Deployment RPC method */
+/**
+ * QueryDeploymentRequest is request type for the Query/Deployment RPC method
+ * @name QueryDeploymentRequest
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryDeploymentRequest
+ */
 export interface QueryDeploymentRequest {
   id: DeploymentID;
 }
@@ -49,7 +74,12 @@ export interface QueryDeploymentRequestProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.QueryDeploymentRequest";
   value: Uint8Array;
 }
-/** QueryDeploymentRequest is request type for the Query/Deployment RPC method */
+/**
+ * QueryDeploymentRequest is request type for the Query/Deployment RPC method
+ * @name QueryDeploymentRequestAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryDeploymentRequest
+ */
 export interface QueryDeploymentRequestAmino {
   id: DeploymentIDAmino;
 }
@@ -57,7 +87,12 @@ export interface QueryDeploymentRequestAminoMsg {
   type: "/akash.deployment.v1beta2.QueryDeploymentRequest";
   value: QueryDeploymentRequestAmino;
 }
-/** QueryDeploymentResponse is response type for the Query/Deployment RPC method */
+/**
+ * QueryDeploymentResponse is response type for the Query/Deployment RPC method
+ * @name QueryDeploymentResponse
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryDeploymentResponse
+ */
 export interface QueryDeploymentResponse {
   deployment: Deployment;
   groups: Group[];
@@ -67,7 +102,12 @@ export interface QueryDeploymentResponseProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.QueryDeploymentResponse";
   value: Uint8Array;
 }
-/** QueryDeploymentResponse is response type for the Query/Deployment RPC method */
+/**
+ * QueryDeploymentResponse is response type for the Query/Deployment RPC method
+ * @name QueryDeploymentResponseAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryDeploymentResponse
+ */
 export interface QueryDeploymentResponseAmino {
   deployment: DeploymentAmino;
   groups: GroupAmino[];
@@ -77,7 +117,12 @@ export interface QueryDeploymentResponseAminoMsg {
   type: "/akash.deployment.v1beta2.QueryDeploymentResponse";
   value: QueryDeploymentResponseAmino;
 }
-/** QueryGroupRequest is request type for the Query/Group RPC method */
+/**
+ * QueryGroupRequest is request type for the Query/Group RPC method
+ * @name QueryGroupRequest
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryGroupRequest
+ */
 export interface QueryGroupRequest {
   id: GroupID;
 }
@@ -85,7 +130,12 @@ export interface QueryGroupRequestProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.QueryGroupRequest";
   value: Uint8Array;
 }
-/** QueryGroupRequest is request type for the Query/Group RPC method */
+/**
+ * QueryGroupRequest is request type for the Query/Group RPC method
+ * @name QueryGroupRequestAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryGroupRequest
+ */
 export interface QueryGroupRequestAmino {
   id: GroupIDAmino;
 }
@@ -93,7 +143,12 @@ export interface QueryGroupRequestAminoMsg {
   type: "/akash.deployment.v1beta2.QueryGroupRequest";
   value: QueryGroupRequestAmino;
 }
-/** QueryGroupResponse is response type for the Query/Group RPC method */
+/**
+ * QueryGroupResponse is response type for the Query/Group RPC method
+ * @name QueryGroupResponse
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryGroupResponse
+ */
 export interface QueryGroupResponse {
   group: Group;
 }
@@ -101,7 +156,12 @@ export interface QueryGroupResponseProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.QueryGroupResponse";
   value: Uint8Array;
 }
-/** QueryGroupResponse is response type for the Query/Group RPC method */
+/**
+ * QueryGroupResponse is response type for the Query/Group RPC method
+ * @name QueryGroupResponseAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryGroupResponse
+ */
 export interface QueryGroupResponseAmino {
   group: GroupAmino;
 }
@@ -115,6 +175,12 @@ function createBaseQueryDeploymentsRequest(): QueryDeploymentsRequest {
     pagination: undefined
   };
 }
+/**
+ * QueryDeploymentsRequest is request type for the Query/Deployments RPC method
+ * @name QueryDeploymentsRequest
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryDeploymentsRequest
+ */
 export const QueryDeploymentsRequest = {
   typeUrl: "/akash.deployment.v1beta2.QueryDeploymentsRequest",
   encode(message: QueryDeploymentsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -190,6 +256,12 @@ function createBaseQueryDeploymentsResponse(): QueryDeploymentsResponse {
     pagination: undefined
   };
 }
+/**
+ * QueryDeploymentsResponse is response type for the Query/Deployments RPC method
+ * @name QueryDeploymentsResponse
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryDeploymentsResponse
+ */
 export const QueryDeploymentsResponse = {
   typeUrl: "/akash.deployment.v1beta2.QueryDeploymentsResponse",
   encode(message: QueryDeploymentsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -266,6 +338,12 @@ function createBaseQueryDeploymentRequest(): QueryDeploymentRequest {
     id: DeploymentID.fromPartial({})
   };
 }
+/**
+ * QueryDeploymentRequest is request type for the Query/Deployment RPC method
+ * @name QueryDeploymentRequest
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryDeploymentRequest
+ */
 export const QueryDeploymentRequest = {
   typeUrl: "/akash.deployment.v1beta2.QueryDeploymentRequest",
   encode(message: QueryDeploymentRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -331,6 +409,12 @@ function createBaseQueryDeploymentResponse(): QueryDeploymentResponse {
     escrowAccount: Account.fromPartial({})
   };
 }
+/**
+ * QueryDeploymentResponse is response type for the Query/Deployment RPC method
+ * @name QueryDeploymentResponse
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryDeploymentResponse
+ */
 export const QueryDeploymentResponse = {
   typeUrl: "/akash.deployment.v1beta2.QueryDeploymentResponse",
   encode(message: QueryDeploymentResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -418,6 +502,12 @@ function createBaseQueryGroupRequest(): QueryGroupRequest {
     id: GroupID.fromPartial({})
   };
 }
+/**
+ * QueryGroupRequest is request type for the Query/Group RPC method
+ * @name QueryGroupRequest
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryGroupRequest
+ */
 export const QueryGroupRequest = {
   typeUrl: "/akash.deployment.v1beta2.QueryGroupRequest",
   encode(message: QueryGroupRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -481,6 +571,12 @@ function createBaseQueryGroupResponse(): QueryGroupResponse {
     group: Group.fromPartial({})
   };
 }
+/**
+ * QueryGroupResponse is response type for the Query/Group RPC method
+ * @name QueryGroupResponse
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.QueryGroupResponse
+ */
 export const QueryGroupResponse = {
   typeUrl: "/akash.deployment.v1beta2.QueryGroupResponse",
   encode(message: QueryGroupResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

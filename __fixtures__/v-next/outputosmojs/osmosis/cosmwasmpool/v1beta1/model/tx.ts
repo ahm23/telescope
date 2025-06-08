@@ -2,7 +2,12 @@ import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, bytesFromBase64, base64FromBytes, DeepPartial } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
 export const protobufPackage = "osmosis.cosmwasmpool.v1beta1";
-/** ===================== MsgCreateCosmwasmPool */
+/**
+ * ===================== MsgCreateCosmwasmPool
+ * @name MsgCreateCosmWasmPool
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool
+ */
 export interface MsgCreateCosmWasmPool {
   codeId: bigint;
   instantiateMsg: Uint8Array;
@@ -12,13 +17,23 @@ export interface MsgCreateCosmWasmPoolProtoMsg {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool";
   value: Uint8Array;
 }
-/** ===================== MsgCreateCosmwasmPool */
+/**
+ * ===================== MsgCreateCosmwasmPool
+ * @name MsgCreateCosmWasmPoolSDKType
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool
+ */
 export interface MsgCreateCosmWasmPoolSDKType {
   code_id: bigint;
   instantiate_msg: Uint8Array;
   sender: string;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateCosmWasmPoolResponse
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse
+ */
 export interface MsgCreateCosmWasmPoolResponse {
   poolId: bigint;
 }
@@ -26,7 +41,12 @@ export interface MsgCreateCosmWasmPoolResponseProtoMsg {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse";
   value: Uint8Array;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateCosmWasmPoolResponseSDKType
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse
+ */
 export interface MsgCreateCosmWasmPoolResponseSDKType {
   pool_id: bigint;
 }
@@ -37,6 +57,12 @@ function createBaseMsgCreateCosmWasmPool(): MsgCreateCosmWasmPool {
     sender: ""
   };
 }
+/**
+ * ===================== MsgCreateCosmwasmPool
+ * @name MsgCreateCosmWasmPool
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool
+ */
 export const MsgCreateCosmWasmPool = {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.MsgCreateCosmWasmPool",
   encode(message: MsgCreateCosmWasmPool, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -163,6 +189,12 @@ function createBaseMsgCreateCosmWasmPoolResponse(): MsgCreateCosmWasmPoolRespons
     poolId: BigInt(0)
   };
 }
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateCosmWasmPoolResponse
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse
+ */
 export const MsgCreateCosmWasmPoolResponse = {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.MsgCreateCosmWasmPoolResponse",
   encode(message: MsgCreateCosmWasmPoolResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

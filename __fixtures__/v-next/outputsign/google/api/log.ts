@@ -11,6 +11,9 @@ export const protobufPackage = "google.api";
  *       labels:
  *       - key: /customer_id
  *         description: Identifier of a library customer
+ * @name LogDescriptor
+ * @package google.api
+ * @see proto type: google.api.LogDescriptor
  */
 export interface LogDescriptor {
   /**
@@ -50,6 +53,9 @@ export interface LogDescriptorProtoMsg {
  *       labels:
  *       - key: /customer_id
  *         description: Identifier of a library customer
+ * @name LogDescriptorAmino
+ * @package google.api
+ * @see proto type: google.api.LogDescriptor
  */
 export interface LogDescriptorAmino {
   /**
@@ -89,6 +95,9 @@ export interface LogDescriptorAminoMsg {
  *       labels:
  *       - key: /customer_id
  *         description: Identifier of a library customer
+ * @name LogDescriptorSDKType
+ * @package google.api
+ * @see proto type: google.api.LogDescriptor
  */
 export interface LogDescriptorSDKType {
   name: string;
@@ -104,6 +113,19 @@ function createBaseLogDescriptor(): LogDescriptor {
     displayName: ""
   };
 }
+/**
+ * A description of a log type. Example in YAML format:
+ * 
+ *     - name: library.googleapis.com/activity_history
+ *       description: The history of borrowing and returning library items.
+ *       display_name: Activity
+ *       labels:
+ *       - key: /customer_id
+ *         description: Identifier of a library customer
+ * @name LogDescriptor
+ * @package google.api
+ * @see proto type: google.api.LogDescriptor
+ */
 export const LogDescriptor = {
   typeUrl: "/google.api.LogDescriptor",
   encode(message: LogDescriptor, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

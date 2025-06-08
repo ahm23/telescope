@@ -2,30 +2,58 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial, isSet } from "../../../helpers";
 export const protobufPackage = "osmosis.cosmwasmpool.v1beta1";
-/** Params holds parameters for the cosmwasmpool module */
+/**
+ * Params holds parameters for the cosmwasmpool module
+ * @name Params
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.Params
+ */
 export interface Params {}
 export interface ParamsProtoMsg {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the cosmwasmpool module */
+/**
+ * Params holds parameters for the cosmwasmpool module
+ * @name ParamsSDKType
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.Params
+ */
 export interface ParamsSDKType {}
-/** GenesisState defines the cosmwasmpool module's genesis state. */
+/**
+ * GenesisState defines the cosmwasmpool module's genesis state.
+ * @name GenesisState
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params is the container of cosmwasmpool parameters. */
+  /**
+   * params is the container of cosmwasmpool parameters.
+   */
   params: Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the cosmwasmpool module's genesis state. */
+/**
+ * GenesisState defines the cosmwasmpool module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
 }
 function createBaseParams(): Params {
   return {};
 }
+/**
+ * Params holds parameters for the cosmwasmpool module
+ * @name Params
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.Params",
   encode(_: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -101,6 +129,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the cosmwasmpool module's genesis state.
+ * @name GenesisState
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

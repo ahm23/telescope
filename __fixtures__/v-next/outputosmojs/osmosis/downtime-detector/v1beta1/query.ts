@@ -7,6 +7,9 @@ export const protobufPackage = "osmosis.downtimedetector.v1beta1";
 /**
  * Query for has it been at least $RECOVERY_DURATION units of time,
  * since the chain has been down for $DOWNTIME_DURATION.
+ * @name RecoveredSinceDowntimeOfLengthRequest
+ * @package osmosis.downtimedetector.v1beta1
+ * @see proto type: osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest
  */
 export interface RecoveredSinceDowntimeOfLengthRequest {
   downtime: Downtime;
@@ -19,11 +22,19 @@ export interface RecoveredSinceDowntimeOfLengthRequestProtoMsg {
 /**
  * Query for has it been at least $RECOVERY_DURATION units of time,
  * since the chain has been down for $DOWNTIME_DURATION.
+ * @name RecoveredSinceDowntimeOfLengthRequestSDKType
+ * @package osmosis.downtimedetector.v1beta1
+ * @see proto type: osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest
  */
 export interface RecoveredSinceDowntimeOfLengthRequestSDKType {
   downtime: Downtime;
   recovery: DurationSDKType;
 }
+/**
+ * @name RecoveredSinceDowntimeOfLengthResponse
+ * @package osmosis.downtimedetector.v1beta1
+ * @see proto type: osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse
+ */
 export interface RecoveredSinceDowntimeOfLengthResponse {
   succesfullyRecovered: boolean;
 }
@@ -31,6 +42,11 @@ export interface RecoveredSinceDowntimeOfLengthResponseProtoMsg {
   typeUrl: "/osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse";
   value: Uint8Array;
 }
+/**
+ * @name RecoveredSinceDowntimeOfLengthResponseSDKType
+ * @package osmosis.downtimedetector.v1beta1
+ * @see proto type: osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse
+ */
 export interface RecoveredSinceDowntimeOfLengthResponseSDKType {
   succesfully_recovered: boolean;
 }
@@ -40,6 +56,13 @@ function createBaseRecoveredSinceDowntimeOfLengthRequest(): RecoveredSinceDownti
     recovery: Duration.fromPartial({})
   };
 }
+/**
+ * Query for has it been at least $RECOVERY_DURATION units of time,
+ * since the chain has been down for $DOWNTIME_DURATION.
+ * @name RecoveredSinceDowntimeOfLengthRequest
+ * @package osmosis.downtimedetector.v1beta1
+ * @see proto type: osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest
+ */
 export const RecoveredSinceDowntimeOfLengthRequest = {
   typeUrl: "/osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest",
   encode(message: RecoveredSinceDowntimeOfLengthRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -150,6 +173,11 @@ function createBaseRecoveredSinceDowntimeOfLengthResponse(): RecoveredSinceDownt
     succesfullyRecovered: false
   };
 }
+/**
+ * @name RecoveredSinceDowntimeOfLengthResponse
+ * @package osmosis.downtimedetector.v1beta1
+ * @see proto type: osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse
+ */
 export const RecoveredSinceDowntimeOfLengthResponse = {
   typeUrl: "/osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse",
   encode(message: RecoveredSinceDowntimeOfLengthResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

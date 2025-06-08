@@ -1,6 +1,6 @@
 import * as t from '@babel/types';
 import { ProtoType, ProtoField, TelescopeLogLevel } from '@cosmology/types';
-import { identifier, tsPropertySignature, functionDeclaration, makeCommentBlock } from '../../../utils';
+import { identifier, tsPropertySignature, functionDeclaration, makeCommentBlock, CommentBlockBuilder } from '../../../utils';
 import { ProtoParseContext } from '../../context';
 
 import {
@@ -70,6 +70,8 @@ export const createProtoType = (
     proto: ProtoType,
     type: TelescopeBaseTypes = 'Msg'
 ) => {
+    const isVNext = context.pluginValue('env') === 'v-next';
+
     const oneOfs = getOneOfs(proto);
 
     // MARKED AS COSMOS SDK specific code
@@ -162,23 +164,34 @@ export const createProtoType = (
             isOptional || optional
         );
 
-        const comments = [];
-        if (
-            field.comment &&
-            // no comment for derivative types
-            (type === 'Msg')
-        ) {
-            comments.push(
-                makeCommentBlock(field.comment)
-            );
-        }
-        if (field.options?.deprecated) {
-            comments.push(
-                makeCommentBlock('@deprecated')
-            );
-        }
-        if (comments.length) {
-            propSig.leadingComments = comments;
+        if (isVNext) {
+          const commentBlock = new CommentBlockBuilder()
+            .addLine(type === 'Msg' ? field.comment : null)
+            .addLine(field.options?.deprecated ? '@deprecated' : null)
+            .build();
+
+          if (commentBlock) {
+            propSig.leadingComments = [commentBlock];
+          }
+        } else {
+          const comments = [];
+          if (
+              field.comment &&
+              // no comment for derivative types
+              (type === 'Msg')
+          ) {
+              comments.push(
+                  makeCommentBlock(field.comment)
+              );
+          }
+          if (field.options?.deprecated) {
+              comments.push(
+                  makeCommentBlock('@deprecated')
+              );
+          }
+          if (comments.length) {
+              propSig.leadingComments = comments;
+          }
         }
 
         m.push(propSig)
@@ -195,18 +208,29 @@ export const createProtoType = (
         )
     ));
 
-    const comments = [];
+    if (isVNext) {
+      const commentBlock = new CommentBlockBuilder()
+      .addLine(proto.comment)
+      .addLine(`@name ${MsgName}`)
+      .addLine(`@package ${context.ref.proto.package}`)
+      .addLine(`@see proto type: ${context.ref.proto.package}.${proto.originalName ?? proto.name}`)
+      .addLine(proto.options?.deprecated ? '@deprecated' : null)
+      .build();
 
-    if (proto.comment) {
+      if (commentBlock) {
+        declaration.leadingComments = [commentBlock];
+      }
+    } else {
+      const comments = [];
+      if (proto.comment) {
         comments.push(makeCommentBlock(proto.comment));
-    }
-
-    if (proto.options?.deprecated) {
+      }
+      if (proto.options?.deprecated) {
         comments.push(makeCommentBlock('@deprecated'));
-    }
-
-    if (comments.length) {
+      }
+      if (comments.length) {
         declaration.leadingComments = comments;
+      }
     }
 
 
@@ -265,6 +289,7 @@ export const createProtoInterfaceEncodedType = (
     name: string,
     proto: ProtoType
 ) => {
+    const isVNext = context.pluginValue('env') === 'v-next';
 
     const MsgName = SymbolNames.Msg(name);
     const EncodedMsgName = SymbolNames.Encoded(name);
@@ -330,19 +355,30 @@ export const createProtoInterfaceEncodedType = (
             optional || getFieldOptionality(context, field, isOneOf)
         );
 
-        const comments = [];
-        if (field.comment) {
-            comments.push(
-                makeCommentBlock(field.comment)
-            );
-        }
-        if (field.options?.deprecated) {
-            comments.push(
-                makeCommentBlock('@deprecated')
-            );
-        }
-        if (comments.length) {
-            propSig.leadingComments = comments;
+        if (isVNext) {
+            const commentBlock = new CommentBlockBuilder()
+            .addLine(field.comment)
+            .addLine(field.options?.deprecated ? '@deprecated' : null)
+            .build();
+
+            if (commentBlock) {
+                propSig.leadingComments = [commentBlock];
+            }
+        } else {
+            const comments = [];
+          if (field.comment) {
+              comments.push(
+                  makeCommentBlock(field.comment)
+              );
+          }
+          if (field.options?.deprecated) {
+              comments.push(
+                  makeCommentBlock('@deprecated')
+              );
+          }
+          if (comments.length) {
+                propSig.leadingComments = comments;
+          }
         }
 
         return propSig;

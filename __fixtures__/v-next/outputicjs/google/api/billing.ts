@@ -33,6 +33,9 @@ import { DeepPartial } from "../../helpers";
  *       - monitored_resource: library.googleapis.com/billing_branch
  *         metrics:
  *         - library.googleapis.com/book/borrowed_count
+ * @name Billing
+ * @package google.api
+ * @see proto type: google.api.Billing
  */
 export interface Billing {
   /**
@@ -80,6 +83,9 @@ export interface BillingProtoMsg {
  *       - monitored_resource: library.googleapis.com/billing_branch
  *         metrics:
  *         - library.googleapis.com/book/borrowed_count
+ * @name BillingAmino
+ * @package google.api
+ * @see proto type: google.api.Billing
  */
 export interface BillingAmino {
   /**
@@ -97,6 +103,9 @@ export interface BillingAminoMsg {
 /**
  * Configuration of a specific billing destination (Currently only support
  * bill against consumer project).
+ * @name Billing_BillingDestination
+ * @package google.api
+ * @see proto type: google.api.BillingDestination
  */
 export interface Billing_BillingDestination {
   /**
@@ -117,6 +126,9 @@ export interface Billing_BillingDestinationProtoMsg {
 /**
  * Configuration of a specific billing destination (Currently only support
  * bill against consumer project).
+ * @name Billing_BillingDestinationAmino
+ * @package google.api
+ * @see proto type: google.api.Billing_BillingDestination
  */
 export interface Billing_BillingDestinationAmino {
   /**
@@ -139,6 +151,43 @@ function createBaseBilling(): Billing {
     consumerDestinations: []
   };
 }
+/**
+ * Billing related configuration of the service.
+ * 
+ * The following example shows how to configure monitored resources and metrics
+ * for billing, `consumer_destinations` is the only supported destination and
+ * the monitored resources need at least one label key
+ * `cloud.googleapis.com/location` to indicate the location of the billing
+ * usage, using different monitored resources between monitoring and billing is
+ * recommended so they can be evolved independently:
+ * 
+ * 
+ *     monitored_resources:
+ *     - type: library.googleapis.com/billing_branch
+ *       labels:
+ *       - key: cloud.googleapis.com/location
+ *         description: |
+ *           Predefined label to support billing location restriction.
+ *       - key: city
+ *         description: |
+ *           Custom label to define the city where the library branch is located
+ *           in.
+ *       - key: name
+ *         description: Custom label to define the name of the library branch.
+ *     metrics:
+ *     - name: library.googleapis.com/book/borrowed_count
+ *       metric_kind: DELTA
+ *       value_type: INT64
+ *       unit: "1"
+ *     billing:
+ *       consumer_destinations:
+ *       - monitored_resource: library.googleapis.com/billing_branch
+ *         metrics:
+ *         - library.googleapis.com/book/borrowed_count
+ * @name Billing
+ * @package google.api
+ * @see proto type: google.api.Billing
+ */
 export const Billing = {
   typeUrl: "/google.api.Billing",
   encode(message: Billing, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -205,6 +254,13 @@ function createBaseBilling_BillingDestination(): Billing_BillingDestination {
     metrics: []
   };
 }
+/**
+ * Configuration of a specific billing destination (Currently only support
+ * bill against consumer project).
+ * @name Billing_BillingDestination
+ * @package google.api
+ * @see proto type: google.api.BillingDestination
+ */
 export const Billing_BillingDestination = {
   typeUrl: "/google.api.BillingDestination",
   encode(message: Billing_BillingDestination, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

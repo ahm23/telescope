@@ -1,16 +1,23 @@
-import { Params, ParamsAmino } from "./params";
 import { Gauge, GaugeAmino } from "./gauge";
 import { Duration, DurationAmino } from "../../google/protobuf/duration";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { DeepPartial } from "../../helpers";
+import { OsmosisIncentivesParams, OsmosisIncentivesParamsAmino } from "./params";
 /**
  * GenesisState defines the incentives module's various parameters when first
  * initialized
+ * @name GenesisState
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GenesisState
  */
 export interface GenesisState {
-  /** params are all the parameters of the module */
-  params: Params;
-  /** gauges are all gauges that should exist at genesis */
+  /**
+   * params are all the parameters of the module
+   */
+  params: OsmosisIncentivesParams;
+  /**
+   * gauges are all gauges that should exist at genesis
+   */
   gauges: Gauge[];
   /**
    * lockable_durations are all lockup durations that gauges can be locked for
@@ -30,11 +37,18 @@ export interface GenesisStateProtoMsg {
 /**
  * GenesisState defines the incentives module's various parameters when first
  * initialized
+ * @name GenesisStateAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GenesisState
  */
 export interface GenesisStateAmino {
-  /** params are all the parameters of the module */
-  params: ParamsAmino;
-  /** gauges are all gauges that should exist at genesis */
+  /**
+   * params are all the parameters of the module
+   */
+  params: OsmosisIncentivesParamsAmino;
+  /**
+   * gauges are all gauges that should exist at genesis
+   */
   gauges: GaugeAmino[];
   /**
    * lockable_durations are all lockup durations that gauges can be locked for
@@ -53,18 +67,25 @@ export interface GenesisStateAminoMsg {
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({}),
+    params: OsmosisIncentivesParams.fromPartial({}),
     gauges: [],
     lockableDurations: [],
     lastGaugeId: BigInt(0)
   };
 }
+/**
+ * GenesisState defines the incentives module's various parameters when first
+ * initialized
+ * @name GenesisState
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.incentives.GenesisState",
   aminoType: "osmosis/incentives/genesis-state",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      OsmosisIncentivesParams.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.gauges) {
       Gauge.encode(v!, writer.uint32(18).fork()).ldelim();
@@ -85,7 +106,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = OsmosisIncentivesParams.decode(reader, reader.uint32());
           break;
         case 2:
           message.gauges.push(Gauge.decode(reader, reader.uint32()));
@@ -105,7 +126,7 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? OsmosisIncentivesParams.fromPartial(object.params) : undefined;
     message.gauges = object.gauges?.map(e => Gauge.fromPartial(e)) || [];
     message.lockableDurations = object.lockableDurations?.map(e => Duration.fromPartial(e)) || [];
     message.lastGaugeId = object.lastGaugeId !== undefined && object.lastGaugeId !== null ? BigInt(object.lastGaugeId.toString()) : BigInt(0);
@@ -114,7 +135,7 @@ export const GenesisState = {
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = OsmosisIncentivesParams.fromAmino(object.params);
     }
     message.gauges = object.gauges?.map(e => Gauge.fromAmino(e)) || [];
     message.lockableDurations = object.lockable_durations?.map(e => Duration.fromAmino(e)) || [];
@@ -125,7 +146,7 @@ export const GenesisState = {
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? OsmosisIncentivesParams.toAmino(message.params) : undefined;
     if (message.gauges) {
       obj.gauges = message.gauges.map(e => e ? Gauge.toAmino(e) : undefined);
     } else {

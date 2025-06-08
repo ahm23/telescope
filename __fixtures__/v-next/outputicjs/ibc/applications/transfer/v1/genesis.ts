@@ -1,21 +1,31 @@
-import { DenomTrace, DenomTraceAmino, Params, ParamsAmino } from "./transfer";
+import { DenomTrace, DenomTraceAmino, IbcApplicationsTransferV1Params, IbcApplicationsTransferV1ParamsAmino } from "./transfer";
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { DeepPartial } from "../../../../helpers";
-/** GenesisState defines the ibc-transfer genesis state */
+/**
+ * GenesisState defines the ibc-transfer genesis state
+ * @name GenesisState
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.GenesisState
+ */
 export interface GenesisState {
   portId: string;
   denomTraces: DenomTrace[];
-  params: Params;
+  params: IbcApplicationsTransferV1Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/ibc.applications.transfer.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the ibc-transfer genesis state */
+/**
+ * GenesisState defines the ibc-transfer genesis state
+ * @name GenesisStateAmino
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.GenesisState
+ */
 export interface GenesisStateAmino {
   port_id: string;
   denom_traces: DenomTraceAmino[];
-  params: ParamsAmino;
+  params: IbcApplicationsTransferV1ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
   type: "cosmos-sdk/GenesisState";
@@ -25,9 +35,15 @@ function createBaseGenesisState(): GenesisState {
   return {
     portId: "",
     denomTraces: [],
-    params: Params.fromPartial({})
+    params: IbcApplicationsTransferV1Params.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the ibc-transfer genesis state
+ * @name GenesisState
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/ibc.applications.transfer.v1.GenesisState",
   aminoType: "cosmos-sdk/GenesisState",
@@ -39,7 +55,7 @@ export const GenesisState = {
       DenomTrace.encode(v!, writer.uint32(18).fork()).ldelim();
     }
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(26).fork()).ldelim();
+      IbcApplicationsTransferV1Params.encode(message.params, writer.uint32(26).fork()).ldelim();
     }
     return writer;
   },
@@ -57,7 +73,7 @@ export const GenesisState = {
           message.denomTraces.push(DenomTrace.decode(reader, reader.uint32()));
           break;
         case 3:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = IbcApplicationsTransferV1Params.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -70,7 +86,7 @@ export const GenesisState = {
     const message = createBaseGenesisState();
     message.portId = object.portId ?? "";
     message.denomTraces = object.denomTraces?.map(e => DenomTrace.fromPartial(e)) || [];
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? IbcApplicationsTransferV1Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
@@ -80,7 +96,7 @@ export const GenesisState = {
     }
     message.denomTraces = object.denom_traces?.map(e => DenomTrace.fromAmino(e)) || [];
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = IbcApplicationsTransferV1Params.fromAmino(object.params);
     }
     return message;
   },
@@ -92,7 +108,7 @@ export const GenesisState = {
     } else {
       obj.denom_traces = message.denomTraces;
     }
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? IbcApplicationsTransferV1Params.toAmino(message.params) : undefined;
     return obj;
   },
   fromAminoMsg(object: GenesisStateAminoMsg): GenesisState {

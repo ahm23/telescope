@@ -2,6 +2,11 @@ import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, DeepPartial } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
 export const protobufPackage = "osmosis.cosmwasmpool.v1beta1";
+/**
+ * @name CosmWasmPool
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.CosmWasmPool
+ */
 export interface CosmWasmPool {
   poolAddress: string;
   contractAddress: string;
@@ -12,6 +17,11 @@ export interface CosmWasmPoolProtoMsg {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.CosmWasmPool";
   value: Uint8Array;
 }
+/**
+ * @name CosmWasmPoolSDKType
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.CosmWasmPool
+ */
 export interface CosmWasmPoolSDKType {
   pool_address: string;
   contract_address: string;
@@ -26,6 +36,11 @@ function createBaseCosmWasmPool(): CosmWasmPool {
     codeId: BigInt(0)
   };
 }
+/**
+ * @name CosmWasmPool
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.CosmWasmPool
+ */
 export const CosmWasmPool = {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.CosmWasmPool",
   encode(message: CosmWasmPool, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

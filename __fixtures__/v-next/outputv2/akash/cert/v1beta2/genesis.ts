@@ -3,7 +3,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "akash.cert.v1beta2";
-/** GenesisCertificate defines certificate entry at genesis */
+/**
+ * GenesisCertificate defines certificate entry at genesis
+ * @name GenesisCertificate
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.GenesisCertificate
+ */
 export interface GenesisCertificate {
   owner: string;
   certificate: Certificate;
@@ -12,7 +17,12 @@ export interface GenesisCertificateProtoMsg {
   typeUrl: "/akash.cert.v1beta2.GenesisCertificate";
   value: Uint8Array;
 }
-/** GenesisCertificate defines certificate entry at genesis */
+/**
+ * GenesisCertificate defines certificate entry at genesis
+ * @name GenesisCertificateAmino
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.GenesisCertificate
+ */
 export interface GenesisCertificateAmino {
   owner: string;
   certificate: CertificateAmino;
@@ -21,12 +31,22 @@ export interface GenesisCertificateAminoMsg {
   type: "/akash.cert.v1beta2.GenesisCertificate";
   value: GenesisCertificateAmino;
 }
-/** GenesisCertificate defines certificate entry at genesis */
+/**
+ * GenesisCertificate defines certificate entry at genesis
+ * @name GenesisCertificateSDKType
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.GenesisCertificate
+ */
 export interface GenesisCertificateSDKType {
   owner: string;
   certificate: CertificateSDKType;
 }
-/** GenesisState defines the basic genesis state used by cert module */
+/**
+ * GenesisState defines the basic genesis state used by cert module
+ * @name GenesisState
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.GenesisState
+ */
 export interface GenesisState {
   certificates: GenesisCertificate[];
 }
@@ -34,7 +54,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/akash.cert.v1beta2.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the basic genesis state used by cert module */
+/**
+ * GenesisState defines the basic genesis state used by cert module
+ * @name GenesisStateAmino
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.GenesisState
+ */
 export interface GenesisStateAmino {
   certificates: GenesisCertificateAmino[];
 }
@@ -42,7 +67,12 @@ export interface GenesisStateAminoMsg {
   type: "/akash.cert.v1beta2.GenesisState";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the basic genesis state used by cert module */
+/**
+ * GenesisState defines the basic genesis state used by cert module
+ * @name GenesisStateSDKType
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.GenesisState
+ */
 export interface GenesisStateSDKType {
   certificates: GenesisCertificateSDKType[];
 }
@@ -52,6 +82,12 @@ function createBaseGenesisCertificate(): GenesisCertificate {
     certificate: Certificate.fromPartial({})
   };
 }
+/**
+ * GenesisCertificate defines certificate entry at genesis
+ * @name GenesisCertificate
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.GenesisCertificate
+ */
 export const GenesisCertificate = {
   typeUrl: "/akash.cert.v1beta2.GenesisCertificate",
   encode(message: GenesisCertificate, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -152,6 +188,12 @@ function createBaseGenesisState(): GenesisState {
     certificates: []
   };
 }
+/**
+ * GenesisState defines the basic genesis state used by cert module
+ * @name GenesisState
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.cert.v1beta2.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

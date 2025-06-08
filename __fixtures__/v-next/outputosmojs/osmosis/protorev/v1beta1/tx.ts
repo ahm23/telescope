@@ -3,33 +3,64 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.protorev.v1beta1";
-/** MsgSetHotRoutes defines the Msg/SetHotRoutes request type. */
+/**
+ * MsgSetHotRoutes defines the Msg/SetHotRoutes request type.
+ * @name MsgSetHotRoutes
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetHotRoutes
+ */
 export interface MsgSetHotRoutes {
-  /** admin is the account that is authorized to set the hot routes. */
+  /**
+   * admin is the account that is authorized to set the hot routes.
+   */
   admin: string;
-  /** hot_routes is the list of hot routes to set. */
+  /**
+   * hot_routes is the list of hot routes to set.
+   */
   hotRoutes: TokenPairArbRoutes[];
 }
 export interface MsgSetHotRoutesProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetHotRoutes";
   value: Uint8Array;
 }
-/** MsgSetHotRoutes defines the Msg/SetHotRoutes request type. */
+/**
+ * MsgSetHotRoutes defines the Msg/SetHotRoutes request type.
+ * @name MsgSetHotRoutesSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetHotRoutes
+ */
 export interface MsgSetHotRoutesSDKType {
   admin: string;
   hot_routes: TokenPairArbRoutesSDKType[];
 }
-/** MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type. */
+/**
+ * MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type.
+ * @name MsgSetHotRoutesResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetHotRoutesResponse
+ */
 export interface MsgSetHotRoutesResponse {}
 export interface MsgSetHotRoutesResponseProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetHotRoutesResponse";
   value: Uint8Array;
 }
-/** MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type. */
+/**
+ * MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type.
+ * @name MsgSetHotRoutesResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetHotRoutesResponse
+ */
 export interface MsgSetHotRoutesResponseSDKType {}
-/** MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type. */
+/**
+ * MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type.
+ * @name MsgSetDeveloperAccount
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetDeveloperAccount
+ */
 export interface MsgSetDeveloperAccount {
-  /** admin is the account that is authorized to set the developer account. */
+  /**
+   * admin is the account that is authorized to set the developer account.
+   */
   admin: string;
   /**
    * developer_account is the account that will receive a portion of the profits
@@ -41,7 +72,12 @@ export interface MsgSetDeveloperAccountProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetDeveloperAccount";
   value: Uint8Array;
 }
-/** MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type. */
+/**
+ * MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type.
+ * @name MsgSetDeveloperAccountSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetDeveloperAccount
+ */
 export interface MsgSetDeveloperAccountSDKType {
   admin: string;
   developer_account: string;
@@ -49,6 +85,9 @@ export interface MsgSetDeveloperAccountSDKType {
 /**
  * MsgSetDeveloperAccountResponse defines the Msg/SetDeveloperAccount response
  * type.
+ * @name MsgSetDeveloperAccountResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetDeveloperAccountResponse
  */
 export interface MsgSetDeveloperAccountResponse {}
 export interface MsgSetDeveloperAccountResponseProtoMsg {
@@ -58,35 +97,69 @@ export interface MsgSetDeveloperAccountResponseProtoMsg {
 /**
  * MsgSetDeveloperAccountResponse defines the Msg/SetDeveloperAccount response
  * type.
+ * @name MsgSetDeveloperAccountResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetDeveloperAccountResponse
  */
 export interface MsgSetDeveloperAccountResponseSDKType {}
-/** MsgSetPoolWeights defines the Msg/SetPoolWeights request type. */
+/**
+ * MsgSetPoolWeights defines the Msg/SetPoolWeights request type.
+ * @name MsgSetPoolWeights
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetPoolWeights
+ */
 export interface MsgSetPoolWeights {
-  /** admin is the account that is authorized to set the pool weights. */
+  /**
+   * admin is the account that is authorized to set the pool weights.
+   */
   admin: string;
-  /** pool_weights is the list of pool weights to set. */
+  /**
+   * pool_weights is the list of pool weights to set.
+   */
   poolWeights: PoolWeights;
 }
 export interface MsgSetPoolWeightsProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetPoolWeights";
   value: Uint8Array;
 }
-/** MsgSetPoolWeights defines the Msg/SetPoolWeights request type. */
+/**
+ * MsgSetPoolWeights defines the Msg/SetPoolWeights request type.
+ * @name MsgSetPoolWeightsSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetPoolWeights
+ */
 export interface MsgSetPoolWeightsSDKType {
   admin: string;
   pool_weights: PoolWeightsSDKType;
 }
-/** MsgSetPoolWeightsResponse defines the Msg/SetPoolWeights response type. */
+/**
+ * MsgSetPoolWeightsResponse defines the Msg/SetPoolWeights response type.
+ * @name MsgSetPoolWeightsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse
+ */
 export interface MsgSetPoolWeightsResponse {}
 export interface MsgSetPoolWeightsResponseProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse";
   value: Uint8Array;
 }
-/** MsgSetPoolWeightsResponse defines the Msg/SetPoolWeights response type. */
+/**
+ * MsgSetPoolWeightsResponse defines the Msg/SetPoolWeights response type.
+ * @name MsgSetPoolWeightsResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse
+ */
 export interface MsgSetPoolWeightsResponseSDKType {}
-/** MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type. */
+/**
+ * MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type.
+ * @name MsgSetMaxPoolPointsPerTx
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTx
+ */
 export interface MsgSetMaxPoolPointsPerTx {
-  /** admin is the account that is authorized to set the max pool points per tx. */
+  /**
+   * admin is the account that is authorized to set the max pool points per tx.
+   */
   admin: string;
   /**
    * max_pool_points_per_tx is the maximum number of pool points that can be
@@ -98,7 +171,12 @@ export interface MsgSetMaxPoolPointsPerTxProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTx";
   value: Uint8Array;
 }
-/** MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type. */
+/**
+ * MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type.
+ * @name MsgSetMaxPoolPointsPerTxSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTx
+ */
 export interface MsgSetMaxPoolPointsPerTxSDKType {
   admin: string;
   max_pool_points_per_tx: bigint;
@@ -106,6 +184,9 @@ export interface MsgSetMaxPoolPointsPerTxSDKType {
 /**
  * MsgSetMaxPoolPointsPerTxResponse defines the Msg/SetMaxPoolPointsPerTx
  * response type.
+ * @name MsgSetMaxPoolPointsPerTxResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse
  */
 export interface MsgSetMaxPoolPointsPerTxResponse {}
 export interface MsgSetMaxPoolPointsPerTxResponseProtoMsg {
@@ -115,11 +196,17 @@ export interface MsgSetMaxPoolPointsPerTxResponseProtoMsg {
 /**
  * MsgSetMaxPoolPointsPerTxResponse defines the Msg/SetMaxPoolPointsPerTx
  * response type.
+ * @name MsgSetMaxPoolPointsPerTxResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse
  */
 export interface MsgSetMaxPoolPointsPerTxResponseSDKType {}
 /**
  * MsgSetMaxPoolPointsPerBlock defines the Msg/SetMaxPoolPointsPerBlock request
  * type.
+ * @name MsgSetMaxPoolPointsPerBlock
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock
  */
 export interface MsgSetMaxPoolPointsPerBlock {
   /**
@@ -140,6 +227,9 @@ export interface MsgSetMaxPoolPointsPerBlockProtoMsg {
 /**
  * MsgSetMaxPoolPointsPerBlock defines the Msg/SetMaxPoolPointsPerBlock request
  * type.
+ * @name MsgSetMaxPoolPointsPerBlockSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock
  */
 export interface MsgSetMaxPoolPointsPerBlockSDKType {
   admin: string;
@@ -148,6 +238,9 @@ export interface MsgSetMaxPoolPointsPerBlockSDKType {
 /**
  * MsgSetMaxPoolPointsPerBlockResponse defines the
  * Msg/SetMaxPoolPointsPerBlock response type.
+ * @name MsgSetMaxPoolPointsPerBlockResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse
  */
 export interface MsgSetMaxPoolPointsPerBlockResponse {}
 export interface MsgSetMaxPoolPointsPerBlockResponseProtoMsg {
@@ -157,31 +250,58 @@ export interface MsgSetMaxPoolPointsPerBlockResponseProtoMsg {
 /**
  * MsgSetMaxPoolPointsPerBlockResponse defines the
  * Msg/SetMaxPoolPointsPerBlock response type.
+ * @name MsgSetMaxPoolPointsPerBlockResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse
  */
 export interface MsgSetMaxPoolPointsPerBlockResponseSDKType {}
-/** MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type. */
+/**
+ * MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type.
+ * @name MsgSetBaseDenoms
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetBaseDenoms
+ */
 export interface MsgSetBaseDenoms {
-  /** admin is the account that is authorized to set the base denoms. */
+  /**
+   * admin is the account that is authorized to set the base denoms.
+   */
   admin: string;
-  /** base_denoms is the list of base denoms to set. */
+  /**
+   * base_denoms is the list of base denoms to set.
+   */
   baseDenoms: BaseDenom[];
 }
 export interface MsgSetBaseDenomsProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetBaseDenoms";
   value: Uint8Array;
 }
-/** MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type. */
+/**
+ * MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type.
+ * @name MsgSetBaseDenomsSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetBaseDenoms
+ */
 export interface MsgSetBaseDenomsSDKType {
   admin: string;
   base_denoms: BaseDenomSDKType[];
 }
-/** MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type. */
+/**
+ * MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type.
+ * @name MsgSetBaseDenomsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetBaseDenomsResponse
+ */
 export interface MsgSetBaseDenomsResponse {}
 export interface MsgSetBaseDenomsResponseProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetBaseDenomsResponse";
   value: Uint8Array;
 }
-/** MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type. */
+/**
+ * MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type.
+ * @name MsgSetBaseDenomsResponseSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetBaseDenomsResponse
+ */
 export interface MsgSetBaseDenomsResponseSDKType {}
 function createBaseMsgSetHotRoutes(): MsgSetHotRoutes {
   return {
@@ -189,6 +309,12 @@ function createBaseMsgSetHotRoutes(): MsgSetHotRoutes {
     hotRoutes: []
   };
 }
+/**
+ * MsgSetHotRoutes defines the Msg/SetHotRoutes request type.
+ * @name MsgSetHotRoutes
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetHotRoutes
+ */
 export const MsgSetHotRoutes = {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetHotRoutes",
   encode(message: MsgSetHotRoutes, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -307,6 +433,12 @@ export const MsgSetHotRoutes = {
 function createBaseMsgSetHotRoutesResponse(): MsgSetHotRoutesResponse {
   return {};
 }
+/**
+ * MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type.
+ * @name MsgSetHotRoutesResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetHotRoutesResponse
+ */
 export const MsgSetHotRoutesResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetHotRoutesResponse",
   encode(_: MsgSetHotRoutesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -383,6 +515,12 @@ function createBaseMsgSetDeveloperAccount(): MsgSetDeveloperAccount {
     developerAccount: ""
   };
 }
+/**
+ * MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type.
+ * @name MsgSetDeveloperAccount
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetDeveloperAccount
+ */
 export const MsgSetDeveloperAccount = {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetDeveloperAccount",
   encode(message: MsgSetDeveloperAccount, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -491,6 +629,13 @@ export const MsgSetDeveloperAccount = {
 function createBaseMsgSetDeveloperAccountResponse(): MsgSetDeveloperAccountResponse {
   return {};
 }
+/**
+ * MsgSetDeveloperAccountResponse defines the Msg/SetDeveloperAccount response
+ * type.
+ * @name MsgSetDeveloperAccountResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetDeveloperAccountResponse
+ */
 export const MsgSetDeveloperAccountResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetDeveloperAccountResponse",
   encode(_: MsgSetDeveloperAccountResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -567,6 +712,12 @@ function createBaseMsgSetPoolWeights(): MsgSetPoolWeights {
     poolWeights: PoolWeights.fromPartial({})
   };
 }
+/**
+ * MsgSetPoolWeights defines the Msg/SetPoolWeights request type.
+ * @name MsgSetPoolWeights
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetPoolWeights
+ */
 export const MsgSetPoolWeights = {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetPoolWeights",
   encode(message: MsgSetPoolWeights, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -675,6 +826,12 @@ export const MsgSetPoolWeights = {
 function createBaseMsgSetPoolWeightsResponse(): MsgSetPoolWeightsResponse {
   return {};
 }
+/**
+ * MsgSetPoolWeightsResponse defines the Msg/SetPoolWeights response type.
+ * @name MsgSetPoolWeightsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse
+ */
 export const MsgSetPoolWeightsResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse",
   encode(_: MsgSetPoolWeightsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -751,6 +908,12 @@ function createBaseMsgSetMaxPoolPointsPerTx(): MsgSetMaxPoolPointsPerTx {
     maxPoolPointsPerTx: BigInt(0)
   };
 }
+/**
+ * MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type.
+ * @name MsgSetMaxPoolPointsPerTx
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTx
+ */
 export const MsgSetMaxPoolPointsPerTx = {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTx",
   encode(message: MsgSetMaxPoolPointsPerTx, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -859,6 +1022,13 @@ export const MsgSetMaxPoolPointsPerTx = {
 function createBaseMsgSetMaxPoolPointsPerTxResponse(): MsgSetMaxPoolPointsPerTxResponse {
   return {};
 }
+/**
+ * MsgSetMaxPoolPointsPerTxResponse defines the Msg/SetMaxPoolPointsPerTx
+ * response type.
+ * @name MsgSetMaxPoolPointsPerTxResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse
+ */
 export const MsgSetMaxPoolPointsPerTxResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse",
   encode(_: MsgSetMaxPoolPointsPerTxResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -935,6 +1105,13 @@ function createBaseMsgSetMaxPoolPointsPerBlock(): MsgSetMaxPoolPointsPerBlock {
     maxPoolPointsPerBlock: BigInt(0)
   };
 }
+/**
+ * MsgSetMaxPoolPointsPerBlock defines the Msg/SetMaxPoolPointsPerBlock request
+ * type.
+ * @name MsgSetMaxPoolPointsPerBlock
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock
+ */
 export const MsgSetMaxPoolPointsPerBlock = {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock",
   encode(message: MsgSetMaxPoolPointsPerBlock, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1043,6 +1220,13 @@ export const MsgSetMaxPoolPointsPerBlock = {
 function createBaseMsgSetMaxPoolPointsPerBlockResponse(): MsgSetMaxPoolPointsPerBlockResponse {
   return {};
 }
+/**
+ * MsgSetMaxPoolPointsPerBlockResponse defines the
+ * Msg/SetMaxPoolPointsPerBlock response type.
+ * @name MsgSetMaxPoolPointsPerBlockResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse
+ */
 export const MsgSetMaxPoolPointsPerBlockResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse",
   encode(_: MsgSetMaxPoolPointsPerBlockResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1119,6 +1303,12 @@ function createBaseMsgSetBaseDenoms(): MsgSetBaseDenoms {
     baseDenoms: []
   };
 }
+/**
+ * MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type.
+ * @name MsgSetBaseDenoms
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetBaseDenoms
+ */
 export const MsgSetBaseDenoms = {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetBaseDenoms",
   encode(message: MsgSetBaseDenoms, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1237,6 +1427,12 @@ export const MsgSetBaseDenoms = {
 function createBaseMsgSetBaseDenomsResponse(): MsgSetBaseDenomsResponse {
   return {};
 }
+/**
+ * MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type.
+ * @name MsgSetBaseDenomsResponse
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.MsgSetBaseDenomsResponse
+ */
 export const MsgSetBaseDenomsResponse = {
   typeUrl: "/osmosis.protorev.v1beta1.MsgSetBaseDenomsResponse",
   encode(_: MsgSetBaseDenomsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

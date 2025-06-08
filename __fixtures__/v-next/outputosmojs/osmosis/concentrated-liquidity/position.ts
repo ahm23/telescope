@@ -8,6 +8,9 @@ export const protobufPackage = "osmosis.concentratedliquidity.v1beta1";
 /**
  * Position contains position's id, address, pool id, lower tick, upper tick
  * join time, and liquidity.
+ * @name Position
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.Position
  */
 export interface Position {
   positionId: bigint;
@@ -25,6 +28,9 @@ export interface PositionProtoMsg {
 /**
  * Position contains position's id, address, pool id, lower tick, upper tick
  * join time, and liquidity.
+ * @name PositionSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.Position
  */
 export interface PositionSDKType {
   position_id: bigint;
@@ -35,6 +41,11 @@ export interface PositionSDKType {
   join_time: Date;
   liquidity: string;
 }
+/**
+ * @name PositionWithUnderlyingAssetBreakdown
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.PositionWithUnderlyingAssetBreakdown
+ */
 export interface PositionWithUnderlyingAssetBreakdown {
   position: Position;
   asset0: Coin;
@@ -44,6 +55,11 @@ export interface PositionWithUnderlyingAssetBreakdownProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.PositionWithUnderlyingAssetBreakdown";
   value: Uint8Array;
 }
+/**
+ * @name PositionWithUnderlyingAssetBreakdownSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.PositionWithUnderlyingAssetBreakdown
+ */
 export interface PositionWithUnderlyingAssetBreakdownSDKType {
   position: PositionSDKType;
   asset0: CoinSDKType;
@@ -60,6 +76,13 @@ function createBasePosition(): Position {
     liquidity: ""
   };
 }
+/**
+ * Position contains position's id, address, pool id, lower tick, upper tick
+ * join time, and liquidity.
+ * @name Position
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.Position
+ */
 export const Position = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.Position",
   encode(message: Position, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -252,6 +275,11 @@ function createBasePositionWithUnderlyingAssetBreakdown(): PositionWithUnderlyin
     asset1: Coin.fromPartial({})
   };
 }
+/**
+ * @name PositionWithUnderlyingAssetBreakdown
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.PositionWithUnderlyingAssetBreakdown
+ */
 export const PositionWithUnderlyingAssetBreakdown = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.PositionWithUnderlyingAssetBreakdown",
   encode(message: PositionWithUnderlyingAssetBreakdown, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

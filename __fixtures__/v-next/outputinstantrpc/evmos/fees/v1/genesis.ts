@@ -4,25 +4,46 @@ import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 import { Decimal } from "@cosmjs/math";
 export const protobufPackage = "evmos.fees.v1";
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.GenesisState
+ */
 export interface GenesisState {
-  /** module parameters */
+  /**
+   * module parameters
+   */
   params: Params;
-  /** active registered contracts */
+  /**
+   * active registered contracts
+   */
   devFeeInfos: DevFeeInfo[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/evmos.fees.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisStateSDKType
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   dev_fee_infos: DevFeeInfoSDKType[];
 }
-/** Params defines the fees module params */
+/**
+ * Params defines the fees module params
+ * @name Params
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.Params
+ */
 export interface Params {
-  /** parameter to enable fees */
+  /**
+   * parameter to enable fees
+   */
   enableFees: boolean;
   /**
    * developer_shares defines the proportion of the transaction fees to be
@@ -39,14 +60,21 @@ export interface Params {
    * verifying the contract deployer at fee registration
    */
   addrDerivationCostCreate: bigint;
-  /** min_gas_price defines the minimum gas price value for cosmos and eth transactions */
+  /**
+   * min_gas_price defines the minimum gas price value for cosmos and eth transactions
+   */
   minGasPrice: string;
 }
 export interface ParamsProtoMsg {
   typeUrl: "/evmos.fees.v1.Params";
   value: Uint8Array;
 }
-/** Params defines the fees module params */
+/**
+ * Params defines the fees module params
+ * @name ParamsSDKType
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.Params
+ */
 export interface ParamsSDKType {
   enable_fees: boolean;
   developer_shares: string;
@@ -60,6 +88,12 @@ function createBaseGenesisState(): GenesisState {
     devFeeInfos: []
   };
 }
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/evmos.fees.v1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -180,6 +214,12 @@ function createBaseParams(): Params {
     minGasPrice: ""
   };
 }
+/**
+ * Params defines the fees module params
+ * @name Params
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.Params
+ */
 export const Params = {
   typeUrl: "/evmos.fees.v1.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

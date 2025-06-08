@@ -7,6 +7,11 @@ import { HttpRequest, HttpRequestAmino, HttpRequestSDKType } from "../type/http_
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial, toTimestamp, fromTimestamp } from "../../../helpers";
 export const protobufPackage = "google.logging.v2";
+/**
+ * @name LogEntry_LabelsEntry
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.undefined
+ */
 export interface LogEntry_LabelsEntry {
   key: string;
   value: string;
@@ -15,6 +20,11 @@ export interface LogEntry_LabelsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name LogEntry_LabelsEntryAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogEntry_LabelsEntry
+ */
 export interface LogEntry_LabelsEntryAmino {
   key?: string;
   value?: string;
@@ -23,11 +33,21 @@ export interface LogEntry_LabelsEntryAminoMsg {
   type: string;
   value: LogEntry_LabelsEntryAmino;
 }
+/**
+ * @name LogEntry_LabelsEntrySDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.undefined
+ */
 export interface LogEntry_LabelsEntrySDKType {
   key: string;
   value: string;
 }
-/** An individual entry in a log. */
+/**
+ * An individual entry in a log.
+ * @name LogEntry
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogEntry
+ */
 export interface LogEntry {
   /**
    * Required. The resource name of the log to which this log entry belongs:
@@ -74,7 +94,9 @@ export interface LogEntry {
    *   "type.googleapis.com/google.appengine.logging.v1.RequestLog"
    */
   protoPayload?: Any;
-  /** The log entry payload, represented as a Unicode string (UTF-8). */
+  /**
+   * The log entry payload, represented as a Unicode string (UTF-8).
+   */
   textPayload?: string;
   /**
    * The log entry payload, represented as a structure that is
@@ -95,9 +117,13 @@ export interface LogEntry {
    * those time boundaries aren't ingested by Logging.
    */
   timestamp?: Date;
-  /** Output only. The time the log entry was received by Logging. */
+  /**
+   * Output only. The time the log entry was received by Logging.
+   */
   receiveTimestamp?: Date;
-  /** Optional. The severity of the log entry. The default value is `LogSeverity.DEFAULT`. */
+  /**
+   * Optional. The severity of the log entry. The default value is `LogSeverity.DEFAULT`.
+   */
   severity: LogSeverity;
   /**
    * Optional. A unique identifier for the log entry. If you provide a value, then
@@ -167,7 +193,9 @@ export interface LogEntry {
    * request correlation identifier. The default is False.
    */
   traceSampled: boolean;
-  /** Optional. Source code location information associated with the log entry, if any. */
+  /**
+   * Optional. Source code location information associated with the log entry, if any.
+   */
   sourceLocation?: LogEntrySourceLocation;
   /**
    * Optional. Information indicating this LogEntry is part of a sequence of multiple log
@@ -179,7 +207,12 @@ export interface LogEntryProtoMsg {
   typeUrl: "/google.logging.v2.LogEntry";
   value: Uint8Array;
 }
-/** An individual entry in a log. */
+/**
+ * An individual entry in a log.
+ * @name LogEntryAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogEntry
+ */
 export interface LogEntryAmino {
   /**
    * Required. The resource name of the log to which this log entry belongs:
@@ -226,7 +259,9 @@ export interface LogEntryAmino {
    *   "type.googleapis.com/google.appengine.logging.v1.RequestLog"
    */
   proto_payload?: AnyAmino;
-  /** The log entry payload, represented as a Unicode string (UTF-8). */
+  /**
+   * The log entry payload, represented as a Unicode string (UTF-8).
+   */
   text_payload?: string;
   /**
    * The log entry payload, represented as a structure that is
@@ -247,9 +282,13 @@ export interface LogEntryAmino {
    * those time boundaries aren't ingested by Logging.
    */
   timestamp?: string;
-  /** Output only. The time the log entry was received by Logging. */
+  /**
+   * Output only. The time the log entry was received by Logging.
+   */
   receive_timestamp?: string;
-  /** Optional. The severity of the log entry. The default value is `LogSeverity.DEFAULT`. */
+  /**
+   * Optional. The severity of the log entry. The default value is `LogSeverity.DEFAULT`.
+   */
   severity?: LogSeverity;
   /**
    * Optional. A unique identifier for the log entry. If you provide a value, then
@@ -319,7 +358,9 @@ export interface LogEntryAmino {
    * request correlation identifier. The default is False.
    */
   trace_sampled?: boolean;
-  /** Optional. Source code location information associated with the log entry, if any. */
+  /**
+   * Optional. Source code location information associated with the log entry, if any.
+   */
   source_location?: LogEntrySourceLocationAmino;
   /**
    * Optional. Information indicating this LogEntry is part of a sequence of multiple log
@@ -331,7 +372,12 @@ export interface LogEntryAminoMsg {
   type: "/google.logging.v2.LogEntry";
   value: LogEntryAmino;
 }
-/** An individual entry in a log. */
+/**
+ * An individual entry in a log.
+ * @name LogEntrySDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogEntry
+ */
 export interface LogEntrySDKType {
   log_name: string;
   resource?: MonitoredResourceSDKType;
@@ -356,6 +402,9 @@ export interface LogEntrySDKType {
 /**
  * Additional information about a potentially long-running operation with which
  * a log entry is associated.
+ * @name LogEntryOperation
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogEntryOperation
  */
 export interface LogEntryOperation {
   /**
@@ -369,9 +418,13 @@ export interface LogEntryOperation {
    * `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
    */
   producer: string;
-  /** Optional. Set this to True if this is the first log entry in the operation. */
+  /**
+   * Optional. Set this to True if this is the first log entry in the operation.
+   */
   first: boolean;
-  /** Optional. Set this to True if this is the last log entry in the operation. */
+  /**
+   * Optional. Set this to True if this is the last log entry in the operation.
+   */
   last: boolean;
 }
 export interface LogEntryOperationProtoMsg {
@@ -381,6 +434,9 @@ export interface LogEntryOperationProtoMsg {
 /**
  * Additional information about a potentially long-running operation with which
  * a log entry is associated.
+ * @name LogEntryOperationAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogEntryOperation
  */
 export interface LogEntryOperationAmino {
   /**
@@ -394,9 +450,13 @@ export interface LogEntryOperationAmino {
    * `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
    */
   producer?: string;
-  /** Optional. Set this to True if this is the first log entry in the operation. */
+  /**
+   * Optional. Set this to True if this is the first log entry in the operation.
+   */
   first?: boolean;
-  /** Optional. Set this to True if this is the last log entry in the operation. */
+  /**
+   * Optional. Set this to True if this is the last log entry in the operation.
+   */
   last?: boolean;
 }
 export interface LogEntryOperationAminoMsg {
@@ -406,6 +466,9 @@ export interface LogEntryOperationAminoMsg {
 /**
  * Additional information about a potentially long-running operation with which
  * a log entry is associated.
+ * @name LogEntryOperationSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogEntryOperation
  */
 export interface LogEntryOperationSDKType {
   id: string;
@@ -416,6 +479,9 @@ export interface LogEntryOperationSDKType {
 /**
  * Additional information about the source code location that produced the log
  * entry.
+ * @name LogEntrySourceLocation
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogEntrySourceLocation
  */
 export interface LogEntrySourceLocation {
   /**
@@ -445,6 +511,9 @@ export interface LogEntrySourceLocationProtoMsg {
 /**
  * Additional information about the source code location that produced the log
  * entry.
+ * @name LogEntrySourceLocationAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogEntrySourceLocation
  */
 export interface LogEntrySourceLocationAmino {
   /**
@@ -474,6 +543,9 @@ export interface LogEntrySourceLocationAminoMsg {
 /**
  * Additional information about the source code location that produced the log
  * entry.
+ * @name LogEntrySourceLocationSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogEntrySourceLocation
  */
 export interface LogEntrySourceLocationSDKType {
   file: string;
@@ -484,6 +556,9 @@ export interface LogEntrySourceLocationSDKType {
  * Additional information used to correlate multiple log entries. Used when a
  * single LogEntry would exceed the Google Cloud Logging size limit and is
  * split across multiple log entries.
+ * @name LogSplit
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogSplit
  */
 export interface LogSplit {
   /**
@@ -498,7 +573,9 @@ export interface LogSplit {
    * entries.
    */
   index: number;
-  /** The total number of log entries that the original LogEntry was split into. */
+  /**
+   * The total number of log entries that the original LogEntry was split into.
+   */
   totalSplits: number;
 }
 export interface LogSplitProtoMsg {
@@ -509,6 +586,9 @@ export interface LogSplitProtoMsg {
  * Additional information used to correlate multiple log entries. Used when a
  * single LogEntry would exceed the Google Cloud Logging size limit and is
  * split across multiple log entries.
+ * @name LogSplitAmino
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogSplit
  */
 export interface LogSplitAmino {
   /**
@@ -523,7 +603,9 @@ export interface LogSplitAmino {
    * entries.
    */
   index?: number;
-  /** The total number of log entries that the original LogEntry was split into. */
+  /**
+   * The total number of log entries that the original LogEntry was split into.
+   */
   total_splits?: number;
 }
 export interface LogSplitAminoMsg {
@@ -534,6 +616,9 @@ export interface LogSplitAminoMsg {
  * Additional information used to correlate multiple log entries. Used when a
  * single LogEntry would exceed the Google Cloud Logging size limit and is
  * split across multiple log entries.
+ * @name LogSplitSDKType
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogSplit
  */
 export interface LogSplitSDKType {
   uid: string;
@@ -546,6 +631,11 @@ function createBaseLogEntry_LabelsEntry(): LogEntry_LabelsEntry {
     value: ""
   };
 }
+/**
+ * @name LogEntry_LabelsEntry
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.undefined
+ */
 export const LogEntry_LabelsEntry = {
   encode(message: LogEntry_LabelsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -629,6 +719,12 @@ function createBaseLogEntry(): LogEntry {
     split: undefined
   };
 }
+/**
+ * An individual entry in a log.
+ * @name LogEntry
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogEntry
+ */
 export const LogEntry = {
   typeUrl: "/google.logging.v2.LogEntry",
   encode(message: LogEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -908,6 +1004,13 @@ function createBaseLogEntryOperation(): LogEntryOperation {
     last: false
   };
 }
+/**
+ * Additional information about a potentially long-running operation with which
+ * a log entry is associated.
+ * @name LogEntryOperation
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogEntryOperation
+ */
 export const LogEntryOperation = {
   typeUrl: "/google.logging.v2.LogEntryOperation",
   encode(message: LogEntryOperation, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1006,6 +1109,13 @@ function createBaseLogEntrySourceLocation(): LogEntrySourceLocation {
     function: ""
   };
 }
+/**
+ * Additional information about the source code location that produced the log
+ * entry.
+ * @name LogEntrySourceLocation
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogEntrySourceLocation
+ */
 export const LogEntrySourceLocation = {
   typeUrl: "/google.logging.v2.LogEntrySourceLocation",
   encode(message: LogEntrySourceLocation, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1095,6 +1205,14 @@ function createBaseLogSplit(): LogSplit {
     totalSplits: 0
   };
 }
+/**
+ * Additional information used to correlate multiple log entries. Used when a
+ * single LogEntry would exceed the Google Cloud Logging size limit and is
+ * split across multiple log entries.
+ * @name LogSplit
+ * @package google.logging.v2
+ * @see proto type: google.logging.v2.LogSplit
+ */
 export const LogSplit = {
   typeUrl: "/google.logging.v2.LogSplit",
   encode(message: LogSplit, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

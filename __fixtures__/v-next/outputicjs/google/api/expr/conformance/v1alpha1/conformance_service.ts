@@ -55,61 +55,112 @@ export function issueDetails_SeverityToJSON(object: IssueDetails_Severity): stri
       return "UNRECOGNIZED";
   }
 }
-/** Request message for the Parse method. */
+/**
+ * Request message for the Parse method.
+ * @name ParseRequest
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.ParseRequest
+ */
 export interface ParseRequest {
-  /** Required. Source text in CEL syntax. */
+  /**
+   * Required. Source text in CEL syntax.
+   */
   celSource: string;
-  /** Tag for version of CEL syntax, for future use. */
+  /**
+   * Tag for version of CEL syntax, for future use.
+   */
   syntaxVersion: string;
-  /** File or resource for source text, used in [SourceInfo][google.api.SourceInfo]. */
+  /**
+   * File or resource for source text, used in [SourceInfo][google.api.SourceInfo].
+   */
   sourceLocation: string;
-  /** Prevent macro expansion.  See "Macros" in Language Defiinition. */
+  /**
+   * Prevent macro expansion.  See "Macros" in Language Defiinition.
+   */
   disableMacros: boolean;
 }
 export interface ParseRequestProtoMsg {
   typeUrl: "/google.api.expr.conformance.v1alpha1.ParseRequest";
   value: Uint8Array;
 }
-/** Request message for the Parse method. */
+/**
+ * Request message for the Parse method.
+ * @name ParseRequestAmino
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.ParseRequest
+ */
 export interface ParseRequestAmino {
-  /** Required. Source text in CEL syntax. */
+  /**
+   * Required. Source text in CEL syntax.
+   */
   cel_source: string;
-  /** Tag for version of CEL syntax, for future use. */
+  /**
+   * Tag for version of CEL syntax, for future use.
+   */
   syntax_version: string;
-  /** File or resource for source text, used in [SourceInfo][google.api.SourceInfo]. */
+  /**
+   * File or resource for source text, used in [SourceInfo][google.api.SourceInfo].
+   */
   source_location: string;
-  /** Prevent macro expansion.  See "Macros" in Language Defiinition. */
+  /**
+   * Prevent macro expansion.  See "Macros" in Language Defiinition.
+   */
   disable_macros: boolean;
 }
 export interface ParseRequestAminoMsg {
   type: "/google.api.expr.conformance.v1alpha1.ParseRequest";
   value: ParseRequestAmino;
 }
-/** Response message for the Parse method. */
+/**
+ * Response message for the Parse method.
+ * @name ParseResponse
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.ParseResponse
+ */
 export interface ParseResponse {
-  /** The parsed representation, or unset if parsing failed. */
+  /**
+   * The parsed representation, or unset if parsing failed.
+   */
   parsedExpr?: ParsedExpr;
-  /** Any number of issues with [StatusDetails][] as the details. */
+  /**
+   * Any number of issues with [StatusDetails][] as the details.
+   */
   issues: Status[];
 }
 export interface ParseResponseProtoMsg {
   typeUrl: "/google.api.expr.conformance.v1alpha1.ParseResponse";
   value: Uint8Array;
 }
-/** Response message for the Parse method. */
+/**
+ * Response message for the Parse method.
+ * @name ParseResponseAmino
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.ParseResponse
+ */
 export interface ParseResponseAmino {
-  /** The parsed representation, or unset if parsing failed. */
+  /**
+   * The parsed representation, or unset if parsing failed.
+   */
   parsed_expr?: ParsedExprAmino;
-  /** Any number of issues with [StatusDetails][] as the details. */
+  /**
+   * Any number of issues with [StatusDetails][] as the details.
+   */
   issues: StatusAmino[];
 }
 export interface ParseResponseAminoMsg {
   type: "/google.api.expr.conformance.v1alpha1.ParseResponse";
   value: ParseResponseAmino;
 }
-/** Request message for the Check method. */
+/**
+ * Request message for the Check method.
+ * @name CheckRequest
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.CheckRequest
+ */
 export interface CheckRequest {
-  /** Required. The parsed representation of the CEL program. */
+  /**
+   * Required. The parsed representation of the CEL program.
+   */
   parsedExpr?: ParsedExpr;
   /**
    * Declarations of types for external variables and functions.
@@ -133,9 +184,16 @@ export interface CheckRequestProtoMsg {
   typeUrl: "/google.api.expr.conformance.v1alpha1.CheckRequest";
   value: Uint8Array;
 }
-/** Request message for the Check method. */
+/**
+ * Request message for the Check method.
+ * @name CheckRequestAmino
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.CheckRequest
+ */
 export interface CheckRequestAmino {
-  /** Required. The parsed representation of the CEL program. */
+  /**
+   * Required. The parsed representation of the CEL program.
+   */
   parsed_expr?: ParsedExprAmino;
   /**
    * Declarations of types for external variables and functions.
@@ -159,28 +217,51 @@ export interface CheckRequestAminoMsg {
   type: "/google.api.expr.conformance.v1alpha1.CheckRequest";
   value: CheckRequestAmino;
 }
-/** Response message for the Check method. */
+/**
+ * Response message for the Check method.
+ * @name CheckResponse
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.CheckResponse
+ */
 export interface CheckResponse {
-  /** The annotated representation, or unset if checking failed. */
+  /**
+   * The annotated representation, or unset if checking failed.
+   */
   checkedExpr?: CheckedExpr;
-  /** Any number of issues with [StatusDetails][] as the details. */
+  /**
+   * Any number of issues with [StatusDetails][] as the details.
+   */
   issues: Status[];
 }
 export interface CheckResponseProtoMsg {
   typeUrl: "/google.api.expr.conformance.v1alpha1.CheckResponse";
   value: Uint8Array;
 }
-/** Response message for the Check method. */
+/**
+ * Response message for the Check method.
+ * @name CheckResponseAmino
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.CheckResponse
+ */
 export interface CheckResponseAmino {
-  /** The annotated representation, or unset if checking failed. */
+  /**
+   * The annotated representation, or unset if checking failed.
+   */
   checked_expr?: CheckedExprAmino;
-  /** Any number of issues with [StatusDetails][] as the details. */
+  /**
+   * Any number of issues with [StatusDetails][] as the details.
+   */
   issues: StatusAmino[];
 }
 export interface CheckResponseAminoMsg {
   type: "/google.api.expr.conformance.v1alpha1.CheckResponse";
   value: CheckResponseAmino;
 }
+/**
+ * @name EvalRequest_BindingsEntry
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.undefined
+ */
 export interface EvalRequest_BindingsEntry {
   key: string;
   value?: ExprValue;
@@ -189,6 +270,11 @@ export interface EvalRequest_BindingsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name EvalRequest_BindingsEntryAmino
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.EvalRequest_BindingsEntry
+ */
 export interface EvalRequest_BindingsEntryAmino {
   key: string;
   value?: ExprValueAmino;
@@ -197,11 +283,20 @@ export interface EvalRequest_BindingsEntryAminoMsg {
   type: string;
   value: EvalRequest_BindingsEntryAmino;
 }
-/** Request message for the Eval method. */
+/**
+ * Request message for the Eval method.
+ * @name EvalRequest
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.EvalRequest
+ */
 export interface EvalRequest {
-  /** Evaluate based on the parsed representation. */
+  /**
+   * Evaluate based on the parsed representation.
+   */
   parsedExpr?: ParsedExpr;
-  /** Evaluate based on the checked representation. */
+  /**
+   * Evaluate based on the checked representation.
+   */
   checkedExpr?: CheckedExpr;
   /**
    * Bindings for the external variables.  The types SHOULD be compatible
@@ -210,18 +305,29 @@ export interface EvalRequest {
   bindings: {
     [key: string]: ExprValue;
   };
-  /** SHOULD be the same container as used in [CheckRequest][google.api.expr.conformance.v1alpha1.CheckRequest], if checked. */
+  /**
+   * SHOULD be the same container as used in [CheckRequest][google.api.expr.conformance.v1alpha1.CheckRequest], if checked.
+   */
   container: string;
 }
 export interface EvalRequestProtoMsg {
   typeUrl: "/google.api.expr.conformance.v1alpha1.EvalRequest";
   value: Uint8Array;
 }
-/** Request message for the Eval method. */
+/**
+ * Request message for the Eval method.
+ * @name EvalRequestAmino
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.EvalRequest
+ */
 export interface EvalRequestAmino {
-  /** Evaluate based on the parsed representation. */
+  /**
+   * Evaluate based on the parsed representation.
+   */
   parsed_expr?: ParsedExprAmino;
-  /** Evaluate based on the checked representation. */
+  /**
+   * Evaluate based on the checked representation.
+   */
   checked_expr?: CheckedExprAmino;
   /**
    * Bindings for the external variables.  The types SHOULD be compatible
@@ -230,16 +336,25 @@ export interface EvalRequestAmino {
   bindings: {
     [key: string]: ExprValueAmino;
   };
-  /** SHOULD be the same container as used in [CheckRequest][google.api.expr.conformance.v1alpha1.CheckRequest], if checked. */
+  /**
+   * SHOULD be the same container as used in [CheckRequest][google.api.expr.conformance.v1alpha1.CheckRequest], if checked.
+   */
   container: string;
 }
 export interface EvalRequestAminoMsg {
   type: "/google.api.expr.conformance.v1alpha1.EvalRequest";
   value: EvalRequestAmino;
 }
-/** Response message for the Eval method. */
+/**
+ * Response message for the Eval method.
+ * @name EvalResponse
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.EvalResponse
+ */
 export interface EvalResponse {
-  /** The execution result, or unset if execution couldn't start. */
+  /**
+   * The execution result, or unset if execution couldn't start.
+   */
   result?: ExprValue;
   /**
    * Any number of issues with [StatusDetails][] as the details.
@@ -253,9 +368,16 @@ export interface EvalResponseProtoMsg {
   typeUrl: "/google.api.expr.conformance.v1alpha1.EvalResponse";
   value: Uint8Array;
 }
-/** Response message for the Eval method. */
+/**
+ * Response message for the Eval method.
+ * @name EvalResponseAmino
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.EvalResponse
+ */
 export interface EvalResponseAmino {
-  /** The execution result, or unset if execution couldn't start. */
+  /**
+   * The execution result, or unset if execution couldn't start.
+   */
   result?: ExprValueAmino;
   /**
    * Any number of issues with [StatusDetails][] as the details.
@@ -273,13 +395,22 @@ export interface EvalResponseAminoMsg {
  * Warnings or errors in service execution are represented by
  * [google.rpc.Status][google.rpc.Status] messages, with the following message
  * in the details field.
+ * @name IssueDetails
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.IssueDetails
  */
 export interface IssueDetails {
-  /** The severity of the issue. */
+  /**
+   * The severity of the issue.
+   */
   severity: IssueDetails_Severity;
-  /** Position in the source, if known. */
+  /**
+   * Position in the source, if known.
+   */
   position?: SourcePosition;
-  /** Expression ID from [Expr][], 0 if unknown. */
+  /**
+   * Expression ID from [Expr][], 0 if unknown.
+   */
   id: bigint;
 }
 export interface IssueDetailsProtoMsg {
@@ -290,13 +421,22 @@ export interface IssueDetailsProtoMsg {
  * Warnings or errors in service execution are represented by
  * [google.rpc.Status][google.rpc.Status] messages, with the following message
  * in the details field.
+ * @name IssueDetailsAmino
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.IssueDetails
  */
 export interface IssueDetailsAmino {
-  /** The severity of the issue. */
+  /**
+   * The severity of the issue.
+   */
   severity: IssueDetails_Severity;
-  /** Position in the source, if known. */
+  /**
+   * Position in the source, if known.
+   */
   position?: SourcePositionAmino;
-  /** Expression ID from [Expr][], 0 if unknown. */
+  /**
+   * Expression ID from [Expr][], 0 if unknown.
+   */
   id: string;
 }
 export interface IssueDetailsAminoMsg {
@@ -311,6 +451,12 @@ function createBaseParseRequest(): ParseRequest {
     disableMacros: false
   };
 }
+/**
+ * Request message for the Parse method.
+ * @name ParseRequest
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.ParseRequest
+ */
 export const ParseRequest = {
   typeUrl: "/google.api.expr.conformance.v1alpha1.ParseRequest",
   encode(message: ParseRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -408,6 +554,12 @@ function createBaseParseResponse(): ParseResponse {
     issues: []
   };
 }
+/**
+ * Response message for the Parse method.
+ * @name ParseResponse
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.ParseResponse
+ */
 export const ParseResponse = {
   typeUrl: "/google.api.expr.conformance.v1alpha1.ParseResponse",
   encode(message: ParseResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -487,6 +639,12 @@ function createBaseCheckRequest(): CheckRequest {
     noStdEnv: false
   };
 }
+/**
+ * Request message for the Check method.
+ * @name CheckRequest
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.CheckRequest
+ */
 export const CheckRequest = {
   typeUrl: "/google.api.expr.conformance.v1alpha1.CheckRequest",
   encode(message: CheckRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -586,6 +744,12 @@ function createBaseCheckResponse(): CheckResponse {
     issues: []
   };
 }
+/**
+ * Response message for the Check method.
+ * @name CheckResponse
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.CheckResponse
+ */
 export const CheckResponse = {
   typeUrl: "/google.api.expr.conformance.v1alpha1.CheckResponse",
   encode(message: CheckResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -663,6 +827,11 @@ function createBaseEvalRequest_BindingsEntry(): EvalRequest_BindingsEntry {
     value: undefined
   };
 }
+/**
+ * @name EvalRequest_BindingsEntry
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.undefined
+ */
 export const EvalRequest_BindingsEntry = {
   encode(message: EvalRequest_BindingsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -733,6 +902,12 @@ function createBaseEvalRequest(): EvalRequest {
     container: ""
   };
 }
+/**
+ * Request message for the Eval method.
+ * @name EvalRequest
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.EvalRequest
+ */
 export const EvalRequest = {
   typeUrl: "/google.api.expr.conformance.v1alpha1.EvalRequest",
   encode(message: EvalRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -853,6 +1028,12 @@ function createBaseEvalResponse(): EvalResponse {
     issues: []
   };
 }
+/**
+ * Response message for the Eval method.
+ * @name EvalResponse
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.EvalResponse
+ */
 export const EvalResponse = {
   typeUrl: "/google.api.expr.conformance.v1alpha1.EvalResponse",
   encode(message: EvalResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -931,6 +1112,14 @@ function createBaseIssueDetails(): IssueDetails {
     id: BigInt(0)
   };
 }
+/**
+ * Warnings or errors in service execution are represented by
+ * [google.rpc.Status][google.rpc.Status] messages, with the following message
+ * in the details field.
+ * @name IssueDetails
+ * @package google.api.expr.conformance.v1alpha1
+ * @see proto type: google.api.expr.conformance.v1alpha1.IssueDetails
+ */
 export const IssueDetails = {
   typeUrl: "/google.api.expr.conformance.v1alpha1.IssueDetails",
   encode(message: IssueDetails, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

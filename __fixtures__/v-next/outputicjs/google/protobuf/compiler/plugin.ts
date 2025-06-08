@@ -1,7 +1,12 @@
 import { FileDescriptorProto, FileDescriptorProtoAmino } from "../descriptor";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** The version number of protocol compiler. */
+/**
+ * The version number of protocol compiler.
+ * @name Version
+ * @package google.protobuf.compiler
+ * @see proto type: google.protobuf.compiler.Version
+ */
 export interface Version {
   major: number;
   minor: number;
@@ -16,7 +21,12 @@ export interface VersionProtoMsg {
   typeUrl: "/google.protobuf.compiler.Version";
   value: Uint8Array;
 }
-/** The version number of protocol compiler. */
+/**
+ * The version number of protocol compiler.
+ * @name VersionAmino
+ * @package google.protobuf.compiler
+ * @see proto type: google.protobuf.compiler.Version
+ */
 export interface VersionAmino {
   major: number;
   minor: number;
@@ -31,7 +41,12 @@ export interface VersionAminoMsg {
   type: "/google.protobuf.compiler.Version";
   value: VersionAmino;
 }
-/** An encoded CodeGeneratorRequest is written to the plugin's stdin. */
+/**
+ * An encoded CodeGeneratorRequest is written to the plugin's stdin.
+ * @name CodeGeneratorRequest
+ * @package google.protobuf.compiler
+ * @see proto type: google.protobuf.compiler.CodeGeneratorRequest
+ */
 export interface CodeGeneratorRequest {
   /**
    * The .proto files that were explicitly listed on the command-line.  The
@@ -39,7 +54,9 @@ export interface CodeGeneratorRequest {
    * descriptor will be included in proto_file, below.
    */
   fileToGenerate: string[];
-  /** The generator parameter passed on the command-line. */
+  /**
+   * The generator parameter passed on the command-line.
+   */
   parameter: string;
   /**
    * FileDescriptorProtos for all files in files_to_generate and everything
@@ -58,14 +75,21 @@ export interface CodeGeneratorRequest {
    * fully qualified.
    */
   protoFile: FileDescriptorProto[];
-  /** The version number of protocol compiler. */
+  /**
+   * The version number of protocol compiler.
+   */
   compilerVersion?: Version;
 }
 export interface CodeGeneratorRequestProtoMsg {
   typeUrl: "/google.protobuf.compiler.CodeGeneratorRequest";
   value: Uint8Array;
 }
-/** An encoded CodeGeneratorRequest is written to the plugin's stdin. */
+/**
+ * An encoded CodeGeneratorRequest is written to the plugin's stdin.
+ * @name CodeGeneratorRequestAmino
+ * @package google.protobuf.compiler
+ * @see proto type: google.protobuf.compiler.CodeGeneratorRequest
+ */
 export interface CodeGeneratorRequestAmino {
   /**
    * The .proto files that were explicitly listed on the command-line.  The
@@ -73,7 +97,9 @@ export interface CodeGeneratorRequestAmino {
    * descriptor will be included in proto_file, below.
    */
   file_to_generate: string[];
-  /** The generator parameter passed on the command-line. */
+  /**
+   * The generator parameter passed on the command-line.
+   */
   parameter: string;
   /**
    * FileDescriptorProtos for all files in files_to_generate and everything
@@ -92,14 +118,21 @@ export interface CodeGeneratorRequestAmino {
    * fully qualified.
    */
   proto_file: FileDescriptorProtoAmino[];
-  /** The version number of protocol compiler. */
+  /**
+   * The version number of protocol compiler.
+   */
   compiler_version?: VersionAmino;
 }
 export interface CodeGeneratorRequestAminoMsg {
   type: "/google.protobuf.compiler.CodeGeneratorRequest";
   value: CodeGeneratorRequestAmino;
 }
-/** The plugin writes an encoded CodeGeneratorResponse to stdout. */
+/**
+ * The plugin writes an encoded CodeGeneratorResponse to stdout.
+ * @name CodeGeneratorResponse
+ * @package google.protobuf.compiler
+ * @see proto type: google.protobuf.compiler.CodeGeneratorResponse
+ */
 export interface CodeGeneratorResponse {
   /**
    * Error message.  If non-empty, code generation failed.  The plugin process
@@ -118,7 +151,12 @@ export interface CodeGeneratorResponseProtoMsg {
   typeUrl: "/google.protobuf.compiler.CodeGeneratorResponse";
   value: Uint8Array;
 }
-/** The plugin writes an encoded CodeGeneratorResponse to stdout. */
+/**
+ * The plugin writes an encoded CodeGeneratorResponse to stdout.
+ * @name CodeGeneratorResponseAmino
+ * @package google.protobuf.compiler
+ * @see proto type: google.protobuf.compiler.CodeGeneratorResponse
+ */
 export interface CodeGeneratorResponseAmino {
   /**
    * Error message.  If non-empty, code generation failed.  The plugin process
@@ -137,7 +175,12 @@ export interface CodeGeneratorResponseAminoMsg {
   type: "/google.protobuf.compiler.CodeGeneratorResponse";
   value: CodeGeneratorResponseAmino;
 }
-/** Represents a single generated file. */
+/**
+ * Represents a single generated file.
+ * @name CodeGeneratorResponse_File
+ * @package google.protobuf.compiler
+ * @see proto type: google.protobuf.compiler.File
+ */
 export interface CodeGeneratorResponse_File {
   /**
    * The file name, relative to the output directory.  The name must not
@@ -193,14 +236,21 @@ export interface CodeGeneratorResponse_File {
    * If |insertion_point| is present, |name| must also be present.
    */
   insertionPoint: string;
-  /** The file contents. */
+  /**
+   * The file contents.
+   */
   content: string;
 }
 export interface CodeGeneratorResponse_FileProtoMsg {
   typeUrl: "/google.protobuf.compiler.File";
   value: Uint8Array;
 }
-/** Represents a single generated file. */
+/**
+ * Represents a single generated file.
+ * @name CodeGeneratorResponse_FileAmino
+ * @package google.protobuf.compiler
+ * @see proto type: google.protobuf.compiler.CodeGeneratorResponse_File
+ */
 export interface CodeGeneratorResponse_FileAmino {
   /**
    * The file name, relative to the output directory.  The name must not
@@ -256,7 +306,9 @@ export interface CodeGeneratorResponse_FileAmino {
    * If |insertion_point| is present, |name| must also be present.
    */
   insertion_point: string;
-  /** The file contents. */
+  /**
+   * The file contents.
+   */
   content: string;
 }
 export interface CodeGeneratorResponse_FileAminoMsg {
@@ -271,6 +323,12 @@ function createBaseVersion(): Version {
     suffix: ""
   };
 }
+/**
+ * The version number of protocol compiler.
+ * @name Version
+ * @package google.protobuf.compiler
+ * @see proto type: google.protobuf.compiler.Version
+ */
 export const Version = {
   typeUrl: "/google.protobuf.compiler.Version",
   encode(message: Version, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -370,6 +428,12 @@ function createBaseCodeGeneratorRequest(): CodeGeneratorRequest {
     compilerVersion: undefined
   };
 }
+/**
+ * An encoded CodeGeneratorRequest is written to the plugin's stdin.
+ * @name CodeGeneratorRequest
+ * @package google.protobuf.compiler
+ * @see proto type: google.protobuf.compiler.CodeGeneratorRequest
+ */
 export const CodeGeneratorRequest = {
   typeUrl: "/google.protobuf.compiler.CodeGeneratorRequest",
   encode(message: CodeGeneratorRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -471,6 +535,12 @@ function createBaseCodeGeneratorResponse(): CodeGeneratorResponse {
     file: []
   };
 }
+/**
+ * The plugin writes an encoded CodeGeneratorResponse to stdout.
+ * @name CodeGeneratorResponse
+ * @package google.protobuf.compiler
+ * @see proto type: google.protobuf.compiler.CodeGeneratorResponse
+ */
 export const CodeGeneratorResponse = {
   typeUrl: "/google.protobuf.compiler.CodeGeneratorResponse",
   encode(message: CodeGeneratorResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -549,6 +619,12 @@ function createBaseCodeGeneratorResponse_File(): CodeGeneratorResponse_File {
     content: ""
   };
 }
+/**
+ * Represents a single generated file.
+ * @name CodeGeneratorResponse_File
+ * @package google.protobuf.compiler
+ * @see proto type: google.protobuf.compiler.File
+ */
 export const CodeGeneratorResponse_File = {
   typeUrl: "/google.protobuf.compiler.File",
   encode(message: CodeGeneratorResponse_File, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

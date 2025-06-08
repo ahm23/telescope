@@ -7,8 +7,11 @@ export const protobufPackage = "google.api.expr.v1alpha1";
 /**
  * Values of intermediate expressions produced when evaluating expression.
  * Deprecated, use `EvalState` instead.
+ * @name Explain
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Explain
+ * @deprecated
  */
-/** @deprecated */
 export interface Explain {
   /**
    * All of the observed values.
@@ -33,8 +36,11 @@ export interface ExplainProtoMsg {
 /**
  * Values of intermediate expressions produced when evaluating expression.
  * Deprecated, use `EvalState` instead.
+ * @name ExplainAmino
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Explain
+ * @deprecated
  */
-/** @deprecated */
 export interface ExplainAmino {
   /**
    * All of the observed values.
@@ -59,35 +65,61 @@ export interface ExplainAminoMsg {
 /**
  * Values of intermediate expressions produced when evaluating expression.
  * Deprecated, use `EvalState` instead.
+ * @name ExplainSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Explain
+ * @deprecated
  */
-/** @deprecated */
 export interface ExplainSDKType {
   values: ValueSDKType[];
   expr_steps: Explain_ExprStepSDKType[];
 }
-/** ID and value index of one step. */
+/**
+ * ID and value index of one step.
+ * @name Explain_ExprStep
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprStep
+ */
 export interface Explain_ExprStep {
-  /** ID of corresponding Expr node. */
+  /**
+   * ID of corresponding Expr node.
+   */
   id: bigint;
-  /** Index of the value in the values list. */
+  /**
+   * Index of the value in the values list.
+   */
   valueIndex: number;
 }
 export interface Explain_ExprStepProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.ExprStep";
   value: Uint8Array;
 }
-/** ID and value index of one step. */
+/**
+ * ID and value index of one step.
+ * @name Explain_ExprStepAmino
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Explain_ExprStep
+ */
 export interface Explain_ExprStepAmino {
-  /** ID of corresponding Expr node. */
+  /**
+   * ID of corresponding Expr node.
+   */
   id?: string;
-  /** Index of the value in the values list. */
+  /**
+   * Index of the value in the values list.
+   */
   value_index?: number;
 }
 export interface Explain_ExprStepAminoMsg {
   type: "/google.api.expr.v1alpha1.ExprStep";
   value: Explain_ExprStepAmino;
 }
-/** ID and value index of one step. */
+/**
+ * ID and value index of one step.
+ * @name Explain_ExprStepSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprStep
+ */
 export interface Explain_ExprStepSDKType {
   id: bigint;
   value_index: number;
@@ -98,6 +130,14 @@ function createBaseExplain(): Explain {
     exprSteps: []
   };
 }
+/**
+ * Values of intermediate expressions produced when evaluating expression.
+ * Deprecated, use `EvalState` instead.
+ * @name Explain
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Explain
+ * @deprecated
+ */
 export const Explain = {
   typeUrl: "/google.api.expr.v1alpha1.Explain",
   is(o: any): o is Explain {
@@ -239,6 +279,12 @@ function createBaseExplain_ExprStep(): Explain_ExprStep {
     valueIndex: 0
   };
 }
+/**
+ * ID and value index of one step.
+ * @name Explain_ExprStep
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprStep
+ */
 export const Explain_ExprStep = {
   typeUrl: "/google.api.expr.v1alpha1.ExprStep",
   is(o: any): o is Explain_ExprStep {

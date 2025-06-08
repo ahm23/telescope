@@ -12,10 +12,15 @@ import { DeepPartial } from "../../../helpers";
  * <factory/{creatorAddress}/{subdenom}>. The resulting denom's admin is
  * originally set to be the creator, but this can be changed later. The token
  * denom does not indicate the current admin.
+ * @name MsgCreateDenom
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgCreateDenom
  */
 export interface MsgCreateDenom {
   sender: string;
-  /** subdenom can be up to 44 "alphanumeric" characters long. */
+  /**
+   * subdenom can be up to 44 "alphanumeric" characters long.
+   */
   subdenom: string;
 }
 export interface MsgCreateDenomProtoMsg {
@@ -32,10 +37,15 @@ export interface MsgCreateDenomProtoMsg {
  * <factory/{creatorAddress}/{subdenom}>. The resulting denom's admin is
  * originally set to be the creator, but this can be changed later. The token
  * denom does not indicate the current admin.
+ * @name MsgCreateDenomAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgCreateDenom
  */
 export interface MsgCreateDenomAmino {
   sender: string;
-  /** subdenom can be up to 44 "alphanumeric" characters long. */
+  /**
+   * subdenom can be up to 44 "alphanumeric" characters long.
+   */
   subdenom: string;
 }
 export interface MsgCreateDenomAminoMsg {
@@ -45,6 +55,9 @@ export interface MsgCreateDenomAminoMsg {
 /**
  * MsgCreateDenomResponse is the return value of MsgCreateDenom
  * It returns the full string of the newly created denom
+ * @name MsgCreateDenomResponse
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgCreateDenomResponse
  */
 export interface MsgCreateDenomResponse {
   newTokenDenom: string;
@@ -56,6 +69,9 @@ export interface MsgCreateDenomResponseProtoMsg {
 /**
  * MsgCreateDenomResponse is the return value of MsgCreateDenom
  * It returns the full string of the newly created denom
+ * @name MsgCreateDenomResponseAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgCreateDenomResponse
  */
 export interface MsgCreateDenomResponseAmino {
   new_token_denom: string;
@@ -67,6 +83,9 @@ export interface MsgCreateDenomResponseAminoMsg {
 /**
  * MsgMint is the sdk.Msg type for allowing an admin account to mint
  * more of a token.  For now, we only support minting to the sender account
+ * @name MsgMint
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgMint
  */
 export interface MsgMint {
   sender: string;
@@ -79,6 +98,9 @@ export interface MsgMintProtoMsg {
 /**
  * MsgMint is the sdk.Msg type for allowing an admin account to mint
  * more of a token.  For now, we only support minting to the sender account
+ * @name MsgMintAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgMint
  */
 export interface MsgMintAmino {
   sender: string;
@@ -88,11 +110,21 @@ export interface MsgMintAminoMsg {
   type: "osmosis/tokenfactory/mint";
   value: MsgMintAmino;
 }
+/**
+ * @name MsgMintResponse
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgMintResponse
+ */
 export interface MsgMintResponse {}
 export interface MsgMintResponseProtoMsg {
   typeUrl: "/osmosis.tokenfactory.v1beta1.MsgMintResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgMintResponseAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgMintResponse
+ */
 export interface MsgMintResponseAmino {}
 export interface MsgMintResponseAminoMsg {
   type: "osmosis/tokenfactory/mint-response";
@@ -101,6 +133,9 @@ export interface MsgMintResponseAminoMsg {
 /**
  * MsgBurn is the sdk.Msg type for allowing an admin account to burn
  * a token.  For now, we only support burning from the sender account.
+ * @name MsgBurn
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgBurn
  */
 export interface MsgBurn {
   sender: string;
@@ -113,6 +148,9 @@ export interface MsgBurnProtoMsg {
 /**
  * MsgBurn is the sdk.Msg type for allowing an admin account to burn
  * a token.  For now, we only support burning from the sender account.
+ * @name MsgBurnAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgBurn
  */
 export interface MsgBurnAmino {
   sender: string;
@@ -122,11 +160,21 @@ export interface MsgBurnAminoMsg {
   type: "osmosis/tokenfactory/burn";
   value: MsgBurnAmino;
 }
+/**
+ * @name MsgBurnResponse
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgBurnResponse
+ */
 export interface MsgBurnResponse {}
 export interface MsgBurnResponseProtoMsg {
   typeUrl: "/osmosis.tokenfactory.v1beta1.MsgBurnResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgBurnResponseAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgBurnResponse
+ */
 export interface MsgBurnResponseAmino {}
 export interface MsgBurnResponseAminoMsg {
   type: "osmosis/tokenfactory/burn-response";
@@ -135,6 +183,9 @@ export interface MsgBurnResponseAminoMsg {
 /**
  * MsgChangeAdmin is the sdk.Msg type for allowing an admin account to reassign
  * adminship of a denom to a new account
+ * @name MsgChangeAdmin
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgChangeAdmin
  */
 export interface MsgChangeAdmin {
   sender: string;
@@ -148,6 +199,9 @@ export interface MsgChangeAdminProtoMsg {
 /**
  * MsgChangeAdmin is the sdk.Msg type for allowing an admin account to reassign
  * adminship of a denom to a new account
+ * @name MsgChangeAdminAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgChangeAdmin
  */
 export interface MsgChangeAdminAmino {
   sender: string;
@@ -161,6 +215,9 @@ export interface MsgChangeAdminAminoMsg {
 /**
  * MsgChangeAdminResponse defines the response structure for an executed
  * MsgChangeAdmin message.
+ * @name MsgChangeAdminResponse
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgChangeAdminResponse
  */
 export interface MsgChangeAdminResponse {}
 export interface MsgChangeAdminResponseProtoMsg {
@@ -170,6 +227,9 @@ export interface MsgChangeAdminResponseProtoMsg {
 /**
  * MsgChangeAdminResponse defines the response structure for an executed
  * MsgChangeAdmin message.
+ * @name MsgChangeAdminResponseAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgChangeAdminResponse
  */
 export interface MsgChangeAdminResponseAmino {}
 export interface MsgChangeAdminResponseAminoMsg {
@@ -179,6 +239,9 @@ export interface MsgChangeAdminResponseAminoMsg {
 /**
  * MsgSetDenomMetadata is the sdk.Msg type for allowing an admin account to set
  * the denom's bank metadata
+ * @name MsgSetDenomMetadata
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgSetDenomMetadata
  */
 export interface MsgSetDenomMetadata {
   sender: string;
@@ -191,6 +254,9 @@ export interface MsgSetDenomMetadataProtoMsg {
 /**
  * MsgSetDenomMetadata is the sdk.Msg type for allowing an admin account to set
  * the denom's bank metadata
+ * @name MsgSetDenomMetadataAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgSetDenomMetadata
  */
 export interface MsgSetDenomMetadataAmino {
   sender: string;
@@ -203,6 +269,9 @@ export interface MsgSetDenomMetadataAminoMsg {
 /**
  * MsgSetDenomMetadataResponse defines the response structure for an executed
  * MsgSetDenomMetadata message.
+ * @name MsgSetDenomMetadataResponse
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgSetDenomMetadataResponse
  */
 export interface MsgSetDenomMetadataResponse {}
 export interface MsgSetDenomMetadataResponseProtoMsg {
@@ -212,6 +281,9 @@ export interface MsgSetDenomMetadataResponseProtoMsg {
 /**
  * MsgSetDenomMetadataResponse defines the response structure for an executed
  * MsgSetDenomMetadata message.
+ * @name MsgSetDenomMetadataResponseAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgSetDenomMetadataResponse
  */
 export interface MsgSetDenomMetadataResponseAmino {}
 export interface MsgSetDenomMetadataResponseAminoMsg {
@@ -224,6 +296,20 @@ function createBaseMsgCreateDenom(): MsgCreateDenom {
     subdenom: ""
   };
 }
+/**
+ * MsgCreateDenom defines the message structure for the CreateDenom gRPC service
+ * method. It allows an account to create a new denom. It requires a sender
+ * address and a sub denomination. The (sender_address, sub_denomination) tuple
+ * must be unique and cannot be re-used.
+ * 
+ * The resulting denom created is defined as
+ * <factory/{creatorAddress}/{subdenom}>. The resulting denom's admin is
+ * originally set to be the creator, but this can be changed later. The token
+ * denom does not indicate the current admin.
+ * @name MsgCreateDenom
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgCreateDenom
+ */
 export const MsgCreateDenom = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.MsgCreateDenom",
   aminoType: "osmosis/tokenfactory/create-denom",
@@ -305,6 +391,13 @@ function createBaseMsgCreateDenomResponse(): MsgCreateDenomResponse {
     newTokenDenom: ""
   };
 }
+/**
+ * MsgCreateDenomResponse is the return value of MsgCreateDenom
+ * It returns the full string of the newly created denom
+ * @name MsgCreateDenomResponse
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgCreateDenomResponse
+ */
 export const MsgCreateDenomResponse = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.MsgCreateDenomResponse",
   aminoType: "osmosis/tokenfactory/create-denom-response",
@@ -376,6 +469,13 @@ function createBaseMsgMint(): MsgMint {
     amount: Coin.fromPartial({})
   };
 }
+/**
+ * MsgMint is the sdk.Msg type for allowing an admin account to mint
+ * more of a token.  For now, we only support minting to the sender account
+ * @name MsgMint
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgMint
+ */
 export const MsgMint = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.MsgMint",
   aminoType: "osmosis/tokenfactory/mint",
@@ -455,6 +555,11 @@ export const MsgMint = {
 function createBaseMsgMintResponse(): MsgMintResponse {
   return {};
 }
+/**
+ * @name MsgMintResponse
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgMintResponse
+ */
 export const MsgMintResponse = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.MsgMintResponse",
   aminoType: "osmosis/tokenfactory/mint-response",
@@ -515,6 +620,13 @@ function createBaseMsgBurn(): MsgBurn {
     amount: Coin.fromPartial({})
   };
 }
+/**
+ * MsgBurn is the sdk.Msg type for allowing an admin account to burn
+ * a token.  For now, we only support burning from the sender account.
+ * @name MsgBurn
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgBurn
+ */
 export const MsgBurn = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.MsgBurn",
   aminoType: "osmosis/tokenfactory/burn",
@@ -594,6 +706,11 @@ export const MsgBurn = {
 function createBaseMsgBurnResponse(): MsgBurnResponse {
   return {};
 }
+/**
+ * @name MsgBurnResponse
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgBurnResponse
+ */
 export const MsgBurnResponse = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.MsgBurnResponse",
   aminoType: "osmosis/tokenfactory/burn-response",
@@ -655,6 +772,13 @@ function createBaseMsgChangeAdmin(): MsgChangeAdmin {
     newAdmin: ""
   };
 }
+/**
+ * MsgChangeAdmin is the sdk.Msg type for allowing an admin account to reassign
+ * adminship of a denom to a new account
+ * @name MsgChangeAdmin
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgChangeAdmin
+ */
 export const MsgChangeAdmin = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.MsgChangeAdmin",
   aminoType: "osmosis/tokenfactory/change-admin",
@@ -745,6 +869,13 @@ export const MsgChangeAdmin = {
 function createBaseMsgChangeAdminResponse(): MsgChangeAdminResponse {
   return {};
 }
+/**
+ * MsgChangeAdminResponse defines the response structure for an executed
+ * MsgChangeAdmin message.
+ * @name MsgChangeAdminResponse
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgChangeAdminResponse
+ */
 export const MsgChangeAdminResponse = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.MsgChangeAdminResponse",
   aminoType: "osmosis/tokenfactory/change-admin-response",
@@ -805,6 +936,13 @@ function createBaseMsgSetDenomMetadata(): MsgSetDenomMetadata {
     metadata: Metadata.fromPartial({})
   };
 }
+/**
+ * MsgSetDenomMetadata is the sdk.Msg type for allowing an admin account to set
+ * the denom's bank metadata
+ * @name MsgSetDenomMetadata
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgSetDenomMetadata
+ */
 export const MsgSetDenomMetadata = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.MsgSetDenomMetadata",
   aminoType: "osmosis/tokenfactory/set-denom-metadata",
@@ -884,6 +1022,13 @@ export const MsgSetDenomMetadata = {
 function createBaseMsgSetDenomMetadataResponse(): MsgSetDenomMetadataResponse {
   return {};
 }
+/**
+ * MsgSetDenomMetadataResponse defines the response structure for an executed
+ * MsgSetDenomMetadata message.
+ * @name MsgSetDenomMetadataResponse
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.MsgSetDenomMetadataResponse
+ */
 export const MsgSetDenomMetadataResponse = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.MsgSetDenomMetadataResponse",
   aminoType: "osmosis/tokenfactory/set-denom-metadata-response",

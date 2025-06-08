@@ -1,7 +1,12 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 export const protobufPackage = "cosmos.crisis.v1beta1";
-/** MsgVerifyInvariant represents a message to verify a particular invariance. */
+/**
+ * MsgVerifyInvariant represents a message to verify a particular invariance.
+ * @name MsgVerifyInvariant
+ * @package cosmos.crisis.v1beta1
+ * @see proto type: cosmos.crisis.v1beta1.MsgVerifyInvariant
+ */
 export interface MsgVerifyInvariant {
   sender: string;
   invariantModuleName: string;
@@ -11,7 +16,12 @@ export interface MsgVerifyInvariantProtoMsg {
   typeUrl: "/cosmos.crisis.v1beta1.MsgVerifyInvariant";
   value: Uint8Array;
 }
-/** MsgVerifyInvariant represents a message to verify a particular invariance. */
+/**
+ * MsgVerifyInvariant represents a message to verify a particular invariance.
+ * @name MsgVerifyInvariantAmino
+ * @package cosmos.crisis.v1beta1
+ * @see proto type: cosmos.crisis.v1beta1.MsgVerifyInvariant
+ */
 export interface MsgVerifyInvariantAmino {
   sender?: string;
   invariant_module_name?: string;
@@ -21,25 +31,45 @@ export interface MsgVerifyInvariantAminoMsg {
   type: "cosmos-sdk/MsgVerifyInvariant";
   value: MsgVerifyInvariantAmino;
 }
-/** MsgVerifyInvariant represents a message to verify a particular invariance. */
+/**
+ * MsgVerifyInvariant represents a message to verify a particular invariance.
+ * @name MsgVerifyInvariantSDKType
+ * @package cosmos.crisis.v1beta1
+ * @see proto type: cosmos.crisis.v1beta1.MsgVerifyInvariant
+ */
 export interface MsgVerifyInvariantSDKType {
   sender: string;
   invariant_module_name: string;
   invariant_route: string;
 }
-/** MsgVerifyInvariantResponse defines the Msg/VerifyInvariant response type. */
+/**
+ * MsgVerifyInvariantResponse defines the Msg/VerifyInvariant response type.
+ * @name MsgVerifyInvariantResponse
+ * @package cosmos.crisis.v1beta1
+ * @see proto type: cosmos.crisis.v1beta1.MsgVerifyInvariantResponse
+ */
 export interface MsgVerifyInvariantResponse {}
 export interface MsgVerifyInvariantResponseProtoMsg {
   typeUrl: "/cosmos.crisis.v1beta1.MsgVerifyInvariantResponse";
   value: Uint8Array;
 }
-/** MsgVerifyInvariantResponse defines the Msg/VerifyInvariant response type. */
+/**
+ * MsgVerifyInvariantResponse defines the Msg/VerifyInvariant response type.
+ * @name MsgVerifyInvariantResponseAmino
+ * @package cosmos.crisis.v1beta1
+ * @see proto type: cosmos.crisis.v1beta1.MsgVerifyInvariantResponse
+ */
 export interface MsgVerifyInvariantResponseAmino {}
 export interface MsgVerifyInvariantResponseAminoMsg {
   type: "cosmos-sdk/MsgVerifyInvariantResponse";
   value: MsgVerifyInvariantResponseAmino;
 }
-/** MsgVerifyInvariantResponse defines the Msg/VerifyInvariant response type. */
+/**
+ * MsgVerifyInvariantResponse defines the Msg/VerifyInvariant response type.
+ * @name MsgVerifyInvariantResponseSDKType
+ * @package cosmos.crisis.v1beta1
+ * @see proto type: cosmos.crisis.v1beta1.MsgVerifyInvariantResponse
+ */
 export interface MsgVerifyInvariantResponseSDKType {}
 function createBaseMsgVerifyInvariant(): MsgVerifyInvariant {
   return {
@@ -48,6 +78,12 @@ function createBaseMsgVerifyInvariant(): MsgVerifyInvariant {
     invariantRoute: ""
   };
 }
+/**
+ * MsgVerifyInvariant represents a message to verify a particular invariance.
+ * @name MsgVerifyInvariant
+ * @package cosmos.crisis.v1beta1
+ * @see proto type: cosmos.crisis.v1beta1.MsgVerifyInvariant
+ */
 export const MsgVerifyInvariant = {
   typeUrl: "/cosmos.crisis.v1beta1.MsgVerifyInvariant",
   encode(message: MsgVerifyInvariant, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -137,6 +173,12 @@ export const MsgVerifyInvariant = {
 function createBaseMsgVerifyInvariantResponse(): MsgVerifyInvariantResponse {
   return {};
 }
+/**
+ * MsgVerifyInvariantResponse defines the Msg/VerifyInvariant response type.
+ * @name MsgVerifyInvariantResponse
+ * @package cosmos.crisis.v1beta1
+ * @see proto type: cosmos.crisis.v1beta1.MsgVerifyInvariantResponse
+ */
 export const MsgVerifyInvariantResponse = {
   typeUrl: "/cosmos.crisis.v1beta1.MsgVerifyInvariantResponse",
   encode(_: MsgVerifyInvariantResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

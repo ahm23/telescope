@@ -1,21 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`msg funcs works 1`] = `
-"/* Send defines a method for sending coins from one account to another account. */
+"/**
+ * Send defines a method for sending coins from one account to another account.
+ * @name send
+ * @package cosmos.bank.v1beta1
+ * @see proto service: cosmos.bank.v1beta1.Send
+ */
 export const send = buildTx<MsgSend>({
   msg: MsgSend
 });"
 `;
 
 exports[`msg funcs works 2`] = `
-"/* Send defines a method for sending coins from one account to another account. */
+"/**
+ * Send defines a method for sending coins from one account to another account.
+ * @name useSend
+ * @package cosmos.bank.v1beta1
+ * @see proto service: cosmos.bank.v1beta1.Send
+ */
 export const useSend = buildUseMutation<MsgSend, Error>({
   builderMutationFn: send
 });"
 `;
 
 exports[`query funcs works 1`] = `
-"/* Balance queries the balance of a single coin for a single account. */
+"/**
+ * Balance queries the balance of a single coin for a single account.
+ * @name getBalance
+ * @package cosmos.bank.v1beta1
+ * @see proto service: cosmos.bank.v1beta1.Balance
+ */
 export const getBalance = buildQuery<QueryBalanceRequest, QueryBalanceResponse>({
   encode: QueryBalanceRequest.encode,
   decode: QueryBalanceResponse.decode,
@@ -25,7 +40,12 @@ export const getBalance = buildQuery<QueryBalanceRequest, QueryBalanceResponse>(
 `;
 
 exports[`query funcs works 2`] = `
-"/* Balance queries the balance of a single coin for a single account. */
+"/**
+ * Balance queries the balance of a single coin for a single account.
+ * @name useBalance
+ * @package cosmos.bank.v1beta1
+ * @see proto service: cosmos.bank.v1beta1.Balance
+ */
 export const useBalance = buildUseQuery<QueryBalanceRequest, QueryBalanceResponse>({
   builderQueryFn: getBalance,
   queryKeyPrefix: "BalanceQuery"

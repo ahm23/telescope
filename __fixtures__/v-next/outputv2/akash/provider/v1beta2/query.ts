@@ -4,7 +4,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "akash.provider.v1beta2";
-/** QueryProvidersRequest is request type for the Query/Providers RPC method */
+/**
+ * QueryProvidersRequest is request type for the Query/Providers RPC method
+ * @name QueryProvidersRequest
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProvidersRequest
+ */
 export interface QueryProvidersRequest {
   pagination?: PageRequest;
 }
@@ -12,7 +17,12 @@ export interface QueryProvidersRequestProtoMsg {
   typeUrl: "/akash.provider.v1beta2.QueryProvidersRequest";
   value: Uint8Array;
 }
-/** QueryProvidersRequest is request type for the Query/Providers RPC method */
+/**
+ * QueryProvidersRequest is request type for the Query/Providers RPC method
+ * @name QueryProvidersRequestAmino
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProvidersRequest
+ */
 export interface QueryProvidersRequestAmino {
   pagination?: PageRequestAmino;
 }
@@ -20,11 +30,21 @@ export interface QueryProvidersRequestAminoMsg {
   type: "/akash.provider.v1beta2.QueryProvidersRequest";
   value: QueryProvidersRequestAmino;
 }
-/** QueryProvidersRequest is request type for the Query/Providers RPC method */
+/**
+ * QueryProvidersRequest is request type for the Query/Providers RPC method
+ * @name QueryProvidersRequestSDKType
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProvidersRequest
+ */
 export interface QueryProvidersRequestSDKType {
   pagination?: PageRequestSDKType;
 }
-/** QueryProvidersResponse is response type for the Query/Providers RPC method */
+/**
+ * QueryProvidersResponse is response type for the Query/Providers RPC method
+ * @name QueryProvidersResponse
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProvidersResponse
+ */
 export interface QueryProvidersResponse {
   providers: Provider[];
   pagination?: PageResponse;
@@ -33,7 +53,12 @@ export interface QueryProvidersResponseProtoMsg {
   typeUrl: "/akash.provider.v1beta2.QueryProvidersResponse";
   value: Uint8Array;
 }
-/** QueryProvidersResponse is response type for the Query/Providers RPC method */
+/**
+ * QueryProvidersResponse is response type for the Query/Providers RPC method
+ * @name QueryProvidersResponseAmino
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProvidersResponse
+ */
 export interface QueryProvidersResponseAmino {
   providers?: ProviderAmino[];
   pagination?: PageResponseAmino;
@@ -42,12 +67,22 @@ export interface QueryProvidersResponseAminoMsg {
   type: "/akash.provider.v1beta2.QueryProvidersResponse";
   value: QueryProvidersResponseAmino;
 }
-/** QueryProvidersResponse is response type for the Query/Providers RPC method */
+/**
+ * QueryProvidersResponse is response type for the Query/Providers RPC method
+ * @name QueryProvidersResponseSDKType
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProvidersResponse
+ */
 export interface QueryProvidersResponseSDKType {
   providers: ProviderSDKType[];
   pagination?: PageResponseSDKType;
 }
-/** QueryProviderRequest is request type for the Query/Provider RPC method */
+/**
+ * QueryProviderRequest is request type for the Query/Provider RPC method
+ * @name QueryProviderRequest
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProviderRequest
+ */
 export interface QueryProviderRequest {
   owner: string;
 }
@@ -55,7 +90,12 @@ export interface QueryProviderRequestProtoMsg {
   typeUrl: "/akash.provider.v1beta2.QueryProviderRequest";
   value: Uint8Array;
 }
-/** QueryProviderRequest is request type for the Query/Provider RPC method */
+/**
+ * QueryProviderRequest is request type for the Query/Provider RPC method
+ * @name QueryProviderRequestAmino
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProviderRequest
+ */
 export interface QueryProviderRequestAmino {
   owner?: string;
 }
@@ -63,11 +103,21 @@ export interface QueryProviderRequestAminoMsg {
   type: "/akash.provider.v1beta2.QueryProviderRequest";
   value: QueryProviderRequestAmino;
 }
-/** QueryProviderRequest is request type for the Query/Provider RPC method */
+/**
+ * QueryProviderRequest is request type for the Query/Provider RPC method
+ * @name QueryProviderRequestSDKType
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProviderRequest
+ */
 export interface QueryProviderRequestSDKType {
   owner: string;
 }
-/** QueryProviderResponse is response type for the Query/Provider RPC method */
+/**
+ * QueryProviderResponse is response type for the Query/Provider RPC method
+ * @name QueryProviderResponse
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProviderResponse
+ */
 export interface QueryProviderResponse {
   provider: Provider;
 }
@@ -75,7 +125,12 @@ export interface QueryProviderResponseProtoMsg {
   typeUrl: "/akash.provider.v1beta2.QueryProviderResponse";
   value: Uint8Array;
 }
-/** QueryProviderResponse is response type for the Query/Provider RPC method */
+/**
+ * QueryProviderResponse is response type for the Query/Provider RPC method
+ * @name QueryProviderResponseAmino
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProviderResponse
+ */
 export interface QueryProviderResponseAmino {
   provider?: ProviderAmino;
 }
@@ -83,7 +138,12 @@ export interface QueryProviderResponseAminoMsg {
   type: "/akash.provider.v1beta2.QueryProviderResponse";
   value: QueryProviderResponseAmino;
 }
-/** QueryProviderResponse is response type for the Query/Provider RPC method */
+/**
+ * QueryProviderResponse is response type for the Query/Provider RPC method
+ * @name QueryProviderResponseSDKType
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProviderResponse
+ */
 export interface QueryProviderResponseSDKType {
   provider: ProviderSDKType;
 }
@@ -92,6 +152,12 @@ function createBaseQueryProvidersRequest(): QueryProvidersRequest {
     pagination: undefined
   };
 }
+/**
+ * QueryProvidersRequest is request type for the Query/Providers RPC method
+ * @name QueryProvidersRequest
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProvidersRequest
+ */
 export const QueryProvidersRequest = {
   typeUrl: "/akash.provider.v1beta2.QueryProvidersRequest",
   encode(message: QueryProvidersRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -178,6 +244,12 @@ function createBaseQueryProvidersResponse(): QueryProvidersResponse {
     pagination: undefined
   };
 }
+/**
+ * QueryProvidersResponse is response type for the Query/Providers RPC method
+ * @name QueryProvidersResponse
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProvidersResponse
+ */
 export const QueryProvidersResponse = {
   typeUrl: "/akash.provider.v1beta2.QueryProvidersResponse",
   encode(message: QueryProvidersResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -288,6 +360,12 @@ function createBaseQueryProviderRequest(): QueryProviderRequest {
     owner: ""
   };
 }
+/**
+ * QueryProviderRequest is request type for the Query/Provider RPC method
+ * @name QueryProviderRequest
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProviderRequest
+ */
 export const QueryProviderRequest = {
   typeUrl: "/akash.provider.v1beta2.QueryProviderRequest",
   encode(message: QueryProviderRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -371,6 +449,12 @@ function createBaseQueryProviderResponse(): QueryProviderResponse {
     provider: Provider.fromPartial({})
   };
 }
+/**
+ * QueryProviderResponse is response type for the Query/Provider RPC method
+ * @name QueryProviderResponse
+ * @package akash.provider.v1beta2
+ * @see proto type: akash.provider.v1beta2.QueryProviderResponse
+ */
 export const QueryProviderResponse = {
   typeUrl: "/akash.provider.v1beta2.QueryProviderResponse",
   encode(message: QueryProviderResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

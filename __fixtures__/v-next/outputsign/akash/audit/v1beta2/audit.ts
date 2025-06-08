@@ -2,7 +2,12 @@ import { Attribute, AttributeAmino, AttributeSDKType } from "../../base/v1beta2/
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial, Exact } from "../../../helpers";
 export const protobufPackage = "akash.audit.v1beta2";
-/** Provider stores owner auditor and attributes details */
+/**
+ * Provider stores owner auditor and attributes details
+ * @name Provider
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.Provider
+ */
 export interface Provider {
   owner: string;
   auditor: string;
@@ -12,7 +17,12 @@ export interface ProviderProtoMsg {
   typeUrl: "/akash.audit.v1beta2.Provider";
   value: Uint8Array;
 }
-/** Provider stores owner auditor and attributes details */
+/**
+ * Provider stores owner auditor and attributes details
+ * @name ProviderAmino
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.Provider
+ */
 export interface ProviderAmino {
   owner: string;
   auditor: string;
@@ -22,13 +32,23 @@ export interface ProviderAminoMsg {
   type: "/akash.audit.v1beta2.Provider";
   value: ProviderAmino;
 }
-/** Provider stores owner auditor and attributes details */
+/**
+ * Provider stores owner auditor and attributes details
+ * @name ProviderSDKType
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.Provider
+ */
 export interface ProviderSDKType {
   owner: string;
   auditor: string;
   attributes: AttributeSDKType[];
 }
-/** Attributes */
+/**
+ * Attributes
+ * @name AuditedAttributes
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.AuditedAttributes
+ */
 export interface AuditedAttributes {
   owner: string;
   auditor: string;
@@ -38,7 +58,12 @@ export interface AuditedAttributesProtoMsg {
   typeUrl: "/akash.audit.v1beta2.AuditedAttributes";
   value: Uint8Array;
 }
-/** Attributes */
+/**
+ * Attributes
+ * @name AuditedAttributesAmino
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.AuditedAttributes
+ */
 export interface AuditedAttributesAmino {
   owner: string;
   auditor: string;
@@ -48,13 +73,23 @@ export interface AuditedAttributesAminoMsg {
   type: "/akash.audit.v1beta2.AuditedAttributes";
   value: AuditedAttributesAmino;
 }
-/** Attributes */
+/**
+ * Attributes
+ * @name AuditedAttributesSDKType
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.AuditedAttributes
+ */
 export interface AuditedAttributesSDKType {
   owner: string;
   auditor: string;
   attributes: AttributeSDKType[];
 }
-/** AttributesResponse represents details of deployment along with group details */
+/**
+ * AttributesResponse represents details of deployment along with group details
+ * @name AttributesResponse
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.AttributesResponse
+ */
 export interface AttributesResponse {
   attributes: AuditedAttributes[];
 }
@@ -62,7 +97,12 @@ export interface AttributesResponseProtoMsg {
   typeUrl: "/akash.audit.v1beta2.AttributesResponse";
   value: Uint8Array;
 }
-/** AttributesResponse represents details of deployment along with group details */
+/**
+ * AttributesResponse represents details of deployment along with group details
+ * @name AttributesResponseAmino
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.AttributesResponse
+ */
 export interface AttributesResponseAmino {
   attributes: AuditedAttributesAmino[];
 }
@@ -70,11 +110,21 @@ export interface AttributesResponseAminoMsg {
   type: "/akash.audit.v1beta2.AttributesResponse";
   value: AttributesResponseAmino;
 }
-/** AttributesResponse represents details of deployment along with group details */
+/**
+ * AttributesResponse represents details of deployment along with group details
+ * @name AttributesResponseSDKType
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.AttributesResponse
+ */
 export interface AttributesResponseSDKType {
   attributes: AuditedAttributesSDKType[];
 }
-/** AttributesFilters defines filters used to filter deployments */
+/**
+ * AttributesFilters defines filters used to filter deployments
+ * @name AttributesFilters
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.AttributesFilters
+ */
 export interface AttributesFilters {
   auditors: string[];
   owners: string[];
@@ -83,7 +133,12 @@ export interface AttributesFiltersProtoMsg {
   typeUrl: "/akash.audit.v1beta2.AttributesFilters";
   value: Uint8Array;
 }
-/** AttributesFilters defines filters used to filter deployments */
+/**
+ * AttributesFilters defines filters used to filter deployments
+ * @name AttributesFiltersAmino
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.AttributesFilters
+ */
 export interface AttributesFiltersAmino {
   auditors: string[];
   owners: string[];
@@ -92,12 +147,22 @@ export interface AttributesFiltersAminoMsg {
   type: "/akash.audit.v1beta2.AttributesFilters";
   value: AttributesFiltersAmino;
 }
-/** AttributesFilters defines filters used to filter deployments */
+/**
+ * AttributesFilters defines filters used to filter deployments
+ * @name AttributesFiltersSDKType
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.AttributesFilters
+ */
 export interface AttributesFiltersSDKType {
   auditors: string[];
   owners: string[];
 }
-/** MsgSignProviderAttributes defines an SDK message for signing a provider attributes */
+/**
+ * MsgSignProviderAttributes defines an SDK message for signing a provider attributes
+ * @name MsgSignProviderAttributes
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgSignProviderAttributes
+ */
 export interface MsgSignProviderAttributes {
   owner: string;
   auditor: string;
@@ -107,7 +172,12 @@ export interface MsgSignProviderAttributesProtoMsg {
   typeUrl: "/akash.audit.v1beta2.MsgSignProviderAttributes";
   value: Uint8Array;
 }
-/** MsgSignProviderAttributes defines an SDK message for signing a provider attributes */
+/**
+ * MsgSignProviderAttributes defines an SDK message for signing a provider attributes
+ * @name MsgSignProviderAttributesAmino
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgSignProviderAttributes
+ */
 export interface MsgSignProviderAttributesAmino {
   owner: string;
   auditor: string;
@@ -117,27 +187,52 @@ export interface MsgSignProviderAttributesAminoMsg {
   type: "/akash.audit.v1beta2.MsgSignProviderAttributes";
   value: MsgSignProviderAttributesAmino;
 }
-/** MsgSignProviderAttributes defines an SDK message for signing a provider attributes */
+/**
+ * MsgSignProviderAttributes defines an SDK message for signing a provider attributes
+ * @name MsgSignProviderAttributesSDKType
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgSignProviderAttributes
+ */
 export interface MsgSignProviderAttributesSDKType {
   owner: string;
   auditor: string;
   attributes: AttributeSDKType[];
 }
-/** MsgSignProviderAttributesResponse defines the Msg/CreateProvider response type. */
+/**
+ * MsgSignProviderAttributesResponse defines the Msg/CreateProvider response type.
+ * @name MsgSignProviderAttributesResponse
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgSignProviderAttributesResponse
+ */
 export interface MsgSignProviderAttributesResponse {}
 export interface MsgSignProviderAttributesResponseProtoMsg {
   typeUrl: "/akash.audit.v1beta2.MsgSignProviderAttributesResponse";
   value: Uint8Array;
 }
-/** MsgSignProviderAttributesResponse defines the Msg/CreateProvider response type. */
+/**
+ * MsgSignProviderAttributesResponse defines the Msg/CreateProvider response type.
+ * @name MsgSignProviderAttributesResponseAmino
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgSignProviderAttributesResponse
+ */
 export interface MsgSignProviderAttributesResponseAmino {}
 export interface MsgSignProviderAttributesResponseAminoMsg {
   type: "/akash.audit.v1beta2.MsgSignProviderAttributesResponse";
   value: MsgSignProviderAttributesResponseAmino;
 }
-/** MsgSignProviderAttributesResponse defines the Msg/CreateProvider response type. */
+/**
+ * MsgSignProviderAttributesResponse defines the Msg/CreateProvider response type.
+ * @name MsgSignProviderAttributesResponseSDKType
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgSignProviderAttributesResponse
+ */
 export interface MsgSignProviderAttributesResponseSDKType {}
-/** MsgDeleteProviderAttributes defined the Msg/DeleteProviderAttributes */
+/**
+ * MsgDeleteProviderAttributes defined the Msg/DeleteProviderAttributes
+ * @name MsgDeleteProviderAttributes
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgDeleteProviderAttributes
+ */
 export interface MsgDeleteProviderAttributes {
   owner: string;
   auditor: string;
@@ -147,7 +242,12 @@ export interface MsgDeleteProviderAttributesProtoMsg {
   typeUrl: "/akash.audit.v1beta2.MsgDeleteProviderAttributes";
   value: Uint8Array;
 }
-/** MsgDeleteProviderAttributes defined the Msg/DeleteProviderAttributes */
+/**
+ * MsgDeleteProviderAttributes defined the Msg/DeleteProviderAttributes
+ * @name MsgDeleteProviderAttributesAmino
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgDeleteProviderAttributes
+ */
 export interface MsgDeleteProviderAttributesAmino {
   owner: string;
   auditor: string;
@@ -157,25 +257,45 @@ export interface MsgDeleteProviderAttributesAminoMsg {
   type: "/akash.audit.v1beta2.MsgDeleteProviderAttributes";
   value: MsgDeleteProviderAttributesAmino;
 }
-/** MsgDeleteProviderAttributes defined the Msg/DeleteProviderAttributes */
+/**
+ * MsgDeleteProviderAttributes defined the Msg/DeleteProviderAttributes
+ * @name MsgDeleteProviderAttributesSDKType
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgDeleteProviderAttributes
+ */
 export interface MsgDeleteProviderAttributesSDKType {
   owner: string;
   auditor: string;
   keys: string[];
 }
-/** MsgDeleteProviderAttributesResponse defines the Msg/ProviderAttributes response type. */
+/**
+ * MsgDeleteProviderAttributesResponse defines the Msg/ProviderAttributes response type.
+ * @name MsgDeleteProviderAttributesResponse
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgDeleteProviderAttributesResponse
+ */
 export interface MsgDeleteProviderAttributesResponse {}
 export interface MsgDeleteProviderAttributesResponseProtoMsg {
   typeUrl: "/akash.audit.v1beta2.MsgDeleteProviderAttributesResponse";
   value: Uint8Array;
 }
-/** MsgDeleteProviderAttributesResponse defines the Msg/ProviderAttributes response type. */
+/**
+ * MsgDeleteProviderAttributesResponse defines the Msg/ProviderAttributes response type.
+ * @name MsgDeleteProviderAttributesResponseAmino
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgDeleteProviderAttributesResponse
+ */
 export interface MsgDeleteProviderAttributesResponseAmino {}
 export interface MsgDeleteProviderAttributesResponseAminoMsg {
   type: "/akash.audit.v1beta2.MsgDeleteProviderAttributesResponse";
   value: MsgDeleteProviderAttributesResponseAmino;
 }
-/** MsgDeleteProviderAttributesResponse defines the Msg/ProviderAttributes response type. */
+/**
+ * MsgDeleteProviderAttributesResponse defines the Msg/ProviderAttributes response type.
+ * @name MsgDeleteProviderAttributesResponseSDKType
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgDeleteProviderAttributesResponse
+ */
 export interface MsgDeleteProviderAttributesResponseSDKType {}
 function createBaseProvider(): Provider {
   return {
@@ -184,6 +304,12 @@ function createBaseProvider(): Provider {
     attributes: []
   };
 }
+/**
+ * Provider stores owner auditor and attributes details
+ * @name Provider
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.Provider
+ */
 export const Provider = {
   typeUrl: "/akash.audit.v1beta2.Provider",
   encode(message: Provider, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -273,6 +399,12 @@ function createBaseAuditedAttributes(): AuditedAttributes {
     attributes: []
   };
 }
+/**
+ * Attributes
+ * @name AuditedAttributes
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.AuditedAttributes
+ */
 export const AuditedAttributes = {
   typeUrl: "/akash.audit.v1beta2.AuditedAttributes",
   encode(message: AuditedAttributes, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -360,6 +492,12 @@ function createBaseAttributesResponse(): AttributesResponse {
     attributes: []
   };
 }
+/**
+ * AttributesResponse represents details of deployment along with group details
+ * @name AttributesResponse
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.AttributesResponse
+ */
 export const AttributesResponse = {
   typeUrl: "/akash.audit.v1beta2.AttributesResponse",
   encode(message: AttributesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -426,6 +564,12 @@ function createBaseAttributesFilters(): AttributesFilters {
     owners: []
   };
 }
+/**
+ * AttributesFilters defines filters used to filter deployments
+ * @name AttributesFilters
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.AttributesFilters
+ */
 export const AttributesFilters = {
   typeUrl: "/akash.audit.v1beta2.AttributesFilters",
   encode(message: AttributesFilters, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -506,6 +650,12 @@ function createBaseMsgSignProviderAttributes(): MsgSignProviderAttributes {
     attributes: []
   };
 }
+/**
+ * MsgSignProviderAttributes defines an SDK message for signing a provider attributes
+ * @name MsgSignProviderAttributes
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgSignProviderAttributes
+ */
 export const MsgSignProviderAttributes = {
   typeUrl: "/akash.audit.v1beta2.MsgSignProviderAttributes",
   encode(message: MsgSignProviderAttributes, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -591,6 +741,12 @@ export const MsgSignProviderAttributes = {
 function createBaseMsgSignProviderAttributesResponse(): MsgSignProviderAttributesResponse {
   return {};
 }
+/**
+ * MsgSignProviderAttributesResponse defines the Msg/CreateProvider response type.
+ * @name MsgSignProviderAttributesResponse
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgSignProviderAttributesResponse
+ */
 export const MsgSignProviderAttributesResponse = {
   typeUrl: "/akash.audit.v1beta2.MsgSignProviderAttributesResponse",
   encode(_: MsgSignProviderAttributesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -645,6 +801,12 @@ function createBaseMsgDeleteProviderAttributes(): MsgDeleteProviderAttributes {
     keys: []
   };
 }
+/**
+ * MsgDeleteProviderAttributes defined the Msg/DeleteProviderAttributes
+ * @name MsgDeleteProviderAttributes
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgDeleteProviderAttributes
+ */
 export const MsgDeleteProviderAttributes = {
   typeUrl: "/akash.audit.v1beta2.MsgDeleteProviderAttributes",
   encode(message: MsgDeleteProviderAttributes, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -730,6 +892,12 @@ export const MsgDeleteProviderAttributes = {
 function createBaseMsgDeleteProviderAttributesResponse(): MsgDeleteProviderAttributesResponse {
   return {};
 }
+/**
+ * MsgDeleteProviderAttributesResponse defines the Msg/ProviderAttributes response type.
+ * @name MsgDeleteProviderAttributesResponse
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.MsgDeleteProviderAttributesResponse
+ */
 export const MsgDeleteProviderAttributesResponse = {
   typeUrl: "/akash.audit.v1beta2.MsgDeleteProviderAttributesResponse",
   encode(_: MsgDeleteProviderAttributesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

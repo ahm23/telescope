@@ -10,6 +10,9 @@ export const protobufPackage = "osmosis.concentratedliquidity.v1beta1";
  * incentive being distributed on a pool. Note that PoolId, Denom, and MinUptime
  * are included in the key so we avoid storing them in state, hence the
  * distinction between IncentiveRecord and IncentiveRecordBody.
+ * @name IncentiveRecord
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.IncentiveRecord
  */
 export interface IncentiveRecord {
   poolId: bigint;
@@ -24,7 +27,9 @@ export interface IncentiveRecord {
    * incentive records created by different addresses separate.
    */
   incentiveCreatorAddr: string;
-  /** incentive record body holds necessary */
+  /**
+   * incentive record body holds necessary
+   */
   incentiveRecordBody: IncentiveRecordBody;
   /**
    * min_uptime is the minimum uptime required for liquidity to qualify for this
@@ -42,6 +47,9 @@ export interface IncentiveRecordProtoMsg {
  * incentive being distributed on a pool. Note that PoolId, Denom, and MinUptime
  * are included in the key so we avoid storing them in state, hence the
  * distinction between IncentiveRecord and IncentiveRecordBody.
+ * @name IncentiveRecordSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.IncentiveRecord
  */
 export interface IncentiveRecordSDKType {
   pool_id: bigint;
@@ -53,13 +61,22 @@ export interface IncentiveRecordSDKType {
 /**
  * IncentiveRecordBody represents the body stored in state for each individual
  * record.
+ * @name IncentiveRecordBody
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody
  */
 export interface IncentiveRecordBody {
-  /** remaining_amount is the total amount of incentives to be distributed */
+  /**
+   * remaining_amount is the total amount of incentives to be distributed
+   */
   remainingAmount: string;
-  /** emission_rate is the incentive emission rate per second */
+  /**
+   * emission_rate is the incentive emission rate per second
+   */
   emissionRate: string;
-  /** start_time is the time when the incentive starts distributing */
+  /**
+   * start_time is the time when the incentive starts distributing
+   */
   startTime: Date;
 }
 export interface IncentiveRecordBodyProtoMsg {
@@ -69,6 +86,9 @@ export interface IncentiveRecordBodyProtoMsg {
 /**
  * IncentiveRecordBody represents the body stored in state for each individual
  * record.
+ * @name IncentiveRecordBodySDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody
  */
 export interface IncentiveRecordBodySDKType {
   remaining_amount: string;
@@ -84,6 +104,15 @@ function createBaseIncentiveRecord(): IncentiveRecord {
     minUptime: Duration.fromPartial({})
   };
 }
+/**
+ * IncentiveRecord is the high-level struct we use to deal with an independent
+ * incentive being distributed on a pool. Note that PoolId, Denom, and MinUptime
+ * are included in the key so we avoid storing them in state, hence the
+ * distinction between IncentiveRecord and IncentiveRecordBody.
+ * @name IncentiveRecord
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.IncentiveRecord
+ */
 export const IncentiveRecord = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.IncentiveRecord",
   encode(message: IncentiveRecord, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -244,6 +273,13 @@ function createBaseIncentiveRecordBody(): IncentiveRecordBody {
     startTime: new Date()
   };
 }
+/**
+ * IncentiveRecordBody represents the body stored in state for each individual
+ * record.
+ * @name IncentiveRecordBody
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody
+ */
 export const IncentiveRecordBody = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody",
   encode(message: IncentiveRecordBody, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -4,6 +4,9 @@ import { DeepPartial } from "../../../helpers";
 /**
  * SetSuperfluidAssetsProposal is a gov Content type to update the superfluid
  * assets
+ * @name SetSuperfluidAssetsProposal
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal
  */
 export interface SetSuperfluidAssetsProposal {
   title: string;
@@ -17,6 +20,9 @@ export interface SetSuperfluidAssetsProposalProtoMsg {
 /**
  * SetSuperfluidAssetsProposal is a gov Content type to update the superfluid
  * assets
+ * @name SetSuperfluidAssetsProposalAmino
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal
  */
 export interface SetSuperfluidAssetsProposalAmino {
   title: string;
@@ -30,6 +36,9 @@ export interface SetSuperfluidAssetsProposalAminoMsg {
 /**
  * RemoveSuperfluidAssetsProposal is a gov Content type to remove the superfluid
  * assets by denom
+ * @name RemoveSuperfluidAssetsProposal
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal
  */
 export interface RemoveSuperfluidAssetsProposal {
   title: string;
@@ -43,6 +52,9 @@ export interface RemoveSuperfluidAssetsProposalProtoMsg {
 /**
  * RemoveSuperfluidAssetsProposal is a gov Content type to remove the superfluid
  * assets by denom
+ * @name RemoveSuperfluidAssetsProposalAmino
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal
  */
 export interface RemoveSuperfluidAssetsProposalAmino {
   title: string;
@@ -56,6 +68,9 @@ export interface RemoveSuperfluidAssetsProposalAminoMsg {
 /**
  * UpdateUnpoolWhiteListProposal is a gov Content type to update the
  * allowed list of pool ids.
+ * @name UpdateUnpoolWhiteListProposal
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal
  */
 export interface UpdateUnpoolWhiteListProposal {
   title: string;
@@ -70,6 +85,9 @@ export interface UpdateUnpoolWhiteListProposalProtoMsg {
 /**
  * UpdateUnpoolWhiteListProposal is a gov Content type to update the
  * allowed list of pool ids.
+ * @name UpdateUnpoolWhiteListProposalAmino
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal
  */
 export interface UpdateUnpoolWhiteListProposalAmino {
   title: string;
@@ -88,6 +106,13 @@ function createBaseSetSuperfluidAssetsProposal(): SetSuperfluidAssetsProposal {
     assets: []
   };
 }
+/**
+ * SetSuperfluidAssetsProposal is a gov Content type to update the superfluid
+ * assets
+ * @name SetSuperfluidAssetsProposal
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal
+ */
 export const SetSuperfluidAssetsProposal = {
   typeUrl: "/osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal",
   aminoType: "osmosis/v1beta1/set-superfluid-assets-proposal",
@@ -184,6 +209,13 @@ function createBaseRemoveSuperfluidAssetsProposal(): RemoveSuperfluidAssetsPropo
     superfluidAssetDenoms: []
   };
 }
+/**
+ * RemoveSuperfluidAssetsProposal is a gov Content type to remove the superfluid
+ * assets by denom
+ * @name RemoveSuperfluidAssetsProposal
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal
+ */
 export const RemoveSuperfluidAssetsProposal = {
   typeUrl: "/osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal",
   aminoType: "osmosis/v1beta1/remove-superfluid-assets-proposal",
@@ -281,6 +313,13 @@ function createBaseUpdateUnpoolWhiteListProposal(): UpdateUnpoolWhiteListProposa
     isOverwrite: false
   };
 }
+/**
+ * UpdateUnpoolWhiteListProposal is a gov Content type to update the
+ * allowed list of pool ids.
+ * @name UpdateUnpoolWhiteListProposal
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal
+ */
 export const UpdateUnpoolWhiteListProposal = {
   typeUrl: "/osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal",
   aminoType: "osmosis/v1beta1/update-unpool-white-list-proposal",

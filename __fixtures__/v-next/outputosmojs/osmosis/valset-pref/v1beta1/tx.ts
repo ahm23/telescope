@@ -4,34 +4,63 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.valsetpref.v1beta1";
-/** MsgCreateValidatorSetPreference is a list that holds validator-set. */
+/**
+ * MsgCreateValidatorSetPreference is a list that holds validator-set.
+ * @name MsgSetValidatorSetPreference
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreference
+ */
 export interface MsgSetValidatorSetPreference {
-  /** delegator is the user who is trying to create a validator-set. */
+  /**
+   * delegator is the user who is trying to create a validator-set.
+   */
   delegator: string;
-  /** list of {valAddr, weight} to delegate to */
+  /**
+   * list of {valAddr, weight} to delegate to
+   */
   preferences: ValidatorPreference[];
 }
 export interface MsgSetValidatorSetPreferenceProtoMsg {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreference";
   value: Uint8Array;
 }
-/** MsgCreateValidatorSetPreference is a list that holds validator-set. */
+/**
+ * MsgCreateValidatorSetPreference is a list that holds validator-set.
+ * @name MsgSetValidatorSetPreferenceSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreference
+ */
 export interface MsgSetValidatorSetPreferenceSDKType {
   delegator: string;
   preferences: ValidatorPreferenceSDKType[];
 }
+/**
+ * @name MsgSetValidatorSetPreferenceResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse
+ */
 export interface MsgSetValidatorSetPreferenceResponse {}
 export interface MsgSetValidatorSetPreferenceResponseProtoMsg {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgSetValidatorSetPreferenceResponseSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse
+ */
 export interface MsgSetValidatorSetPreferenceResponseSDKType {}
 /**
  * MsgDelegateToValidatorSet allows users to delegate to an existing
  * validator-set
+ * @name MsgDelegateToValidatorSet
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSet
  */
 export interface MsgDelegateToValidatorSet {
-  /** delegator is the user who is trying to delegate. */
+  /**
+   * delegator is the user who is trying to delegate.
+   */
   delegator: string;
   /**
    * the amount of tokens the user is trying to delegate.
@@ -48,19 +77,39 @@ export interface MsgDelegateToValidatorSetProtoMsg {
 /**
  * MsgDelegateToValidatorSet allows users to delegate to an existing
  * validator-set
+ * @name MsgDelegateToValidatorSetSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSet
  */
 export interface MsgDelegateToValidatorSetSDKType {
   delegator: string;
   coin: CoinSDKType;
 }
+/**
+ * @name MsgDelegateToValidatorSetResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse
+ */
 export interface MsgDelegateToValidatorSetResponse {}
 export interface MsgDelegateToValidatorSetResponseProtoMsg {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgDelegateToValidatorSetResponseSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse
+ */
 export interface MsgDelegateToValidatorSetResponseSDKType {}
+/**
+ * @name MsgUndelegateFromValidatorSet
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSet
+ */
 export interface MsgUndelegateFromValidatorSet {
-  /** delegator is the user who is trying to undelegate. */
+  /**
+   * delegator is the user who is trying to undelegate.
+   */
   delegator: string;
   /**
    * the amount the user wants to undelegate
@@ -75,42 +124,86 @@ export interface MsgUndelegateFromValidatorSetProtoMsg {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSet";
   value: Uint8Array;
 }
+/**
+ * @name MsgUndelegateFromValidatorSetSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSet
+ */
 export interface MsgUndelegateFromValidatorSetSDKType {
   delegator: string;
   coin: CoinSDKType;
 }
+/**
+ * @name MsgUndelegateFromValidatorSetResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse
+ */
 export interface MsgUndelegateFromValidatorSetResponse {}
 export interface MsgUndelegateFromValidatorSetResponseProtoMsg {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgUndelegateFromValidatorSetResponseSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse
+ */
 export interface MsgUndelegateFromValidatorSetResponseSDKType {}
+/**
+ * @name MsgRedelegateValidatorSet
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSet
+ */
 export interface MsgRedelegateValidatorSet {
-  /** delegator is the user who is trying to create a validator-set. */
+  /**
+   * delegator is the user who is trying to create a validator-set.
+   */
   delegator: string;
-  /** list of {valAddr, weight} to delegate to */
+  /**
+   * list of {valAddr, weight} to delegate to
+   */
   preferences: ValidatorPreference[];
 }
 export interface MsgRedelegateValidatorSetProtoMsg {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSet";
   value: Uint8Array;
 }
+/**
+ * @name MsgRedelegateValidatorSetSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSet
+ */
 export interface MsgRedelegateValidatorSetSDKType {
   delegator: string;
   preferences: ValidatorPreferenceSDKType[];
 }
+/**
+ * @name MsgRedelegateValidatorSetResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse
+ */
 export interface MsgRedelegateValidatorSetResponse {}
 export interface MsgRedelegateValidatorSetResponseProtoMsg {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgRedelegateValidatorSetResponseSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse
+ */
 export interface MsgRedelegateValidatorSetResponseSDKType {}
 /**
  * MsgWithdrawDelegationRewards allows user to claim staking rewards from the
  * validator set.
+ * @name MsgWithdrawDelegationRewards
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewards
  */
 export interface MsgWithdrawDelegationRewards {
-  /** delegator is the user who is trying to claim staking rewards. */
+  /**
+   * delegator is the user who is trying to claim staking rewards.
+   */
   delegator: string;
 }
 export interface MsgWithdrawDelegationRewardsProtoMsg {
@@ -120,25 +213,45 @@ export interface MsgWithdrawDelegationRewardsProtoMsg {
 /**
  * MsgWithdrawDelegationRewards allows user to claim staking rewards from the
  * validator set.
+ * @name MsgWithdrawDelegationRewardsSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewards
  */
 export interface MsgWithdrawDelegationRewardsSDKType {
   delegator: string;
 }
+/**
+ * @name MsgWithdrawDelegationRewardsResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse
+ */
 export interface MsgWithdrawDelegationRewardsResponse {}
 export interface MsgWithdrawDelegationRewardsResponseProtoMsg {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgWithdrawDelegationRewardsResponseSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse
+ */
 export interface MsgWithdrawDelegationRewardsResponseSDKType {}
 /**
  * MsgDelegateBondedTokens breaks bonded lockup (by ID) of osmo, of
  * length <= 2 weeks and takes all that osmo and delegates according to
  * delegator's current validator set preference.
+ * @name MsgDelegateBondedTokens
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgDelegateBondedTokens
  */
 export interface MsgDelegateBondedTokens {
-  /** delegator is the user who is trying to force unbond osmo and delegate. */
+  /**
+   * delegator is the user who is trying to force unbond osmo and delegate.
+   */
   delegator: string;
-  /** lockup id of osmo in the pool */
+  /**
+   * lockup id of osmo in the pool
+   */
   lockID: bigint;
 }
 export interface MsgDelegateBondedTokensProtoMsg {
@@ -149,16 +262,29 @@ export interface MsgDelegateBondedTokensProtoMsg {
  * MsgDelegateBondedTokens breaks bonded lockup (by ID) of osmo, of
  * length <= 2 weeks and takes all that osmo and delegates according to
  * delegator's current validator set preference.
+ * @name MsgDelegateBondedTokensSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgDelegateBondedTokens
  */
 export interface MsgDelegateBondedTokensSDKType {
   delegator: string;
   lockID: bigint;
 }
+/**
+ * @name MsgDelegateBondedTokensResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgDelegateBondedTokensResponse
+ */
 export interface MsgDelegateBondedTokensResponse {}
 export interface MsgDelegateBondedTokensResponseProtoMsg {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgDelegateBondedTokensResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgDelegateBondedTokensResponseSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgDelegateBondedTokensResponse
+ */
 export interface MsgDelegateBondedTokensResponseSDKType {}
 function createBaseMsgSetValidatorSetPreference(): MsgSetValidatorSetPreference {
   return {
@@ -166,6 +292,12 @@ function createBaseMsgSetValidatorSetPreference(): MsgSetValidatorSetPreference 
     preferences: []
   };
 }
+/**
+ * MsgCreateValidatorSetPreference is a list that holds validator-set.
+ * @name MsgSetValidatorSetPreference
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreference
+ */
 export const MsgSetValidatorSetPreference = {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreference",
   encode(message: MsgSetValidatorSetPreference, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -284,6 +416,11 @@ export const MsgSetValidatorSetPreference = {
 function createBaseMsgSetValidatorSetPreferenceResponse(): MsgSetValidatorSetPreferenceResponse {
   return {};
 }
+/**
+ * @name MsgSetValidatorSetPreferenceResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse
+ */
 export const MsgSetValidatorSetPreferenceResponse = {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgSetValidatorSetPreferenceResponse",
   encode(_: MsgSetValidatorSetPreferenceResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -360,6 +497,13 @@ function createBaseMsgDelegateToValidatorSet(): MsgDelegateToValidatorSet {
     coin: Coin.fromPartial({})
   };
 }
+/**
+ * MsgDelegateToValidatorSet allows users to delegate to an existing
+ * validator-set
+ * @name MsgDelegateToValidatorSet
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSet
+ */
 export const MsgDelegateToValidatorSet = {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSet",
   encode(message: MsgDelegateToValidatorSet, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -468,6 +612,11 @@ export const MsgDelegateToValidatorSet = {
 function createBaseMsgDelegateToValidatorSetResponse(): MsgDelegateToValidatorSetResponse {
   return {};
 }
+/**
+ * @name MsgDelegateToValidatorSetResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse
+ */
 export const MsgDelegateToValidatorSetResponse = {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgDelegateToValidatorSetResponse",
   encode(_: MsgDelegateToValidatorSetResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -544,6 +693,11 @@ function createBaseMsgUndelegateFromValidatorSet(): MsgUndelegateFromValidatorSe
     coin: Coin.fromPartial({})
   };
 }
+/**
+ * @name MsgUndelegateFromValidatorSet
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSet
+ */
 export const MsgUndelegateFromValidatorSet = {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSet",
   encode(message: MsgUndelegateFromValidatorSet, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -652,6 +806,11 @@ export const MsgUndelegateFromValidatorSet = {
 function createBaseMsgUndelegateFromValidatorSetResponse(): MsgUndelegateFromValidatorSetResponse {
   return {};
 }
+/**
+ * @name MsgUndelegateFromValidatorSetResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse
+ */
 export const MsgUndelegateFromValidatorSetResponse = {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgUndelegateFromValidatorSetResponse",
   encode(_: MsgUndelegateFromValidatorSetResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -728,6 +887,11 @@ function createBaseMsgRedelegateValidatorSet(): MsgRedelegateValidatorSet {
     preferences: []
   };
 }
+/**
+ * @name MsgRedelegateValidatorSet
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSet
+ */
 export const MsgRedelegateValidatorSet = {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSet",
   encode(message: MsgRedelegateValidatorSet, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -846,6 +1010,11 @@ export const MsgRedelegateValidatorSet = {
 function createBaseMsgRedelegateValidatorSetResponse(): MsgRedelegateValidatorSetResponse {
   return {};
 }
+/**
+ * @name MsgRedelegateValidatorSetResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse
+ */
 export const MsgRedelegateValidatorSetResponse = {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgRedelegateValidatorSetResponse",
   encode(_: MsgRedelegateValidatorSetResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -921,6 +1090,13 @@ function createBaseMsgWithdrawDelegationRewards(): MsgWithdrawDelegationRewards 
     delegator: ""
   };
 }
+/**
+ * MsgWithdrawDelegationRewards allows user to claim staking rewards from the
+ * validator set.
+ * @name MsgWithdrawDelegationRewards
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewards
+ */
 export const MsgWithdrawDelegationRewards = {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewards",
   encode(message: MsgWithdrawDelegationRewards, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1013,6 +1189,11 @@ export const MsgWithdrawDelegationRewards = {
 function createBaseMsgWithdrawDelegationRewardsResponse(): MsgWithdrawDelegationRewardsResponse {
   return {};
 }
+/**
+ * @name MsgWithdrawDelegationRewardsResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse
+ */
 export const MsgWithdrawDelegationRewardsResponse = {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgWithdrawDelegationRewardsResponse",
   encode(_: MsgWithdrawDelegationRewardsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1089,6 +1270,14 @@ function createBaseMsgDelegateBondedTokens(): MsgDelegateBondedTokens {
     lockID: BigInt(0)
   };
 }
+/**
+ * MsgDelegateBondedTokens breaks bonded lockup (by ID) of osmo, of
+ * length <= 2 weeks and takes all that osmo and delegates according to
+ * delegator's current validator set preference.
+ * @name MsgDelegateBondedTokens
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgDelegateBondedTokens
+ */
 export const MsgDelegateBondedTokens = {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgDelegateBondedTokens",
   encode(message: MsgDelegateBondedTokens, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1197,6 +1386,11 @@ export const MsgDelegateBondedTokens = {
 function createBaseMsgDelegateBondedTokensResponse(): MsgDelegateBondedTokensResponse {
   return {};
 }
+/**
+ * @name MsgDelegateBondedTokensResponse
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.MsgDelegateBondedTokensResponse
+ */
 export const MsgDelegateBondedTokensResponse = {
   typeUrl: "/osmosis.valsetpref.v1beta1.MsgDelegateBondedTokensResponse",
   encode(_: MsgDelegateBondedTokensResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

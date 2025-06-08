@@ -50,9 +50,14 @@ import { DeepPartial } from "../../helpers";
  *        display_name: Write requests
  *        metric_kind: DELTA
  *        value_type: INT64
+ * @name Quota
+ * @package google.api
+ * @see proto type: google.api.Quota
  */
 export interface Quota {
-  /** List of `QuotaLimit` definitions for the service. */
+  /**
+   * List of `QuotaLimit` definitions for the service.
+   */
   limits: QuotaLimit[];
   /**
    * List of `MetricRule` definitions, each one mapping a selected method to one
@@ -114,9 +119,14 @@ export interface QuotaProtoMsg {
  *        display_name: Write requests
  *        metric_kind: DELTA
  *        value_type: INT64
+ * @name QuotaAmino
+ * @package google.api
+ * @see proto type: google.api.Quota
  */
 export interface QuotaAmino {
-  /** List of `QuotaLimit` definitions for the service. */
+  /**
+   * List of `QuotaLimit` definitions for the service.
+   */
   limits: QuotaLimitAmino[];
   /**
    * List of `MetricRule` definitions, each one mapping a selected method to one
@@ -128,6 +138,11 @@ export interface QuotaAminoMsg {
   type: "/google.api.Quota";
   value: QuotaAmino;
 }
+/**
+ * @name MetricRule_MetricCostsEntry
+ * @package google.api
+ * @see proto type: google.api.undefined
+ */
 export interface MetricRule_MetricCostsEntry {
   key: string;
   value: bigint;
@@ -136,6 +151,11 @@ export interface MetricRule_MetricCostsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name MetricRule_MetricCostsEntryAmino
+ * @package google.api
+ * @see proto type: google.api.MetricRule_MetricCostsEntry
+ */
 export interface MetricRule_MetricCostsEntryAmino {
   key: string;
   value: string;
@@ -147,6 +167,9 @@ export interface MetricRule_MetricCostsEntryAminoMsg {
 /**
  * Bind API methods to metrics. Binding a method to a metric causes that
  * metric's configured quota behaviors to apply to the method call.
+ * @name MetricRule
+ * @package google.api
+ * @see proto type: google.api.MetricRule
  */
 export interface MetricRule {
   /**
@@ -174,6 +197,9 @@ export interface MetricRuleProtoMsg {
 /**
  * Bind API methods to metrics. Binding a method to a metric causes that
  * metric's configured quota behaviors to apply to the method call.
+ * @name MetricRuleAmino
+ * @package google.api
+ * @see proto type: google.api.MetricRule
  */
 export interface MetricRuleAmino {
   /**
@@ -198,6 +224,11 @@ export interface MetricRuleAminoMsg {
   type: "/google.api.MetricRule";
   value: MetricRuleAmino;
 }
+/**
+ * @name QuotaLimit_ValuesEntry
+ * @package google.api
+ * @see proto type: google.api.undefined
+ */
 export interface QuotaLimit_ValuesEntry {
   key: string;
   value: bigint;
@@ -206,6 +237,11 @@ export interface QuotaLimit_ValuesEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name QuotaLimit_ValuesEntryAmino
+ * @package google.api
+ * @see proto type: google.api.QuotaLimit_ValuesEntry
+ */
 export interface QuotaLimit_ValuesEntryAmino {
   key: string;
   value: string;
@@ -218,6 +254,9 @@ export interface QuotaLimit_ValuesEntryAminoMsg {
  * `QuotaLimit` defines a specific limit that applies over a specified duration
  * for a limit type. There can be at most one limit for a duration and limit
  * type combination defined within a `QuotaGroup`.
+ * @name QuotaLimit
+ * @package google.api
+ * @see proto type: google.api.QuotaLimit
  */
 export interface QuotaLimit {
   /**
@@ -319,6 +358,9 @@ export interface QuotaLimitProtoMsg {
  * `QuotaLimit` defines a specific limit that applies over a specified duration
  * for a limit type. There can be at most one limit for a duration and limit
  * type combination defined within a `QuotaGroup`.
+ * @name QuotaLimitAmino
+ * @package google.api
+ * @see proto type: google.api.QuotaLimit
  */
 export interface QuotaLimitAmino {
   /**
@@ -422,6 +464,60 @@ function createBaseQuota(): Quota {
     metricRules: []
   };
 }
+/**
+ * Quota configuration helps to achieve fairness and budgeting in service
+ * usage.
+ * 
+ * The metric based quota configuration works this way:
+ * - The service configuration defines a set of metrics.
+ * - For API calls, the quota.metric_rules maps methods to metrics with
+ *   corresponding costs.
+ * - The quota.limits defines limits on the metrics, which will be used for
+ *   quota checks at runtime.
+ * 
+ * An example quota configuration in yaml format:
+ * 
+ *    quota:
+ *      limits:
+ * 
+ *      - name: apiWriteQpsPerProject
+ *        metric: library.googleapis.com/write_calls
+ *        unit: "1/min/{project}"  # rate limit for consumer projects
+ *        values:
+ *          STANDARD: 10000
+ * 
+ * 
+ *      # The metric rules bind all methods to the read_calls metric,
+ *      # except for the UpdateBook and DeleteBook methods. These two methods
+ *      # are mapped to the write_calls metric, with the UpdateBook method
+ *      # consuming at twice rate as the DeleteBook method.
+ *      metric_rules:
+ *      - selector: "*"
+ *        metric_costs:
+ *          library.googleapis.com/read_calls: 1
+ *      - selector: google.example.library.v1.LibraryService.UpdateBook
+ *        metric_costs:
+ *          library.googleapis.com/write_calls: 2
+ *      - selector: google.example.library.v1.LibraryService.DeleteBook
+ *        metric_costs:
+ *          library.googleapis.com/write_calls: 1
+ * 
+ *  Corresponding Metric definition:
+ * 
+ *      metrics:
+ *      - name: library.googleapis.com/read_calls
+ *        display_name: Read requests
+ *        metric_kind: DELTA
+ *        value_type: INT64
+ * 
+ *      - name: library.googleapis.com/write_calls
+ *        display_name: Write requests
+ *        metric_kind: DELTA
+ *        value_type: INT64
+ * @name Quota
+ * @package google.api
+ * @see proto type: google.api.Quota
+ */
 export const Quota = {
   typeUrl: "/google.api.Quota",
   encode(message: Quota, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -501,6 +597,11 @@ function createBaseMetricRule_MetricCostsEntry(): MetricRule_MetricCostsEntry {
     value: BigInt(0)
   };
 }
+/**
+ * @name MetricRule_MetricCostsEntry
+ * @package google.api
+ * @see proto type: google.api.undefined
+ */
 export const MetricRule_MetricCostsEntry = {
   encode(message: MetricRule_MetricCostsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -569,6 +670,13 @@ function createBaseMetricRule(): MetricRule {
     metricCosts: {}
   };
 }
+/**
+ * Bind API methods to metrics. Binding a method to a metric causes that
+ * metric's configured quota behaviors to apply to the method call.
+ * @name MetricRule
+ * @package google.api
+ * @see proto type: google.api.MetricRule
+ */
 export const MetricRule = {
   typeUrl: "/google.api.MetricRule",
   encode(message: MetricRule, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -667,6 +775,11 @@ function createBaseQuotaLimit_ValuesEntry(): QuotaLimit_ValuesEntry {
     value: BigInt(0)
   };
 }
+/**
+ * @name QuotaLimit_ValuesEntry
+ * @package google.api
+ * @see proto type: google.api.undefined
+ */
 export const QuotaLimit_ValuesEntry = {
   encode(message: QuotaLimit_ValuesEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -743,6 +856,14 @@ function createBaseQuotaLimit(): QuotaLimit {
     displayName: ""
   };
 }
+/**
+ * `QuotaLimit` defines a specific limit that applies over a specified duration
+ * for a limit type. There can be at most one limit for a duration and limit
+ * type combination defined within a `QuotaGroup`.
+ * @name QuotaLimit
+ * @package google.api
+ * @see proto type: google.api.QuotaLimit
+ */
 export const QuotaLimit = {
   typeUrl: "/google.api.QuotaLimit",
   encode(message: QuotaLimit, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

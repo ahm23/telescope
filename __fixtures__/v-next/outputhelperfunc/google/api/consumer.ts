@@ -76,9 +76,14 @@ export function property_PropertyTypeToJSON(object: Property_PropertyType): stri
  *        description: Allows usage of the API without watermarks.
  *      - name: EXTENDED_TILE_CACHE_PERIOD
  *        type: INT64
+ * @name ProjectProperties
+ * @package google.api
+ * @see proto type: google.api.ProjectProperties
  */
 export interface ProjectProperties {
-  /** List of per consumer project-specific properties. */
+  /**
+   * List of per consumer project-specific properties.
+   */
   properties: Property[];
 }
 export interface ProjectPropertiesProtoMsg {
@@ -102,9 +107,14 @@ export interface ProjectPropertiesProtoMsg {
  *        description: Allows usage of the API without watermarks.
  *      - name: EXTENDED_TILE_CACHE_PERIOD
  *        type: INT64
+ * @name ProjectPropertiesAmino
+ * @package google.api
+ * @see proto type: google.api.ProjectProperties
  */
 export interface ProjectPropertiesAmino {
-  /** List of per consumer project-specific properties. */
+  /**
+   * List of per consumer project-specific properties.
+   */
   properties?: PropertyAmino[];
 }
 export interface ProjectPropertiesAminoMsg {
@@ -128,6 +138,9 @@ export interface ProjectPropertiesAminoMsg {
  *        description: Allows usage of the API without watermarks.
  *      - name: EXTENDED_TILE_CACHE_PERIOD
  *        type: INT64
+ * @name ProjectPropertiesSDKType
+ * @package google.api
+ * @see proto type: google.api.ProjectProperties
  */
 export interface ProjectPropertiesSDKType {
   properties: PropertySDKType[];
@@ -143,13 +156,22 @@ export interface ProjectPropertiesSDKType {
  * 
  * These values can be set via API producer console. Only API providers can
  * define and set these properties.
+ * @name Property
+ * @package google.api
+ * @see proto type: google.api.Property
  */
 export interface Property {
-  /** The name of the property (a.k.a key). */
+  /**
+   * The name of the property (a.k.a key).
+   */
   name: string;
-  /** The type of this property. */
+  /**
+   * The type of this property.
+   */
   type: Property_PropertyType;
-  /** The description of the property */
+  /**
+   * The description of the property
+   */
   description: string;
 }
 export interface PropertyProtoMsg {
@@ -167,13 +189,22 @@ export interface PropertyProtoMsg {
  * 
  * These values can be set via API producer console. Only API providers can
  * define and set these properties.
+ * @name PropertyAmino
+ * @package google.api
+ * @see proto type: google.api.Property
  */
 export interface PropertyAmino {
-  /** The name of the property (a.k.a key). */
+  /**
+   * The name of the property (a.k.a key).
+   */
   name?: string;
-  /** The type of this property. */
+  /**
+   * The type of this property.
+   */
   type?: Property_PropertyType;
-  /** The description of the property */
+  /**
+   * The description of the property
+   */
   description?: string;
 }
 export interface PropertyAminoMsg {
@@ -191,6 +222,9 @@ export interface PropertyAminoMsg {
  * 
  * These values can be set via API producer console. Only API providers can
  * define and set these properties.
+ * @name PropertySDKType
+ * @package google.api
+ * @see proto type: google.api.Property
  */
 export interface PropertySDKType {
   name: string;
@@ -202,6 +236,27 @@ function createBaseProjectProperties(): ProjectProperties {
     properties: []
   };
 }
+/**
+ * A descriptor for defining project properties for a service. One service may
+ * have many consumer projects, and the service may want to behave differently
+ * depending on some properties on the project. For example, a project may be
+ * associated with a school, or a business, or a government agency, a business
+ * type property on the project may affect how a service responds to the client.
+ * This descriptor defines which properties are allowed to be set on a project.
+ * 
+ * Example:
+ * 
+ *    project_properties:
+ *      properties:
+ *      - name: NO_WATERMARK
+ *        type: BOOL
+ *        description: Allows usage of the API without watermarks.
+ *      - name: EXTENDED_TILE_CACHE_PERIOD
+ *        type: INT64
+ * @name ProjectProperties
+ * @package google.api
+ * @see proto type: google.api.ProjectProperties
+ */
 export const ProjectProperties = {
   typeUrl: "/google.api.ProjectProperties",
   is(o: any): o is ProjectProperties {
@@ -317,6 +372,21 @@ function createBaseProperty(): Property {
     description: ""
   };
 }
+/**
+ * Defines project properties.
+ * 
+ * API services can define properties that can be assigned to consumer projects
+ * so that backends can perform response customization without having to make
+ * additional calls or maintain additional storage. For example, Maps API
+ * defines properties that controls map tile cache period, or whether to embed a
+ * watermark in a result.
+ * 
+ * These values can be set via API producer console. Only API providers can
+ * define and set these properties.
+ * @name Property
+ * @package google.api
+ * @see proto type: google.api.Property
+ */
 export const Property = {
   typeUrl: "/google.api.Property",
   is(o: any): o is Property {

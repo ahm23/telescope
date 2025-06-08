@@ -1,23 +1,41 @@
-import { Params, ParamsAmino } from "./auth";
 import { Any, AnyAmino } from "../../../google/protobuf/any";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState defines the auth module's genesis state. */
+import { CosmosAuthV1beta1Params, CosmosAuthV1beta1ParamsAmino } from "./auth";
+/**
+ * GenesisState defines the auth module's genesis state.
+ * @name GenesisState
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the paramaters of the module. */
-  params: Params;
-  /** accounts are the accounts present at genesis. */
+  /**
+   * params defines all the paramaters of the module.
+   */
+  params: CosmosAuthV1beta1Params;
+  /**
+   * accounts are the accounts present at genesis.
+   */
   accounts: Any[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.auth.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the auth module's genesis state. */
+/**
+ * GenesisState defines the auth module's genesis state.
+ * @name GenesisStateAmino
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines all the paramaters of the module. */
-  params: ParamsAmino;
-  /** accounts are the accounts present at genesis. */
+  /**
+   * params defines all the paramaters of the module.
+   */
+  params: CosmosAuthV1beta1ParamsAmino;
+  /**
+   * accounts are the accounts present at genesis.
+   */
   accounts: AnyAmino[];
 }
 export interface GenesisStateAminoMsg {
@@ -26,16 +44,22 @@ export interface GenesisStateAminoMsg {
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({}),
+    params: CosmosAuthV1beta1Params.fromPartial({}),
     accounts: []
   };
 }
+/**
+ * GenesisState defines the auth module's genesis state.
+ * @name GenesisState
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.auth.v1beta1.GenesisState",
   aminoType: "cosmos-sdk/GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      CosmosAuthV1beta1Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.accounts) {
       Any.encode(v!, writer.uint32(18).fork()).ldelim();
@@ -50,7 +74,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = CosmosAuthV1beta1Params.decode(reader, reader.uint32());
           break;
         case 2:
           message.accounts.push(Any.decode(reader, reader.uint32()));
@@ -64,21 +88,21 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? CosmosAuthV1beta1Params.fromPartial(object.params) : undefined;
     message.accounts = object.accounts?.map(e => Any.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = CosmosAuthV1beta1Params.fromAmino(object.params);
     }
     message.accounts = object.accounts?.map(e => Any.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? CosmosAuthV1beta1Params.toAmino(message.params) : undefined;
     if (message.accounts) {
       obj.accounts = message.accounts.map(e => e ? Any.toAmino(e) : undefined);
     } else {

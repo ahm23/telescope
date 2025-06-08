@@ -4,6 +4,11 @@ import { Validator, ValidatorAmino, ValidatorSDKType } from "./validator";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial, toTimestamp, fromTimestamp } from "../../helpers";
 export const protobufPackage = "tendermint.types";
+/**
+ * @name Evidence
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Evidence
+ */
 export interface Evidence {
   duplicateVoteEvidence?: DuplicateVoteEvidence;
   lightClientAttackEvidence?: LightClientAttackEvidence;
@@ -12,15 +17,30 @@ export interface EvidenceProtoMsg {
   typeUrl: "/tendermint.types.Evidence";
   value: Uint8Array;
 }
+/**
+ * @name EvidenceAmino
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Evidence
+ */
 export interface EvidenceAmino {
   duplicate_vote_evidence?: DuplicateVoteEvidenceAmino;
   light_client_attack_evidence?: LightClientAttackEvidenceAmino;
 }
+/**
+ * @name EvidenceSDKType
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Evidence
+ */
 export interface EvidenceSDKType {
   duplicate_vote_evidence?: DuplicateVoteEvidenceSDKType;
   light_client_attack_evidence?: LightClientAttackEvidenceSDKType;
 }
-/** DuplicateVoteEvidence contains evidence of a validator signed two conflicting votes. */
+/**
+ * DuplicateVoteEvidence contains evidence of a validator signed two conflicting votes.
+ * @name DuplicateVoteEvidence
+ * @package tendermint.types
+ * @see proto type: tendermint.types.DuplicateVoteEvidence
+ */
 export interface DuplicateVoteEvidence {
   voteA?: Vote;
   voteB?: Vote;
@@ -32,7 +52,12 @@ export interface DuplicateVoteEvidenceProtoMsg {
   typeUrl: "/tendermint.types.DuplicateVoteEvidence";
   value: Uint8Array;
 }
-/** DuplicateVoteEvidence contains evidence of a validator signed two conflicting votes. */
+/**
+ * DuplicateVoteEvidence contains evidence of a validator signed two conflicting votes.
+ * @name DuplicateVoteEvidenceAmino
+ * @package tendermint.types
+ * @see proto type: tendermint.types.DuplicateVoteEvidence
+ */
 export interface DuplicateVoteEvidenceAmino {
   vote_a?: VoteAmino;
   vote_b?: VoteAmino;
@@ -40,7 +65,12 @@ export interface DuplicateVoteEvidenceAmino {
   validator_power?: string;
   timestamp?: string;
 }
-/** DuplicateVoteEvidence contains evidence of a validator signed two conflicting votes. */
+/**
+ * DuplicateVoteEvidence contains evidence of a validator signed two conflicting votes.
+ * @name DuplicateVoteEvidenceSDKType
+ * @package tendermint.types
+ * @see proto type: tendermint.types.DuplicateVoteEvidence
+ */
 export interface DuplicateVoteEvidenceSDKType {
   vote_a?: VoteSDKType;
   vote_b?: VoteSDKType;
@@ -48,7 +78,12 @@ export interface DuplicateVoteEvidenceSDKType {
   validator_power: bigint;
   timestamp: Date;
 }
-/** LightClientAttackEvidence contains evidence of a set of validators attempting to mislead a light client. */
+/**
+ * LightClientAttackEvidence contains evidence of a set of validators attempting to mislead a light client.
+ * @name LightClientAttackEvidence
+ * @package tendermint.types
+ * @see proto type: tendermint.types.LightClientAttackEvidence
+ */
 export interface LightClientAttackEvidence {
   conflictingBlock?: LightBlock;
   commonHeight: bigint;
@@ -60,7 +95,12 @@ export interface LightClientAttackEvidenceProtoMsg {
   typeUrl: "/tendermint.types.LightClientAttackEvidence";
   value: Uint8Array;
 }
-/** LightClientAttackEvidence contains evidence of a set of validators attempting to mislead a light client. */
+/**
+ * LightClientAttackEvidence contains evidence of a set of validators attempting to mislead a light client.
+ * @name LightClientAttackEvidenceAmino
+ * @package tendermint.types
+ * @see proto type: tendermint.types.LightClientAttackEvidence
+ */
 export interface LightClientAttackEvidenceAmino {
   conflicting_block?: LightBlockAmino;
   common_height?: string;
@@ -68,7 +108,12 @@ export interface LightClientAttackEvidenceAmino {
   total_voting_power?: string;
   timestamp?: string;
 }
-/** LightClientAttackEvidence contains evidence of a set of validators attempting to mislead a light client. */
+/**
+ * LightClientAttackEvidence contains evidence of a set of validators attempting to mislead a light client.
+ * @name LightClientAttackEvidenceSDKType
+ * @package tendermint.types
+ * @see proto type: tendermint.types.LightClientAttackEvidence
+ */
 export interface LightClientAttackEvidenceSDKType {
   conflicting_block?: LightBlockSDKType;
   common_height: bigint;
@@ -76,6 +121,11 @@ export interface LightClientAttackEvidenceSDKType {
   total_voting_power: bigint;
   timestamp: Date;
 }
+/**
+ * @name EvidenceList
+ * @package tendermint.types
+ * @see proto type: tendermint.types.EvidenceList
+ */
 export interface EvidenceList {
   evidence: Evidence[];
 }
@@ -83,9 +133,19 @@ export interface EvidenceListProtoMsg {
   typeUrl: "/tendermint.types.EvidenceList";
   value: Uint8Array;
 }
+/**
+ * @name EvidenceListAmino
+ * @package tendermint.types
+ * @see proto type: tendermint.types.EvidenceList
+ */
 export interface EvidenceListAmino {
   evidence?: EvidenceAmino[];
 }
+/**
+ * @name EvidenceListSDKType
+ * @package tendermint.types
+ * @see proto type: tendermint.types.EvidenceList
+ */
 export interface EvidenceListSDKType {
   evidence: EvidenceSDKType[];
 }
@@ -95,6 +155,11 @@ function createBaseEvidence(): Evidence {
     lightClientAttackEvidence: undefined
   };
 }
+/**
+ * @name Evidence
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Evidence
+ */
 export const Evidence = {
   typeUrl: "/tendermint.types.Evidence",
   encode(message: Evidence, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -192,6 +257,12 @@ function createBaseDuplicateVoteEvidence(): DuplicateVoteEvidence {
     timestamp: new Date()
   };
 }
+/**
+ * DuplicateVoteEvidence contains evidence of a validator signed two conflicting votes.
+ * @name DuplicateVoteEvidence
+ * @package tendermint.types
+ * @see proto type: tendermint.types.DuplicateVoteEvidence
+ */
 export const DuplicateVoteEvidence = {
   typeUrl: "/tendermint.types.DuplicateVoteEvidence",
   encode(message: DuplicateVoteEvidence, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -335,6 +406,12 @@ function createBaseLightClientAttackEvidence(): LightClientAttackEvidence {
     timestamp: new Date()
   };
 }
+/**
+ * LightClientAttackEvidence contains evidence of a set of validators attempting to mislead a light client.
+ * @name LightClientAttackEvidence
+ * @package tendermint.types
+ * @see proto type: tendermint.types.LightClientAttackEvidence
+ */
 export const LightClientAttackEvidence = {
   typeUrl: "/tendermint.types.LightClientAttackEvidence",
   encode(message: LightClientAttackEvidence, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -478,6 +555,11 @@ function createBaseEvidenceList(): EvidenceList {
     evidence: []
   };
 }
+/**
+ * @name EvidenceList
+ * @package tendermint.types
+ * @see proto type: tendermint.types.EvidenceList
+ */
 export const EvidenceList = {
   typeUrl: "/tendermint.types.EvidenceList",
   encode(message: EvidenceList, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

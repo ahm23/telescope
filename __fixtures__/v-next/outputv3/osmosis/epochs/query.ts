@@ -2,13 +2,33 @@ import { EpochInfo, EpochInfoAmino, EpochInfoSDKType } from "./genesis";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { DeepPartial, isSet } from "../../helpers";
 export const protobufPackage = "osmosis.epochs.v1beta1";
+/**
+ * @name QueryEpochsInfoRequest
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoRequest
+ */
 export interface QueryEpochsInfoRequest {}
 export interface QueryEpochsInfoRequestProtoMsg {
   typeUrl: "/osmosis.epochs.v1beta1.QueryEpochsInfoRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryEpochsInfoRequestAmino
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoRequest
+ */
 export interface QueryEpochsInfoRequestAmino {}
+/**
+ * @name QueryEpochsInfoRequestSDKType
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoRequest
+ */
 export interface QueryEpochsInfoRequestSDKType {}
+/**
+ * @name QueryEpochsInfoResponse
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoResponse
+ */
 export interface QueryEpochsInfoResponse {
   epochs: EpochInfo[];
 }
@@ -16,12 +36,27 @@ export interface QueryEpochsInfoResponseProtoMsg {
   typeUrl: "/osmosis.epochs.v1beta1.QueryEpochsInfoResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryEpochsInfoResponseAmino
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoResponse
+ */
 export interface QueryEpochsInfoResponseAmino {
   epochs?: EpochInfoAmino[];
 }
+/**
+ * @name QueryEpochsInfoResponseSDKType
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoResponse
+ */
 export interface QueryEpochsInfoResponseSDKType {
   epochs: EpochInfoSDKType[];
 }
+/**
+ * @name QueryCurrentEpochRequest
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochRequest
+ */
 export interface QueryCurrentEpochRequest {
   identifier: string;
 }
@@ -29,12 +64,27 @@ export interface QueryCurrentEpochRequestProtoMsg {
   typeUrl: "/osmosis.epochs.v1beta1.QueryCurrentEpochRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryCurrentEpochRequestAmino
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochRequest
+ */
 export interface QueryCurrentEpochRequestAmino {
   identifier?: string;
 }
+/**
+ * @name QueryCurrentEpochRequestSDKType
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochRequest
+ */
 export interface QueryCurrentEpochRequestSDKType {
   identifier: string;
 }
+/**
+ * @name QueryCurrentEpochResponse
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochResponse
+ */
 export interface QueryCurrentEpochResponse {
   currentEpoch: bigint;
 }
@@ -42,15 +92,30 @@ export interface QueryCurrentEpochResponseProtoMsg {
   typeUrl: "/osmosis.epochs.v1beta1.QueryCurrentEpochResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryCurrentEpochResponseAmino
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochResponse
+ */
 export interface QueryCurrentEpochResponseAmino {
   current_epoch?: string;
 }
+/**
+ * @name QueryCurrentEpochResponseSDKType
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochResponse
+ */
 export interface QueryCurrentEpochResponseSDKType {
   current_epoch: bigint;
 }
 function createBaseQueryEpochsInfoRequest(): QueryEpochsInfoRequest {
   return {};
 }
+/**
+ * @name QueryEpochsInfoRequest
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoRequest
+ */
 export const QueryEpochsInfoRequest = {
   typeUrl: "/osmosis.epochs.v1beta1.QueryEpochsInfoRequest",
   aminoType: "osmosis/epochs/query-epochs-info-request",
@@ -112,6 +177,11 @@ function createBaseQueryEpochsInfoResponse(): QueryEpochsInfoResponse {
     epochs: []
   };
 }
+/**
+ * @name QueryEpochsInfoResponse
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoResponse
+ */
 export const QueryEpochsInfoResponse = {
   typeUrl: "/osmosis.epochs.v1beta1.QueryEpochsInfoResponse",
   aminoType: "osmosis/epochs/query-epochs-info-response",
@@ -194,6 +264,11 @@ function createBaseQueryCurrentEpochRequest(): QueryCurrentEpochRequest {
     identifier: ""
   };
 }
+/**
+ * @name QueryCurrentEpochRequest
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochRequest
+ */
 export const QueryCurrentEpochRequest = {
   typeUrl: "/osmosis.epochs.v1beta1.QueryCurrentEpochRequest",
   aminoType: "osmosis/epochs/query-current-epoch-request",
@@ -270,6 +345,11 @@ function createBaseQueryCurrentEpochResponse(): QueryCurrentEpochResponse {
     currentEpoch: BigInt(0)
   };
 }
+/**
+ * @name QueryCurrentEpochResponse
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochResponse
+ */
 export const QueryCurrentEpochResponse = {
   typeUrl: "/osmosis.epochs.v1beta1.QueryCurrentEpochResponse",
   aminoType: "osmosis/epochs/query-current-epoch-response",

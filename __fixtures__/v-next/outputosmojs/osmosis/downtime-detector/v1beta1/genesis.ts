@@ -4,6 +4,11 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { toTimestamp, fromTimestamp, isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.downtimedetector.v1beta1";
+/**
+ * @name GenesisDowntimeEntry
+ * @package osmosis.downtimedetector.v1beta1
+ * @see proto type: osmosis.downtimedetector.v1beta1.GenesisDowntimeEntry
+ */
 export interface GenesisDowntimeEntry {
   duration: Downtime;
   lastDowntime: Date;
@@ -12,11 +17,21 @@ export interface GenesisDowntimeEntryProtoMsg {
   typeUrl: "/osmosis.downtimedetector.v1beta1.GenesisDowntimeEntry";
   value: Uint8Array;
 }
+/**
+ * @name GenesisDowntimeEntrySDKType
+ * @package osmosis.downtimedetector.v1beta1
+ * @see proto type: osmosis.downtimedetector.v1beta1.GenesisDowntimeEntry
+ */
 export interface GenesisDowntimeEntrySDKType {
   duration: Downtime;
   last_downtime: Date;
 }
-/** GenesisState defines the twap module's genesis state. */
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisState
+ * @package osmosis.downtimedetector.v1beta1
+ * @see proto type: osmosis.downtimedetector.v1beta1.GenesisState
+ */
 export interface GenesisState {
   downtimes: GenesisDowntimeEntry[];
   lastBlockTime: Date;
@@ -25,7 +40,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.downtimedetector.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the twap module's genesis state. */
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.downtimedetector.v1beta1
+ * @see proto type: osmosis.downtimedetector.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   downtimes: GenesisDowntimeEntrySDKType[];
   last_block_time: Date;
@@ -36,6 +56,11 @@ function createBaseGenesisDowntimeEntry(): GenesisDowntimeEntry {
     lastDowntime: new Date()
   };
 }
+/**
+ * @name GenesisDowntimeEntry
+ * @package osmosis.downtimedetector.v1beta1
+ * @see proto type: osmosis.downtimedetector.v1beta1.GenesisDowntimeEntry
+ */
 export const GenesisDowntimeEntry = {
   typeUrl: "/osmosis.downtimedetector.v1beta1.GenesisDowntimeEntry",
   encode(message: GenesisDowntimeEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -147,6 +172,12 @@ function createBaseGenesisState(): GenesisState {
     lastBlockTime: new Date()
   };
 }
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisState
+ * @package osmosis.downtimedetector.v1beta1
+ * @see proto type: osmosis.downtimedetector.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.downtimedetector.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

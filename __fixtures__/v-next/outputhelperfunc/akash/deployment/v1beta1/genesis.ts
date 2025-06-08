@@ -6,7 +6,12 @@ import { GlobalDecoderRegistry } from "../../../registry";
 import { isSet, Exact } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "akash.deployment.v1beta1";
-/** GenesisDeployment defines the basic genesis state used by deployment module */
+/**
+ * GenesisDeployment defines the basic genesis state used by deployment module
+ * @name GenesisDeployment
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisDeployment
+ */
 export interface GenesisDeployment {
   deployment: Deployment | undefined;
   groups: Group[];
@@ -15,7 +20,12 @@ export interface GenesisDeploymentProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.GenesisDeployment";
   value: Uint8Array;
 }
-/** GenesisDeployment defines the basic genesis state used by deployment module */
+/**
+ * GenesisDeployment defines the basic genesis state used by deployment module
+ * @name GenesisDeploymentAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisDeployment
+ */
 export interface GenesisDeploymentAmino {
   deployment: DeploymentAmino | undefined;
   groups: GroupAmino[];
@@ -24,12 +34,22 @@ export interface GenesisDeploymentAminoMsg {
   type: "akash/deployment/genesis-deployment";
   value: GenesisDeploymentAmino;
 }
-/** GenesisDeployment defines the basic genesis state used by deployment module */
+/**
+ * GenesisDeployment defines the basic genesis state used by deployment module
+ * @name GenesisDeploymentSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisDeployment
+ */
 export interface GenesisDeploymentSDKType {
   deployment: DeploymentSDKType | undefined;
   groups: GroupSDKType[];
 }
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisState
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisState
+ */
 export interface GenesisState {
   deployments: GenesisDeployment[];
   params: Params | undefined;
@@ -38,7 +58,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisStateAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   deployments: GenesisDeploymentAmino[];
   params: ParamsAmino | undefined;
@@ -47,7 +72,12 @@ export interface GenesisStateAminoMsg {
   type: "akash/deployment/genesis-state";
   value: GenesisStateAmino;
 }
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisStateSDKType
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   deployments: GenesisDeploymentSDKType[];
   params: ParamsSDKType | undefined;
@@ -58,6 +88,12 @@ function createBaseGenesisDeployment(): GenesisDeployment {
     groups: []
   };
 }
+/**
+ * GenesisDeployment defines the basic genesis state used by deployment module
+ * @name GenesisDeployment
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisDeployment
+ */
 export const GenesisDeployment = {
   typeUrl: "/akash.deployment.v1beta1.GenesisDeployment",
   aminoType: "akash/deployment/genesis-deployment",
@@ -195,6 +231,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({})
   };
 }
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisState
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.deployment.v1beta1.GenesisState",
   aminoType: "akash/deployment/genesis-state",

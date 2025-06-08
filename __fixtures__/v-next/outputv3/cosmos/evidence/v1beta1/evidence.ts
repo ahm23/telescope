@@ -5,6 +5,9 @@ export const protobufPackage = "cosmos.evidence.v1beta1";
 /**
  * Equivocation implements the Evidence interface and defines evidence of double
  * signing misbehavior.
+ * @name Equivocation
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.Equivocation
  */
 export interface Equivocation {
   height: bigint;
@@ -19,6 +22,9 @@ export interface EquivocationProtoMsg {
 /**
  * Equivocation implements the Evidence interface and defines evidence of double
  * signing misbehavior.
+ * @name EquivocationAmino
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.Equivocation
  */
 export interface EquivocationAmino {
   height?: string;
@@ -29,6 +35,9 @@ export interface EquivocationAmino {
 /**
  * Equivocation implements the Evidence interface and defines evidence of double
  * signing misbehavior.
+ * @name EquivocationSDKType
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.Equivocation
  */
 export interface EquivocationSDKType {
   height: bigint;
@@ -44,6 +53,13 @@ function createBaseEquivocation(): Equivocation {
     consensusAddress: ""
   };
 }
+/**
+ * Equivocation implements the Evidence interface and defines evidence of double
+ * signing misbehavior.
+ * @name Equivocation
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.Equivocation
+ */
 export const Equivocation = {
   typeUrl: "/cosmos.evidence.v1beta1.Equivocation",
   aminoType: "cosmos-sdk/Equivocation",

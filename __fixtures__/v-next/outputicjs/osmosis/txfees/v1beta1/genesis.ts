@@ -1,7 +1,12 @@
 import { FeeToken, FeeTokenAmino } from "./feetoken";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState defines the txfees module's genesis state. */
+/**
+ * GenesisState defines the txfees module's genesis state.
+ * @name GenesisState
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.GenesisState
+ */
 export interface GenesisState {
   basedenom: string;
   feetokens: FeeToken[];
@@ -10,7 +15,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.txfees.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the txfees module's genesis state. */
+/**
+ * GenesisState defines the txfees module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   basedenom: string;
   feetokens: FeeTokenAmino[];
@@ -25,6 +35,12 @@ function createBaseGenesisState(): GenesisState {
     feetokens: []
   };
 }
+/**
+ * GenesisState defines the txfees module's genesis state.
+ * @name GenesisState
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.txfees.v1beta1.GenesisState",
   aminoType: "osmosis/txfees/genesis-state",

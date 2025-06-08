@@ -69,6 +69,9 @@ export function changeTypeToJSON(object: ChangeType): string {
  * Includes detailed information about a field that have changed with
  * applicable advice about potential consequences for the change, such as
  * backwards-incompatibility.
+ * @name ConfigChange
+ * @package google.api
+ * @see proto type: google.api.ConfigChange
  */
 export interface ConfigChange {
   /**
@@ -93,7 +96,9 @@ export interface ConfigChange {
    * in JSON format. This field will not be populated if ChangeType == REMOVED.
    */
   newValue: string;
-  /** The type for this change, either ADDED, REMOVED, or MODIFIED. */
+  /**
+   * The type for this change, either ADDED, REMOVED, or MODIFIED.
+   */
   changeType: ChangeType;
   /**
    * Collection of advice provided for this change, useful for determining the
@@ -112,6 +117,9 @@ export interface ConfigChangeProtoMsg {
  * Includes detailed information about a field that have changed with
  * applicable advice about potential consequences for the change, such as
  * backwards-incompatibility.
+ * @name ConfigChangeAmino
+ * @package google.api
+ * @see proto type: google.api.ConfigChange
  */
 export interface ConfigChangeAmino {
   /**
@@ -136,7 +144,9 @@ export interface ConfigChangeAmino {
    * in JSON format. This field will not be populated if ChangeType == REMOVED.
    */
   new_value?: string;
-  /** The type for this change, either ADDED, REMOVED, or MODIFIED. */
+  /**
+   * The type for this change, either ADDED, REMOVED, or MODIFIED.
+   */
   change_type?: ChangeType;
   /**
    * Collection of advice provided for this change, useful for determining the
@@ -155,6 +165,9 @@ export interface ConfigChangeAminoMsg {
  * Includes detailed information about a field that have changed with
  * applicable advice about potential consequences for the change, such as
  * backwards-incompatibility.
+ * @name ConfigChangeSDKType
+ * @package google.api
+ * @see proto type: google.api.ConfigChange
  */
 export interface ConfigChangeSDKType {
   element: string;
@@ -166,6 +179,9 @@ export interface ConfigChangeSDKType {
 /**
  * Generated advice about this change, used for providing more
  * information about how a change will affect the existing service.
+ * @name Advice
+ * @package google.api
+ * @see proto type: google.api.Advice
  */
 export interface Advice {
   /**
@@ -181,6 +197,9 @@ export interface AdviceProtoMsg {
 /**
  * Generated advice about this change, used for providing more
  * information about how a change will affect the existing service.
+ * @name AdviceAmino
+ * @package google.api
+ * @see proto type: google.api.Advice
  */
 export interface AdviceAmino {
   /**
@@ -196,6 +215,9 @@ export interface AdviceAminoMsg {
 /**
  * Generated advice about this change, used for providing more
  * information about how a change will affect the existing service.
+ * @name AdviceSDKType
+ * @package google.api
+ * @see proto type: google.api.Advice
  */
 export interface AdviceSDKType {
   description: string;
@@ -209,6 +231,17 @@ function createBaseConfigChange(): ConfigChange {
     advices: []
   };
 }
+/**
+ * Output generated from semantically comparing two versions of a service
+ * configuration.
+ * 
+ * Includes detailed information about a field that have changed with
+ * applicable advice about potential consequences for the change, such as
+ * backwards-incompatibility.
+ * @name ConfigChange
+ * @package google.api
+ * @see proto type: google.api.ConfigChange
+ */
 export const ConfigChange = {
   typeUrl: "/google.api.ConfigChange",
   encode(message: ConfigChange, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -318,6 +351,13 @@ function createBaseAdvice(): Advice {
     description: ""
   };
 }
+/**
+ * Generated advice about this change, used for providing more
+ * information about how a change will affect the existing service.
+ * @name Advice
+ * @package google.api
+ * @see proto type: google.api.Advice
+ */
 export const Advice = {
   typeUrl: "/google.api.Advice",
   encode(message: Advice, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

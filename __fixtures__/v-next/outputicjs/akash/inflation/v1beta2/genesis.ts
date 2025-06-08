@@ -1,17 +1,27 @@
-import { Params, ParamsAmino } from "./params";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState stores slice of genesis deployment instance */
+import { AkashInflationV1beta2Params, AkashInflationV1beta2ParamsAmino } from "./params";
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisState
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.GenesisState
+ */
 export interface GenesisState {
-  params: Params;
+  params: AkashInflationV1beta2Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/akash.inflation.v1beta2.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState stores slice of genesis deployment instance */
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisStateAmino
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.GenesisState
+ */
 export interface GenesisStateAmino {
-  params: ParamsAmino;
+  params: AkashInflationV1beta2ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
   type: "/akash.inflation.v1beta2.GenesisState";
@@ -19,14 +29,20 @@ export interface GenesisStateAminoMsg {
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({})
+    params: AkashInflationV1beta2Params.fromPartial({})
   };
 }
+/**
+ * GenesisState stores slice of genesis deployment instance
+ * @name GenesisState
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.inflation.v1beta2.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      AkashInflationV1beta2Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
@@ -38,7 +54,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = AkashInflationV1beta2Params.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -49,19 +65,19 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? AkashInflationV1beta2Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = AkashInflationV1beta2Params.fromAmino(object.params);
     }
     return message;
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : Params.toAmino(Params.fromPartial({}));
+    obj.params = message.params ? AkashInflationV1beta2Params.toAmino(message.params) : AkashInflationV1beta2Params.toAmino(AkashInflationV1beta2Params.fromPartial({}));
     return obj;
   },
   fromAminoMsg(object: GenesisStateAminoMsg): GenesisState {

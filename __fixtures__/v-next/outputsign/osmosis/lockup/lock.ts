@@ -46,6 +46,9 @@ export function lockQueryTypeToJSON(object: LockQueryType): string {
  * unlock time and the number of coins locked. A state of a period lock is
  * created upon lock creation, and deleted once the lock has been matured after
  * the `duration` has passed since unbonding started.
+ * @name PeriodLock
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.PeriodLock
  */
 export interface PeriodLock {
   /**
@@ -70,7 +73,9 @@ export interface PeriodLock {
    * end time being block time + duration.
    */
   endTime: Date;
-  /** Coins are the tokens locked within the lock, kept in the module account. */
+  /**
+   * Coins are the tokens locked within the lock, kept in the module account.
+   */
   coins: Coin[];
 }
 export interface PeriodLockProtoMsg {
@@ -83,6 +88,9 @@ export interface PeriodLockProtoMsg {
  * unlock time and the number of coins locked. A state of a period lock is
  * created upon lock creation, and deleted once the lock has been matured after
  * the `duration` has passed since unbonding started.
+ * @name PeriodLockAmino
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.PeriodLock
  */
 export interface PeriodLockAmino {
   /**
@@ -107,7 +115,9 @@ export interface PeriodLockAmino {
    * end time being block time + duration.
    */
   end_time?: string;
-  /** Coins are the tokens locked within the lock, kept in the module account. */
+  /**
+   * Coins are the tokens locked within the lock, kept in the module account.
+   */
   coins?: CoinAmino[];
 }
 export interface PeriodLockAminoMsg {
@@ -120,6 +130,9 @@ export interface PeriodLockAminoMsg {
  * unlock time and the number of coins locked. A state of a period lock is
  * created upon lock creation, and deleted once the lock has been matured after
  * the `duration` has passed since unbonding started.
+ * @name PeriodLockSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.PeriodLock
  */
 export interface PeriodLockSDKType {
   ID: bigint;
@@ -132,11 +145,18 @@ export interface PeriodLockSDKType {
  * QueryCondition is a struct used for querying locks upon different conditions.
  * Duration field and timestamp fields could be optional, depending on the
  * LockQueryType.
+ * @name QueryCondition
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.QueryCondition
  */
 export interface QueryCondition {
-  /** LockQueryType is a type of lock query, ByLockDuration | ByLockTime */
+  /**
+   * LockQueryType is a type of lock query, ByLockDuration | ByLockTime
+   */
   lockQueryType: LockQueryType;
-  /** Denom represents the token denomination we are looking to lock up */
+  /**
+   * Denom represents the token denomination we are looking to lock up
+   */
   denom: string;
   /**
    * Duration is used to query locks with longer duration than the specified
@@ -159,11 +179,18 @@ export interface QueryConditionProtoMsg {
  * QueryCondition is a struct used for querying locks upon different conditions.
  * Duration field and timestamp fields could be optional, depending on the
  * LockQueryType.
+ * @name QueryConditionAmino
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.QueryCondition
  */
 export interface QueryConditionAmino {
-  /** LockQueryType is a type of lock query, ByLockDuration | ByLockTime */
+  /**
+   * LockQueryType is a type of lock query, ByLockDuration | ByLockTime
+   */
   lock_query_type?: LockQueryType;
-  /** Denom represents the token denomination we are looking to lock up */
+  /**
+   * Denom represents the token denomination we are looking to lock up
+   */
   denom?: string;
   /**
    * Duration is used to query locks with longer duration than the specified
@@ -186,6 +213,9 @@ export interface QueryConditionAminoMsg {
  * QueryCondition is a struct used for querying locks upon different conditions.
  * Duration field and timestamp fields could be optional, depending on the
  * LockQueryType.
+ * @name QueryConditionSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.QueryCondition
  */
 export interface QueryConditionSDKType {
   lock_query_type: LockQueryType;
@@ -198,6 +228,9 @@ export interface QueryConditionSDKType {
  * original denom and synthetic suffix. At the time of synthetic lockup creation
  * and deletion, accumulation store is also being updated and on querier side,
  * they can query as freely as native lockup.
+ * @name SyntheticLock
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.SyntheticLock
  */
 export interface SyntheticLock {
   /**
@@ -230,6 +263,9 @@ export interface SyntheticLockProtoMsg {
  * original denom and synthetic suffix. At the time of synthetic lockup creation
  * and deletion, accumulation store is also being updated and on querier side,
  * they can query as freely as native lockup.
+ * @name SyntheticLockAmino
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.SyntheticLock
  */
 export interface SyntheticLockAmino {
   /**
@@ -262,6 +298,9 @@ export interface SyntheticLockAminoMsg {
  * original denom and synthetic suffix. At the time of synthetic lockup creation
  * and deletion, accumulation store is also being updated and on querier side,
  * they can query as freely as native lockup.
+ * @name SyntheticLockSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.SyntheticLock
  */
 export interface SyntheticLockSDKType {
   underlying_lock_id: bigint;
@@ -278,6 +317,16 @@ function createBasePeriodLock(): PeriodLock {
     coins: []
   };
 }
+/**
+ * PeriodLock is a single lock unit by period defined by the x/lockup module.
+ * It's a record of a locked coin at a specific time. It stores owner, duration,
+ * unlock time and the number of coins locked. A state of a period lock is
+ * created upon lock creation, and deleted once the lock has been matured after
+ * the `duration` has passed since unbonding started.
+ * @name PeriodLock
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.PeriodLock
+ */
 export const PeriodLock = {
   typeUrl: "/osmosis.lockup.PeriodLock",
   encode(message: PeriodLock, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -400,6 +449,14 @@ function createBaseQueryCondition(): QueryCondition {
     timestamp: new Date()
   };
 }
+/**
+ * QueryCondition is a struct used for querying locks upon different conditions.
+ * Duration field and timestamp fields could be optional, depending on the
+ * LockQueryType.
+ * @name QueryCondition
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.QueryCondition
+ */
 export const QueryCondition = {
   typeUrl: "/osmosis.lockup.QueryCondition",
   encode(message: QueryCondition, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -507,6 +564,15 @@ function createBaseSyntheticLock(): SyntheticLock {
     duration: Duration.fromPartial({})
   };
 }
+/**
+ * SyntheticLock is creating virtual lockup where new denom is combination of
+ * original denom and synthetic suffix. At the time of synthetic lockup creation
+ * and deletion, accumulation store is also being updated and on querier side,
+ * they can query as freely as native lockup.
+ * @name SyntheticLock
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.SyntheticLock
+ */
 export const SyntheticLock = {
   typeUrl: "/osmosis.lockup.SyntheticLock",
   encode(message: SyntheticLock, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

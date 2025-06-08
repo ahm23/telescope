@@ -1,17 +1,32 @@
 import { buildUseQuery } from "../../../react-query";
 import { QueryDeploymentsRequest, QueryDeploymentsResponse, QueryDeploymentRequest, QueryDeploymentResponse, QueryGroupRequest, QueryGroupResponse } from "./query";
 import { getDeployments, getDeployment, getGroup } from "./query.rpc.func";
-/* Deployments queries deployments */
+/**
+ * Deployments queries deployments
+ * @name useGetDeployments
+ * @package akash.deployment.v1beta1
+ * @see proto service: akash.deployment.v1beta1.Deployments
+ */
 export const useGetDeployments = buildUseQuery<QueryDeploymentsRequest, QueryDeploymentsResponse>({
   builderQueryFn: getDeployments,
   queryKeyPrefix: "DeploymentsQuery"
 });
-/* Deployment queries deployment details */
+/**
+ * Deployment queries deployment details
+ * @name useGetDeployment
+ * @package akash.deployment.v1beta1
+ * @see proto service: akash.deployment.v1beta1.Deployment
+ */
 export const useGetDeployment = buildUseQuery<QueryDeploymentRequest, QueryDeploymentResponse>({
   builderQueryFn: getDeployment,
   queryKeyPrefix: "DeploymentQuery"
 });
-/* Group queries group details */
+/**
+ * Group queries group details
+ * @name useGetGroup
+ * @package akash.deployment.v1beta1
+ * @see proto service: akash.deployment.v1beta1.Group
+ */
 export const useGetGroup = buildUseQuery<QueryGroupRequest, QueryGroupResponse>({
   builderQueryFn: getGroup,
   queryKeyPrefix: "GroupQuery"

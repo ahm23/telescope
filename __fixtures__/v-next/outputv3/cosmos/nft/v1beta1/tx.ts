@@ -1,48 +1,94 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 export const protobufPackage = "cosmos.nft.v1beta1";
-/** MsgSend represents a message to send a nft from one account to another account. */
+/**
+ * MsgSend represents a message to send a nft from one account to another account.
+ * @name MsgSend
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.MsgSend
+ */
 export interface MsgSend {
-  /** class_id defines the unique identifier of the nft classification, similar to the contract address of ERC721 */
+  /**
+   * class_id defines the unique identifier of the nft classification, similar to the contract address of ERC721
+   */
   classId: string;
-  /** id defines the unique identification of nft */
+  /**
+   * id defines the unique identification of nft
+   */
   id: string;
-  /** sender is the address of the owner of nft */
+  /**
+   * sender is the address of the owner of nft
+   */
   sender: string;
-  /** receiver is the receiver address of nft */
+  /**
+   * receiver is the receiver address of nft
+   */
   receiver: string;
 }
 export interface MsgSendProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.MsgSend";
   value: Uint8Array;
 }
-/** MsgSend represents a message to send a nft from one account to another account. */
+/**
+ * MsgSend represents a message to send a nft from one account to another account.
+ * @name MsgSendAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.MsgSend
+ */
 export interface MsgSendAmino {
-  /** class_id defines the unique identifier of the nft classification, similar to the contract address of ERC721 */
+  /**
+   * class_id defines the unique identifier of the nft classification, similar to the contract address of ERC721
+   */
   class_id?: string;
-  /** id defines the unique identification of nft */
+  /**
+   * id defines the unique identification of nft
+   */
   id?: string;
-  /** sender is the address of the owner of nft */
+  /**
+   * sender is the address of the owner of nft
+   */
   sender?: string;
-  /** receiver is the receiver address of nft */
+  /**
+   * receiver is the receiver address of nft
+   */
   receiver?: string;
 }
-/** MsgSend represents a message to send a nft from one account to another account. */
+/**
+ * MsgSend represents a message to send a nft from one account to another account.
+ * @name MsgSendSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.MsgSend
+ */
 export interface MsgSendSDKType {
   class_id: string;
   id: string;
   sender: string;
   receiver: string;
 }
-/** MsgSendResponse defines the Msg/Send response type. */
+/**
+ * MsgSendResponse defines the Msg/Send response type.
+ * @name MsgSendResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.MsgSendResponse
+ */
 export interface MsgSendResponse {}
 export interface MsgSendResponseProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.MsgSendResponse";
   value: Uint8Array;
 }
-/** MsgSendResponse defines the Msg/Send response type. */
+/**
+ * MsgSendResponse defines the Msg/Send response type.
+ * @name MsgSendResponseAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.MsgSendResponse
+ */
 export interface MsgSendResponseAmino {}
-/** MsgSendResponse defines the Msg/Send response type. */
+/**
+ * MsgSendResponse defines the Msg/Send response type.
+ * @name MsgSendResponseSDKType
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.MsgSendResponse
+ */
 export interface MsgSendResponseSDKType {}
 function createBaseMsgSend(): MsgSend {
   return {
@@ -52,6 +98,12 @@ function createBaseMsgSend(): MsgSend {
     receiver: ""
   };
 }
+/**
+ * MsgSend represents a message to send a nft from one account to another account.
+ * @name MsgSend
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.MsgSend
+ */
 export const MsgSend = {
   typeUrl: "/cosmos.nft.v1beta1.MsgSend",
   aminoType: "cosmos-sdk/MsgNFTSend",
@@ -168,6 +220,12 @@ export const MsgSend = {
 function createBaseMsgSendResponse(): MsgSendResponse {
   return {};
 }
+/**
+ * MsgSendResponse defines the Msg/Send response type.
+ * @name MsgSendResponse
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.MsgSendResponse
+ */
 export const MsgSendResponse = {
   typeUrl: "/cosmos.nft.v1beta1.MsgSendResponse",
   aminoType: "cosmos-sdk/MsgSendResponse",

@@ -6,6 +6,9 @@ export const protobufPackage = "cosmos.crypto.multisig.v1beta1";
  * MultiSignature wraps the signatures from a multisig.LegacyAminoPubKey.
  * See cosmos.tx.v1betata1.ModeInfo.Multi for how to specify which signers
  * signed and with which modes.
+ * @name MultiSignature
+ * @package cosmos.crypto.multisig.v1beta1
+ * @see proto type: cosmos.crypto.multisig.v1beta1.MultiSignature
  */
 export interface MultiSignature {
   signatures: Uint8Array[];
@@ -18,6 +21,9 @@ export interface MultiSignatureProtoMsg {
  * MultiSignature wraps the signatures from a multisig.LegacyAminoPubKey.
  * See cosmos.tx.v1betata1.ModeInfo.Multi for how to specify which signers
  * signed and with which modes.
+ * @name MultiSignatureSDKType
+ * @package cosmos.crypto.multisig.v1beta1
+ * @see proto type: cosmos.crypto.multisig.v1beta1.MultiSignature
  */
 export interface MultiSignatureSDKType {
   signatures: Uint8Array[];
@@ -27,6 +33,9 @@ export interface MultiSignatureSDKType {
  * This is used to ensure that the encoded data takes up a minimal amount of
  * space after proto encoding.
  * This is not thread safe, and is not intended for concurrent usage.
+ * @name CompactBitArray
+ * @package cosmos.crypto.multisig.v1beta1
+ * @see proto type: cosmos.crypto.multisig.v1beta1.CompactBitArray
  */
 export interface CompactBitArray {
   extraBitsStored: number;
@@ -41,6 +50,9 @@ export interface CompactBitArrayProtoMsg {
  * This is used to ensure that the encoded data takes up a minimal amount of
  * space after proto encoding.
  * This is not thread safe, and is not intended for concurrent usage.
+ * @name CompactBitArraySDKType
+ * @package cosmos.crypto.multisig.v1beta1
+ * @see proto type: cosmos.crypto.multisig.v1beta1.CompactBitArray
  */
 export interface CompactBitArraySDKType {
   extra_bits_stored: number;
@@ -51,6 +63,14 @@ function createBaseMultiSignature(): MultiSignature {
     signatures: []
   };
 }
+/**
+ * MultiSignature wraps the signatures from a multisig.LegacyAminoPubKey.
+ * See cosmos.tx.v1betata1.ModeInfo.Multi for how to specify which signers
+ * signed and with which modes.
+ * @name MultiSignature
+ * @package cosmos.crypto.multisig.v1beta1
+ * @see proto type: cosmos.crypto.multisig.v1beta1.MultiSignature
+ */
 export const MultiSignature = {
   typeUrl: "/cosmos.crypto.multisig.v1beta1.MultiSignature",
   encode(message: MultiSignature, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -156,6 +176,15 @@ function createBaseCompactBitArray(): CompactBitArray {
     elems: new Uint8Array()
   };
 }
+/**
+ * CompactBitArray is an implementation of a space efficient bit array.
+ * This is used to ensure that the encoded data takes up a minimal amount of
+ * space after proto encoding.
+ * This is not thread safe, and is not intended for concurrent usage.
+ * @name CompactBitArray
+ * @package cosmos.crypto.multisig.v1beta1
+ * @see proto type: cosmos.crypto.multisig.v1beta1.CompactBitArray
+ */
 export const CompactBitArray = {
   typeUrl: "/cosmos.crypto.multisig.v1beta1.CompactBitArray",
   encode(message: CompactBitArray, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

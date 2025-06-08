@@ -5,10 +5,15 @@ import { toTimestamp, fromTimestamp, DeepPartial, bytesFromBase64, base64FromByt
 /**
  * ValidatorSigningInfo defines a validator's signing info for monitoring their
  * liveness activity.
+ * @name ValidatorSigningInfo
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.ValidatorSigningInfo
  */
 export interface ValidatorSigningInfo {
   address: string;
-  /** Height at which validator was first a candidate OR was unjailed */
+  /**
+   * Height at which validator was first a candidate OR was unjailed
+   */
   startHeight: bigint;
   /**
    * Index which is incremented each time the validator was a bonded
@@ -16,7 +21,9 @@ export interface ValidatorSigningInfo {
    * `SignedBlocksWindow` param determines the index in the `MissedBlocksBitArray`.
    */
   indexOffset: bigint;
-  /** Timestamp until which the validator is jailed due to liveness downtime. */
+  /**
+   * Timestamp until which the validator is jailed due to liveness downtime.
+   */
   jailedUntil: Date;
   /**
    * Whether or not a validator has been tombstoned (killed out of validator set). It is set
@@ -36,10 +43,15 @@ export interface ValidatorSigningInfoProtoMsg {
 /**
  * ValidatorSigningInfo defines a validator's signing info for monitoring their
  * liveness activity.
+ * @name ValidatorSigningInfoAmino
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.ValidatorSigningInfo
  */
 export interface ValidatorSigningInfoAmino {
   address: string;
-  /** Height at which validator was first a candidate OR was unjailed */
+  /**
+   * Height at which validator was first a candidate OR was unjailed
+   */
   start_height: string;
   /**
    * Index which is incremented each time the validator was a bonded
@@ -47,7 +59,9 @@ export interface ValidatorSigningInfoAmino {
    * `SignedBlocksWindow` param determines the index in the `MissedBlocksBitArray`.
    */
   index_offset: string;
-  /** Timestamp until which the validator is jailed due to liveness downtime. */
+  /**
+   * Timestamp until which the validator is jailed due to liveness downtime.
+   */
   jailed_until: string;
   /**
    * Whether or not a validator has been tombstoned (killed out of validator set). It is set
@@ -64,29 +78,39 @@ export interface ValidatorSigningInfoAminoMsg {
   type: "cosmos-sdk/ValidatorSigningInfo";
   value: ValidatorSigningInfoAmino;
 }
-/** Params represents the parameters used for by the slashing module. */
-export interface Params {
+/**
+ * Params represents the parameters used for by the slashing module.
+ * @name CosmosSlashingV1beta1Params
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.Params
+ */
+export interface CosmosSlashingV1beta1Params {
   signedBlocksWindow: bigint;
   minSignedPerWindow: Uint8Array;
   downtimeJailDuration: Duration;
   slashFractionDoubleSign: Uint8Array;
   slashFractionDowntime: Uint8Array;
 }
-export interface ParamsProtoMsg {
+export interface CosmosSlashingV1beta1ParamsProtoMsg {
   typeUrl: "/cosmos.slashing.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params represents the parameters used for by the slashing module. */
-export interface ParamsAmino {
+/**
+ * Params represents the parameters used for by the slashing module.
+ * @name CosmosSlashingV1beta1ParamsAmino
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.CosmosSlashingV1beta1Params
+ */
+export interface CosmosSlashingV1beta1ParamsAmino {
   signed_blocks_window: string;
   min_signed_per_window: string;
   downtime_jail_duration: DurationAmino;
   slash_fraction_double_sign: string;
   slash_fraction_downtime: string;
 }
-export interface ParamsAminoMsg {
+export interface CosmosSlashingV1beta1ParamsAminoMsg {
   type: "cosmos-sdk/Params";
-  value: ParamsAmino;
+  value: CosmosSlashingV1beta1ParamsAmino;
 }
 function createBaseValidatorSigningInfo(): ValidatorSigningInfo {
   return {
@@ -98,6 +122,13 @@ function createBaseValidatorSigningInfo(): ValidatorSigningInfo {
     missedBlocksCounter: BigInt(0)
   };
 }
+/**
+ * ValidatorSigningInfo defines a validator's signing info for monitoring their
+ * liveness activity.
+ * @name ValidatorSigningInfo
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.ValidatorSigningInfo
+ */
 export const ValidatorSigningInfo = {
   typeUrl: "/cosmos.slashing.v1beta1.ValidatorSigningInfo",
   aminoType: "cosmos-sdk/ValidatorSigningInfo",
@@ -218,7 +249,7 @@ export const ValidatorSigningInfo = {
     };
   }
 };
-function createBaseParams(): Params {
+function createBaseCosmosSlashingV1beta1Params(): CosmosSlashingV1beta1Params {
   return {
     signedBlocksWindow: BigInt(0),
     minSignedPerWindow: new Uint8Array(),
@@ -227,10 +258,16 @@ function createBaseParams(): Params {
     slashFractionDowntime: new Uint8Array()
   };
 }
-export const Params = {
+/**
+ * Params represents the parameters used for by the slashing module.
+ * @name CosmosSlashingV1beta1Params
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.Params
+ */
+export const CosmosSlashingV1beta1Params = {
   typeUrl: "/cosmos.slashing.v1beta1.Params",
   aminoType: "cosmos-sdk/Params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: CosmosSlashingV1beta1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.signedBlocksWindow !== BigInt(0)) {
       writer.uint32(8).int64(message.signedBlocksWindow);
     }
@@ -248,10 +285,10 @@ export const Params = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): CosmosSlashingV1beta1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseCosmosSlashingV1beta1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -277,8 +314,8 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<CosmosSlashingV1beta1Params>): CosmosSlashingV1beta1Params {
+    const message = createBaseCosmosSlashingV1beta1Params();
     message.signedBlocksWindow = object.signedBlocksWindow !== undefined && object.signedBlocksWindow !== null ? BigInt(object.signedBlocksWindow.toString()) : BigInt(0);
     message.minSignedPerWindow = object.minSignedPerWindow ?? new Uint8Array();
     message.downtimeJailDuration = object.downtimeJailDuration !== undefined && object.downtimeJailDuration !== null ? Duration.fromPartial(object.downtimeJailDuration) : undefined;
@@ -286,8 +323,8 @@ export const Params = {
     message.slashFractionDowntime = object.slashFractionDowntime ?? new Uint8Array();
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: CosmosSlashingV1beta1ParamsAmino): CosmosSlashingV1beta1Params {
+    const message = createBaseCosmosSlashingV1beta1Params();
     if (object.signed_blocks_window !== undefined && object.signed_blocks_window !== null) {
       message.signedBlocksWindow = BigInt(object.signed_blocks_window);
     }
@@ -305,7 +342,7 @@ export const Params = {
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: CosmosSlashingV1beta1Params): CosmosSlashingV1beta1ParamsAmino {
     const obj: any = {};
     obj.signed_blocks_window = message.signedBlocksWindow !== BigInt(0) ? message.signedBlocksWindow?.toString() : undefined;
     obj.min_signed_per_window = message.minSignedPerWindow ? base64FromBytes(message.minSignedPerWindow) : undefined;
@@ -314,25 +351,25 @@ export const Params = {
     obj.slash_fraction_downtime = message.slashFractionDowntime ? base64FromBytes(message.slashFractionDowntime) : undefined;
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: CosmosSlashingV1beta1ParamsAminoMsg): CosmosSlashingV1beta1Params {
+    return CosmosSlashingV1beta1Params.fromAmino(object.value);
   },
-  toAminoMsg(message: Params): ParamsAminoMsg {
+  toAminoMsg(message: CosmosSlashingV1beta1Params): CosmosSlashingV1beta1ParamsAminoMsg {
     return {
       type: "cosmos-sdk/Params",
-      value: Params.toAmino(message)
+      value: CosmosSlashingV1beta1Params.toAmino(message)
     };
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: CosmosSlashingV1beta1ParamsProtoMsg): CosmosSlashingV1beta1Params {
+    return CosmosSlashingV1beta1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: CosmosSlashingV1beta1Params): Uint8Array {
+    return CosmosSlashingV1beta1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: CosmosSlashingV1beta1Params): CosmosSlashingV1beta1ParamsProtoMsg {
     return {
       typeUrl: "/cosmos.slashing.v1beta1.Params",
-      value: Params.encode(message).finish()
+      value: CosmosSlashingV1beta1Params.encode(message).finish()
     };
   }
 };

@@ -7,6 +7,9 @@ export const protobufPackage = "google.longrunning";
 /**
  * This resource represents a long-running operation that is the result of a
  * network API call.
+ * @name Operation
+ * @package google.longrunning
+ * @see proto type: google.longrunning.Operation
  */
 export interface Operation {
   /**
@@ -28,7 +31,9 @@ export interface Operation {
    * available.
    */
   done: boolean;
-  /** The error result of the operation in case of failure or cancellation. */
+  /**
+   * The error result of the operation in case of failure or cancellation.
+   */
   error?: Status;
   /**
    * The normal response of the operation in case of success.  If the original
@@ -49,6 +54,9 @@ export interface OperationProtoMsg {
 /**
  * This resource represents a long-running operation that is the result of a
  * network API call.
+ * @name OperationAmino
+ * @package google.longrunning
+ * @see proto type: google.longrunning.Operation
  */
 export interface OperationAmino {
   /**
@@ -70,7 +78,9 @@ export interface OperationAmino {
    * available.
    */
   done?: boolean;
-  /** The error result of the operation in case of failure or cancellation. */
+  /**
+   * The error result of the operation in case of failure or cancellation.
+   */
   error?: StatusAmino;
   /**
    * The normal response of the operation in case of success.  If the original
@@ -91,6 +101,9 @@ export interface OperationAminoMsg {
 /**
  * This resource represents a long-running operation that is the result of a
  * network API call.
+ * @name OperationSDKType
+ * @package google.longrunning
+ * @see proto type: google.longrunning.Operation
  */
 export interface OperationSDKType {
   name: string;
@@ -99,139 +112,257 @@ export interface OperationSDKType {
   error?: StatusSDKType;
   response?: AnySDKType;
 }
-/** The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation]. */
+/**
+ * The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation].
+ * @name GetOperationRequest
+ * @package google.longrunning
+ * @see proto type: google.longrunning.GetOperationRequest
+ */
 export interface GetOperationRequest {
-  /** The name of the operation resource. */
+  /**
+   * The name of the operation resource.
+   */
   name: string;
 }
 export interface GetOperationRequestProtoMsg {
   typeUrl: "/google.longrunning.GetOperationRequest";
   value: Uint8Array;
 }
-/** The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation]. */
+/**
+ * The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation].
+ * @name GetOperationRequestAmino
+ * @package google.longrunning
+ * @see proto type: google.longrunning.GetOperationRequest
+ */
 export interface GetOperationRequestAmino {
-  /** The name of the operation resource. */
+  /**
+   * The name of the operation resource.
+   */
   name?: string;
 }
 export interface GetOperationRequestAminoMsg {
   type: "/google.longrunning.GetOperationRequest";
   value: GetOperationRequestAmino;
 }
-/** The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation]. */
+/**
+ * The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation].
+ * @name GetOperationRequestSDKType
+ * @package google.longrunning
+ * @see proto type: google.longrunning.GetOperationRequest
+ */
 export interface GetOperationRequestSDKType {
   name: string;
 }
-/** The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations]. */
+/**
+ * The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+ * @name ListOperationsRequest
+ * @package google.longrunning
+ * @see proto type: google.longrunning.ListOperationsRequest
+ */
 export interface ListOperationsRequest {
-  /** The name of the operation's parent resource. */
+  /**
+   * The name of the operation's parent resource.
+   */
   name: string;
-  /** The standard list filter. */
+  /**
+   * The standard list filter.
+   */
   filter: string;
-  /** The standard list page size. */
+  /**
+   * The standard list page size.
+   */
   pageSize: number;
-  /** The standard list page token. */
+  /**
+   * The standard list page token.
+   */
   pageToken: string;
 }
 export interface ListOperationsRequestProtoMsg {
   typeUrl: "/google.longrunning.ListOperationsRequest";
   value: Uint8Array;
 }
-/** The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations]. */
+/**
+ * The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+ * @name ListOperationsRequestAmino
+ * @package google.longrunning
+ * @see proto type: google.longrunning.ListOperationsRequest
+ */
 export interface ListOperationsRequestAmino {
-  /** The name of the operation's parent resource. */
+  /**
+   * The name of the operation's parent resource.
+   */
   name?: string;
-  /** The standard list filter. */
+  /**
+   * The standard list filter.
+   */
   filter?: string;
-  /** The standard list page size. */
+  /**
+   * The standard list page size.
+   */
   page_size?: number;
-  /** The standard list page token. */
+  /**
+   * The standard list page token.
+   */
   page_token?: string;
 }
 export interface ListOperationsRequestAminoMsg {
   type: "/google.longrunning.ListOperationsRequest";
   value: ListOperationsRequestAmino;
 }
-/** The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations]. */
+/**
+ * The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+ * @name ListOperationsRequestSDKType
+ * @package google.longrunning
+ * @see proto type: google.longrunning.ListOperationsRequest
+ */
 export interface ListOperationsRequestSDKType {
   name: string;
   filter: string;
   page_size: number;
   page_token: string;
 }
-/** The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations]. */
+/**
+ * The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+ * @name ListOperationsResponse
+ * @package google.longrunning
+ * @see proto type: google.longrunning.ListOperationsResponse
+ */
 export interface ListOperationsResponse {
-  /** A list of operations that matches the specified filter in the request. */
+  /**
+   * A list of operations that matches the specified filter in the request.
+   */
   operations: Operation[];
-  /** The standard List next-page token. */
+  /**
+   * The standard List next-page token.
+   */
   nextPageToken: string;
 }
 export interface ListOperationsResponseProtoMsg {
   typeUrl: "/google.longrunning.ListOperationsResponse";
   value: Uint8Array;
 }
-/** The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations]. */
+/**
+ * The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+ * @name ListOperationsResponseAmino
+ * @package google.longrunning
+ * @see proto type: google.longrunning.ListOperationsResponse
+ */
 export interface ListOperationsResponseAmino {
-  /** A list of operations that matches the specified filter in the request. */
+  /**
+   * A list of operations that matches the specified filter in the request.
+   */
   operations?: OperationAmino[];
-  /** The standard List next-page token. */
+  /**
+   * The standard List next-page token.
+   */
   next_page_token?: string;
 }
 export interface ListOperationsResponseAminoMsg {
   type: "/google.longrunning.ListOperationsResponse";
   value: ListOperationsResponseAmino;
 }
-/** The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations]. */
+/**
+ * The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+ * @name ListOperationsResponseSDKType
+ * @package google.longrunning
+ * @see proto type: google.longrunning.ListOperationsResponse
+ */
 export interface ListOperationsResponseSDKType {
   operations: OperationSDKType[];
   next_page_token: string;
 }
-/** The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation]. */
+/**
+ * The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
+ * @name CancelOperationRequest
+ * @package google.longrunning
+ * @see proto type: google.longrunning.CancelOperationRequest
+ */
 export interface CancelOperationRequest {
-  /** The name of the operation resource to be cancelled. */
+  /**
+   * The name of the operation resource to be cancelled.
+   */
   name: string;
 }
 export interface CancelOperationRequestProtoMsg {
   typeUrl: "/google.longrunning.CancelOperationRequest";
   value: Uint8Array;
 }
-/** The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation]. */
+/**
+ * The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
+ * @name CancelOperationRequestAmino
+ * @package google.longrunning
+ * @see proto type: google.longrunning.CancelOperationRequest
+ */
 export interface CancelOperationRequestAmino {
-  /** The name of the operation resource to be cancelled. */
+  /**
+   * The name of the operation resource to be cancelled.
+   */
   name?: string;
 }
 export interface CancelOperationRequestAminoMsg {
   type: "/google.longrunning.CancelOperationRequest";
   value: CancelOperationRequestAmino;
 }
-/** The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation]. */
+/**
+ * The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
+ * @name CancelOperationRequestSDKType
+ * @package google.longrunning
+ * @see proto type: google.longrunning.CancelOperationRequest
+ */
 export interface CancelOperationRequestSDKType {
   name: string;
 }
-/** The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation]. */
+/**
+ * The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
+ * @name DeleteOperationRequest
+ * @package google.longrunning
+ * @see proto type: google.longrunning.DeleteOperationRequest
+ */
 export interface DeleteOperationRequest {
-  /** The name of the operation resource to be deleted. */
+  /**
+   * The name of the operation resource to be deleted.
+   */
   name: string;
 }
 export interface DeleteOperationRequestProtoMsg {
   typeUrl: "/google.longrunning.DeleteOperationRequest";
   value: Uint8Array;
 }
-/** The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation]. */
+/**
+ * The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
+ * @name DeleteOperationRequestAmino
+ * @package google.longrunning
+ * @see proto type: google.longrunning.DeleteOperationRequest
+ */
 export interface DeleteOperationRequestAmino {
-  /** The name of the operation resource to be deleted. */
+  /**
+   * The name of the operation resource to be deleted.
+   */
   name?: string;
 }
 export interface DeleteOperationRequestAminoMsg {
   type: "/google.longrunning.DeleteOperationRequest";
   value: DeleteOperationRequestAmino;
 }
-/** The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation]. */
+/**
+ * The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
+ * @name DeleteOperationRequestSDKType
+ * @package google.longrunning
+ * @see proto type: google.longrunning.DeleteOperationRequest
+ */
 export interface DeleteOperationRequestSDKType {
   name: string;
 }
-/** The request message for [Operations.WaitOperation][google.longrunning.Operations.WaitOperation]. */
+/**
+ * The request message for [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
+ * @name WaitOperationRequest
+ * @package google.longrunning
+ * @see proto type: google.longrunning.WaitOperationRequest
+ */
 export interface WaitOperationRequest {
-  /** The name of the operation resource to wait on. */
+  /**
+   * The name of the operation resource to wait on.
+   */
   name: string;
   /**
    * The maximum duration to wait before timing out. If left blank, the wait
@@ -244,9 +375,16 @@ export interface WaitOperationRequestProtoMsg {
   typeUrl: "/google.longrunning.WaitOperationRequest";
   value: Uint8Array;
 }
-/** The request message for [Operations.WaitOperation][google.longrunning.Operations.WaitOperation]. */
+/**
+ * The request message for [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
+ * @name WaitOperationRequestAmino
+ * @package google.longrunning
+ * @see proto type: google.longrunning.WaitOperationRequest
+ */
 export interface WaitOperationRequestAmino {
-  /** The name of the operation resource to wait on. */
+  /**
+   * The name of the operation resource to wait on.
+   */
   name?: string;
   /**
    * The maximum duration to wait before timing out. If left blank, the wait
@@ -259,7 +397,12 @@ export interface WaitOperationRequestAminoMsg {
   type: "/google.longrunning.WaitOperationRequest";
   value: WaitOperationRequestAmino;
 }
-/** The request message for [Operations.WaitOperation][google.longrunning.Operations.WaitOperation]. */
+/**
+ * The request message for [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
+ * @name WaitOperationRequestSDKType
+ * @package google.longrunning
+ * @see proto type: google.longrunning.WaitOperationRequest
+ */
 export interface WaitOperationRequestSDKType {
   name: string;
   timeout?: DurationSDKType;
@@ -276,6 +419,9 @@ export interface WaitOperationRequestSDKType {
  *       metadata_type: "LongRunningRecognizeMetadata"
  *     };
  *   }
+ * @name OperationInfo
+ * @package google.longrunning
+ * @see proto type: google.longrunning.OperationInfo
  */
 export interface OperationInfo {
   /**
@@ -316,6 +462,9 @@ export interface OperationInfoProtoMsg {
  *       metadata_type: "LongRunningRecognizeMetadata"
  *     };
  *   }
+ * @name OperationInfoAmino
+ * @package google.longrunning
+ * @see proto type: google.longrunning.OperationInfo
  */
 export interface OperationInfoAmino {
   /**
@@ -356,6 +505,9 @@ export interface OperationInfoAminoMsg {
  *       metadata_type: "LongRunningRecognizeMetadata"
  *     };
  *   }
+ * @name OperationInfoSDKType
+ * @package google.longrunning
+ * @see proto type: google.longrunning.OperationInfo
  */
 export interface OperationInfoSDKType {
   response_type: string;
@@ -370,6 +522,13 @@ function createBaseOperation(): Operation {
     response: undefined
   };
 }
+/**
+ * This resource represents a long-running operation that is the result of a
+ * network API call.
+ * @name Operation
+ * @package google.longrunning
+ * @see proto type: google.longrunning.Operation
+ */
 export const Operation = {
   typeUrl: "/google.longrunning.Operation",
   encode(message: Operation, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -483,6 +642,12 @@ function createBaseGetOperationRequest(): GetOperationRequest {
     name: ""
   };
 }
+/**
+ * The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation].
+ * @name GetOperationRequest
+ * @package google.longrunning
+ * @see proto type: google.longrunning.GetOperationRequest
+ */
 export const GetOperationRequest = {
   typeUrl: "/google.longrunning.GetOperationRequest",
   encode(message: GetOperationRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -549,6 +714,12 @@ function createBaseListOperationsRequest(): ListOperationsRequest {
     pageToken: ""
   };
 }
+/**
+ * The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+ * @name ListOperationsRequest
+ * @package google.longrunning
+ * @see proto type: google.longrunning.ListOperationsRequest
+ */
 export const ListOperationsRequest = {
   typeUrl: "/google.longrunning.ListOperationsRequest",
   encode(message: ListOperationsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -646,6 +817,12 @@ function createBaseListOperationsResponse(): ListOperationsResponse {
     nextPageToken: ""
   };
 }
+/**
+ * The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+ * @name ListOperationsResponse
+ * @package google.longrunning
+ * @see proto type: google.longrunning.ListOperationsResponse
+ */
 export const ListOperationsResponse = {
   typeUrl: "/google.longrunning.ListOperationsResponse",
   encode(message: ListOperationsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -722,6 +899,12 @@ function createBaseCancelOperationRequest(): CancelOperationRequest {
     name: ""
   };
 }
+/**
+ * The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
+ * @name CancelOperationRequest
+ * @package google.longrunning
+ * @see proto type: google.longrunning.CancelOperationRequest
+ */
 export const CancelOperationRequest = {
   typeUrl: "/google.longrunning.CancelOperationRequest",
   encode(message: CancelOperationRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -785,6 +968,12 @@ function createBaseDeleteOperationRequest(): DeleteOperationRequest {
     name: ""
   };
 }
+/**
+ * The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
+ * @name DeleteOperationRequest
+ * @package google.longrunning
+ * @see proto type: google.longrunning.DeleteOperationRequest
+ */
 export const DeleteOperationRequest = {
   typeUrl: "/google.longrunning.DeleteOperationRequest",
   encode(message: DeleteOperationRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -849,6 +1038,12 @@ function createBaseWaitOperationRequest(): WaitOperationRequest {
     timeout: undefined
   };
 }
+/**
+ * The request message for [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
+ * @name WaitOperationRequest
+ * @package google.longrunning
+ * @see proto type: google.longrunning.WaitOperationRequest
+ */
 export const WaitOperationRequest = {
   typeUrl: "/google.longrunning.WaitOperationRequest",
   encode(message: WaitOperationRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -926,6 +1121,22 @@ function createBaseOperationInfo(): OperationInfo {
     metadataType: ""
   };
 }
+/**
+ * A message representing the message types used by a long-running operation.
+ * 
+ * Example:
+ * 
+ *   rpc LongRunningRecognize(LongRunningRecognizeRequest)
+ *       returns (google.longrunning.Operation) {
+ *     option (google.longrunning.operation_info) = {
+ *       response_type: "LongRunningRecognizeResponse"
+ *       metadata_type: "LongRunningRecognizeMetadata"
+ *     };
+ *   }
+ * @name OperationInfo
+ * @package google.longrunning
+ * @see proto type: google.longrunning.OperationInfo
+ */
 export const OperationInfo = {
   typeUrl: "/google.longrunning.OperationInfo",
   encode(message: OperationInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

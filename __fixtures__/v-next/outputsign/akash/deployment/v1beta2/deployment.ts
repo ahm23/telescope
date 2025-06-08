@@ -43,7 +43,12 @@ export function deployment_StateToJSON(object: Deployment_State): string {
       return "UNRECOGNIZED";
   }
 }
-/** DeploymentID stores owner and sequence number */
+/**
+ * DeploymentID stores owner and sequence number
+ * @name DeploymentID
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.DeploymentID
+ */
 export interface DeploymentID {
   owner: string;
   dseq: bigint;
@@ -52,7 +57,12 @@ export interface DeploymentIDProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.DeploymentID";
   value: Uint8Array;
 }
-/** DeploymentID stores owner and sequence number */
+/**
+ * DeploymentID stores owner and sequence number
+ * @name DeploymentIDAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.DeploymentID
+ */
 export interface DeploymentIDAmino {
   owner: string;
   dseq: string;
@@ -61,12 +71,22 @@ export interface DeploymentIDAminoMsg {
   type: "/akash.deployment.v1beta2.DeploymentID";
   value: DeploymentIDAmino;
 }
-/** DeploymentID stores owner and sequence number */
+/**
+ * DeploymentID stores owner and sequence number
+ * @name DeploymentIDSDKType
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.DeploymentID
+ */
 export interface DeploymentIDSDKType {
   owner: string;
   dseq: bigint;
 }
-/** Deployment stores deploymentID, state and version details */
+/**
+ * Deployment stores deploymentID, state and version details
+ * @name Deployment
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Deployment
+ */
 export interface Deployment {
   deploymentId: DeploymentID;
   state: Deployment_State;
@@ -77,7 +97,12 @@ export interface DeploymentProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.Deployment";
   value: Uint8Array;
 }
-/** Deployment stores deploymentID, state and version details */
+/**
+ * Deployment stores deploymentID, state and version details
+ * @name DeploymentAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Deployment
+ */
 export interface DeploymentAmino {
   deployment_id: DeploymentIDAmino;
   state: Deployment_State;
@@ -88,14 +113,24 @@ export interface DeploymentAminoMsg {
   type: "/akash.deployment.v1beta2.Deployment";
   value: DeploymentAmino;
 }
-/** Deployment stores deploymentID, state and version details */
+/**
+ * Deployment stores deploymentID, state and version details
+ * @name DeploymentSDKType
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Deployment
+ */
 export interface DeploymentSDKType {
   deployment_id: DeploymentIDSDKType;
   state: Deployment_State;
   version: Uint8Array;
   created_at: bigint;
 }
-/** DeploymentFilters defines filters used to filter deployments */
+/**
+ * DeploymentFilters defines filters used to filter deployments
+ * @name DeploymentFilters
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.DeploymentFilters
+ */
 export interface DeploymentFilters {
   owner: string;
   dseq: bigint;
@@ -105,7 +140,12 @@ export interface DeploymentFiltersProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.DeploymentFilters";
   value: Uint8Array;
 }
-/** DeploymentFilters defines filters used to filter deployments */
+/**
+ * DeploymentFilters defines filters used to filter deployments
+ * @name DeploymentFiltersAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.DeploymentFilters
+ */
 export interface DeploymentFiltersAmino {
   owner: string;
   dseq: string;
@@ -115,7 +155,12 @@ export interface DeploymentFiltersAminoMsg {
   type: "/akash.deployment.v1beta2.DeploymentFilters";
   value: DeploymentFiltersAmino;
 }
-/** DeploymentFilters defines filters used to filter deployments */
+/**
+ * DeploymentFilters defines filters used to filter deployments
+ * @name DeploymentFiltersSDKType
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.DeploymentFilters
+ */
 export interface DeploymentFiltersSDKType {
   owner: string;
   dseq: bigint;
@@ -127,6 +172,12 @@ function createBaseDeploymentID(): DeploymentID {
     dseq: BigInt(0)
   };
 }
+/**
+ * DeploymentID stores owner and sequence number
+ * @name DeploymentID
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.DeploymentID
+ */
 export const DeploymentID = {
   typeUrl: "/akash.deployment.v1beta2.DeploymentID",
   encode(message: DeploymentID, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -206,6 +257,12 @@ function createBaseDeployment(): Deployment {
     createdAt: BigInt(0)
   };
 }
+/**
+ * Deployment stores deploymentID, state and version details
+ * @name Deployment
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Deployment
+ */
 export const Deployment = {
   typeUrl: "/akash.deployment.v1beta2.Deployment",
   encode(message: Deployment, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -308,6 +365,12 @@ function createBaseDeploymentFilters(): DeploymentFilters {
     state: ""
   };
 }
+/**
+ * DeploymentFilters defines filters used to filter deployments
+ * @name DeploymentFilters
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.DeploymentFilters
+ */
 export const DeploymentFilters = {
   typeUrl: "/akash.deployment.v1beta2.DeploymentFilters",
   encode(message: DeploymentFilters, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

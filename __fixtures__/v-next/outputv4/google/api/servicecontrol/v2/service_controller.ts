@@ -4,7 +4,12 @@ import { BinaryReader, BinaryWriter } from "../../../../binary.js";
 import { isSet, DeepPartial, isObject } from "../../../../helpers.js";
 import { JsonSafe } from "../../../../json-safe.js";
 export const protobufPackage = "google.api.servicecontrol.v2";
-/** Request message for the Check method. */
+/**
+ * Request message for the Check method.
+ * @name CheckRequest
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.CheckRequest
+ */
 export interface CheckRequest {
   /**
    * The service name as specified in its service configuration. For example,
@@ -21,18 +26,29 @@ export interface CheckRequest {
    * specify using the latest configuration.
    */
   serviceConfigId: string;
-  /** Describes attributes about the operation being executed by the service. */
+  /**
+   * Describes attributes about the operation being executed by the service.
+   */
   attributes?: AttributeContext;
-  /** Describes the resources and the policies applied to each resource. */
+  /**
+   * Describes the resources and the policies applied to each resource.
+   */
   resources: ResourceInfo[];
-  /** Optional. Contains a comma-separated list of flags. */
+  /**
+   * Optional. Contains a comma-separated list of flags.
+   */
   flags: string;
 }
 export interface CheckRequestProtoMsg {
   typeUrl: "/google.api.servicecontrol.v2.CheckRequest";
   value: Uint8Array;
 }
-/** Request message for the Check method. */
+/**
+ * Request message for the Check method.
+ * @name CheckRequestSDKType
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.CheckRequest
+ */
 export interface CheckRequestSDKType {
   service_name: string;
   service_config_id: string;
@@ -40,11 +56,20 @@ export interface CheckRequestSDKType {
   resources: ResourceInfoSDKType[];
   flags: string;
 }
-/** Describes a resource referenced in the request. */
+/**
+ * Describes a resource referenced in the request.
+ * @name ResourceInfo
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.ResourceInfo
+ */
 export interface ResourceInfo {
-  /** The name of the resource referenced in the request. */
+  /**
+   * The name of the resource referenced in the request.
+   */
   name: string;
-  /** The resource type in the format of "{service}/{kind}". */
+  /**
+   * The resource type in the format of "{service}/{kind}".
+   */
   type: string;
   /**
    * The resource permission needed for this request.
@@ -73,7 +98,12 @@ export interface ResourceInfoProtoMsg {
   typeUrl: "/google.api.servicecontrol.v2.ResourceInfo";
   value: Uint8Array;
 }
-/** Describes a resource referenced in the request. */
+/**
+ * Describes a resource referenced in the request.
+ * @name ResourceInfoSDKType
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.ResourceInfo
+ */
 export interface ResourceInfoSDKType {
   name: string;
   type: string;
@@ -81,6 +111,11 @@ export interface ResourceInfoSDKType {
   container: string;
   location: string;
 }
+/**
+ * @name CheckResponse_HeadersEntry
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.undefined
+ */
 export interface CheckResponse_HeadersEntry {
   key: string;
   value: string;
@@ -89,11 +124,21 @@ export interface CheckResponse_HeadersEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name CheckResponse_HeadersEntrySDKType
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.undefined
+ */
 export interface CheckResponse_HeadersEntrySDKType {
   key: string;
   value: string;
 }
-/** Response message for the Check method. */
+/**
+ * Response message for the Check method.
+ * @name CheckResponse
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.CheckResponse
+ */
 export interface CheckResponse {
   /**
    * Operation is allowed when this field is not set. Any non-'OK' status
@@ -101,7 +146,9 @@ export interface CheckResponse {
    * would contain additional details about the denial.
    */
   status?: Status;
-  /** Returns a set of request contexts generated from the `CheckRequest`. */
+  /**
+   * Returns a set of request contexts generated from the `CheckRequest`.
+   */
   headers: {
     [key: string]: string;
   };
@@ -110,14 +157,24 @@ export interface CheckResponseProtoMsg {
   typeUrl: "/google.api.servicecontrol.v2.CheckResponse";
   value: Uint8Array;
 }
-/** Response message for the Check method. */
+/**
+ * Response message for the Check method.
+ * @name CheckResponseSDKType
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.CheckResponse
+ */
 export interface CheckResponseSDKType {
   status?: StatusSDKType;
   headers: {
     [key: string]: string;
   };
 }
-/** Request message for the Report method. */
+/**
+ * Request message for the Report method.
+ * @name ReportRequest
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.ReportRequest
+ */
 export interface ReportRequest {
   /**
    * The service name as specified in its service configuration. For example,
@@ -145,7 +202,12 @@ export interface ReportRequestProtoMsg {
   typeUrl: "/google.api.servicecontrol.v2.ReportRequest";
   value: Uint8Array;
 }
-/** Request message for the Report method. */
+/**
+ * Request message for the Report method.
+ * @name ReportRequestSDKType
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.ReportRequest
+ */
 export interface ReportRequestSDKType {
   service_name: string;
   service_config_id: string;
@@ -154,6 +216,9 @@ export interface ReportRequestSDKType {
 /**
  * Response message for the Report method.
  * If the request contains any invalid data, the server returns an RPC error.
+ * @name ReportResponse
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.ReportResponse
  */
 export interface ReportResponse {}
 export interface ReportResponseProtoMsg {
@@ -163,6 +228,9 @@ export interface ReportResponseProtoMsg {
 /**
  * Response message for the Report method.
  * If the request contains any invalid data, the server returns an RPC error.
+ * @name ReportResponseSDKType
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.ReportResponse
  */
 export interface ReportResponseSDKType {}
 function createBaseCheckRequest(): CheckRequest {
@@ -174,6 +242,12 @@ function createBaseCheckRequest(): CheckRequest {
     flags: ""
   };
 }
+/**
+ * Request message for the Check method.
+ * @name CheckRequest
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.CheckRequest
+ */
 export const CheckRequest = {
   typeUrl: "/google.api.servicecontrol.v2.CheckRequest",
   encode(message: CheckRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -342,6 +416,12 @@ function createBaseResourceInfo(): ResourceInfo {
     location: ""
   };
 }
+/**
+ * Describes a resource referenced in the request.
+ * @name ResourceInfo
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.ResourceInfo
+ */
 export const ResourceInfo = {
   typeUrl: "/google.api.servicecontrol.v2.ResourceInfo",
   encode(message: ResourceInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -495,6 +575,11 @@ function createBaseCheckResponse_HeadersEntry(): CheckResponse_HeadersEntry {
     value: ""
   };
 }
+/**
+ * @name CheckResponse_HeadersEntry
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.undefined
+ */
 export const CheckResponse_HeadersEntry = {
   encode(message: CheckResponse_HeadersEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== undefined) {
@@ -593,6 +678,12 @@ function createBaseCheckResponse(): CheckResponse {
     headers: {}
   };
 }
+/**
+ * Response message for the Check method.
+ * @name CheckResponse
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.CheckResponse
+ */
 export const CheckResponse = {
   typeUrl: "/google.api.servicecontrol.v2.CheckResponse",
   encode(message: CheckResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -749,6 +840,12 @@ function createBaseReportRequest(): ReportRequest {
     operations: []
   };
 }
+/**
+ * Request message for the Report method.
+ * @name ReportRequest
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.ReportRequest
+ */
 export const ReportRequest = {
   typeUrl: "/google.api.servicecontrol.v2.ReportRequest",
   encode(message: ReportRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -877,6 +974,13 @@ export const ReportRequest = {
 function createBaseReportResponse(): ReportResponse {
   return {};
 }
+/**
+ * Response message for the Report method.
+ * If the request contains any invalid data, the server returns an RPC error.
+ * @name ReportResponse
+ * @package google.api.servicecontrol.v2
+ * @see proto type: google.api.servicecontrol.v2.ReportResponse
+ */
 export const ReportResponse = {
   typeUrl: "/google.api.servicecontrol.v2.ReportResponse",
   encode(_: ReportResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -173,7 +173,12 @@ export function quotaError_CodeToJSON(object: QuotaError_Code): string {
       return "UNRECOGNIZED";
   }
 }
-/** Request message for the AllocateQuota method. */
+/**
+ * Request message for the AllocateQuota method.
+ * @name AllocateQuotaRequest
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.AllocateQuotaRequest
+ */
 export interface AllocateQuotaRequest {
   /**
    * Name of the service as specified in the service configuration. For example,
@@ -182,7 +187,9 @@ export interface AllocateQuotaRequest {
    * See [google.api.Service][google.api.Service] for the definition of a service name.
    */
   serviceName: string;
-  /** Operation that describes the quota allocation. */
+  /**
+   * Operation that describes the quota allocation.
+   */
   allocateOperation?: QuotaOperation;
   /**
    * Specifies which version of service configuration should be used to process
@@ -195,7 +202,12 @@ export interface AllocateQuotaRequestProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.AllocateQuotaRequest";
   value: Uint8Array;
 }
-/** Request message for the AllocateQuota method. */
+/**
+ * Request message for the AllocateQuota method.
+ * @name AllocateQuotaRequestAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.AllocateQuotaRequest
+ */
 export interface AllocateQuotaRequestAmino {
   /**
    * Name of the service as specified in the service configuration. For example,
@@ -204,7 +216,9 @@ export interface AllocateQuotaRequestAmino {
    * See [google.api.Service][google.api.Service] for the definition of a service name.
    */
   service_name?: string;
-  /** Operation that describes the quota allocation. */
+  /**
+   * Operation that describes the quota allocation.
+   */
   allocate_operation?: QuotaOperationAmino;
   /**
    * Specifies which version of service configuration should be used to process
@@ -217,12 +231,22 @@ export interface AllocateQuotaRequestAminoMsg {
   type: "/google.api.servicecontrol.v1.AllocateQuotaRequest";
   value: AllocateQuotaRequestAmino;
 }
-/** Request message for the AllocateQuota method. */
+/**
+ * Request message for the AllocateQuota method.
+ * @name AllocateQuotaRequestSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.AllocateQuotaRequest
+ */
 export interface AllocateQuotaRequestSDKType {
   service_name: string;
   allocate_operation?: QuotaOperationSDKType;
   service_config_id: string;
 }
+/**
+ * @name QuotaOperation_LabelsEntry
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.undefined
+ */
 export interface QuotaOperation_LabelsEntry {
   key: string;
   value: string;
@@ -231,6 +255,11 @@ export interface QuotaOperation_LabelsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name QuotaOperation_LabelsEntryAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.QuotaOperation_LabelsEntry
+ */
 export interface QuotaOperation_LabelsEntryAmino {
   key?: string;
   value?: string;
@@ -239,11 +268,21 @@ export interface QuotaOperation_LabelsEntryAminoMsg {
   type: string;
   value: QuotaOperation_LabelsEntryAmino;
 }
+/**
+ * @name QuotaOperation_LabelsEntrySDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.undefined
+ */
 export interface QuotaOperation_LabelsEntrySDKType {
   key: string;
   value: string;
 }
-/** Represents information regarding a quota operation. */
+/**
+ * Represents information regarding a quota operation.
+ * @name QuotaOperation
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.QuotaOperation
+ */
 export interface QuotaOperation {
   /**
    * Identity of the operation. This is expected to be unique within the scope
@@ -280,7 +319,9 @@ export interface QuotaOperation {
    *   api_key:<api_key>.
    */
   consumerId: string;
-  /** Labels describing the operation. */
+  /**
+   * Labels describing the operation.
+   */
   labels: {
     [key: string]: string;
   };
@@ -299,14 +340,21 @@ export interface QuotaOperation {
    * This field is mutually exclusive with method_name.
    */
   quotaMetrics: MetricValueSet[];
-  /** Quota mode for this operation. */
+  /**
+   * Quota mode for this operation.
+   */
   quotaMode: QuotaOperation_QuotaMode;
 }
 export interface QuotaOperationProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.QuotaOperation";
   value: Uint8Array;
 }
-/** Represents information regarding a quota operation. */
+/**
+ * Represents information regarding a quota operation.
+ * @name QuotaOperationAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.QuotaOperation
+ */
 export interface QuotaOperationAmino {
   /**
    * Identity of the operation. This is expected to be unique within the scope
@@ -343,7 +391,9 @@ export interface QuotaOperationAmino {
    *   api_key:<api_key>.
    */
   consumer_id?: string;
-  /** Labels describing the operation. */
+  /**
+   * Labels describing the operation.
+   */
   labels?: {
     [key: string]: string;
   };
@@ -362,14 +412,21 @@ export interface QuotaOperationAmino {
    * This field is mutually exclusive with method_name.
    */
   quota_metrics?: MetricValueSetAmino[];
-  /** Quota mode for this operation. */
+  /**
+   * Quota mode for this operation.
+   */
   quota_mode?: QuotaOperation_QuotaMode;
 }
 export interface QuotaOperationAminoMsg {
   type: "/google.api.servicecontrol.v1.QuotaOperation";
   value: QuotaOperationAmino;
 }
-/** Represents information regarding a quota operation. */
+/**
+ * Represents information regarding a quota operation.
+ * @name QuotaOperationSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.QuotaOperation
+ */
 export interface QuotaOperationSDKType {
   operation_id: string;
   method_name: string;
@@ -380,14 +437,21 @@ export interface QuotaOperationSDKType {
   quota_metrics: MetricValueSetSDKType[];
   quota_mode: QuotaOperation_QuotaMode;
 }
-/** Response message for the AllocateQuota method. */
+/**
+ * Response message for the AllocateQuota method.
+ * @name AllocateQuotaResponse
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.AllocateQuotaResponse
+ */
 export interface AllocateQuotaResponse {
   /**
    * The same operation_id value used in the AllocateQuotaRequest. Used for
    * logging and diagnostics purposes.
    */
   operationId: string;
-  /** Indicates the decision of the allocate. */
+  /**
+   * Indicates the decision of the allocate.
+   */
   allocateErrors: QuotaError[];
   /**
    * Quota metrics to indicate the result of allocation. Depending on the
@@ -402,21 +466,30 @@ export interface AllocateQuotaResponse {
    *   "serviceruntime.googleapis.com/quota/exceeded"
    */
   quotaMetrics: MetricValueSet[];
-  /** ID of the actual config used to process the request. */
+  /**
+   * ID of the actual config used to process the request.
+   */
   serviceConfigId: string;
 }
 export interface AllocateQuotaResponseProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.AllocateQuotaResponse";
   value: Uint8Array;
 }
-/** Response message for the AllocateQuota method. */
+/**
+ * Response message for the AllocateQuota method.
+ * @name AllocateQuotaResponseAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.AllocateQuotaResponse
+ */
 export interface AllocateQuotaResponseAmino {
   /**
    * The same operation_id value used in the AllocateQuotaRequest. Used for
    * logging and diagnostics purposes.
    */
   operation_id?: string;
-  /** Indicates the decision of the allocate. */
+  /**
+   * Indicates the decision of the allocate.
+   */
   allocate_errors?: QuotaErrorAmino[];
   /**
    * Quota metrics to indicate the result of allocation. Depending on the
@@ -431,23 +504,37 @@ export interface AllocateQuotaResponseAmino {
    *   "serviceruntime.googleapis.com/quota/exceeded"
    */
   quota_metrics?: MetricValueSetAmino[];
-  /** ID of the actual config used to process the request. */
+  /**
+   * ID of the actual config used to process the request.
+   */
   service_config_id?: string;
 }
 export interface AllocateQuotaResponseAminoMsg {
   type: "/google.api.servicecontrol.v1.AllocateQuotaResponse";
   value: AllocateQuotaResponseAmino;
 }
-/** Response message for the AllocateQuota method. */
+/**
+ * Response message for the AllocateQuota method.
+ * @name AllocateQuotaResponseSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.AllocateQuotaResponse
+ */
 export interface AllocateQuotaResponseSDKType {
   operation_id: string;
   allocate_errors: QuotaErrorSDKType[];
   quota_metrics: MetricValueSetSDKType[];
   service_config_id: string;
 }
-/** Represents error information for [QuotaOperation][google.api.servicecontrol.v1.QuotaOperation]. */
+/**
+ * Represents error information for [QuotaOperation][google.api.servicecontrol.v1.QuotaOperation].
+ * @name QuotaError
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.QuotaError
+ */
 export interface QuotaError {
-  /** Error code. */
+  /**
+   * Error code.
+   */
   code: QuotaError_Code;
   /**
    * Subject to whom this error applies. See the specific enum for more details
@@ -455,7 +542,9 @@ export interface QuotaError {
    * "project:<Google developer project id>".
    */
   subject: string;
-  /** Free-form text that provides details on the cause of the error. */
+  /**
+   * Free-form text that provides details on the cause of the error.
+   */
   description: string;
   /**
    * Contains additional information about the quota error.
@@ -467,9 +556,16 @@ export interface QuotaErrorProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.QuotaError";
   value: Uint8Array;
 }
-/** Represents error information for [QuotaOperation][google.api.servicecontrol.v1.QuotaOperation]. */
+/**
+ * Represents error information for [QuotaOperation][google.api.servicecontrol.v1.QuotaOperation].
+ * @name QuotaErrorAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.QuotaError
+ */
 export interface QuotaErrorAmino {
-  /** Error code. */
+  /**
+   * Error code.
+   */
   code?: QuotaError_Code;
   /**
    * Subject to whom this error applies. See the specific enum for more details
@@ -477,7 +573,9 @@ export interface QuotaErrorAmino {
    * "project:<Google developer project id>".
    */
   subject?: string;
-  /** Free-form text that provides details on the cause of the error. */
+  /**
+   * Free-form text that provides details on the cause of the error.
+   */
   description?: string;
   /**
    * Contains additional information about the quota error.
@@ -489,7 +587,12 @@ export interface QuotaErrorAminoMsg {
   type: "/google.api.servicecontrol.v1.QuotaError";
   value: QuotaErrorAmino;
 }
-/** Represents error information for [QuotaOperation][google.api.servicecontrol.v1.QuotaOperation]. */
+/**
+ * Represents error information for [QuotaOperation][google.api.servicecontrol.v1.QuotaOperation].
+ * @name QuotaErrorSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.QuotaError
+ */
 export interface QuotaErrorSDKType {
   code: QuotaError_Code;
   subject: string;
@@ -503,6 +606,12 @@ function createBaseAllocateQuotaRequest(): AllocateQuotaRequest {
     serviceConfigId: ""
   };
 }
+/**
+ * Request message for the AllocateQuota method.
+ * @name AllocateQuotaRequest
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.AllocateQuotaRequest
+ */
 export const AllocateQuotaRequest = {
   typeUrl: "/google.api.servicecontrol.v1.AllocateQuotaRequest",
   encode(message: AllocateQuotaRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -591,6 +700,11 @@ function createBaseQuotaOperation_LabelsEntry(): QuotaOperation_LabelsEntry {
     value: ""
   };
 }
+/**
+ * @name QuotaOperation_LabelsEntry
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.undefined
+ */
 export const QuotaOperation_LabelsEntry = {
   encode(message: QuotaOperation_LabelsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -663,6 +777,12 @@ function createBaseQuotaOperation(): QuotaOperation {
     quotaMode: 0
   };
 }
+/**
+ * Represents information regarding a quota operation.
+ * @name QuotaOperation
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.QuotaOperation
+ */
 export const QuotaOperation = {
   typeUrl: "/google.api.servicecontrol.v1.QuotaOperation",
   encode(message: QuotaOperation, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -809,6 +929,12 @@ function createBaseAllocateQuotaResponse(): AllocateQuotaResponse {
     serviceConfigId: ""
   };
 }
+/**
+ * Response message for the AllocateQuota method.
+ * @name AllocateQuotaResponse
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.AllocateQuotaResponse
+ */
 export const AllocateQuotaResponse = {
   typeUrl: "/google.api.servicecontrol.v1.AllocateQuotaResponse",
   encode(message: AllocateQuotaResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -912,6 +1038,12 @@ function createBaseQuotaError(): QuotaError {
     status: undefined
   };
 }
+/**
+ * Represents error information for [QuotaOperation][google.api.servicecontrol.v1.QuotaOperation].
+ * @name QuotaError
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.QuotaError
+ */
 export const QuotaError = {
   typeUrl: "/google.api.servicecontrol.v1.QuotaError",
   encode(message: QuotaError, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

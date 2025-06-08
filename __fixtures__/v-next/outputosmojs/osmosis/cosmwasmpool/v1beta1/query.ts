@@ -3,14 +3,29 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial, isSet } from "../../../helpers";
 export const protobufPackage = "osmosis.cosmwasmpool.v1beta1";
-/** =============================== Params */
+/**
+ * =============================== Params
+ * @name ParamsRequest
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.ParamsRequest
+ */
 export interface ParamsRequest {}
 export interface ParamsRequestProtoMsg {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.ParamsRequest";
   value: Uint8Array;
 }
-/** =============================== Params */
+/**
+ * =============================== Params
+ * @name ParamsRequestSDKType
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.ParamsRequest
+ */
 export interface ParamsRequestSDKType {}
+/**
+ * @name ParamsResponse
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.ParamsResponse
+ */
 export interface ParamsResponse {
   params: Params;
 }
@@ -18,12 +33,23 @@ export interface ParamsResponseProtoMsg {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.ParamsResponse";
   value: Uint8Array;
 }
+/**
+ * @name ParamsResponseSDKType
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.ParamsResponse
+ */
 export interface ParamsResponseSDKType {
   params: ParamsSDKType;
 }
 function createBaseParamsRequest(): ParamsRequest {
   return {};
 }
+/**
+ * =============================== Params
+ * @name ParamsRequest
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.ParamsRequest
+ */
 export const ParamsRequest = {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.ParamsRequest",
   encode(_: ParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -99,6 +125,11 @@ function createBaseParamsResponse(): ParamsResponse {
     params: Params.fromPartial({})
   };
 }
+/**
+ * @name ParamsResponse
+ * @package osmosis.cosmwasmpool.v1beta1
+ * @see proto type: osmosis.cosmwasmpool.v1beta1.ParamsResponse
+ */
 export const ParamsResponse = {
   typeUrl: "/osmosis.cosmwasmpool.v1beta1.ParamsResponse",
   encode(message: ParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

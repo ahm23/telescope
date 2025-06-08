@@ -5,11 +5,18 @@ import { DeepPartial } from "../../../../helpers";
 /**
  * IdentifiedClientState defines a client state with an additional client
  * identifier field.
+ * @name IdentifiedClientState
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.IdentifiedClientState
  */
 export interface IdentifiedClientState {
-  /** client identifier */
+  /**
+   * client identifier
+   */
   clientId: string;
-  /** client state */
+  /**
+   * client state
+   */
   clientState?: Any;
 }
 export interface IdentifiedClientStateProtoMsg {
@@ -19,11 +26,18 @@ export interface IdentifiedClientStateProtoMsg {
 /**
  * IdentifiedClientState defines a client state with an additional client
  * identifier field.
+ * @name IdentifiedClientStateAmino
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.IdentifiedClientState
  */
 export interface IdentifiedClientStateAmino {
-  /** client identifier */
+  /**
+   * client identifier
+   */
   client_id: string;
-  /** client state */
+  /**
+   * client state
+   */
   client_state?: AnyAmino;
 }
 export interface IdentifiedClientStateAminoMsg {
@@ -33,11 +47,18 @@ export interface IdentifiedClientStateAminoMsg {
 /**
  * ConsensusStateWithHeight defines a consensus state with an additional height
  * field.
+ * @name ConsensusStateWithHeight
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.ConsensusStateWithHeight
  */
 export interface ConsensusStateWithHeight {
-  /** consensus state height */
+  /**
+   * consensus state height
+   */
   height: Height;
-  /** consensus state */
+  /**
+   * consensus state
+   */
   consensusState?: Any;
 }
 export interface ConsensusStateWithHeightProtoMsg {
@@ -47,11 +68,18 @@ export interface ConsensusStateWithHeightProtoMsg {
 /**
  * ConsensusStateWithHeight defines a consensus state with an additional height
  * field.
+ * @name ConsensusStateWithHeightAmino
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.ConsensusStateWithHeight
  */
 export interface ConsensusStateWithHeightAmino {
-  /** consensus state height */
+  /**
+   * consensus state height
+   */
   height: HeightAmino;
-  /** consensus state */
+  /**
+   * consensus state
+   */
   consensus_state?: AnyAmino;
 }
 export interface ConsensusStateWithHeightAminoMsg {
@@ -61,11 +89,18 @@ export interface ConsensusStateWithHeightAminoMsg {
 /**
  * ClientConsensusStates defines all the stored consensus states for a given
  * client.
+ * @name ClientConsensusStates
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.ClientConsensusStates
  */
 export interface ClientConsensusStates {
-  /** client identifier */
+  /**
+   * client identifier
+   */
   clientId: string;
-  /** consensus states and their heights associated with the client */
+  /**
+   * consensus states and their heights associated with the client
+   */
   consensusStates: ConsensusStateWithHeight[];
 }
 export interface ClientConsensusStatesProtoMsg {
@@ -75,11 +110,18 @@ export interface ClientConsensusStatesProtoMsg {
 /**
  * ClientConsensusStates defines all the stored consensus states for a given
  * client.
+ * @name ClientConsensusStatesAmino
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.ClientConsensusStates
  */
 export interface ClientConsensusStatesAmino {
-  /** client identifier */
+  /**
+   * client identifier
+   */
   client_id: string;
-  /** consensus states and their heights associated with the client */
+  /**
+   * consensus states and their heights associated with the client
+   */
   consensus_states: ConsensusStateWithHeightAmino[];
 }
 export interface ClientConsensusStatesAminoMsg {
@@ -91,13 +133,22 @@ export interface ClientConsensusStatesAminoMsg {
  * client's latest consensus state is copied over to the subject client. The proposal
  * handler may fail if the subject and the substitute do not match in client and
  * chain parameters (with exception to latest height, frozen height, and chain-id).
+ * @name ClientUpdateProposal
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.ClientUpdateProposal
  */
 export interface ClientUpdateProposal {
-  /** the title of the update proposal */
+  /**
+   * the title of the update proposal
+   */
   title: string;
-  /** the description of the proposal */
+  /**
+   * the description of the proposal
+   */
   description: string;
-  /** the client identifier for the client to be updated if the proposal passes */
+  /**
+   * the client identifier for the client to be updated if the proposal passes
+   */
   subjectClientId: string;
   /**
    * the substitute client identifier for the client standing in for the subject
@@ -114,13 +165,22 @@ export interface ClientUpdateProposalProtoMsg {
  * client's latest consensus state is copied over to the subject client. The proposal
  * handler may fail if the subject and the substitute do not match in client and
  * chain parameters (with exception to latest height, frozen height, and chain-id).
+ * @name ClientUpdateProposalAmino
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.ClientUpdateProposal
  */
 export interface ClientUpdateProposalAmino {
-  /** the title of the update proposal */
+  /**
+   * the title of the update proposal
+   */
   title: string;
-  /** the description of the proposal */
+  /**
+   * the description of the proposal
+   */
   description: string;
-  /** the client identifier for the client to be updated if the proposal passes */
+  /**
+   * the client identifier for the client to be updated if the proposal passes
+   */
   subject_client_id: string;
   /**
    * the substitute client identifier for the client standing in for the subject
@@ -135,6 +195,9 @@ export interface ClientUpdateProposalAminoMsg {
 /**
  * UpgradeProposal is a gov Content type for initiating an IBC breaking
  * upgrade.
+ * @name UpgradeProposal
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.UpgradeProposal
  */
 export interface UpgradeProposal {
   title: string;
@@ -157,6 +220,9 @@ export interface UpgradeProposalProtoMsg {
 /**
  * UpgradeProposal is a gov Content type for initiating an IBC breaking
  * upgrade.
+ * @name UpgradeProposalAmino
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.UpgradeProposal
  */
 export interface UpgradeProposalAmino {
   title: string;
@@ -187,11 +253,18 @@ export interface UpgradeProposalAminoMsg {
  * breaking changes In these cases, the RevisionNumber is incremented so that
  * height continues to be monitonically increasing even as the RevisionHeight
  * gets reset
+ * @name Height
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.Height
  */
 export interface Height {
-  /** the revision that the client is currently on */
+  /**
+   * the revision that the client is currently on
+   */
   revisionNumber: bigint;
-  /** the height within the given revision */
+  /**
+   * the height within the given revision
+   */
   revisionHeight: bigint;
 }
 export interface HeightProtoMsg {
@@ -209,34 +282,55 @@ export interface HeightProtoMsg {
  * breaking changes In these cases, the RevisionNumber is incremented so that
  * height continues to be monitonically increasing even as the RevisionHeight
  * gets reset
+ * @name HeightAmino
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.Height
  */
 export interface HeightAmino {
-  /** the revision that the client is currently on */
+  /**
+   * the revision that the client is currently on
+   */
   revision_number: string;
-  /** the height within the given revision */
+  /**
+   * the height within the given revision
+   */
   revision_height: string;
 }
 export interface HeightAminoMsg {
   type: "cosmos-sdk/Height";
   value: HeightAmino;
 }
-/** Params defines the set of IBC light client parameters. */
-export interface Params {
-  /** allowed_clients defines the list of allowed client state types. */
+/**
+ * Params defines the set of IBC light client parameters.
+ * @name IbcCoreClientV1Params
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.Params
+ */
+export interface IbcCoreClientV1Params {
+  /**
+   * allowed_clients defines the list of allowed client state types.
+   */
   allowedClients: string[];
 }
-export interface ParamsProtoMsg {
+export interface IbcCoreClientV1ParamsProtoMsg {
   typeUrl: "/ibc.core.client.v1.Params";
   value: Uint8Array;
 }
-/** Params defines the set of IBC light client parameters. */
-export interface ParamsAmino {
-  /** allowed_clients defines the list of allowed client state types. */
+/**
+ * Params defines the set of IBC light client parameters.
+ * @name IbcCoreClientV1ParamsAmino
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.IbcCoreClientV1Params
+ */
+export interface IbcCoreClientV1ParamsAmino {
+  /**
+   * allowed_clients defines the list of allowed client state types.
+   */
   allowed_clients: string[];
 }
-export interface ParamsAminoMsg {
+export interface IbcCoreClientV1ParamsAminoMsg {
   type: "cosmos-sdk/Params";
-  value: ParamsAmino;
+  value: IbcCoreClientV1ParamsAmino;
 }
 function createBaseIdentifiedClientState(): IdentifiedClientState {
   return {
@@ -244,6 +338,13 @@ function createBaseIdentifiedClientState(): IdentifiedClientState {
     clientState: undefined
   };
 }
+/**
+ * IdentifiedClientState defines a client state with an additional client
+ * identifier field.
+ * @name IdentifiedClientState
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.IdentifiedClientState
+ */
 export const IdentifiedClientState = {
   typeUrl: "/ibc.core.client.v1.IdentifiedClientState",
   aminoType: "cosmos-sdk/IdentifiedClientState",
@@ -326,6 +427,13 @@ function createBaseConsensusStateWithHeight(): ConsensusStateWithHeight {
     consensusState: undefined
   };
 }
+/**
+ * ConsensusStateWithHeight defines a consensus state with an additional height
+ * field.
+ * @name ConsensusStateWithHeight
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.ConsensusStateWithHeight
+ */
 export const ConsensusStateWithHeight = {
   typeUrl: "/ibc.core.client.v1.ConsensusStateWithHeight",
   aminoType: "cosmos-sdk/ConsensusStateWithHeight",
@@ -408,6 +516,13 @@ function createBaseClientConsensusStates(): ClientConsensusStates {
     consensusStates: []
   };
 }
+/**
+ * ClientConsensusStates defines all the stored consensus states for a given
+ * client.
+ * @name ClientConsensusStates
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.ClientConsensusStates
+ */
 export const ClientConsensusStates = {
   typeUrl: "/ibc.core.client.v1.ClientConsensusStates",
   aminoType: "cosmos-sdk/ClientConsensusStates",
@@ -494,6 +609,15 @@ function createBaseClientUpdateProposal(): ClientUpdateProposal {
     substituteClientId: ""
   };
 }
+/**
+ * ClientUpdateProposal is a governance proposal. If it passes, the substitute
+ * client's latest consensus state is copied over to the subject client. The proposal
+ * handler may fail if the subject and the substitute do not match in client and
+ * chain parameters (with exception to latest height, frozen height, and chain-id).
+ * @name ClientUpdateProposal
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.ClientUpdateProposal
+ */
 export const ClientUpdateProposal = {
   typeUrl: "/ibc.core.client.v1.ClientUpdateProposal",
   aminoType: "cosmos-sdk/ClientUpdateProposal",
@@ -600,6 +724,13 @@ function createBaseUpgradeProposal(): UpgradeProposal {
     upgradedClientState: undefined
   };
 }
+/**
+ * UpgradeProposal is a gov Content type for initiating an IBC breaking
+ * upgrade.
+ * @name UpgradeProposal
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.UpgradeProposal
+ */
 export const UpgradeProposal = {
   typeUrl: "/ibc.core.client.v1.UpgradeProposal",
   aminoType: "cosmos-sdk/UpgradeProposal",
@@ -704,6 +835,21 @@ function createBaseHeight(): Height {
     revisionHeight: BigInt(0)
   };
 }
+/**
+ * Height is a monotonically increasing data type
+ * that can be compared against another Height for the purposes of updating and
+ * freezing clients
+ * 
+ * Normally the RevisionHeight is incremented at each height while keeping
+ * RevisionNumber the same. However some consensus algorithms may choose to
+ * reset the height in certain conditions e.g. hard forks, state-machine
+ * breaking changes In these cases, the RevisionNumber is incremented so that
+ * height continues to be monitonically increasing even as the RevisionHeight
+ * gets reset
+ * @name Height
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.Height
+ */
 export const Height = {
   typeUrl: "/ibc.core.client.v1.Height",
   aminoType: "cosmos-sdk/Height",
@@ -776,24 +922,30 @@ export const Height = {
     };
   }
 };
-function createBaseParams(): Params {
+function createBaseIbcCoreClientV1Params(): IbcCoreClientV1Params {
   return {
     allowedClients: []
   };
 }
-export const Params = {
+/**
+ * Params defines the set of IBC light client parameters.
+ * @name IbcCoreClientV1Params
+ * @package ibc.core.client.v1
+ * @see proto type: ibc.core.client.v1.Params
+ */
+export const IbcCoreClientV1Params = {
   typeUrl: "/ibc.core.client.v1.Params",
   aminoType: "cosmos-sdk/Params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: IbcCoreClientV1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.allowedClients) {
       writer.uint32(10).string(v!);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): IbcCoreClientV1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseIbcCoreClientV1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -807,17 +959,17 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<IbcCoreClientV1Params>): IbcCoreClientV1Params {
+    const message = createBaseIbcCoreClientV1Params();
     message.allowedClients = object.allowedClients?.map(e => e) || [];
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: IbcCoreClientV1ParamsAmino): IbcCoreClientV1Params {
+    const message = createBaseIbcCoreClientV1Params();
     message.allowedClients = object.allowed_clients?.map(e => e) || [];
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: IbcCoreClientV1Params): IbcCoreClientV1ParamsAmino {
     const obj: any = {};
     if (message.allowedClients) {
       obj.allowed_clients = message.allowedClients.map(e => e);
@@ -826,25 +978,25 @@ export const Params = {
     }
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: IbcCoreClientV1ParamsAminoMsg): IbcCoreClientV1Params {
+    return IbcCoreClientV1Params.fromAmino(object.value);
   },
-  toAminoMsg(message: Params): ParamsAminoMsg {
+  toAminoMsg(message: IbcCoreClientV1Params): IbcCoreClientV1ParamsAminoMsg {
     return {
       type: "cosmos-sdk/Params",
-      value: Params.toAmino(message)
+      value: IbcCoreClientV1Params.toAmino(message)
     };
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: IbcCoreClientV1ParamsProtoMsg): IbcCoreClientV1Params {
+    return IbcCoreClientV1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: IbcCoreClientV1Params): Uint8Array {
+    return IbcCoreClientV1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: IbcCoreClientV1Params): IbcCoreClientV1ParamsProtoMsg {
     return {
       typeUrl: "/ibc.core.client.v1.Params",
-      value: Params.encode(message).finish()
+      value: IbcCoreClientV1Params.encode(message).finish()
     };
   }
 };

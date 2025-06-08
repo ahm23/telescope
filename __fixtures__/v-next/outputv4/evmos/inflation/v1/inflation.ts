@@ -11,6 +11,9 @@ export const protobufPackage = "evmos.inflation.v1";
  * Model like this:
  * mintDistribution1 = distribution1 / (1 - teamVestingDistribution)
  * 0.5333333         = 40%           / (1 - 25%)
+ * @name InflationDistribution
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.InflationDistribution
  */
 export interface InflationDistribution {
   /**
@@ -41,6 +44,9 @@ export interface InflationDistributionProtoMsg {
  * Model like this:
  * mintDistribution1 = distribution1 / (1 - teamVestingDistribution)
  * 0.5333333         = 40%           / (1 - 25%)
+ * @name InflationDistributionSDKType
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.InflationDistribution
  */
 export interface InflationDistributionSDKType {
   staking_rewards: string;
@@ -53,17 +59,30 @@ export interface InflationDistributionSDKType {
  * periodProvision = exponentialDecay       *  bondingIncentive
  * f(x)            = (a * (1 - r) ^ x + c)  *  (1 + max_variance - bondedRatio *
  * (max_variance / bonding_target))
+ * @name ExponentialCalculation
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.ExponentialCalculation
  */
 export interface ExponentialCalculation {
-  /** initial value */
+  /**
+   * initial value
+   */
   a: string;
-  /** reduction factor */
+  /**
+   * reduction factor
+   */
   r: string;
-  /** long term inflation */
+  /**
+   * long term inflation
+   */
   c: string;
-  /** bonding target */
+  /**
+   * bonding target
+   */
   bondingTarget: string;
-  /** max variance */
+  /**
+   * max variance
+   */
   maxVariance: string;
 }
 export interface ExponentialCalculationProtoMsg {
@@ -76,6 +95,9 @@ export interface ExponentialCalculationProtoMsg {
  * periodProvision = exponentialDecay       *  bondingIncentive
  * f(x)            = (a * (1 - r) ^ x + c)  *  (1 + max_variance - bondedRatio *
  * (max_variance / bonding_target))
+ * @name ExponentialCalculationSDKType
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.ExponentialCalculation
  */
 export interface ExponentialCalculationSDKType {
   a: string;
@@ -91,6 +113,18 @@ function createBaseInflationDistribution(): InflationDistribution {
     communityPool: ""
   };
 }
+/**
+ * InflationDistribution defines the distribution in which inflation is
+ * allocated through minting on each epoch (staking, incentives, community). It
+ * excludes the team vesting distribution, as this is minted once at genesis.
+ * The initial InflationDistribution can be calculated from the Evmos Token
+ * Model like this:
+ * mintDistribution1 = distribution1 / (1 - teamVestingDistribution)
+ * 0.5333333         = 40%           / (1 - 25%)
+ * @name InflationDistribution
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.InflationDistribution
+ */
 export const InflationDistribution = {
   typeUrl: "/evmos.inflation.v1.InflationDistribution",
   encode(message: InflationDistribution, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -215,6 +249,16 @@ function createBaseExponentialCalculation(): ExponentialCalculation {
     maxVariance: ""
   };
 }
+/**
+ * ExponentialCalculation holds factors to calculate exponential inflation on
+ * each period. Calculation reference:
+ * periodProvision = exponentialDecay       *  bondingIncentive
+ * f(x)            = (a * (1 - r) ^ x + c)  *  (1 + max_variance - bondedRatio *
+ * (max_variance / bonding_target))
+ * @name ExponentialCalculation
+ * @package evmos.inflation.v1
+ * @see proto type: evmos.inflation.v1.ExponentialCalculation
+ */
 export const ExponentialCalculation = {
   typeUrl: "/evmos.inflation.v1.ExponentialCalculation",
   encode(message: ExponentialCalculation, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

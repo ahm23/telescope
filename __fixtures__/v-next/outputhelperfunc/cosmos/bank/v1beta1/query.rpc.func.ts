@@ -5,7 +5,12 @@ import { EndpointOrRpc, buildQuery } from "../../../helper-func-types";
 import { buildUseQuery } from "../../../react-query";
 import { buildUseVueQuery } from "../../../vue-query";
 import { QueryBalanceRequest, QueryBalanceRequestSDKType, QueryBalanceResponse, QueryBalanceResponseSDKType, QueryAllBalancesRequest, QueryAllBalancesRequestSDKType, QueryAllBalancesResponse, QueryAllBalancesResponseSDKType, QuerySpendableBalancesRequest, QuerySpendableBalancesRequestSDKType, QuerySpendableBalancesResponse, QuerySpendableBalancesResponseSDKType, QueryTotalSupplyRequest, QueryTotalSupplyRequestSDKType, QueryTotalSupplyResponse, QueryTotalSupplyResponseSDKType, QuerySupplyOfRequest, QuerySupplyOfRequestSDKType, QuerySupplyOfResponse, QuerySupplyOfResponseSDKType, QueryParamsRequest, QueryParamsRequestSDKType, QueryParamsResponse, QueryParamsResponseSDKType, QueryDenomMetadataRequest, QueryDenomMetadataRequestSDKType, QueryDenomMetadataResponse, QueryDenomMetadataResponseSDKType, QueryDenomsMetadataRequest, QueryDenomsMetadataRequestSDKType, QueryDenomsMetadataResponse, QueryDenomsMetadataResponseSDKType, QueryDenomOwnersRequest, QueryDenomOwnersRequestSDKType, QueryDenomOwnersResponse, QueryDenomOwnersResponseSDKType } from "./query";
-/* Balance queries the balance of a single coin for a single account. */
+/**
+ * Balance queries the balance of a single coin for a single account.
+ * @name getBalance
+ * @package cosmos.bank.v1beta1
+ * @see proto service: cosmos.bank.v1beta1.Balance
+ */
 export const getBalance = buildQuery<QueryBalanceRequest, QueryBalanceResponse>({
   encode: QueryBalanceRequest.encode,
   decode: QueryBalanceResponse.decode,
@@ -13,7 +18,12 @@ export const getBalance = buildQuery<QueryBalanceRequest, QueryBalanceResponse>(
   method: "Balance",
   deps: [QueryBalanceRequest, QueryBalanceResponse]
 });
-/* AllBalances queries the balance of all coins for a single account. */
+/**
+ * AllBalances queries the balance of all coins for a single account.
+ * @name getAllBalances
+ * @package cosmos.bank.v1beta1
+ * @see proto service: cosmos.bank.v1beta1.AllBalances
+ */
 export const getAllBalances = buildQuery<QueryAllBalancesRequest, QueryAllBalancesResponse>({
   encode: QueryAllBalancesRequest.encode,
   decode: QueryAllBalancesResponse.decode,
@@ -21,8 +31,13 @@ export const getAllBalances = buildQuery<QueryAllBalancesRequest, QueryAllBalanc
   method: "AllBalances",
   deps: [QueryAllBalancesRequest, QueryAllBalancesResponse]
 });
-/* SpendableBalances queries the spenable balance of all coins for a single
- account. */
+/**
+ * SpendableBalances queries the spenable balance of all coins for a single
+ * account.
+ * @name getSpendableBalances
+ * @package cosmos.bank.v1beta1
+ * @see proto service: cosmos.bank.v1beta1.SpendableBalances
+ */
 export const getSpendableBalances = buildQuery<QuerySpendableBalancesRequest, QuerySpendableBalancesResponse>({
   encode: QuerySpendableBalancesRequest.encode,
   decode: QuerySpendableBalancesResponse.decode,
@@ -30,7 +45,12 @@ export const getSpendableBalances = buildQuery<QuerySpendableBalancesRequest, Qu
   method: "SpendableBalances",
   deps: [QuerySpendableBalancesRequest, QuerySpendableBalancesResponse]
 });
-/* TotalSupply queries the total supply of all coins. */
+/**
+ * TotalSupply queries the total supply of all coins.
+ * @name getTotalSupply
+ * @package cosmos.bank.v1beta1
+ * @see proto service: cosmos.bank.v1beta1.TotalSupply
+ */
 export const getTotalSupply = buildQuery<QueryTotalSupplyRequest, QueryTotalSupplyResponse>({
   encode: QueryTotalSupplyRequest.encode,
   decode: QueryTotalSupplyResponse.decode,
@@ -38,7 +58,12 @@ export const getTotalSupply = buildQuery<QueryTotalSupplyRequest, QueryTotalSupp
   method: "TotalSupply",
   deps: [QueryTotalSupplyRequest, QueryTotalSupplyResponse]
 });
-/* SupplyOf queries the supply of a single coin. */
+/**
+ * SupplyOf queries the supply of a single coin.
+ * @name getSupplyOf
+ * @package cosmos.bank.v1beta1
+ * @see proto service: cosmos.bank.v1beta1.SupplyOf
+ */
 export const getSupplyOf = buildQuery<QuerySupplyOfRequest, QuerySupplyOfResponse>({
   encode: QuerySupplyOfRequest.encode,
   decode: QuerySupplyOfResponse.decode,
@@ -46,7 +71,12 @@ export const getSupplyOf = buildQuery<QuerySupplyOfRequest, QuerySupplyOfRespons
   method: "SupplyOf",
   deps: [QuerySupplyOfRequest, QuerySupplyOfResponse]
 });
-/* Params queries the parameters of x/bank module. */
+/**
+ * Params queries the parameters of x/bank module.
+ * @name getParams
+ * @package cosmos.bank.v1beta1
+ * @see proto service: cosmos.bank.v1beta1.Params
+ */
 export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   encode: QueryParamsRequest.encode,
   decode: QueryParamsResponse.decode,
@@ -54,7 +84,12 @@ export const getParams = buildQuery<QueryParamsRequest, QueryParamsResponse>({
   method: "Params",
   deps: [QueryParamsRequest, QueryParamsResponse]
 });
-/* DenomsMetadata queries the client metadata of a given coin denomination. */
+/**
+ * DenomsMetadata queries the client metadata of a given coin denomination.
+ * @name getDenomMetadata
+ * @package cosmos.bank.v1beta1
+ * @see proto service: cosmos.bank.v1beta1.DenomMetadata
+ */
 export const getDenomMetadata = buildQuery<QueryDenomMetadataRequest, QueryDenomMetadataResponse>({
   encode: QueryDenomMetadataRequest.encode,
   decode: QueryDenomMetadataResponse.decode,
@@ -62,8 +97,13 @@ export const getDenomMetadata = buildQuery<QueryDenomMetadataRequest, QueryDenom
   method: "DenomMetadata",
   deps: [QueryDenomMetadataRequest, QueryDenomMetadataResponse]
 });
-/* DenomsMetadata queries the client metadata for all registered coin
- denominations. */
+/**
+ * DenomsMetadata queries the client metadata for all registered coin
+ * denominations.
+ * @name getDenomsMetadata
+ * @package cosmos.bank.v1beta1
+ * @see proto service: cosmos.bank.v1beta1.DenomsMetadata
+ */
 export const getDenomsMetadata = buildQuery<QueryDenomsMetadataRequest, QueryDenomsMetadataResponse>({
   encode: QueryDenomsMetadataRequest.encode,
   decode: QueryDenomsMetadataResponse.decode,
@@ -71,8 +111,13 @@ export const getDenomsMetadata = buildQuery<QueryDenomsMetadataRequest, QueryDen
   method: "DenomsMetadata",
   deps: [QueryDenomsMetadataRequest, QueryDenomsMetadataResponse]
 });
-/* DenomOwners queries for all account addresses that own a particular token
- denomination. */
+/**
+ * DenomOwners queries for all account addresses that own a particular token
+ * denomination.
+ * @name getDenomOwners
+ * @package cosmos.bank.v1beta1
+ * @see proto service: cosmos.bank.v1beta1.DenomOwners
+ */
 export const getDenomOwners = buildQuery<QueryDenomOwnersRequest, QueryDenomOwnersResponse>({
   encode: QueryDenomOwnersRequest.encode,
   decode: QueryDenomOwnersResponse.decode,

@@ -3,12 +3,27 @@ import { BinaryReader, BinaryWriter } from "../../binary";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial, isSet } from "../../helpers";
 export const protobufPackage = "osmosis.epochs.v1beta1";
+/**
+ * @name QueryEpochsInfoRequest
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoRequest
+ */
 export interface QueryEpochsInfoRequest {}
 export interface QueryEpochsInfoRequestProtoMsg {
   typeUrl: "/osmosis.epochs.v1beta1.QueryEpochsInfoRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryEpochsInfoRequestSDKType
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoRequest
+ */
 export interface QueryEpochsInfoRequestSDKType {}
+/**
+ * @name QueryEpochsInfoResponse
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoResponse
+ */
 export interface QueryEpochsInfoResponse {
   epochs: EpochInfo[];
 }
@@ -16,9 +31,19 @@ export interface QueryEpochsInfoResponseProtoMsg {
   typeUrl: "/osmosis.epochs.v1beta1.QueryEpochsInfoResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryEpochsInfoResponseSDKType
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoResponse
+ */
 export interface QueryEpochsInfoResponseSDKType {
   epochs: EpochInfoSDKType[];
 }
+/**
+ * @name QueryCurrentEpochRequest
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochRequest
+ */
 export interface QueryCurrentEpochRequest {
   identifier: string;
 }
@@ -26,9 +51,19 @@ export interface QueryCurrentEpochRequestProtoMsg {
   typeUrl: "/osmosis.epochs.v1beta1.QueryCurrentEpochRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryCurrentEpochRequestSDKType
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochRequest
+ */
 export interface QueryCurrentEpochRequestSDKType {
   identifier: string;
 }
+/**
+ * @name QueryCurrentEpochResponse
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochResponse
+ */
 export interface QueryCurrentEpochResponse {
   currentEpoch: bigint;
 }
@@ -36,12 +71,22 @@ export interface QueryCurrentEpochResponseProtoMsg {
   typeUrl: "/osmosis.epochs.v1beta1.QueryCurrentEpochResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryCurrentEpochResponseSDKType
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochResponse
+ */
 export interface QueryCurrentEpochResponseSDKType {
   current_epoch: bigint;
 }
 function createBaseQueryEpochsInfoRequest(): QueryEpochsInfoRequest {
   return {};
 }
+/**
+ * @name QueryEpochsInfoRequest
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoRequest
+ */
 export const QueryEpochsInfoRequest = {
   typeUrl: "/osmosis.epochs.v1beta1.QueryEpochsInfoRequest",
   encode(_: QueryEpochsInfoRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -117,6 +162,11 @@ function createBaseQueryEpochsInfoResponse(): QueryEpochsInfoResponse {
     epochs: []
   };
 }
+/**
+ * @name QueryEpochsInfoResponse
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryEpochsInfoResponse
+ */
 export const QueryEpochsInfoResponse = {
   typeUrl: "/osmosis.epochs.v1beta1.QueryEpochsInfoResponse",
   encode(message: QueryEpochsInfoResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -221,6 +271,11 @@ function createBaseQueryCurrentEpochRequest(): QueryCurrentEpochRequest {
     identifier: ""
   };
 }
+/**
+ * @name QueryCurrentEpochRequest
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochRequest
+ */
 export const QueryCurrentEpochRequest = {
   typeUrl: "/osmosis.epochs.v1beta1.QueryCurrentEpochRequest",
   encode(message: QueryCurrentEpochRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -315,6 +370,11 @@ function createBaseQueryCurrentEpochResponse(): QueryCurrentEpochResponse {
     currentEpoch: BigInt(0)
   };
 }
+/**
+ * @name QueryCurrentEpochResponse
+ * @package osmosis.epochs.v1beta1
+ * @see proto type: osmosis.epochs.v1beta1.QueryCurrentEpochResponse
+ */
 export const QueryCurrentEpochResponse = {
   typeUrl: "/osmosis.epochs.v1beta1.QueryCurrentEpochResponse",
   encode(message: QueryCurrentEpochResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -3,6 +3,11 @@ import { Distribution, DistributionAmino, DistributionSDKType } from "./distribu
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, DeepPartial, toTimestamp, fromTimestamp, isObject } from "../../../../helpers";
 export const protobufPackage = "google.api.servicecontrol.v1";
+/**
+ * @name MetricValue_LabelsEntry
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.undefined
+ */
 export interface MetricValue_LabelsEntry {
   key: string;
   value: string;
@@ -11,15 +16,30 @@ export interface MetricValue_LabelsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name MetricValue_LabelsEntryAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.MetricValue_LabelsEntry
+ */
 export interface MetricValue_LabelsEntryAmino {
   key?: string;
   value?: string;
 }
+/**
+ * @name MetricValue_LabelsEntrySDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.undefined
+ */
 export interface MetricValue_LabelsEntrySDKType {
   key: string;
   value: string;
 }
-/** Represents a single metric value. */
+/**
+ * Represents a single metric value.
+ * @name MetricValue
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.MetricValue
+ */
 export interface MetricValue {
   /**
    * The labels describing the metric value.
@@ -44,22 +64,37 @@ export interface MetricValue {
    * [google.api.servicecontrol.v1.Operation.end_time][google.api.servicecontrol.v1.Operation.end_time] will be used.
    */
   endTime?: Date;
-  /** A boolean value. */
+  /**
+   * A boolean value.
+   */
   boolValue?: boolean;
-  /** A signed 64-bit integer value. */
+  /**
+   * A signed 64-bit integer value.
+   */
   int64Value?: bigint;
-  /** A double precision floating point value. */
+  /**
+   * A double precision floating point value.
+   */
   doubleValue?: number;
-  /** A text string value. */
+  /**
+   * A text string value.
+   */
   stringValue?: string;
-  /** A distribution value. */
+  /**
+   * A distribution value.
+   */
   distributionValue?: Distribution;
 }
 export interface MetricValueProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.MetricValue";
   value: Uint8Array;
 }
-/** Represents a single metric value. */
+/**
+ * Represents a single metric value.
+ * @name MetricValueAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.MetricValue
+ */
 export interface MetricValueAmino {
   /**
    * The labels describing the metric value.
@@ -84,18 +119,33 @@ export interface MetricValueAmino {
    * [google.api.servicecontrol.v1.Operation.end_time][google.api.servicecontrol.v1.Operation.end_time] will be used.
    */
   end_time?: string;
-  /** A boolean value. */
+  /**
+   * A boolean value.
+   */
   bool_value?: boolean;
-  /** A signed 64-bit integer value. */
+  /**
+   * A signed 64-bit integer value.
+   */
   int64_value?: string;
-  /** A double precision floating point value. */
+  /**
+   * A double precision floating point value.
+   */
   double_value?: number;
-  /** A text string value. */
+  /**
+   * A text string value.
+   */
   string_value?: string;
-  /** A distribution value. */
+  /**
+   * A distribution value.
+   */
   distribution_value?: DistributionAmino;
 }
-/** Represents a single metric value. */
+/**
+ * Represents a single metric value.
+ * @name MetricValueSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.MetricValue
+ */
 export interface MetricValueSDKType {
   labels: {
     [key: string]: string;
@@ -112,11 +162,18 @@ export interface MetricValueSDKType {
  * Represents a set of metric values in the same metric.
  * Each metric value in the set should have a unique combination of start time,
  * end time, and label values.
+ * @name MetricValueSet
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.MetricValueSet
  */
 export interface MetricValueSet {
-  /** The metric name defined in the service configuration. */
+  /**
+   * The metric name defined in the service configuration.
+   */
   metricName: string;
-  /** The values in this metric. */
+  /**
+   * The values in this metric.
+   */
   metricValues: MetricValue[];
 }
 export interface MetricValueSetProtoMsg {
@@ -127,17 +184,27 @@ export interface MetricValueSetProtoMsg {
  * Represents a set of metric values in the same metric.
  * Each metric value in the set should have a unique combination of start time,
  * end time, and label values.
+ * @name MetricValueSetAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.MetricValueSet
  */
 export interface MetricValueSetAmino {
-  /** The metric name defined in the service configuration. */
+  /**
+   * The metric name defined in the service configuration.
+   */
   metric_name?: string;
-  /** The values in this metric. */
+  /**
+   * The values in this metric.
+   */
   metric_values?: MetricValueAmino[];
 }
 /**
  * Represents a set of metric values in the same metric.
  * Each metric value in the set should have a unique combination of start time,
  * end time, and label values.
+ * @name MetricValueSetSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.MetricValueSet
  */
 export interface MetricValueSetSDKType {
   metric_name: string;
@@ -149,6 +216,11 @@ function createBaseMetricValue_LabelsEntry(): MetricValue_LabelsEntry {
     value: ""
   };
 }
+/**
+ * @name MetricValue_LabelsEntry
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.undefined
+ */
 export const MetricValue_LabelsEntry = {
   encode(message: MetricValue_LabelsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -238,6 +310,12 @@ function createBaseMetricValue(): MetricValue {
     distributionValue: undefined
   };
 }
+/**
+ * Represents a single metric value.
+ * @name MetricValue
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.MetricValue
+ */
 export const MetricValue = {
   typeUrl: "/google.api.servicecontrol.v1.MetricValue",
   encode(message: MetricValue, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -454,6 +532,14 @@ function createBaseMetricValueSet(): MetricValueSet {
     metricValues: []
   };
 }
+/**
+ * Represents a set of metric values in the same metric.
+ * Each metric value in the set should have a unique combination of start time,
+ * end time, and label values.
+ * @name MetricValueSet
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.MetricValueSet
+ */
 export const MetricValueSet = {
   typeUrl: "/google.api.servicecontrol.v1.MetricValueSet",
   encode(message: MetricValueSet, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

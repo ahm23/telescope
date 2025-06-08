@@ -1,23 +1,41 @@
-import { Minter, MinterAmino, Params, ParamsAmino } from "./mint";
+import { Minter, MinterAmino, CosmosMintV1beta1Params, CosmosMintV1beta1ParamsAmino } from "./mint";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisState
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** minter is a space for holding current inflation information. */
+  /**
+   * minter is a space for holding current inflation information.
+   */
   minter: Minter;
-  /** params defines all the paramaters of the module. */
-  params: Params;
+  /**
+   * params defines all the paramaters of the module.
+   */
+  params: CosmosMintV1beta1Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.mint.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the mint module's genesis state. */
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisStateAmino
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** minter is a space for holding current inflation information. */
+  /**
+   * minter is a space for holding current inflation information.
+   */
   minter: MinterAmino;
-  /** params defines all the paramaters of the module. */
-  params: ParamsAmino;
+  /**
+   * params defines all the paramaters of the module.
+   */
+  params: CosmosMintV1beta1ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
   type: "cosmos-sdk/GenesisState";
@@ -26,9 +44,15 @@ export interface GenesisStateAminoMsg {
 function createBaseGenesisState(): GenesisState {
   return {
     minter: Minter.fromPartial({}),
-    params: Params.fromPartial({})
+    params: CosmosMintV1beta1Params.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the mint module's genesis state.
+ * @name GenesisState
+ * @package cosmos.mint.v1beta1
+ * @see proto type: cosmos.mint.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.mint.v1beta1.GenesisState",
   aminoType: "cosmos-sdk/GenesisState",
@@ -37,7 +61,7 @@ export const GenesisState = {
       Minter.encode(message.minter, writer.uint32(10).fork()).ldelim();
     }
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(18).fork()).ldelim();
+      CosmosMintV1beta1Params.encode(message.params, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
@@ -52,7 +76,7 @@ export const GenesisState = {
           message.minter = Minter.decode(reader, reader.uint32());
           break;
         case 2:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = CosmosMintV1beta1Params.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -64,7 +88,7 @@ export const GenesisState = {
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
     message.minter = object.minter !== undefined && object.minter !== null ? Minter.fromPartial(object.minter) : undefined;
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? CosmosMintV1beta1Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
@@ -73,14 +97,14 @@ export const GenesisState = {
       message.minter = Minter.fromAmino(object.minter);
     }
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = CosmosMintV1beta1Params.fromAmino(object.params);
     }
     return message;
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
     obj.minter = message.minter ? Minter.toAmino(message.minter) : undefined;
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? CosmosMintV1beta1Params.toAmino(message.params) : undefined;
     return obj;
   },
   fromAminoMsg(object: GenesisStateAminoMsg): GenesisState {

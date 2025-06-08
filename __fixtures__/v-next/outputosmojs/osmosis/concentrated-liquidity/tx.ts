@@ -6,7 +6,12 @@ import { isSet, DeepPartial, toTimestamp, fromTimestamp } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
 import { Decimal } from "@cosmjs/math";
 export const protobufPackage = "osmosis.concentratedliquidity.v1beta1";
-/** ===================== MsgCreatePosition */
+/**
+ * ===================== MsgCreatePosition
+ * @name MsgCreatePosition
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreatePosition
+ */
 export interface MsgCreatePosition {
   poolId: bigint;
   sender: string;
@@ -21,7 +26,12 @@ export interface MsgCreatePositionProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCreatePosition";
   value: Uint8Array;
 }
-/** ===================== MsgCreatePosition */
+/**
+ * ===================== MsgCreatePosition
+ * @name MsgCreatePositionSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreatePosition
+ */
 export interface MsgCreatePositionSDKType {
   pool_id: bigint;
   sender: string;
@@ -32,6 +42,11 @@ export interface MsgCreatePositionSDKType {
   token_min_amount0: string;
   token_min_amount1: string;
 }
+/**
+ * @name MsgCreatePositionResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreatePositionResponse
+ */
 export interface MsgCreatePositionResponse {
   positionId: bigint;
   amount0: string;
@@ -43,6 +58,11 @@ export interface MsgCreatePositionResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCreatePositionResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgCreatePositionResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreatePositionResponse
+ */
 export interface MsgCreatePositionResponseSDKType {
   position_id: bigint;
   amount0: string;
@@ -50,7 +70,12 @@ export interface MsgCreatePositionResponseSDKType {
   join_time: Date;
   liquidity_created: string;
 }
-/** ===================== MsgWithdrawPosition */
+/**
+ * ===================== MsgWithdrawPosition
+ * @name MsgWithdrawPosition
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgWithdrawPosition
+ */
 export interface MsgWithdrawPosition {
   positionId: bigint;
   sender: string;
@@ -60,12 +85,22 @@ export interface MsgWithdrawPositionProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgWithdrawPosition";
   value: Uint8Array;
 }
-/** ===================== MsgWithdrawPosition */
+/**
+ * ===================== MsgWithdrawPosition
+ * @name MsgWithdrawPositionSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgWithdrawPosition
+ */
 export interface MsgWithdrawPositionSDKType {
   position_id: bigint;
   sender: string;
   liquidity_amount: string;
 }
+/**
+ * @name MsgWithdrawPositionResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse
+ */
 export interface MsgWithdrawPositionResponse {
   amount0: string;
   amount1: string;
@@ -74,11 +109,21 @@ export interface MsgWithdrawPositionResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgWithdrawPositionResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse
+ */
 export interface MsgWithdrawPositionResponseSDKType {
   amount0: string;
   amount1: string;
 }
-/** ===================== MsgCollectFees */
+/**
+ * ===================== MsgCollectFees
+ * @name MsgCollectFees
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCollectFees
+ */
 export interface MsgCollectFees {
   positionIds: bigint[];
   sender: string;
@@ -87,11 +132,21 @@ export interface MsgCollectFeesProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCollectFees";
   value: Uint8Array;
 }
-/** ===================== MsgCollectFees */
+/**
+ * ===================== MsgCollectFees
+ * @name MsgCollectFeesSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCollectFees
+ */
 export interface MsgCollectFeesSDKType {
   position_ids: bigint[];
   sender: string;
 }
+/**
+ * @name MsgCollectFeesResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCollectFeesResponse
+ */
 export interface MsgCollectFeesResponse {
   collectedFees: Coin[];
 }
@@ -99,10 +154,20 @@ export interface MsgCollectFeesResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCollectFeesResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgCollectFeesResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCollectFeesResponse
+ */
 export interface MsgCollectFeesResponseSDKType {
   collected_fees: CoinSDKType[];
 }
-/** ===================== MsgCollectIncentives */
+/**
+ * ===================== MsgCollectIncentives
+ * @name MsgCollectIncentives
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCollectIncentives
+ */
 export interface MsgCollectIncentives {
   positionIds: bigint[];
   sender: string;
@@ -111,11 +176,21 @@ export interface MsgCollectIncentivesProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCollectIncentives";
   value: Uint8Array;
 }
-/** ===================== MsgCollectIncentives */
+/**
+ * ===================== MsgCollectIncentives
+ * @name MsgCollectIncentivesSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCollectIncentives
+ */
 export interface MsgCollectIncentivesSDKType {
   position_ids: bigint[];
   sender: string;
 }
+/**
+ * @name MsgCollectIncentivesResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse
+ */
 export interface MsgCollectIncentivesResponse {
   collectedIncentives: Coin[];
 }
@@ -123,10 +198,20 @@ export interface MsgCollectIncentivesResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgCollectIncentivesResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse
+ */
 export interface MsgCollectIncentivesResponseSDKType {
   collected_incentives: CoinSDKType[];
 }
-/** ===================== MsgCreateIncentive */
+/**
+ * ===================== MsgCreateIncentive
+ * @name MsgCreateIncentive
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreateIncentive
+ */
 export interface MsgCreateIncentive {
   poolId: bigint;
   sender: string;
@@ -140,7 +225,12 @@ export interface MsgCreateIncentiveProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCreateIncentive";
   value: Uint8Array;
 }
-/** ===================== MsgCreateIncentive */
+/**
+ * ===================== MsgCreateIncentive
+ * @name MsgCreateIncentiveSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreateIncentive
+ */
 export interface MsgCreateIncentiveSDKType {
   pool_id: bigint;
   sender: string;
@@ -150,6 +240,11 @@ export interface MsgCreateIncentiveSDKType {
   start_time: Date;
   min_uptime: DurationSDKType;
 }
+/**
+ * @name MsgCreateIncentiveResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreateIncentiveResponse
+ */
 export interface MsgCreateIncentiveResponse {
   incentiveDenom: string;
   incentiveAmount: string;
@@ -161,6 +256,11 @@ export interface MsgCreateIncentiveResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCreateIncentiveResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgCreateIncentiveResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreateIncentiveResponse
+ */
 export interface MsgCreateIncentiveResponseSDKType {
   incentive_denom: string;
   incentive_amount: string;
@@ -168,7 +268,12 @@ export interface MsgCreateIncentiveResponseSDKType {
   start_time: Date;
   min_uptime: DurationSDKType;
 }
-/** ===================== MsgFungifyChargedPositions */
+/**
+ * ===================== MsgFungifyChargedPositions
+ * @name MsgFungifyChargedPositions
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgFungifyChargedPositions
+ */
 export interface MsgFungifyChargedPositions {
   positionIds: bigint[];
   sender: string;
@@ -177,11 +282,21 @@ export interface MsgFungifyChargedPositionsProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgFungifyChargedPositions";
   value: Uint8Array;
 }
-/** ===================== MsgFungifyChargedPositions */
+/**
+ * ===================== MsgFungifyChargedPositions
+ * @name MsgFungifyChargedPositionsSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgFungifyChargedPositions
+ */
 export interface MsgFungifyChargedPositionsSDKType {
   position_ids: bigint[];
   sender: string;
 }
+/**
+ * @name MsgFungifyChargedPositionsResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse
+ */
 export interface MsgFungifyChargedPositionsResponse {
   newPositionId: bigint;
 }
@@ -189,6 +304,11 @@ export interface MsgFungifyChargedPositionsResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgFungifyChargedPositionsResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse
+ */
 export interface MsgFungifyChargedPositionsResponseSDKType {
   new_position_id: bigint;
 }
@@ -204,6 +324,12 @@ function createBaseMsgCreatePosition(): MsgCreatePosition {
     tokenMinAmount1: ""
   };
 }
+/**
+ * ===================== MsgCreatePosition
+ * @name MsgCreatePosition
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreatePosition
+ */
 export const MsgCreatePosition = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCreatePosition",
   encode(message: MsgCreatePosition, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -414,6 +540,11 @@ function createBaseMsgCreatePositionResponse(): MsgCreatePositionResponse {
     liquidityCreated: ""
   };
 }
+/**
+ * @name MsgCreatePositionResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreatePositionResponse
+ */
 export const MsgCreatePositionResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCreatePositionResponse",
   encode(message: MsgCreatePositionResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -574,6 +705,12 @@ function createBaseMsgWithdrawPosition(): MsgWithdrawPosition {
     liquidityAmount: ""
   };
 }
+/**
+ * ===================== MsgWithdrawPosition
+ * @name MsgWithdrawPosition
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgWithdrawPosition
+ */
 export const MsgWithdrawPosition = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgWithdrawPosition",
   encode(message: MsgWithdrawPosition, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -701,6 +838,11 @@ function createBaseMsgWithdrawPositionResponse(): MsgWithdrawPositionResponse {
     amount1: ""
   };
 }
+/**
+ * @name MsgWithdrawPositionResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse
+ */
 export const MsgWithdrawPositionResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgWithdrawPositionResponse",
   encode(message: MsgWithdrawPositionResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -812,6 +954,12 @@ function createBaseMsgCollectFees(): MsgCollectFees {
     sender: ""
   };
 }
+/**
+ * ===================== MsgCollectFees
+ * @name MsgCollectFees
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCollectFees
+ */
 export const MsgCollectFees = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCollectFees",
   encode(message: MsgCollectFees, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -941,6 +1089,11 @@ function createBaseMsgCollectFeesResponse(): MsgCollectFeesResponse {
     collectedFees: []
   };
 }
+/**
+ * @name MsgCollectFeesResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCollectFeesResponse
+ */
 export const MsgCollectFeesResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCollectFeesResponse",
   encode(message: MsgCollectFeesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1046,6 +1199,12 @@ function createBaseMsgCollectIncentives(): MsgCollectIncentives {
     sender: ""
   };
 }
+/**
+ * ===================== MsgCollectIncentives
+ * @name MsgCollectIncentives
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCollectIncentives
+ */
 export const MsgCollectIncentives = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCollectIncentives",
   encode(message: MsgCollectIncentives, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1175,6 +1334,11 @@ function createBaseMsgCollectIncentivesResponse(): MsgCollectIncentivesResponse 
     collectedIncentives: []
   };
 }
+/**
+ * @name MsgCollectIncentivesResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse
+ */
 export const MsgCollectIncentivesResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCollectIncentivesResponse",
   encode(message: MsgCollectIncentivesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1285,6 +1449,12 @@ function createBaseMsgCreateIncentive(): MsgCreateIncentive {
     minUptime: Duration.fromPartial({})
   };
 }
+/**
+ * ===================== MsgCreateIncentive
+ * @name MsgCreateIncentive
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreateIncentive
+ */
 export const MsgCreateIncentive = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCreateIncentive",
   encode(message: MsgCreateIncentive, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1479,6 +1649,11 @@ function createBaseMsgCreateIncentiveResponse(): MsgCreateIncentiveResponse {
     minUptime: Duration.fromPartial({})
   };
 }
+/**
+ * @name MsgCreateIncentiveResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreateIncentiveResponse
+ */
 export const MsgCreateIncentiveResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCreateIncentiveResponse",
   encode(message: MsgCreateIncentiveResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1638,6 +1813,12 @@ function createBaseMsgFungifyChargedPositions(): MsgFungifyChargedPositions {
     sender: ""
   };
 }
+/**
+ * ===================== MsgFungifyChargedPositions
+ * @name MsgFungifyChargedPositions
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgFungifyChargedPositions
+ */
 export const MsgFungifyChargedPositions = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgFungifyChargedPositions",
   encode(message: MsgFungifyChargedPositions, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1767,6 +1948,11 @@ function createBaseMsgFungifyChargedPositionsResponse(): MsgFungifyChargedPositi
     newPositionId: BigInt(0)
   };
 }
+/**
+ * @name MsgFungifyChargedPositionsResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse
+ */
 export const MsgFungifyChargedPositionsResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgFungifyChargedPositionsResponse",
   encode(message: MsgFungifyChargedPositionsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

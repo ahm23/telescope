@@ -5,20 +5,36 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.claim.v1beta1";
-/** GenesisState defines the claim module's genesis state. */
+/**
+ * GenesisState defines the claim module's genesis state.
+ * @name GenesisState
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** balance of the claim module's account */
+  /**
+   * balance of the claim module's account
+   */
   moduleAccountBalance: Coin;
-  /** params defines all the parameters of the module. */
+  /**
+   * params defines all the parameters of the module.
+   */
   params: Params;
-  /** list of claim records, one for every airdrop recipient */
+  /**
+   * list of claim records, one for every airdrop recipient
+   */
   claimRecords: ClaimRecord[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.claim.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the claim module's genesis state. */
+/**
+ * GenesisState defines the claim module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   module_account_balance: CoinSDKType;
   params: ParamsSDKType;
@@ -31,6 +47,12 @@ function createBaseGenesisState(): GenesisState {
     claimRecords: []
   };
 }
+/**
+ * GenesisState defines the claim module's genesis state.
+ * @name GenesisState
+ * @package osmosis.claim.v1beta1
+ * @see proto type: osmosis.claim.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.claim.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

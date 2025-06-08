@@ -1,10 +1,15 @@
 import { MsgStoreCode, MsgStoreCodeAmino, MsgInstantiateContract, MsgInstantiateContractAmino, MsgExecuteContract, MsgExecuteContractAmino } from "./tx";
-import { Params, ParamsAmino, CodeInfo, CodeInfoAmino, ContractInfo, ContractInfoAmino, Model, ModelAmino } from "./types";
+import { CodeInfo, CodeInfoAmino, ContractInfo, ContractInfoAmino, Model, ModelAmino, CosmwasmWasmV1Params, CosmwasmWasmV1ParamsAmino } from "./types";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../helpers";
-/** GenesisState - genesis state of x/wasm */
+/**
+ * GenesisState - genesis state of x/wasm
+ * @name GenesisState
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenesisState
+ */
 export interface GenesisState {
-  params: Params;
+  params: CosmwasmWasmV1Params;
   codes: Code[];
   contracts: Contract[];
   sequences: Sequence[];
@@ -14,9 +19,14 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState - genesis state of x/wasm */
+/**
+ * GenesisState - genesis state of x/wasm
+ * @name GenesisStateAmino
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenesisState
+ */
 export interface GenesisStateAmino {
-  params: ParamsAmino;
+  params: CosmwasmWasmV1ParamsAmino;
   codes: CodeAmino[];
   contracts: ContractAmino[];
   sequences: SequenceAmino[];
@@ -29,6 +39,9 @@ export interface GenesisStateAminoMsg {
 /**
  * GenMsgs define the messages that can be executed during genesis phase in
  * order. The intention is to have more human readable data that is auditable.
+ * @name GenesisState_GenMsgs
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenMsgs
  */
 export interface GenesisState_GenMsgs {
   storeCode?: MsgStoreCode;
@@ -42,6 +55,9 @@ export interface GenesisState_GenMsgsProtoMsg {
 /**
  * GenMsgs define the messages that can be executed during genesis phase in
  * order. The intention is to have more human readable data that is auditable.
+ * @name GenesisState_GenMsgsAmino
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenesisState_GenMsgs
  */
 export interface GenesisState_GenMsgsAmino {
   store_code?: MsgStoreCodeAmino;
@@ -52,31 +68,50 @@ export interface GenesisState_GenMsgsAminoMsg {
   type: "wasm/GenMsgs";
   value: GenesisState_GenMsgsAmino;
 }
-/** Code struct encompasses CodeInfo and CodeBytes */
+/**
+ * Code struct encompasses CodeInfo and CodeBytes
+ * @name Code
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Code
+ */
 export interface Code {
   codeId: bigint;
   codeInfo: CodeInfo;
   codeBytes: Uint8Array;
-  /** Pinned to wasmvm cache */
+  /**
+   * Pinned to wasmvm cache
+   */
   pinned: boolean;
 }
 export interface CodeProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.Code";
   value: Uint8Array;
 }
-/** Code struct encompasses CodeInfo and CodeBytes */
+/**
+ * Code struct encompasses CodeInfo and CodeBytes
+ * @name CodeAmino
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Code
+ */
 export interface CodeAmino {
   code_id: string;
   code_info: CodeInfoAmino;
   code_bytes: string;
-  /** Pinned to wasmvm cache */
+  /**
+   * Pinned to wasmvm cache
+   */
   pinned: boolean;
 }
 export interface CodeAminoMsg {
   type: "wasm/Code";
   value: CodeAmino;
 }
-/** Contract struct encompasses ContractAddress, ContractInfo, and ContractState */
+/**
+ * Contract struct encompasses ContractAddress, ContractInfo, and ContractState
+ * @name Contract
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Contract
+ */
 export interface Contract {
   contractAddress: string;
   contractInfo: ContractInfo;
@@ -86,7 +121,12 @@ export interface ContractProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.Contract";
   value: Uint8Array;
 }
-/** Contract struct encompasses ContractAddress, ContractInfo, and ContractState */
+/**
+ * Contract struct encompasses ContractAddress, ContractInfo, and ContractState
+ * @name ContractAmino
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Contract
+ */
 export interface ContractAmino {
   contract_address: string;
   contract_info: ContractInfoAmino;
@@ -96,7 +136,12 @@ export interface ContractAminoMsg {
   type: "wasm/Contract";
   value: ContractAmino;
 }
-/** Sequence key and value of an id generation counter */
+/**
+ * Sequence key and value of an id generation counter
+ * @name Sequence
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Sequence
+ */
 export interface Sequence {
   idKey: Uint8Array;
   value: bigint;
@@ -105,7 +150,12 @@ export interface SequenceProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.Sequence";
   value: Uint8Array;
 }
-/** Sequence key and value of an id generation counter */
+/**
+ * Sequence key and value of an id generation counter
+ * @name SequenceAmino
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Sequence
+ */
 export interface SequenceAmino {
   id_key: string;
   value: string;
@@ -116,19 +166,25 @@ export interface SequenceAminoMsg {
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({}),
+    params: CosmwasmWasmV1Params.fromPartial({}),
     codes: [],
     contracts: [],
     sequences: [],
     genMsgs: []
   };
 }
+/**
+ * GenesisState - genesis state of x/wasm
+ * @name GenesisState
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmwasm.wasm.v1.GenesisState",
   aminoType: "wasm/GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      CosmwasmWasmV1Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.codes) {
       Code.encode(v!, writer.uint32(18).fork()).ldelim();
@@ -152,7 +208,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = CosmwasmWasmV1Params.decode(reader, reader.uint32());
           break;
         case 2:
           message.codes.push(Code.decode(reader, reader.uint32()));
@@ -175,7 +231,7 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? CosmwasmWasmV1Params.fromPartial(object.params) : undefined;
     message.codes = object.codes?.map(e => Code.fromPartial(e)) || [];
     message.contracts = object.contracts?.map(e => Contract.fromPartial(e)) || [];
     message.sequences = object.sequences?.map(e => Sequence.fromPartial(e)) || [];
@@ -185,7 +241,7 @@ export const GenesisState = {
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = CosmwasmWasmV1Params.fromAmino(object.params);
     }
     message.codes = object.codes?.map(e => Code.fromAmino(e)) || [];
     message.contracts = object.contracts?.map(e => Contract.fromAmino(e)) || [];
@@ -195,7 +251,7 @@ export const GenesisState = {
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? CosmwasmWasmV1Params.toAmino(message.params) : undefined;
     if (message.codes) {
       obj.codes = message.codes.map(e => e ? Code.toAmino(e) : undefined);
     } else {
@@ -247,6 +303,13 @@ function createBaseGenesisState_GenMsgs(): GenesisState_GenMsgs {
     executeContract: undefined
   };
 }
+/**
+ * GenMsgs define the messages that can be executed during genesis phase in
+ * order. The intention is to have more human readable data that is auditable.
+ * @name GenesisState_GenMsgs
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenMsgs
+ */
 export const GenesisState_GenMsgs = {
   typeUrl: "/cosmwasm.wasm.v1.GenMsgs",
   aminoType: "wasm/GenMsgs",
@@ -342,6 +405,12 @@ function createBaseCode(): Code {
     pinned: false
   };
 }
+/**
+ * Code struct encompasses CodeInfo and CodeBytes
+ * @name Code
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Code
+ */
 export const Code = {
   typeUrl: "/cosmwasm.wasm.v1.Code",
   aminoType: "wasm/Code",
@@ -447,6 +516,12 @@ function createBaseContract(): Contract {
     contractState: []
   };
 }
+/**
+ * Contract struct encompasses ContractAddress, ContractInfo, and ContractState
+ * @name Contract
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Contract
+ */
 export const Contract = {
   typeUrl: "/cosmwasm.wasm.v1.Contract",
   aminoType: "wasm/Contract",
@@ -542,6 +617,12 @@ function createBaseSequence(): Sequence {
     value: BigInt(0)
   };
 }
+/**
+ * Sequence key and value of an id generation counter
+ * @name Sequence
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Sequence
+ */
 export const Sequence = {
   typeUrl: "/cosmwasm.wasm.v1.Sequence",
   aminoType: "wasm/Sequence",

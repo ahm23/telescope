@@ -54,6 +54,9 @@ export const protobufPackage = "google.api";
  *         metrics:
  *         - library.googleapis.com/book/returned_count
  *         - library.googleapis.com/book/num_overdue
+ * @name Monitoring
+ * @package google.api
+ * @see proto type: google.api.Monitoring
  */
 export interface Monitoring {
   /**
@@ -132,6 +135,9 @@ export interface MonitoringProtoMsg {
  *         metrics:
  *         - library.googleapis.com/book/returned_count
  *         - library.googleapis.com/book/num_overdue
+ * @name MonitoringAmino
+ * @package google.api
+ * @see proto type: google.api.Monitoring
  */
 export interface MonitoringAmino {
   /**
@@ -206,6 +212,9 @@ export interface MonitoringAmino {
  *         metrics:
  *         - library.googleapis.com/book/returned_count
  *         - library.googleapis.com/book/num_overdue
+ * @name MonitoringSDKType
+ * @package google.api
+ * @see proto type: google.api.Monitoring
  */
 export interface MonitoringSDKType {
   producer_destinations: Monitoring_MonitoringDestinationSDKType[];
@@ -214,6 +223,9 @@ export interface MonitoringSDKType {
 /**
  * Configuration of a specific monitoring destination (the producer project
  * or the consumer project).
+ * @name Monitoring_MonitoringDestination
+ * @package google.api
+ * @see proto type: google.api.MonitoringDestination
  */
 export interface Monitoring_MonitoringDestination {
   /**
@@ -234,6 +246,9 @@ export interface Monitoring_MonitoringDestinationProtoMsg {
 /**
  * Configuration of a specific monitoring destination (the producer project
  * or the consumer project).
+ * @name Monitoring_MonitoringDestinationAmino
+ * @package google.api
+ * @see proto type: google.api.Monitoring_MonitoringDestination
  */
 export interface Monitoring_MonitoringDestinationAmino {
   /**
@@ -250,6 +265,9 @@ export interface Monitoring_MonitoringDestinationAmino {
 /**
  * Configuration of a specific monitoring destination (the producer project
  * or the consumer project).
+ * @name Monitoring_MonitoringDestinationSDKType
+ * @package google.api
+ * @see proto type: google.api.MonitoringDestination
  */
 export interface Monitoring_MonitoringDestinationSDKType {
   monitored_resource: string;
@@ -261,6 +279,63 @@ function createBaseMonitoring(): Monitoring {
     consumerDestinations: []
   };
 }
+/**
+ * Monitoring configuration of the service.
+ * 
+ * The example below shows how to configure monitored resources and metrics
+ * for monitoring. In the example, a monitored resource and two metrics are
+ * defined. The `library.googleapis.com/book/returned_count` metric is sent
+ * to both producer and consumer projects, whereas the
+ * `library.googleapis.com/book/num_overdue` metric is only sent to the
+ * consumer project.
+ * 
+ *     monitored_resources:
+ *     - type: library.googleapis.com/Branch
+ *       display_name: "Library Branch"
+ *       description: "A branch of a library."
+ *       launch_stage: GA
+ *       labels:
+ *       - key: resource_container
+ *         description: "The Cloud container (ie. project id) for the Branch."
+ *       - key: location
+ *         description: "The location of the library branch."
+ *       - key: branch_id
+ *         description: "The id of the branch."
+ *     metrics:
+ *     - name: library.googleapis.com/book/returned_count
+ *       display_name: "Books Returned"
+ *       description: "The count of books that have been returned."
+ *       launch_stage: GA
+ *       metric_kind: DELTA
+ *       value_type: INT64
+ *       unit: "1"
+ *       labels:
+ *       - key: customer_id
+ *         description: "The id of the customer."
+ *     - name: library.googleapis.com/book/num_overdue
+ *       display_name: "Books Overdue"
+ *       description: "The current number of overdue books."
+ *       launch_stage: GA
+ *       metric_kind: GAUGE
+ *       value_type: INT64
+ *       unit: "1"
+ *       labels:
+ *       - key: customer_id
+ *         description: "The id of the customer."
+ *     monitoring:
+ *       producer_destinations:
+ *       - monitored_resource: library.googleapis.com/Branch
+ *         metrics:
+ *         - library.googleapis.com/book/returned_count
+ *       consumer_destinations:
+ *       - monitored_resource: library.googleapis.com/Branch
+ *         metrics:
+ *         - library.googleapis.com/book/returned_count
+ *         - library.googleapis.com/book/num_overdue
+ * @name Monitoring
+ * @package google.api
+ * @see proto type: google.api.Monitoring
+ */
 export const Monitoring = {
   typeUrl: "/google.api.Monitoring",
   encode(message: Monitoring, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -363,6 +438,13 @@ function createBaseMonitoring_MonitoringDestination(): Monitoring_MonitoringDest
     metrics: []
   };
 }
+/**
+ * Configuration of a specific monitoring destination (the producer project
+ * or the consumer project).
+ * @name Monitoring_MonitoringDestination
+ * @package google.api
+ * @see proto type: google.api.MonitoringDestination
+ */
 export const Monitoring_MonitoringDestination = {
   typeUrl: "/google.api.MonitoringDestination",
   encode(message: Monitoring_MonitoringDestination, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

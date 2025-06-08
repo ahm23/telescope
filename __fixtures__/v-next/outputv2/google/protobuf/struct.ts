@@ -35,6 +35,11 @@ export function nullValueToJSON(object: NullValue): string {
       return "UNRECOGNIZED";
   }
 }
+/**
+ * @name Struct_FieldsEntry
+ * @package google.protobuf
+ * @see proto type: google.protobuf.undefined
+ */
 export interface Struct_FieldsEntry {
   key: string;
   value?: Value;
@@ -43,6 +48,11 @@ export interface Struct_FieldsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name Struct_FieldsEntryAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Struct_FieldsEntry
+ */
 export interface Struct_FieldsEntryAmino {
   key?: string;
   value?: ValueAmino;
@@ -51,6 +61,11 @@ export interface Struct_FieldsEntryAminoMsg {
   type: string;
   value: Struct_FieldsEntryAmino;
 }
+/**
+ * @name Struct_FieldsEntrySDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.undefined
+ */
 export interface Struct_FieldsEntrySDKType {
   key: string;
   value?: ValueSDKType;
@@ -64,9 +79,14 @@ export interface Struct_FieldsEntrySDKType {
  * with the proto support for the language.
  * 
  * The JSON representation for `Struct` is JSON object.
+ * @name Struct
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Struct
  */
 export interface Struct {
-  /** Unordered map of dynamically typed values. */
+  /**
+   * Unordered map of dynamically typed values.
+   */
   fields: {
     [key: string]: Value;
   };
@@ -84,9 +104,14 @@ export interface StructProtoMsg {
  * with the proto support for the language.
  * 
  * The JSON representation for `Struct` is JSON object.
+ * @name StructAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Struct
  */
 export interface StructAmino {
-  /** Unordered map of dynamically typed values. */
+  /**
+   * Unordered map of dynamically typed values.
+   */
   fields?: {
     [key: string]: ValueAmino;
   };
@@ -104,6 +129,9 @@ export interface StructAminoMsg {
  * with the proto support for the language.
  * 
  * The JSON representation for `Struct` is JSON object.
+ * @name StructSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Struct
  */
 export interface StructSDKType {
   fields: {
@@ -117,19 +145,34 @@ export interface StructSDKType {
  * variants, absence of any variant indicates an error.
  * 
  * The JSON representation for `Value` is JSON value.
+ * @name Value
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Value
  */
 export interface Value {
-  /** Represents a null value. */
+  /**
+   * Represents a null value.
+   */
   nullValue?: NullValue;
-  /** Represents a double value. */
+  /**
+   * Represents a double value.
+   */
   numberValue?: number;
-  /** Represents a string value. */
+  /**
+   * Represents a string value.
+   */
   stringValue?: string;
-  /** Represents a boolean value. */
+  /**
+   * Represents a boolean value.
+   */
   boolValue?: boolean;
-  /** Represents a structured value. */
+  /**
+   * Represents a structured value.
+   */
   structValue?: Struct;
-  /** Represents a repeated `Value`. */
+  /**
+   * Represents a repeated `Value`.
+   */
   listValue?: ListValue;
 }
 export interface ValueProtoMsg {
@@ -143,19 +186,34 @@ export interface ValueProtoMsg {
  * variants, absence of any variant indicates an error.
  * 
  * The JSON representation for `Value` is JSON value.
+ * @name ValueAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Value
  */
 export interface ValueAmino {
-  /** Represents a null value. */
+  /**
+   * Represents a null value.
+   */
   null_value?: NullValue;
-  /** Represents a double value. */
+  /**
+   * Represents a double value.
+   */
   number_value?: number;
-  /** Represents a string value. */
+  /**
+   * Represents a string value.
+   */
   string_value?: string;
-  /** Represents a boolean value. */
+  /**
+   * Represents a boolean value.
+   */
   bool_value?: boolean;
-  /** Represents a structured value. */
+  /**
+   * Represents a structured value.
+   */
   struct_value?: StructAmino;
-  /** Represents a repeated `Value`. */
+  /**
+   * Represents a repeated `Value`.
+   */
   list_value?: ListValueAmino;
 }
 export interface ValueAminoMsg {
@@ -169,6 +227,9 @@ export interface ValueAminoMsg {
  * variants, absence of any variant indicates an error.
  * 
  * The JSON representation for `Value` is JSON value.
+ * @name ValueSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Value
  */
 export interface ValueSDKType {
   null_value?: NullValue;
@@ -182,9 +243,14 @@ export interface ValueSDKType {
  * `ListValue` is a wrapper around a repeated field of values.
  * 
  * The JSON representation for `ListValue` is JSON array.
+ * @name ListValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.ListValue
  */
 export interface ListValue {
-  /** Repeated field of dynamically typed values. */
+  /**
+   * Repeated field of dynamically typed values.
+   */
   values: Value[];
 }
 export interface ListValueProtoMsg {
@@ -195,9 +261,14 @@ export interface ListValueProtoMsg {
  * `ListValue` is a wrapper around a repeated field of values.
  * 
  * The JSON representation for `ListValue` is JSON array.
+ * @name ListValueAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.ListValue
  */
 export interface ListValueAmino {
-  /** Repeated field of dynamically typed values. */
+  /**
+   * Repeated field of dynamically typed values.
+   */
   values?: ValueAmino[];
 }
 export interface ListValueAminoMsg {
@@ -208,6 +279,9 @@ export interface ListValueAminoMsg {
  * `ListValue` is a wrapper around a repeated field of values.
  * 
  * The JSON representation for `ListValue` is JSON array.
+ * @name ListValueSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.ListValue
  */
 export interface ListValueSDKType {
   values: ValueSDKType[];
@@ -218,6 +292,11 @@ function createBaseStruct_FieldsEntry(): Struct_FieldsEntry {
     value: undefined
   };
 }
+/**
+ * @name Struct_FieldsEntry
+ * @package google.protobuf
+ * @see proto type: google.protobuf.undefined
+ */
 export const Struct_FieldsEntry = {
   encode(message: Struct_FieldsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -311,6 +390,19 @@ function createBaseStruct(): Struct {
     fields: {}
   };
 }
+/**
+ * `Struct` represents a structured data value, consisting of fields
+ * which map to dynamically typed values. In some languages, `Struct`
+ * might be supported by a native representation. For example, in
+ * scripting languages like JS a struct is represented as an
+ * object. The details of that representation are described together
+ * with the proto support for the language.
+ * 
+ * The JSON representation for `Struct` is JSON object.
+ * @name Struct
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Struct
+ */
 export const Struct = {
   typeUrl: "/google.protobuf.Struct",
   encode(message: Struct, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -442,6 +534,17 @@ function createBaseValue(): Value {
     listValue: undefined
   };
 }
+/**
+ * `Value` represents a dynamically typed value which can be either
+ * null, a number, a string, a boolean, a recursive struct value, or a
+ * list of values. A producer of value is expected to set one of that
+ * variants, absence of any variant indicates an error.
+ * 
+ * The JSON representation for `Value` is JSON value.
+ * @name Value
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Value
+ */
 export const Value = {
   typeUrl: "/google.protobuf.Value",
   encode(message: Value, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -604,6 +707,14 @@ function createBaseListValue(): ListValue {
     values: []
   };
 }
+/**
+ * `ListValue` is a wrapper around a repeated field of values.
+ * 
+ * The JSON representation for `ListValue` is JSON array.
+ * @name ListValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.ListValue
+ */
 export const ListValue = {
   typeUrl: "/google.protobuf.ListValue",
   encode(message: ListValue, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

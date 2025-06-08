@@ -3,7 +3,12 @@ import { Decimal } from "@cosmjs/math";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.concentratedliquidity.v1beta1";
-/** ===================== MsgCreateConcentratedPool */
+/**
+ * ===================== MsgCreateConcentratedPool
+ * @name MsgCreateConcentratedPool
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreateConcentratedPool
+ */
 export interface MsgCreateConcentratedPool {
   sender: string;
   denom0: string;
@@ -16,7 +21,12 @@ export interface MsgCreateConcentratedPoolProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCreateConcentratedPool";
   value: Uint8Array;
 }
-/** ===================== MsgCreateConcentratedPool */
+/**
+ * ===================== MsgCreateConcentratedPool
+ * @name MsgCreateConcentratedPoolSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreateConcentratedPool
+ */
 export interface MsgCreateConcentratedPoolSDKType {
   sender: string;
   denom0: string;
@@ -25,7 +35,12 @@ export interface MsgCreateConcentratedPoolSDKType {
   exponent_at_price_one: string;
   swap_fee: string;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateConcentratedPoolResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreateConcentratedPoolResponse
+ */
 export interface MsgCreateConcentratedPoolResponse {
   poolId: bigint;
 }
@@ -33,7 +48,12 @@ export interface MsgCreateConcentratedPoolResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCreateConcentratedPoolResponse";
   value: Uint8Array;
 }
-/** Returns a unique poolID to identify the pool with. */
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateConcentratedPoolResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreateConcentratedPoolResponse
+ */
 export interface MsgCreateConcentratedPoolResponseSDKType {
   pool_id: bigint;
 }
@@ -47,6 +67,12 @@ function createBaseMsgCreateConcentratedPool(): MsgCreateConcentratedPool {
     swapFee: ""
   };
 }
+/**
+ * ===================== MsgCreateConcentratedPool
+ * @name MsgCreateConcentratedPool
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreateConcentratedPool
+ */
 export const MsgCreateConcentratedPool = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCreateConcentratedPool",
   encode(message: MsgCreateConcentratedPool, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -221,6 +247,12 @@ function createBaseMsgCreateConcentratedPoolResponse(): MsgCreateConcentratedPoo
     poolId: BigInt(0)
   };
 }
+/**
+ * Returns a unique poolID to identify the pool with.
+ * @name MsgCreateConcentratedPoolResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.MsgCreateConcentratedPoolResponse
+ */
 export const MsgCreateConcentratedPoolResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.MsgCreateConcentratedPoolResponse",
   encode(message: MsgCreateConcentratedPoolResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

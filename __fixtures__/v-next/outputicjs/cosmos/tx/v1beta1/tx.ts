@@ -4,9 +4,16 @@ import { CompactBitArray, CompactBitArrayAmino } from "../../crypto/multisig/v1b
 import { Coin, CoinAmino } from "../../base/v1beta1/coin";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../helpers";
-/** Tx is the standard type used for broadcasting transactions. */
+/**
+ * Tx is the standard type used for broadcasting transactions.
+ * @name Tx
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.Tx
+ */
 export interface Tx {
-  /** body is the processable content of the transaction */
+  /**
+   * body is the processable content of the transaction
+   */
   body?: TxBody;
   /**
    * auth_info is the authorization related content of the transaction,
@@ -24,9 +31,16 @@ export interface TxProtoMsg {
   typeUrl: "/cosmos.tx.v1beta1.Tx";
   value: Uint8Array;
 }
-/** Tx is the standard type used for broadcasting transactions. */
+/**
+ * Tx is the standard type used for broadcasting transactions.
+ * @name TxAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.Tx
+ */
 export interface TxAmino {
-  /** body is the processable content of the transaction */
+  /**
+   * body is the processable content of the transaction
+   */
   body?: TxBodyAmino;
   /**
    * auth_info is the authorization related content of the transaction,
@@ -50,6 +64,9 @@ export interface TxAminoMsg {
  * verification. The binary `serialize(tx: TxRaw)` is stored in Tendermint and
  * the hash `sha256(serialize(tx: TxRaw))` becomes the "txhash", commonly used
  * as the transaction ID.
+ * @name TxRaw
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxRaw
  */
 export interface TxRaw {
   /**
@@ -79,6 +96,9 @@ export interface TxRawProtoMsg {
  * verification. The binary `serialize(tx: TxRaw)` is stored in Tendermint and
  * the hash `sha256(serialize(tx: TxRaw))` becomes the "txhash", commonly used
  * as the transaction ID.
+ * @name TxRawAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxRaw
  */
 export interface TxRawAmino {
   /**
@@ -102,7 +122,12 @@ export interface TxRawAminoMsg {
   type: "cosmos-sdk/TxRaw";
   value: TxRawAmino;
 }
-/** SignDoc is the type used for generating sign bytes for SIGN_MODE_DIRECT. */
+/**
+ * SignDoc is the type used for generating sign bytes for SIGN_MODE_DIRECT.
+ * @name SignDoc
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SignDoc
+ */
 export interface SignDoc {
   /**
    * body_bytes is protobuf serialization of a TxBody that matches the
@@ -120,14 +145,21 @@ export interface SignDoc {
    * attacker
    */
   chainId: string;
-  /** account_number is the account number of the account in state */
+  /**
+   * account_number is the account number of the account in state
+   */
   accountNumber: bigint;
 }
 export interface SignDocProtoMsg {
   typeUrl: "/cosmos.tx.v1beta1.SignDoc";
   value: Uint8Array;
 }
-/** SignDoc is the type used for generating sign bytes for SIGN_MODE_DIRECT. */
+/**
+ * SignDoc is the type used for generating sign bytes for SIGN_MODE_DIRECT.
+ * @name SignDocAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SignDoc
+ */
 export interface SignDocAmino {
   /**
    * body_bytes is protobuf serialization of a TxBody that matches the
@@ -145,7 +177,9 @@ export interface SignDocAmino {
    * attacker
    */
   chain_id: string;
-  /** account_number is the account number of the account in state */
+  /**
+   * account_number is the account number of the account in state
+   */
   account_number: string;
 }
 export interface SignDocAminoMsg {
@@ -157,6 +191,9 @@ export interface SignDocAminoMsg {
  * SIGN_MODE_DIRECT_AUX.
  * 
  * Since: cosmos-sdk 0.46
+ * @name SignDocDirectAux
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SignDocDirectAux
  */
 export interface SignDocDirectAux {
   /**
@@ -164,7 +201,9 @@ export interface SignDocDirectAux {
    * representation in TxRaw.
    */
   bodyBytes: Uint8Array;
-  /** public_key is the public key of the signing account. */
+  /**
+   * public_key is the public key of the signing account.
+   */
   publicKey?: Any;
   /**
    * chain_id is the identifier of the chain this transaction targets.
@@ -172,9 +211,13 @@ export interface SignDocDirectAux {
    * attacker.
    */
   chainId: string;
-  /** account_number is the account number of the account in state. */
+  /**
+   * account_number is the account number of the account in state.
+   */
   accountNumber: bigint;
-  /** sequence is the sequence number of the signing account. */
+  /**
+   * sequence is the sequence number of the signing account.
+   */
   sequence: bigint;
   /**
    * Tip is the optional tip used for meta-transactions. It should be left
@@ -191,6 +234,9 @@ export interface SignDocDirectAuxProtoMsg {
  * SIGN_MODE_DIRECT_AUX.
  * 
  * Since: cosmos-sdk 0.46
+ * @name SignDocDirectAuxAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SignDocDirectAux
  */
 export interface SignDocDirectAuxAmino {
   /**
@@ -198,7 +244,9 @@ export interface SignDocDirectAuxAmino {
    * representation in TxRaw.
    */
   body_bytes: string;
-  /** public_key is the public key of the signing account. */
+  /**
+   * public_key is the public key of the signing account.
+   */
   public_key?: AnyAmino;
   /**
    * chain_id is the identifier of the chain this transaction targets.
@@ -206,9 +254,13 @@ export interface SignDocDirectAuxAmino {
    * attacker.
    */
   chain_id: string;
-  /** account_number is the account number of the account in state. */
+  /**
+   * account_number is the account number of the account in state.
+   */
   account_number: string;
-  /** sequence is the sequence number of the signing account. */
+  /**
+   * sequence is the sequence number of the signing account.
+   */
   sequence: string;
   /**
    * Tip is the optional tip used for meta-transactions. It should be left
@@ -220,7 +272,12 @@ export interface SignDocDirectAuxAminoMsg {
   type: "cosmos-sdk/SignDocDirectAux";
   value: SignDocDirectAuxAmino;
 }
-/** TxBody is the body of a transaction that all signers sign over. */
+/**
+ * TxBody is the body of a transaction that all signers sign over.
+ * @name TxBody
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxBody
+ */
 export interface TxBody {
   /**
    * messages is a list of messages to be executed. The required signers of
@@ -260,7 +317,12 @@ export interface TxBodyProtoMsg {
   typeUrl: "/cosmos.tx.v1beta1.TxBody";
   value: Uint8Array;
 }
-/** TxBody is the body of a transaction that all signers sign over. */
+/**
+ * TxBody is the body of a transaction that all signers sign over.
+ * @name TxBodyAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxBody
+ */
 export interface TxBodyAmino {
   /**
    * messages is a list of messages to be executed. The required signers of
@@ -303,6 +365,9 @@ export interface TxBodyAminoMsg {
 /**
  * AuthInfo describes the fee and signer modes that are used to sign a
  * transaction.
+ * @name AuthInfo
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.AuthInfo
  */
 export interface AuthInfo {
   /**
@@ -333,6 +398,9 @@ export interface AuthInfoProtoMsg {
 /**
  * AuthInfo describes the fee and signer modes that are used to sign a
  * transaction.
+ * @name AuthInfoAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.AuthInfo
  */
 export interface AuthInfoAmino {
   /**
@@ -363,6 +431,9 @@ export interface AuthInfoAminoMsg {
 /**
  * SignerInfo describes the public key and signing mode of a single top-level
  * signer.
+ * @name SignerInfo
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SignerInfo
  */
 export interface SignerInfo {
   /**
@@ -390,6 +461,9 @@ export interface SignerInfoProtoMsg {
 /**
  * SignerInfo describes the public key and signing mode of a single top-level
  * signer.
+ * @name SignerInfoAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SignerInfo
  */
 export interface SignerInfoAmino {
   /**
@@ -414,22 +488,40 @@ export interface SignerInfoAminoMsg {
   type: "cosmos-sdk/SignerInfo";
   value: SignerInfoAmino;
 }
-/** ModeInfo describes the signing mode of a single or nested multisig signer. */
+/**
+ * ModeInfo describes the signing mode of a single or nested multisig signer.
+ * @name ModeInfo
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.ModeInfo
+ */
 export interface ModeInfo {
-  /** single represents a single signer */
+  /**
+   * single represents a single signer
+   */
   single?: ModeInfo_Single;
-  /** multi represents a nested multisig signer */
+  /**
+   * multi represents a nested multisig signer
+   */
   multi?: ModeInfo_Multi;
 }
 export interface ModeInfoProtoMsg {
   typeUrl: "/cosmos.tx.v1beta1.ModeInfo";
   value: Uint8Array;
 }
-/** ModeInfo describes the signing mode of a single or nested multisig signer. */
+/**
+ * ModeInfo describes the signing mode of a single or nested multisig signer.
+ * @name ModeInfoAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.ModeInfo
+ */
 export interface ModeInfoAmino {
-  /** single represents a single signer */
+  /**
+   * single represents a single signer
+   */
   single?: ModeInfo_SingleAmino;
-  /** multi represents a nested multisig signer */
+  /**
+   * multi represents a nested multisig signer
+   */
   multi?: ModeInfo_MultiAmino;
 }
 export interface ModeInfoAminoMsg {
@@ -440,9 +532,14 @@ export interface ModeInfoAminoMsg {
  * Single is the mode info for a single signer. It is structured as a message
  * to allow for additional fields such as locale for SIGN_MODE_TEXTUAL in the
  * future
+ * @name ModeInfo_Single
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.Single
  */
 export interface ModeInfo_Single {
-  /** mode is the signing mode of the single signer */
+  /**
+   * mode is the signing mode of the single signer
+   */
   mode: SignMode;
 }
 export interface ModeInfo_SingleProtoMsg {
@@ -453,18 +550,30 @@ export interface ModeInfo_SingleProtoMsg {
  * Single is the mode info for a single signer. It is structured as a message
  * to allow for additional fields such as locale for SIGN_MODE_TEXTUAL in the
  * future
+ * @name ModeInfo_SingleAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.ModeInfo_Single
  */
 export interface ModeInfo_SingleAmino {
-  /** mode is the signing mode of the single signer */
+  /**
+   * mode is the signing mode of the single signer
+   */
   mode: SignMode;
 }
 export interface ModeInfo_SingleAminoMsg {
   type: "cosmos-sdk/Single";
   value: ModeInfo_SingleAmino;
 }
-/** Multi is the mode info for a multisig public key */
+/**
+ * Multi is the mode info for a multisig public key
+ * @name ModeInfo_Multi
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.Multi
+ */
 export interface ModeInfo_Multi {
-  /** bitarray specifies which keys within the multisig are signing */
+  /**
+   * bitarray specifies which keys within the multisig are signing
+   */
   bitarray?: CompactBitArray;
   /**
    * mode_infos is the corresponding modes of the signers of the multisig
@@ -476,9 +585,16 @@ export interface ModeInfo_MultiProtoMsg {
   typeUrl: "/cosmos.tx.v1beta1.Multi";
   value: Uint8Array;
 }
-/** Multi is the mode info for a multisig public key */
+/**
+ * Multi is the mode info for a multisig public key
+ * @name ModeInfo_MultiAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.ModeInfo_Multi
+ */
 export interface ModeInfo_MultiAmino {
-  /** bitarray specifies which keys within the multisig are signing */
+  /**
+   * bitarray specifies which keys within the multisig are signing
+   */
   bitarray?: CompactBitArrayAmino;
   /**
    * mode_infos is the corresponding modes of the signers of the multisig
@@ -494,9 +610,14 @@ export interface ModeInfo_MultiAminoMsg {
  * Fee includes the amount of coins paid in fees and the maximum
  * gas to be used by the transaction. The ratio yields an effective "gasprice",
  * which must be above some miminum to be accepted into the mempool.
+ * @name Fee
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.Fee
  */
 export interface Fee {
-  /** amount is the amount of coins to be paid as a fee */
+  /**
+   * amount is the amount of coins to be paid as a fee
+   */
   amount: Coin[];
   /**
    * gas_limit is the maximum gas that can be used in transaction processing
@@ -524,9 +645,14 @@ export interface FeeProtoMsg {
  * Fee includes the amount of coins paid in fees and the maximum
  * gas to be used by the transaction. The ratio yields an effective "gasprice",
  * which must be above some miminum to be accepted into the mempool.
+ * @name FeeAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.Fee
  */
 export interface FeeAmino {
-  /** amount is the amount of coins to be paid as a fee */
+  /**
+   * amount is the amount of coins to be paid as a fee
+   */
   amount: CoinAmino[];
   /**
    * gas_limit is the maximum gas that can be used in transaction processing
@@ -554,11 +680,18 @@ export interface FeeAminoMsg {
  * Tip is the tip used for meta-transactions.
  * 
  * Since: cosmos-sdk 0.46
+ * @name Tip
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.Tip
  */
 export interface Tip {
-  /** amount is the amount of the tip */
+  /**
+   * amount is the amount of the tip
+   */
   amount: Coin[];
-  /** tipper is the address of the account paying for the tip */
+  /**
+   * tipper is the address of the account paying for the tip
+   */
   tipper: string;
 }
 export interface TipProtoMsg {
@@ -569,11 +702,18 @@ export interface TipProtoMsg {
  * Tip is the tip used for meta-transactions.
  * 
  * Since: cosmos-sdk 0.46
+ * @name TipAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.Tip
  */
 export interface TipAmino {
-  /** amount is the amount of the tip */
+  /**
+   * amount is the amount of the tip
+   */
   amount: CoinAmino[];
-  /** tipper is the address of the account paying for the tip */
+  /**
+   * tipper is the address of the account paying for the tip
+   */
   tipper: string;
 }
 export interface TipAminoMsg {
@@ -587,6 +727,9 @@ export interface TipAminoMsg {
  * by the node if sent directly as-is.
  * 
  * Since: cosmos-sdk 0.46
+ * @name AuxSignerData
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.AuxSignerData
  */
 export interface AuxSignerData {
   /**
@@ -601,9 +744,13 @@ export interface AuxSignerData {
    * LEGACY_AMINO_JSON.
    */
   signDoc?: SignDocDirectAux;
-  /** mode is the signing mode of the single signer */
+  /**
+   * mode is the signing mode of the single signer
+   */
   mode: SignMode;
-  /** sig is the signature of the sign doc. */
+  /**
+   * sig is the signature of the sign doc.
+   */
   sig: Uint8Array;
 }
 export interface AuxSignerDataProtoMsg {
@@ -617,6 +764,9 @@ export interface AuxSignerDataProtoMsg {
  * by the node if sent directly as-is.
  * 
  * Since: cosmos-sdk 0.46
+ * @name AuxSignerDataAmino
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.AuxSignerData
  */
 export interface AuxSignerDataAmino {
   /**
@@ -631,9 +781,13 @@ export interface AuxSignerDataAmino {
    * LEGACY_AMINO_JSON.
    */
   sign_doc?: SignDocDirectAuxAmino;
-  /** mode is the signing mode of the single signer */
+  /**
+   * mode is the signing mode of the single signer
+   */
   mode: SignMode;
-  /** sig is the signature of the sign doc. */
+  /**
+   * sig is the signature of the sign doc.
+   */
   sig: string;
 }
 export interface AuxSignerDataAminoMsg {
@@ -647,6 +801,12 @@ function createBaseTx(): Tx {
     signatures: []
   };
 }
+/**
+ * Tx is the standard type used for broadcasting transactions.
+ * @name Tx
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.Tx
+ */
 export const Tx = {
   typeUrl: "/cosmos.tx.v1beta1.Tx",
   aminoType: "cosmos-sdk/Tx",
@@ -743,6 +903,16 @@ function createBaseTxRaw(): TxRaw {
     signatures: []
   };
 }
+/**
+ * TxRaw is a variant of Tx that pins the signer's exact binary representation
+ * of body and auth_info. This is used for signing, broadcasting and
+ * verification. The binary `serialize(tx: TxRaw)` is stored in Tendermint and
+ * the hash `sha256(serialize(tx: TxRaw))` becomes the "txhash", commonly used
+ * as the transaction ID.
+ * @name TxRaw
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxRaw
+ */
 export const TxRaw = {
   typeUrl: "/cosmos.tx.v1beta1.TxRaw",
   aminoType: "cosmos-sdk/TxRaw",
@@ -840,6 +1010,12 @@ function createBaseSignDoc(): SignDoc {
     accountNumber: BigInt(0)
   };
 }
+/**
+ * SignDoc is the type used for generating sign bytes for SIGN_MODE_DIRECT.
+ * @name SignDoc
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SignDoc
+ */
 export const SignDoc = {
   typeUrl: "/cosmos.tx.v1beta1.SignDoc",
   aminoType: "cosmos-sdk/SignDoc",
@@ -948,6 +1124,15 @@ function createBaseSignDocDirectAux(): SignDocDirectAux {
     tip: undefined
   };
 }
+/**
+ * SignDocDirectAux is the type used for generating sign bytes for
+ * SIGN_MODE_DIRECT_AUX.
+ * 
+ * Since: cosmos-sdk 0.46
+ * @name SignDocDirectAux
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SignDocDirectAux
+ */
 export const SignDocDirectAux = {
   typeUrl: "/cosmos.tx.v1beta1.SignDocDirectAux",
   aminoType: "cosmos-sdk/SignDocDirectAux",
@@ -1077,6 +1262,12 @@ function createBaseTxBody(): TxBody {
     nonCriticalExtensionOptions: []
   };
 }
+/**
+ * TxBody is the body of a transaction that all signers sign over.
+ * @name TxBody
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.TxBody
+ */
 export const TxBody = {
   typeUrl: "/cosmos.tx.v1beta1.TxBody",
   aminoType: "cosmos-sdk/TxBody",
@@ -1199,6 +1390,13 @@ function createBaseAuthInfo(): AuthInfo {
     tip: undefined
   };
 }
+/**
+ * AuthInfo describes the fee and signer modes that are used to sign a
+ * transaction.
+ * @name AuthInfo
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.AuthInfo
+ */
 export const AuthInfo = {
   typeUrl: "/cosmos.tx.v1beta1.AuthInfo",
   aminoType: "cosmos-sdk/AuthInfo",
@@ -1295,6 +1493,13 @@ function createBaseSignerInfo(): SignerInfo {
     sequence: BigInt(0)
   };
 }
+/**
+ * SignerInfo describes the public key and signing mode of a single top-level
+ * signer.
+ * @name SignerInfo
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.SignerInfo
+ */
 export const SignerInfo = {
   typeUrl: "/cosmos.tx.v1beta1.SignerInfo",
   aminoType: "cosmos-sdk/SignerInfo",
@@ -1388,6 +1593,12 @@ function createBaseModeInfo(): ModeInfo {
     multi: undefined
   };
 }
+/**
+ * ModeInfo describes the signing mode of a single or nested multisig signer.
+ * @name ModeInfo
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.ModeInfo
+ */
 export const ModeInfo = {
   typeUrl: "/cosmos.tx.v1beta1.ModeInfo",
   aminoType: "cosmos-sdk/ModeInfo",
@@ -1469,6 +1680,14 @@ function createBaseModeInfo_Single(): ModeInfo_Single {
     mode: 0
   };
 }
+/**
+ * Single is the mode info for a single signer. It is structured as a message
+ * to allow for additional fields such as locale for SIGN_MODE_TEXTUAL in the
+ * future
+ * @name ModeInfo_Single
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.Single
+ */
 export const ModeInfo_Single = {
   typeUrl: "/cosmos.tx.v1beta1.Single",
   aminoType: "cosmos-sdk/Single",
@@ -1540,6 +1759,12 @@ function createBaseModeInfo_Multi(): ModeInfo_Multi {
     modeInfos: []
   };
 }
+/**
+ * Multi is the mode info for a multisig public key
+ * @name ModeInfo_Multi
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.Multi
+ */
 export const ModeInfo_Multi = {
   typeUrl: "/cosmos.tx.v1beta1.Multi",
   aminoType: "cosmos-sdk/Multi",
@@ -1626,6 +1851,14 @@ function createBaseFee(): Fee {
     granter: ""
   };
 }
+/**
+ * Fee includes the amount of coins paid in fees and the maximum
+ * gas to be used by the transaction. The ratio yields an effective "gasprice",
+ * which must be above some miminum to be accepted into the mempool.
+ * @name Fee
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.Fee
+ */
 export const Fee = {
   typeUrl: "/cosmos.tx.v1beta1.Fee",
   aminoType: "cosmos-sdk/Fee",
@@ -1732,6 +1965,14 @@ function createBaseTip(): Tip {
     tipper: ""
   };
 }
+/**
+ * Tip is the tip used for meta-transactions.
+ * 
+ * Since: cosmos-sdk 0.46
+ * @name Tip
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.Tip
+ */
 export const Tip = {
   typeUrl: "/cosmos.tx.v1beta1.Tip",
   aminoType: "cosmos-sdk/Tip",
@@ -1818,6 +2059,17 @@ function createBaseAuxSignerData(): AuxSignerData {
     sig: new Uint8Array()
   };
 }
+/**
+ * AuxSignerData is the intermediary format that an auxiliary signer (e.g. a
+ * tipper) builds and sends to the fee payer (who will build and broadcast the
+ * actual tx). AuxSignerData is not a valid tx in itself, and will be rejected
+ * by the node if sent directly as-is.
+ * 
+ * Since: cosmos-sdk 0.46
+ * @name AuxSignerData
+ * @package cosmos.tx.v1beta1
+ * @see proto type: cosmos.tx.v1beta1.AuxSignerData
+ */
 export const AuxSignerData = {
   typeUrl: "/cosmos.tx.v1beta1.AuxSignerData",
   aminoType: "cosmos-sdk/AuxSignerData",

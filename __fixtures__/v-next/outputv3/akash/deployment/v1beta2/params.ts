@@ -2,7 +2,12 @@ import { Coin, CoinAmino, CoinSDKType } from "../../../cosmos/base/v1beta1/coin"
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 export const protobufPackage = "akash.deployment.v1beta2";
-/** Params defines the parameters for the x/deployment package */
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name Params
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Params
+ */
 export interface Params {
   deploymentMinDeposit: Coin;
 }
@@ -10,11 +15,21 @@ export interface ParamsProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.Params";
   value: Uint8Array;
 }
-/** Params defines the parameters for the x/deployment package */
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name ParamsAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Params
+ */
 export interface ParamsAmino {
   deployment_min_deposit: CoinAmino;
 }
-/** Params defines the parameters for the x/deployment package */
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name ParamsSDKType
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Params
+ */
 export interface ParamsSDKType {
   deployment_min_deposit: CoinSDKType;
 }
@@ -23,6 +38,12 @@ function createBaseParams(): Params {
     deploymentMinDeposit: Coin.fromPartial({})
   };
 }
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name Params
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Params
+ */
 export const Params = {
   typeUrl: "/akash.deployment.v1beta2.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

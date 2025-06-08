@@ -20,6 +20,9 @@ const options: TelescopeOptions = {
   useInterchainJs: true,
   useSDKTypes: false,
   prototypes: {
+    alias: {
+      "**.Params": makeAliasName,
+    },
     enableRegistryLoader: false,
     enableMessageComposer: true,
     enabled: true,

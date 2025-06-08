@@ -4,7 +4,12 @@ import { JsonSafe } from "../../../json-safe";
 import { DeepPartial, Exact } from "../../../helpers";
 import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "akash.escrow.v1beta1";
-/** GenesisState defines the basic genesis state used by escrow module */
+/**
+ * GenesisState defines the basic genesis state used by escrow module
+ * @name GenesisState
+ * @package akash.escrow.v1beta1
+ * @see proto type: akash.escrow.v1beta1.GenesisState
+ */
 export interface GenesisState {
   accounts: Account[];
   payments: Payment[];
@@ -13,7 +18,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/akash.escrow.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the basic genesis state used by escrow module */
+/**
+ * GenesisState defines the basic genesis state used by escrow module
+ * @name GenesisStateAmino
+ * @package akash.escrow.v1beta1
+ * @see proto type: akash.escrow.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
   accounts: AccountAmino[];
   payments: PaymentAmino[];
@@ -22,7 +32,12 @@ export interface GenesisStateAminoMsg {
   type: "akash/escrow/genesis-state";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the basic genesis state used by escrow module */
+/**
+ * GenesisState defines the basic genesis state used by escrow module
+ * @name GenesisStateSDKType
+ * @package akash.escrow.v1beta1
+ * @see proto type: akash.escrow.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   accounts: AccountSDKType[];
   payments: PaymentSDKType[];
@@ -33,6 +48,12 @@ function createBaseGenesisState(): GenesisState {
     payments: []
   };
 }
+/**
+ * GenesisState defines the basic genesis state used by escrow module
+ * @name GenesisState
+ * @package akash.escrow.v1beta1
+ * @see proto type: akash.escrow.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.escrow.v1beta1.GenesisState",
   aminoType: "akash/escrow/genesis-state",

@@ -2,16 +2,28 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { bytesFromBase64, base64FromBytes, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "cosmos.genutil.v1beta1";
-/** GenesisState defines the raw genesis transaction in JSON. */
+/**
+ * GenesisState defines the raw genesis transaction in JSON.
+ * @name GenesisState
+ * @package cosmos.genutil.v1beta1
+ * @see proto type: cosmos.genutil.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** gen_txs defines the genesis transactions. */
+  /**
+   * gen_txs defines the genesis transactions.
+   */
   genTxs: Uint8Array[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.genutil.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the raw genesis transaction in JSON. */
+/**
+ * GenesisState defines the raw genesis transaction in JSON.
+ * @name GenesisStateSDKType
+ * @package cosmos.genutil.v1beta1
+ * @see proto type: cosmos.genutil.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   gen_txs: Uint8Array[];
 }
@@ -20,6 +32,12 @@ function createBaseGenesisState(): GenesisState {
     genTxs: []
   };
 }
+/**
+ * GenesisState defines the raw genesis transaction in JSON.
+ * @name GenesisState
+ * @package cosmos.genutil.v1beta1
+ * @see proto type: cosmos.genutil.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.genutil.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

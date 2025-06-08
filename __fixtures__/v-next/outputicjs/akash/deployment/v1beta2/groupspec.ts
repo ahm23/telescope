@@ -2,7 +2,12 @@ import { PlacementRequirements, PlacementRequirementsAmino } from "../../base/v1
 import { Resource, ResourceAmino } from "./resource";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GroupSpec stores group specifications */
+/**
+ * GroupSpec stores group specifications
+ * @name GroupSpec
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GroupSpec
+ */
 export interface GroupSpec {
   name: string;
   requirements: PlacementRequirements;
@@ -12,7 +17,12 @@ export interface GroupSpecProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.GroupSpec";
   value: Uint8Array;
 }
-/** GroupSpec stores group specifications */
+/**
+ * GroupSpec stores group specifications
+ * @name GroupSpecAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GroupSpec
+ */
 export interface GroupSpecAmino {
   name: string;
   requirements: PlacementRequirementsAmino;
@@ -29,6 +39,12 @@ function createBaseGroupSpec(): GroupSpec {
     resources: []
   };
 }
+/**
+ * GroupSpec stores group specifications
+ * @name GroupSpec
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GroupSpec
+ */
 export const GroupSpec = {
   typeUrl: "/akash.deployment.v1beta2.GroupSpec",
   encode(message: GroupSpec, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

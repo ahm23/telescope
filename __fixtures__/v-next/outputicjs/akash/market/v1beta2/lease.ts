@@ -50,7 +50,12 @@ export function lease_StateToJSON(object: Lease_State): string {
       return "UNRECOGNIZED";
   }
 }
-/** LeaseID stores bid details of lease */
+/**
+ * LeaseID stores bid details of lease
+ * @name LeaseID
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.LeaseID
+ */
 export interface LeaseID {
   owner: string;
   dseq: bigint;
@@ -62,7 +67,12 @@ export interface LeaseIDProtoMsg {
   typeUrl: "/akash.market.v1beta2.LeaseID";
   value: Uint8Array;
 }
-/** LeaseID stores bid details of lease */
+/**
+ * LeaseID stores bid details of lease
+ * @name LeaseIDAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.LeaseID
+ */
 export interface LeaseIDAmino {
   owner: string;
   dseq: string;
@@ -74,7 +84,12 @@ export interface LeaseIDAminoMsg {
   type: "/akash.market.v1beta2.LeaseID";
   value: LeaseIDAmino;
 }
-/** Lease stores LeaseID, state of lease and price */
+/**
+ * Lease stores LeaseID, state of lease and price
+ * @name Lease
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Lease
+ */
 export interface Lease {
   leaseId: LeaseID;
   state: Lease_State;
@@ -86,7 +101,12 @@ export interface LeaseProtoMsg {
   typeUrl: "/akash.market.v1beta2.Lease";
   value: Uint8Array;
 }
-/** Lease stores LeaseID, state of lease and price */
+/**
+ * Lease stores LeaseID, state of lease and price
+ * @name LeaseAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Lease
+ */
 export interface LeaseAmino {
   lease_id: LeaseIDAmino;
   state: Lease_State;
@@ -98,7 +118,12 @@ export interface LeaseAminoMsg {
   type: "/akash.market.v1beta2.Lease";
   value: LeaseAmino;
 }
-/** LeaseFilters defines flags for lease list filter */
+/**
+ * LeaseFilters defines flags for lease list filter
+ * @name LeaseFilters
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.LeaseFilters
+ */
 export interface LeaseFilters {
   owner: string;
   dseq: bigint;
@@ -111,7 +136,12 @@ export interface LeaseFiltersProtoMsg {
   typeUrl: "/akash.market.v1beta2.LeaseFilters";
   value: Uint8Array;
 }
-/** LeaseFilters defines flags for lease list filter */
+/**
+ * LeaseFilters defines flags for lease list filter
+ * @name LeaseFiltersAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.LeaseFilters
+ */
 export interface LeaseFiltersAmino {
   owner: string;
   dseq: string;
@@ -124,7 +154,12 @@ export interface LeaseFiltersAminoMsg {
   type: "/akash.market.v1beta2.LeaseFilters";
   value: LeaseFiltersAmino;
 }
-/** MsgCreateLease is sent to create a lease */
+/**
+ * MsgCreateLease is sent to create a lease
+ * @name MsgCreateLease
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateLease
+ */
 export interface MsgCreateLease {
   bidId: BidID;
 }
@@ -132,7 +167,12 @@ export interface MsgCreateLeaseProtoMsg {
   typeUrl: "/akash.market.v1beta2.MsgCreateLease";
   value: Uint8Array;
 }
-/** MsgCreateLease is sent to create a lease */
+/**
+ * MsgCreateLease is sent to create a lease
+ * @name MsgCreateLeaseAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateLease
+ */
 export interface MsgCreateLeaseAmino {
   bid_id: BidIDAmino;
 }
@@ -140,19 +180,34 @@ export interface MsgCreateLeaseAminoMsg {
   type: "/akash.market.v1beta2.MsgCreateLease";
   value: MsgCreateLeaseAmino;
 }
-/** MsgCreateLeaseResponse is the response from creating a lease */
+/**
+ * MsgCreateLeaseResponse is the response from creating a lease
+ * @name MsgCreateLeaseResponse
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateLeaseResponse
+ */
 export interface MsgCreateLeaseResponse {}
 export interface MsgCreateLeaseResponseProtoMsg {
   typeUrl: "/akash.market.v1beta2.MsgCreateLeaseResponse";
   value: Uint8Array;
 }
-/** MsgCreateLeaseResponse is the response from creating a lease */
+/**
+ * MsgCreateLeaseResponse is the response from creating a lease
+ * @name MsgCreateLeaseResponseAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateLeaseResponse
+ */
 export interface MsgCreateLeaseResponseAmino {}
 export interface MsgCreateLeaseResponseAminoMsg {
   type: "/akash.market.v1beta2.MsgCreateLeaseResponse";
   value: MsgCreateLeaseResponseAmino;
 }
-/** MsgWithdrawLease defines an SDK message for closing bid */
+/**
+ * MsgWithdrawLease defines an SDK message for closing bid
+ * @name MsgWithdrawLease
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgWithdrawLease
+ */
 export interface MsgWithdrawLease {
   bidId: LeaseID;
 }
@@ -160,7 +215,12 @@ export interface MsgWithdrawLeaseProtoMsg {
   typeUrl: "/akash.market.v1beta2.MsgWithdrawLease";
   value: Uint8Array;
 }
-/** MsgWithdrawLease defines an SDK message for closing bid */
+/**
+ * MsgWithdrawLease defines an SDK message for closing bid
+ * @name MsgWithdrawLeaseAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgWithdrawLease
+ */
 export interface MsgWithdrawLeaseAmino {
   bid_id: LeaseIDAmino;
 }
@@ -168,19 +228,34 @@ export interface MsgWithdrawLeaseAminoMsg {
   type: "/akash.market.v1beta2.MsgWithdrawLease";
   value: MsgWithdrawLeaseAmino;
 }
-/** MsgWithdrawLeaseResponse defines the Msg/WithdrawLease response type. */
+/**
+ * MsgWithdrawLeaseResponse defines the Msg/WithdrawLease response type.
+ * @name MsgWithdrawLeaseResponse
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgWithdrawLeaseResponse
+ */
 export interface MsgWithdrawLeaseResponse {}
 export interface MsgWithdrawLeaseResponseProtoMsg {
   typeUrl: "/akash.market.v1beta2.MsgWithdrawLeaseResponse";
   value: Uint8Array;
 }
-/** MsgWithdrawLeaseResponse defines the Msg/WithdrawLease response type. */
+/**
+ * MsgWithdrawLeaseResponse defines the Msg/WithdrawLease response type.
+ * @name MsgWithdrawLeaseResponseAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgWithdrawLeaseResponse
+ */
 export interface MsgWithdrawLeaseResponseAmino {}
 export interface MsgWithdrawLeaseResponseAminoMsg {
   type: "/akash.market.v1beta2.MsgWithdrawLeaseResponse";
   value: MsgWithdrawLeaseResponseAmino;
 }
-/** MsgCloseLease defines an SDK message for closing order */
+/**
+ * MsgCloseLease defines an SDK message for closing order
+ * @name MsgCloseLease
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseLease
+ */
 export interface MsgCloseLease {
   leaseId: LeaseID;
 }
@@ -188,7 +263,12 @@ export interface MsgCloseLeaseProtoMsg {
   typeUrl: "/akash.market.v1beta2.MsgCloseLease";
   value: Uint8Array;
 }
-/** MsgCloseLease defines an SDK message for closing order */
+/**
+ * MsgCloseLease defines an SDK message for closing order
+ * @name MsgCloseLeaseAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseLease
+ */
 export interface MsgCloseLeaseAmino {
   lease_id: LeaseIDAmino;
 }
@@ -196,13 +276,23 @@ export interface MsgCloseLeaseAminoMsg {
   type: "/akash.market.v1beta2.MsgCloseLease";
   value: MsgCloseLeaseAmino;
 }
-/** MsgCloseLeaseResponse defines the Msg/CloseLease response type. */
+/**
+ * MsgCloseLeaseResponse defines the Msg/CloseLease response type.
+ * @name MsgCloseLeaseResponse
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseLeaseResponse
+ */
 export interface MsgCloseLeaseResponse {}
 export interface MsgCloseLeaseResponseProtoMsg {
   typeUrl: "/akash.market.v1beta2.MsgCloseLeaseResponse";
   value: Uint8Array;
 }
-/** MsgCloseLeaseResponse defines the Msg/CloseLease response type. */
+/**
+ * MsgCloseLeaseResponse defines the Msg/CloseLease response type.
+ * @name MsgCloseLeaseResponseAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseLeaseResponse
+ */
 export interface MsgCloseLeaseResponseAmino {}
 export interface MsgCloseLeaseResponseAminoMsg {
   type: "/akash.market.v1beta2.MsgCloseLeaseResponse";
@@ -217,6 +307,12 @@ function createBaseLeaseID(): LeaseID {
     provider: ""
   };
 }
+/**
+ * LeaseID stores bid details of lease
+ * @name LeaseID
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.LeaseID
+ */
 export const LeaseID = {
   typeUrl: "/akash.market.v1beta2.LeaseID",
   encode(message: LeaseID, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -328,6 +424,12 @@ function createBaseLease(): Lease {
     closedOn: BigInt(0)
   };
 }
+/**
+ * Lease stores LeaseID, state of lease and price
+ * @name Lease
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.Lease
+ */
 export const Lease = {
   typeUrl: "/akash.market.v1beta2.Lease",
   encode(message: Lease, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -440,6 +542,12 @@ function createBaseLeaseFilters(): LeaseFilters {
     state: ""
   };
 }
+/**
+ * LeaseFilters defines flags for lease list filter
+ * @name LeaseFilters
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.LeaseFilters
+ */
 export const LeaseFilters = {
   typeUrl: "/akash.market.v1beta2.LeaseFilters",
   encode(message: LeaseFilters, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -558,6 +666,12 @@ function createBaseMsgCreateLease(): MsgCreateLease {
     bidId: BidID.fromPartial({})
   };
 }
+/**
+ * MsgCreateLease is sent to create a lease
+ * @name MsgCreateLease
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateLease
+ */
 export const MsgCreateLease = {
   typeUrl: "/akash.market.v1beta2.MsgCreateLease",
   encode(message: MsgCreateLease, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -619,6 +733,12 @@ export const MsgCreateLease = {
 function createBaseMsgCreateLeaseResponse(): MsgCreateLeaseResponse {
   return {};
 }
+/**
+ * MsgCreateLeaseResponse is the response from creating a lease
+ * @name MsgCreateLeaseResponse
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCreateLeaseResponse
+ */
 export const MsgCreateLeaseResponse = {
   typeUrl: "/akash.market.v1beta2.MsgCreateLeaseResponse",
   encode(_: MsgCreateLeaseResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -671,6 +791,12 @@ function createBaseMsgWithdrawLease(): MsgWithdrawLease {
     bidId: LeaseID.fromPartial({})
   };
 }
+/**
+ * MsgWithdrawLease defines an SDK message for closing bid
+ * @name MsgWithdrawLease
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgWithdrawLease
+ */
 export const MsgWithdrawLease = {
   typeUrl: "/akash.market.v1beta2.MsgWithdrawLease",
   encode(message: MsgWithdrawLease, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -732,6 +858,12 @@ export const MsgWithdrawLease = {
 function createBaseMsgWithdrawLeaseResponse(): MsgWithdrawLeaseResponse {
   return {};
 }
+/**
+ * MsgWithdrawLeaseResponse defines the Msg/WithdrawLease response type.
+ * @name MsgWithdrawLeaseResponse
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgWithdrawLeaseResponse
+ */
 export const MsgWithdrawLeaseResponse = {
   typeUrl: "/akash.market.v1beta2.MsgWithdrawLeaseResponse",
   encode(_: MsgWithdrawLeaseResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -784,6 +916,12 @@ function createBaseMsgCloseLease(): MsgCloseLease {
     leaseId: LeaseID.fromPartial({})
   };
 }
+/**
+ * MsgCloseLease defines an SDK message for closing order
+ * @name MsgCloseLease
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseLease
+ */
 export const MsgCloseLease = {
   typeUrl: "/akash.market.v1beta2.MsgCloseLease",
   encode(message: MsgCloseLease, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -845,6 +983,12 @@ export const MsgCloseLease = {
 function createBaseMsgCloseLeaseResponse(): MsgCloseLeaseResponse {
   return {};
 }
+/**
+ * MsgCloseLeaseResponse defines the Msg/CloseLease response type.
+ * @name MsgCloseLeaseResponse
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.MsgCloseLeaseResponse
+ */
 export const MsgCloseLeaseResponse = {
   typeUrl: "/akash.market.v1beta2.MsgCloseLeaseResponse",
   encode(_: MsgCloseLeaseResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

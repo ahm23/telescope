@@ -243,45 +243,84 @@ export function syntaxToJSON(object: Syntax): string {
       return "UNRECOGNIZED";
   }
 }
-/** A protocol buffer message type. */
+/**
+ * A protocol buffer message type.
+ * @name Type
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Type
+ */
 export interface Type {
-  /** The fully qualified message name. */
+  /**
+   * The fully qualified message name.
+   */
   name: string;
-  /** The list of fields. */
+  /**
+   * The list of fields.
+   */
   fields: Field[];
-  /** The list of types appearing in `oneof` definitions in this type. */
+  /**
+   * The list of types appearing in `oneof` definitions in this type.
+   */
   oneofs: string[];
-  /** The protocol buffer options. */
+  /**
+   * The protocol buffer options.
+   */
   options: Option[];
-  /** The source context. */
+  /**
+   * The source context.
+   */
   sourceContext?: SourceContext;
-  /** The source syntax. */
+  /**
+   * The source syntax.
+   */
   syntax: Syntax;
 }
 export interface TypeProtoMsg {
   typeUrl: "/google.protobuf.Type";
   value: Uint8Array;
 }
-/** A protocol buffer message type. */
+/**
+ * A protocol buffer message type.
+ * @name TypeAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Type
+ */
 export interface TypeAmino {
-  /** The fully qualified message name. */
+  /**
+   * The fully qualified message name.
+   */
   name?: string;
-  /** The list of fields. */
+  /**
+   * The list of fields.
+   */
   fields?: FieldAmino[];
-  /** The list of types appearing in `oneof` definitions in this type. */
+  /**
+   * The list of types appearing in `oneof` definitions in this type.
+   */
   oneofs?: string[];
-  /** The protocol buffer options. */
+  /**
+   * The protocol buffer options.
+   */
   options?: OptionAmino[];
-  /** The source context. */
+  /**
+   * The source context.
+   */
   source_context?: SourceContextAmino;
-  /** The source syntax. */
+  /**
+   * The source syntax.
+   */
   syntax?: Syntax;
 }
 export interface TypeAminoMsg {
   type: "/google.protobuf.Type";
   value: TypeAmino;
 }
-/** A protocol buffer message type. */
+/**
+ * A protocol buffer message type.
+ * @name TypeSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Type
+ */
 export interface TypeSDKType {
   name: string;
   fields: FieldSDKType[];
@@ -290,15 +329,28 @@ export interface TypeSDKType {
   source_context?: SourceContextSDKType;
   syntax: Syntax;
 }
-/** A single field of a message type. */
+/**
+ * A single field of a message type.
+ * @name Field
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Field
+ */
 export interface Field {
-  /** The field type. */
+  /**
+   * The field type.
+   */
   kind: Field_Kind;
-  /** The field cardinality. */
+  /**
+   * The field cardinality.
+   */
   cardinality: Field_Cardinality;
-  /** The field number. */
+  /**
+   * The field number.
+   */
   number: number;
-  /** The field name. */
+  /**
+   * The field name.
+   */
   name: string;
   /**
    * The field type URL, without the scheme, for message or enumeration
@@ -310,28 +362,49 @@ export interface Field {
    * types. The first type has index 1; zero means the type is not in the list.
    */
   oneofIndex: number;
-  /** Whether to use alternative packed wire representation. */
+  /**
+   * Whether to use alternative packed wire representation.
+   */
   packed: boolean;
-  /** The protocol buffer options. */
+  /**
+   * The protocol buffer options.
+   */
   options: Option[];
-  /** The field JSON name. */
+  /**
+   * The field JSON name.
+   */
   jsonName: string;
-  /** The string value of the default value of this field. Proto2 syntax only. */
+  /**
+   * The string value of the default value of this field. Proto2 syntax only.
+   */
   defaultValue: string;
 }
 export interface FieldProtoMsg {
   typeUrl: "/google.protobuf.Field";
   value: Uint8Array;
 }
-/** A single field of a message type. */
+/**
+ * A single field of a message type.
+ * @name FieldAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Field
+ */
 export interface FieldAmino {
-  /** The field type. */
+  /**
+   * The field type.
+   */
   kind?: Field_Kind;
-  /** The field cardinality. */
+  /**
+   * The field cardinality.
+   */
   cardinality?: Field_Cardinality;
-  /** The field number. */
+  /**
+   * The field number.
+   */
   number?: number;
-  /** The field name. */
+  /**
+   * The field name.
+   */
   name?: string;
   /**
    * The field type URL, without the scheme, for message or enumeration
@@ -343,20 +416,33 @@ export interface FieldAmino {
    * types. The first type has index 1; zero means the type is not in the list.
    */
   oneof_index?: number;
-  /** Whether to use alternative packed wire representation. */
+  /**
+   * Whether to use alternative packed wire representation.
+   */
   packed?: boolean;
-  /** The protocol buffer options. */
+  /**
+   * The protocol buffer options.
+   */
   options?: OptionAmino[];
-  /** The field JSON name. */
+  /**
+   * The field JSON name.
+   */
   json_name?: string;
-  /** The string value of the default value of this field. Proto2 syntax only. */
+  /**
+   * The string value of the default value of this field. Proto2 syntax only.
+   */
   default_value?: string;
 }
 export interface FieldAminoMsg {
   type: "/google.protobuf.Field";
   value: FieldAmino;
 }
-/** A single field of a message type. */
+/**
+ * A single field of a message type.
+ * @name FieldSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Field
+ */
 export interface FieldSDKType {
   kind: Field_Kind;
   cardinality: Field_Cardinality;
@@ -369,41 +455,76 @@ export interface FieldSDKType {
   json_name: string;
   default_value: string;
 }
-/** Enum type definition. */
+/**
+ * Enum type definition.
+ * @name Enum
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Enum
+ */
 export interface Enum {
-  /** Enum type name. */
+  /**
+   * Enum type name.
+   */
   name: string;
-  /** Enum value definitions. */
+  /**
+   * Enum value definitions.
+   */
   enumvalue: EnumValue[];
-  /** Protocol buffer options. */
+  /**
+   * Protocol buffer options.
+   */
   options: Option[];
-  /** The source context. */
+  /**
+   * The source context.
+   */
   sourceContext?: SourceContext;
-  /** The source syntax. */
+  /**
+   * The source syntax.
+   */
   syntax: Syntax;
 }
 export interface EnumProtoMsg {
   typeUrl: "/google.protobuf.Enum";
   value: Uint8Array;
 }
-/** Enum type definition. */
+/**
+ * Enum type definition.
+ * @name EnumAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Enum
+ */
 export interface EnumAmino {
-  /** Enum type name. */
+  /**
+   * Enum type name.
+   */
   name?: string;
-  /** Enum value definitions. */
+  /**
+   * Enum value definitions.
+   */
   enumvalue?: EnumValueAmino[];
-  /** Protocol buffer options. */
+  /**
+   * Protocol buffer options.
+   */
   options?: OptionAmino[];
-  /** The source context. */
+  /**
+   * The source context.
+   */
   source_context?: SourceContextAmino;
-  /** The source syntax. */
+  /**
+   * The source syntax.
+   */
   syntax?: Syntax;
 }
 export interface EnumAminoMsg {
   type: "/google.protobuf.Enum";
   value: EnumAmino;
 }
-/** Enum type definition. */
+/**
+ * Enum type definition.
+ * @name EnumSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Enum
+ */
 export interface EnumSDKType {
   name: string;
   enumvalue: EnumValueSDKType[];
@@ -411,33 +532,60 @@ export interface EnumSDKType {
   source_context?: SourceContextSDKType;
   syntax: Syntax;
 }
-/** Enum value definition. */
+/**
+ * Enum value definition.
+ * @name EnumValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.EnumValue
+ */
 export interface EnumValue {
-  /** Enum value name. */
+  /**
+   * Enum value name.
+   */
   name: string;
-  /** Enum value number. */
+  /**
+   * Enum value number.
+   */
   number: number;
-  /** Protocol buffer options. */
+  /**
+   * Protocol buffer options.
+   */
   options: Option[];
 }
 export interface EnumValueProtoMsg {
   typeUrl: "/google.protobuf.EnumValue";
   value: Uint8Array;
 }
-/** Enum value definition. */
+/**
+ * Enum value definition.
+ * @name EnumValueAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.EnumValue
+ */
 export interface EnumValueAmino {
-  /** Enum value name. */
+  /**
+   * Enum value name.
+   */
   name?: string;
-  /** Enum value number. */
+  /**
+   * Enum value number.
+   */
   number?: number;
-  /** Protocol buffer options. */
+  /**
+   * Protocol buffer options.
+   */
   options?: OptionAmino[];
 }
 export interface EnumValueAminoMsg {
   type: "/google.protobuf.EnumValue";
   value: EnumValueAmino;
 }
-/** Enum value definition. */
+/**
+ * Enum value definition.
+ * @name EnumValueSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.EnumValue
+ */
 export interface EnumValueSDKType {
   name: string;
   number: number;
@@ -446,6 +594,9 @@ export interface EnumValueSDKType {
 /**
  * A protocol buffer option, which can be attached to a message, field,
  * enumeration, etc.
+ * @name Option
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Option
  */
 export interface Option {
   /**
@@ -470,6 +621,9 @@ export interface OptionProtoMsg {
 /**
  * A protocol buffer option, which can be attached to a message, field,
  * enumeration, etc.
+ * @name OptionAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Option
  */
 export interface OptionAmino {
   /**
@@ -494,6 +648,9 @@ export interface OptionAminoMsg {
 /**
  * A protocol buffer option, which can be attached to a message, field,
  * enumeration, etc.
+ * @name OptionSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Option
  */
 export interface OptionSDKType {
   name: string;
@@ -509,6 +666,12 @@ function createBaseType(): Type {
     syntax: 0
   };
 }
+/**
+ * A protocol buffer message type.
+ * @name Type
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Type
+ */
 export const Type = {
   typeUrl: "/google.protobuf.Type",
   is(o: any): o is Type {
@@ -735,6 +898,12 @@ function createBaseField(): Field {
     defaultValue: ""
   };
 }
+/**
+ * A single field of a message type.
+ * @name Field
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Field
+ */
 export const Field = {
   typeUrl: "/google.protobuf.Field",
   is(o: any): o is Field {
@@ -996,6 +1165,12 @@ function createBaseEnum(): Enum {
     syntax: 0
   };
 }
+/**
+ * Enum type definition.
+ * @name Enum
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Enum
+ */
 export const Enum = {
   typeUrl: "/google.protobuf.Enum",
   is(o: any): o is Enum {
@@ -1189,6 +1364,12 @@ function createBaseEnumValue(): EnumValue {
     options: []
   };
 }
+/**
+ * Enum value definition.
+ * @name EnumValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.EnumValue
+ */
 export const EnumValue = {
   typeUrl: "/google.protobuf.EnumValue",
   is(o: any): o is EnumValue {
@@ -1335,6 +1516,13 @@ function createBaseOption(): Option {
     value: undefined
   };
 }
+/**
+ * A protocol buffer option, which can be attached to a message, field,
+ * enumeration, etc.
+ * @name Option
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Option
+ */
 export const Option = {
   typeUrl: "/google.protobuf.Option",
   is(o: any): o is Option {

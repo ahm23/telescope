@@ -7,6 +7,9 @@ export const protobufPackage = "ibc.core.channel.v1";
 /**
  * MsgChannelOpenInit defines an sdk.Msg to initialize a channel handshake. It
  * is called by a relayer on Chain A.
+ * @name MsgChannelOpenInit
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenInit
  */
 export interface MsgChannelOpenInit {
   portId: string;
@@ -20,6 +23,9 @@ export interface MsgChannelOpenInitProtoMsg {
 /**
  * MsgChannelOpenInit defines an sdk.Msg to initialize a channel handshake. It
  * is called by a relayer on Chain A.
+ * @name MsgChannelOpenInitAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenInit
  */
 export interface MsgChannelOpenInitAmino {
   port_id?: string;
@@ -33,29 +39,50 @@ export interface MsgChannelOpenInitAminoMsg {
 /**
  * MsgChannelOpenInit defines an sdk.Msg to initialize a channel handshake. It
  * is called by a relayer on Chain A.
+ * @name MsgChannelOpenInitSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenInit
  */
 export interface MsgChannelOpenInitSDKType {
   port_id: string;
   channel: ChannelSDKType;
   signer: string;
 }
-/** MsgChannelOpenInitResponse defines the Msg/ChannelOpenInit response type. */
+/**
+ * MsgChannelOpenInitResponse defines the Msg/ChannelOpenInit response type.
+ * @name MsgChannelOpenInitResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenInitResponse
+ */
 export interface MsgChannelOpenInitResponse {}
 export interface MsgChannelOpenInitResponseProtoMsg {
   typeUrl: "/ibc.core.channel.v1.MsgChannelOpenInitResponse";
   value: Uint8Array;
 }
-/** MsgChannelOpenInitResponse defines the Msg/ChannelOpenInit response type. */
+/**
+ * MsgChannelOpenInitResponse defines the Msg/ChannelOpenInit response type.
+ * @name MsgChannelOpenInitResponseAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenInitResponse
+ */
 export interface MsgChannelOpenInitResponseAmino {}
 export interface MsgChannelOpenInitResponseAminoMsg {
   type: "cosmos-sdk/MsgChannelOpenInitResponse";
   value: MsgChannelOpenInitResponseAmino;
 }
-/** MsgChannelOpenInitResponse defines the Msg/ChannelOpenInit response type. */
+/**
+ * MsgChannelOpenInitResponse defines the Msg/ChannelOpenInit response type.
+ * @name MsgChannelOpenInitResponseSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenInitResponse
+ */
 export interface MsgChannelOpenInitResponseSDKType {}
 /**
  * MsgChannelOpenInit defines a msg sent by a Relayer to try to open a channel
  * on Chain B.
+ * @name MsgChannelOpenTry
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenTry
  */
 export interface MsgChannelOpenTry {
   portId: string;
@@ -77,6 +104,9 @@ export interface MsgChannelOpenTryProtoMsg {
 /**
  * MsgChannelOpenInit defines a msg sent by a Relayer to try to open a channel
  * on Chain B.
+ * @name MsgChannelOpenTryAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenTry
  */
 export interface MsgChannelOpenTryAmino {
   port_id?: string;
@@ -98,6 +128,9 @@ export interface MsgChannelOpenTryAminoMsg {
 /**
  * MsgChannelOpenInit defines a msg sent by a Relayer to try to open a channel
  * on Chain B.
+ * @name MsgChannelOpenTrySDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenTry
  */
 export interface MsgChannelOpenTrySDKType {
   port_id: string;
@@ -108,23 +141,41 @@ export interface MsgChannelOpenTrySDKType {
   proof_height: HeightSDKType;
   signer: string;
 }
-/** MsgChannelOpenTryResponse defines the Msg/ChannelOpenTry response type. */
+/**
+ * MsgChannelOpenTryResponse defines the Msg/ChannelOpenTry response type.
+ * @name MsgChannelOpenTryResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenTryResponse
+ */
 export interface MsgChannelOpenTryResponse {}
 export interface MsgChannelOpenTryResponseProtoMsg {
   typeUrl: "/ibc.core.channel.v1.MsgChannelOpenTryResponse";
   value: Uint8Array;
 }
-/** MsgChannelOpenTryResponse defines the Msg/ChannelOpenTry response type. */
+/**
+ * MsgChannelOpenTryResponse defines the Msg/ChannelOpenTry response type.
+ * @name MsgChannelOpenTryResponseAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenTryResponse
+ */
 export interface MsgChannelOpenTryResponseAmino {}
 export interface MsgChannelOpenTryResponseAminoMsg {
   type: "cosmos-sdk/MsgChannelOpenTryResponse";
   value: MsgChannelOpenTryResponseAmino;
 }
-/** MsgChannelOpenTryResponse defines the Msg/ChannelOpenTry response type. */
+/**
+ * MsgChannelOpenTryResponse defines the Msg/ChannelOpenTry response type.
+ * @name MsgChannelOpenTryResponseSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenTryResponse
+ */
 export interface MsgChannelOpenTryResponseSDKType {}
 /**
  * MsgChannelOpenAck defines a msg sent by a Relayer to Chain A to acknowledge
  * the change of channel state to TRYOPEN on Chain B.
+ * @name MsgChannelOpenAck
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenAck
  */
 export interface MsgChannelOpenAck {
   portId: string;
@@ -142,6 +193,9 @@ export interface MsgChannelOpenAckProtoMsg {
 /**
  * MsgChannelOpenAck defines a msg sent by a Relayer to Chain A to acknowledge
  * the change of channel state to TRYOPEN on Chain B.
+ * @name MsgChannelOpenAckAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenAck
  */
 export interface MsgChannelOpenAckAmino {
   port_id?: string;
@@ -159,6 +213,9 @@ export interface MsgChannelOpenAckAminoMsg {
 /**
  * MsgChannelOpenAck defines a msg sent by a Relayer to Chain A to acknowledge
  * the change of channel state to TRYOPEN on Chain B.
+ * @name MsgChannelOpenAckSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenAck
  */
 export interface MsgChannelOpenAckSDKType {
   port_id: string;
@@ -169,23 +226,41 @@ export interface MsgChannelOpenAckSDKType {
   proof_height: HeightSDKType;
   signer: string;
 }
-/** MsgChannelOpenAckResponse defines the Msg/ChannelOpenAck response type. */
+/**
+ * MsgChannelOpenAckResponse defines the Msg/ChannelOpenAck response type.
+ * @name MsgChannelOpenAckResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenAckResponse
+ */
 export interface MsgChannelOpenAckResponse {}
 export interface MsgChannelOpenAckResponseProtoMsg {
   typeUrl: "/ibc.core.channel.v1.MsgChannelOpenAckResponse";
   value: Uint8Array;
 }
-/** MsgChannelOpenAckResponse defines the Msg/ChannelOpenAck response type. */
+/**
+ * MsgChannelOpenAckResponse defines the Msg/ChannelOpenAck response type.
+ * @name MsgChannelOpenAckResponseAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenAckResponse
+ */
 export interface MsgChannelOpenAckResponseAmino {}
 export interface MsgChannelOpenAckResponseAminoMsg {
   type: "cosmos-sdk/MsgChannelOpenAckResponse";
   value: MsgChannelOpenAckResponseAmino;
 }
-/** MsgChannelOpenAckResponse defines the Msg/ChannelOpenAck response type. */
+/**
+ * MsgChannelOpenAckResponse defines the Msg/ChannelOpenAck response type.
+ * @name MsgChannelOpenAckResponseSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenAckResponse
+ */
 export interface MsgChannelOpenAckResponseSDKType {}
 /**
  * MsgChannelOpenConfirm defines a msg sent by a Relayer to Chain B to
  * acknowledge the change of channel state to OPEN on Chain A.
+ * @name MsgChannelOpenConfirm
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenConfirm
  */
 export interface MsgChannelOpenConfirm {
   portId: string;
@@ -201,6 +276,9 @@ export interface MsgChannelOpenConfirmProtoMsg {
 /**
  * MsgChannelOpenConfirm defines a msg sent by a Relayer to Chain B to
  * acknowledge the change of channel state to OPEN on Chain A.
+ * @name MsgChannelOpenConfirmAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenConfirm
  */
 export interface MsgChannelOpenConfirmAmino {
   port_id?: string;
@@ -216,6 +294,9 @@ export interface MsgChannelOpenConfirmAminoMsg {
 /**
  * MsgChannelOpenConfirm defines a msg sent by a Relayer to Chain B to
  * acknowledge the change of channel state to OPEN on Chain A.
+ * @name MsgChannelOpenConfirmSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenConfirm
  */
 export interface MsgChannelOpenConfirmSDKType {
   port_id: string;
@@ -227,6 +308,9 @@ export interface MsgChannelOpenConfirmSDKType {
 /**
  * MsgChannelOpenConfirmResponse defines the Msg/ChannelOpenConfirm response
  * type.
+ * @name MsgChannelOpenConfirmResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenConfirmResponse
  */
 export interface MsgChannelOpenConfirmResponse {}
 export interface MsgChannelOpenConfirmResponseProtoMsg {
@@ -236,6 +320,9 @@ export interface MsgChannelOpenConfirmResponseProtoMsg {
 /**
  * MsgChannelOpenConfirmResponse defines the Msg/ChannelOpenConfirm response
  * type.
+ * @name MsgChannelOpenConfirmResponseAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenConfirmResponse
  */
 export interface MsgChannelOpenConfirmResponseAmino {}
 export interface MsgChannelOpenConfirmResponseAminoMsg {
@@ -245,11 +332,17 @@ export interface MsgChannelOpenConfirmResponseAminoMsg {
 /**
  * MsgChannelOpenConfirmResponse defines the Msg/ChannelOpenConfirm response
  * type.
+ * @name MsgChannelOpenConfirmResponseSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenConfirmResponse
  */
 export interface MsgChannelOpenConfirmResponseSDKType {}
 /**
  * MsgChannelCloseInit defines a msg sent by a Relayer to Chain A
  * to close a channel with Chain B.
+ * @name MsgChannelCloseInit
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseInit
  */
 export interface MsgChannelCloseInit {
   portId: string;
@@ -263,6 +356,9 @@ export interface MsgChannelCloseInitProtoMsg {
 /**
  * MsgChannelCloseInit defines a msg sent by a Relayer to Chain A
  * to close a channel with Chain B.
+ * @name MsgChannelCloseInitAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseInit
  */
 export interface MsgChannelCloseInitAmino {
   port_id?: string;
@@ -276,29 +372,50 @@ export interface MsgChannelCloseInitAminoMsg {
 /**
  * MsgChannelCloseInit defines a msg sent by a Relayer to Chain A
  * to close a channel with Chain B.
+ * @name MsgChannelCloseInitSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseInit
  */
 export interface MsgChannelCloseInitSDKType {
   port_id: string;
   channel_id: string;
   signer: string;
 }
-/** MsgChannelCloseInitResponse defines the Msg/ChannelCloseInit response type. */
+/**
+ * MsgChannelCloseInitResponse defines the Msg/ChannelCloseInit response type.
+ * @name MsgChannelCloseInitResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseInitResponse
+ */
 export interface MsgChannelCloseInitResponse {}
 export interface MsgChannelCloseInitResponseProtoMsg {
   typeUrl: "/ibc.core.channel.v1.MsgChannelCloseInitResponse";
   value: Uint8Array;
 }
-/** MsgChannelCloseInitResponse defines the Msg/ChannelCloseInit response type. */
+/**
+ * MsgChannelCloseInitResponse defines the Msg/ChannelCloseInit response type.
+ * @name MsgChannelCloseInitResponseAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseInitResponse
+ */
 export interface MsgChannelCloseInitResponseAmino {}
 export interface MsgChannelCloseInitResponseAminoMsg {
   type: "cosmos-sdk/MsgChannelCloseInitResponse";
   value: MsgChannelCloseInitResponseAmino;
 }
-/** MsgChannelCloseInitResponse defines the Msg/ChannelCloseInit response type. */
+/**
+ * MsgChannelCloseInitResponse defines the Msg/ChannelCloseInit response type.
+ * @name MsgChannelCloseInitResponseSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseInitResponse
+ */
 export interface MsgChannelCloseInitResponseSDKType {}
 /**
  * MsgChannelCloseConfirm defines a msg sent by a Relayer to Chain B
  * to acknowledge the change of channel state to CLOSED on Chain A.
+ * @name MsgChannelCloseConfirm
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseConfirm
  */
 export interface MsgChannelCloseConfirm {
   portId: string;
@@ -314,6 +431,9 @@ export interface MsgChannelCloseConfirmProtoMsg {
 /**
  * MsgChannelCloseConfirm defines a msg sent by a Relayer to Chain B
  * to acknowledge the change of channel state to CLOSED on Chain A.
+ * @name MsgChannelCloseConfirmAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseConfirm
  */
 export interface MsgChannelCloseConfirmAmino {
   port_id?: string;
@@ -329,6 +449,9 @@ export interface MsgChannelCloseConfirmAminoMsg {
 /**
  * MsgChannelCloseConfirm defines a msg sent by a Relayer to Chain B
  * to acknowledge the change of channel state to CLOSED on Chain A.
+ * @name MsgChannelCloseConfirmSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseConfirm
  */
 export interface MsgChannelCloseConfirmSDKType {
   port_id: string;
@@ -340,6 +463,9 @@ export interface MsgChannelCloseConfirmSDKType {
 /**
  * MsgChannelCloseConfirmResponse defines the Msg/ChannelCloseConfirm response
  * type.
+ * @name MsgChannelCloseConfirmResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseConfirmResponse
  */
 export interface MsgChannelCloseConfirmResponse {}
 export interface MsgChannelCloseConfirmResponseProtoMsg {
@@ -349,6 +475,9 @@ export interface MsgChannelCloseConfirmResponseProtoMsg {
 /**
  * MsgChannelCloseConfirmResponse defines the Msg/ChannelCloseConfirm response
  * type.
+ * @name MsgChannelCloseConfirmResponseAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseConfirmResponse
  */
 export interface MsgChannelCloseConfirmResponseAmino {}
 export interface MsgChannelCloseConfirmResponseAminoMsg {
@@ -358,9 +487,17 @@ export interface MsgChannelCloseConfirmResponseAminoMsg {
 /**
  * MsgChannelCloseConfirmResponse defines the Msg/ChannelCloseConfirm response
  * type.
+ * @name MsgChannelCloseConfirmResponseSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseConfirmResponse
  */
 export interface MsgChannelCloseConfirmResponseSDKType {}
-/** MsgRecvPacket receives incoming IBC packet */
+/**
+ * MsgRecvPacket receives incoming IBC packet
+ * @name MsgRecvPacket
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgRecvPacket
+ */
 export interface MsgRecvPacket {
   packet: Packet;
   proofCommitment: Uint8Array;
@@ -371,7 +508,12 @@ export interface MsgRecvPacketProtoMsg {
   typeUrl: "/ibc.core.channel.v1.MsgRecvPacket";
   value: Uint8Array;
 }
-/** MsgRecvPacket receives incoming IBC packet */
+/**
+ * MsgRecvPacket receives incoming IBC packet
+ * @name MsgRecvPacketAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgRecvPacket
+ */
 export interface MsgRecvPacketAmino {
   packet?: PacketAmino;
   proof_commitment?: string;
@@ -382,28 +524,53 @@ export interface MsgRecvPacketAminoMsg {
   type: "cosmos-sdk/MsgRecvPacket";
   value: MsgRecvPacketAmino;
 }
-/** MsgRecvPacket receives incoming IBC packet */
+/**
+ * MsgRecvPacket receives incoming IBC packet
+ * @name MsgRecvPacketSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgRecvPacket
+ */
 export interface MsgRecvPacketSDKType {
   packet: PacketSDKType;
   proof_commitment: Uint8Array;
   proof_height: HeightSDKType;
   signer: string;
 }
-/** MsgRecvPacketResponse defines the Msg/RecvPacket response type. */
+/**
+ * MsgRecvPacketResponse defines the Msg/RecvPacket response type.
+ * @name MsgRecvPacketResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgRecvPacketResponse
+ */
 export interface MsgRecvPacketResponse {}
 export interface MsgRecvPacketResponseProtoMsg {
   typeUrl: "/ibc.core.channel.v1.MsgRecvPacketResponse";
   value: Uint8Array;
 }
-/** MsgRecvPacketResponse defines the Msg/RecvPacket response type. */
+/**
+ * MsgRecvPacketResponse defines the Msg/RecvPacket response type.
+ * @name MsgRecvPacketResponseAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgRecvPacketResponse
+ */
 export interface MsgRecvPacketResponseAmino {}
 export interface MsgRecvPacketResponseAminoMsg {
   type: "cosmos-sdk/MsgRecvPacketResponse";
   value: MsgRecvPacketResponseAmino;
 }
-/** MsgRecvPacketResponse defines the Msg/RecvPacket response type. */
+/**
+ * MsgRecvPacketResponse defines the Msg/RecvPacket response type.
+ * @name MsgRecvPacketResponseSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgRecvPacketResponse
+ */
 export interface MsgRecvPacketResponseSDKType {}
-/** MsgTimeout receives timed-out packet */
+/**
+ * MsgTimeout receives timed-out packet
+ * @name MsgTimeout
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeout
+ */
 export interface MsgTimeout {
   packet: Packet;
   proofUnreceived: Uint8Array;
@@ -415,7 +582,12 @@ export interface MsgTimeoutProtoMsg {
   typeUrl: "/ibc.core.channel.v1.MsgTimeout";
   value: Uint8Array;
 }
-/** MsgTimeout receives timed-out packet */
+/**
+ * MsgTimeout receives timed-out packet
+ * @name MsgTimeoutAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeout
+ */
 export interface MsgTimeoutAmino {
   packet?: PacketAmino;
   proof_unreceived?: string;
@@ -427,7 +599,12 @@ export interface MsgTimeoutAminoMsg {
   type: "cosmos-sdk/MsgTimeout";
   value: MsgTimeoutAmino;
 }
-/** MsgTimeout receives timed-out packet */
+/**
+ * MsgTimeout receives timed-out packet
+ * @name MsgTimeoutSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeout
+ */
 export interface MsgTimeoutSDKType {
   packet: PacketSDKType;
   proof_unreceived: Uint8Array;
@@ -435,21 +612,41 @@ export interface MsgTimeoutSDKType {
   next_sequence_recv: bigint;
   signer: string;
 }
-/** MsgTimeoutResponse defines the Msg/Timeout response type. */
+/**
+ * MsgTimeoutResponse defines the Msg/Timeout response type.
+ * @name MsgTimeoutResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeoutResponse
+ */
 export interface MsgTimeoutResponse {}
 export interface MsgTimeoutResponseProtoMsg {
   typeUrl: "/ibc.core.channel.v1.MsgTimeoutResponse";
   value: Uint8Array;
 }
-/** MsgTimeoutResponse defines the Msg/Timeout response type. */
+/**
+ * MsgTimeoutResponse defines the Msg/Timeout response type.
+ * @name MsgTimeoutResponseAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeoutResponse
+ */
 export interface MsgTimeoutResponseAmino {}
 export interface MsgTimeoutResponseAminoMsg {
   type: "cosmos-sdk/MsgTimeoutResponse";
   value: MsgTimeoutResponseAmino;
 }
-/** MsgTimeoutResponse defines the Msg/Timeout response type. */
+/**
+ * MsgTimeoutResponse defines the Msg/Timeout response type.
+ * @name MsgTimeoutResponseSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeoutResponse
+ */
 export interface MsgTimeoutResponseSDKType {}
-/** MsgTimeoutOnClose timed-out packet upon counterparty channel closure. */
+/**
+ * MsgTimeoutOnClose timed-out packet upon counterparty channel closure.
+ * @name MsgTimeoutOnClose
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeoutOnClose
+ */
 export interface MsgTimeoutOnClose {
   packet: Packet;
   proofUnreceived: Uint8Array;
@@ -462,7 +659,12 @@ export interface MsgTimeoutOnCloseProtoMsg {
   typeUrl: "/ibc.core.channel.v1.MsgTimeoutOnClose";
   value: Uint8Array;
 }
-/** MsgTimeoutOnClose timed-out packet upon counterparty channel closure. */
+/**
+ * MsgTimeoutOnClose timed-out packet upon counterparty channel closure.
+ * @name MsgTimeoutOnCloseAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeoutOnClose
+ */
 export interface MsgTimeoutOnCloseAmino {
   packet?: PacketAmino;
   proof_unreceived?: string;
@@ -475,7 +677,12 @@ export interface MsgTimeoutOnCloseAminoMsg {
   type: "cosmos-sdk/MsgTimeoutOnClose";
   value: MsgTimeoutOnCloseAmino;
 }
-/** MsgTimeoutOnClose timed-out packet upon counterparty channel closure. */
+/**
+ * MsgTimeoutOnClose timed-out packet upon counterparty channel closure.
+ * @name MsgTimeoutOnCloseSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeoutOnClose
+ */
 export interface MsgTimeoutOnCloseSDKType {
   packet: PacketSDKType;
   proof_unreceived: Uint8Array;
@@ -484,21 +691,41 @@ export interface MsgTimeoutOnCloseSDKType {
   next_sequence_recv: bigint;
   signer: string;
 }
-/** MsgTimeoutOnCloseResponse defines the Msg/TimeoutOnClose response type. */
+/**
+ * MsgTimeoutOnCloseResponse defines the Msg/TimeoutOnClose response type.
+ * @name MsgTimeoutOnCloseResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeoutOnCloseResponse
+ */
 export interface MsgTimeoutOnCloseResponse {}
 export interface MsgTimeoutOnCloseResponseProtoMsg {
   typeUrl: "/ibc.core.channel.v1.MsgTimeoutOnCloseResponse";
   value: Uint8Array;
 }
-/** MsgTimeoutOnCloseResponse defines the Msg/TimeoutOnClose response type. */
+/**
+ * MsgTimeoutOnCloseResponse defines the Msg/TimeoutOnClose response type.
+ * @name MsgTimeoutOnCloseResponseAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeoutOnCloseResponse
+ */
 export interface MsgTimeoutOnCloseResponseAmino {}
 export interface MsgTimeoutOnCloseResponseAminoMsg {
   type: "cosmos-sdk/MsgTimeoutOnCloseResponse";
   value: MsgTimeoutOnCloseResponseAmino;
 }
-/** MsgTimeoutOnCloseResponse defines the Msg/TimeoutOnClose response type. */
+/**
+ * MsgTimeoutOnCloseResponse defines the Msg/TimeoutOnClose response type.
+ * @name MsgTimeoutOnCloseResponseSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeoutOnCloseResponse
+ */
 export interface MsgTimeoutOnCloseResponseSDKType {}
-/** MsgAcknowledgement receives incoming IBC acknowledgement */
+/**
+ * MsgAcknowledgement receives incoming IBC acknowledgement
+ * @name MsgAcknowledgement
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgAcknowledgement
+ */
 export interface MsgAcknowledgement {
   packet: Packet;
   acknowledgement: Uint8Array;
@@ -510,7 +737,12 @@ export interface MsgAcknowledgementProtoMsg {
   typeUrl: "/ibc.core.channel.v1.MsgAcknowledgement";
   value: Uint8Array;
 }
-/** MsgAcknowledgement receives incoming IBC acknowledgement */
+/**
+ * MsgAcknowledgement receives incoming IBC acknowledgement
+ * @name MsgAcknowledgementAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgAcknowledgement
+ */
 export interface MsgAcknowledgementAmino {
   packet?: PacketAmino;
   acknowledgement?: string;
@@ -522,7 +754,12 @@ export interface MsgAcknowledgementAminoMsg {
   type: "cosmos-sdk/MsgAcknowledgement";
   value: MsgAcknowledgementAmino;
 }
-/** MsgAcknowledgement receives incoming IBC acknowledgement */
+/**
+ * MsgAcknowledgement receives incoming IBC acknowledgement
+ * @name MsgAcknowledgementSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgAcknowledgement
+ */
 export interface MsgAcknowledgementSDKType {
   packet: PacketSDKType;
   acknowledgement: Uint8Array;
@@ -530,19 +767,34 @@ export interface MsgAcknowledgementSDKType {
   proof_height: HeightSDKType;
   signer: string;
 }
-/** MsgAcknowledgementResponse defines the Msg/Acknowledgement response type. */
+/**
+ * MsgAcknowledgementResponse defines the Msg/Acknowledgement response type.
+ * @name MsgAcknowledgementResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgAcknowledgementResponse
+ */
 export interface MsgAcknowledgementResponse {}
 export interface MsgAcknowledgementResponseProtoMsg {
   typeUrl: "/ibc.core.channel.v1.MsgAcknowledgementResponse";
   value: Uint8Array;
 }
-/** MsgAcknowledgementResponse defines the Msg/Acknowledgement response type. */
+/**
+ * MsgAcknowledgementResponse defines the Msg/Acknowledgement response type.
+ * @name MsgAcknowledgementResponseAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgAcknowledgementResponse
+ */
 export interface MsgAcknowledgementResponseAmino {}
 export interface MsgAcknowledgementResponseAminoMsg {
   type: "cosmos-sdk/MsgAcknowledgementResponse";
   value: MsgAcknowledgementResponseAmino;
 }
-/** MsgAcknowledgementResponse defines the Msg/Acknowledgement response type. */
+/**
+ * MsgAcknowledgementResponse defines the Msg/Acknowledgement response type.
+ * @name MsgAcknowledgementResponseSDKType
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgAcknowledgementResponse
+ */
 export interface MsgAcknowledgementResponseSDKType {}
 function createBaseMsgChannelOpenInit(): MsgChannelOpenInit {
   return {
@@ -551,6 +803,13 @@ function createBaseMsgChannelOpenInit(): MsgChannelOpenInit {
     signer: ""
   };
 }
+/**
+ * MsgChannelOpenInit defines an sdk.Msg to initialize a channel handshake. It
+ * is called by a relayer on Chain A.
+ * @name MsgChannelOpenInit
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenInit
+ */
 export const MsgChannelOpenInit = {
   typeUrl: "/ibc.core.channel.v1.MsgChannelOpenInit",
   aminoType: "cosmos-sdk/MsgChannelOpenInit",
@@ -671,6 +930,12 @@ export const MsgChannelOpenInit = {
 function createBaseMsgChannelOpenInitResponse(): MsgChannelOpenInitResponse {
   return {};
 }
+/**
+ * MsgChannelOpenInitResponse defines the Msg/ChannelOpenInit response type.
+ * @name MsgChannelOpenInitResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenInitResponse
+ */
 export const MsgChannelOpenInitResponse = {
   typeUrl: "/ibc.core.channel.v1.MsgChannelOpenInitResponse",
   aminoType: "cosmos-sdk/MsgChannelOpenInitResponse",
@@ -751,6 +1016,13 @@ function createBaseMsgChannelOpenTry(): MsgChannelOpenTry {
     signer: ""
   };
 }
+/**
+ * MsgChannelOpenInit defines a msg sent by a Relayer to try to open a channel
+ * on Chain B.
+ * @name MsgChannelOpenTry
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenTry
+ */
 export const MsgChannelOpenTry = {
   typeUrl: "/ibc.core.channel.v1.MsgChannelOpenTry",
   aminoType: "cosmos-sdk/MsgChannelOpenTry",
@@ -933,6 +1205,12 @@ export const MsgChannelOpenTry = {
 function createBaseMsgChannelOpenTryResponse(): MsgChannelOpenTryResponse {
   return {};
 }
+/**
+ * MsgChannelOpenTryResponse defines the Msg/ChannelOpenTry response type.
+ * @name MsgChannelOpenTryResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenTryResponse
+ */
 export const MsgChannelOpenTryResponse = {
   typeUrl: "/ibc.core.channel.v1.MsgChannelOpenTryResponse",
   aminoType: "cosmos-sdk/MsgChannelOpenTryResponse",
@@ -1013,6 +1291,13 @@ function createBaseMsgChannelOpenAck(): MsgChannelOpenAck {
     signer: ""
   };
 }
+/**
+ * MsgChannelOpenAck defines a msg sent by a Relayer to Chain A to acknowledge
+ * the change of channel state to TRYOPEN on Chain B.
+ * @name MsgChannelOpenAck
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenAck
+ */
 export const MsgChannelOpenAck = {
   typeUrl: "/ibc.core.channel.v1.MsgChannelOpenAck",
   aminoType: "cosmos-sdk/MsgChannelOpenAck",
@@ -1193,6 +1478,12 @@ export const MsgChannelOpenAck = {
 function createBaseMsgChannelOpenAckResponse(): MsgChannelOpenAckResponse {
   return {};
 }
+/**
+ * MsgChannelOpenAckResponse defines the Msg/ChannelOpenAck response type.
+ * @name MsgChannelOpenAckResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenAckResponse
+ */
 export const MsgChannelOpenAckResponse = {
   typeUrl: "/ibc.core.channel.v1.MsgChannelOpenAckResponse",
   aminoType: "cosmos-sdk/MsgChannelOpenAckResponse",
@@ -1271,6 +1562,13 @@ function createBaseMsgChannelOpenConfirm(): MsgChannelOpenConfirm {
     signer: ""
   };
 }
+/**
+ * MsgChannelOpenConfirm defines a msg sent by a Relayer to Chain B to
+ * acknowledge the change of channel state to OPEN on Chain A.
+ * @name MsgChannelOpenConfirm
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenConfirm
+ */
 export const MsgChannelOpenConfirm = {
   typeUrl: "/ibc.core.channel.v1.MsgChannelOpenConfirm",
   aminoType: "cosmos-sdk/MsgChannelOpenConfirm",
@@ -1421,6 +1719,13 @@ export const MsgChannelOpenConfirm = {
 function createBaseMsgChannelOpenConfirmResponse(): MsgChannelOpenConfirmResponse {
   return {};
 }
+/**
+ * MsgChannelOpenConfirmResponse defines the Msg/ChannelOpenConfirm response
+ * type.
+ * @name MsgChannelOpenConfirmResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelOpenConfirmResponse
+ */
 export const MsgChannelOpenConfirmResponse = {
   typeUrl: "/ibc.core.channel.v1.MsgChannelOpenConfirmResponse",
   aminoType: "cosmos-sdk/MsgChannelOpenConfirmResponse",
@@ -1497,6 +1802,13 @@ function createBaseMsgChannelCloseInit(): MsgChannelCloseInit {
     signer: ""
   };
 }
+/**
+ * MsgChannelCloseInit defines a msg sent by a Relayer to Chain A
+ * to close a channel with Chain B.
+ * @name MsgChannelCloseInit
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseInit
+ */
 export const MsgChannelCloseInit = {
   typeUrl: "/ibc.core.channel.v1.MsgChannelCloseInit",
   aminoType: "cosmos-sdk/MsgChannelCloseInit",
@@ -1615,6 +1927,12 @@ export const MsgChannelCloseInit = {
 function createBaseMsgChannelCloseInitResponse(): MsgChannelCloseInitResponse {
   return {};
 }
+/**
+ * MsgChannelCloseInitResponse defines the Msg/ChannelCloseInit response type.
+ * @name MsgChannelCloseInitResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseInitResponse
+ */
 export const MsgChannelCloseInitResponse = {
   typeUrl: "/ibc.core.channel.v1.MsgChannelCloseInitResponse",
   aminoType: "cosmos-sdk/MsgChannelCloseInitResponse",
@@ -1693,6 +2011,13 @@ function createBaseMsgChannelCloseConfirm(): MsgChannelCloseConfirm {
     signer: ""
   };
 }
+/**
+ * MsgChannelCloseConfirm defines a msg sent by a Relayer to Chain B
+ * to acknowledge the change of channel state to CLOSED on Chain A.
+ * @name MsgChannelCloseConfirm
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseConfirm
+ */
 export const MsgChannelCloseConfirm = {
   typeUrl: "/ibc.core.channel.v1.MsgChannelCloseConfirm",
   aminoType: "cosmos-sdk/MsgChannelCloseConfirm",
@@ -1843,6 +2168,13 @@ export const MsgChannelCloseConfirm = {
 function createBaseMsgChannelCloseConfirmResponse(): MsgChannelCloseConfirmResponse {
   return {};
 }
+/**
+ * MsgChannelCloseConfirmResponse defines the Msg/ChannelCloseConfirm response
+ * type.
+ * @name MsgChannelCloseConfirmResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgChannelCloseConfirmResponse
+ */
 export const MsgChannelCloseConfirmResponse = {
   typeUrl: "/ibc.core.channel.v1.MsgChannelCloseConfirmResponse",
   aminoType: "cosmos-sdk/MsgChannelCloseConfirmResponse",
@@ -1920,6 +2252,12 @@ function createBaseMsgRecvPacket(): MsgRecvPacket {
     signer: ""
   };
 }
+/**
+ * MsgRecvPacket receives incoming IBC packet
+ * @name MsgRecvPacket
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgRecvPacket
+ */
 export const MsgRecvPacket = {
   typeUrl: "/ibc.core.channel.v1.MsgRecvPacket",
   aminoType: "cosmos-sdk/MsgRecvPacket",
@@ -2057,6 +2395,12 @@ export const MsgRecvPacket = {
 function createBaseMsgRecvPacketResponse(): MsgRecvPacketResponse {
   return {};
 }
+/**
+ * MsgRecvPacketResponse defines the Msg/RecvPacket response type.
+ * @name MsgRecvPacketResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgRecvPacketResponse
+ */
 export const MsgRecvPacketResponse = {
   typeUrl: "/ibc.core.channel.v1.MsgRecvPacketResponse",
   aminoType: "cosmos-sdk/MsgRecvPacketResponse",
@@ -2135,6 +2479,12 @@ function createBaseMsgTimeout(): MsgTimeout {
     signer: ""
   };
 }
+/**
+ * MsgTimeout receives timed-out packet
+ * @name MsgTimeout
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeout
+ */
 export const MsgTimeout = {
   typeUrl: "/ibc.core.channel.v1.MsgTimeout",
   aminoType: "cosmos-sdk/MsgTimeout",
@@ -2289,6 +2639,12 @@ export const MsgTimeout = {
 function createBaseMsgTimeoutResponse(): MsgTimeoutResponse {
   return {};
 }
+/**
+ * MsgTimeoutResponse defines the Msg/Timeout response type.
+ * @name MsgTimeoutResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeoutResponse
+ */
 export const MsgTimeoutResponse = {
   typeUrl: "/ibc.core.channel.v1.MsgTimeoutResponse",
   aminoType: "cosmos-sdk/MsgTimeoutResponse",
@@ -2368,6 +2724,12 @@ function createBaseMsgTimeoutOnClose(): MsgTimeoutOnClose {
     signer: ""
   };
 }
+/**
+ * MsgTimeoutOnClose timed-out packet upon counterparty channel closure.
+ * @name MsgTimeoutOnClose
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeoutOnClose
+ */
 export const MsgTimeoutOnClose = {
   typeUrl: "/ibc.core.channel.v1.MsgTimeoutOnClose",
   aminoType: "cosmos-sdk/MsgTimeoutOnClose",
@@ -2537,6 +2899,12 @@ export const MsgTimeoutOnClose = {
 function createBaseMsgTimeoutOnCloseResponse(): MsgTimeoutOnCloseResponse {
   return {};
 }
+/**
+ * MsgTimeoutOnCloseResponse defines the Msg/TimeoutOnClose response type.
+ * @name MsgTimeoutOnCloseResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgTimeoutOnCloseResponse
+ */
 export const MsgTimeoutOnCloseResponse = {
   typeUrl: "/ibc.core.channel.v1.MsgTimeoutOnCloseResponse",
   aminoType: "cosmos-sdk/MsgTimeoutOnCloseResponse",
@@ -2615,6 +2983,12 @@ function createBaseMsgAcknowledgement(): MsgAcknowledgement {
     signer: ""
   };
 }
+/**
+ * MsgAcknowledgement receives incoming IBC acknowledgement
+ * @name MsgAcknowledgement
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgAcknowledgement
+ */
 export const MsgAcknowledgement = {
   typeUrl: "/ibc.core.channel.v1.MsgAcknowledgement",
   aminoType: "cosmos-sdk/MsgAcknowledgement",
@@ -2767,6 +3141,12 @@ export const MsgAcknowledgement = {
 function createBaseMsgAcknowledgementResponse(): MsgAcknowledgementResponse {
   return {};
 }
+/**
+ * MsgAcknowledgementResponse defines the Msg/Acknowledgement response type.
+ * @name MsgAcknowledgementResponse
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.MsgAcknowledgementResponse
+ */
 export const MsgAcknowledgementResponse = {
   typeUrl: "/ibc.core.channel.v1.MsgAcknowledgementResponse",
   aminoType: "cosmos-sdk/MsgAcknowledgementResponse",

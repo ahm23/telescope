@@ -99,7 +99,12 @@ export function fractionalPayment_StateToJSON(object: FractionalPayment_State): 
       return "UNRECOGNIZED";
   }
 }
-/** AccountID is the account identifier */
+/**
+ * AccountID is the account identifier
+ * @name AccountID
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.AccountID
+ */
 export interface AccountID {
   scope: string;
   xid: string;
@@ -108,24 +113,46 @@ export interface AccountIDProtoMsg {
   typeUrl: "/akash.escrow.v1beta2.AccountID";
   value: Uint8Array;
 }
-/** AccountID is the account identifier */
+/**
+ * AccountID is the account identifier
+ * @name AccountIDSDKType
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.AccountID
+ */
 export interface AccountIDSDKType {
   scope: string;
   xid: string;
 }
-/** Account stores state for an escrow account */
+/**
+ * Account stores state for an escrow account
+ * @name Account
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.Account
+ */
 export interface Account {
-  /** unique identifier for this escrow account */
+  /**
+   * unique identifier for this escrow account
+   */
   id: AccountID;
-  /** bech32 encoded account address of the owner of this escrow account */
+  /**
+   * bech32 encoded account address of the owner of this escrow account
+   */
   owner: string;
-  /** current state of this escrow account */
+  /**
+   * current state of this escrow account
+   */
   state: Account_State;
-  /** unspent coins received from the owner's wallet */
+  /**
+   * unspent coins received from the owner's wallet
+   */
   balance: DecCoin;
-  /** total coins spent by this account */
+  /**
+   * total coins spent by this account
+   */
   transferred: DecCoin;
-  /** block height at which this account was last settled */
+  /**
+   * block height at which this account was last settled
+   */
   settledAt: bigint;
   /**
    * bech32 encoded account address of the depositor.
@@ -143,7 +170,12 @@ export interface AccountProtoMsg {
   typeUrl: "/akash.escrow.v1beta2.Account";
   value: Uint8Array;
 }
-/** Account stores state for an escrow account */
+/**
+ * Account stores state for an escrow account
+ * @name AccountSDKType
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.Account
+ */
 export interface AccountSDKType {
   id: AccountIDSDKType;
   owner: string;
@@ -154,7 +186,12 @@ export interface AccountSDKType {
   depositor: string;
   funds: DecCoinSDKType;
 }
-/** Payment stores state for a payment */
+/**
+ * Payment stores state for a payment
+ * @name FractionalPayment
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.FractionalPayment
+ */
 export interface FractionalPayment {
   accountId: AccountID;
   paymentId: string;
@@ -168,7 +205,12 @@ export interface FractionalPaymentProtoMsg {
   typeUrl: "/akash.escrow.v1beta2.FractionalPayment";
   value: Uint8Array;
 }
-/** Payment stores state for a payment */
+/**
+ * Payment stores state for a payment
+ * @name FractionalPaymentSDKType
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.FractionalPayment
+ */
 export interface FractionalPaymentSDKType {
   account_id: AccountIDSDKType;
   payment_id: string;
@@ -184,6 +226,12 @@ function createBaseAccountID(): AccountID {
     xid: ""
   };
 }
+/**
+ * AccountID is the account identifier
+ * @name AccountID
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.AccountID
+ */
 export const AccountID = {
   typeUrl: "/akash.escrow.v1beta2.AccountID",
   encode(message: AccountID, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -301,6 +349,12 @@ function createBaseAccount(): Account {
     funds: DecCoin.fromPartial({})
   };
 }
+/**
+ * Account stores state for an escrow account
+ * @name Account
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.Account
+ */
 export const Account = {
   typeUrl: "/akash.escrow.v1beta2.Account",
   encode(message: Account, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -513,6 +567,12 @@ function createBaseFractionalPayment(): FractionalPayment {
     withdrawn: Coin.fromPartial({})
   };
 }
+/**
+ * Payment stores state for a payment
+ * @name FractionalPayment
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.FractionalPayment
+ */
 export const FractionalPayment = {
   typeUrl: "/akash.escrow.v1beta2.FractionalPayment",
   encode(message: FractionalPayment, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

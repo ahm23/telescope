@@ -4,36 +4,66 @@ import { GlobalDecoderRegistry } from "../../../registry";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "evmos.erc20.v1";
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.GenesisState
+ */
 export interface GenesisState {
-  /** module parameters */
+  /**
+   * module parameters
+   */
   params: Params;
-  /** registered token pairs */
+  /**
+   * registered token pairs
+   */
   tokenPairs: TokenPair[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/evmos.erc20.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisStateAmino
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** module parameters */
+  /**
+   * module parameters
+   */
   params?: ParamsAmino;
-  /** registered token pairs */
+  /**
+   * registered token pairs
+   */
   token_pairs?: TokenPairAmino[];
 }
 export interface GenesisStateAminoMsg {
   type: "/evmos.erc20.v1.GenesisState";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisStateSDKType
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   token_pairs: TokenPairSDKType[];
 }
-/** Params defines the erc20 module params */
+/**
+ * Params defines the erc20 module params
+ * @name Params
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.Params
+ */
 export interface Params {
-  /** parameter to enable the conversion of Cosmos coins <--> ERC20 tokens. */
+  /**
+   * parameter to enable the conversion of Cosmos coins <--> ERC20 tokens.
+   */
   enableErc20: boolean;
   /**
    * parameter to enable the EVM hook that converts an ERC20 token to a Cosmos
@@ -46,9 +76,16 @@ export interface ParamsProtoMsg {
   typeUrl: "/evmos.erc20.v1.Params";
   value: Uint8Array;
 }
-/** Params defines the erc20 module params */
+/**
+ * Params defines the erc20 module params
+ * @name ParamsAmino
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.Params
+ */
 export interface ParamsAmino {
-  /** parameter to enable the conversion of Cosmos coins <--> ERC20 tokens. */
+  /**
+   * parameter to enable the conversion of Cosmos coins <--> ERC20 tokens.
+   */
   enable_erc20?: boolean;
   /**
    * parameter to enable the EVM hook that converts an ERC20 token to a Cosmos
@@ -61,7 +98,12 @@ export interface ParamsAminoMsg {
   type: "/evmos.erc20.v1.Params";
   value: ParamsAmino;
 }
-/** Params defines the erc20 module params */
+/**
+ * Params defines the erc20 module params
+ * @name ParamsSDKType
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.Params
+ */
 export interface ParamsSDKType {
   enable_erc20: boolean;
   enable_evm_hook: boolean;
@@ -72,6 +114,12 @@ function createBaseGenesisState(): GenesisState {
     tokenPairs: []
   };
 }
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/evmos.erc20.v1.GenesisState",
   is(o: any): o is GenesisState {
@@ -205,6 +253,12 @@ function createBaseParams(): Params {
     enableEvmHook: false
   };
 }
+/**
+ * Params defines the erc20 module params
+ * @name Params
+ * @package evmos.erc20.v1
+ * @see proto type: evmos.erc20.v1.Params
+ */
 export const Params = {
   typeUrl: "/evmos.erc20.v1.Params",
   is(o: any): o is Params {

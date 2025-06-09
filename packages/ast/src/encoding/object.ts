@@ -12,7 +12,7 @@ import { fromSDKMethod } from './proto/from-sdk';
 import { ProtoParseContext } from './context';
 import { createAminoTypeProperty, createTypeUrlProperty, fromProtoMsgMethod, fromSDKJSONMethod, registerTypeUrlMethod, toProtoMethod, toProtoMsgMethod } from './proto';
 import { isMethod } from './proto/is';
-import { getAminoFieldName, getSdkFieldName } from '../utils';
+import { CommentBlockBuilder, getAminoFieldName, getSdkFieldName } from '../utils';
 import { getAminoTypeName, getTypeUrl } from '@cosmology/utils';
 
 export const createObjectWithMethods = (
@@ -20,6 +20,7 @@ export const createObjectWithMethods = (
     name: string,
     proto: ProtoType
 ) => {
+    const isVNext = context.pluginValue('env') === 'v-next';
     const methodsAndProps = [
         ( context.pluginValue('prototypes.addTypeUrlToObjects') || context.pluginValue('interfaces.enabled') && context.pluginValue('interfaces.useGlobalDecoderRegistry') ) && createTypeUrlProperty(context, proto),
         ( context.pluginValue('prototypes.addAminoTypeToObjects') || context.pluginValue('interfaces.enabled') && context.pluginValue('interfaces.useGlobalDecoderRegistry') ) && createAminoTypeProperty(context, proto),
@@ -44,7 +45,7 @@ export const createObjectWithMethods = (
         context.pluginValue('interfaces.enabled') && context.pluginValue('interfaces.useGlobalDecoderRegistry') && context.pluginValue('helperFunctions.enabled') && context.pluginValue('helperFunctions.useGlobalDecoderRegistry') && registerTypeUrlMethod({context, name, proto}),
     ].filter(Boolean);
 
-    return t.exportNamedDeclaration(
+    const declaration = t.exportNamedDeclaration(
         t.variableDeclaration('const',
             [
                 t.variableDeclarator(
@@ -56,4 +57,20 @@ export const createObjectWithMethods = (
             ]
         )
     )
+
+    if (isVNext) {
+        const commentBlock = new CommentBlockBuilder()
+        .addLine(proto.comment)
+        .addLine(`@name ${name}`)
+        .addLine(`@package ${context.ref.proto.package}`)
+        .addLine(`@see proto type: ${context.ref.proto.package}.${proto.originalName ?? proto.name}`)
+        .addLine(proto.options?.deprecated ? '@deprecated' : null)
+        .build();
+
+        if (commentBlock) {
+            declaration.leadingComments = [commentBlock];
+        }
+    }
+
+    return declaration;
 };

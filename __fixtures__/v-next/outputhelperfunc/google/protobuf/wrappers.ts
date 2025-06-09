@@ -6,9 +6,14 @@ export const protobufPackage = "google.protobuf";
  * Wrapper message for `double`.
  * 
  * The JSON representation for `DoubleValue` is JSON number.
+ * @name DoubleValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.DoubleValue
  */
 export interface DoubleValue {
-  /** The double value. */
+  /**
+   * The double value.
+   */
   value: number;
 }
 export interface DoubleValueProtoMsg {
@@ -19,9 +24,14 @@ export interface DoubleValueProtoMsg {
  * Wrapper message for `double`.
  * 
  * The JSON representation for `DoubleValue` is JSON number.
+ * @name DoubleValueAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.DoubleValue
  */
 export interface DoubleValueAmino {
-  /** The double value. */
+  /**
+   * The double value.
+   */
   value?: number;
 }
 export interface DoubleValueAminoMsg {
@@ -32,6 +42,9 @@ export interface DoubleValueAminoMsg {
  * Wrapper message for `double`.
  * 
  * The JSON representation for `DoubleValue` is JSON number.
+ * @name DoubleValueSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.DoubleValue
  */
 export interface DoubleValueSDKType {
   value: number;
@@ -40,9 +53,14 @@ export interface DoubleValueSDKType {
  * Wrapper message for `float`.
  * 
  * The JSON representation for `FloatValue` is JSON number.
+ * @name FloatValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.FloatValue
  */
 export interface FloatValue {
-  /** The float value. */
+  /**
+   * The float value.
+   */
   value: number;
 }
 export interface FloatValueProtoMsg {
@@ -53,9 +71,14 @@ export interface FloatValueProtoMsg {
  * Wrapper message for `float`.
  * 
  * The JSON representation for `FloatValue` is JSON number.
+ * @name FloatValueAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.FloatValue
  */
 export interface FloatValueAmino {
-  /** The float value. */
+  /**
+   * The float value.
+   */
   value?: number;
 }
 export interface FloatValueAminoMsg {
@@ -66,6 +89,9 @@ export interface FloatValueAminoMsg {
  * Wrapper message for `float`.
  * 
  * The JSON representation for `FloatValue` is JSON number.
+ * @name FloatValueSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.FloatValue
  */
 export interface FloatValueSDKType {
   value: number;
@@ -74,9 +100,14 @@ export interface FloatValueSDKType {
  * Wrapper message for `int64`.
  * 
  * The JSON representation for `Int64Value` is JSON string.
+ * @name Int64Value
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Int64Value
  */
 export interface Int64Value {
-  /** The int64 value. */
+  /**
+   * The int64 value.
+   */
   value: bigint;
 }
 export interface Int64ValueProtoMsg {
@@ -87,9 +118,14 @@ export interface Int64ValueProtoMsg {
  * Wrapper message for `int64`.
  * 
  * The JSON representation for `Int64Value` is JSON string.
+ * @name Int64ValueAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Int64Value
  */
 export interface Int64ValueAmino {
-  /** The int64 value. */
+  /**
+   * The int64 value.
+   */
   value?: string;
 }
 export interface Int64ValueAminoMsg {
@@ -100,6 +136,9 @@ export interface Int64ValueAminoMsg {
  * Wrapper message for `int64`.
  * 
  * The JSON representation for `Int64Value` is JSON string.
+ * @name Int64ValueSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Int64Value
  */
 export interface Int64ValueSDKType {
   value: bigint;
@@ -108,9 +147,14 @@ export interface Int64ValueSDKType {
  * Wrapper message for `uint64`.
  * 
  * The JSON representation for `UInt64Value` is JSON string.
+ * @name UInt64Value
+ * @package google.protobuf
+ * @see proto type: google.protobuf.UInt64Value
  */
 export interface UInt64Value {
-  /** The uint64 value. */
+  /**
+   * The uint64 value.
+   */
   value: bigint;
 }
 export interface UInt64ValueProtoMsg {
@@ -121,9 +165,14 @@ export interface UInt64ValueProtoMsg {
  * Wrapper message for `uint64`.
  * 
  * The JSON representation for `UInt64Value` is JSON string.
+ * @name UInt64ValueAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.UInt64Value
  */
 export interface UInt64ValueAmino {
-  /** The uint64 value. */
+  /**
+   * The uint64 value.
+   */
   value?: string;
 }
 export interface UInt64ValueAminoMsg {
@@ -134,6 +183,9 @@ export interface UInt64ValueAminoMsg {
  * Wrapper message for `uint64`.
  * 
  * The JSON representation for `UInt64Value` is JSON string.
+ * @name UInt64ValueSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.UInt64Value
  */
 export interface UInt64ValueSDKType {
   value: bigint;
@@ -142,9 +194,14 @@ export interface UInt64ValueSDKType {
  * Wrapper message for `int32`.
  * 
  * The JSON representation for `Int32Value` is JSON number.
+ * @name Int32Value
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Int32Value
  */
 export interface Int32Value {
-  /** The int32 value. */
+  /**
+   * The int32 value.
+   */
   value: number;
 }
 export interface Int32ValueProtoMsg {
@@ -155,9 +212,14 @@ export interface Int32ValueProtoMsg {
  * Wrapper message for `int32`.
  * 
  * The JSON representation for `Int32Value` is JSON number.
+ * @name Int32ValueAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Int32Value
  */
 export interface Int32ValueAmino {
-  /** The int32 value. */
+  /**
+   * The int32 value.
+   */
   value?: number;
 }
 export interface Int32ValueAminoMsg {
@@ -168,6 +230,9 @@ export interface Int32ValueAminoMsg {
  * Wrapper message for `int32`.
  * 
  * The JSON representation for `Int32Value` is JSON number.
+ * @name Int32ValueSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Int32Value
  */
 export interface Int32ValueSDKType {
   value: number;
@@ -176,9 +241,14 @@ export interface Int32ValueSDKType {
  * Wrapper message for `uint32`.
  * 
  * The JSON representation for `UInt32Value` is JSON number.
+ * @name UInt32Value
+ * @package google.protobuf
+ * @see proto type: google.protobuf.UInt32Value
  */
 export interface UInt32Value {
-  /** The uint32 value. */
+  /**
+   * The uint32 value.
+   */
   value: number;
 }
 export interface UInt32ValueProtoMsg {
@@ -189,9 +259,14 @@ export interface UInt32ValueProtoMsg {
  * Wrapper message for `uint32`.
  * 
  * The JSON representation for `UInt32Value` is JSON number.
+ * @name UInt32ValueAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.UInt32Value
  */
 export interface UInt32ValueAmino {
-  /** The uint32 value. */
+  /**
+   * The uint32 value.
+   */
   value?: number;
 }
 export interface UInt32ValueAminoMsg {
@@ -202,6 +277,9 @@ export interface UInt32ValueAminoMsg {
  * Wrapper message for `uint32`.
  * 
  * The JSON representation for `UInt32Value` is JSON number.
+ * @name UInt32ValueSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.UInt32Value
  */
 export interface UInt32ValueSDKType {
   value: number;
@@ -210,9 +288,14 @@ export interface UInt32ValueSDKType {
  * Wrapper message for `bool`.
  * 
  * The JSON representation for `BoolValue` is JSON `true` and `false`.
+ * @name BoolValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.BoolValue
  */
 export interface BoolValue {
-  /** The bool value. */
+  /**
+   * The bool value.
+   */
   value: boolean;
 }
 export interface BoolValueProtoMsg {
@@ -223,9 +306,14 @@ export interface BoolValueProtoMsg {
  * Wrapper message for `bool`.
  * 
  * The JSON representation for `BoolValue` is JSON `true` and `false`.
+ * @name BoolValueAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.BoolValue
  */
 export interface BoolValueAmino {
-  /** The bool value. */
+  /**
+   * The bool value.
+   */
   value?: boolean;
 }
 export interface BoolValueAminoMsg {
@@ -236,6 +324,9 @@ export interface BoolValueAminoMsg {
  * Wrapper message for `bool`.
  * 
  * The JSON representation for `BoolValue` is JSON `true` and `false`.
+ * @name BoolValueSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.BoolValue
  */
 export interface BoolValueSDKType {
   value: boolean;
@@ -244,9 +335,14 @@ export interface BoolValueSDKType {
  * Wrapper message for `string`.
  * 
  * The JSON representation for `StringValue` is JSON string.
+ * @name StringValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.StringValue
  */
 export interface StringValue {
-  /** The string value. */
+  /**
+   * The string value.
+   */
   value: string;
 }
 export interface StringValueProtoMsg {
@@ -257,9 +353,14 @@ export interface StringValueProtoMsg {
  * Wrapper message for `string`.
  * 
  * The JSON representation for `StringValue` is JSON string.
+ * @name StringValueAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.StringValue
  */
 export interface StringValueAmino {
-  /** The string value. */
+  /**
+   * The string value.
+   */
   value?: string;
 }
 export interface StringValueAminoMsg {
@@ -270,6 +371,9 @@ export interface StringValueAminoMsg {
  * Wrapper message for `string`.
  * 
  * The JSON representation for `StringValue` is JSON string.
+ * @name StringValueSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.StringValue
  */
 export interface StringValueSDKType {
   value: string;
@@ -278,9 +382,14 @@ export interface StringValueSDKType {
  * Wrapper message for `bytes`.
  * 
  * The JSON representation for `BytesValue` is JSON string.
+ * @name BytesValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.BytesValue
  */
 export interface BytesValue {
-  /** The bytes value. */
+  /**
+   * The bytes value.
+   */
   value: Uint8Array;
 }
 export interface BytesValueProtoMsg {
@@ -291,9 +400,14 @@ export interface BytesValueProtoMsg {
  * Wrapper message for `bytes`.
  * 
  * The JSON representation for `BytesValue` is JSON string.
+ * @name BytesValueAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.BytesValue
  */
 export interface BytesValueAmino {
-  /** The bytes value. */
+  /**
+   * The bytes value.
+   */
   value?: string;
 }
 export interface BytesValueAminoMsg {
@@ -304,6 +418,9 @@ export interface BytesValueAminoMsg {
  * Wrapper message for `bytes`.
  * 
  * The JSON representation for `BytesValue` is JSON string.
+ * @name BytesValueSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.BytesValue
  */
 export interface BytesValueSDKType {
   value: Uint8Array;
@@ -313,6 +430,14 @@ function createBaseDoubleValue(): DoubleValue {
     value: 0
   };
 }
+/**
+ * Wrapper message for `double`.
+ * 
+ * The JSON representation for `DoubleValue` is JSON number.
+ * @name DoubleValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.DoubleValue
+ */
 export const DoubleValue = {
   typeUrl: "/google.protobuf.DoubleValue",
   is(o: any): o is DoubleValue {
@@ -411,6 +536,14 @@ function createBaseFloatValue(): FloatValue {
     value: 0
   };
 }
+/**
+ * Wrapper message for `float`.
+ * 
+ * The JSON representation for `FloatValue` is JSON number.
+ * @name FloatValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.FloatValue
+ */
 export const FloatValue = {
   typeUrl: "/google.protobuf.FloatValue",
   is(o: any): o is FloatValue {
@@ -509,6 +642,14 @@ function createBaseInt64Value(): Int64Value {
     value: BigInt(0)
   };
 }
+/**
+ * Wrapper message for `int64`.
+ * 
+ * The JSON representation for `Int64Value` is JSON string.
+ * @name Int64Value
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Int64Value
+ */
 export const Int64Value = {
   typeUrl: "/google.protobuf.Int64Value",
   is(o: any): o is Int64Value {
@@ -609,6 +750,14 @@ function createBaseUInt64Value(): UInt64Value {
     value: BigInt(0)
   };
 }
+/**
+ * Wrapper message for `uint64`.
+ * 
+ * The JSON representation for `UInt64Value` is JSON string.
+ * @name UInt64Value
+ * @package google.protobuf
+ * @see proto type: google.protobuf.UInt64Value
+ */
 export const UInt64Value = {
   typeUrl: "/google.protobuf.UInt64Value",
   is(o: any): o is UInt64Value {
@@ -709,6 +858,14 @@ function createBaseInt32Value(): Int32Value {
     value: 0
   };
 }
+/**
+ * Wrapper message for `int32`.
+ * 
+ * The JSON representation for `Int32Value` is JSON number.
+ * @name Int32Value
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Int32Value
+ */
 export const Int32Value = {
   typeUrl: "/google.protobuf.Int32Value",
   is(o: any): o is Int32Value {
@@ -807,6 +964,14 @@ function createBaseUInt32Value(): UInt32Value {
     value: 0
   };
 }
+/**
+ * Wrapper message for `uint32`.
+ * 
+ * The JSON representation for `UInt32Value` is JSON number.
+ * @name UInt32Value
+ * @package google.protobuf
+ * @see proto type: google.protobuf.UInt32Value
+ */
 export const UInt32Value = {
   typeUrl: "/google.protobuf.UInt32Value",
   is(o: any): o is UInt32Value {
@@ -905,6 +1070,14 @@ function createBaseBoolValue(): BoolValue {
     value: false
   };
 }
+/**
+ * Wrapper message for `bool`.
+ * 
+ * The JSON representation for `BoolValue` is JSON `true` and `false`.
+ * @name BoolValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.BoolValue
+ */
 export const BoolValue = {
   typeUrl: "/google.protobuf.BoolValue",
   is(o: any): o is BoolValue {
@@ -1003,6 +1176,14 @@ function createBaseStringValue(): StringValue {
     value: ""
   };
 }
+/**
+ * Wrapper message for `string`.
+ * 
+ * The JSON representation for `StringValue` is JSON string.
+ * @name StringValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.StringValue
+ */
 export const StringValue = {
   typeUrl: "/google.protobuf.StringValue",
   is(o: any): o is StringValue {
@@ -1101,6 +1282,14 @@ function createBaseBytesValue(): BytesValue {
     value: new Uint8Array()
   };
 }
+/**
+ * Wrapper message for `bytes`.
+ * 
+ * The JSON representation for `BytesValue` is JSON string.
+ * @name BytesValue
+ * @package google.protobuf
+ * @see proto type: google.protobuf.BytesValue
+ */
 export const BytesValue = {
   typeUrl: "/google.protobuf.BytesValue",
   is(o: any): o is BytesValue {

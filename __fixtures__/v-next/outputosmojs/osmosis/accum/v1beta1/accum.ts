@@ -4,6 +4,11 @@ import { Decimal } from "@cosmjs/math";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.accum.v1beta1";
+/**
+ * @name AccumulatorContent
+ * @package osmosis.accum.v1beta1
+ * @see proto type: osmosis.accum.v1beta1.AccumulatorContent
+ */
 export interface AccumulatorContent {
   accumValue: DecCoin[];
   totalShares: string;
@@ -12,16 +17,36 @@ export interface AccumulatorContentProtoMsg {
   typeUrl: "/osmosis.accum.v1beta1.AccumulatorContent";
   value: Uint8Array;
 }
+/**
+ * @name AccumulatorContentSDKType
+ * @package osmosis.accum.v1beta1
+ * @see proto type: osmosis.accum.v1beta1.AccumulatorContent
+ */
 export interface AccumulatorContentSDKType {
   accum_value: DecCoinSDKType[];
   total_shares: string;
 }
+/**
+ * @name Options
+ * @package osmosis.accum.v1beta1
+ * @see proto type: osmosis.accum.v1beta1.Options
+ */
 export interface Options {}
 export interface OptionsProtoMsg {
   typeUrl: "/osmosis.accum.v1beta1.Options";
   value: Uint8Array;
 }
+/**
+ * @name OptionsSDKType
+ * @package osmosis.accum.v1beta1
+ * @see proto type: osmosis.accum.v1beta1.Options
+ */
 export interface OptionsSDKType {}
+/**
+ * @name Record
+ * @package osmosis.accum.v1beta1
+ * @see proto type: osmosis.accum.v1beta1.Record
+ */
 export interface Record {
   numShares: string;
   initAccumValue: DecCoin[];
@@ -32,6 +57,11 @@ export interface RecordProtoMsg {
   typeUrl: "/osmosis.accum.v1beta1.Record";
   value: Uint8Array;
 }
+/**
+ * @name RecordSDKType
+ * @package osmosis.accum.v1beta1
+ * @see proto type: osmosis.accum.v1beta1.Record
+ */
 export interface RecordSDKType {
   num_shares: string;
   init_accum_value: DecCoinSDKType[];
@@ -44,6 +74,11 @@ function createBaseAccumulatorContent(): AccumulatorContent {
     totalShares: ""
   };
 }
+/**
+ * @name AccumulatorContent
+ * @package osmosis.accum.v1beta1
+ * @see proto type: osmosis.accum.v1beta1.AccumulatorContent
+ */
 export const AccumulatorContent = {
   typeUrl: "/osmosis.accum.v1beta1.AccumulatorContent",
   encode(message: AccumulatorContent, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -162,6 +197,11 @@ export const AccumulatorContent = {
 function createBaseOptions(): Options {
   return {};
 }
+/**
+ * @name Options
+ * @package osmosis.accum.v1beta1
+ * @see proto type: osmosis.accum.v1beta1.Options
+ */
 export const Options = {
   typeUrl: "/osmosis.accum.v1beta1.Options",
   encode(_: Options, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -240,6 +280,11 @@ function createBaseRecord(): Record {
     options: undefined
   };
 }
+/**
+ * @name Record
+ * @package osmosis.accum.v1beta1
+ * @see proto type: osmosis.accum.v1beta1.Record
+ */
 export const Record = {
   typeUrl: "/osmosis.accum.v1beta1.Record",
   encode(message: Record, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

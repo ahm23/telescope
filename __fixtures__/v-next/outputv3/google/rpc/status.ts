@@ -10,9 +10,14 @@ export const protobufPackage = "google.rpc";
  * 
  * You can find out more about this error model and how to work with it in the
  * [API Design Guide](https://cloud.google.com/apis/design/errors).
+ * @name Status
+ * @package google.rpc
+ * @see proto type: google.rpc.Status
  */
 export interface Status {
-  /** The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code]. */
+  /**
+   * The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code].
+   */
   code: number;
   /**
    * A developer-facing error message, which should be in English. Any
@@ -38,9 +43,14 @@ export interface StatusProtoMsg {
  * 
  * You can find out more about this error model and how to work with it in the
  * [API Design Guide](https://cloud.google.com/apis/design/errors).
+ * @name StatusAmino
+ * @package google.rpc
+ * @see proto type: google.rpc.Status
  */
 export interface StatusAmino {
-  /** The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code]. */
+  /**
+   * The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code].
+   */
   code?: number;
   /**
    * A developer-facing error message, which should be in English. Any
@@ -62,6 +72,9 @@ export interface StatusAmino {
  * 
  * You can find out more about this error model and how to work with it in the
  * [API Design Guide](https://cloud.google.com/apis/design/errors).
+ * @name StatusSDKType
+ * @package google.rpc
+ * @see proto type: google.rpc.Status
  */
 export interface StatusSDKType {
   code: number;
@@ -75,6 +88,18 @@ function createBaseStatus(): Status {
     details: []
   };
 }
+/**
+ * The `Status` type defines a logical error model that is suitable for
+ * different programming environments, including REST APIs and RPC APIs. It is
+ * used by [gRPC](https://github.com/grpc). Each `Status` message contains
+ * three pieces of data: error code, error message, and error details.
+ * 
+ * You can find out more about this error model and how to work with it in the
+ * [API Design Guide](https://cloud.google.com/apis/design/errors).
+ * @name Status
+ * @package google.rpc
+ * @see proto type: google.rpc.Status
+ */
 export const Status = {
   typeUrl: "/google.rpc.Status",
   encode(message: Status, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -2,41 +2,76 @@ import { Order, OrderSDKType, Counterparty, CounterpartyAmino, CounterpartySDKTy
 import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { DeepPartial } from "../../../../helpers";
 export const protobufPackage = "ibc.core.port.v1";
-/** QueryAppVersionRequest is the request type for the Query/AppVersion RPC method */
+/**
+ * QueryAppVersionRequest is the request type for the Query/AppVersion RPC method
+ * @name QueryAppVersionRequest
+ * @package ibc.core.port.v1
+ * @see proto type: ibc.core.port.v1.QueryAppVersionRequest
+ */
 export interface QueryAppVersionRequest {
-  /** port unique identifier */
+  /**
+   * port unique identifier
+   */
   portId: string;
-  /** connection unique identifier */
+  /**
+   * connection unique identifier
+   */
   connectionId: string;
-  /** whether the channel is ordered or unordered */
+  /**
+   * whether the channel is ordered or unordered
+   */
   ordering: Order;
-  /** counterparty channel end */
+  /**
+   * counterparty channel end
+   */
   counterparty?: Counterparty;
-  /** proposed version */
+  /**
+   * proposed version
+   */
   proposedVersion: string;
 }
 export interface QueryAppVersionRequestProtoMsg {
   typeUrl: "/ibc.core.port.v1.QueryAppVersionRequest";
   value: Uint8Array;
 }
-/** QueryAppVersionRequest is the request type for the Query/AppVersion RPC method */
+/**
+ * QueryAppVersionRequest is the request type for the Query/AppVersion RPC method
+ * @name QueryAppVersionRequestAmino
+ * @package ibc.core.port.v1
+ * @see proto type: ibc.core.port.v1.QueryAppVersionRequest
+ */
 export interface QueryAppVersionRequestAmino {
-  /** port unique identifier */
+  /**
+   * port unique identifier
+   */
   port_id?: string;
-  /** connection unique identifier */
+  /**
+   * connection unique identifier
+   */
   connection_id?: string;
-  /** whether the channel is ordered or unordered */
+  /**
+   * whether the channel is ordered or unordered
+   */
   ordering?: Order;
-  /** counterparty channel end */
+  /**
+   * counterparty channel end
+   */
   counterparty?: CounterpartyAmino;
-  /** proposed version */
+  /**
+   * proposed version
+   */
   proposed_version?: string;
 }
 export interface QueryAppVersionRequestAminoMsg {
   type: "cosmos-sdk/QueryAppVersionRequest";
   value: QueryAppVersionRequestAmino;
 }
-/** QueryAppVersionRequest is the request type for the Query/AppVersion RPC method */
+/**
+ * QueryAppVersionRequest is the request type for the Query/AppVersion RPC method
+ * @name QueryAppVersionRequestSDKType
+ * @package ibc.core.port.v1
+ * @see proto type: ibc.core.port.v1.QueryAppVersionRequest
+ */
 export interface QueryAppVersionRequestSDKType {
   port_id: string;
   connection_id: string;
@@ -44,29 +79,52 @@ export interface QueryAppVersionRequestSDKType {
   counterparty?: CounterpartySDKType;
   proposed_version: string;
 }
-/** QueryAppVersionResponse is the response type for the Query/AppVersion RPC method. */
+/**
+ * QueryAppVersionResponse is the response type for the Query/AppVersion RPC method.
+ * @name QueryAppVersionResponse
+ * @package ibc.core.port.v1
+ * @see proto type: ibc.core.port.v1.QueryAppVersionResponse
+ */
 export interface QueryAppVersionResponse {
-  /** port id associated with the request identifiers */
+  /**
+   * port id associated with the request identifiers
+   */
   portId: string;
-  /** supported app version */
+  /**
+   * supported app version
+   */
   version: string;
 }
 export interface QueryAppVersionResponseProtoMsg {
   typeUrl: "/ibc.core.port.v1.QueryAppVersionResponse";
   value: Uint8Array;
 }
-/** QueryAppVersionResponse is the response type for the Query/AppVersion RPC method. */
+/**
+ * QueryAppVersionResponse is the response type for the Query/AppVersion RPC method.
+ * @name QueryAppVersionResponseAmino
+ * @package ibc.core.port.v1
+ * @see proto type: ibc.core.port.v1.QueryAppVersionResponse
+ */
 export interface QueryAppVersionResponseAmino {
-  /** port id associated with the request identifiers */
+  /**
+   * port id associated with the request identifiers
+   */
   port_id?: string;
-  /** supported app version */
+  /**
+   * supported app version
+   */
   version?: string;
 }
 export interface QueryAppVersionResponseAminoMsg {
   type: "cosmos-sdk/QueryAppVersionResponse";
   value: QueryAppVersionResponseAmino;
 }
-/** QueryAppVersionResponse is the response type for the Query/AppVersion RPC method. */
+/**
+ * QueryAppVersionResponse is the response type for the Query/AppVersion RPC method.
+ * @name QueryAppVersionResponseSDKType
+ * @package ibc.core.port.v1
+ * @see proto type: ibc.core.port.v1.QueryAppVersionResponse
+ */
 export interface QueryAppVersionResponseSDKType {
   port_id: string;
   version: string;
@@ -80,6 +138,12 @@ function createBaseQueryAppVersionRequest(): QueryAppVersionRequest {
     proposedVersion: ""
   };
 }
+/**
+ * QueryAppVersionRequest is the request type for the Query/AppVersion RPC method
+ * @name QueryAppVersionRequest
+ * @package ibc.core.port.v1
+ * @see proto type: ibc.core.port.v1.QueryAppVersionRequest
+ */
 export const QueryAppVersionRequest = {
   typeUrl: "/ibc.core.port.v1.QueryAppVersionRequest",
   encode(message: QueryAppVersionRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -196,6 +260,12 @@ function createBaseQueryAppVersionResponse(): QueryAppVersionResponse {
     version: ""
   };
 }
+/**
+ * QueryAppVersionResponse is the response type for the Query/AppVersion RPC method.
+ * @name QueryAppVersionResponse
+ * @package ibc.core.port.v1
+ * @see proto type: ibc.core.port.v1.QueryAppVersionResponse
+ */
 export const QueryAppVersionResponse = {
   typeUrl: "/ibc.core.port.v1.QueryAppVersionResponse",
   encode(message: QueryAppVersionResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -2,7 +2,12 @@ import { BinaryReader, BinaryWriter } from "../../../../binary.js";
 import { isSet, bytesFromBase64, base64FromBytes, DeepPartial } from "../../../../helpers.js";
 import { JsonSafe } from "../../../../json-safe.js";
 export const protobufPackage = "cosmos.base.snapshots.v1beta1";
-/** Snapshot contains Tendermint state sync snapshot info. */
+/**
+ * Snapshot contains Tendermint state sync snapshot info.
+ * @name Snapshot
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.Snapshot
+ */
 export interface Snapshot {
   height: bigint;
   format: number;
@@ -14,7 +19,12 @@ export interface SnapshotProtoMsg {
   typeUrl: "/cosmos.base.snapshots.v1beta1.Snapshot";
   value: Uint8Array;
 }
-/** Snapshot contains Tendermint state sync snapshot info. */
+/**
+ * Snapshot contains Tendermint state sync snapshot info.
+ * @name SnapshotSDKType
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.Snapshot
+ */
 export interface SnapshotSDKType {
   height: bigint;
   format: number;
@@ -22,20 +32,37 @@ export interface SnapshotSDKType {
   hash: Uint8Array;
   metadata: MetadataSDKType;
 }
-/** Metadata contains SDK-specific snapshot metadata. */
+/**
+ * Metadata contains SDK-specific snapshot metadata.
+ * @name Metadata
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.Metadata
+ */
 export interface Metadata {
-  /** SHA-256 chunk hashes */
+  /**
+   * SHA-256 chunk hashes
+   */
   chunkHashes: Uint8Array[];
 }
 export interface MetadataProtoMsg {
   typeUrl: "/cosmos.base.snapshots.v1beta1.Metadata";
   value: Uint8Array;
 }
-/** Metadata contains SDK-specific snapshot metadata. */
+/**
+ * Metadata contains SDK-specific snapshot metadata.
+ * @name MetadataSDKType
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.Metadata
+ */
 export interface MetadataSDKType {
   chunk_hashes: Uint8Array[];
 }
-/** SnapshotItem is an item contained in a rootmulti.Store snapshot. */
+/**
+ * SnapshotItem is an item contained in a rootmulti.Store snapshot.
+ * @name SnapshotItem
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotItem
+ */
 export interface SnapshotItem {
   store?: SnapshotStoreItem;
   iavl?: SnapshotIAVLItem;
@@ -48,7 +75,12 @@ export interface SnapshotItemProtoMsg {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotItem";
   value: Uint8Array;
 }
-/** SnapshotItem is an item contained in a rootmulti.Store snapshot. */
+/**
+ * SnapshotItem is an item contained in a rootmulti.Store snapshot.
+ * @name SnapshotItemSDKType
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotItem
+ */
 export interface SnapshotItemSDKType {
   store?: SnapshotStoreItemSDKType;
   iavl?: SnapshotIAVLItemSDKType;
@@ -57,7 +89,12 @@ export interface SnapshotItemSDKType {
   kv?: SnapshotKVItemSDKType;
   schema?: SnapshotSchemaSDKType;
 }
-/** SnapshotStoreItem contains metadata about a snapshotted store. */
+/**
+ * SnapshotStoreItem contains metadata about a snapshotted store.
+ * @name SnapshotStoreItem
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotStoreItem
+ */
 export interface SnapshotStoreItem {
   name: string;
 }
@@ -65,31 +102,55 @@ export interface SnapshotStoreItemProtoMsg {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotStoreItem";
   value: Uint8Array;
 }
-/** SnapshotStoreItem contains metadata about a snapshotted store. */
+/**
+ * SnapshotStoreItem contains metadata about a snapshotted store.
+ * @name SnapshotStoreItemSDKType
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotStoreItem
+ */
 export interface SnapshotStoreItemSDKType {
   name: string;
 }
-/** SnapshotIAVLItem is an exported IAVL node. */
+/**
+ * SnapshotIAVLItem is an exported IAVL node.
+ * @name SnapshotIAVLItem
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotIAVLItem
+ */
 export interface SnapshotIAVLItem {
   key: Uint8Array;
   value: Uint8Array;
-  /** version is block height */
+  /**
+   * version is block height
+   */
   version: bigint;
-  /** height is depth of the tree. */
+  /**
+   * height is depth of the tree.
+   */
   height: number;
 }
 export interface SnapshotIAVLItemProtoMsg {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotIAVLItem";
   value: Uint8Array;
 }
-/** SnapshotIAVLItem is an exported IAVL node. */
+/**
+ * SnapshotIAVLItem is an exported IAVL node.
+ * @name SnapshotIAVLItemSDKType
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotIAVLItem
+ */
 export interface SnapshotIAVLItemSDKType {
   key: Uint8Array;
   value: Uint8Array;
   version: bigint;
   height: number;
 }
-/** SnapshotExtensionMeta contains metadata about an external snapshotter. */
+/**
+ * SnapshotExtensionMeta contains metadata about an external snapshotter.
+ * @name SnapshotExtensionMeta
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta
+ */
 export interface SnapshotExtensionMeta {
   name: string;
   format: number;
@@ -98,12 +159,22 @@ export interface SnapshotExtensionMetaProtoMsg {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta";
   value: Uint8Array;
 }
-/** SnapshotExtensionMeta contains metadata about an external snapshotter. */
+/**
+ * SnapshotExtensionMeta contains metadata about an external snapshotter.
+ * @name SnapshotExtensionMetaSDKType
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta
+ */
 export interface SnapshotExtensionMetaSDKType {
   name: string;
   format: number;
 }
-/** SnapshotExtensionPayload contains payloads of an external snapshotter. */
+/**
+ * SnapshotExtensionPayload contains payloads of an external snapshotter.
+ * @name SnapshotExtensionPayload
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotExtensionPayload
+ */
 export interface SnapshotExtensionPayload {
   payload: Uint8Array;
 }
@@ -111,11 +182,21 @@ export interface SnapshotExtensionPayloadProtoMsg {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotExtensionPayload";
   value: Uint8Array;
 }
-/** SnapshotExtensionPayload contains payloads of an external snapshotter. */
+/**
+ * SnapshotExtensionPayload contains payloads of an external snapshotter.
+ * @name SnapshotExtensionPayloadSDKType
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotExtensionPayload
+ */
 export interface SnapshotExtensionPayloadSDKType {
   payload: Uint8Array;
 }
-/** SnapshotKVItem is an exported Key/Value Pair */
+/**
+ * SnapshotKVItem is an exported Key/Value Pair
+ * @name SnapshotKVItem
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotKVItem
+ */
 export interface SnapshotKVItem {
   key: Uint8Array;
   value: Uint8Array;
@@ -124,12 +205,22 @@ export interface SnapshotKVItemProtoMsg {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotKVItem";
   value: Uint8Array;
 }
-/** SnapshotKVItem is an exported Key/Value Pair */
+/**
+ * SnapshotKVItem is an exported Key/Value Pair
+ * @name SnapshotKVItemSDKType
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotKVItem
+ */
 export interface SnapshotKVItemSDKType {
   key: Uint8Array;
   value: Uint8Array;
 }
-/** SnapshotSchema is an exported schema of smt store */
+/**
+ * SnapshotSchema is an exported schema of smt store
+ * @name SnapshotSchema
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotSchema
+ */
 export interface SnapshotSchema {
   keys: Uint8Array[];
 }
@@ -137,7 +228,12 @@ export interface SnapshotSchemaProtoMsg {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotSchema";
   value: Uint8Array;
 }
-/** SnapshotSchema is an exported schema of smt store */
+/**
+ * SnapshotSchema is an exported schema of smt store
+ * @name SnapshotSchemaSDKType
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotSchema
+ */
 export interface SnapshotSchemaSDKType {
   keys: Uint8Array[];
 }
@@ -150,6 +246,12 @@ function createBaseSnapshot(): Snapshot {
     metadata: Metadata.fromPartial({})
   };
 }
+/**
+ * Snapshot contains Tendermint state sync snapshot info.
+ * @name Snapshot
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.Snapshot
+ */
 export const Snapshot = {
   typeUrl: "/cosmos.base.snapshots.v1beta1.Snapshot",
   encode(message: Snapshot, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -312,6 +414,12 @@ function createBaseMetadata(): Metadata {
     chunkHashes: []
   };
 }
+/**
+ * Metadata contains SDK-specific snapshot metadata.
+ * @name Metadata
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.Metadata
+ */
 export const Metadata = {
   typeUrl: "/cosmos.base.snapshots.v1beta1.Metadata",
   encode(message: Metadata, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -421,6 +529,12 @@ function createBaseSnapshotItem(): SnapshotItem {
     schema: undefined
   };
 }
+/**
+ * SnapshotItem is an item contained in a rootmulti.Store snapshot.
+ * @name SnapshotItem
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotItem
+ */
 export const SnapshotItem = {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotItem",
   encode(message: SnapshotItem, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -607,6 +721,12 @@ function createBaseSnapshotStoreItem(): SnapshotStoreItem {
     name: ""
   };
 }
+/**
+ * SnapshotStoreItem contains metadata about a snapshotted store.
+ * @name SnapshotStoreItem
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotStoreItem
+ */
 export const SnapshotStoreItem = {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotStoreItem",
   encode(message: SnapshotStoreItem, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -704,6 +824,12 @@ function createBaseSnapshotIAVLItem(): SnapshotIAVLItem {
     height: 0
   };
 }
+/**
+ * SnapshotIAVLItem is an exported IAVL node.
+ * @name SnapshotIAVLItem
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotIAVLItem
+ */
 export const SnapshotIAVLItem = {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotIAVLItem",
   encode(message: SnapshotIAVLItem, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -849,6 +975,12 @@ function createBaseSnapshotExtensionMeta(): SnapshotExtensionMeta {
     format: 0
   };
 }
+/**
+ * SnapshotExtensionMeta contains metadata about an external snapshotter.
+ * @name SnapshotExtensionMeta
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta
+ */
 export const SnapshotExtensionMeta = {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta",
   encode(message: SnapshotExtensionMeta, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -959,6 +1091,12 @@ function createBaseSnapshotExtensionPayload(): SnapshotExtensionPayload {
     payload: new Uint8Array()
   };
 }
+/**
+ * SnapshotExtensionPayload contains payloads of an external snapshotter.
+ * @name SnapshotExtensionPayload
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotExtensionPayload
+ */
 export const SnapshotExtensionPayload = {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotExtensionPayload",
   encode(message: SnapshotExtensionPayload, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1054,6 +1192,12 @@ function createBaseSnapshotKVItem(): SnapshotKVItem {
     value: new Uint8Array()
   };
 }
+/**
+ * SnapshotKVItem is an exported Key/Value Pair
+ * @name SnapshotKVItem
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotKVItem
+ */
 export const SnapshotKVItem = {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotKVItem",
   encode(message: SnapshotKVItem, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1164,6 +1308,12 @@ function createBaseSnapshotSchema(): SnapshotSchema {
     keys: []
   };
 }
+/**
+ * SnapshotSchema is an exported schema of smt store
+ * @name SnapshotSchema
+ * @package cosmos.base.snapshots.v1beta1
+ * @see proto type: cosmos.base.snapshots.v1beta1.SnapshotSchema
+ */
 export const SnapshotSchema = {
   typeUrl: "/cosmos.base.snapshots.v1beta1.SnapshotSchema",
   encode(message: SnapshotSchema, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

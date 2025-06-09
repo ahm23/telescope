@@ -142,6 +142,9 @@ export function resourceDescriptor_StyleToJSON(object: ResourceDescriptor_Style)
  *       pattern: "folders/{folder}/logs/{log}"
  *       pattern: "organizations/{organization}/logs/{log}"
  *       pattern: "billingAccounts/{billing_account}/logs/{log}"
+ * @name ResourceDescriptor
+ * @package google.api
+ * @see proto type: google.api.ResourceDescriptor
  */
 export interface ResourceDescriptor {
   /**
@@ -278,6 +281,9 @@ export interface ResourceDescriptorProtoMsg {
  *       pattern: "folders/{folder}/logs/{log}"
  *       pattern: "organizations/{organization}/logs/{log}"
  *       pattern: "billingAccounts/{billing_account}/logs/{log}"
+ * @name ResourceDescriptorAmino
+ * @package google.api
+ * @see proto type: google.api.ResourceDescriptor
  */
 export interface ResourceDescriptorAmino {
   /**
@@ -369,6 +375,9 @@ export interface ResourceDescriptorAminoMsg {
 /**
  * Defines a proto annotation that describes a string field that refers to
  * an API resource.
+ * @name ResourceReference
+ * @package google.api
+ * @see proto type: google.api.ResourceReference
  */
 export interface ResourceReference {
   /**
@@ -416,6 +425,9 @@ export interface ResourceReferenceProtoMsg {
 /**
  * Defines a proto annotation that describes a string field that refers to
  * an API resource.
+ * @name ResourceReferenceAmino
+ * @package google.api
+ * @see proto type: google.api.ResourceReference
  */
 export interface ResourceReferenceAmino {
   /**
@@ -471,6 +483,58 @@ function createBaseResourceDescriptor(): ResourceDescriptor {
     style: []
   };
 }
+/**
+ * A simple descriptor of a resource type.
+ * 
+ * ResourceDescriptor annotates a resource message (either by means of a
+ * protobuf annotation or use in the service config), and associates the
+ * resource's schema, the resource type, and the pattern of the resource name.
+ * 
+ * Example:
+ * 
+ *     message Topic {
+ *       // Indicates this message defines a resource schema.
+ *       // Declares the resource type in the format of {service}/{kind}.
+ *       // For Kubernetes resources, the format is {api group}/{kind}.
+ *       option (google.api.resource) = {
+ *         type: "pubsub.googleapis.com/Topic"
+ *         pattern: "projects/{project}/topics/{topic}"
+ *       };
+ *     }
+ * 
+ * The ResourceDescriptor Yaml config will look like:
+ * 
+ *     resources:
+ *     - type: "pubsub.googleapis.com/Topic"
+ *       pattern: "projects/{project}/topics/{topic}"
+ * 
+ * Sometimes, resources have multiple patterns, typically because they can
+ * live under multiple parents.
+ * 
+ * Example:
+ * 
+ *     message LogEntry {
+ *       option (google.api.resource) = {
+ *         type: "logging.googleapis.com/LogEntry"
+ *         pattern: "projects/{project}/logs/{log}"
+ *         pattern: "folders/{folder}/logs/{log}"
+ *         pattern: "organizations/{organization}/logs/{log}"
+ *         pattern: "billingAccounts/{billing_account}/logs/{log}"
+ *       };
+ *     }
+ * 
+ * The ResourceDescriptor Yaml config will look like:
+ * 
+ *     resources:
+ *     - type: 'logging.googleapis.com/LogEntry'
+ *       pattern: "projects/{project}/logs/{log}"
+ *       pattern: "folders/{folder}/logs/{log}"
+ *       pattern: "organizations/{organization}/logs/{log}"
+ *       pattern: "billingAccounts/{billing_account}/logs/{log}"
+ * @name ResourceDescriptor
+ * @package google.api
+ * @see proto type: google.api.ResourceDescriptor
+ */
 export const ResourceDescriptor = {
   typeUrl: "/google.api.ResourceDescriptor",
   encode(message: ResourceDescriptor, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -614,6 +678,13 @@ function createBaseResourceReference(): ResourceReference {
     childType: ""
   };
 }
+/**
+ * Defines a proto annotation that describes a string field that refers to
+ * an API resource.
+ * @name ResourceReference
+ * @package google.api
+ * @see proto type: google.api.ResourceReference
+ */
 export const ResourceReference = {
   typeUrl: "/google.api.ResourceReference",
   encode(message: ResourceReference, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

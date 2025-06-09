@@ -2,6 +2,11 @@ import { Duration, DurationAmino, DurationSDKType } from "../../../google/protob
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 export const protobufPackage = "osmosis.poolincentives.v1beta1";
+/**
+ * @name Params
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.Params
+ */
 export interface Params {
   /**
    * minted_denom is the denomination of the coin expected to be minted by the
@@ -15,6 +20,11 @@ export interface ParamsProtoMsg {
   typeUrl: "/osmosis.poolincentives.v1beta1.Params";
   value: Uint8Array;
 }
+/**
+ * @name ParamsAmino
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.Params
+ */
 export interface ParamsAmino {
   /**
    * minted_denom is the denomination of the coin expected to be minted by the
@@ -24,9 +34,19 @@ export interface ParamsAmino {
    */
   minted_denom?: string;
 }
+/**
+ * @name ParamsSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.Params
+ */
 export interface ParamsSDKType {
   minted_denom: string;
 }
+/**
+ * @name LockableDurationsInfo
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.LockableDurationsInfo
+ */
 export interface LockableDurationsInfo {
   lockableDurations: Duration[];
 }
@@ -34,12 +54,27 @@ export interface LockableDurationsInfoProtoMsg {
   typeUrl: "/osmosis.poolincentives.v1beta1.LockableDurationsInfo";
   value: Uint8Array;
 }
+/**
+ * @name LockableDurationsInfoAmino
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.LockableDurationsInfo
+ */
 export interface LockableDurationsInfoAmino {
   lockable_durations?: DurationAmino[];
 }
+/**
+ * @name LockableDurationsInfoSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.LockableDurationsInfo
+ */
 export interface LockableDurationsInfoSDKType {
   lockable_durations: DurationSDKType[];
 }
+/**
+ * @name DistrInfo
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrInfo
+ */
 export interface DistrInfo {
   totalWeight: string;
   records: DistrRecord[];
@@ -48,14 +83,29 @@ export interface DistrInfoProtoMsg {
   typeUrl: "/osmosis.poolincentives.v1beta1.DistrInfo";
   value: Uint8Array;
 }
+/**
+ * @name DistrInfoAmino
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrInfo
+ */
 export interface DistrInfoAmino {
   total_weight?: string;
   records?: DistrRecordAmino[];
 }
+/**
+ * @name DistrInfoSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrInfo
+ */
 export interface DistrInfoSDKType {
   total_weight: string;
   records: DistrRecordSDKType[];
 }
+/**
+ * @name DistrRecord
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrRecord
+ */
 export interface DistrRecord {
   gaugeId: bigint;
   weight: string;
@@ -64,14 +114,29 @@ export interface DistrRecordProtoMsg {
   typeUrl: "/osmosis.poolincentives.v1beta1.DistrRecord";
   value: Uint8Array;
 }
+/**
+ * @name DistrRecordAmino
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrRecord
+ */
 export interface DistrRecordAmino {
   gauge_id?: string;
   weight?: string;
 }
+/**
+ * @name DistrRecordSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrRecord
+ */
 export interface DistrRecordSDKType {
   gauge_id: bigint;
   weight: string;
 }
+/**
+ * @name PoolToGauge
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauge
+ */
 export interface PoolToGauge {
   poolId: bigint;
   gaugeId: bigint;
@@ -81,16 +146,31 @@ export interface PoolToGaugeProtoMsg {
   typeUrl: "/osmosis.poolincentives.v1beta1.PoolToGauge";
   value: Uint8Array;
 }
+/**
+ * @name PoolToGaugeAmino
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauge
+ */
 export interface PoolToGaugeAmino {
   pool_id?: string;
   gauge_id?: string;
   duration?: DurationAmino;
 }
+/**
+ * @name PoolToGaugeSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauge
+ */
 export interface PoolToGaugeSDKType {
   pool_id: bigint;
   gauge_id: bigint;
   duration: DurationSDKType;
 }
+/**
+ * @name PoolToGauges
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauges
+ */
 export interface PoolToGauges {
   poolToGauge: PoolToGauge[];
 }
@@ -98,9 +178,19 @@ export interface PoolToGaugesProtoMsg {
   typeUrl: "/osmosis.poolincentives.v1beta1.PoolToGauges";
   value: Uint8Array;
 }
+/**
+ * @name PoolToGaugesAmino
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauges
+ */
 export interface PoolToGaugesAmino {
   pool_to_gauge?: PoolToGaugeAmino[];
 }
+/**
+ * @name PoolToGaugesSDKType
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauges
+ */
 export interface PoolToGaugesSDKType {
   pool_to_gauge: PoolToGaugeSDKType[];
 }
@@ -109,6 +199,11 @@ function createBaseParams(): Params {
     mintedDenom: ""
   };
 }
+/**
+ * @name Params
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.poolincentives.v1beta1.Params",
   aminoType: "osmosis/poolincentives/params",
@@ -185,6 +280,11 @@ function createBaseLockableDurationsInfo(): LockableDurationsInfo {
     lockableDurations: []
   };
 }
+/**
+ * @name LockableDurationsInfo
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.LockableDurationsInfo
+ */
 export const LockableDurationsInfo = {
   typeUrl: "/osmosis.poolincentives.v1beta1.LockableDurationsInfo",
   aminoType: "osmosis/poolincentives/lockable-durations-info",
@@ -268,6 +368,11 @@ function createBaseDistrInfo(): DistrInfo {
     records: []
   };
 }
+/**
+ * @name DistrInfo
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrInfo
+ */
 export const DistrInfo = {
   typeUrl: "/osmosis.poolincentives.v1beta1.DistrInfo",
   aminoType: "osmosis/poolincentives/distr-info",
@@ -365,6 +470,11 @@ function createBaseDistrRecord(): DistrRecord {
     weight: ""
   };
 }
+/**
+ * @name DistrRecord
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.DistrRecord
+ */
 export const DistrRecord = {
   typeUrl: "/osmosis.poolincentives.v1beta1.DistrRecord",
   aminoType: "osmosis/poolincentives/distr-record",
@@ -459,6 +569,11 @@ function createBasePoolToGauge(): PoolToGauge {
     duration: Duration.fromPartial({})
   };
 }
+/**
+ * @name PoolToGauge
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauge
+ */
 export const PoolToGauge = {
   typeUrl: "/osmosis.poolincentives.v1beta1.PoolToGauge",
   aminoType: "osmosis/poolincentives/pool-to-gauge",
@@ -569,6 +684,11 @@ function createBasePoolToGauges(): PoolToGauges {
     poolToGauge: []
   };
 }
+/**
+ * @name PoolToGauges
+ * @package osmosis.poolincentives.v1beta1
+ * @see proto type: osmosis.poolincentives.v1beta1.PoolToGauges
+ */
 export const PoolToGauges = {
   typeUrl: "/osmosis.poolincentives.v1beta1.PoolToGauges",
   aminoType: "osmosis/poolincentives/pool-to-gauges",

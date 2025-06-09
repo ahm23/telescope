@@ -25,6 +25,9 @@ export const protobufPackage = "google.api";
  * 
  * Here, all methods are publicly visible except for the restricted methods
  * EnhancedSearch and Delegate.
+ * @name Visibility
+ * @package google.api
+ * @see proto type: google.api.Visibility
  */
 export interface Visibility {
   /**
@@ -61,6 +64,9 @@ export interface VisibilityProtoMsg {
  * 
  * Here, all methods are publicly visible except for the restricted methods
  * EnhancedSearch and Delegate.
+ * @name VisibilityAmino
+ * @package google.api
+ * @see proto type: google.api.Visibility
  */
 export interface VisibilityAmino {
   /**
@@ -97,6 +103,9 @@ export interface VisibilityAminoMsg {
  * 
  * Here, all methods are publicly visible except for the restricted methods
  * EnhancedSearch and Delegate.
+ * @name VisibilitySDKType
+ * @package google.api
+ * @see proto type: google.api.Visibility
  */
 export interface VisibilitySDKType {
   rules: VisibilityRuleSDKType[];
@@ -104,6 +113,9 @@ export interface VisibilitySDKType {
 /**
  * A visibility rule provides visibility configuration for an individual API
  * element.
+ * @name VisibilityRule
+ * @package google.api
+ * @see proto type: google.api.VisibilityRule
  */
 export interface VisibilityRule {
   /**
@@ -138,6 +150,9 @@ export interface VisibilityRuleProtoMsg {
 /**
  * A visibility rule provides visibility configuration for an individual API
  * element.
+ * @name VisibilityRuleAmino
+ * @package google.api
+ * @see proto type: google.api.VisibilityRule
  */
 export interface VisibilityRuleAmino {
   /**
@@ -172,6 +187,9 @@ export interface VisibilityRuleAminoMsg {
 /**
  * A visibility rule provides visibility configuration for an individual API
  * element.
+ * @name VisibilityRuleSDKType
+ * @package google.api
+ * @see proto type: google.api.VisibilityRule
  */
 export interface VisibilityRuleSDKType {
   selector: string;
@@ -182,6 +200,33 @@ function createBaseVisibility(): Visibility {
     rules: []
   };
 }
+/**
+ * `Visibility` defines restrictions for the visibility of service
+ * elements.  Restrictions are specified using visibility labels
+ * (e.g., PREVIEW) that are elsewhere linked to users and projects.
+ * 
+ * Users and projects can have access to more than one visibility label. The
+ * effective visibility for multiple labels is the union of each label's
+ * elements, plus any unrestricted elements.
+ * 
+ * If an element and its parents have no restrictions, visibility is
+ * unconditionally granted.
+ * 
+ * Example:
+ * 
+ *     visibility:
+ *       rules:
+ *       - selector: google.calendar.Calendar.EnhancedSearch
+ *         restriction: PREVIEW
+ *       - selector: google.calendar.Calendar.Delegate
+ *         restriction: INTERNAL
+ * 
+ * Here, all methods are publicly visible except for the restricted methods
+ * EnhancedSearch and Delegate.
+ * @name Visibility
+ * @package google.api
+ * @see proto type: google.api.Visibility
+ */
 export const Visibility = {
   typeUrl: "/google.api.Visibility",
   encode(message: Visibility, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -276,6 +321,13 @@ function createBaseVisibilityRule(): VisibilityRule {
     restriction: ""
   };
 }
+/**
+ * A visibility rule provides visibility configuration for an individual API
+ * element.
+ * @name VisibilityRule
+ * @package google.api
+ * @see proto type: google.api.VisibilityRule
+ */
 export const VisibilityRule = {
   typeUrl: "/google.api.VisibilityRule",
   encode(message: VisibilityRule, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

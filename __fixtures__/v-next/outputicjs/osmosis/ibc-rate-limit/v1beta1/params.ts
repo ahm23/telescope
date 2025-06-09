@@ -1,39 +1,55 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** Params defines the parameters for the ibc-rate-limit module. */
-export interface Params {
+/**
+ * Params defines the parameters for the ibc-rate-limit module.
+ * @name OsmosisIbcratelimitV1beta1Params
+ * @package osmosis.ibcratelimit.v1beta1
+ * @see proto type: osmosis.ibcratelimit.v1beta1.Params
+ */
+export interface OsmosisIbcratelimitV1beta1Params {
   contractAddress: string;
 }
-export interface ParamsProtoMsg {
+export interface OsmosisIbcratelimitV1beta1ParamsProtoMsg {
   typeUrl: "/osmosis.ibcratelimit.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params defines the parameters for the ibc-rate-limit module. */
-export interface ParamsAmino {
+/**
+ * Params defines the parameters for the ibc-rate-limit module.
+ * @name OsmosisIbcratelimitV1beta1ParamsAmino
+ * @package osmosis.ibcratelimit.v1beta1
+ * @see proto type: osmosis.ibcratelimit.v1beta1.OsmosisIbcratelimitV1beta1Params
+ */
+export interface OsmosisIbcratelimitV1beta1ParamsAmino {
   contract_address: string;
 }
-export interface ParamsAminoMsg {
+export interface OsmosisIbcratelimitV1beta1ParamsAminoMsg {
   type: "osmosis/ibcratelimit/params";
-  value: ParamsAmino;
+  value: OsmosisIbcratelimitV1beta1ParamsAmino;
 }
-function createBaseParams(): Params {
+function createBaseOsmosisIbcratelimitV1beta1Params(): OsmosisIbcratelimitV1beta1Params {
   return {
     contractAddress: ""
   };
 }
-export const Params = {
+/**
+ * Params defines the parameters for the ibc-rate-limit module.
+ * @name OsmosisIbcratelimitV1beta1Params
+ * @package osmosis.ibcratelimit.v1beta1
+ * @see proto type: osmosis.ibcratelimit.v1beta1.Params
+ */
+export const OsmosisIbcratelimitV1beta1Params = {
   typeUrl: "/osmosis.ibcratelimit.v1beta1.Params",
   aminoType: "osmosis/ibcratelimit/params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: OsmosisIbcratelimitV1beta1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.contractAddress !== "") {
       writer.uint32(10).string(message.contractAddress);
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): OsmosisIbcratelimitV1beta1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseOsmosisIbcratelimitV1beta1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -47,42 +63,42 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<OsmosisIbcratelimitV1beta1Params>): OsmosisIbcratelimitV1beta1Params {
+    const message = createBaseOsmosisIbcratelimitV1beta1Params();
     message.contractAddress = object.contractAddress ?? "";
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: OsmosisIbcratelimitV1beta1ParamsAmino): OsmosisIbcratelimitV1beta1Params {
+    const message = createBaseOsmosisIbcratelimitV1beta1Params();
     if (object.contract_address !== undefined && object.contract_address !== null) {
       message.contractAddress = object.contract_address;
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: OsmosisIbcratelimitV1beta1Params): OsmosisIbcratelimitV1beta1ParamsAmino {
     const obj: any = {};
     obj.contract_address = message.contractAddress === "" ? undefined : message.contractAddress;
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: OsmosisIbcratelimitV1beta1ParamsAminoMsg): OsmosisIbcratelimitV1beta1Params {
+    return OsmosisIbcratelimitV1beta1Params.fromAmino(object.value);
   },
-  toAminoMsg(message: Params): ParamsAminoMsg {
+  toAminoMsg(message: OsmosisIbcratelimitV1beta1Params): OsmosisIbcratelimitV1beta1ParamsAminoMsg {
     return {
       type: "osmosis/ibcratelimit/params",
-      value: Params.toAmino(message)
+      value: OsmosisIbcratelimitV1beta1Params.toAmino(message)
     };
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: OsmosisIbcratelimitV1beta1ParamsProtoMsg): OsmosisIbcratelimitV1beta1Params {
+    return OsmosisIbcratelimitV1beta1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: OsmosisIbcratelimitV1beta1Params): Uint8Array {
+    return OsmosisIbcratelimitV1beta1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: OsmosisIbcratelimitV1beta1Params): OsmosisIbcratelimitV1beta1ParamsProtoMsg {
     return {
       typeUrl: "/osmosis.ibcratelimit.v1beta1.Params",
-      value: Params.encode(message).finish()
+      value: OsmosisIbcratelimitV1beta1Params.encode(message).finish()
     };
   }
 };

@@ -1,17 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GenesisState interface 1`] = `
-"/** GenesisState defines the auth module's genesis state. */
+"/**
+ * GenesisState defines the auth module's genesis state.
+ * @name GenesisStateAmino
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines all the paramaters of the module. */
+  /**
+   * params defines all the paramaters of the module.
+   */
   params?: ParamsAmino;
-  /** accounts are the accounts present at genesis. */
+  /**
+   * accounts are the accounts present at genesis.
+   */
   accounts?: AnyAmino[];
 }"
 `;
 
 exports[`MsgSend amino interface 1`] = `
-"/** MsgSend represents a message to send coins from one account to another. */
+"/**
+ * MsgSend represents a message to send coins from one account to another.
+ * @name MsgSendAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSend
+ */
 export interface MsgSendAmino {
   from_address?: string;
   to_address?: string;
@@ -28,6 +42,9 @@ exports[`PageRequest interface 1`] = `
  *          Foo some_parameter = 1;
  *          PageRequest pagination = 2;
  *  }
+ * @name PageRequestAmino
+ * @package cosmos.base.query.v1beta1
+ * @see proto type: cosmos.base.query.v1beta1.PageRequest
  */
 export interface PageRequestAmino {
   /**
@@ -72,6 +89,9 @@ exports[`PageResponse interface 1`] = `
  *          repeated Bar results = 1;
  *          PageResponse page = 2;
  *  }
+ * @name PageResponseAmino
+ * @package cosmos.base.query.v1beta1
+ * @see proto type: cosmos.base.query.v1beta1.PageResponse
  */
 export interface PageResponseAmino {
   /**
@@ -109,6 +129,9 @@ exports[`confio/proofs.proto ExistenceProof 1`] = `
  * With LengthOp this is tricker but not impossible. Which is why the "leafPrefixEqual" field
  * in the ProofSpec is valuable to prevent this mutability. And why all trees should
  * length-prefix the data before hashing it.
+ * @name ExistenceProofAmino
+ * @package ics23
+ * @see proto type: ics23.ExistenceProof
  */
 export interface ExistenceProofAmino {
   key?: string;
@@ -123,6 +146,9 @@ exports[`cosmos/auth/v1beta1/auth.proto BaseAccount 1`] = `
  * BaseAccount defines a base account type. It contains all the necessary fields
  * for basic account functionality. Any custom account type should extend this
  * type for additional functionality (e.g. vesting).
+ * @name BaseAccountAmino
+ * @package cosmos.auth.v1beta1
+ * @see proto type: cosmos.auth.v1beta1.BaseAccount
  */
 export interface BaseAccountAmino {
   address?: string;
@@ -136,6 +162,9 @@ exports[`cosmos/authz/v1beta1/authz.proto Grant 1`] = `
 "/**
  * Grant gives permissions to execute
  * the provide method with expiration time.
+ * @name GrantAmino
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.Grant
  */
 export interface GrantAmino {
   authorization?: AnyAmino;
@@ -152,6 +181,9 @@ exports[`cosmos/authz/v1beta1/authz.proto GrantAuthorization 1`] = `
 "/**
  * GrantAuthorization extends a grant with both the addresses of the grantee and granter.
  * It is used in genesis.proto and query.proto
+ * @name GrantAuthorizationAmino
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.GrantAuthorization
  */
 export interface GrantAuthorizationAmino {
   granter?: string;
@@ -162,19 +194,33 @@ export interface GrantAuthorizationAmino {
 `;
 
 exports[`cosmos/authz/v1beta1/query.proto QueryGrantsRequest 1`] = `
-"/** QueryGrantsRequest is the request type for the Query/Grants RPC method. */
+"/**
+ * QueryGrantsRequest is the request type for the Query/Grants RPC method.
+ * @name QueryGrantsRequestAmino
+ * @package cosmos.authz.v1beta1
+ * @see proto type: cosmos.authz.v1beta1.QueryGrantsRequest
+ */
 export interface QueryGrantsRequestAmino {
   granter?: string;
   grantee?: string;
-  /** Optional, msg_type_url, when set, will query only grants matching given msg type. */
+  /**
+   * Optional, msg_type_url, when set, will query only grants matching given msg type.
+   */
   msg_type_url?: string;
-  /** pagination defines an pagination for the request. */
+  /**
+   * pagination defines an pagination for the request.
+   */
   pagination?: PageRequestAmino;
 }"
 `;
 
 exports[`misc/eval_request EvalRequest 1`] = `
-"export interface EvalRequestAmino {
+"/**
+ * @name EvalRequestAmino
+ * @package misc
+ * @see proto type: misc.EvalRequest
+ */
+export interface EvalRequestAmino {
   /**
    * Bindings for the external variables.  The types SHOULD be compatible
    * with the type environment in [CheckRequest][google.api.expr.conformance.v1alpha1.CheckRequest], if checked.
@@ -189,13 +235,17 @@ exports[`misc/eval_request EvalRequest 1`] = `
   test_string?: string;
   test_bool?: boolean;
   instantiate_permission?: AccessConfigAmino;
-  /** [(gogoproto.nullable) = false] wouldn't work in this case */
+  /**
+   * [(gogoproto.nullable) = false] wouldn't work in this case
+   */
   id?: string;
   name?: string;
   test_array?: string[];
   opt: FeatureSet_Utf8Validation;
   graph?: TestNest_GraphAmino;
-  /** deprecated option */
+  /**
+   * deprecated option
+   */
   deprecated?: string;
   false_deprecated?: string;
 }"
@@ -205,6 +255,9 @@ exports[`osmosis/gamm/v1beta1/tx.proto MsgJoinPool 1`] = `
 "/**
  * ===================== MsgJoinPool
  * This is really MsgJoinPoolNoSwap
+ * @name MsgJoinPoolAmino
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinPool
  */
 export interface MsgJoinPoolAmino {
   sender?: string;

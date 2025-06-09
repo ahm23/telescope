@@ -2,25 +2,49 @@ import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { JsonSafe } from "../../../../json-safe";
 import { DeepPartial, isSet } from "../../../../helpers";
 export const protobufPackage = "google.api.expr.v1alpha1";
+/**
+ * @name ExprValue
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprValue
+ */
 export interface ExprValue {
-  /** The ids of the expressions with unknown values. */
+  /**
+   * The ids of the expressions with unknown values.
+   */
   exprs: IdRef[];
 }
 export interface ExprValueProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.ExprValue";
   value: Uint8Array;
 }
+/**
+ * @name ExprValueSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprValue
+ */
 export interface ExprValueSDKType {
   exprs: IdRefSDKType[];
 }
+/**
+ * @name IdRef
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.IdRef
+ */
 export interface IdRef {
-  /** The expression id. */
+  /**
+   * The expression id.
+   */
   id?: number;
 }
 export interface IdRefProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.IdRef";
   value: Uint8Array;
 }
+/**
+ * @name IdRefSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.IdRef
+ */
 export interface IdRefSDKType {
   id?: number;
 }
@@ -29,6 +53,11 @@ function createBaseExprValue(): ExprValue {
     exprs: []
   };
 }
+/**
+ * @name ExprValue
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprValue
+ */
 export const ExprValue = {
   typeUrl: "/google.api.expr.v1alpha1.ExprValue",
   encode(message: ExprValue, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -110,6 +139,11 @@ function createBaseIdRef(): IdRef {
     id: undefined
   };
 }
+/**
+ * @name IdRef
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.IdRef
+ */
 export const IdRef = {
   typeUrl: "/google.api.expr.v1alpha1.IdRef",
   encode(message: IdRef, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

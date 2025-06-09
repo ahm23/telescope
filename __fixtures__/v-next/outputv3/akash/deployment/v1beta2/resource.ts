@@ -3,7 +3,12 @@ import { DecCoin, DecCoinAmino, DecCoinSDKType } from "../../../cosmos/base/v1be
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 export const protobufPackage = "akash.deployment.v1beta2";
-/** Resource stores unit, total count and price of resource */
+/**
+ * Resource stores unit, total count and price of resource
+ * @name Resource
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Resource
+ */
 export interface Resource {
   resources: ResourceUnits;
   count: number;
@@ -13,13 +18,23 @@ export interface ResourceProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.Resource";
   value: Uint8Array;
 }
-/** Resource stores unit, total count and price of resource */
+/**
+ * Resource stores unit, total count and price of resource
+ * @name ResourceAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Resource
+ */
 export interface ResourceAmino {
   resources: ResourceUnitsAmino;
   count: number;
   price: DecCoinAmino;
 }
-/** Resource stores unit, total count and price of resource */
+/**
+ * Resource stores unit, total count and price of resource
+ * @name ResourceSDKType
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Resource
+ */
 export interface ResourceSDKType {
   resources: ResourceUnitsSDKType;
   count: number;
@@ -32,6 +47,12 @@ function createBaseResource(): Resource {
     price: DecCoin.fromPartial({})
   };
 }
+/**
+ * Resource stores unit, total count and price of resource
+ * @name Resource
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.Resource
+ */
 export const Resource = {
   typeUrl: "/akash.deployment.v1beta2.Resource",
   encode(message: Resource, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

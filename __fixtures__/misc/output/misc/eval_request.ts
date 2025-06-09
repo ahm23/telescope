@@ -60,6 +60,11 @@ export function miscVoteOptionToJSON(object: MiscVoteOption): string {
       return "UNRECOGNIZED";
   }
 }
+/**
+ * @name EvalRequest_BindingsEntry
+ * @package misc
+ * @see proto type: misc.undefined
+ */
 export interface EvalRequest_BindingsEntry {
   key: string;
   value?: ExprValue;
@@ -68,6 +73,11 @@ export interface EvalRequest_BindingsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name EvalRequest_BindingsEntryAmino
+ * @package misc
+ * @see proto type: misc.EvalRequest_BindingsEntry
+ */
 export interface EvalRequest_BindingsEntryAmino {
   key?: string;
   value?: ExprValueAmino;
@@ -76,10 +86,20 @@ export interface EvalRequest_BindingsEntryAminoMsg {
   type: string;
   value: EvalRequest_BindingsEntryAmino;
 }
+/**
+ * @name EvalRequest_BindingsEntrySDKType
+ * @package misc
+ * @see proto type: misc.undefined
+ */
 export interface EvalRequest_BindingsEntrySDKType {
   key: string;
   value?: ExprValueSDKType;
 }
+/**
+ * @name EvalRequest_RefsEntry
+ * @package misc
+ * @see proto type: misc.undefined
+ */
 export interface EvalRequest_RefsEntry {
   key: string;
   value?: IdRef;
@@ -88,6 +108,11 @@ export interface EvalRequest_RefsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name EvalRequest_RefsEntryAmino
+ * @package misc
+ * @see proto type: misc.EvalRequest_RefsEntry
+ */
 export interface EvalRequest_RefsEntryAmino {
   key?: string;
   value?: IdRefAmino;
@@ -96,10 +121,20 @@ export interface EvalRequest_RefsEntryAminoMsg {
   type: string;
   value: EvalRequest_RefsEntryAmino;
 }
+/**
+ * @name EvalRequest_RefsEntrySDKType
+ * @package misc
+ * @see proto type: misc.undefined
+ */
 export interface EvalRequest_RefsEntrySDKType {
   key: string;
   value?: IdRefSDKType;
 }
+/**
+ * @name EvalRequest
+ * @package misc
+ * @see proto type: misc.EvalRequest
+ */
 export interface EvalRequest {
   /**
    * Bindings for the external variables.  The types SHOULD be compatible
@@ -115,13 +150,17 @@ export interface EvalRequest {
   testString: string;
   testBool: boolean;
   instantiatePermission?: MiscAccessConfig;
-  /** [(gogoproto.nullable) = false] wouldn't work in this case */
+  /**
+   * [(gogoproto.nullable) = false] wouldn't work in this case
+   */
   id?: string;
   name?: string;
   testArray: string[];
   opt: FeatureSet_Utf8Validation;
   graph?: TestNest_Graph;
-  /** deprecated option */
+  /**
+   * deprecated option
+   */
   deprecated?: string;
   falseDeprecated: string;
 }
@@ -129,6 +168,11 @@ export interface EvalRequestProtoMsg {
   typeUrl: "/misc.EvalRequest";
   value: Uint8Array;
 }
+/**
+ * @name EvalRequestAmino
+ * @package misc
+ * @see proto type: misc.EvalRequest
+ */
 export interface EvalRequestAmino {
   /**
    * Bindings for the external variables.  The types SHOULD be compatible
@@ -144,13 +188,17 @@ export interface EvalRequestAmino {
   test_string?: string;
   test_bool?: boolean;
   instantiate_permission?: MiscAccessConfigAmino;
-  /** [(gogoproto.nullable) = false] wouldn't work in this case */
+  /**
+   * [(gogoproto.nullable) = false] wouldn't work in this case
+   */
   id?: string;
   name?: string;
   test_array?: string[];
   opt: FeatureSet_Utf8Validation;
   graph?: TestNest_GraphAmino;
-  /** deprecated option */
+  /**
+   * deprecated option
+   */
   deprecated?: string;
   false_deprecated?: string;
 }
@@ -158,6 +206,11 @@ export interface EvalRequestAminoMsg {
   type: "/misc.EvalRequest";
   value: EvalRequestAmino;
 }
+/**
+ * @name EvalRequestSDKType
+ * @package misc
+ * @see proto type: misc.EvalRequest
+ */
 export interface EvalRequestSDKType {
   bindings: {
     [key: string]: ExprValueSDKType;
@@ -177,6 +230,11 @@ export interface EvalRequestSDKType {
   deprecated?: string;
   false_deprecated: string;
 }
+/**
+ * @name MiscAccessConfig
+ * @package misc
+ * @see proto type: misc.AccessConfig
+ */
 export interface MiscAccessConfig {
   sender: string;
 }
@@ -184,6 +242,11 @@ export interface MiscAccessConfigProtoMsg {
   typeUrl: "/misc.AccessConfig";
   value: Uint8Array;
 }
+/**
+ * @name MiscAccessConfigAmino
+ * @package misc
+ * @see proto type: misc.MiscAccessConfig
+ */
 export interface MiscAccessConfigAmino {
   sender?: string;
 }
@@ -191,25 +254,49 @@ export interface MiscAccessConfigAminoMsg {
   type: "/misc.AccessConfig";
   value: MiscAccessConfigAmino;
 }
+/**
+ * @name MiscAccessConfigSDKType
+ * @package misc
+ * @see proto type: misc.AccessConfig
+ */
 export interface MiscAccessConfigSDKType {
   sender: string;
 }
+/**
+ * @name MiscGenericAuthorization
+ * @package misc
+ * @see proto type: misc.GenericAuthorization
+ */
 export interface MiscGenericAuthorization {
-  /** Msg, identified by it's type URL, to grant unrestricted permissions to execute */
+  /**
+   * Msg, identified by it's type URL, to grant unrestricted permissions to execute
+   */
   msg: string;
 }
 export interface MiscGenericAuthorizationProtoMsg {
   typeUrl: "/misc.GenericAuthorization";
   value: Uint8Array;
 }
+/**
+ * @name MiscGenericAuthorizationAmino
+ * @package misc
+ * @see proto type: misc.MiscGenericAuthorization
+ */
 export interface MiscGenericAuthorizationAmino {
-  /** Msg, identified by it's type URL, to grant unrestricted permissions to execute */
+  /**
+   * Msg, identified by it's type URL, to grant unrestricted permissions to execute
+   */
   msg?: string;
 }
 export interface MiscGenericAuthorizationAminoMsg {
   type: "/misc.GenericAuthorization";
   value: MiscGenericAuthorizationAmino;
 }
+/**
+ * @name MiscGenericAuthorizationSDKType
+ * @package misc
+ * @see proto type: misc.GenericAuthorization
+ */
 export interface MiscGenericAuthorizationSDKType {
   msg: string;
 }
@@ -219,6 +306,11 @@ function createBaseEvalRequest_BindingsEntry(): EvalRequest_BindingsEntry {
     value: undefined
   };
 }
+/**
+ * @name EvalRequest_BindingsEntry
+ * @package misc
+ * @see proto type: misc.undefined
+ */
 export const EvalRequest_BindingsEntry = {
   encode(message: EvalRequest_BindingsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -319,6 +411,11 @@ function createBaseEvalRequest_RefsEntry(): EvalRequest_RefsEntry {
     value: undefined
   };
 }
+/**
+ * @name EvalRequest_RefsEntry
+ * @package misc
+ * @see proto type: misc.undefined
+ */
 export const EvalRequest_RefsEntry = {
   encode(message: EvalRequest_RefsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== "") {
@@ -430,6 +527,11 @@ function createBaseEvalRequest(): EvalRequest {
     falseDeprecated: ""
   };
 }
+/**
+ * @name EvalRequest
+ * @package misc
+ * @see proto type: misc.EvalRequest
+ */
 export const EvalRequest = {
   typeUrl: "/misc.EvalRequest",
   encode(message: EvalRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -820,6 +922,11 @@ function createBaseMiscAccessConfig(): MiscAccessConfig {
     sender: ""
   };
 }
+/**
+ * @name MiscAccessConfig
+ * @package misc
+ * @see proto type: misc.AccessConfig
+ */
 export const MiscAccessConfig = {
   typeUrl: "/misc.AccessConfig",
   encode(message: MiscAccessConfig, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -908,6 +1015,11 @@ function createBaseMiscGenericAuthorization(): MiscGenericAuthorization {
     msg: ""
   };
 }
+/**
+ * @name MiscGenericAuthorization
+ * @package misc
+ * @see proto type: misc.GenericAuthorization
+ */
 export const MiscGenericAuthorization = {
   typeUrl: "/misc.GenericAuthorization",
   encode(message: MiscGenericAuthorization, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

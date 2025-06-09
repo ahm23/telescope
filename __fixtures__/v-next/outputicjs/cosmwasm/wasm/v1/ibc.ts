@@ -1,8 +1,15 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../../helpers";
-/** MsgIBCSend */
+/**
+ * MsgIBCSend
+ * @name MsgIBCSend
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.MsgIBCSend
+ */
 export interface MsgIBCSend {
-  /** the channel by which the packet will be sent */
+  /**
+   * the channel by which the packet will be sent
+   */
   channel: string;
   /**
    * Timeout height relative to the current block height.
@@ -24,9 +31,16 @@ export interface MsgIBCSendProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.MsgIBCSend";
   value: Uint8Array;
 }
-/** MsgIBCSend */
+/**
+ * MsgIBCSend
+ * @name MsgIBCSendAmino
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.MsgIBCSend
+ */
 export interface MsgIBCSendAmino {
-  /** the channel by which the packet will be sent */
+  /**
+   * the channel by which the packet will be sent
+   */
   channel: string;
   /**
    * Timeout height relative to the current block height.
@@ -48,7 +62,12 @@ export interface MsgIBCSendAminoMsg {
   type: "wasm/MsgIBCSend";
   value: MsgIBCSendAmino;
 }
-/** MsgIBCCloseChannel port and channel need to be owned by the contract */
+/**
+ * MsgIBCCloseChannel port and channel need to be owned by the contract
+ * @name MsgIBCCloseChannel
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.MsgIBCCloseChannel
+ */
 export interface MsgIBCCloseChannel {
   channel: string;
 }
@@ -56,7 +75,12 @@ export interface MsgIBCCloseChannelProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.MsgIBCCloseChannel";
   value: Uint8Array;
 }
-/** MsgIBCCloseChannel port and channel need to be owned by the contract */
+/**
+ * MsgIBCCloseChannel port and channel need to be owned by the contract
+ * @name MsgIBCCloseChannelAmino
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.MsgIBCCloseChannel
+ */
 export interface MsgIBCCloseChannelAmino {
   channel: string;
 }
@@ -72,6 +96,12 @@ function createBaseMsgIBCSend(): MsgIBCSend {
     data: new Uint8Array()
   };
 }
+/**
+ * MsgIBCSend
+ * @name MsgIBCSend
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.MsgIBCSend
+ */
 export const MsgIBCSend = {
   typeUrl: "/cosmwasm.wasm.v1.MsgIBCSend",
   aminoType: "wasm/MsgIBCSend",
@@ -175,6 +205,12 @@ function createBaseMsgIBCCloseChannel(): MsgIBCCloseChannel {
     channel: ""
   };
 }
+/**
+ * MsgIBCCloseChannel port and channel need to be owned by the contract
+ * @name MsgIBCCloseChannel
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.MsgIBCCloseChannel
+ */
 export const MsgIBCCloseChannel = {
   typeUrl: "/cosmwasm.wasm.v1.MsgIBCCloseChannel",
   aminoType: "wasm/MsgIBCCloseChannel",

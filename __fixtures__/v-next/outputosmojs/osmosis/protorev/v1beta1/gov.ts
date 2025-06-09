@@ -5,6 +5,9 @@ export const protobufPackage = "osmosis.protorev.v1beta1";
 /**
  * SetProtoRevEnabledProposal is a gov Content type to update whether the
  * protorev module is enabled
+ * @name SetProtoRevEnabledProposal
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.SetProtoRevEnabledProposal
  */
 export interface SetProtoRevEnabledProposal {
   title: string;
@@ -18,6 +21,9 @@ export interface SetProtoRevEnabledProposalProtoMsg {
 /**
  * SetProtoRevEnabledProposal is a gov Content type to update whether the
  * protorev module is enabled
+ * @name SetProtoRevEnabledProposalSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.SetProtoRevEnabledProposal
  */
 export interface SetProtoRevEnabledProposalSDKType {
   title: string;
@@ -28,6 +34,9 @@ export interface SetProtoRevEnabledProposalSDKType {
  * SetProtoRevAdminAccountProposal is a gov Content type to set the admin
  * account that will receive permissions to alter hot routes and set the
  * developer address that will be receiving a share of profits from the module
+ * @name SetProtoRevAdminAccountProposal
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.SetProtoRevAdminAccountProposal
  */
 export interface SetProtoRevAdminAccountProposal {
   title: string;
@@ -42,6 +51,9 @@ export interface SetProtoRevAdminAccountProposalProtoMsg {
  * SetProtoRevAdminAccountProposal is a gov Content type to set the admin
  * account that will receive permissions to alter hot routes and set the
  * developer address that will be receiving a share of profits from the module
+ * @name SetProtoRevAdminAccountProposalSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.SetProtoRevAdminAccountProposal
  */
 export interface SetProtoRevAdminAccountProposalSDKType {
   title: string;
@@ -55,6 +67,13 @@ function createBaseSetProtoRevEnabledProposal(): SetProtoRevEnabledProposal {
     enabled: false
   };
 }
+/**
+ * SetProtoRevEnabledProposal is a gov Content type to update whether the
+ * protorev module is enabled
+ * @name SetProtoRevEnabledProposal
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.SetProtoRevEnabledProposal
+ */
 export const SetProtoRevEnabledProposal = {
   typeUrl: "/osmosis.protorev.v1beta1.SetProtoRevEnabledProposal",
   encode(message: SetProtoRevEnabledProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -183,6 +202,14 @@ function createBaseSetProtoRevAdminAccountProposal(): SetProtoRevAdminAccountPro
     account: ""
   };
 }
+/**
+ * SetProtoRevAdminAccountProposal is a gov Content type to set the admin
+ * account that will receive permissions to alter hot routes and set the
+ * developer address that will be receiving a share of profits from the module
+ * @name SetProtoRevAdminAccountProposal
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.SetProtoRevAdminAccountProposal
+ */
 export const SetProtoRevAdminAccountProposal = {
   typeUrl: "/osmosis.protorev.v1beta1.SetProtoRevAdminAccountProposal",
   encode(message: SetProtoRevAdminAccountProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

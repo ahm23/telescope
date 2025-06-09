@@ -19,6 +19,9 @@ export const protobufPackage = "google.api";
  * Although it is not forbidden, it is generally a bad idea to include
  * non-finite values (infinities or NaNs) in the population of values, as this
  * will render the `mean` and `sum_of_squared_deviation` fields meaningless.
+ * @name Distribution
+ * @package google.api
+ * @see proto type: google.api.Distribution
  */
 export interface Distribution {
   /**
@@ -72,7 +75,9 @@ export interface Distribution {
    * `bucket_counts` is the count for the overflow bucket (number N-1).
    */
   bucketCounts: bigint[];
-  /** Must be in increasing order of `value` field. */
+  /**
+   * Must be in increasing order of `value` field.
+   */
   exemplars: Distribution_Exemplar[];
 }
 export interface DistributionProtoMsg {
@@ -94,6 +99,9 @@ export interface DistributionProtoMsg {
  * Although it is not forbidden, it is generally a bad idea to include
  * non-finite values (infinities or NaNs) in the population of values, as this
  * will render the `mean` and `sum_of_squared_deviation` fields meaningless.
+ * @name DistributionSDKType
+ * @package google.api
+ * @see proto type: google.api.Distribution
  */
 export interface DistributionSDKType {
   count: bigint;
@@ -104,18 +112,32 @@ export interface DistributionSDKType {
   bucket_counts: bigint[];
   exemplars: Distribution_ExemplarSDKType[];
 }
-/** The range of the population values. */
+/**
+ * The range of the population values.
+ * @name Distribution_Range
+ * @package google.api
+ * @see proto type: google.api.Range
+ */
 export interface Distribution_Range {
-  /** The minimum of the population values. */
+  /**
+   * The minimum of the population values.
+   */
   min: number;
-  /** The maximum of the population values. */
+  /**
+   * The maximum of the population values.
+   */
   max: number;
 }
 export interface Distribution_RangeProtoMsg {
   typeUrl: "/google.api.Range";
   value: Uint8Array;
 }
-/** The range of the population values. */
+/**
+ * The range of the population values.
+ * @name Distribution_RangeSDKType
+ * @package google.api
+ * @see proto type: google.api.Range
+ */
 export interface Distribution_RangeSDKType {
   min: number;
   max: number;
@@ -136,13 +158,22 @@ export interface Distribution_RangeSDKType {
  * of finite values: lower bound of the underflow bucket is -infinity and the
  * upper bound of the overflow bucket is +infinity. The finite buckets are
  * so-called because both bounds are finite.
+ * @name Distribution_BucketOptions
+ * @package google.api
+ * @see proto type: google.api.BucketOptions
  */
 export interface Distribution_BucketOptions {
-  /** The linear bucket. */
+  /**
+   * The linear bucket.
+   */
   linearBuckets?: Distribution_BucketOptions_Linear;
-  /** The exponential buckets. */
+  /**
+   * The exponential buckets.
+   */
   exponentialBuckets?: Distribution_BucketOptions_Exponential;
-  /** The explicit buckets. */
+  /**
+   * The explicit buckets.
+   */
   explicitBuckets?: Distribution_BucketOptions_Explicit;
 }
 export interface Distribution_BucketOptionsProtoMsg {
@@ -165,6 +196,9 @@ export interface Distribution_BucketOptionsProtoMsg {
  * of finite values: lower bound of the underflow bucket is -infinity and the
  * upper bound of the overflow bucket is +infinity. The finite buckets are
  * so-called because both bounds are finite.
+ * @name Distribution_BucketOptionsSDKType
+ * @package google.api
+ * @see proto type: google.api.BucketOptions
  */
 export interface Distribution_BucketOptionsSDKType {
   linear_buckets?: Distribution_BucketOptions_LinearSDKType;
@@ -181,13 +215,22 @@ export interface Distribution_BucketOptionsSDKType {
  * 
  *    Upper bound (0 <= i < N-1):     offset + (width * i).
  *    Lower bound (1 <= i < N):       offset + (width * (i - 1)).
+ * @name Distribution_BucketOptions_Linear
+ * @package google.api
+ * @see proto type: google.api.Linear
  */
 export interface Distribution_BucketOptions_Linear {
-  /** Must be greater than 0. */
+  /**
+   * Must be greater than 0.
+   */
   numFiniteBuckets: number;
-  /** Must be greater than 0. */
+  /**
+   * Must be greater than 0.
+   */
   width: number;
-  /** Lower bound of the first bucket. */
+  /**
+   * Lower bound of the first bucket.
+   */
   offset: number;
 }
 export interface Distribution_BucketOptions_LinearProtoMsg {
@@ -204,6 +247,9 @@ export interface Distribution_BucketOptions_LinearProtoMsg {
  * 
  *    Upper bound (0 <= i < N-1):     offset + (width * i).
  *    Lower bound (1 <= i < N):       offset + (width * (i - 1)).
+ * @name Distribution_BucketOptions_LinearSDKType
+ * @package google.api
+ * @see proto type: google.api.Linear
  */
 export interface Distribution_BucketOptions_LinearSDKType {
   num_finite_buckets: number;
@@ -220,13 +266,22 @@ export interface Distribution_BucketOptions_LinearSDKType {
  * 
  *    Upper bound (0 <= i < N-1):     scale * (growth_factor ^ i).
  *    Lower bound (1 <= i < N):       scale * (growth_factor ^ (i - 1)).
+ * @name Distribution_BucketOptions_Exponential
+ * @package google.api
+ * @see proto type: google.api.Exponential
  */
 export interface Distribution_BucketOptions_Exponential {
-  /** Must be greater than 0. */
+  /**
+   * Must be greater than 0.
+   */
   numFiniteBuckets: number;
-  /** Must be greater than 1. */
+  /**
+   * Must be greater than 1.
+   */
   growthFactor: number;
-  /** Must be greater than 0. */
+  /**
+   * Must be greater than 0.
+   */
   scale: number;
 }
 export interface Distribution_BucketOptions_ExponentialProtoMsg {
@@ -243,6 +298,9 @@ export interface Distribution_BucketOptions_ExponentialProtoMsg {
  * 
  *    Upper bound (0 <= i < N-1):     scale * (growth_factor ^ i).
  *    Lower bound (1 <= i < N):       scale * (growth_factor ^ (i - 1)).
+ * @name Distribution_BucketOptions_ExponentialSDKType
+ * @package google.api
+ * @see proto type: google.api.Exponential
  */
 export interface Distribution_BucketOptions_ExponentialSDKType {
   num_finite_buckets: number;
@@ -261,9 +319,14 @@ export interface Distribution_BucketOptions_ExponentialSDKType {
  * The `bounds` field must contain at least one element. If `bounds` has
  * only one element, then there are no finite buckets, and that single
  * element is the common boundary of the overflow and underflow buckets.
+ * @name Distribution_BucketOptions_Explicit
+ * @package google.api
+ * @see proto type: google.api.Explicit
  */
 export interface Distribution_BucketOptions_Explicit {
-  /** The values must be monotonically increasing. */
+  /**
+   * The values must be monotonically increasing.
+   */
   bounds: number[];
 }
 export interface Distribution_BucketOptions_ExplicitProtoMsg {
@@ -282,6 +345,9 @@ export interface Distribution_BucketOptions_ExplicitProtoMsg {
  * The `bounds` field must contain at least one element. If `bounds` has
  * only one element, then there are no finite buckets, and that single
  * element is the common boundary of the overflow and underflow buckets.
+ * @name Distribution_BucketOptions_ExplicitSDKType
+ * @package google.api
+ * @see proto type: google.api.Explicit
  */
 export interface Distribution_BucketOptions_ExplicitSDKType {
   bounds: number[];
@@ -292,6 +358,9 @@ export interface Distribution_BucketOptions_ExplicitSDKType {
  * particular value added to a Distribution bucket, such as a trace ID that
  * was active when a value was added. They may contain further information,
  * such as a example values and timestamps, origin, etc.
+ * @name Distribution_Exemplar
+ * @package google.api
+ * @see proto type: google.api.Exemplar
  */
 export interface Distribution_Exemplar {
   /**
@@ -299,7 +368,9 @@ export interface Distribution_Exemplar {
    * exemplar belongs.
    */
   value: number;
-  /** The observation (sampling) time of the above value. */
+  /**
+   * The observation (sampling) time of the above value.
+   */
   timestamp?: Date;
   /**
    * Contextual information about the example value. Examples are:
@@ -326,6 +397,9 @@ export interface Distribution_ExemplarProtoMsg {
  * particular value added to a Distribution bucket, such as a trace ID that
  * was active when a value was added. They may contain further information,
  * such as a example values and timestamps, origin, etc.
+ * @name Distribution_ExemplarSDKType
+ * @package google.api
+ * @see proto type: google.api.Exemplar
  */
 export interface Distribution_ExemplarSDKType {
   value: number;
@@ -343,6 +417,25 @@ function createBaseDistribution(): Distribution {
     exemplars: []
   };
 }
+/**
+ * `Distribution` contains summary statistics for a population of values. It
+ * optionally contains a histogram representing the distribution of those values
+ * across a set of buckets.
+ * 
+ * The summary statistics are the count, mean, sum of the squared deviation from
+ * the mean, the minimum, and the maximum of the set of population of values.
+ * The histogram is based on a sequence of buckets and gives a count of values
+ * that fall into each bucket. The boundaries of the buckets are given either
+ * explicitly or by formulas for buckets of fixed or exponentially increasing
+ * widths.
+ * 
+ * Although it is not forbidden, it is generally a bad idea to include
+ * non-finite values (infinities or NaNs) in the population of values, as this
+ * will render the `mean` and `sum_of_squared_deviation` fields meaningless.
+ * @name Distribution
+ * @package google.api
+ * @see proto type: google.api.Distribution
+ */
 export const Distribution = {
   typeUrl: "/google.api.Distribution",
   encode(message: Distribution, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -563,6 +656,12 @@ function createBaseDistribution_Range(): Distribution_Range {
     max: 0
   };
 }
+/**
+ * The range of the population values.
+ * @name Distribution_Range
+ * @package google.api
+ * @see proto type: google.api.Range
+ */
 export const Distribution_Range = {
   typeUrl: "/google.api.Range",
   encode(message: Distribution_Range, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -669,6 +768,26 @@ function createBaseDistribution_BucketOptions(): Distribution_BucketOptions {
     explicitBuckets: undefined
   };
 }
+/**
+ * `BucketOptions` describes the bucket boundaries used to create a histogram
+ * for the distribution. The buckets can be in a linear sequence, an
+ * exponential sequence, or each bucket can be specified explicitly.
+ * `BucketOptions` does not include the number of values in each bucket.
+ * 
+ * A bucket has an inclusive lower bound and exclusive upper bound for the
+ * values that are counted for that bucket. The upper bound of a bucket must
+ * be strictly greater than the lower bound. The sequence of N buckets for a
+ * distribution consists of an underflow bucket (number 0), zero or more
+ * finite buckets (number 1 through N - 2) and an overflow bucket (number N -
+ * 1). The buckets are contiguous: the lower bound of bucket i (i > 0) is the
+ * same as the upper bound of bucket i - 1. The buckets span the whole range
+ * of finite values: lower bound of the underflow bucket is -infinity and the
+ * upper bound of the overflow bucket is +infinity. The finite buckets are
+ * so-called because both bounds are finite.
+ * @name Distribution_BucketOptions
+ * @package google.api
+ * @see proto type: google.api.BucketOptions
+ */
 export const Distribution_BucketOptions = {
   typeUrl: "/google.api.BucketOptions",
   encode(message: Distribution_BucketOptions, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -797,6 +916,20 @@ function createBaseDistribution_BucketOptions_Linear(): Distribution_BucketOptio
     offset: 0
   };
 }
+/**
+ * Specifies a linear sequence of buckets that all have the same width
+ * (except overflow and underflow). Each bucket represents a constant
+ * absolute uncertainty on the specific value in the bucket.
+ * 
+ * There are `num_finite_buckets + 2` (= N) buckets. Bucket `i` has the
+ * following boundaries:
+ * 
+ *    Upper bound (0 <= i < N-1):     offset + (width * i).
+ *    Lower bound (1 <= i < N):       offset + (width * (i - 1)).
+ * @name Distribution_BucketOptions_Linear
+ * @package google.api
+ * @see proto type: google.api.Linear
+ */
 export const Distribution_BucketOptions_Linear = {
   typeUrl: "/google.api.Linear",
   encode(message: Distribution_BucketOptions_Linear, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -919,6 +1052,20 @@ function createBaseDistribution_BucketOptions_Exponential(): Distribution_Bucket
     scale: 0
   };
 }
+/**
+ * Specifies an exponential sequence of buckets that have a width that is
+ * proportional to the value of the lower bound. Each bucket represents a
+ * constant relative uncertainty on a specific value in the bucket.
+ * 
+ * There are `num_finite_buckets + 2` (= N) buckets. Bucket `i` has the
+ * following boundaries:
+ * 
+ *    Upper bound (0 <= i < N-1):     scale * (growth_factor ^ i).
+ *    Lower bound (1 <= i < N):       scale * (growth_factor ^ (i - 1)).
+ * @name Distribution_BucketOptions_Exponential
+ * @package google.api
+ * @see proto type: google.api.Exponential
+ */
 export const Distribution_BucketOptions_Exponential = {
   typeUrl: "/google.api.Exponential",
   encode(message: Distribution_BucketOptions_Exponential, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1039,6 +1186,22 @@ function createBaseDistribution_BucketOptions_Explicit(): Distribution_BucketOpt
     bounds: []
   };
 }
+/**
+ * Specifies a set of buckets with arbitrary widths.
+ * 
+ * There are `size(bounds) + 1` (= N) buckets. Bucket `i` has the following
+ * boundaries:
+ * 
+ *    Upper bound (0 <= i < N-1):     bounds[i]
+ *    Lower bound (1 <= i < N);       bounds[i - 1]
+ * 
+ * The `bounds` field must contain at least one element. If `bounds` has
+ * only one element, then there are no finite buckets, and that single
+ * element is the common boundary of the overflow and underflow buckets.
+ * @name Distribution_BucketOptions_Explicit
+ * @package google.api
+ * @see proto type: google.api.Explicit
+ */
 export const Distribution_BucketOptions_Explicit = {
   typeUrl: "/google.api.Explicit",
   encode(message: Distribution_BucketOptions_Explicit, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1148,6 +1311,16 @@ function createBaseDistribution_Exemplar(): Distribution_Exemplar {
     attachments: []
   };
 }
+/**
+ * Exemplars are example points that may be used to annotate aggregated
+ * distribution values. They are metadata that gives information about a
+ * particular value added to a Distribution bucket, such as a trace ID that
+ * was active when a value was added. They may contain further information,
+ * such as a example values and timestamps, origin, etc.
+ * @name Distribution_Exemplar
+ * @package google.api
+ * @see proto type: google.api.Exemplar
+ */
 export const Distribution_Exemplar = {
   typeUrl: "/google.api.Exemplar",
   encode(message: Distribution_Exemplar, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

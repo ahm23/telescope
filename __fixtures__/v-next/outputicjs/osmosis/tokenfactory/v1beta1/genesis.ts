@@ -1,21 +1,35 @@
-import { Params, ParamsAmino } from "./params";
 import { DenomAuthorityMetadata, DenomAuthorityMetadataAmino } from "./authorityMetadata";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState defines the tokenfactory module's genesis state. */
+import { OsmosisTokenfactoryV1beta1Params, OsmosisTokenfactoryV1beta1ParamsAmino } from "./params";
+/**
+ * GenesisState defines the tokenfactory module's genesis state.
+ * @name GenesisState
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines the paramaters of the module. */
-  params: Params;
+  /**
+   * params defines the paramaters of the module.
+   */
+  params: OsmosisTokenfactoryV1beta1Params;
   factoryDenoms: GenesisDenom[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.tokenfactory.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the tokenfactory module's genesis state. */
+/**
+ * GenesisState defines the tokenfactory module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines the paramaters of the module. */
-  params: ParamsAmino;
+  /**
+   * params defines the paramaters of the module.
+   */
+  params: OsmosisTokenfactoryV1beta1ParamsAmino;
   factory_denoms: GenesisDenomAmino[];
 }
 export interface GenesisStateAminoMsg {
@@ -26,6 +40,9 @@ export interface GenesisStateAminoMsg {
  * GenesisDenom defines a tokenfactory denom that is defined within genesis
  * state. The structure contains DenomAuthorityMetadata which defines the
  * denom's admin.
+ * @name GenesisDenom
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisDenom
  */
 export interface GenesisDenom {
   denom: string;
@@ -39,6 +56,9 @@ export interface GenesisDenomProtoMsg {
  * GenesisDenom defines a tokenfactory denom that is defined within genesis
  * state. The structure contains DenomAuthorityMetadata which defines the
  * denom's admin.
+ * @name GenesisDenomAmino
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisDenom
  */
 export interface GenesisDenomAmino {
   denom: string;
@@ -50,16 +70,22 @@ export interface GenesisDenomAminoMsg {
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({}),
+    params: OsmosisTokenfactoryV1beta1Params.fromPartial({}),
     factoryDenoms: []
   };
 }
+/**
+ * GenesisState defines the tokenfactory module's genesis state.
+ * @name GenesisState
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.GenesisState",
   aminoType: "osmosis/tokenfactory/genesis-state",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      OsmosisTokenfactoryV1beta1Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.factoryDenoms) {
       GenesisDenom.encode(v!, writer.uint32(18).fork()).ldelim();
@@ -74,7 +100,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = OsmosisTokenfactoryV1beta1Params.decode(reader, reader.uint32());
           break;
         case 2:
           message.factoryDenoms.push(GenesisDenom.decode(reader, reader.uint32()));
@@ -88,21 +114,21 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? OsmosisTokenfactoryV1beta1Params.fromPartial(object.params) : undefined;
     message.factoryDenoms = object.factoryDenoms?.map(e => GenesisDenom.fromPartial(e)) || [];
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = OsmosisTokenfactoryV1beta1Params.fromAmino(object.params);
     }
     message.factoryDenoms = object.factory_denoms?.map(e => GenesisDenom.fromAmino(e)) || [];
     return message;
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? OsmosisTokenfactoryV1beta1Params.toAmino(message.params) : undefined;
     if (message.factoryDenoms) {
       obj.factory_denoms = message.factoryDenoms.map(e => e ? GenesisDenom.toAmino(e) : undefined);
     } else {
@@ -138,6 +164,14 @@ function createBaseGenesisDenom(): GenesisDenom {
     authorityMetadata: DenomAuthorityMetadata.fromPartial({})
   };
 }
+/**
+ * GenesisDenom defines a tokenfactory denom that is defined within genesis
+ * state. The structure contains DenomAuthorityMetadata which defines the
+ * denom's admin.
+ * @name GenesisDenom
+ * @package osmosis.tokenfactory.v1beta1
+ * @see proto type: osmosis.tokenfactory.v1beta1.GenesisDenom
+ */
 export const GenesisDenom = {
   typeUrl: "/osmosis.tokenfactory.v1beta1.GenesisDenom",
   aminoType: "osmosis/tokenfactory/genesis-denom",

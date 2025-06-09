@@ -1,14 +1,19 @@
 import { PageRequest, PageRequestAmino, PageResponse, PageResponseAmino } from "../../../cosmos/base/query/v1beta1/pagination";
 import { DevFeeInfo, DevFeeInfoAmino } from "./fees";
-import { Params, ParamsAmino } from "./genesis";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
+import { EvmosFeesV1Params, EvmosFeesV1ParamsAmino } from "./genesis";
 /**
  * QueryDevFeeInfosRequest is the request type for the Query/DevFeeInfos RPC
  * method.
+ * @name QueryDevFeeInfosRequest
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfosRequest
  */
 export interface QueryDevFeeInfosRequest {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequest;
 }
 export interface QueryDevFeeInfosRequestProtoMsg {
@@ -18,9 +23,14 @@ export interface QueryDevFeeInfosRequestProtoMsg {
 /**
  * QueryDevFeeInfosRequest is the request type for the Query/DevFeeInfos RPC
  * method.
+ * @name QueryDevFeeInfosRequestAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfosRequest
  */
 export interface QueryDevFeeInfosRequestAmino {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryDevFeeInfosRequestAminoMsg {
@@ -30,10 +40,15 @@ export interface QueryDevFeeInfosRequestAminoMsg {
 /**
  * QueryDevFeeInfosResponse is the response type for the Query/DevFeeInfos
  * RPC method.
+ * @name QueryDevFeeInfosResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfosResponse
  */
 export interface QueryDevFeeInfosResponse {
   fees: DevFeeInfo[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponse;
 }
 export interface QueryDevFeeInfosResponseProtoMsg {
@@ -43,10 +58,15 @@ export interface QueryDevFeeInfosResponseProtoMsg {
 /**
  * QueryDevFeeInfosResponse is the response type for the Query/DevFeeInfos
  * RPC method.
+ * @name QueryDevFeeInfosResponseAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfosResponse
  */
 export interface QueryDevFeeInfosResponseAmino {
   fees: DevFeeInfoAmino[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryDevFeeInfosResponseAminoMsg {
@@ -56,9 +76,14 @@ export interface QueryDevFeeInfosResponseAminoMsg {
 /**
  * QueryDevFeeInfoRequest is the request type for the Query/DevFeeInfo RPC
  * method.
+ * @name QueryDevFeeInfoRequest
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfoRequest
  */
 export interface QueryDevFeeInfoRequest {
-  /** contract identifier is the hex contract address of a contract */
+  /**
+   * contract identifier is the hex contract address of a contract
+   */
   contractAddress: string;
 }
 export interface QueryDevFeeInfoRequestProtoMsg {
@@ -68,9 +93,14 @@ export interface QueryDevFeeInfoRequestProtoMsg {
 /**
  * QueryDevFeeInfoRequest is the request type for the Query/DevFeeInfo RPC
  * method.
+ * @name QueryDevFeeInfoRequestAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfoRequest
  */
 export interface QueryDevFeeInfoRequestAmino {
-  /** contract identifier is the hex contract address of a contract */
+  /**
+   * contract identifier is the hex contract address of a contract
+   */
   contract_address: string;
 }
 export interface QueryDevFeeInfoRequestAminoMsg {
@@ -80,6 +110,9 @@ export interface QueryDevFeeInfoRequestAminoMsg {
 /**
  * QueryDevFeeInfoResponse is the response type for the Query/DevFeeInfo RPC
  * method.
+ * @name QueryDevFeeInfoResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfoResponse
  */
 export interface QueryDevFeeInfoResponse {
   fee: DevFeeInfo;
@@ -91,6 +124,9 @@ export interface QueryDevFeeInfoResponseProtoMsg {
 /**
  * QueryDevFeeInfoResponse is the response type for the Query/DevFeeInfo RPC
  * method.
+ * @name QueryDevFeeInfoResponseAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfoResponse
  */
 export interface QueryDevFeeInfoResponseAmino {
   fee: DevFeeInfoAmino;
@@ -99,13 +135,23 @@ export interface QueryDevFeeInfoResponseAminoMsg {
   type: "/evmos.fees.v1.QueryDevFeeInfoResponse";
   value: QueryDevFeeInfoResponseAmino;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: "/evmos.fees.v1.QueryParamsRequest";
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
   type: "/evmos.fees.v1.QueryParamsRequest";
@@ -114,9 +160,12 @@ export interface QueryParamsRequestAminoMsg {
 /**
  * QueryParamsResponse is the response type for the Query/Params RPC
  * method.
+ * @name QueryParamsResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryParamsResponse
  */
 export interface QueryParamsResponse {
-  params: Params;
+  params: EvmosFeesV1Params;
 }
 export interface QueryParamsResponseProtoMsg {
   typeUrl: "/evmos.fees.v1.QueryParamsResponse";
@@ -125,9 +174,12 @@ export interface QueryParamsResponseProtoMsg {
 /**
  * QueryParamsResponse is the response type for the Query/Params RPC
  * method.
+ * @name QueryParamsResponseAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryParamsResponse
  */
 export interface QueryParamsResponseAmino {
-  params: ParamsAmino;
+  params: EvmosFeesV1ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
   type: "/evmos.fees.v1.QueryParamsResponse";
@@ -136,11 +188,18 @@ export interface QueryParamsResponseAminoMsg {
 /**
  * QueryDevFeeInfosPerDeployerRequest is the request type for the
  * Query/DevFeeInfosPerDeployer RPC method.
+ * @name QueryDevFeeInfosPerDeployerRequest
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfosPerDeployerRequest
  */
 export interface QueryDevFeeInfosPerDeployerRequest {
-  /** deployer bech32 address */
+  /**
+   * deployer bech32 address
+   */
   deployerAddress: string;
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequest;
 }
 export interface QueryDevFeeInfosPerDeployerRequestProtoMsg {
@@ -150,11 +209,18 @@ export interface QueryDevFeeInfosPerDeployerRequestProtoMsg {
 /**
  * QueryDevFeeInfosPerDeployerRequest is the request type for the
  * Query/DevFeeInfosPerDeployer RPC method.
+ * @name QueryDevFeeInfosPerDeployerRequestAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfosPerDeployerRequest
  */
 export interface QueryDevFeeInfosPerDeployerRequestAmino {
-  /** deployer bech32 address */
+  /**
+   * deployer bech32 address
+   */
   deployer_address: string;
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryDevFeeInfosPerDeployerRequestAminoMsg {
@@ -164,10 +230,15 @@ export interface QueryDevFeeInfosPerDeployerRequestAminoMsg {
 /**
  * QueryDevFeeInfosPerDeployerResponse is the response type for the
  * Query/DevFeeInfosPerDeployer RPC method.
+ * @name QueryDevFeeInfosPerDeployerResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfosPerDeployerResponse
  */
 export interface QueryDevFeeInfosPerDeployerResponse {
   fees: DevFeeInfo[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponse;
 }
 export interface QueryDevFeeInfosPerDeployerResponseProtoMsg {
@@ -177,10 +248,15 @@ export interface QueryDevFeeInfosPerDeployerResponseProtoMsg {
 /**
  * QueryDevFeeInfosPerDeployerResponse is the response type for the
  * Query/DevFeeInfosPerDeployer RPC method.
+ * @name QueryDevFeeInfosPerDeployerResponseAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfosPerDeployerResponse
  */
 export interface QueryDevFeeInfosPerDeployerResponseAmino {
   fees: DevFeeInfoAmino[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryDevFeeInfosPerDeployerResponseAminoMsg {
@@ -192,6 +268,13 @@ function createBaseQueryDevFeeInfosRequest(): QueryDevFeeInfosRequest {
     pagination: undefined
   };
 }
+/**
+ * QueryDevFeeInfosRequest is the request type for the Query/DevFeeInfos RPC
+ * method.
+ * @name QueryDevFeeInfosRequest
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfosRequest
+ */
 export const QueryDevFeeInfosRequest = {
   typeUrl: "/evmos.fees.v1.QueryDevFeeInfosRequest",
   encode(message: QueryDevFeeInfosRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -256,6 +339,13 @@ function createBaseQueryDevFeeInfosResponse(): QueryDevFeeInfosResponse {
     pagination: undefined
   };
 }
+/**
+ * QueryDevFeeInfosResponse is the response type for the Query/DevFeeInfos
+ * RPC method.
+ * @name QueryDevFeeInfosResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfosResponse
+ */
 export const QueryDevFeeInfosResponse = {
   typeUrl: "/evmos.fees.v1.QueryDevFeeInfosResponse",
   encode(message: QueryDevFeeInfosResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -332,6 +422,13 @@ function createBaseQueryDevFeeInfoRequest(): QueryDevFeeInfoRequest {
     contractAddress: ""
   };
 }
+/**
+ * QueryDevFeeInfoRequest is the request type for the Query/DevFeeInfo RPC
+ * method.
+ * @name QueryDevFeeInfoRequest
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfoRequest
+ */
 export const QueryDevFeeInfoRequest = {
   typeUrl: "/evmos.fees.v1.QueryDevFeeInfoRequest",
   encode(message: QueryDevFeeInfoRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -395,6 +492,13 @@ function createBaseQueryDevFeeInfoResponse(): QueryDevFeeInfoResponse {
     fee: DevFeeInfo.fromPartial({})
   };
 }
+/**
+ * QueryDevFeeInfoResponse is the response type for the Query/DevFeeInfo RPC
+ * method.
+ * @name QueryDevFeeInfoResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfoResponse
+ */
 export const QueryDevFeeInfoResponse = {
   typeUrl: "/evmos.fees.v1.QueryDevFeeInfoResponse",
   encode(message: QueryDevFeeInfoResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -456,6 +560,12 @@ export const QueryDevFeeInfoResponse = {
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: "/evmos.fees.v1.QueryParamsRequest",
   encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -505,14 +615,21 @@ export const QueryParamsRequest = {
 };
 function createBaseQueryParamsResponse(): QueryParamsResponse {
   return {
-    params: Params.fromPartial({})
+    params: EvmosFeesV1Params.fromPartial({})
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC
+ * method.
+ * @name QueryParamsResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: "/evmos.fees.v1.QueryParamsResponse",
   encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      EvmosFeesV1Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
@@ -524,7 +641,7 @@ export const QueryParamsResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = EvmosFeesV1Params.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -535,19 +652,19 @@ export const QueryParamsResponse = {
   },
   fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? EvmosFeesV1Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: QueryParamsResponseAmino): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = EvmosFeesV1Params.fromAmino(object.params);
     }
     return message;
   },
   toAmino(message: QueryParamsResponse): QueryParamsResponseAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? EvmosFeesV1Params.toAmino(message.params) : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryParamsResponseAminoMsg): QueryParamsResponse {
@@ -572,6 +689,13 @@ function createBaseQueryDevFeeInfosPerDeployerRequest(): QueryDevFeeInfosPerDepl
     pagination: undefined
   };
 }
+/**
+ * QueryDevFeeInfosPerDeployerRequest is the request type for the
+ * Query/DevFeeInfosPerDeployer RPC method.
+ * @name QueryDevFeeInfosPerDeployerRequest
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfosPerDeployerRequest
+ */
 export const QueryDevFeeInfosPerDeployerRequest = {
   typeUrl: "/evmos.fees.v1.QueryDevFeeInfosPerDeployerRequest",
   encode(message: QueryDevFeeInfosPerDeployerRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -647,6 +771,13 @@ function createBaseQueryDevFeeInfosPerDeployerResponse(): QueryDevFeeInfosPerDep
     pagination: undefined
   };
 }
+/**
+ * QueryDevFeeInfosPerDeployerResponse is the response type for the
+ * Query/DevFeeInfosPerDeployer RPC method.
+ * @name QueryDevFeeInfosPerDeployerResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.QueryDevFeeInfosPerDeployerResponse
+ */
 export const QueryDevFeeInfosPerDeployerResponse = {
   typeUrl: "/evmos.fees.v1.QueryDevFeeInfosPerDeployerResponse",
   encode(message: QueryDevFeeInfosPerDeployerResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

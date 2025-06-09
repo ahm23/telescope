@@ -43,7 +43,12 @@ export function certificate_StateToJSON(object: Certificate_State): string {
       return "UNRECOGNIZED";
   }
 }
-/** CertificateID stores owner and sequence number */
+/**
+ * CertificateID stores owner and sequence number
+ * @name CertificateID
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.CertificateID
+ */
 export interface CertificateID {
   owner: string;
   serial: string;
@@ -52,12 +57,22 @@ export interface CertificateIDProtoMsg {
   typeUrl: "/akash.cert.v1beta2.CertificateID";
   value: Uint8Array;
 }
-/** CertificateID stores owner and sequence number */
+/**
+ * CertificateID stores owner and sequence number
+ * @name CertificateIDSDKType
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.CertificateID
+ */
 export interface CertificateIDSDKType {
   owner: string;
   serial: string;
 }
-/** Certificate stores state, certificate and it's public key */
+/**
+ * Certificate stores state, certificate and it's public key
+ * @name Certificate
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.Certificate
+ */
 export interface Certificate {
   state: Certificate_State;
   cert: Uint8Array;
@@ -67,13 +82,23 @@ export interface CertificateProtoMsg {
   typeUrl: "/akash.cert.v1beta2.Certificate";
   value: Uint8Array;
 }
-/** Certificate stores state, certificate and it's public key */
+/**
+ * Certificate stores state, certificate and it's public key
+ * @name CertificateSDKType
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.Certificate
+ */
 export interface CertificateSDKType {
   state: Certificate_State;
   cert: Uint8Array;
   pubkey: Uint8Array;
 }
-/** CertificateFilter defines filters used to filter certificates */
+/**
+ * CertificateFilter defines filters used to filter certificates
+ * @name CertificateFilter
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.CertificateFilter
+ */
 export interface CertificateFilter {
   owner: string;
   serial: string;
@@ -83,13 +108,23 @@ export interface CertificateFilterProtoMsg {
   typeUrl: "/akash.cert.v1beta2.CertificateFilter";
   value: Uint8Array;
 }
-/** CertificateFilter defines filters used to filter certificates */
+/**
+ * CertificateFilter defines filters used to filter certificates
+ * @name CertificateFilterSDKType
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.CertificateFilter
+ */
 export interface CertificateFilterSDKType {
   owner: string;
   serial: string;
   state: string;
 }
-/** MsgCreateCertificate defines an SDK message for creating certificate */
+/**
+ * MsgCreateCertificate defines an SDK message for creating certificate
+ * @name MsgCreateCertificate
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.MsgCreateCertificate
+ */
 export interface MsgCreateCertificate {
   owner: string;
   cert: Uint8Array;
@@ -99,21 +134,41 @@ export interface MsgCreateCertificateProtoMsg {
   typeUrl: "/akash.cert.v1beta2.MsgCreateCertificate";
   value: Uint8Array;
 }
-/** MsgCreateCertificate defines an SDK message for creating certificate */
+/**
+ * MsgCreateCertificate defines an SDK message for creating certificate
+ * @name MsgCreateCertificateSDKType
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.MsgCreateCertificate
+ */
 export interface MsgCreateCertificateSDKType {
   owner: string;
   cert: Uint8Array;
   pubkey: Uint8Array;
 }
-/** MsgCreateCertificateResponse defines the Msg/CreateCertificate response type. */
+/**
+ * MsgCreateCertificateResponse defines the Msg/CreateCertificate response type.
+ * @name MsgCreateCertificateResponse
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.MsgCreateCertificateResponse
+ */
 export interface MsgCreateCertificateResponse {}
 export interface MsgCreateCertificateResponseProtoMsg {
   typeUrl: "/akash.cert.v1beta2.MsgCreateCertificateResponse";
   value: Uint8Array;
 }
-/** MsgCreateCertificateResponse defines the Msg/CreateCertificate response type. */
+/**
+ * MsgCreateCertificateResponse defines the Msg/CreateCertificate response type.
+ * @name MsgCreateCertificateResponseSDKType
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.MsgCreateCertificateResponse
+ */
 export interface MsgCreateCertificateResponseSDKType {}
-/** MsgRevokeCertificate defines an SDK message for revoking certificate */
+/**
+ * MsgRevokeCertificate defines an SDK message for revoking certificate
+ * @name MsgRevokeCertificate
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.MsgRevokeCertificate
+ */
 export interface MsgRevokeCertificate {
   id: CertificateID;
 }
@@ -121,17 +176,32 @@ export interface MsgRevokeCertificateProtoMsg {
   typeUrl: "/akash.cert.v1beta2.MsgRevokeCertificate";
   value: Uint8Array;
 }
-/** MsgRevokeCertificate defines an SDK message for revoking certificate */
+/**
+ * MsgRevokeCertificate defines an SDK message for revoking certificate
+ * @name MsgRevokeCertificateSDKType
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.MsgRevokeCertificate
+ */
 export interface MsgRevokeCertificateSDKType {
   id: CertificateIDSDKType;
 }
-/** MsgRevokeCertificateResponse defines the Msg/RevokeCertificate response type. */
+/**
+ * MsgRevokeCertificateResponse defines the Msg/RevokeCertificate response type.
+ * @name MsgRevokeCertificateResponse
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.MsgRevokeCertificateResponse
+ */
 export interface MsgRevokeCertificateResponse {}
 export interface MsgRevokeCertificateResponseProtoMsg {
   typeUrl: "/akash.cert.v1beta2.MsgRevokeCertificateResponse";
   value: Uint8Array;
 }
-/** MsgRevokeCertificateResponse defines the Msg/RevokeCertificate response type. */
+/**
+ * MsgRevokeCertificateResponse defines the Msg/RevokeCertificate response type.
+ * @name MsgRevokeCertificateResponseSDKType
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.MsgRevokeCertificateResponse
+ */
 export interface MsgRevokeCertificateResponseSDKType {}
 function createBaseCertificateID(): CertificateID {
   return {
@@ -139,6 +209,12 @@ function createBaseCertificateID(): CertificateID {
     serial: ""
   };
 }
+/**
+ * CertificateID stores owner and sequence number
+ * @name CertificateID
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.CertificateID
+ */
 export const CertificateID = {
   typeUrl: "/akash.cert.v1beta2.CertificateID",
   encode(message: CertificateID, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -251,6 +327,12 @@ function createBaseCertificate(): Certificate {
     pubkey: new Uint8Array()
   };
 }
+/**
+ * Certificate stores state, certificate and it's public key
+ * @name Certificate
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.Certificate
+ */
 export const Certificate = {
   typeUrl: "/akash.cert.v1beta2.Certificate",
   encode(message: Certificate, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -379,6 +461,12 @@ function createBaseCertificateFilter(): CertificateFilter {
     state: ""
   };
 }
+/**
+ * CertificateFilter defines filters used to filter certificates
+ * @name CertificateFilter
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.CertificateFilter
+ */
 export const CertificateFilter = {
   typeUrl: "/akash.cert.v1beta2.CertificateFilter",
   encode(message: CertificateFilter, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -507,6 +595,12 @@ function createBaseMsgCreateCertificate(): MsgCreateCertificate {
     pubkey: new Uint8Array()
   };
 }
+/**
+ * MsgCreateCertificate defines an SDK message for creating certificate
+ * @name MsgCreateCertificate
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.MsgCreateCertificate
+ */
 export const MsgCreateCertificate = {
   typeUrl: "/akash.cert.v1beta2.MsgCreateCertificate",
   encode(message: MsgCreateCertificate, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -631,6 +725,12 @@ export const MsgCreateCertificate = {
 function createBaseMsgCreateCertificateResponse(): MsgCreateCertificateResponse {
   return {};
 }
+/**
+ * MsgCreateCertificateResponse defines the Msg/CreateCertificate response type.
+ * @name MsgCreateCertificateResponse
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.MsgCreateCertificateResponse
+ */
 export const MsgCreateCertificateResponse = {
   typeUrl: "/akash.cert.v1beta2.MsgCreateCertificateResponse",
   encode(_: MsgCreateCertificateResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -707,6 +807,12 @@ function createBaseMsgRevokeCertificate(): MsgRevokeCertificate {
     id: CertificateID.fromPartial({})
   };
 }
+/**
+ * MsgRevokeCertificate defines an SDK message for revoking certificate
+ * @name MsgRevokeCertificate
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.MsgRevokeCertificate
+ */
 export const MsgRevokeCertificate = {
   typeUrl: "/akash.cert.v1beta2.MsgRevokeCertificate",
   encode(message: MsgRevokeCertificate, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -801,6 +907,12 @@ export const MsgRevokeCertificate = {
 function createBaseMsgRevokeCertificateResponse(): MsgRevokeCertificateResponse {
   return {};
 }
+/**
+ * MsgRevokeCertificateResponse defines the Msg/RevokeCertificate response type.
+ * @name MsgRevokeCertificateResponse
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.MsgRevokeCertificateResponse
+ */
 export const MsgRevokeCertificateResponse = {
   typeUrl: "/akash.cert.v1beta2.MsgRevokeCertificateResponse",
   encode(_: MsgRevokeCertificateResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

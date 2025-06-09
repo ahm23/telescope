@@ -3,6 +3,11 @@ import { BinaryReader, BinaryWriter } from "../../binary.js";
 import { isSet, DeepPartial } from "../../helpers.js";
 import { JsonSafe } from "../../json-safe.js";
 export const protobufPackage = "osmosis.superfluid";
+/**
+ * @name MsgSuperfluidDelegate
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidDelegate
+ */
 export interface MsgSuperfluidDelegate {
   sender: string;
   lockId: bigint;
@@ -12,17 +17,37 @@ export interface MsgSuperfluidDelegateProtoMsg {
   typeUrl: "/osmosis.superfluid.MsgSuperfluidDelegate";
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidDelegateSDKType
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidDelegate
+ */
 export interface MsgSuperfluidDelegateSDKType {
   sender: string;
   lock_id: bigint;
   val_addr: string;
 }
+/**
+ * @name MsgSuperfluidDelegateResponse
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidDelegateResponse
+ */
 export interface MsgSuperfluidDelegateResponse {}
 export interface MsgSuperfluidDelegateResponseProtoMsg {
   typeUrl: "/osmosis.superfluid.MsgSuperfluidDelegateResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidDelegateResponseSDKType
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidDelegateResponse
+ */
 export interface MsgSuperfluidDelegateResponseSDKType {}
+/**
+ * @name MsgSuperfluidUndelegate
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidUndelegate
+ */
 export interface MsgSuperfluidUndelegate {
   sender: string;
   lockId: bigint;
@@ -31,16 +56,36 @@ export interface MsgSuperfluidUndelegateProtoMsg {
   typeUrl: "/osmosis.superfluid.MsgSuperfluidUndelegate";
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidUndelegateSDKType
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidUndelegate
+ */
 export interface MsgSuperfluidUndelegateSDKType {
   sender: string;
   lock_id: bigint;
 }
+/**
+ * @name MsgSuperfluidUndelegateResponse
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidUndelegateResponse
+ */
 export interface MsgSuperfluidUndelegateResponse {}
 export interface MsgSuperfluidUndelegateResponseProtoMsg {
   typeUrl: "/osmosis.superfluid.MsgSuperfluidUndelegateResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidUndelegateResponseSDKType
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidUndelegateResponse
+ */
 export interface MsgSuperfluidUndelegateResponseSDKType {}
+/**
+ * @name MsgSuperfluidUnbondLock
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidUnbondLock
+ */
 export interface MsgSuperfluidUnbondLock {
   sender: string;
   lockId: bigint;
@@ -49,20 +94,38 @@ export interface MsgSuperfluidUnbondLockProtoMsg {
   typeUrl: "/osmosis.superfluid.MsgSuperfluidUnbondLock";
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidUnbondLockSDKType
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidUnbondLock
+ */
 export interface MsgSuperfluidUnbondLockSDKType {
   sender: string;
   lock_id: bigint;
 }
+/**
+ * @name MsgSuperfluidUnbondLockResponse
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidUnbondLockResponse
+ */
 export interface MsgSuperfluidUnbondLockResponse {}
 export interface MsgSuperfluidUnbondLockResponseProtoMsg {
   typeUrl: "/osmosis.superfluid.MsgSuperfluidUnbondLockResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgSuperfluidUnbondLockResponseSDKType
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidUnbondLockResponse
+ */
 export interface MsgSuperfluidUnbondLockResponseSDKType {}
 /**
  * MsgLockAndSuperfluidDelegate locks coins with the unbonding period duration,
  * and then does a superfluid lock from the newly created lockup, to the
  * specified validator addr.
+ * @name MsgLockAndSuperfluidDelegate
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgLockAndSuperfluidDelegate
  */
 export interface MsgLockAndSuperfluidDelegate {
   sender: string;
@@ -77,12 +140,20 @@ export interface MsgLockAndSuperfluidDelegateProtoMsg {
  * MsgLockAndSuperfluidDelegate locks coins with the unbonding period duration,
  * and then does a superfluid lock from the newly created lockup, to the
  * specified validator addr.
+ * @name MsgLockAndSuperfluidDelegateSDKType
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgLockAndSuperfluidDelegate
  */
 export interface MsgLockAndSuperfluidDelegateSDKType {
   sender: string;
   coins: CoinSDKType[];
   val_addr: string;
 }
+/**
+ * @name MsgLockAndSuperfluidDelegateResponse
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgLockAndSuperfluidDelegateResponse
+ */
 export interface MsgLockAndSuperfluidDelegateResponse {
   iD: bigint;
 }
@@ -90,6 +161,11 @@ export interface MsgLockAndSuperfluidDelegateResponseProtoMsg {
   typeUrl: "/osmosis.superfluid.MsgLockAndSuperfluidDelegateResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgLockAndSuperfluidDelegateResponseSDKType
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgLockAndSuperfluidDelegateResponse
+ */
 export interface MsgLockAndSuperfluidDelegateResponseSDKType {
   ID: bigint;
 }
@@ -102,6 +178,9 @@ export interface MsgLockAndSuperfluidDelegateResponseSDKType {
  * lock for every constituent token, with the duration associated with the lock.
  * If the lock was unbonding, the new lockup durations should be the time left
  * until unbond completion.
+ * @name MsgUnPoolWhitelistedPool
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgUnPoolWhitelistedPool
  */
 export interface MsgUnPoolWhitelistedPool {
   sender: string;
@@ -120,11 +199,19 @@ export interface MsgUnPoolWhitelistedPoolProtoMsg {
  * lock for every constituent token, with the duration associated with the lock.
  * If the lock was unbonding, the new lockup durations should be the time left
  * until unbond completion.
+ * @name MsgUnPoolWhitelistedPoolSDKType
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgUnPoolWhitelistedPool
  */
 export interface MsgUnPoolWhitelistedPoolSDKType {
   sender: string;
   pool_id: bigint;
 }
+/**
+ * @name MsgUnPoolWhitelistedPoolResponse
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgUnPoolWhitelistedPoolResponse
+ */
 export interface MsgUnPoolWhitelistedPoolResponse {
   exitedLockIds: bigint[];
 }
@@ -132,6 +219,11 @@ export interface MsgUnPoolWhitelistedPoolResponseProtoMsg {
   typeUrl: "/osmosis.superfluid.MsgUnPoolWhitelistedPoolResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgUnPoolWhitelistedPoolResponseSDKType
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgUnPoolWhitelistedPoolResponse
+ */
 export interface MsgUnPoolWhitelistedPoolResponseSDKType {
   exited_lock_ids: bigint[];
 }
@@ -142,6 +234,11 @@ function createBaseMsgSuperfluidDelegate(): MsgSuperfluidDelegate {
     valAddr: ""
   };
 }
+/**
+ * @name MsgSuperfluidDelegate
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidDelegate
+ */
 export const MsgSuperfluidDelegate = {
   typeUrl: "/osmosis.superfluid.MsgSuperfluidDelegate",
   encode(message: MsgSuperfluidDelegate, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -268,6 +365,11 @@ export const MsgSuperfluidDelegate = {
 function createBaseMsgSuperfluidDelegateResponse(): MsgSuperfluidDelegateResponse {
   return {};
 }
+/**
+ * @name MsgSuperfluidDelegateResponse
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidDelegateResponse
+ */
 export const MsgSuperfluidDelegateResponse = {
   typeUrl: "/osmosis.superfluid.MsgSuperfluidDelegateResponse",
   encode(_: MsgSuperfluidDelegateResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -345,6 +447,11 @@ function createBaseMsgSuperfluidUndelegate(): MsgSuperfluidUndelegate {
     lockId: BigInt(0)
   };
 }
+/**
+ * @name MsgSuperfluidUndelegate
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidUndelegate
+ */
 export const MsgSuperfluidUndelegate = {
   typeUrl: "/osmosis.superfluid.MsgSuperfluidUndelegate",
   encode(message: MsgSuperfluidUndelegate, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -455,6 +562,11 @@ export const MsgSuperfluidUndelegate = {
 function createBaseMsgSuperfluidUndelegateResponse(): MsgSuperfluidUndelegateResponse {
   return {};
 }
+/**
+ * @name MsgSuperfluidUndelegateResponse
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidUndelegateResponse
+ */
 export const MsgSuperfluidUndelegateResponse = {
   typeUrl: "/osmosis.superfluid.MsgSuperfluidUndelegateResponse",
   encode(_: MsgSuperfluidUndelegateResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -532,6 +644,11 @@ function createBaseMsgSuperfluidUnbondLock(): MsgSuperfluidUnbondLock {
     lockId: BigInt(0)
   };
 }
+/**
+ * @name MsgSuperfluidUnbondLock
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidUnbondLock
+ */
 export const MsgSuperfluidUnbondLock = {
   typeUrl: "/osmosis.superfluid.MsgSuperfluidUnbondLock",
   encode(message: MsgSuperfluidUnbondLock, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -642,6 +759,11 @@ export const MsgSuperfluidUnbondLock = {
 function createBaseMsgSuperfluidUnbondLockResponse(): MsgSuperfluidUnbondLockResponse {
   return {};
 }
+/**
+ * @name MsgSuperfluidUnbondLockResponse
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgSuperfluidUnbondLockResponse
+ */
 export const MsgSuperfluidUnbondLockResponse = {
   typeUrl: "/osmosis.superfluid.MsgSuperfluidUnbondLockResponse",
   encode(_: MsgSuperfluidUnbondLockResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -720,6 +842,14 @@ function createBaseMsgLockAndSuperfluidDelegate(): MsgLockAndSuperfluidDelegate 
     valAddr: ""
   };
 }
+/**
+ * MsgLockAndSuperfluidDelegate locks coins with the unbonding period duration,
+ * and then does a superfluid lock from the newly created lockup, to the
+ * specified validator addr.
+ * @name MsgLockAndSuperfluidDelegate
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgLockAndSuperfluidDelegate
+ */
 export const MsgLockAndSuperfluidDelegate = {
   typeUrl: "/osmosis.superfluid.MsgLockAndSuperfluidDelegate",
   encode(message: MsgLockAndSuperfluidDelegate, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -856,6 +986,11 @@ function createBaseMsgLockAndSuperfluidDelegateResponse(): MsgLockAndSuperfluidD
     iD: BigInt(0)
   };
 }
+/**
+ * @name MsgLockAndSuperfluidDelegateResponse
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgLockAndSuperfluidDelegateResponse
+ */
 export const MsgLockAndSuperfluidDelegateResponse = {
   typeUrl: "/osmosis.superfluid.MsgLockAndSuperfluidDelegateResponse",
   encode(message: MsgLockAndSuperfluidDelegateResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -953,6 +1088,19 @@ function createBaseMsgUnPoolWhitelistedPool(): MsgUnPoolWhitelistedPool {
     poolId: BigInt(0)
   };
 }
+/**
+ * MsgUnPoolWhitelistedPool Unpools every lock the sender has, that is
+ * associated with pool pool_id. If pool_id is not approved for unpooling by
+ * governance, this is a no-op. Unpooling takes the locked gamm shares, and runs
+ * "ExitPool" on it, to get the constituent tokens. e.g. z gamm/pool/1 tokens
+ * ExitPools into constituent tokens x uatom, y uosmo. Then it creates a new
+ * lock for every constituent token, with the duration associated with the lock.
+ * If the lock was unbonding, the new lockup durations should be the time left
+ * until unbond completion.
+ * @name MsgUnPoolWhitelistedPool
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgUnPoolWhitelistedPool
+ */
 export const MsgUnPoolWhitelistedPool = {
   typeUrl: "/osmosis.superfluid.MsgUnPoolWhitelistedPool",
   encode(message: MsgUnPoolWhitelistedPool, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1065,6 +1213,11 @@ function createBaseMsgUnPoolWhitelistedPoolResponse(): MsgUnPoolWhitelistedPoolR
     exitedLockIds: []
   };
 }
+/**
+ * @name MsgUnPoolWhitelistedPoolResponse
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.MsgUnPoolWhitelistedPoolResponse
+ */
 export const MsgUnPoolWhitelistedPoolResponse = {
   typeUrl: "/osmosis.superfluid.MsgUnPoolWhitelistedPoolResponse",
   encode(message: MsgUnPoolWhitelistedPoolResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

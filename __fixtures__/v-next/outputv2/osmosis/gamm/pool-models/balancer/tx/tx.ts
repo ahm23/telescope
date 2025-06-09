@@ -3,7 +3,12 @@ import { BinaryReader, BinaryWriter } from "../../../../../binary";
 import { isSet, DeepPartial } from "../../../../../helpers";
 import { JsonSafe } from "../../../../../json-safe";
 export const protobufPackage = "osmosis.gamm.poolmodels.balancer.v1beta1";
-/** ===================== MsgCreatePool */
+/**
+ * ===================== MsgCreatePool
+ * @name MsgCreateBalancerPool
+ * @package osmosis.gamm.poolmodels.balancer.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool
+ */
 export interface MsgCreateBalancerPool {
   sender: string;
   poolParams?: PoolParams;
@@ -14,7 +19,12 @@ export interface MsgCreateBalancerPoolProtoMsg {
   typeUrl: "/osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool";
   value: Uint8Array;
 }
-/** ===================== MsgCreatePool */
+/**
+ * ===================== MsgCreatePool
+ * @name MsgCreateBalancerPoolAmino
+ * @package osmosis.gamm.poolmodels.balancer.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool
+ */
 export interface MsgCreateBalancerPoolAmino {
   sender?: string;
   pool_params?: PoolParamsAmino;
@@ -25,14 +35,24 @@ export interface MsgCreateBalancerPoolAminoMsg {
   type: "osmosis/gamm/poolmodels/balancer/create-balancer-pool";
   value: MsgCreateBalancerPoolAmino;
 }
-/** ===================== MsgCreatePool */
+/**
+ * ===================== MsgCreatePool
+ * @name MsgCreateBalancerPoolSDKType
+ * @package osmosis.gamm.poolmodels.balancer.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool
+ */
 export interface MsgCreateBalancerPoolSDKType {
   sender: string;
   pool_params?: PoolParamsSDKType;
   pool_assets: PoolAssetSDKType[];
   future_pool_governor: string;
 }
-/** Returns the poolID */
+/**
+ * Returns the poolID
+ * @name MsgCreateBalancerPoolResponse
+ * @package osmosis.gamm.poolmodels.balancer.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPoolResponse
+ */
 export interface MsgCreateBalancerPoolResponse {
   poolId: bigint;
 }
@@ -40,7 +60,12 @@ export interface MsgCreateBalancerPoolResponseProtoMsg {
   typeUrl: "/osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPoolResponse";
   value: Uint8Array;
 }
-/** Returns the poolID */
+/**
+ * Returns the poolID
+ * @name MsgCreateBalancerPoolResponseAmino
+ * @package osmosis.gamm.poolmodels.balancer.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPoolResponse
+ */
 export interface MsgCreateBalancerPoolResponseAmino {
   pool_id?: string;
 }
@@ -48,7 +73,12 @@ export interface MsgCreateBalancerPoolResponseAminoMsg {
   type: "osmosis/gamm/poolmodels/balancer/create-balancer-pool-response";
   value: MsgCreateBalancerPoolResponseAmino;
 }
-/** Returns the poolID */
+/**
+ * Returns the poolID
+ * @name MsgCreateBalancerPoolResponseSDKType
+ * @package osmosis.gamm.poolmodels.balancer.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPoolResponse
+ */
 export interface MsgCreateBalancerPoolResponseSDKType {
   pool_id: bigint;
 }
@@ -60,6 +90,12 @@ function createBaseMsgCreateBalancerPool(): MsgCreateBalancerPool {
     futurePoolGovernor: ""
   };
 }
+/**
+ * ===================== MsgCreatePool
+ * @name MsgCreateBalancerPool
+ * @package osmosis.gamm.poolmodels.balancer.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool
+ */
 export const MsgCreateBalancerPool = {
   typeUrl: "/osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool",
   aminoType: "osmosis/gamm/poolmodels/balancer/create-balancer-pool",
@@ -207,6 +243,12 @@ function createBaseMsgCreateBalancerPoolResponse(): MsgCreateBalancerPoolRespons
     poolId: BigInt(0)
   };
 }
+/**
+ * Returns the poolID
+ * @name MsgCreateBalancerPoolResponse
+ * @package osmosis.gamm.poolmodels.balancer.v1beta1
+ * @see proto type: osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPoolResponse
+ */
 export const MsgCreateBalancerPoolResponse = {
   typeUrl: "/osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPoolResponse",
   aminoType: "osmosis/gamm/poolmodels/balancer/create-balancer-pool-response",

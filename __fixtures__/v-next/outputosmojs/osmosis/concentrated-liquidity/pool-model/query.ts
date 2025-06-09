@@ -8,7 +8,12 @@ import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 import { Decimal } from "@cosmjs/math";
 export const protobufPackage = "osmosis.concentratedliquidity.v1beta1";
-/** =============================== UserPositions */
+/**
+ * =============================== UserPositions
+ * @name QueryUserPositionsRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryUserPositionsRequest
+ */
 export interface QueryUserPositionsRequest {
   address: string;
   poolId: bigint;
@@ -17,11 +22,21 @@ export interface QueryUserPositionsRequestProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryUserPositionsRequest";
   value: Uint8Array;
 }
-/** =============================== UserPositions */
+/**
+ * =============================== UserPositions
+ * @name QueryUserPositionsRequestSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryUserPositionsRequest
+ */
 export interface QueryUserPositionsRequestSDKType {
   address: string;
   pool_id: bigint;
 }
+/**
+ * @name QueryUserPositionsResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryUserPositionsResponse
+ */
 export interface QueryUserPositionsResponse {
   positions: PositionWithUnderlyingAssetBreakdown[];
 }
@@ -29,10 +44,20 @@ export interface QueryUserPositionsResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryUserPositionsResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryUserPositionsResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryUserPositionsResponse
+ */
 export interface QueryUserPositionsResponseSDKType {
   positions: PositionWithUnderlyingAssetBreakdownSDKType[];
 }
-/** =============================== PositionById */
+/**
+ * =============================== PositionById
+ * @name QueryPositionByIdRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryPositionByIdRequest
+ */
 export interface QueryPositionByIdRequest {
   positionId: bigint;
 }
@@ -40,10 +65,20 @@ export interface QueryPositionByIdRequestProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryPositionByIdRequest";
   value: Uint8Array;
 }
-/** =============================== PositionById */
+/**
+ * =============================== PositionById
+ * @name QueryPositionByIdRequestSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryPositionByIdRequest
+ */
 export interface QueryPositionByIdRequestSDKType {
   position_id: bigint;
 }
+/**
+ * @name QueryPositionByIdResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryPositionByIdResponse
+ */
 export interface QueryPositionByIdResponse {
   position: PositionWithUnderlyingAssetBreakdown;
 }
@@ -51,43 +86,87 @@ export interface QueryPositionByIdResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryPositionByIdResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryPositionByIdResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryPositionByIdResponse
+ */
 export interface QueryPositionByIdResponseSDKType {
   position: PositionWithUnderlyingAssetBreakdownSDKType;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name QueryPoolsRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryPoolsRequest
+ */
 export interface QueryPoolsRequest {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequest;
 }
 export interface QueryPoolsRequestProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryPoolsRequest";
   value: Uint8Array;
 }
-/** =============================== Pools */
+/**
+ * =============================== Pools
+ * @name QueryPoolsRequestSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryPoolsRequest
+ */
 export interface QueryPoolsRequestSDKType {
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name QueryPoolsResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryPoolsResponse
+ */
 export interface QueryPoolsResponse {
   pools: Any[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponse;
 }
 export interface QueryPoolsResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryPoolsResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryPoolsResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryPoolsResponse
+ */
 export interface QueryPoolsResponseSDKType {
   pools: AnySDKType[];
   pagination?: PageResponseSDKType;
 }
-/** =============================== ModuleParams */
+/**
+ * =============================== ModuleParams
+ * @name QueryParamsRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryParamsRequest";
   value: Uint8Array;
 }
-/** =============================== ModuleParams */
+/**
+ * =============================== ModuleParams
+ * @name QueryParamsRequestSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
+/**
+ * @name QueryParamsResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
   params: Params;
 }
@@ -95,9 +174,19 @@ export interface QueryParamsResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryParamsResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryParamsResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
+/**
+ * @name TickLiquidityNet
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.TickLiquidityNet
+ */
 export interface TickLiquidityNet {
   liquidityNet: string;
   tickIndex: string;
@@ -106,10 +195,20 @@ export interface TickLiquidityNetProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.TickLiquidityNet";
   value: Uint8Array;
 }
+/**
+ * @name TickLiquidityNetSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.TickLiquidityNet
+ */
 export interface TickLiquidityNetSDKType {
   liquidity_net: string;
   tick_index: string;
 }
+/**
+ * @name LiquidityDepthWithRange
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.LiquidityDepthWithRange
+ */
 export interface LiquidityDepthWithRange {
   liquidityAmount: string;
   lowerTick: string;
@@ -119,12 +218,22 @@ export interface LiquidityDepthWithRangeProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.LiquidityDepthWithRange";
   value: Uint8Array;
 }
+/**
+ * @name LiquidityDepthWithRangeSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.LiquidityDepthWithRange
+ */
 export interface LiquidityDepthWithRangeSDKType {
   liquidity_amount: string;
   lower_tick: string;
   upper_tick: string;
 }
-/** =============================== LiquidityNetInDirection */
+/**
+ * =============================== LiquidityNetInDirection
+ * @name QueryLiquidityNetInDirectionRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryLiquidityNetInDirectionRequest
+ */
 export interface QueryLiquidityNetInDirectionRequest {
   poolId: bigint;
   tokenIn: string;
@@ -135,13 +244,23 @@ export interface QueryLiquidityNetInDirectionRequestProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryLiquidityNetInDirectionRequest";
   value: Uint8Array;
 }
-/** =============================== LiquidityNetInDirection */
+/**
+ * =============================== LiquidityNetInDirection
+ * @name QueryLiquidityNetInDirectionRequestSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryLiquidityNetInDirectionRequest
+ */
 export interface QueryLiquidityNetInDirectionRequestSDKType {
   pool_id: bigint;
   token_in: string;
   start_tick?: string;
   bound_tick?: string;
 }
+/**
+ * @name QueryLiquidityNetInDirectionResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryLiquidityNetInDirectionResponse
+ */
 export interface QueryLiquidityNetInDirectionResponse {
   liquidityDepths: TickLiquidityNet[];
   currentTick: bigint;
@@ -151,12 +270,22 @@ export interface QueryLiquidityNetInDirectionResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryLiquidityNetInDirectionResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryLiquidityNetInDirectionResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryLiquidityNetInDirectionResponse
+ */
 export interface QueryLiquidityNetInDirectionResponseSDKType {
   liquidity_depths: TickLiquidityNetSDKType[];
   current_tick: bigint;
   current_liquidity: string;
 }
-/** =============================== TotalLiquidityForRange */
+/**
+ * =============================== TotalLiquidityForRange
+ * @name QueryTotalLiquidityForRangeRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryTotalLiquidityForRangeRequest
+ */
 export interface QueryTotalLiquidityForRangeRequest {
   poolId: bigint;
 }
@@ -164,10 +293,20 @@ export interface QueryTotalLiquidityForRangeRequestProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryTotalLiquidityForRangeRequest";
   value: Uint8Array;
 }
-/** =============================== TotalLiquidityForRange */
+/**
+ * =============================== TotalLiquidityForRange
+ * @name QueryTotalLiquidityForRangeRequestSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryTotalLiquidityForRangeRequest
+ */
 export interface QueryTotalLiquidityForRangeRequestSDKType {
   pool_id: bigint;
 }
+/**
+ * @name QueryTotalLiquidityForRangeResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryTotalLiquidityForRangeResponse
+ */
 export interface QueryTotalLiquidityForRangeResponse {
   liquidity: LiquidityDepthWithRange[];
 }
@@ -175,10 +314,20 @@ export interface QueryTotalLiquidityForRangeResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryTotalLiquidityForRangeResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryTotalLiquidityForRangeResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryTotalLiquidityForRangeResponse
+ */
 export interface QueryTotalLiquidityForRangeResponseSDKType {
   liquidity: LiquidityDepthWithRangeSDKType[];
 }
-/** ===================== MsgQueryClaimableFees */
+/**
+ * ===================== MsgQueryClaimableFees
+ * @name QueryClaimableFeesRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryClaimableFeesRequest
+ */
 export interface QueryClaimableFeesRequest {
   positionId: bigint;
 }
@@ -186,10 +335,20 @@ export interface QueryClaimableFeesRequestProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryClaimableFeesRequest";
   value: Uint8Array;
 }
-/** ===================== MsgQueryClaimableFees */
+/**
+ * ===================== MsgQueryClaimableFees
+ * @name QueryClaimableFeesRequestSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryClaimableFeesRequest
+ */
 export interface QueryClaimableFeesRequestSDKType {
   position_id: bigint;
 }
+/**
+ * @name QueryClaimableFeesResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryClaimableFeesResponse
+ */
 export interface QueryClaimableFeesResponse {
   claimableFees: Coin[];
 }
@@ -197,6 +356,11 @@ export interface QueryClaimableFeesResponseProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryClaimableFeesResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryClaimableFeesResponseSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryClaimableFeesResponse
+ */
 export interface QueryClaimableFeesResponseSDKType {
   claimable_fees: CoinSDKType[];
 }
@@ -206,6 +370,12 @@ function createBaseQueryUserPositionsRequest(): QueryUserPositionsRequest {
     poolId: BigInt(0)
   };
 }
+/**
+ * =============================== UserPositions
+ * @name QueryUserPositionsRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryUserPositionsRequest
+ */
 export const QueryUserPositionsRequest = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryUserPositionsRequest",
   encode(message: QueryUserPositionsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -316,6 +486,11 @@ function createBaseQueryUserPositionsResponse(): QueryUserPositionsResponse {
     positions: []
   };
 }
+/**
+ * @name QueryUserPositionsResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryUserPositionsResponse
+ */
 export const QueryUserPositionsResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryUserPositionsResponse",
   encode(message: QueryUserPositionsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -420,6 +595,12 @@ function createBaseQueryPositionByIdRequest(): QueryPositionByIdRequest {
     positionId: BigInt(0)
   };
 }
+/**
+ * =============================== PositionById
+ * @name QueryPositionByIdRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryPositionByIdRequest
+ */
 export const QueryPositionByIdRequest = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryPositionByIdRequest",
   encode(message: QueryPositionByIdRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -514,6 +695,11 @@ function createBaseQueryPositionByIdResponse(): QueryPositionByIdResponse {
     position: PositionWithUnderlyingAssetBreakdown.fromPartial({})
   };
 }
+/**
+ * @name QueryPositionByIdResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryPositionByIdResponse
+ */
 export const QueryPositionByIdResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryPositionByIdResponse",
   encode(message: QueryPositionByIdResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -608,6 +794,12 @@ function createBaseQueryPoolsRequest(): QueryPoolsRequest {
     pagination: undefined
   };
 }
+/**
+ * =============================== Pools
+ * @name QueryPoolsRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryPoolsRequest
+ */
 export const QueryPoolsRequest = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryPoolsRequest",
   encode(message: QueryPoolsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -703,6 +895,11 @@ function createBaseQueryPoolsResponse(): QueryPoolsResponse {
     pagination: undefined
   };
 }
+/**
+ * @name QueryPoolsResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryPoolsResponse
+ */
 export const QueryPoolsResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryPoolsResponse",
   encode(message: QueryPoolsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -821,6 +1018,12 @@ export const QueryPoolsResponse = {
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * =============================== ModuleParams
+ * @name QueryParamsRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryParamsRequest",
   encode(_: QueryParamsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -896,6 +1099,11 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({})
   };
 }
+/**
+ * @name QueryParamsResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryParamsResponse",
   encode(message: QueryParamsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -991,6 +1199,11 @@ function createBaseTickLiquidityNet(): TickLiquidityNet {
     tickIndex: ""
   };
 }
+/**
+ * @name TickLiquidityNet
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.TickLiquidityNet
+ */
 export const TickLiquidityNet = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.TickLiquidityNet",
   encode(message: TickLiquidityNet, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1103,6 +1316,11 @@ function createBaseLiquidityDepthWithRange(): LiquidityDepthWithRange {
     upperTick: ""
   };
 }
+/**
+ * @name LiquidityDepthWithRange
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.LiquidityDepthWithRange
+ */
 export const LiquidityDepthWithRange = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.LiquidityDepthWithRange",
   encode(message: LiquidityDepthWithRange, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1232,6 +1450,12 @@ function createBaseQueryLiquidityNetInDirectionRequest(): QueryLiquidityNetInDir
     boundTick: undefined
   };
 }
+/**
+ * =============================== LiquidityNetInDirection
+ * @name QueryLiquidityNetInDirectionRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryLiquidityNetInDirectionRequest
+ */
 export const QueryLiquidityNetInDirectionRequest = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryLiquidityNetInDirectionRequest",
   encode(message: QueryLiquidityNetInDirectionRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1376,6 +1600,11 @@ function createBaseQueryLiquidityNetInDirectionResponse(): QueryLiquidityNetInDi
     currentLiquidity: ""
   };
 }
+/**
+ * @name QueryLiquidityNetInDirectionResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryLiquidityNetInDirectionResponse
+ */
 export const QueryLiquidityNetInDirectionResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryLiquidityNetInDirectionResponse",
   encode(message: QueryLiquidityNetInDirectionResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1512,6 +1741,12 @@ function createBaseQueryTotalLiquidityForRangeRequest(): QueryTotalLiquidityForR
     poolId: BigInt(0)
   };
 }
+/**
+ * =============================== TotalLiquidityForRange
+ * @name QueryTotalLiquidityForRangeRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryTotalLiquidityForRangeRequest
+ */
 export const QueryTotalLiquidityForRangeRequest = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryTotalLiquidityForRangeRequest",
   encode(message: QueryTotalLiquidityForRangeRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1606,6 +1841,11 @@ function createBaseQueryTotalLiquidityForRangeResponse(): QueryTotalLiquidityFor
     liquidity: []
   };
 }
+/**
+ * @name QueryTotalLiquidityForRangeResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryTotalLiquidityForRangeResponse
+ */
 export const QueryTotalLiquidityForRangeResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryTotalLiquidityForRangeResponse",
   encode(message: QueryTotalLiquidityForRangeResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1710,6 +1950,12 @@ function createBaseQueryClaimableFeesRequest(): QueryClaimableFeesRequest {
     positionId: BigInt(0)
   };
 }
+/**
+ * ===================== MsgQueryClaimableFees
+ * @name QueryClaimableFeesRequest
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryClaimableFeesRequest
+ */
 export const QueryClaimableFeesRequest = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryClaimableFeesRequest",
   encode(message: QueryClaimableFeesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1804,6 +2050,11 @@ function createBaseQueryClaimableFeesResponse(): QueryClaimableFeesResponse {
     claimableFees: []
   };
 }
+/**
+ * @name QueryClaimableFeesResponse
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.QueryClaimableFeesResponse
+ */
 export const QueryClaimableFeesResponse = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.QueryClaimableFeesResponse",
   encode(message: QueryClaimableFeesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

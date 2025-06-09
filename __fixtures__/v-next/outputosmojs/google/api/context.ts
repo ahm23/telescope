@@ -39,6 +39,9 @@ export const protobufPackage = "google.api";
  * 
  * You can also specify extension ID instead of fully qualified extension name
  * here.
+ * @name Context
+ * @package google.api
+ * @see proto type: google.api.Context
  */
 export interface Context {
   /**
@@ -89,6 +92,9 @@ export interface ContextProtoMsg {
  * 
  * You can also specify extension ID instead of fully qualified extension name
  * here.
+ * @name ContextSDKType
+ * @package google.api
+ * @see proto type: google.api.Context
  */
 export interface ContextSDKType {
   rules: ContextRuleSDKType[];
@@ -96,6 +102,9 @@ export interface ContextSDKType {
 /**
  * A context rule provides information about the context for an individual API
  * element.
+ * @name ContextRule
+ * @package google.api
+ * @see proto type: google.api.ContextRule
  */
 export interface ContextRule {
   /**
@@ -104,9 +113,13 @@ export interface ContextRule {
    * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
    */
   selector: string;
-  /** A list of full type names of requested contexts. */
+  /**
+   * A list of full type names of requested contexts.
+   */
   requested: string[];
-  /** A list of full type names of provided contexts. */
+  /**
+   * A list of full type names of provided contexts.
+   */
   provided: string[];
   /**
    * A list of full type names or extension IDs of extensions allowed in grpc
@@ -126,6 +139,9 @@ export interface ContextRuleProtoMsg {
 /**
  * A context rule provides information about the context for an individual API
  * element.
+ * @name ContextRuleSDKType
+ * @package google.api
+ * @see proto type: google.api.ContextRule
  */
 export interface ContextRuleSDKType {
   selector: string;
@@ -139,6 +155,47 @@ function createBaseContext(): Context {
     rules: []
   };
 }
+/**
+ * `Context` defines which contexts an API requests.
+ * 
+ * Example:
+ * 
+ *     context:
+ *       rules:
+ *       - selector: "*"
+ *         requested:
+ *         - google.rpc.context.ProjectContext
+ *         - google.rpc.context.OriginContext
+ * 
+ * The above specifies that all methods in the API request
+ * `google.rpc.context.ProjectContext` and
+ * `google.rpc.context.OriginContext`.
+ * 
+ * Available context types are defined in package
+ * `google.rpc.context`.
+ * 
+ * This also provides mechanism to allowlist any protobuf message extension that
+ * can be sent in grpc metadata using “x-goog-ext-<extension_id>-bin” and
+ * “x-goog-ext-<extension_id>-jspb” format. For example, list any service
+ * specific protobuf types that can appear in grpc metadata as follows in your
+ * yaml file:
+ * 
+ * Example:
+ * 
+ *     context:
+ *       rules:
+ *        - selector: "google.example.library.v1.LibraryService.CreateBook"
+ *          allowed_request_extensions:
+ *          - google.foo.v1.NewExtension
+ *          allowed_response_extensions:
+ *          - google.foo.v1.NewExtension
+ * 
+ * You can also specify extension ID instead of fully qualified extension name
+ * here.
+ * @name Context
+ * @package google.api
+ * @see proto type: google.api.Context
+ */
 export const Context = {
   typeUrl: "/google.api.Context",
   encode(message: Context, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -241,6 +298,13 @@ function createBaseContextRule(): ContextRule {
     allowedResponseExtensions: []
   };
 }
+/**
+ * A context rule provides information about the context for an individual API
+ * element.
+ * @name ContextRule
+ * @package google.api
+ * @see proto type: google.api.ContextRule
+ */
 export const ContextRule = {
   typeUrl: "/google.api.ContextRule",
   encode(message: ContextRule, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

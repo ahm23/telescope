@@ -3,7 +3,12 @@ import { isSet, DeepPartial, Exact } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 import { GlobalDecoderRegistry } from "../../../registry";
 export const protobufPackage = "akash.base.v1beta1";
-/** Attribute represents key value pair */
+/**
+ * Attribute represents key value pair
+ * @name Attribute
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.Attribute
+ */
 export interface Attribute {
   key: string;
   value: string;
@@ -12,7 +17,12 @@ export interface AttributeProtoMsg {
   typeUrl: "/akash.base.v1beta1.Attribute";
   value: Uint8Array;
 }
-/** Attribute represents key value pair */
+/**
+ * Attribute represents key value pair
+ * @name AttributeAmino
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.Attribute
+ */
 export interface AttributeAmino {
   key?: string;
   value?: string;
@@ -21,7 +31,12 @@ export interface AttributeAminoMsg {
   type: "akash/base/attribute";
   value: AttributeAmino;
 }
-/** Attribute represents key value pair */
+/**
+ * Attribute represents key value pair
+ * @name AttributeSDKType
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.Attribute
+ */
 export interface AttributeSDKType {
   key: string;
   value: string;
@@ -31,11 +46,18 @@ export interface AttributeSDKType {
  * AllOf has precedence i.e. if there is at least one entry AnyOf is ignored regardless to how many
  * entries there
  * this behaviour to be discussed
+ * @name SignedBy
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.SignedBy
  */
 export interface SignedBy {
-  /** all_of all keys in this list must have signed attributes */
+  /**
+   * all_of all keys in this list must have signed attributes
+   */
   allOf: string[];
-  /** any_of at least of of the keys from the list must have signed attributes */
+  /**
+   * any_of at least of of the keys from the list must have signed attributes
+   */
   anyOf: string[];
 }
 export interface SignedByProtoMsg {
@@ -47,11 +69,18 @@ export interface SignedByProtoMsg {
  * AllOf has precedence i.e. if there is at least one entry AnyOf is ignored regardless to how many
  * entries there
  * this behaviour to be discussed
+ * @name SignedByAmino
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.SignedBy
  */
 export interface SignedByAmino {
-  /** all_of all keys in this list must have signed attributes */
+  /**
+   * all_of all keys in this list must have signed attributes
+   */
   all_of: string[];
-  /** any_of at least of of the keys from the list must have signed attributes */
+  /**
+   * any_of at least of of the keys from the list must have signed attributes
+   */
   any_of: string[];
 }
 export interface SignedByAminoMsg {
@@ -63,34 +92,60 @@ export interface SignedByAminoMsg {
  * AllOf has precedence i.e. if there is at least one entry AnyOf is ignored regardless to how many
  * entries there
  * this behaviour to be discussed
+ * @name SignedBySDKType
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.SignedBy
  */
 export interface SignedBySDKType {
   all_of: string[];
   any_of: string[];
 }
-/** PlacementRequirements */
+/**
+ * PlacementRequirements
+ * @name PlacementRequirements
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.PlacementRequirements
+ */
 export interface PlacementRequirements {
-  /** SignedBy list of keys that tenants expect to have signatures from */
+  /**
+   * SignedBy list of keys that tenants expect to have signatures from
+   */
   signedBy: SignedBy;
-  /** Attribute list of attributes tenant expects from the provider */
+  /**
+   * Attribute list of attributes tenant expects from the provider
+   */
   attributes: Attribute[];
 }
 export interface PlacementRequirementsProtoMsg {
   typeUrl: "/akash.base.v1beta1.PlacementRequirements";
   value: Uint8Array;
 }
-/** PlacementRequirements */
+/**
+ * PlacementRequirements
+ * @name PlacementRequirementsAmino
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.PlacementRequirements
+ */
 export interface PlacementRequirementsAmino {
-  /** SignedBy list of keys that tenants expect to have signatures from */
+  /**
+   * SignedBy list of keys that tenants expect to have signatures from
+   */
   signed_by: SignedByAmino;
-  /** Attribute list of attributes tenant expects from the provider */
+  /**
+   * Attribute list of attributes tenant expects from the provider
+   */
   attributes: AttributeAmino[];
 }
 export interface PlacementRequirementsAminoMsg {
   type: "akash/base/placement-requirements";
   value: PlacementRequirementsAmino;
 }
-/** PlacementRequirements */
+/**
+ * PlacementRequirements
+ * @name PlacementRequirementsSDKType
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.PlacementRequirements
+ */
 export interface PlacementRequirementsSDKType {
   signed_by: SignedBySDKType;
   attributes: AttributeSDKType[];
@@ -101,6 +156,12 @@ function createBaseAttribute(): Attribute {
     value: ""
   };
 }
+/**
+ * Attribute represents key value pair
+ * @name Attribute
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.Attribute
+ */
 export const Attribute = {
   typeUrl: "/akash.base.v1beta1.Attribute",
   aminoType: "akash/base/attribute",
@@ -223,6 +284,15 @@ function createBaseSignedBy(): SignedBy {
     anyOf: []
   };
 }
+/**
+ * SignedBy represents validation accounts that tenant expects signatures for provider attributes
+ * AllOf has precedence i.e. if there is at least one entry AnyOf is ignored regardless to how many
+ * entries there
+ * this behaviour to be discussed
+ * @name SignedBy
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.SignedBy
+ */
 export const SignedBy = {
   typeUrl: "/akash.base.v1beta1.SignedBy",
   aminoType: "akash/base/signed-by",
@@ -365,6 +435,12 @@ function createBasePlacementRequirements(): PlacementRequirements {
     attributes: []
   };
 }
+/**
+ * PlacementRequirements
+ * @name PlacementRequirements
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.PlacementRequirements
+ */
 export const PlacementRequirements = {
   typeUrl: "/akash.base.v1beta1.PlacementRequirements",
   aminoType: "akash/base/placement-requirements",

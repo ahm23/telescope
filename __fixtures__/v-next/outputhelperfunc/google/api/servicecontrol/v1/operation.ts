@@ -48,6 +48,11 @@ export function operation_ImportanceToJSON(object: Operation_Importance): string
       return "UNRECOGNIZED";
   }
 }
+/**
+ * @name Operation_LabelsEntry
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.undefined
+ */
 export interface Operation_LabelsEntry {
   key: string;
   value: string;
@@ -56,6 +61,11 @@ export interface Operation_LabelsEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name Operation_LabelsEntryAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.Operation_LabelsEntry
+ */
 export interface Operation_LabelsEntryAmino {
   key?: string;
   value?: string;
@@ -64,11 +74,21 @@ export interface Operation_LabelsEntryAminoMsg {
   type: string;
   value: Operation_LabelsEntryAmino;
 }
+/**
+ * @name Operation_LabelsEntrySDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.undefined
+ */
 export interface Operation_LabelsEntrySDKType {
   key: string;
   value: string;
 }
-/** Represents information regarding an operation. */
+/**
+ * Represents information regarding an operation.
+ * @name Operation
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.Operation
+ */
 export interface Operation {
   /**
    * Identity of the operation. This must be unique within the scope of the
@@ -82,7 +102,9 @@ export interface Operation {
    * is recommended. See RFC 4122 for details.
    */
   operationId: string;
-  /** Fully qualified name of the operation. Reserved for future use. */
+  /**
+   * Fully qualified name of the operation. Reserved for future use.
+   */
   operationName: string;
   /**
    * Identity of the consumer who is using the service.
@@ -99,7 +121,9 @@ export interface Operation {
    *     - api`_`key:API_KEY.
    */
   consumerId: string;
-  /** Required. Start time of the operation. */
+  /**
+   * Required. Start time of the operation.
+   */
   startTime?: Date;
   /**
    * End time of the operation.
@@ -143,18 +167,29 @@ export interface Operation {
    * an invalid argument error.
    */
   metricValueSets: MetricValueSet[];
-  /** Represents information to be logged. */
+  /**
+   * Represents information to be logged.
+   */
   logEntries: LogEntry[];
-  /** DO NOT USE. This is an experimental field. */
+  /**
+   * DO NOT USE. This is an experimental field.
+   */
   importance: Operation_Importance;
-  /** Unimplemented. */
+  /**
+   * Unimplemented.
+   */
   extensions: Any[];
 }
 export interface OperationProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.Operation";
   value: Uint8Array;
 }
-/** Represents information regarding an operation. */
+/**
+ * Represents information regarding an operation.
+ * @name OperationAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.Operation
+ */
 export interface OperationAmino {
   /**
    * Identity of the operation. This must be unique within the scope of the
@@ -168,7 +203,9 @@ export interface OperationAmino {
    * is recommended. See RFC 4122 for details.
    */
   operation_id?: string;
-  /** Fully qualified name of the operation. Reserved for future use. */
+  /**
+   * Fully qualified name of the operation. Reserved for future use.
+   */
   operation_name?: string;
   /**
    * Identity of the consumer who is using the service.
@@ -185,7 +222,9 @@ export interface OperationAmino {
    *     - api`_`key:API_KEY.
    */
   consumer_id?: string;
-  /** Required. Start time of the operation. */
+  /**
+   * Required. Start time of the operation.
+   */
   start_time?: string;
   /**
    * End time of the operation.
@@ -229,18 +268,29 @@ export interface OperationAmino {
    * an invalid argument error.
    */
   metric_value_sets?: MetricValueSetAmino[];
-  /** Represents information to be logged. */
+  /**
+   * Represents information to be logged.
+   */
   log_entries?: LogEntryAmino[];
-  /** DO NOT USE. This is an experimental field. */
+  /**
+   * DO NOT USE. This is an experimental field.
+   */
   importance?: Operation_Importance;
-  /** Unimplemented. */
+  /**
+   * Unimplemented.
+   */
   extensions?: AnyAmino[];
 }
 export interface OperationAminoMsg {
   type: "/google.api.servicecontrol.v1.Operation";
   value: OperationAmino;
 }
-/** Represents information regarding an operation. */
+/**
+ * Represents information regarding an operation.
+ * @name OperationSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.Operation
+ */
 export interface OperationSDKType {
   operation_id: string;
   operation_name: string;
@@ -261,6 +311,11 @@ function createBaseOperation_LabelsEntry(): Operation_LabelsEntry {
     value: ""
   };
 }
+/**
+ * @name Operation_LabelsEntry
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.undefined
+ */
 export const Operation_LabelsEntry = {
   encode(message: Operation_LabelsEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== undefined) {
@@ -368,6 +423,12 @@ function createBaseOperation(): Operation {
     extensions: []
   };
 }
+/**
+ * Represents information regarding an operation.
+ * @name Operation
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.Operation
+ */
 export const Operation = {
   typeUrl: "/google.api.servicecontrol.v1.Operation",
   is(o: any): o is Operation {

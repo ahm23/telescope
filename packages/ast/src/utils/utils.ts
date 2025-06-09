@@ -44,6 +44,79 @@ export const makeCommentBlock = (comment: string): t.CommentBlock => {
     };
 };
 
+export class CommentBlockBuilder {
+    private lines: string[] = [];
+
+    /**
+     * Add a line to the comment block
+     * If the line contains newlines, it will be split into multiple lines
+     */
+    addLine(line: string): this {
+        if (!line) return this;
+        if (line.includes('\n')) {
+            const splitLines = line.split('\n');
+            this.lines.push(...splitLines);
+        } else {
+            this.lines.push(line);
+        }
+        return this;
+    }
+
+    /**
+     * Add multiple lines to the comment block
+     * If any line contains newlines, it will be split into multiple lines
+     */
+    addLines(lines: string[]): this {
+        if (!lines) return this;
+        for (const line of lines) {
+            this.addLine(line);
+        }
+        return this;
+    }
+
+    /**
+     * Clear all lines from the comment block
+     */
+    clear(): this {
+        this.lines = [];
+        return this;
+    }
+
+    /**
+     * Build the comment block AST node
+     */
+    build(): t.CommentBlock | null {
+        if (this.lines.length === 0) {
+            return null;
+        }
+
+        if (this.lines.length === 1) {
+            return {
+                type: "CommentBlock",
+                value: `*\n * ${cleanComment(this.lines[0])}\n `,
+                start: null,
+                end: null,
+                loc: null,
+            };
+        }
+
+        const commentLines = ["*", ...this.lines, " "];
+        const comments = commentLines.map((line, i) => {
+            if (i == 0) return line;
+            if (i == commentLines.length - 1) return cleanComment(line);
+            return ` *${ensureOneSpace(cleanComment(line))}`;
+        });
+
+        return {
+            type: "CommentBlock",
+            value: comments.join("\n"),
+            start: null,
+            end: null,
+            loc: null,
+        };
+    }
+}
+
 export const renderNameSafely = (name) => {
     return name
         .split("_")

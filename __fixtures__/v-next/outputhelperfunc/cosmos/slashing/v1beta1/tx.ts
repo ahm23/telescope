@@ -2,7 +2,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "cosmos.slashing.v1beta1";
-/** MsgUnjail defines the Msg/Unjail request type */
+/**
+ * MsgUnjail defines the Msg/Unjail request type
+ * @name MsgUnjail
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.MsgUnjail
+ */
 export interface MsgUnjail {
   validatorAddr: string;
 }
@@ -10,7 +15,12 @@ export interface MsgUnjailProtoMsg {
   typeUrl: "/cosmos.slashing.v1beta1.MsgUnjail";
   value: Uint8Array;
 }
-/** MsgUnjail defines the Msg/Unjail request type */
+/**
+ * MsgUnjail defines the Msg/Unjail request type
+ * @name MsgUnjailAmino
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.MsgUnjail
+ */
 export interface MsgUnjailAmino {
   validator_addr: string;
 }
@@ -18,29 +28,55 @@ export interface MsgUnjailAminoMsg {
   type: "cosmos-sdk/MsgUnjail";
   value: MsgUnjailAmino;
 }
-/** MsgUnjail defines the Msg/Unjail request type */
+/**
+ * MsgUnjail defines the Msg/Unjail request type
+ * @name MsgUnjailSDKType
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.MsgUnjail
+ */
 export interface MsgUnjailSDKType {
   validator_addr: string;
 }
-/** MsgUnjailResponse defines the Msg/Unjail response type */
+/**
+ * MsgUnjailResponse defines the Msg/Unjail response type
+ * @name MsgUnjailResponse
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.MsgUnjailResponse
+ */
 export interface MsgUnjailResponse {}
 export interface MsgUnjailResponseProtoMsg {
   typeUrl: "/cosmos.slashing.v1beta1.MsgUnjailResponse";
   value: Uint8Array;
 }
-/** MsgUnjailResponse defines the Msg/Unjail response type */
+/**
+ * MsgUnjailResponse defines the Msg/Unjail response type
+ * @name MsgUnjailResponseAmino
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.MsgUnjailResponse
+ */
 export interface MsgUnjailResponseAmino {}
 export interface MsgUnjailResponseAminoMsg {
   type: "cosmos-sdk/MsgUnjailResponse";
   value: MsgUnjailResponseAmino;
 }
-/** MsgUnjailResponse defines the Msg/Unjail response type */
+/**
+ * MsgUnjailResponse defines the Msg/Unjail response type
+ * @name MsgUnjailResponseSDKType
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.MsgUnjailResponse
+ */
 export interface MsgUnjailResponseSDKType {}
 function createBaseMsgUnjail(): MsgUnjail {
   return {
     validatorAddr: ""
   };
 }
+/**
+ * MsgUnjail defines the Msg/Unjail request type
+ * @name MsgUnjail
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.MsgUnjail
+ */
 export const MsgUnjail = {
   typeUrl: "/cosmos.slashing.v1beta1.MsgUnjail",
   aminoType: "cosmos-sdk/MsgUnjail",
@@ -144,6 +180,12 @@ export const MsgUnjail = {
 function createBaseMsgUnjailResponse(): MsgUnjailResponse {
   return {};
 }
+/**
+ * MsgUnjailResponse defines the Msg/Unjail response type
+ * @name MsgUnjailResponse
+ * @package cosmos.slashing.v1beta1
+ * @see proto type: cosmos.slashing.v1beta1.MsgUnjailResponse
+ */
 export const MsgUnjailResponse = {
   typeUrl: "/cosmos.slashing.v1beta1.MsgUnjailResponse",
   aminoType: "cosmos-sdk/MsgUnjailResponse",

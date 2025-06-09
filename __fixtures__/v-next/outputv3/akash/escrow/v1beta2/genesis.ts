@@ -2,7 +2,12 @@ import { Account, AccountAmino, AccountSDKType, FractionalPayment, FractionalPay
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 export const protobufPackage = "akash.escrow.v1beta2";
-/** GenesisState defines the basic genesis state used by escrow module */
+/**
+ * GenesisState defines the basic genesis state used by escrow module
+ * @name GenesisState
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.GenesisState
+ */
 export interface GenesisState {
   accounts: Account[];
   payments: FractionalPayment[];
@@ -11,12 +16,22 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/akash.escrow.v1beta2.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the basic genesis state used by escrow module */
+/**
+ * GenesisState defines the basic genesis state used by escrow module
+ * @name GenesisStateAmino
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.GenesisState
+ */
 export interface GenesisStateAmino {
   accounts: AccountAmino[];
   payments: FractionalPaymentAmino[];
 }
-/** GenesisState defines the basic genesis state used by escrow module */
+/**
+ * GenesisState defines the basic genesis state used by escrow module
+ * @name GenesisStateSDKType
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.GenesisState
+ */
 export interface GenesisStateSDKType {
   accounts: AccountSDKType[];
   payments: FractionalPaymentSDKType[];
@@ -27,6 +42,12 @@ function createBaseGenesisState(): GenesisState {
     payments: []
   };
 }
+/**
+ * GenesisState defines the basic genesis state used by escrow module
+ * @name GenesisState
+ * @package akash.escrow.v1beta2
+ * @see proto type: akash.escrow.v1beta2.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.escrow.v1beta2.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

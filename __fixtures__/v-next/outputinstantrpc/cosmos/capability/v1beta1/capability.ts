@@ -5,6 +5,9 @@ export const protobufPackage = "cosmos.capability.v1beta1";
 /**
  * Capability defines an implementation of an object capability. The index
  * provided to a Capability must be globally unique.
+ * @name Capability
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.Capability
  */
 export interface Capability {
   index: bigint;
@@ -16,6 +19,9 @@ export interface CapabilityProtoMsg {
 /**
  * Capability defines an implementation of an object capability. The index
  * provided to a Capability must be globally unique.
+ * @name CapabilitySDKType
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.Capability
  */
 export interface CapabilitySDKType {
   index: bigint;
@@ -23,6 +29,9 @@ export interface CapabilitySDKType {
 /**
  * Owner defines a single capability owner. An owner is defined by the name of
  * capability and the module name.
+ * @name Owner
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.Owner
  */
 export interface Owner {
   module: string;
@@ -35,6 +44,9 @@ export interface OwnerProtoMsg {
 /**
  * Owner defines a single capability owner. An owner is defined by the name of
  * capability and the module name.
+ * @name OwnerSDKType
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.Owner
  */
 export interface OwnerSDKType {
   module: string;
@@ -43,6 +55,9 @@ export interface OwnerSDKType {
 /**
  * CapabilityOwners defines a set of owners of a single Capability. The set of
  * owners must be unique.
+ * @name CapabilityOwners
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.CapabilityOwners
  */
 export interface CapabilityOwners {
   owners: Owner[];
@@ -54,6 +69,9 @@ export interface CapabilityOwnersProtoMsg {
 /**
  * CapabilityOwners defines a set of owners of a single Capability. The set of
  * owners must be unique.
+ * @name CapabilityOwnersSDKType
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.CapabilityOwners
  */
 export interface CapabilityOwnersSDKType {
   owners: OwnerSDKType[];
@@ -63,6 +81,13 @@ function createBaseCapability(): Capability {
     index: BigInt(0)
   };
 }
+/**
+ * Capability defines an implementation of an object capability. The index
+ * provided to a Capability must be globally unique.
+ * @name Capability
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.Capability
+ */
 export const Capability = {
   typeUrl: "/cosmos.capability.v1beta1.Capability",
   encode(message: Capability, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -160,6 +185,13 @@ function createBaseOwner(): Owner {
     name: ""
   };
 }
+/**
+ * Owner defines a single capability owner. An owner is defined by the name of
+ * capability and the module name.
+ * @name Owner
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.Owner
+ */
 export const Owner = {
   typeUrl: "/cosmos.capability.v1beta1.Owner",
   encode(message: Owner, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -270,6 +302,13 @@ function createBaseCapabilityOwners(): CapabilityOwners {
     owners: []
   };
 }
+/**
+ * CapabilityOwners defines a set of owners of a single Capability. The set of
+ * owners must be unique.
+ * @name CapabilityOwners
+ * @package cosmos.capability.v1beta1
+ * @see proto type: cosmos.capability.v1beta1.CapabilityOwners
+ */
 export const CapabilityOwners = {
   typeUrl: "/cosmos.capability.v1beta1.CapabilityOwners",
   encode(message: CapabilityOwners, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

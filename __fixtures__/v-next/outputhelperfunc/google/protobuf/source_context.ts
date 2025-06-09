@@ -5,6 +5,9 @@ export const protobufPackage = "google.protobuf";
 /**
  * `SourceContext` represents information about the source of a
  * protobuf element, like the file in which it is defined.
+ * @name SourceContext
+ * @package google.protobuf
+ * @see proto type: google.protobuf.SourceContext
  */
 export interface SourceContext {
   /**
@@ -20,6 +23,9 @@ export interface SourceContextProtoMsg {
 /**
  * `SourceContext` represents information about the source of a
  * protobuf element, like the file in which it is defined.
+ * @name SourceContextAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.SourceContext
  */
 export interface SourceContextAmino {
   /**
@@ -35,6 +41,9 @@ export interface SourceContextAminoMsg {
 /**
  * `SourceContext` represents information about the source of a
  * protobuf element, like the file in which it is defined.
+ * @name SourceContextSDKType
+ * @package google.protobuf
+ * @see proto type: google.protobuf.SourceContext
  */
 export interface SourceContextSDKType {
   file_name: string;
@@ -44,6 +53,13 @@ function createBaseSourceContext(): SourceContext {
     fileName: ""
   };
 }
+/**
+ * `SourceContext` represents information about the source of a
+ * protobuf element, like the file in which it is defined.
+ * @name SourceContext
+ * @package google.protobuf
+ * @see proto type: google.protobuf.SourceContext
+ */
 export const SourceContext = {
   typeUrl: "/google.protobuf.SourceContext",
   is(o: any): o is SourceContext {

@@ -113,20 +113,31 @@ export function orderToJSON(object: Order): string {
  * Channel defines pipeline for exactly-once packet delivery between specific
  * modules on separate blockchains, which has at least one end capable of
  * sending packets and one end capable of receiving packets.
+ * @name Channel
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.Channel
  */
 export interface Channel {
-  /** current state of the channel end */
+  /**
+   * current state of the channel end
+   */
   state: State;
-  /** whether the channel is ordered or unordered */
+  /**
+   * whether the channel is ordered or unordered
+   */
   ordering: Order;
-  /** counterparty channel end */
+  /**
+   * counterparty channel end
+   */
   counterparty: Counterparty;
   /**
    * list of connection identifiers, in order, along which packets sent on
    * this channel will travel
    */
   connectionHops: string[];
-  /** opaque channel version, which is agreed upon during the handshake */
+  /**
+   * opaque channel version, which is agreed upon during the handshake
+   */
   version: string;
 }
 export interface ChannelProtoMsg {
@@ -137,20 +148,31 @@ export interface ChannelProtoMsg {
  * Channel defines pipeline for exactly-once packet delivery between specific
  * modules on separate blockchains, which has at least one end capable of
  * sending packets and one end capable of receiving packets.
+ * @name ChannelAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.Channel
  */
 export interface ChannelAmino {
-  /** current state of the channel end */
+  /**
+   * current state of the channel end
+   */
   state: State;
-  /** whether the channel is ordered or unordered */
+  /**
+   * whether the channel is ordered or unordered
+   */
   ordering: Order;
-  /** counterparty channel end */
+  /**
+   * counterparty channel end
+   */
   counterparty: CounterpartyAmino;
   /**
    * list of connection identifiers, in order, along which packets sent on
    * this channel will travel
    */
   connection_hops: string[];
-  /** opaque channel version, which is agreed upon during the handshake */
+  /**
+   * opaque channel version, which is agreed upon during the handshake
+   */
   version: string;
 }
 export interface ChannelAminoMsg {
@@ -160,24 +182,39 @@ export interface ChannelAminoMsg {
 /**
  * IdentifiedChannel defines a channel with additional port and channel
  * identifier fields.
+ * @name IdentifiedChannel
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.IdentifiedChannel
  */
 export interface IdentifiedChannel {
-  /** current state of the channel end */
+  /**
+   * current state of the channel end
+   */
   state: State;
-  /** whether the channel is ordered or unordered */
+  /**
+   * whether the channel is ordered or unordered
+   */
   ordering: Order;
-  /** counterparty channel end */
+  /**
+   * counterparty channel end
+   */
   counterparty: Counterparty;
   /**
    * list of connection identifiers, in order, along which packets sent on
    * this channel will travel
    */
   connectionHops: string[];
-  /** opaque channel version, which is agreed upon during the handshake */
+  /**
+   * opaque channel version, which is agreed upon during the handshake
+   */
   version: string;
-  /** port identifier */
+  /**
+   * port identifier
+   */
   portId: string;
-  /** channel identifier */
+  /**
+   * channel identifier
+   */
   channelId: string;
 }
 export interface IdentifiedChannelProtoMsg {
@@ -187,53 +224,91 @@ export interface IdentifiedChannelProtoMsg {
 /**
  * IdentifiedChannel defines a channel with additional port and channel
  * identifier fields.
+ * @name IdentifiedChannelAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.IdentifiedChannel
  */
 export interface IdentifiedChannelAmino {
-  /** current state of the channel end */
+  /**
+   * current state of the channel end
+   */
   state: State;
-  /** whether the channel is ordered or unordered */
+  /**
+   * whether the channel is ordered or unordered
+   */
   ordering: Order;
-  /** counterparty channel end */
+  /**
+   * counterparty channel end
+   */
   counterparty: CounterpartyAmino;
   /**
    * list of connection identifiers, in order, along which packets sent on
    * this channel will travel
    */
   connection_hops: string[];
-  /** opaque channel version, which is agreed upon during the handshake */
+  /**
+   * opaque channel version, which is agreed upon during the handshake
+   */
   version: string;
-  /** port identifier */
+  /**
+   * port identifier
+   */
   port_id: string;
-  /** channel identifier */
+  /**
+   * channel identifier
+   */
   channel_id: string;
 }
 export interface IdentifiedChannelAminoMsg {
   type: "cosmos-sdk/IdentifiedChannel";
   value: IdentifiedChannelAmino;
 }
-/** Counterparty defines a channel end counterparty */
+/**
+ * Counterparty defines a channel end counterparty
+ * @name Counterparty
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.Counterparty
+ */
 export interface Counterparty {
-  /** port on the counterparty chain which owns the other end of the channel. */
+  /**
+   * port on the counterparty chain which owns the other end of the channel.
+   */
   portId: string;
-  /** channel end on the counterparty chain */
+  /**
+   * channel end on the counterparty chain
+   */
   channelId: string;
 }
 export interface CounterpartyProtoMsg {
   typeUrl: "/ibc.core.channel.v1.Counterparty";
   value: Uint8Array;
 }
-/** Counterparty defines a channel end counterparty */
+/**
+ * Counterparty defines a channel end counterparty
+ * @name CounterpartyAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.Counterparty
+ */
 export interface CounterpartyAmino {
-  /** port on the counterparty chain which owns the other end of the channel. */
+  /**
+   * port on the counterparty chain which owns the other end of the channel.
+   */
   port_id: string;
-  /** channel end on the counterparty chain */
+  /**
+   * channel end on the counterparty chain
+   */
   channel_id: string;
 }
 export interface CounterpartyAminoMsg {
   type: "cosmos-sdk/Counterparty";
   value: CounterpartyAmino;
 }
-/** Packet defines a type that carries data across different chains through IBC */
+/**
+ * Packet defines a type that carries data across different chains through IBC
+ * @name Packet
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.Packet
+ */
 export interface Packet {
   /**
    * number corresponds to the order of sends and receives, where a Packet
@@ -241,26 +316,45 @@ export interface Packet {
    * with a later sequence number.
    */
   sequence: bigint;
-  /** identifies the port on the sending chain. */
+  /**
+   * identifies the port on the sending chain.
+   */
   sourcePort: string;
-  /** identifies the channel end on the sending chain. */
+  /**
+   * identifies the channel end on the sending chain.
+   */
   sourceChannel: string;
-  /** identifies the port on the receiving chain. */
+  /**
+   * identifies the port on the receiving chain.
+   */
   destinationPort: string;
-  /** identifies the channel end on the receiving chain. */
+  /**
+   * identifies the channel end on the receiving chain.
+   */
   destinationChannel: string;
-  /** actual opaque bytes transferred directly to the application module */
+  /**
+   * actual opaque bytes transferred directly to the application module
+   */
   data: Uint8Array;
-  /** block height after which the packet times out */
+  /**
+   * block height after which the packet times out
+   */
   timeoutHeight: Height;
-  /** block timestamp (in nanoseconds) after which the packet times out */
+  /**
+   * block timestamp (in nanoseconds) after which the packet times out
+   */
   timeoutTimestamp: bigint;
 }
 export interface PacketProtoMsg {
   typeUrl: "/ibc.core.channel.v1.Packet";
   value: Uint8Array;
 }
-/** Packet defines a type that carries data across different chains through IBC */
+/**
+ * Packet defines a type that carries data across different chains through IBC
+ * @name PacketAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.Packet
+ */
 export interface PacketAmino {
   /**
    * number corresponds to the order of sends and receives, where a Packet
@@ -268,19 +362,33 @@ export interface PacketAmino {
    * with a later sequence number.
    */
   sequence: string;
-  /** identifies the port on the sending chain. */
+  /**
+   * identifies the port on the sending chain.
+   */
   source_port: string;
-  /** identifies the channel end on the sending chain. */
+  /**
+   * identifies the channel end on the sending chain.
+   */
   source_channel: string;
-  /** identifies the port on the receiving chain. */
+  /**
+   * identifies the port on the receiving chain.
+   */
   destination_port: string;
-  /** identifies the channel end on the receiving chain. */
+  /**
+   * identifies the channel end on the receiving chain.
+   */
   destination_channel: string;
-  /** actual opaque bytes transferred directly to the application module */
+  /**
+   * actual opaque bytes transferred directly to the application module
+   */
   data: string;
-  /** block height after which the packet times out */
+  /**
+   * block height after which the packet times out
+   */
   timeout_height: HeightAmino;
-  /** block timestamp (in nanoseconds) after which the packet times out */
+  /**
+   * block timestamp (in nanoseconds) after which the packet times out
+   */
   timeout_timestamp: string;
 }
 export interface PacketAminoMsg {
@@ -292,15 +400,26 @@ export interface PacketAminoMsg {
  * packet commitments, acknowledgements, and receipts.
  * Caller is responsible for knowing the context necessary to interpret this
  * state as a commitment, acknowledgement, or a receipt.
+ * @name PacketState
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.PacketState
  */
 export interface PacketState {
-  /** channel port identifier. */
+  /**
+   * channel port identifier.
+   */
   portId: string;
-  /** channel unique identifier. */
+  /**
+   * channel unique identifier.
+   */
   channelId: string;
-  /** packet sequence. */
+  /**
+   * packet sequence.
+   */
   sequence: bigint;
-  /** embedded data that represents packet state. */
+  /**
+   * embedded data that represents packet state.
+   */
   data: Uint8Array;
 }
 export interface PacketStateProtoMsg {
@@ -312,15 +431,26 @@ export interface PacketStateProtoMsg {
  * packet commitments, acknowledgements, and receipts.
  * Caller is responsible for knowing the context necessary to interpret this
  * state as a commitment, acknowledgement, or a receipt.
+ * @name PacketStateAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.PacketState
  */
 export interface PacketStateAmino {
-  /** channel port identifier. */
+  /**
+   * channel port identifier.
+   */
   port_id: string;
-  /** channel unique identifier. */
+  /**
+   * channel unique identifier.
+   */
   channel_id: string;
-  /** packet sequence. */
+  /**
+   * packet sequence.
+   */
   sequence: string;
-  /** embedded data that represents packet state. */
+  /**
+   * embedded data that represents packet state.
+   */
   data: string;
 }
 export interface PacketStateAminoMsg {
@@ -335,6 +465,9 @@ export interface PacketStateAminoMsg {
  * The first byte of any message with this format will be the non-ASCII values
  * `0xaa` (result) or `0xb2` (error). Implemented as defined by ICS:
  * https://github.com/cosmos/ibc/tree/master/spec/core/ics-004-channel-and-packet-semantics#acknowledgement-envelope
+ * @name Acknowledgement
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.Acknowledgement
  */
 export interface Acknowledgement {
   result?: Uint8Array;
@@ -352,6 +485,9 @@ export interface AcknowledgementProtoMsg {
  * The first byte of any message with this format will be the non-ASCII values
  * `0xaa` (result) or `0xb2` (error). Implemented as defined by ICS:
  * https://github.com/cosmos/ibc/tree/master/spec/core/ics-004-channel-and-packet-semantics#acknowledgement-envelope
+ * @name AcknowledgementAmino
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.Acknowledgement
  */
 export interface AcknowledgementAmino {
   result?: string;
@@ -370,6 +506,14 @@ function createBaseChannel(): Channel {
     version: ""
   };
 }
+/**
+ * Channel defines pipeline for exactly-once packet delivery between specific
+ * modules on separate blockchains, which has at least one end capable of
+ * sending packets and one end capable of receiving packets.
+ * @name Channel
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.Channel
+ */
 export const Channel = {
   typeUrl: "/ibc.core.channel.v1.Channel",
   aminoType: "cosmos-sdk/Channel",
@@ -492,6 +636,13 @@ function createBaseIdentifiedChannel(): IdentifiedChannel {
     channelId: ""
   };
 }
+/**
+ * IdentifiedChannel defines a channel with additional port and channel
+ * identifier fields.
+ * @name IdentifiedChannel
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.IdentifiedChannel
+ */
 export const IdentifiedChannel = {
   typeUrl: "/ibc.core.channel.v1.IdentifiedChannel",
   aminoType: "cosmos-sdk/IdentifiedChannel",
@@ -631,6 +782,12 @@ function createBaseCounterparty(): Counterparty {
     channelId: ""
   };
 }
+/**
+ * Counterparty defines a channel end counterparty
+ * @name Counterparty
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.Counterparty
+ */
 export const Counterparty = {
   typeUrl: "/ibc.core.channel.v1.Counterparty",
   aminoType: "cosmos-sdk/Counterparty",
@@ -719,6 +876,12 @@ function createBasePacket(): Packet {
     timeoutTimestamp: BigInt(0)
   };
 }
+/**
+ * Packet defines a type that carries data across different chains through IBC
+ * @name Packet
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.Packet
+ */
 export const Packet = {
   typeUrl: "/ibc.core.channel.v1.Packet",
   aminoType: "cosmos-sdk/Packet",
@@ -869,6 +1032,15 @@ function createBasePacketState(): PacketState {
     data: new Uint8Array()
   };
 }
+/**
+ * PacketState defines the generic type necessary to retrieve and store
+ * packet commitments, acknowledgements, and receipts.
+ * Caller is responsible for knowing the context necessary to interpret this
+ * state as a commitment, acknowledgement, or a receipt.
+ * @name PacketState
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.PacketState
+ */
 export const PacketState = {
   typeUrl: "/ibc.core.channel.v1.PacketState",
   aminoType: "cosmos-sdk/PacketState",
@@ -973,6 +1145,18 @@ function createBaseAcknowledgement(): Acknowledgement {
     error: undefined
   };
 }
+/**
+ * Acknowledgement is the recommended acknowledgement format to be used by
+ * app-specific protocols.
+ * NOTE: The field numbers 21 and 22 were explicitly chosen to avoid accidental
+ * conflicts with other protobuf message formats used for acknowledgements.
+ * The first byte of any message with this format will be the non-ASCII values
+ * `0xaa` (result) or `0xb2` (error). Implemented as defined by ICS:
+ * https://github.com/cosmos/ibc/tree/master/spec/core/ics-004-channel-and-packet-semantics#acknowledgement-envelope
+ * @name Acknowledgement
+ * @package ibc.core.channel.v1
+ * @see proto type: ibc.core.channel.v1.Acknowledgement
+ */
 export const Acknowledgement = {
   typeUrl: "/ibc.core.channel.v1.Acknowledgement",
   aminoType: "cosmos-sdk/Acknowledgement",

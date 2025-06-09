@@ -6,8 +6,11 @@ export const protobufPackage = "google.api.expr.v1alpha1";
 /**
  * Values of intermediate expressions produced when evaluating expression.
  * Deprecated, use `EvalState` instead.
+ * @name Explain
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Explain
+ * @deprecated
  */
-/** @deprecated */
 export interface Explain {
   /**
    * All of the observed values.
@@ -32,24 +35,41 @@ export interface ExplainProtoMsg {
 /**
  * Values of intermediate expressions produced when evaluating expression.
  * Deprecated, use `EvalState` instead.
+ * @name ExplainSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Explain
+ * @deprecated
  */
-/** @deprecated */
 export interface ExplainSDKType {
   values: ValueSDKType[];
   expr_steps: Explain_ExprStepSDKType[];
 }
-/** ID and value index of one step. */
+/**
+ * ID and value index of one step.
+ * @name Explain_ExprStep
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprStep
+ */
 export interface Explain_ExprStep {
-  /** ID of corresponding Expr node. */
+  /**
+   * ID of corresponding Expr node.
+   */
   id: bigint;
-  /** Index of the value in the values list. */
+  /**
+   * Index of the value in the values list.
+   */
   valueIndex: number;
 }
 export interface Explain_ExprStepProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.ExprStep";
   value: Uint8Array;
 }
-/** ID and value index of one step. */
+/**
+ * ID and value index of one step.
+ * @name Explain_ExprStepSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprStep
+ */
 export interface Explain_ExprStepSDKType {
   id: bigint;
   value_index: number;
@@ -60,6 +80,14 @@ function createBaseExplain(): Explain {
     exprSteps: []
   };
 }
+/**
+ * Values of intermediate expressions produced when evaluating expression.
+ * Deprecated, use `EvalState` instead.
+ * @name Explain
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Explain
+ * @deprecated
+ */
 export const Explain = {
   typeUrl: "/google.api.expr.v1alpha1.Explain",
   encode(message: Explain, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -185,6 +213,12 @@ function createBaseExplain_ExprStep(): Explain_ExprStep {
     valueIndex: 0
   };
 }
+/**
+ * ID and value index of one step.
+ * @name Explain_ExprStep
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ExprStep
+ */
 export const Explain_ExprStep = {
   typeUrl: "/google.api.expr.v1alpha1.ExprStep",
   encode(message: Explain_ExprStep, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

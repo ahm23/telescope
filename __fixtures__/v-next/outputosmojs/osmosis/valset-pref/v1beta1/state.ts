@@ -9,6 +9,9 @@ export const protobufPackage = "osmosis.valsetpref.v1beta1";
  * state. If a user does not have a validator set preference list set, and has
  * staked, make their preference list default to their current staking
  * distribution.
+ * @name ValidatorPreference
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.ValidatorPreference
  */
 export interface ValidatorPreference {
   /**
@@ -16,7 +19,9 @@ export interface ValidatorPreference {
    * funds to.
    */
   valOperAddress: string;
-  /** weight is decimal between 0 and 1, and they all sum to 1. */
+  /**
+   * weight is decimal between 0 and 1, and they all sum to 1.
+   */
   weight: string;
 }
 export interface ValidatorPreferenceProtoMsg {
@@ -29,6 +34,9 @@ export interface ValidatorPreferenceProtoMsg {
  * state. If a user does not have a validator set preference list set, and has
  * staked, make their preference list default to their current staking
  * distribution.
+ * @name ValidatorPreferenceSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.ValidatorPreference
  */
 export interface ValidatorPreferenceSDKType {
   val_oper_address: string;
@@ -39,9 +47,14 @@ export interface ValidatorPreferenceSDKType {
  * It contains a list of (validator, percent_allocation) pairs.
  * The percent allocation are arranged in decimal notation from 0 to 1 and must
  * add up to 1.
+ * @name ValidatorSetPreferences
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.ValidatorSetPreferences
  */
 export interface ValidatorSetPreferences {
-  /** preference holds {valAddr, weight} for the user who created it. */
+  /**
+   * preference holds {valAddr, weight} for the user who created it.
+   */
   preferences: ValidatorPreference[];
 }
 export interface ValidatorSetPreferencesProtoMsg {
@@ -53,6 +66,9 @@ export interface ValidatorSetPreferencesProtoMsg {
  * It contains a list of (validator, percent_allocation) pairs.
  * The percent allocation are arranged in decimal notation from 0 to 1 and must
  * add up to 1.
+ * @name ValidatorSetPreferencesSDKType
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.ValidatorSetPreferences
  */
 export interface ValidatorSetPreferencesSDKType {
   preferences: ValidatorPreferenceSDKType[];
@@ -63,6 +79,16 @@ function createBaseValidatorPreference(): ValidatorPreference {
     weight: ""
   };
 }
+/**
+ * ValidatorPreference defines the message structure for
+ * CreateValidatorSetPreference. It allows a user to set {val_addr, weight} in
+ * state. If a user does not have a validator set preference list set, and has
+ * staked, make their preference list default to their current staking
+ * distribution.
+ * @name ValidatorPreference
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.ValidatorPreference
+ */
 export const ValidatorPreference = {
   typeUrl: "/osmosis.valsetpref.v1beta1.ValidatorPreference",
   encode(message: ValidatorPreference, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -173,6 +199,15 @@ function createBaseValidatorSetPreferences(): ValidatorSetPreferences {
     preferences: []
   };
 }
+/**
+ * ValidatorSetPreferences defines a delegator's validator set preference.
+ * It contains a list of (validator, percent_allocation) pairs.
+ * The percent allocation are arranged in decimal notation from 0 to 1 and must
+ * add up to 1.
+ * @name ValidatorSetPreferences
+ * @package osmosis.valsetpref.v1beta1
+ * @see proto type: osmosis.valsetpref.v1beta1.ValidatorSetPreferences
+ */
 export const ValidatorSetPreferences = {
   typeUrl: "/osmosis.valsetpref.v1beta1.ValidatorSetPreferences",
   encode(message: ValidatorSetPreferences, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

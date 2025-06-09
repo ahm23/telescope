@@ -1,7 +1,12 @@
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
 export const protobufPackage = "osmosis.incentives";
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name Params
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.Params
+ */
 export interface Params {
   /**
    * distr_epoch_identifier is what epoch type distribution will be triggered by
@@ -13,7 +18,12 @@ export interface ParamsProtoMsg {
   typeUrl: "/osmosis.incentives.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name ParamsAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.Params
+ */
 export interface ParamsAmino {
   /**
    * distr_epoch_identifier is what epoch type distribution will be triggered by
@@ -21,7 +31,12 @@ export interface ParamsAmino {
    */
   distr_epoch_identifier?: string;
 }
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name ParamsSDKType
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.Params
+ */
 export interface ParamsSDKType {
   distr_epoch_identifier: string;
 }
@@ -30,6 +45,12 @@ function createBaseParams(): Params {
     distrEpochIdentifier: ""
   };
 }
+/**
+ * Params holds parameters for the incentives module
+ * @name Params
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.incentives.Params",
   aminoType: "osmosis/incentives/params",

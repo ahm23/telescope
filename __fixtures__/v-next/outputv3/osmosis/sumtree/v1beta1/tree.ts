@@ -1,6 +1,11 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial, isSet, bytesFromBase64, base64FromBytes } from "../../../helpers";
 export const protobufPackage = "osmosis.store.v1beta1";
+/**
+ * @name Node
+ * @package osmosis.store.v1beta1
+ * @see proto type: osmosis.store.v1beta1.Node
+ */
 export interface Node {
   children: Child[];
 }
@@ -8,12 +13,27 @@ export interface NodeProtoMsg {
   typeUrl: "/osmosis.store.v1beta1.Node";
   value: Uint8Array;
 }
+/**
+ * @name NodeAmino
+ * @package osmosis.store.v1beta1
+ * @see proto type: osmosis.store.v1beta1.Node
+ */
 export interface NodeAmino {
   children?: ChildAmino[];
 }
+/**
+ * @name NodeSDKType
+ * @package osmosis.store.v1beta1
+ * @see proto type: osmosis.store.v1beta1.Node
+ */
 export interface NodeSDKType {
   children: ChildSDKType[];
 }
+/**
+ * @name Child
+ * @package osmosis.store.v1beta1
+ * @see proto type: osmosis.store.v1beta1.Child
+ */
 export interface Child {
   index: Uint8Array;
   accumulation: string;
@@ -22,14 +42,29 @@ export interface ChildProtoMsg {
   typeUrl: "/osmosis.store.v1beta1.Child";
   value: Uint8Array;
 }
+/**
+ * @name ChildAmino
+ * @package osmosis.store.v1beta1
+ * @see proto type: osmosis.store.v1beta1.Child
+ */
 export interface ChildAmino {
   index?: string;
   accumulation?: string;
 }
+/**
+ * @name ChildSDKType
+ * @package osmosis.store.v1beta1
+ * @see proto type: osmosis.store.v1beta1.Child
+ */
 export interface ChildSDKType {
   index: Uint8Array;
   accumulation: string;
 }
+/**
+ * @name Leaf
+ * @package osmosis.store.v1beta1
+ * @see proto type: osmosis.store.v1beta1.Leaf
+ */
 export interface Leaf {
   leaf?: Child;
 }
@@ -37,9 +72,19 @@ export interface LeafProtoMsg {
   typeUrl: "/osmosis.store.v1beta1.Leaf";
   value: Uint8Array;
 }
+/**
+ * @name LeafAmino
+ * @package osmosis.store.v1beta1
+ * @see proto type: osmosis.store.v1beta1.Leaf
+ */
 export interface LeafAmino {
   leaf?: ChildAmino;
 }
+/**
+ * @name LeafSDKType
+ * @package osmosis.store.v1beta1
+ * @see proto type: osmosis.store.v1beta1.Leaf
+ */
 export interface LeafSDKType {
   leaf?: ChildSDKType;
 }
@@ -48,6 +93,11 @@ function createBaseNode(): Node {
     children: []
   };
 }
+/**
+ * @name Node
+ * @package osmosis.store.v1beta1
+ * @see proto type: osmosis.store.v1beta1.Node
+ */
 export const Node = {
   typeUrl: "/osmosis.store.v1beta1.Node",
   aminoType: "osmosis/store/node",
@@ -131,6 +181,11 @@ function createBaseChild(): Child {
     accumulation: ""
   };
 }
+/**
+ * @name Child
+ * @package osmosis.store.v1beta1
+ * @see proto type: osmosis.store.v1beta1.Child
+ */
 export const Child = {
   typeUrl: "/osmosis.store.v1beta1.Child",
   aminoType: "osmosis/store/child",
@@ -221,6 +276,11 @@ function createBaseLeaf(): Leaf {
     leaf: undefined
   };
 }
+/**
+ * @name Leaf
+ * @package osmosis.store.v1beta1
+ * @see proto type: osmosis.store.v1beta1.Leaf
+ */
 export const Leaf = {
   typeUrl: "/osmosis.store.v1beta1.Leaf",
   aminoType: "osmosis/store/leaf",

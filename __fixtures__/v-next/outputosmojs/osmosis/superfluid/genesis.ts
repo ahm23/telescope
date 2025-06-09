@@ -4,7 +4,12 @@ import { BinaryReader, BinaryWriter } from "../../binary";
 import { isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
 export const protobufPackage = "osmosis.superfluid";
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.GenesisState
+ */
 export interface GenesisState {
   params: Params;
   /**
@@ -28,7 +33,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.superfluid.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the module's genesis state. */
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   superfluid_assets: SuperfluidAssetSDKType[];
@@ -45,6 +55,12 @@ function createBaseGenesisState(): GenesisState {
     intemediaryAccountConnections: []
   };
 }
+/**
+ * GenesisState defines the module's genesis state.
+ * @name GenesisState
+ * @package osmosis.superfluid
+ * @see proto type: osmosis.superfluid.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.superfluid.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

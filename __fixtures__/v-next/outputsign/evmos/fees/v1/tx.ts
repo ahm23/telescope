@@ -1,16 +1,25 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 export const protobufPackage = "evmos.fees.v1";
-/** MsgRegisterFeesContract defines a message that registers a DevFeeInfo */
+/**
+ * MsgRegisterFeesContract defines a message that registers a DevFeeInfo
+ * @name MsgRegisterDevFeeInfo
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgRegisterDevFeeInfo
+ */
 export interface MsgRegisterDevFeeInfo {
-  /** contract hex address */
+  /**
+   * contract hex address
+   */
   contractAddress: string;
   /**
    * bech32 address of message sender, must be the same as the origin EOA
    * sending the transaction which deploys the contract
    */
   deployerAddress: string;
-  /** bech32 address of account receiving the transaction fees */
+  /**
+   * bech32 address of account receiving the transaction fees
+   */
   withdrawAddress: string;
   /**
    * array of nonces from the address path, where the last nonce is
@@ -23,16 +32,25 @@ export interface MsgRegisterDevFeeInfoProtoMsg {
   typeUrl: "/evmos.fees.v1.MsgRegisterDevFeeInfo";
   value: Uint8Array;
 }
-/** MsgRegisterFeesContract defines a message that registers a DevFeeInfo */
+/**
+ * MsgRegisterFeesContract defines a message that registers a DevFeeInfo
+ * @name MsgRegisterDevFeeInfoAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgRegisterDevFeeInfo
+ */
 export interface MsgRegisterDevFeeInfoAmino {
-  /** contract hex address */
+  /**
+   * contract hex address
+   */
   contract_address?: string;
   /**
    * bech32 address of message sender, must be the same as the origin EOA
    * sending the transaction which deploys the contract
    */
   deployer_address?: string;
-  /** bech32 address of account receiving the transaction fees */
+  /**
+   * bech32 address of account receiving the transaction fees
+   */
   withdraw_address?: string;
   /**
    * array of nonces from the address path, where the last nonce is
@@ -45,7 +63,12 @@ export interface MsgRegisterDevFeeInfoAminoMsg {
   type: "/evmos.fees.v1.MsgRegisterDevFeeInfo";
   value: MsgRegisterDevFeeInfoAmino;
 }
-/** MsgRegisterFeesContract defines a message that registers a DevFeeInfo */
+/**
+ * MsgRegisterFeesContract defines a message that registers a DevFeeInfo
+ * @name MsgRegisterDevFeeInfoSDKType
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgRegisterDevFeeInfo
+ */
 export interface MsgRegisterDevFeeInfoSDKType {
   contract_address: string;
   deployer_address: string;
@@ -55,6 +78,9 @@ export interface MsgRegisterDevFeeInfoSDKType {
 /**
  * MsgRegisterDevFeeInfoResponse defines the MsgRegisterDevFeeInfo response
  * type
+ * @name MsgRegisterDevFeeInfoResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgRegisterDevFeeInfoResponse
  */
 export interface MsgRegisterDevFeeInfoResponse {}
 export interface MsgRegisterDevFeeInfoResponseProtoMsg {
@@ -64,6 +90,9 @@ export interface MsgRegisterDevFeeInfoResponseProtoMsg {
 /**
  * MsgRegisterDevFeeInfoResponse defines the MsgRegisterDevFeeInfo response
  * type
+ * @name MsgRegisterDevFeeInfoResponseAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgRegisterDevFeeInfoResponse
  */
 export interface MsgRegisterDevFeeInfoResponseAmino {}
 export interface MsgRegisterDevFeeInfoResponseAminoMsg {
@@ -73,16 +102,26 @@ export interface MsgRegisterDevFeeInfoResponseAminoMsg {
 /**
  * MsgRegisterDevFeeInfoResponse defines the MsgRegisterDevFeeInfo response
  * type
+ * @name MsgRegisterDevFeeInfoResponseSDKType
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgRegisterDevFeeInfoResponse
  */
 export interface MsgRegisterDevFeeInfoResponseSDKType {}
 /**
  * MsgCancelDevFeeInfo defines a message that cancels a registered a
  * DevFeeInfo
+ * @name MsgCancelDevFeeInfo
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgCancelDevFeeInfo
  */
 export interface MsgCancelDevFeeInfo {
-  /** contract hex address */
+  /**
+   * contract hex address
+   */
   contractAddress: string;
-  /** deployer bech32 address */
+  /**
+   * deployer bech32 address
+   */
   deployerAddress: string;
 }
 export interface MsgCancelDevFeeInfoProtoMsg {
@@ -92,11 +131,18 @@ export interface MsgCancelDevFeeInfoProtoMsg {
 /**
  * MsgCancelDevFeeInfo defines a message that cancels a registered a
  * DevFeeInfo
+ * @name MsgCancelDevFeeInfoAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgCancelDevFeeInfo
  */
 export interface MsgCancelDevFeeInfoAmino {
-  /** contract hex address */
+  /**
+   * contract hex address
+   */
   contract_address?: string;
-  /** deployer bech32 address */
+  /**
+   * deployer bech32 address
+   */
   deployer_address?: string;
 }
 export interface MsgCancelDevFeeInfoAminoMsg {
@@ -106,35 +152,62 @@ export interface MsgCancelDevFeeInfoAminoMsg {
 /**
  * MsgCancelDevFeeInfo defines a message that cancels a registered a
  * DevFeeInfo
+ * @name MsgCancelDevFeeInfoSDKType
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgCancelDevFeeInfo
  */
 export interface MsgCancelDevFeeInfoSDKType {
   contract_address: string;
   deployer_address: string;
 }
-/** MsgCancelDevFeeInfoResponse defines the MsgCancelDevFeeInfo response type */
+/**
+ * MsgCancelDevFeeInfoResponse defines the MsgCancelDevFeeInfo response type
+ * @name MsgCancelDevFeeInfoResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgCancelDevFeeInfoResponse
+ */
 export interface MsgCancelDevFeeInfoResponse {}
 export interface MsgCancelDevFeeInfoResponseProtoMsg {
   typeUrl: "/evmos.fees.v1.MsgCancelDevFeeInfoResponse";
   value: Uint8Array;
 }
-/** MsgCancelDevFeeInfoResponse defines the MsgCancelDevFeeInfo response type */
+/**
+ * MsgCancelDevFeeInfoResponse defines the MsgCancelDevFeeInfo response type
+ * @name MsgCancelDevFeeInfoResponseAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgCancelDevFeeInfoResponse
+ */
 export interface MsgCancelDevFeeInfoResponseAmino {}
 export interface MsgCancelDevFeeInfoResponseAminoMsg {
   type: "/evmos.fees.v1.MsgCancelDevFeeInfoResponse";
   value: MsgCancelDevFeeInfoResponseAmino;
 }
-/** MsgCancelDevFeeInfoResponse defines the MsgCancelDevFeeInfo response type */
+/**
+ * MsgCancelDevFeeInfoResponse defines the MsgCancelDevFeeInfo response type
+ * @name MsgCancelDevFeeInfoResponseSDKType
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgCancelDevFeeInfoResponse
+ */
 export interface MsgCancelDevFeeInfoResponseSDKType {}
 /**
  * MsgUpdateDevFeeInfo defines a message that updates the withdraw address for
  * a registered DevFeeInfo
+ * @name MsgUpdateDevFeeInfo
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgUpdateDevFeeInfo
  */
 export interface MsgUpdateDevFeeInfo {
-  /** contract hex address */
+  /**
+   * contract hex address
+   */
   contractAddress: string;
-  /** deployer bech32 address */
+  /**
+   * deployer bech32 address
+   */
   deployerAddress: string;
-  /** new withdraw bech32 address for receiving the transaction fees */
+  /**
+   * new withdraw bech32 address for receiving the transaction fees
+   */
   withdrawAddress: string;
 }
 export interface MsgUpdateDevFeeInfoProtoMsg {
@@ -144,13 +217,22 @@ export interface MsgUpdateDevFeeInfoProtoMsg {
 /**
  * MsgUpdateDevFeeInfo defines a message that updates the withdraw address for
  * a registered DevFeeInfo
+ * @name MsgUpdateDevFeeInfoAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgUpdateDevFeeInfo
  */
 export interface MsgUpdateDevFeeInfoAmino {
-  /** contract hex address */
+  /**
+   * contract hex address
+   */
   contract_address?: string;
-  /** deployer bech32 address */
+  /**
+   * deployer bech32 address
+   */
   deployer_address?: string;
-  /** new withdraw bech32 address for receiving the transaction fees */
+  /**
+   * new withdraw bech32 address for receiving the transaction fees
+   */
   withdraw_address?: string;
 }
 export interface MsgUpdateDevFeeInfoAminoMsg {
@@ -160,25 +242,43 @@ export interface MsgUpdateDevFeeInfoAminoMsg {
 /**
  * MsgUpdateDevFeeInfo defines a message that updates the withdraw address for
  * a registered DevFeeInfo
+ * @name MsgUpdateDevFeeInfoSDKType
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgUpdateDevFeeInfo
  */
 export interface MsgUpdateDevFeeInfoSDKType {
   contract_address: string;
   deployer_address: string;
   withdraw_address: string;
 }
-/** MsgUpdateDevFeeInfoResponse defines the MsgUpdateDevFeeInfo response type */
+/**
+ * MsgUpdateDevFeeInfoResponse defines the MsgUpdateDevFeeInfo response type
+ * @name MsgUpdateDevFeeInfoResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgUpdateDevFeeInfoResponse
+ */
 export interface MsgUpdateDevFeeInfoResponse {}
 export interface MsgUpdateDevFeeInfoResponseProtoMsg {
   typeUrl: "/evmos.fees.v1.MsgUpdateDevFeeInfoResponse";
   value: Uint8Array;
 }
-/** MsgUpdateDevFeeInfoResponse defines the MsgUpdateDevFeeInfo response type */
+/**
+ * MsgUpdateDevFeeInfoResponse defines the MsgUpdateDevFeeInfo response type
+ * @name MsgUpdateDevFeeInfoResponseAmino
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgUpdateDevFeeInfoResponse
+ */
 export interface MsgUpdateDevFeeInfoResponseAmino {}
 export interface MsgUpdateDevFeeInfoResponseAminoMsg {
   type: "/evmos.fees.v1.MsgUpdateDevFeeInfoResponse";
   value: MsgUpdateDevFeeInfoResponseAmino;
 }
-/** MsgUpdateDevFeeInfoResponse defines the MsgUpdateDevFeeInfo response type */
+/**
+ * MsgUpdateDevFeeInfoResponse defines the MsgUpdateDevFeeInfo response type
+ * @name MsgUpdateDevFeeInfoResponseSDKType
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgUpdateDevFeeInfoResponse
+ */
 export interface MsgUpdateDevFeeInfoResponseSDKType {}
 function createBaseMsgRegisterDevFeeInfo(): MsgRegisterDevFeeInfo {
   return {
@@ -188,6 +288,12 @@ function createBaseMsgRegisterDevFeeInfo(): MsgRegisterDevFeeInfo {
     nonces: []
   };
 }
+/**
+ * MsgRegisterFeesContract defines a message that registers a DevFeeInfo
+ * @name MsgRegisterDevFeeInfo
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgRegisterDevFeeInfo
+ */
 export const MsgRegisterDevFeeInfo = {
   typeUrl: "/evmos.fees.v1.MsgRegisterDevFeeInfo",
   encode(message: MsgRegisterDevFeeInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -293,6 +399,13 @@ export const MsgRegisterDevFeeInfo = {
 function createBaseMsgRegisterDevFeeInfoResponse(): MsgRegisterDevFeeInfoResponse {
   return {};
 }
+/**
+ * MsgRegisterDevFeeInfoResponse defines the MsgRegisterDevFeeInfo response
+ * type
+ * @name MsgRegisterDevFeeInfoResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgRegisterDevFeeInfoResponse
+ */
 export const MsgRegisterDevFeeInfoResponse = {
   typeUrl: "/evmos.fees.v1.MsgRegisterDevFeeInfoResponse",
   encode(_: MsgRegisterDevFeeInfoResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -346,6 +459,13 @@ function createBaseMsgCancelDevFeeInfo(): MsgCancelDevFeeInfo {
     deployerAddress: ""
   };
 }
+/**
+ * MsgCancelDevFeeInfo defines a message that cancels a registered a
+ * DevFeeInfo
+ * @name MsgCancelDevFeeInfo
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgCancelDevFeeInfo
+ */
 export const MsgCancelDevFeeInfo = {
   typeUrl: "/evmos.fees.v1.MsgCancelDevFeeInfo",
   encode(message: MsgCancelDevFeeInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -418,6 +538,12 @@ export const MsgCancelDevFeeInfo = {
 function createBaseMsgCancelDevFeeInfoResponse(): MsgCancelDevFeeInfoResponse {
   return {};
 }
+/**
+ * MsgCancelDevFeeInfoResponse defines the MsgCancelDevFeeInfo response type
+ * @name MsgCancelDevFeeInfoResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgCancelDevFeeInfoResponse
+ */
 export const MsgCancelDevFeeInfoResponse = {
   typeUrl: "/evmos.fees.v1.MsgCancelDevFeeInfoResponse",
   encode(_: MsgCancelDevFeeInfoResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -472,6 +598,13 @@ function createBaseMsgUpdateDevFeeInfo(): MsgUpdateDevFeeInfo {
     withdrawAddress: ""
   };
 }
+/**
+ * MsgUpdateDevFeeInfo defines a message that updates the withdraw address for
+ * a registered DevFeeInfo
+ * @name MsgUpdateDevFeeInfo
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgUpdateDevFeeInfo
+ */
 export const MsgUpdateDevFeeInfo = {
   typeUrl: "/evmos.fees.v1.MsgUpdateDevFeeInfo",
   encode(message: MsgUpdateDevFeeInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -555,6 +688,12 @@ export const MsgUpdateDevFeeInfo = {
 function createBaseMsgUpdateDevFeeInfoResponse(): MsgUpdateDevFeeInfoResponse {
   return {};
 }
+/**
+ * MsgUpdateDevFeeInfoResponse defines the MsgUpdateDevFeeInfo response type
+ * @name MsgUpdateDevFeeInfoResponse
+ * @package evmos.fees.v1
+ * @see proto type: evmos.fees.v1.MsgUpdateDevFeeInfoResponse
+ */
 export const MsgUpdateDevFeeInfoResponse = {
   typeUrl: "/evmos.fees.v1.MsgUpdateDevFeeInfoResponse",
   encode(_: MsgUpdateDevFeeInfoResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

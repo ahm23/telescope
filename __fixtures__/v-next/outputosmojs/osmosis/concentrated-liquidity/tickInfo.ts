@@ -4,6 +4,11 @@ import { Decimal } from "@cosmjs/math";
 import { isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
 export const protobufPackage = "osmosis.concentratedliquidity.v1beta1";
+/**
+ * @name TickInfo
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.TickInfo
+ */
 export interface TickInfo {
   liquidityGross: string;
   liquidityNet: string;
@@ -14,12 +19,22 @@ export interface TickInfoProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.TickInfo";
   value: Uint8Array;
 }
+/**
+ * @name TickInfoSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.TickInfo
+ */
 export interface TickInfoSDKType {
   liquidity_gross: string;
   liquidity_net: string;
   fee_growth_outside: DecCoinSDKType[];
   uptime_trackers: UptimeTrackerSDKType[];
 }
+/**
+ * @name UptimeTracker
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.UptimeTracker
+ */
 export interface UptimeTracker {
   uptimeGrowthOutside: DecCoin[];
 }
@@ -27,6 +42,11 @@ export interface UptimeTrackerProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.UptimeTracker";
   value: Uint8Array;
 }
+/**
+ * @name UptimeTrackerSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.UptimeTracker
+ */
 export interface UptimeTrackerSDKType {
   uptime_growth_outside: DecCoinSDKType[];
 }
@@ -38,6 +58,11 @@ function createBaseTickInfo(): TickInfo {
     uptimeTrackers: []
   };
 }
+/**
+ * @name TickInfo
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.TickInfo
+ */
 export const TickInfo = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.TickInfo",
   encode(message: TickInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -200,6 +225,11 @@ function createBaseUptimeTracker(): UptimeTracker {
     uptimeGrowthOutside: []
   };
 }
+/**
+ * @name UptimeTracker
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.UptimeTracker
+ */
 export const UptimeTracker = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.UptimeTracker",
   encode(message: UptimeTracker, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

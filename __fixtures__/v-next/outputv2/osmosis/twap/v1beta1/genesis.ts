@@ -4,7 +4,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.twap.v1beta1";
-/** Params holds parameters for the twap module */
+/**
+ * Params holds parameters for the twap module
+ * @name Params
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.Params
+ */
 export interface Params {
   pruneEpochIdentifier: string;
   recordHistoryKeepPeriod: Duration;
@@ -13,7 +18,12 @@ export interface ParamsProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the twap module */
+/**
+ * Params holds parameters for the twap module
+ * @name ParamsAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.Params
+ */
 export interface ParamsAmino {
   prune_epoch_identifier?: string;
   record_history_keep_period?: DurationAmino;
@@ -22,34 +32,62 @@ export interface ParamsAminoMsg {
   type: "osmosis/twap/params";
   value: ParamsAmino;
 }
-/** Params holds parameters for the twap module */
+/**
+ * Params holds parameters for the twap module
+ * @name ParamsSDKType
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.Params
+ */
 export interface ParamsSDKType {
   prune_epoch_identifier: string;
   record_history_keep_period: DurationSDKType;
 }
-/** GenesisState defines the twap module's genesis state. */
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisState
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** twaps is the collection of all twap records. */
+  /**
+   * twaps is the collection of all twap records.
+   */
   twaps: TwapRecord[];
-  /** params is the container of twap parameters. */
+  /**
+   * params is the container of twap parameters.
+   */
   params: Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.twap.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the twap module's genesis state. */
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisStateAmino
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** twaps is the collection of all twap records. */
+  /**
+   * twaps is the collection of all twap records.
+   */
   twaps?: TwapRecordAmino[];
-  /** params is the container of twap parameters. */
+  /**
+   * params is the container of twap parameters.
+   */
   params?: ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
   type: "osmosis/twap/genesis-state";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the twap module's genesis state. */
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   twaps: TwapRecordSDKType[];
   params: ParamsSDKType;
@@ -60,6 +98,12 @@ function createBaseParams(): Params {
     recordHistoryKeepPeriod: Duration.fromPartial({})
   };
 }
+/**
+ * Params holds parameters for the twap module
+ * @name Params
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.twap.v1beta1.Params",
   aminoType: "osmosis/twap/params",
@@ -168,6 +212,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the twap module's genesis state.
+ * @name GenesisState
+ * @package osmosis.twap.v1beta1
+ * @see proto type: osmosis.twap.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.twap.v1beta1.GenesisState",
   aminoType: "osmosis/twap/genesis-state",

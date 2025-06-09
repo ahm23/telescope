@@ -5,6 +5,11 @@ import { toTimestamp, fromTimestamp, isSet, DeepPartial } from "../../../helpers
 import { GlobalDecoderRegistry } from "../../../registry";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "evmos.epochs.v1";
+/**
+ * @name EpochInfo
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.EpochInfo
+ */
 export interface EpochInfo {
   identifier: string;
   startTime: Date;
@@ -18,6 +23,11 @@ export interface EpochInfoProtoMsg {
   typeUrl: "/evmos.epochs.v1.EpochInfo";
   value: Uint8Array;
 }
+/**
+ * @name EpochInfoAmino
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.EpochInfo
+ */
 export interface EpochInfoAmino {
   identifier?: string;
   start_time?: string;
@@ -31,6 +41,11 @@ export interface EpochInfoAminoMsg {
   type: "/evmos.epochs.v1.EpochInfo";
   value: EpochInfoAmino;
 }
+/**
+ * @name EpochInfoSDKType
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.EpochInfo
+ */
 export interface EpochInfoSDKType {
   identifier: string;
   start_time: Date;
@@ -40,7 +55,12 @@ export interface EpochInfoSDKType {
   epoch_counting_started: boolean;
   current_epoch_start_height: bigint;
 }
-/** GenesisState defines the epochs module's genesis state. */
+/**
+ * GenesisState defines the epochs module's genesis state.
+ * @name GenesisState
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.GenesisState
+ */
 export interface GenesisState {
   epochs: EpochInfo[];
 }
@@ -48,7 +68,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/evmos.epochs.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the epochs module's genesis state. */
+/**
+ * GenesisState defines the epochs module's genesis state.
+ * @name GenesisStateAmino
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.GenesisState
+ */
 export interface GenesisStateAmino {
   epochs?: EpochInfoAmino[];
 }
@@ -56,7 +81,12 @@ export interface GenesisStateAminoMsg {
   type: "/evmos.epochs.v1.GenesisState";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the epochs module's genesis state. */
+/**
+ * GenesisState defines the epochs module's genesis state.
+ * @name GenesisStateSDKType
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.GenesisState
+ */
 export interface GenesisStateSDKType {
   epochs: EpochInfoSDKType[];
 }
@@ -71,6 +101,11 @@ function createBaseEpochInfo(): EpochInfo {
     currentEpochStartHeight: BigInt(0)
   };
 }
+/**
+ * @name EpochInfo
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.EpochInfo
+ */
 export const EpochInfo = {
   typeUrl: "/evmos.epochs.v1.EpochInfo",
   is(o: any): o is EpochInfo {
@@ -271,6 +306,12 @@ function createBaseGenesisState(): GenesisState {
     epochs: []
   };
 }
+/**
+ * GenesisState defines the epochs module's genesis state.
+ * @name GenesisState
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/evmos.epochs.v1.GenesisState",
   is(o: any): o is GenesisState {

@@ -4,43 +4,70 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "cosmos.bank.v1beta1";
-/** GenesisState defines the bank module's genesis state. */
+/**
+ * GenesisState defines the bank module's genesis state.
+ * @name GenesisState
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the paramaters of the module. */
+  /**
+   * params defines all the paramaters of the module.
+   */
   params: Params;
-  /** balances is an array containing the balances of all the accounts. */
+  /**
+   * balances is an array containing the balances of all the accounts.
+   */
   balances: Balance[];
   /**
    * supply represents the total supply. If it is left empty, then supply will be calculated based on the provided
    * balances. Otherwise, it will be used to validate that the sum of the balances equals this amount.
    */
   supply: Coin[];
-  /** denom_metadata defines the metadata of the differents coins. */
+  /**
+   * denom_metadata defines the metadata of the differents coins.
+   */
   denomMetadata: Metadata[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.bank.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the bank module's genesis state. */
+/**
+ * GenesisState defines the bank module's genesis state.
+ * @name GenesisStateAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines all the paramaters of the module. */
+  /**
+   * params defines all the paramaters of the module.
+   */
   params?: ParamsAmino;
-  /** balances is an array containing the balances of all the accounts. */
+  /**
+   * balances is an array containing the balances of all the accounts.
+   */
   balances?: BalanceAmino[];
   /**
    * supply represents the total supply. If it is left empty, then supply will be calculated based on the provided
    * balances. Otherwise, it will be used to validate that the sum of the balances equals this amount.
    */
   supply?: CoinAmino[];
-  /** denom_metadata defines the metadata of the differents coins. */
+  /**
+   * denom_metadata defines the metadata of the differents coins.
+   */
   denom_metadata?: MetadataAmino[];
 }
 export interface GenesisStateAminoMsg {
   type: "cosmos-sdk/GenesisState";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the bank module's genesis state. */
+/**
+ * GenesisState defines the bank module's genesis state.
+ * @name GenesisStateSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   balances: BalanceSDKType[];
@@ -50,11 +77,18 @@ export interface GenesisStateSDKType {
 /**
  * Balance defines an account address and balance pair used in the bank module's
  * genesis state.
+ * @name Balance
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.Balance
  */
 export interface Balance {
-  /** address is the address of the balance holder. */
+  /**
+   * address is the address of the balance holder.
+   */
   address: string;
-  /** coins defines the different coins this balance holds. */
+  /**
+   * coins defines the different coins this balance holds.
+   */
   coins: Coin[];
 }
 export interface BalanceProtoMsg {
@@ -64,11 +98,18 @@ export interface BalanceProtoMsg {
 /**
  * Balance defines an account address and balance pair used in the bank module's
  * genesis state.
+ * @name BalanceAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.Balance
  */
 export interface BalanceAmino {
-  /** address is the address of the balance holder. */
+  /**
+   * address is the address of the balance holder.
+   */
   address?: string;
-  /** coins defines the different coins this balance holds. */
+  /**
+   * coins defines the different coins this balance holds.
+   */
   coins?: CoinAmino[];
 }
 export interface BalanceAminoMsg {
@@ -78,6 +119,9 @@ export interface BalanceAminoMsg {
 /**
  * Balance defines an account address and balance pair used in the bank module's
  * genesis state.
+ * @name BalanceSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.Balance
  */
 export interface BalanceSDKType {
   address: string;
@@ -91,6 +135,12 @@ function createBaseGenesisState(): GenesisState {
     denomMetadata: []
   };
 }
+/**
+ * GenesisState defines the bank module's genesis state.
+ * @name GenesisState
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.bank.v1beta1.GenesisState",
   aminoType: "cosmos-sdk/GenesisState",
@@ -259,6 +309,13 @@ function createBaseBalance(): Balance {
     coins: []
   };
 }
+/**
+ * Balance defines an account address and balance pair used in the bank module's
+ * genesis state.
+ * @name Balance
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.Balance
+ */
 export const Balance = {
   typeUrl: "/cosmos.bank.v1beta1.Balance",
   aminoType: "cosmos-sdk/Balance",

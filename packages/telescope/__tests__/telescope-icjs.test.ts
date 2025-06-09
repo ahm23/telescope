@@ -21,6 +21,9 @@ const options: TelescopeOptions = {
   useSDKTypes: false,
   exportReadme: true,
   prototypes: {
+    alias: {
+      "**.Params": makeAliasName,
+    },
     enableRegistryLoader: false,
     enableMessageComposer: true,
     enabled: true,

@@ -8,6 +8,9 @@ export const protobufPackage = "osmosis.gamm.v1beta1";
  * proposal’s records override the existing MigrationRecords set in the module.
  * Each record specifies a single connection between a single balancer pool and
  * a single concentrated pool.
+ * @name ReplaceMigrationRecordsProposal
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.ReplaceMigrationRecordsProposal
  */
 export interface ReplaceMigrationRecordsProposal {
   title: string;
@@ -23,6 +26,9 @@ export interface ReplaceMigrationRecordsProposalProtoMsg {
  * proposal’s records override the existing MigrationRecords set in the module.
  * Each record specifies a single connection between a single balancer pool and
  * a single concentrated pool.
+ * @name ReplaceMigrationRecordsProposalSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.ReplaceMigrationRecordsProposal
  */
 export interface ReplaceMigrationRecordsProposalSDKType {
   title: string;
@@ -37,6 +43,9 @@ export interface ReplaceMigrationRecordsProposalSDKType {
  * Edit Balancer 3 record, and Add Balancer 4 record
  * The result MigrationRecords in state would be:
  * [(Balancer 1, CL 5), (Balancer 3, CL 4), (Balancer 4, CL 10)]
+ * @name UpdateMigrationRecordsProposal
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.UpdateMigrationRecordsProposal
  */
 export interface UpdateMigrationRecordsProposal {
   title: string;
@@ -55,6 +64,9 @@ export interface UpdateMigrationRecordsProposalProtoMsg {
  * Edit Balancer 3 record, and Add Balancer 4 record
  * The result MigrationRecords in state would be:
  * [(Balancer 1, CL 5), (Balancer 3, CL 4), (Balancer 4, CL 10)]
+ * @name UpdateMigrationRecordsProposalSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.UpdateMigrationRecordsProposal
  */
 export interface UpdateMigrationRecordsProposalSDKType {
   title: string;
@@ -66,6 +78,16 @@ function createBaseReplaceMigrationRecordsProposal(): ReplaceMigrationRecordsPro
     description: ""
   };
 }
+/**
+ * ReplaceMigrationRecordsProposal is a gov Content type for updating the
+ * migration records. If a ReplaceMigrationRecordsProposal passes, the
+ * proposal’s records override the existing MigrationRecords set in the module.
+ * Each record specifies a single connection between a single balancer pool and
+ * a single concentrated pool.
+ * @name ReplaceMigrationRecordsProposal
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.ReplaceMigrationRecordsProposal
+ */
 export const ReplaceMigrationRecordsProposal = {
   typeUrl: "/osmosis.gamm.v1beta1.ReplaceMigrationRecordsProposal",
   encode(message: ReplaceMigrationRecordsProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -177,6 +199,19 @@ function createBaseUpdateMigrationRecordsProposal(): UpdateMigrationRecordsPropo
     description: ""
   };
 }
+/**
+ * For example: if the existing DistrRecords were:
+ * [(Balancer 1, CL 5), (Balancer 2, CL 6), (Balancer 3, CL 7)]
+ * And an UpdateMigrationRecordsProposal includes
+ * [(Balancer 2, CL 0), (Balancer 3, CL 4), (Balancer 4, CL 10)]
+ * This would leave Balancer 1 record, delete Balancer 2 record,
+ * Edit Balancer 3 record, and Add Balancer 4 record
+ * The result MigrationRecords in state would be:
+ * [(Balancer 1, CL 5), (Balancer 3, CL 4), (Balancer 4, CL 10)]
+ * @name UpdateMigrationRecordsProposal
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.UpdateMigrationRecordsProposal
+ */
 export const UpdateMigrationRecordsProposal = {
   typeUrl: "/osmosis.gamm.v1beta1.UpdateMigrationRecordsProposal",
   encode(message: UpdateMigrationRecordsProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

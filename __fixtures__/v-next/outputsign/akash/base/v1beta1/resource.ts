@@ -4,7 +4,12 @@ import { Endpoint, EndpointAmino, EndpointSDKType } from "./endpoint";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial, Exact } from "../../../helpers";
 export const protobufPackage = "akash.base.v1beta1";
-/** CPU stores resource units and cpu config attributes */
+/**
+ * CPU stores resource units and cpu config attributes
+ * @name CPU
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.CPU
+ */
 export interface CPU {
   units: ResourceValue;
   attributes: Attribute[];
@@ -13,7 +18,12 @@ export interface CPUProtoMsg {
   typeUrl: "/akash.base.v1beta1.CPU";
   value: Uint8Array;
 }
-/** CPU stores resource units and cpu config attributes */
+/**
+ * CPU stores resource units and cpu config attributes
+ * @name CPUAmino
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.CPU
+ */
 export interface CPUAmino {
   units?: ResourceValueAmino;
   attributes?: AttributeAmino[];
@@ -22,12 +32,22 @@ export interface CPUAminoMsg {
   type: "/akash.base.v1beta1.CPU";
   value: CPUAmino;
 }
-/** CPU stores resource units and cpu config attributes */
+/**
+ * CPU stores resource units and cpu config attributes
+ * @name CPUSDKType
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.CPU
+ */
 export interface CPUSDKType {
   units: ResourceValueSDKType;
   attributes: AttributeSDKType[];
 }
-/** Memory stores resource quantity and memory attributes */
+/**
+ * Memory stores resource quantity and memory attributes
+ * @name Memory
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.Memory
+ */
 export interface Memory {
   quantity: ResourceValue;
   attributes: Attribute[];
@@ -36,7 +56,12 @@ export interface MemoryProtoMsg {
   typeUrl: "/akash.base.v1beta1.Memory";
   value: Uint8Array;
 }
-/** Memory stores resource quantity and memory attributes */
+/**
+ * Memory stores resource quantity and memory attributes
+ * @name MemoryAmino
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.Memory
+ */
 export interface MemoryAmino {
   quantity: ResourceValueAmino;
   attributes?: AttributeAmino[];
@@ -45,12 +70,22 @@ export interface MemoryAminoMsg {
   type: "/akash.base.v1beta1.Memory";
   value: MemoryAmino;
 }
-/** Memory stores resource quantity and memory attributes */
+/**
+ * Memory stores resource quantity and memory attributes
+ * @name MemorySDKType
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.Memory
+ */
 export interface MemorySDKType {
   quantity: ResourceValueSDKType;
   attributes: AttributeSDKType[];
 }
-/** Storage stores resource quantity and storage attributes */
+/**
+ * Storage stores resource quantity and storage attributes
+ * @name Storage
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.Storage
+ */
 export interface Storage {
   quantity: ResourceValue;
   attributes: Attribute[];
@@ -59,7 +94,12 @@ export interface StorageProtoMsg {
   typeUrl: "/akash.base.v1beta1.Storage";
   value: Uint8Array;
 }
-/** Storage stores resource quantity and storage attributes */
+/**
+ * Storage stores resource quantity and storage attributes
+ * @name StorageAmino
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.Storage
+ */
 export interface StorageAmino {
   quantity: ResourceValueAmino;
   attributes?: AttributeAmino[];
@@ -68,7 +108,12 @@ export interface StorageAminoMsg {
   type: "/akash.base.v1beta1.Storage";
   value: StorageAmino;
 }
-/** Storage stores resource quantity and storage attributes */
+/**
+ * Storage stores resource quantity and storage attributes
+ * @name StorageSDKType
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.Storage
+ */
 export interface StorageSDKType {
   quantity: ResourceValueSDKType;
   attributes: AttributeSDKType[];
@@ -76,6 +121,9 @@ export interface StorageSDKType {
 /**
  * ResourceUnits describes all available resources types for deployment/node etc
  * if field is nil resource is not present in the given data-structure
+ * @name ResourceUnits
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.ResourceUnits
  */
 export interface ResourceUnits {
   cpu?: CPU;
@@ -90,6 +138,9 @@ export interface ResourceUnitsProtoMsg {
 /**
  * ResourceUnits describes all available resources types for deployment/node etc
  * if field is nil resource is not present in the given data-structure
+ * @name ResourceUnitsAmino
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.ResourceUnits
  */
 export interface ResourceUnitsAmino {
   cpu?: CPUAmino;
@@ -104,6 +155,9 @@ export interface ResourceUnitsAminoMsg {
 /**
  * ResourceUnits describes all available resources types for deployment/node etc
  * if field is nil resource is not present in the given data-structure
+ * @name ResourceUnitsSDKType
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.ResourceUnits
  */
 export interface ResourceUnitsSDKType {
   cpu?: CPUSDKType;
@@ -117,6 +171,12 @@ function createBaseCPU(): CPU {
     attributes: []
   };
 }
+/**
+ * CPU stores resource units and cpu config attributes
+ * @name CPU
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.CPU
+ */
 export const CPU = {
   typeUrl: "/akash.base.v1beta1.CPU",
   encode(message: CPU, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -196,6 +256,12 @@ function createBaseMemory(): Memory {
     attributes: []
   };
 }
+/**
+ * Memory stores resource quantity and memory attributes
+ * @name Memory
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.Memory
+ */
 export const Memory = {
   typeUrl: "/akash.base.v1beta1.Memory",
   encode(message: Memory, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -275,6 +341,12 @@ function createBaseStorage(): Storage {
     attributes: []
   };
 }
+/**
+ * Storage stores resource quantity and storage attributes
+ * @name Storage
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.Storage
+ */
 export const Storage = {
   typeUrl: "/akash.base.v1beta1.Storage",
   encode(message: Storage, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -356,6 +428,13 @@ function createBaseResourceUnits(): ResourceUnits {
     endpoints: []
   };
 }
+/**
+ * ResourceUnits describes all available resources types for deployment/node etc
+ * if field is nil resource is not present in the given data-structure
+ * @name ResourceUnits
+ * @package akash.base.v1beta1
+ * @see proto type: akash.base.v1beta1.ResourceUnits
+ */
 export const ResourceUnits = {
   typeUrl: "/akash.base.v1beta1.ResourceUnits",
   encode(message: ResourceUnits, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

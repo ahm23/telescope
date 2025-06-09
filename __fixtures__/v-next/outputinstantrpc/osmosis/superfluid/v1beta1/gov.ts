@@ -6,6 +6,9 @@ export const protobufPackage = "osmosis.superfluid.v1beta1";
 /**
  * SetSuperfluidAssetsProposal is a gov Content type to update the superfluid
  * assets
+ * @name SetSuperfluidAssetsProposal
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal
  */
 export interface SetSuperfluidAssetsProposal {
   title: string;
@@ -19,6 +22,9 @@ export interface SetSuperfluidAssetsProposalProtoMsg {
 /**
  * SetSuperfluidAssetsProposal is a gov Content type to update the superfluid
  * assets
+ * @name SetSuperfluidAssetsProposalSDKType
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal
  */
 export interface SetSuperfluidAssetsProposalSDKType {
   title: string;
@@ -28,6 +34,9 @@ export interface SetSuperfluidAssetsProposalSDKType {
 /**
  * RemoveSuperfluidAssetsProposal is a gov Content type to remove the superfluid
  * assets by denom
+ * @name RemoveSuperfluidAssetsProposal
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal
  */
 export interface RemoveSuperfluidAssetsProposal {
   title: string;
@@ -41,6 +50,9 @@ export interface RemoveSuperfluidAssetsProposalProtoMsg {
 /**
  * RemoveSuperfluidAssetsProposal is a gov Content type to remove the superfluid
  * assets by denom
+ * @name RemoveSuperfluidAssetsProposalSDKType
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal
  */
 export interface RemoveSuperfluidAssetsProposalSDKType {
   title: string;
@@ -50,6 +62,9 @@ export interface RemoveSuperfluidAssetsProposalSDKType {
 /**
  * UpdateUnpoolWhiteListProposal is a gov Content type to update the
  * allowed list of pool ids.
+ * @name UpdateUnpoolWhiteListProposal
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal
  */
 export interface UpdateUnpoolWhiteListProposal {
   title: string;
@@ -64,6 +79,9 @@ export interface UpdateUnpoolWhiteListProposalProtoMsg {
 /**
  * UpdateUnpoolWhiteListProposal is a gov Content type to update the
  * allowed list of pool ids.
+ * @name UpdateUnpoolWhiteListProposalSDKType
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal
  */
 export interface UpdateUnpoolWhiteListProposalSDKType {
   title: string;
@@ -78,6 +96,13 @@ function createBaseSetSuperfluidAssetsProposal(): SetSuperfluidAssetsProposal {
     assets: []
   };
 }
+/**
+ * SetSuperfluidAssetsProposal is a gov Content type to update the superfluid
+ * assets
+ * @name SetSuperfluidAssetsProposal
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal
+ */
 export const SetSuperfluidAssetsProposal = {
   typeUrl: "/osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal",
   encode(message: SetSuperfluidAssetsProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -216,6 +241,13 @@ function createBaseRemoveSuperfluidAssetsProposal(): RemoveSuperfluidAssetsPropo
     superfluidAssetDenoms: []
   };
 }
+/**
+ * RemoveSuperfluidAssetsProposal is a gov Content type to remove the superfluid
+ * assets by denom
+ * @name RemoveSuperfluidAssetsProposal
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal
+ */
 export const RemoveSuperfluidAssetsProposal = {
   typeUrl: "/osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal",
   encode(message: RemoveSuperfluidAssetsProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -355,6 +387,13 @@ function createBaseUpdateUnpoolWhiteListProposal(): UpdateUnpoolWhiteListProposa
     isOverwrite: false
   };
 }
+/**
+ * UpdateUnpoolWhiteListProposal is a gov Content type to update the
+ * allowed list of pool ids.
+ * @name UpdateUnpoolWhiteListProposal
+ * @package osmosis.superfluid.v1beta1
+ * @see proto type: osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal
+ */
 export const UpdateUnpoolWhiteListProposal = {
   typeUrl: "/osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal",
   encode(message: UpdateUnpoolWhiteListProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

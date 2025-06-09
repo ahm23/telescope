@@ -2,6 +2,11 @@ import { BinaryReader, BinaryWriter } from "../binary";
 import { isSet, DeepPartial } from "../helpers";
 import { JsonSafe } from "../json-safe";
 export const protobufPackage = "misc";
+/**
+ * @name TestNest
+ * @package misc
+ * @see proto type: misc.TestNest
+ */
 export interface TestNest {
   test: string;
 }
@@ -9,6 +14,11 @@ export interface TestNestProtoMsg {
   typeUrl: "/misc.TestNest";
   value: Uint8Array;
 }
+/**
+ * @name TestNestAmino
+ * @package misc
+ * @see proto type: misc.TestNest
+ */
 export interface TestNestAmino {
   test?: string;
 }
@@ -16,9 +26,19 @@ export interface TestNestAminoMsg {
   type: "/misc.TestNest";
   value: TestNestAmino;
 }
+/**
+ * @name TestNestSDKType
+ * @package misc
+ * @see proto type: misc.TestNest
+ */
 export interface TestNestSDKType {
   test: string;
 }
+/**
+ * @name TestNest_Graph
+ * @package misc
+ * @see proto type: misc.Graph
+ */
 export interface TestNest_Graph {
   name: string;
 }
@@ -26,6 +46,11 @@ export interface TestNest_GraphProtoMsg {
   typeUrl: "/misc.Graph";
   value: Uint8Array;
 }
+/**
+ * @name TestNest_GraphAmino
+ * @package misc
+ * @see proto type: misc.TestNest_Graph
+ */
 export interface TestNest_GraphAmino {
   name?: string;
 }
@@ -33,6 +58,11 @@ export interface TestNest_GraphAminoMsg {
   type: "/misc.Graph";
   value: TestNest_GraphAmino;
 }
+/**
+ * @name TestNest_GraphSDKType
+ * @package misc
+ * @see proto type: misc.Graph
+ */
 export interface TestNest_GraphSDKType {
   name: string;
 }
@@ -41,6 +71,11 @@ function createBaseTestNest(): TestNest {
     test: ""
   };
 }
+/**
+ * @name TestNest
+ * @package misc
+ * @see proto type: misc.TestNest
+ */
 export const TestNest = {
   typeUrl: "/misc.TestNest",
   encode(message: TestNest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -129,6 +164,11 @@ function createBaseTestNest_Graph(): TestNest_Graph {
     name: ""
   };
 }
+/**
+ * @name TestNest_Graph
+ * @package misc
+ * @see proto type: misc.Graph
+ */
 export const TestNest_Graph = {
   typeUrl: "/misc.Graph",
   encode(message: TestNest_Graph, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

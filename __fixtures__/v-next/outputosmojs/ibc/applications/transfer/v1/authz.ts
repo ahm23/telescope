@@ -3,22 +3,40 @@ import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, DeepPartial } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
 export const protobufPackage = "ibc.applications.transfer.v1";
-/** Allocation defines the spend limit for a particular port and channel */
+/**
+ * Allocation defines the spend limit for a particular port and channel
+ * @name Allocation
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.Allocation
+ */
 export interface Allocation {
-  /** the port on which the packet will be sent */
+  /**
+   * the port on which the packet will be sent
+   */
   sourcePort: string;
-  /** the channel by which the packet will be sent */
+  /**
+   * the channel by which the packet will be sent
+   */
   sourceChannel: string;
-  /** spend limitation on the channel */
+  /**
+   * spend limitation on the channel
+   */
   spendLimit: Coin[];
-  /** allow list of receivers, an empty allow list permits any receiver address */
+  /**
+   * allow list of receivers, an empty allow list permits any receiver address
+   */
   allowList: string[];
 }
 export interface AllocationProtoMsg {
   typeUrl: "/ibc.applications.transfer.v1.Allocation";
   value: Uint8Array;
 }
-/** Allocation defines the spend limit for a particular port and channel */
+/**
+ * Allocation defines the spend limit for a particular port and channel
+ * @name AllocationSDKType
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.Allocation
+ */
 export interface AllocationSDKType {
   source_port: string;
   source_channel: string;
@@ -28,9 +46,14 @@ export interface AllocationSDKType {
 /**
  * TransferAuthorization allows the grantee to spend up to spend_limit coins from
  * the granter's account for ibc transfer on a specific channel
+ * @name TransferAuthorization
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.TransferAuthorization
  */
 export interface TransferAuthorization {
-  /** port and channel amounts */
+  /**
+   * port and channel amounts
+   */
   allocations: Allocation[];
 }
 export interface TransferAuthorizationProtoMsg {
@@ -40,6 +63,9 @@ export interface TransferAuthorizationProtoMsg {
 /**
  * TransferAuthorization allows the grantee to spend up to spend_limit coins from
  * the granter's account for ibc transfer on a specific channel
+ * @name TransferAuthorizationSDKType
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.TransferAuthorization
  */
 export interface TransferAuthorizationSDKType {
   allocations: AllocationSDKType[];
@@ -52,6 +78,12 @@ function createBaseAllocation(): Allocation {
     allowList: []
   };
 }
+/**
+ * Allocation defines the spend limit for a particular port and channel
+ * @name Allocation
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.Allocation
+ */
 export const Allocation = {
   typeUrl: "/ibc.applications.transfer.v1.Allocation",
   encode(message: Allocation, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -214,6 +246,13 @@ function createBaseTransferAuthorization(): TransferAuthorization {
     allocations: []
   };
 }
+/**
+ * TransferAuthorization allows the grantee to spend up to spend_limit coins from
+ * the granter's account for ibc transfer on a specific channel
+ * @name TransferAuthorization
+ * @package ibc.applications.transfer.v1
+ * @see proto type: ibc.applications.transfer.v1.TransferAuthorization
+ */
 export const TransferAuthorization = {
   typeUrl: "/ibc.applications.transfer.v1.TransferAuthorization",
   encode(message: TransferAuthorization, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

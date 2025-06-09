@@ -5,7 +5,12 @@ import { GlobalDecoderRegistry } from "../../../registry";
 import { isSet, DeepPartial, Exact } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "akash.cert.v1beta2";
-/** CertificateResponse contains a single X509 certificate and its serial number */
+/**
+ * CertificateResponse contains a single X509 certificate and its serial number
+ * @name CertificateResponse
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.CertificateResponse
+ */
 export interface CertificateResponse {
   certificate: Certificate;
   serial: string;
@@ -14,7 +19,12 @@ export interface CertificateResponseProtoMsg {
   typeUrl: "/akash.cert.v1beta2.CertificateResponse";
   value: Uint8Array;
 }
-/** CertificateResponse contains a single X509 certificate and its serial number */
+/**
+ * CertificateResponse contains a single X509 certificate and its serial number
+ * @name CertificateResponseAmino
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.CertificateResponse
+ */
 export interface CertificateResponseAmino {
   certificate: CertificateAmino;
   serial: string;
@@ -23,12 +33,22 @@ export interface CertificateResponseAminoMsg {
   type: "akash/cert/v1beta2/certificate-response";
   value: CertificateResponseAmino;
 }
-/** CertificateResponse contains a single X509 certificate and its serial number */
+/**
+ * CertificateResponse contains a single X509 certificate and its serial number
+ * @name CertificateResponseSDKType
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.CertificateResponse
+ */
 export interface CertificateResponseSDKType {
   certificate: CertificateSDKType;
   serial: string;
 }
-/** QueryDeploymentsRequest is request type for the Query/Deployments RPC method */
+/**
+ * QueryDeploymentsRequest is request type for the Query/Deployments RPC method
+ * @name QueryCertificatesRequest
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.QueryCertificatesRequest
+ */
 export interface QueryCertificatesRequest {
   filter: CertificateFilter;
   pagination?: PageRequest;
@@ -37,7 +57,12 @@ export interface QueryCertificatesRequestProtoMsg {
   typeUrl: "/akash.cert.v1beta2.QueryCertificatesRequest";
   value: Uint8Array;
 }
-/** QueryDeploymentsRequest is request type for the Query/Deployments RPC method */
+/**
+ * QueryDeploymentsRequest is request type for the Query/Deployments RPC method
+ * @name QueryCertificatesRequestAmino
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.QueryCertificatesRequest
+ */
 export interface QueryCertificatesRequestAmino {
   filter?: CertificateFilterAmino;
   pagination?: PageRequestAmino;
@@ -46,12 +71,22 @@ export interface QueryCertificatesRequestAminoMsg {
   type: "akash/cert/v1beta2/query-certificates-request";
   value: QueryCertificatesRequestAmino;
 }
-/** QueryDeploymentsRequest is request type for the Query/Deployments RPC method */
+/**
+ * QueryDeploymentsRequest is request type for the Query/Deployments RPC method
+ * @name QueryCertificatesRequestSDKType
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.QueryCertificatesRequest
+ */
 export interface QueryCertificatesRequestSDKType {
   filter: CertificateFilterSDKType;
   pagination?: PageRequestSDKType;
 }
-/** QueryCertificatesResponse is response type for the Query/Certificates RPC method */
+/**
+ * QueryCertificatesResponse is response type for the Query/Certificates RPC method
+ * @name QueryCertificatesResponse
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.QueryCertificatesResponse
+ */
 export interface QueryCertificatesResponse {
   certificates: CertificateResponse[];
   pagination?: PageResponse;
@@ -60,7 +95,12 @@ export interface QueryCertificatesResponseProtoMsg {
   typeUrl: "/akash.cert.v1beta2.QueryCertificatesResponse";
   value: Uint8Array;
 }
-/** QueryCertificatesResponse is response type for the Query/Certificates RPC method */
+/**
+ * QueryCertificatesResponse is response type for the Query/Certificates RPC method
+ * @name QueryCertificatesResponseAmino
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.QueryCertificatesResponse
+ */
 export interface QueryCertificatesResponseAmino {
   certificates?: CertificateResponseAmino[];
   pagination?: PageResponseAmino;
@@ -69,7 +109,12 @@ export interface QueryCertificatesResponseAminoMsg {
   type: "akash/cert/v1beta2/query-certificates-response";
   value: QueryCertificatesResponseAmino;
 }
-/** QueryCertificatesResponse is response type for the Query/Certificates RPC method */
+/**
+ * QueryCertificatesResponse is response type for the Query/Certificates RPC method
+ * @name QueryCertificatesResponseSDKType
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.QueryCertificatesResponse
+ */
 export interface QueryCertificatesResponseSDKType {
   certificates: CertificateResponseSDKType[];
   pagination?: PageResponseSDKType;
@@ -80,6 +125,12 @@ function createBaseCertificateResponse(): CertificateResponse {
     serial: ""
   };
 }
+/**
+ * CertificateResponse contains a single X509 certificate and its serial number
+ * @name CertificateResponse
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.CertificateResponse
+ */
 export const CertificateResponse = {
   typeUrl: "/akash.cert.v1beta2.CertificateResponse",
   aminoType: "akash/cert/v1beta2/certificate-response",
@@ -209,6 +260,12 @@ function createBaseQueryCertificatesRequest(): QueryCertificatesRequest {
     pagination: undefined
   };
 }
+/**
+ * QueryDeploymentsRequest is request type for the Query/Deployments RPC method
+ * @name QueryCertificatesRequest
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.QueryCertificatesRequest
+ */
 export const QueryCertificatesRequest = {
   typeUrl: "/akash.cert.v1beta2.QueryCertificatesRequest",
   aminoType: "akash/cert/v1beta2/query-certificates-request",
@@ -341,6 +398,12 @@ function createBaseQueryCertificatesResponse(): QueryCertificatesResponse {
     pagination: undefined
   };
 }
+/**
+ * QueryCertificatesResponse is response type for the Query/Certificates RPC method
+ * @name QueryCertificatesResponse
+ * @package akash.cert.v1beta2
+ * @see proto type: akash.cert.v1beta2.QueryCertificatesResponse
+ */
 export const QueryCertificatesResponse = {
   typeUrl: "/akash.cert.v1beta2.QueryCertificatesResponse",
   aminoType: "akash/cert/v1beta2/query-certificates-response",

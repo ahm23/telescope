@@ -1,23 +1,33 @@
 import { Order, OrderAmino } from "./order";
 import { Lease, LeaseAmino } from "./lease";
-import { Params, ParamsAmino } from "./params";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState defines the basic genesis state used by market module */
+import { AkashMarketV1beta2Params, AkashMarketV1beta2ParamsAmino } from "./params";
+/**
+ * GenesisState defines the basic genesis state used by market module
+ * @name GenesisState
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.GenesisState
+ */
 export interface GenesisState {
   orders: Order[];
   leases: Lease[];
-  params: Params;
+  params: AkashMarketV1beta2Params;
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/akash.market.v1beta2.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the basic genesis state used by market module */
+/**
+ * GenesisState defines the basic genesis state used by market module
+ * @name GenesisStateAmino
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.GenesisState
+ */
 export interface GenesisStateAmino {
   orders: OrderAmino[];
   leases: LeaseAmino[];
-  params: ParamsAmino;
+  params: AkashMarketV1beta2ParamsAmino;
 }
 export interface GenesisStateAminoMsg {
   type: "/akash.market.v1beta2.GenesisState";
@@ -27,9 +37,15 @@ function createBaseGenesisState(): GenesisState {
   return {
     orders: [],
     leases: [],
-    params: Params.fromPartial({})
+    params: AkashMarketV1beta2Params.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the basic genesis state used by market module
+ * @name GenesisState
+ * @package akash.market.v1beta2
+ * @see proto type: akash.market.v1beta2.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.market.v1beta2.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -40,7 +56,7 @@ export const GenesisState = {
       Lease.encode(v!, writer.uint32(18).fork()).ldelim();
     }
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(26).fork()).ldelim();
+      AkashMarketV1beta2Params.encode(message.params, writer.uint32(26).fork()).ldelim();
     }
     return writer;
   },
@@ -58,7 +74,7 @@ export const GenesisState = {
           message.leases.push(Lease.decode(reader, reader.uint32()));
           break;
         case 3:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = AkashMarketV1beta2Params.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -71,7 +87,7 @@ export const GenesisState = {
     const message = createBaseGenesisState();
     message.orders = object.orders?.map(e => Order.fromPartial(e)) || [];
     message.leases = object.leases?.map(e => Lease.fromPartial(e)) || [];
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? AkashMarketV1beta2Params.fromPartial(object.params) : undefined;
     return message;
   },
   fromAmino(object: GenesisStateAmino): GenesisState {
@@ -79,7 +95,7 @@ export const GenesisState = {
     message.orders = object.orders?.map(e => Order.fromAmino(e)) || [];
     message.leases = object.leases?.map(e => Lease.fromAmino(e)) || [];
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = AkashMarketV1beta2Params.fromAmino(object.params);
     }
     return message;
   },
@@ -95,7 +111,7 @@ export const GenesisState = {
     } else {
       obj.leases = message.leases;
     }
-    obj.params = message.params ? Params.toAmino(message.params) : Params.toAmino(Params.fromPartial({}));
+    obj.params = message.params ? AkashMarketV1beta2Params.toAmino(message.params) : AkashMarketV1beta2Params.toAmino(AkashMarketV1beta2Params.fromPartial({}));
     return obj;
   },
   fromAminoMsg(object: GenesisStateAminoMsg): GenesisState {

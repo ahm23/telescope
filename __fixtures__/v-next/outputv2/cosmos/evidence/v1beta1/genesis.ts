@@ -3,25 +3,44 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial } from "../../../helpers";
 export const protobufPackage = "cosmos.evidence.v1beta1";
-/** GenesisState defines the evidence module's genesis state. */
+/**
+ * GenesisState defines the evidence module's genesis state.
+ * @name GenesisState
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** evidence defines all the evidence at genesis. */
+  /**
+   * evidence defines all the evidence at genesis.
+   */
   evidence: Any[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.evidence.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the evidence module's genesis state. */
+/**
+ * GenesisState defines the evidence module's genesis state.
+ * @name GenesisStateAmino
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** evidence defines all the evidence at genesis. */
+  /**
+   * evidence defines all the evidence at genesis.
+   */
   evidence?: AnyAmino[];
 }
 export interface GenesisStateAminoMsg {
   type: "cosmos-sdk/GenesisState";
   value: GenesisStateAmino;
 }
-/** GenesisState defines the evidence module's genesis state. */
+/**
+ * GenesisState defines the evidence module's genesis state.
+ * @name GenesisStateSDKType
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   evidence: AnySDKType[];
 }
@@ -30,6 +49,12 @@ function createBaseGenesisState(): GenesisState {
     evidence: []
   };
 }
+/**
+ * GenesisState defines the evidence module's genesis state.
+ * @name GenesisState
+ * @package cosmos.evidence.v1beta1
+ * @see proto type: cosmos.evidence.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.evidence.v1beta1.GenesisState",
   aminoType: "cosmos-sdk/GenesisState",

@@ -1,9 +1,16 @@
 import { Class, ClassAmino, NFT, NFTAmino } from "./nft";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState defines the nft module's genesis state. */
+/**
+ * GenesisState defines the nft module's genesis state.
+ * @name GenesisState
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** class defines the class of the nft type. */
+  /**
+   * class defines the class of the nft type.
+   */
   classes: Class[];
   entries: Entry[];
 }
@@ -11,9 +18,16 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the nft module's genesis state. */
+/**
+ * GenesisState defines the nft module's genesis state.
+ * @name GenesisStateAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** class defines the class of the nft type. */
+  /**
+   * class defines the class of the nft type.
+   */
   classes: ClassAmino[];
   entries: EntryAmino[];
 }
@@ -21,22 +35,40 @@ export interface GenesisStateAminoMsg {
   type: "cosmos-sdk/GenesisState";
   value: GenesisStateAmino;
 }
-/** Entry Defines all nft owned by a person */
+/**
+ * Entry Defines all nft owned by a person
+ * @name Entry
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.Entry
+ */
 export interface Entry {
-  /** owner is the owner address of the following nft */
+  /**
+   * owner is the owner address of the following nft
+   */
   owner: string;
-  /** nfts is a group of nfts of the same owner */
+  /**
+   * nfts is a group of nfts of the same owner
+   */
   nfts: NFT[];
 }
 export interface EntryProtoMsg {
   typeUrl: "/cosmos.nft.v1beta1.Entry";
   value: Uint8Array;
 }
-/** Entry Defines all nft owned by a person */
+/**
+ * Entry Defines all nft owned by a person
+ * @name EntryAmino
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.Entry
+ */
 export interface EntryAmino {
-  /** owner is the owner address of the following nft */
+  /**
+   * owner is the owner address of the following nft
+   */
   owner: string;
-  /** nfts is a group of nfts of the same owner */
+  /**
+   * nfts is a group of nfts of the same owner
+   */
   nfts: NFTAmino[];
 }
 export interface EntryAminoMsg {
@@ -49,6 +81,12 @@ function createBaseGenesisState(): GenesisState {
     entries: []
   };
 }
+/**
+ * GenesisState defines the nft module's genesis state.
+ * @name GenesisState
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.nft.v1beta1.GenesisState",
   aminoType: "cosmos-sdk/GenesisState",
@@ -135,6 +173,12 @@ function createBaseEntry(): Entry {
     nfts: []
   };
 }
+/**
+ * Entry Defines all nft owned by a person
+ * @name Entry
+ * @package cosmos.nft.v1beta1
+ * @see proto type: cosmos.nft.v1beta1.Entry
+ */
 export const Entry = {
   typeUrl: "/cosmos.nft.v1beta1.Entry",
   aminoType: "cosmos-sdk/Entry",

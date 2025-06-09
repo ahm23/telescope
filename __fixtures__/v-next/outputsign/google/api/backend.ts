@@ -94,7 +94,12 @@ export function backendRule_PathTranslationToJSON(object: BackendRule_PathTransl
       return "UNRECOGNIZED";
   }
 }
-/** `Backend` defines the backend configuration for a service. */
+/**
+ * `Backend` defines the backend configuration for a service.
+ * @name Backend
+ * @package google.api
+ * @see proto type: google.api.Backend
+ */
 export interface Backend {
   /**
    * A list of API backend rules that apply to individual API methods.
@@ -107,7 +112,12 @@ export interface BackendProtoMsg {
   typeUrl: "/google.api.Backend";
   value: Uint8Array;
 }
-/** `Backend` defines the backend configuration for a service. */
+/**
+ * `Backend` defines the backend configuration for a service.
+ * @name BackendAmino
+ * @package google.api
+ * @see proto type: google.api.Backend
+ */
 export interface BackendAmino {
   /**
    * A list of API backend rules that apply to individual API methods.
@@ -120,11 +130,21 @@ export interface BackendAminoMsg {
   type: "/google.api.Backend";
   value: BackendAmino;
 }
-/** `Backend` defines the backend configuration for a service. */
+/**
+ * `Backend` defines the backend configuration for a service.
+ * @name BackendSDKType
+ * @package google.api
+ * @see proto type: google.api.Backend
+ */
 export interface BackendSDKType {
   rules: BackendRuleSDKType[];
 }
-/** A backend rule provides configuration for an individual API element. */
+/**
+ * A backend rule provides configuration for an individual API element.
+ * @name BackendRule
+ * @package google.api
+ * @see proto type: google.api.BackendRule
+ */
 export interface BackendRule {
   /**
    * Selects the methods to which this rule applies.
@@ -213,7 +233,12 @@ export interface BackendRuleProtoMsg {
   typeUrl: "/google.api.BackendRule";
   value: Uint8Array;
 }
-/** A backend rule provides configuration for an individual API element. */
+/**
+ * A backend rule provides configuration for an individual API element.
+ * @name BackendRuleAmino
+ * @package google.api
+ * @see proto type: google.api.BackendRule
+ */
 export interface BackendRuleAmino {
   /**
    * Selects the methods to which this rule applies.
@@ -302,7 +327,12 @@ export interface BackendRuleAminoMsg {
   type: "/google.api.BackendRule";
   value: BackendRuleAmino;
 }
-/** A backend rule provides configuration for an individual API element. */
+/**
+ * A backend rule provides configuration for an individual API element.
+ * @name BackendRuleSDKType
+ * @package google.api
+ * @see proto type: google.api.BackendRule
+ */
 export interface BackendRuleSDKType {
   selector: string;
   address: string;
@@ -319,6 +349,12 @@ function createBaseBackend(): Backend {
     rules: []
   };
 }
+/**
+ * `Backend` defines the backend configuration for a service.
+ * @name Backend
+ * @package google.api
+ * @see proto type: google.api.Backend
+ */
 export const Backend = {
   typeUrl: "/google.api.Backend",
   encode(message: Backend, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -392,6 +428,12 @@ function createBaseBackendRule(): BackendRule {
     protocol: ""
   };
 }
+/**
+ * A backend rule provides configuration for an individual API element.
+ * @name BackendRule
+ * @package google.api
+ * @see proto type: google.api.BackendRule
+ */
 export const BackendRule = {
   typeUrl: "/google.api.BackendRule",
   encode(message: BackendRule, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

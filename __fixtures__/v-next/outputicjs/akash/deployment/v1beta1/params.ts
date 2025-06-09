@@ -1,39 +1,55 @@
 import { Coin, CoinAmino } from "../../../cosmos/base/v1beta1/coin";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** Params defines the parameters for the x/deployment package */
-export interface Params {
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name AkashDeploymentV1beta1Params
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Params
+ */
+export interface AkashDeploymentV1beta1Params {
   deploymentMinDeposit: Coin;
 }
-export interface ParamsProtoMsg {
+export interface AkashDeploymentV1beta1ParamsProtoMsg {
   typeUrl: "/akash.deployment.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params defines the parameters for the x/deployment package */
-export interface ParamsAmino {
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name AkashDeploymentV1beta1ParamsAmino
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.AkashDeploymentV1beta1Params
+ */
+export interface AkashDeploymentV1beta1ParamsAmino {
   deployment_min_deposit: CoinAmino;
 }
-export interface ParamsAminoMsg {
+export interface AkashDeploymentV1beta1ParamsAminoMsg {
   type: "/akash.deployment.v1beta1.Params";
-  value: ParamsAmino;
+  value: AkashDeploymentV1beta1ParamsAmino;
 }
-function createBaseParams(): Params {
+function createBaseAkashDeploymentV1beta1Params(): AkashDeploymentV1beta1Params {
   return {
     deploymentMinDeposit: Coin.fromPartial({})
   };
 }
-export const Params = {
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name AkashDeploymentV1beta1Params
+ * @package akash.deployment.v1beta1
+ * @see proto type: akash.deployment.v1beta1.Params
+ */
+export const AkashDeploymentV1beta1Params = {
   typeUrl: "/akash.deployment.v1beta1.Params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: AkashDeploymentV1beta1Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.deploymentMinDeposit !== undefined) {
       Coin.encode(message.deploymentMinDeposit, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): AkashDeploymentV1beta1Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseAkashDeploymentV1beta1Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -47,36 +63,36 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<AkashDeploymentV1beta1Params>): AkashDeploymentV1beta1Params {
+    const message = createBaseAkashDeploymentV1beta1Params();
     message.deploymentMinDeposit = object.deploymentMinDeposit !== undefined && object.deploymentMinDeposit !== null ? Coin.fromPartial(object.deploymentMinDeposit) : undefined;
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: AkashDeploymentV1beta1ParamsAmino): AkashDeploymentV1beta1Params {
+    const message = createBaseAkashDeploymentV1beta1Params();
     if (object.deployment_min_deposit !== undefined && object.deployment_min_deposit !== null) {
       message.deploymentMinDeposit = Coin.fromAmino(object.deployment_min_deposit);
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: AkashDeploymentV1beta1Params): AkashDeploymentV1beta1ParamsAmino {
     const obj: any = {};
     obj.deployment_min_deposit = message.deploymentMinDeposit ? Coin.toAmino(message.deploymentMinDeposit) : Coin.toAmino(Coin.fromPartial({}));
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: AkashDeploymentV1beta1ParamsAminoMsg): AkashDeploymentV1beta1Params {
+    return AkashDeploymentV1beta1Params.fromAmino(object.value);
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: AkashDeploymentV1beta1ParamsProtoMsg): AkashDeploymentV1beta1Params {
+    return AkashDeploymentV1beta1Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: AkashDeploymentV1beta1Params): Uint8Array {
+    return AkashDeploymentV1beta1Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: AkashDeploymentV1beta1Params): AkashDeploymentV1beta1ParamsProtoMsg {
     return {
       typeUrl: "/akash.deployment.v1beta1.Params",
-      value: Params.encode(message).finish()
+      value: AkashDeploymentV1beta1Params.encode(message).finish()
     };
   }
 };

@@ -2,6 +2,11 @@ import { PublicKey, PublicKeyAmino, PublicKeySDKType } from "../crypto/keys";
 import { BinaryReader, BinaryWriter } from "../../binary";
 import { DeepPartial, bytesFromBase64, base64FromBytes } from "../../helpers";
 export const protobufPackage = "tendermint.types";
+/**
+ * @name ValidatorSet
+ * @package tendermint.types
+ * @see proto type: tendermint.types.ValidatorSet
+ */
 export interface ValidatorSet {
   validators: Validator[];
   proposer?: Validator;
@@ -11,6 +16,11 @@ export interface ValidatorSetProtoMsg {
   typeUrl: "/tendermint.types.ValidatorSet";
   value: Uint8Array;
 }
+/**
+ * @name ValidatorSetAmino
+ * @package tendermint.types
+ * @see proto type: tendermint.types.ValidatorSet
+ */
 export interface ValidatorSetAmino {
   validators?: ValidatorAmino[];
   proposer?: ValidatorAmino;
@@ -20,11 +30,21 @@ export interface ValidatorSetAminoMsg {
   type: "/tendermint.types.ValidatorSet";
   value: ValidatorSetAmino;
 }
+/**
+ * @name ValidatorSetSDKType
+ * @package tendermint.types
+ * @see proto type: tendermint.types.ValidatorSet
+ */
 export interface ValidatorSetSDKType {
   validators: ValidatorSDKType[];
   proposer?: ValidatorSDKType;
   total_voting_power: bigint;
 }
+/**
+ * @name Validator
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Validator
+ */
 export interface Validator {
   address: Uint8Array;
   pubKey: PublicKey;
@@ -35,6 +55,11 @@ export interface ValidatorProtoMsg {
   typeUrl: "/tendermint.types.Validator";
   value: Uint8Array;
 }
+/**
+ * @name ValidatorAmino
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Validator
+ */
 export interface ValidatorAmino {
   address?: string;
   pub_key?: PublicKeyAmino;
@@ -45,12 +70,22 @@ export interface ValidatorAminoMsg {
   type: "/tendermint.types.Validator";
   value: ValidatorAmino;
 }
+/**
+ * @name ValidatorSDKType
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Validator
+ */
 export interface ValidatorSDKType {
   address: Uint8Array;
   pub_key: PublicKeySDKType;
   voting_power: bigint;
   proposer_priority: bigint;
 }
+/**
+ * @name SimpleValidator
+ * @package tendermint.types
+ * @see proto type: tendermint.types.SimpleValidator
+ */
 export interface SimpleValidator {
   pubKey?: PublicKey;
   votingPower: bigint;
@@ -59,6 +94,11 @@ export interface SimpleValidatorProtoMsg {
   typeUrl: "/tendermint.types.SimpleValidator";
   value: Uint8Array;
 }
+/**
+ * @name SimpleValidatorAmino
+ * @package tendermint.types
+ * @see proto type: tendermint.types.SimpleValidator
+ */
 export interface SimpleValidatorAmino {
   pub_key?: PublicKeyAmino;
   voting_power?: string;
@@ -67,6 +107,11 @@ export interface SimpleValidatorAminoMsg {
   type: "/tendermint.types.SimpleValidator";
   value: SimpleValidatorAmino;
 }
+/**
+ * @name SimpleValidatorSDKType
+ * @package tendermint.types
+ * @see proto type: tendermint.types.SimpleValidator
+ */
 export interface SimpleValidatorSDKType {
   pub_key?: PublicKeySDKType;
   voting_power: bigint;
@@ -78,6 +123,11 @@ function createBaseValidatorSet(): ValidatorSet {
     totalVotingPower: BigInt(0)
   };
 }
+/**
+ * @name ValidatorSet
+ * @package tendermint.types
+ * @see proto type: tendermint.types.ValidatorSet
+ */
 export const ValidatorSet = {
   typeUrl: "/tendermint.types.ValidatorSet",
   encode(message: ValidatorSet, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -172,6 +222,11 @@ function createBaseValidator(): Validator {
     proposerPriority: BigInt(0)
   };
 }
+/**
+ * @name Validator
+ * @package tendermint.types
+ * @see proto type: tendermint.types.Validator
+ */
 export const Validator = {
   typeUrl: "/tendermint.types.Validator",
   encode(message: Validator, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -275,6 +330,11 @@ function createBaseSimpleValidator(): SimpleValidator {
     votingPower: BigInt(0)
   };
 }
+/**
+ * @name SimpleValidator
+ * @package tendermint.types
+ * @see proto type: tendermint.types.SimpleValidator
+ */
 export const SimpleValidator = {
   typeUrl: "/tendermint.types.SimpleValidator",
   encode(message: SimpleValidator, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

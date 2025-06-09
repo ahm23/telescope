@@ -5,7 +5,7 @@ import {
   exportTypesWithAlias,
   recursiveModuleBundle,
 } from "@cosmology/ast";
-import { duplicateImportPathsWithExt, makeAliasName } from "@cosmology/utils";
+import { duplicateImportPathsWithExt, makeAliasName, makeAliasNameWithPackageAtEnd } from "@cosmology/utils";
 
 export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
   if (!builder.options.bundle.enabled) {
@@ -63,7 +63,7 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
             if (exportObj.isHelperFunc) {
               const serialNumber = builder.store.getAndIncTypeSerialNumber(identifier);
               if (serialNumber > 0) {
-                alias = `${identifier}${serialNumber}`;
+                alias = makeAliasNameWithPackageAtEnd({ package: exportObj.pkg, name: identifier });
               } else {
                 alias = identifier;
               }

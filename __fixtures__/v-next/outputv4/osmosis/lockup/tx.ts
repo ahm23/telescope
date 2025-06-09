@@ -5,6 +5,11 @@ import { BinaryReader, BinaryWriter } from "../../binary.js";
 import { isSet, DeepPartial } from "../../helpers.js";
 import { JsonSafe } from "../../json-safe.js";
 export const protobufPackage = "osmosis.lockup";
+/**
+ * @name MsgLockTokens
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgLockTokens
+ */
 export interface MsgLockTokens {
   owner: string;
   duration: Duration;
@@ -14,11 +19,21 @@ export interface MsgLockTokensProtoMsg {
   typeUrl: "/osmosis.lockup.MsgLockTokens";
   value: Uint8Array;
 }
+/**
+ * @name MsgLockTokensSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgLockTokens
+ */
 export interface MsgLockTokensSDKType {
   owner: string;
   duration: DurationSDKType;
   coins: CoinSDKType[];
 }
+/**
+ * @name MsgLockTokensResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgLockTokensResponse
+ */
 export interface MsgLockTokensResponse {
   iD: bigint;
 }
@@ -26,9 +41,19 @@ export interface MsgLockTokensResponseProtoMsg {
   typeUrl: "/osmosis.lockup.MsgLockTokensResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgLockTokensResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgLockTokensResponse
+ */
 export interface MsgLockTokensResponseSDKType {
   ID: bigint;
 }
+/**
+ * @name MsgBeginUnlockingAll
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgBeginUnlockingAll
+ */
 export interface MsgBeginUnlockingAll {
   owner: string;
 }
@@ -36,9 +61,19 @@ export interface MsgBeginUnlockingAllProtoMsg {
   typeUrl: "/osmosis.lockup.MsgBeginUnlockingAll";
   value: Uint8Array;
 }
+/**
+ * @name MsgBeginUnlockingAllSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgBeginUnlockingAll
+ */
 export interface MsgBeginUnlockingAllSDKType {
   owner: string;
 }
+/**
+ * @name MsgBeginUnlockingAllResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgBeginUnlockingAllResponse
+ */
 export interface MsgBeginUnlockingAllResponse {
   unlocks: PeriodLock[];
 }
@@ -46,24 +81,46 @@ export interface MsgBeginUnlockingAllResponseProtoMsg {
   typeUrl: "/osmosis.lockup.MsgBeginUnlockingAllResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgBeginUnlockingAllResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgBeginUnlockingAllResponse
+ */
 export interface MsgBeginUnlockingAllResponseSDKType {
   unlocks: PeriodLockSDKType[];
 }
+/**
+ * @name MsgBeginUnlocking
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgBeginUnlocking
+ */
 export interface MsgBeginUnlocking {
   owner: string;
   iD: bigint;
-  /** Amount of unlocking coins. Unlock all if not set. */
+  /**
+   * Amount of unlocking coins. Unlock all if not set.
+   */
   coins: Coin[];
 }
 export interface MsgBeginUnlockingProtoMsg {
   typeUrl: "/osmosis.lockup.MsgBeginUnlocking";
   value: Uint8Array;
 }
+/**
+ * @name MsgBeginUnlockingSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgBeginUnlocking
+ */
 export interface MsgBeginUnlockingSDKType {
   owner: string;
   ID: bigint;
   coins: CoinSDKType[];
 }
+/**
+ * @name MsgBeginUnlockingResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgBeginUnlockingResponse
+ */
 export interface MsgBeginUnlockingResponse {
   success: boolean;
 }
@@ -71,12 +128,20 @@ export interface MsgBeginUnlockingResponseProtoMsg {
   typeUrl: "/osmosis.lockup.MsgBeginUnlockingResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgBeginUnlockingResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgBeginUnlockingResponse
+ */
 export interface MsgBeginUnlockingResponseSDKType {
   success: boolean;
 }
 /**
  * MsgExtendLockup extends the existing lockup's duration.
  * The new duration is longer than the original.
+ * @name MsgExtendLockup
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgExtendLockup
  */
 export interface MsgExtendLockup {
   owner: string;
@@ -94,12 +159,20 @@ export interface MsgExtendLockupProtoMsg {
 /**
  * MsgExtendLockup extends the existing lockup's duration.
  * The new duration is longer than the original.
+ * @name MsgExtendLockupSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgExtendLockup
  */
 export interface MsgExtendLockupSDKType {
   owner: string;
   ID: bigint;
   duration: DurationSDKType;
 }
+/**
+ * @name MsgExtendLockupResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgExtendLockupResponse
+ */
 export interface MsgExtendLockupResponse {
   success: boolean;
 }
@@ -107,17 +180,27 @@ export interface MsgExtendLockupResponseProtoMsg {
   typeUrl: "/osmosis.lockup.MsgExtendLockupResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgExtendLockupResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgExtendLockupResponse
+ */
 export interface MsgExtendLockupResponseSDKType {
   success: boolean;
 }
 /**
  * MsgForceUnlock unlocks locks immediately for
  * addresses registered via governance.
+ * @name MsgForceUnlock
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgForceUnlock
  */
 export interface MsgForceUnlock {
   owner: string;
   iD: bigint;
-  /** Amount of unlocking coins. Unlock all if not set. */
+  /**
+   * Amount of unlocking coins. Unlock all if not set.
+   */
   coins: Coin[];
 }
 export interface MsgForceUnlockProtoMsg {
@@ -127,12 +210,20 @@ export interface MsgForceUnlockProtoMsg {
 /**
  * MsgForceUnlock unlocks locks immediately for
  * addresses registered via governance.
+ * @name MsgForceUnlockSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgForceUnlock
  */
 export interface MsgForceUnlockSDKType {
   owner: string;
   ID: bigint;
   coins: CoinSDKType[];
 }
+/**
+ * @name MsgForceUnlockResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgForceUnlockResponse
+ */
 export interface MsgForceUnlockResponse {
   success: boolean;
 }
@@ -140,6 +231,11 @@ export interface MsgForceUnlockResponseProtoMsg {
   typeUrl: "/osmosis.lockup.MsgForceUnlockResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgForceUnlockResponseSDKType
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgForceUnlockResponse
+ */
 export interface MsgForceUnlockResponseSDKType {
   success: boolean;
 }
@@ -150,6 +246,11 @@ function createBaseMsgLockTokens(): MsgLockTokens {
     coins: []
   };
 }
+/**
+ * @name MsgLockTokens
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgLockTokens
+ */
 export const MsgLockTokens = {
   typeUrl: "/osmosis.lockup.MsgLockTokens",
   encode(message: MsgLockTokens, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -288,6 +389,11 @@ function createBaseMsgLockTokensResponse(): MsgLockTokensResponse {
     iD: BigInt(0)
   };
 }
+/**
+ * @name MsgLockTokensResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgLockTokensResponse
+ */
 export const MsgLockTokensResponse = {
   typeUrl: "/osmosis.lockup.MsgLockTokensResponse",
   encode(message: MsgLockTokensResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -384,6 +490,11 @@ function createBaseMsgBeginUnlockingAll(): MsgBeginUnlockingAll {
     owner: ""
   };
 }
+/**
+ * @name MsgBeginUnlockingAll
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgBeginUnlockingAll
+ */
 export const MsgBeginUnlockingAll = {
   typeUrl: "/osmosis.lockup.MsgBeginUnlockingAll",
   encode(message: MsgBeginUnlockingAll, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -478,6 +589,11 @@ function createBaseMsgBeginUnlockingAllResponse(): MsgBeginUnlockingAllResponse 
     unlocks: []
   };
 }
+/**
+ * @name MsgBeginUnlockingAllResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgBeginUnlockingAllResponse
+ */
 export const MsgBeginUnlockingAllResponse = {
   typeUrl: "/osmosis.lockup.MsgBeginUnlockingAllResponse",
   encode(message: MsgBeginUnlockingAllResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -584,6 +700,11 @@ function createBaseMsgBeginUnlocking(): MsgBeginUnlocking {
     coins: []
   };
 }
+/**
+ * @name MsgBeginUnlocking
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgBeginUnlocking
+ */
 export const MsgBeginUnlocking = {
   typeUrl: "/osmosis.lockup.MsgBeginUnlocking",
   encode(message: MsgBeginUnlocking, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -722,6 +843,11 @@ function createBaseMsgBeginUnlockingResponse(): MsgBeginUnlockingResponse {
     success: false
   };
 }
+/**
+ * @name MsgBeginUnlockingResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgBeginUnlockingResponse
+ */
 export const MsgBeginUnlockingResponse = {
   typeUrl: "/osmosis.lockup.MsgBeginUnlockingResponse",
   encode(message: MsgBeginUnlockingResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -818,6 +944,13 @@ function createBaseMsgExtendLockup(): MsgExtendLockup {
     duration: Duration.fromPartial({})
   };
 }
+/**
+ * MsgExtendLockup extends the existing lockup's duration.
+ * The new duration is longer than the original.
+ * @name MsgExtendLockup
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgExtendLockup
+ */
 export const MsgExtendLockup = {
   typeUrl: "/osmosis.lockup.MsgExtendLockup",
   encode(message: MsgExtendLockup, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -948,6 +1081,11 @@ function createBaseMsgExtendLockupResponse(): MsgExtendLockupResponse {
     success: false
   };
 }
+/**
+ * @name MsgExtendLockupResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgExtendLockupResponse
+ */
 export const MsgExtendLockupResponse = {
   typeUrl: "/osmosis.lockup.MsgExtendLockupResponse",
   encode(message: MsgExtendLockupResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1044,6 +1182,13 @@ function createBaseMsgForceUnlock(): MsgForceUnlock {
     coins: []
   };
 }
+/**
+ * MsgForceUnlock unlocks locks immediately for
+ * addresses registered via governance.
+ * @name MsgForceUnlock
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgForceUnlock
+ */
 export const MsgForceUnlock = {
   typeUrl: "/osmosis.lockup.MsgForceUnlock",
   encode(message: MsgForceUnlock, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1182,6 +1327,11 @@ function createBaseMsgForceUnlockResponse(): MsgForceUnlockResponse {
     success: false
   };
 }
+/**
+ * @name MsgForceUnlockResponse
+ * @package osmosis.lockup
+ * @see proto type: osmosis.lockup.MsgForceUnlockResponse
+ */
 export const MsgForceUnlockResponse = {
   typeUrl: "/osmosis.lockup.MsgForceUnlockResponse",
   encode(message: MsgForceUnlockResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

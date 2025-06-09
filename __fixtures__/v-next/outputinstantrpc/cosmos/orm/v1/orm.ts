@@ -2,11 +2,20 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "cosmos.orm.v1";
-/** TableDescriptor describes an ORM table. */
+/**
+ * TableDescriptor describes an ORM table.
+ * @name TableDescriptor
+ * @package cosmos.orm.v1
+ * @see proto type: cosmos.orm.v1.TableDescriptor
+ */
 export interface TableDescriptor {
-  /** primary_key defines the primary key for the table. */
+  /**
+   * primary_key defines the primary key for the table.
+   */
   primaryKey?: PrimaryKeyDescriptor;
-  /** index defines one or more secondary indexes. */
+  /**
+   * index defines one or more secondary indexes.
+   */
   index: SecondaryIndexDescriptor[];
   /**
    * id is a non-zero integer ID that must be unique within the
@@ -19,13 +28,23 @@ export interface TableDescriptorProtoMsg {
   typeUrl: "/cosmos.orm.v1.TableDescriptor";
   value: Uint8Array;
 }
-/** TableDescriptor describes an ORM table. */
+/**
+ * TableDescriptor describes an ORM table.
+ * @name TableDescriptorSDKType
+ * @package cosmos.orm.v1
+ * @see proto type: cosmos.orm.v1.TableDescriptor
+ */
 export interface TableDescriptorSDKType {
   primary_key?: PrimaryKeyDescriptorSDKType;
   index: SecondaryIndexDescriptorSDKType[];
   id: number;
 }
-/** PrimaryKeyDescriptor describes a table primary key. */
+/**
+ * PrimaryKeyDescriptor describes a table primary key.
+ * @name PrimaryKeyDescriptor
+ * @package cosmos.orm.v1
+ * @see proto type: cosmos.orm.v1.PrimaryKeyDescriptor
+ */
 export interface PrimaryKeyDescriptor {
   /**
    * fields is a comma-separated list of fields in the primary key. Spaces are
@@ -71,12 +90,22 @@ export interface PrimaryKeyDescriptorProtoMsg {
   typeUrl: "/cosmos.orm.v1.PrimaryKeyDescriptor";
   value: Uint8Array;
 }
-/** PrimaryKeyDescriptor describes a table primary key. */
+/**
+ * PrimaryKeyDescriptor describes a table primary key.
+ * @name PrimaryKeyDescriptorSDKType
+ * @package cosmos.orm.v1
+ * @see proto type: cosmos.orm.v1.PrimaryKeyDescriptor
+ */
 export interface PrimaryKeyDescriptorSDKType {
   fields: string;
   auto_increment: boolean;
 }
-/** PrimaryKeyDescriptor describes a table secondary index. */
+/**
+ * PrimaryKeyDescriptor describes a table secondary index.
+ * @name SecondaryIndexDescriptor
+ * @package cosmos.orm.v1
+ * @see proto type: cosmos.orm.v1.SecondaryIndexDescriptor
+ */
 export interface SecondaryIndexDescriptor {
   /**
    * fields is a comma-separated list of fields in the index. The supported
@@ -96,20 +125,32 @@ export interface SecondaryIndexDescriptor {
    * be auto-generated.
    */
   id: number;
-  /** unique specifies that this an unique index. */
+  /**
+   * unique specifies that this an unique index.
+   */
   unique: boolean;
 }
 export interface SecondaryIndexDescriptorProtoMsg {
   typeUrl: "/cosmos.orm.v1.SecondaryIndexDescriptor";
   value: Uint8Array;
 }
-/** PrimaryKeyDescriptor describes a table secondary index. */
+/**
+ * PrimaryKeyDescriptor describes a table secondary index.
+ * @name SecondaryIndexDescriptorSDKType
+ * @package cosmos.orm.v1
+ * @see proto type: cosmos.orm.v1.SecondaryIndexDescriptor
+ */
 export interface SecondaryIndexDescriptorSDKType {
   fields: string;
   id: number;
   unique: boolean;
 }
-/** TableDescriptor describes an ORM singleton table which has at most one instance. */
+/**
+ * TableDescriptor describes an ORM singleton table which has at most one instance.
+ * @name SingletonDescriptor
+ * @package cosmos.orm.v1
+ * @see proto type: cosmos.orm.v1.SingletonDescriptor
+ */
 export interface SingletonDescriptor {
   /**
    * id is a non-zero integer ID that must be unique within the
@@ -122,7 +163,12 @@ export interface SingletonDescriptorProtoMsg {
   typeUrl: "/cosmos.orm.v1.SingletonDescriptor";
   value: Uint8Array;
 }
-/** TableDescriptor describes an ORM singleton table which has at most one instance. */
+/**
+ * TableDescriptor describes an ORM singleton table which has at most one instance.
+ * @name SingletonDescriptorSDKType
+ * @package cosmos.orm.v1
+ * @see proto type: cosmos.orm.v1.SingletonDescriptor
+ */
 export interface SingletonDescriptorSDKType {
   id: number;
 }
@@ -133,6 +179,12 @@ function createBaseTableDescriptor(): TableDescriptor {
     id: 0
   };
 }
+/**
+ * TableDescriptor describes an ORM table.
+ * @name TableDescriptor
+ * @package cosmos.orm.v1
+ * @see proto type: cosmos.orm.v1.TableDescriptor
+ */
 export const TableDescriptor = {
   typeUrl: "/cosmos.orm.v1.TableDescriptor",
   encode(message: TableDescriptor, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -272,6 +324,12 @@ function createBasePrimaryKeyDescriptor(): PrimaryKeyDescriptor {
     autoIncrement: false
   };
 }
+/**
+ * PrimaryKeyDescriptor describes a table primary key.
+ * @name PrimaryKeyDescriptor
+ * @package cosmos.orm.v1
+ * @see proto type: cosmos.orm.v1.PrimaryKeyDescriptor
+ */
 export const PrimaryKeyDescriptor = {
   typeUrl: "/cosmos.orm.v1.PrimaryKeyDescriptor",
   encode(message: PrimaryKeyDescriptor, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -384,6 +442,12 @@ function createBaseSecondaryIndexDescriptor(): SecondaryIndexDescriptor {
     unique: false
   };
 }
+/**
+ * PrimaryKeyDescriptor describes a table secondary index.
+ * @name SecondaryIndexDescriptor
+ * @package cosmos.orm.v1
+ * @see proto type: cosmos.orm.v1.SecondaryIndexDescriptor
+ */
 export const SecondaryIndexDescriptor = {
   typeUrl: "/cosmos.orm.v1.SecondaryIndexDescriptor",
   encode(message: SecondaryIndexDescriptor, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -510,6 +574,12 @@ function createBaseSingletonDescriptor(): SingletonDescriptor {
     id: 0
   };
 }
+/**
+ * TableDescriptor describes an ORM singleton table which has at most one instance.
+ * @name SingletonDescriptor
+ * @package cosmos.orm.v1
+ * @see proto type: cosmos.orm.v1.SingletonDescriptor
+ */
 export const SingletonDescriptor = {
   typeUrl: "/cosmos.orm.v1.SingletonDescriptor",
   encode(message: SingletonDescriptor, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

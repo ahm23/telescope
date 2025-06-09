@@ -3,81 +3,150 @@ import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { isSet, DeepPartial } from "../../../../helpers";
 import { JsonSafe } from "../../../../json-safe";
 export const protobufPackage = "ibc.applications.fee.v1";
-/** MsgRegisterPayee defines the request type for the RegisterPayee rpc */
+/**
+ * MsgRegisterPayee defines the request type for the RegisterPayee rpc
+ * @name MsgRegisterPayee
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgRegisterPayee
+ */
 export interface MsgRegisterPayee {
-  /** unique port identifier */
+  /**
+   * unique port identifier
+   */
   portId: string;
-  /** unique channel identifier */
+  /**
+   * unique channel identifier
+   */
   channelId: string;
-  /** the relayer address */
+  /**
+   * the relayer address
+   */
   relayer: string;
-  /** the payee address */
+  /**
+   * the payee address
+   */
   payee: string;
 }
 export interface MsgRegisterPayeeProtoMsg {
   typeUrl: "/ibc.applications.fee.v1.MsgRegisterPayee";
   value: Uint8Array;
 }
-/** MsgRegisterPayee defines the request type for the RegisterPayee rpc */
+/**
+ * MsgRegisterPayee defines the request type for the RegisterPayee rpc
+ * @name MsgRegisterPayeeSDKType
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgRegisterPayee
+ */
 export interface MsgRegisterPayeeSDKType {
   port_id: string;
   channel_id: string;
   relayer: string;
   payee: string;
 }
-/** MsgRegisterPayeeResponse defines the response type for the RegisterPayee rpc */
+/**
+ * MsgRegisterPayeeResponse defines the response type for the RegisterPayee rpc
+ * @name MsgRegisterPayeeResponse
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgRegisterPayeeResponse
+ */
 export interface MsgRegisterPayeeResponse {}
 export interface MsgRegisterPayeeResponseProtoMsg {
   typeUrl: "/ibc.applications.fee.v1.MsgRegisterPayeeResponse";
   value: Uint8Array;
 }
-/** MsgRegisterPayeeResponse defines the response type for the RegisterPayee rpc */
+/**
+ * MsgRegisterPayeeResponse defines the response type for the RegisterPayee rpc
+ * @name MsgRegisterPayeeResponseSDKType
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgRegisterPayeeResponse
+ */
 export interface MsgRegisterPayeeResponseSDKType {}
-/** MsgRegisterCounterpartyPayee defines the request type for the RegisterCounterpartyPayee rpc */
+/**
+ * MsgRegisterCounterpartyPayee defines the request type for the RegisterCounterpartyPayee rpc
+ * @name MsgRegisterCounterpartyPayee
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgRegisterCounterpartyPayee
+ */
 export interface MsgRegisterCounterpartyPayee {
-  /** unique port identifier */
+  /**
+   * unique port identifier
+   */
   portId: string;
-  /** unique channel identifier */
+  /**
+   * unique channel identifier
+   */
   channelId: string;
-  /** the relayer address */
+  /**
+   * the relayer address
+   */
   relayer: string;
-  /** the counterparty payee address */
+  /**
+   * the counterparty payee address
+   */
   counterpartyPayee: string;
 }
 export interface MsgRegisterCounterpartyPayeeProtoMsg {
   typeUrl: "/ibc.applications.fee.v1.MsgRegisterCounterpartyPayee";
   value: Uint8Array;
 }
-/** MsgRegisterCounterpartyPayee defines the request type for the RegisterCounterpartyPayee rpc */
+/**
+ * MsgRegisterCounterpartyPayee defines the request type for the RegisterCounterpartyPayee rpc
+ * @name MsgRegisterCounterpartyPayeeSDKType
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgRegisterCounterpartyPayee
+ */
 export interface MsgRegisterCounterpartyPayeeSDKType {
   port_id: string;
   channel_id: string;
   relayer: string;
   counterparty_payee: string;
 }
-/** MsgRegisterCounterpartyPayeeResponse defines the response type for the RegisterCounterpartyPayee rpc */
+/**
+ * MsgRegisterCounterpartyPayeeResponse defines the response type for the RegisterCounterpartyPayee rpc
+ * @name MsgRegisterCounterpartyPayeeResponse
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgRegisterCounterpartyPayeeResponse
+ */
 export interface MsgRegisterCounterpartyPayeeResponse {}
 export interface MsgRegisterCounterpartyPayeeResponseProtoMsg {
   typeUrl: "/ibc.applications.fee.v1.MsgRegisterCounterpartyPayeeResponse";
   value: Uint8Array;
 }
-/** MsgRegisterCounterpartyPayeeResponse defines the response type for the RegisterCounterpartyPayee rpc */
+/**
+ * MsgRegisterCounterpartyPayeeResponse defines the response type for the RegisterCounterpartyPayee rpc
+ * @name MsgRegisterCounterpartyPayeeResponseSDKType
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgRegisterCounterpartyPayeeResponse
+ */
 export interface MsgRegisterCounterpartyPayeeResponseSDKType {}
 /**
  * MsgPayPacketFee defines the request type for the PayPacketFee rpc
  * This Msg can be used to pay for a packet at the next sequence send & should be combined with the Msg that will be
  * paid for
+ * @name MsgPayPacketFee
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgPayPacketFee
  */
 export interface MsgPayPacketFee {
-  /** fee encapsulates the recv, ack and timeout fees associated with an IBC packet */
+  /**
+   * fee encapsulates the recv, ack and timeout fees associated with an IBC packet
+   */
   fee: Fee;
-  /** the source port unique identifier */
+  /**
+   * the source port unique identifier
+   */
   sourcePortId: string;
-  /** the source channel unique identifer */
+  /**
+   * the source channel unique identifer
+   */
   sourceChannelId: string;
-  /** account address to refund fee if necessary */
+  /**
+   * account address to refund fee if necessary
+   */
   signer: string;
-  /** optional list of relayers permitted to the receive packet fees */
+  /**
+   * optional list of relayers permitted to the receive packet fees
+   */
   relayers: string[];
 }
 export interface MsgPayPacketFeeProtoMsg {
@@ -88,6 +157,9 @@ export interface MsgPayPacketFeeProtoMsg {
  * MsgPayPacketFee defines the request type for the PayPacketFee rpc
  * This Msg can be used to pay for a packet at the next sequence send & should be combined with the Msg that will be
  * paid for
+ * @name MsgPayPacketFeeSDKType
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgPayPacketFee
  */
 export interface MsgPayPacketFeeSDKType {
   fee: FeeSDKType;
@@ -96,20 +168,35 @@ export interface MsgPayPacketFeeSDKType {
   signer: string;
   relayers: string[];
 }
-/** MsgPayPacketFeeResponse defines the response type for the PayPacketFee rpc */
+/**
+ * MsgPayPacketFeeResponse defines the response type for the PayPacketFee rpc
+ * @name MsgPayPacketFeeResponse
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgPayPacketFeeResponse
+ */
 export interface MsgPayPacketFeeResponse {}
 export interface MsgPayPacketFeeResponseProtoMsg {
   typeUrl: "/ibc.applications.fee.v1.MsgPayPacketFeeResponse";
   value: Uint8Array;
 }
-/** MsgPayPacketFeeResponse defines the response type for the PayPacketFee rpc */
+/**
+ * MsgPayPacketFeeResponse defines the response type for the PayPacketFee rpc
+ * @name MsgPayPacketFeeResponseSDKType
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgPayPacketFeeResponse
+ */
 export interface MsgPayPacketFeeResponseSDKType {}
 /**
  * MsgPayPacketFeeAsync defines the request type for the PayPacketFeeAsync rpc
  * This Msg can be used to pay for a packet at a specified sequence (instead of the next sequence send)
+ * @name MsgPayPacketFeeAsync
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgPayPacketFeeAsync
  */
 export interface MsgPayPacketFeeAsync {
-  /** the packet fee associated with a particular IBC packet */
+  /**
+   * the packet fee associated with a particular IBC packet
+   */
   packetFee: PacketFee;
 }
 export interface MsgPayPacketFeeAsyncProtoMsg {
@@ -119,17 +206,30 @@ export interface MsgPayPacketFeeAsyncProtoMsg {
 /**
  * MsgPayPacketFeeAsync defines the request type for the PayPacketFeeAsync rpc
  * This Msg can be used to pay for a packet at a specified sequence (instead of the next sequence send)
+ * @name MsgPayPacketFeeAsyncSDKType
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgPayPacketFeeAsync
  */
 export interface MsgPayPacketFeeAsyncSDKType {
   packet_fee: PacketFeeSDKType;
 }
-/** MsgPayPacketFeeAsyncResponse defines the response type for the PayPacketFeeAsync rpc */
+/**
+ * MsgPayPacketFeeAsyncResponse defines the response type for the PayPacketFeeAsync rpc
+ * @name MsgPayPacketFeeAsyncResponse
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgPayPacketFeeAsyncResponse
+ */
 export interface MsgPayPacketFeeAsyncResponse {}
 export interface MsgPayPacketFeeAsyncResponseProtoMsg {
   typeUrl: "/ibc.applications.fee.v1.MsgPayPacketFeeAsyncResponse";
   value: Uint8Array;
 }
-/** MsgPayPacketFeeAsyncResponse defines the response type for the PayPacketFeeAsync rpc */
+/**
+ * MsgPayPacketFeeAsyncResponse defines the response type for the PayPacketFeeAsync rpc
+ * @name MsgPayPacketFeeAsyncResponseSDKType
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgPayPacketFeeAsyncResponse
+ */
 export interface MsgPayPacketFeeAsyncResponseSDKType {}
 function createBaseMsgRegisterPayee(): MsgRegisterPayee {
   return {
@@ -139,6 +239,12 @@ function createBaseMsgRegisterPayee(): MsgRegisterPayee {
     payee: ""
   };
 }
+/**
+ * MsgRegisterPayee defines the request type for the RegisterPayee rpc
+ * @name MsgRegisterPayee
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgRegisterPayee
+ */
 export const MsgRegisterPayee = {
   typeUrl: "/ibc.applications.fee.v1.MsgRegisterPayee",
   encode(message: MsgRegisterPayee, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -279,6 +385,12 @@ export const MsgRegisterPayee = {
 function createBaseMsgRegisterPayeeResponse(): MsgRegisterPayeeResponse {
   return {};
 }
+/**
+ * MsgRegisterPayeeResponse defines the response type for the RegisterPayee rpc
+ * @name MsgRegisterPayeeResponse
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgRegisterPayeeResponse
+ */
 export const MsgRegisterPayeeResponse = {
   typeUrl: "/ibc.applications.fee.v1.MsgRegisterPayeeResponse",
   encode(_: MsgRegisterPayeeResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -357,6 +469,12 @@ function createBaseMsgRegisterCounterpartyPayee(): MsgRegisterCounterpartyPayee 
     counterpartyPayee: ""
   };
 }
+/**
+ * MsgRegisterCounterpartyPayee defines the request type for the RegisterCounterpartyPayee rpc
+ * @name MsgRegisterCounterpartyPayee
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgRegisterCounterpartyPayee
+ */
 export const MsgRegisterCounterpartyPayee = {
   typeUrl: "/ibc.applications.fee.v1.MsgRegisterCounterpartyPayee",
   encode(message: MsgRegisterCounterpartyPayee, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -497,6 +615,12 @@ export const MsgRegisterCounterpartyPayee = {
 function createBaseMsgRegisterCounterpartyPayeeResponse(): MsgRegisterCounterpartyPayeeResponse {
   return {};
 }
+/**
+ * MsgRegisterCounterpartyPayeeResponse defines the response type for the RegisterCounterpartyPayee rpc
+ * @name MsgRegisterCounterpartyPayeeResponse
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgRegisterCounterpartyPayeeResponse
+ */
 export const MsgRegisterCounterpartyPayeeResponse = {
   typeUrl: "/ibc.applications.fee.v1.MsgRegisterCounterpartyPayeeResponse",
   encode(_: MsgRegisterCounterpartyPayeeResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -576,6 +700,14 @@ function createBaseMsgPayPacketFee(): MsgPayPacketFee {
     relayers: []
   };
 }
+/**
+ * MsgPayPacketFee defines the request type for the PayPacketFee rpc
+ * This Msg can be used to pay for a packet at the next sequence send & should be combined with the Msg that will be
+ * paid for
+ * @name MsgPayPacketFee
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgPayPacketFee
+ */
 export const MsgPayPacketFee = {
   typeUrl: "/ibc.applications.fee.v1.MsgPayPacketFee",
   encode(message: MsgPayPacketFee, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -742,6 +874,12 @@ export const MsgPayPacketFee = {
 function createBaseMsgPayPacketFeeResponse(): MsgPayPacketFeeResponse {
   return {};
 }
+/**
+ * MsgPayPacketFeeResponse defines the response type for the PayPacketFee rpc
+ * @name MsgPayPacketFeeResponse
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgPayPacketFeeResponse
+ */
 export const MsgPayPacketFeeResponse = {
   typeUrl: "/ibc.applications.fee.v1.MsgPayPacketFeeResponse",
   encode(_: MsgPayPacketFeeResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -817,6 +955,13 @@ function createBaseMsgPayPacketFeeAsync(): MsgPayPacketFeeAsync {
     packetFee: PacketFee.fromPartial({})
   };
 }
+/**
+ * MsgPayPacketFeeAsync defines the request type for the PayPacketFeeAsync rpc
+ * This Msg can be used to pay for a packet at a specified sequence (instead of the next sequence send)
+ * @name MsgPayPacketFeeAsync
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgPayPacketFeeAsync
+ */
 export const MsgPayPacketFeeAsync = {
   typeUrl: "/ibc.applications.fee.v1.MsgPayPacketFeeAsync",
   encode(message: MsgPayPacketFeeAsync, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -909,6 +1054,12 @@ export const MsgPayPacketFeeAsync = {
 function createBaseMsgPayPacketFeeAsyncResponse(): MsgPayPacketFeeAsyncResponse {
   return {};
 }
+/**
+ * MsgPayPacketFeeAsyncResponse defines the response type for the PayPacketFeeAsync rpc
+ * @name MsgPayPacketFeeAsyncResponse
+ * @package ibc.applications.fee.v1
+ * @see proto type: ibc.applications.fee.v1.MsgPayPacketFeeAsyncResponse
+ */
 export const MsgPayPacketFeeAsyncResponse = {
   typeUrl: "/ibc.applications.fee.v1.MsgPayPacketFeeAsyncResponse",
   encode(_: MsgPayPacketFeeAsyncResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

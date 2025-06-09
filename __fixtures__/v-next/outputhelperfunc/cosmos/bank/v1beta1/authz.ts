@@ -9,6 +9,9 @@ export const protobufPackage = "cosmos.bank.v1beta1";
  * the granter's account.
  * 
  * Since: cosmos-sdk 0.43
+ * @name SendAuthorization
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.SendAuthorization
  */
 export interface SendAuthorization {
   $typeUrl?: "/cosmos.bank.v1beta1.SendAuthorization";
@@ -23,6 +26,9 @@ export interface SendAuthorizationProtoMsg {
  * the granter's account.
  * 
  * Since: cosmos-sdk 0.43
+ * @name SendAuthorizationAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.SendAuthorization
  */
 export interface SendAuthorizationAmino {
   spend_limit?: CoinAmino[];
@@ -36,6 +42,9 @@ export interface SendAuthorizationAminoMsg {
  * the granter's account.
  * 
  * Since: cosmos-sdk 0.43
+ * @name SendAuthorizationSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.SendAuthorization
  */
 export interface SendAuthorizationSDKType {
   $typeUrl?: "/cosmos.bank.v1beta1.SendAuthorization";
@@ -47,6 +56,15 @@ function createBaseSendAuthorization(): SendAuthorization {
     spendLimit: []
   };
 }
+/**
+ * SendAuthorization allows the grantee to spend up to spend_limit coins from
+ * the granter's account.
+ * 
+ * Since: cosmos-sdk 0.43
+ * @name SendAuthorization
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.SendAuthorization
+ */
 export const SendAuthorization = {
   typeUrl: "/cosmos.bank.v1beta1.SendAuthorization",
   aminoType: "cosmos-sdk/SendAuthorization",

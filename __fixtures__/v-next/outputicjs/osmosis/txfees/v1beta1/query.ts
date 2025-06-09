@@ -2,16 +2,31 @@ import { FeeToken, FeeTokenAmino } from "./feetoken";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 import { Decimal } from "@interchainjs/math";
+/**
+ * @name QueryFeeTokensRequest
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryFeeTokensRequest
+ */
 export interface QueryFeeTokensRequest {}
 export interface QueryFeeTokensRequestProtoMsg {
   typeUrl: "/osmosis.txfees.v1beta1.QueryFeeTokensRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryFeeTokensRequestAmino
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryFeeTokensRequest
+ */
 export interface QueryFeeTokensRequestAmino {}
 export interface QueryFeeTokensRequestAminoMsg {
   type: "osmosis/txfees/query-fee-tokens-request";
   value: QueryFeeTokensRequestAmino;
 }
+/**
+ * @name QueryFeeTokensResponse
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryFeeTokensResponse
+ */
 export interface QueryFeeTokensResponse {
   feeTokens: FeeToken[];
 }
@@ -19,6 +34,11 @@ export interface QueryFeeTokensResponseProtoMsg {
   typeUrl: "/osmosis.txfees.v1beta1.QueryFeeTokensResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryFeeTokensResponseAmino
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryFeeTokensResponse
+ */
 export interface QueryFeeTokensResponseAmino {
   fee_tokens: FeeTokenAmino[];
 }
@@ -29,6 +49,9 @@ export interface QueryFeeTokensResponseAminoMsg {
 /**
  * QueryDenomSpotPriceRequest defines grpc request structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceRequest
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryDenomSpotPriceRequest
  */
 export interface QueryDenomSpotPriceRequest {
   denom: string;
@@ -40,6 +63,9 @@ export interface QueryDenomSpotPriceRequestProtoMsg {
 /**
  * QueryDenomSpotPriceRequest defines grpc request structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceRequestAmino
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryDenomSpotPriceRequest
  */
 export interface QueryDenomSpotPriceRequestAmino {
   denom: string;
@@ -51,6 +77,9 @@ export interface QueryDenomSpotPriceRequestAminoMsg {
 /**
  * QueryDenomSpotPriceRequest defines grpc response structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceResponse
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryDenomSpotPriceResponse
  */
 export interface QueryDenomSpotPriceResponse {
   poolID: bigint;
@@ -63,6 +92,9 @@ export interface QueryDenomSpotPriceResponseProtoMsg {
 /**
  * QueryDenomSpotPriceRequest defines grpc response structure for querying spot
  * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceResponseAmino
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryDenomSpotPriceResponse
  */
 export interface QueryDenomSpotPriceResponseAmino {
   poolID: string;
@@ -72,6 +104,11 @@ export interface QueryDenomSpotPriceResponseAminoMsg {
   type: "osmosis/txfees/query-denom-spot-price-response";
   value: QueryDenomSpotPriceResponseAmino;
 }
+/**
+ * @name QueryDenomPoolIdRequest
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryDenomPoolIdRequest
+ */
 export interface QueryDenomPoolIdRequest {
   denom: string;
 }
@@ -79,6 +116,11 @@ export interface QueryDenomPoolIdRequestProtoMsg {
   typeUrl: "/osmosis.txfees.v1beta1.QueryDenomPoolIdRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryDenomPoolIdRequestAmino
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryDenomPoolIdRequest
+ */
 export interface QueryDenomPoolIdRequestAmino {
   denom: string;
 }
@@ -86,6 +128,11 @@ export interface QueryDenomPoolIdRequestAminoMsg {
   type: "osmosis/txfees/query-denom-pool-id-request";
   value: QueryDenomPoolIdRequestAmino;
 }
+/**
+ * @name QueryDenomPoolIdResponse
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryDenomPoolIdResponse
+ */
 export interface QueryDenomPoolIdResponse {
   poolID: bigint;
 }
@@ -93,6 +140,11 @@ export interface QueryDenomPoolIdResponseProtoMsg {
   typeUrl: "/osmosis.txfees.v1beta1.QueryDenomPoolIdResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryDenomPoolIdResponseAmino
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryDenomPoolIdResponse
+ */
 export interface QueryDenomPoolIdResponseAmino {
   poolID: string;
 }
@@ -100,16 +152,31 @@ export interface QueryDenomPoolIdResponseAminoMsg {
   type: "osmosis/txfees/query-denom-pool-id-response";
   value: QueryDenomPoolIdResponseAmino;
 }
+/**
+ * @name QueryBaseDenomRequest
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryBaseDenomRequest
+ */
 export interface QueryBaseDenomRequest {}
 export interface QueryBaseDenomRequestProtoMsg {
   typeUrl: "/osmosis.txfees.v1beta1.QueryBaseDenomRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryBaseDenomRequestAmino
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryBaseDenomRequest
+ */
 export interface QueryBaseDenomRequestAmino {}
 export interface QueryBaseDenomRequestAminoMsg {
   type: "osmosis/txfees/query-base-denom-request";
   value: QueryBaseDenomRequestAmino;
 }
+/**
+ * @name QueryBaseDenomResponse
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryBaseDenomResponse
+ */
 export interface QueryBaseDenomResponse {
   baseDenom: string;
 }
@@ -117,6 +184,11 @@ export interface QueryBaseDenomResponseProtoMsg {
   typeUrl: "/osmosis.txfees.v1beta1.QueryBaseDenomResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryBaseDenomResponseAmino
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryBaseDenomResponse
+ */
 export interface QueryBaseDenomResponseAmino {
   base_denom: string;
 }
@@ -127,6 +199,11 @@ export interface QueryBaseDenomResponseAminoMsg {
 function createBaseQueryFeeTokensRequest(): QueryFeeTokensRequest {
   return {};
 }
+/**
+ * @name QueryFeeTokensRequest
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryFeeTokensRequest
+ */
 export const QueryFeeTokensRequest = {
   typeUrl: "/osmosis.txfees.v1beta1.QueryFeeTokensRequest",
   aminoType: "osmosis/txfees/query-fee-tokens-request",
@@ -186,6 +263,11 @@ function createBaseQueryFeeTokensResponse(): QueryFeeTokensResponse {
     feeTokens: []
   };
 }
+/**
+ * @name QueryFeeTokensResponse
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryFeeTokensResponse
+ */
 export const QueryFeeTokensResponse = {
   typeUrl: "/osmosis.txfees.v1beta1.QueryFeeTokensResponse",
   aminoType: "osmosis/txfees/query-fee-tokens-response",
@@ -258,6 +340,13 @@ function createBaseQueryDenomSpotPriceRequest(): QueryDenomSpotPriceRequest {
     denom: ""
   };
 }
+/**
+ * QueryDenomSpotPriceRequest defines grpc request structure for querying spot
+ * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceRequest
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryDenomSpotPriceRequest
+ */
 export const QueryDenomSpotPriceRequest = {
   typeUrl: "/osmosis.txfees.v1beta1.QueryDenomSpotPriceRequest",
   aminoType: "osmosis/txfees/query-denom-spot-price-request",
@@ -329,6 +418,13 @@ function createBaseQueryDenomSpotPriceResponse(): QueryDenomSpotPriceResponse {
     spotPrice: ""
   };
 }
+/**
+ * QueryDenomSpotPriceRequest defines grpc response structure for querying spot
+ * price for the specified tx fee denom
+ * @name QueryDenomSpotPriceResponse
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryDenomSpotPriceResponse
+ */
 export const QueryDenomSpotPriceResponse = {
   typeUrl: "/osmosis.txfees.v1beta1.QueryDenomSpotPriceResponse",
   aminoType: "osmosis/txfees/query-denom-spot-price-response",
@@ -410,6 +506,11 @@ function createBaseQueryDenomPoolIdRequest(): QueryDenomPoolIdRequest {
     denom: ""
   };
 }
+/**
+ * @name QueryDenomPoolIdRequest
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryDenomPoolIdRequest
+ */
 export const QueryDenomPoolIdRequest = {
   typeUrl: "/osmosis.txfees.v1beta1.QueryDenomPoolIdRequest",
   aminoType: "osmosis/txfees/query-denom-pool-id-request",
@@ -480,6 +581,11 @@ function createBaseQueryDenomPoolIdResponse(): QueryDenomPoolIdResponse {
     poolID: BigInt(0)
   };
 }
+/**
+ * @name QueryDenomPoolIdResponse
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryDenomPoolIdResponse
+ */
 export const QueryDenomPoolIdResponse = {
   typeUrl: "/osmosis.txfees.v1beta1.QueryDenomPoolIdResponse",
   aminoType: "osmosis/txfees/query-denom-pool-id-response",
@@ -548,6 +654,11 @@ export const QueryDenomPoolIdResponse = {
 function createBaseQueryBaseDenomRequest(): QueryBaseDenomRequest {
   return {};
 }
+/**
+ * @name QueryBaseDenomRequest
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryBaseDenomRequest
+ */
 export const QueryBaseDenomRequest = {
   typeUrl: "/osmosis.txfees.v1beta1.QueryBaseDenomRequest",
   aminoType: "osmosis/txfees/query-base-denom-request",
@@ -607,6 +718,11 @@ function createBaseQueryBaseDenomResponse(): QueryBaseDenomResponse {
     baseDenom: ""
   };
 }
+/**
+ * @name QueryBaseDenomResponse
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.QueryBaseDenomResponse
+ */
 export const QueryBaseDenomResponse = {
   typeUrl: "/osmosis.txfees.v1beta1.QueryBaseDenomResponse",
   aminoType: "osmosis/txfees/query-base-denom-response",

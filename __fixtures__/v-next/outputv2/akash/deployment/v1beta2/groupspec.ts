@@ -4,7 +4,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "akash.deployment.v1beta2";
-/** GroupSpec stores group specifications */
+/**
+ * GroupSpec stores group specifications
+ * @name GroupSpec
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GroupSpec
+ */
 export interface GroupSpec {
   name: string;
   requirements: PlacementRequirements;
@@ -14,7 +19,12 @@ export interface GroupSpecProtoMsg {
   typeUrl: "/akash.deployment.v1beta2.GroupSpec";
   value: Uint8Array;
 }
-/** GroupSpec stores group specifications */
+/**
+ * GroupSpec stores group specifications
+ * @name GroupSpecAmino
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GroupSpec
+ */
 export interface GroupSpecAmino {
   name: string;
   requirements: PlacementRequirementsAmino;
@@ -24,7 +34,12 @@ export interface GroupSpecAminoMsg {
   type: "/akash.deployment.v1beta2.GroupSpec";
   value: GroupSpecAmino;
 }
-/** GroupSpec stores group specifications */
+/**
+ * GroupSpec stores group specifications
+ * @name GroupSpecSDKType
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GroupSpec
+ */
 export interface GroupSpecSDKType {
   name: string;
   requirements: PlacementRequirementsSDKType;
@@ -37,6 +52,12 @@ function createBaseGroupSpec(): GroupSpec {
     resources: []
   };
 }
+/**
+ * GroupSpec stores group specifications
+ * @name GroupSpec
+ * @package akash.deployment.v1beta2
+ * @see proto type: akash.deployment.v1beta2.GroupSpec
+ */
 export const GroupSpec = {
   typeUrl: "/akash.deployment.v1beta2.GroupSpec",
   encode(message: GroupSpec, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

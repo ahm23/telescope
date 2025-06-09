@@ -3,6 +3,9 @@ import { DeepPartial } from "../../helpers";
 /**
  * `SourceContext` represents information about the source of a
  * protobuf element, like the file in which it is defined.
+ * @name SourceContext
+ * @package google.protobuf
+ * @see proto type: google.protobuf.SourceContext
  */
 export interface SourceContext {
   /**
@@ -18,6 +21,9 @@ export interface SourceContextProtoMsg {
 /**
  * `SourceContext` represents information about the source of a
  * protobuf element, like the file in which it is defined.
+ * @name SourceContextAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.SourceContext
  */
 export interface SourceContextAmino {
   /**
@@ -35,6 +41,13 @@ function createBaseSourceContext(): SourceContext {
     fileName: ""
   };
 }
+/**
+ * `SourceContext` represents information about the source of a
+ * protobuf element, like the file in which it is defined.
+ * @name SourceContext
+ * @package google.protobuf
+ * @see proto type: google.protobuf.SourceContext
+ */
 export const SourceContext = {
   typeUrl: "/google.protobuf.SourceContext",
   encode(message: SourceContext, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

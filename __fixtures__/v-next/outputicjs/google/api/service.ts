@@ -43,6 +43,9 @@ import { DeepPartial } from "../../helpers";
  *       - selector: "*"
  *         requirements:
  *           provider_id: google_calendar_auth
+ * @name Service
+ * @package google.api
+ * @see proto type: google.api.Service
  */
 export interface Service {
   /**
@@ -52,9 +55,13 @@ export interface Service {
    * of the service also owns the DNS name.
    */
   name: string;
-  /** The product title for this service. */
+  /**
+   * The product title for this service.
+   */
   title: string;
-  /** The Google project that owns this service. */
+  /**
+   * The Google project that owns this service.
+   */
   producerProjectId: string;
   /**
    * A unique ID for a specific instance of this message, typically assigned
@@ -92,19 +99,33 @@ export interface Service {
    *     - name: google.someapi.v1.SomeEnum
    */
   enums: Enum[];
-  /** Additional API documentation. */
+  /**
+   * Additional API documentation.
+   */
   documentation?: Documentation;
-  /** API backend configuration. */
+  /**
+   * API backend configuration.
+   */
   backend?: Backend;
-  /** HTTP configuration. */
+  /**
+   * HTTP configuration.
+   */
   http?: Http;
-  /** Quota configuration. */
+  /**
+   * Quota configuration.
+   */
   quota?: Quota;
-  /** Auth configuration. */
+  /**
+   * Auth configuration.
+   */
   authentication?: Authentication;
-  /** Context configuration. */
+  /**
+   * Context configuration.
+   */
   context?: Context;
-  /** Configuration controlling usage of this service. */
+  /**
+   * Configuration controlling usage of this service.
+   */
   usage?: Usage;
   /**
    * Configuration for network endpoints.  If this is empty, then an endpoint
@@ -112,34 +133,50 @@ export interface Service {
    * defined APIs.
    */
   endpoints: Endpoint[];
-  /** Configuration for the service control plane. */
+  /**
+   * Configuration for the service control plane.
+   */
   control?: Control;
-  /** Defines the logs used by this service. */
+  /**
+   * Defines the logs used by this service.
+   */
   logs: LogDescriptor[];
-  /** Defines the metrics used by this service. */
+  /**
+   * Defines the metrics used by this service.
+   */
   metrics: MetricDescriptor[];
   /**
    * Defines the monitored resources used by this service. This is required
    * by the [Service.monitoring][google.api.Service.monitoring] and [Service.logging][google.api.Service.logging] configurations.
    */
   monitoredResources: MonitoredResourceDescriptor[];
-  /** Billing configuration. */
+  /**
+   * Billing configuration.
+   */
   billing?: Billing;
-  /** Logging configuration. */
+  /**
+   * Logging configuration.
+   */
   logging?: Logging;
-  /** Monitoring configuration. */
+  /**
+   * Monitoring configuration.
+   */
   monitoring?: Monitoring;
-  /** System parameter configuration. */
+  /**
+   * System parameter configuration.
+   */
   systemParameters?: SystemParameters;
-  /** Output only. The source information for this configuration if available. */
+  /**
+   * Output only. The source information for this configuration if available.
+   */
   sourceInfo?: SourceInfo;
   /**
    * Obsolete. Do not use.
    * 
    * This field has no semantic meaning. The service config compiler always
    * sets this field to `3`.
+   * @deprecated
    */
-  /** @deprecated */
   configVersion?: UInt32Value;
 }
 export interface ServiceProtoMsg {
@@ -169,6 +206,9 @@ export interface ServiceProtoMsg {
  *       - selector: "*"
  *         requirements:
  *           provider_id: google_calendar_auth
+ * @name ServiceAmino
+ * @package google.api
+ * @see proto type: google.api.Service
  */
 export interface ServiceAmino {
   /**
@@ -178,9 +218,13 @@ export interface ServiceAmino {
    * of the service also owns the DNS name.
    */
   name: string;
-  /** The product title for this service. */
+  /**
+   * The product title for this service.
+   */
   title: string;
-  /** The Google project that owns this service. */
+  /**
+   * The Google project that owns this service.
+   */
   producer_project_id: string;
   /**
    * A unique ID for a specific instance of this message, typically assigned
@@ -218,19 +262,33 @@ export interface ServiceAmino {
    *     - name: google.someapi.v1.SomeEnum
    */
   enums: EnumAmino[];
-  /** Additional API documentation. */
+  /**
+   * Additional API documentation.
+   */
   documentation?: DocumentationAmino;
-  /** API backend configuration. */
+  /**
+   * API backend configuration.
+   */
   backend?: BackendAmino;
-  /** HTTP configuration. */
+  /**
+   * HTTP configuration.
+   */
   http?: HttpAmino;
-  /** Quota configuration. */
+  /**
+   * Quota configuration.
+   */
   quota?: QuotaAmino;
-  /** Auth configuration. */
+  /**
+   * Auth configuration.
+   */
   authentication?: AuthenticationAmino;
-  /** Context configuration. */
+  /**
+   * Context configuration.
+   */
   context?: ContextAmino;
-  /** Configuration controlling usage of this service. */
+  /**
+   * Configuration controlling usage of this service.
+   */
   usage?: UsageAmino;
   /**
    * Configuration for network endpoints.  If this is empty, then an endpoint
@@ -238,34 +296,50 @@ export interface ServiceAmino {
    * defined APIs.
    */
   endpoints: EndpointAmino[];
-  /** Configuration for the service control plane. */
+  /**
+   * Configuration for the service control plane.
+   */
   control?: ControlAmino;
-  /** Defines the logs used by this service. */
+  /**
+   * Defines the logs used by this service.
+   */
   logs: LogDescriptorAmino[];
-  /** Defines the metrics used by this service. */
+  /**
+   * Defines the metrics used by this service.
+   */
   metrics: MetricDescriptorAmino[];
   /**
    * Defines the monitored resources used by this service. This is required
    * by the [Service.monitoring][google.api.Service.monitoring] and [Service.logging][google.api.Service.logging] configurations.
    */
   monitored_resources: MonitoredResourceDescriptorAmino[];
-  /** Billing configuration. */
+  /**
+   * Billing configuration.
+   */
   billing?: BillingAmino;
-  /** Logging configuration. */
+  /**
+   * Logging configuration.
+   */
   logging?: LoggingAmino;
-  /** Monitoring configuration. */
+  /**
+   * Monitoring configuration.
+   */
   monitoring?: MonitoringAmino;
-  /** System parameter configuration. */
+  /**
+   * System parameter configuration.
+   */
   system_parameters?: SystemParametersAmino;
-  /** Output only. The source information for this configuration if available. */
+  /**
+   * Output only. The source information for this configuration if available.
+   */
   source_info?: SourceInfoAmino;
   /**
    * Obsolete. Do not use.
    * 
    * This field has no semantic meaning. The service config compiler always
    * sets this field to `3`.
+   * @deprecated
    */
-  /** @deprecated */
   config_version?: UInt32ValueAmino;
 }
 export interface ServiceAminoMsg {
@@ -301,6 +375,33 @@ function createBaseService(): Service {
     configVersion: undefined
   };
 }
+/**
+ * `Service` is the root object of Google service configuration schema. It
+ * describes basic information about a service, such as the name and the
+ * title, and delegates other aspects to sub-sections. Each sub-section is
+ * either a proto message or a repeated proto message that configures a
+ * specific aspect, such as auth. See each proto message definition for details.
+ * 
+ * Example:
+ * 
+ *     type: google.api.Service
+ *     name: calendar.googleapis.com
+ *     title: Google Calendar API
+ *     apis:
+ *     - name: google.calendar.v3.Calendar
+ *     authentication:
+ *       providers:
+ *       - id: google_calendar_auth
+ *         jwks_uri: https://www.googleapis.com/oauth2/v1/certs
+ *         issuer: https://securetoken.google.com
+ *       rules:
+ *       - selector: "*"
+ *         requirements:
+ *           provider_id: google_calendar_auth
+ * @name Service
+ * @package google.api
+ * @see proto type: google.api.Service
+ */
 export const Service = {
   typeUrl: "/google.api.Service",
   encode(message: Service, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

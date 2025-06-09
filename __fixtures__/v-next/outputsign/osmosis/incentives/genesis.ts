@@ -7,11 +7,18 @@ export const protobufPackage = "osmosis.incentives";
 /**
  * GenesisState defines the incentives module's various parameters when first
  * initialized
+ * @name GenesisState
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GenesisState
  */
 export interface GenesisState {
-  /** params are all the parameters of the module */
+  /**
+   * params are all the parameters of the module
+   */
   params: Params;
-  /** gauges are all gauges that should exist at genesis */
+  /**
+   * gauges are all gauges that should exist at genesis
+   */
   gauges: Gauge[];
   /**
    * lockable_durations are all lockup durations that gauges can be locked for
@@ -31,11 +38,18 @@ export interface GenesisStateProtoMsg {
 /**
  * GenesisState defines the incentives module's various parameters when first
  * initialized
+ * @name GenesisStateAmino
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GenesisState
  */
 export interface GenesisStateAmino {
-  /** params are all the parameters of the module */
+  /**
+   * params are all the parameters of the module
+   */
   params?: ParamsAmino;
-  /** gauges are all gauges that should exist at genesis */
+  /**
+   * gauges are all gauges that should exist at genesis
+   */
   gauges?: GaugeAmino[];
   /**
    * lockable_durations are all lockup durations that gauges can be locked for
@@ -55,6 +69,9 @@ export interface GenesisStateAminoMsg {
 /**
  * GenesisState defines the incentives module's various parameters when first
  * initialized
+ * @name GenesisStateSDKType
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GenesisState
  */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
@@ -70,6 +87,13 @@ function createBaseGenesisState(): GenesisState {
     lastGaugeId: BigInt(0)
   };
 }
+/**
+ * GenesisState defines the incentives module's various parameters when first
+ * initialized
+ * @name GenesisState
+ * @package osmosis.incentives
+ * @see proto type: osmosis.incentives.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.incentives.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

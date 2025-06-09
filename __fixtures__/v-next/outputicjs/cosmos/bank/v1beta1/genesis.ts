@@ -1,37 +1,59 @@
-import { Params, ParamsAmino, Metadata, MetadataAmino } from "./bank";
+import { Metadata, MetadataAmino, CosmosBankV1beta1Params, CosmosBankV1beta1ParamsAmino } from "./bank";
 import { Coin, CoinAmino } from "../../base/v1beta1/coin";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState defines the bank module's genesis state. */
+/**
+ * GenesisState defines the bank module's genesis state.
+ * @name GenesisState
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the paramaters of the module. */
-  params: Params;
-  /** balances is an array containing the balances of all the accounts. */
+  /**
+   * params defines all the paramaters of the module.
+   */
+  params: CosmosBankV1beta1Params;
+  /**
+   * balances is an array containing the balances of all the accounts.
+   */
   balances: Balance[];
   /**
    * supply represents the total supply. If it is left empty, then supply will be calculated based on the provided
    * balances. Otherwise, it will be used to validate that the sum of the balances equals this amount.
    */
   supply: Coin[];
-  /** denom_metadata defines the metadata of the differents coins. */
+  /**
+   * denom_metadata defines the metadata of the differents coins.
+   */
   denomMetadata: Metadata[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/cosmos.bank.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the bank module's genesis state. */
+/**
+ * GenesisState defines the bank module's genesis state.
+ * @name GenesisStateAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.GenesisState
+ */
 export interface GenesisStateAmino {
-  /** params defines all the paramaters of the module. */
-  params: ParamsAmino;
-  /** balances is an array containing the balances of all the accounts. */
+  /**
+   * params defines all the paramaters of the module.
+   */
+  params: CosmosBankV1beta1ParamsAmino;
+  /**
+   * balances is an array containing the balances of all the accounts.
+   */
   balances: BalanceAmino[];
   /**
    * supply represents the total supply. If it is left empty, then supply will be calculated based on the provided
    * balances. Otherwise, it will be used to validate that the sum of the balances equals this amount.
    */
   supply: CoinAmino[];
-  /** denom_metadata defines the metadata of the differents coins. */
+  /**
+   * denom_metadata defines the metadata of the differents coins.
+   */
   denom_metadata: MetadataAmino[];
 }
 export interface GenesisStateAminoMsg {
@@ -41,11 +63,18 @@ export interface GenesisStateAminoMsg {
 /**
  * Balance defines an account address and balance pair used in the bank module's
  * genesis state.
+ * @name Balance
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.Balance
  */
 export interface Balance {
-  /** address is the address of the balance holder. */
+  /**
+   * address is the address of the balance holder.
+   */
   address: string;
-  /** coins defines the different coins this balance holds. */
+  /**
+   * coins defines the different coins this balance holds.
+   */
   coins: Coin[];
 }
 export interface BalanceProtoMsg {
@@ -55,11 +84,18 @@ export interface BalanceProtoMsg {
 /**
  * Balance defines an account address and balance pair used in the bank module's
  * genesis state.
+ * @name BalanceAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.Balance
  */
 export interface BalanceAmino {
-  /** address is the address of the balance holder. */
+  /**
+   * address is the address of the balance holder.
+   */
   address: string;
-  /** coins defines the different coins this balance holds. */
+  /**
+   * coins defines the different coins this balance holds.
+   */
   coins: CoinAmino[];
 }
 export interface BalanceAminoMsg {
@@ -68,18 +104,24 @@ export interface BalanceAminoMsg {
 }
 function createBaseGenesisState(): GenesisState {
   return {
-    params: Params.fromPartial({}),
+    params: CosmosBankV1beta1Params.fromPartial({}),
     balances: [],
     supply: [],
     denomMetadata: []
   };
 }
+/**
+ * GenesisState defines the bank module's genesis state.
+ * @name GenesisState
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmos.bank.v1beta1.GenesisState",
   aminoType: "cosmos-sdk/GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.params !== undefined) {
-      Params.encode(message.params, writer.uint32(10).fork()).ldelim();
+      CosmosBankV1beta1Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.balances) {
       Balance.encode(v!, writer.uint32(18).fork()).ldelim();
@@ -100,7 +142,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.params = Params.decode(reader, reader.uint32());
+          message.params = CosmosBankV1beta1Params.decode(reader, reader.uint32());
           break;
         case 2:
           message.balances.push(Balance.decode(reader, reader.uint32()));
@@ -120,7 +162,7 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
+    message.params = object.params !== undefined && object.params !== null ? CosmosBankV1beta1Params.fromPartial(object.params) : undefined;
     message.balances = object.balances?.map(e => Balance.fromPartial(e)) || [];
     message.supply = object.supply?.map(e => Coin.fromPartial(e)) || [];
     message.denomMetadata = object.denomMetadata?.map(e => Metadata.fromPartial(e)) || [];
@@ -129,7 +171,7 @@ export const GenesisState = {
   fromAmino(object: GenesisStateAmino): GenesisState {
     const message = createBaseGenesisState();
     if (object.params !== undefined && object.params !== null) {
-      message.params = Params.fromAmino(object.params);
+      message.params = CosmosBankV1beta1Params.fromAmino(object.params);
     }
     message.balances = object.balances?.map(e => Balance.fromAmino(e)) || [];
     message.supply = object.supply?.map(e => Coin.fromAmino(e)) || [];
@@ -138,7 +180,7 @@ export const GenesisState = {
   },
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
-    obj.params = message.params ? Params.toAmino(message.params) : undefined;
+    obj.params = message.params ? CosmosBankV1beta1Params.toAmino(message.params) : undefined;
     if (message.balances) {
       obj.balances = message.balances.map(e => e ? Balance.toAmino(e) : undefined);
     } else {
@@ -184,6 +226,13 @@ function createBaseBalance(): Balance {
     coins: []
   };
 }
+/**
+ * Balance defines an account address and balance pair used in the bank module's
+ * genesis state.
+ * @name Balance
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.Balance
+ */
 export const Balance = {
   typeUrl: "/cosmos.bank.v1beta1.Balance",
   aminoType: "cosmos-sdk/Balance",

@@ -140,6 +140,11 @@ export function type_WellKnownTypeToJSON(object: Type_WellKnownType): string {
       return "UNRECOGNIZED";
   }
 }
+/**
+ * @name CheckedExpr_ReferenceMapEntry
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.undefined
+ */
 export interface CheckedExpr_ReferenceMapEntry {
   key: bigint;
   value?: Reference;
@@ -148,10 +153,20 @@ export interface CheckedExpr_ReferenceMapEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name CheckedExpr_ReferenceMapEntrySDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.undefined
+ */
 export interface CheckedExpr_ReferenceMapEntrySDKType {
   key: bigint;
   value?: ReferenceSDKType;
 }
+/**
+ * @name CheckedExpr_TypeMapEntry
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.undefined
+ */
 export interface CheckedExpr_TypeMapEntry {
   key: bigint;
   value?: Type;
@@ -160,11 +175,21 @@ export interface CheckedExpr_TypeMapEntryProtoMsg {
   typeUrl: string;
   value: Uint8Array;
 }
+/**
+ * @name CheckedExpr_TypeMapEntrySDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.undefined
+ */
 export interface CheckedExpr_TypeMapEntrySDKType {
   key: bigint;
   value?: TypeSDKType;
 }
-/** A CEL expression which has been successfully type checked. */
+/**
+ * A CEL expression which has been successfully type checked.
+ * @name CheckedExpr
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.CheckedExpr
+ */
 export interface CheckedExpr {
   /**
    * A map from expression ids to resolved references.
@@ -221,7 +246,12 @@ export interface CheckedExprProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.CheckedExpr";
   value: Uint8Array;
 }
-/** A CEL expression which has been successfully type checked. */
+/**
+ * A CEL expression which has been successfully type checked.
+ * @name CheckedExprSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.CheckedExpr
+ */
 export interface CheckedExprSDKType {
   reference_map: {
     [key: bigint]: ReferenceSDKType;
@@ -233,23 +263,44 @@ export interface CheckedExprSDKType {
   expr_version: string;
   expr?: ExprSDKType;
 }
-/** Represents a CEL type. */
+/**
+ * Represents a CEL type.
+ * @name Type
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Type
+ */
 export interface Type {
-  /** Dynamic type. */
+  /**
+   * Dynamic type.
+   */
   dyn?: Empty;
-  /** Null value. */
+  /**
+   * Null value.
+   */
   null?: NullValue;
-  /** Primitive types: `true`, `1u`, `-2.0`, `'string'`, `b'bytes'`. */
+  /**
+   * Primitive types: `true`, `1u`, `-2.0`, `'string'`, `b'bytes'`.
+   */
   primitive?: Type_PrimitiveType;
-  /** Wrapper of a primitive type, e.g. `google.protobuf.Int64Value`. */
+  /**
+   * Wrapper of a primitive type, e.g. `google.protobuf.Int64Value`.
+   */
   wrapper?: Type_PrimitiveType;
-  /** Well-known protobuf type such as `google.protobuf.Timestamp`. */
+  /**
+   * Well-known protobuf type such as `google.protobuf.Timestamp`.
+   */
   wellKnown?: Type_WellKnownType;
-  /** Parameterized list with elements of `list_type`, e.g. `list<timestamp>`. */
+  /**
+   * Parameterized list with elements of `list_type`, e.g. `list<timestamp>`.
+   */
   listType?: Type_ListType;
-  /** Parameterized map with typed keys and values. */
+  /**
+   * Parameterized map with typed keys and values.
+   */
   mapType?: Type_MapType;
-  /** Function type. */
+  /**
+   * Function type.
+   */
   function?: Type_FunctionType;
   /**
    * Protocol buffer message type.
@@ -281,14 +332,21 @@ export interface Type {
    * errors present in the expression.
    */
   error?: Empty;
-  /** Abstract, application defined type. */
+  /**
+   * Abstract, application defined type.
+   */
   abstractType?: Type_AbstractType;
 }
 export interface TypeProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.Type";
   value: Uint8Array;
 }
-/** Represents a CEL type. */
+/**
+ * Represents a CEL type.
+ * @name TypeSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Type
+ */
 export interface TypeSDKType {
   dyn?: EmptySDKType;
   null?: NullValue;
@@ -304,63 +362,117 @@ export interface TypeSDKType {
   error?: EmptySDKType;
   abstract_type?: Type_AbstractTypeSDKType;
 }
-/** List type with typed elements, e.g. `list<example.proto.MyMessage>`. */
+/**
+ * List type with typed elements, e.g. `list<example.proto.MyMessage>`.
+ * @name Type_ListType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ListType
+ */
 export interface Type_ListType {
-  /** The element type. */
+  /**
+   * The element type.
+   */
   elemType?: Type;
 }
 export interface Type_ListTypeProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.ListType";
   value: Uint8Array;
 }
-/** List type with typed elements, e.g. `list<example.proto.MyMessage>`. */
+/**
+ * List type with typed elements, e.g. `list<example.proto.MyMessage>`.
+ * @name Type_ListTypeSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ListType
+ */
 export interface Type_ListTypeSDKType {
   elem_type?: TypeSDKType;
 }
-/** Map type with parameterized key and value types, e.g. `map<string, int>`. */
+/**
+ * Map type with parameterized key and value types, e.g. `map<string, int>`.
+ * @name Type_MapType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.MapType
+ */
 export interface Type_MapType {
-  /** The type of the key. */
+  /**
+   * The type of the key.
+   */
   keyType?: Type;
-  /** The type of the value. */
+  /**
+   * The type of the value.
+   */
   valueType?: Type;
 }
 export interface Type_MapTypeProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.MapType";
   value: Uint8Array;
 }
-/** Map type with parameterized key and value types, e.g. `map<string, int>`. */
+/**
+ * Map type with parameterized key and value types, e.g. `map<string, int>`.
+ * @name Type_MapTypeSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.MapType
+ */
 export interface Type_MapTypeSDKType {
   key_type?: TypeSDKType;
   value_type?: TypeSDKType;
 }
-/** Function type with result and arg types. */
+/**
+ * Function type with result and arg types.
+ * @name Type_FunctionType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.FunctionType
+ */
 export interface Type_FunctionType {
-  /** Result type of the function. */
+  /**
+   * Result type of the function.
+   */
   resultType?: Type;
-  /** Argument types of the function. */
+  /**
+   * Argument types of the function.
+   */
   argTypes: Type[];
 }
 export interface Type_FunctionTypeProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.FunctionType";
   value: Uint8Array;
 }
-/** Function type with result and arg types. */
+/**
+ * Function type with result and arg types.
+ * @name Type_FunctionTypeSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.FunctionType
+ */
 export interface Type_FunctionTypeSDKType {
   result_type?: TypeSDKType;
   arg_types: TypeSDKType[];
 }
-/** Application defined abstract type. */
+/**
+ * Application defined abstract type.
+ * @name Type_AbstractType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.AbstractType
+ */
 export interface Type_AbstractType {
-  /** The fully qualified name of this abstract type. */
+  /**
+   * The fully qualified name of this abstract type.
+   */
   name: string;
-  /** Parameter types for this abstract type. */
+  /**
+   * Parameter types for this abstract type.
+   */
   parameterTypes: Type[];
 }
 export interface Type_AbstractTypeProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.AbstractType";
   value: Uint8Array;
 }
-/** Application defined abstract type. */
+/**
+ * Application defined abstract type.
+ * @name Type_AbstractTypeSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.AbstractType
+ */
 export interface Type_AbstractTypeSDKType {
   name: string;
   parameter_types: TypeSDKType[];
@@ -370,6 +482,9 @@ export interface Type_AbstractTypeSDKType {
  * 
  * A declaration is part of the contract between the expression, the agent
  * evaluating that expression, and the caller requesting evaluation.
+ * @name Decl
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Decl
  */
 export interface Decl {
   /**
@@ -383,9 +498,13 @@ export interface Decl {
    * function definition containing a result [Expr][google.api.expr.v1alpha1.Expr].
    */
   name: string;
-  /** Identifier declaration. */
+  /**
+   * Identifier declaration.
+   */
   ident?: Decl_IdentDecl;
-  /** Function declaration. */
+  /**
+   * Function declaration.
+   */
   function?: Decl_FunctionDecl;
 }
 export interface DeclProtoMsg {
@@ -397,6 +516,9 @@ export interface DeclProtoMsg {
  * 
  * A declaration is part of the contract between the expression, the agent
  * evaluating that expression, and the caller requesting evaluation.
+ * @name DeclSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Decl
  */
 export interface DeclSDKType {
   name: string;
@@ -410,16 +532,23 @@ export interface DeclSDKType {
  * evaluation time. An identifier with a value should resolve to a constant,
  * but may be used in conjunction with other identifiers bound at evaluation
  * time.
+ * @name Decl_IdentDecl
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.IdentDecl
  */
 export interface Decl_IdentDecl {
-  /** Required. The type of the identifier. */
+  /**
+   * Required. The type of the identifier.
+   */
   type?: Type;
   /**
    * The constant value of the identifier. If not specified, the identifier
    * must be supplied at evaluation time.
    */
   value?: Constant;
-  /** Documentation string for the identifier. */
+  /**
+   * Documentation string for the identifier.
+   */
   doc: string;
 }
 export interface Decl_IdentDeclProtoMsg {
@@ -433,6 +562,9 @@ export interface Decl_IdentDeclProtoMsg {
  * evaluation time. An identifier with a value should resolve to a constant,
  * but may be used in conjunction with other identifiers bound at evaluation
  * time.
+ * @name Decl_IdentDeclSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.IdentDecl
  */
 export interface Decl_IdentDeclSDKType {
   type?: TypeSDKType;
@@ -445,9 +577,14 @@ export interface Decl_IdentDeclSDKType {
  * 
  * Functions have no observable side-effects (there may be side-effects like
  * logging which are not observable from CEL).
+ * @name Decl_FunctionDecl
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.FunctionDecl
  */
 export interface Decl_FunctionDecl {
-  /** Required. List of function overloads, must contain at least one overload. */
+  /**
+   * Required. List of function overloads, must contain at least one overload.
+   */
   overloads: Decl_FunctionDecl_Overload[];
 }
 export interface Decl_FunctionDeclProtoMsg {
@@ -460,6 +597,9 @@ export interface Decl_FunctionDeclProtoMsg {
  * 
  * Functions have no observable side-effects (there may be side-effects like
  * logging which are not observable from CEL).
+ * @name Decl_FunctionDeclSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.FunctionDecl
  */
 export interface Decl_FunctionDeclSDKType {
   overloads: Decl_FunctionDecl_OverloadSDKType[];
@@ -475,6 +615,9 @@ export interface Decl_FunctionDeclSDKType {
  * 
  * Overloads must have non-overlapping argument types after erasure of all
  * parameterized type variables (similar as type erasure in Java).
+ * @name Decl_FunctionDecl_Overload
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Overload
  */
 export interface Decl_FunctionDecl_Overload {
   /**
@@ -518,7 +661,9 @@ export interface Decl_FunctionDecl_Overload {
    * expected type of the target receiver.
    */
   isInstanceFunction: boolean;
-  /** Documentation string for the overload. */
+  /**
+   * Documentation string for the overload.
+   */
   doc: string;
 }
 export interface Decl_FunctionDecl_OverloadProtoMsg {
@@ -536,6 +681,9 @@ export interface Decl_FunctionDecl_OverloadProtoMsg {
  * 
  * Overloads must have non-overlapping argument types after erasure of all
  * parameterized type variables (similar as type erasure in Java).
+ * @name Decl_FunctionDecl_OverloadSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Overload
  */
 export interface Decl_FunctionDecl_OverloadSDKType {
   overload_id: string;
@@ -545,9 +693,16 @@ export interface Decl_FunctionDecl_OverloadSDKType {
   is_instance_function: boolean;
   doc: string;
 }
-/** Describes a resolved reference to a declaration. */
+/**
+ * Describes a resolved reference to a declaration.
+ * @name Reference
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Reference
+ */
 export interface Reference {
-  /** The fully qualified name of the declaration. */
+  /**
+   * The fully qualified name of the declaration.
+   */
   name: string;
   /**
    * For references to functions, this is a list of `Overload.overload_id`
@@ -570,7 +725,12 @@ export interface ReferenceProtoMsg {
   typeUrl: "/google.api.expr.v1alpha1.Reference";
   value: Uint8Array;
 }
-/** Describes a resolved reference to a declaration. */
+/**
+ * Describes a resolved reference to a declaration.
+ * @name ReferenceSDKType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Reference
+ */
 export interface ReferenceSDKType {
   name: string;
   overload_id: string[];
@@ -582,6 +742,11 @@ function createBaseCheckedExpr_ReferenceMapEntry(): CheckedExpr_ReferenceMapEntr
     value: undefined
   };
 }
+/**
+ * @name CheckedExpr_ReferenceMapEntry
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.undefined
+ */
 export const CheckedExpr_ReferenceMapEntry = {
   encode(message: CheckedExpr_ReferenceMapEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== BigInt(0)) {
@@ -680,6 +845,11 @@ function createBaseCheckedExpr_TypeMapEntry(): CheckedExpr_TypeMapEntry {
     value: undefined
   };
 }
+/**
+ * @name CheckedExpr_TypeMapEntry
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.undefined
+ */
 export const CheckedExpr_TypeMapEntry = {
   encode(message: CheckedExpr_TypeMapEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.key !== BigInt(0)) {
@@ -781,6 +951,12 @@ function createBaseCheckedExpr(): CheckedExpr {
     expr: undefined
   };
 }
+/**
+ * A CEL expression which has been successfully type checked.
+ * @name CheckedExpr
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.CheckedExpr
+ */
 export const CheckedExpr = {
   typeUrl: "/google.api.expr.v1alpha1.CheckedExpr",
   encode(message: CheckedExpr, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1041,6 +1217,12 @@ function createBaseType(): Type {
     abstractType: undefined
   };
 }
+/**
+ * Represents a CEL type.
+ * @name Type
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Type
+ */
 export const Type = {
   typeUrl: "/google.api.expr.v1alpha1.Type",
   encode(message: Type, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1321,6 +1503,12 @@ function createBaseType_ListType(): Type_ListType {
     elemType: undefined
   };
 }
+/**
+ * List type with typed elements, e.g. `list<example.proto.MyMessage>`.
+ * @name Type_ListType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.ListType
+ */
 export const Type_ListType = {
   typeUrl: "/google.api.expr.v1alpha1.ListType",
   encode(message: Type_ListType, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1410,6 +1598,12 @@ function createBaseType_MapType(): Type_MapType {
     valueType: undefined
   };
 }
+/**
+ * Map type with parameterized key and value types, e.g. `map<string, int>`.
+ * @name Type_MapType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.MapType
+ */
 export const Type_MapType = {
   typeUrl: "/google.api.expr.v1alpha1.MapType",
   encode(message: Type_MapType, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1515,6 +1709,12 @@ function createBaseType_FunctionType(): Type_FunctionType {
     argTypes: []
   };
 }
+/**
+ * Function type with result and arg types.
+ * @name Type_FunctionType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.FunctionType
+ */
 export const Type_FunctionType = {
   typeUrl: "/google.api.expr.v1alpha1.FunctionType",
   encode(message: Type_FunctionType, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1630,6 +1830,12 @@ function createBaseType_AbstractType(): Type_AbstractType {
     parameterTypes: []
   };
 }
+/**
+ * Application defined abstract type.
+ * @name Type_AbstractType
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.AbstractType
+ */
 export const Type_AbstractType = {
   typeUrl: "/google.api.expr.v1alpha1.AbstractType",
   encode(message: Type_AbstractType, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1746,6 +1952,15 @@ function createBaseDecl(): Decl {
     function: undefined
   };
 }
+/**
+ * Represents a declaration of a named value or function.
+ * 
+ * A declaration is part of the contract between the expression, the agent
+ * evaluating that expression, and the caller requesting evaluation.
+ * @name Decl
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Decl
+ */
 export const Decl = {
   typeUrl: "/google.api.expr.v1alpha1.Decl",
   encode(message: Decl, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1868,6 +2083,17 @@ function createBaseDecl_IdentDecl(): Decl_IdentDecl {
     doc: ""
   };
 }
+/**
+ * Identifier declaration which specifies its type and optional `Expr` value.
+ * 
+ * An identifier without a value is a declaration that must be provided at
+ * evaluation time. An identifier with a value should resolve to a constant,
+ * but may be used in conjunction with other identifiers bound at evaluation
+ * time.
+ * @name Decl_IdentDecl
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.IdentDecl
+ */
 export const Decl_IdentDecl = {
   typeUrl: "/google.api.expr.v1alpha1.IdentDecl",
   encode(message: Decl_IdentDecl, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1988,6 +2214,16 @@ function createBaseDecl_FunctionDecl(): Decl_FunctionDecl {
     overloads: []
   };
 }
+/**
+ * Function declaration specifies one or more overloads which indicate the
+ * function's parameter types and return type.
+ * 
+ * Functions have no observable side-effects (there may be side-effects like
+ * logging which are not observable from CEL).
+ * @name Decl_FunctionDecl
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.FunctionDecl
+ */
 export const Decl_FunctionDecl = {
   typeUrl: "/google.api.expr.v1alpha1.FunctionDecl",
   encode(message: Decl_FunctionDecl, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2091,6 +2327,21 @@ function createBaseDecl_FunctionDecl_Overload(): Decl_FunctionDecl_Overload {
     doc: ""
   };
 }
+/**
+ * An overload indicates a function's parameter types and return type, and
+ * may optionally include a function body described in terms of [Expr][google.api.expr.v1alpha1.Expr]
+ * values.
+ * 
+ * Functions overloads are declared in either a function or method
+ * call-style. For methods, the `params[0]` is the expected type of the
+ * target receiver.
+ * 
+ * Overloads must have non-overlapping argument types after erasure of all
+ * parameterized type variables (similar as type erasure in Java).
+ * @name Decl_FunctionDecl_Overload
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Overload
+ */
 export const Decl_FunctionDecl_Overload = {
   typeUrl: "/google.api.expr.v1alpha1.Overload",
   encode(message: Decl_FunctionDecl_Overload, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2281,6 +2532,12 @@ function createBaseReference(): Reference {
     value: undefined
   };
 }
+/**
+ * Describes a resolved reference to a declaration.
+ * @name Reference
+ * @package google.api.expr.v1alpha1
+ * @see proto type: google.api.expr.v1alpha1.Reference
+ */
 export const Reference = {
   typeUrl: "/google.api.expr.v1alpha1.Reference",
   encode(message: Reference, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

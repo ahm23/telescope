@@ -3,6 +3,11 @@ import { BinaryReader, BinaryWriter } from "../../binary.js";
 import { isSet, DeepPartial, bytesFromBase64, base64FromBytes, toTimestamp, fromTimestamp } from "../../helpers.js";
 import { JsonSafe } from "../../json-safe.js";
 export const protobufPackage = "tendermint.p2p";
+/**
+ * @name ProtocolVersion
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.ProtocolVersion
+ */
 export interface ProtocolVersion {
   p2p: bigint;
   block: bigint;
@@ -12,11 +17,21 @@ export interface ProtocolVersionProtoMsg {
   typeUrl: "/tendermint.p2p.ProtocolVersion";
   value: Uint8Array;
 }
+/**
+ * @name ProtocolVersionSDKType
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.ProtocolVersion
+ */
 export interface ProtocolVersionSDKType {
   p2p: bigint;
   block: bigint;
   app: bigint;
 }
+/**
+ * @name NodeInfo
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.NodeInfo
+ */
 export interface NodeInfo {
   protocolVersion: ProtocolVersion;
   nodeId: string;
@@ -31,6 +46,11 @@ export interface NodeInfoProtoMsg {
   typeUrl: "/tendermint.p2p.NodeInfo";
   value: Uint8Array;
 }
+/**
+ * @name NodeInfoSDKType
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.NodeInfo
+ */
 export interface NodeInfoSDKType {
   protocol_version: ProtocolVersionSDKType;
   node_id: string;
@@ -41,6 +61,11 @@ export interface NodeInfoSDKType {
   moniker: string;
   other: NodeInfoOtherSDKType;
 }
+/**
+ * @name NodeInfoOther
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.NodeInfoOther
+ */
 export interface NodeInfoOther {
   txIndex: string;
   rpcAddress: string;
@@ -49,10 +74,20 @@ export interface NodeInfoOtherProtoMsg {
   typeUrl: "/tendermint.p2p.NodeInfoOther";
   value: Uint8Array;
 }
+/**
+ * @name NodeInfoOtherSDKType
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.NodeInfoOther
+ */
 export interface NodeInfoOtherSDKType {
   tx_index: string;
   rpc_address: string;
 }
+/**
+ * @name PeerInfo
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.PeerInfo
+ */
 export interface PeerInfo {
   id: string;
   addressInfo: PeerAddressInfo[];
@@ -62,11 +97,21 @@ export interface PeerInfoProtoMsg {
   typeUrl: "/tendermint.p2p.PeerInfo";
   value: Uint8Array;
 }
+/**
+ * @name PeerInfoSDKType
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.PeerInfo
+ */
 export interface PeerInfoSDKType {
   id: string;
   address_info: PeerAddressInfoSDKType[];
   last_connected?: Date;
 }
+/**
+ * @name PeerAddressInfo
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.PeerAddressInfo
+ */
 export interface PeerAddressInfo {
   address: string;
   lastDialSuccess?: Date;
@@ -77,6 +122,11 @@ export interface PeerAddressInfoProtoMsg {
   typeUrl: "/tendermint.p2p.PeerAddressInfo";
   value: Uint8Array;
 }
+/**
+ * @name PeerAddressInfoSDKType
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.PeerAddressInfo
+ */
 export interface PeerAddressInfoSDKType {
   address: string;
   last_dial_success?: Date;
@@ -90,6 +140,11 @@ function createBaseProtocolVersion(): ProtocolVersion {
     app: BigInt(0)
   };
 }
+/**
+ * @name ProtocolVersion
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.ProtocolVersion
+ */
 export const ProtocolVersion = {
   typeUrl: "/tendermint.p2p.ProtocolVersion",
   encode(message: ProtocolVersion, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -223,6 +278,11 @@ function createBaseNodeInfo(): NodeInfo {
     other: NodeInfoOther.fromPartial({})
   };
 }
+/**
+ * @name NodeInfo
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.NodeInfo
+ */
 export const NodeInfo = {
   typeUrl: "/tendermint.p2p.NodeInfo",
   encode(message: NodeInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -428,6 +488,11 @@ function createBaseNodeInfoOther(): NodeInfoOther {
     rpcAddress: ""
   };
 }
+/**
+ * @name NodeInfoOther
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.NodeInfoOther
+ */
 export const NodeInfoOther = {
   typeUrl: "/tendermint.p2p.NodeInfoOther",
   encode(message: NodeInfoOther, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -534,6 +599,11 @@ function createBasePeerInfo(): PeerInfo {
     lastConnected: undefined
   };
 }
+/**
+ * @name PeerInfo
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.PeerInfo
+ */
 export const PeerInfo = {
   typeUrl: "/tendermint.p2p.PeerInfo",
   encode(message: PeerInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -667,6 +737,11 @@ function createBasePeerAddressInfo(): PeerAddressInfo {
     dialFailures: 0
   };
 }
+/**
+ * @name PeerAddressInfo
+ * @package tendermint.p2p
+ * @see proto type: tendermint.p2p.PeerAddressInfo
+ */
 export const PeerAddressInfo = {
   typeUrl: "/tendermint.p2p.PeerAddressInfo",
   encode(message: PeerAddressInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

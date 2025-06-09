@@ -4,7 +4,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "cosmos.bank.v1beta1";
-/** MsgSend represents a message to send coins from one account to another. */
+/**
+ * MsgSend represents a message to send coins from one account to another.
+ * @name MsgSend
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSend
+ */
 export interface MsgSend {
   fromAddress: string;
   toAddress: string;
@@ -14,7 +19,12 @@ export interface MsgSendProtoMsg {
   typeUrl: "/cosmos.bank.v1beta1.MsgSend";
   value: Uint8Array;
 }
-/** MsgSend represents a message to send coins from one account to another. */
+/**
+ * MsgSend represents a message to send coins from one account to another.
+ * @name MsgSendAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSend
+ */
 export interface MsgSendAmino {
   from_address?: string;
   to_address?: string;
@@ -24,27 +34,52 @@ export interface MsgSendAminoMsg {
   type: "cosmos-sdk/MsgSend";
   value: MsgSendAmino;
 }
-/** MsgSend represents a message to send coins from one account to another. */
+/**
+ * MsgSend represents a message to send coins from one account to another.
+ * @name MsgSendSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSend
+ */
 export interface MsgSendSDKType {
   from_address: string;
   to_address: string;
   amount: CoinSDKType[];
 }
-/** MsgSendResponse defines the Msg/Send response type. */
+/**
+ * MsgSendResponse defines the Msg/Send response type.
+ * @name MsgSendResponse
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSendResponse
+ */
 export interface MsgSendResponse {}
 export interface MsgSendResponseProtoMsg {
   typeUrl: "/cosmos.bank.v1beta1.MsgSendResponse";
   value: Uint8Array;
 }
-/** MsgSendResponse defines the Msg/Send response type. */
+/**
+ * MsgSendResponse defines the Msg/Send response type.
+ * @name MsgSendResponseAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSendResponse
+ */
 export interface MsgSendResponseAmino {}
 export interface MsgSendResponseAminoMsg {
   type: "cosmos-sdk/MsgSendResponse";
   value: MsgSendResponseAmino;
 }
-/** MsgSendResponse defines the Msg/Send response type. */
+/**
+ * MsgSendResponse defines the Msg/Send response type.
+ * @name MsgSendResponseSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSendResponse
+ */
 export interface MsgSendResponseSDKType {}
-/** MsgMultiSend represents an arbitrary multi-in, multi-out send message. */
+/**
+ * MsgMultiSend represents an arbitrary multi-in, multi-out send message.
+ * @name MsgMultiSend
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSend
+ */
 export interface MsgMultiSend {
   inputs: Input[];
   outputs: Output[];
@@ -53,7 +88,12 @@ export interface MsgMultiSendProtoMsg {
   typeUrl: "/cosmos.bank.v1beta1.MsgMultiSend";
   value: Uint8Array;
 }
-/** MsgMultiSend represents an arbitrary multi-in, multi-out send message. */
+/**
+ * MsgMultiSend represents an arbitrary multi-in, multi-out send message.
+ * @name MsgMultiSendAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSend
+ */
 export interface MsgMultiSendAmino {
   inputs?: InputAmino[];
   outputs?: OutputAmino[];
@@ -62,24 +102,44 @@ export interface MsgMultiSendAminoMsg {
   type: "cosmos-sdk/MsgMultiSend";
   value: MsgMultiSendAmino;
 }
-/** MsgMultiSend represents an arbitrary multi-in, multi-out send message. */
+/**
+ * MsgMultiSend represents an arbitrary multi-in, multi-out send message.
+ * @name MsgMultiSendSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSend
+ */
 export interface MsgMultiSendSDKType {
   inputs: InputSDKType[];
   outputs: OutputSDKType[];
 }
-/** MsgMultiSendResponse defines the Msg/MultiSend response type. */
+/**
+ * MsgMultiSendResponse defines the Msg/MultiSend response type.
+ * @name MsgMultiSendResponse
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSendResponse
+ */
 export interface MsgMultiSendResponse {}
 export interface MsgMultiSendResponseProtoMsg {
   typeUrl: "/cosmos.bank.v1beta1.MsgMultiSendResponse";
   value: Uint8Array;
 }
-/** MsgMultiSendResponse defines the Msg/MultiSend response type. */
+/**
+ * MsgMultiSendResponse defines the Msg/MultiSend response type.
+ * @name MsgMultiSendResponseAmino
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSendResponse
+ */
 export interface MsgMultiSendResponseAmino {}
 export interface MsgMultiSendResponseAminoMsg {
   type: "cosmos-sdk/MsgMultiSendResponse";
   value: MsgMultiSendResponseAmino;
 }
-/** MsgMultiSendResponse defines the Msg/MultiSend response type. */
+/**
+ * MsgMultiSendResponse defines the Msg/MultiSend response type.
+ * @name MsgMultiSendResponseSDKType
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSendResponse
+ */
 export interface MsgMultiSendResponseSDKType {}
 function createBaseMsgSend(): MsgSend {
   return {
@@ -88,6 +148,12 @@ function createBaseMsgSend(): MsgSend {
     amount: []
   };
 }
+/**
+ * MsgSend represents a message to send coins from one account to another.
+ * @name MsgSend
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSend
+ */
 export const MsgSend = {
   typeUrl: "/cosmos.bank.v1beta1.MsgSend",
   aminoType: "cosmos-sdk/MsgSend",
@@ -216,6 +282,12 @@ export const MsgSend = {
 function createBaseMsgSendResponse(): MsgSendResponse {
   return {};
 }
+/**
+ * MsgSendResponse defines the Msg/Send response type.
+ * @name MsgSendResponse
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgSendResponse
+ */
 export const MsgSendResponse = {
   typeUrl: "/cosmos.bank.v1beta1.MsgSendResponse",
   aminoType: "cosmos-sdk/MsgSendResponse",
@@ -291,6 +363,12 @@ function createBaseMsgMultiSend(): MsgMultiSend {
     outputs: []
   };
 }
+/**
+ * MsgMultiSend represents an arbitrary multi-in, multi-out send message.
+ * @name MsgMultiSend
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSend
+ */
 export const MsgMultiSend = {
   typeUrl: "/cosmos.bank.v1beta1.MsgMultiSend",
   aminoType: "cosmos-sdk/MsgMultiSend",
@@ -414,6 +492,12 @@ export const MsgMultiSend = {
 function createBaseMsgMultiSendResponse(): MsgMultiSendResponse {
   return {};
 }
+/**
+ * MsgMultiSendResponse defines the Msg/MultiSend response type.
+ * @name MsgMultiSendResponse
+ * @package cosmos.bank.v1beta1
+ * @see proto type: cosmos.bank.v1beta1.MsgMultiSendResponse
+ */
 export const MsgMultiSendResponse = {
   typeUrl: "/cosmos.bank.v1beta1.MsgMultiSendResponse",
   aminoType: "cosmos-sdk/MsgMultiSendResponse",

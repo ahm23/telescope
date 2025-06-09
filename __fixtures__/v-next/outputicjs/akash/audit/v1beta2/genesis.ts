@@ -1,7 +1,12 @@
 import { AuditedAttributes, AuditedAttributesAmino } from "./audit";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** GenesisState defines the basic genesis state used by audit module */
+/**
+ * GenesisState defines the basic genesis state used by audit module
+ * @name GenesisState
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.GenesisState
+ */
 export interface GenesisState {
   attributes: AuditedAttributes[];
 }
@@ -9,7 +14,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/akash.audit.v1beta2.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the basic genesis state used by audit module */
+/**
+ * GenesisState defines the basic genesis state used by audit module
+ * @name GenesisStateAmino
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.GenesisState
+ */
 export interface GenesisStateAmino {
   attributes: AuditedAttributesAmino[];
 }
@@ -22,6 +32,12 @@ function createBaseGenesisState(): GenesisState {
     attributes: []
   };
 }
+/**
+ * GenesisState defines the basic genesis state used by audit module
+ * @name GenesisState
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.audit.v1beta2.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

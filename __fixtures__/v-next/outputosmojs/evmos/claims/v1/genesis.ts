@@ -5,47 +5,83 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial, toTimestamp, fromTimestamp } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "evmos.claims.v1";
-/** GenesisState define the claims module's genesis state. */
+/**
+ * GenesisState define the claims module's genesis state.
+ * @name GenesisState
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.GenesisState
+ */
 export interface GenesisState {
-  /** params defines all the parameters of the module. */
+  /**
+   * params defines all the parameters of the module.
+   */
   params: Params;
-  /** list of claim records with the corresponding airdrop recipient */
+  /**
+   * list of claim records with the corresponding airdrop recipient
+   */
   claimsRecords: ClaimsRecordAddress[];
 }
 export interface GenesisStateProtoMsg {
   typeUrl: "/evmos.claims.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState define the claims module's genesis state. */
+/**
+ * GenesisState define the claims module's genesis state.
+ * @name GenesisStateSDKType
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   claims_records: ClaimsRecordAddressSDKType[];
 }
-/** Params defines the claims module's parameters. */
+/**
+ * Params defines the claims module's parameters.
+ * @name Params
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.Params
+ */
 export interface Params {
-  /** enable claiming process */
+  /**
+   * enable claiming process
+   */
   enableClaims: boolean;
-  /** timestamp of the airdrop start */
+  /**
+   * timestamp of the airdrop start
+   */
   airdropStartTime: Date;
-  /** duration until decay of claimable tokens begin */
+  /**
+   * duration until decay of claimable tokens begin
+   */
   durationUntilDecay: Duration;
-  /** duration of the token claim decay period */
+  /**
+   * duration of the token claim decay period
+   */
   durationOfDecay: Duration;
-  /** denom of claimable coin */
+  /**
+   * denom of claimable coin
+   */
   claimsDenom: string;
   /**
    * list of authorized channel identifiers that can perform address
    * attestations via IBC.
    */
   authorizedChannels: string[];
-  /** list of channel identifiers from EVM compatible chains */
+  /**
+   * list of channel identifiers from EVM compatible chains
+   */
   evmChannels: string[];
 }
 export interface ParamsProtoMsg {
   typeUrl: "/evmos.claims.v1.Params";
   value: Uint8Array;
 }
-/** Params defines the claims module's parameters. */
+/**
+ * Params defines the claims module's parameters.
+ * @name ParamsSDKType
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.Params
+ */
 export interface ParamsSDKType {
   enable_claims: boolean;
   airdrop_start_time: Date;
@@ -61,6 +97,12 @@ function createBaseGenesisState(): GenesisState {
     claimsRecords: []
   };
 }
+/**
+ * GenesisState define the claims module's genesis state.
+ * @name GenesisState
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/evmos.claims.v1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -181,6 +223,12 @@ function createBaseParams(): Params {
     evmChannels: []
   };
 }
+/**
+ * Params defines the claims module's parameters.
+ * @name Params
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.Params
+ */
 export const Params = {
   typeUrl: "/evmos.claims.v1.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

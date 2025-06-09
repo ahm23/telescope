@@ -10,6 +10,9 @@ import { DeepPartial } from "../../helpers";
  *     }
  * 
  * The JSON representation for `Empty` is empty JSON object `{}`.
+ * @name Empty
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Empty
  */
 export interface Empty {}
 export interface EmptyProtoMsg {
@@ -26,6 +29,9 @@ export interface EmptyProtoMsg {
  *     }
  * 
  * The JSON representation for `Empty` is empty JSON object `{}`.
+ * @name EmptyAmino
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Empty
  */
 export interface EmptyAmino {}
 export interface EmptyAminoMsg {
@@ -35,6 +41,20 @@ export interface EmptyAminoMsg {
 function createBaseEmpty(): Empty {
   return {};
 }
+/**
+ * A generic empty message that you can re-use to avoid defining duplicated
+ * empty messages in your APIs. A typical example is to use it as the request
+ * or the response type of an API method. For instance:
+ * 
+ *     service Foo {
+ *       rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);
+ *     }
+ * 
+ * The JSON representation for `Empty` is empty JSON object `{}`.
+ * @name Empty
+ * @package google.protobuf
+ * @see proto type: google.protobuf.Empty
+ */
 export const Empty = {
   typeUrl: "/google.protobuf.Empty",
   encode(_: Empty, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

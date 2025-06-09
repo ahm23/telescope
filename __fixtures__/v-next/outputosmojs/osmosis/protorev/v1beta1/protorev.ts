@@ -3,26 +3,47 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "osmosis.protorev.v1beta1";
-/** TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens */
+/**
+ * TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens
+ * @name TokenPairArbRoutes
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.TokenPairArbRoutes
+ */
 export interface TokenPairArbRoutes {
-  /** Stores all of the possible hot paths for a given pair of tokens */
+  /**
+   * Stores all of the possible hot paths for a given pair of tokens
+   */
   arbRoutes: Route[];
-  /** Token denomination of the first asset */
+  /**
+   * Token denomination of the first asset
+   */
   tokenIn: string;
-  /** Token denomination of the second asset */
+  /**
+   * Token denomination of the second asset
+   */
   tokenOut: string;
 }
 export interface TokenPairArbRoutesProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.TokenPairArbRoutes";
   value: Uint8Array;
 }
-/** TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens */
+/**
+ * TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens
+ * @name TokenPairArbRoutesSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.TokenPairArbRoutes
+ */
 export interface TokenPairArbRoutesSDKType {
   arb_routes: RouteSDKType[];
   token_in: string;
   token_out: string;
 }
-/** Route is a hot route for a given pair of tokens */
+/**
+ * Route is a hot route for a given pair of tokens
+ * @name Route
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.Route
+ */
 export interface Route {
   /**
    * The pool IDs that are travered in the directed cyclic graph (traversed left
@@ -39,25 +60,46 @@ export interface RouteProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.Route";
   value: Uint8Array;
 }
-/** Route is a hot route for a given pair of tokens */
+/**
+ * Route is a hot route for a given pair of tokens
+ * @name RouteSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.Route
+ */
 export interface RouteSDKType {
   trades: TradeSDKType[];
   step_size: string;
 }
-/** Trade is a single trade in a route */
+/**
+ * Trade is a single trade in a route
+ * @name Trade
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.Trade
+ */
 export interface Trade {
-  /** The pool id of the pool that is traded on */
+  /**
+   * The pool id of the pool that is traded on
+   */
   pool: bigint;
-  /** The denom of the token that is traded */
+  /**
+   * The denom of the token that is traded
+   */
   tokenIn: string;
-  /** The denom of the token that is received */
+  /**
+   * The denom of the token that is received
+   */
   tokenOut: string;
 }
 export interface TradeProtoMsg {
   typeUrl: "/osmosis.protorev.v1beta1.Trade";
   value: Uint8Array;
 }
-/** Trade is a single trade in a route */
+/**
+ * Trade is a single trade in a route
+ * @name TradeSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.Trade
+ */
 export interface TradeSDKType {
   pool: bigint;
   token_in: string;
@@ -66,16 +108,23 @@ export interface TradeSDKType {
 /**
  * RouteStatistics contains the number of trades the module has executed after a
  * swap on a given route and the profits from the trades
+ * @name RouteStatistics
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.RouteStatistics
  */
 export interface RouteStatistics {
-  /** profits is the total profit from all trades on this route */
+  /**
+   * profits is the total profit from all trades on this route
+   */
   profits: Coin[];
   /**
    * number_of_trades is the number of trades the module has executed using this
    * route
    */
   numberOfTrades: string;
-  /** route is the route that was used (pool ids along the arbitrage route) */
+  /**
+   * route is the route that was used (pool ids along the arbitrage route)
+   */
   route: bigint[];
 }
 export interface RouteStatisticsProtoMsg {
@@ -85,6 +134,9 @@ export interface RouteStatisticsProtoMsg {
 /**
  * RouteStatistics contains the number of trades the module has executed after a
  * swap on a given route and the profits from the trades
+ * @name RouteStatisticsSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.RouteStatistics
  */
 export interface RouteStatisticsSDKType {
   profits: CoinSDKType[];
@@ -97,13 +149,22 @@ export interface RouteStatisticsSDKType {
  * significantly between the different pool types. Each weight roughly
  * corresponds to the amount of time (in ms) it takes to execute a swap on that
  * pool type.
+ * @name PoolWeights
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.PoolWeights
  */
 export interface PoolWeights {
-  /** The weight of a stableswap pool */
+  /**
+   * The weight of a stableswap pool
+   */
   stableWeight: bigint;
-  /** The weight of a balancer pool */
+  /**
+   * The weight of a balancer pool
+   */
   balancerWeight: bigint;
-  /** The weight of a concentrated pool */
+  /**
+   * The weight of a concentrated pool
+   */
   concentratedWeight: bigint;
 }
 export interface PoolWeightsProtoMsg {
@@ -116,6 +177,9 @@ export interface PoolWeightsProtoMsg {
  * significantly between the different pool types. Each weight roughly
  * corresponds to the amount of time (in ms) it takes to execute a swap on that
  * pool type.
+ * @name PoolWeightsSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.PoolWeights
  */
 export interface PoolWeightsSDKType {
   stable_weight: bigint;
@@ -126,9 +190,14 @@ export interface PoolWeightsSDKType {
  * BaseDenom represents a single base denom that the module uses for its
  * arbitrage trades. It contains the denom name alongside the step size of the
  * binary search that is used to find the optimal swap amount
+ * @name BaseDenom
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.BaseDenom
  */
 export interface BaseDenom {
-  /** The denom i.e. name of the base denom (ex. uosmo) */
+  /**
+   * The denom i.e. name of the base denom (ex. uosmo)
+   */
   denom: string;
   /**
    * The step size of the binary search that is used to find the optimal swap
@@ -144,6 +213,9 @@ export interface BaseDenomProtoMsg {
  * BaseDenom represents a single base denom that the module uses for its
  * arbitrage trades. It contains the denom name alongside the step size of the
  * binary search that is used to find the optimal swap amount
+ * @name BaseDenomSDKType
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.BaseDenom
  */
 export interface BaseDenomSDKType {
   denom: string;
@@ -156,6 +228,12 @@ function createBaseTokenPairArbRoutes(): TokenPairArbRoutes {
     tokenOut: ""
   };
 }
+/**
+ * TokenPairArbRoutes tracks all of the hot routes for a given pair of tokens
+ * @name TokenPairArbRoutes
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.TokenPairArbRoutes
+ */
 export const TokenPairArbRoutes = {
   typeUrl: "/osmosis.protorev.v1beta1.TokenPairArbRoutes",
   encode(message: TokenPairArbRoutes, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -293,6 +371,12 @@ function createBaseRoute(): Route {
     stepSize: ""
   };
 }
+/**
+ * Route is a hot route for a given pair of tokens
+ * @name Route
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.Route
+ */
 export const Route = {
   typeUrl: "/osmosis.protorev.v1beta1.Route",
   encode(message: Route, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -415,6 +499,12 @@ function createBaseTrade(): Trade {
     tokenOut: ""
   };
 }
+/**
+ * Trade is a single trade in a route
+ * @name Trade
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.Trade
+ */
 export const Trade = {
   typeUrl: "/osmosis.protorev.v1beta1.Trade",
   encode(message: Trade, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -543,6 +633,13 @@ function createBaseRouteStatistics(): RouteStatistics {
     route: []
   };
 }
+/**
+ * RouteStatistics contains the number of trades the module has executed after a
+ * swap on a given route and the profits from the trades
+ * @name RouteStatistics
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.RouteStatistics
+ */
 export const RouteStatistics = {
   typeUrl: "/osmosis.protorev.v1beta1.RouteStatistics",
   encode(message: RouteStatistics, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -700,6 +797,16 @@ function createBasePoolWeights(): PoolWeights {
     concentratedWeight: BigInt(0)
   };
 }
+/**
+ * PoolWeights contains the weights of all of the different pool types. This
+ * distinction is made and necessary because the execution time ranges
+ * significantly between the different pool types. Each weight roughly
+ * corresponds to the amount of time (in ms) it takes to execute a swap on that
+ * pool type.
+ * @name PoolWeights
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.PoolWeights
+ */
 export const PoolWeights = {
   typeUrl: "/osmosis.protorev.v1beta1.PoolWeights",
   encode(message: PoolWeights, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -827,6 +934,14 @@ function createBaseBaseDenom(): BaseDenom {
     stepSize: ""
   };
 }
+/**
+ * BaseDenom represents a single base denom that the module uses for its
+ * arbitrage trades. It contains the denom name alongside the step size of the
+ * binary search that is used to find the optimal swap amount
+ * @name BaseDenom
+ * @package osmosis.protorev.v1beta1
+ * @see proto type: osmosis.protorev.v1beta1.BaseDenom
+ */
 export const BaseDenom = {
   typeUrl: "/osmosis.protorev.v1beta1.BaseDenom",
   encode(message: BaseDenom, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

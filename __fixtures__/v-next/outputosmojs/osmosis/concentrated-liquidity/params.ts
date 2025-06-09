@@ -3,6 +3,11 @@ import { Decimal } from "@cosmjs/math";
 import { JsonSafe } from "../../json-safe";
 import { DeepPartial } from "../../helpers";
 export const protobufPackage = "osmosis.concentratedliquidity";
+/**
+ * @name Params
+ * @package osmosis.concentratedliquidity
+ * @see proto type: osmosis.concentratedliquidity.Params
+ */
 export interface Params {
   /**
    * authorized_tick_spacing is an array of uint64s that represents the tick
@@ -17,6 +22,11 @@ export interface ParamsProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.Params";
   value: Uint8Array;
 }
+/**
+ * @name ParamsSDKType
+ * @package osmosis.concentratedliquidity
+ * @see proto type: osmosis.concentratedliquidity.Params
+ */
 export interface ParamsSDKType {
   authorized_tick_spacing: bigint[];
   authorized_swap_fees: string[];
@@ -27,6 +37,11 @@ function createBaseParams(): Params {
     authorizedSwapFees: []
   };
 }
+/**
+ * @name Params
+ * @package osmosis.concentratedliquidity
+ * @see proto type: osmosis.concentratedliquidity.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.concentratedliquidity.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

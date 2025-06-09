@@ -3,7 +3,12 @@ import { Params, ParamsAmino, ParamsSDKType, CodeInfo, CodeInfoAmino, CodeInfoSD
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial, bytesFromBase64, base64FromBytes } from "../../../helpers";
 export const protobufPackage = "cosmwasm.wasm.v1";
-/** GenesisState - genesis state of x/wasm */
+/**
+ * GenesisState - genesis state of x/wasm
+ * @name GenesisState
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenesisState
+ */
 export interface GenesisState {
   params: Params;
   codes: Code[];
@@ -15,7 +20,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState - genesis state of x/wasm */
+/**
+ * GenesisState - genesis state of x/wasm
+ * @name GenesisStateAmino
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenesisState
+ */
 export interface GenesisStateAmino {
   params?: ParamsAmino;
   codes?: CodeAmino[];
@@ -23,7 +33,12 @@ export interface GenesisStateAmino {
   sequences?: SequenceAmino[];
   gen_msgs?: GenesisState_GenMsgsAmino[];
 }
-/** GenesisState - genesis state of x/wasm */
+/**
+ * GenesisState - genesis state of x/wasm
+ * @name GenesisStateSDKType
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   codes: CodeSDKType[];
@@ -34,6 +49,9 @@ export interface GenesisStateSDKType {
 /**
  * GenMsgs define the messages that can be executed during genesis phase in
  * order. The intention is to have more human readable data that is auditable.
+ * @name GenesisState_GenMsgs
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenMsgs
  */
 export interface GenesisState_GenMsgs {
   storeCode?: MsgStoreCode;
@@ -47,6 +65,9 @@ export interface GenesisState_GenMsgsProtoMsg {
 /**
  * GenMsgs define the messages that can be executed during genesis phase in
  * order. The intention is to have more human readable data that is auditable.
+ * @name GenesisState_GenMsgsAmino
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenesisState_GenMsgs
  */
 export interface GenesisState_GenMsgsAmino {
   store_code?: MsgStoreCodeAmino;
@@ -56,40 +77,67 @@ export interface GenesisState_GenMsgsAmino {
 /**
  * GenMsgs define the messages that can be executed during genesis phase in
  * order. The intention is to have more human readable data that is auditable.
+ * @name GenesisState_GenMsgsSDKType
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenMsgs
  */
 export interface GenesisState_GenMsgsSDKType {
   store_code?: MsgStoreCodeSDKType;
   instantiate_contract?: MsgInstantiateContractSDKType;
   execute_contract?: MsgExecuteContractSDKType;
 }
-/** Code struct encompasses CodeInfo and CodeBytes */
+/**
+ * Code struct encompasses CodeInfo and CodeBytes
+ * @name Code
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Code
+ */
 export interface Code {
   codeId: bigint;
   codeInfo: CodeInfo;
   codeBytes: Uint8Array;
-  /** Pinned to wasmvm cache */
+  /**
+   * Pinned to wasmvm cache
+   */
   pinned: boolean;
 }
 export interface CodeProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.Code";
   value: Uint8Array;
 }
-/** Code struct encompasses CodeInfo and CodeBytes */
+/**
+ * Code struct encompasses CodeInfo and CodeBytes
+ * @name CodeAmino
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Code
+ */
 export interface CodeAmino {
   code_id?: string;
   code_info?: CodeInfoAmino;
   code_bytes?: string;
-  /** Pinned to wasmvm cache */
+  /**
+   * Pinned to wasmvm cache
+   */
   pinned?: boolean;
 }
-/** Code struct encompasses CodeInfo and CodeBytes */
+/**
+ * Code struct encompasses CodeInfo and CodeBytes
+ * @name CodeSDKType
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Code
+ */
 export interface CodeSDKType {
   code_id: bigint;
   code_info: CodeInfoSDKType;
   code_bytes: Uint8Array;
   pinned: boolean;
 }
-/** Contract struct encompasses ContractAddress, ContractInfo, and ContractState */
+/**
+ * Contract struct encompasses ContractAddress, ContractInfo, and ContractState
+ * @name Contract
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Contract
+ */
 export interface Contract {
   contractAddress: string;
   contractInfo: ContractInfo;
@@ -99,19 +147,34 @@ export interface ContractProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.Contract";
   value: Uint8Array;
 }
-/** Contract struct encompasses ContractAddress, ContractInfo, and ContractState */
+/**
+ * Contract struct encompasses ContractAddress, ContractInfo, and ContractState
+ * @name ContractAmino
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Contract
+ */
 export interface ContractAmino {
   contract_address?: string;
   contract_info?: ContractInfoAmino;
   contract_state?: ModelAmino[];
 }
-/** Contract struct encompasses ContractAddress, ContractInfo, and ContractState */
+/**
+ * Contract struct encompasses ContractAddress, ContractInfo, and ContractState
+ * @name ContractSDKType
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Contract
+ */
 export interface ContractSDKType {
   contract_address: string;
   contract_info: ContractInfoSDKType;
   contract_state: ModelSDKType[];
 }
-/** Sequence key and value of an id generation counter */
+/**
+ * Sequence key and value of an id generation counter
+ * @name Sequence
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Sequence
+ */
 export interface Sequence {
   idKey: Uint8Array;
   value: bigint;
@@ -120,12 +183,22 @@ export interface SequenceProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.Sequence";
   value: Uint8Array;
 }
-/** Sequence key and value of an id generation counter */
+/**
+ * Sequence key and value of an id generation counter
+ * @name SequenceAmino
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Sequence
+ */
 export interface SequenceAmino {
   id_key?: string;
   value?: string;
 }
-/** Sequence key and value of an id generation counter */
+/**
+ * Sequence key and value of an id generation counter
+ * @name SequenceSDKType
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Sequence
+ */
 export interface SequenceSDKType {
   id_key: Uint8Array;
   value: bigint;
@@ -139,6 +212,12 @@ function createBaseGenesisState(): GenesisState {
     genMsgs: []
   };
 }
+/**
+ * GenesisState - genesis state of x/wasm
+ * @name GenesisState
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/cosmwasm.wasm.v1.GenesisState",
   aminoType: "wasm/GenesisState",
@@ -299,6 +378,13 @@ function createBaseGenesisState_GenMsgs(): GenesisState_GenMsgs {
     executeContract: undefined
   };
 }
+/**
+ * GenMsgs define the messages that can be executed during genesis phase in
+ * order. The intention is to have more human readable data that is auditable.
+ * @name GenesisState_GenMsgs
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.GenMsgs
+ */
 export const GenesisState_GenMsgs = {
   typeUrl: "/cosmwasm.wasm.v1.GenMsgs",
   aminoType: "wasm/GenMsgs",
@@ -412,6 +498,12 @@ function createBaseCode(): Code {
     pinned: false
   };
 }
+/**
+ * Code struct encompasses CodeInfo and CodeBytes
+ * @name Code
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Code
+ */
 export const Code = {
   typeUrl: "/cosmwasm.wasm.v1.Code",
   aminoType: "wasm/Code",
@@ -536,6 +628,12 @@ function createBaseContract(): Contract {
     contractState: []
   };
 }
+/**
+ * Contract struct encompasses ContractAddress, ContractInfo, and ContractState
+ * @name Contract
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Contract
+ */
 export const Contract = {
   typeUrl: "/cosmwasm.wasm.v1.Contract",
   aminoType: "wasm/Contract",
@@ -649,6 +747,12 @@ function createBaseSequence(): Sequence {
     value: BigInt(0)
   };
 }
+/**
+ * Sequence key and value of an id generation counter
+ * @name Sequence
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Sequence
+ */
 export const Sequence = {
   typeUrl: "/cosmwasm.wasm.v1.Sequence",
   aminoType: "wasm/Sequence",

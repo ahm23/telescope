@@ -4,6 +4,11 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 import { JsonSafe } from "../../../json-safe";
 export const protobufPackage = "evmos.epochs.v1";
+/**
+ * @name QueryEpochsInfoRequest
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryEpochsInfoRequest
+ */
 export interface QueryEpochsInfoRequest {
   pagination?: PageRequest;
 }
@@ -11,6 +16,11 @@ export interface QueryEpochsInfoRequestProtoMsg {
   typeUrl: "/evmos.epochs.v1.QueryEpochsInfoRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryEpochsInfoRequestAmino
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryEpochsInfoRequest
+ */
 export interface QueryEpochsInfoRequestAmino {
   pagination?: PageRequestAmino;
 }
@@ -18,9 +28,19 @@ export interface QueryEpochsInfoRequestAminoMsg {
   type: "/evmos.epochs.v1.QueryEpochsInfoRequest";
   value: QueryEpochsInfoRequestAmino;
 }
+/**
+ * @name QueryEpochsInfoRequestSDKType
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryEpochsInfoRequest
+ */
 export interface QueryEpochsInfoRequestSDKType {
   pagination?: PageRequestSDKType;
 }
+/**
+ * @name QueryEpochsInfoResponse
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryEpochsInfoResponse
+ */
 export interface QueryEpochsInfoResponse {
   epochs: EpochInfo[];
   pagination?: PageResponse;
@@ -29,6 +49,11 @@ export interface QueryEpochsInfoResponseProtoMsg {
   typeUrl: "/evmos.epochs.v1.QueryEpochsInfoResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryEpochsInfoResponseAmino
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryEpochsInfoResponse
+ */
 export interface QueryEpochsInfoResponseAmino {
   epochs?: EpochInfoAmino[];
   pagination?: PageResponseAmino;
@@ -37,10 +62,20 @@ export interface QueryEpochsInfoResponseAminoMsg {
   type: "/evmos.epochs.v1.QueryEpochsInfoResponse";
   value: QueryEpochsInfoResponseAmino;
 }
+/**
+ * @name QueryEpochsInfoResponseSDKType
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryEpochsInfoResponse
+ */
 export interface QueryEpochsInfoResponseSDKType {
   epochs: EpochInfoSDKType[];
   pagination?: PageResponseSDKType;
 }
+/**
+ * @name QueryCurrentEpochRequest
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryCurrentEpochRequest
+ */
 export interface QueryCurrentEpochRequest {
   identifier: string;
 }
@@ -48,6 +83,11 @@ export interface QueryCurrentEpochRequestProtoMsg {
   typeUrl: "/evmos.epochs.v1.QueryCurrentEpochRequest";
   value: Uint8Array;
 }
+/**
+ * @name QueryCurrentEpochRequestAmino
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryCurrentEpochRequest
+ */
 export interface QueryCurrentEpochRequestAmino {
   identifier?: string;
 }
@@ -55,9 +95,19 @@ export interface QueryCurrentEpochRequestAminoMsg {
   type: "/evmos.epochs.v1.QueryCurrentEpochRequest";
   value: QueryCurrentEpochRequestAmino;
 }
+/**
+ * @name QueryCurrentEpochRequestSDKType
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryCurrentEpochRequest
+ */
 export interface QueryCurrentEpochRequestSDKType {
   identifier: string;
 }
+/**
+ * @name QueryCurrentEpochResponse
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryCurrentEpochResponse
+ */
 export interface QueryCurrentEpochResponse {
   currentEpoch: bigint;
 }
@@ -65,6 +115,11 @@ export interface QueryCurrentEpochResponseProtoMsg {
   typeUrl: "/evmos.epochs.v1.QueryCurrentEpochResponse";
   value: Uint8Array;
 }
+/**
+ * @name QueryCurrentEpochResponseAmino
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryCurrentEpochResponse
+ */
 export interface QueryCurrentEpochResponseAmino {
   current_epoch?: string;
 }
@@ -72,6 +127,11 @@ export interface QueryCurrentEpochResponseAminoMsg {
   type: "/evmos.epochs.v1.QueryCurrentEpochResponse";
   value: QueryCurrentEpochResponseAmino;
 }
+/**
+ * @name QueryCurrentEpochResponseSDKType
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryCurrentEpochResponse
+ */
 export interface QueryCurrentEpochResponseSDKType {
   current_epoch: bigint;
 }
@@ -80,6 +140,11 @@ function createBaseQueryEpochsInfoRequest(): QueryEpochsInfoRequest {
     pagination: undefined
   };
 }
+/**
+ * @name QueryEpochsInfoRequest
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryEpochsInfoRequest
+ */
 export const QueryEpochsInfoRequest = {
   typeUrl: "/evmos.epochs.v1.QueryEpochsInfoRequest",
   encode(message: QueryEpochsInfoRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -166,6 +231,11 @@ function createBaseQueryEpochsInfoResponse(): QueryEpochsInfoResponse {
     pagination: undefined
   };
 }
+/**
+ * @name QueryEpochsInfoResponse
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryEpochsInfoResponse
+ */
 export const QueryEpochsInfoResponse = {
   typeUrl: "/evmos.epochs.v1.QueryEpochsInfoResponse",
   encode(message: QueryEpochsInfoResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -276,6 +346,11 @@ function createBaseQueryCurrentEpochRequest(): QueryCurrentEpochRequest {
     identifier: ""
   };
 }
+/**
+ * @name QueryCurrentEpochRequest
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryCurrentEpochRequest
+ */
 export const QueryCurrentEpochRequest = {
   typeUrl: "/evmos.epochs.v1.QueryCurrentEpochRequest",
   encode(message: QueryCurrentEpochRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -359,6 +434,11 @@ function createBaseQueryCurrentEpochResponse(): QueryCurrentEpochResponse {
     currentEpoch: BigInt(0)
   };
 }
+/**
+ * @name QueryCurrentEpochResponse
+ * @package evmos.epochs.v1
+ * @see proto type: evmos.epochs.v1.QueryCurrentEpochResponse
+ */
 export const QueryCurrentEpochResponse = {
   typeUrl: "/evmos.epochs.v1.QueryCurrentEpochResponse",
   encode(message: QueryCurrentEpochResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

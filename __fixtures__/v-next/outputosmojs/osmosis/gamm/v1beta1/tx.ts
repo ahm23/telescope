@@ -6,6 +6,9 @@ export const protobufPackage = "osmosis.gamm.v1beta1";
 /**
  * ===================== MsgJoinPool
  * This is really MsgJoinPoolNoSwap
+ * @name MsgJoinPool
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinPool
  */
 export interface MsgJoinPool {
   sender: string;
@@ -20,6 +23,9 @@ export interface MsgJoinPoolProtoMsg {
 /**
  * ===================== MsgJoinPool
  * This is really MsgJoinPoolNoSwap
+ * @name MsgJoinPoolSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinPool
  */
 export interface MsgJoinPoolSDKType {
   sender: string;
@@ -27,6 +33,11 @@ export interface MsgJoinPoolSDKType {
   share_out_amount: string;
   token_in_maxs: CoinSDKType[];
 }
+/**
+ * @name MsgJoinPoolResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinPoolResponse
+ */
 export interface MsgJoinPoolResponse {
   shareOutAmount: string;
   tokenIn: Coin[];
@@ -35,11 +46,21 @@ export interface MsgJoinPoolResponseProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgJoinPoolResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgJoinPoolResponseSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinPoolResponse
+ */
 export interface MsgJoinPoolResponseSDKType {
   share_out_amount: string;
   token_in: CoinSDKType[];
 }
-/** ===================== MsgExitPool */
+/**
+ * ===================== MsgExitPool
+ * @name MsgExitPool
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitPool
+ */
 export interface MsgExitPool {
   sender: string;
   poolId: bigint;
@@ -50,13 +71,23 @@ export interface MsgExitPoolProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgExitPool";
   value: Uint8Array;
 }
-/** ===================== MsgExitPool */
+/**
+ * ===================== MsgExitPool
+ * @name MsgExitPoolSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitPool
+ */
 export interface MsgExitPoolSDKType {
   sender: string;
   pool_id: bigint;
   share_in_amount: string;
   token_out_mins: CoinSDKType[];
 }
+/**
+ * @name MsgExitPoolResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitPoolResponse
+ */
 export interface MsgExitPoolResponse {
   tokenOut: Coin[];
 }
@@ -64,10 +95,20 @@ export interface MsgExitPoolResponseProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgExitPoolResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgExitPoolResponseSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitPoolResponse
+ */
 export interface MsgExitPoolResponseSDKType {
   token_out: CoinSDKType[];
 }
-/** ===================== MsgSwapExactAmountIn */
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name SwapAmountInRoute
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.SwapAmountInRoute
+ */
 export interface SwapAmountInRoute {
   poolId: bigint;
   tokenOutDenom: string;
@@ -76,11 +117,21 @@ export interface SwapAmountInRouteProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.SwapAmountInRoute";
   value: Uint8Array;
 }
-/** ===================== MsgSwapExactAmountIn */
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name SwapAmountInRouteSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.SwapAmountInRoute
+ */
 export interface SwapAmountInRouteSDKType {
   pool_id: bigint;
   token_out_denom: string;
 }
+/**
+ * @name MsgSwapExactAmountIn
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgSwapExactAmountIn
+ */
 export interface MsgSwapExactAmountIn {
   sender: string;
   routes: SwapAmountInRoute[];
@@ -91,12 +142,22 @@ export interface MsgSwapExactAmountInProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgSwapExactAmountIn";
   value: Uint8Array;
 }
+/**
+ * @name MsgSwapExactAmountInSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgSwapExactAmountIn
+ */
 export interface MsgSwapExactAmountInSDKType {
   sender: string;
   routes: SwapAmountInRouteSDKType[];
   token_in: CoinSDKType;
   token_out_min_amount: string;
 }
+/**
+ * @name MsgSwapExactAmountInResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgSwapExactAmountInResponse
+ */
 export interface MsgSwapExactAmountInResponse {
   tokenOutAmount: string;
 }
@@ -104,10 +165,20 @@ export interface MsgSwapExactAmountInResponseProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgSwapExactAmountInResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgSwapExactAmountInResponseSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgSwapExactAmountInResponse
+ */
 export interface MsgSwapExactAmountInResponseSDKType {
   token_out_amount: string;
 }
-/** ===================== MsgSwapExactAmountOut */
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name SwapAmountOutRoute
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.SwapAmountOutRoute
+ */
 export interface SwapAmountOutRoute {
   poolId: bigint;
   tokenInDenom: string;
@@ -116,11 +187,21 @@ export interface SwapAmountOutRouteProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.SwapAmountOutRoute";
   value: Uint8Array;
 }
-/** ===================== MsgSwapExactAmountOut */
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name SwapAmountOutRouteSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.SwapAmountOutRoute
+ */
 export interface SwapAmountOutRouteSDKType {
   pool_id: bigint;
   token_in_denom: string;
 }
+/**
+ * @name MsgSwapExactAmountOut
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgSwapExactAmountOut
+ */
 export interface MsgSwapExactAmountOut {
   sender: string;
   routes: SwapAmountOutRoute[];
@@ -131,12 +212,22 @@ export interface MsgSwapExactAmountOutProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgSwapExactAmountOut";
   value: Uint8Array;
 }
+/**
+ * @name MsgSwapExactAmountOutSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgSwapExactAmountOut
+ */
 export interface MsgSwapExactAmountOutSDKType {
   sender: string;
   routes: SwapAmountOutRouteSDKType[];
   token_in_max_amount: string;
   token_out: CoinSDKType;
 }
+/**
+ * @name MsgSwapExactAmountOutResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export interface MsgSwapExactAmountOutResponse {
   tokenInAmount: string;
 }
@@ -144,12 +235,20 @@ export interface MsgSwapExactAmountOutResponseProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgSwapExactAmountOutResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgSwapExactAmountOutResponseSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export interface MsgSwapExactAmountOutResponseSDKType {
   token_in_amount: string;
 }
 /**
  * ===================== MsgJoinSwapExternAmountIn
  * TODO: Rename to MsgJoinSwapExactAmountIn
+ * @name MsgJoinSwapExternAmountIn
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinSwapExternAmountIn
  */
 export interface MsgJoinSwapExternAmountIn {
   sender: string;
@@ -164,6 +263,9 @@ export interface MsgJoinSwapExternAmountInProtoMsg {
 /**
  * ===================== MsgJoinSwapExternAmountIn
  * TODO: Rename to MsgJoinSwapExactAmountIn
+ * @name MsgJoinSwapExternAmountInSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinSwapExternAmountIn
  */
 export interface MsgJoinSwapExternAmountInSDKType {
   sender: string;
@@ -171,6 +273,11 @@ export interface MsgJoinSwapExternAmountInSDKType {
   token_in: CoinSDKType;
   share_out_min_amount: string;
 }
+/**
+ * @name MsgJoinSwapExternAmountInResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinSwapExternAmountInResponse
+ */
 export interface MsgJoinSwapExternAmountInResponse {
   shareOutAmount: string;
 }
@@ -178,10 +285,20 @@ export interface MsgJoinSwapExternAmountInResponseProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgJoinSwapExternAmountInResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgJoinSwapExternAmountInResponseSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinSwapExternAmountInResponse
+ */
 export interface MsgJoinSwapExternAmountInResponseSDKType {
   share_out_amount: string;
 }
-/** ===================== MsgJoinSwapShareAmountOut */
+/**
+ * ===================== MsgJoinSwapShareAmountOut
+ * @name MsgJoinSwapShareAmountOut
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinSwapShareAmountOut
+ */
 export interface MsgJoinSwapShareAmountOut {
   sender: string;
   poolId: bigint;
@@ -193,7 +310,12 @@ export interface MsgJoinSwapShareAmountOutProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgJoinSwapShareAmountOut";
   value: Uint8Array;
 }
-/** ===================== MsgJoinSwapShareAmountOut */
+/**
+ * ===================== MsgJoinSwapShareAmountOut
+ * @name MsgJoinSwapShareAmountOutSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinSwapShareAmountOut
+ */
 export interface MsgJoinSwapShareAmountOutSDKType {
   sender: string;
   pool_id: bigint;
@@ -201,6 +323,11 @@ export interface MsgJoinSwapShareAmountOutSDKType {
   share_out_amount: string;
   token_in_max_amount: string;
 }
+/**
+ * @name MsgJoinSwapShareAmountOutResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinSwapShareAmountOutResponse
+ */
 export interface MsgJoinSwapShareAmountOutResponse {
   tokenInAmount: string;
 }
@@ -208,10 +335,20 @@ export interface MsgJoinSwapShareAmountOutResponseProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgJoinSwapShareAmountOutResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgJoinSwapShareAmountOutResponseSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinSwapShareAmountOutResponse
+ */
 export interface MsgJoinSwapShareAmountOutResponseSDKType {
   token_in_amount: string;
 }
-/** ===================== MsgExitSwapShareAmountIn */
+/**
+ * ===================== MsgExitSwapShareAmountIn
+ * @name MsgExitSwapShareAmountIn
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitSwapShareAmountIn
+ */
 export interface MsgExitSwapShareAmountIn {
   sender: string;
   poolId: bigint;
@@ -223,7 +360,12 @@ export interface MsgExitSwapShareAmountInProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgExitSwapShareAmountIn";
   value: Uint8Array;
 }
-/** ===================== MsgExitSwapShareAmountIn */
+/**
+ * ===================== MsgExitSwapShareAmountIn
+ * @name MsgExitSwapShareAmountInSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitSwapShareAmountIn
+ */
 export interface MsgExitSwapShareAmountInSDKType {
   sender: string;
   pool_id: bigint;
@@ -231,6 +373,11 @@ export interface MsgExitSwapShareAmountInSDKType {
   share_in_amount: string;
   token_out_min_amount: string;
 }
+/**
+ * @name MsgExitSwapShareAmountInResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitSwapShareAmountInResponse
+ */
 export interface MsgExitSwapShareAmountInResponse {
   tokenOutAmount: string;
 }
@@ -238,10 +385,20 @@ export interface MsgExitSwapShareAmountInResponseProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgExitSwapShareAmountInResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgExitSwapShareAmountInResponseSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitSwapShareAmountInResponse
+ */
 export interface MsgExitSwapShareAmountInResponseSDKType {
   token_out_amount: string;
 }
-/** ===================== MsgExitSwapExternAmountOut */
+/**
+ * ===================== MsgExitSwapExternAmountOut
+ * @name MsgExitSwapExternAmountOut
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitSwapExternAmountOut
+ */
 export interface MsgExitSwapExternAmountOut {
   sender: string;
   poolId: bigint;
@@ -252,13 +409,23 @@ export interface MsgExitSwapExternAmountOutProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgExitSwapExternAmountOut";
   value: Uint8Array;
 }
-/** ===================== MsgExitSwapExternAmountOut */
+/**
+ * ===================== MsgExitSwapExternAmountOut
+ * @name MsgExitSwapExternAmountOutSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitSwapExternAmountOut
+ */
 export interface MsgExitSwapExternAmountOutSDKType {
   sender: string;
   pool_id: bigint;
   token_out: CoinSDKType;
   share_in_max_amount: string;
 }
+/**
+ * @name MsgExitSwapExternAmountOutResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitSwapExternAmountOutResponse
+ */
 export interface MsgExitSwapExternAmountOutResponse {
   shareInAmount: string;
 }
@@ -266,6 +433,11 @@ export interface MsgExitSwapExternAmountOutResponseProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.MsgExitSwapExternAmountOutResponse";
   value: Uint8Array;
 }
+/**
+ * @name MsgExitSwapExternAmountOutResponseSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitSwapExternAmountOutResponse
+ */
 export interface MsgExitSwapExternAmountOutResponseSDKType {
   share_in_amount: string;
 }
@@ -277,6 +449,13 @@ function createBaseMsgJoinPool(): MsgJoinPool {
     tokenInMaxs: []
   };
 }
+/**
+ * ===================== MsgJoinPool
+ * This is really MsgJoinPoolNoSwap
+ * @name MsgJoinPool
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinPool
+ */
 export const MsgJoinPool = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgJoinPool",
   encode(message: MsgJoinPool, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -430,6 +609,11 @@ function createBaseMsgJoinPoolResponse(): MsgJoinPoolResponse {
     tokenIn: []
   };
 }
+/**
+ * @name MsgJoinPoolResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinPoolResponse
+ */
 export const MsgJoinPoolResponse = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgJoinPoolResponse",
   encode(message: MsgJoinPoolResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -553,6 +737,12 @@ function createBaseMsgExitPool(): MsgExitPool {
     tokenOutMins: []
   };
 }
+/**
+ * ===================== MsgExitPool
+ * @name MsgExitPool
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitPool
+ */
 export const MsgExitPool = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgExitPool",
   encode(message: MsgExitPool, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -705,6 +895,11 @@ function createBaseMsgExitPoolResponse(): MsgExitPoolResponse {
     tokenOut: []
   };
 }
+/**
+ * @name MsgExitPoolResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitPoolResponse
+ */
 export const MsgExitPoolResponse = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgExitPoolResponse",
   encode(message: MsgExitPoolResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -810,6 +1005,12 @@ function createBaseSwapAmountInRoute(): SwapAmountInRoute {
     tokenOutDenom: ""
   };
 }
+/**
+ * ===================== MsgSwapExactAmountIn
+ * @name SwapAmountInRoute
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.SwapAmountInRoute
+ */
 export const SwapAmountInRoute = {
   typeUrl: "/osmosis.gamm.v1beta1.SwapAmountInRoute",
   encode(message: SwapAmountInRoute, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -923,6 +1124,11 @@ function createBaseMsgSwapExactAmountIn(): MsgSwapExactAmountIn {
     tokenOutMinAmount: ""
   };
 }
+/**
+ * @name MsgSwapExactAmountIn
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgSwapExactAmountIn
+ */
 export const MsgSwapExactAmountIn = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgSwapExactAmountIn",
   encode(message: MsgSwapExactAmountIn, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1075,6 +1281,11 @@ function createBaseMsgSwapExactAmountInResponse(): MsgSwapExactAmountInResponse 
     tokenOutAmount: ""
   };
 }
+/**
+ * @name MsgSwapExactAmountInResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgSwapExactAmountInResponse
+ */
 export const MsgSwapExactAmountInResponse = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgSwapExactAmountInResponse",
   encode(message: MsgSwapExactAmountInResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1170,6 +1381,12 @@ function createBaseSwapAmountOutRoute(): SwapAmountOutRoute {
     tokenInDenom: ""
   };
 }
+/**
+ * ===================== MsgSwapExactAmountOut
+ * @name SwapAmountOutRoute
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.SwapAmountOutRoute
+ */
 export const SwapAmountOutRoute = {
   typeUrl: "/osmosis.gamm.v1beta1.SwapAmountOutRoute",
   encode(message: SwapAmountOutRoute, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1283,6 +1500,11 @@ function createBaseMsgSwapExactAmountOut(): MsgSwapExactAmountOut {
     tokenOut: Coin.fromPartial({})
   };
 }
+/**
+ * @name MsgSwapExactAmountOut
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgSwapExactAmountOut
+ */
 export const MsgSwapExactAmountOut = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgSwapExactAmountOut",
   encode(message: MsgSwapExactAmountOut, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1435,6 +1657,11 @@ function createBaseMsgSwapExactAmountOutResponse(): MsgSwapExactAmountOutRespons
     tokenInAmount: ""
   };
 }
+/**
+ * @name MsgSwapExactAmountOutResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgSwapExactAmountOutResponse
+ */
 export const MsgSwapExactAmountOutResponse = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgSwapExactAmountOutResponse",
   encode(message: MsgSwapExactAmountOutResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1532,6 +1759,13 @@ function createBaseMsgJoinSwapExternAmountIn(): MsgJoinSwapExternAmountIn {
     shareOutMinAmount: ""
   };
 }
+/**
+ * ===================== MsgJoinSwapExternAmountIn
+ * TODO: Rename to MsgJoinSwapExactAmountIn
+ * @name MsgJoinSwapExternAmountIn
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinSwapExternAmountIn
+ */
 export const MsgJoinSwapExternAmountIn = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgJoinSwapExternAmountIn",
   encode(message: MsgJoinSwapExternAmountIn, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1674,6 +1908,11 @@ function createBaseMsgJoinSwapExternAmountInResponse(): MsgJoinSwapExternAmountI
     shareOutAmount: ""
   };
 }
+/**
+ * @name MsgJoinSwapExternAmountInResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinSwapExternAmountInResponse
+ */
 export const MsgJoinSwapExternAmountInResponse = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgJoinSwapExternAmountInResponse",
   encode(message: MsgJoinSwapExternAmountInResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1772,6 +2011,12 @@ function createBaseMsgJoinSwapShareAmountOut(): MsgJoinSwapShareAmountOut {
     tokenInMaxAmount: ""
   };
 }
+/**
+ * ===================== MsgJoinSwapShareAmountOut
+ * @name MsgJoinSwapShareAmountOut
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinSwapShareAmountOut
+ */
 export const MsgJoinSwapShareAmountOut = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgJoinSwapShareAmountOut",
   encode(message: MsgJoinSwapShareAmountOut, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1930,6 +2175,11 @@ function createBaseMsgJoinSwapShareAmountOutResponse(): MsgJoinSwapShareAmountOu
     tokenInAmount: ""
   };
 }
+/**
+ * @name MsgJoinSwapShareAmountOutResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgJoinSwapShareAmountOutResponse
+ */
 export const MsgJoinSwapShareAmountOutResponse = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgJoinSwapShareAmountOutResponse",
   encode(message: MsgJoinSwapShareAmountOutResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2028,6 +2278,12 @@ function createBaseMsgExitSwapShareAmountIn(): MsgExitSwapShareAmountIn {
     tokenOutMinAmount: ""
   };
 }
+/**
+ * ===================== MsgExitSwapShareAmountIn
+ * @name MsgExitSwapShareAmountIn
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitSwapShareAmountIn
+ */
 export const MsgExitSwapShareAmountIn = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgExitSwapShareAmountIn",
   encode(message: MsgExitSwapShareAmountIn, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2186,6 +2442,11 @@ function createBaseMsgExitSwapShareAmountInResponse(): MsgExitSwapShareAmountInR
     tokenOutAmount: ""
   };
 }
+/**
+ * @name MsgExitSwapShareAmountInResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitSwapShareAmountInResponse
+ */
 export const MsgExitSwapShareAmountInResponse = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgExitSwapShareAmountInResponse",
   encode(message: MsgExitSwapShareAmountInResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2283,6 +2544,12 @@ function createBaseMsgExitSwapExternAmountOut(): MsgExitSwapExternAmountOut {
     shareInMaxAmount: ""
   };
 }
+/**
+ * ===================== MsgExitSwapExternAmountOut
+ * @name MsgExitSwapExternAmountOut
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitSwapExternAmountOut
+ */
 export const MsgExitSwapExternAmountOut = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgExitSwapExternAmountOut",
   encode(message: MsgExitSwapExternAmountOut, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -2425,6 +2692,11 @@ function createBaseMsgExitSwapExternAmountOutResponse(): MsgExitSwapExternAmount
     shareInAmount: ""
   };
 }
+/**
+ * @name MsgExitSwapExternAmountOutResponse
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.MsgExitSwapExternAmountOutResponse
+ */
 export const MsgExitSwapExternAmountOutResponse = {
   typeUrl: "/osmosis.gamm.v1beta1.MsgExitSwapExternAmountOutResponse",
   encode(message: MsgExitSwapExternAmountOutResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -7,6 +7,9 @@ export const protobufPackage = "cosmos.crypto.multisig";
  * LegacyAminoPubKey specifies a public key type
  * which nests multiple public keys and a threshold,
  * it uses legacy amino address rules.
+ * @name LegacyAminoPubKey
+ * @package cosmos.crypto.multisig
+ * @see proto type: cosmos.crypto.multisig.LegacyAminoPubKey
  */
 export interface LegacyAminoPubKey {
   threshold: number;
@@ -20,6 +23,9 @@ export interface LegacyAminoPubKeyProtoMsg {
  * LegacyAminoPubKey specifies a public key type
  * which nests multiple public keys and a threshold,
  * it uses legacy amino address rules.
+ * @name LegacyAminoPubKeyAmino
+ * @package cosmos.crypto.multisig
+ * @see proto type: cosmos.crypto.multisig.LegacyAminoPubKey
  */
 export interface LegacyAminoPubKeyAmino {
   threshold?: number;
@@ -33,6 +39,9 @@ export interface LegacyAminoPubKeyAminoMsg {
  * LegacyAminoPubKey specifies a public key type
  * which nests multiple public keys and a threshold,
  * it uses legacy amino address rules.
+ * @name LegacyAminoPubKeySDKType
+ * @package cosmos.crypto.multisig
+ * @see proto type: cosmos.crypto.multisig.LegacyAminoPubKey
  */
 export interface LegacyAminoPubKeySDKType {
   threshold: number;
@@ -44,6 +53,14 @@ function createBaseLegacyAminoPubKey(): LegacyAminoPubKey {
     publicKeys: []
   };
 }
+/**
+ * LegacyAminoPubKey specifies a public key type
+ * which nests multiple public keys and a threshold,
+ * it uses legacy amino address rules.
+ * @name LegacyAminoPubKey
+ * @package cosmos.crypto.multisig
+ * @see proto type: cosmos.crypto.multisig.LegacyAminoPubKey
+ */
 export const LegacyAminoPubKey = {
   typeUrl: "/cosmos.crypto.multisig.LegacyAminoPubKey",
   aminoType: "cosmos-sdk/LegacyAminoPubKey",

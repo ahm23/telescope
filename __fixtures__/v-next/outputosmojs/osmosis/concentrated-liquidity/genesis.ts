@@ -11,13 +11,22 @@ export const protobufPackage = "osmosis.concentratedliquidity.v1beta1";
 /**
  * FullTick contains tick index and pool id along with other tick model
  * information.
+ * @name FullTick
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.FullTick
  */
 export interface FullTick {
-  /** pool id associated with the tick. */
+  /**
+   * pool id associated with the tick.
+   */
   poolId: bigint;
-  /** tick's index. */
+  /**
+   * tick's index.
+   */
   tickIndex: bigint;
-  /** tick's info. */
+  /**
+   * tick's info.
+   */
   info: TickInfo;
 }
 export interface FullTickProtoMsg {
@@ -27,6 +36,9 @@ export interface FullTickProtoMsg {
 /**
  * FullTick contains tick index and pool id along with other tick model
  * information.
+ * @name FullTickSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.FullTick
  */
 export interface FullTickSDKType {
   pool_id: bigint;
@@ -36,15 +48,24 @@ export interface FullTickSDKType {
 /**
  * PoolData represents a serialized pool along with its ticks
  * for genesis state.
+ * @name PoolData
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.PoolData
  */
 export interface PoolData {
-  /** pool struct */
+  /**
+   * pool struct
+   */
   pool?: Any;
-  /** pool's ticks */
+  /**
+   * pool's ticks
+   */
   ticks: FullTick[];
   feeAccumulator: AccumObject;
   incentivesAccumulators: AccumObject[];
-  /** incentive records to be set */
+  /**
+   * incentive records to be set
+   */
   incentiveRecords: IncentiveRecord[];
 }
 export interface PoolDataProtoMsg {
@@ -54,6 +75,9 @@ export interface PoolDataProtoMsg {
 /**
  * PoolData represents a serialized pool along with its ticks
  * for genesis state.
+ * @name PoolDataSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.PoolData
  */
 export interface PoolDataSDKType {
   pool?: AnySDKType;
@@ -62,11 +86,20 @@ export interface PoolDataSDKType {
   incentives_accumulators: AccumObjectSDKType[];
   incentive_records: IncentiveRecordSDKType[];
 }
-/** GenesisState defines the concentrated liquidity module's genesis state. */
+/**
+ * GenesisState defines the concentrated liquidity module's genesis state.
+ * @name GenesisState
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.GenesisState
+ */
 export interface GenesisState {
-  /** params are all the parameters of the module */
+  /**
+   * params are all the parameters of the module
+   */
   params: Params;
-  /** pool data containining serialized pool struct and ticks. */
+  /**
+   * pool data containining serialized pool struct and ticks.
+   */
   poolData: PoolData[];
   positions: Position[];
   nextPositionId: bigint;
@@ -75,15 +108,27 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the concentrated liquidity module's genesis state. */
+/**
+ * GenesisState defines the concentrated liquidity module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   params: ParamsSDKType;
   pool_data: PoolDataSDKType[];
   positions: PositionSDKType[];
   next_position_id: bigint;
 }
+/**
+ * @name AccumObject
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.AccumObject
+ */
 export interface AccumObject {
-  /** Accumulator's name (pulled from AccumulatorContent) */
+  /**
+   * Accumulator's name (pulled from AccumulatorContent)
+   */
   name: string;
   accumContent?: AccumulatorContent;
 }
@@ -91,6 +136,11 @@ export interface AccumObjectProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.AccumObject";
   value: Uint8Array;
 }
+/**
+ * @name AccumObjectSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.AccumObject
+ */
 export interface AccumObjectSDKType {
   name: string;
   accum_content?: AccumulatorContentSDKType;
@@ -102,6 +152,13 @@ function createBaseFullTick(): FullTick {
     info: TickInfo.fromPartial({})
   };
 }
+/**
+ * FullTick contains tick index and pool id along with other tick model
+ * information.
+ * @name FullTick
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.FullTick
+ */
 export const FullTick = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.FullTick",
   encode(message: FullTick, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -232,6 +289,13 @@ function createBasePoolData(): PoolData {
     incentiveRecords: []
   };
 }
+/**
+ * PoolData represents a serialized pool along with its ticks
+ * for genesis state.
+ * @name PoolData
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.PoolData
+ */
 export const PoolData = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.PoolData",
   encode(message: PoolData, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -423,6 +487,12 @@ function createBaseGenesisState(): GenesisState {
     nextPositionId: BigInt(0)
   };
 }
+/**
+ * GenesisState defines the concentrated liquidity module's genesis state.
+ * @name GenesisState
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -586,6 +656,11 @@ function createBaseAccumObject(): AccumObject {
     accumContent: undefined
   };
 }
+/**
+ * @name AccumObject
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.AccumObject
+ */
 export const AccumObject = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.AccumObject",
   encode(message: AccumObject, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

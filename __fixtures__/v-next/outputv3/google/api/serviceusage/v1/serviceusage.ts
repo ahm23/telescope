@@ -51,7 +51,12 @@ export function disableServiceRequest_CheckIfServiceHasUsageToJSON(object: Disab
       return "UNRECOGNIZED";
   }
 }
-/** Request message for the `EnableService` method. */
+/**
+ * Request message for the `EnableService` method.
+ * @name EnableServiceRequest
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.EnableServiceRequest
+ */
 export interface EnableServiceRequest {
   /**
    * Name of the consumer and service to enable the service on.
@@ -72,7 +77,12 @@ export interface EnableServiceRequestProtoMsg {
   typeUrl: "/google.api.serviceusage.v1.EnableServiceRequest";
   value: Uint8Array;
 }
-/** Request message for the `EnableService` method. */
+/**
+ * Request message for the `EnableService` method.
+ * @name EnableServiceRequestAmino
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.EnableServiceRequest
+ */
 export interface EnableServiceRequestAmino {
   /**
    * Name of the consumer and service to enable the service on.
@@ -89,7 +99,12 @@ export interface EnableServiceRequestAmino {
    */
   name?: string;
 }
-/** Request message for the `EnableService` method. */
+/**
+ * Request message for the `EnableService` method.
+ * @name EnableServiceRequestSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.EnableServiceRequest
+ */
 export interface EnableServiceRequestSDKType {
   name: string;
 }
@@ -97,9 +112,14 @@ export interface EnableServiceRequestSDKType {
  * Response message for the `EnableService` method.
  * This response message is assigned to the `response` field of the returned
  * Operation when that operation is done.
+ * @name EnableServiceResponse
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.EnableServiceResponse
  */
 export interface EnableServiceResponse {
-  /** The new state of the service after enabling. */
+  /**
+   * The new state of the service after enabling.
+   */
   service?: Service;
 }
 export interface EnableServiceResponseProtoMsg {
@@ -110,20 +130,33 @@ export interface EnableServiceResponseProtoMsg {
  * Response message for the `EnableService` method.
  * This response message is assigned to the `response` field of the returned
  * Operation when that operation is done.
+ * @name EnableServiceResponseAmino
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.EnableServiceResponse
  */
 export interface EnableServiceResponseAmino {
-  /** The new state of the service after enabling. */
+  /**
+   * The new state of the service after enabling.
+   */
   service?: ServiceAmino;
 }
 /**
  * Response message for the `EnableService` method.
  * This response message is assigned to the `response` field of the returned
  * Operation when that operation is done.
+ * @name EnableServiceResponseSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.EnableServiceResponse
  */
 export interface EnableServiceResponseSDKType {
   service?: ServiceSDKType;
 }
-/** Request message for the `DisableService` method. */
+/**
+ * Request message for the `DisableService` method.
+ * @name DisableServiceRequest
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.DisableServiceRequest
+ */
 export interface DisableServiceRequest {
   /**
    * Name of the consumer and service to disable the service on.
@@ -143,14 +176,21 @@ export interface DisableServiceRequest {
    * together.
    */
   disableDependentServices: boolean;
-  /** Defines the behavior for checking service usage when disabling a service. */
+  /**
+   * Defines the behavior for checking service usage when disabling a service.
+   */
   checkIfServiceHasUsage: DisableServiceRequest_CheckIfServiceHasUsage;
 }
 export interface DisableServiceRequestProtoMsg {
   typeUrl: "/google.api.serviceusage.v1.DisableServiceRequest";
   value: Uint8Array;
 }
-/** Request message for the `DisableService` method. */
+/**
+ * Request message for the `DisableService` method.
+ * @name DisableServiceRequestAmino
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.DisableServiceRequest
+ */
 export interface DisableServiceRequestAmino {
   /**
    * Name of the consumer and service to disable the service on.
@@ -170,10 +210,17 @@ export interface DisableServiceRequestAmino {
    * together.
    */
   disable_dependent_services?: boolean;
-  /** Defines the behavior for checking service usage when disabling a service. */
+  /**
+   * Defines the behavior for checking service usage when disabling a service.
+   */
   check_if_service_has_usage?: DisableServiceRequest_CheckIfServiceHasUsage;
 }
-/** Request message for the `DisableService` method. */
+/**
+ * Request message for the `DisableService` method.
+ * @name DisableServiceRequestSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.DisableServiceRequest
+ */
 export interface DisableServiceRequestSDKType {
   name: string;
   disable_dependent_services: boolean;
@@ -183,9 +230,14 @@ export interface DisableServiceRequestSDKType {
  * Response message for the `DisableService` method.
  * This response message is assigned to the `response` field of the returned
  * Operation when that operation is done.
+ * @name DisableServiceResponse
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.DisableServiceResponse
  */
 export interface DisableServiceResponse {
-  /** The new state of the service after disabling. */
+  /**
+   * The new state of the service after disabling.
+   */
   service?: Service;
 }
 export interface DisableServiceResponseProtoMsg {
@@ -196,20 +248,33 @@ export interface DisableServiceResponseProtoMsg {
  * Response message for the `DisableService` method.
  * This response message is assigned to the `response` field of the returned
  * Operation when that operation is done.
+ * @name DisableServiceResponseAmino
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.DisableServiceResponse
  */
 export interface DisableServiceResponseAmino {
-  /** The new state of the service after disabling. */
+  /**
+   * The new state of the service after disabling.
+   */
   service?: ServiceAmino;
 }
 /**
  * Response message for the `DisableService` method.
  * This response message is assigned to the `response` field of the returned
  * Operation when that operation is done.
+ * @name DisableServiceResponseSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.DisableServiceResponse
  */
 export interface DisableServiceResponseSDKType {
   service?: ServiceSDKType;
 }
-/** Request message for the `GetService` method. */
+/**
+ * Request message for the `GetService` method.
+ * @name GetServiceRequest
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.GetServiceRequest
+ */
 export interface GetServiceRequest {
   /**
    * Name of the consumer and service to get the `ConsumerState` for.
@@ -224,7 +289,12 @@ export interface GetServiceRequestProtoMsg {
   typeUrl: "/google.api.serviceusage.v1.GetServiceRequest";
   value: Uint8Array;
 }
-/** Request message for the `GetService` method. */
+/**
+ * Request message for the `GetService` method.
+ * @name GetServiceRequestAmino
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.GetServiceRequest
+ */
 export interface GetServiceRequestAmino {
   /**
    * Name of the consumer and service to get the `ConsumerState` for.
@@ -235,11 +305,21 @@ export interface GetServiceRequestAmino {
    */
   name?: string;
 }
-/** Request message for the `GetService` method. */
+/**
+ * Request message for the `GetService` method.
+ * @name GetServiceRequestSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.GetServiceRequest
+ */
 export interface GetServiceRequestSDKType {
   name: string;
 }
-/** Request message for the `ListServices` method. */
+/**
+ * Request message for the `ListServices` method.
+ * @name ListServicesRequest
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.ListServicesRequest
+ */
 export interface ListServicesRequest {
   /**
    * Parent to search for services on.
@@ -269,7 +349,12 @@ export interface ListServicesRequestProtoMsg {
   typeUrl: "/google.api.serviceusage.v1.ListServicesRequest";
   value: Uint8Array;
 }
-/** Request message for the `ListServices` method. */
+/**
+ * Request message for the `ListServices` method.
+ * @name ListServicesRequestAmino
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.ListServicesRequest
+ */
 export interface ListServicesRequestAmino {
   /**
    * Parent to search for services on.
@@ -295,16 +380,28 @@ export interface ListServicesRequestAmino {
    */
   filter?: string;
 }
-/** Request message for the `ListServices` method. */
+/**
+ * Request message for the `ListServices` method.
+ * @name ListServicesRequestSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.ListServicesRequest
+ */
 export interface ListServicesRequestSDKType {
   parent: string;
   page_size: number;
   page_token: string;
   filter: string;
 }
-/** Response message for the `ListServices` method. */
+/**
+ * Response message for the `ListServices` method.
+ * @name ListServicesResponse
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.ListServicesResponse
+ */
 export interface ListServicesResponse {
-  /** The available services for the requested project. */
+  /**
+   * The available services for the requested project.
+   */
   services: Service[];
   /**
    * Token that can be passed to `ListServices` to resume a paginated
@@ -316,9 +413,16 @@ export interface ListServicesResponseProtoMsg {
   typeUrl: "/google.api.serviceusage.v1.ListServicesResponse";
   value: Uint8Array;
 }
-/** Response message for the `ListServices` method. */
+/**
+ * Response message for the `ListServices` method.
+ * @name ListServicesResponseAmino
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.ListServicesResponse
+ */
 export interface ListServicesResponseAmino {
-  /** The available services for the requested project. */
+  /**
+   * The available services for the requested project.
+   */
   services?: ServiceAmino[];
   /**
    * Token that can be passed to `ListServices` to resume a paginated
@@ -326,12 +430,22 @@ export interface ListServicesResponseAmino {
    */
   next_page_token?: string;
 }
-/** Response message for the `ListServices` method. */
+/**
+ * Response message for the `ListServices` method.
+ * @name ListServicesResponseSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.ListServicesResponse
+ */
 export interface ListServicesResponseSDKType {
   services: ServiceSDKType[];
   next_page_token: string;
 }
-/** Request message for the `BatchEnableServices` method. */
+/**
+ * Request message for the `BatchEnableServices` method.
+ * @name BatchEnableServicesRequest
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchEnableServicesRequest
+ */
 export interface BatchEnableServicesRequest {
   /**
    * Parent to enable services on.
@@ -361,7 +475,12 @@ export interface BatchEnableServicesRequestProtoMsg {
   typeUrl: "/google.api.serviceusage.v1.BatchEnableServicesRequest";
   value: Uint8Array;
 }
-/** Request message for the `BatchEnableServices` method. */
+/**
+ * Request message for the `BatchEnableServices` method.
+ * @name BatchEnableServicesRequestAmino
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchEnableServicesRequest
+ */
 export interface BatchEnableServicesRequestAmino {
   /**
    * Parent to enable services on.
@@ -387,7 +506,12 @@ export interface BatchEnableServicesRequestAmino {
    */
   service_ids?: string[];
 }
-/** Request message for the `BatchEnableServices` method. */
+/**
+ * Request message for the `BatchEnableServices` method.
+ * @name BatchEnableServicesRequestSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchEnableServicesRequest
+ */
 export interface BatchEnableServicesRequestSDKType {
   parent: string;
   service_ids: string[];
@@ -396,9 +520,14 @@ export interface BatchEnableServicesRequestSDKType {
  * Response message for the `BatchEnableServices` method.
  * This response message is assigned to the `response` field of the returned
  * Operation when that operation is done.
+ * @name BatchEnableServicesResponse
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchEnableServicesResponse
  */
 export interface BatchEnableServicesResponse {
-  /** The new state of the services after enabling. */
+  /**
+   * The new state of the services after enabling.
+   */
   services: Service[];
   /**
    * If allow_partial_success is true, and one or more services could not be
@@ -414,9 +543,14 @@ export interface BatchEnableServicesResponseProtoMsg {
  * Response message for the `BatchEnableServices` method.
  * This response message is assigned to the `response` field of the returned
  * Operation when that operation is done.
+ * @name BatchEnableServicesResponseAmino
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchEnableServicesResponse
  */
 export interface BatchEnableServicesResponseAmino {
-  /** The new state of the services after enabling. */
+  /**
+   * The new state of the services after enabling.
+   */
   services?: ServiceAmino[];
   /**
    * If allow_partial_success is true, and one or more services could not be
@@ -428,35 +562,66 @@ export interface BatchEnableServicesResponseAmino {
  * Response message for the `BatchEnableServices` method.
  * This response message is assigned to the `response` field of the returned
  * Operation when that operation is done.
+ * @name BatchEnableServicesResponseSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchEnableServicesResponse
  */
 export interface BatchEnableServicesResponseSDKType {
   services: ServiceSDKType[];
   failures: BatchEnableServicesResponse_EnableFailureSDKType[];
 }
-/** Provides error messages for the failing services. */
+/**
+ * Provides error messages for the failing services.
+ * @name BatchEnableServicesResponse_EnableFailure
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.EnableFailure
+ */
 export interface BatchEnableServicesResponse_EnableFailure {
-  /** The service id of a service that could not be enabled. */
+  /**
+   * The service id of a service that could not be enabled.
+   */
   serviceId: string;
-  /** An error message describing why the service could not be enabled. */
+  /**
+   * An error message describing why the service could not be enabled.
+   */
   errorMessage: string;
 }
 export interface BatchEnableServicesResponse_EnableFailureProtoMsg {
   typeUrl: "/google.api.serviceusage.v1.EnableFailure";
   value: Uint8Array;
 }
-/** Provides error messages for the failing services. */
+/**
+ * Provides error messages for the failing services.
+ * @name BatchEnableServicesResponse_EnableFailureAmino
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchEnableServicesResponse_EnableFailure
+ */
 export interface BatchEnableServicesResponse_EnableFailureAmino {
-  /** The service id of a service that could not be enabled. */
+  /**
+   * The service id of a service that could not be enabled.
+   */
   service_id?: string;
-  /** An error message describing why the service could not be enabled. */
+  /**
+   * An error message describing why the service could not be enabled.
+   */
   error_message?: string;
 }
-/** Provides error messages for the failing services. */
+/**
+ * Provides error messages for the failing services.
+ * @name BatchEnableServicesResponse_EnableFailureSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.EnableFailure
+ */
 export interface BatchEnableServicesResponse_EnableFailureSDKType {
   service_id: string;
   error_message: string;
 }
-/** Request message for the `BatchGetServices` method. */
+/**
+ * Request message for the `BatchGetServices` method.
+ * @name BatchGetServicesRequest
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchGetServicesRequest
+ */
 export interface BatchGetServicesRequest {
   /**
    * Parent to retrieve services from.
@@ -480,7 +645,12 @@ export interface BatchGetServicesRequestProtoMsg {
   typeUrl: "/google.api.serviceusage.v1.BatchGetServicesRequest";
   value: Uint8Array;
 }
-/** Request message for the `BatchGetServices` method. */
+/**
+ * Request message for the `BatchGetServices` method.
+ * @name BatchGetServicesRequestAmino
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchGetServicesRequest
+ */
 export interface BatchGetServicesRequestAmino {
   /**
    * Parent to retrieve services from.
@@ -500,26 +670,50 @@ export interface BatchGetServicesRequestAmino {
    */
   names?: string[];
 }
-/** Request message for the `BatchGetServices` method. */
+/**
+ * Request message for the `BatchGetServices` method.
+ * @name BatchGetServicesRequestSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchGetServicesRequest
+ */
 export interface BatchGetServicesRequestSDKType {
   parent: string;
   names: string[];
 }
-/** Response message for the `BatchGetServices` method. */
+/**
+ * Response message for the `BatchGetServices` method.
+ * @name BatchGetServicesResponse
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchGetServicesResponse
+ */
 export interface BatchGetServicesResponse {
-  /** The requested Service states. */
+  /**
+   * The requested Service states.
+   */
   services: Service[];
 }
 export interface BatchGetServicesResponseProtoMsg {
   typeUrl: "/google.api.serviceusage.v1.BatchGetServicesResponse";
   value: Uint8Array;
 }
-/** Response message for the `BatchGetServices` method. */
+/**
+ * Response message for the `BatchGetServices` method.
+ * @name BatchGetServicesResponseAmino
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchGetServicesResponse
+ */
 export interface BatchGetServicesResponseAmino {
-  /** The requested Service states. */
+  /**
+   * The requested Service states.
+   */
   services?: ServiceAmino[];
 }
-/** Response message for the `BatchGetServices` method. */
+/**
+ * Response message for the `BatchGetServices` method.
+ * @name BatchGetServicesResponseSDKType
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchGetServicesResponse
+ */
 export interface BatchGetServicesResponseSDKType {
   services: ServiceSDKType[];
 }
@@ -528,6 +722,12 @@ function createBaseEnableServiceRequest(): EnableServiceRequest {
     name: ""
   };
 }
+/**
+ * Request message for the `EnableService` method.
+ * @name EnableServiceRequest
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.EnableServiceRequest
+ */
 export const EnableServiceRequest = {
   typeUrl: "/google.api.serviceusage.v1.EnableServiceRequest",
   encode(message: EnableServiceRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -603,6 +803,14 @@ function createBaseEnableServiceResponse(): EnableServiceResponse {
     service: undefined
   };
 }
+/**
+ * Response message for the `EnableService` method.
+ * This response message is assigned to the `response` field of the returned
+ * Operation when that operation is done.
+ * @name EnableServiceResponse
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.EnableServiceResponse
+ */
 export const EnableServiceResponse = {
   typeUrl: "/google.api.serviceusage.v1.EnableServiceResponse",
   encode(message: EnableServiceResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -682,6 +890,12 @@ function createBaseDisableServiceRequest(): DisableServiceRequest {
     checkIfServiceHasUsage: 0
   };
 }
+/**
+ * Request message for the `DisableService` method.
+ * @name DisableServiceRequest
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.DisableServiceRequest
+ */
 export const DisableServiceRequest = {
   typeUrl: "/google.api.serviceusage.v1.DisableServiceRequest",
   encode(message: DisableServiceRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -785,6 +999,14 @@ function createBaseDisableServiceResponse(): DisableServiceResponse {
     service: undefined
   };
 }
+/**
+ * Response message for the `DisableService` method.
+ * This response message is assigned to the `response` field of the returned
+ * Operation when that operation is done.
+ * @name DisableServiceResponse
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.DisableServiceResponse
+ */
 export const DisableServiceResponse = {
   typeUrl: "/google.api.serviceusage.v1.DisableServiceResponse",
   encode(message: DisableServiceResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -862,6 +1084,12 @@ function createBaseGetServiceRequest(): GetServiceRequest {
     name: ""
   };
 }
+/**
+ * Request message for the `GetService` method.
+ * @name GetServiceRequest
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.GetServiceRequest
+ */
 export const GetServiceRequest = {
   typeUrl: "/google.api.serviceusage.v1.GetServiceRequest",
   encode(message: GetServiceRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -940,6 +1168,12 @@ function createBaseListServicesRequest(): ListServicesRequest {
     filter: ""
   };
 }
+/**
+ * Request message for the `ListServices` method.
+ * @name ListServicesRequest
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.ListServicesRequest
+ */
 export const ListServicesRequest = {
   typeUrl: "/google.api.serviceusage.v1.ListServicesRequest",
   encode(message: ListServicesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1058,6 +1292,12 @@ function createBaseListServicesResponse(): ListServicesResponse {
     nextPageToken: ""
   };
 }
+/**
+ * Response message for the `ListServices` method.
+ * @name ListServicesResponse
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.ListServicesResponse
+ */
 export const ListServicesResponse = {
   typeUrl: "/google.api.serviceusage.v1.ListServicesResponse",
   encode(message: ListServicesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1154,6 +1394,12 @@ function createBaseBatchEnableServicesRequest(): BatchEnableServicesRequest {
     serviceIds: []
   };
 }
+/**
+ * Request message for the `BatchEnableServices` method.
+ * @name BatchEnableServicesRequest
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchEnableServicesRequest
+ */
 export const BatchEnableServicesRequest = {
   typeUrl: "/google.api.serviceusage.v1.BatchEnableServicesRequest",
   encode(message: BatchEnableServicesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1250,6 +1496,14 @@ function createBaseBatchEnableServicesResponse(): BatchEnableServicesResponse {
     failures: []
   };
 }
+/**
+ * Response message for the `BatchEnableServices` method.
+ * This response message is assigned to the `response` field of the returned
+ * Operation when that operation is done.
+ * @name BatchEnableServicesResponse
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchEnableServicesResponse
+ */
 export const BatchEnableServicesResponse = {
   typeUrl: "/google.api.serviceusage.v1.BatchEnableServicesResponse",
   encode(message: BatchEnableServicesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1352,6 +1606,12 @@ function createBaseBatchEnableServicesResponse_EnableFailure(): BatchEnableServi
     errorMessage: ""
   };
 }
+/**
+ * Provides error messages for the failing services.
+ * @name BatchEnableServicesResponse_EnableFailure
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.EnableFailure
+ */
 export const BatchEnableServicesResponse_EnableFailure = {
   typeUrl: "/google.api.serviceusage.v1.EnableFailure",
   encode(message: BatchEnableServicesResponse_EnableFailure, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1442,6 +1702,12 @@ function createBaseBatchGetServicesRequest(): BatchGetServicesRequest {
     names: []
   };
 }
+/**
+ * Request message for the `BatchGetServices` method.
+ * @name BatchGetServicesRequest
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchGetServicesRequest
+ */
 export const BatchGetServicesRequest = {
   typeUrl: "/google.api.serviceusage.v1.BatchGetServicesRequest",
   encode(message: BatchGetServicesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1537,6 +1803,12 @@ function createBaseBatchGetServicesResponse(): BatchGetServicesResponse {
     services: []
   };
 }
+/**
+ * Response message for the `BatchGetServices` method.
+ * @name BatchGetServicesResponse
+ * @package google.api.serviceusage.v1
+ * @see proto type: google.api.serviceusage.v1.BatchGetServicesResponse
+ */
 export const BatchGetServicesResponse = {
   typeUrl: "/google.api.serviceusage.v1.BatchGetServicesResponse",
   encode(message: BatchGetServicesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

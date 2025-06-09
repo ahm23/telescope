@@ -3,7 +3,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary.js";
 import { JsonSafe } from "../../../json-safe.js";
 import { DeepPartial, Exact } from "../../../helpers.js";
 export const protobufPackage = "akash.audit.v1beta2";
-/** GenesisState defines the basic genesis state used by audit module */
+/**
+ * GenesisState defines the basic genesis state used by audit module
+ * @name GenesisState
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.GenesisState
+ */
 export interface GenesisState {
   attributes: AuditedAttributes[];
 }
@@ -11,7 +16,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/akash.audit.v1beta2.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the basic genesis state used by audit module */
+/**
+ * GenesisState defines the basic genesis state used by audit module
+ * @name GenesisStateSDKType
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.GenesisState
+ */
 export interface GenesisStateSDKType {
   attributes: AuditedAttributesSDKType[];
 }
@@ -20,6 +30,12 @@ function createBaseGenesisState(): GenesisState {
     attributes: []
   };
 }
+/**
+ * GenesisState defines the basic genesis state used by audit module
+ * @name GenesisState
+ * @package akash.audit.v1beta2
+ * @see proto type: akash.audit.v1beta2.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/akash.audit.v1beta2.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

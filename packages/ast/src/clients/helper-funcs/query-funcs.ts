@@ -1,6 +1,7 @@
 import * as ast from "@babel/types";
 import { ProtoServiceMethod } from "@cosmology/types";
 import { GenericParseContext } from "../../encoding";
+import { CommentBlockBuilder } from "../../utils";
 
 /**
  *
@@ -11,85 +12,86 @@ import { GenericParseContext } from "../../encoding";
  * @returns
  */
 export function createQueryHelperCreator(
-    context: GenericParseContext,
-    service: ProtoServiceMethod,
-    svcKey: string,
-    methodKey?: string,
-    helperCreatorName?: string
+  context: GenericParseContext,
+  service: ProtoServiceMethod,
+  svcKey: string,
+  methodKey?: string,
+  helperCreatorName?: string
 ) {
-    const pkgImportName = context.ref.proto.package + "." + svcKey;
+  const pkgImportName = context.ref.proto.package + "." + svcKey;
 
-    context.addUtil("EndpointOrRpc");
-    context.addUtil("buildQuery");
+  context.addUtil("EndpointOrRpc");
+  context.addUtil("buildQuery");
 
-    const useGlobalDecoderRegistry =
-        context.pluginValue("interfaces.enabled") &&
-        context.pluginValue("interfaces.useGlobalDecoderRegistry") &&
-        context.pluginValue("helperFunctions.enabled") &&
-        context.pluginValue("helperFunctions.useGlobalDecoderRegistry");
+  const useGlobalDecoderRegistry =
+    context.pluginValue("interfaces.enabled") &&
+    context.pluginValue("interfaces.useGlobalDecoderRegistry") &&
+    context.pluginValue("helperFunctions.enabled") &&
+    context.pluginValue("helperFunctions.useGlobalDecoderRegistry");
 
-    const callExpression = ast.callExpression(ast.identifier("buildQuery"), [
-        ast.objectExpression(
-            [
-                ast.objectProperty(
-                    ast.identifier("encode"),
-                    ast.memberExpression(
-                        ast.identifier(service.requestType),
-                        ast.identifier("encode")
-                    )
-                ),
-                ast.objectProperty(
-                    ast.identifier("decode"),
-                    ast.memberExpression(
-                        ast.identifier(service.responseType),
-                        ast.identifier("decode")
-                    )
-                ),
-                ast.objectProperty(
-                    ast.identifier("service"),
-                    ast.stringLiteral(pkgImportName)
-                ),
-                ast.objectProperty(
-                    ast.identifier("method"),
-                    ast.stringLiteral(methodKey)
-                ),
-                useGlobalDecoderRegistry &&
-                ast.objectProperty(
-                    ast.identifier("deps"),
-                    ast.arrayExpression([
-                        ast.identifier(service.requestType),
-                        ast.identifier(service.responseType),
-                    ])
-                ),
-            ].filter(Boolean)
+  const callExpression = ast.callExpression(ast.identifier("buildQuery"), [
+    ast.objectExpression(
+      [
+        ast.objectProperty(
+          ast.identifier("encode"),
+          ast.memberExpression(
+            ast.identifier(service.requestType),
+            ast.identifier("encode")
+          )
         ),
-    ]);
-    callExpression.typeParameters = ast.tsTypeParameterInstantiation([
-        ast.tsTypeReference(ast.identifier(service.requestType)),
-        ast.tsTypeReference(ast.identifier(service.responseType)),
-    ]);
+        ast.objectProperty(
+          ast.identifier("decode"),
+          ast.memberExpression(
+            ast.identifier(service.responseType),
+            ast.identifier("decode")
+          )
+        ),
+        ast.objectProperty(
+          ast.identifier("service"),
+          ast.stringLiteral(pkgImportName)
+        ),
+        ast.objectProperty(
+          ast.identifier("method"),
+          ast.stringLiteral(methodKey)
+        ),
+        useGlobalDecoderRegistry &&
+        ast.objectProperty(
+          ast.identifier("deps"),
+          ast.arrayExpression([
+            ast.identifier(service.requestType),
+            ast.identifier(service.responseType),
+          ])
+        ),
+      ].filter(Boolean)
+    ),
+  ]);
+  callExpression.typeParameters = ast.tsTypeParameterInstantiation([
+    ast.tsTypeReference(ast.identifier(service.requestType)),
+    ast.tsTypeReference(ast.identifier(service.responseType)),
+  ]);
 
-    const exportDeclaration = ast.exportNamedDeclaration(
-        ast.variableDeclaration("const", [
-            ast.variableDeclarator(
-                ast.identifier(helperCreatorName),
-                callExpression
-            ),
-        ])
-    );
+  const exportDeclaration = ast.exportNamedDeclaration(
+    ast.variableDeclaration("const", [
+      ast.variableDeclarator(
+        ast.identifier(helperCreatorName),
+        callExpression
+      ),
+    ])
+  );
 
-    // Add comments if service has a comment
-    if (service.comment) {
-        exportDeclaration.leadingComments = [{
-            type: 'CommentBlock',
-            value: ` ${service.comment} `,
-            start: null,
-            end: null,
-            loc: null
-        }];
-    }
+  const commentBlock = new CommentBlockBuilder()
+    .addLine(service.comment)
+    .addLine(`@name ${helperCreatorName}`)
+    .addLine(`@package ${context.ref.proto.package}`)
+    .addLine(`@see proto service: ${context.ref.proto.package}.${methodKey}`)
+    .addLine(service.options?.deprecated ? '@deprecated' : null)
+    .build();
 
-    return exportDeclaration;
+  if (commentBlock) {
+    exportDeclaration.leadingComments = [commentBlock];
+  }
+
+  return exportDeclaration;
 }
 
 /**
@@ -102,48 +104,50 @@ export function createQueryHelperCreator(
  * @returns
  */
 export function createQueryHooks(
-    context: GenericParseContext,
-    service: ProtoServiceMethod,
-    methodKey?: string,
-    helperCreatorName?: string,
-    hookName?: string
+  context: GenericParseContext,
+  service: ProtoServiceMethod,
+  methodKey?: string,
+  helperCreatorName?: string,
+  hookName?: string
 ) {
-    context.addUtil("buildUseQuery");
-    const callExpression = ast.callExpression(ast.identifier("buildUseQuery"), [
-        ast.objectExpression([
-            ast.objectProperty(
-                ast.identifier("builderQueryFn"),
-                ast.identifier(helperCreatorName)
-            ),
-            ast.objectProperty(
-                ast.identifier("queryKeyPrefix"),
-                ast.stringLiteral(`${methodKey}Query`)
-            ),
-        ]),
-    ]);
-    callExpression.typeParameters = ast.tsTypeParameterInstantiation([
-        ast.tsTypeReference(ast.identifier(service.requestType)),
-        ast.tsTypeReference(ast.identifier(service.responseType)),
-    ]);
+  context.addUtil("buildUseQuery");
+  const callExpression = ast.callExpression(ast.identifier("buildUseQuery"), [
+    ast.objectExpression([
+      ast.objectProperty(
+        ast.identifier("builderQueryFn"),
+        ast.identifier(helperCreatorName)
+      ),
+      ast.objectProperty(
+        ast.identifier("queryKeyPrefix"),
+        ast.stringLiteral(`${methodKey}Query`)
+      ),
+    ]),
+  ]);
+  callExpression.typeParameters = ast.tsTypeParameterInstantiation([
+    ast.tsTypeReference(ast.identifier(service.requestType)),
+    ast.tsTypeReference(ast.identifier(service.responseType)),
+  ]);
 
-    const exportDeclaration = ast.exportNamedDeclaration(
-        ast.variableDeclaration("const", [
-            ast.variableDeclarator(ast.identifier(hookName), callExpression),
-        ])
-    );
+  const exportDeclaration = ast.exportNamedDeclaration(
+    ast.variableDeclaration("const", [
+      ast.variableDeclarator(ast.identifier(hookName), callExpression),
+    ])
+  );
 
-    // Add comments if service has a comment
-    if (service.comment) {
-        exportDeclaration.leadingComments = [{
-            type: 'CommentBlock',
-            value: ` ${service.comment} `,
-            start: null,
-            end: null,
-            loc: null
-        }];
-    }
+  // Add comments if service has a comment
+  const commentBlock = new CommentBlockBuilder()
+    .addLine(service.comment)
+    .addLine(`@name ${hookName}`)
+    .addLine(`@package ${context.ref.proto.package}`)
+    .addLine(`@see proto service: ${context.ref.proto.package}.${methodKey}`)
+    .addLine(service.options?.deprecated ? '@deprecated' : null)
+    .build();
 
-    return exportDeclaration;
+  if (commentBlock) {
+    exportDeclaration.leadingComments = [commentBlock];
+  }
+
+  return exportDeclaration;
 }
 
 
@@ -157,46 +161,48 @@ export function createQueryHooks(
  * @returns
  */
 export function createVueQueryHooks(
-    context: GenericParseContext,
-    service: ProtoServiceMethod,
-    methodKey?: string,
-    helperCreatorName?: string,
-    hookName?: string,
+  context: GenericParseContext,
+  service: ProtoServiceMethod,
+  methodKey?: string,
+  helperCreatorName?: string,
+  hookName?: string,
 ) {
-    context.addUtil("buildUseVueQuery");
-    const callExpression = ast.callExpression(ast.identifier("buildUseVueQuery"), [
-        ast.objectExpression([
-            ast.objectProperty(
-                ast.identifier("builderQueryFn"),
-                ast.identifier(helperCreatorName)
-            ),
-            ast.objectProperty(
-                ast.identifier("queryKeyPrefix"),
-                ast.stringLiteral(`${methodKey}Query`)
-            ),
-        ]),
-    ]);
-    callExpression.typeParameters = ast.tsTypeParameterInstantiation([
-        ast.tsTypeReference(ast.identifier(service.requestType)),
-        ast.tsTypeReference(ast.identifier(service.responseType)),
-    ]);
+  context.addUtil("buildUseVueQuery");
+  const callExpression = ast.callExpression(ast.identifier("buildUseVueQuery"), [
+    ast.objectExpression([
+      ast.objectProperty(
+        ast.identifier("builderQueryFn"),
+        ast.identifier(helperCreatorName)
+      ),
+      ast.objectProperty(
+        ast.identifier("queryKeyPrefix"),
+        ast.stringLiteral(`${methodKey}Query`)
+      ),
+    ]),
+  ]);
+  callExpression.typeParameters = ast.tsTypeParameterInstantiation([
+    ast.tsTypeReference(ast.identifier(service.requestType)),
+    ast.tsTypeReference(ast.identifier(service.responseType)),
+  ]);
 
-    const exportDeclaration = ast.exportNamedDeclaration(
-        ast.variableDeclaration("const", [
-            ast.variableDeclarator(ast.identifier(hookName), callExpression),
-        ])
-    );
+  const exportDeclaration = ast.exportNamedDeclaration(
+    ast.variableDeclaration("const", [
+      ast.variableDeclarator(ast.identifier(hookName), callExpression),
+    ])
+  );
 
-    // Add comments if service has a comment
-    if (service.comment) {
-        exportDeclaration.leadingComments = [{
-            type: 'CommentBlock',
-            value: ` ${service.comment} `,
-            start: null,
-            end: null,
-            loc: null
-        }];
-    }
+  // Add comments if service has a comment
+  const commentBlock = new CommentBlockBuilder()
+    .addLine(service.comment)
+    .addLine(`@name ${hookName}`)
+    .addLine(`@package ${context.ref.proto.package}`)
+    .addLine(`@see proto service: ${context.ref.proto.package}.${methodKey}`)
+    .addLine(service.options?.deprecated ? '@deprecated' : null)
+    .build();
 
-    return exportDeclaration;
+  if (commentBlock) {
+    exportDeclaration.leadingComments = [commentBlock];
+  }
+
+  return exportDeclaration;
 }

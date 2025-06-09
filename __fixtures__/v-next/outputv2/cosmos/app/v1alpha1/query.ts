@@ -3,45 +3,85 @@ import { BinaryReader, BinaryWriter } from "../../../binary";
 import { JsonSafe } from "../../../json-safe";
 import { DeepPartial, isSet } from "../../../helpers";
 export const protobufPackage = "cosmos.app.v1alpha1";
-/** QueryConfigRequest is the Query/Config request type. */
+/**
+ * QueryConfigRequest is the Query/Config request type.
+ * @name QueryConfigRequest
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.QueryConfigRequest
+ */
 export interface QueryConfigRequest {}
 export interface QueryConfigRequestProtoMsg {
   typeUrl: "/cosmos.app.v1alpha1.QueryConfigRequest";
   value: Uint8Array;
 }
-/** QueryConfigRequest is the Query/Config request type. */
+/**
+ * QueryConfigRequest is the Query/Config request type.
+ * @name QueryConfigRequestAmino
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.QueryConfigRequest
+ */
 export interface QueryConfigRequestAmino {}
 export interface QueryConfigRequestAminoMsg {
   type: "cosmos-sdk/QueryConfigRequest";
   value: QueryConfigRequestAmino;
 }
-/** QueryConfigRequest is the Query/Config request type. */
+/**
+ * QueryConfigRequest is the Query/Config request type.
+ * @name QueryConfigRequestSDKType
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.QueryConfigRequest
+ */
 export interface QueryConfigRequestSDKType {}
-/** QueryConfigRequest is the Query/Config response type. */
+/**
+ * QueryConfigRequest is the Query/Config response type.
+ * @name QueryConfigResponse
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.QueryConfigResponse
+ */
 export interface QueryConfigResponse {
-  /** config is the current app config. */
+  /**
+   * config is the current app config.
+   */
   config?: Config;
 }
 export interface QueryConfigResponseProtoMsg {
   typeUrl: "/cosmos.app.v1alpha1.QueryConfigResponse";
   value: Uint8Array;
 }
-/** QueryConfigRequest is the Query/Config response type. */
+/**
+ * QueryConfigRequest is the Query/Config response type.
+ * @name QueryConfigResponseAmino
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.QueryConfigResponse
+ */
 export interface QueryConfigResponseAmino {
-  /** config is the current app config. */
+  /**
+   * config is the current app config.
+   */
   config?: ConfigAmino;
 }
 export interface QueryConfigResponseAminoMsg {
   type: "cosmos-sdk/QueryConfigResponse";
   value: QueryConfigResponseAmino;
 }
-/** QueryConfigRequest is the Query/Config response type. */
+/**
+ * QueryConfigRequest is the Query/Config response type.
+ * @name QueryConfigResponseSDKType
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.QueryConfigResponse
+ */
 export interface QueryConfigResponseSDKType {
   config?: ConfigSDKType;
 }
 function createBaseQueryConfigRequest(): QueryConfigRequest {
   return {};
 }
+/**
+ * QueryConfigRequest is the Query/Config request type.
+ * @name QueryConfigRequest
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.QueryConfigRequest
+ */
 export const QueryConfigRequest = {
   typeUrl: "/cosmos.app.v1alpha1.QueryConfigRequest",
   aminoType: "cosmos-sdk/QueryConfigRequest",
@@ -116,6 +156,12 @@ function createBaseQueryConfigResponse(): QueryConfigResponse {
     config: undefined
   };
 }
+/**
+ * QueryConfigRequest is the Query/Config response type.
+ * @name QueryConfigResponse
+ * @package cosmos.app.v1alpha1
+ * @see proto type: cosmos.app.v1alpha1.QueryConfigResponse
+ */
 export const QueryConfigResponse = {
   typeUrl: "/cosmos.app.v1alpha1.QueryConfigResponse",
   aminoType: "cosmos-sdk/QueryConfigResponse",

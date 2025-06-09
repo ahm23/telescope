@@ -4,7 +4,12 @@ import { BinaryReader, BinaryWriter } from "../../../binary.js";
 import { JsonSafe } from "../../../json-safe.js";
 import { DeepPartial, isSet } from "../../../helpers.js";
 export const protobufPackage = "osmosis.gamm.v1beta1";
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name Params
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.Params
+ */
 export interface Params {
   poolCreationFee: Coin[];
 }
@@ -12,14 +17,26 @@ export interface ParamsProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.Params";
   value: Uint8Array;
 }
-/** Params holds parameters for the incentives module */
+/**
+ * Params holds parameters for the incentives module
+ * @name ParamsSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.Params
+ */
 export interface ParamsSDKType {
   pool_creation_fee: CoinSDKType[];
 }
-/** GenesisState defines the gamm module's genesis state. */
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisState
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.GenesisState
+ */
 export interface GenesisState {
   pools: Any[];
-  /** will be renamed to next_pool_id in an upcoming version */
+  /**
+   * will be renamed to next_pool_id in an upcoming version
+   */
   nextPoolNumber: bigint;
   params: Params;
 }
@@ -27,7 +44,12 @@ export interface GenesisStateProtoMsg {
   typeUrl: "/osmosis.gamm.v1beta1.GenesisState";
   value: Uint8Array;
 }
-/** GenesisState defines the gamm module's genesis state. */
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisStateSDKType
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.GenesisState
+ */
 export interface GenesisStateSDKType {
   pools: AnySDKType[];
   next_pool_number: bigint;
@@ -38,6 +60,12 @@ function createBaseParams(): Params {
     poolCreationFee: []
   };
 }
+/**
+ * Params holds parameters for the incentives module
+ * @name Params
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.Params
+ */
 export const Params = {
   typeUrl: "/osmosis.gamm.v1beta1.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -144,6 +172,12 @@ function createBaseGenesisState(): GenesisState {
     params: Params.fromPartial({})
   };
 }
+/**
+ * GenesisState defines the gamm module's genesis state.
+ * @name GenesisState
+ * @package osmosis.gamm.v1beta1
+ * @see proto type: osmosis.gamm.v1beta1.GenesisState
+ */
 export const GenesisState = {
   typeUrl: "/osmosis.gamm.v1beta1.GenesisState",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

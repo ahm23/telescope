@@ -67,7 +67,12 @@ export function checkResponse_ConsumerInfo_ConsumerTypeToJSON(object: CheckRespo
       return "UNRECOGNIZED";
   }
 }
-/** Request message for the Check method. */
+/**
+ * Request message for the Check method.
+ * @name CheckRequest
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckRequest
+ */
 export interface CheckRequest {
   /**
    * The service name as specified in its service configuration. For example,
@@ -78,7 +83,9 @@ export interface CheckRequest {
    * for the definition of a service name.
    */
   serviceName: string;
-  /** The operation to be checked. */
+  /**
+   * The operation to be checked.
+   */
   operation?: Operation;
   /**
    * Specifies which version of service configuration should be used to process
@@ -93,7 +100,12 @@ export interface CheckRequestProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.CheckRequest";
   value: Uint8Array;
 }
-/** Request message for the Check method. */
+/**
+ * Request message for the Check method.
+ * @name CheckRequestAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckRequest
+ */
 export interface CheckRequestAmino {
   /**
    * The service name as specified in its service configuration. For example,
@@ -104,7 +116,9 @@ export interface CheckRequestAmino {
    * for the definition of a service name.
    */
   service_name?: string;
-  /** The operation to be checked. */
+  /**
+   * The operation to be checked.
+   */
   operation?: OperationAmino;
   /**
    * Specifies which version of service configuration should be used to process
@@ -119,13 +133,23 @@ export interface CheckRequestAminoMsg {
   type: "/google.api.servicecontrol.v1.CheckRequest";
   value: CheckRequestAmino;
 }
-/** Request message for the Check method. */
+/**
+ * Request message for the Check method.
+ * @name CheckRequestSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckRequest
+ */
 export interface CheckRequestSDKType {
   service_name: string;
   operation?: OperationSDKType;
   service_config_id: string;
 }
-/** Response message for the Check method. */
+/**
+ * Response message for the Check method.
+ * @name CheckResponse
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckResponse
+ */
 export interface CheckResponse {
   /**
    * The same operation_id value used in the
@@ -141,18 +165,29 @@ export interface CheckResponse {
    * appropriate action.
    */
   checkErrors: CheckError[];
-  /** The actual config id used to process the request. */
+  /**
+   * The actual config id used to process the request.
+   */
   serviceConfigId: string;
-  /** The current service rollout id used to process the request. */
+  /**
+   * The current service rollout id used to process the request.
+   */
   serviceRolloutId: string;
-  /** Feedback data returned from the server during processing a Check request. */
+  /**
+   * Feedback data returned from the server during processing a Check request.
+   */
   checkInfo?: CheckResponse_CheckInfo;
 }
 export interface CheckResponseProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.CheckResponse";
   value: Uint8Array;
 }
-/** Response message for the Check method. */
+/**
+ * Response message for the Check method.
+ * @name CheckResponseAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckResponse
+ */
 export interface CheckResponseAmino {
   /**
    * The same operation_id value used in the
@@ -168,18 +203,29 @@ export interface CheckResponseAmino {
    * appropriate action.
    */
   check_errors?: CheckErrorAmino[];
-  /** The actual config id used to process the request. */
+  /**
+   * The actual config id used to process the request.
+   */
   service_config_id?: string;
-  /** The current service rollout id used to process the request. */
+  /**
+   * The current service rollout id used to process the request.
+   */
   service_rollout_id?: string;
-  /** Feedback data returned from the server during processing a Check request. */
+  /**
+   * Feedback data returned from the server during processing a Check request.
+   */
   check_info?: CheckResponse_CheckInfoAmino;
 }
 export interface CheckResponseAminoMsg {
   type: "/google.api.servicecontrol.v1.CheckResponse";
   value: CheckResponseAmino;
 }
-/** Response message for the Check method. */
+/**
+ * Response message for the Check method.
+ * @name CheckResponseSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckResponse
+ */
 export interface CheckResponseSDKType {
   operation_id: string;
   check_errors: CheckErrorSDKType[];
@@ -187,7 +233,12 @@ export interface CheckResponseSDKType {
   service_rollout_id: string;
   check_info?: CheckResponse_CheckInfoSDKType;
 }
-/** Contains additional information about the check operation. */
+/**
+ * Contains additional information about the check operation.
+ * @name CheckResponse_CheckInfo
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckInfo
+ */
 export interface CheckResponse_CheckInfo {
   /**
    * A list of fields and label keys that are ignored by the server.
@@ -195,14 +246,21 @@ export interface CheckResponse_CheckInfo {
    * performance and allow better aggregation.
    */
   unusedArguments: string[];
-  /** Consumer info of this check. */
+  /**
+   * Consumer info of this check.
+   */
   consumerInfo?: CheckResponse_ConsumerInfo;
 }
 export interface CheckResponse_CheckInfoProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.CheckInfo";
   value: Uint8Array;
 }
-/** Contains additional information about the check operation. */
+/**
+ * Contains additional information about the check operation.
+ * @name CheckResponse_CheckInfoAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckResponse_CheckInfo
+ */
 export interface CheckResponse_CheckInfoAmino {
   /**
    * A list of fields and label keys that are ignored by the server.
@@ -210,19 +268,31 @@ export interface CheckResponse_CheckInfoAmino {
    * performance and allow better aggregation.
    */
   unused_arguments?: string[];
-  /** Consumer info of this check. */
+  /**
+   * Consumer info of this check.
+   */
   consumer_info?: CheckResponse_ConsumerInfoAmino;
 }
 export interface CheckResponse_CheckInfoAminoMsg {
   type: "/google.api.servicecontrol.v1.CheckInfo";
   value: CheckResponse_CheckInfoAmino;
 }
-/** Contains additional information about the check operation. */
+/**
+ * Contains additional information about the check operation.
+ * @name CheckResponse_CheckInfoSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckInfo
+ */
 export interface CheckResponse_CheckInfoSDKType {
   unused_arguments: string[];
   consumer_info?: CheckResponse_ConsumerInfoSDKType;
 }
-/** `ConsumerInfo` provides information about the consumer. */
+/**
+ * `ConsumerInfo` provides information about the consumer.
+ * @name CheckResponse_ConsumerInfo
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ConsumerInfo
+ */
 export interface CheckResponse_ConsumerInfo {
   /**
    * The Google cloud project number, e.g. 1234567890. A value of 0 indicates
@@ -248,7 +318,12 @@ export interface CheckResponse_ConsumerInfoProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.ConsumerInfo";
   value: Uint8Array;
 }
-/** `ConsumerInfo` provides information about the consumer. */
+/**
+ * `ConsumerInfo` provides information about the consumer.
+ * @name CheckResponse_ConsumerInfoAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckResponse_ConsumerInfo
+ */
 export interface CheckResponse_ConsumerInfoAmino {
   /**
    * The Google cloud project number, e.g. 1234567890. A value of 0 indicates
@@ -274,13 +349,23 @@ export interface CheckResponse_ConsumerInfoAminoMsg {
   type: "/google.api.servicecontrol.v1.ConsumerInfo";
   value: CheckResponse_ConsumerInfoAmino;
 }
-/** `ConsumerInfo` provides information about the consumer. */
+/**
+ * `ConsumerInfo` provides information about the consumer.
+ * @name CheckResponse_ConsumerInfoSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ConsumerInfo
+ */
 export interface CheckResponse_ConsumerInfoSDKType {
   project_number: bigint;
   type: CheckResponse_ConsumerInfo_ConsumerType;
   consumer_number: bigint;
 }
-/** Request message for the Report method. */
+/**
+ * Request message for the Report method.
+ * @name ReportRequest
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ReportRequest
+ */
 export interface ReportRequest {
   /**
    * The service name as specified in its service configuration. For example,
@@ -318,7 +403,12 @@ export interface ReportRequestProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.ReportRequest";
   value: Uint8Array;
 }
-/** Request message for the Report method. */
+/**
+ * Request message for the Report method.
+ * @name ReportRequestAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ReportRequest
+ */
 export interface ReportRequestAmino {
   /**
    * The service name as specified in its service configuration. For example,
@@ -356,13 +446,23 @@ export interface ReportRequestAminoMsg {
   type: "/google.api.servicecontrol.v1.ReportRequest";
   value: ReportRequestAmino;
 }
-/** Request message for the Report method. */
+/**
+ * Request message for the Report method.
+ * @name ReportRequestSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ReportRequest
+ */
 export interface ReportRequestSDKType {
   service_name: string;
   operations: OperationSDKType[];
   service_config_id: string;
 }
-/** Response message for the Report method. */
+/**
+ * Response message for the Report method.
+ * @name ReportResponse
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ReportResponse
+ */
 export interface ReportResponse {
   /**
    * Partial failures, one for each `Operation` in the request that failed
@@ -381,16 +481,25 @@ export interface ReportResponse {
    *    'Operations' in the request succeeded or failed.
    */
   reportErrors: ReportResponse_ReportError[];
-  /** The actual config id used to process the request. */
+  /**
+   * The actual config id used to process the request.
+   */
   serviceConfigId: string;
-  /** The current service rollout id used to process the request. */
+  /**
+   * The current service rollout id used to process the request.
+   */
   serviceRolloutId: string;
 }
 export interface ReportResponseProtoMsg {
   typeUrl: "/google.api.servicecontrol.v1.ReportResponse";
   value: Uint8Array;
 }
-/** Response message for the Report method. */
+/**
+ * Response message for the Report method.
+ * @name ReportResponseAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ReportResponse
+ */
 export interface ReportResponseAmino {
   /**
    * Partial failures, one for each `Operation` in the request that failed
@@ -409,16 +518,25 @@ export interface ReportResponseAmino {
    *    'Operations' in the request succeeded or failed.
    */
   report_errors?: ReportResponse_ReportErrorAmino[];
-  /** The actual config id used to process the request. */
+  /**
+   * The actual config id used to process the request.
+   */
   service_config_id?: string;
-  /** The current service rollout id used to process the request. */
+  /**
+   * The current service rollout id used to process the request.
+   */
   service_rollout_id?: string;
 }
 export interface ReportResponseAminoMsg {
   type: "/google.api.servicecontrol.v1.ReportResponse";
   value: ReportResponseAmino;
 }
-/** Response message for the Report method. */
+/**
+ * Response message for the Report method.
+ * @name ReportResponseSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ReportResponse
+ */
 export interface ReportResponseSDKType {
   report_errors: ReportResponse_ReportErrorSDKType[];
   service_config_id: string;
@@ -427,6 +545,9 @@ export interface ReportResponseSDKType {
 /**
  * Represents the processing error of one
  * [Operation][google.api.servicecontrol.v1.Operation] in the request.
+ * @name ReportResponse_ReportError
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ReportError
  */
 export interface ReportResponse_ReportError {
   /**
@@ -448,6 +569,9 @@ export interface ReportResponse_ReportErrorProtoMsg {
 /**
  * Represents the processing error of one
  * [Operation][google.api.servicecontrol.v1.Operation] in the request.
+ * @name ReportResponse_ReportErrorAmino
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ReportResponse_ReportError
  */
 export interface ReportResponse_ReportErrorAmino {
   /**
@@ -469,6 +593,9 @@ export interface ReportResponse_ReportErrorAminoMsg {
 /**
  * Represents the processing error of one
  * [Operation][google.api.servicecontrol.v1.Operation] in the request.
+ * @name ReportResponse_ReportErrorSDKType
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ReportError
  */
 export interface ReportResponse_ReportErrorSDKType {
   operation_id: string;
@@ -481,6 +608,12 @@ function createBaseCheckRequest(): CheckRequest {
     serviceConfigId: ""
   };
 }
+/**
+ * Request message for the Check method.
+ * @name CheckRequest
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckRequest
+ */
 export const CheckRequest = {
   typeUrl: "/google.api.servicecontrol.v1.CheckRequest",
   encode(message: CheckRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -572,6 +705,12 @@ function createBaseCheckResponse(): CheckResponse {
     checkInfo: undefined
   };
 }
+/**
+ * Response message for the Check method.
+ * @name CheckResponse
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckResponse
+ */
 export const CheckResponse = {
   typeUrl: "/google.api.servicecontrol.v1.CheckResponse",
   encode(message: CheckResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -684,6 +823,12 @@ function createBaseCheckResponse_CheckInfo(): CheckResponse_CheckInfo {
     consumerInfo: undefined
   };
 }
+/**
+ * Contains additional information about the check operation.
+ * @name CheckResponse_CheckInfo
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.CheckInfo
+ */
 export const CheckResponse_CheckInfo = {
   typeUrl: "/google.api.servicecontrol.v1.CheckInfo",
   encode(message: CheckResponse_CheckInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -764,6 +909,12 @@ function createBaseCheckResponse_ConsumerInfo(): CheckResponse_ConsumerInfo {
     consumerNumber: BigInt(0)
   };
 }
+/**
+ * `ConsumerInfo` provides information about the consumer.
+ * @name CheckResponse_ConsumerInfo
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ConsumerInfo
+ */
 export const CheckResponse_ConsumerInfo = {
   typeUrl: "/google.api.servicecontrol.v1.ConsumerInfo",
   encode(message: CheckResponse_ConsumerInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -855,6 +1006,12 @@ function createBaseReportRequest(): ReportRequest {
     serviceConfigId: ""
   };
 }
+/**
+ * Request message for the Report method.
+ * @name ReportRequest
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ReportRequest
+ */
 export const ReportRequest = {
   typeUrl: "/google.api.servicecontrol.v1.ReportRequest",
   encode(message: ReportRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -944,6 +1101,12 @@ function createBaseReportResponse(): ReportResponse {
     serviceRolloutId: ""
   };
 }
+/**
+ * Response message for the Report method.
+ * @name ReportResponse
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ReportResponse
+ */
 export const ReportResponse = {
   typeUrl: "/google.api.servicecontrol.v1.ReportResponse",
   encode(message: ReportResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1032,6 +1195,13 @@ function createBaseReportResponse_ReportError(): ReportResponse_ReportError {
     status: undefined
   };
 }
+/**
+ * Represents the processing error of one
+ * [Operation][google.api.servicecontrol.v1.Operation] in the request.
+ * @name ReportResponse_ReportError
+ * @package google.api.servicecontrol.v1
+ * @see proto type: google.api.servicecontrol.v1.ReportError
+ */
 export const ReportResponse_ReportError = {
   typeUrl: "/google.api.servicecontrol.v1.ReportError",
   encode(message: ReportResponse_ReportError, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

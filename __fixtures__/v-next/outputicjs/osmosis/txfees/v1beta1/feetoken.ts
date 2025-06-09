@@ -5,6 +5,9 @@ import { DeepPartial } from "../../../helpers";
  * This marks the token as eligible for use as a tx fee asset in Osmosis.
  * Its price in osmo is derived through looking at the provided pool ID.
  * The pool ID must have osmo as one of its assets.
+ * @name FeeToken
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.FeeToken
  */
 export interface FeeToken {
   denom: string;
@@ -19,6 +22,9 @@ export interface FeeTokenProtoMsg {
  * This marks the token as eligible for use as a tx fee asset in Osmosis.
  * Its price in osmo is derived through looking at the provided pool ID.
  * The pool ID must have osmo as one of its assets.
+ * @name FeeTokenAmino
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.FeeToken
  */
 export interface FeeTokenAmino {
   denom: string;
@@ -34,6 +40,15 @@ function createBaseFeeToken(): FeeToken {
     poolID: BigInt(0)
   };
 }
+/**
+ * FeeToken is a struct that specifies a coin denom, and pool ID pair.
+ * This marks the token as eligible for use as a tx fee asset in Osmosis.
+ * Its price in osmo is derived through looking at the provided pool ID.
+ * The pool ID must have osmo as one of its assets.
+ * @name FeeToken
+ * @package osmosis.txfees.v1beta1
+ * @see proto type: osmosis.txfees.v1beta1.FeeToken
+ */
 export const FeeToken = {
   typeUrl: "/osmosis.txfees.v1beta1.FeeToken",
   aminoType: "osmosis/txfees/fee-token",

@@ -2,33 +2,60 @@ import { BinaryReader, BinaryWriter } from "../../../../binary.js";
 import { JsonSafe } from "../../../../json-safe.js";
 import { DeepPartial, isSet } from "../../../../helpers.js";
 export const protobufPackage = "cosmos.base.reflection.v1beta1";
-/** ListAllInterfacesRequest is the request type of the ListAllInterfaces RPC. */
+/**
+ * ListAllInterfacesRequest is the request type of the ListAllInterfaces RPC.
+ * @name ListAllInterfacesRequest
+ * @package cosmos.base.reflection.v1beta1
+ * @see proto type: cosmos.base.reflection.v1beta1.ListAllInterfacesRequest
+ */
 export interface ListAllInterfacesRequest {}
 export interface ListAllInterfacesRequestProtoMsg {
   typeUrl: "/cosmos.base.reflection.v1beta1.ListAllInterfacesRequest";
   value: Uint8Array;
 }
-/** ListAllInterfacesRequest is the request type of the ListAllInterfaces RPC. */
+/**
+ * ListAllInterfacesRequest is the request type of the ListAllInterfaces RPC.
+ * @name ListAllInterfacesRequestSDKType
+ * @package cosmos.base.reflection.v1beta1
+ * @see proto type: cosmos.base.reflection.v1beta1.ListAllInterfacesRequest
+ */
 export interface ListAllInterfacesRequestSDKType {}
-/** ListAllInterfacesResponse is the response type of the ListAllInterfaces RPC. */
+/**
+ * ListAllInterfacesResponse is the response type of the ListAllInterfaces RPC.
+ * @name ListAllInterfacesResponse
+ * @package cosmos.base.reflection.v1beta1
+ * @see proto type: cosmos.base.reflection.v1beta1.ListAllInterfacesResponse
+ */
 export interface ListAllInterfacesResponse {
-  /** interface_names is an array of all the registered interfaces. */
+  /**
+   * interface_names is an array of all the registered interfaces.
+   */
   interfaceNames: string[];
 }
 export interface ListAllInterfacesResponseProtoMsg {
   typeUrl: "/cosmos.base.reflection.v1beta1.ListAllInterfacesResponse";
   value: Uint8Array;
 }
-/** ListAllInterfacesResponse is the response type of the ListAllInterfaces RPC. */
+/**
+ * ListAllInterfacesResponse is the response type of the ListAllInterfaces RPC.
+ * @name ListAllInterfacesResponseSDKType
+ * @package cosmos.base.reflection.v1beta1
+ * @see proto type: cosmos.base.reflection.v1beta1.ListAllInterfacesResponse
+ */
 export interface ListAllInterfacesResponseSDKType {
   interface_names: string[];
 }
 /**
  * ListImplementationsRequest is the request type of the ListImplementations
  * RPC.
+ * @name ListImplementationsRequest
+ * @package cosmos.base.reflection.v1beta1
+ * @see proto type: cosmos.base.reflection.v1beta1.ListImplementationsRequest
  */
 export interface ListImplementationsRequest {
-  /** interface_name defines the interface to query the implementations for. */
+  /**
+   * interface_name defines the interface to query the implementations for.
+   */
   interfaceName: string;
 }
 export interface ListImplementationsRequestProtoMsg {
@@ -38,6 +65,9 @@ export interface ListImplementationsRequestProtoMsg {
 /**
  * ListImplementationsRequest is the request type of the ListImplementations
  * RPC.
+ * @name ListImplementationsRequestSDKType
+ * @package cosmos.base.reflection.v1beta1
+ * @see proto type: cosmos.base.reflection.v1beta1.ListImplementationsRequest
  */
 export interface ListImplementationsRequestSDKType {
   interface_name: string;
@@ -45,6 +75,9 @@ export interface ListImplementationsRequestSDKType {
 /**
  * ListImplementationsResponse is the response type of the ListImplementations
  * RPC.
+ * @name ListImplementationsResponse
+ * @package cosmos.base.reflection.v1beta1
+ * @see proto type: cosmos.base.reflection.v1beta1.ListImplementationsResponse
  */
 export interface ListImplementationsResponse {
   implementationMessageNames: string[];
@@ -56,6 +89,9 @@ export interface ListImplementationsResponseProtoMsg {
 /**
  * ListImplementationsResponse is the response type of the ListImplementations
  * RPC.
+ * @name ListImplementationsResponseSDKType
+ * @package cosmos.base.reflection.v1beta1
+ * @see proto type: cosmos.base.reflection.v1beta1.ListImplementationsResponse
  */
 export interface ListImplementationsResponseSDKType {
   implementation_message_names: string[];
@@ -63,6 +99,12 @@ export interface ListImplementationsResponseSDKType {
 function createBaseListAllInterfacesRequest(): ListAllInterfacesRequest {
   return {};
 }
+/**
+ * ListAllInterfacesRequest is the request type of the ListAllInterfaces RPC.
+ * @name ListAllInterfacesRequest
+ * @package cosmos.base.reflection.v1beta1
+ * @see proto type: cosmos.base.reflection.v1beta1.ListAllInterfacesRequest
+ */
 export const ListAllInterfacesRequest = {
   typeUrl: "/cosmos.base.reflection.v1beta1.ListAllInterfacesRequest",
   encode(_: ListAllInterfacesRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -139,6 +181,12 @@ function createBaseListAllInterfacesResponse(): ListAllInterfacesResponse {
     interfaceNames: []
   };
 }
+/**
+ * ListAllInterfacesResponse is the response type of the ListAllInterfaces RPC.
+ * @name ListAllInterfacesResponse
+ * @package cosmos.base.reflection.v1beta1
+ * @see proto type: cosmos.base.reflection.v1beta1.ListAllInterfacesResponse
+ */
 export const ListAllInterfacesResponse = {
   typeUrl: "/cosmos.base.reflection.v1beta1.ListAllInterfacesResponse",
   encode(message: ListAllInterfacesResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -243,6 +291,13 @@ function createBaseListImplementationsRequest(): ListImplementationsRequest {
     interfaceName: ""
   };
 }
+/**
+ * ListImplementationsRequest is the request type of the ListImplementations
+ * RPC.
+ * @name ListImplementationsRequest
+ * @package cosmos.base.reflection.v1beta1
+ * @see proto type: cosmos.base.reflection.v1beta1.ListImplementationsRequest
+ */
 export const ListImplementationsRequest = {
   typeUrl: "/cosmos.base.reflection.v1beta1.ListImplementationsRequest",
   encode(message: ListImplementationsRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -337,6 +392,13 @@ function createBaseListImplementationsResponse(): ListImplementationsResponse {
     implementationMessageNames: []
   };
 }
+/**
+ * ListImplementationsResponse is the response type of the ListImplementations
+ * RPC.
+ * @name ListImplementationsResponse
+ * @package cosmos.base.reflection.v1beta1
+ * @see proto type: cosmos.base.reflection.v1beta1.ListImplementationsResponse
+ */
 export const ListImplementationsResponse = {
   typeUrl: "/cosmos.base.reflection.v1beta1.ListImplementationsResponse",
   encode(message: ListImplementationsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

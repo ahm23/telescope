@@ -4,13 +4,24 @@ import { Decimal } from "@cosmjs/math";
 import { toTimestamp, fromTimestamp, isSet, DeepPartial } from "../../helpers";
 import { JsonSafe } from "../../json-safe";
 export const protobufPackage = "osmosis.concentratedliquidity.v1beta1";
+/**
+ * @name Pool
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.Pool
+ */
 export interface Pool {
-  /** pool's address holding all liquidity tokens. */
+  /**
+   * pool's address holding all liquidity tokens.
+   */
   address: string;
-  /** address holding the incentives liquidity. */
+  /**
+   * address holding the incentives liquidity.
+   */
   incentivesAddress: string;
   id: bigint;
-  /** Amount of total liquidity */
+  /**
+   * Amount of total liquidity
+   */
   currentTickLiquidity: string;
   token0: string;
   token1: string;
@@ -22,7 +33,9 @@ export interface Pool {
    */
   tickSpacing: bigint;
   exponentAtPriceOne: string;
-  /** swap_fee is the ratio that is charged on the amount of token in. */
+  /**
+   * swap_fee is the ratio that is charged on the amount of token in.
+   */
   swapFee: string;
   /**
    * last_liquidity_update is the last time either the pool liquidity or the
@@ -34,6 +47,11 @@ export interface PoolProtoMsg {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.Pool";
   value: Uint8Array;
 }
+/**
+ * @name PoolSDKType
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.Pool
+ */
 export interface PoolSDKType {
   address: string;
   incentives_address: string;
@@ -64,6 +82,11 @@ function createBasePool(): Pool {
     lastLiquidityUpdate: new Date()
   };
 }
+/**
+ * @name Pool
+ * @package osmosis.concentratedliquidity.v1beta1
+ * @see proto type: osmosis.concentratedliquidity.v1beta1.Pool
+ */
 export const Pool = {
   typeUrl: "/osmosis.concentratedliquidity.v1beta1.Pool",
   encode(message: Pool, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

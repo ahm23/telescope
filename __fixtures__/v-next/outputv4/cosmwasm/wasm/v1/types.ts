@@ -100,7 +100,12 @@ export function contractCodeHistoryOperationTypeToJSON(object: ContractCodeHisto
       return "UNRECOGNIZED";
   }
 }
-/** AccessTypeParam */
+/**
+ * AccessTypeParam
+ * @name AccessTypeParam
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.AccessTypeParam
+ */
 export interface AccessTypeParam {
   value: AccessType;
 }
@@ -108,11 +113,21 @@ export interface AccessTypeParamProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.AccessTypeParam";
   value: Uint8Array;
 }
-/** AccessTypeParam */
+/**
+ * AccessTypeParam
+ * @name AccessTypeParamSDKType
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.AccessTypeParam
+ */
 export interface AccessTypeParamSDKType {
   value: AccessType;
 }
-/** AccessConfig access control type. */
+/**
+ * AccessConfig access control type.
+ * @name AccessConfig
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.AccessConfig
+ */
 export interface AccessConfig {
   permission: AccessType;
   address: string;
@@ -121,12 +136,22 @@ export interface AccessConfigProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.AccessConfig";
   value: Uint8Array;
 }
-/** AccessConfig access control type. */
+/**
+ * AccessConfig access control type.
+ * @name AccessConfigSDKType
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.AccessConfig
+ */
 export interface AccessConfigSDKType {
   permission: AccessType;
   address: string;
 }
-/** Params defines the set of wasm parameters. */
+/**
+ * Params defines the set of wasm parameters.
+ * @name Params
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Params
+ */
 export interface Params {
   codeUploadAccess: AccessConfig;
   instantiateDefaultPermission: AccessType;
@@ -136,40 +161,74 @@ export interface ParamsProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.Params";
   value: Uint8Array;
 }
-/** Params defines the set of wasm parameters. */
+/**
+ * Params defines the set of wasm parameters.
+ * @name ParamsSDKType
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Params
+ */
 export interface ParamsSDKType {
   code_upload_access: AccessConfigSDKType;
   instantiate_default_permission: AccessType;
   max_wasm_code_size: bigint;
 }
-/** CodeInfo is data for the uploaded contract WASM code */
+/**
+ * CodeInfo is data for the uploaded contract WASM code
+ * @name CodeInfo
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.CodeInfo
+ */
 export interface CodeInfo {
-  /** CodeHash is the unique identifier created by wasmvm */
+  /**
+   * CodeHash is the unique identifier created by wasmvm
+   */
   codeHash: Uint8Array;
-  /** Creator address who initially stored the code */
+  /**
+   * Creator address who initially stored the code
+   */
   creator: string;
-  /** InstantiateConfig access control to apply on contract creation, optional */
+  /**
+   * InstantiateConfig access control to apply on contract creation, optional
+   */
   instantiateConfig: AccessConfig;
 }
 export interface CodeInfoProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.CodeInfo";
   value: Uint8Array;
 }
-/** CodeInfo is data for the uploaded contract WASM code */
+/**
+ * CodeInfo is data for the uploaded contract WASM code
+ * @name CodeInfoSDKType
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.CodeInfo
+ */
 export interface CodeInfoSDKType {
   code_hash: Uint8Array;
   creator: string;
   instantiate_config: AccessConfigSDKType;
 }
-/** ContractInfo stores a WASM contract instance */
+/**
+ * ContractInfo stores a WASM contract instance
+ * @name ContractInfo
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.ContractInfo
+ */
 export interface ContractInfo {
-  /** CodeID is the reference to the stored Wasm code */
+  /**
+   * CodeID is the reference to the stored Wasm code
+   */
   codeId: bigint;
-  /** Creator address who initially instantiated the contract */
+  /**
+   * Creator address who initially instantiated the contract
+   */
   creator: string;
-  /** Admin is an optional address that can execute migrations */
+  /**
+   * Admin is an optional address that can execute migrations
+   */
   admin: string;
-  /** Label is optional metadata to be stored with a contract instance. */
+  /**
+   * Label is optional metadata to be stored with a contract instance.
+   */
   label: string;
   /**
    * Created Tx position when the contract was instantiated.
@@ -188,7 +247,12 @@ export interface ContractInfoProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.ContractInfo";
   value: Uint8Array;
 }
-/** ContractInfo stores a WASM contract instance */
+/**
+ * ContractInfo stores a WASM contract instance
+ * @name ContractInfoSDKType
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.ContractInfo
+ */
 export interface ContractInfoSDKType {
   code_id: bigint;
   creator: string;
@@ -198,12 +262,21 @@ export interface ContractInfoSDKType {
   ibc_port_id: string;
   extension?: AnySDKType;
 }
-/** ContractCodeHistoryEntry metadata to a contract. */
+/**
+ * ContractCodeHistoryEntry metadata to a contract.
+ * @name ContractCodeHistoryEntry
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.ContractCodeHistoryEntry
+ */
 export interface ContractCodeHistoryEntry {
   operation: ContractCodeHistoryOperationType;
-  /** CodeID is the reference to the stored WASM code */
+  /**
+   * CodeID is the reference to the stored WASM code
+   */
   codeId: bigint;
-  /** Updated Tx position when the operation was executed. */
+  /**
+   * Updated Tx position when the operation was executed.
+   */
   updated?: AbsoluteTxPosition;
   msg: Uint8Array;
 }
@@ -211,7 +284,12 @@ export interface ContractCodeHistoryEntryProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.ContractCodeHistoryEntry";
   value: Uint8Array;
 }
-/** ContractCodeHistoryEntry metadata to a contract. */
+/**
+ * ContractCodeHistoryEntry metadata to a contract.
+ * @name ContractCodeHistoryEntrySDKType
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.ContractCodeHistoryEntry
+ */
 export interface ContractCodeHistoryEntrySDKType {
   operation: ContractCodeHistoryOperationType;
   code_id: bigint;
@@ -221,9 +299,14 @@ export interface ContractCodeHistoryEntrySDKType {
 /**
  * AbsoluteTxPosition is a unique transaction position that allows for global
  * ordering of transactions.
+ * @name AbsoluteTxPosition
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.AbsoluteTxPosition
  */
 export interface AbsoluteTxPosition {
-  /** BlockHeight is the block the contract was created at */
+  /**
+   * BlockHeight is the block the contract was created at
+   */
   blockHeight: bigint;
   /**
    * TxIndex is a monotonic counter within the block (actual transaction index,
@@ -238,23 +321,40 @@ export interface AbsoluteTxPositionProtoMsg {
 /**
  * AbsoluteTxPosition is a unique transaction position that allows for global
  * ordering of transactions.
+ * @name AbsoluteTxPositionSDKType
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.AbsoluteTxPosition
  */
 export interface AbsoluteTxPositionSDKType {
   block_height: bigint;
   tx_index: bigint;
 }
-/** Model is a struct that holds a KV pair */
+/**
+ * Model is a struct that holds a KV pair
+ * @name Model
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Model
+ */
 export interface Model {
-  /** hex-encode key to read it better (this is often ascii) */
+  /**
+   * hex-encode key to read it better (this is often ascii)
+   */
   key: Uint8Array;
-  /** base64-encode raw value */
+  /**
+   * base64-encode raw value
+   */
   value: Uint8Array;
 }
 export interface ModelProtoMsg {
   typeUrl: "/cosmwasm.wasm.v1.Model";
   value: Uint8Array;
 }
-/** Model is a struct that holds a KV pair */
+/**
+ * Model is a struct that holds a KV pair
+ * @name ModelSDKType
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Model
+ */
 export interface ModelSDKType {
   key: Uint8Array;
   value: Uint8Array;
@@ -264,6 +364,12 @@ function createBaseAccessTypeParam(): AccessTypeParam {
     value: 0
   };
 }
+/**
+ * AccessTypeParam
+ * @name AccessTypeParam
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.AccessTypeParam
+ */
 export const AccessTypeParam = {
   typeUrl: "/cosmwasm.wasm.v1.AccessTypeParam",
   encode(message: AccessTypeParam, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -359,6 +465,12 @@ function createBaseAccessConfig(): AccessConfig {
     address: ""
   };
 }
+/**
+ * AccessConfig access control type.
+ * @name AccessConfig
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.AccessConfig
+ */
 export const AccessConfig = {
   typeUrl: "/cosmwasm.wasm.v1.AccessConfig",
   encode(message: AccessConfig, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -471,6 +583,12 @@ function createBaseParams(): Params {
     maxWasmCodeSize: BigInt(0)
   };
 }
+/**
+ * Params defines the set of wasm parameters.
+ * @name Params
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Params
+ */
 export const Params = {
   typeUrl: "/cosmwasm.wasm.v1.Params",
   encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -603,6 +721,12 @@ function createBaseCodeInfo(): CodeInfo {
     instantiateConfig: AccessConfig.fromPartial({})
   };
 }
+/**
+ * CodeInfo is data for the uploaded contract WASM code
+ * @name CodeInfo
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.CodeInfo
+ */
 export const CodeInfo = {
   typeUrl: "/cosmwasm.wasm.v1.CodeInfo",
   encode(message: CodeInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -737,6 +861,12 @@ function createBaseContractInfo(): ContractInfo {
     extension: undefined
   };
 }
+/**
+ * ContractInfo stores a WASM contract instance
+ * @name ContractInfo
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.ContractInfo
+ */
 export const ContractInfo = {
   typeUrl: "/cosmwasm.wasm.v1.ContractInfo",
   encode(message: ContractInfo, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -936,6 +1066,12 @@ function createBaseContractCodeHistoryEntry(): ContractCodeHistoryEntry {
     msg: new Uint8Array()
   };
 }
+/**
+ * ContractCodeHistoryEntry metadata to a contract.
+ * @name ContractCodeHistoryEntry
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.ContractCodeHistoryEntry
+ */
 export const ContractCodeHistoryEntry = {
   typeUrl: "/cosmwasm.wasm.v1.ContractCodeHistoryEntry",
   encode(message: ContractCodeHistoryEntry, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1083,6 +1219,13 @@ function createBaseAbsoluteTxPosition(): AbsoluteTxPosition {
     txIndex: BigInt(0)
   };
 }
+/**
+ * AbsoluteTxPosition is a unique transaction position that allows for global
+ * ordering of transactions.
+ * @name AbsoluteTxPosition
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.AbsoluteTxPosition
+ */
 export const AbsoluteTxPosition = {
   typeUrl: "/cosmwasm.wasm.v1.AbsoluteTxPosition",
   encode(message: AbsoluteTxPosition, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
@@ -1198,6 +1341,12 @@ function createBaseModel(): Model {
     value: new Uint8Array()
   };
 }
+/**
+ * Model is a struct that holds a KV pair
+ * @name Model
+ * @package cosmwasm.wasm.v1
+ * @see proto type: cosmwasm.wasm.v1.Model
+ */
 export const Model = {
   typeUrl: "/cosmwasm.wasm.v1.Model",
   encode(message: Model, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {

@@ -1,9 +1,16 @@
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { Decimal } from "@interchainjs/math";
 import { DeepPartial } from "../../../helpers";
-/** Params defines the parameters for the x/deployment package */
-export interface Params {
-  /** InflationDecayFactor is the number of years it takes inflation to halve. */
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name AkashInflationV1beta2Params
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.Params
+ */
+export interface AkashInflationV1beta2Params {
+  /**
+   * InflationDecayFactor is the number of years it takes inflation to halve.
+   */
   inflationDecayFactor: string;
   /**
    * InitialInflation is the rate at which inflation starts at genesis.
@@ -16,13 +23,20 @@ export interface Params {
    */
   variance: string;
 }
-export interface ParamsProtoMsg {
+export interface AkashInflationV1beta2ParamsProtoMsg {
   typeUrl: "/akash.inflation.v1beta2.Params";
   value: Uint8Array;
 }
-/** Params defines the parameters for the x/deployment package */
-export interface ParamsAmino {
-  /** InflationDecayFactor is the number of years it takes inflation to halve. */
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name AkashInflationV1beta2ParamsAmino
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.AkashInflationV1beta2Params
+ */
+export interface AkashInflationV1beta2ParamsAmino {
+  /**
+   * InflationDecayFactor is the number of years it takes inflation to halve.
+   */
   inflation_decay_factor: string;
   /**
    * InitialInflation is the rate at which inflation starts at genesis.
@@ -35,20 +49,26 @@ export interface ParamsAmino {
    */
   variance: string;
 }
-export interface ParamsAminoMsg {
+export interface AkashInflationV1beta2ParamsAminoMsg {
   type: "/akash.inflation.v1beta2.Params";
-  value: ParamsAmino;
+  value: AkashInflationV1beta2ParamsAmino;
 }
-function createBaseParams(): Params {
+function createBaseAkashInflationV1beta2Params(): AkashInflationV1beta2Params {
   return {
     inflationDecayFactor: "",
     initialInflation: "",
     variance: ""
   };
 }
-export const Params = {
+/**
+ * Params defines the parameters for the x/deployment package
+ * @name AkashInflationV1beta2Params
+ * @package akash.inflation.v1beta2
+ * @see proto type: akash.inflation.v1beta2.Params
+ */
+export const AkashInflationV1beta2Params = {
   typeUrl: "/akash.inflation.v1beta2.Params",
-  encode(message: Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+  encode(message: AkashInflationV1beta2Params, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.inflationDecayFactor !== "") {
       writer.uint32(10).string(Decimal.fromUserInput(message.inflationDecayFactor, 18).atomics);
     }
@@ -60,10 +80,10 @@ export const Params = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+  decode(input: BinaryReader | Uint8Array, length?: number): AkashInflationV1beta2Params {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseParams();
+    const message = createBaseAkashInflationV1beta2Params();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -83,15 +103,15 @@ export const Params = {
     }
     return message;
   },
-  fromPartial(object: DeepPartial<Params>): Params {
-    const message = createBaseParams();
+  fromPartial(object: DeepPartial<AkashInflationV1beta2Params>): AkashInflationV1beta2Params {
+    const message = createBaseAkashInflationV1beta2Params();
     message.inflationDecayFactor = object.inflationDecayFactor ?? "";
     message.initialInflation = object.initialInflation ?? "";
     message.variance = object.variance ?? "";
     return message;
   },
-  fromAmino(object: ParamsAmino): Params {
-    const message = createBaseParams();
+  fromAmino(object: AkashInflationV1beta2ParamsAmino): AkashInflationV1beta2Params {
+    const message = createBaseAkashInflationV1beta2Params();
     if (object.inflation_decay_factor !== undefined && object.inflation_decay_factor !== null) {
       message.inflationDecayFactor = object.inflation_decay_factor;
     }
@@ -103,26 +123,26 @@ export const Params = {
     }
     return message;
   },
-  toAmino(message: Params): ParamsAmino {
+  toAmino(message: AkashInflationV1beta2Params): AkashInflationV1beta2ParamsAmino {
     const obj: any = {};
     obj.inflation_decay_factor = message.inflationDecayFactor ?? "";
     obj.initial_inflation = message.initialInflation ?? "";
     obj.variance = message.variance ?? "";
     return obj;
   },
-  fromAminoMsg(object: ParamsAminoMsg): Params {
-    return Params.fromAmino(object.value);
+  fromAminoMsg(object: AkashInflationV1beta2ParamsAminoMsg): AkashInflationV1beta2Params {
+    return AkashInflationV1beta2Params.fromAmino(object.value);
   },
-  fromProtoMsg(message: ParamsProtoMsg): Params {
-    return Params.decode(message.value);
+  fromProtoMsg(message: AkashInflationV1beta2ParamsProtoMsg): AkashInflationV1beta2Params {
+    return AkashInflationV1beta2Params.decode(message.value);
   },
-  toProto(message: Params): Uint8Array {
-    return Params.encode(message).finish();
+  toProto(message: AkashInflationV1beta2Params): Uint8Array {
+    return AkashInflationV1beta2Params.encode(message).finish();
   },
-  toProtoMsg(message: Params): ParamsProtoMsg {
+  toProtoMsg(message: AkashInflationV1beta2Params): AkashInflationV1beta2ParamsProtoMsg {
     return {
       typeUrl: "/akash.inflation.v1beta2.Params",
-      value: Params.encode(message).finish()
+      value: AkashInflationV1beta2Params.encode(message).finish()
     };
   }
 };

@@ -10,6 +10,9 @@ export const protobufPackage = "evmos.claims.v1";
 /**
  * QueryTotalUnclaimedRequest is the request type for the Query/TotalUnclaimed
  * RPC method.
+ * @name QueryTotalUnclaimedRequest
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryTotalUnclaimedRequest
  */
 export interface QueryTotalUnclaimedRequest {}
 export interface QueryTotalUnclaimedRequestProtoMsg {
@@ -19,6 +22,9 @@ export interface QueryTotalUnclaimedRequestProtoMsg {
 /**
  * QueryTotalUnclaimedRequest is the request type for the Query/TotalUnclaimed
  * RPC method.
+ * @name QueryTotalUnclaimedRequestAmino
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryTotalUnclaimedRequest
  */
 export interface QueryTotalUnclaimedRequestAmino {}
 export interface QueryTotalUnclaimedRequestAminoMsg {
@@ -28,14 +34,22 @@ export interface QueryTotalUnclaimedRequestAminoMsg {
 /**
  * QueryTotalUnclaimedRequest is the request type for the Query/TotalUnclaimed
  * RPC method.
+ * @name QueryTotalUnclaimedRequestSDKType
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryTotalUnclaimedRequest
  */
 export interface QueryTotalUnclaimedRequestSDKType {}
 /**
  * QueryTotalUnclaimedResponse is the response type for the Query/TotalUnclaimed
  * RPC method.
+ * @name QueryTotalUnclaimedResponse
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryTotalUnclaimedResponse
  */
 export interface QueryTotalUnclaimedResponse {
-  /** coins defines the unclaimed coins */
+  /**
+   * coins defines the unclaimed coins
+   */
   coins: Coin[];
 }
 export interface QueryTotalUnclaimedResponseProtoMsg {
@@ -45,9 +59,14 @@ export interface QueryTotalUnclaimedResponseProtoMsg {
 /**
  * QueryTotalUnclaimedResponse is the response type for the Query/TotalUnclaimed
  * RPC method.
+ * @name QueryTotalUnclaimedResponseAmino
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryTotalUnclaimedResponse
  */
 export interface QueryTotalUnclaimedResponseAmino {
-  /** coins defines the unclaimed coins */
+  /**
+   * coins defines the unclaimed coins
+   */
   coins?: CoinAmino[];
 }
 export interface QueryTotalUnclaimedResponseAminoMsg {
@@ -57,52 +76,94 @@ export interface QueryTotalUnclaimedResponseAminoMsg {
 /**
  * QueryTotalUnclaimedResponse is the response type for the Query/TotalUnclaimed
  * RPC method.
+ * @name QueryTotalUnclaimedResponseSDKType
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryTotalUnclaimedResponse
  */
 export interface QueryTotalUnclaimedResponseSDKType {
   coins: CoinSDKType[];
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryParamsRequest
+ */
 export interface QueryParamsRequest {}
 export interface QueryParamsRequestProtoMsg {
   typeUrl: "/evmos.claims.v1.QueryParamsRequest";
   value: Uint8Array;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestAmino
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryParamsRequest
+ */
 export interface QueryParamsRequestAmino {}
 export interface QueryParamsRequestAminoMsg {
   type: "/evmos.claims.v1.QueryParamsRequest";
   value: QueryParamsRequestAmino;
 }
-/** QueryParamsRequest is the request type for the Query/Params RPC method. */
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequestSDKType
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryParamsRequest
+ */
 export interface QueryParamsRequestSDKType {}
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryParamsResponse
+ */
 export interface QueryParamsResponse {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params: Params;
 }
 export interface QueryParamsResponseProtoMsg {
   typeUrl: "/evmos.claims.v1.QueryParamsResponse";
   value: Uint8Array;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseAmino
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryParamsResponse
+ */
 export interface QueryParamsResponseAmino {
-  /** params defines the parameters of the module. */
+  /**
+   * params defines the parameters of the module.
+   */
   params?: ParamsAmino;
 }
 export interface QueryParamsResponseAminoMsg {
   type: "/evmos.claims.v1.QueryParamsResponse";
   value: QueryParamsResponseAmino;
 }
-/** QueryParamsResponse is the response type for the Query/Params RPC method. */
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponseSDKType
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryParamsResponse
+ */
 export interface QueryParamsResponseSDKType {
   params: ParamsSDKType;
 }
 /**
  * QueryClaimsRecordsRequest is the request type for the Query/ClaimsRecords RPC
  * method.
+ * @name QueryClaimsRecordsRequest
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordsRequest
  */
 export interface QueryClaimsRecordsRequest {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequest;
 }
 export interface QueryClaimsRecordsRequestProtoMsg {
@@ -112,9 +173,14 @@ export interface QueryClaimsRecordsRequestProtoMsg {
 /**
  * QueryClaimsRecordsRequest is the request type for the Query/ClaimsRecords RPC
  * method.
+ * @name QueryClaimsRecordsRequestAmino
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordsRequest
  */
 export interface QueryClaimsRecordsRequestAmino {
-  /** pagination defines an optional pagination for the request. */
+  /**
+   * pagination defines an optional pagination for the request.
+   */
   pagination?: PageRequestAmino;
 }
 export interface QueryClaimsRecordsRequestAminoMsg {
@@ -124,6 +190,9 @@ export interface QueryClaimsRecordsRequestAminoMsg {
 /**
  * QueryClaimsRecordsRequest is the request type for the Query/ClaimsRecords RPC
  * method.
+ * @name QueryClaimsRecordsRequestSDKType
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordsRequest
  */
 export interface QueryClaimsRecordsRequestSDKType {
   pagination?: PageRequestSDKType;
@@ -131,11 +200,18 @@ export interface QueryClaimsRecordsRequestSDKType {
 /**
  * QueryClaimsRecordsResponse is the response type for the Query/ClaimsRecords
  * RPC method.
+ * @name QueryClaimsRecordsResponse
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordsResponse
  */
 export interface QueryClaimsRecordsResponse {
-  /** claims defines all claims records */
+  /**
+   * claims defines all claims records
+   */
   claims: ClaimsRecordAddress[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponse;
 }
 export interface QueryClaimsRecordsResponseProtoMsg {
@@ -145,11 +221,18 @@ export interface QueryClaimsRecordsResponseProtoMsg {
 /**
  * QueryClaimsRecordsResponse is the response type for the Query/ClaimsRecords
  * RPC method.
+ * @name QueryClaimsRecordsResponseAmino
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordsResponse
  */
 export interface QueryClaimsRecordsResponseAmino {
-  /** claims defines all claims records */
+  /**
+   * claims defines all claims records
+   */
   claims?: ClaimsRecordAddressAmino[];
-  /** pagination defines the pagination in the response. */
+  /**
+   * pagination defines the pagination in the response.
+   */
   pagination?: PageResponseAmino;
 }
 export interface QueryClaimsRecordsResponseAminoMsg {
@@ -159,6 +242,9 @@ export interface QueryClaimsRecordsResponseAminoMsg {
 /**
  * QueryClaimsRecordsResponse is the response type for the Query/ClaimsRecords
  * RPC method.
+ * @name QueryClaimsRecordsResponseSDKType
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordsResponse
  */
 export interface QueryClaimsRecordsResponseSDKType {
   claims: ClaimsRecordAddressSDKType[];
@@ -167,9 +253,14 @@ export interface QueryClaimsRecordsResponseSDKType {
 /**
  * QueryClaimsRecordRequest is the request type for the Query/ClaimsRecord RPC
  * method.
+ * @name QueryClaimsRecordRequest
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordRequest
  */
 export interface QueryClaimsRecordRequest {
-  /** address defines the user to query claims record for */
+  /**
+   * address defines the user to query claims record for
+   */
   address: string;
 }
 export interface QueryClaimsRecordRequestProtoMsg {
@@ -179,9 +270,14 @@ export interface QueryClaimsRecordRequestProtoMsg {
 /**
  * QueryClaimsRecordRequest is the request type for the Query/ClaimsRecord RPC
  * method.
+ * @name QueryClaimsRecordRequestAmino
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordRequest
  */
 export interface QueryClaimsRecordRequestAmino {
-  /** address defines the user to query claims record for */
+  /**
+   * address defines the user to query claims record for
+   */
   address?: string;
 }
 export interface QueryClaimsRecordRequestAminoMsg {
@@ -191,6 +287,9 @@ export interface QueryClaimsRecordRequestAminoMsg {
 /**
  * QueryClaimsRecordRequest is the request type for the Query/ClaimsRecord RPC
  * method.
+ * @name QueryClaimsRecordRequestSDKType
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordRequest
  */
 export interface QueryClaimsRecordRequestSDKType {
   address: string;
@@ -198,11 +297,18 @@ export interface QueryClaimsRecordRequestSDKType {
 /**
  * QueryClaimsRecordResponse is the response type for the Query/ClaimsRecord RPC
  * method.
+ * @name QueryClaimsRecordResponse
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordResponse
  */
 export interface QueryClaimsRecordResponse {
-  /** total initial claimable amount for the user */
+  /**
+   * total initial claimable amount for the user
+   */
   initialClaimableAmount: string;
-  /** the claims of the user */
+  /**
+   * the claims of the user
+   */
   claims: Claim[];
 }
 export interface QueryClaimsRecordResponseProtoMsg {
@@ -212,11 +318,18 @@ export interface QueryClaimsRecordResponseProtoMsg {
 /**
  * QueryClaimsRecordResponse is the response type for the Query/ClaimsRecord RPC
  * method.
+ * @name QueryClaimsRecordResponseAmino
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordResponse
  */
 export interface QueryClaimsRecordResponseAmino {
-  /** total initial claimable amount for the user */
+  /**
+   * total initial claimable amount for the user
+   */
   initial_claimable_amount?: string;
-  /** the claims of the user */
+  /**
+   * the claims of the user
+   */
   claims?: ClaimAmino[];
 }
 export interface QueryClaimsRecordResponseAminoMsg {
@@ -226,6 +339,9 @@ export interface QueryClaimsRecordResponseAminoMsg {
 /**
  * QueryClaimsRecordResponse is the response type for the Query/ClaimsRecord RPC
  * method.
+ * @name QueryClaimsRecordResponseSDKType
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordResponse
  */
 export interface QueryClaimsRecordResponseSDKType {
   initial_claimable_amount: string;
@@ -234,6 +350,13 @@ export interface QueryClaimsRecordResponseSDKType {
 function createBaseQueryTotalUnclaimedRequest(): QueryTotalUnclaimedRequest {
   return {};
 }
+/**
+ * QueryTotalUnclaimedRequest is the request type for the Query/TotalUnclaimed
+ * RPC method.
+ * @name QueryTotalUnclaimedRequest
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryTotalUnclaimedRequest
+ */
 export const QueryTotalUnclaimedRequest = {
   typeUrl: "/evmos.claims.v1.QueryTotalUnclaimedRequest",
   is(o: any): o is QueryTotalUnclaimedRequest {
@@ -314,6 +437,13 @@ function createBaseQueryTotalUnclaimedResponse(): QueryTotalUnclaimedResponse {
     coins: []
   };
 }
+/**
+ * QueryTotalUnclaimedResponse is the response type for the Query/TotalUnclaimed
+ * RPC method.
+ * @name QueryTotalUnclaimedResponse
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryTotalUnclaimedResponse
+ */
 export const QueryTotalUnclaimedResponse = {
   typeUrl: "/evmos.claims.v1.QueryTotalUnclaimedResponse",
   is(o: any): o is QueryTotalUnclaimedResponse {
@@ -425,6 +555,12 @@ export const QueryTotalUnclaimedResponse = {
 function createBaseQueryParamsRequest(): QueryParamsRequest {
   return {};
 }
+/**
+ * QueryParamsRequest is the request type for the Query/Params RPC method.
+ * @name QueryParamsRequest
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryParamsRequest
+ */
 export const QueryParamsRequest = {
   typeUrl: "/evmos.claims.v1.QueryParamsRequest",
   is(o: any): o is QueryParamsRequest {
@@ -505,6 +641,12 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
     params: Params.fromPartial({})
   };
 }
+/**
+ * QueryParamsResponse is the response type for the Query/Params RPC method.
+ * @name QueryParamsResponse
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryParamsResponse
+ */
 export const QueryParamsResponse = {
   typeUrl: "/evmos.claims.v1.QueryParamsResponse",
   is(o: any): o is QueryParamsResponse {
@@ -610,6 +752,13 @@ function createBaseQueryClaimsRecordsRequest(): QueryClaimsRecordsRequest {
     pagination: undefined
   };
 }
+/**
+ * QueryClaimsRecordsRequest is the request type for the Query/ClaimsRecords RPC
+ * method.
+ * @name QueryClaimsRecordsRequest
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordsRequest
+ */
 export const QueryClaimsRecordsRequest = {
   typeUrl: "/evmos.claims.v1.QueryClaimsRecordsRequest",
   is(o: any): o is QueryClaimsRecordsRequest {
@@ -716,6 +865,13 @@ function createBaseQueryClaimsRecordsResponse(): QueryClaimsRecordsResponse {
     pagination: undefined
   };
 }
+/**
+ * QueryClaimsRecordsResponse is the response type for the Query/ClaimsRecords
+ * RPC method.
+ * @name QueryClaimsRecordsResponse
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordsResponse
+ */
 export const QueryClaimsRecordsResponse = {
   typeUrl: "/evmos.claims.v1.QueryClaimsRecordsResponse",
   is(o: any): o is QueryClaimsRecordsResponse {
@@ -848,6 +1004,13 @@ function createBaseQueryClaimsRecordRequest(): QueryClaimsRecordRequest {
     address: ""
   };
 }
+/**
+ * QueryClaimsRecordRequest is the request type for the Query/ClaimsRecord RPC
+ * method.
+ * @name QueryClaimsRecordRequest
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordRequest
+ */
 export const QueryClaimsRecordRequest = {
   typeUrl: "/evmos.claims.v1.QueryClaimsRecordRequest",
   is(o: any): o is QueryClaimsRecordRequest {
@@ -947,6 +1110,13 @@ function createBaseQueryClaimsRecordResponse(): QueryClaimsRecordResponse {
     claims: []
   };
 }
+/**
+ * QueryClaimsRecordResponse is the response type for the Query/ClaimsRecord RPC
+ * method.
+ * @name QueryClaimsRecordResponse
+ * @package evmos.claims.v1
+ * @see proto type: evmos.claims.v1.QueryClaimsRecordResponse
+ */
 export const QueryClaimsRecordResponse = {
   typeUrl: "/evmos.claims.v1.QueryClaimsRecordResponse",
   is(o: any): o is QueryClaimsRecordResponse {

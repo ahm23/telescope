@@ -8,15 +8,15 @@
 ### Transaction Methods
 
 **SignProviderAttributes**
-- Function: `signProviderAttributes2`
-- Hook: `useSignProviderAttributes2`
+- Function: `signProviderAttributesAkashAuditV1beta1`
+- Hook: `useSignProviderAttributesAkashAuditV1beta1`
 - Description: SignProviderAttributes defines a method that signs provider attributes
 - Request: MsgSignProviderAttributes
 - Response: MsgSignProviderAttributesResponse
 
 **DeleteProviderAttributes**
-- Function: `deleteProviderAttributes2`
-- Hook: `useDeleteProviderAttributes2`
+- Function: `deleteProviderAttributesAkashAuditV1beta1`
+- Hook: `useDeleteProviderAttributesAkashAuditV1beta1`
 - Description: DeleteProviderAttributes defines a method that deletes provider attributes
 - Request: MsgDeleteProviderAttributes
 - Response: MsgDeleteProviderAttributesResponse
@@ -65,15 +65,15 @@
 ### Transaction Methods
 
 **SignProviderAttributes**
-- Function: `signProviderAttributes3`
-- Hook: `useSignProviderAttributes3`
+- Function: `signProviderAttributesAkashAuditV1beta2`
+- Hook: `useSignProviderAttributesAkashAuditV1beta2`
 - Description: SignProviderAttributes defines a method that signs provider attributes
 - Request: MsgSignProviderAttributes
 - Response: MsgSignProviderAttributesResponse
 
 **DeleteProviderAttributes**
-- Function: `deleteProviderAttributes3`
-- Hook: `useDeleteProviderAttributes3`
+- Function: `deleteProviderAttributesAkashAuditV1beta2`
+- Hook: `useDeleteProviderAttributesAkashAuditV1beta2`
 - Description: DeleteProviderAttributes defines a method that deletes provider attributes
 - Request: MsgDeleteProviderAttributes
 - Response: MsgDeleteProviderAttributesResponse
@@ -112,22 +112,22 @@
 ### Query Methods
 
 **Deployments**
-- Function: `getDeployments2`
-- Hook: `useGetDeployments2`
+- Function: `getDeploymentsAkashDeploymentV1beta1`
+- Hook: `useGetDeploymentsAkashDeploymentV1beta1`
 - Description: Deployments queries deployments
 - Request: QueryDeploymentsRequest
 - Response: QueryDeploymentsResponse
 
 **Deployment**
-- Function: `getDeployment2`
-- Hook: `useGetDeployment2`
+- Function: `getDeploymentAkashDeploymentV1beta1`
+- Hook: `useGetDeploymentAkashDeploymentV1beta1`
 - Description: Deployment queries deployment details
 - Request: QueryDeploymentRequest
 - Response: QueryDeploymentResponse
 
 **Group**
-- Function: `getGroup2`
-- Hook: `useGetGroup2`
+- Function: `getGroupAkashDeploymentV1beta1`
+- Hook: `useGetGroupAkashDeploymentV1beta1`
 - Description: Group queries group details
 - Request: QueryGroupRequest
 - Response: QueryGroupResponse
@@ -135,50 +135,50 @@
 ### Transaction Methods
 
 **CreateDeployment**
-- Function: `createDeployment2`
-- Hook: `useCreateDeployment2`
+- Function: `createDeploymentAkashDeploymentV1beta1`
+- Hook: `useCreateDeploymentAkashDeploymentV1beta1`
 - Description: CreateDeployment defines a method to create new deployment given proper inputs.
 - Request: MsgCreateDeployment
 - Response: MsgCreateDeploymentResponse
 
 **DepositDeployment**
-- Function: `depositDeployment2`
-- Hook: `useDepositDeployment2`
+- Function: `depositDeploymentAkashDeploymentV1beta1`
+- Hook: `useDepositDeploymentAkashDeploymentV1beta1`
 - Description: DepositDeployment deposits more funds into the deployment account
 - Request: MsgDepositDeployment
 - Response: MsgDepositDeploymentResponse
 
 **UpdateDeployment**
-- Function: `updateDeployment2`
-- Hook: `useUpdateDeployment2`
+- Function: `updateDeploymentAkashDeploymentV1beta1`
+- Hook: `useUpdateDeploymentAkashDeploymentV1beta1`
 - Description: UpdateDeployment defines a method to update a deployment given proper inputs.
 - Request: MsgUpdateDeployment
 - Response: MsgUpdateDeploymentResponse
 
 **CloseDeployment**
-- Function: `closeDeployment2`
-- Hook: `useCloseDeployment2`
+- Function: `closeDeploymentAkashDeploymentV1beta1`
+- Hook: `useCloseDeploymentAkashDeploymentV1beta1`
 - Description: CloseDeployment defines a method to close a deployment given proper inputs.
 - Request: MsgCloseDeployment
 - Response: MsgCloseDeploymentResponse
 
 **CloseGroup**
-- Function: `closeGroup2`
-- Hook: `useCloseGroup2`
+- Function: `closeGroupAkashDeploymentV1beta1`
+- Hook: `useCloseGroupAkashDeploymentV1beta1`
 - Description: CloseGroup defines a method to close a group of a deployment given proper inputs.
 - Request: MsgCloseGroup
 - Response: MsgCloseGroupResponse
 
 **PauseGroup**
-- Function: `pauseGroup2`
-- Hook: `usePauseGroup2`
+- Function: `pauseGroupAkashDeploymentV1beta1`
+- Hook: `usePauseGroupAkashDeploymentV1beta1`
 - Description: PauseGroup defines a method to close a group of a deployment given proper inputs.
 - Request: MsgPauseGroup
 - Response: MsgPauseGroupResponse
 
 **StartGroup**
-- Function: `startGroup2`
-- Hook: `useStartGroup2`
+- Function: `startGroupAkashDeploymentV1beta1`
+- Hook: `useStartGroupAkashDeploymentV1beta1`
 - Description: StartGroup defines a method to close a group of a deployment given proper inputs.
 - Request: MsgStartGroup
 - Response: MsgStartGroupResponse
@@ -189,22 +189,22 @@
 ### Query Methods
 
 **Deployments**
-- Function: `getDeployments3`
-- Hook: `useGetDeployments3`
+- Function: `getDeploymentsAkashDeploymentV1beta2`
+- Hook: `useGetDeploymentsAkashDeploymentV1beta2`
 - Description: Deployments queries deployments
 - Request: QueryDeploymentsRequest
 - Response: QueryDeploymentsResponse
 
 **Deployment**
-- Function: `getDeployment3`
-- Hook: `useGetDeployment3`
+- Function: `getDeploymentAkashDeploymentV1beta2`
+- Hook: `useGetDeploymentAkashDeploymentV1beta2`
 - Description: Deployment queries deployment details
 - Request: QueryDeploymentRequest
 - Response: QueryDeploymentResponse
 
 **Group**
-- Function: `getGroup3`
-- Hook: `useGetGroup3`
+- Function: `getGroupAkashDeploymentV1beta2`
+- Hook: `useGetGroupAkashDeploymentV1beta2`
 - Description: Group queries group details
 - Request: QueryGroupRequest
 - Response: QueryGroupResponse
@@ -212,50 +212,50 @@
 ### Transaction Methods
 
 **CreateDeployment**
-- Function: `createDeployment3`
-- Hook: `useCreateDeployment3`
+- Function: `createDeploymentAkashDeploymentV1beta2`
+- Hook: `useCreateDeploymentAkashDeploymentV1beta2`
 - Description: CreateDeployment defines a method to create new deployment given proper inputs.
 - Request: MsgCreateDeployment
 - Response: MsgCreateDeploymentResponse
 
 **DepositDeployment**
-- Function: `depositDeployment3`
-- Hook: `useDepositDeployment3`
+- Function: `depositDeploymentAkashDeploymentV1beta2`
+- Hook: `useDepositDeploymentAkashDeploymentV1beta2`
 - Description: DepositDeployment deposits more funds into the deployment account
 - Request: MsgDepositDeployment
 - Response: MsgDepositDeploymentResponse
 
 **UpdateDeployment**
-- Function: `updateDeployment3`
-- Hook: `useUpdateDeployment3`
+- Function: `updateDeploymentAkashDeploymentV1beta2`
+- Hook: `useUpdateDeploymentAkashDeploymentV1beta2`
 - Description: UpdateDeployment defines a method to update a deployment given proper inputs.
 - Request: MsgUpdateDeployment
 - Response: MsgUpdateDeploymentResponse
 
 **CloseDeployment**
-- Function: `closeDeployment3`
-- Hook: `useCloseDeployment3`
+- Function: `closeDeploymentAkashDeploymentV1beta2`
+- Hook: `useCloseDeploymentAkashDeploymentV1beta2`
 - Description: CloseDeployment defines a method to close a deployment given proper inputs.
 - Request: MsgCloseDeployment
 - Response: MsgCloseDeploymentResponse
 
 **CloseGroup**
-- Function: `closeGroup3`
-- Hook: `useCloseGroup3`
+- Function: `closeGroupAkashDeploymentV1beta2`
+- Hook: `useCloseGroupAkashDeploymentV1beta2`
 - Description: CloseGroup defines a method to close a group of a deployment given proper inputs.
 - Request: MsgCloseGroup
 - Response: MsgCloseGroupResponse
 
 **PauseGroup**
-- Function: `pauseGroup3`
-- Hook: `usePauseGroup3`
+- Function: `pauseGroupAkashDeploymentV1beta2`
+- Hook: `usePauseGroupAkashDeploymentV1beta2`
 - Description: PauseGroup defines a method to close a group of a deployment given proper inputs.
 - Request: MsgPauseGroup
 - Response: MsgPauseGroupResponse
 
 **StartGroup**
-- Function: `startGroup3`
-- Hook: `useStartGroup3`
+- Function: `startGroupAkashDeploymentV1beta2`
+- Hook: `useStartGroupAkashDeploymentV1beta2`
 - Description: StartGroup defines a method to close a group of a deployment given proper inputs.
 - Request: MsgStartGroup
 - Response: MsgStartGroupResponse
@@ -266,8 +266,8 @@
 ### Query Methods
 
 **Accounts**
-- Function: `getAccounts3`
-- Hook: `useGetAccounts3`
+- Function: `getAccountsAkashEscrowV1beta1`
+- Hook: `useGetAccountsAkashEscrowV1beta1`
 - Description: buf:lint:ignore RPC_REQUEST_RESPONSE_UNIQUE
  buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
  Accounts queries all accounts
@@ -275,8 +275,8 @@
 - Response: QueryAccountsResponse
 
 **Payments**
-- Function: `getPayments2`
-- Hook: `useGetPayments2`
+- Function: `getPaymentsAkashEscrowV1beta1`
+- Hook: `useGetPaymentsAkashEscrowV1beta1`
 - Description: buf:lint:ignore RPC_REQUEST_RESPONSE_UNIQUE
  buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
  Payments queries all payments
@@ -289,8 +289,8 @@
 ### Query Methods
 
 **Accounts**
-- Function: `getAccounts4`
-- Hook: `useGetAccounts4`
+- Function: `getAccountsAkashEscrowV1beta2`
+- Hook: `useGetAccountsAkashEscrowV1beta2`
 - Description: buf:lint:ignore RPC_REQUEST_RESPONSE_UNIQUE
  buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
  Accounts queries all accounts
@@ -298,8 +298,8 @@
 - Response: QueryAccountsResponse
 
 **Payments**
-- Function: `getPayments3`
-- Hook: `useGetPayments3`
+- Function: `getPaymentsAkashEscrowV1beta2`
+- Hook: `useGetPaymentsAkashEscrowV1beta2`
 - Description: buf:lint:ignore RPC_REQUEST_RESPONSE_UNIQUE
  buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
  Payments queries all payments
@@ -396,22 +396,22 @@
 ### Transaction Methods
 
 **CreateProvider**
-- Function: `createProvider2`
-- Hook: `useCreateProvider2`
+- Function: `createProviderAkashProviderV1beta1`
+- Hook: `useCreateProviderAkashProviderV1beta1`
 - Description: CreateProvider defines a method that creates a provider given the proper inputs
 - Request: MsgCreateProvider
 - Response: MsgCreateProviderResponse
 
 **UpdateProvider**
-- Function: `updateProvider2`
-- Hook: `useUpdateProvider2`
+- Function: `updateProviderAkashProviderV1beta1`
+- Hook: `useUpdateProviderAkashProviderV1beta1`
 - Description: UpdateProvider defines a method that updates a provider given the proper inputs
 - Request: MsgUpdateProvider
 - Response: MsgUpdateProviderResponse
 
 **DeleteProvider**
-- Function: `deleteProvider2`
-- Hook: `useDeleteProvider2`
+- Function: `deleteProviderAkashProviderV1beta1`
+- Hook: `useDeleteProviderAkashProviderV1beta1`
 - Description: DeleteProvider defines a method that deletes a provider given the proper inputs
 - Request: MsgDeleteProvider
 - Response: MsgDeleteProviderResponse
@@ -438,22 +438,22 @@
 ### Transaction Methods
 
 **CreateProvider**
-- Function: `createProvider3`
-- Hook: `useCreateProvider3`
+- Function: `createProviderAkashProviderV1beta2`
+- Hook: `useCreateProviderAkashProviderV1beta2`
 - Description: CreateProvider defines a method that creates a provider given the proper inputs
 - Request: MsgCreateProvider
 - Response: MsgCreateProviderResponse
 
 **UpdateProvider**
-- Function: `updateProvider3`
-- Hook: `useUpdateProvider3`
+- Function: `updateProviderAkashProviderV1beta2`
+- Hook: `useUpdateProviderAkashProviderV1beta2`
 - Description: UpdateProvider defines a method that updates a provider given the proper inputs
 - Request: MsgUpdateProvider
 - Response: MsgUpdateProviderResponse
 
 **DeleteProvider**
-- Function: `deleteProvider3`
-- Hook: `useDeleteProvider3`
+- Function: `deleteProviderAkashProviderV1beta2`
+- Hook: `useDeleteProviderAkashProviderV1beta2`
 - Description: DeleteProvider defines a method that deletes a provider given the proper inputs
 - Request: MsgDeleteProvider
 - Response: MsgDeleteProviderResponse
@@ -476,8 +476,8 @@
 ### Query Methods
 
 **Accounts**
-- Function: `getAccounts5`
-- Hook: `useGetAccounts5`
+- Function: `getAccountsCosmosAuthV1beta1`
+- Hook: `useGetAccountsCosmosAuthV1beta1`
 - Description: Accounts returns all the existing accounts
 
  Since: cosmos-sdk 0.43
@@ -569,8 +569,8 @@
 - Response: MsgGrantResponse
 
 **Exec**
-- Function: `exec2`
-- Hook: `useExec2`
+- Function: `execCosmosAuthzV1beta1`
+- Hook: `useExecCosmosAuthzV1beta1`
 - Description: Exec attempts to execute the provided messages using
  authorizations granted to the grantee. Each message should have only
  one signer corresponding to the granter of the authorization.
@@ -591,8 +591,8 @@
 ### Query Methods
 
 **Balance**
-- Function: `getBalance2`
-- Hook: `useGetBalance2`
+- Function: `getBalanceCosmosBankV1beta1`
+- Hook: `useGetBalanceCosmosBankV1beta1`
 - Description: Balance queries the balance of a single coin for a single account.
 - Request: QueryBalanceRequest
 - Response: QueryBalanceResponse
@@ -659,8 +659,8 @@
 ### Transaction Methods
 
 **Send**
-- Function: `send2`
-- Hook: `useSend2`
+- Function: `sendCosmosBankV1beta1`
+- Hook: `useSendCosmosBankV1beta1`
 - Description: Send defines a method for sending coins from one account to another account.
 - Request: MsgSend
 - Response: MsgSendResponse
@@ -742,8 +742,8 @@
 - Response: QueryDelegationTotalRewardsResponse
 
 **DelegatorValidators**
-- Function: `getDelegatorValidators2`
-- Hook: `useGetDelegatorValidators2`
+- Function: `getDelegatorValidatorsCosmosDistributionV1beta1`
+- Hook: `useGetDelegatorValidatorsCosmosDistributionV1beta1`
 - Description: DelegatorValidators queries the validators of a delegator.
 - Request: QueryDelegatorValidatorsRequest
 - Response: QueryDelegatorValidatorsResponse
@@ -876,29 +876,29 @@
 ### Query Methods
 
 **Proposal**
-- Function: `getProposal3`
-- Hook: `useGetProposal3`
+- Function: `getProposalCosmosGovV1`
+- Hook: `useGetProposalCosmosGovV1`
 - Description: Proposal queries proposal details based on ProposalID.
 - Request: QueryProposalRequest
 - Response: QueryProposalResponse
 
 **Proposals**
-- Function: `getProposals2`
-- Hook: `useGetProposals2`
+- Function: `getProposalsCosmosGovV1`
+- Hook: `useGetProposalsCosmosGovV1`
 - Description: Proposals queries all proposals based on given status.
 - Request: QueryProposalsRequest
 - Response: QueryProposalsResponse
 
 **Vote**
-- Function: `getVote2`
-- Hook: `useGetVote2`
+- Function: `getVoteCosmosGovV1`
+- Hook: `useGetVoteCosmosGovV1`
 - Description: Vote queries voted information based on proposalID, voterAddr.
 - Request: QueryVoteRequest
 - Response: QueryVoteResponse
 
 **Votes**
-- Function: `getVotes2`
-- Hook: `useGetVotes2`
+- Function: `getVotesCosmosGovV1`
+- Hook: `useGetVotesCosmosGovV1`
 - Description: Votes queries votes of a given proposal.
 - Request: QueryVotesRequest
 - Response: QueryVotesResponse
@@ -911,22 +911,22 @@
 - Response: QueryParamsResponse
 
 **Deposit**
-- Function: `getDeposit2`
-- Hook: `useGetDeposit2`
+- Function: `getDepositCosmosGovV1`
+- Hook: `useGetDepositCosmosGovV1`
 - Description: Deposit queries single deposit information based proposalID, depositAddr.
 - Request: QueryDepositRequest
 - Response: QueryDepositResponse
 
 **Deposits**
-- Function: `getDeposits2`
-- Hook: `useGetDeposits2`
+- Function: `getDepositsCosmosGovV1`
+- Hook: `useGetDepositsCosmosGovV1`
 - Description: Deposits queries all deposits of a single proposal.
 - Request: QueryDepositsRequest
 - Response: QueryDepositsResponse
 
 **TallyResult**
-- Function: `getTallyResult3`
-- Hook: `useGetTallyResult3`
+- Function: `getTallyResultCosmosGovV1`
+- Hook: `useGetTallyResultCosmosGovV1`
 - Description: TallyResult queries the tally of a proposal vote.
 - Request: QueryTallyResultRequest
 - Response: QueryTallyResultResponse
@@ -934,8 +934,8 @@
 ### Transaction Methods
 
 **SubmitProposal**
-- Function: `submitProposal3`
-- Hook: `useSubmitProposal3`
+- Function: `submitProposalCosmosGovV1`
+- Hook: `useSubmitProposalCosmosGovV1`
 - Description: SubmitProposal defines a method to create new proposal given a content.
 - Request: MsgSubmitProposal
 - Response: MsgSubmitProposalResponse
@@ -949,22 +949,22 @@
 - Response: MsgExecLegacyContentResponse
 
 **Vote**
-- Function: `vote3`
-- Hook: `useVote3`
+- Function: `voteCosmosGovV1`
+- Hook: `useVoteCosmosGovV1`
 - Description: Vote defines a method to add a vote on a specific proposal.
 - Request: MsgVote
 - Response: MsgVoteResponse
 
 **VoteWeighted**
-- Function: `voteWeighted2`
-- Hook: `useVoteWeighted2`
+- Function: `voteWeightedCosmosGovV1`
+- Hook: `useVoteWeightedCosmosGovV1`
 - Description: VoteWeighted defines a method to add a weighted vote on a specific proposal.
 - Request: MsgVoteWeighted
 - Response: MsgVoteWeightedResponse
 
 **Deposit**
-- Function: `deposit2`
-- Hook: `useDeposit2`
+- Function: `depositCosmosGovV1`
+- Hook: `useDepositCosmosGovV1`
 - Description: Deposit defines a method to add deposit on a specific proposal.
 - Request: MsgDeposit
 - Response: MsgDepositResponse
@@ -975,29 +975,29 @@
 ### Query Methods
 
 **Proposal**
-- Function: `getProposal4`
-- Hook: `useGetProposal4`
+- Function: `getProposalCosmosGovV1beta1`
+- Hook: `useGetProposalCosmosGovV1beta1`
 - Description: Proposal queries proposal details based on ProposalID.
 - Request: QueryProposalRequest
 - Response: QueryProposalResponse
 
 **Proposals**
-- Function: `getProposals3`
-- Hook: `useGetProposals3`
+- Function: `getProposalsCosmosGovV1beta1`
+- Hook: `useGetProposalsCosmosGovV1beta1`
 - Description: Proposals queries all proposals based on given status.
 - Request: QueryProposalsRequest
 - Response: QueryProposalsResponse
 
 **Vote**
-- Function: `getVote3`
-- Hook: `useGetVote3`
+- Function: `getVoteCosmosGovV1beta1`
+- Hook: `useGetVoteCosmosGovV1beta1`
 - Description: Vote queries voted information based on proposalID, voterAddr.
 - Request: QueryVoteRequest
 - Response: QueryVoteResponse
 
 **Votes**
-- Function: `getVotes3`
-- Hook: `useGetVotes3`
+- Function: `getVotesCosmosGovV1beta1`
+- Hook: `useGetVotesCosmosGovV1beta1`
 - Description: Votes queries votes of a given proposal.
 - Request: QueryVotesRequest
 - Response: QueryVotesResponse
@@ -1010,22 +1010,22 @@
 - Response: QueryParamsResponse
 
 **Deposit**
-- Function: `getDeposit3`
-- Hook: `useGetDeposit3`
+- Function: `getDepositCosmosGovV1beta1`
+- Hook: `useGetDepositCosmosGovV1beta1`
 - Description: Deposit queries single deposit information based proposalID, depositAddr.
 - Request: QueryDepositRequest
 - Response: QueryDepositResponse
 
 **Deposits**
-- Function: `getDeposits3`
-- Hook: `useGetDeposits3`
+- Function: `getDepositsCosmosGovV1beta1`
+- Hook: `useGetDepositsCosmosGovV1beta1`
 - Description: Deposits queries all deposits of a single proposal.
 - Request: QueryDepositsRequest
 - Response: QueryDepositsResponse
 
 **TallyResult**
-- Function: `getTallyResult4`
-- Hook: `useGetTallyResult4`
+- Function: `getTallyResultCosmosGovV1beta1`
+- Hook: `useGetTallyResultCosmosGovV1beta1`
 - Description: TallyResult queries the tally of a proposal vote.
 - Request: QueryTallyResultRequest
 - Response: QueryTallyResultResponse
@@ -1033,22 +1033,22 @@
 ### Transaction Methods
 
 **SubmitProposal**
-- Function: `submitProposal4`
-- Hook: `useSubmitProposal4`
+- Function: `submitProposalCosmosGovV1beta1`
+- Hook: `useSubmitProposalCosmosGovV1beta1`
 - Description: SubmitProposal defines a method to create new proposal given a content.
 - Request: MsgSubmitProposal
 - Response: MsgSubmitProposalResponse
 
 **Vote**
-- Function: `vote4`
-- Hook: `useVote4`
+- Function: `voteCosmosGovV1beta1`
+- Hook: `useVoteCosmosGovV1beta1`
 - Description: Vote defines a method to add a vote on a specific proposal.
 - Request: MsgVote
 - Response: MsgVoteResponse
 
 **VoteWeighted**
-- Function: `voteWeighted3`
-- Hook: `useVoteWeighted3`
+- Function: `voteWeightedCosmosGovV1beta1`
+- Hook: `useVoteWeightedCosmosGovV1beta1`
 - Description: VoteWeighted defines a method to add a weighted vote on a specific proposal.
 
  Since: cosmos-sdk 0.43
@@ -1056,8 +1056,8 @@
 - Response: MsgVoteWeightedResponse
 
 **Deposit**
-- Function: `deposit3`
-- Hook: `useDeposit3`
+- Function: `depositCosmosGovV1beta1`
+- Hook: `useDepositCosmosGovV1beta1`
 - Description: Deposit defines a method to add deposit on a specific proposal.
 - Request: MsgDeposit
 - Response: MsgDepositResponse
@@ -1110,8 +1110,8 @@
 - Response: QueryGroupPoliciesByAdminResponse
 
 **Proposal**
-- Function: `getProposal5`
-- Hook: `useGetProposal5`
+- Function: `getProposalCosmosGroupV1`
+- Hook: `useGetProposalCosmosGroupV1`
 - Description: Proposal queries a proposal based on proposal id.
 - Request: QueryProposalRequest
 - Response: QueryProposalResponse
@@ -1152,8 +1152,8 @@
 - Response: QueryGroupsByMemberResponse
 
 **TallyResult**
-- Function: `getTallyResult5`
-- Hook: `useGetTallyResult5`
+- Function: `getTallyResultCosmosGroupV1`
+- Hook: `useGetTallyResultCosmosGroupV1`
 - Description: TallyResult queries the tally of a proposal votes.
 - Request: QueryTallyResultRequest
 - Response: QueryTallyResultResponse
@@ -1224,8 +1224,8 @@
 - Response: MsgUpdateGroupPolicyMetadataResponse
 
 **SubmitProposal**
-- Function: `submitProposal5`
-- Hook: `useSubmitProposal5`
+- Function: `submitProposalCosmosGroupV1`
+- Hook: `useSubmitProposalCosmosGroupV1`
 - Description: SubmitProposal submits a new proposal.
 - Request: MsgSubmitProposal
 - Response: MsgSubmitProposalResponse
@@ -1238,15 +1238,15 @@
 - Response: MsgWithdrawProposalResponse
 
 **Vote**
-- Function: `vote5`
-- Hook: `useVote5`
+- Function: `voteCosmosGroupV1`
+- Hook: `useVoteCosmosGroupV1`
 - Description: Vote allows a voter to vote on a proposal.
 - Request: MsgVote
 - Response: MsgVoteResponse
 
 **Exec**
-- Function: `exec3`
-- Hook: `useExec3`
+- Function: `execCosmosGroupV1`
+- Hook: `useExecCosmosGroupV1`
 - Description: Exec executes a proposal.
 - Request: MsgExec
 - Response: MsgExecResponse
@@ -1290,8 +1290,8 @@
 ### Query Methods
 
 **Balance**
-- Function: `getBalance3`
-- Hook: `useGetBalance3`
+- Function: `getBalanceCosmosNftV1beta1`
+- Hook: `useGetBalanceCosmosNftV1beta1`
 - Description: Balance queries the number of NFTs of a given class owned by the owner, same as balanceOf in ERC721
 - Request: QueryBalanceRequest
 - Response: QueryBalanceResponse
@@ -1342,8 +1342,8 @@
 ### Transaction Methods
 
 **Send**
-- Function: `send3`
-- Hook: `useSend3`
+- Function: `sendCosmosNftV1beta1`
+- Hook: `useSendCosmosNftV1beta1`
 - Description: Send defines a method to send a nft from one account to another account.
 - Request: MsgSend
 - Response: MsgSendResponse
@@ -1476,8 +1476,8 @@
 - Response: QueryRedelegationsResponse
 
 **DelegatorValidators**
-- Function: `getDelegatorValidators3`
-- Hook: `useGetDelegatorValidators3`
+- Function: `getDelegatorValidatorsCosmosStakingV1beta1`
+- Hook: `useGetDelegatorValidatorsCosmosStakingV1beta1`
 - Description: DelegatorValidators queries all validators info for given delegator
  address.
 - Request: QueryDelegatorValidatorsRequest
@@ -1499,8 +1499,8 @@
 - Response: QueryHistoricalInfoResponse
 
 **Pool**
-- Function: `getPool2`
-- Hook: `useGetPool2`
+- Function: `getPoolCosmosStakingV1beta1`
+- Hook: `useGetPoolCosmosStakingV1beta1`
 - Description: Pool queries the pool info.
 - Request: QueryPoolRequest
 - Response: QueryPoolResponse
@@ -1575,8 +1575,8 @@
 - Response: QueryAppliedPlanResponse
 
 **UpgradedConsensusState**
-- Function: `getUpgradedConsensusState2`
-- Hook: `useGetUpgradedConsensusState2`
+- Function: `getUpgradedConsensusStateCosmosUpgradeV1beta1`
+- Hook: `useGetUpgradedConsensusStateCosmosUpgradeV1beta1`
 - Description: UpgradedConsensusState queries the consensus state that will serve
  as a trusted kernel for the next version of this chain. It will only be
  stored at the last height of this chain.
@@ -1803,15 +1803,15 @@
 ### Query Methods
 
 **EpochInfos**
-- Function: `getEpochInfos2`
-- Hook: `useGetEpochInfos2`
+- Function: `getEpochInfosEvmosEpochsV1`
+- Hook: `useGetEpochInfosEvmosEpochsV1`
 - Description: EpochInfos provide running epochInfos
 - Request: QueryEpochsInfoRequest
 - Response: QueryEpochsInfoResponse
 
 **CurrentEpoch**
-- Function: `getCurrentEpoch2`
-- Hook: `useGetCurrentEpoch2`
+- Function: `getCurrentEpochEvmosEpochsV1`
+- Hook: `useGetCurrentEpochEvmosEpochsV1`
 - Description: CurrentEpoch provide current epoch of specified identifier
 - Request: QueryCurrentEpochRequest
 - Response: QueryCurrentEpochResponse
@@ -2332,8 +2332,8 @@
 - Response: QueryUpgradedClientStateResponse
 
 **UpgradedConsensusState**
-- Function: `getUpgradedConsensusState3`
-- Hook: `useGetUpgradedConsensusState3`
+- Function: `getUpgradedConsensusStateIbcCoreClientV1`
+- Hook: `useGetUpgradedConsensusStateIbcCoreClientV1`
 - Description: UpgradedConsensusState queries an Upgraded IBC consensus state.
 - Request: QueryUpgradedConsensusStateRequest
 - Response: QueryUpgradedConsensusStateResponse
@@ -2495,15 +2495,15 @@
 ### Query Methods
 
 **EpochInfos**
-- Function: `getEpochInfos3`
-- Hook: `useGetEpochInfos3`
+- Function: `getEpochInfosOsmosisEpochsV1beta1`
+- Hook: `useGetEpochInfosOsmosisEpochsV1beta1`
 - Description: EpochInfos provide running epochInfos
 - Request: QueryEpochsInfoRequest
 - Response: QueryEpochsInfoResponse
 
 **CurrentEpoch**
-- Function: `getCurrentEpoch3`
-- Hook: `useGetCurrentEpoch3`
+- Function: `getCurrentEpochOsmosisEpochsV1beta1`
+- Hook: `useGetCurrentEpochOsmosisEpochsV1beta1`
 - Description: CurrentEpoch provide current epoch of specified identifier
 - Request: QueryCurrentEpochRequest
 - Response: QueryCurrentEpochResponse
@@ -2568,8 +2568,8 @@
 - Response: QueryPoolsWithFilterResponse
 
 **Pool**
-- Function: `getPool3`
-- Hook: `useGetPool3`
+- Function: `getPoolOsmosisGammV1beta1`
+- Hook: `useGetPoolOsmosisGammV1beta1`
 - Description: Per Pool gRPC Endpoints
 - Request: QueryPoolRequest
 - Response: QueryPoolResponse
@@ -2622,8 +2622,8 @@
 - Response: QueryTotalSharesResponse
 
 **SpotPrice**
-- Function: `getSpotPrice2`
-- Hook: `useGetSpotPrice2`
+- Function: `getSpotPriceOsmosisGammV1beta1`
+- Hook: `useGetSpotPriceOsmosisGammV1beta1`
 - Description: SpotPrice defines a gRPC query handler that returns the spot price given
  a base denomination and a quote denomination.
 - Request: QuerySpotPriceRequest
@@ -2698,8 +2698,8 @@
 ### Query Methods
 
 **SpotPrice**
-- Function: `getSpotPrice3`
-- Hook: `useGetSpotPrice3`
+- Function: `getSpotPriceOsmosisGammV2`
+- Hook: `useGetSpotPriceOsmosisGammV2`
 - Description: SpotPrice defines a gRPC query handler that returns the spot price given
  a base denomination and a quote denomination.
 - Request: QuerySpotPriceRequest
@@ -2783,8 +2783,8 @@
 - Response: RewardsEstResponse
 
 **LockableDurations**
-- Function: `getLockableDurations2`
-- Hook: `useGetLockableDurations2`
+- Function: `getLockableDurationsOsmosisIncentives`
+- Hook: `useGetLockableDurationsOsmosisIncentives`
 - Description: LockableDurations returns lockable durations that are valid to distribute
  incentives for
 - Request: QueryLockableDurationsRequest
@@ -3012,8 +3012,8 @@
 - Response: QueryParamsResponse
 
 **LockableDurations**
-- Function: `getLockableDurations3`
-- Hook: `useGetLockableDurations3`
+- Function: `getLockableDurationsOsmosisPoolincentivesV1beta1`
+- Hook: `useGetLockableDurationsOsmosisPoolincentivesV1beta1`
 - Description: LockableDurations returns lock durations for pools.
 - Request: QueryLockableDurationsRequest
 - Response: QueryLockableDurationsResponse

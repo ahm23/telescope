@@ -1,19 +1,19 @@
 import { TelescopeBuilder } from "../builder";
 import { writeContentToFile } from "../utils/files";
 import { join } from "path";
-
+import { makeAliasNameWithPackageAtEnd } from "@cosmology/utils";
 
 /**
  * Gets the aliased function name if it's duplicated across multiple files
  */
-function getAliasedFunctionName(builder: TelescopeBuilder, functionName: string): string {
+function getAliasedFunctionName(builder: TelescopeBuilder, functionName: string, packageName: string): string {
     const duplicatedHelperFuncs = builder.store.getHelperFuncsInMultipleFiles();
     const isDuplicated = duplicatedHelperFuncs.includes(functionName);
 
     if (isDuplicated) {
         const serialNumber = builder.store.getAndIncTypeSerialNumber(functionName);
         if (serialNumber > 0) {
-            return `${functionName}${serialNumber}`;
+            return makeAliasNameWithPackageAtEnd({ package: packageName, name: functionName });
         }
     }
 
@@ -21,7 +21,7 @@ function getAliasedFunctionName(builder: TelescopeBuilder, functionName: string)
 }
 
 export const plugin = (builder: TelescopeBuilder) => {
-    if (!builder.options.exportReadme) {
+    if (!builder.options.readme.enabled) {
         return;
     }
 
@@ -37,8 +37,6 @@ export const plugin = (builder: TelescopeBuilder) => {
         const packageServices = functionMappings[packageName];
         packageDocs += `\n## ${packageName}\n\n`;
 
-        // Type section
-
         // Query section
         if (packageServices.Query) {
             packageDocs += `### Query Methods\n\n`;
@@ -46,9 +44,9 @@ export const plugin = (builder: TelescopeBuilder) => {
             queryMethods.forEach(methodName => {
                 const method = packageServices.Query[methodName];
 
-                // Get the aliased function name
-                const aliasedFunctionName = getAliasedFunctionName(builder, method.functionName);
-                const aliasedHookName = getAliasedFunctionName(builder, method.hookName);
+                // Get the aliased function name using the same logic as bundler
+                const aliasedFunctionName = getAliasedFunctionName(builder, method.functionName, packageName);
+                const aliasedHookName = getAliasedFunctionName(builder, method.hookName, packageName);
 
                 packageDocs += `**${methodName}**\n`;
                 packageDocs += `- Function: \`${aliasedFunctionName}\`\n`;
@@ -75,9 +73,9 @@ export const plugin = (builder: TelescopeBuilder) => {
             msgMethods.forEach(methodName => {
                 const method = packageServices.Msg[methodName];
 
-                // Get the aliased function name
-                const aliasedFunctionName = getAliasedFunctionName(builder, method.functionName);
-                const aliasedHookName = getAliasedFunctionName(builder, method.hookName);
+                // Get the aliased function name using the same logic as bundler
+                const aliasedFunctionName = getAliasedFunctionName(builder, method.functionName, packageName);
+                const aliasedHookName = getAliasedFunctionName(builder, method.hookName, packageName);
 
                 packageDocs += `**${methodName}**\n`;
                 packageDocs += `- Function: \`${aliasedFunctionName}\`\n`;

@@ -19,7 +19,7 @@ const options: TelescopeOptions = {
   env: "v-next",
   useInterchainJs: true,
   useSDKTypes: false,
-  exportReadme: true,
+  readme: { enabled: true },
   prototypes: {
     alias: {
       "**.Params": makeAliasName,

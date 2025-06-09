@@ -43,7 +43,9 @@ export interface TelescopeOpts {
     useSDKTypes?: boolean;
     includeExternalHelpers?: boolean;
     restoreImportExtension?: string;
-    exportReadme?: boolean;
+    readme?: {
+        enabled: boolean;
+    };
     logLevel?: TelescopeLogLevel;
     interfaces?: {
         enabled?: boolean;

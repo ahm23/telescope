@@ -53,8 +53,9 @@ export interface TelescopeOpts {
   useSDKTypes?: boolean;
   includeExternalHelpers?: boolean;
   restoreImportExtension?: string;
-  exportReadme?: boolean;
-
+  readme?: {
+    enabled: boolean;
+  };
   logLevel?: TelescopeLogLevel;
 
   interfaces?: {
@@ -249,13 +250,13 @@ export interface TelescopeOpts {
     bundle?: boolean;
     serviceImplement?: {
       [
-        key:
-          | "Msg"
-          | "Query"
-          | "Service"
-          | "ReflectionService"
-          | "ABCIApplication"
-          | string
+      key:
+        | "Msg"
+        | "Query"
+        | "Service"
+        | "ReflectionService"
+        | "ABCIApplication"
+        | string
       ]: {
         include?: {
           patterns?: string[];
@@ -395,7 +396,7 @@ export const defaultTelescopeOptions: TelescopeOptions = {
   useSDKTypes: true,
   includeExternalHelpers: false,
   logLevel: TelescopeLogLevel.None,
-  exportReadme: false,
+  readme: { enabled: false },
 
   interfaces: {
     enabled: true,

@@ -102,6 +102,14 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
 
             helperCreatorNameList.push(helperCreatorName);
 
+            const genCustomHooks = c.proto.pluginValue(
+              "helperFunctions.hooks.react"
+            );
+
+            const genCustomHooksVue = c.proto.pluginValue(
+              "helperFunctions.hooks.vue"
+            );
+
             // Store the mapping in builder
             builder.addFunctionMapping(
               bundlerFile.package,
@@ -111,7 +119,10 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
               hookName,
               svc.methods[methodKey].comment,
               svc.methods[methodKey].requestType,
-              svc.methods[methodKey].responseType
+              svc.methods[methodKey].responseType,
+              localname, // function source file
+              genCustomHooks ? localnameReact : undefined, // hook source file (React)
+              bundler.getLocalFilename(c.ref) // type source file (main types file)
             );
 
             // gen helper funcs
@@ -121,14 +132,6 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
                 svc.methods[methodKey],
                 helperCreatorName
               )
-            );
-
-            const genCustomHooks = c.proto.pluginValue(
-              "helperFunctions.hooks.react"
-            );
-
-            const genCustomHooksVue = c.proto.pluginValue(
-              "helperFunctions.hooks.vue"
             );
 
             if (genCustomHooks) {
@@ -196,7 +199,7 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
 
       bundler.writeAst(prog, filename);
       bundler.addExportObjToBundle(c.ref.proto.package, localname, exportedTypeNames, true);
-      if(reactAsts.length) {
+      if (reactAsts.length) {
         bundler.writeAst(progReact, filenameReact);
         bundler.addExportObjToBundle(c.ref.proto.package, localnameReact, exportedTypeNamesReact, true);
       }

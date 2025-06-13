@@ -1,3310 +1,8932 @@
-# Generated Code
-
 # Package Documentation
-
-
 ## akash.audit.v1beta1
+
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `AttributesFilters` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `AttributesResponse` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `AuditedAttributes` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `MsgDeleteProviderAttributes` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `MsgDeleteProviderAttributesResponse` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `MsgSignProviderAttributes` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `MsgSignProviderAttributesResponse` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `Provider` | [View source ↗](akash/audit/v1beta1/audit.ts) |
 
 ### Transaction Methods
 
 **SignProviderAttributes**
-- Function: `signProviderAttributesAkashAuditV1beta1`
-- Hook: `useSignProviderAttributesAkashAuditV1beta1`
-- Description: SignProviderAttributes defines a method that signs provider attributes
-- Request: MsgSignProviderAttributes
-- Response: MsgSignProviderAttributesResponse
+
+SignProviderAttributes defines a method that signs provider attributes
+
+```ts
+import { signProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/audit/v1beta1'
+import { useSignProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/audit/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `signProviderAttributesAkashAuditV1beta1` | [View source ↗](akash/audit/v1beta1/audit.rpc.func.ts) |
+| Hook | `useSignProviderAttributesAkashAuditV1beta1` | [View source ↗](akash/audit/v1beta1/audit.rpc.react.ts) |
+| Request | `MsgSignProviderAttributes` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Response | `MsgSignProviderAttributesResponse` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+
+---
 
 **DeleteProviderAttributes**
-- Function: `deleteProviderAttributesAkashAuditV1beta1`
-- Hook: `useDeleteProviderAttributesAkashAuditV1beta1`
-- Description: DeleteProviderAttributes defines a method that deletes provider attributes
-- Request: MsgDeleteProviderAttributes
-- Response: MsgDeleteProviderAttributesResponse
+
+DeleteProviderAttributes defines a method that deletes provider attributes
+
+```ts
+import { deleteProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/audit/v1beta1'
+import { useDeleteProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/audit/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `deleteProviderAttributesAkashAuditV1beta1` | [View source ↗](akash/audit/v1beta1/audit.rpc.func.ts) |
+| Hook | `useDeleteProviderAttributesAkashAuditV1beta1` | [View source ↗](akash/audit/v1beta1/audit.rpc.react.ts) |
+| Request | `MsgDeleteProviderAttributes` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Response | `MsgDeleteProviderAttributesResponse` | [View source ↗](akash/audit/v1beta1/audit.ts) |
 
 
 ## akash.audit.v1beta2
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `AttributesFilters` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `AttributesResponse` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `AuditedAttributes` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MsgDeleteProviderAttributes` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `MsgDeleteProviderAttributesResponse` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `MsgSignProviderAttributes` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `MsgSignProviderAttributesResponse` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `Provider` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `QueryAllProvidersAttributesRequest` | [View source ↗](akash/audit/v1beta2/query.ts) |
+| Type | `QueryAuditorAttributesRequest` | [View source ↗](akash/audit/v1beta2/query.ts) |
+| Type | `QueryProviderAttributesRequest` | [View source ↗](akash/audit/v1beta2/query.ts) |
+| Type | `QueryProviderAuditorRequest` | [View source ↗](akash/audit/v1beta2/query.ts) |
+| Type | `QueryProviderRequest` | [View source ↗](akash/audit/v1beta2/query.ts) |
+| Type | `QueryProvidersResponse` | [View source ↗](akash/audit/v1beta2/query.ts) |
+
 ### Query Methods
 
 **AllProvidersAttributes**
-- Function: `getAllProvidersAttributes`
-- Hook: `useGetAllProvidersAttributes`
-- Description: AllProvidersAttributes queries all providers
- buf:lint:ignore RPC_REQUEST_RESPONSE_UNIQUE
- buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
-- Request: QueryAllProvidersAttributesRequest
-- Response: QueryProvidersResponse
+
+AllProvidersAttributes queries all providers
+
+```ts
+import { getAllProvidersAttributes } from 'outputicjs/akash/audit/v1beta2'
+import { useGetAllProvidersAttributes } from 'outputicjs/akash/audit/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAllProvidersAttributes` | [View source ↗](akash/audit/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetAllProvidersAttributes` | [View source ↗](akash/audit/v1beta2/query.rpc.react.ts) |
+| Request | `QueryAllProvidersAttributesRequest` | [View source ↗](akash/audit/v1beta2/query.ts) |
+| Response | `QueryProvidersResponse` | [View source ↗](akash/audit/v1beta2/query.ts) |
+
+---
 
 **ProviderAttributes**
-- Function: `getProviderAttributes`
-- Hook: `useGetProviderAttributes`
-- Description: ProviderAttributes queries all provider signed attributes
- buf:lint:ignore RPC_REQUEST_RESPONSE_UNIQUE
- buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
-- Request: QueryProviderAttributesRequest
-- Response: QueryProvidersResponse
+
+ProviderAttributes queries all provider signed attributes
+
+```ts
+import { getProviderAttributes } from 'outputicjs/akash/audit/v1beta2'
+import { useGetProviderAttributes } from 'outputicjs/akash/audit/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getProviderAttributes` | [View source ↗](akash/audit/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetProviderAttributes` | [View source ↗](akash/audit/v1beta2/query.rpc.react.ts) |
+| Request | `QueryProviderAttributesRequest` | [View source ↗](akash/audit/v1beta2/query.ts) |
+| Response | `QueryProvidersResponse` | [View source ↗](akash/audit/v1beta2/query.ts) |
+
+---
 
 **ProviderAuditorAttributes**
-- Function: `getProviderAuditorAttributes`
-- Hook: `useGetProviderAuditorAttributes`
-- Description: ProviderAuditorAttributes queries provider signed attributes by specific auditor
- buf:lint:ignore RPC_REQUEST_RESPONSE_UNIQUE
- buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
-- Request: QueryProviderAuditorRequest
-- Response: QueryProvidersResponse
+
+ProviderAuditorAttributes queries provider signed attributes by specific auditor
+
+```ts
+import { getProviderAuditorAttributes } from 'outputicjs/akash/audit/v1beta2'
+import { useGetProviderAuditorAttributes } from 'outputicjs/akash/audit/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getProviderAuditorAttributes` | [View source ↗](akash/audit/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetProviderAuditorAttributes` | [View source ↗](akash/audit/v1beta2/query.rpc.react.ts) |
+| Request | `QueryProviderAuditorRequest` | [View source ↗](akash/audit/v1beta2/query.ts) |
+| Response | `QueryProvidersResponse` | [View source ↗](akash/audit/v1beta2/query.ts) |
+
+---
 
 **AuditorAttributes**
-- Function: `getAuditorAttributes`
-- Hook: `useGetAuditorAttributes`
-- Description: AuditorAttributes queries all providers signed by this auditor
- buf:lint:ignore RPC_REQUEST_RESPONSE_UNIQUE
- buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
-- Request: QueryAuditorAttributesRequest
-- Response: QueryProvidersResponse
+
+AuditorAttributes queries all providers signed by this auditor
+
+```ts
+import { getAuditorAttributes } from 'outputicjs/akash/audit/v1beta2'
+import { useGetAuditorAttributes } from 'outputicjs/akash/audit/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAuditorAttributes` | [View source ↗](akash/audit/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetAuditorAttributes` | [View source ↗](akash/audit/v1beta2/query.rpc.react.ts) |
+| Request | `QueryAuditorAttributesRequest` | [View source ↗](akash/audit/v1beta2/query.ts) |
+| Response | `QueryProvidersResponse` | [View source ↗](akash/audit/v1beta2/query.ts) |
 
 ### Transaction Methods
 
 **SignProviderAttributes**
-- Function: `signProviderAttributesAkashAuditV1beta2`
-- Hook: `useSignProviderAttributesAkashAuditV1beta2`
-- Description: SignProviderAttributes defines a method that signs provider attributes
-- Request: MsgSignProviderAttributes
-- Response: MsgSignProviderAttributesResponse
+
+SignProviderAttributes defines a method that signs provider attributes
+
+```ts
+import { signProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/audit/v1beta2'
+import { useSignProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/audit/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `signProviderAttributesAkashAuditV1beta2` | [View source ↗](akash/audit/v1beta2/audit.rpc.func.ts) |
+| Hook | `useSignProviderAttributesAkashAuditV1beta2` | [View source ↗](akash/audit/v1beta2/audit.rpc.react.ts) |
+| Request | `MsgSignProviderAttributes` | [View source ↗](akash/audit/v1beta2/audit.ts) |
+| Response | `MsgSignProviderAttributesResponse` | [View source ↗](akash/audit/v1beta2/audit.ts) |
+
+---
 
 **DeleteProviderAttributes**
-- Function: `deleteProviderAttributesAkashAuditV1beta2`
-- Hook: `useDeleteProviderAttributesAkashAuditV1beta2`
-- Description: DeleteProviderAttributes defines a method that deletes provider attributes
-- Request: MsgDeleteProviderAttributes
-- Response: MsgDeleteProviderAttributesResponse
+
+DeleteProviderAttributes defines a method that deletes provider attributes
+
+```ts
+import { deleteProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/audit/v1beta2'
+import { useDeleteProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/audit/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `deleteProviderAttributesAkashAuditV1beta2` | [View source ↗](akash/audit/v1beta2/audit.rpc.func.ts) |
+| Hook | `useDeleteProviderAttributesAkashAuditV1beta2` | [View source ↗](akash/audit/v1beta2/audit.rpc.react.ts) |
+| Request | `MsgDeleteProviderAttributes` | [View source ↗](akash/audit/v1beta2/audit.ts) |
+| Response | `MsgDeleteProviderAttributesResponse` | [View source ↗](akash/audit/v1beta2/audit.ts) |
 
 
 ## akash.cert.v1beta2
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `Certificate` | [View source ↗](akash/cert/v1beta2/cert.ts) |
+| Type | `CertificateFilter` | [View source ↗](akash/cert/v1beta2/cert.ts) |
+| Type | `CertificateID` | [View source ↗](akash/cert/v1beta2/cert.ts) |
+| Type | `CertificateResponse` | [View source ↗](akash/cert/v1beta2/query.ts) |
+| Type | `GenesisCertificate` | [View source ↗](akash/cert/v1beta2/genesis.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MsgCreateCertificate` | [View source ↗](akash/cert/v1beta2/cert.ts) |
+| Type | `MsgCreateCertificateResponse` | [View source ↗](akash/cert/v1beta2/cert.ts) |
+| Type | `MsgRevokeCertificate` | [View source ↗](akash/cert/v1beta2/cert.ts) |
+| Type | `MsgRevokeCertificateResponse` | [View source ↗](akash/cert/v1beta2/cert.ts) |
+| Type | `QueryCertificatesRequest` | [View source ↗](akash/cert/v1beta2/query.ts) |
+| Type | `QueryCertificatesResponse` | [View source ↗](akash/cert/v1beta2/query.ts) |
+
 ### Query Methods
 
 **Certificates**
-- Function: `getCertificates`
-- Hook: `useGetCertificates`
-- Description: Certificates queries certificates
-- Request: QueryCertificatesRequest
-- Response: QueryCertificatesResponse
+
+Certificates queries certificates
+
+```ts
+import { getCertificates } from 'outputicjs/akash/cert/v1beta2'
+import { useGetCertificates } from 'outputicjs/akash/cert/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCertificates` | [View source ↗](akash/cert/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetCertificates` | [View source ↗](akash/cert/v1beta2/query.rpc.react.ts) |
+| Request | `QueryCertificatesRequest` | [View source ↗](akash/cert/v1beta2/query.ts) |
+| Response | `QueryCertificatesResponse` | [View source ↗](akash/cert/v1beta2/query.ts) |
 
 ### Transaction Methods
 
 **CreateCertificate**
-- Function: `createCertificate`
-- Hook: `useCreateCertificate`
-- Description: CreateCertificate defines a method to create new certificate given proper inputs.
-- Request: MsgCreateCertificate
-- Response: MsgCreateCertificateResponse
+
+CreateCertificate defines a method to create new certificate given proper inputs.
+
+```ts
+import { createCertificate } from 'outputicjs/akash/cert/v1beta2'
+import { useCreateCertificate } from 'outputicjs/akash/cert/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createCertificate` | [View source ↗](akash/cert/v1beta2/cert.rpc.func.ts) |
+| Hook | `useCreateCertificate` | [View source ↗](akash/cert/v1beta2/cert.rpc.react.ts) |
+| Request | `MsgCreateCertificate` | [View source ↗](akash/cert/v1beta2/cert.ts) |
+| Response | `MsgCreateCertificateResponse` | [View source ↗](akash/cert/v1beta2/cert.ts) |
+
+---
 
 **RevokeCertificate**
-- Function: `revokeCertificate`
-- Hook: `useRevokeCertificate`
-- Description: RevokeCertificate defines a method to revoke the certificate
-- Request: MsgRevokeCertificate
-- Response: MsgRevokeCertificateResponse
+
+RevokeCertificate defines a method to revoke the certificate
+
+```ts
+import { revokeCertificate } from 'outputicjs/akash/cert/v1beta2'
+import { useRevokeCertificate } from 'outputicjs/akash/cert/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `revokeCertificate` | [View source ↗](akash/cert/v1beta2/cert.rpc.func.ts) |
+| Hook | `useRevokeCertificate` | [View source ↗](akash/cert/v1beta2/cert.rpc.react.ts) |
+| Request | `MsgRevokeCertificate` | [View source ↗](akash/cert/v1beta2/cert.ts) |
+| Response | `MsgRevokeCertificateResponse` | [View source ↗](akash/cert/v1beta2/cert.ts) |
 
 
 ## akash.deployment.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `AkashDeploymentV1beta1Params` | [View source ↗](akash/deployment/v1beta1/params.ts) |
+| Type | `Deployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `DeploymentFilters` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `DeploymentID` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `DepositDeploymentAuthorization` | [View source ↗](akash/deployment/v1beta1/authz.ts) |
+| Type | `GenesisDeployment` | [View source ↗](akash/deployment/v1beta1/genesis.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `Group` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `GroupID` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `GroupSpec` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgCloseDeployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgCloseDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgCloseGroup` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgCloseGroupResponse` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgCreateDeployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgCreateDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgDepositDeployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgDepositDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgPauseGroup` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgPauseGroupResponse` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgStartGroup` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgStartGroupResponse` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgUpdateDeployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgUpdateDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `QueryDeploymentRequest` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Type | `QueryDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Type | `QueryDeploymentsRequest` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Type | `QueryDeploymentsResponse` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Type | `QueryGroupRequest` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Type | `QueryGroupResponse` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Type | `Resource` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+
 ### Query Methods
 
 **Deployments**
-- Function: `getDeploymentsAkashDeploymentV1beta1`
-- Hook: `useGetDeploymentsAkashDeploymentV1beta1`
-- Description: Deployments queries deployments
-- Request: QueryDeploymentsRequest
-- Response: QueryDeploymentsResponse
+
+Deployments queries deployments
+
+```ts
+import { getDeploymentsAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { useGetDeploymentsAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDeploymentsAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDeploymentsAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDeploymentsRequest` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Response | `QueryDeploymentsResponse` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+
+---
 
 **Deployment**
-- Function: `getDeploymentAkashDeploymentV1beta1`
-- Hook: `useGetDeploymentAkashDeploymentV1beta1`
-- Description: Deployment queries deployment details
-- Request: QueryDeploymentRequest
-- Response: QueryDeploymentResponse
+
+Deployment queries deployment details
+
+```ts
+import { getDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { useGetDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDeploymentAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDeploymentAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDeploymentRequest` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Response | `QueryDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+
+---
 
 **Group**
-- Function: `getGroupAkashDeploymentV1beta1`
-- Hook: `useGetGroupAkashDeploymentV1beta1`
-- Description: Group queries group details
-- Request: QueryGroupRequest
-- Response: QueryGroupResponse
+
+Group queries group details
+
+```ts
+import { getGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { useGetGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGroupAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetGroupAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/query.rpc.react.ts) |
+| Request | `QueryGroupRequest` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Response | `QueryGroupResponse` | [View source ↗](akash/deployment/v1beta1/query.ts) |
 
 ### Transaction Methods
 
 **CreateDeployment**
-- Function: `createDeploymentAkashDeploymentV1beta1`
-- Hook: `useCreateDeploymentAkashDeploymentV1beta1`
-- Description: CreateDeployment defines a method to create new deployment given proper inputs.
-- Request: MsgCreateDeployment
-- Response: MsgCreateDeploymentResponse
+
+CreateDeployment defines a method to create new deployment given proper inputs.
+
+```ts
+import { createDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { useCreateDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createDeploymentAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.func.ts) |
+| Hook | `useCreateDeploymentAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.react.ts) |
+| Request | `MsgCreateDeployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Response | `MsgCreateDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+
+---
 
 **DepositDeployment**
-- Function: `depositDeploymentAkashDeploymentV1beta1`
-- Hook: `useDepositDeploymentAkashDeploymentV1beta1`
-- Description: DepositDeployment deposits more funds into the deployment account
-- Request: MsgDepositDeployment
-- Response: MsgDepositDeploymentResponse
+
+DepositDeployment deposits more funds into the deployment account
+
+```ts
+import { depositDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { useDepositDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `depositDeploymentAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.func.ts) |
+| Hook | `useDepositDeploymentAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.react.ts) |
+| Request | `MsgDepositDeployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Response | `MsgDepositDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+
+---
 
 **UpdateDeployment**
-- Function: `updateDeploymentAkashDeploymentV1beta1`
-- Hook: `useUpdateDeploymentAkashDeploymentV1beta1`
-- Description: UpdateDeployment defines a method to update a deployment given proper inputs.
-- Request: MsgUpdateDeployment
-- Response: MsgUpdateDeploymentResponse
+
+UpdateDeployment defines a method to update a deployment given proper inputs.
+
+```ts
+import { updateDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { useUpdateDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `updateDeploymentAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.func.ts) |
+| Hook | `useUpdateDeploymentAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.react.ts) |
+| Request | `MsgUpdateDeployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Response | `MsgUpdateDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+
+---
 
 **CloseDeployment**
-- Function: `closeDeploymentAkashDeploymentV1beta1`
-- Hook: `useCloseDeploymentAkashDeploymentV1beta1`
-- Description: CloseDeployment defines a method to close a deployment given proper inputs.
-- Request: MsgCloseDeployment
-- Response: MsgCloseDeploymentResponse
+
+CloseDeployment defines a method to close a deployment given proper inputs.
+
+```ts
+import { closeDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { useCloseDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `closeDeploymentAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.func.ts) |
+| Hook | `useCloseDeploymentAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.react.ts) |
+| Request | `MsgCloseDeployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Response | `MsgCloseDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+
+---
 
 **CloseGroup**
-- Function: `closeGroupAkashDeploymentV1beta1`
-- Hook: `useCloseGroupAkashDeploymentV1beta1`
-- Description: CloseGroup defines a method to close a group of a deployment given proper inputs.
-- Request: MsgCloseGroup
-- Response: MsgCloseGroupResponse
+
+CloseGroup defines a method to close a group of a deployment given proper inputs.
+
+```ts
+import { closeGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { useCloseGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `closeGroupAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.func.ts) |
+| Hook | `useCloseGroupAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.react.ts) |
+| Request | `MsgCloseGroup` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Response | `MsgCloseGroupResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+
+---
 
 **PauseGroup**
-- Function: `pauseGroupAkashDeploymentV1beta1`
-- Hook: `usePauseGroupAkashDeploymentV1beta1`
-- Description: PauseGroup defines a method to close a group of a deployment given proper inputs.
-- Request: MsgPauseGroup
-- Response: MsgPauseGroupResponse
+
+PauseGroup defines a method to close a group of a deployment given proper inputs.
+
+```ts
+import { pauseGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { usePauseGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `pauseGroupAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.func.ts) |
+| Hook | `usePauseGroupAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.react.ts) |
+| Request | `MsgPauseGroup` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Response | `MsgPauseGroupResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+
+---
 
 **StartGroup**
-- Function: `startGroupAkashDeploymentV1beta1`
-- Hook: `useStartGroupAkashDeploymentV1beta1`
-- Description: StartGroup defines a method to close a group of a deployment given proper inputs.
-- Request: MsgStartGroup
-- Response: MsgStartGroupResponse
+
+StartGroup defines a method to close a group of a deployment given proper inputs.
+
+```ts
+import { startGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { useStartGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `startGroupAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.func.ts) |
+| Hook | `useStartGroupAkashDeploymentV1beta1` | [View source ↗](akash/deployment/v1beta1/deployment.rpc.react.ts) |
+| Request | `MsgStartGroup` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Response | `MsgStartGroupResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
 
 
 ## akash.deployment.v1beta2
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `AkashDeploymentV1beta2Params` | [View source ↗](akash/deployment/v1beta2/params.ts) |
+| Type | `Deployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `DeploymentFilters` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `DeploymentID` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `DepositDeploymentAuthorization` | [View source ↗](akash/deployment/v1beta1/authz.ts) |
+| Type | `GenesisDeployment` | [View source ↗](akash/deployment/v1beta1/genesis.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `Group` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `GroupID` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `GroupSpec` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgCloseDeployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgCloseDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgCloseGroup` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgCloseGroupResponse` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgCreateDeployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgCreateDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgDepositDeployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgDepositDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgPauseGroup` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgPauseGroupResponse` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgStartGroup` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgStartGroupResponse` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+| Type | `MsgUpdateDeployment` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `MsgUpdateDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/deployment.ts) |
+| Type | `QueryDeploymentRequest` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Type | `QueryDeploymentResponse` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Type | `QueryDeploymentsRequest` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Type | `QueryDeploymentsResponse` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Type | `QueryGroupRequest` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Type | `QueryGroupResponse` | [View source ↗](akash/deployment/v1beta1/query.ts) |
+| Type | `Resource` | [View source ↗](akash/deployment/v1beta1/group.ts) |
+
 ### Query Methods
 
 **Deployments**
-- Function: `getDeploymentsAkashDeploymentV1beta2`
-- Hook: `useGetDeploymentsAkashDeploymentV1beta2`
-- Description: Deployments queries deployments
-- Request: QueryDeploymentsRequest
-- Response: QueryDeploymentsResponse
+
+Deployments queries deployments
+
+```ts
+import { getDeploymentsAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { useGetDeploymentsAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDeploymentsAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetDeploymentsAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/query.rpc.react.ts) |
+| Request | `QueryDeploymentsRequest` | [View source ↗](akash/deployment/v1beta2/query.ts) |
+| Response | `QueryDeploymentsResponse` | [View source ↗](akash/deployment/v1beta2/query.ts) |
+
+---
 
 **Deployment**
-- Function: `getDeploymentAkashDeploymentV1beta2`
-- Hook: `useGetDeploymentAkashDeploymentV1beta2`
-- Description: Deployment queries deployment details
-- Request: QueryDeploymentRequest
-- Response: QueryDeploymentResponse
+
+Deployment queries deployment details
+
+```ts
+import { getDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { useGetDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDeploymentAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetDeploymentAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/query.rpc.react.ts) |
+| Request | `QueryDeploymentRequest` | [View source ↗](akash/deployment/v1beta2/query.ts) |
+| Response | `QueryDeploymentResponse` | [View source ↗](akash/deployment/v1beta2/query.ts) |
+
+---
 
 **Group**
-- Function: `getGroupAkashDeploymentV1beta2`
-- Hook: `useGetGroupAkashDeploymentV1beta2`
-- Description: Group queries group details
-- Request: QueryGroupRequest
-- Response: QueryGroupResponse
+
+Group queries group details
+
+```ts
+import { getGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { useGetGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGroupAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetGroupAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/query.rpc.react.ts) |
+| Request | `QueryGroupRequest` | [View source ↗](akash/deployment/v1beta2/query.ts) |
+| Response | `QueryGroupResponse` | [View source ↗](akash/deployment/v1beta2/query.ts) |
 
 ### Transaction Methods
 
 **CreateDeployment**
-- Function: `createDeploymentAkashDeploymentV1beta2`
-- Hook: `useCreateDeploymentAkashDeploymentV1beta2`
-- Description: CreateDeployment defines a method to create new deployment given proper inputs.
-- Request: MsgCreateDeployment
-- Response: MsgCreateDeploymentResponse
+
+CreateDeployment defines a method to create new deployment given proper inputs.
+
+```ts
+import { createDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { useCreateDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createDeploymentAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.func.ts) |
+| Hook | `useCreateDeploymentAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.react.ts) |
+| Request | `MsgCreateDeployment` | [View source ↗](akash/deployment/v1beta2/service.ts) |
+| Response | `MsgCreateDeploymentResponse` | [View source ↗](akash/deployment/v1beta2/service.ts) |
+
+---
 
 **DepositDeployment**
-- Function: `depositDeploymentAkashDeploymentV1beta2`
-- Hook: `useDepositDeploymentAkashDeploymentV1beta2`
-- Description: DepositDeployment deposits more funds into the deployment account
-- Request: MsgDepositDeployment
-- Response: MsgDepositDeploymentResponse
+
+DepositDeployment deposits more funds into the deployment account
+
+```ts
+import { depositDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { useDepositDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `depositDeploymentAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.func.ts) |
+| Hook | `useDepositDeploymentAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.react.ts) |
+| Request | `MsgDepositDeployment` | [View source ↗](akash/deployment/v1beta2/service.ts) |
+| Response | `MsgDepositDeploymentResponse` | [View source ↗](akash/deployment/v1beta2/service.ts) |
+
+---
 
 **UpdateDeployment**
-- Function: `updateDeploymentAkashDeploymentV1beta2`
-- Hook: `useUpdateDeploymentAkashDeploymentV1beta2`
-- Description: UpdateDeployment defines a method to update a deployment given proper inputs.
-- Request: MsgUpdateDeployment
-- Response: MsgUpdateDeploymentResponse
+
+UpdateDeployment defines a method to update a deployment given proper inputs.
+
+```ts
+import { updateDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { useUpdateDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `updateDeploymentAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.func.ts) |
+| Hook | `useUpdateDeploymentAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.react.ts) |
+| Request | `MsgUpdateDeployment` | [View source ↗](akash/deployment/v1beta2/service.ts) |
+| Response | `MsgUpdateDeploymentResponse` | [View source ↗](akash/deployment/v1beta2/service.ts) |
+
+---
 
 **CloseDeployment**
-- Function: `closeDeploymentAkashDeploymentV1beta2`
-- Hook: `useCloseDeploymentAkashDeploymentV1beta2`
-- Description: CloseDeployment defines a method to close a deployment given proper inputs.
-- Request: MsgCloseDeployment
-- Response: MsgCloseDeploymentResponse
+
+CloseDeployment defines a method to close a deployment given proper inputs.
+
+```ts
+import { closeDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { useCloseDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `closeDeploymentAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.func.ts) |
+| Hook | `useCloseDeploymentAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.react.ts) |
+| Request | `MsgCloseDeployment` | [View source ↗](akash/deployment/v1beta2/service.ts) |
+| Response | `MsgCloseDeploymentResponse` | [View source ↗](akash/deployment/v1beta2/service.ts) |
+
+---
 
 **CloseGroup**
-- Function: `closeGroupAkashDeploymentV1beta2`
-- Hook: `useCloseGroupAkashDeploymentV1beta2`
-- Description: CloseGroup defines a method to close a group of a deployment given proper inputs.
-- Request: MsgCloseGroup
-- Response: MsgCloseGroupResponse
+
+CloseGroup defines a method to close a group of a deployment given proper inputs.
+
+```ts
+import { closeGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { useCloseGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `closeGroupAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.func.ts) |
+| Hook | `useCloseGroupAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.react.ts) |
+| Request | `MsgCloseGroup` | [View source ↗](akash/deployment/v1beta2/service.ts) |
+| Response | `MsgCloseGroupResponse` | [View source ↗](akash/deployment/v1beta2/service.ts) |
+
+---
 
 **PauseGroup**
-- Function: `pauseGroupAkashDeploymentV1beta2`
-- Hook: `usePauseGroupAkashDeploymentV1beta2`
-- Description: PauseGroup defines a method to close a group of a deployment given proper inputs.
-- Request: MsgPauseGroup
-- Response: MsgPauseGroupResponse
+
+PauseGroup defines a method to close a group of a deployment given proper inputs.
+
+```ts
+import { pauseGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { usePauseGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `pauseGroupAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.func.ts) |
+| Hook | `usePauseGroupAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.react.ts) |
+| Request | `MsgPauseGroup` | [View source ↗](akash/deployment/v1beta2/service.ts) |
+| Response | `MsgPauseGroupResponse` | [View source ↗](akash/deployment/v1beta2/service.ts) |
+
+---
 
 **StartGroup**
-- Function: `startGroupAkashDeploymentV1beta2`
-- Hook: `useStartGroupAkashDeploymentV1beta2`
-- Description: StartGroup defines a method to close a group of a deployment given proper inputs.
-- Request: MsgStartGroup
-- Response: MsgStartGroupResponse
+
+StartGroup defines a method to close a group of a deployment given proper inputs.
+
+```ts
+import { startGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { useStartGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `startGroupAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.func.ts) |
+| Hook | `useStartGroupAkashDeploymentV1beta2` | [View source ↗](akash/deployment/v1beta2/service.rpc.react.ts) |
+| Request | `MsgStartGroup` | [View source ↗](akash/deployment/v1beta2/service.ts) |
+| Response | `MsgStartGroupResponse` | [View source ↗](akash/deployment/v1beta2/service.ts) |
 
 
 ## akash.escrow.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `Account` | [View source ↗](akash/escrow/v1beta1/types.ts) |
+| Type | `AccountID` | [View source ↗](akash/escrow/v1beta1/types.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `Payment` | [View source ↗](akash/escrow/v1beta1/types.ts) |
+| Type | `QueryAccountsRequest` | [View source ↗](akash/escrow/v1beta1/query.ts) |
+| Type | `QueryAccountsResponse` | [View source ↗](akash/escrow/v1beta1/query.ts) |
+| Type | `QueryPaymentsRequest` | [View source ↗](akash/escrow/v1beta1/query.ts) |
+| Type | `QueryPaymentsResponse` | [View source ↗](akash/escrow/v1beta1/query.ts) |
+
 ### Query Methods
 
 **Accounts**
-- Function: `getAccountsAkashEscrowV1beta1`
-- Hook: `useGetAccountsAkashEscrowV1beta1`
-- Description: buf:lint:ignore RPC_REQUEST_RESPONSE_UNIQUE
- buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
- Accounts queries all accounts
-- Request: QueryAccountsRequest
-- Response: QueryAccountsResponse
+
+Accounts queries all accounts
+
+```ts
+import { getAccountsAkashEscrowV1beta1 } from 'outputicjs/akash/escrow/v1beta1'
+import { useGetAccountsAkashEscrowV1beta1 } from 'outputicjs/akash/escrow/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountsAkashEscrowV1beta1` | [View source ↗](akash/escrow/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetAccountsAkashEscrowV1beta1` | [View source ↗](akash/escrow/v1beta1/query.rpc.react.ts) |
+| Request | `QueryAccountsRequest` | [View source ↗](akash/escrow/v1beta1/query.ts) |
+| Response | `QueryAccountsResponse` | [View source ↗](akash/escrow/v1beta1/query.ts) |
+
+---
 
 **Payments**
-- Function: `getPaymentsAkashEscrowV1beta1`
-- Hook: `useGetPaymentsAkashEscrowV1beta1`
-- Description: buf:lint:ignore RPC_REQUEST_RESPONSE_UNIQUE
- buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
- Payments queries all payments
-- Request: QueryPaymentsRequest
-- Response: QueryPaymentsResponse
+
+Payments queries all payments
+
+```ts
+import { getPaymentsAkashEscrowV1beta1 } from 'outputicjs/akash/escrow/v1beta1'
+import { useGetPaymentsAkashEscrowV1beta1 } from 'outputicjs/akash/escrow/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPaymentsAkashEscrowV1beta1` | [View source ↗](akash/escrow/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetPaymentsAkashEscrowV1beta1` | [View source ↗](akash/escrow/v1beta1/query.rpc.react.ts) |
+| Request | `QueryPaymentsRequest` | [View source ↗](akash/escrow/v1beta1/query.ts) |
+| Response | `QueryPaymentsResponse` | [View source ↗](akash/escrow/v1beta1/query.ts) |
 
 
 ## akash.escrow.v1beta2
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `Account` | [View source ↗](akash/escrow/v1beta1/types.ts) |
+| Type | `AccountID` | [View source ↗](akash/escrow/v1beta1/types.ts) |
+| Type | `FractionalPayment` | [View source ↗](akash/escrow/v1beta2/types.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `QueryAccountsRequest` | [View source ↗](akash/escrow/v1beta1/query.ts) |
+| Type | `QueryAccountsResponse` | [View source ↗](akash/escrow/v1beta1/query.ts) |
+| Type | `QueryPaymentsRequest` | [View source ↗](akash/escrow/v1beta1/query.ts) |
+| Type | `QueryPaymentsResponse` | [View source ↗](akash/escrow/v1beta1/query.ts) |
+
 ### Query Methods
 
 **Accounts**
-- Function: `getAccountsAkashEscrowV1beta2`
-- Hook: `useGetAccountsAkashEscrowV1beta2`
-- Description: buf:lint:ignore RPC_REQUEST_RESPONSE_UNIQUE
- buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
- Accounts queries all accounts
-- Request: QueryAccountsRequest
-- Response: QueryAccountsResponse
+
+Accounts queries all accounts
+
+```ts
+import { getAccountsAkashEscrowV1beta2 } from 'outputicjs/akash/escrow/v1beta2'
+import { useGetAccountsAkashEscrowV1beta2 } from 'outputicjs/akash/escrow/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountsAkashEscrowV1beta2` | [View source ↗](akash/escrow/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetAccountsAkashEscrowV1beta2` | [View source ↗](akash/escrow/v1beta2/query.rpc.react.ts) |
+| Request | `QueryAccountsRequest` | [View source ↗](akash/escrow/v1beta2/query.ts) |
+| Response | `QueryAccountsResponse` | [View source ↗](akash/escrow/v1beta2/query.ts) |
+
+---
 
 **Payments**
-- Function: `getPaymentsAkashEscrowV1beta2`
-- Hook: `useGetPaymentsAkashEscrowV1beta2`
-- Description: buf:lint:ignore RPC_REQUEST_RESPONSE_UNIQUE
- buf:lint:ignore RPC_RESPONSE_STANDARD_NAME
- Payments queries all payments
-- Request: QueryPaymentsRequest
-- Response: QueryPaymentsResponse
+
+Payments queries all payments
+
+```ts
+import { getPaymentsAkashEscrowV1beta2 } from 'outputicjs/akash/escrow/v1beta2'
+import { useGetPaymentsAkashEscrowV1beta2 } from 'outputicjs/akash/escrow/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPaymentsAkashEscrowV1beta2` | [View source ↗](akash/escrow/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetPaymentsAkashEscrowV1beta2` | [View source ↗](akash/escrow/v1beta2/query.rpc.react.ts) |
+| Request | `QueryPaymentsRequest` | [View source ↗](akash/escrow/v1beta2/query.ts) |
+| Response | `QueryPaymentsResponse` | [View source ↗](akash/escrow/v1beta2/query.ts) |
 
 
 ## akash.market.v1beta2
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `AkashMarketV1beta2Params` | [View source ↗](akash/market/v1beta2/params.ts) |
+| Type | `Bid` | [View source ↗](akash/market/v1beta2/bid.ts) |
+| Type | `BidFilters` | [View source ↗](akash/market/v1beta2/bid.ts) |
+| Type | `BidID` | [View source ↗](akash/market/v1beta2/bid.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `Lease` | [View source ↗](akash/market/v1beta2/lease.ts) |
+| Type | `LeaseFilters` | [View source ↗](akash/market/v1beta2/lease.ts) |
+| Type | `LeaseID` | [View source ↗](akash/market/v1beta2/lease.ts) |
+| Type | `MsgCloseBid` | [View source ↗](akash/market/v1beta2/bid.ts) |
+| Type | `MsgCloseBidResponse` | [View source ↗](akash/market/v1beta2/bid.ts) |
+| Type | `MsgCloseLease` | [View source ↗](akash/market/v1beta2/lease.ts) |
+| Type | `MsgCloseLeaseResponse` | [View source ↗](akash/market/v1beta2/lease.ts) |
+| Type | `MsgCreateBid` | [View source ↗](akash/market/v1beta2/bid.ts) |
+| Type | `MsgCreateBidResponse` | [View source ↗](akash/market/v1beta2/bid.ts) |
+| Type | `MsgCreateLease` | [View source ↗](akash/market/v1beta2/lease.ts) |
+| Type | `MsgCreateLeaseResponse` | [View source ↗](akash/market/v1beta2/lease.ts) |
+| Type | `MsgWithdrawLease` | [View source ↗](akash/market/v1beta2/lease.ts) |
+| Type | `MsgWithdrawLeaseResponse` | [View source ↗](akash/market/v1beta2/lease.ts) |
+| Type | `Order` | [View source ↗](akash/market/v1beta2/order.ts) |
+| Type | `OrderFilters` | [View source ↗](akash/market/v1beta2/order.ts) |
+| Type | `OrderID` | [View source ↗](akash/market/v1beta2/order.ts) |
+| Type | `QueryBidRequest` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Type | `QueryBidResponse` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Type | `QueryBidsRequest` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Type | `QueryBidsResponse` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Type | `QueryLeaseRequest` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Type | `QueryLeaseResponse` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Type | `QueryLeasesRequest` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Type | `QueryLeasesResponse` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Type | `QueryOrderRequest` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Type | `QueryOrderResponse` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Type | `QueryOrdersRequest` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Type | `QueryOrdersResponse` | [View source ↗](akash/market/v1beta2/query.ts) |
+
 ### Query Methods
 
 **Orders**
-- Function: `getOrders`
-- Hook: `useGetOrders`
-- Description: Orders queries orders with filters
-- Request: QueryOrdersRequest
-- Response: QueryOrdersResponse
+
+Orders queries orders with filters
+
+```ts
+import { getOrders } from 'outputicjs/akash/market/v1beta2'
+import { useGetOrders } from 'outputicjs/akash/market/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getOrders` | [View source ↗](akash/market/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetOrders` | [View source ↗](akash/market/v1beta2/query.rpc.react.ts) |
+| Request | `QueryOrdersRequest` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Response | `QueryOrdersResponse` | [View source ↗](akash/market/v1beta2/query.ts) |
+
+---
 
 **Order**
-- Function: `getOrder`
-- Hook: `useGetOrder`
-- Description: Order queries order details
-- Request: QueryOrderRequest
-- Response: QueryOrderResponse
+
+Order queries order details
+
+```ts
+import { getOrder } from 'outputicjs/akash/market/v1beta2'
+import { useGetOrder } from 'outputicjs/akash/market/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getOrder` | [View source ↗](akash/market/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetOrder` | [View source ↗](akash/market/v1beta2/query.rpc.react.ts) |
+| Request | `QueryOrderRequest` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Response | `QueryOrderResponse` | [View source ↗](akash/market/v1beta2/query.ts) |
+
+---
 
 **Bids**
-- Function: `getBids`
-- Hook: `useGetBids`
-- Description: Bids queries bids with filters
-- Request: QueryBidsRequest
-- Response: QueryBidsResponse
+
+Bids queries bids with filters
+
+```ts
+import { getBids } from 'outputicjs/akash/market/v1beta2'
+import { useGetBids } from 'outputicjs/akash/market/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getBids` | [View source ↗](akash/market/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetBids` | [View source ↗](akash/market/v1beta2/query.rpc.react.ts) |
+| Request | `QueryBidsRequest` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Response | `QueryBidsResponse` | [View source ↗](akash/market/v1beta2/query.ts) |
+
+---
 
 **Bid**
-- Function: `getBid`
-- Hook: `useGetBid`
-- Description: Bid queries bid details
-- Request: QueryBidRequest
-- Response: QueryBidResponse
+
+Bid queries bid details
+
+```ts
+import { getBid } from 'outputicjs/akash/market/v1beta2'
+import { useGetBid } from 'outputicjs/akash/market/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getBid` | [View source ↗](akash/market/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetBid` | [View source ↗](akash/market/v1beta2/query.rpc.react.ts) |
+| Request | `QueryBidRequest` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Response | `QueryBidResponse` | [View source ↗](akash/market/v1beta2/query.ts) |
+
+---
 
 **Leases**
-- Function: `getLeases`
-- Hook: `useGetLeases`
-- Description: Leases queries leases with filters
-- Request: QueryLeasesRequest
-- Response: QueryLeasesResponse
+
+Leases queries leases with filters
+
+```ts
+import { getLeases } from 'outputicjs/akash/market/v1beta2'
+import { useGetLeases } from 'outputicjs/akash/market/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getLeases` | [View source ↗](akash/market/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetLeases` | [View source ↗](akash/market/v1beta2/query.rpc.react.ts) |
+| Request | `QueryLeasesRequest` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Response | `QueryLeasesResponse` | [View source ↗](akash/market/v1beta2/query.ts) |
+
+---
 
 **Lease**
-- Function: `getLease`
-- Hook: `useGetLease`
-- Description: Lease queries lease details
-- Request: QueryLeaseRequest
-- Response: QueryLeaseResponse
+
+Lease queries lease details
+
+```ts
+import { getLease } from 'outputicjs/akash/market/v1beta2'
+import { useGetLease } from 'outputicjs/akash/market/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getLease` | [View source ↗](akash/market/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetLease` | [View source ↗](akash/market/v1beta2/query.rpc.react.ts) |
+| Request | `QueryLeaseRequest` | [View source ↗](akash/market/v1beta2/query.ts) |
+| Response | `QueryLeaseResponse` | [View source ↗](akash/market/v1beta2/query.ts) |
 
 ### Transaction Methods
 
 **CreateBid**
-- Function: `createBid`
-- Hook: `useCreateBid`
-- Description: CreateBid defines a method to create a bid given proper inputs.
-- Request: MsgCreateBid
-- Response: MsgCreateBidResponse
+
+CreateBid defines a method to create a bid given proper inputs.
+
+```ts
+import { createBid } from 'outputicjs/akash/market/v1beta2'
+import { useCreateBid } from 'outputicjs/akash/market/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createBid` | [View source ↗](akash/market/v1beta2/service.rpc.func.ts) |
+| Hook | `useCreateBid` | [View source ↗](akash/market/v1beta2/service.rpc.react.ts) |
+| Request | `MsgCreateBid` | [View source ↗](akash/market/v1beta2/service.ts) |
+| Response | `MsgCreateBidResponse` | [View source ↗](akash/market/v1beta2/service.ts) |
+
+---
 
 **CloseBid**
-- Function: `closeBid`
-- Hook: `useCloseBid`
-- Description: CloseBid defines a method to close a bid given proper inputs.
-- Request: MsgCloseBid
-- Response: MsgCloseBidResponse
+
+CloseBid defines a method to close a bid given proper inputs.
+
+```ts
+import { closeBid } from 'outputicjs/akash/market/v1beta2'
+import { useCloseBid } from 'outputicjs/akash/market/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `closeBid` | [View source ↗](akash/market/v1beta2/service.rpc.func.ts) |
+| Hook | `useCloseBid` | [View source ↗](akash/market/v1beta2/service.rpc.react.ts) |
+| Request | `MsgCloseBid` | [View source ↗](akash/market/v1beta2/service.ts) |
+| Response | `MsgCloseBidResponse` | [View source ↗](akash/market/v1beta2/service.ts) |
+
+---
 
 **WithdrawLease**
-- Function: `withdrawLease`
-- Hook: `useWithdrawLease`
-- Description: WithdrawLease withdraws accrued funds from the lease payment
-- Request: MsgWithdrawLease
-- Response: MsgWithdrawLeaseResponse
+
+WithdrawLease withdraws accrued funds from the lease payment
+
+```ts
+import { withdrawLease } from 'outputicjs/akash/market/v1beta2'
+import { useWithdrawLease } from 'outputicjs/akash/market/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `withdrawLease` | [View source ↗](akash/market/v1beta2/service.rpc.func.ts) |
+| Hook | `useWithdrawLease` | [View source ↗](akash/market/v1beta2/service.rpc.react.ts) |
+| Request | `MsgWithdrawLease` | [View source ↗](akash/market/v1beta2/service.ts) |
+| Response | `MsgWithdrawLeaseResponse` | [View source ↗](akash/market/v1beta2/service.ts) |
+
+---
 
 **CreateLease**
-- Function: `createLease`
-- Hook: `useCreateLease`
-- Description: CreateLease creates a new lease
-- Request: MsgCreateLease
-- Response: MsgCreateLeaseResponse
+
+CreateLease creates a new lease
+
+```ts
+import { createLease } from 'outputicjs/akash/market/v1beta2'
+import { useCreateLease } from 'outputicjs/akash/market/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createLease` | [View source ↗](akash/market/v1beta2/service.rpc.func.ts) |
+| Hook | `useCreateLease` | [View source ↗](akash/market/v1beta2/service.rpc.react.ts) |
+| Request | `MsgCreateLease` | [View source ↗](akash/market/v1beta2/service.ts) |
+| Response | `MsgCreateLeaseResponse` | [View source ↗](akash/market/v1beta2/service.ts) |
+
+---
 
 **CloseLease**
-- Function: `closeLease`
-- Hook: `useCloseLease`
-- Description: CloseLease defines a method to close an order given proper inputs.
-- Request: MsgCloseLease
-- Response: MsgCloseLeaseResponse
+
+CloseLease defines a method to close an order given proper inputs.
+
+```ts
+import { closeLease } from 'outputicjs/akash/market/v1beta2'
+import { useCloseLease } from 'outputicjs/akash/market/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `closeLease` | [View source ↗](akash/market/v1beta2/service.rpc.func.ts) |
+| Hook | `useCloseLease` | [View source ↗](akash/market/v1beta2/service.rpc.react.ts) |
+| Request | `MsgCloseLease` | [View source ↗](akash/market/v1beta2/service.ts) |
+| Response | `MsgCloseLeaseResponse` | [View source ↗](akash/market/v1beta2/service.ts) |
 
 
 ## akash.provider.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `MsgCreateProvider` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Type | `MsgCreateProviderResponse` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Type | `MsgDeleteProvider` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Type | `MsgDeleteProviderResponse` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Type | `MsgUpdateProvider` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Type | `MsgUpdateProviderResponse` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Type | `Provider` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `ProviderInfo` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+
 ### Transaction Methods
 
 **CreateProvider**
-- Function: `createProviderAkashProviderV1beta1`
-- Hook: `useCreateProviderAkashProviderV1beta1`
-- Description: CreateProvider defines a method that creates a provider given the proper inputs
-- Request: MsgCreateProvider
-- Response: MsgCreateProviderResponse
+
+CreateProvider defines a method that creates a provider given the proper inputs
+
+```ts
+import { createProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider/v1beta1'
+import { useCreateProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createProviderAkashProviderV1beta1` | [View source ↗](akash/provider/v1beta1/provider.rpc.func.ts) |
+| Hook | `useCreateProviderAkashProviderV1beta1` | [View source ↗](akash/provider/v1beta1/provider.rpc.react.ts) |
+| Request | `MsgCreateProvider` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Response | `MsgCreateProviderResponse` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+
+---
 
 **UpdateProvider**
-- Function: `updateProviderAkashProviderV1beta1`
-- Hook: `useUpdateProviderAkashProviderV1beta1`
-- Description: UpdateProvider defines a method that updates a provider given the proper inputs
-- Request: MsgUpdateProvider
-- Response: MsgUpdateProviderResponse
+
+UpdateProvider defines a method that updates a provider given the proper inputs
+
+```ts
+import { updateProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider/v1beta1'
+import { useUpdateProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `updateProviderAkashProviderV1beta1` | [View source ↗](akash/provider/v1beta1/provider.rpc.func.ts) |
+| Hook | `useUpdateProviderAkashProviderV1beta1` | [View source ↗](akash/provider/v1beta1/provider.rpc.react.ts) |
+| Request | `MsgUpdateProvider` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Response | `MsgUpdateProviderResponse` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+
+---
 
 **DeleteProvider**
-- Function: `deleteProviderAkashProviderV1beta1`
-- Hook: `useDeleteProviderAkashProviderV1beta1`
-- Description: DeleteProvider defines a method that deletes a provider given the proper inputs
-- Request: MsgDeleteProvider
-- Response: MsgDeleteProviderResponse
+
+DeleteProvider defines a method that deletes a provider given the proper inputs
+
+```ts
+import { deleteProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider/v1beta1'
+import { useDeleteProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `deleteProviderAkashProviderV1beta1` | [View source ↗](akash/provider/v1beta1/provider.rpc.func.ts) |
+| Hook | `useDeleteProviderAkashProviderV1beta1` | [View source ↗](akash/provider/v1beta1/provider.rpc.react.ts) |
+| Request | `MsgDeleteProvider` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Response | `MsgDeleteProviderResponse` | [View source ↗](akash/provider/v1beta1/provider.ts) |
 
 
 ## akash.provider.v1beta2
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MsgCreateProvider` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Type | `MsgCreateProviderResponse` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Type | `MsgDeleteProvider` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Type | `MsgDeleteProviderResponse` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Type | `MsgUpdateProvider` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Type | `MsgUpdateProviderResponse` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Type | `Provider` | [View source ↗](akash/audit/v1beta1/audit.ts) |
+| Type | `ProviderInfo` | [View source ↗](akash/provider/v1beta1/provider.ts) |
+| Type | `QueryProviderRequest` | [View source ↗](akash/audit/v1beta2/query.ts) |
+| Type | `QueryProviderResponse` | [View source ↗](akash/provider/v1beta2/query.ts) |
+| Type | `QueryProvidersRequest` | [View source ↗](akash/provider/v1beta2/query.ts) |
+| Type | `QueryProvidersResponse` | [View source ↗](akash/audit/v1beta2/query.ts) |
+
 ### Query Methods
 
 **Providers**
-- Function: `getProviders`
-- Hook: `useGetProviders`
-- Description: Providers queries providers
-- Request: QueryProvidersRequest
-- Response: QueryProvidersResponse
+
+Providers queries providers
+
+```ts
+import { getProviders } from 'outputicjs/akash/provider/v1beta2'
+import { useGetProviders } from 'outputicjs/akash/provider/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getProviders` | [View source ↗](akash/provider/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetProviders` | [View source ↗](akash/provider/v1beta2/query.rpc.react.ts) |
+| Request | `QueryProvidersRequest` | [View source ↗](akash/provider/v1beta2/query.ts) |
+| Response | `QueryProvidersResponse` | [View source ↗](akash/provider/v1beta2/query.ts) |
+
+---
 
 **Provider**
-- Function: `getProvider`
-- Hook: `useGetProvider`
-- Description: Provider queries provider details
-- Request: QueryProviderRequest
-- Response: QueryProviderResponse
+
+Provider queries provider details
+
+```ts
+import { getProvider } from 'outputicjs/akash/provider/v1beta2'
+import { useGetProvider } from 'outputicjs/akash/provider/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getProvider` | [View source ↗](akash/provider/v1beta2/query.rpc.func.ts) |
+| Hook | `useGetProvider` | [View source ↗](akash/provider/v1beta2/query.rpc.react.ts) |
+| Request | `QueryProviderRequest` | [View source ↗](akash/provider/v1beta2/query.ts) |
+| Response | `QueryProviderResponse` | [View source ↗](akash/provider/v1beta2/query.ts) |
 
 ### Transaction Methods
 
 **CreateProvider**
-- Function: `createProviderAkashProviderV1beta2`
-- Hook: `useCreateProviderAkashProviderV1beta2`
-- Description: CreateProvider defines a method that creates a provider given the proper inputs
-- Request: MsgCreateProvider
-- Response: MsgCreateProviderResponse
+
+CreateProvider defines a method that creates a provider given the proper inputs
+
+```ts
+import { createProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider/v1beta2'
+import { useCreateProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createProviderAkashProviderV1beta2` | [View source ↗](akash/provider/v1beta2/provider.rpc.func.ts) |
+| Hook | `useCreateProviderAkashProviderV1beta2` | [View source ↗](akash/provider/v1beta2/provider.rpc.react.ts) |
+| Request | `MsgCreateProvider` | [View source ↗](akash/provider/v1beta2/provider.ts) |
+| Response | `MsgCreateProviderResponse` | [View source ↗](akash/provider/v1beta2/provider.ts) |
+
+---
 
 **UpdateProvider**
-- Function: `updateProviderAkashProviderV1beta2`
-- Hook: `useUpdateProviderAkashProviderV1beta2`
-- Description: UpdateProvider defines a method that updates a provider given the proper inputs
-- Request: MsgUpdateProvider
-- Response: MsgUpdateProviderResponse
+
+UpdateProvider defines a method that updates a provider given the proper inputs
+
+```ts
+import { updateProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider/v1beta2'
+import { useUpdateProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `updateProviderAkashProviderV1beta2` | [View source ↗](akash/provider/v1beta2/provider.rpc.func.ts) |
+| Hook | `useUpdateProviderAkashProviderV1beta2` | [View source ↗](akash/provider/v1beta2/provider.rpc.react.ts) |
+| Request | `MsgUpdateProvider` | [View source ↗](akash/provider/v1beta2/provider.ts) |
+| Response | `MsgUpdateProviderResponse` | [View source ↗](akash/provider/v1beta2/provider.ts) |
+
+---
 
 **DeleteProvider**
-- Function: `deleteProviderAkashProviderV1beta2`
-- Hook: `useDeleteProviderAkashProviderV1beta2`
-- Description: DeleteProvider defines a method that deletes a provider given the proper inputs
-- Request: MsgDeleteProvider
-- Response: MsgDeleteProviderResponse
+
+DeleteProvider defines a method that deletes a provider given the proper inputs
+
+```ts
+import { deleteProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider/v1beta2'
+import { useDeleteProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider/v1beta2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `deleteProviderAkashProviderV1beta2` | [View source ↗](akash/provider/v1beta2/provider.rpc.func.ts) |
+| Hook | `useDeleteProviderAkashProviderV1beta2` | [View source ↗](akash/provider/v1beta2/provider.rpc.react.ts) |
+| Request | `MsgDeleteProvider` | [View source ↗](akash/provider/v1beta2/provider.ts) |
+| Response | `MsgDeleteProviderResponse` | [View source ↗](akash/provider/v1beta2/provider.ts) |
 
 
 ## cosmos.app.v1alpha1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `Config` | [View source ↗](cosmos/app/v1alpha1/config.ts) |
+| Type | `MigrateFromInfo` | [View source ↗](cosmos/app/v1alpha1/module.ts) |
+| Type | `ModuleConfig` | [View source ↗](cosmos/app/v1alpha1/config.ts) |
+| Type | `ModuleDescriptor` | [View source ↗](cosmos/app/v1alpha1/module.ts) |
+| Type | `PackageReference` | [View source ↗](cosmos/app/v1alpha1/module.ts) |
+| Type | `QueryConfigRequest` | [View source ↗](cosmos/app/v1alpha1/query.ts) |
+| Type | `QueryConfigResponse` | [View source ↗](cosmos/app/v1alpha1/query.ts) |
+
 ### Query Methods
 
 **Config**
-- Function: `getConfig`
-- Hook: `useGetConfig`
-- Description: Config returns the current app config.
-- Request: QueryConfigRequest
-- Response: QueryConfigResponse
+
+Config returns the current app config.
+
+```ts
+import { getConfig } from 'outputicjs/cosmos/app/v1alpha1'
+import { useGetConfig } from 'outputicjs/cosmos/app/v1alpha1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getConfig` | [View source ↗](cosmos/app/v1alpha1/query.rpc.func.ts) |
+| Hook | `useGetConfig` | [View source ↗](cosmos/app/v1alpha1/query.rpc.react.ts) |
+| Request | `QueryConfigRequest` | [View source ↗](cosmos/app/v1alpha1/query.ts) |
+| Response | `QueryConfigResponse` | [View source ↗](cosmos/app/v1alpha1/query.ts) |
 
 
 ## cosmos.auth.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `AddressBytesToStringRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `AddressBytesToStringResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `AddressStringToBytesRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `AddressStringToBytesResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `BaseAccount` | [View source ↗](cosmos/auth/v1beta1/auth.ts) |
+| Type | `Bech32PrefixRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `Bech32PrefixResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `CosmosAuthV1beta1Params` | [View source ↗](cosmos/auth/v1beta1/auth.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `ModuleAccount` | [View source ↗](cosmos/auth/v1beta1/auth.ts) |
+| Type | `QueryAccountRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryAccountResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryAccountsRequest` | [View source ↗](akash/escrow/v1beta1/query.ts) |
+| Type | `QueryAccountsResponse` | [View source ↗](akash/escrow/v1beta1/query.ts) |
+| Type | `QueryModuleAccountsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryModuleAccountsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+
 ### Query Methods
 
 **Accounts**
-- Function: `getAccountsCosmosAuthV1beta1`
-- Hook: `useGetAccountsCosmosAuthV1beta1`
-- Description: Accounts returns all the existing accounts
 
- Since: cosmos-sdk 0.43
-- Request: QueryAccountsRequest
-- Response: QueryAccountsResponse
+Accounts returns all the existing accounts Since: cosmos-sdk 0.43
+
+```ts
+import { getAccountsCosmosAuthV1beta1 } from 'outputicjs/cosmos/auth/v1beta1'
+import { useGetAccountsCosmosAuthV1beta1 } from 'outputicjs/cosmos/auth/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountsCosmosAuthV1beta1` | [View source ↗](cosmos/auth/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetAccountsCosmosAuthV1beta1` | [View source ↗](cosmos/auth/v1beta1/query.rpc.react.ts) |
+| Request | `QueryAccountsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Response | `QueryAccountsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+
+---
 
 **Account**
-- Function: `getAccount`
-- Hook: `useGetAccount`
-- Description: Account returns account details based on address.
-- Request: QueryAccountRequest
-- Response: QueryAccountResponse
+
+Account returns account details based on address.
+
+```ts
+import { getAccount } from 'outputicjs/cosmos/auth/v1beta1'
+import { useGetAccount } from 'outputicjs/cosmos/auth/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccount` | [View source ↗](cosmos/auth/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetAccount` | [View source ↗](cosmos/auth/v1beta1/query.rpc.react.ts) |
+| Request | `QueryAccountRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Response | `QueryAccountResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+
+---
 
 **Params**
-- Function: `getCosmosAuthV1beta1Params`
-- Hook: `useGetCosmosAuthV1beta1Params`
-- Description: Params queries all parameters.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params queries all parameters.
+
+```ts
+import { getCosmosAuthV1beta1Params } from 'outputicjs/cosmos/auth/v1beta1'
+import { useGetCosmosAuthV1beta1Params } from 'outputicjs/cosmos/auth/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCosmosAuthV1beta1Params` | [View source ↗](cosmos/auth/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetCosmosAuthV1beta1Params` | [View source ↗](cosmos/auth/v1beta1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+
+---
 
 **ModuleAccounts**
-- Function: `getModuleAccounts`
-- Hook: `useGetModuleAccounts`
-- Description: ModuleAccounts returns all the existing module accounts.
-- Request: QueryModuleAccountsRequest
-- Response: QueryModuleAccountsResponse
+
+ModuleAccounts returns all the existing module accounts.
+
+```ts
+import { getModuleAccounts } from 'outputicjs/cosmos/auth/v1beta1'
+import { useGetModuleAccounts } from 'outputicjs/cosmos/auth/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getModuleAccounts` | [View source ↗](cosmos/auth/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetModuleAccounts` | [View source ↗](cosmos/auth/v1beta1/query.rpc.react.ts) |
+| Request | `QueryModuleAccountsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Response | `QueryModuleAccountsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+
+---
 
 **Bech32Prefix**
-- Function: `getBech32Prefix`
-- Hook: `useGetBech32Prefix`
-- Description: Bech32 queries bech32Prefix
-- Request: Bech32PrefixRequest
-- Response: Bech32PrefixResponse
+
+Bech32 queries bech32Prefix
+
+```ts
+import { getBech32Prefix } from 'outputicjs/cosmos/auth/v1beta1'
+import { useGetBech32Prefix } from 'outputicjs/cosmos/auth/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getBech32Prefix` | [View source ↗](cosmos/auth/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetBech32Prefix` | [View source ↗](cosmos/auth/v1beta1/query.rpc.react.ts) |
+| Request | `Bech32PrefixRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Response | `Bech32PrefixResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+
+---
 
 **AddressBytesToString**
-- Function: `getAddressBytesToString`
-- Hook: `useGetAddressBytesToString`
-- Description: AddressBytesToString converts Account Address bytes to string
-- Request: AddressBytesToStringRequest
-- Response: AddressBytesToStringResponse
+
+AddressBytesToString converts Account Address bytes to string
+
+```ts
+import { getAddressBytesToString } from 'outputicjs/cosmos/auth/v1beta1'
+import { useGetAddressBytesToString } from 'outputicjs/cosmos/auth/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAddressBytesToString` | [View source ↗](cosmos/auth/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetAddressBytesToString` | [View source ↗](cosmos/auth/v1beta1/query.rpc.react.ts) |
+| Request | `AddressBytesToStringRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Response | `AddressBytesToStringResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+
+---
 
 **AddressStringToBytes**
-- Function: `getAddressStringToBytes`
-- Hook: `useGetAddressStringToBytes`
-- Description: AddressStringToBytes converts Address string to bytes
-- Request: AddressStringToBytesRequest
-- Response: AddressStringToBytesResponse
+
+AddressStringToBytes converts Address string to bytes
+
+```ts
+import { getAddressStringToBytes } from 'outputicjs/cosmos/auth/v1beta1'
+import { useGetAddressStringToBytes } from 'outputicjs/cosmos/auth/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAddressStringToBytes` | [View source ↗](cosmos/auth/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetAddressStringToBytes` | [View source ↗](cosmos/auth/v1beta1/query.rpc.react.ts) |
+| Request | `AddressStringToBytesRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Response | `AddressStringToBytesResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
 
 
 ## cosmos.authz.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `EventGrant` | [View source ↗](cosmos/authz/v1beta1/event.ts) |
+| Type | `EventRevoke` | [View source ↗](cosmos/authz/v1beta1/event.ts) |
+| Type | `GenericAuthorization` | [View source ↗](cosmos/authz/v1beta1/authz.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `Grant` | [View source ↗](cosmos/authz/v1beta1/authz.ts) |
+| Type | `GrantAuthorization` | [View source ↗](cosmos/authz/v1beta1/authz.ts) |
+| Type | `GrantQueueItem` | [View source ↗](cosmos/authz/v1beta1/authz.ts) |
+| Type | `MsgExec` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
+| Type | `MsgExecResponse` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
+| Type | `MsgGrant` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
+| Type | `MsgGrantResponse` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
+| Type | `MsgRevoke` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
+| Type | `MsgRevokeResponse` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
+| Type | `QueryGranteeGrantsRequest` | [View source ↗](cosmos/authz/v1beta1/query.ts) |
+| Type | `QueryGranteeGrantsResponse` | [View source ↗](cosmos/authz/v1beta1/query.ts) |
+| Type | `QueryGranterGrantsRequest` | [View source ↗](cosmos/authz/v1beta1/query.ts) |
+| Type | `QueryGranterGrantsResponse` | [View source ↗](cosmos/authz/v1beta1/query.ts) |
+| Type | `QueryGrantsRequest` | [View source ↗](cosmos/authz/v1beta1/query.ts) |
+| Type | `QueryGrantsResponse` | [View source ↗](cosmos/authz/v1beta1/query.ts) |
+
 ### Query Methods
 
 **Grants**
-- Function: `getGrants`
-- Hook: `useGetGrants`
-- Description: Returns list of `Authorization`, granted to the grantee by the granter.
-- Request: QueryGrantsRequest
-- Response: QueryGrantsResponse
+
+Returns list of `Authorization`, granted to the grantee by the granter.
+
+```ts
+import { getGrants } from 'outputicjs/cosmos/authz/v1beta1'
+import { useGetGrants } from 'outputicjs/cosmos/authz/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGrants` | [View source ↗](cosmos/authz/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetGrants` | [View source ↗](cosmos/authz/v1beta1/query.rpc.react.ts) |
+| Request | `QueryGrantsRequest` | [View source ↗](cosmos/authz/v1beta1/query.ts) |
+| Response | `QueryGrantsResponse` | [View source ↗](cosmos/authz/v1beta1/query.ts) |
+
+---
 
 **GranterGrants**
-- Function: `getGranterGrants`
-- Hook: `useGetGranterGrants`
-- Description: GranterGrants returns list of `GrantAuthorization`, granted by granter.
 
- Since: cosmos-sdk 0.46
-- Request: QueryGranterGrantsRequest
-- Response: QueryGranterGrantsResponse
+GranterGrants returns list of `GrantAuthorization`, granted by granter. Since: cosmos-sdk 0.46
+
+```ts
+import { getGranterGrants } from 'outputicjs/cosmos/authz/v1beta1'
+import { useGetGranterGrants } from 'outputicjs/cosmos/authz/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGranterGrants` | [View source ↗](cosmos/authz/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetGranterGrants` | [View source ↗](cosmos/authz/v1beta1/query.rpc.react.ts) |
+| Request | `QueryGranterGrantsRequest` | [View source ↗](cosmos/authz/v1beta1/query.ts) |
+| Response | `QueryGranterGrantsResponse` | [View source ↗](cosmos/authz/v1beta1/query.ts) |
+
+---
 
 **GranteeGrants**
-- Function: `getGranteeGrants`
-- Hook: `useGetGranteeGrants`
-- Description: GranteeGrants returns a list of `GrantAuthorization` by grantee.
 
- Since: cosmos-sdk 0.46
-- Request: QueryGranteeGrantsRequest
-- Response: QueryGranteeGrantsResponse
+GranteeGrants returns a list of `GrantAuthorization` by grantee. Since: cosmos-sdk 0.46
+
+```ts
+import { getGranteeGrants } from 'outputicjs/cosmos/authz/v1beta1'
+import { useGetGranteeGrants } from 'outputicjs/cosmos/authz/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGranteeGrants` | [View source ↗](cosmos/authz/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetGranteeGrants` | [View source ↗](cosmos/authz/v1beta1/query.rpc.react.ts) |
+| Request | `QueryGranteeGrantsRequest` | [View source ↗](cosmos/authz/v1beta1/query.ts) |
+| Response | `QueryGranteeGrantsResponse` | [View source ↗](cosmos/authz/v1beta1/query.ts) |
 
 ### Transaction Methods
 
 **Grant**
-- Function: `grant`
-- Hook: `useGrant`
-- Description: Grant grants the provided authorization to the grantee on the granter's
- account with the provided expiration time. If there is already a grant
- for the given (granter, grantee, Authorization) triple, then the grant
- will be overwritten.
-- Request: MsgGrant
-- Response: MsgGrantResponse
+
+Grant grants the provided authorization to the grantee on the granter's account with the provided expiration time. If there is already a grant for the given (granter, grantee, Authorization) triple, then the grant will be overwritten.
+
+```ts
+import { grant } from 'outputicjs/cosmos/authz/v1beta1'
+import { useGrant } from 'outputicjs/cosmos/authz/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `grant` | [View source ↗](cosmos/authz/v1beta1/tx.rpc.func.ts) |
+| Hook | `useGrant` | [View source ↗](cosmos/authz/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgGrant` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
+| Response | `MsgGrantResponse` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
+
+---
 
 **Exec**
-- Function: `execCosmosAuthzV1beta1`
-- Hook: `useExecCosmosAuthzV1beta1`
-- Description: Exec attempts to execute the provided messages using
- authorizations granted to the grantee. Each message should have only
- one signer corresponding to the granter of the authorization.
-- Request: MsgExec
-- Response: MsgExecResponse
+
+Exec attempts to execute the provided messages using authorizations granted to the grantee. Each message should have only one signer corresponding to the granter of the authorization.
+
+```ts
+import { execCosmosAuthzV1beta1 } from 'outputicjs/cosmos/authz/v1beta1'
+import { useExecCosmosAuthzV1beta1 } from 'outputicjs/cosmos/authz/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `execCosmosAuthzV1beta1` | [View source ↗](cosmos/authz/v1beta1/tx.rpc.func.ts) |
+| Hook | `useExecCosmosAuthzV1beta1` | [View source ↗](cosmos/authz/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgExec` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
+| Response | `MsgExecResponse` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
+
+---
 
 **Revoke**
-- Function: `revoke`
-- Hook: `useRevoke`
-- Description: Revoke revokes any authorization corresponding to the provided method name on the
- granter's account that has been granted to the grantee.
-- Request: MsgRevoke
-- Response: MsgRevokeResponse
+
+Revoke revokes any authorization corresponding to the provided method name on the granter's account that has been granted to the grantee.
+
+```ts
+import { revoke } from 'outputicjs/cosmos/authz/v1beta1'
+import { useRevoke } from 'outputicjs/cosmos/authz/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `revoke` | [View source ↗](cosmos/authz/v1beta1/tx.rpc.func.ts) |
+| Hook | `useRevoke` | [View source ↗](cosmos/authz/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgRevoke` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
+| Response | `MsgRevokeResponse` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
 
 
 ## cosmos.bank.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `Balance` | [View source ↗](cosmos/bank/v1beta1/genesis.ts) |
+| Type | `CosmosBankV1beta1Params` | [View source ↗](cosmos/bank/v1beta1/bank.ts) |
+| Type | `DenomOwner` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `DenomUnit` | [View source ↗](cosmos/bank/v1beta1/bank.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `Input` | [View source ↗](cosmos/bank/v1beta1/bank.ts) |
+| Type | `Metadata` | [View source ↗](cosmos/bank/v1beta1/bank.ts) |
+| Type | `MsgMultiSend` | [View source ↗](cosmos/bank/v1beta1/tx.ts) |
+| Type | `MsgMultiSendResponse` | [View source ↗](cosmos/bank/v1beta1/tx.ts) |
+| Type | `MsgSend` | [View source ↗](cosmos/bank/v1beta1/tx.ts) |
+| Type | `MsgSendResponse` | [View source ↗](cosmos/bank/v1beta1/tx.ts) |
+| Type | `Output` | [View source ↗](cosmos/bank/v1beta1/bank.ts) |
+| Type | `QueryAllBalancesRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryAllBalancesResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryBalanceRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryBalanceResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryDenomMetadataRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryDenomMetadataResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryDenomOwnersRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryDenomOwnersResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryDenomsMetadataRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryDenomsMetadataResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QuerySpendableBalancesRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QuerySpendableBalancesResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QuerySupplyOfRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QuerySupplyOfResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryTotalSupplyRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryTotalSupplyResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `SendAuthorization` | [View source ↗](cosmos/bank/v1beta1/authz.ts) |
+| Type | `SendEnabled` | [View source ↗](cosmos/bank/v1beta1/bank.ts) |
+| Type | `Supply` | [View source ↗](cosmos/bank/v1beta1/bank.ts) |
+
 ### Query Methods
 
 **Balance**
-- Function: `getBalanceCosmosBankV1beta1`
-- Hook: `useGetBalanceCosmosBankV1beta1`
-- Description: Balance queries the balance of a single coin for a single account.
-- Request: QueryBalanceRequest
-- Response: QueryBalanceResponse
+
+Balance queries the balance of a single coin for a single account.
+
+```ts
+import { getBalanceCosmosBankV1beta1 } from 'outputicjs/cosmos/bank/v1beta1'
+import { useGetBalanceCosmosBankV1beta1 } from 'outputicjs/cosmos/bank/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getBalanceCosmosBankV1beta1` | [View source ↗](cosmos/bank/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetBalanceCosmosBankV1beta1` | [View source ↗](cosmos/bank/v1beta1/query.rpc.react.ts) |
+| Request | `QueryBalanceRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Response | `QueryBalanceResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+
+---
 
 **AllBalances**
-- Function: `getAllBalances`
-- Hook: `useGetAllBalances`
-- Description: AllBalances queries the balance of all coins for a single account.
-- Request: QueryAllBalancesRequest
-- Response: QueryAllBalancesResponse
+
+AllBalances queries the balance of all coins for a single account.
+
+```ts
+import { getAllBalances } from 'outputicjs/cosmos/bank/v1beta1'
+import { useGetAllBalances } from 'outputicjs/cosmos/bank/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAllBalances` | [View source ↗](cosmos/bank/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetAllBalances` | [View source ↗](cosmos/bank/v1beta1/query.rpc.react.ts) |
+| Request | `QueryAllBalancesRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Response | `QueryAllBalancesResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+
+---
 
 **SpendableBalances**
-- Function: `getSpendableBalances`
-- Hook: `useGetSpendableBalances`
-- Description: SpendableBalances queries the spenable balance of all coins for a single
- account.
-- Request: QuerySpendableBalancesRequest
-- Response: QuerySpendableBalancesResponse
+
+SpendableBalances queries the spenable balance of all coins for a single account.
+
+```ts
+import { getSpendableBalances } from 'outputicjs/cosmos/bank/v1beta1'
+import { useGetSpendableBalances } from 'outputicjs/cosmos/bank/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSpendableBalances` | [View source ↗](cosmos/bank/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetSpendableBalances` | [View source ↗](cosmos/bank/v1beta1/query.rpc.react.ts) |
+| Request | `QuerySpendableBalancesRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Response | `QuerySpendableBalancesResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+
+---
 
 **TotalSupply**
-- Function: `getTotalSupply`
-- Hook: `useGetTotalSupply`
-- Description: TotalSupply queries the total supply of all coins.
-- Request: QueryTotalSupplyRequest
-- Response: QueryTotalSupplyResponse
+
+TotalSupply queries the total supply of all coins.
+
+```ts
+import { getTotalSupply } from 'outputicjs/cosmos/bank/v1beta1'
+import { useGetTotalSupply } from 'outputicjs/cosmos/bank/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTotalSupply` | [View source ↗](cosmos/bank/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetTotalSupply` | [View source ↗](cosmos/bank/v1beta1/query.rpc.react.ts) |
+| Request | `QueryTotalSupplyRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Response | `QueryTotalSupplyResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+
+---
 
 **SupplyOf**
-- Function: `getSupplyOf`
-- Hook: `useGetSupplyOf`
-- Description: SupplyOf queries the supply of a single coin.
-- Request: QuerySupplyOfRequest
-- Response: QuerySupplyOfResponse
+
+SupplyOf queries the supply of a single coin.
+
+```ts
+import { getSupplyOf } from 'outputicjs/cosmos/bank/v1beta1'
+import { useGetSupplyOf } from 'outputicjs/cosmos/bank/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSupplyOf` | [View source ↗](cosmos/bank/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetSupplyOf` | [View source ↗](cosmos/bank/v1beta1/query.rpc.react.ts) |
+| Request | `QuerySupplyOfRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Response | `QuerySupplyOfResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+
+---
 
 **Params**
-- Function: `getCosmosBankV1beta1Params`
-- Hook: `useGetCosmosBankV1beta1Params`
-- Description: Params queries the parameters of x/bank module.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params queries the parameters of x/bank module.
+
+```ts
+import { getCosmosBankV1beta1Params } from 'outputicjs/cosmos/bank/v1beta1'
+import { useGetCosmosBankV1beta1Params } from 'outputicjs/cosmos/bank/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCosmosBankV1beta1Params` | [View source ↗](cosmos/bank/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetCosmosBankV1beta1Params` | [View source ↗](cosmos/bank/v1beta1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+
+---
 
 **DenomMetadata**
-- Function: `getDenomMetadata`
-- Hook: `useGetDenomMetadata`
-- Description: DenomsMetadata queries the client metadata of a given coin denomination.
-- Request: QueryDenomMetadataRequest
-- Response: QueryDenomMetadataResponse
+
+DenomsMetadata queries the client metadata of a given coin denomination.
+
+```ts
+import { getDenomMetadata } from 'outputicjs/cosmos/bank/v1beta1'
+import { useGetDenomMetadata } from 'outputicjs/cosmos/bank/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDenomMetadata` | [View source ↗](cosmos/bank/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDenomMetadata` | [View source ↗](cosmos/bank/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDenomMetadataRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Response | `QueryDenomMetadataResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+
+---
 
 **DenomsMetadata**
-- Function: `getDenomsMetadata`
-- Hook: `useGetDenomsMetadata`
-- Description: DenomsMetadata queries the client metadata for all registered coin
- denominations.
-- Request: QueryDenomsMetadataRequest
-- Response: QueryDenomsMetadataResponse
+
+DenomsMetadata queries the client metadata for all registered coin denominations.
+
+```ts
+import { getDenomsMetadata } from 'outputicjs/cosmos/bank/v1beta1'
+import { useGetDenomsMetadata } from 'outputicjs/cosmos/bank/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDenomsMetadata` | [View source ↗](cosmos/bank/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDenomsMetadata` | [View source ↗](cosmos/bank/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDenomsMetadataRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Response | `QueryDenomsMetadataResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+
+---
 
 **DenomOwners**
-- Function: `getDenomOwners`
-- Hook: `useGetDenomOwners`
-- Description: DenomOwners queries for all account addresses that own a particular token
- denomination.
-- Request: QueryDenomOwnersRequest
-- Response: QueryDenomOwnersResponse
+
+DenomOwners queries for all account addresses that own a particular token denomination.
+
+```ts
+import { getDenomOwners } from 'outputicjs/cosmos/bank/v1beta1'
+import { useGetDenomOwners } from 'outputicjs/cosmos/bank/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDenomOwners` | [View source ↗](cosmos/bank/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDenomOwners` | [View source ↗](cosmos/bank/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDenomOwnersRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Response | `QueryDenomOwnersResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
 
 ### Transaction Methods
 
 **Send**
-- Function: `sendCosmosBankV1beta1`
-- Hook: `useSendCosmosBankV1beta1`
-- Description: Send defines a method for sending coins from one account to another account.
-- Request: MsgSend
-- Response: MsgSendResponse
+
+Send defines a method for sending coins from one account to another account.
+
+```ts
+import { sendCosmosBankV1beta1 } from 'outputicjs/cosmos/bank/v1beta1'
+import { useSendCosmosBankV1beta1 } from 'outputicjs/cosmos/bank/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `sendCosmosBankV1beta1` | [View source ↗](cosmos/bank/v1beta1/tx.rpc.func.ts) |
+| Hook | `useSendCosmosBankV1beta1` | [View source ↗](cosmos/bank/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgSend` | [View source ↗](cosmos/bank/v1beta1/tx.ts) |
+| Response | `MsgSendResponse` | [View source ↗](cosmos/bank/v1beta1/tx.ts) |
+
+---
 
 **MultiSend**
-- Function: `multiSend`
-- Hook: `useMultiSend`
-- Description: MultiSend defines a method for sending coins from some accounts to other accounts.
-- Request: MsgMultiSend
-- Response: MsgMultiSendResponse
 
+MultiSend defines a method for sending coins from some accounts to other accounts.
 
-## cosmos.base.reflection.v1beta1
+```ts
+import { multiSend } from 'outputicjs/cosmos/bank/v1beta1'
+import { useMultiSend } from 'outputicjs/cosmos/bank/v1beta1'
+```
 
-
-## cosmos.base.reflection.v2alpha1
-
-
-## cosmos.base.tendermint.v1beta1
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `multiSend` | [View source ↗](cosmos/bank/v1beta1/tx.rpc.func.ts) |
+| Hook | `useMultiSend` | [View source ↗](cosmos/bank/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgMultiSend` | [View source ↗](cosmos/bank/v1beta1/tx.ts) |
+| Response | `MsgMultiSendResponse` | [View source ↗](cosmos/bank/v1beta1/tx.ts) |
 
 
 ## cosmos.crisis.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MsgVerifyInvariant` | [View source ↗](cosmos/crisis/v1beta1/tx.ts) |
+| Type | `MsgVerifyInvariantResponse` | [View source ↗](cosmos/crisis/v1beta1/tx.ts) |
+
 ### Transaction Methods
 
 **VerifyInvariant**
-- Function: `verifyInvariant`
-- Hook: `useVerifyInvariant`
-- Description: VerifyInvariant defines a method to verify a particular invariance.
-- Request: MsgVerifyInvariant
-- Response: MsgVerifyInvariantResponse
+
+VerifyInvariant defines a method to verify a particular invariance.
+
+```ts
+import { verifyInvariant } from 'outputicjs/cosmos/crisis/v1beta1'
+import { useVerifyInvariant } from 'outputicjs/cosmos/crisis/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `verifyInvariant` | [View source ↗](cosmos/crisis/v1beta1/tx.rpc.func.ts) |
+| Hook | `useVerifyInvariant` | [View source ↗](cosmos/crisis/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgVerifyInvariant` | [View source ↗](cosmos/crisis/v1beta1/tx.ts) |
+| Response | `MsgVerifyInvariantResponse` | [View source ↗](cosmos/crisis/v1beta1/tx.ts) |
 
 
 ## cosmos.distribution.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `CommunityPoolSpendProposal` | [View source ↗](cosmos/distribution/v1beta1/distribution.ts) |
+| Type | `CommunityPoolSpendProposalWithDeposit` | [View source ↗](cosmos/distribution/v1beta1/distribution.ts) |
+| Type | `CosmosDistributionV1beta1Params` | [View source ↗](cosmos/distribution/v1beta1/distribution.ts) |
+| Type | `DelegationDelegatorReward` | [View source ↗](cosmos/distribution/v1beta1/distribution.ts) |
+| Type | `DelegatorStartingInfo` | [View source ↗](cosmos/distribution/v1beta1/distribution.ts) |
+| Type | `DelegatorStartingInfoRecord` | [View source ↗](cosmos/distribution/v1beta1/genesis.ts) |
+| Type | `DelegatorWithdrawInfo` | [View source ↗](cosmos/distribution/v1beta1/genesis.ts) |
+| Type | `FeePool` | [View source ↗](cosmos/distribution/v1beta1/distribution.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MsgFundCommunityPool` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+| Type | `MsgFundCommunityPoolResponse` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+| Type | `MsgSetWithdrawAddress` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+| Type | `MsgSetWithdrawAddressResponse` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+| Type | `MsgWithdrawDelegatorReward` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+| Type | `MsgWithdrawDelegatorRewardResponse` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+| Type | `MsgWithdrawValidatorCommission` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+| Type | `MsgWithdrawValidatorCommissionResponse` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+| Type | `QueryCommunityPoolRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryCommunityPoolResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryDelegationRewardsRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryDelegationRewardsResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryDelegationTotalRewardsRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryDelegationTotalRewardsResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryDelegatorValidatorsRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryDelegatorValidatorsResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryDelegatorWithdrawAddressRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryDelegatorWithdrawAddressResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryValidatorCommissionRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryValidatorCommissionResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryValidatorOutstandingRewardsRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryValidatorOutstandingRewardsResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryValidatorSlashesRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryValidatorSlashesResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `ValidatorAccumulatedCommission` | [View source ↗](cosmos/distribution/v1beta1/distribution.ts) |
+| Type | `ValidatorAccumulatedCommissionRecord` | [View source ↗](cosmos/distribution/v1beta1/genesis.ts) |
+| Type | `ValidatorCurrentRewards` | [View source ↗](cosmos/distribution/v1beta1/distribution.ts) |
+| Type | `ValidatorCurrentRewardsRecord` | [View source ↗](cosmos/distribution/v1beta1/genesis.ts) |
+| Type | `ValidatorHistoricalRewards` | [View source ↗](cosmos/distribution/v1beta1/distribution.ts) |
+| Type | `ValidatorHistoricalRewardsRecord` | [View source ↗](cosmos/distribution/v1beta1/genesis.ts) |
+| Type | `ValidatorOutstandingRewards` | [View source ↗](cosmos/distribution/v1beta1/distribution.ts) |
+| Type | `ValidatorOutstandingRewardsRecord` | [View source ↗](cosmos/distribution/v1beta1/genesis.ts) |
+| Type | `ValidatorSlashEvent` | [View source ↗](cosmos/distribution/v1beta1/distribution.ts) |
+| Type | `ValidatorSlashEventRecord` | [View source ↗](cosmos/distribution/v1beta1/genesis.ts) |
+| Type | `ValidatorSlashEvents` | [View source ↗](cosmos/distribution/v1beta1/distribution.ts) |
+
 ### Query Methods
 
 **Params**
-- Function: `getCosmosDistributionV1beta1Params`
-- Hook: `useGetCosmosDistributionV1beta1Params`
-- Description: Params queries params of the distribution module.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params queries params of the distribution module.
+
+```ts
+import { getCosmosDistributionV1beta1Params } from 'outputicjs/cosmos/distribution/v1beta1'
+import { useGetCosmosDistributionV1beta1Params } from 'outputicjs/cosmos/distribution/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCosmosDistributionV1beta1Params` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetCosmosDistributionV1beta1Params` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+
+---
 
 **ValidatorOutstandingRewards**
-- Function: `getValidatorOutstandingRewards`
-- Hook: `useGetValidatorOutstandingRewards`
-- Description: ValidatorOutstandingRewards queries rewards of a validator address.
-- Request: QueryValidatorOutstandingRewardsRequest
-- Response: QueryValidatorOutstandingRewardsResponse
+
+ValidatorOutstandingRewards queries rewards of a validator address.
+
+```ts
+import { getValidatorOutstandingRewards } from 'outputicjs/cosmos/distribution/v1beta1'
+import { useGetValidatorOutstandingRewards } from 'outputicjs/cosmos/distribution/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getValidatorOutstandingRewards` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetValidatorOutstandingRewards` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.react.ts) |
+| Request | `QueryValidatorOutstandingRewardsRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Response | `QueryValidatorOutstandingRewardsResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+
+---
 
 **ValidatorCommission**
-- Function: `getValidatorCommission`
-- Hook: `useGetValidatorCommission`
-- Description: ValidatorCommission queries accumulated commission for a validator.
-- Request: QueryValidatorCommissionRequest
-- Response: QueryValidatorCommissionResponse
+
+ValidatorCommission queries accumulated commission for a validator.
+
+```ts
+import { getValidatorCommission } from 'outputicjs/cosmos/distribution/v1beta1'
+import { useGetValidatorCommission } from 'outputicjs/cosmos/distribution/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getValidatorCommission` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetValidatorCommission` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.react.ts) |
+| Request | `QueryValidatorCommissionRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Response | `QueryValidatorCommissionResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+
+---
 
 **ValidatorSlashes**
-- Function: `getValidatorSlashes`
-- Hook: `useGetValidatorSlashes`
-- Description: ValidatorSlashes queries slash events of a validator.
-- Request: QueryValidatorSlashesRequest
-- Response: QueryValidatorSlashesResponse
+
+ValidatorSlashes queries slash events of a validator.
+
+```ts
+import { getValidatorSlashes } from 'outputicjs/cosmos/distribution/v1beta1'
+import { useGetValidatorSlashes } from 'outputicjs/cosmos/distribution/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getValidatorSlashes` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetValidatorSlashes` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.react.ts) |
+| Request | `QueryValidatorSlashesRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Response | `QueryValidatorSlashesResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+
+---
 
 **DelegationRewards**
-- Function: `getDelegationRewards`
-- Hook: `useGetDelegationRewards`
-- Description: DelegationRewards queries the total rewards accrued by a delegation.
-- Request: QueryDelegationRewardsRequest
-- Response: QueryDelegationRewardsResponse
+
+DelegationRewards queries the total rewards accrued by a delegation.
+
+```ts
+import { getDelegationRewards } from 'outputicjs/cosmos/distribution/v1beta1'
+import { useGetDelegationRewards } from 'outputicjs/cosmos/distribution/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDelegationRewards` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDelegationRewards` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDelegationRewardsRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Response | `QueryDelegationRewardsResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+
+---
 
 **DelegationTotalRewards**
-- Function: `getDelegationTotalRewards`
-- Hook: `useGetDelegationTotalRewards`
-- Description: DelegationTotalRewards queries the total rewards accrued by a each
- validator.
-- Request: QueryDelegationTotalRewardsRequest
-- Response: QueryDelegationTotalRewardsResponse
+
+DelegationTotalRewards queries the total rewards accrued by a each validator.
+
+```ts
+import { getDelegationTotalRewards } from 'outputicjs/cosmos/distribution/v1beta1'
+import { useGetDelegationTotalRewards } from 'outputicjs/cosmos/distribution/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDelegationTotalRewards` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDelegationTotalRewards` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDelegationTotalRewardsRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Response | `QueryDelegationTotalRewardsResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+
+---
 
 **DelegatorValidators**
-- Function: `getDelegatorValidatorsCosmosDistributionV1beta1`
-- Hook: `useGetDelegatorValidatorsCosmosDistributionV1beta1`
-- Description: DelegatorValidators queries the validators of a delegator.
-- Request: QueryDelegatorValidatorsRequest
-- Response: QueryDelegatorValidatorsResponse
+
+DelegatorValidators queries the validators of a delegator.
+
+```ts
+import { getDelegatorValidatorsCosmosDistributionV1beta1 } from 'outputicjs/cosmos/distribution/v1beta1'
+import { useGetDelegatorValidatorsCosmosDistributionV1beta1 } from 'outputicjs/cosmos/distribution/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDelegatorValidatorsCosmosDistributionV1beta1` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDelegatorValidatorsCosmosDistributionV1beta1` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDelegatorValidatorsRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Response | `QueryDelegatorValidatorsResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+
+---
 
 **DelegatorWithdrawAddress**
-- Function: `getDelegatorWithdrawAddress`
-- Hook: `useGetDelegatorWithdrawAddress`
-- Description: DelegatorWithdrawAddress queries withdraw address of a delegator.
-- Request: QueryDelegatorWithdrawAddressRequest
-- Response: QueryDelegatorWithdrawAddressResponse
+
+DelegatorWithdrawAddress queries withdraw address of a delegator.
+
+```ts
+import { getDelegatorWithdrawAddress } from 'outputicjs/cosmos/distribution/v1beta1'
+import { useGetDelegatorWithdrawAddress } from 'outputicjs/cosmos/distribution/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDelegatorWithdrawAddress` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDelegatorWithdrawAddress` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDelegatorWithdrawAddressRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Response | `QueryDelegatorWithdrawAddressResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+
+---
 
 **CommunityPool**
-- Function: `getCommunityPool`
-- Hook: `useGetCommunityPool`
-- Description: CommunityPool queries the community pool coins.
-- Request: QueryCommunityPoolRequest
-- Response: QueryCommunityPoolResponse
+
+CommunityPool queries the community pool coins.
+
+```ts
+import { getCommunityPool } from 'outputicjs/cosmos/distribution/v1beta1'
+import { useGetCommunityPool } from 'outputicjs/cosmos/distribution/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCommunityPool` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetCommunityPool` | [View source ↗](cosmos/distribution/v1beta1/query.rpc.react.ts) |
+| Request | `QueryCommunityPoolRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Response | `QueryCommunityPoolResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
 
 ### Transaction Methods
 
 **SetWithdrawAddress**
-- Function: `setWithdrawAddress`
-- Hook: `useSetWithdrawAddress`
-- Description: SetWithdrawAddress defines a method to change the withdraw address
- for a delegator (or validator self-delegation).
-- Request: MsgSetWithdrawAddress
-- Response: MsgSetWithdrawAddressResponse
+
+SetWithdrawAddress defines a method to change the withdraw address for a delegator (or validator self-delegation).
+
+```ts
+import { setWithdrawAddress } from 'outputicjs/cosmos/distribution/v1beta1'
+import { useSetWithdrawAddress } from 'outputicjs/cosmos/distribution/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `setWithdrawAddress` | [View source ↗](cosmos/distribution/v1beta1/tx.rpc.func.ts) |
+| Hook | `useSetWithdrawAddress` | [View source ↗](cosmos/distribution/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgSetWithdrawAddress` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+| Response | `MsgSetWithdrawAddressResponse` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+
+---
 
 **WithdrawDelegatorReward**
-- Function: `withdrawDelegatorReward`
-- Hook: `useWithdrawDelegatorReward`
-- Description: WithdrawDelegatorReward defines a method to withdraw rewards of delegator
- from a single validator.
-- Request: MsgWithdrawDelegatorReward
-- Response: MsgWithdrawDelegatorRewardResponse
+
+WithdrawDelegatorReward defines a method to withdraw rewards of delegator from a single validator.
+
+```ts
+import { withdrawDelegatorReward } from 'outputicjs/cosmos/distribution/v1beta1'
+import { useWithdrawDelegatorReward } from 'outputicjs/cosmos/distribution/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `withdrawDelegatorReward` | [View source ↗](cosmos/distribution/v1beta1/tx.rpc.func.ts) |
+| Hook | `useWithdrawDelegatorReward` | [View source ↗](cosmos/distribution/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgWithdrawDelegatorReward` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+| Response | `MsgWithdrawDelegatorRewardResponse` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+
+---
 
 **WithdrawValidatorCommission**
-- Function: `withdrawValidatorCommission`
-- Hook: `useWithdrawValidatorCommission`
-- Description: WithdrawValidatorCommission defines a method to withdraw the
- full commission to the validator address.
-- Request: MsgWithdrawValidatorCommission
-- Response: MsgWithdrawValidatorCommissionResponse
+
+WithdrawValidatorCommission defines a method to withdraw the full commission to the validator address.
+
+```ts
+import { withdrawValidatorCommission } from 'outputicjs/cosmos/distribution/v1beta1'
+import { useWithdrawValidatorCommission } from 'outputicjs/cosmos/distribution/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `withdrawValidatorCommission` | [View source ↗](cosmos/distribution/v1beta1/tx.rpc.func.ts) |
+| Hook | `useWithdrawValidatorCommission` | [View source ↗](cosmos/distribution/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgWithdrawValidatorCommission` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+| Response | `MsgWithdrawValidatorCommissionResponse` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+
+---
 
 **FundCommunityPool**
-- Function: `fundCommunityPool`
-- Hook: `useFundCommunityPool`
-- Description: FundCommunityPool defines a method to allow an account to directly
- fund the community pool.
-- Request: MsgFundCommunityPool
-- Response: MsgFundCommunityPoolResponse
+
+FundCommunityPool defines a method to allow an account to directly fund the community pool.
+
+```ts
+import { fundCommunityPool } from 'outputicjs/cosmos/distribution/v1beta1'
+import { useFundCommunityPool } from 'outputicjs/cosmos/distribution/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `fundCommunityPool` | [View source ↗](cosmos/distribution/v1beta1/tx.rpc.func.ts) |
+| Hook | `useFundCommunityPool` | [View source ↗](cosmos/distribution/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgFundCommunityPool` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
+| Response | `MsgFundCommunityPoolResponse` | [View source ↗](cosmos/distribution/v1beta1/tx.ts) |
 
 
 ## cosmos.evidence.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `Equivocation` | [View source ↗](cosmos/evidence/v1beta1/evidence.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MsgSubmitEvidence` | [View source ↗](cosmos/evidence/v1beta1/tx.ts) |
+| Type | `MsgSubmitEvidenceResponse` | [View source ↗](cosmos/evidence/v1beta1/tx.ts) |
+| Type | `QueryAllEvidenceRequest` | [View source ↗](cosmos/evidence/v1beta1/query.ts) |
+| Type | `QueryAllEvidenceResponse` | [View source ↗](cosmos/evidence/v1beta1/query.ts) |
+| Type | `QueryEvidenceRequest` | [View source ↗](cosmos/evidence/v1beta1/query.ts) |
+| Type | `QueryEvidenceResponse` | [View source ↗](cosmos/evidence/v1beta1/query.ts) |
+
 ### Query Methods
 
 **Evidence**
-- Function: `getEvidence`
-- Hook: `useGetEvidence`
-- Description: Evidence queries evidence based on evidence hash.
-- Request: QueryEvidenceRequest
-- Response: QueryEvidenceResponse
+
+Evidence queries evidence based on evidence hash.
+
+```ts
+import { getEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
+import { useGetEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEvidence` | [View source ↗](cosmos/evidence/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetEvidence` | [View source ↗](cosmos/evidence/v1beta1/query.rpc.react.ts) |
+| Request | `QueryEvidenceRequest` | [View source ↗](cosmos/evidence/v1beta1/query.ts) |
+| Response | `QueryEvidenceResponse` | [View source ↗](cosmos/evidence/v1beta1/query.ts) |
+
+---
 
 **AllEvidence**
-- Function: `getAllEvidence`
-- Hook: `useGetAllEvidence`
-- Description: AllEvidence queries all evidence.
-- Request: QueryAllEvidenceRequest
-- Response: QueryAllEvidenceResponse
+
+AllEvidence queries all evidence.
+
+```ts
+import { getAllEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
+import { useGetAllEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAllEvidence` | [View source ↗](cosmos/evidence/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetAllEvidence` | [View source ↗](cosmos/evidence/v1beta1/query.rpc.react.ts) |
+| Request | `QueryAllEvidenceRequest` | [View source ↗](cosmos/evidence/v1beta1/query.ts) |
+| Response | `QueryAllEvidenceResponse` | [View source ↗](cosmos/evidence/v1beta1/query.ts) |
 
 ### Transaction Methods
 
 **SubmitEvidence**
-- Function: `submitEvidence`
-- Hook: `useSubmitEvidence`
-- Description: SubmitEvidence submits an arbitrary Evidence of misbehavior such as equivocation or
- counterfactual signing.
-- Request: MsgSubmitEvidence
-- Response: MsgSubmitEvidenceResponse
+
+SubmitEvidence submits an arbitrary Evidence of misbehavior such as equivocation or counterfactual signing.
+
+```ts
+import { submitEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
+import { useSubmitEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `submitEvidence` | [View source ↗](cosmos/evidence/v1beta1/tx.rpc.func.ts) |
+| Hook | `useSubmitEvidence` | [View source ↗](cosmos/evidence/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgSubmitEvidence` | [View source ↗](cosmos/evidence/v1beta1/tx.ts) |
+| Response | `MsgSubmitEvidenceResponse` | [View source ↗](cosmos/evidence/v1beta1/tx.ts) |
 
 
 ## cosmos.feegrant.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `AllowedMsgAllowance` | [View source ↗](cosmos/feegrant/v1beta1/feegrant.ts) |
+| Type | `BasicAllowance` | [View source ↗](cosmos/feegrant/v1beta1/feegrant.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `Grant` | [View source ↗](cosmos/authz/v1beta1/authz.ts) |
+| Type | `MsgGrantAllowance` | [View source ↗](cosmos/feegrant/v1beta1/tx.ts) |
+| Type | `MsgGrantAllowanceResponse` | [View source ↗](cosmos/feegrant/v1beta1/tx.ts) |
+| Type | `MsgRevokeAllowance` | [View source ↗](cosmos/feegrant/v1beta1/tx.ts) |
+| Type | `MsgRevokeAllowanceResponse` | [View source ↗](cosmos/feegrant/v1beta1/tx.ts) |
+| Type | `PeriodicAllowance` | [View source ↗](cosmos/feegrant/v1beta1/feegrant.ts) |
+| Type | `QueryAllowanceRequest` | [View source ↗](cosmos/feegrant/v1beta1/query.ts) |
+| Type | `QueryAllowanceResponse` | [View source ↗](cosmos/feegrant/v1beta1/query.ts) |
+| Type | `QueryAllowancesByGranterRequest` | [View source ↗](cosmos/feegrant/v1beta1/query.ts) |
+| Type | `QueryAllowancesByGranterResponse` | [View source ↗](cosmos/feegrant/v1beta1/query.ts) |
+| Type | `QueryAllowancesRequest` | [View source ↗](cosmos/feegrant/v1beta1/query.ts) |
+| Type | `QueryAllowancesResponse` | [View source ↗](cosmos/feegrant/v1beta1/query.ts) |
+
 ### Query Methods
 
 **Allowance**
-- Function: `getAllowance`
-- Hook: `useGetAllowance`
-- Description: Allowance returns fee granted to the grantee by the granter.
-- Request: QueryAllowanceRequest
-- Response: QueryAllowanceResponse
+
+Allowance returns fee granted to the grantee by the granter.
+
+```ts
+import { getAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
+import { useGetAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAllowance` | [View source ↗](cosmos/feegrant/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetAllowance` | [View source ↗](cosmos/feegrant/v1beta1/query.rpc.react.ts) |
+| Request | `QueryAllowanceRequest` | [View source ↗](cosmos/feegrant/v1beta1/query.ts) |
+| Response | `QueryAllowanceResponse` | [View source ↗](cosmos/feegrant/v1beta1/query.ts) |
+
+---
 
 **Allowances**
-- Function: `getAllowances`
-- Hook: `useGetAllowances`
-- Description: Allowances returns all the grants for address.
-- Request: QueryAllowancesRequest
-- Response: QueryAllowancesResponse
+
+Allowances returns all the grants for address.
+
+```ts
+import { getAllowances } from 'outputicjs/cosmos/feegrant/v1beta1'
+import { useGetAllowances } from 'outputicjs/cosmos/feegrant/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAllowances` | [View source ↗](cosmos/feegrant/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetAllowances` | [View source ↗](cosmos/feegrant/v1beta1/query.rpc.react.ts) |
+| Request | `QueryAllowancesRequest` | [View source ↗](cosmos/feegrant/v1beta1/query.ts) |
+| Response | `QueryAllowancesResponse` | [View source ↗](cosmos/feegrant/v1beta1/query.ts) |
+
+---
 
 **AllowancesByGranter**
-- Function: `getAllowancesByGranter`
-- Hook: `useGetAllowancesByGranter`
-- Description: AllowancesByGranter returns all the grants given by an address
- Since v0.46
-- Request: QueryAllowancesByGranterRequest
-- Response: QueryAllowancesByGranterResponse
+
+AllowancesByGranter returns all the grants given by an address Since v0.46
+
+```ts
+import { getAllowancesByGranter } from 'outputicjs/cosmos/feegrant/v1beta1'
+import { useGetAllowancesByGranter } from 'outputicjs/cosmos/feegrant/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAllowancesByGranter` | [View source ↗](cosmos/feegrant/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetAllowancesByGranter` | [View source ↗](cosmos/feegrant/v1beta1/query.rpc.react.ts) |
+| Request | `QueryAllowancesByGranterRequest` | [View source ↗](cosmos/feegrant/v1beta1/query.ts) |
+| Response | `QueryAllowancesByGranterResponse` | [View source ↗](cosmos/feegrant/v1beta1/query.ts) |
 
 ### Transaction Methods
 
 **GrantAllowance**
-- Function: `grantAllowance`
-- Hook: `useGrantAllowance`
-- Description: GrantAllowance grants fee allowance to the grantee on the granter's
- account with the provided expiration time.
-- Request: MsgGrantAllowance
-- Response: MsgGrantAllowanceResponse
+
+GrantAllowance grants fee allowance to the grantee on the granter's account with the provided expiration time.
+
+```ts
+import { grantAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
+import { useGrantAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `grantAllowance` | [View source ↗](cosmos/feegrant/v1beta1/tx.rpc.func.ts) |
+| Hook | `useGrantAllowance` | [View source ↗](cosmos/feegrant/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgGrantAllowance` | [View source ↗](cosmos/feegrant/v1beta1/tx.ts) |
+| Response | `MsgGrantAllowanceResponse` | [View source ↗](cosmos/feegrant/v1beta1/tx.ts) |
+
+---
 
 **RevokeAllowance**
-- Function: `revokeAllowance`
-- Hook: `useRevokeAllowance`
-- Description: RevokeAllowance revokes any fee allowance of granter's account that
- has been granted to the grantee.
-- Request: MsgRevokeAllowance
-- Response: MsgRevokeAllowanceResponse
+
+RevokeAllowance revokes any fee allowance of granter's account that has been granted to the grantee.
+
+```ts
+import { revokeAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
+import { useRevokeAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `revokeAllowance` | [View source ↗](cosmos/feegrant/v1beta1/tx.rpc.func.ts) |
+| Hook | `useRevokeAllowance` | [View source ↗](cosmos/feegrant/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgRevokeAllowance` | [View source ↗](cosmos/feegrant/v1beta1/tx.ts) |
+| Response | `MsgRevokeAllowanceResponse` | [View source ↗](cosmos/feegrant/v1beta1/tx.ts) |
 
 
 ## cosmos.gov.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `Deposit` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `DepositParams` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MsgDeposit` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgDepositResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgExecLegacyContent` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgExecLegacyContentResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgSubmitProposal` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgSubmitProposalResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgVote` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgVoteResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgVoteWeighted` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgVoteWeightedResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `Proposal` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `ProposalStatus` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `QueryDepositRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryDepositResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryDepositsRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryDepositsResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryProposalRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryProposalResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryProposalsRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryProposalsResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryTallyResultRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryTallyResultResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryVoteRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryVoteResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryVotesRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryVotesResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `TallyParams` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `TallyResult` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `Vote` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `VoteOption` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `VotingParams` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `WeightedVoteOption` | [View source ↗](cosmos/gov/v1/gov.ts) |
+
 ### Query Methods
 
 **Proposal**
-- Function: `getProposalCosmosGovV1`
-- Hook: `useGetProposalCosmosGovV1`
-- Description: Proposal queries proposal details based on ProposalID.
-- Request: QueryProposalRequest
-- Response: QueryProposalResponse
+
+Proposal queries proposal details based on ProposalID.
+
+```ts
+import { getProposalCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { useGetProposalCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getProposalCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.func.ts) |
+| Hook | `useGetProposalCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.react.ts) |
+| Request | `QueryProposalRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Response | `QueryProposalResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+
+---
 
 **Proposals**
-- Function: `getProposalsCosmosGovV1`
-- Hook: `useGetProposalsCosmosGovV1`
-- Description: Proposals queries all proposals based on given status.
-- Request: QueryProposalsRequest
-- Response: QueryProposalsResponse
+
+Proposals queries all proposals based on given status.
+
+```ts
+import { getProposalsCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { useGetProposalsCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getProposalsCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.func.ts) |
+| Hook | `useGetProposalsCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.react.ts) |
+| Request | `QueryProposalsRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Response | `QueryProposalsResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+
+---
 
 **Vote**
-- Function: `getVoteCosmosGovV1`
-- Hook: `useGetVoteCosmosGovV1`
-- Description: Vote queries voted information based on proposalID, voterAddr.
-- Request: QueryVoteRequest
-- Response: QueryVoteResponse
+
+Vote queries voted information based on proposalID, voterAddr.
+
+```ts
+import { getVoteCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { useGetVoteCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getVoteCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.func.ts) |
+| Hook | `useGetVoteCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.react.ts) |
+| Request | `QueryVoteRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Response | `QueryVoteResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+
+---
 
 **Votes**
-- Function: `getVotesCosmosGovV1`
-- Hook: `useGetVotesCosmosGovV1`
-- Description: Votes queries votes of a given proposal.
-- Request: QueryVotesRequest
-- Response: QueryVotesResponse
+
+Votes queries votes of a given proposal.
+
+```ts
+import { getVotesCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { useGetVotesCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getVotesCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.func.ts) |
+| Hook | `useGetVotesCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.react.ts) |
+| Request | `QueryVotesRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Response | `QueryVotesResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+
+---
 
 **Params**
-- Function: `getCosmosGovV1Params`
-- Hook: `useGetCosmosGovV1Params`
-- Description: Params queries all parameters of the gov module.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params queries all parameters of the gov module.
+
+```ts
+import { getCosmosGovV1Params } from 'outputicjs/cosmos/gov/v1'
+import { useGetCosmosGovV1Params } from 'outputicjs/cosmos/gov/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCosmosGovV1Params` | [View source ↗](cosmos/gov/v1/query.rpc.func.ts) |
+| Hook | `useGetCosmosGovV1Params` | [View source ↗](cosmos/gov/v1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+
+---
 
 **Deposit**
-- Function: `getDepositCosmosGovV1`
-- Hook: `useGetDepositCosmosGovV1`
-- Description: Deposit queries single deposit information based proposalID, depositAddr.
-- Request: QueryDepositRequest
-- Response: QueryDepositResponse
+
+Deposit queries single deposit information based proposalID, depositAddr.
+
+```ts
+import { getDepositCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { useGetDepositCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDepositCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.func.ts) |
+| Hook | `useGetDepositCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.react.ts) |
+| Request | `QueryDepositRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Response | `QueryDepositResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+
+---
 
 **Deposits**
-- Function: `getDepositsCosmosGovV1`
-- Hook: `useGetDepositsCosmosGovV1`
-- Description: Deposits queries all deposits of a single proposal.
-- Request: QueryDepositsRequest
-- Response: QueryDepositsResponse
+
+Deposits queries all deposits of a single proposal.
+
+```ts
+import { getDepositsCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { useGetDepositsCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDepositsCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.func.ts) |
+| Hook | `useGetDepositsCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.react.ts) |
+| Request | `QueryDepositsRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Response | `QueryDepositsResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+
+---
 
 **TallyResult**
-- Function: `getTallyResultCosmosGovV1`
-- Hook: `useGetTallyResultCosmosGovV1`
-- Description: TallyResult queries the tally of a proposal vote.
-- Request: QueryTallyResultRequest
-- Response: QueryTallyResultResponse
+
+TallyResult queries the tally of a proposal vote.
+
+```ts
+import { getTallyResultCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { useGetTallyResultCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTallyResultCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.func.ts) |
+| Hook | `useGetTallyResultCosmosGovV1` | [View source ↗](cosmos/gov/v1/query.rpc.react.ts) |
+| Request | `QueryTallyResultRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Response | `QueryTallyResultResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
 
 ### Transaction Methods
 
 **SubmitProposal**
-- Function: `submitProposalCosmosGovV1`
-- Hook: `useSubmitProposalCosmosGovV1`
-- Description: SubmitProposal defines a method to create new proposal given a content.
-- Request: MsgSubmitProposal
-- Response: MsgSubmitProposalResponse
+
+SubmitProposal defines a method to create new proposal given a content.
+
+```ts
+import { submitProposalCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { useSubmitProposalCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `submitProposalCosmosGovV1` | [View source ↗](cosmos/gov/v1/tx.rpc.func.ts) |
+| Hook | `useSubmitProposalCosmosGovV1` | [View source ↗](cosmos/gov/v1/tx.rpc.react.ts) |
+| Request | `MsgSubmitProposal` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Response | `MsgSubmitProposalResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+
+---
 
 **ExecLegacyContent**
-- Function: `execLegacyContent`
-- Hook: `useExecLegacyContent`
-- Description: ExecLegacyContent defines a Msg to be in included in a MsgSubmitProposal
- to execute a legacy content-based proposal.
-- Request: MsgExecLegacyContent
-- Response: MsgExecLegacyContentResponse
+
+ExecLegacyContent defines a Msg to be in included in a MsgSubmitProposal to execute a legacy content-based proposal.
+
+```ts
+import { execLegacyContent } from 'outputicjs/cosmos/gov/v1'
+import { useExecLegacyContent } from 'outputicjs/cosmos/gov/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `execLegacyContent` | [View source ↗](cosmos/gov/v1/tx.rpc.func.ts) |
+| Hook | `useExecLegacyContent` | [View source ↗](cosmos/gov/v1/tx.rpc.react.ts) |
+| Request | `MsgExecLegacyContent` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Response | `MsgExecLegacyContentResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+
+---
 
 **Vote**
-- Function: `voteCosmosGovV1`
-- Hook: `useVoteCosmosGovV1`
-- Description: Vote defines a method to add a vote on a specific proposal.
-- Request: MsgVote
-- Response: MsgVoteResponse
+
+Vote defines a method to add a vote on a specific proposal.
+
+```ts
+import { voteCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { useVoteCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `voteCosmosGovV1` | [View source ↗](cosmos/gov/v1/tx.rpc.func.ts) |
+| Hook | `useVoteCosmosGovV1` | [View source ↗](cosmos/gov/v1/tx.rpc.react.ts) |
+| Request | `MsgVote` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Response | `MsgVoteResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+
+---
 
 **VoteWeighted**
-- Function: `voteWeightedCosmosGovV1`
-- Hook: `useVoteWeightedCosmosGovV1`
-- Description: VoteWeighted defines a method to add a weighted vote on a specific proposal.
-- Request: MsgVoteWeighted
-- Response: MsgVoteWeightedResponse
+
+VoteWeighted defines a method to add a weighted vote on a specific proposal.
+
+```ts
+import { voteWeightedCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { useVoteWeightedCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `voteWeightedCosmosGovV1` | [View source ↗](cosmos/gov/v1/tx.rpc.func.ts) |
+| Hook | `useVoteWeightedCosmosGovV1` | [View source ↗](cosmos/gov/v1/tx.rpc.react.ts) |
+| Request | `MsgVoteWeighted` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Response | `MsgVoteWeightedResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+
+---
 
 **Deposit**
-- Function: `depositCosmosGovV1`
-- Hook: `useDepositCosmosGovV1`
-- Description: Deposit defines a method to add deposit on a specific proposal.
-- Request: MsgDeposit
-- Response: MsgDepositResponse
+
+Deposit defines a method to add deposit on a specific proposal.
+
+```ts
+import { depositCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { useDepositCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `depositCosmosGovV1` | [View source ↗](cosmos/gov/v1/tx.rpc.func.ts) |
+| Hook | `useDepositCosmosGovV1` | [View source ↗](cosmos/gov/v1/tx.rpc.react.ts) |
+| Request | `MsgDeposit` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Response | `MsgDepositResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
 
 
 ## cosmos.gov.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `Deposit` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `DepositParams` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MsgDeposit` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgDepositResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgSubmitProposal` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgSubmitProposalResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgVote` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgVoteResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgVoteWeighted` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgVoteWeightedResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `Proposal` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `ProposalStatus` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `QueryDepositRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryDepositResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryDepositsRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryDepositsResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryProposalRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryProposalResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryProposalsRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryProposalsResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryTallyResultRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryTallyResultResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryVoteRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryVoteResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryVotesRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryVotesResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `TallyParams` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `TallyResult` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `TextProposal` | [View source ↗](cosmos/gov/v1beta1/gov.ts) |
+| Type | `Vote` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `VoteOption` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `VotingParams` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `WeightedVoteOption` | [View source ↗](cosmos/gov/v1/gov.ts) |
+
 ### Query Methods
 
 **Proposal**
-- Function: `getProposalCosmosGovV1beta1`
-- Hook: `useGetProposalCosmosGovV1beta1`
-- Description: Proposal queries proposal details based on ProposalID.
-- Request: QueryProposalRequest
-- Response: QueryProposalResponse
+
+Proposal queries proposal details based on ProposalID.
+
+```ts
+import { getProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { useGetProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getProposalCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetProposalCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.react.ts) |
+| Request | `QueryProposalRequest` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+| Response | `QueryProposalResponse` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+
+---
 
 **Proposals**
-- Function: `getProposalsCosmosGovV1beta1`
-- Hook: `useGetProposalsCosmosGovV1beta1`
-- Description: Proposals queries all proposals based on given status.
-- Request: QueryProposalsRequest
-- Response: QueryProposalsResponse
+
+Proposals queries all proposals based on given status.
+
+```ts
+import { getProposalsCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { useGetProposalsCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getProposalsCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetProposalsCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.react.ts) |
+| Request | `QueryProposalsRequest` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+| Response | `QueryProposalsResponse` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+
+---
 
 **Vote**
-- Function: `getVoteCosmosGovV1beta1`
-- Hook: `useGetVoteCosmosGovV1beta1`
-- Description: Vote queries voted information based on proposalID, voterAddr.
-- Request: QueryVoteRequest
-- Response: QueryVoteResponse
+
+Vote queries voted information based on proposalID, voterAddr.
+
+```ts
+import { getVoteCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { useGetVoteCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getVoteCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetVoteCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.react.ts) |
+| Request | `QueryVoteRequest` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+| Response | `QueryVoteResponse` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+
+---
 
 **Votes**
-- Function: `getVotesCosmosGovV1beta1`
-- Hook: `useGetVotesCosmosGovV1beta1`
-- Description: Votes queries votes of a given proposal.
-- Request: QueryVotesRequest
-- Response: QueryVotesResponse
+
+Votes queries votes of a given proposal.
+
+```ts
+import { getVotesCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { useGetVotesCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getVotesCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetVotesCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.react.ts) |
+| Request | `QueryVotesRequest` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+| Response | `QueryVotesResponse` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+
+---
 
 **Params**
-- Function: `getCosmosGovV1beta1Params`
-- Hook: `useGetCosmosGovV1beta1Params`
-- Description: Params queries all parameters of the gov module.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params queries all parameters of the gov module.
+
+```ts
+import { getCosmosGovV1beta1Params } from 'outputicjs/cosmos/gov/v1beta1'
+import { useGetCosmosGovV1beta1Params } from 'outputicjs/cosmos/gov/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCosmosGovV1beta1Params` | [View source ↗](cosmos/gov/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetCosmosGovV1beta1Params` | [View source ↗](cosmos/gov/v1beta1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+
+---
 
 **Deposit**
-- Function: `getDepositCosmosGovV1beta1`
-- Hook: `useGetDepositCosmosGovV1beta1`
-- Description: Deposit queries single deposit information based proposalID, depositAddr.
-- Request: QueryDepositRequest
-- Response: QueryDepositResponse
+
+Deposit queries single deposit information based proposalID, depositAddr.
+
+```ts
+import { getDepositCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { useGetDepositCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDepositCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDepositCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDepositRequest` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+| Response | `QueryDepositResponse` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+
+---
 
 **Deposits**
-- Function: `getDepositsCosmosGovV1beta1`
-- Hook: `useGetDepositsCosmosGovV1beta1`
-- Description: Deposits queries all deposits of a single proposal.
-- Request: QueryDepositsRequest
-- Response: QueryDepositsResponse
+
+Deposits queries all deposits of a single proposal.
+
+```ts
+import { getDepositsCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { useGetDepositsCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDepositsCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDepositsCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDepositsRequest` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+| Response | `QueryDepositsResponse` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+
+---
 
 **TallyResult**
-- Function: `getTallyResultCosmosGovV1beta1`
-- Hook: `useGetTallyResultCosmosGovV1beta1`
-- Description: TallyResult queries the tally of a proposal vote.
-- Request: QueryTallyResultRequest
-- Response: QueryTallyResultResponse
+
+TallyResult queries the tally of a proposal vote.
+
+```ts
+import { getTallyResultCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { useGetTallyResultCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTallyResultCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetTallyResultCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/query.rpc.react.ts) |
+| Request | `QueryTallyResultRequest` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
+| Response | `QueryTallyResultResponse` | [View source ↗](cosmos/gov/v1beta1/query.ts) |
 
 ### Transaction Methods
 
 **SubmitProposal**
-- Function: `submitProposalCosmosGovV1beta1`
-- Hook: `useSubmitProposalCosmosGovV1beta1`
-- Description: SubmitProposal defines a method to create new proposal given a content.
-- Request: MsgSubmitProposal
-- Response: MsgSubmitProposalResponse
+
+SubmitProposal defines a method to create new proposal given a content.
+
+```ts
+import { submitProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { useSubmitProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `submitProposalCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/tx.rpc.func.ts) |
+| Hook | `useSubmitProposalCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgSubmitProposal` | [View source ↗](cosmos/gov/v1beta1/tx.ts) |
+| Response | `MsgSubmitProposalResponse` | [View source ↗](cosmos/gov/v1beta1/tx.ts) |
+
+---
 
 **Vote**
-- Function: `voteCosmosGovV1beta1`
-- Hook: `useVoteCosmosGovV1beta1`
-- Description: Vote defines a method to add a vote on a specific proposal.
-- Request: MsgVote
-- Response: MsgVoteResponse
+
+Vote defines a method to add a vote on a specific proposal.
+
+```ts
+import { voteCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { useVoteCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `voteCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/tx.rpc.func.ts) |
+| Hook | `useVoteCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgVote` | [View source ↗](cosmos/gov/v1beta1/tx.ts) |
+| Response | `MsgVoteResponse` | [View source ↗](cosmos/gov/v1beta1/tx.ts) |
+
+---
 
 **VoteWeighted**
-- Function: `voteWeightedCosmosGovV1beta1`
-- Hook: `useVoteWeightedCosmosGovV1beta1`
-- Description: VoteWeighted defines a method to add a weighted vote on a specific proposal.
 
- Since: cosmos-sdk 0.43
-- Request: MsgVoteWeighted
-- Response: MsgVoteWeightedResponse
+VoteWeighted defines a method to add a weighted vote on a specific proposal. Since: cosmos-sdk 0.43
+
+```ts
+import { voteWeightedCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { useVoteWeightedCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `voteWeightedCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/tx.rpc.func.ts) |
+| Hook | `useVoteWeightedCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgVoteWeighted` | [View source ↗](cosmos/gov/v1beta1/tx.ts) |
+| Response | `MsgVoteWeightedResponse` | [View source ↗](cosmos/gov/v1beta1/tx.ts) |
+
+---
 
 **Deposit**
-- Function: `depositCosmosGovV1beta1`
-- Hook: `useDepositCosmosGovV1beta1`
-- Description: Deposit defines a method to add deposit on a specific proposal.
-- Request: MsgDeposit
-- Response: MsgDepositResponse
+
+Deposit defines a method to add deposit on a specific proposal.
+
+```ts
+import { depositCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { useDepositCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `depositCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/tx.rpc.func.ts) |
+| Hook | `useDepositCosmosGovV1beta1` | [View source ↗](cosmos/gov/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgDeposit` | [View source ↗](cosmos/gov/v1beta1/tx.ts) |
+| Response | `MsgDepositResponse` | [View source ↗](cosmos/gov/v1beta1/tx.ts) |
 
 
 ## cosmos.group.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `DecisionPolicyWindows` | [View source ↗](cosmos/group/v1/types.ts) |
+| Type | `EventCreateGroup` | [View source ↗](cosmos/group/v1/events.ts) |
+| Type | `EventCreateGroupPolicy` | [View source ↗](cosmos/group/v1/events.ts) |
+| Type | `EventExec` | [View source ↗](cosmos/group/v1/events.ts) |
+| Type | `EventLeaveGroup` | [View source ↗](cosmos/group/v1/events.ts) |
+| Type | `EventSubmitProposal` | [View source ↗](cosmos/group/v1/events.ts) |
+| Type | `EventUpdateGroup` | [View source ↗](cosmos/group/v1/events.ts) |
+| Type | `EventUpdateGroupPolicy` | [View source ↗](cosmos/group/v1/events.ts) |
+| Type | `EventVote` | [View source ↗](cosmos/group/v1/events.ts) |
+| Type | `EventWithdrawProposal` | [View source ↗](cosmos/group/v1/events.ts) |
+| Type | `Exec` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `GroupInfo` | [View source ↗](cosmos/group/v1/types.ts) |
+| Type | `GroupMember` | [View source ↗](cosmos/group/v1/types.ts) |
+| Type | `GroupPolicyInfo` | [View source ↗](cosmos/group/v1/types.ts) |
+| Type | `Member` | [View source ↗](cosmos/group/v1/types.ts) |
+| Type | `Members` | [View source ↗](cosmos/group/v1/types.ts) |
+| Type | `MsgCreateGroup` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgCreateGroupPolicy` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgCreateGroupPolicyResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgCreateGroupResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgCreateGroupWithPolicy` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgCreateGroupWithPolicyResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgExec` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
+| Type | `MsgExecResponse` | [View source ↗](cosmos/authz/v1beta1/tx.ts) |
+| Type | `MsgLeaveGroup` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgLeaveGroupResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgSubmitProposal` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgSubmitProposalResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgUpdateGroupAdmin` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgUpdateGroupAdminResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgUpdateGroupMembers` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgUpdateGroupMembersResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgUpdateGroupMetadata` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgUpdateGroupMetadataResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgUpdateGroupPolicyAdmin` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgUpdateGroupPolicyAdminResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgUpdateGroupPolicyDecisionPolicy` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgUpdateGroupPolicyDecisionPolicyResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgUpdateGroupPolicyMetadata` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgUpdateGroupPolicyMetadataResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgVote` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgVoteResponse` | [View source ↗](cosmos/gov/v1/tx.ts) |
+| Type | `MsgWithdrawProposal` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `MsgWithdrawProposalResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Type | `PercentageDecisionPolicy` | [View source ↗](cosmos/group/v1/types.ts) |
+| Type | `Proposal` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `ProposalExecutorResult` | [View source ↗](cosmos/group/v1/types.ts) |
+| Type | `ProposalResult` | [View source ↗](cosmos/group/v1/types.ts) |
+| Type | `ProposalStatus` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `QueryGroupInfoRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryGroupInfoResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryGroupMembersRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryGroupMembersResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryGroupPoliciesByAdminRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryGroupPoliciesByAdminResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryGroupPoliciesByGroupRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryGroupPoliciesByGroupResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryGroupPolicyInfoRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryGroupPolicyInfoResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryGroupsByAdminRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryGroupsByAdminResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryGroupsByMemberRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryGroupsByMemberResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryProposalRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryProposalResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryProposalsByGroupPolicyRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryProposalsByGroupPolicyResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryTallyResultRequest` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryTallyResultResponse` | [View source ↗](cosmos/gov/v1/query.ts) |
+| Type | `QueryVoteByProposalVoterRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryVoteByProposalVoterResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryVotesByProposalRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryVotesByProposalResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryVotesByVoterRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `QueryVotesByVoterResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+| Type | `TallyResult` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `ThresholdDecisionPolicy` | [View source ↗](cosmos/group/v1/types.ts) |
+| Type | `Vote` | [View source ↗](cosmos/gov/v1/gov.ts) |
+| Type | `VoteOption` | [View source ↗](cosmos/gov/v1/gov.ts) |
+
 ### Query Methods
 
 **GroupInfo**
-- Function: `getGroupInfo`
-- Hook: `useGetGroupInfo`
-- Description: GroupInfo queries group info based on group id.
-- Request: QueryGroupInfoRequest
-- Response: QueryGroupInfoResponse
+
+GroupInfo queries group info based on group id.
+
+```ts
+import { getGroupInfo } from 'outputicjs/cosmos/group/v1'
+import { useGetGroupInfo } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGroupInfo` | [View source ↗](cosmos/group/v1/query.rpc.func.ts) |
+| Hook | `useGetGroupInfo` | [View source ↗](cosmos/group/v1/query.rpc.react.ts) |
+| Request | `QueryGroupInfoRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Response | `QueryGroupInfoResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+
+---
 
 **GroupPolicyInfo**
-- Function: `getGroupPolicyInfo`
-- Hook: `useGetGroupPolicyInfo`
-- Description: GroupPolicyInfo queries group policy info based on account address of group policy.
-- Request: QueryGroupPolicyInfoRequest
-- Response: QueryGroupPolicyInfoResponse
+
+GroupPolicyInfo queries group policy info based on account address of group policy.
+
+```ts
+import { getGroupPolicyInfo } from 'outputicjs/cosmos/group/v1'
+import { useGetGroupPolicyInfo } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGroupPolicyInfo` | [View source ↗](cosmos/group/v1/query.rpc.func.ts) |
+| Hook | `useGetGroupPolicyInfo` | [View source ↗](cosmos/group/v1/query.rpc.react.ts) |
+| Request | `QueryGroupPolicyInfoRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Response | `QueryGroupPolicyInfoResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+
+---
 
 **GroupMembers**
-- Function: `getGroupMembers`
-- Hook: `useGetGroupMembers`
-- Description: GroupMembers queries members of a group
-- Request: QueryGroupMembersRequest
-- Response: QueryGroupMembersResponse
+
+GroupMembers queries members of a group
+
+```ts
+import { getGroupMembers } from 'outputicjs/cosmos/group/v1'
+import { useGetGroupMembers } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGroupMembers` | [View source ↗](cosmos/group/v1/query.rpc.func.ts) |
+| Hook | `useGetGroupMembers` | [View source ↗](cosmos/group/v1/query.rpc.react.ts) |
+| Request | `QueryGroupMembersRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Response | `QueryGroupMembersResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+
+---
 
 **GroupsByAdmin**
-- Function: `getGroupsByAdmin`
-- Hook: `useGetGroupsByAdmin`
-- Description: GroupsByAdmin queries groups by admin address.
-- Request: QueryGroupsByAdminRequest
-- Response: QueryGroupsByAdminResponse
+
+GroupsByAdmin queries groups by admin address.
+
+```ts
+import { getGroupsByAdmin } from 'outputicjs/cosmos/group/v1'
+import { useGetGroupsByAdmin } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGroupsByAdmin` | [View source ↗](cosmos/group/v1/query.rpc.func.ts) |
+| Hook | `useGetGroupsByAdmin` | [View source ↗](cosmos/group/v1/query.rpc.react.ts) |
+| Request | `QueryGroupsByAdminRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Response | `QueryGroupsByAdminResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+
+---
 
 **GroupPoliciesByGroup**
-- Function: `getGroupPoliciesByGroup`
-- Hook: `useGetGroupPoliciesByGroup`
-- Description: GroupPoliciesByGroup queries group policies by group id.
-- Request: QueryGroupPoliciesByGroupRequest
-- Response: QueryGroupPoliciesByGroupResponse
+
+GroupPoliciesByGroup queries group policies by group id.
+
+```ts
+import { getGroupPoliciesByGroup } from 'outputicjs/cosmos/group/v1'
+import { useGetGroupPoliciesByGroup } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGroupPoliciesByGroup` | [View source ↗](cosmos/group/v1/query.rpc.func.ts) |
+| Hook | `useGetGroupPoliciesByGroup` | [View source ↗](cosmos/group/v1/query.rpc.react.ts) |
+| Request | `QueryGroupPoliciesByGroupRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Response | `QueryGroupPoliciesByGroupResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+
+---
 
 **GroupPoliciesByAdmin**
-- Function: `getGroupPoliciesByAdmin`
-- Hook: `useGetGroupPoliciesByAdmin`
-- Description: GroupsByAdmin queries group policies by admin address.
-- Request: QueryGroupPoliciesByAdminRequest
-- Response: QueryGroupPoliciesByAdminResponse
+
+GroupsByAdmin queries group policies by admin address.
+
+```ts
+import { getGroupPoliciesByAdmin } from 'outputicjs/cosmos/group/v1'
+import { useGetGroupPoliciesByAdmin } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGroupPoliciesByAdmin` | [View source ↗](cosmos/group/v1/query.rpc.func.ts) |
+| Hook | `useGetGroupPoliciesByAdmin` | [View source ↗](cosmos/group/v1/query.rpc.react.ts) |
+| Request | `QueryGroupPoliciesByAdminRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Response | `QueryGroupPoliciesByAdminResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+
+---
 
 **Proposal**
-- Function: `getProposalCosmosGroupV1`
-- Hook: `useGetProposalCosmosGroupV1`
-- Description: Proposal queries a proposal based on proposal id.
-- Request: QueryProposalRequest
-- Response: QueryProposalResponse
+
+Proposal queries a proposal based on proposal id.
+
+```ts
+import { getProposalCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+import { useGetProposalCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getProposalCosmosGroupV1` | [View source ↗](cosmos/group/v1/query.rpc.func.ts) |
+| Hook | `useGetProposalCosmosGroupV1` | [View source ↗](cosmos/group/v1/query.rpc.react.ts) |
+| Request | `QueryProposalRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Response | `QueryProposalResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+
+---
 
 **ProposalsByGroupPolicy**
-- Function: `getProposalsByGroupPolicy`
-- Hook: `useGetProposalsByGroupPolicy`
-- Description: ProposalsByGroupPolicy queries proposals based on account address of group policy.
-- Request: QueryProposalsByGroupPolicyRequest
-- Response: QueryProposalsByGroupPolicyResponse
+
+ProposalsByGroupPolicy queries proposals based on account address of group policy.
+
+```ts
+import { getProposalsByGroupPolicy } from 'outputicjs/cosmos/group/v1'
+import { useGetProposalsByGroupPolicy } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getProposalsByGroupPolicy` | [View source ↗](cosmos/group/v1/query.rpc.func.ts) |
+| Hook | `useGetProposalsByGroupPolicy` | [View source ↗](cosmos/group/v1/query.rpc.react.ts) |
+| Request | `QueryProposalsByGroupPolicyRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Response | `QueryProposalsByGroupPolicyResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+
+---
 
 **VoteByProposalVoter**
-- Function: `getVoteByProposalVoter`
-- Hook: `useGetVoteByProposalVoter`
-- Description: VoteByProposalVoter queries a vote by proposal id and voter.
-- Request: QueryVoteByProposalVoterRequest
-- Response: QueryVoteByProposalVoterResponse
+
+VoteByProposalVoter queries a vote by proposal id and voter.
+
+```ts
+import { getVoteByProposalVoter } from 'outputicjs/cosmos/group/v1'
+import { useGetVoteByProposalVoter } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getVoteByProposalVoter` | [View source ↗](cosmos/group/v1/query.rpc.func.ts) |
+| Hook | `useGetVoteByProposalVoter` | [View source ↗](cosmos/group/v1/query.rpc.react.ts) |
+| Request | `QueryVoteByProposalVoterRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Response | `QueryVoteByProposalVoterResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+
+---
 
 **VotesByProposal**
-- Function: `getVotesByProposal`
-- Hook: `useGetVotesByProposal`
-- Description: VotesByProposal queries a vote by proposal.
-- Request: QueryVotesByProposalRequest
-- Response: QueryVotesByProposalResponse
+
+VotesByProposal queries a vote by proposal.
+
+```ts
+import { getVotesByProposal } from 'outputicjs/cosmos/group/v1'
+import { useGetVotesByProposal } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getVotesByProposal` | [View source ↗](cosmos/group/v1/query.rpc.func.ts) |
+| Hook | `useGetVotesByProposal` | [View source ↗](cosmos/group/v1/query.rpc.react.ts) |
+| Request | `QueryVotesByProposalRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Response | `QueryVotesByProposalResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+
+---
 
 **VotesByVoter**
-- Function: `getVotesByVoter`
-- Hook: `useGetVotesByVoter`
-- Description: VotesByVoter queries a vote by voter.
-- Request: QueryVotesByVoterRequest
-- Response: QueryVotesByVoterResponse
+
+VotesByVoter queries a vote by voter.
+
+```ts
+import { getVotesByVoter } from 'outputicjs/cosmos/group/v1'
+import { useGetVotesByVoter } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getVotesByVoter` | [View source ↗](cosmos/group/v1/query.rpc.func.ts) |
+| Hook | `useGetVotesByVoter` | [View source ↗](cosmos/group/v1/query.rpc.react.ts) |
+| Request | `QueryVotesByVoterRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Response | `QueryVotesByVoterResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+
+---
 
 **GroupsByMember**
-- Function: `getGroupsByMember`
-- Hook: `useGetGroupsByMember`
-- Description: GroupsByMember queries groups by member address.
-- Request: QueryGroupsByMemberRequest
-- Response: QueryGroupsByMemberResponse
+
+GroupsByMember queries groups by member address.
+
+```ts
+import { getGroupsByMember } from 'outputicjs/cosmos/group/v1'
+import { useGetGroupsByMember } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGroupsByMember` | [View source ↗](cosmos/group/v1/query.rpc.func.ts) |
+| Hook | `useGetGroupsByMember` | [View source ↗](cosmos/group/v1/query.rpc.react.ts) |
+| Request | `QueryGroupsByMemberRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Response | `QueryGroupsByMemberResponse` | [View source ↗](cosmos/group/v1/query.ts) |
+
+---
 
 **TallyResult**
-- Function: `getTallyResultCosmosGroupV1`
-- Hook: `useGetTallyResultCosmosGroupV1`
-- Description: TallyResult queries the tally of a proposal votes.
-- Request: QueryTallyResultRequest
-- Response: QueryTallyResultResponse
+
+TallyResult queries the tally of a proposal votes.
+
+```ts
+import { getTallyResultCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+import { useGetTallyResultCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTallyResultCosmosGroupV1` | [View source ↗](cosmos/group/v1/query.rpc.func.ts) |
+| Hook | `useGetTallyResultCosmosGroupV1` | [View source ↗](cosmos/group/v1/query.rpc.react.ts) |
+| Request | `QueryTallyResultRequest` | [View source ↗](cosmos/group/v1/query.ts) |
+| Response | `QueryTallyResultResponse` | [View source ↗](cosmos/group/v1/query.ts) |
 
 ### Transaction Methods
 
 **CreateGroup**
-- Function: `createGroup`
-- Hook: `useCreateGroup`
-- Description: CreateGroup creates a new group with an admin account address, a list of members and some optional metadata.
-- Request: MsgCreateGroup
-- Response: MsgCreateGroupResponse
+
+CreateGroup creates a new group with an admin account address, a list of members and some optional metadata.
+
+```ts
+import { createGroup } from 'outputicjs/cosmos/group/v1'
+import { useCreateGroup } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createGroup` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useCreateGroup` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgCreateGroup` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgCreateGroupResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+
+---
 
 **UpdateGroupMembers**
-- Function: `updateGroupMembers`
-- Hook: `useUpdateGroupMembers`
-- Description: UpdateGroupMembers updates the group members with given group id and admin address.
-- Request: MsgUpdateGroupMembers
-- Response: MsgUpdateGroupMembersResponse
+
+UpdateGroupMembers updates the group members with given group id and admin address.
+
+```ts
+import { updateGroupMembers } from 'outputicjs/cosmos/group/v1'
+import { useUpdateGroupMembers } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `updateGroupMembers` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useUpdateGroupMembers` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgUpdateGroupMembers` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgUpdateGroupMembersResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+
+---
 
 **UpdateGroupAdmin**
-- Function: `updateGroupAdmin`
-- Hook: `useUpdateGroupAdmin`
-- Description: UpdateGroupAdmin updates the group admin with given group id and previous admin address.
-- Request: MsgUpdateGroupAdmin
-- Response: MsgUpdateGroupAdminResponse
+
+UpdateGroupAdmin updates the group admin with given group id and previous admin address.
+
+```ts
+import { updateGroupAdmin } from 'outputicjs/cosmos/group/v1'
+import { useUpdateGroupAdmin } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `updateGroupAdmin` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useUpdateGroupAdmin` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgUpdateGroupAdmin` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgUpdateGroupAdminResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+
+---
 
 **UpdateGroupMetadata**
-- Function: `updateGroupMetadata`
-- Hook: `useUpdateGroupMetadata`
-- Description: UpdateGroupMetadata updates the group metadata with given group id and admin address.
-- Request: MsgUpdateGroupMetadata
-- Response: MsgUpdateGroupMetadataResponse
+
+UpdateGroupMetadata updates the group metadata with given group id and admin address.
+
+```ts
+import { updateGroupMetadata } from 'outputicjs/cosmos/group/v1'
+import { useUpdateGroupMetadata } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `updateGroupMetadata` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useUpdateGroupMetadata` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgUpdateGroupMetadata` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgUpdateGroupMetadataResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+
+---
 
 **CreateGroupPolicy**
-- Function: `createGroupPolicy`
-- Hook: `useCreateGroupPolicy`
-- Description: CreateGroupPolicy creates a new group policy using given DecisionPolicy.
-- Request: MsgCreateGroupPolicy
-- Response: MsgCreateGroupPolicyResponse
+
+CreateGroupPolicy creates a new group policy using given DecisionPolicy.
+
+```ts
+import { createGroupPolicy } from 'outputicjs/cosmos/group/v1'
+import { useCreateGroupPolicy } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createGroupPolicy` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useCreateGroupPolicy` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgCreateGroupPolicy` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgCreateGroupPolicyResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+
+---
 
 **CreateGroupWithPolicy**
-- Function: `createGroupWithPolicy`
-- Hook: `useCreateGroupWithPolicy`
-- Description: CreateGroupWithPolicy creates a new group with policy.
-- Request: MsgCreateGroupWithPolicy
-- Response: MsgCreateGroupWithPolicyResponse
+
+CreateGroupWithPolicy creates a new group with policy.
+
+```ts
+import { createGroupWithPolicy } from 'outputicjs/cosmos/group/v1'
+import { useCreateGroupWithPolicy } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createGroupWithPolicy` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useCreateGroupWithPolicy` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgCreateGroupWithPolicy` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgCreateGroupWithPolicyResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+
+---
 
 **UpdateGroupPolicyAdmin**
-- Function: `updateGroupPolicyAdmin`
-- Hook: `useUpdateGroupPolicyAdmin`
-- Description: UpdateGroupPolicyAdmin updates a group policy admin.
-- Request: MsgUpdateGroupPolicyAdmin
-- Response: MsgUpdateGroupPolicyAdminResponse
+
+UpdateGroupPolicyAdmin updates a group policy admin.
+
+```ts
+import { updateGroupPolicyAdmin } from 'outputicjs/cosmos/group/v1'
+import { useUpdateGroupPolicyAdmin } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `updateGroupPolicyAdmin` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useUpdateGroupPolicyAdmin` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgUpdateGroupPolicyAdmin` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgUpdateGroupPolicyAdminResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+
+---
 
 **UpdateGroupPolicyDecisionPolicy**
-- Function: `updateGroupPolicyDecisionPolicy`
-- Hook: `useUpdateGroupPolicyDecisionPolicy`
-- Description: UpdateGroupPolicyDecisionPolicy allows a group policy's decision policy to be updated.
-- Request: MsgUpdateGroupPolicyDecisionPolicy
-- Response: MsgUpdateGroupPolicyDecisionPolicyResponse
+
+UpdateGroupPolicyDecisionPolicy allows a group policy's decision policy to be updated.
+
+```ts
+import { updateGroupPolicyDecisionPolicy } from 'outputicjs/cosmos/group/v1'
+import { useUpdateGroupPolicyDecisionPolicy } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `updateGroupPolicyDecisionPolicy` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useUpdateGroupPolicyDecisionPolicy` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgUpdateGroupPolicyDecisionPolicy` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgUpdateGroupPolicyDecisionPolicyResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+
+---
 
 **UpdateGroupPolicyMetadata**
-- Function: `updateGroupPolicyMetadata`
-- Hook: `useUpdateGroupPolicyMetadata`
-- Description: UpdateGroupPolicyMetadata updates a group policy metadata.
-- Request: MsgUpdateGroupPolicyMetadata
-- Response: MsgUpdateGroupPolicyMetadataResponse
+
+UpdateGroupPolicyMetadata updates a group policy metadata.
+
+```ts
+import { updateGroupPolicyMetadata } from 'outputicjs/cosmos/group/v1'
+import { useUpdateGroupPolicyMetadata } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `updateGroupPolicyMetadata` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useUpdateGroupPolicyMetadata` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgUpdateGroupPolicyMetadata` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgUpdateGroupPolicyMetadataResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+
+---
 
 **SubmitProposal**
-- Function: `submitProposalCosmosGroupV1`
-- Hook: `useSubmitProposalCosmosGroupV1`
-- Description: SubmitProposal submits a new proposal.
-- Request: MsgSubmitProposal
-- Response: MsgSubmitProposalResponse
+
+SubmitProposal submits a new proposal.
+
+```ts
+import { submitProposalCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+import { useSubmitProposalCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `submitProposalCosmosGroupV1` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useSubmitProposalCosmosGroupV1` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgSubmitProposal` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgSubmitProposalResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+
+---
 
 **WithdrawProposal**
-- Function: `withdrawProposal`
-- Hook: `useWithdrawProposal`
-- Description: WithdrawProposal aborts a proposal.
-- Request: MsgWithdrawProposal
-- Response: MsgWithdrawProposalResponse
+
+WithdrawProposal aborts a proposal.
+
+```ts
+import { withdrawProposal } from 'outputicjs/cosmos/group/v1'
+import { useWithdrawProposal } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `withdrawProposal` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useWithdrawProposal` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgWithdrawProposal` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgWithdrawProposalResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+
+---
 
 **Vote**
-- Function: `voteCosmosGroupV1`
-- Hook: `useVoteCosmosGroupV1`
-- Description: Vote allows a voter to vote on a proposal.
-- Request: MsgVote
-- Response: MsgVoteResponse
+
+Vote allows a voter to vote on a proposal.
+
+```ts
+import { voteCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+import { useVoteCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `voteCosmosGroupV1` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useVoteCosmosGroupV1` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgVote` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgVoteResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+
+---
 
 **Exec**
-- Function: `execCosmosGroupV1`
-- Hook: `useExecCosmosGroupV1`
-- Description: Exec executes a proposal.
-- Request: MsgExec
-- Response: MsgExecResponse
+
+Exec executes a proposal.
+
+```ts
+import { execCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+import { useExecCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `execCosmosGroupV1` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useExecCosmosGroupV1` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgExec` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgExecResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
+
+---
 
 **LeaveGroup**
-- Function: `leaveGroup`
-- Hook: `useLeaveGroup`
-- Description: LeaveGroup allows a group member to leave the group.
-- Request: MsgLeaveGroup
-- Response: MsgLeaveGroupResponse
+
+LeaveGroup allows a group member to leave the group.
+
+```ts
+import { leaveGroup } from 'outputicjs/cosmos/group/v1'
+import { useLeaveGroup } from 'outputicjs/cosmos/group/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `leaveGroup` | [View source ↗](cosmos/group/v1/tx.rpc.func.ts) |
+| Hook | `useLeaveGroup` | [View source ↗](cosmos/group/v1/tx.rpc.react.ts) |
+| Request | `MsgLeaveGroup` | [View source ↗](cosmos/group/v1/tx.ts) |
+| Response | `MsgLeaveGroupResponse` | [View source ↗](cosmos/group/v1/tx.ts) |
 
 
 ## cosmos.mint.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `CosmosMintV1beta1Params` | [View source ↗](cosmos/mint/v1beta1/mint.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `Minter` | [View source ↗](cosmos/mint/v1beta1/mint.ts) |
+| Type | `QueryAnnualProvisionsRequest` | [View source ↗](cosmos/mint/v1beta1/query.ts) |
+| Type | `QueryAnnualProvisionsResponse` | [View source ↗](cosmos/mint/v1beta1/query.ts) |
+| Type | `QueryInflationRequest` | [View source ↗](cosmos/mint/v1beta1/query.ts) |
+| Type | `QueryInflationResponse` | [View source ↗](cosmos/mint/v1beta1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+
 ### Query Methods
 
 **Params**
-- Function: `getCosmosMintV1beta1Params`
-- Hook: `useGetCosmosMintV1beta1Params`
-- Description: Params returns the total set of minting parameters.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params returns the total set of minting parameters.
+
+```ts
+import { getCosmosMintV1beta1Params } from 'outputicjs/cosmos/mint/v1beta1'
+import { useGetCosmosMintV1beta1Params } from 'outputicjs/cosmos/mint/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCosmosMintV1beta1Params` | [View source ↗](cosmos/mint/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetCosmosMintV1beta1Params` | [View source ↗](cosmos/mint/v1beta1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](cosmos/mint/v1beta1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](cosmos/mint/v1beta1/query.ts) |
+
+---
 
 **Inflation**
-- Function: `getInflation`
-- Hook: `useGetInflation`
-- Description: Inflation returns the current minting inflation value.
-- Request: QueryInflationRequest
-- Response: QueryInflationResponse
+
+Inflation returns the current minting inflation value.
+
+```ts
+import { getInflation } from 'outputicjs/cosmos/mint/v1beta1'
+import { useGetInflation } from 'outputicjs/cosmos/mint/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getInflation` | [View source ↗](cosmos/mint/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetInflation` | [View source ↗](cosmos/mint/v1beta1/query.rpc.react.ts) |
+| Request | `QueryInflationRequest` | [View source ↗](cosmos/mint/v1beta1/query.ts) |
+| Response | `QueryInflationResponse` | [View source ↗](cosmos/mint/v1beta1/query.ts) |
+
+---
 
 **AnnualProvisions**
-- Function: `getAnnualProvisions`
-- Hook: `useGetAnnualProvisions`
-- Description: AnnualProvisions current minting annual provisions value.
-- Request: QueryAnnualProvisionsRequest
-- Response: QueryAnnualProvisionsResponse
+
+AnnualProvisions current minting annual provisions value.
+
+```ts
+import { getAnnualProvisions } from 'outputicjs/cosmos/mint/v1beta1'
+import { useGetAnnualProvisions } from 'outputicjs/cosmos/mint/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAnnualProvisions` | [View source ↗](cosmos/mint/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetAnnualProvisions` | [View source ↗](cosmos/mint/v1beta1/query.rpc.react.ts) |
+| Request | `QueryAnnualProvisionsRequest` | [View source ↗](cosmos/mint/v1beta1/query.ts) |
+| Response | `QueryAnnualProvisionsResponse` | [View source ↗](cosmos/mint/v1beta1/query.ts) |
 
 
 ## cosmos.nft.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `Class` | [View source ↗](cosmos/nft/v1beta1/nft.ts) |
+| Type | `Entry` | [View source ↗](cosmos/nft/v1beta1/genesis.ts) |
+| Type | `EventBurn` | [View source ↗](cosmos/nft/v1beta1/event.ts) |
+| Type | `EventMint` | [View source ↗](cosmos/nft/v1beta1/event.ts) |
+| Type | `EventSend` | [View source ↗](cosmos/nft/v1beta1/event.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MsgSend` | [View source ↗](cosmos/bank/v1beta1/tx.ts) |
+| Type | `MsgSendResponse` | [View source ↗](cosmos/bank/v1beta1/tx.ts) |
+| Type | `NFT` | [View source ↗](cosmos/nft/v1beta1/nft.ts) |
+| Type | `QueryBalanceRequest` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryBalanceResponse` | [View source ↗](cosmos/bank/v1beta1/query.ts) |
+| Type | `QueryClassesRequest` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Type | `QueryClassesResponse` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Type | `QueryClassRequest` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Type | `QueryClassResponse` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Type | `QueryNFTRequest` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Type | `QueryNFTResponse` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Type | `QueryNFTsRequest` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Type | `QueryNFTsResponse` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Type | `QueryOwnerRequest` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Type | `QueryOwnerResponse` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Type | `QuerySupplyRequest` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Type | `QuerySupplyResponse` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+
 ### Query Methods
 
 **Balance**
-- Function: `getBalanceCosmosNftV1beta1`
-- Hook: `useGetBalanceCosmosNftV1beta1`
-- Description: Balance queries the number of NFTs of a given class owned by the owner, same as balanceOf in ERC721
-- Request: QueryBalanceRequest
-- Response: QueryBalanceResponse
+
+Balance queries the number of NFTs of a given class owned by the owner, same as balanceOf in ERC721
+
+```ts
+import { getBalanceCosmosNftV1beta1 } from 'outputicjs/cosmos/nft/v1beta1'
+import { useGetBalanceCosmosNftV1beta1 } from 'outputicjs/cosmos/nft/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getBalanceCosmosNftV1beta1` | [View source ↗](cosmos/nft/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetBalanceCosmosNftV1beta1` | [View source ↗](cosmos/nft/v1beta1/query.rpc.react.ts) |
+| Request | `QueryBalanceRequest` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Response | `QueryBalanceResponse` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+
+---
 
 **Owner**
-- Function: `getOwner`
-- Hook: `useGetOwner`
-- Description: Owner queries the owner of the NFT based on its class and id, same as ownerOf in ERC721
-- Request: QueryOwnerRequest
-- Response: QueryOwnerResponse
+
+Owner queries the owner of the NFT based on its class and id, same as ownerOf in ERC721
+
+```ts
+import { getOwner } from 'outputicjs/cosmos/nft/v1beta1'
+import { useGetOwner } from 'outputicjs/cosmos/nft/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getOwner` | [View source ↗](cosmos/nft/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetOwner` | [View source ↗](cosmos/nft/v1beta1/query.rpc.react.ts) |
+| Request | `QueryOwnerRequest` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Response | `QueryOwnerResponse` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+
+---
 
 **Supply**
-- Function: `getSupply`
-- Hook: `useGetSupply`
-- Description: Supply queries the number of NFTs from the given class, same as totalSupply of ERC721.
-- Request: QuerySupplyRequest
-- Response: QuerySupplyResponse
+
+Supply queries the number of NFTs from the given class, same as totalSupply of ERC721.
+
+```ts
+import { getSupply } from 'outputicjs/cosmos/nft/v1beta1'
+import { useGetSupply } from 'outputicjs/cosmos/nft/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSupply` | [View source ↗](cosmos/nft/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetSupply` | [View source ↗](cosmos/nft/v1beta1/query.rpc.react.ts) |
+| Request | `QuerySupplyRequest` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Response | `QuerySupplyResponse` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+
+---
 
 **NFTs**
-- Function: `getNFTs`
-- Hook: `useGetNFTs`
-- Description: NFTs queries all NFTs of a given class or owner,choose at least one of the two, similar to tokenByIndex in
- ERC721Enumerable
-- Request: QueryNFTsRequest
-- Response: QueryNFTsResponse
+
+NFTs queries all NFTs of a given class or owner,choose at least one of the two, similar to tokenByIndex in ERC721Enumerable
+
+```ts
+import { getNFTs } from 'outputicjs/cosmos/nft/v1beta1'
+import { useGetNFTs } from 'outputicjs/cosmos/nft/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getNFTs` | [View source ↗](cosmos/nft/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetNFTs` | [View source ↗](cosmos/nft/v1beta1/query.rpc.react.ts) |
+| Request | `QueryNFTsRequest` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Response | `QueryNFTsResponse` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+
+---
 
 **NFT**
-- Function: `getNFT`
-- Hook: `useGetNFT`
-- Description: NFT queries an NFT based on its class and id.
-- Request: QueryNFTRequest
-- Response: QueryNFTResponse
+
+NFT queries an NFT based on its class and id.
+
+```ts
+import { getNFT } from 'outputicjs/cosmos/nft/v1beta1'
+import { useGetNFT } from 'outputicjs/cosmos/nft/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getNFT` | [View source ↗](cosmos/nft/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetNFT` | [View source ↗](cosmos/nft/v1beta1/query.rpc.react.ts) |
+| Request | `QueryNFTRequest` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Response | `QueryNFTResponse` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+
+---
 
 **Class**
-- Function: `getClass`
-- Hook: `useGetClass`
-- Description: Class queries an NFT class based on its id
-- Request: QueryClassRequest
-- Response: QueryClassResponse
+
+Class queries an NFT class based on its id
+
+```ts
+import { getClass } from 'outputicjs/cosmos/nft/v1beta1'
+import { useGetClass } from 'outputicjs/cosmos/nft/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getClass` | [View source ↗](cosmos/nft/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetClass` | [View source ↗](cosmos/nft/v1beta1/query.rpc.react.ts) |
+| Request | `QueryClassRequest` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Response | `QueryClassResponse` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+
+---
 
 **Classes**
-- Function: `getClasses`
-- Hook: `useGetClasses`
-- Description: Classes queries all NFT classes
-- Request: QueryClassesRequest
-- Response: QueryClassesResponse
+
+Classes queries all NFT classes
+
+```ts
+import { getClasses } from 'outputicjs/cosmos/nft/v1beta1'
+import { useGetClasses } from 'outputicjs/cosmos/nft/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getClasses` | [View source ↗](cosmos/nft/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetClasses` | [View source ↗](cosmos/nft/v1beta1/query.rpc.react.ts) |
+| Request | `QueryClassesRequest` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
+| Response | `QueryClassesResponse` | [View source ↗](cosmos/nft/v1beta1/query.ts) |
 
 ### Transaction Methods
 
 **Send**
-- Function: `sendCosmosNftV1beta1`
-- Hook: `useSendCosmosNftV1beta1`
-- Description: Send defines a method to send a nft from one account to another account.
-- Request: MsgSend
-- Response: MsgSendResponse
+
+Send defines a method to send a nft from one account to another account.
+
+```ts
+import { sendCosmosNftV1beta1 } from 'outputicjs/cosmos/nft/v1beta1'
+import { useSendCosmosNftV1beta1 } from 'outputicjs/cosmos/nft/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `sendCosmosNftV1beta1` | [View source ↗](cosmos/nft/v1beta1/tx.rpc.func.ts) |
+| Hook | `useSendCosmosNftV1beta1` | [View source ↗](cosmos/nft/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgSend` | [View source ↗](cosmos/nft/v1beta1/tx.ts) |
+| Response | `MsgSendResponse` | [View source ↗](cosmos/nft/v1beta1/tx.ts) |
 
 
 ## cosmos.params.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `ParamChange` | [View source ↗](cosmos/params/v1beta1/params.ts) |
+| Type | `ParameterChangeProposal` | [View source ↗](cosmos/params/v1beta1/params.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QuerySubspacesRequest` | [View source ↗](cosmos/params/v1beta1/query.ts) |
+| Type | `QuerySubspacesResponse` | [View source ↗](cosmos/params/v1beta1/query.ts) |
+| Type | `Subspace` | [View source ↗](cosmos/params/v1beta1/query.ts) |
+
 ### Query Methods
 
 **Params**
-- Function: `getCosmosParamsV1beta1Params`
-- Hook: `useGetCosmosParamsV1beta1Params`
-- Description: Params queries a specific parameter of a module, given its subspace and
- key.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params queries a specific parameter of a module, given its subspace and key.
+
+```ts
+import { getCosmosParamsV1beta1Params } from 'outputicjs/cosmos/params/v1beta1'
+import { useGetCosmosParamsV1beta1Params } from 'outputicjs/cosmos/params/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCosmosParamsV1beta1Params` | [View source ↗](cosmos/params/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetCosmosParamsV1beta1Params` | [View source ↗](cosmos/params/v1beta1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](cosmos/params/v1beta1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](cosmos/params/v1beta1/query.ts) |
+
+---
 
 **Subspaces**
-- Function: `getSubspaces`
-- Hook: `useGetSubspaces`
-- Description: Subspaces queries for all registered subspaces and all keys for a subspace.
-- Request: QuerySubspacesRequest
-- Response: QuerySubspacesResponse
+
+Subspaces queries for all registered subspaces and all keys for a subspace.
+
+```ts
+import { getSubspaces } from 'outputicjs/cosmos/params/v1beta1'
+import { useGetSubspaces } from 'outputicjs/cosmos/params/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSubspaces` | [View source ↗](cosmos/params/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetSubspaces` | [View source ↗](cosmos/params/v1beta1/query.rpc.react.ts) |
+| Request | `QuerySubspacesRequest` | [View source ↗](cosmos/params/v1beta1/query.ts) |
+| Response | `QuerySubspacesResponse` | [View source ↗](cosmos/params/v1beta1/query.ts) |
 
 
 ## cosmos.slashing.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `CosmosSlashingV1beta1Params` | [View source ↗](cosmos/slashing/v1beta1/slashing.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MissedBlock` | [View source ↗](cosmos/slashing/v1beta1/genesis.ts) |
+| Type | `MsgUnjail` | [View source ↗](cosmos/slashing/v1beta1/tx.ts) |
+| Type | `MsgUnjailResponse` | [View source ↗](cosmos/slashing/v1beta1/tx.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QuerySigningInfoRequest` | [View source ↗](cosmos/slashing/v1beta1/query.ts) |
+| Type | `QuerySigningInfoResponse` | [View source ↗](cosmos/slashing/v1beta1/query.ts) |
+| Type | `QuerySigningInfosRequest` | [View source ↗](cosmos/slashing/v1beta1/query.ts) |
+| Type | `QuerySigningInfosResponse` | [View source ↗](cosmos/slashing/v1beta1/query.ts) |
+| Type | `SigningInfo` | [View source ↗](cosmos/slashing/v1beta1/genesis.ts) |
+| Type | `ValidatorMissedBlocks` | [View source ↗](cosmos/slashing/v1beta1/genesis.ts) |
+| Type | `ValidatorSigningInfo` | [View source ↗](cosmos/slashing/v1beta1/slashing.ts) |
+
 ### Query Methods
 
 **Params**
-- Function: `getCosmosSlashingV1beta1Params`
-- Hook: `useGetCosmosSlashingV1beta1Params`
-- Description: Params queries the parameters of slashing module
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params queries the parameters of slashing module
+
+```ts
+import { getCosmosSlashingV1beta1Params } from 'outputicjs/cosmos/slashing/v1beta1'
+import { useGetCosmosSlashingV1beta1Params } from 'outputicjs/cosmos/slashing/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCosmosSlashingV1beta1Params` | [View source ↗](cosmos/slashing/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetCosmosSlashingV1beta1Params` | [View source ↗](cosmos/slashing/v1beta1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](cosmos/slashing/v1beta1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](cosmos/slashing/v1beta1/query.ts) |
+
+---
 
 **SigningInfo**
-- Function: `getSigningInfo`
-- Hook: `useGetSigningInfo`
-- Description: SigningInfo queries the signing info of given cons address
-- Request: QuerySigningInfoRequest
-- Response: QuerySigningInfoResponse
+
+SigningInfo queries the signing info of given cons address
+
+```ts
+import { getSigningInfo } from 'outputicjs/cosmos/slashing/v1beta1'
+import { useGetSigningInfo } from 'outputicjs/cosmos/slashing/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSigningInfo` | [View source ↗](cosmos/slashing/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetSigningInfo` | [View source ↗](cosmos/slashing/v1beta1/query.rpc.react.ts) |
+| Request | `QuerySigningInfoRequest` | [View source ↗](cosmos/slashing/v1beta1/query.ts) |
+| Response | `QuerySigningInfoResponse` | [View source ↗](cosmos/slashing/v1beta1/query.ts) |
+
+---
 
 **SigningInfos**
-- Function: `getSigningInfos`
-- Hook: `useGetSigningInfos`
-- Description: SigningInfos queries signing info of all validators
-- Request: QuerySigningInfosRequest
-- Response: QuerySigningInfosResponse
+
+SigningInfos queries signing info of all validators
+
+```ts
+import { getSigningInfos } from 'outputicjs/cosmos/slashing/v1beta1'
+import { useGetSigningInfos } from 'outputicjs/cosmos/slashing/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSigningInfos` | [View source ↗](cosmos/slashing/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetSigningInfos` | [View source ↗](cosmos/slashing/v1beta1/query.rpc.react.ts) |
+| Request | `QuerySigningInfosRequest` | [View source ↗](cosmos/slashing/v1beta1/query.ts) |
+| Response | `QuerySigningInfosResponse` | [View source ↗](cosmos/slashing/v1beta1/query.ts) |
 
 ### Transaction Methods
 
 **Unjail**
-- Function: `unjail`
-- Hook: `useUnjail`
-- Description: Unjail defines a method for unjailing a jailed validator, thus returning
- them into the bonded validator set, so they can begin receiving provisions
- and rewards again.
-- Request: MsgUnjail
-- Response: MsgUnjailResponse
+
+Unjail defines a method for unjailing a jailed validator, thus returning them into the bonded validator set, so they can begin receiving provisions and rewards again.
+
+```ts
+import { unjail } from 'outputicjs/cosmos/slashing/v1beta1'
+import { useUnjail } from 'outputicjs/cosmos/slashing/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `unjail` | [View source ↗](cosmos/slashing/v1beta1/tx.rpc.func.ts) |
+| Hook | `useUnjail` | [View source ↗](cosmos/slashing/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgUnjail` | [View source ↗](cosmos/slashing/v1beta1/tx.ts) |
+| Response | `MsgUnjailResponse` | [View source ↗](cosmos/slashing/v1beta1/tx.ts) |
 
 
 ## cosmos.staking.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `AuthorizationType` | [View source ↗](cosmos/staking/v1beta1/authz.ts) |
+| Type | `BondStatus` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `Commission` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `CommissionRates` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `CosmosStakingV1beta1Params` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `Delegation` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `DelegationResponse` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `Description` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `DVPair` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `DVPairs` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `DVVTriplet` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `DVVTriplets` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `HistoricalInfo` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `LastValidatorPower` | [View source ↗](cosmos/staking/v1beta1/genesis.ts) |
+| Type | `MsgBeginRedelegate` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Type | `MsgBeginRedelegateResponse` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Type | `MsgCreateValidator` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Type | `MsgCreateValidatorResponse` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Type | `MsgDelegate` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Type | `MsgDelegateResponse` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Type | `MsgEditValidator` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Type | `MsgEditValidatorResponse` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Type | `MsgUndelegate` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Type | `MsgUndelegateResponse` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Type | `Pool` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `QueryDelegationRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryDelegationResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryDelegatorDelegationsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryDelegatorDelegationsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryDelegatorUnbondingDelegationsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryDelegatorUnbondingDelegationsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryDelegatorValidatorRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryDelegatorValidatorResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryDelegatorValidatorsRequest` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryDelegatorValidatorsResponse` | [View source ↗](cosmos/distribution/v1beta1/query.ts) |
+| Type | `QueryHistoricalInfoRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryHistoricalInfoResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryPoolRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryPoolResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryRedelegationsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryRedelegationsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryUnbondingDelegationRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryUnbondingDelegationResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryValidatorDelegationsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryValidatorDelegationsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryValidatorRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryValidatorResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryValidatorsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryValidatorsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryValidatorUnbondingDelegationsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryValidatorUnbondingDelegationsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `Redelegation` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `RedelegationEntry` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `RedelegationEntryResponse` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `RedelegationResponse` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `StakeAuthorization` | [View source ↗](cosmos/staking/v1beta1/authz.ts) |
+| Type | `UnbondingDelegation` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `UnbondingDelegationEntry` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `ValAddresses` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `Validator` | [View source ↗](cosmos/base/tendermint/v1beta1/query.ts) |
+
 ### Query Methods
 
 **Validators**
-- Function: `getValidators`
-- Hook: `useGetValidators`
-- Description: Validators queries all validators that match the given status.
-- Request: QueryValidatorsRequest
-- Response: QueryValidatorsResponse
+
+Validators queries all validators that match the given status.
+
+```ts
+import { getValidators } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetValidators } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getValidators` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetValidators` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryValidatorsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryValidatorsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+
+---
 
 **Validator**
-- Function: `getValidator`
-- Hook: `useGetValidator`
-- Description: Validator queries validator info for given validator address.
-- Request: QueryValidatorRequest
-- Response: QueryValidatorResponse
+
+Validator queries validator info for given validator address.
+
+```ts
+import { getValidator } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetValidator } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getValidator` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetValidator` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryValidatorRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryValidatorResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+
+---
 
 **ValidatorDelegations**
-- Function: `getValidatorDelegations`
-- Hook: `useGetValidatorDelegations`
-- Description: ValidatorDelegations queries delegate info for given validator.
-- Request: QueryValidatorDelegationsRequest
-- Response: QueryValidatorDelegationsResponse
+
+ValidatorDelegations queries delegate info for given validator.
+
+```ts
+import { getValidatorDelegations } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetValidatorDelegations } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getValidatorDelegations` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetValidatorDelegations` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryValidatorDelegationsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryValidatorDelegationsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+
+---
 
 **ValidatorUnbondingDelegations**
-- Function: `getValidatorUnbondingDelegations`
-- Hook: `useGetValidatorUnbondingDelegations`
-- Description: ValidatorUnbondingDelegations queries unbonding delegations of a validator.
-- Request: QueryValidatorUnbondingDelegationsRequest
-- Response: QueryValidatorUnbondingDelegationsResponse
+
+ValidatorUnbondingDelegations queries unbonding delegations of a validator.
+
+```ts
+import { getValidatorUnbondingDelegations } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetValidatorUnbondingDelegations } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getValidatorUnbondingDelegations` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetValidatorUnbondingDelegations` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryValidatorUnbondingDelegationsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryValidatorUnbondingDelegationsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+
+---
 
 **Delegation**
-- Function: `getDelegation`
-- Hook: `useGetDelegation`
-- Description: Delegation queries delegate info for given validator delegator pair.
-- Request: QueryDelegationRequest
-- Response: QueryDelegationResponse
+
+Delegation queries delegate info for given validator delegator pair.
+
+```ts
+import { getDelegation } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetDelegation } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDelegation` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDelegation` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDelegationRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryDelegationResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+
+---
 
 **UnbondingDelegation**
-- Function: `getUnbondingDelegation`
-- Hook: `useGetUnbondingDelegation`
-- Description: UnbondingDelegation queries unbonding info for given validator delegator
- pair.
-- Request: QueryUnbondingDelegationRequest
-- Response: QueryUnbondingDelegationResponse
+
+UnbondingDelegation queries unbonding info for given validator delegator pair.
+
+```ts
+import { getUnbondingDelegation } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetUnbondingDelegation } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getUnbondingDelegation` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetUnbondingDelegation` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryUnbondingDelegationRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryUnbondingDelegationResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+
+---
 
 **DelegatorDelegations**
-- Function: `getDelegatorDelegations`
-- Hook: `useGetDelegatorDelegations`
-- Description: DelegatorDelegations queries all delegations of a given delegator address.
-- Request: QueryDelegatorDelegationsRequest
-- Response: QueryDelegatorDelegationsResponse
+
+DelegatorDelegations queries all delegations of a given delegator address.
+
+```ts
+import { getDelegatorDelegations } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetDelegatorDelegations } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDelegatorDelegations` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDelegatorDelegations` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDelegatorDelegationsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryDelegatorDelegationsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+
+---
 
 **DelegatorUnbondingDelegations**
-- Function: `getDelegatorUnbondingDelegations`
-- Hook: `useGetDelegatorUnbondingDelegations`
-- Description: DelegatorUnbondingDelegations queries all unbonding delegations of a given
- delegator address.
-- Request: QueryDelegatorUnbondingDelegationsRequest
-- Response: QueryDelegatorUnbondingDelegationsResponse
+
+DelegatorUnbondingDelegations queries all unbonding delegations of a given delegator address.
+
+```ts
+import { getDelegatorUnbondingDelegations } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetDelegatorUnbondingDelegations } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDelegatorUnbondingDelegations` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDelegatorUnbondingDelegations` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDelegatorUnbondingDelegationsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryDelegatorUnbondingDelegationsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+
+---
 
 **Redelegations**
-- Function: `getRedelegations`
-- Hook: `useGetRedelegations`
-- Description: Redelegations queries redelegations of given address.
-- Request: QueryRedelegationsRequest
-- Response: QueryRedelegationsResponse
+
+Redelegations queries redelegations of given address.
+
+```ts
+import { getRedelegations } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetRedelegations } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getRedelegations` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetRedelegations` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryRedelegationsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryRedelegationsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+
+---
 
 **DelegatorValidators**
-- Function: `getDelegatorValidatorsCosmosStakingV1beta1`
-- Hook: `useGetDelegatorValidatorsCosmosStakingV1beta1`
-- Description: DelegatorValidators queries all validators info for given delegator
- address.
-- Request: QueryDelegatorValidatorsRequest
-- Response: QueryDelegatorValidatorsResponse
+
+DelegatorValidators queries all validators info for given delegator address.
+
+```ts
+import { getDelegatorValidatorsCosmosStakingV1beta1 } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetDelegatorValidatorsCosmosStakingV1beta1 } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDelegatorValidatorsCosmosStakingV1beta1` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDelegatorValidatorsCosmosStakingV1beta1` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDelegatorValidatorsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryDelegatorValidatorsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+
+---
 
 **DelegatorValidator**
-- Function: `getDelegatorValidator`
-- Hook: `useGetDelegatorValidator`
-- Description: DelegatorValidator queries validator info for given delegator validator
- pair.
-- Request: QueryDelegatorValidatorRequest
-- Response: QueryDelegatorValidatorResponse
+
+DelegatorValidator queries validator info for given delegator validator pair.
+
+```ts
+import { getDelegatorValidator } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetDelegatorValidator } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDelegatorValidator` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDelegatorValidator` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDelegatorValidatorRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryDelegatorValidatorResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+
+---
 
 **HistoricalInfo**
-- Function: `getHistoricalInfo`
-- Hook: `useGetHistoricalInfo`
-- Description: HistoricalInfo queries the historical info for given height.
-- Request: QueryHistoricalInfoRequest
-- Response: QueryHistoricalInfoResponse
+
+HistoricalInfo queries the historical info for given height.
+
+```ts
+import { getHistoricalInfo } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetHistoricalInfo } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getHistoricalInfo` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetHistoricalInfo` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryHistoricalInfoRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryHistoricalInfoResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+
+---
 
 **Pool**
-- Function: `getPoolCosmosStakingV1beta1`
-- Hook: `useGetPoolCosmosStakingV1beta1`
-- Description: Pool queries the pool info.
-- Request: QueryPoolRequest
-- Response: QueryPoolResponse
+
+Pool queries the pool info.
+
+```ts
+import { getPoolCosmosStakingV1beta1 } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetPoolCosmosStakingV1beta1 } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPoolCosmosStakingV1beta1` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetPoolCosmosStakingV1beta1` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryPoolRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryPoolResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+
+---
 
 **Params**
-- Function: `getCosmosStakingV1beta1Params`
-- Hook: `useGetCosmosStakingV1beta1Params`
-- Description: Parameters queries the staking parameters.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Parameters queries the staking parameters.
+
+```ts
+import { getCosmosStakingV1beta1Params } from 'outputicjs/cosmos/staking/v1beta1'
+import { useGetCosmosStakingV1beta1Params } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCosmosStakingV1beta1Params` | [View source ↗](cosmos/staking/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetCosmosStakingV1beta1Params` | [View source ↗](cosmos/staking/v1beta1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
 
 ### Transaction Methods
 
 **CreateValidator**
-- Function: `createValidator`
-- Hook: `useCreateValidator`
-- Description: CreateValidator defines a method for creating a new validator.
-- Request: MsgCreateValidator
-- Response: MsgCreateValidatorResponse
+
+CreateValidator defines a method for creating a new validator.
+
+```ts
+import { createValidator } from 'outputicjs/cosmos/staking/v1beta1'
+import { useCreateValidator } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createValidator` | [View source ↗](cosmos/staking/v1beta1/tx.rpc.func.ts) |
+| Hook | `useCreateValidator` | [View source ↗](cosmos/staking/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgCreateValidator` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Response | `MsgCreateValidatorResponse` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+
+---
 
 **EditValidator**
-- Function: `editValidator`
-- Hook: `useEditValidator`
-- Description: EditValidator defines a method for editing an existing validator.
-- Request: MsgEditValidator
-- Response: MsgEditValidatorResponse
+
+EditValidator defines a method for editing an existing validator.
+
+```ts
+import { editValidator } from 'outputicjs/cosmos/staking/v1beta1'
+import { useEditValidator } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `editValidator` | [View source ↗](cosmos/staking/v1beta1/tx.rpc.func.ts) |
+| Hook | `useEditValidator` | [View source ↗](cosmos/staking/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgEditValidator` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Response | `MsgEditValidatorResponse` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+
+---
 
 **Delegate**
-- Function: `delegate`
-- Hook: `useDelegate`
-- Description: Delegate defines a method for performing a delegation of coins
- from a delegator to a validator.
-- Request: MsgDelegate
-- Response: MsgDelegateResponse
+
+Delegate defines a method for performing a delegation of coins from a delegator to a validator.
+
+```ts
+import { delegate } from 'outputicjs/cosmos/staking/v1beta1'
+import { useDelegate } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `delegate` | [View source ↗](cosmos/staking/v1beta1/tx.rpc.func.ts) |
+| Hook | `useDelegate` | [View source ↗](cosmos/staking/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgDelegate` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Response | `MsgDelegateResponse` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+
+---
 
 **BeginRedelegate**
-- Function: `beginRedelegate`
-- Hook: `useBeginRedelegate`
-- Description: BeginRedelegate defines a method for performing a redelegation
- of coins from a delegator and source validator to a destination validator.
-- Request: MsgBeginRedelegate
-- Response: MsgBeginRedelegateResponse
+
+BeginRedelegate defines a method for performing a redelegation of coins from a delegator and source validator to a destination validator.
+
+```ts
+import { beginRedelegate } from 'outputicjs/cosmos/staking/v1beta1'
+import { useBeginRedelegate } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `beginRedelegate` | [View source ↗](cosmos/staking/v1beta1/tx.rpc.func.ts) |
+| Hook | `useBeginRedelegate` | [View source ↗](cosmos/staking/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgBeginRedelegate` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Response | `MsgBeginRedelegateResponse` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+
+---
 
 **Undelegate**
-- Function: `undelegate`
-- Hook: `useUndelegate`
-- Description: Undelegate defines a method for performing an undelegation from a
- delegate and a validator.
-- Request: MsgUndelegate
-- Response: MsgUndelegateResponse
 
+Undelegate defines a method for performing an undelegation from a delegate and a validator.
 
-## cosmos.tx.v1beta1
+```ts
+import { undelegate } from 'outputicjs/cosmos/staking/v1beta1'
+import { useUndelegate } from 'outputicjs/cosmos/staking/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `undelegate` | [View source ↗](cosmos/staking/v1beta1/tx.rpc.func.ts) |
+| Hook | `useUndelegate` | [View source ↗](cosmos/staking/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgUndelegate` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
+| Response | `MsgUndelegateResponse` | [View source ↗](cosmos/staking/v1beta1/tx.ts) |
 
 
 ## cosmos.upgrade.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `CancelSoftwareUpgradeProposal` | [View source ↗](cosmos/upgrade/v1beta1/upgrade.ts) |
+| Type | `ModuleVersion` | [View source ↗](cosmos/upgrade/v1beta1/upgrade.ts) |
+| Type | `MsgCancelUpgrade` | [View source ↗](cosmos/upgrade/v1beta1/tx.ts) |
+| Type | `MsgCancelUpgradeResponse` | [View source ↗](cosmos/upgrade/v1beta1/tx.ts) |
+| Type | `MsgSoftwareUpgrade` | [View source ↗](cosmos/upgrade/v1beta1/tx.ts) |
+| Type | `MsgSoftwareUpgradeResponse` | [View source ↗](cosmos/upgrade/v1beta1/tx.ts) |
+| Type | `Plan` | [View source ↗](cosmos/upgrade/v1beta1/upgrade.ts) |
+| Type | `QueryAppliedPlanRequest` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Type | `QueryAppliedPlanResponse` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Type | `QueryAuthorityRequest` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Type | `QueryAuthorityResponse` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Type | `QueryCurrentPlanRequest` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Type | `QueryCurrentPlanResponse` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Type | `QueryModuleVersionsRequest` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Type | `QueryModuleVersionsResponse` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Type | `QueryUpgradedConsensusStateRequest` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Type | `QueryUpgradedConsensusStateResponse` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Type | `SoftwareUpgradeProposal` | [View source ↗](cosmos/upgrade/v1beta1/upgrade.ts) |
+
 ### Query Methods
 
 **CurrentPlan**
-- Function: `getCurrentPlan`
-- Hook: `useGetCurrentPlan`
-- Description: CurrentPlan queries the current upgrade plan.
-- Request: QueryCurrentPlanRequest
-- Response: QueryCurrentPlanResponse
+
+CurrentPlan queries the current upgrade plan.
+
+```ts
+import { getCurrentPlan } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { useGetCurrentPlan } from 'outputicjs/cosmos/upgrade/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCurrentPlan` | [View source ↗](cosmos/upgrade/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetCurrentPlan` | [View source ↗](cosmos/upgrade/v1beta1/query.rpc.react.ts) |
+| Request | `QueryCurrentPlanRequest` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Response | `QueryCurrentPlanResponse` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+
+---
 
 **AppliedPlan**
-- Function: `getAppliedPlan`
-- Hook: `useGetAppliedPlan`
-- Description: AppliedPlan queries a previously applied upgrade plan by its name.
-- Request: QueryAppliedPlanRequest
-- Response: QueryAppliedPlanResponse
+
+AppliedPlan queries a previously applied upgrade plan by its name.
+
+```ts
+import { getAppliedPlan } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { useGetAppliedPlan } from 'outputicjs/cosmos/upgrade/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAppliedPlan` | [View source ↗](cosmos/upgrade/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetAppliedPlan` | [View source ↗](cosmos/upgrade/v1beta1/query.rpc.react.ts) |
+| Request | `QueryAppliedPlanRequest` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Response | `QueryAppliedPlanResponse` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+
+---
 
 **UpgradedConsensusState**
-- Function: `getUpgradedConsensusStateCosmosUpgradeV1beta1`
-- Hook: `useGetUpgradedConsensusStateCosmosUpgradeV1beta1`
-- Description: UpgradedConsensusState queries the consensus state that will serve
- as a trusted kernel for the next version of this chain. It will only be
- stored at the last height of this chain.
- UpgradedConsensusState RPC not supported with legacy querier
- This rpc is deprecated now that IBC has its own replacement
- (https://github.com/cosmos/ibc-go/blob/2c880a22e9f9cc75f62b527ca94aa75ce1106001/proto/ibc/core/client/v1/query.proto#L54)
-- Request: QueryUpgradedConsensusStateRequest
-- Response: QueryUpgradedConsensusStateResponse
+
+UpgradedConsensusState queries the consensus state that will serve as a trusted kernel for the next version of this chain. It will only be stored at the last height of this chain. UpgradedConsensusState RPC not supported with legacy querier This rpc is deprecated now that IBC has its own replacement (https://github.com/cosmos/ibc-go/blob/2c880a22e9f9cc75f62b527ca94aa75ce1106001/proto/ibc/core/client/v1/query.proto#L54)
+
+```ts
+import { getUpgradedConsensusStateCosmosUpgradeV1beta1 } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { useGetUpgradedConsensusStateCosmosUpgradeV1beta1 } from 'outputicjs/cosmos/upgrade/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getUpgradedConsensusStateCosmosUpgradeV1beta1` | [View source ↗](cosmos/upgrade/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetUpgradedConsensusStateCosmosUpgradeV1beta1` | [View source ↗](cosmos/upgrade/v1beta1/query.rpc.react.ts) |
+| Request | `QueryUpgradedConsensusStateRequest` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Response | `QueryUpgradedConsensusStateResponse` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+
+---
 
 **ModuleVersions**
-- Function: `getModuleVersions`
-- Hook: `useGetModuleVersions`
-- Description: ModuleVersions queries the list of module versions from state.
 
- Since: cosmos-sdk 0.43
-- Request: QueryModuleVersionsRequest
-- Response: QueryModuleVersionsResponse
+ModuleVersions queries the list of module versions from state. Since: cosmos-sdk 0.43
+
+```ts
+import { getModuleVersions } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { useGetModuleVersions } from 'outputicjs/cosmos/upgrade/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getModuleVersions` | [View source ↗](cosmos/upgrade/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetModuleVersions` | [View source ↗](cosmos/upgrade/v1beta1/query.rpc.react.ts) |
+| Request | `QueryModuleVersionsRequest` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Response | `QueryModuleVersionsResponse` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+
+---
 
 **Authority**
-- Function: `getAuthority`
-- Hook: `useGetAuthority`
-- Description: Returns the account with authority to conduct upgrades
-- Request: QueryAuthorityRequest
-- Response: QueryAuthorityResponse
+
+Returns the account with authority to conduct upgrades
+
+```ts
+import { getAuthority } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { useGetAuthority } from 'outputicjs/cosmos/upgrade/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAuthority` | [View source ↗](cosmos/upgrade/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetAuthority` | [View source ↗](cosmos/upgrade/v1beta1/query.rpc.react.ts) |
+| Request | `QueryAuthorityRequest` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Response | `QueryAuthorityResponse` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
 
 ### Transaction Methods
 
 **SoftwareUpgrade**
-- Function: `softwareUpgrade`
-- Hook: `useSoftwareUpgrade`
-- Description: SoftwareUpgrade is a governance operation for initiating a software upgrade.
 
- Since: cosmos-sdk 0.46
-- Request: MsgSoftwareUpgrade
-- Response: MsgSoftwareUpgradeResponse
+SoftwareUpgrade is a governance operation for initiating a software upgrade. Since: cosmos-sdk 0.46
+
+```ts
+import { softwareUpgrade } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { useSoftwareUpgrade } from 'outputicjs/cosmos/upgrade/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `softwareUpgrade` | [View source ↗](cosmos/upgrade/v1beta1/tx.rpc.func.ts) |
+| Hook | `useSoftwareUpgrade` | [View source ↗](cosmos/upgrade/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgSoftwareUpgrade` | [View source ↗](cosmos/upgrade/v1beta1/tx.ts) |
+| Response | `MsgSoftwareUpgradeResponse` | [View source ↗](cosmos/upgrade/v1beta1/tx.ts) |
+
+---
 
 **CancelUpgrade**
-- Function: `cancelUpgrade`
-- Hook: `useCancelUpgrade`
-- Description: CancelUpgrade is a governance operation for cancelling a previously
- approvid software upgrade.
 
- Since: cosmos-sdk 0.46
-- Request: MsgCancelUpgrade
-- Response: MsgCancelUpgradeResponse
+CancelUpgrade is a governance operation for cancelling a previously approvid software upgrade. Since: cosmos-sdk 0.46
+
+```ts
+import { cancelUpgrade } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { useCancelUpgrade } from 'outputicjs/cosmos/upgrade/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `cancelUpgrade` | [View source ↗](cosmos/upgrade/v1beta1/tx.rpc.func.ts) |
+| Hook | `useCancelUpgrade` | [View source ↗](cosmos/upgrade/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgCancelUpgrade` | [View source ↗](cosmos/upgrade/v1beta1/tx.ts) |
+| Response | `MsgCancelUpgradeResponse` | [View source ↗](cosmos/upgrade/v1beta1/tx.ts) |
 
 
 ## cosmos.vesting.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `BaseVestingAccount` | [View source ↗](cosmos/vesting/v1beta1/vesting.ts) |
+| Type | `ContinuousVestingAccount` | [View source ↗](cosmos/vesting/v1beta1/vesting.ts) |
+| Type | `DelayedVestingAccount` | [View source ↗](cosmos/vesting/v1beta1/vesting.ts) |
+| Type | `MsgCreatePeriodicVestingAccount` | [View source ↗](cosmos/vesting/v1beta1/tx.ts) |
+| Type | `MsgCreatePeriodicVestingAccountResponse` | [View source ↗](cosmos/vesting/v1beta1/tx.ts) |
+| Type | `MsgCreatePermanentLockedAccount` | [View source ↗](cosmos/vesting/v1beta1/tx.ts) |
+| Type | `MsgCreatePermanentLockedAccountResponse` | [View source ↗](cosmos/vesting/v1beta1/tx.ts) |
+| Type | `MsgCreateVestingAccount` | [View source ↗](cosmos/vesting/v1beta1/tx.ts) |
+| Type | `MsgCreateVestingAccountResponse` | [View source ↗](cosmos/vesting/v1beta1/tx.ts) |
+| Type | `Period` | [View source ↗](cosmos/vesting/v1beta1/vesting.ts) |
+| Type | `PeriodicVestingAccount` | [View source ↗](cosmos/vesting/v1beta1/vesting.ts) |
+| Type | `PermanentLockedAccount` | [View source ↗](cosmos/vesting/v1beta1/vesting.ts) |
+
 ### Transaction Methods
 
 **CreateVestingAccount**
-- Function: `createVestingAccount`
-- Hook: `useCreateVestingAccount`
-- Description: CreateVestingAccount defines a method that enables creating a vesting
- account.
-- Request: MsgCreateVestingAccount
-- Response: MsgCreateVestingAccountResponse
+
+CreateVestingAccount defines a method that enables creating a vesting account.
+
+```ts
+import { createVestingAccount } from 'outputicjs/cosmos/vesting/v1beta1'
+import { useCreateVestingAccount } from 'outputicjs/cosmos/vesting/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createVestingAccount` | [View source ↗](cosmos/vesting/v1beta1/tx.rpc.func.ts) |
+| Hook | `useCreateVestingAccount` | [View source ↗](cosmos/vesting/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgCreateVestingAccount` | [View source ↗](cosmos/vesting/v1beta1/tx.ts) |
+| Response | `MsgCreateVestingAccountResponse` | [View source ↗](cosmos/vesting/v1beta1/tx.ts) |
+
+---
 
 **CreatePermanentLockedAccount**
-- Function: `createPermanentLockedAccount`
-- Hook: `useCreatePermanentLockedAccount`
-- Description: CreatePermanentLockedAccount defines a method that enables creating a permanent
- locked account.
-- Request: MsgCreatePermanentLockedAccount
-- Response: MsgCreatePermanentLockedAccountResponse
+
+CreatePermanentLockedAccount defines a method that enables creating a permanent locked account.
+
+```ts
+import { createPermanentLockedAccount } from 'outputicjs/cosmos/vesting/v1beta1'
+import { useCreatePermanentLockedAccount } from 'outputicjs/cosmos/vesting/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createPermanentLockedAccount` | [View source ↗](cosmos/vesting/v1beta1/tx.rpc.func.ts) |
+| Hook | `useCreatePermanentLockedAccount` | [View source ↗](cosmos/vesting/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgCreatePermanentLockedAccount` | [View source ↗](cosmos/vesting/v1beta1/tx.ts) |
+| Response | `MsgCreatePermanentLockedAccountResponse` | [View source ↗](cosmos/vesting/v1beta1/tx.ts) |
+
+---
 
 **CreatePeriodicVestingAccount**
-- Function: `createPeriodicVestingAccount`
-- Hook: `useCreatePeriodicVestingAccount`
-- Description: CreatePeriodicVestingAccount defines a method that enables creating a
- periodic vesting account.
-- Request: MsgCreatePeriodicVestingAccount
-- Response: MsgCreatePeriodicVestingAccountResponse
+
+CreatePeriodicVestingAccount defines a method that enables creating a periodic vesting account.
+
+```ts
+import { createPeriodicVestingAccount } from 'outputicjs/cosmos/vesting/v1beta1'
+import { useCreatePeriodicVestingAccount } from 'outputicjs/cosmos/vesting/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createPeriodicVestingAccount` | [View source ↗](cosmos/vesting/v1beta1/tx.rpc.func.ts) |
+| Hook | `useCreatePeriodicVestingAccount` | [View source ↗](cosmos/vesting/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgCreatePeriodicVestingAccount` | [View source ↗](cosmos/vesting/v1beta1/tx.ts) |
+| Response | `MsgCreatePeriodicVestingAccountResponse` | [View source ↗](cosmos/vesting/v1beta1/tx.ts) |
 
 
 ## cosmwasm.wasm.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `AbsoluteTxPosition` | [View source ↗](cosmwasm/wasm/v1/types.ts) |
+| Type | `AccessConfig` | [View source ↗](cosmwasm/wasm/v1/types.ts) |
+| Type | `AccessType` | [View source ↗](cosmwasm/wasm/v1/types.ts) |
+| Type | `AccessTypeParam` | [View source ↗](cosmwasm/wasm/v1/types.ts) |
+| Type | `ClearAdminProposal` | [View source ↗](cosmwasm/wasm/v1/proposal.ts) |
+| Type | `Code` | [View source ↗](cosmwasm/wasm/v1/genesis.ts) |
+| Type | `CodeInfo` | [View source ↗](cosmwasm/wasm/v1/types.ts) |
+| Type | `CodeInfoResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `Contract` | [View source ↗](cosmwasm/wasm/v1/genesis.ts) |
+| Type | `ContractCodeHistoryEntry` | [View source ↗](cosmwasm/wasm/v1/types.ts) |
+| Type | `ContractCodeHistoryOperationType` | [View source ↗](cosmwasm/wasm/v1/types.ts) |
+| Type | `ContractInfo` | [View source ↗](cosmwasm/wasm/v1/types.ts) |
+| Type | `CosmwasmWasmV1Params` | [View source ↗](cosmwasm/wasm/v1/types.ts) |
+| Type | `ExecuteContractProposal` | [View source ↗](cosmwasm/wasm/v1/proposal.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `InstantiateContractProposal` | [View source ↗](cosmwasm/wasm/v1/proposal.ts) |
+| Type | `MigrateContractProposal` | [View source ↗](cosmwasm/wasm/v1/proposal.ts) |
+| Type | `Model` | [View source ↗](cosmwasm/wasm/v1/types.ts) |
+| Type | `MsgClearAdmin` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Type | `MsgClearAdminResponse` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Type | `MsgExecuteContract` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Type | `MsgExecuteContractResponse` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Type | `MsgIBCCloseChannel` | [View source ↗](cosmwasm/wasm/v1/ibc.ts) |
+| Type | `MsgIBCSend` | [View source ↗](cosmwasm/wasm/v1/ibc.ts) |
+| Type | `MsgInstantiateContract` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Type | `MsgInstantiateContractResponse` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Type | `MsgMigrateContract` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Type | `MsgMigrateContractResponse` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Type | `MsgStoreCode` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Type | `MsgStoreCodeResponse` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Type | `MsgUpdateAdmin` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Type | `MsgUpdateAdminResponse` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Type | `PinCodesProposal` | [View source ↗](cosmwasm/wasm/v1/proposal.ts) |
+| Type | `QueryAllContractStateRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryAllContractStateResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryCodeRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryCodeResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryCodesRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryCodesResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryContractHistoryRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryContractHistoryResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryContractInfoRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryContractInfoResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryContractsByCodeRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryContractsByCodeResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryPinnedCodesRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryPinnedCodesResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryRawContractStateRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QueryRawContractStateResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QuerySmartContractStateRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `QuerySmartContractStateResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Type | `Sequence` | [View source ↗](cosmwasm/wasm/v1/genesis.ts) |
+| Type | `StoreCodeProposal` | [View source ↗](cosmwasm/wasm/v1/proposal.ts) |
+| Type | `SudoContractProposal` | [View source ↗](cosmwasm/wasm/v1/proposal.ts) |
+| Type | `UnpinCodesProposal` | [View source ↗](cosmwasm/wasm/v1/proposal.ts) |
+| Type | `UpdateAdminProposal` | [View source ↗](cosmwasm/wasm/v1/proposal.ts) |
+
 ### Query Methods
 
 **ContractInfo**
-- Function: `getContractInfo`
-- Hook: `useGetContractInfo`
-- Description: ContractInfo gets the contract meta data
-- Request: QueryContractInfoRequest
-- Response: QueryContractInfoResponse
+
+ContractInfo gets the contract meta data
+
+```ts
+import { getContractInfo } from 'outputicjs/cosmwasm/wasm/v1'
+import { useGetContractInfo } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getContractInfo` | [View source ↗](cosmwasm/wasm/v1/query.rpc.func.ts) |
+| Hook | `useGetContractInfo` | [View source ↗](cosmwasm/wasm/v1/query.rpc.react.ts) |
+| Request | `QueryContractInfoRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Response | `QueryContractInfoResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+
+---
 
 **ContractHistory**
-- Function: `getContractHistory`
-- Hook: `useGetContractHistory`
-- Description: ContractHistory gets the contract code history
-- Request: QueryContractHistoryRequest
-- Response: QueryContractHistoryResponse
+
+ContractHistory gets the contract code history
+
+```ts
+import { getContractHistory } from 'outputicjs/cosmwasm/wasm/v1'
+import { useGetContractHistory } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getContractHistory` | [View source ↗](cosmwasm/wasm/v1/query.rpc.func.ts) |
+| Hook | `useGetContractHistory` | [View source ↗](cosmwasm/wasm/v1/query.rpc.react.ts) |
+| Request | `QueryContractHistoryRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Response | `QueryContractHistoryResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+
+---
 
 **ContractsByCode**
-- Function: `getContractsByCode`
-- Hook: `useGetContractsByCode`
-- Description: ContractsByCode lists all smart contracts for a code id
-- Request: QueryContractsByCodeRequest
-- Response: QueryContractsByCodeResponse
+
+ContractsByCode lists all smart contracts for a code id
+
+```ts
+import { getContractsByCode } from 'outputicjs/cosmwasm/wasm/v1'
+import { useGetContractsByCode } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getContractsByCode` | [View source ↗](cosmwasm/wasm/v1/query.rpc.func.ts) |
+| Hook | `useGetContractsByCode` | [View source ↗](cosmwasm/wasm/v1/query.rpc.react.ts) |
+| Request | `QueryContractsByCodeRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Response | `QueryContractsByCodeResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+
+---
 
 **AllContractState**
-- Function: `getAllContractState`
-- Hook: `useGetAllContractState`
-- Description: AllContractState gets all raw store data for a single contract
-- Request: QueryAllContractStateRequest
-- Response: QueryAllContractStateResponse
+
+AllContractState gets all raw store data for a single contract
+
+```ts
+import { getAllContractState } from 'outputicjs/cosmwasm/wasm/v1'
+import { useGetAllContractState } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAllContractState` | [View source ↗](cosmwasm/wasm/v1/query.rpc.func.ts) |
+| Hook | `useGetAllContractState` | [View source ↗](cosmwasm/wasm/v1/query.rpc.react.ts) |
+| Request | `QueryAllContractStateRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Response | `QueryAllContractStateResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+
+---
 
 **RawContractState**
-- Function: `getRawContractState`
-- Hook: `useGetRawContractState`
-- Description: RawContractState gets single key from the raw store data of a contract
-- Request: QueryRawContractStateRequest
-- Response: QueryRawContractStateResponse
+
+RawContractState gets single key from the raw store data of a contract
+
+```ts
+import { getRawContractState } from 'outputicjs/cosmwasm/wasm/v1'
+import { useGetRawContractState } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getRawContractState` | [View source ↗](cosmwasm/wasm/v1/query.rpc.func.ts) |
+| Hook | `useGetRawContractState` | [View source ↗](cosmwasm/wasm/v1/query.rpc.react.ts) |
+| Request | `QueryRawContractStateRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Response | `QueryRawContractStateResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+
+---
 
 **SmartContractState**
-- Function: `getSmartContractState`
-- Hook: `useGetSmartContractState`
-- Description: SmartContractState get smart query result from the contract
-- Request: QuerySmartContractStateRequest
-- Response: QuerySmartContractStateResponse
+
+SmartContractState get smart query result from the contract
+
+```ts
+import { getSmartContractState } from 'outputicjs/cosmwasm/wasm/v1'
+import { useGetSmartContractState } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSmartContractState` | [View source ↗](cosmwasm/wasm/v1/query.rpc.func.ts) |
+| Hook | `useGetSmartContractState` | [View source ↗](cosmwasm/wasm/v1/query.rpc.react.ts) |
+| Request | `QuerySmartContractStateRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Response | `QuerySmartContractStateResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+
+---
 
 **Code**
-- Function: `getCode`
-- Hook: `useGetCode`
-- Description: Code gets the binary code and metadata for a singe wasm code
-- Request: QueryCodeRequest
-- Response: QueryCodeResponse
+
+Code gets the binary code and metadata for a singe wasm code
+
+```ts
+import { getCode } from 'outputicjs/cosmwasm/wasm/v1'
+import { useGetCode } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCode` | [View source ↗](cosmwasm/wasm/v1/query.rpc.func.ts) |
+| Hook | `useGetCode` | [View source ↗](cosmwasm/wasm/v1/query.rpc.react.ts) |
+| Request | `QueryCodeRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Response | `QueryCodeResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+
+---
 
 **Codes**
-- Function: `getCodes`
-- Hook: `useGetCodes`
-- Description: Codes gets the metadata for all stored wasm codes
-- Request: QueryCodesRequest
-- Response: QueryCodesResponse
+
+Codes gets the metadata for all stored wasm codes
+
+```ts
+import { getCodes } from 'outputicjs/cosmwasm/wasm/v1'
+import { useGetCodes } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCodes` | [View source ↗](cosmwasm/wasm/v1/query.rpc.func.ts) |
+| Hook | `useGetCodes` | [View source ↗](cosmwasm/wasm/v1/query.rpc.react.ts) |
+| Request | `QueryCodesRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Response | `QueryCodesResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+
+---
 
 **PinnedCodes**
-- Function: `getPinnedCodes`
-- Hook: `useGetPinnedCodes`
-- Description: PinnedCodes gets the pinned code ids
-- Request: QueryPinnedCodesRequest
-- Response: QueryPinnedCodesResponse
+
+PinnedCodes gets the pinned code ids
+
+```ts
+import { getPinnedCodes } from 'outputicjs/cosmwasm/wasm/v1'
+import { useGetPinnedCodes } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPinnedCodes` | [View source ↗](cosmwasm/wasm/v1/query.rpc.func.ts) |
+| Hook | `useGetPinnedCodes` | [View source ↗](cosmwasm/wasm/v1/query.rpc.react.ts) |
+| Request | `QueryPinnedCodesRequest` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
+| Response | `QueryPinnedCodesResponse` | [View source ↗](cosmwasm/wasm/v1/query.ts) |
 
 ### Transaction Methods
 
 **StoreCode**
-- Function: `storeCode`
-- Hook: `useStoreCode`
-- Description: StoreCode to submit Wasm code to the system
-- Request: MsgStoreCode
-- Response: MsgStoreCodeResponse
+
+StoreCode to submit Wasm code to the system
+
+```ts
+import { storeCode } from 'outputicjs/cosmwasm/wasm/v1'
+import { useStoreCode } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `storeCode` | [View source ↗](cosmwasm/wasm/v1/tx.rpc.func.ts) |
+| Hook | `useStoreCode` | [View source ↗](cosmwasm/wasm/v1/tx.rpc.react.ts) |
+| Request | `MsgStoreCode` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Response | `MsgStoreCodeResponse` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+
+---
 
 **InstantiateContract**
-- Function: `instantiateContract`
-- Hook: `useInstantiateContract`
-- Description: Instantiate creates a new smart contract instance for the given code id.
-- Request: MsgInstantiateContract
-- Response: MsgInstantiateContractResponse
+
+Instantiate creates a new smart contract instance for the given code id.
+
+```ts
+import { instantiateContract } from 'outputicjs/cosmwasm/wasm/v1'
+import { useInstantiateContract } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `instantiateContract` | [View source ↗](cosmwasm/wasm/v1/tx.rpc.func.ts) |
+| Hook | `useInstantiateContract` | [View source ↗](cosmwasm/wasm/v1/tx.rpc.react.ts) |
+| Request | `MsgInstantiateContract` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Response | `MsgInstantiateContractResponse` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+
+---
 
 **ExecuteContract**
-- Function: `executeContract`
-- Hook: `useExecuteContract`
-- Description: Execute submits the given message data to a smart contract
-- Request: MsgExecuteContract
-- Response: MsgExecuteContractResponse
+
+Execute submits the given message data to a smart contract
+
+```ts
+import { executeContract } from 'outputicjs/cosmwasm/wasm/v1'
+import { useExecuteContract } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `executeContract` | [View source ↗](cosmwasm/wasm/v1/tx.rpc.func.ts) |
+| Hook | `useExecuteContract` | [View source ↗](cosmwasm/wasm/v1/tx.rpc.react.ts) |
+| Request | `MsgExecuteContract` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Response | `MsgExecuteContractResponse` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+
+---
 
 **MigrateContract**
-- Function: `migrateContract`
-- Hook: `useMigrateContract`
-- Description: Migrate runs a code upgrade/ downgrade for a smart contract
-- Request: MsgMigrateContract
-- Response: MsgMigrateContractResponse
+
+Migrate runs a code upgrade/ downgrade for a smart contract
+
+```ts
+import { migrateContract } from 'outputicjs/cosmwasm/wasm/v1'
+import { useMigrateContract } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `migrateContract` | [View source ↗](cosmwasm/wasm/v1/tx.rpc.func.ts) |
+| Hook | `useMigrateContract` | [View source ↗](cosmwasm/wasm/v1/tx.rpc.react.ts) |
+| Request | `MsgMigrateContract` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Response | `MsgMigrateContractResponse` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+
+---
 
 **UpdateAdmin**
-- Function: `updateAdmin`
-- Hook: `useUpdateAdmin`
-- Description: UpdateAdmin sets a new   admin for a smart contract
-- Request: MsgUpdateAdmin
-- Response: MsgUpdateAdminResponse
+
+UpdateAdmin sets a new admin for a smart contract
+
+```ts
+import { updateAdmin } from 'outputicjs/cosmwasm/wasm/v1'
+import { useUpdateAdmin } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `updateAdmin` | [View source ↗](cosmwasm/wasm/v1/tx.rpc.func.ts) |
+| Hook | `useUpdateAdmin` | [View source ↗](cosmwasm/wasm/v1/tx.rpc.react.ts) |
+| Request | `MsgUpdateAdmin` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Response | `MsgUpdateAdminResponse` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+
+---
 
 **ClearAdmin**
-- Function: `clearAdmin`
-- Hook: `useClearAdmin`
-- Description: ClearAdmin removes any admin stored for a smart contract
-- Request: MsgClearAdmin
-- Response: MsgClearAdminResponse
+
+ClearAdmin removes any admin stored for a smart contract
+
+```ts
+import { clearAdmin } from 'outputicjs/cosmwasm/wasm/v1'
+import { useClearAdmin } from 'outputicjs/cosmwasm/wasm/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `clearAdmin` | [View source ↗](cosmwasm/wasm/v1/tx.rpc.func.ts) |
+| Hook | `useClearAdmin` | [View source ↗](cosmwasm/wasm/v1/tx.rpc.react.ts) |
+| Request | `MsgClearAdmin` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
+| Response | `MsgClearAdminResponse` | [View source ↗](cosmwasm/wasm/v1/tx.ts) |
 
 
 ## evmos.claims.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `Action` | [View source ↗](evmos/claims/v1/claims.ts) |
+| Type | `Claim` | [View source ↗](evmos/claims/v1/claims.ts) |
+| Type | `ClaimsRecord` | [View source ↗](evmos/claims/v1/claims.ts) |
+| Type | `ClaimsRecordAddress` | [View source ↗](evmos/claims/v1/claims.ts) |
+| Type | `EvmosClaimsV1Params` | [View source ↗](evmos/claims/v1/genesis.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `QueryClaimsRecordRequest` | [View source ↗](evmos/claims/v1/query.ts) |
+| Type | `QueryClaimsRecordResponse` | [View source ↗](evmos/claims/v1/query.ts) |
+| Type | `QueryClaimsRecordsRequest` | [View source ↗](evmos/claims/v1/query.ts) |
+| Type | `QueryClaimsRecordsResponse` | [View source ↗](evmos/claims/v1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryTotalUnclaimedRequest` | [View source ↗](evmos/claims/v1/query.ts) |
+| Type | `QueryTotalUnclaimedResponse` | [View source ↗](evmos/claims/v1/query.ts) |
+
 ### Query Methods
 
 **TotalUnclaimed**
-- Function: `getTotalUnclaimed`
-- Hook: `useGetTotalUnclaimed`
-- Description: TotalUnclaimed queries the total unclaimed tokens from the airdrop
-- Request: QueryTotalUnclaimedRequest
-- Response: QueryTotalUnclaimedResponse
+
+TotalUnclaimed queries the total unclaimed tokens from the airdrop
+
+```ts
+import { getTotalUnclaimed } from 'outputicjs/evmos/claims/v1'
+import { useGetTotalUnclaimed } from 'outputicjs/evmos/claims/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTotalUnclaimed` | [View source ↗](evmos/claims/v1/query.rpc.func.ts) |
+| Hook | `useGetTotalUnclaimed` | [View source ↗](evmos/claims/v1/query.rpc.react.ts) |
+| Request | `QueryTotalUnclaimedRequest` | [View source ↗](evmos/claims/v1/query.ts) |
+| Response | `QueryTotalUnclaimedResponse` | [View source ↗](evmos/claims/v1/query.ts) |
+
+---
 
 **Params**
-- Function: `getEvmosClaimsV1Params`
-- Hook: `useGetEvmosClaimsV1Params`
-- Description: Params returns the claims module parameters
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params returns the claims module parameters
+
+```ts
+import { getEvmosClaimsV1Params } from 'outputicjs/evmos/claims/v1'
+import { useGetEvmosClaimsV1Params } from 'outputicjs/evmos/claims/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEvmosClaimsV1Params` | [View source ↗](evmos/claims/v1/query.rpc.func.ts) |
+| Hook | `useGetEvmosClaimsV1Params` | [View source ↗](evmos/claims/v1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](evmos/claims/v1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](evmos/claims/v1/query.ts) |
+
+---
 
 **ClaimsRecords**
-- Function: `getClaimsRecords`
-- Hook: `useGetClaimsRecords`
-- Description: ClaimsRecords returns all claims records
-- Request: QueryClaimsRecordsRequest
-- Response: QueryClaimsRecordsResponse
+
+ClaimsRecords returns all claims records
+
+```ts
+import { getClaimsRecords } from 'outputicjs/evmos/claims/v1'
+import { useGetClaimsRecords } from 'outputicjs/evmos/claims/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getClaimsRecords` | [View source ↗](evmos/claims/v1/query.rpc.func.ts) |
+| Hook | `useGetClaimsRecords` | [View source ↗](evmos/claims/v1/query.rpc.react.ts) |
+| Request | `QueryClaimsRecordsRequest` | [View source ↗](evmos/claims/v1/query.ts) |
+| Response | `QueryClaimsRecordsResponse` | [View source ↗](evmos/claims/v1/query.ts) |
+
+---
 
 **ClaimsRecord**
-- Function: `getClaimsRecord`
-- Hook: `useGetClaimsRecord`
-- Description: ClaimsRecord returns the claims record for a given address
-- Request: QueryClaimsRecordRequest
-- Response: QueryClaimsRecordResponse
+
+ClaimsRecord returns the claims record for a given address
+
+```ts
+import { getClaimsRecord } from 'outputicjs/evmos/claims/v1'
+import { useGetClaimsRecord } from 'outputicjs/evmos/claims/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getClaimsRecord` | [View source ↗](evmos/claims/v1/query.rpc.func.ts) |
+| Hook | `useGetClaimsRecord` | [View source ↗](evmos/claims/v1/query.rpc.react.ts) |
+| Request | `QueryClaimsRecordRequest` | [View source ↗](evmos/claims/v1/query.ts) |
+| Response | `QueryClaimsRecordResponse` | [View source ↗](evmos/claims/v1/query.ts) |
 
 
 ## evmos.epochs.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `EpochInfo` | [View source ↗](evmos/epochs/v1/genesis.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `QueryCurrentEpochRequest` | [View source ↗](evmos/epochs/v1/query.ts) |
+| Type | `QueryCurrentEpochResponse` | [View source ↗](evmos/epochs/v1/query.ts) |
+| Type | `QueryEpochsInfoRequest` | [View source ↗](evmos/epochs/v1/query.ts) |
+| Type | `QueryEpochsInfoResponse` | [View source ↗](evmos/epochs/v1/query.ts) |
+
 ### Query Methods
 
 **EpochInfos**
-- Function: `getEpochInfosEvmosEpochsV1`
-- Hook: `useGetEpochInfosEvmosEpochsV1`
-- Description: EpochInfos provide running epochInfos
-- Request: QueryEpochsInfoRequest
-- Response: QueryEpochsInfoResponse
+
+EpochInfos provide running epochInfos
+
+```ts
+import { getEpochInfosEvmosEpochsV1 } from 'outputicjs/evmos/epochs/v1'
+import { useGetEpochInfosEvmosEpochsV1 } from 'outputicjs/evmos/epochs/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEpochInfosEvmosEpochsV1` | [View source ↗](evmos/epochs/v1/query.rpc.func.ts) |
+| Hook | `useGetEpochInfosEvmosEpochsV1` | [View source ↗](evmos/epochs/v1/query.rpc.react.ts) |
+| Request | `QueryEpochsInfoRequest` | [View source ↗](evmos/epochs/v1/query.ts) |
+| Response | `QueryEpochsInfoResponse` | [View source ↗](evmos/epochs/v1/query.ts) |
+
+---
 
 **CurrentEpoch**
-- Function: `getCurrentEpochEvmosEpochsV1`
-- Hook: `useGetCurrentEpochEvmosEpochsV1`
-- Description: CurrentEpoch provide current epoch of specified identifier
-- Request: QueryCurrentEpochRequest
-- Response: QueryCurrentEpochResponse
+
+CurrentEpoch provide current epoch of specified identifier
+
+```ts
+import { getCurrentEpochEvmosEpochsV1 } from 'outputicjs/evmos/epochs/v1'
+import { useGetCurrentEpochEvmosEpochsV1 } from 'outputicjs/evmos/epochs/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCurrentEpochEvmosEpochsV1` | [View source ↗](evmos/epochs/v1/query.rpc.func.ts) |
+| Hook | `useGetCurrentEpochEvmosEpochsV1` | [View source ↗](evmos/epochs/v1/query.rpc.react.ts) |
+| Request | `QueryCurrentEpochRequest` | [View source ↗](evmos/epochs/v1/query.ts) |
+| Response | `QueryCurrentEpochResponse` | [View source ↗](evmos/epochs/v1/query.ts) |
 
 
 ## evmos.erc20.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `EvmosErc20V1Params` | [View source ↗](evmos/erc20/v1/genesis.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MsgConvertCoin` | [View source ↗](evmos/erc20/v1/tx.ts) |
+| Type | `MsgConvertCoinResponse` | [View source ↗](evmos/erc20/v1/tx.ts) |
+| Type | `MsgConvertERC20` | [View source ↗](evmos/erc20/v1/tx.ts) |
+| Type | `MsgConvertERC20Response` | [View source ↗](evmos/erc20/v1/tx.ts) |
+| Type | `Owner` | [View source ↗](cosmos/capability/v1beta1/capability.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryTokenPairRequest` | [View source ↗](evmos/erc20/v1/query.ts) |
+| Type | `QueryTokenPairResponse` | [View source ↗](evmos/erc20/v1/query.ts) |
+| Type | `QueryTokenPairsRequest` | [View source ↗](evmos/erc20/v1/query.ts) |
+| Type | `QueryTokenPairsResponse` | [View source ↗](evmos/erc20/v1/query.ts) |
+| Type | `RegisterCoinProposal` | [View source ↗](evmos/erc20/v1/erc20.ts) |
+| Type | `RegisterERC20Proposal` | [View source ↗](evmos/erc20/v1/erc20.ts) |
+| Type | `ToggleTokenConversionProposal` | [View source ↗](evmos/erc20/v1/erc20.ts) |
+| Type | `TokenPair` | [View source ↗](evmos/erc20/v1/erc20.ts) |
+
 ### Query Methods
 
 **TokenPairs**
-- Function: `getTokenPairs`
-- Hook: `useGetTokenPairs`
-- Description: TokenPairs retrieves registered token pairs
-- Request: QueryTokenPairsRequest
-- Response: QueryTokenPairsResponse
+
+TokenPairs retrieves registered token pairs
+
+```ts
+import { getTokenPairs } from 'outputicjs/evmos/erc20/v1'
+import { useGetTokenPairs } from 'outputicjs/evmos/erc20/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTokenPairs` | [View source ↗](evmos/erc20/v1/query.rpc.func.ts) |
+| Hook | `useGetTokenPairs` | [View source ↗](evmos/erc20/v1/query.rpc.react.ts) |
+| Request | `QueryTokenPairsRequest` | [View source ↗](evmos/erc20/v1/query.ts) |
+| Response | `QueryTokenPairsResponse` | [View source ↗](evmos/erc20/v1/query.ts) |
+
+---
 
 **TokenPair**
-- Function: `getTokenPair`
-- Hook: `useGetTokenPair`
-- Description: TokenPair retrieves a registered token pair
-- Request: QueryTokenPairRequest
-- Response: QueryTokenPairResponse
+
+TokenPair retrieves a registered token pair
+
+```ts
+import { getTokenPair } from 'outputicjs/evmos/erc20/v1'
+import { useGetTokenPair } from 'outputicjs/evmos/erc20/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTokenPair` | [View source ↗](evmos/erc20/v1/query.rpc.func.ts) |
+| Hook | `useGetTokenPair` | [View source ↗](evmos/erc20/v1/query.rpc.react.ts) |
+| Request | `QueryTokenPairRequest` | [View source ↗](evmos/erc20/v1/query.ts) |
+| Response | `QueryTokenPairResponse` | [View source ↗](evmos/erc20/v1/query.ts) |
+
+---
 
 **Params**
-- Function: `getEvmosErc20V1Params`
-- Hook: `useGetEvmosErc20V1Params`
-- Description: Params retrieves the erc20 module params
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params retrieves the erc20 module params
+
+```ts
+import { getEvmosErc20V1Params } from 'outputicjs/evmos/erc20/v1'
+import { useGetEvmosErc20V1Params } from 'outputicjs/evmos/erc20/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEvmosErc20V1Params` | [View source ↗](evmos/erc20/v1/query.rpc.func.ts) |
+| Hook | `useGetEvmosErc20V1Params` | [View source ↗](evmos/erc20/v1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](evmos/erc20/v1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](evmos/erc20/v1/query.ts) |
 
 ### Transaction Methods
 
 **ConvertCoin**
-- Function: `convertCoin`
-- Hook: `useConvertCoin`
-- Description: ConvertCoin mints a ERC20 representation of the native Cosmos coin denom
- that is registered on the token mapping.
-- Request: MsgConvertCoin
-- Response: MsgConvertCoinResponse
+
+ConvertCoin mints a ERC20 representation of the native Cosmos coin denom that is registered on the token mapping.
+
+```ts
+import { convertCoin } from 'outputicjs/evmos/erc20/v1'
+import { useConvertCoin } from 'outputicjs/evmos/erc20/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `convertCoin` | [View source ↗](evmos/erc20/v1/tx.rpc.func.ts) |
+| Hook | `useConvertCoin` | [View source ↗](evmos/erc20/v1/tx.rpc.react.ts) |
+| Request | `MsgConvertCoin` | [View source ↗](evmos/erc20/v1/tx.ts) |
+| Response | `MsgConvertCoinResponse` | [View source ↗](evmos/erc20/v1/tx.ts) |
+
+---
 
 **ConvertERC20**
-- Function: `convertERC20`
-- Hook: `useConvertERC20`
-- Description: ConvertERC20 mints a native Cosmos coin representation of the ERC20 token
- contract that is registered on the token mapping.
-- Request: MsgConvertERC20
-- Response: MsgConvertERC20Response
+
+ConvertERC20 mints a native Cosmos coin representation of the ERC20 token contract that is registered on the token mapping.
+
+```ts
+import { convertERC20 } from 'outputicjs/evmos/erc20/v1'
+import { useConvertERC20 } from 'outputicjs/evmos/erc20/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `convertERC20` | [View source ↗](evmos/erc20/v1/tx.rpc.func.ts) |
+| Hook | `useConvertERC20` | [View source ↗](evmos/erc20/v1/tx.rpc.react.ts) |
+| Request | `MsgConvertERC20` | [View source ↗](evmos/erc20/v1/tx.ts) |
+| Response | `MsgConvertERC20Response` | [View source ↗](evmos/erc20/v1/tx.ts) |
 
 
 ## evmos.fees.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `DevFeeInfo` | [View source ↗](evmos/fees/v1/fees.ts) |
+| Type | `EvmosFeesV1Params` | [View source ↗](evmos/fees/v1/genesis.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MsgCancelDevFeeInfo` | [View source ↗](evmos/fees/v1/tx.ts) |
+| Type | `MsgCancelDevFeeInfoResponse` | [View source ↗](evmos/fees/v1/tx.ts) |
+| Type | `MsgRegisterDevFeeInfo` | [View source ↗](evmos/fees/v1/tx.ts) |
+| Type | `MsgRegisterDevFeeInfoResponse` | [View source ↗](evmos/fees/v1/tx.ts) |
+| Type | `MsgUpdateDevFeeInfo` | [View source ↗](evmos/fees/v1/tx.ts) |
+| Type | `MsgUpdateDevFeeInfoResponse` | [View source ↗](evmos/fees/v1/tx.ts) |
+| Type | `QueryDevFeeInfoRequest` | [View source ↗](evmos/fees/v1/query.ts) |
+| Type | `QueryDevFeeInfoResponse` | [View source ↗](evmos/fees/v1/query.ts) |
+| Type | `QueryDevFeeInfosPerDeployerRequest` | [View source ↗](evmos/fees/v1/query.ts) |
+| Type | `QueryDevFeeInfosPerDeployerResponse` | [View source ↗](evmos/fees/v1/query.ts) |
+| Type | `QueryDevFeeInfosRequest` | [View source ↗](evmos/fees/v1/query.ts) |
+| Type | `QueryDevFeeInfosResponse` | [View source ↗](evmos/fees/v1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+
 ### Query Methods
 
 **DevFeeInfos**
-- Function: `getDevFeeInfos`
-- Hook: `useGetDevFeeInfos`
-- Description: DevFeeInfos retrieves all registered contracts for fee distribution
-- Request: QueryDevFeeInfosRequest
-- Response: QueryDevFeeInfosResponse
+
+DevFeeInfos retrieves all registered contracts for fee distribution
+
+```ts
+import { getDevFeeInfos } from 'outputicjs/evmos/fees/v1'
+import { useGetDevFeeInfos } from 'outputicjs/evmos/fees/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDevFeeInfos` | [View source ↗](evmos/fees/v1/query.rpc.func.ts) |
+| Hook | `useGetDevFeeInfos` | [View source ↗](evmos/fees/v1/query.rpc.react.ts) |
+| Request | `QueryDevFeeInfosRequest` | [View source ↗](evmos/fees/v1/query.ts) |
+| Response | `QueryDevFeeInfosResponse` | [View source ↗](evmos/fees/v1/query.ts) |
+
+---
 
 **DevFeeInfo**
-- Function: `getDevFeeInfo`
-- Hook: `useGetDevFeeInfo`
-- Description: DevFeeInfo retrieves a registered contract for fee distribution
-- Request: QueryDevFeeInfoRequest
-- Response: QueryDevFeeInfoResponse
+
+DevFeeInfo retrieves a registered contract for fee distribution
+
+```ts
+import { getDevFeeInfo } from 'outputicjs/evmos/fees/v1'
+import { useGetDevFeeInfo } from 'outputicjs/evmos/fees/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDevFeeInfo` | [View source ↗](evmos/fees/v1/query.rpc.func.ts) |
+| Hook | `useGetDevFeeInfo` | [View source ↗](evmos/fees/v1/query.rpc.react.ts) |
+| Request | `QueryDevFeeInfoRequest` | [View source ↗](evmos/fees/v1/query.ts) |
+| Response | `QueryDevFeeInfoResponse` | [View source ↗](evmos/fees/v1/query.ts) |
+
+---
 
 **Params**
-- Function: `getEvmosFeesV1Params`
-- Hook: `useGetEvmosFeesV1Params`
-- Description: Params retrieves the fees module params
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params retrieves the fees module params
+
+```ts
+import { getEvmosFeesV1Params } from 'outputicjs/evmos/fees/v1'
+import { useGetEvmosFeesV1Params } from 'outputicjs/evmos/fees/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEvmosFeesV1Params` | [View source ↗](evmos/fees/v1/query.rpc.func.ts) |
+| Hook | `useGetEvmosFeesV1Params` | [View source ↗](evmos/fees/v1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](evmos/fees/v1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](evmos/fees/v1/query.ts) |
+
+---
 
 **DevFeeInfosPerDeployer**
-- Function: `getDevFeeInfosPerDeployer`
-- Hook: `useGetDevFeeInfosPerDeployer`
-- Description: DevFeeInfosPerDeployer retrieves all contracts that a deployer has
- registered for fee distribution
-- Request: QueryDevFeeInfosPerDeployerRequest
-- Response: QueryDevFeeInfosPerDeployerResponse
+
+DevFeeInfosPerDeployer retrieves all contracts that a deployer has registered for fee distribution
+
+```ts
+import { getDevFeeInfosPerDeployer } from 'outputicjs/evmos/fees/v1'
+import { useGetDevFeeInfosPerDeployer } from 'outputicjs/evmos/fees/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDevFeeInfosPerDeployer` | [View source ↗](evmos/fees/v1/query.rpc.func.ts) |
+| Hook | `useGetDevFeeInfosPerDeployer` | [View source ↗](evmos/fees/v1/query.rpc.react.ts) |
+| Request | `QueryDevFeeInfosPerDeployerRequest` | [View source ↗](evmos/fees/v1/query.ts) |
+| Response | `QueryDevFeeInfosPerDeployerResponse` | [View source ↗](evmos/fees/v1/query.ts) |
 
 ### Transaction Methods
 
 **RegisterDevFeeInfo**
-- Function: `registerDevFeeInfo`
-- Hook: `useRegisterDevFeeInfo`
-- Description: RegisterDevFeeInfo is used by a deployer to register a new contract for
- receiving transaction fees
-- Request: MsgRegisterDevFeeInfo
-- Response: MsgRegisterDevFeeInfoResponse
+
+RegisterDevFeeInfo is used by a deployer to register a new contract for receiving transaction fees
+
+```ts
+import { registerDevFeeInfo } from 'outputicjs/evmos/fees/v1'
+import { useRegisterDevFeeInfo } from 'outputicjs/evmos/fees/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `registerDevFeeInfo` | [View source ↗](evmos/fees/v1/tx.rpc.func.ts) |
+| Hook | `useRegisterDevFeeInfo` | [View source ↗](evmos/fees/v1/tx.rpc.react.ts) |
+| Request | `MsgRegisterDevFeeInfo` | [View source ↗](evmos/fees/v1/tx.ts) |
+| Response | `MsgRegisterDevFeeInfoResponse` | [View source ↗](evmos/fees/v1/tx.ts) |
+
+---
 
 **CancelDevFeeInfo**
-- Function: `cancelDevFeeInfo`
-- Hook: `useCancelDevFeeInfo`
-- Description: CancelDevFeeInfo is used by a deployer to cancel a registered contract
- and stop receiving transaction fees
-- Request: MsgCancelDevFeeInfo
-- Response: MsgCancelDevFeeInfoResponse
+
+CancelDevFeeInfo is used by a deployer to cancel a registered contract and stop receiving transaction fees
+
+```ts
+import { cancelDevFeeInfo } from 'outputicjs/evmos/fees/v1'
+import { useCancelDevFeeInfo } from 'outputicjs/evmos/fees/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `cancelDevFeeInfo` | [View source ↗](evmos/fees/v1/tx.rpc.func.ts) |
+| Hook | `useCancelDevFeeInfo` | [View source ↗](evmos/fees/v1/tx.rpc.react.ts) |
+| Request | `MsgCancelDevFeeInfo` | [View source ↗](evmos/fees/v1/tx.ts) |
+| Response | `MsgCancelDevFeeInfoResponse` | [View source ↗](evmos/fees/v1/tx.ts) |
+
+---
 
 **UpdateDevFeeInfo**
-- Function: `updateDevFeeInfo`
-- Hook: `useUpdateDevFeeInfo`
-- Description: UpdateDevFeeInfo is used by a deployer to update the withdraw address
-- Request: MsgUpdateDevFeeInfo
-- Response: MsgUpdateDevFeeInfoResponse
+
+UpdateDevFeeInfo is used by a deployer to update the withdraw address
+
+```ts
+import { updateDevFeeInfo } from 'outputicjs/evmos/fees/v1'
+import { useUpdateDevFeeInfo } from 'outputicjs/evmos/fees/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `updateDevFeeInfo` | [View source ↗](evmos/fees/v1/tx.rpc.func.ts) |
+| Hook | `useUpdateDevFeeInfo` | [View source ↗](evmos/fees/v1/tx.rpc.react.ts) |
+| Request | `MsgUpdateDevFeeInfo` | [View source ↗](evmos/fees/v1/tx.ts) |
+| Response | `MsgUpdateDevFeeInfoResponse` | [View source ↗](evmos/fees/v1/tx.ts) |
 
 
 ## evmos.incentives.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `CancelIncentiveProposal` | [View source ↗](evmos/incentives/v1/incentives.ts) |
+| Type | `EvmosIncentivesV1Params` | [View source ↗](evmos/incentives/v1/genesis.ts) |
+| Type | `GasMeter` | [View source ↗](evmos/incentives/v1/incentives.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `Incentive` | [View source ↗](evmos/incentives/v1/incentives.ts) |
+| Type | `QueryAllocationMeterRequest` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Type | `QueryAllocationMeterResponse` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Type | `QueryAllocationMetersRequest` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Type | `QueryAllocationMetersResponse` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Type | `QueryGasMeterRequest` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Type | `QueryGasMeterResponse` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Type | `QueryGasMetersRequest` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Type | `QueryGasMetersResponse` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Type | `QueryIncentiveRequest` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Type | `QueryIncentiveResponse` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Type | `QueryIncentivesRequest` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Type | `QueryIncentivesResponse` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `RegisterIncentiveProposal` | [View source ↗](evmos/incentives/v1/incentives.ts) |
+
 ### Query Methods
 
 **Incentives**
-- Function: `getIncentives`
-- Hook: `useGetIncentives`
-- Description: Incentives retrieves registered incentives
-- Request: QueryIncentivesRequest
-- Response: QueryIncentivesResponse
+
+Incentives retrieves registered incentives
+
+```ts
+import { getIncentives } from 'outputicjs/evmos/incentives/v1'
+import { useGetIncentives } from 'outputicjs/evmos/incentives/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getIncentives` | [View source ↗](evmos/incentives/v1/query.rpc.func.ts) |
+| Hook | `useGetIncentives` | [View source ↗](evmos/incentives/v1/query.rpc.react.ts) |
+| Request | `QueryIncentivesRequest` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Response | `QueryIncentivesResponse` | [View source ↗](evmos/incentives/v1/query.ts) |
+
+---
 
 **Incentive**
-- Function: `getIncentive`
-- Hook: `useGetIncentive`
-- Description: Incentive retrieves a registered incentive
-- Request: QueryIncentiveRequest
-- Response: QueryIncentiveResponse
+
+Incentive retrieves a registered incentive
+
+```ts
+import { getIncentive } from 'outputicjs/evmos/incentives/v1'
+import { useGetIncentive } from 'outputicjs/evmos/incentives/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getIncentive` | [View source ↗](evmos/incentives/v1/query.rpc.func.ts) |
+| Hook | `useGetIncentive` | [View source ↗](evmos/incentives/v1/query.rpc.react.ts) |
+| Request | `QueryIncentiveRequest` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Response | `QueryIncentiveResponse` | [View source ↗](evmos/incentives/v1/query.ts) |
+
+---
 
 **GasMeters**
-- Function: `getGasMeters`
-- Hook: `useGetGasMeters`
-- Description: GasMeters retrieves active gas meters for a given contract
-- Request: QueryGasMetersRequest
-- Response: QueryGasMetersResponse
+
+GasMeters retrieves active gas meters for a given contract
+
+```ts
+import { getGasMeters } from 'outputicjs/evmos/incentives/v1'
+import { useGetGasMeters } from 'outputicjs/evmos/incentives/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGasMeters` | [View source ↗](evmos/incentives/v1/query.rpc.func.ts) |
+| Hook | `useGetGasMeters` | [View source ↗](evmos/incentives/v1/query.rpc.react.ts) |
+| Request | `QueryGasMetersRequest` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Response | `QueryGasMetersResponse` | [View source ↗](evmos/incentives/v1/query.ts) |
+
+---
 
 **GasMeter**
-- Function: `getGasMeter`
-- Hook: `useGetGasMeter`
-- Description: GasMeter Retrieves a active gas meter
-- Request: QueryGasMeterRequest
-- Response: QueryGasMeterResponse
+
+GasMeter Retrieves a active gas meter
+
+```ts
+import { getGasMeter } from 'outputicjs/evmos/incentives/v1'
+import { useGetGasMeter } from 'outputicjs/evmos/incentives/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGasMeter` | [View source ↗](evmos/incentives/v1/query.rpc.func.ts) |
+| Hook | `useGetGasMeter` | [View source ↗](evmos/incentives/v1/query.rpc.react.ts) |
+| Request | `QueryGasMeterRequest` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Response | `QueryGasMeterResponse` | [View source ↗](evmos/incentives/v1/query.ts) |
+
+---
 
 **AllocationMeters**
-- Function: `getAllocationMeters`
-- Hook: `useGetAllocationMeters`
-- Description: AllocationMeters retrieves active allocation meters for a given
- denomination
-- Request: QueryAllocationMetersRequest
-- Response: QueryAllocationMetersResponse
+
+AllocationMeters retrieves active allocation meters for a given denomination
+
+```ts
+import { getAllocationMeters } from 'outputicjs/evmos/incentives/v1'
+import { useGetAllocationMeters } from 'outputicjs/evmos/incentives/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAllocationMeters` | [View source ↗](evmos/incentives/v1/query.rpc.func.ts) |
+| Hook | `useGetAllocationMeters` | [View source ↗](evmos/incentives/v1/query.rpc.react.ts) |
+| Request | `QueryAllocationMetersRequest` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Response | `QueryAllocationMetersResponse` | [View source ↗](evmos/incentives/v1/query.ts) |
+
+---
 
 **AllocationMeter**
-- Function: `getAllocationMeter`
-- Hook: `useGetAllocationMeter`
-- Description: AllocationMeter Retrieves a active gas meter
-- Request: QueryAllocationMeterRequest
-- Response: QueryAllocationMeterResponse
+
+AllocationMeter Retrieves a active gas meter
+
+```ts
+import { getAllocationMeter } from 'outputicjs/evmos/incentives/v1'
+import { useGetAllocationMeter } from 'outputicjs/evmos/incentives/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAllocationMeter` | [View source ↗](evmos/incentives/v1/query.rpc.func.ts) |
+| Hook | `useGetAllocationMeter` | [View source ↗](evmos/incentives/v1/query.rpc.react.ts) |
+| Request | `QueryAllocationMeterRequest` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Response | `QueryAllocationMeterResponse` | [View source ↗](evmos/incentives/v1/query.ts) |
+
+---
 
 **Params**
-- Function: `getEvmosIncentivesV1Params`
-- Hook: `useGetEvmosIncentivesV1Params`
-- Description: Params retrieves the incentives module params
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params retrieves the incentives module params
+
+```ts
+import { getEvmosIncentivesV1Params } from 'outputicjs/evmos/incentives/v1'
+import { useGetEvmosIncentivesV1Params } from 'outputicjs/evmos/incentives/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEvmosIncentivesV1Params` | [View source ↗](evmos/incentives/v1/query.rpc.func.ts) |
+| Hook | `useGetEvmosIncentivesV1Params` | [View source ↗](evmos/incentives/v1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](evmos/incentives/v1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](evmos/incentives/v1/query.ts) |
 
 
 ## evmos.inflation.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `EvmosInflationV1Params` | [View source ↗](evmos/inflation/v1/genesis.ts) |
+| Type | `ExponentialCalculation` | [View source ↗](evmos/inflation/v1/inflation.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `InflationDistribution` | [View source ↗](evmos/inflation/v1/inflation.ts) |
+| Type | `QueryCirculatingSupplyRequest` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Type | `QueryCirculatingSupplyResponse` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Type | `QueryEpochMintProvisionRequest` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Type | `QueryEpochMintProvisionResponse` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Type | `QueryInflationRateRequest` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Type | `QueryInflationRateResponse` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryPeriodRequest` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Type | `QueryPeriodResponse` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Type | `QuerySkippedEpochsRequest` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Type | `QuerySkippedEpochsResponse` | [View source ↗](evmos/inflation/v1/query.ts) |
+
 ### Query Methods
 
 **Period**
-- Function: `getPeriod`
-- Hook: `useGetPeriod`
-- Description: Period retrieves current period.
-- Request: QueryPeriodRequest
-- Response: QueryPeriodResponse
+
+Period retrieves current period.
+
+```ts
+import { getPeriod } from 'outputicjs/evmos/inflation/v1'
+import { useGetPeriod } from 'outputicjs/evmos/inflation/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPeriod` | [View source ↗](evmos/inflation/v1/query.rpc.func.ts) |
+| Hook | `useGetPeriod` | [View source ↗](evmos/inflation/v1/query.rpc.react.ts) |
+| Request | `QueryPeriodRequest` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Response | `QueryPeriodResponse` | [View source ↗](evmos/inflation/v1/query.ts) |
+
+---
 
 **EpochMintProvision**
-- Function: `getEpochMintProvision`
-- Hook: `useGetEpochMintProvision`
-- Description: EpochMintProvision retrieves current minting epoch provision value.
-- Request: QueryEpochMintProvisionRequest
-- Response: QueryEpochMintProvisionResponse
+
+EpochMintProvision retrieves current minting epoch provision value.
+
+```ts
+import { getEpochMintProvision } from 'outputicjs/evmos/inflation/v1'
+import { useGetEpochMintProvision } from 'outputicjs/evmos/inflation/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEpochMintProvision` | [View source ↗](evmos/inflation/v1/query.rpc.func.ts) |
+| Hook | `useGetEpochMintProvision` | [View source ↗](evmos/inflation/v1/query.rpc.react.ts) |
+| Request | `QueryEpochMintProvisionRequest` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Response | `QueryEpochMintProvisionResponse` | [View source ↗](evmos/inflation/v1/query.ts) |
+
+---
 
 **SkippedEpochs**
-- Function: `getSkippedEpochs`
-- Hook: `useGetSkippedEpochs`
-- Description: SkippedEpochs retrieves the total number of skipped epochs.
-- Request: QuerySkippedEpochsRequest
-- Response: QuerySkippedEpochsResponse
+
+SkippedEpochs retrieves the total number of skipped epochs.
+
+```ts
+import { getSkippedEpochs } from 'outputicjs/evmos/inflation/v1'
+import { useGetSkippedEpochs } from 'outputicjs/evmos/inflation/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSkippedEpochs` | [View source ↗](evmos/inflation/v1/query.rpc.func.ts) |
+| Hook | `useGetSkippedEpochs` | [View source ↗](evmos/inflation/v1/query.rpc.react.ts) |
+| Request | `QuerySkippedEpochsRequest` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Response | `QuerySkippedEpochsResponse` | [View source ↗](evmos/inflation/v1/query.ts) |
+
+---
 
 **CirculatingSupply**
-- Function: `getCirculatingSupply`
-- Hook: `useGetCirculatingSupply`
-- Description: CirculatingSupply retrieves the total number of tokens that are in
- circulation (i.e. excluding unvested tokens).
-- Request: QueryCirculatingSupplyRequest
-- Response: QueryCirculatingSupplyResponse
+
+CirculatingSupply retrieves the total number of tokens that are in circulation (i.e. excluding unvested tokens).
+
+```ts
+import { getCirculatingSupply } from 'outputicjs/evmos/inflation/v1'
+import { useGetCirculatingSupply } from 'outputicjs/evmos/inflation/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCirculatingSupply` | [View source ↗](evmos/inflation/v1/query.rpc.func.ts) |
+| Hook | `useGetCirculatingSupply` | [View source ↗](evmos/inflation/v1/query.rpc.react.ts) |
+| Request | `QueryCirculatingSupplyRequest` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Response | `QueryCirculatingSupplyResponse` | [View source ↗](evmos/inflation/v1/query.ts) |
+
+---
 
 **InflationRate**
-- Function: `getInflationRate`
-- Hook: `useGetInflationRate`
-- Description: InflationRate retrieves the inflation rate of the current period.
-- Request: QueryInflationRateRequest
-- Response: QueryInflationRateResponse
+
+InflationRate retrieves the inflation rate of the current period.
+
+```ts
+import { getInflationRate } from 'outputicjs/evmos/inflation/v1'
+import { useGetInflationRate } from 'outputicjs/evmos/inflation/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getInflationRate` | [View source ↗](evmos/inflation/v1/query.rpc.func.ts) |
+| Hook | `useGetInflationRate` | [View source ↗](evmos/inflation/v1/query.rpc.react.ts) |
+| Request | `QueryInflationRateRequest` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Response | `QueryInflationRateResponse` | [View source ↗](evmos/inflation/v1/query.ts) |
+
+---
 
 **Params**
-- Function: `getEvmosInflationV1Params`
-- Hook: `useGetEvmosInflationV1Params`
-- Description: Params retrieves the total set of minting parameters.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params retrieves the total set of minting parameters.
+
+```ts
+import { getEvmosInflationV1Params } from 'outputicjs/evmos/inflation/v1'
+import { useGetEvmosInflationV1Params } from 'outputicjs/evmos/inflation/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEvmosInflationV1Params` | [View source ↗](evmos/inflation/v1/query.rpc.func.ts) |
+| Hook | `useGetEvmosInflationV1Params` | [View source ↗](evmos/inflation/v1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](evmos/inflation/v1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](evmos/inflation/v1/query.ts) |
 
 
 ## evmos.recovery.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `EvmosRecoveryV1Params` | [View source ↗](evmos/recovery/v1/genesis.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+
 ### Query Methods
 
 **Params**
-- Function: `getEvmosRecoveryV1Params`
-- Hook: `useGetEvmosRecoveryV1Params`
-- Description: Params retrieves the total set of recovery parameters.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params retrieves the total set of recovery parameters.
+
+```ts
+import { getEvmosRecoveryV1Params } from 'outputicjs/evmos/recovery/v1'
+import { useGetEvmosRecoveryV1Params } from 'outputicjs/evmos/recovery/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEvmosRecoveryV1Params` | [View source ↗](evmos/recovery/v1/query.rpc.func.ts) |
+| Hook | `useGetEvmosRecoveryV1Params` | [View source ↗](evmos/recovery/v1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](evmos/recovery/v1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](evmos/recovery/v1/query.ts) |
 
 
 ## evmos.vesting.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `ClawbackVestingAccount` | [View source ↗](evmos/vesting/v1/vesting.ts) |
+| Type | `MsgClawback` | [View source ↗](evmos/vesting/v1/tx.ts) |
+| Type | `MsgClawbackResponse` | [View source ↗](evmos/vesting/v1/tx.ts) |
+| Type | `MsgCreateClawbackVestingAccount` | [View source ↗](evmos/vesting/v1/tx.ts) |
+| Type | `MsgCreateClawbackVestingAccountResponse` | [View source ↗](evmos/vesting/v1/tx.ts) |
+| Type | `QueryBalancesRequest` | [View source ↗](evmos/vesting/v1/query.ts) |
+| Type | `QueryBalancesResponse` | [View source ↗](evmos/vesting/v1/query.ts) |
+
 ### Query Methods
 
 **Balances**
-- Function: `getBalances`
-- Hook: `useGetBalances`
-- Description: Retrieves the unvested, vested and locked tokens for a vesting account
-- Request: QueryBalancesRequest
-- Response: QueryBalancesResponse
+
+Retrieves the unvested, vested and locked tokens for a vesting account
+
+```ts
+import { getBalances } from 'outputicjs/evmos/vesting/v1'
+import { useGetBalances } from 'outputicjs/evmos/vesting/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getBalances` | [View source ↗](evmos/vesting/v1/query.rpc.func.ts) |
+| Hook | `useGetBalances` | [View source ↗](evmos/vesting/v1/query.rpc.react.ts) |
+| Request | `QueryBalancesRequest` | [View source ↗](evmos/vesting/v1/query.ts) |
+| Response | `QueryBalancesResponse` | [View source ↗](evmos/vesting/v1/query.ts) |
 
 ### Transaction Methods
 
 **CreateClawbackVestingAccount**
-- Function: `createClawbackVestingAccount`
-- Hook: `useCreateClawbackVestingAccount`
-- Description: CreateClawbackVestingAccount creats a vesting account that is subject to
- clawback and the configuration of vesting and lockup schedules.
-- Request: MsgCreateClawbackVestingAccount
-- Response: MsgCreateClawbackVestingAccountResponse
+
+CreateClawbackVestingAccount creats a vesting account that is subject to clawback and the configuration of vesting and lockup schedules.
+
+```ts
+import { createClawbackVestingAccount } from 'outputicjs/evmos/vesting/v1'
+import { useCreateClawbackVestingAccount } from 'outputicjs/evmos/vesting/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createClawbackVestingAccount` | [View source ↗](evmos/vesting/v1/tx.rpc.func.ts) |
+| Hook | `useCreateClawbackVestingAccount` | [View source ↗](evmos/vesting/v1/tx.rpc.react.ts) |
+| Request | `MsgCreateClawbackVestingAccount` | [View source ↗](evmos/vesting/v1/tx.ts) |
+| Response | `MsgCreateClawbackVestingAccountResponse` | [View source ↗](evmos/vesting/v1/tx.ts) |
+
+---
 
 **Clawback**
-- Function: `clawback`
-- Hook: `useClawback`
-- Description: Clawback removes the unvested tokens from a ClawbackVestingAccount.
-- Request: MsgClawback
-- Response: MsgClawbackResponse
+
+Clawback removes the unvested tokens from a ClawbackVestingAccount.
+
+```ts
+import { clawback } from 'outputicjs/evmos/vesting/v1'
+import { useClawback } from 'outputicjs/evmos/vesting/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `clawback` | [View source ↗](evmos/vesting/v1/tx.rpc.func.ts) |
+| Hook | `useClawback` | [View source ↗](evmos/vesting/v1/tx.rpc.react.ts) |
+| Request | `MsgClawback` | [View source ↗](evmos/vesting/v1/tx.ts) |
+| Response | `MsgClawbackResponse` | [View source ↗](evmos/vesting/v1/tx.ts) |
 
 
 ## ibc.applications.transfer.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `DenomTrace` | [View source ↗](ibc/applications/transfer/v1/transfer.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `IbcApplicationsTransferV1Params` | [View source ↗](ibc/applications/transfer/v1/transfer.ts) |
+| Type | `MsgTransfer` | [View source ↗](ibc/applications/transfer/v1/tx.ts) |
+| Type | `MsgTransferResponse` | [View source ↗](ibc/applications/transfer/v1/tx.ts) |
+| Type | `QueryDenomTraceRequest` | [View source ↗](ibc/applications/transfer/v1/query.ts) |
+| Type | `QueryDenomTraceResponse` | [View source ↗](ibc/applications/transfer/v1/query.ts) |
+| Type | `QueryDenomTracesRequest` | [View source ↗](ibc/applications/transfer/v1/query.ts) |
+| Type | `QueryDenomTracesResponse` | [View source ↗](ibc/applications/transfer/v1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+
 ### Query Methods
 
 **DenomTrace**
-- Function: `getDenomTrace`
-- Hook: `useGetDenomTrace`
-- Description: DenomTrace queries a denomination trace information.
-- Request: QueryDenomTraceRequest
-- Response: QueryDenomTraceResponse
+
+DenomTrace queries a denomination trace information.
+
+```ts
+import { getDenomTrace } from 'outputicjs/ibc/applications/transfer/v1'
+import { useGetDenomTrace } from 'outputicjs/ibc/applications/transfer/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDenomTrace` | [View source ↗](ibc/applications/transfer/v1/query.rpc.func.ts) |
+| Hook | `useGetDenomTrace` | [View source ↗](ibc/applications/transfer/v1/query.rpc.react.ts) |
+| Request | `QueryDenomTraceRequest` | [View source ↗](ibc/applications/transfer/v1/query.ts) |
+| Response | `QueryDenomTraceResponse` | [View source ↗](ibc/applications/transfer/v1/query.ts) |
+
+---
 
 **DenomTraces**
-- Function: `getDenomTraces`
-- Hook: `useGetDenomTraces`
-- Description: DenomTraces queries all denomination traces.
-- Request: QueryDenomTracesRequest
-- Response: QueryDenomTracesResponse
+
+DenomTraces queries all denomination traces.
+
+```ts
+import { getDenomTraces } from 'outputicjs/ibc/applications/transfer/v1'
+import { useGetDenomTraces } from 'outputicjs/ibc/applications/transfer/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDenomTraces` | [View source ↗](ibc/applications/transfer/v1/query.rpc.func.ts) |
+| Hook | `useGetDenomTraces` | [View source ↗](ibc/applications/transfer/v1/query.rpc.react.ts) |
+| Request | `QueryDenomTracesRequest` | [View source ↗](ibc/applications/transfer/v1/query.ts) |
+| Response | `QueryDenomTracesResponse` | [View source ↗](ibc/applications/transfer/v1/query.ts) |
+
+---
 
 **Params**
-- Function: `getIbcApplicationsTransferV1Params`
-- Hook: `useGetIbcApplicationsTransferV1Params`
-- Description: Params queries all parameters of the ibc-transfer module.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params queries all parameters of the ibc-transfer module.
+
+```ts
+import { getIbcApplicationsTransferV1Params } from 'outputicjs/ibc/applications/transfer/v1'
+import { useGetIbcApplicationsTransferV1Params } from 'outputicjs/ibc/applications/transfer/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getIbcApplicationsTransferV1Params` | [View source ↗](ibc/applications/transfer/v1/query.rpc.func.ts) |
+| Hook | `useGetIbcApplicationsTransferV1Params` | [View source ↗](ibc/applications/transfer/v1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](ibc/applications/transfer/v1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](ibc/applications/transfer/v1/query.ts) |
 
 ### Transaction Methods
 
 **Transfer**
-- Function: `transfer`
-- Hook: `useTransfer`
-- Description: Transfer defines a rpc handler method for MsgTransfer.
-- Request: MsgTransfer
-- Response: MsgTransferResponse
+
+Transfer defines a rpc handler method for MsgTransfer.
+
+```ts
+import { transfer } from 'outputicjs/ibc/applications/transfer/v1'
+import { useTransfer } from 'outputicjs/ibc/applications/transfer/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `transfer` | [View source ↗](ibc/applications/transfer/v1/tx.rpc.func.ts) |
+| Hook | `useTransfer` | [View source ↗](ibc/applications/transfer/v1/tx.rpc.react.ts) |
+| Request | `MsgTransfer` | [View source ↗](ibc/applications/transfer/v1/tx.ts) |
+| Response | `MsgTransferResponse` | [View source ↗](ibc/applications/transfer/v1/tx.ts) |
 
 
 ## ibc.core.channel.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `Acknowledgement` | [View source ↗](ibc/core/channel/v1/channel.ts) |
+| Type | `Channel` | [View source ↗](ibc/core/channel/v1/channel.ts) |
+| Type | `Counterparty` | [View source ↗](ibc/core/channel/v1/channel.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `IdentifiedChannel` | [View source ↗](ibc/core/channel/v1/channel.ts) |
+| Type | `MsgAcknowledgement` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgAcknowledgementResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgChannelCloseConfirm` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgChannelCloseConfirmResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgChannelCloseInit` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgChannelCloseInitResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgChannelOpenAck` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgChannelOpenAckResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgChannelOpenConfirm` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgChannelOpenConfirmResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgChannelOpenInit` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgChannelOpenInitResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgChannelOpenTry` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgChannelOpenTryResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgRecvPacket` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgRecvPacketResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgTimeout` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgTimeoutOnClose` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgTimeoutOnCloseResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `MsgTimeoutResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Type | `Order` | [View source ↗](akash/market/v1beta2/order.ts) |
+| Type | `Packet` | [View source ↗](ibc/core/channel/v1/channel.ts) |
+| Type | `PacketSequence` | [View source ↗](ibc/core/channel/v1/genesis.ts) |
+| Type | `PacketState` | [View source ↗](ibc/core/channel/v1/channel.ts) |
+| Type | `QueryChannelClientStateRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryChannelClientStateResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryChannelConsensusStateRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryChannelConsensusStateResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryChannelRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryChannelResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryChannelsRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryChannelsResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryConnectionChannelsRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryConnectionChannelsResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryNextSequenceReceiveRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryNextSequenceReceiveResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryPacketAcknowledgementRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryPacketAcknowledgementResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryPacketAcknowledgementsRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryPacketAcknowledgementsResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryPacketCommitmentRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryPacketCommitmentResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryPacketCommitmentsRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryPacketCommitmentsResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryPacketReceiptRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryPacketReceiptResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryUnreceivedAcksRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryUnreceivedAcksResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryUnreceivedPacketsRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `QueryUnreceivedPacketsResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Type | `State` | [View source ↗](google/api/serviceusage/v1/resources.ts) |
+
 ### Query Methods
 
 **Channel**
-- Function: `getChannel`
-- Hook: `useGetChannel`
-- Description: Channel queries an IBC Channel.
-- Request: QueryChannelRequest
-- Response: QueryChannelResponse
+
+Channel queries an IBC Channel.
+
+```ts
+import { getChannel } from 'outputicjs/ibc/core/channel/v1'
+import { useGetChannel } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getChannel` | [View source ↗](ibc/core/channel/v1/query.rpc.func.ts) |
+| Hook | `useGetChannel` | [View source ↗](ibc/core/channel/v1/query.rpc.react.ts) |
+| Request | `QueryChannelRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Response | `QueryChannelResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+
+---
 
 **Channels**
-- Function: `getChannels`
-- Hook: `useGetChannels`
-- Description: Channels queries all the IBC channels of a chain.
-- Request: QueryChannelsRequest
-- Response: QueryChannelsResponse
+
+Channels queries all the IBC channels of a chain.
+
+```ts
+import { getChannels } from 'outputicjs/ibc/core/channel/v1'
+import { useGetChannels } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getChannels` | [View source ↗](ibc/core/channel/v1/query.rpc.func.ts) |
+| Hook | `useGetChannels` | [View source ↗](ibc/core/channel/v1/query.rpc.react.ts) |
+| Request | `QueryChannelsRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Response | `QueryChannelsResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+
+---
 
 **ConnectionChannels**
-- Function: `getConnectionChannels`
-- Hook: `useGetConnectionChannels`
-- Description: ConnectionChannels queries all the channels associated with a connection
- end.
-- Request: QueryConnectionChannelsRequest
-- Response: QueryConnectionChannelsResponse
+
+ConnectionChannels queries all the channels associated with a connection end.
+
+```ts
+import { getConnectionChannels } from 'outputicjs/ibc/core/channel/v1'
+import { useGetConnectionChannels } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getConnectionChannels` | [View source ↗](ibc/core/channel/v1/query.rpc.func.ts) |
+| Hook | `useGetConnectionChannels` | [View source ↗](ibc/core/channel/v1/query.rpc.react.ts) |
+| Request | `QueryConnectionChannelsRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Response | `QueryConnectionChannelsResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+
+---
 
 **ChannelClientState**
-- Function: `getChannelClientState`
-- Hook: `useGetChannelClientState`
-- Description: ChannelClientState queries for the client state for the channel associated
- with the provided channel identifiers.
-- Request: QueryChannelClientStateRequest
-- Response: QueryChannelClientStateResponse
+
+ChannelClientState queries for the client state for the channel associated with the provided channel identifiers.
+
+```ts
+import { getChannelClientState } from 'outputicjs/ibc/core/channel/v1'
+import { useGetChannelClientState } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getChannelClientState` | [View source ↗](ibc/core/channel/v1/query.rpc.func.ts) |
+| Hook | `useGetChannelClientState` | [View source ↗](ibc/core/channel/v1/query.rpc.react.ts) |
+| Request | `QueryChannelClientStateRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Response | `QueryChannelClientStateResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+
+---
 
 **ChannelConsensusState**
-- Function: `getChannelConsensusState`
-- Hook: `useGetChannelConsensusState`
-- Description: ChannelConsensusState queries for the consensus state for the channel
- associated with the provided channel identifiers.
-- Request: QueryChannelConsensusStateRequest
-- Response: QueryChannelConsensusStateResponse
+
+ChannelConsensusState queries for the consensus state for the channel associated with the provided channel identifiers.
+
+```ts
+import { getChannelConsensusState } from 'outputicjs/ibc/core/channel/v1'
+import { useGetChannelConsensusState } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getChannelConsensusState` | [View source ↗](ibc/core/channel/v1/query.rpc.func.ts) |
+| Hook | `useGetChannelConsensusState` | [View source ↗](ibc/core/channel/v1/query.rpc.react.ts) |
+| Request | `QueryChannelConsensusStateRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Response | `QueryChannelConsensusStateResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+
+---
 
 **PacketCommitment**
-- Function: `getPacketCommitment`
-- Hook: `useGetPacketCommitment`
-- Description: PacketCommitment queries a stored packet commitment hash.
-- Request: QueryPacketCommitmentRequest
-- Response: QueryPacketCommitmentResponse
+
+PacketCommitment queries a stored packet commitment hash.
+
+```ts
+import { getPacketCommitment } from 'outputicjs/ibc/core/channel/v1'
+import { useGetPacketCommitment } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPacketCommitment` | [View source ↗](ibc/core/channel/v1/query.rpc.func.ts) |
+| Hook | `useGetPacketCommitment` | [View source ↗](ibc/core/channel/v1/query.rpc.react.ts) |
+| Request | `QueryPacketCommitmentRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Response | `QueryPacketCommitmentResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+
+---
 
 **PacketCommitments**
-- Function: `getPacketCommitments`
-- Hook: `useGetPacketCommitments`
-- Description: PacketCommitments returns all the packet commitments hashes associated
- with a channel.
-- Request: QueryPacketCommitmentsRequest
-- Response: QueryPacketCommitmentsResponse
+
+PacketCommitments returns all the packet commitments hashes associated with a channel.
+
+```ts
+import { getPacketCommitments } from 'outputicjs/ibc/core/channel/v1'
+import { useGetPacketCommitments } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPacketCommitments` | [View source ↗](ibc/core/channel/v1/query.rpc.func.ts) |
+| Hook | `useGetPacketCommitments` | [View source ↗](ibc/core/channel/v1/query.rpc.react.ts) |
+| Request | `QueryPacketCommitmentsRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Response | `QueryPacketCommitmentsResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+
+---
 
 **PacketReceipt**
-- Function: `getPacketReceipt`
-- Hook: `useGetPacketReceipt`
-- Description: PacketReceipt queries if a given packet sequence has been received on the
- queried chain
-- Request: QueryPacketReceiptRequest
-- Response: QueryPacketReceiptResponse
+
+PacketReceipt queries if a given packet sequence has been received on the queried chain
+
+```ts
+import { getPacketReceipt } from 'outputicjs/ibc/core/channel/v1'
+import { useGetPacketReceipt } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPacketReceipt` | [View source ↗](ibc/core/channel/v1/query.rpc.func.ts) |
+| Hook | `useGetPacketReceipt` | [View source ↗](ibc/core/channel/v1/query.rpc.react.ts) |
+| Request | `QueryPacketReceiptRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Response | `QueryPacketReceiptResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+
+---
 
 **PacketAcknowledgement**
-- Function: `getPacketAcknowledgement`
-- Hook: `useGetPacketAcknowledgement`
-- Description: PacketAcknowledgement queries a stored packet acknowledgement hash.
-- Request: QueryPacketAcknowledgementRequest
-- Response: QueryPacketAcknowledgementResponse
+
+PacketAcknowledgement queries a stored packet acknowledgement hash.
+
+```ts
+import { getPacketAcknowledgement } from 'outputicjs/ibc/core/channel/v1'
+import { useGetPacketAcknowledgement } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPacketAcknowledgement` | [View source ↗](ibc/core/channel/v1/query.rpc.func.ts) |
+| Hook | `useGetPacketAcknowledgement` | [View source ↗](ibc/core/channel/v1/query.rpc.react.ts) |
+| Request | `QueryPacketAcknowledgementRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Response | `QueryPacketAcknowledgementResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+
+---
 
 **PacketAcknowledgements**
-- Function: `getPacketAcknowledgements`
-- Hook: `useGetPacketAcknowledgements`
-- Description: PacketAcknowledgements returns all the packet acknowledgements associated
- with a channel.
-- Request: QueryPacketAcknowledgementsRequest
-- Response: QueryPacketAcknowledgementsResponse
+
+PacketAcknowledgements returns all the packet acknowledgements associated with a channel.
+
+```ts
+import { getPacketAcknowledgements } from 'outputicjs/ibc/core/channel/v1'
+import { useGetPacketAcknowledgements } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPacketAcknowledgements` | [View source ↗](ibc/core/channel/v1/query.rpc.func.ts) |
+| Hook | `useGetPacketAcknowledgements` | [View source ↗](ibc/core/channel/v1/query.rpc.react.ts) |
+| Request | `QueryPacketAcknowledgementsRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Response | `QueryPacketAcknowledgementsResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+
+---
 
 **UnreceivedPackets**
-- Function: `getUnreceivedPackets`
-- Hook: `useGetUnreceivedPackets`
-- Description: UnreceivedPackets returns all the unreceived IBC packets associated with a
- channel and sequences.
-- Request: QueryUnreceivedPacketsRequest
-- Response: QueryUnreceivedPacketsResponse
+
+UnreceivedPackets returns all the unreceived IBC packets associated with a channel and sequences.
+
+```ts
+import { getUnreceivedPackets } from 'outputicjs/ibc/core/channel/v1'
+import { useGetUnreceivedPackets } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getUnreceivedPackets` | [View source ↗](ibc/core/channel/v1/query.rpc.func.ts) |
+| Hook | `useGetUnreceivedPackets` | [View source ↗](ibc/core/channel/v1/query.rpc.react.ts) |
+| Request | `QueryUnreceivedPacketsRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Response | `QueryUnreceivedPacketsResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+
+---
 
 **UnreceivedAcks**
-- Function: `getUnreceivedAcks`
-- Hook: `useGetUnreceivedAcks`
-- Description: UnreceivedAcks returns all the unreceived IBC acknowledgements associated
- with a channel and sequences.
-- Request: QueryUnreceivedAcksRequest
-- Response: QueryUnreceivedAcksResponse
+
+UnreceivedAcks returns all the unreceived IBC acknowledgements associated with a channel and sequences.
+
+```ts
+import { getUnreceivedAcks } from 'outputicjs/ibc/core/channel/v1'
+import { useGetUnreceivedAcks } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getUnreceivedAcks` | [View source ↗](ibc/core/channel/v1/query.rpc.func.ts) |
+| Hook | `useGetUnreceivedAcks` | [View source ↗](ibc/core/channel/v1/query.rpc.react.ts) |
+| Request | `QueryUnreceivedAcksRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Response | `QueryUnreceivedAcksResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
+
+---
 
 **NextSequenceReceive**
-- Function: `getNextSequenceReceive`
-- Hook: `useGetNextSequenceReceive`
-- Description: NextSequenceReceive returns the next receive sequence for a given channel.
-- Request: QueryNextSequenceReceiveRequest
-- Response: QueryNextSequenceReceiveResponse
+
+NextSequenceReceive returns the next receive sequence for a given channel.
+
+```ts
+import { getNextSequenceReceive } from 'outputicjs/ibc/core/channel/v1'
+import { useGetNextSequenceReceive } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getNextSequenceReceive` | [View source ↗](ibc/core/channel/v1/query.rpc.func.ts) |
+| Hook | `useGetNextSequenceReceive` | [View source ↗](ibc/core/channel/v1/query.rpc.react.ts) |
+| Request | `QueryNextSequenceReceiveRequest` | [View source ↗](ibc/core/channel/v1/query.ts) |
+| Response | `QueryNextSequenceReceiveResponse` | [View source ↗](ibc/core/channel/v1/query.ts) |
 
 ### Transaction Methods
 
 **ChannelOpenInit**
-- Function: `channelOpenInit`
-- Hook: `useChannelOpenInit`
-- Description: ChannelOpenInit defines a rpc handler method for MsgChannelOpenInit.
-- Request: MsgChannelOpenInit
-- Response: MsgChannelOpenInitResponse
+
+ChannelOpenInit defines a rpc handler method for MsgChannelOpenInit.
+
+```ts
+import { channelOpenInit } from 'outputicjs/ibc/core/channel/v1'
+import { useChannelOpenInit } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `channelOpenInit` | [View source ↗](ibc/core/channel/v1/tx.rpc.func.ts) |
+| Hook | `useChannelOpenInit` | [View source ↗](ibc/core/channel/v1/tx.rpc.react.ts) |
+| Request | `MsgChannelOpenInit` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Response | `MsgChannelOpenInitResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+
+---
 
 **ChannelOpenTry**
-- Function: `channelOpenTry`
-- Hook: `useChannelOpenTry`
-- Description: ChannelOpenTry defines a rpc handler method for MsgChannelOpenTry.
-- Request: MsgChannelOpenTry
-- Response: MsgChannelOpenTryResponse
+
+ChannelOpenTry defines a rpc handler method for MsgChannelOpenTry.
+
+```ts
+import { channelOpenTry } from 'outputicjs/ibc/core/channel/v1'
+import { useChannelOpenTry } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `channelOpenTry` | [View source ↗](ibc/core/channel/v1/tx.rpc.func.ts) |
+| Hook | `useChannelOpenTry` | [View source ↗](ibc/core/channel/v1/tx.rpc.react.ts) |
+| Request | `MsgChannelOpenTry` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Response | `MsgChannelOpenTryResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+
+---
 
 **ChannelOpenAck**
-- Function: `channelOpenAck`
-- Hook: `useChannelOpenAck`
-- Description: ChannelOpenAck defines a rpc handler method for MsgChannelOpenAck.
-- Request: MsgChannelOpenAck
-- Response: MsgChannelOpenAckResponse
+
+ChannelOpenAck defines a rpc handler method for MsgChannelOpenAck.
+
+```ts
+import { channelOpenAck } from 'outputicjs/ibc/core/channel/v1'
+import { useChannelOpenAck } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `channelOpenAck` | [View source ↗](ibc/core/channel/v1/tx.rpc.func.ts) |
+| Hook | `useChannelOpenAck` | [View source ↗](ibc/core/channel/v1/tx.rpc.react.ts) |
+| Request | `MsgChannelOpenAck` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Response | `MsgChannelOpenAckResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+
+---
 
 **ChannelOpenConfirm**
-- Function: `channelOpenConfirm`
-- Hook: `useChannelOpenConfirm`
-- Description: ChannelOpenConfirm defines a rpc handler method for MsgChannelOpenConfirm.
-- Request: MsgChannelOpenConfirm
-- Response: MsgChannelOpenConfirmResponse
+
+ChannelOpenConfirm defines a rpc handler method for MsgChannelOpenConfirm.
+
+```ts
+import { channelOpenConfirm } from 'outputicjs/ibc/core/channel/v1'
+import { useChannelOpenConfirm } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `channelOpenConfirm` | [View source ↗](ibc/core/channel/v1/tx.rpc.func.ts) |
+| Hook | `useChannelOpenConfirm` | [View source ↗](ibc/core/channel/v1/tx.rpc.react.ts) |
+| Request | `MsgChannelOpenConfirm` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Response | `MsgChannelOpenConfirmResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+
+---
 
 **ChannelCloseInit**
-- Function: `channelCloseInit`
-- Hook: `useChannelCloseInit`
-- Description: ChannelCloseInit defines a rpc handler method for MsgChannelCloseInit.
-- Request: MsgChannelCloseInit
-- Response: MsgChannelCloseInitResponse
+
+ChannelCloseInit defines a rpc handler method for MsgChannelCloseInit.
+
+```ts
+import { channelCloseInit } from 'outputicjs/ibc/core/channel/v1'
+import { useChannelCloseInit } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `channelCloseInit` | [View source ↗](ibc/core/channel/v1/tx.rpc.func.ts) |
+| Hook | `useChannelCloseInit` | [View source ↗](ibc/core/channel/v1/tx.rpc.react.ts) |
+| Request | `MsgChannelCloseInit` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Response | `MsgChannelCloseInitResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+
+---
 
 **ChannelCloseConfirm**
-- Function: `channelCloseConfirm`
-- Hook: `useChannelCloseConfirm`
-- Description: ChannelCloseConfirm defines a rpc handler method for
- MsgChannelCloseConfirm.
-- Request: MsgChannelCloseConfirm
-- Response: MsgChannelCloseConfirmResponse
+
+ChannelCloseConfirm defines a rpc handler method for MsgChannelCloseConfirm.
+
+```ts
+import { channelCloseConfirm } from 'outputicjs/ibc/core/channel/v1'
+import { useChannelCloseConfirm } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `channelCloseConfirm` | [View source ↗](ibc/core/channel/v1/tx.rpc.func.ts) |
+| Hook | `useChannelCloseConfirm` | [View source ↗](ibc/core/channel/v1/tx.rpc.react.ts) |
+| Request | `MsgChannelCloseConfirm` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Response | `MsgChannelCloseConfirmResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+
+---
 
 **RecvPacket**
-- Function: `recvPacket`
-- Hook: `useRecvPacket`
-- Description: RecvPacket defines a rpc handler method for MsgRecvPacket.
-- Request: MsgRecvPacket
-- Response: MsgRecvPacketResponse
+
+RecvPacket defines a rpc handler method for MsgRecvPacket.
+
+```ts
+import { recvPacket } from 'outputicjs/ibc/core/channel/v1'
+import { useRecvPacket } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `recvPacket` | [View source ↗](ibc/core/channel/v1/tx.rpc.func.ts) |
+| Hook | `useRecvPacket` | [View source ↗](ibc/core/channel/v1/tx.rpc.react.ts) |
+| Request | `MsgRecvPacket` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Response | `MsgRecvPacketResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+
+---
 
 **Timeout**
-- Function: `timeout`
-- Hook: `useTimeout`
-- Description: Timeout defines a rpc handler method for MsgTimeout.
-- Request: MsgTimeout
-- Response: MsgTimeoutResponse
+
+Timeout defines a rpc handler method for MsgTimeout.
+
+```ts
+import { timeout } from 'outputicjs/ibc/core/channel/v1'
+import { useTimeout } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `timeout` | [View source ↗](ibc/core/channel/v1/tx.rpc.func.ts) |
+| Hook | `useTimeout` | [View source ↗](ibc/core/channel/v1/tx.rpc.react.ts) |
+| Request | `MsgTimeout` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Response | `MsgTimeoutResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+
+---
 
 **TimeoutOnClose**
-- Function: `timeoutOnClose`
-- Hook: `useTimeoutOnClose`
-- Description: TimeoutOnClose defines a rpc handler method for MsgTimeoutOnClose.
-- Request: MsgTimeoutOnClose
-- Response: MsgTimeoutOnCloseResponse
+
+TimeoutOnClose defines a rpc handler method for MsgTimeoutOnClose.
+
+```ts
+import { timeoutOnClose } from 'outputicjs/ibc/core/channel/v1'
+import { useTimeoutOnClose } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `timeoutOnClose` | [View source ↗](ibc/core/channel/v1/tx.rpc.func.ts) |
+| Hook | `useTimeoutOnClose` | [View source ↗](ibc/core/channel/v1/tx.rpc.react.ts) |
+| Request | `MsgTimeoutOnClose` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Response | `MsgTimeoutOnCloseResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+
+---
 
 **Acknowledgement**
-- Function: `acknowledgement`
-- Hook: `useAcknowledgement`
-- Description: Acknowledgement defines a rpc handler method for MsgAcknowledgement.
-- Request: MsgAcknowledgement
-- Response: MsgAcknowledgementResponse
+
+Acknowledgement defines a rpc handler method for MsgAcknowledgement.
+
+```ts
+import { acknowledgement } from 'outputicjs/ibc/core/channel/v1'
+import { useAcknowledgement } from 'outputicjs/ibc/core/channel/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `acknowledgement` | [View source ↗](ibc/core/channel/v1/tx.rpc.func.ts) |
+| Hook | `useAcknowledgement` | [View source ↗](ibc/core/channel/v1/tx.rpc.react.ts) |
+| Request | `MsgAcknowledgement` | [View source ↗](ibc/core/channel/v1/tx.ts) |
+| Response | `MsgAcknowledgementResponse` | [View source ↗](ibc/core/channel/v1/tx.ts) |
 
 
 ## ibc.core.client.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `ClientConsensusStates` | [View source ↗](ibc/core/client/v1/client.ts) |
+| Type | `ClientUpdateProposal` | [View source ↗](ibc/core/client/v1/client.ts) |
+| Type | `ConsensusStateWithHeight` | [View source ↗](ibc/core/client/v1/client.ts) |
+| Type | `GenesisMetadata` | [View source ↗](ibc/core/client/v1/genesis.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `Height` | [View source ↗](ibc/core/client/v1/client.ts) |
+| Type | `IbcCoreClientV1Params` | [View source ↗](ibc/core/client/v1/client.ts) |
+| Type | `IdentifiedClientState` | [View source ↗](ibc/core/client/v1/client.ts) |
+| Type | `IdentifiedGenesisMetadata` | [View source ↗](ibc/core/client/v1/genesis.ts) |
+| Type | `MsgCreateClient` | [View source ↗](ibc/core/client/v1/tx.ts) |
+| Type | `MsgCreateClientResponse` | [View source ↗](ibc/core/client/v1/tx.ts) |
+| Type | `MsgSubmitMisbehaviour` | [View source ↗](ibc/core/client/v1/tx.ts) |
+| Type | `MsgSubmitMisbehaviourResponse` | [View source ↗](ibc/core/client/v1/tx.ts) |
+| Type | `MsgUpdateClient` | [View source ↗](ibc/core/client/v1/tx.ts) |
+| Type | `MsgUpdateClientResponse` | [View source ↗](ibc/core/client/v1/tx.ts) |
+| Type | `MsgUpgradeClient` | [View source ↗](ibc/core/client/v1/tx.ts) |
+| Type | `MsgUpgradeClientResponse` | [View source ↗](ibc/core/client/v1/tx.ts) |
+| Type | `QueryClientParamsRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryClientParamsResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryClientStateRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryClientStateResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryClientStatesRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryClientStatesResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryClientStatusRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryClientStatusResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryConsensusStateRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryConsensusStateResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryConsensusStatesRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryConsensusStatesResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryUpgradedClientStateRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryUpgradedClientStateResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Type | `QueryUpgradedConsensusStateRequest` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Type | `QueryUpgradedConsensusStateResponse` | [View source ↗](cosmos/upgrade/v1beta1/query.ts) |
+| Type | `UpgradeProposal` | [View source ↗](ibc/core/client/v1/client.ts) |
+
 ### Query Methods
 
 **ClientState**
-- Function: `getClientState`
-- Hook: `useGetClientState`
-- Description: ClientState queries an IBC light client.
-- Request: QueryClientStateRequest
-- Response: QueryClientStateResponse
+
+ClientState queries an IBC light client.
+
+```ts
+import { getClientState } from 'outputicjs/ibc/core/client/v1'
+import { useGetClientState } from 'outputicjs/ibc/core/client/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getClientState` | [View source ↗](ibc/core/client/v1/query.rpc.func.ts) |
+| Hook | `useGetClientState` | [View source ↗](ibc/core/client/v1/query.rpc.react.ts) |
+| Request | `QueryClientStateRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Response | `QueryClientStateResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+
+---
 
 **ClientStates**
-- Function: `getClientStates`
-- Hook: `useGetClientStates`
-- Description: ClientStates queries all the IBC light clients of a chain.
-- Request: QueryClientStatesRequest
-- Response: QueryClientStatesResponse
+
+ClientStates queries all the IBC light clients of a chain.
+
+```ts
+import { getClientStates } from 'outputicjs/ibc/core/client/v1'
+import { useGetClientStates } from 'outputicjs/ibc/core/client/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getClientStates` | [View source ↗](ibc/core/client/v1/query.rpc.func.ts) |
+| Hook | `useGetClientStates` | [View source ↗](ibc/core/client/v1/query.rpc.react.ts) |
+| Request | `QueryClientStatesRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Response | `QueryClientStatesResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+
+---
 
 **ConsensusState**
-- Function: `getConsensusState`
-- Hook: `useGetConsensusState`
-- Description: ConsensusState queries a consensus state associated with a client state at
- a given height.
-- Request: QueryConsensusStateRequest
-- Response: QueryConsensusStateResponse
+
+ConsensusState queries a consensus state associated with a client state at a given height.
+
+```ts
+import { getConsensusState } from 'outputicjs/ibc/core/client/v1'
+import { useGetConsensusState } from 'outputicjs/ibc/core/client/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getConsensusState` | [View source ↗](ibc/core/client/v1/query.rpc.func.ts) |
+| Hook | `useGetConsensusState` | [View source ↗](ibc/core/client/v1/query.rpc.react.ts) |
+| Request | `QueryConsensusStateRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Response | `QueryConsensusStateResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+
+---
 
 **ConsensusStates**
-- Function: `getConsensusStates`
-- Hook: `useGetConsensusStates`
-- Description: ConsensusStates queries all the consensus state associated with a given
- client.
-- Request: QueryConsensusStatesRequest
-- Response: QueryConsensusStatesResponse
+
+ConsensusStates queries all the consensus state associated with a given client.
+
+```ts
+import { getConsensusStates } from 'outputicjs/ibc/core/client/v1'
+import { useGetConsensusStates } from 'outputicjs/ibc/core/client/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getConsensusStates` | [View source ↗](ibc/core/client/v1/query.rpc.func.ts) |
+| Hook | `useGetConsensusStates` | [View source ↗](ibc/core/client/v1/query.rpc.react.ts) |
+| Request | `QueryConsensusStatesRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Response | `QueryConsensusStatesResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+
+---
 
 **ClientStatus**
-- Function: `getClientStatus`
-- Hook: `useGetClientStatus`
-- Description: Status queries the status of an IBC client.
-- Request: QueryClientStatusRequest
-- Response: QueryClientStatusResponse
+
+Status queries the status of an IBC client.
+
+```ts
+import { getClientStatus } from 'outputicjs/ibc/core/client/v1'
+import { useGetClientStatus } from 'outputicjs/ibc/core/client/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getClientStatus` | [View source ↗](ibc/core/client/v1/query.rpc.func.ts) |
+| Hook | `useGetClientStatus` | [View source ↗](ibc/core/client/v1/query.rpc.react.ts) |
+| Request | `QueryClientStatusRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Response | `QueryClientStatusResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+
+---
 
 **ClientParams**
-- Function: `getClientParams`
-- Hook: `useGetClientParams`
-- Description: ClientParams queries all parameters of the ibc client.
-- Request: QueryClientParamsRequest
-- Response: QueryClientParamsResponse
+
+ClientParams queries all parameters of the ibc client.
+
+```ts
+import { getClientParams } from 'outputicjs/ibc/core/client/v1'
+import { useGetClientParams } from 'outputicjs/ibc/core/client/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getClientParams` | [View source ↗](ibc/core/client/v1/query.rpc.func.ts) |
+| Hook | `useGetClientParams` | [View source ↗](ibc/core/client/v1/query.rpc.react.ts) |
+| Request | `QueryClientParamsRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Response | `QueryClientParamsResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+
+---
 
 **UpgradedClientState**
-- Function: `getUpgradedClientState`
-- Hook: `useGetUpgradedClientState`
-- Description: UpgradedClientState queries an Upgraded IBC light client.
-- Request: QueryUpgradedClientStateRequest
-- Response: QueryUpgradedClientStateResponse
+
+UpgradedClientState queries an Upgraded IBC light client.
+
+```ts
+import { getUpgradedClientState } from 'outputicjs/ibc/core/client/v1'
+import { useGetUpgradedClientState } from 'outputicjs/ibc/core/client/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getUpgradedClientState` | [View source ↗](ibc/core/client/v1/query.rpc.func.ts) |
+| Hook | `useGetUpgradedClientState` | [View source ↗](ibc/core/client/v1/query.rpc.react.ts) |
+| Request | `QueryUpgradedClientStateRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Response | `QueryUpgradedClientStateResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
+
+---
 
 **UpgradedConsensusState**
-- Function: `getUpgradedConsensusStateIbcCoreClientV1`
-- Hook: `useGetUpgradedConsensusStateIbcCoreClientV1`
-- Description: UpgradedConsensusState queries an Upgraded IBC consensus state.
-- Request: QueryUpgradedConsensusStateRequest
-- Response: QueryUpgradedConsensusStateResponse
+
+UpgradedConsensusState queries an Upgraded IBC consensus state.
+
+```ts
+import { getUpgradedConsensusStateIbcCoreClientV1 } from 'outputicjs/ibc/core/client/v1'
+import { useGetUpgradedConsensusStateIbcCoreClientV1 } from 'outputicjs/ibc/core/client/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getUpgradedConsensusStateIbcCoreClientV1` | [View source ↗](ibc/core/client/v1/query.rpc.func.ts) |
+| Hook | `useGetUpgradedConsensusStateIbcCoreClientV1` | [View source ↗](ibc/core/client/v1/query.rpc.react.ts) |
+| Request | `QueryUpgradedConsensusStateRequest` | [View source ↗](ibc/core/client/v1/query.ts) |
+| Response | `QueryUpgradedConsensusStateResponse` | [View source ↗](ibc/core/client/v1/query.ts) |
 
 ### Transaction Methods
 
 **CreateClient**
-- Function: `createClient`
-- Hook: `useCreateClient`
-- Description: CreateClient defines a rpc handler method for MsgCreateClient.
-- Request: MsgCreateClient
-- Response: MsgCreateClientResponse
+
+CreateClient defines a rpc handler method for MsgCreateClient.
+
+```ts
+import { createClient } from 'outputicjs/ibc/core/client/v1'
+import { useCreateClient } from 'outputicjs/ibc/core/client/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createClient` | [View source ↗](ibc/core/client/v1/tx.rpc.func.ts) |
+| Hook | `useCreateClient` | [View source ↗](ibc/core/client/v1/tx.rpc.react.ts) |
+| Request | `MsgCreateClient` | [View source ↗](ibc/core/client/v1/tx.ts) |
+| Response | `MsgCreateClientResponse` | [View source ↗](ibc/core/client/v1/tx.ts) |
+
+---
 
 **UpdateClient**
-- Function: `updateClient`
-- Hook: `useUpdateClient`
-- Description: UpdateClient defines a rpc handler method for MsgUpdateClient.
-- Request: MsgUpdateClient
-- Response: MsgUpdateClientResponse
+
+UpdateClient defines a rpc handler method for MsgUpdateClient.
+
+```ts
+import { updateClient } from 'outputicjs/ibc/core/client/v1'
+import { useUpdateClient } from 'outputicjs/ibc/core/client/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `updateClient` | [View source ↗](ibc/core/client/v1/tx.rpc.func.ts) |
+| Hook | `useUpdateClient` | [View source ↗](ibc/core/client/v1/tx.rpc.react.ts) |
+| Request | `MsgUpdateClient` | [View source ↗](ibc/core/client/v1/tx.ts) |
+| Response | `MsgUpdateClientResponse` | [View source ↗](ibc/core/client/v1/tx.ts) |
+
+---
 
 **UpgradeClient**
-- Function: `upgradeClient`
-- Hook: `useUpgradeClient`
-- Description: UpgradeClient defines a rpc handler method for MsgUpgradeClient.
-- Request: MsgUpgradeClient
-- Response: MsgUpgradeClientResponse
+
+UpgradeClient defines a rpc handler method for MsgUpgradeClient.
+
+```ts
+import { upgradeClient } from 'outputicjs/ibc/core/client/v1'
+import { useUpgradeClient } from 'outputicjs/ibc/core/client/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `upgradeClient` | [View source ↗](ibc/core/client/v1/tx.rpc.func.ts) |
+| Hook | `useUpgradeClient` | [View source ↗](ibc/core/client/v1/tx.rpc.react.ts) |
+| Request | `MsgUpgradeClient` | [View source ↗](ibc/core/client/v1/tx.ts) |
+| Response | `MsgUpgradeClientResponse` | [View source ↗](ibc/core/client/v1/tx.ts) |
+
+---
 
 **SubmitMisbehaviour**
-- Function: `submitMisbehaviour`
-- Hook: `useSubmitMisbehaviour`
-- Description: SubmitMisbehaviour defines a rpc handler method for MsgSubmitMisbehaviour.
-- Request: MsgSubmitMisbehaviour
-- Response: MsgSubmitMisbehaviourResponse
+
+SubmitMisbehaviour defines a rpc handler method for MsgSubmitMisbehaviour.
+
+```ts
+import { submitMisbehaviour } from 'outputicjs/ibc/core/client/v1'
+import { useSubmitMisbehaviour } from 'outputicjs/ibc/core/client/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `submitMisbehaviour` | [View source ↗](ibc/core/client/v1/tx.rpc.func.ts) |
+| Hook | `useSubmitMisbehaviour` | [View source ↗](ibc/core/client/v1/tx.rpc.react.ts) |
+| Request | `MsgSubmitMisbehaviour` | [View source ↗](ibc/core/client/v1/tx.ts) |
+| Response | `MsgSubmitMisbehaviourResponse` | [View source ↗](ibc/core/client/v1/tx.ts) |
 
 
 ## ibc.core.connection.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `ClientPaths` | [View source ↗](ibc/core/connection/v1/connection.ts) |
+| Type | `ConnectionEnd` | [View source ↗](ibc/core/connection/v1/connection.ts) |
+| Type | `ConnectionPaths` | [View source ↗](ibc/core/connection/v1/connection.ts) |
+| Type | `Counterparty` | [View source ↗](ibc/core/channel/v1/channel.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `IbcCoreConnectionV1Params` | [View source ↗](ibc/core/connection/v1/connection.ts) |
+| Type | `IdentifiedConnection` | [View source ↗](ibc/core/connection/v1/connection.ts) |
+| Type | `MsgConnectionOpenAck` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+| Type | `MsgConnectionOpenAckResponse` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+| Type | `MsgConnectionOpenConfirm` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+| Type | `MsgConnectionOpenConfirmResponse` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+| Type | `MsgConnectionOpenInit` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+| Type | `MsgConnectionOpenInitResponse` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+| Type | `MsgConnectionOpenTry` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+| Type | `MsgConnectionOpenTryResponse` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+| Type | `QueryClientConnectionsRequest` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Type | `QueryClientConnectionsResponse` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Type | `QueryConnectionClientStateRequest` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Type | `QueryConnectionClientStateResponse` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Type | `QueryConnectionConsensusStateRequest` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Type | `QueryConnectionConsensusStateResponse` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Type | `QueryConnectionRequest` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Type | `QueryConnectionResponse` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Type | `QueryConnectionsRequest` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Type | `QueryConnectionsResponse` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Type | `State` | [View source ↗](google/api/serviceusage/v1/resources.ts) |
+| Type | `Version` | [View source ↗](google/protobuf/compiler/plugin.ts) |
+
 ### Query Methods
 
 **Connection**
-- Function: `getConnection`
-- Hook: `useGetConnection`
-- Description: Connection queries an IBC connection end.
-- Request: QueryConnectionRequest
-- Response: QueryConnectionResponse
+
+Connection queries an IBC connection end.
+
+```ts
+import { getConnection } from 'outputicjs/ibc/core/connection/v1'
+import { useGetConnection } from 'outputicjs/ibc/core/connection/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getConnection` | [View source ↗](ibc/core/connection/v1/query.rpc.func.ts) |
+| Hook | `useGetConnection` | [View source ↗](ibc/core/connection/v1/query.rpc.react.ts) |
+| Request | `QueryConnectionRequest` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Response | `QueryConnectionResponse` | [View source ↗](ibc/core/connection/v1/query.ts) |
+
+---
 
 **Connections**
-- Function: `getConnections`
-- Hook: `useGetConnections`
-- Description: Connections queries all the IBC connections of a chain.
-- Request: QueryConnectionsRequest
-- Response: QueryConnectionsResponse
+
+Connections queries all the IBC connections of a chain.
+
+```ts
+import { getConnections } from 'outputicjs/ibc/core/connection/v1'
+import { useGetConnections } from 'outputicjs/ibc/core/connection/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getConnections` | [View source ↗](ibc/core/connection/v1/query.rpc.func.ts) |
+| Hook | `useGetConnections` | [View source ↗](ibc/core/connection/v1/query.rpc.react.ts) |
+| Request | `QueryConnectionsRequest` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Response | `QueryConnectionsResponse` | [View source ↗](ibc/core/connection/v1/query.ts) |
+
+---
 
 **ClientConnections**
-- Function: `getClientConnections`
-- Hook: `useGetClientConnections`
-- Description: ClientConnections queries the connection paths associated with a client
- state.
-- Request: QueryClientConnectionsRequest
-- Response: QueryClientConnectionsResponse
+
+ClientConnections queries the connection paths associated with a client state.
+
+```ts
+import { getClientConnections } from 'outputicjs/ibc/core/connection/v1'
+import { useGetClientConnections } from 'outputicjs/ibc/core/connection/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getClientConnections` | [View source ↗](ibc/core/connection/v1/query.rpc.func.ts) |
+| Hook | `useGetClientConnections` | [View source ↗](ibc/core/connection/v1/query.rpc.react.ts) |
+| Request | `QueryClientConnectionsRequest` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Response | `QueryClientConnectionsResponse` | [View source ↗](ibc/core/connection/v1/query.ts) |
+
+---
 
 **ConnectionClientState**
-- Function: `getConnectionClientState`
-- Hook: `useGetConnectionClientState`
-- Description: ConnectionClientState queries the client state associated with the
- connection.
-- Request: QueryConnectionClientStateRequest
-- Response: QueryConnectionClientStateResponse
+
+ConnectionClientState queries the client state associated with the connection.
+
+```ts
+import { getConnectionClientState } from 'outputicjs/ibc/core/connection/v1'
+import { useGetConnectionClientState } from 'outputicjs/ibc/core/connection/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getConnectionClientState` | [View source ↗](ibc/core/connection/v1/query.rpc.func.ts) |
+| Hook | `useGetConnectionClientState` | [View source ↗](ibc/core/connection/v1/query.rpc.react.ts) |
+| Request | `QueryConnectionClientStateRequest` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Response | `QueryConnectionClientStateResponse` | [View source ↗](ibc/core/connection/v1/query.ts) |
+
+---
 
 **ConnectionConsensusState**
-- Function: `getConnectionConsensusState`
-- Hook: `useGetConnectionConsensusState`
-- Description: ConnectionConsensusState queries the consensus state associated with the
- connection.
-- Request: QueryConnectionConsensusStateRequest
-- Response: QueryConnectionConsensusStateResponse
+
+ConnectionConsensusState queries the consensus state associated with the connection.
+
+```ts
+import { getConnectionConsensusState } from 'outputicjs/ibc/core/connection/v1'
+import { useGetConnectionConsensusState } from 'outputicjs/ibc/core/connection/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getConnectionConsensusState` | [View source ↗](ibc/core/connection/v1/query.rpc.func.ts) |
+| Hook | `useGetConnectionConsensusState` | [View source ↗](ibc/core/connection/v1/query.rpc.react.ts) |
+| Request | `QueryConnectionConsensusStateRequest` | [View source ↗](ibc/core/connection/v1/query.ts) |
+| Response | `QueryConnectionConsensusStateResponse` | [View source ↗](ibc/core/connection/v1/query.ts) |
 
 ### Transaction Methods
 
 **ConnectionOpenInit**
-- Function: `connectionOpenInit`
-- Hook: `useConnectionOpenInit`
-- Description: ConnectionOpenInit defines a rpc handler method for MsgConnectionOpenInit.
-- Request: MsgConnectionOpenInit
-- Response: MsgConnectionOpenInitResponse
+
+ConnectionOpenInit defines a rpc handler method for MsgConnectionOpenInit.
+
+```ts
+import { connectionOpenInit } from 'outputicjs/ibc/core/connection/v1'
+import { useConnectionOpenInit } from 'outputicjs/ibc/core/connection/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `connectionOpenInit` | [View source ↗](ibc/core/connection/v1/tx.rpc.func.ts) |
+| Hook | `useConnectionOpenInit` | [View source ↗](ibc/core/connection/v1/tx.rpc.react.ts) |
+| Request | `MsgConnectionOpenInit` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+| Response | `MsgConnectionOpenInitResponse` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+
+---
 
 **ConnectionOpenTry**
-- Function: `connectionOpenTry`
-- Hook: `useConnectionOpenTry`
-- Description: ConnectionOpenTry defines a rpc handler method for MsgConnectionOpenTry.
-- Request: MsgConnectionOpenTry
-- Response: MsgConnectionOpenTryResponse
+
+ConnectionOpenTry defines a rpc handler method for MsgConnectionOpenTry.
+
+```ts
+import { connectionOpenTry } from 'outputicjs/ibc/core/connection/v1'
+import { useConnectionOpenTry } from 'outputicjs/ibc/core/connection/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `connectionOpenTry` | [View source ↗](ibc/core/connection/v1/tx.rpc.func.ts) |
+| Hook | `useConnectionOpenTry` | [View source ↗](ibc/core/connection/v1/tx.rpc.react.ts) |
+| Request | `MsgConnectionOpenTry` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+| Response | `MsgConnectionOpenTryResponse` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+
+---
 
 **ConnectionOpenAck**
-- Function: `connectionOpenAck`
-- Hook: `useConnectionOpenAck`
-- Description: ConnectionOpenAck defines a rpc handler method for MsgConnectionOpenAck.
-- Request: MsgConnectionOpenAck
-- Response: MsgConnectionOpenAckResponse
+
+ConnectionOpenAck defines a rpc handler method for MsgConnectionOpenAck.
+
+```ts
+import { connectionOpenAck } from 'outputicjs/ibc/core/connection/v1'
+import { useConnectionOpenAck } from 'outputicjs/ibc/core/connection/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `connectionOpenAck` | [View source ↗](ibc/core/connection/v1/tx.rpc.func.ts) |
+| Hook | `useConnectionOpenAck` | [View source ↗](ibc/core/connection/v1/tx.rpc.react.ts) |
+| Request | `MsgConnectionOpenAck` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+| Response | `MsgConnectionOpenAckResponse` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+
+---
 
 **ConnectionOpenConfirm**
-- Function: `connectionOpenConfirm`
-- Hook: `useConnectionOpenConfirm`
-- Description: ConnectionOpenConfirm defines a rpc handler method for
- MsgConnectionOpenConfirm.
-- Request: MsgConnectionOpenConfirm
-- Response: MsgConnectionOpenConfirmResponse
+
+ConnectionOpenConfirm defines a rpc handler method for MsgConnectionOpenConfirm.
+
+```ts
+import { connectionOpenConfirm } from 'outputicjs/ibc/core/connection/v1'
+import { useConnectionOpenConfirm } from 'outputicjs/ibc/core/connection/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `connectionOpenConfirm` | [View source ↗](ibc/core/connection/v1/tx.rpc.func.ts) |
+| Hook | `useConnectionOpenConfirm` | [View source ↗](ibc/core/connection/v1/tx.rpc.react.ts) |
+| Request | `MsgConnectionOpenConfirm` | [View source ↗](ibc/core/connection/v1/tx.ts) |
+| Response | `MsgConnectionOpenConfirmResponse` | [View source ↗](ibc/core/connection/v1/tx.ts) |
 
 
 ## ibc.core.port.v1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `QueryAppVersionRequest` | [View source ↗](ibc/core/port/v1/query.ts) |
+| Type | `QueryAppVersionResponse` | [View source ↗](ibc/core/port/v1/query.ts) |
+
 ### Query Methods
 
 **AppVersion**
-- Function: `getAppVersion`
-- Hook: `useGetAppVersion`
-- Description: AppVersion queries an IBC Port and determines the appropriate application version to be used
-- Request: QueryAppVersionRequest
-- Response: QueryAppVersionResponse
+
+AppVersion queries an IBC Port and determines the appropriate application version to be used
+
+```ts
+import { getAppVersion } from 'outputicjs/ibc/core/port/v1'
+import { useGetAppVersion } from 'outputicjs/ibc/core/port/v1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAppVersion` | [View source ↗](ibc/core/port/v1/query.rpc.func.ts) |
+| Hook | `useGetAppVersion` | [View source ↗](ibc/core/port/v1/query.rpc.react.ts) |
+| Request | `QueryAppVersionRequest` | [View source ↗](ibc/core/port/v1/query.ts) |
+| Response | `QueryAppVersionResponse` | [View source ↗](ibc/core/port/v1/query.ts) |
 
 
 ## osmosis.claim.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `Action` | [View source ↗](evmos/claims/v1/claims.ts) |
+| Type | `ClaimRecord` | [View source ↗](osmosis/claim/v1beta1/claim.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `OsmosisClaimV1beta1Params` | [View source ↗](osmosis/claim/v1beta1/params.ts) |
+| Type | `QueryClaimableForActionRequest` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+| Type | `QueryClaimableForActionResponse` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+| Type | `QueryClaimRecordRequest` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+| Type | `QueryClaimRecordResponse` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+| Type | `QueryModuleAccountBalanceRequest` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+| Type | `QueryModuleAccountBalanceResponse` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryTotalClaimableRequest` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+| Type | `QueryTotalClaimableResponse` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+
 ### Query Methods
 
 **ModuleAccountBalance**
-- Function: `getModuleAccountBalance`
-- Hook: `useGetModuleAccountBalance`
-- Request: QueryModuleAccountBalanceRequest
-- Response: QueryModuleAccountBalanceResponse
+
+```ts
+import { getModuleAccountBalance } from 'outputicjs/osmosis/claim/v1beta1'
+import { useGetModuleAccountBalance } from 'outputicjs/osmosis/claim/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getModuleAccountBalance` | [View source ↗](osmosis/claim/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetModuleAccountBalance` | [View source ↗](osmosis/claim/v1beta1/query.rpc.react.ts) |
+| Request | `QueryModuleAccountBalanceRequest` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+| Response | `QueryModuleAccountBalanceResponse` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+
+---
 
 **Params**
-- Function: `getOsmosisClaimV1beta1Params`
-- Hook: `useGetOsmosisClaimV1beta1Params`
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+```ts
+import { getOsmosisClaimV1beta1Params } from 'outputicjs/osmosis/claim/v1beta1'
+import { useGetOsmosisClaimV1beta1Params } from 'outputicjs/osmosis/claim/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getOsmosisClaimV1beta1Params` | [View source ↗](osmosis/claim/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetOsmosisClaimV1beta1Params` | [View source ↗](osmosis/claim/v1beta1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+
+---
 
 **ClaimRecord**
-- Function: `getClaimRecord`
-- Hook: `useGetClaimRecord`
-- Request: QueryClaimRecordRequest
-- Response: QueryClaimRecordResponse
+
+```ts
+import { getClaimRecord } from 'outputicjs/osmosis/claim/v1beta1'
+import { useGetClaimRecord } from 'outputicjs/osmosis/claim/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getClaimRecord` | [View source ↗](osmosis/claim/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetClaimRecord` | [View source ↗](osmosis/claim/v1beta1/query.rpc.react.ts) |
+| Request | `QueryClaimRecordRequest` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+| Response | `QueryClaimRecordResponse` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+
+---
 
 **ClaimableForAction**
-- Function: `getClaimableForAction`
-- Hook: `useGetClaimableForAction`
-- Request: QueryClaimableForActionRequest
-- Response: QueryClaimableForActionResponse
+
+```ts
+import { getClaimableForAction } from 'outputicjs/osmosis/claim/v1beta1'
+import { useGetClaimableForAction } from 'outputicjs/osmosis/claim/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getClaimableForAction` | [View source ↗](osmosis/claim/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetClaimableForAction` | [View source ↗](osmosis/claim/v1beta1/query.rpc.react.ts) |
+| Request | `QueryClaimableForActionRequest` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+| Response | `QueryClaimableForActionResponse` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+
+---
 
 **TotalClaimable**
-- Function: `getTotalClaimable`
-- Hook: `useGetTotalClaimable`
-- Request: QueryTotalClaimableRequest
-- Response: QueryTotalClaimableResponse
+
+```ts
+import { getTotalClaimable } from 'outputicjs/osmosis/claim/v1beta1'
+import { useGetTotalClaimable } from 'outputicjs/osmosis/claim/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTotalClaimable` | [View source ↗](osmosis/claim/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetTotalClaimable` | [View source ↗](osmosis/claim/v1beta1/query.rpc.react.ts) |
+| Request | `QueryTotalClaimableRequest` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
+| Response | `QueryTotalClaimableResponse` | [View source ↗](osmosis/claim/v1beta1/query.ts) |
 
 
 ## osmosis.epochs.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `EpochInfo` | [View source ↗](evmos/epochs/v1/genesis.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `QueryCurrentEpochRequest` | [View source ↗](evmos/epochs/v1/query.ts) |
+| Type | `QueryCurrentEpochResponse` | [View source ↗](evmos/epochs/v1/query.ts) |
+| Type | `QueryEpochsInfoRequest` | [View source ↗](evmos/epochs/v1/query.ts) |
+| Type | `QueryEpochsInfoResponse` | [View source ↗](evmos/epochs/v1/query.ts) |
+
 ### Query Methods
 
 **EpochInfos**
-- Function: `getEpochInfosOsmosisEpochsV1beta1`
-- Hook: `useGetEpochInfosOsmosisEpochsV1beta1`
-- Description: EpochInfos provide running epochInfos
-- Request: QueryEpochsInfoRequest
-- Response: QueryEpochsInfoResponse
+
+EpochInfos provide running epochInfos
+
+```ts
+import { getEpochInfosOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/epochs/v1beta1'
+import { useGetEpochInfosOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/epochs/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEpochInfosOsmosisEpochsV1beta1` | [View source ↗](osmosis/epochs/query.rpc.func.ts) |
+| Hook | `useGetEpochInfosOsmosisEpochsV1beta1` | [View source ↗](osmosis/epochs/query.rpc.react.ts) |
+| Request | `QueryEpochsInfoRequest` | [View source ↗](osmosis/epochs/query.ts) |
+| Response | `QueryEpochsInfoResponse` | [View source ↗](osmosis/epochs/query.ts) |
+
+---
 
 **CurrentEpoch**
-- Function: `getCurrentEpochOsmosisEpochsV1beta1`
-- Hook: `useGetCurrentEpochOsmosisEpochsV1beta1`
-- Description: CurrentEpoch provide current epoch of specified identifier
-- Request: QueryCurrentEpochRequest
-- Response: QueryCurrentEpochResponse
+
+CurrentEpoch provide current epoch of specified identifier
+
+```ts
+import { getCurrentEpochOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/epochs/v1beta1'
+import { useGetCurrentEpochOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/epochs/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCurrentEpochOsmosisEpochsV1beta1` | [View source ↗](osmosis/epochs/query.rpc.func.ts) |
+| Hook | `useGetCurrentEpochOsmosisEpochsV1beta1` | [View source ↗](osmosis/epochs/query.rpc.react.ts) |
+| Request | `QueryCurrentEpochRequest` | [View source ↗](osmosis/epochs/query.ts) |
+| Response | `QueryCurrentEpochResponse` | [View source ↗](osmosis/epochs/query.ts) |
 
 
 ## osmosis.gamm.poolmodels.balancer.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `MsgCreateBalancerPool` | [View source ↗](osmosis/gamm/pool-models/balancer/tx/tx.ts) |
+| Type | `MsgCreateBalancerPoolResponse` | [View source ↗](osmosis/gamm/pool-models/balancer/tx/tx.ts) |
+
 ### Transaction Methods
 
 **CreateBalancerPool**
-- Function: `createBalancerPool`
-- Hook: `useCreateBalancerPool`
-- Request: MsgCreateBalancerPool
-- Response: MsgCreateBalancerPoolResponse
+
+```ts
+import { createBalancerPool } from 'outputicjs/osmosis/gamm/poolmodels/balancer/v1beta1'
+import { useCreateBalancerPool } from 'outputicjs/osmosis/gamm/poolmodels/balancer/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createBalancerPool` | [View source ↗](osmosis/gamm/pool-models/balancer/tx/tx.rpc.func.ts) |
+| Hook | `useCreateBalancerPool` | [View source ↗](osmosis/gamm/pool-models/balancer/tx/tx.rpc.react.ts) |
+| Request | `MsgCreateBalancerPool` | [View source ↗](osmosis/gamm/pool-models/balancer/tx/tx.ts) |
+| Response | `MsgCreateBalancerPoolResponse` | [View source ↗](osmosis/gamm/pool-models/balancer/tx/tx.ts) |
 
 
 ## osmosis.gamm.poolmodels.stableswap.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `MsgCreateStableswapPool` | [View source ↗](osmosis/gamm/pool-models/stableswap/tx.ts) |
+| Type | `MsgCreateStableswapPoolResponse` | [View source ↗](osmosis/gamm/pool-models/stableswap/tx.ts) |
+| Type | `MsgStableSwapAdjustScalingFactors` | [View source ↗](osmosis/gamm/pool-models/stableswap/tx.ts) |
+| Type | `MsgStableSwapAdjustScalingFactorsResponse` | [View source ↗](osmosis/gamm/pool-models/stableswap/tx.ts) |
+| Type | `Pool` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `PoolParams` | [View source ↗](osmosis/gamm/pool-models/balancer/balancerPool.ts) |
+
 ### Transaction Methods
 
 **CreateStableswapPool**
-- Function: `createStableswapPool`
-- Hook: `useCreateStableswapPool`
-- Request: MsgCreateStableswapPool
-- Response: MsgCreateStableswapPoolResponse
+
+```ts
+import { createStableswapPool } from 'outputicjs/osmosis/gamm/poolmodels/stableswap/v1beta1'
+import { useCreateStableswapPool } from 'outputicjs/osmosis/gamm/poolmodels/stableswap/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createStableswapPool` | [View source ↗](osmosis/gamm/pool-models/stableswap/tx.rpc.func.ts) |
+| Hook | `useCreateStableswapPool` | [View source ↗](osmosis/gamm/pool-models/stableswap/tx.rpc.react.ts) |
+| Request | `MsgCreateStableswapPool` | [View source ↗](osmosis/gamm/pool-models/stableswap/tx.ts) |
+| Response | `MsgCreateStableswapPoolResponse` | [View source ↗](osmosis/gamm/pool-models/stableswap/tx.ts) |
+
+---
 
 **StableSwapAdjustScalingFactors**
-- Function: `stableSwapAdjustScalingFactors`
-- Hook: `useStableSwapAdjustScalingFactors`
-- Request: MsgStableSwapAdjustScalingFactors
-- Response: MsgStableSwapAdjustScalingFactorsResponse
+
+```ts
+import { stableSwapAdjustScalingFactors } from 'outputicjs/osmosis/gamm/poolmodels/stableswap/v1beta1'
+import { useStableSwapAdjustScalingFactors } from 'outputicjs/osmosis/gamm/poolmodels/stableswap/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `stableSwapAdjustScalingFactors` | [View source ↗](osmosis/gamm/pool-models/stableswap/tx.rpc.func.ts) |
+| Hook | `useStableSwapAdjustScalingFactors` | [View source ↗](osmosis/gamm/pool-models/stableswap/tx.rpc.react.ts) |
+| Request | `MsgStableSwapAdjustScalingFactors` | [View source ↗](osmosis/gamm/pool-models/stableswap/tx.ts) |
+| Response | `MsgStableSwapAdjustScalingFactorsResponse` | [View source ↗](osmosis/gamm/pool-models/stableswap/tx.ts) |
 
 
 ## osmosis.gamm.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MsgExitPool` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgExitPoolResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgExitSwapExternAmountOut` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgExitSwapExternAmountOutResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgExitSwapShareAmountIn` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgExitSwapShareAmountInResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgJoinPool` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgJoinPoolResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgJoinSwapExternAmountIn` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgJoinSwapExternAmountInResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgJoinSwapShareAmountOut` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgJoinSwapShareAmountOutResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgSwapExactAmountIn` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgSwapExactAmountInResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgSwapExactAmountOut` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `MsgSwapExactAmountOutResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `OsmosisGammV1beta1Params` | [View source ↗](osmosis/gamm/v1beta1/genesis.ts) |
+| Type | `Pool` | [View source ↗](cosmos/staking/v1beta1/staking.ts) |
+| Type | `PoolAsset` | [View source ↗](osmosis/gamm/pool-models/balancer/balancerPool.ts) |
+| Type | `PoolParams` | [View source ↗](osmosis/gamm/pool-models/balancer/balancerPool.ts) |
+| Type | `QueryCalcExitPoolCoinsFromSharesRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryCalcExitPoolCoinsFromSharesResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryCalcJoinPoolNoSwapSharesRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryCalcJoinPoolNoSwapSharesResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryCalcJoinPoolSharesRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryCalcJoinPoolSharesResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryNumPoolsRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryNumPoolsResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryPoolParamsRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryPoolParamsResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryPoolRequest` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryPoolResponse` | [View source ↗](cosmos/staking/v1beta1/query.ts) |
+| Type | `QueryPoolsRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryPoolsResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryPoolsWithFilterRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryPoolsWithFilterResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryPoolTypeRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryPoolTypeResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QuerySpotPriceRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QuerySpotPriceResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QuerySwapExactAmountInRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QuerySwapExactAmountInResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QuerySwapExactAmountOutRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QuerySwapExactAmountOutResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryTotalLiquidityRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryTotalLiquidityResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryTotalPoolLiquidityRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryTotalPoolLiquidityResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryTotalSharesRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QueryTotalSharesResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `SmoothWeightChangeParams` | [View source ↗](osmosis/gamm/pool-models/balancer/balancerPool.ts) |
+| Type | `SwapAmountInRoute` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Type | `SwapAmountOutRoute` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+
 ### Query Methods
 
 **Pools**
-- Function: `getPools`
-- Hook: `useGetPools`
-- Request: QueryPoolsRequest
-- Response: QueryPoolsResponse
+
+```ts
+import { getPools } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetPools } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPools` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetPools` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QueryPoolsRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QueryPoolsResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **NumPools**
-- Function: `getNumPools`
-- Hook: `useGetNumPools`
-- Request: QueryNumPoolsRequest
-- Response: QueryNumPoolsResponse
+
+```ts
+import { getNumPools } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetNumPools } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getNumPools` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetNumPools` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QueryNumPoolsRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QueryNumPoolsResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **TotalLiquidity**
-- Function: `getTotalLiquidity`
-- Hook: `useGetTotalLiquidity`
-- Request: QueryTotalLiquidityRequest
-- Response: QueryTotalLiquidityResponse
+
+```ts
+import { getTotalLiquidity } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetTotalLiquidity } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTotalLiquidity` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetTotalLiquidity` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QueryTotalLiquidityRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QueryTotalLiquidityResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **PoolsWithFilter**
-- Function: `getPoolsWithFilter`
-- Hook: `useGetPoolsWithFilter`
-- Description: PoolsWithFilter allows you to query specific pools with requested
- parameters
-- Request: QueryPoolsWithFilterRequest
-- Response: QueryPoolsWithFilterResponse
+
+PoolsWithFilter allows you to query specific pools with requested parameters
+
+```ts
+import { getPoolsWithFilter } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetPoolsWithFilter } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPoolsWithFilter` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetPoolsWithFilter` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QueryPoolsWithFilterRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QueryPoolsWithFilterResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **Pool**
-- Function: `getPoolOsmosisGammV1beta1`
-- Hook: `useGetPoolOsmosisGammV1beta1`
-- Description: Per Pool gRPC Endpoints
-- Request: QueryPoolRequest
-- Response: QueryPoolResponse
+
+Per Pool gRPC Endpoints
+
+```ts
+import { getPoolOsmosisGammV1beta1 } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetPoolOsmosisGammV1beta1 } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPoolOsmosisGammV1beta1` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetPoolOsmosisGammV1beta1` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QueryPoolRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QueryPoolResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **PoolType**
-- Function: `getPoolType`
-- Hook: `useGetPoolType`
-- Description: PoolType returns the type of the pool.
- Returns "Balancer" as a string literal when the pool is a balancer pool.
- Errors if the pool is failed to be type caseted.
-- Request: QueryPoolTypeRequest
-- Response: QueryPoolTypeResponse
+
+PoolType returns the type of the pool. Returns "Balancer" as a string literal when the pool is a balancer pool. Errors if the pool is failed to be type caseted.
+
+```ts
+import { getPoolType } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetPoolType } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPoolType` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetPoolType` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QueryPoolTypeRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QueryPoolTypeResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **CalcJoinPoolNoSwapShares**
-- Function: `getCalcJoinPoolNoSwapShares`
-- Hook: `useGetCalcJoinPoolNoSwapShares`
-- Description: Simulates joining pool without a swap. Returns the amount of shares you'd
- get and tokens needed to provide
-- Request: QueryCalcJoinPoolNoSwapSharesRequest
-- Response: QueryCalcJoinPoolNoSwapSharesResponse
+
+Simulates joining pool without a swap. Returns the amount of shares you'd get and tokens needed to provide
+
+```ts
+import { getCalcJoinPoolNoSwapShares } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetCalcJoinPoolNoSwapShares } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCalcJoinPoolNoSwapShares` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetCalcJoinPoolNoSwapShares` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QueryCalcJoinPoolNoSwapSharesRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QueryCalcJoinPoolNoSwapSharesResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **CalcJoinPoolShares**
-- Function: `getCalcJoinPoolShares`
-- Hook: `useGetCalcJoinPoolShares`
-- Request: QueryCalcJoinPoolSharesRequest
-- Response: QueryCalcJoinPoolSharesResponse
+
+```ts
+import { getCalcJoinPoolShares } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetCalcJoinPoolShares } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCalcJoinPoolShares` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetCalcJoinPoolShares` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QueryCalcJoinPoolSharesRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QueryCalcJoinPoolSharesResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **CalcExitPoolCoinsFromShares**
-- Function: `getCalcExitPoolCoinsFromShares`
-- Hook: `useGetCalcExitPoolCoinsFromShares`
-- Request: QueryCalcExitPoolCoinsFromSharesRequest
-- Response: QueryCalcExitPoolCoinsFromSharesResponse
+
+```ts
+import { getCalcExitPoolCoinsFromShares } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetCalcExitPoolCoinsFromShares } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getCalcExitPoolCoinsFromShares` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetCalcExitPoolCoinsFromShares` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QueryCalcExitPoolCoinsFromSharesRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QueryCalcExitPoolCoinsFromSharesResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **PoolParams**
-- Function: `getPoolParams`
-- Hook: `useGetPoolParams`
-- Request: QueryPoolParamsRequest
-- Response: QueryPoolParamsResponse
+
+```ts
+import { getPoolParams } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetPoolParams } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getPoolParams` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetPoolParams` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QueryPoolParamsRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QueryPoolParamsResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **TotalPoolLiquidity**
-- Function: `getTotalPoolLiquidity`
-- Hook: `useGetTotalPoolLiquidity`
-- Request: QueryTotalPoolLiquidityRequest
-- Response: QueryTotalPoolLiquidityResponse
+
+```ts
+import { getTotalPoolLiquidity } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetTotalPoolLiquidity } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTotalPoolLiquidity` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetTotalPoolLiquidity` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QueryTotalPoolLiquidityRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QueryTotalPoolLiquidityResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **TotalShares**
-- Function: `getTotalShares`
-- Hook: `useGetTotalShares`
-- Request: QueryTotalSharesRequest
-- Response: QueryTotalSharesResponse
+
+```ts
+import { getTotalShares } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetTotalShares } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTotalShares` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetTotalShares` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QueryTotalSharesRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QueryTotalSharesResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **SpotPrice**
-- Function: `getSpotPriceOsmosisGammV1beta1`
-- Hook: `useGetSpotPriceOsmosisGammV1beta1`
-- Description: SpotPrice defines a gRPC query handler that returns the spot price given
- a base denomination and a quote denomination.
-- Request: QuerySpotPriceRequest
-- Response: QuerySpotPriceResponse
+
+SpotPrice defines a gRPC query handler that returns the spot price given a base denomination and a quote denomination.
+
+```ts
+import { getSpotPriceOsmosisGammV1beta1 } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetSpotPriceOsmosisGammV1beta1 } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSpotPriceOsmosisGammV1beta1` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetSpotPriceOsmosisGammV1beta1` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QuerySpotPriceRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QuerySpotPriceResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **EstimateSwapExactAmountIn**
-- Function: `getEstimateSwapExactAmountIn`
-- Hook: `useGetEstimateSwapExactAmountIn`
-- Description: Estimate the swap.
-- Request: QuerySwapExactAmountInRequest
-- Response: QuerySwapExactAmountInResponse
+
+Estimate the swap.
+
+```ts
+import { getEstimateSwapExactAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetEstimateSwapExactAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEstimateSwapExactAmountIn` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetEstimateSwapExactAmountIn` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QuerySwapExactAmountInRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QuerySwapExactAmountInResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
+---
 
 **EstimateSwapExactAmountOut**
-- Function: `getEstimateSwapExactAmountOut`
-- Hook: `useGetEstimateSwapExactAmountOut`
-- Request: QuerySwapExactAmountOutRequest
-- Response: QuerySwapExactAmountOutResponse
+
+```ts
+import { getEstimateSwapExactAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useGetEstimateSwapExactAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEstimateSwapExactAmountOut` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetEstimateSwapExactAmountOut` | [View source ↗](osmosis/gamm/v1beta1/query.rpc.react.ts) |
+| Request | `QuerySwapExactAmountOutRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Response | `QuerySwapExactAmountOutResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
 
 ### Transaction Methods
 
 **JoinPool**
-- Function: `joinPool`
-- Hook: `useJoinPool`
-- Request: MsgJoinPool
-- Response: MsgJoinPoolResponse
+
+```ts
+import { joinPool } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useJoinPool } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `joinPool` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.func.ts) |
+| Hook | `useJoinPool` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgJoinPool` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Response | `MsgJoinPoolResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+
+---
 
 **ExitPool**
-- Function: `exitPool`
-- Hook: `useExitPool`
-- Request: MsgExitPool
-- Response: MsgExitPoolResponse
+
+```ts
+import { exitPool } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useExitPool } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `exitPool` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.func.ts) |
+| Hook | `useExitPool` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgExitPool` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Response | `MsgExitPoolResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+
+---
 
 **SwapExactAmountIn**
-- Function: `swapExactAmountIn`
-- Hook: `useSwapExactAmountIn`
-- Request: MsgSwapExactAmountIn
-- Response: MsgSwapExactAmountInResponse
+
+```ts
+import { swapExactAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useSwapExactAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `swapExactAmountIn` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.func.ts) |
+| Hook | `useSwapExactAmountIn` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgSwapExactAmountIn` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Response | `MsgSwapExactAmountInResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+
+---
 
 **SwapExactAmountOut**
-- Function: `swapExactAmountOut`
-- Hook: `useSwapExactAmountOut`
-- Request: MsgSwapExactAmountOut
-- Response: MsgSwapExactAmountOutResponse
+
+```ts
+import { swapExactAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useSwapExactAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `swapExactAmountOut` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.func.ts) |
+| Hook | `useSwapExactAmountOut` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgSwapExactAmountOut` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Response | `MsgSwapExactAmountOutResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+
+---
 
 **JoinSwapExternAmountIn**
-- Function: `joinSwapExternAmountIn`
-- Hook: `useJoinSwapExternAmountIn`
-- Request: MsgJoinSwapExternAmountIn
-- Response: MsgJoinSwapExternAmountInResponse
+
+```ts
+import { joinSwapExternAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useJoinSwapExternAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `joinSwapExternAmountIn` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.func.ts) |
+| Hook | `useJoinSwapExternAmountIn` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgJoinSwapExternAmountIn` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Response | `MsgJoinSwapExternAmountInResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+
+---
 
 **JoinSwapShareAmountOut**
-- Function: `joinSwapShareAmountOut`
-- Hook: `useJoinSwapShareAmountOut`
-- Request: MsgJoinSwapShareAmountOut
-- Response: MsgJoinSwapShareAmountOutResponse
+
+```ts
+import { joinSwapShareAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useJoinSwapShareAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `joinSwapShareAmountOut` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.func.ts) |
+| Hook | `useJoinSwapShareAmountOut` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgJoinSwapShareAmountOut` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Response | `MsgJoinSwapShareAmountOutResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+
+---
 
 **ExitSwapExternAmountOut**
-- Function: `exitSwapExternAmountOut`
-- Hook: `useExitSwapExternAmountOut`
-- Request: MsgExitSwapExternAmountOut
-- Response: MsgExitSwapExternAmountOutResponse
+
+```ts
+import { exitSwapExternAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useExitSwapExternAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `exitSwapExternAmountOut` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.func.ts) |
+| Hook | `useExitSwapExternAmountOut` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgExitSwapExternAmountOut` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Response | `MsgExitSwapExternAmountOutResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+
+---
 
 **ExitSwapShareAmountIn**
-- Function: `exitSwapShareAmountIn`
-- Hook: `useExitSwapShareAmountIn`
-- Request: MsgExitSwapShareAmountIn
-- Response: MsgExitSwapShareAmountInResponse
+
+```ts
+import { exitSwapShareAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
+import { useExitSwapShareAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `exitSwapShareAmountIn` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.func.ts) |
+| Hook | `useExitSwapShareAmountIn` | [View source ↗](osmosis/gamm/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgExitSwapShareAmountIn` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
+| Response | `MsgExitSwapShareAmountInResponse` | [View source ↗](osmosis/gamm/v1beta1/tx.ts) |
 
 
 ## osmosis.gamm.v2
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `QuerySpotPriceRequest` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+| Type | `QuerySpotPriceResponse` | [View source ↗](osmosis/gamm/v1beta1/query.ts) |
+
 ### Query Methods
 
 **SpotPrice**
-- Function: `getSpotPriceOsmosisGammV2`
-- Hook: `useGetSpotPriceOsmosisGammV2`
-- Description: SpotPrice defines a gRPC query handler that returns the spot price given
- a base denomination and a quote denomination.
-- Request: QuerySpotPriceRequest
-- Response: QuerySpotPriceResponse
+
+SpotPrice defines a gRPC query handler that returns the spot price given a base denomination and a quote denomination.
+
+```ts
+import { getSpotPriceOsmosisGammV2 } from 'outputicjs/osmosis/gamm/v2'
+import { useGetSpotPriceOsmosisGammV2 } from 'outputicjs/osmosis/gamm/v2'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSpotPriceOsmosisGammV2` | [View source ↗](osmosis/gamm/v2/query.rpc.func.ts) |
+| Hook | `useGetSpotPriceOsmosisGammV2` | [View source ↗](osmosis/gamm/v2/query.rpc.react.ts) |
+| Request | `QuerySpotPriceRequest` | [View source ↗](osmosis/gamm/v2/query.ts) |
+| Response | `QuerySpotPriceResponse` | [View source ↗](osmosis/gamm/v2/query.ts) |
 
 
 ## osmosis.ibcratelimit.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `OsmosisIbcratelimitV1beta1Params` | [View source ↗](osmosis/ibc-rate-limit/v1beta1/params.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+
 ### Query Methods
 
 **Params**
-- Function: `getOsmosisIbcratelimitV1beta1Params`
-- Hook: `useGetOsmosisIbcratelimitV1beta1Params`
-- Description: Params defines a gRPC query method that returns the ibc-rate-limit module's
- parameters.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params defines a gRPC query method that returns the ibc-rate-limit module's parameters.
+
+```ts
+import { getOsmosisIbcratelimitV1beta1Params } from 'outputicjs/osmosis/ibcratelimit/v1beta1'
+import { useGetOsmosisIbcratelimitV1beta1Params } from 'outputicjs/osmosis/ibcratelimit/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getOsmosisIbcratelimitV1beta1Params` | [View source ↗](osmosis/ibc-rate-limit/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetOsmosisIbcratelimitV1beta1Params` | [View source ↗](osmosis/ibc-rate-limit/v1beta1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](osmosis/ibc-rate-limit/v1beta1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](osmosis/ibc-rate-limit/v1beta1/query.ts) |
 
 
 ## osmosis.incentives
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `ActiveGaugesPerDenomRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `ActiveGaugesPerDenomResponse` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `ActiveGaugesRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `ActiveGaugesResponse` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `Gauge` | [View source ↗](osmosis/incentives/gauge.ts) |
+| Type | `GaugeByIDRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `GaugeByIDResponse` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `GaugesRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `GaugesResponse` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `LockableDurationsInfo` | [View source ↗](osmosis/incentives/gauge.ts) |
+| Type | `ModuleToDistributeCoinsRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `ModuleToDistributeCoinsResponse` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `MsgAddToGauge` | [View source ↗](osmosis/incentives/tx.ts) |
+| Type | `MsgAddToGaugeResponse` | [View source ↗](osmosis/incentives/tx.ts) |
+| Type | `MsgCreateGauge` | [View source ↗](osmosis/incentives/tx.ts) |
+| Type | `MsgCreateGaugeResponse` | [View source ↗](osmosis/incentives/tx.ts) |
+| Type | `OsmosisIncentivesParams` | [View source ↗](osmosis/incentives/params.ts) |
+| Type | `QueryLockableDurationsRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `QueryLockableDurationsResponse` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `RewardsEstRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `RewardsEstResponse` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `UpcomingGaugesPerDenomRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `UpcomingGaugesPerDenomResponse` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `UpcomingGaugesRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `UpcomingGaugesResponse` | [View source ↗](osmosis/incentives/query.ts) |
+
 ### Query Methods
 
 **ModuleToDistributeCoins**
-- Function: `getModuleToDistributeCoins`
-- Hook: `useGetModuleToDistributeCoins`
-- Description: ModuleToDistributeCoins returns coins that are going to be distributed
-- Request: ModuleToDistributeCoinsRequest
-- Response: ModuleToDistributeCoinsResponse
+
+ModuleToDistributeCoins returns coins that are going to be distributed
+
+```ts
+import { getModuleToDistributeCoins } from 'outputicjs/osmosis/incentives'
+import { useGetModuleToDistributeCoins } from 'outputicjs/osmosis/incentives'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getModuleToDistributeCoins` | [View source ↗](osmosis/incentives/query.rpc.func.ts) |
+| Hook | `useGetModuleToDistributeCoins` | [View source ↗](osmosis/incentives/query.rpc.react.ts) |
+| Request | `ModuleToDistributeCoinsRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Response | `ModuleToDistributeCoinsResponse` | [View source ↗](osmosis/incentives/query.ts) |
+
+---
 
 **GaugeByID**
-- Function: `getGaugeByID`
-- Hook: `useGetGaugeByID`
-- Description: GaugeByID returns gauges by their respective ID
-- Request: GaugeByIDRequest
-- Response: GaugeByIDResponse
+
+GaugeByID returns gauges by their respective ID
+
+```ts
+import { getGaugeByID } from 'outputicjs/osmosis/incentives'
+import { useGetGaugeByID } from 'outputicjs/osmosis/incentives'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGaugeByID` | [View source ↗](osmosis/incentives/query.rpc.func.ts) |
+| Hook | `useGetGaugeByID` | [View source ↗](osmosis/incentives/query.rpc.react.ts) |
+| Request | `GaugeByIDRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Response | `GaugeByIDResponse` | [View source ↗](osmosis/incentives/query.ts) |
+
+---
 
 **Gauges**
-- Function: `getGauges`
-- Hook: `useGetGauges`
-- Description: Gauges returns both upcoming and active gauges
-- Request: GaugesRequest
-- Response: GaugesResponse
+
+Gauges returns both upcoming and active gauges
+
+```ts
+import { getGauges } from 'outputicjs/osmosis/incentives'
+import { useGetGauges } from 'outputicjs/osmosis/incentives'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGauges` | [View source ↗](osmosis/incentives/query.rpc.func.ts) |
+| Hook | `useGetGauges` | [View source ↗](osmosis/incentives/query.rpc.react.ts) |
+| Request | `GaugesRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Response | `GaugesResponse` | [View source ↗](osmosis/incentives/query.ts) |
+
+---
 
 **ActiveGauges**
-- Function: `getActiveGauges`
-- Hook: `useGetActiveGauges`
-- Description: ActiveGauges returns active gauges
-- Request: ActiveGaugesRequest
-- Response: ActiveGaugesResponse
+
+ActiveGauges returns active gauges
+
+```ts
+import { getActiveGauges } from 'outputicjs/osmosis/incentives'
+import { useGetActiveGauges } from 'outputicjs/osmosis/incentives'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getActiveGauges` | [View source ↗](osmosis/incentives/query.rpc.func.ts) |
+| Hook | `useGetActiveGauges` | [View source ↗](osmosis/incentives/query.rpc.react.ts) |
+| Request | `ActiveGaugesRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Response | `ActiveGaugesResponse` | [View source ↗](osmosis/incentives/query.ts) |
+
+---
 
 **ActiveGaugesPerDenom**
-- Function: `getActiveGaugesPerDenom`
-- Hook: `useGetActiveGaugesPerDenom`
-- Description: ActiveGaugesPerDenom returns active gauges by denom
-- Request: ActiveGaugesPerDenomRequest
-- Response: ActiveGaugesPerDenomResponse
+
+ActiveGaugesPerDenom returns active gauges by denom
+
+```ts
+import { getActiveGaugesPerDenom } from 'outputicjs/osmosis/incentives'
+import { useGetActiveGaugesPerDenom } from 'outputicjs/osmosis/incentives'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getActiveGaugesPerDenom` | [View source ↗](osmosis/incentives/query.rpc.func.ts) |
+| Hook | `useGetActiveGaugesPerDenom` | [View source ↗](osmosis/incentives/query.rpc.react.ts) |
+| Request | `ActiveGaugesPerDenomRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Response | `ActiveGaugesPerDenomResponse` | [View source ↗](osmosis/incentives/query.ts) |
+
+---
 
 **UpcomingGauges**
-- Function: `getUpcomingGauges`
-- Hook: `useGetUpcomingGauges`
-- Description: Returns scheduled gauges that have not yet occured
-- Request: UpcomingGaugesRequest
-- Response: UpcomingGaugesResponse
+
+Returns scheduled gauges that have not yet occured
+
+```ts
+import { getUpcomingGauges } from 'outputicjs/osmosis/incentives'
+import { useGetUpcomingGauges } from 'outputicjs/osmosis/incentives'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getUpcomingGauges` | [View source ↗](osmosis/incentives/query.rpc.func.ts) |
+| Hook | `useGetUpcomingGauges` | [View source ↗](osmosis/incentives/query.rpc.react.ts) |
+| Request | `UpcomingGaugesRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Response | `UpcomingGaugesResponse` | [View source ↗](osmosis/incentives/query.ts) |
+
+---
 
 **UpcomingGaugesPerDenom**
-- Function: `getUpcomingGaugesPerDenom`
-- Hook: `useGetUpcomingGaugesPerDenom`
-- Description: UpcomingGaugesPerDenom returns scheduled gauges that have not yet occured
- by denom
-- Request: UpcomingGaugesPerDenomRequest
-- Response: UpcomingGaugesPerDenomResponse
+
+UpcomingGaugesPerDenom returns scheduled gauges that have not yet occured by denom
+
+```ts
+import { getUpcomingGaugesPerDenom } from 'outputicjs/osmosis/incentives'
+import { useGetUpcomingGaugesPerDenom } from 'outputicjs/osmosis/incentives'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getUpcomingGaugesPerDenom` | [View source ↗](osmosis/incentives/query.rpc.func.ts) |
+| Hook | `useGetUpcomingGaugesPerDenom` | [View source ↗](osmosis/incentives/query.rpc.react.ts) |
+| Request | `UpcomingGaugesPerDenomRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Response | `UpcomingGaugesPerDenomResponse` | [View source ↗](osmosis/incentives/query.ts) |
+
+---
 
 **RewardsEst**
-- Function: `getRewardsEst`
-- Hook: `useGetRewardsEst`
-- Description: RewardsEst returns an estimate of the rewards from now until a specified
- time in the future The querier either provides an address or a set of locks
- for which they want to find the associated rewards
-- Request: RewardsEstRequest
-- Response: RewardsEstResponse
+
+RewardsEst returns an estimate of the rewards from now until a specified time in the future The querier either provides an address or a set of locks for which they want to find the associated rewards
+
+```ts
+import { getRewardsEst } from 'outputicjs/osmosis/incentives'
+import { useGetRewardsEst } from 'outputicjs/osmosis/incentives'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getRewardsEst` | [View source ↗](osmosis/incentives/query.rpc.func.ts) |
+| Hook | `useGetRewardsEst` | [View source ↗](osmosis/incentives/query.rpc.react.ts) |
+| Request | `RewardsEstRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Response | `RewardsEstResponse` | [View source ↗](osmosis/incentives/query.ts) |
+
+---
 
 **LockableDurations**
-- Function: `getLockableDurationsOsmosisIncentives`
-- Hook: `useGetLockableDurationsOsmosisIncentives`
-- Description: LockableDurations returns lockable durations that are valid to distribute
- incentives for
-- Request: QueryLockableDurationsRequest
-- Response: QueryLockableDurationsResponse
+
+LockableDurations returns lockable durations that are valid to distribute incentives for
+
+```ts
+import { getLockableDurationsOsmosisIncentives } from 'outputicjs/osmosis/incentives'
+import { useGetLockableDurationsOsmosisIncentives } from 'outputicjs/osmosis/incentives'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getLockableDurationsOsmosisIncentives` | [View source ↗](osmosis/incentives/query.rpc.func.ts) |
+| Hook | `useGetLockableDurationsOsmosisIncentives` | [View source ↗](osmosis/incentives/query.rpc.react.ts) |
+| Request | `QueryLockableDurationsRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Response | `QueryLockableDurationsResponse` | [View source ↗](osmosis/incentives/query.ts) |
 
 ### Transaction Methods
 
 **CreateGauge**
-- Function: `createGauge`
-- Hook: `useCreateGauge`
-- Request: MsgCreateGauge
-- Response: MsgCreateGaugeResponse
+
+```ts
+import { createGauge } from 'outputicjs/osmosis/incentives'
+import { useCreateGauge } from 'outputicjs/osmosis/incentives'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createGauge` | [View source ↗](osmosis/incentives/tx.rpc.func.ts) |
+| Hook | `useCreateGauge` | [View source ↗](osmosis/incentives/tx.rpc.react.ts) |
+| Request | `MsgCreateGauge` | [View source ↗](osmosis/incentives/tx.ts) |
+| Response | `MsgCreateGaugeResponse` | [View source ↗](osmosis/incentives/tx.ts) |
+
+---
 
 **AddToGauge**
-- Function: `addToGauge`
-- Hook: `useAddToGauge`
-- Request: MsgAddToGauge
-- Response: MsgAddToGaugeResponse
+
+```ts
+import { addToGauge } from 'outputicjs/osmosis/incentives'
+import { useAddToGauge } from 'outputicjs/osmosis/incentives'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `addToGauge` | [View source ↗](osmosis/incentives/tx.rpc.func.ts) |
+| Hook | `useAddToGauge` | [View source ↗](osmosis/incentives/tx.rpc.react.ts) |
+| Request | `MsgAddToGauge` | [View source ↗](osmosis/incentives/tx.ts) |
+| Response | `MsgAddToGaugeResponse` | [View source ↗](osmosis/incentives/tx.ts) |
 
 
 ## osmosis.lockup
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `AccountLockedCoinsRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedCoinsResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedDurationRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedDurationResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedLongerDurationDenomRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedLongerDurationDenomResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedLongerDurationNotUnlockingOnlyRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedLongerDurationNotUnlockingOnlyResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedLongerDurationRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedLongerDurationResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedPastTimeDenomRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedPastTimeDenomResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedPastTimeNotUnlockingOnlyRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedPastTimeNotUnlockingOnlyResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedPastTimeRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountLockedPastTimeResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountUnlockableCoinsRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountUnlockableCoinsResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountUnlockedBeforeTimeRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountUnlockedBeforeTimeResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountUnlockingCoinsRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `AccountUnlockingCoinsResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `LockedDenomRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `LockedDenomResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `LockedRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `LockedResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `LockQueryType` | [View source ↗](osmosis/lockup/lock.ts) |
+| Type | `ModuleBalanceRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `ModuleBalanceResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `ModuleLockedAmountRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `ModuleLockedAmountResponse` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `MsgBeginUnlocking` | [View source ↗](osmosis/lockup/tx.ts) |
+| Type | `MsgBeginUnlockingAll` | [View source ↗](osmosis/lockup/tx.ts) |
+| Type | `MsgBeginUnlockingAllResponse` | [View source ↗](osmosis/lockup/tx.ts) |
+| Type | `MsgBeginUnlockingResponse` | [View source ↗](osmosis/lockup/tx.ts) |
+| Type | `MsgExtendLockup` | [View source ↗](osmosis/lockup/tx.ts) |
+| Type | `MsgExtendLockupResponse` | [View source ↗](osmosis/lockup/tx.ts) |
+| Type | `MsgForceUnlock` | [View source ↗](osmosis/lockup/tx.ts) |
+| Type | `MsgForceUnlockResponse` | [View source ↗](osmosis/lockup/tx.ts) |
+| Type | `MsgLockTokens` | [View source ↗](osmosis/lockup/tx.ts) |
+| Type | `MsgLockTokensResponse` | [View source ↗](osmosis/lockup/tx.ts) |
+| Type | `OsmosisLockupParams` | [View source ↗](osmosis/lockup/params.ts) |
+| Type | `PeriodLock` | [View source ↗](osmosis/lockup/lock.ts) |
+| Type | `QueryCondition` | [View source ↗](osmosis/lockup/lock.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `SyntheticLock` | [View source ↗](osmosis/lockup/lock.ts) |
+| Type | `SyntheticLockupsByLockupIDRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Type | `SyntheticLockupsByLockupIDResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
 ### Query Methods
 
 **ModuleBalance**
-- Function: `getModuleBalance`
-- Hook: `useGetModuleBalance`
-- Description: Return full balance of the module
-- Request: ModuleBalanceRequest
-- Response: ModuleBalanceResponse
+
+Return full balance of the module
+
+```ts
+import { getModuleBalance } from 'outputicjs/osmosis/lockup'
+import { useGetModuleBalance } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getModuleBalance` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetModuleBalance` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `ModuleBalanceRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `ModuleBalanceResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **ModuleLockedAmount**
-- Function: `getModuleLockedAmount`
-- Hook: `useGetModuleLockedAmount`
-- Description: Return locked balance of the module
-- Request: ModuleLockedAmountRequest
-- Response: ModuleLockedAmountResponse
+
+Return locked balance of the module
+
+```ts
+import { getModuleLockedAmount } from 'outputicjs/osmosis/lockup'
+import { useGetModuleLockedAmount } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getModuleLockedAmount` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetModuleLockedAmount` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `ModuleLockedAmountRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `ModuleLockedAmountResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **AccountUnlockableCoins**
-- Function: `getAccountUnlockableCoins`
-- Hook: `useGetAccountUnlockableCoins`
-- Description: Returns unlockable coins which are not withdrawn yet
-- Request: AccountUnlockableCoinsRequest
-- Response: AccountUnlockableCoinsResponse
+
+Returns unlockable coins which are not withdrawn yet
+
+```ts
+import { getAccountUnlockableCoins } from 'outputicjs/osmosis/lockup'
+import { useGetAccountUnlockableCoins } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountUnlockableCoins` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetAccountUnlockableCoins` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `AccountUnlockableCoinsRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `AccountUnlockableCoinsResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **AccountUnlockingCoins**
-- Function: `getAccountUnlockingCoins`
-- Hook: `useGetAccountUnlockingCoins`
-- Description: Returns unlocking coins
-- Request: AccountUnlockingCoinsRequest
-- Response: AccountUnlockingCoinsResponse
+
+Returns unlocking coins
+
+```ts
+import { getAccountUnlockingCoins } from 'outputicjs/osmosis/lockup'
+import { useGetAccountUnlockingCoins } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountUnlockingCoins` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetAccountUnlockingCoins` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `AccountUnlockingCoinsRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `AccountUnlockingCoinsResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **AccountLockedCoins**
-- Function: `getAccountLockedCoins`
-- Hook: `useGetAccountLockedCoins`
-- Description: Return a locked coins that can't be withdrawn
-- Request: AccountLockedCoinsRequest
-- Response: AccountLockedCoinsResponse
+
+Return a locked coins that can't be withdrawn
+
+```ts
+import { getAccountLockedCoins } from 'outputicjs/osmosis/lockup'
+import { useGetAccountLockedCoins } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountLockedCoins` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetAccountLockedCoins` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `AccountLockedCoinsRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `AccountLockedCoinsResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **AccountLockedPastTime**
-- Function: `getAccountLockedPastTime`
-- Hook: `useGetAccountLockedPastTime`
-- Description: Returns locked records of an account with unlock time beyond timestamp
-- Request: AccountLockedPastTimeRequest
-- Response: AccountLockedPastTimeResponse
+
+Returns locked records of an account with unlock time beyond timestamp
+
+```ts
+import { getAccountLockedPastTime } from 'outputicjs/osmosis/lockup'
+import { useGetAccountLockedPastTime } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountLockedPastTime` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetAccountLockedPastTime` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `AccountLockedPastTimeRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `AccountLockedPastTimeResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **AccountLockedPastTimeNotUnlockingOnly**
-- Function: `getAccountLockedPastTimeNotUnlockingOnly`
-- Hook: `useGetAccountLockedPastTimeNotUnlockingOnly`
-- Description: Returns locked records of an account with unlock time beyond timestamp
- excluding tokens started unlocking
-- Request: AccountLockedPastTimeNotUnlockingOnlyRequest
-- Response: AccountLockedPastTimeNotUnlockingOnlyResponse
+
+Returns locked records of an account with unlock time beyond timestamp excluding tokens started unlocking
+
+```ts
+import { getAccountLockedPastTimeNotUnlockingOnly } from 'outputicjs/osmosis/lockup'
+import { useGetAccountLockedPastTimeNotUnlockingOnly } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountLockedPastTimeNotUnlockingOnly` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetAccountLockedPastTimeNotUnlockingOnly` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `AccountLockedPastTimeNotUnlockingOnlyRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `AccountLockedPastTimeNotUnlockingOnlyResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **AccountUnlockedBeforeTime**
-- Function: `getAccountUnlockedBeforeTime`
-- Hook: `useGetAccountUnlockedBeforeTime`
-- Description: Returns unlocked records with unlock time before timestamp
-- Request: AccountUnlockedBeforeTimeRequest
-- Response: AccountUnlockedBeforeTimeResponse
+
+Returns unlocked records with unlock time before timestamp
+
+```ts
+import { getAccountUnlockedBeforeTime } from 'outputicjs/osmosis/lockup'
+import { useGetAccountUnlockedBeforeTime } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountUnlockedBeforeTime` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetAccountUnlockedBeforeTime` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `AccountUnlockedBeforeTimeRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `AccountUnlockedBeforeTimeResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **AccountLockedPastTimeDenom**
-- Function: `getAccountLockedPastTimeDenom`
-- Hook: `useGetAccountLockedPastTimeDenom`
-- Description: Returns lock records by address, timestamp, denom
-- Request: AccountLockedPastTimeDenomRequest
-- Response: AccountLockedPastTimeDenomResponse
+
+Returns lock records by address, timestamp, denom
+
+```ts
+import { getAccountLockedPastTimeDenom } from 'outputicjs/osmosis/lockup'
+import { useGetAccountLockedPastTimeDenom } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountLockedPastTimeDenom` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetAccountLockedPastTimeDenom` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `AccountLockedPastTimeDenomRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `AccountLockedPastTimeDenomResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **LockedDenom**
-- Function: `getLockedDenom`
-- Hook: `useGetLockedDenom`
-- Description: Returns total locked per denom with longer past given time
-- Request: LockedDenomRequest
-- Response: LockedDenomResponse
+
+Returns total locked per denom with longer past given time
+
+```ts
+import { getLockedDenom } from 'outputicjs/osmosis/lockup'
+import { useGetLockedDenom } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getLockedDenom` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetLockedDenom` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `LockedDenomRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `LockedDenomResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **LockedByID**
-- Function: `getLockedByID`
-- Hook: `useGetLockedByID`
-- Description: Returns lock record by id
-- Request: LockedRequest
-- Response: LockedResponse
+
+Returns lock record by id
+
+```ts
+import { getLockedByID } from 'outputicjs/osmosis/lockup'
+import { useGetLockedByID } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getLockedByID` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetLockedByID` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `LockedRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `LockedResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **SyntheticLockupsByLockupID**
-- Function: `getSyntheticLockupsByLockupID`
-- Hook: `useGetSyntheticLockupsByLockupID`
-- Description: Returns synthetic lockups by native lockup id
-- Request: SyntheticLockupsByLockupIDRequest
-- Response: SyntheticLockupsByLockupIDResponse
+
+Returns synthetic lockups by native lockup id
+
+```ts
+import { getSyntheticLockupsByLockupID } from 'outputicjs/osmosis/lockup'
+import { useGetSyntheticLockupsByLockupID } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSyntheticLockupsByLockupID` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetSyntheticLockupsByLockupID` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `SyntheticLockupsByLockupIDRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `SyntheticLockupsByLockupIDResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **AccountLockedLongerDuration**
-- Function: `getAccountLockedLongerDuration`
-- Hook: `useGetAccountLockedLongerDuration`
-- Description: Returns account locked records with longer duration
-- Request: AccountLockedLongerDurationRequest
-- Response: AccountLockedLongerDurationResponse
+
+Returns account locked records with longer duration
+
+```ts
+import { getAccountLockedLongerDuration } from 'outputicjs/osmosis/lockup'
+import { useGetAccountLockedLongerDuration } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountLockedLongerDuration` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetAccountLockedLongerDuration` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `AccountLockedLongerDurationRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `AccountLockedLongerDurationResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **AccountLockedDuration**
-- Function: `getAccountLockedDuration`
-- Hook: `useGetAccountLockedDuration`
-- Description: Returns account locked records with a specific duration
-- Request: AccountLockedDurationRequest
-- Response: AccountLockedDurationResponse
+
+Returns account locked records with a specific duration
+
+```ts
+import { getAccountLockedDuration } from 'outputicjs/osmosis/lockup'
+import { useGetAccountLockedDuration } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountLockedDuration` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetAccountLockedDuration` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `AccountLockedDurationRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `AccountLockedDurationResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **AccountLockedLongerDurationNotUnlockingOnly**
-- Function: `getAccountLockedLongerDurationNotUnlockingOnly`
-- Hook: `useGetAccountLockedLongerDurationNotUnlockingOnly`
-- Description: Returns account locked records with longer duration excluding tokens
- started unlocking
-- Request: AccountLockedLongerDurationNotUnlockingOnlyRequest
-- Response: AccountLockedLongerDurationNotUnlockingOnlyResponse
+
+Returns account locked records with longer duration excluding tokens started unlocking
+
+```ts
+import { getAccountLockedLongerDurationNotUnlockingOnly } from 'outputicjs/osmosis/lockup'
+import { useGetAccountLockedLongerDurationNotUnlockingOnly } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountLockedLongerDurationNotUnlockingOnly` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetAccountLockedLongerDurationNotUnlockingOnly` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `AccountLockedLongerDurationNotUnlockingOnlyRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `AccountLockedLongerDurationNotUnlockingOnlyResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **AccountLockedLongerDurationDenom**
-- Function: `getAccountLockedLongerDurationDenom`
-- Hook: `useGetAccountLockedLongerDurationDenom`
-- Description: Returns account's locked records for a denom with longer duration
-- Request: AccountLockedLongerDurationDenomRequest
-- Response: AccountLockedLongerDurationDenomResponse
+
+Returns account's locked records for a denom with longer duration
+
+```ts
+import { getAccountLockedLongerDurationDenom } from 'outputicjs/osmosis/lockup'
+import { useGetAccountLockedLongerDurationDenom } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAccountLockedLongerDurationDenom` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetAccountLockedLongerDurationDenom` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `AccountLockedLongerDurationDenomRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `AccountLockedLongerDurationDenomResponse` | [View source ↗](osmosis/lockup/query.ts) |
+
+---
 
 **Params**
-- Function: `getOsmosisLockupParams`
-- Hook: `useGetOsmosisLockupParams`
-- Description: Params returns lockup params.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params returns lockup params.
+
+```ts
+import { getOsmosisLockupParams } from 'outputicjs/osmosis/lockup'
+import { useGetOsmosisLockupParams } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getOsmosisLockupParams` | [View source ↗](osmosis/lockup/query.rpc.func.ts) |
+| Hook | `useGetOsmosisLockupParams` | [View source ↗](osmosis/lockup/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](osmosis/lockup/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](osmosis/lockup/query.ts) |
 
 ### Transaction Methods
 
 **LockTokens**
-- Function: `lockTokens`
-- Hook: `useLockTokens`
-- Description: LockTokens lock tokens
-- Request: MsgLockTokens
-- Response: MsgLockTokensResponse
+
+LockTokens lock tokens
+
+```ts
+import { lockTokens } from 'outputicjs/osmosis/lockup'
+import { useLockTokens } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `lockTokens` | [View source ↗](osmosis/lockup/tx.rpc.func.ts) |
+| Hook | `useLockTokens` | [View source ↗](osmosis/lockup/tx.rpc.react.ts) |
+| Request | `MsgLockTokens` | [View source ↗](osmosis/lockup/tx.ts) |
+| Response | `MsgLockTokensResponse` | [View source ↗](osmosis/lockup/tx.ts) |
+
+---
 
 **BeginUnlockingAll**
-- Function: `beginUnlockingAll`
-- Hook: `useBeginUnlockingAll`
-- Description: BeginUnlockingAll begin unlocking all tokens
-- Request: MsgBeginUnlockingAll
-- Response: MsgBeginUnlockingAllResponse
+
+BeginUnlockingAll begin unlocking all tokens
+
+```ts
+import { beginUnlockingAll } from 'outputicjs/osmosis/lockup'
+import { useBeginUnlockingAll } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `beginUnlockingAll` | [View source ↗](osmosis/lockup/tx.rpc.func.ts) |
+| Hook | `useBeginUnlockingAll` | [View source ↗](osmosis/lockup/tx.rpc.react.ts) |
+| Request | `MsgBeginUnlockingAll` | [View source ↗](osmosis/lockup/tx.ts) |
+| Response | `MsgBeginUnlockingAllResponse` | [View source ↗](osmosis/lockup/tx.ts) |
+
+---
 
 **BeginUnlocking**
-- Function: `beginUnlocking`
-- Hook: `useBeginUnlocking`
-- Description: MsgBeginUnlocking begins unlocking tokens by lock ID
-- Request: MsgBeginUnlocking
-- Response: MsgBeginUnlockingResponse
+
+MsgBeginUnlocking begins unlocking tokens by lock ID
+
+```ts
+import { beginUnlocking } from 'outputicjs/osmosis/lockup'
+import { useBeginUnlocking } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `beginUnlocking` | [View source ↗](osmosis/lockup/tx.rpc.func.ts) |
+| Hook | `useBeginUnlocking` | [View source ↗](osmosis/lockup/tx.rpc.react.ts) |
+| Request | `MsgBeginUnlocking` | [View source ↗](osmosis/lockup/tx.ts) |
+| Response | `MsgBeginUnlockingResponse` | [View source ↗](osmosis/lockup/tx.ts) |
+
+---
 
 **ExtendLockup**
-- Function: `extendLockup`
-- Hook: `useExtendLockup`
-- Description: MsgEditLockup edits the existing lockups by lock ID
-- Request: MsgExtendLockup
-- Response: MsgExtendLockupResponse
+
+MsgEditLockup edits the existing lockups by lock ID
+
+```ts
+import { extendLockup } from 'outputicjs/osmosis/lockup'
+import { useExtendLockup } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `extendLockup` | [View source ↗](osmosis/lockup/tx.rpc.func.ts) |
+| Hook | `useExtendLockup` | [View source ↗](osmosis/lockup/tx.rpc.react.ts) |
+| Request | `MsgExtendLockup` | [View source ↗](osmosis/lockup/tx.ts) |
+| Response | `MsgExtendLockupResponse` | [View source ↗](osmosis/lockup/tx.ts) |
+
+---
 
 **ForceUnlock**
-- Function: `forceUnlock`
-- Hook: `useForceUnlock`
-- Request: MsgForceUnlock
-- Response: MsgForceUnlockResponse
+
+```ts
+import { forceUnlock } from 'outputicjs/osmosis/lockup'
+import { useForceUnlock } from 'outputicjs/osmosis/lockup'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `forceUnlock` | [View source ↗](osmosis/lockup/tx.rpc.func.ts) |
+| Hook | `useForceUnlock` | [View source ↗](osmosis/lockup/tx.rpc.react.ts) |
+| Request | `MsgForceUnlock` | [View source ↗](osmosis/lockup/tx.ts) |
+| Response | `MsgForceUnlockResponse` | [View source ↗](osmosis/lockup/tx.ts) |
 
 
 ## osmosis.mint.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `DistributionProportions` | [View source ↗](osmosis/mint/v1beta1/mint.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `Minter` | [View source ↗](cosmos/mint/v1beta1/mint.ts) |
+| Type | `OsmosisMintV1beta1Params` | [View source ↗](osmosis/mint/v1beta1/mint.ts) |
+| Type | `QueryEpochProvisionsRequest` | [View source ↗](osmosis/mint/v1beta1/query.ts) |
+| Type | `QueryEpochProvisionsResponse` | [View source ↗](osmosis/mint/v1beta1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `WeightedAddress` | [View source ↗](osmosis/mint/v1beta1/mint.ts) |
+
 ### Query Methods
 
 **Params**
-- Function: `getOsmosisMintV1beta1Params`
-- Hook: `useGetOsmosisMintV1beta1Params`
-- Description: Params returns the total set of minting parameters.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params returns the total set of minting parameters.
+
+```ts
+import { getOsmosisMintV1beta1Params } from 'outputicjs/osmosis/mint/v1beta1'
+import { useGetOsmosisMintV1beta1Params } from 'outputicjs/osmosis/mint/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getOsmosisMintV1beta1Params` | [View source ↗](osmosis/mint/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetOsmosisMintV1beta1Params` | [View source ↗](osmosis/mint/v1beta1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](osmosis/mint/v1beta1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](osmosis/mint/v1beta1/query.ts) |
+
+---
 
 **EpochProvisions**
-- Function: `getEpochProvisions`
-- Hook: `useGetEpochProvisions`
-- Description: EpochProvisions returns the current minting epoch provisions value.
-- Request: QueryEpochProvisionsRequest
-- Response: QueryEpochProvisionsResponse
+
+EpochProvisions returns the current minting epoch provisions value.
+
+```ts
+import { getEpochProvisions } from 'outputicjs/osmosis/mint/v1beta1'
+import { useGetEpochProvisions } from 'outputicjs/osmosis/mint/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEpochProvisions` | [View source ↗](osmosis/mint/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetEpochProvisions` | [View source ↗](osmosis/mint/v1beta1/query.rpc.react.ts) |
+| Request | `QueryEpochProvisionsRequest` | [View source ↗](osmosis/mint/v1beta1/query.ts) |
+| Response | `QueryEpochProvisionsResponse` | [View source ↗](osmosis/mint/v1beta1/query.ts) |
 
 
 ## osmosis.poolincentives.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `DistrInfo` | [View source ↗](osmosis/pool-incentives/v1beta1/incentives.ts) |
+| Type | `DistrRecord` | [View source ↗](osmosis/pool-incentives/v1beta1/incentives.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `IncentivizedPool` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Type | `LockableDurationsInfo` | [View source ↗](osmosis/incentives/gauge.ts) |
+| Type | `OsmosisPoolincentivesV1beta1Params` | [View source ↗](osmosis/pool-incentives/v1beta1/incentives.ts) |
+| Type | `PoolToGauge` | [View source ↗](osmosis/pool-incentives/v1beta1/incentives.ts) |
+| Type | `PoolToGauges` | [View source ↗](osmosis/pool-incentives/v1beta1/incentives.ts) |
+| Type | `QueryDistrInfoRequest` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Type | `QueryDistrInfoResponse` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Type | `QueryExternalIncentiveGaugesRequest` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Type | `QueryExternalIncentiveGaugesResponse` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Type | `QueryGaugeIdsRequest` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Type | `QueryGaugeIdsResponse` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Type | `QueryIncentivizedPoolsRequest` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Type | `QueryIncentivizedPoolsResponse` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Type | `QueryLockableDurationsRequest` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `QueryLockableDurationsResponse` | [View source ↗](osmosis/incentives/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `ReplacePoolIncentivesProposal` | [View source ↗](osmosis/pool-incentives/v1beta1/gov.ts) |
+| Type | `UpdatePoolIncentivesProposal` | [View source ↗](osmosis/pool-incentives/v1beta1/gov.ts) |
+
 ### Query Methods
 
 **GaugeIds**
-- Function: `getGaugeIds`
-- Hook: `useGetGaugeIds`
-- Description: GaugeIds takes the pool id and returns the matching gauge ids and durations
-- Request: QueryGaugeIdsRequest
-- Response: QueryGaugeIdsResponse
+
+GaugeIds takes the pool id and returns the matching gauge ids and durations
+
+```ts
+import { getGaugeIds } from 'outputicjs/osmosis/poolincentives/v1beta1'
+import { useGetGaugeIds } from 'outputicjs/osmosis/poolincentives/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getGaugeIds` | [View source ↗](osmosis/pool-incentives/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetGaugeIds` | [View source ↗](osmosis/pool-incentives/v1beta1/query.rpc.react.ts) |
+| Request | `QueryGaugeIdsRequest` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Response | `QueryGaugeIdsResponse` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+
+---
 
 **DistrInfo**
-- Function: `getDistrInfo`
-- Hook: `useGetDistrInfo`
-- Description: DistrInfo returns the pool's matching gauge ids and weights.
-- Request: QueryDistrInfoRequest
-- Response: QueryDistrInfoResponse
+
+DistrInfo returns the pool's matching gauge ids and weights.
+
+```ts
+import { getDistrInfo } from 'outputicjs/osmosis/poolincentives/v1beta1'
+import { useGetDistrInfo } from 'outputicjs/osmosis/poolincentives/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDistrInfo` | [View source ↗](osmosis/pool-incentives/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDistrInfo` | [View source ↗](osmosis/pool-incentives/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDistrInfoRequest` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Response | `QueryDistrInfoResponse` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+
+---
 
 **Params**
-- Function: `getOsmosisPoolincentivesV1beta1Params`
-- Hook: `useGetOsmosisPoolincentivesV1beta1Params`
-- Description: Params returns pool incentives params.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params returns pool incentives params.
+
+```ts
+import { getOsmosisPoolincentivesV1beta1Params } from 'outputicjs/osmosis/poolincentives/v1beta1'
+import { useGetOsmosisPoolincentivesV1beta1Params } from 'outputicjs/osmosis/poolincentives/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getOsmosisPoolincentivesV1beta1Params` | [View source ↗](osmosis/pool-incentives/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetOsmosisPoolincentivesV1beta1Params` | [View source ↗](osmosis/pool-incentives/v1beta1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+
+---
 
 **LockableDurations**
-- Function: `getLockableDurationsOsmosisPoolincentivesV1beta1`
-- Hook: `useGetLockableDurationsOsmosisPoolincentivesV1beta1`
-- Description: LockableDurations returns lock durations for pools.
-- Request: QueryLockableDurationsRequest
-- Response: QueryLockableDurationsResponse
+
+LockableDurations returns lock durations for pools.
+
+```ts
+import { getLockableDurationsOsmosisPoolincentivesV1beta1 } from 'outputicjs/osmosis/poolincentives/v1beta1'
+import { useGetLockableDurationsOsmosisPoolincentivesV1beta1 } from 'outputicjs/osmosis/poolincentives/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getLockableDurationsOsmosisPoolincentivesV1beta1` | [View source ↗](osmosis/pool-incentives/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetLockableDurationsOsmosisPoolincentivesV1beta1` | [View source ↗](osmosis/pool-incentives/v1beta1/query.rpc.react.ts) |
+| Request | `QueryLockableDurationsRequest` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Response | `QueryLockableDurationsResponse` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+
+---
 
 **IncentivizedPools**
-- Function: `getIncentivizedPools`
-- Hook: `useGetIncentivizedPools`
-- Description: IncentivizedPools returns currently incentivized pools
-- Request: QueryIncentivizedPoolsRequest
-- Response: QueryIncentivizedPoolsResponse
+
+IncentivizedPools returns currently incentivized pools
+
+```ts
+import { getIncentivizedPools } from 'outputicjs/osmosis/poolincentives/v1beta1'
+import { useGetIncentivizedPools } from 'outputicjs/osmosis/poolincentives/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getIncentivizedPools` | [View source ↗](osmosis/pool-incentives/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetIncentivizedPools` | [View source ↗](osmosis/pool-incentives/v1beta1/query.rpc.react.ts) |
+| Request | `QueryIncentivizedPoolsRequest` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Response | `QueryIncentivizedPoolsResponse` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+
+---
 
 **ExternalIncentiveGauges**
-- Function: `getExternalIncentiveGauges`
-- Hook: `useGetExternalIncentiveGauges`
-- Description: ExternalIncentiveGauges returns external incentive gauges.
-- Request: QueryExternalIncentiveGaugesRequest
-- Response: QueryExternalIncentiveGaugesResponse
+
+ExternalIncentiveGauges returns external incentive gauges.
+
+```ts
+import { getExternalIncentiveGauges } from 'outputicjs/osmosis/poolincentives/v1beta1'
+import { useGetExternalIncentiveGauges } from 'outputicjs/osmosis/poolincentives/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getExternalIncentiveGauges` | [View source ↗](osmosis/pool-incentives/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetExternalIncentiveGauges` | [View source ↗](osmosis/pool-incentives/v1beta1/query.rpc.react.ts) |
+| Request | `QueryExternalIncentiveGaugesRequest` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
+| Response | `QueryExternalIncentiveGaugesResponse` | [View source ↗](osmosis/pool-incentives/v1beta1/query.ts) |
 
 
 ## osmosis.superfluid
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `AllAssetsRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `AllAssetsResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `AllIntermediaryAccountsRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `AllIntermediaryAccountsResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `AssetMultiplierRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `AssetMultiplierResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `AssetTypeRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `AssetTypeResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `ConnectedIntermediaryAccountRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `ConnectedIntermediaryAccountResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `Delegations` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `EstimateSuperfluidDelegatedAmountByValidatorDenomRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `EstimateSuperfluidDelegatedAmountByValidatorDenomResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `LockIdIntermediaryAccountConnection` | [View source ↗](osmosis/superfluid/superfluid.ts) |
+| Type | `MsgLockAndSuperfluidDelegate` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Type | `MsgLockAndSuperfluidDelegateResponse` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Type | `MsgSuperfluidDelegate` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Type | `MsgSuperfluidDelegateResponse` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Type | `MsgSuperfluidUnbondLock` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Type | `MsgSuperfluidUnbondLockResponse` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Type | `MsgSuperfluidUndelegate` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Type | `MsgSuperfluidUndelegateResponse` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Type | `MsgUnPoolWhitelistedPool` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Type | `MsgUnPoolWhitelistedPoolResponse` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Type | `OsmoEquivalentMultiplierRecord` | [View source ↗](osmosis/superfluid/superfluid.ts) |
+| Type | `OsmosisSuperfluidParams` | [View source ↗](osmosis/superfluid/params.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryTotalDelegationByDelegatorRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `QueryTotalDelegationByDelegatorResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `QueryTotalDelegationByValidatorForDenomRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `QueryTotalDelegationByValidatorForDenomResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `QueryUnpoolWhitelistRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `QueryUnpoolWhitelistResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `SuperfluidAsset` | [View source ↗](osmosis/superfluid/superfluid.ts) |
+| Type | `SuperfluidAssetType` | [View source ↗](osmosis/superfluid/superfluid.ts) |
+| Type | `SuperfluidDelegationAmountRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `SuperfluidDelegationAmountResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `SuperfluidDelegationRecord` | [View source ↗](osmosis/superfluid/superfluid.ts) |
+| Type | `SuperfluidDelegationsByDelegatorRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `SuperfluidDelegationsByDelegatorResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `SuperfluidDelegationsByValidatorDenomRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `SuperfluidDelegationsByValidatorDenomResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `SuperfluidIntermediaryAccount` | [View source ↗](osmosis/superfluid/superfluid.ts) |
+| Type | `SuperfluidIntermediaryAccountInfo` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `SuperfluidUndelegationsByDelegatorRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `SuperfluidUndelegationsByDelegatorResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `TotalSuperfluidDelegationsRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `TotalSuperfluidDelegationsResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+| Type | `UnpoolWhitelistedPools` | [View source ↗](osmosis/superfluid/superfluid.ts) |
+
 ### Query Methods
 
 **Params**
-- Function: `getOsmosisSuperfluidParams`
-- Hook: `useGetOsmosisSuperfluidParams`
-- Description: Params returns the total set of superfluid parameters.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params returns the total set of superfluid parameters.
+
+```ts
+import { getOsmosisSuperfluidParams } from 'outputicjs/osmosis/superfluid'
+import { useGetOsmosisSuperfluidParams } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getOsmosisSuperfluidParams` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetOsmosisSuperfluidParams` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **AssetType**
-- Function: `getAssetType`
-- Hook: `useGetAssetType`
-- Description: Returns superfluid asset type, whether if it's a native asset or an lp
- share.
-- Request: AssetTypeRequest
-- Response: AssetTypeResponse
+
+Returns superfluid asset type, whether if it's a native asset or an lp share.
+
+```ts
+import { getAssetType } from 'outputicjs/osmosis/superfluid'
+import { useGetAssetType } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAssetType` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetAssetType` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `AssetTypeRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `AssetTypeResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **AllAssets**
-- Function: `getAllAssets`
-- Hook: `useGetAllAssets`
-- Description: Returns all registered superfluid assets.
-- Request: AllAssetsRequest
-- Response: AllAssetsResponse
+
+Returns all registered superfluid assets.
+
+```ts
+import { getAllAssets } from 'outputicjs/osmosis/superfluid'
+import { useGetAllAssets } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAllAssets` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetAllAssets` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `AllAssetsRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `AllAssetsResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **AssetMultiplier**
-- Function: `getAssetMultiplier`
-- Hook: `useGetAssetMultiplier`
-- Description: Returns the osmo equivalent multiplier used in the most recent epoch.
-- Request: AssetMultiplierRequest
-- Response: AssetMultiplierResponse
+
+Returns the osmo equivalent multiplier used in the most recent epoch.
+
+```ts
+import { getAssetMultiplier } from 'outputicjs/osmosis/superfluid'
+import { useGetAssetMultiplier } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAssetMultiplier` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetAssetMultiplier` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `AssetMultiplierRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `AssetMultiplierResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **AllIntermediaryAccounts**
-- Function: `getAllIntermediaryAccounts`
-- Hook: `useGetAllIntermediaryAccounts`
-- Description: Returns all superfluid intermediary accounts.
-- Request: AllIntermediaryAccountsRequest
-- Response: AllIntermediaryAccountsResponse
+
+Returns all superfluid intermediary accounts.
+
+```ts
+import { getAllIntermediaryAccounts } from 'outputicjs/osmosis/superfluid'
+import { useGetAllIntermediaryAccounts } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getAllIntermediaryAccounts` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetAllIntermediaryAccounts` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `AllIntermediaryAccountsRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `AllIntermediaryAccountsResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **ConnectedIntermediaryAccount**
-- Function: `getConnectedIntermediaryAccount`
-- Hook: `useGetConnectedIntermediaryAccount`
-- Description: Returns intermediary account connected to a superfluid staked lock by id
-- Request: ConnectedIntermediaryAccountRequest
-- Response: ConnectedIntermediaryAccountResponse
+
+Returns intermediary account connected to a superfluid staked lock by id
+
+```ts
+import { getConnectedIntermediaryAccount } from 'outputicjs/osmosis/superfluid'
+import { useGetConnectedIntermediaryAccount } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getConnectedIntermediaryAccount` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetConnectedIntermediaryAccount` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `ConnectedIntermediaryAccountRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `ConnectedIntermediaryAccountResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **TotalDelegationByValidatorForDenom**
-- Function: `getTotalDelegationByValidatorForDenom`
-- Hook: `useGetTotalDelegationByValidatorForDenom`
-- Description: Returns the amount of delegations of specific denom for all validators
-- Request: QueryTotalDelegationByValidatorForDenomRequest
-- Response: QueryTotalDelegationByValidatorForDenomResponse
+
+Returns the amount of delegations of specific denom for all validators
+
+```ts
+import { getTotalDelegationByValidatorForDenom } from 'outputicjs/osmosis/superfluid'
+import { useGetTotalDelegationByValidatorForDenom } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTotalDelegationByValidatorForDenom` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetTotalDelegationByValidatorForDenom` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `QueryTotalDelegationByValidatorForDenomRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `QueryTotalDelegationByValidatorForDenomResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **TotalSuperfluidDelegations**
-- Function: `getTotalSuperfluidDelegations`
-- Hook: `useGetTotalSuperfluidDelegations`
-- Description: Returns the total amount of osmo superfluidly staked.
- Response is denominated in uosmo.
-- Request: TotalSuperfluidDelegationsRequest
-- Response: TotalSuperfluidDelegationsResponse
+
+Returns the total amount of osmo superfluidly staked. Response is denominated in uosmo.
+
+```ts
+import { getTotalSuperfluidDelegations } from 'outputicjs/osmosis/superfluid'
+import { useGetTotalSuperfluidDelegations } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTotalSuperfluidDelegations` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetTotalSuperfluidDelegations` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `TotalSuperfluidDelegationsRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `TotalSuperfluidDelegationsResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **SuperfluidDelegationAmount**
-- Function: `getSuperfluidDelegationAmount`
-- Hook: `useGetSuperfluidDelegationAmount`
-- Description: Returns the coins superfluid delegated for the delegator, validator, denom
- triplet
-- Request: SuperfluidDelegationAmountRequest
-- Response: SuperfluidDelegationAmountResponse
+
+Returns the coins superfluid delegated for the delegator, validator, denom triplet
+
+```ts
+import { getSuperfluidDelegationAmount } from 'outputicjs/osmosis/superfluid'
+import { useGetSuperfluidDelegationAmount } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSuperfluidDelegationAmount` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetSuperfluidDelegationAmount` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `SuperfluidDelegationAmountRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `SuperfluidDelegationAmountResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **SuperfluidDelegationsByDelegator**
-- Function: `getSuperfluidDelegationsByDelegator`
-- Hook: `useGetSuperfluidDelegationsByDelegator`
-- Description: Returns all the delegated superfluid poistions for a specific delegator.
-- Request: SuperfluidDelegationsByDelegatorRequest
-- Response: SuperfluidDelegationsByDelegatorResponse
+
+Returns all the delegated superfluid poistions for a specific delegator.
+
+```ts
+import { getSuperfluidDelegationsByDelegator } from 'outputicjs/osmosis/superfluid'
+import { useGetSuperfluidDelegationsByDelegator } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSuperfluidDelegationsByDelegator` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetSuperfluidDelegationsByDelegator` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `SuperfluidDelegationsByDelegatorRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `SuperfluidDelegationsByDelegatorResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **SuperfluidUndelegationsByDelegator**
-- Function: `getSuperfluidUndelegationsByDelegator`
-- Hook: `useGetSuperfluidUndelegationsByDelegator`
-- Description: Returns all the undelegating superfluid poistions for a specific delegator.
-- Request: SuperfluidUndelegationsByDelegatorRequest
-- Response: SuperfluidUndelegationsByDelegatorResponse
+
+Returns all the undelegating superfluid poistions for a specific delegator.
+
+```ts
+import { getSuperfluidUndelegationsByDelegator } from 'outputicjs/osmosis/superfluid'
+import { useGetSuperfluidUndelegationsByDelegator } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSuperfluidUndelegationsByDelegator` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetSuperfluidUndelegationsByDelegator` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `SuperfluidUndelegationsByDelegatorRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `SuperfluidUndelegationsByDelegatorResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **SuperfluidDelegationsByValidatorDenom**
-- Function: `getSuperfluidDelegationsByValidatorDenom`
-- Hook: `useGetSuperfluidDelegationsByValidatorDenom`
-- Description: Returns all the superfluid positions of a specific denom delegated to one
- validator
-- Request: SuperfluidDelegationsByValidatorDenomRequest
-- Response: SuperfluidDelegationsByValidatorDenomResponse
+
+Returns all the superfluid positions of a specific denom delegated to one validator
+
+```ts
+import { getSuperfluidDelegationsByValidatorDenom } from 'outputicjs/osmosis/superfluid'
+import { useGetSuperfluidDelegationsByValidatorDenom } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getSuperfluidDelegationsByValidatorDenom` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetSuperfluidDelegationsByValidatorDenom` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `SuperfluidDelegationsByValidatorDenomRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `SuperfluidDelegationsByValidatorDenomResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **EstimateSuperfluidDelegatedAmountByValidatorDenom**
-- Function: `getEstimateSuperfluidDelegatedAmountByValidatorDenom`
-- Hook: `useGetEstimateSuperfluidDelegatedAmountByValidatorDenom`
-- Description: Returns the amount of a specific denom delegated to a specific validator
- This is labeled an estimate, because the way it calculates the amount can
- lead rounding errors from the true delegated amount
-- Request: EstimateSuperfluidDelegatedAmountByValidatorDenomRequest
-- Response: EstimateSuperfluidDelegatedAmountByValidatorDenomResponse
+
+Returns the amount of a specific denom delegated to a specific validator This is labeled an estimate, because the way it calculates the amount can lead rounding errors from the true delegated amount
+
+```ts
+import { getEstimateSuperfluidDelegatedAmountByValidatorDenom } from 'outputicjs/osmosis/superfluid'
+import { useGetEstimateSuperfluidDelegatedAmountByValidatorDenom } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getEstimateSuperfluidDelegatedAmountByValidatorDenom` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetEstimateSuperfluidDelegatedAmountByValidatorDenom` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `EstimateSuperfluidDelegatedAmountByValidatorDenomRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `EstimateSuperfluidDelegatedAmountByValidatorDenomResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **TotalDelegationByDelegator**
-- Function: `getTotalDelegationByDelegator`
-- Hook: `useGetTotalDelegationByDelegator`
-- Description: Returns the specified delegations for a specific delegator
-- Request: QueryTotalDelegationByDelegatorRequest
-- Response: QueryTotalDelegationByDelegatorResponse
+
+Returns the specified delegations for a specific delegator
+
+```ts
+import { getTotalDelegationByDelegator } from 'outputicjs/osmosis/superfluid'
+import { useGetTotalDelegationByDelegator } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getTotalDelegationByDelegator` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetTotalDelegationByDelegator` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `QueryTotalDelegationByDelegatorRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `QueryTotalDelegationByDelegatorResponse` | [View source ↗](osmosis/superfluid/query.ts) |
+
+---
 
 **UnpoolWhitelist**
-- Function: `getUnpoolWhitelist`
-- Hook: `useGetUnpoolWhitelist`
-- Description: Returns a list of whitelisted pool ids to unpool.
-- Request: QueryUnpoolWhitelistRequest
-- Response: QueryUnpoolWhitelistResponse
+
+Returns a list of whitelisted pool ids to unpool.
+
+```ts
+import { getUnpoolWhitelist } from 'outputicjs/osmosis/superfluid'
+import { useGetUnpoolWhitelist } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getUnpoolWhitelist` | [View source ↗](osmosis/superfluid/query.rpc.func.ts) |
+| Hook | `useGetUnpoolWhitelist` | [View source ↗](osmosis/superfluid/query.rpc.react.ts) |
+| Request | `QueryUnpoolWhitelistRequest` | [View source ↗](osmosis/superfluid/query.ts) |
+| Response | `QueryUnpoolWhitelistResponse` | [View source ↗](osmosis/superfluid/query.ts) |
 
 ### Transaction Methods
 
 **SuperfluidDelegate**
-- Function: `superfluidDelegate`
-- Hook: `useSuperfluidDelegate`
-- Description: Execute superfluid delegation for a lockup
-- Request: MsgSuperfluidDelegate
-- Response: MsgSuperfluidDelegateResponse
+
+Execute superfluid delegation for a lockup
+
+```ts
+import { superfluidDelegate } from 'outputicjs/osmosis/superfluid'
+import { useSuperfluidDelegate } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `superfluidDelegate` | [View source ↗](osmosis/superfluid/tx.rpc.func.ts) |
+| Hook | `useSuperfluidDelegate` | [View source ↗](osmosis/superfluid/tx.rpc.react.ts) |
+| Request | `MsgSuperfluidDelegate` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Response | `MsgSuperfluidDelegateResponse` | [View source ↗](osmosis/superfluid/tx.ts) |
+
+---
 
 **SuperfluidUndelegate**
-- Function: `superfluidUndelegate`
-- Hook: `useSuperfluidUndelegate`
-- Description: Execute superfluid undelegation for a lockup
-- Request: MsgSuperfluidUndelegate
-- Response: MsgSuperfluidUndelegateResponse
+
+Execute superfluid undelegation for a lockup
+
+```ts
+import { superfluidUndelegate } from 'outputicjs/osmosis/superfluid'
+import { useSuperfluidUndelegate } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `superfluidUndelegate` | [View source ↗](osmosis/superfluid/tx.rpc.func.ts) |
+| Hook | `useSuperfluidUndelegate` | [View source ↗](osmosis/superfluid/tx.rpc.react.ts) |
+| Request | `MsgSuperfluidUndelegate` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Response | `MsgSuperfluidUndelegateResponse` | [View source ↗](osmosis/superfluid/tx.ts) |
+
+---
 
 **SuperfluidUnbondLock**
-- Function: `superfluidUnbondLock`
-- Hook: `useSuperfluidUnbondLock`
-- Description: For a given lock that is being superfluidly undelegated,
- also unbond the underlying lock.
-- Request: MsgSuperfluidUnbondLock
-- Response: MsgSuperfluidUnbondLockResponse
+
+For a given lock that is being superfluidly undelegated, also unbond the underlying lock.
+
+```ts
+import { superfluidUnbondLock } from 'outputicjs/osmosis/superfluid'
+import { useSuperfluidUnbondLock } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `superfluidUnbondLock` | [View source ↗](osmosis/superfluid/tx.rpc.func.ts) |
+| Hook | `useSuperfluidUnbondLock` | [View source ↗](osmosis/superfluid/tx.rpc.react.ts) |
+| Request | `MsgSuperfluidUnbondLock` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Response | `MsgSuperfluidUnbondLockResponse` | [View source ↗](osmosis/superfluid/tx.ts) |
+
+---
 
 **LockAndSuperfluidDelegate**
-- Function: `lockAndSuperfluidDelegate`
-- Hook: `useLockAndSuperfluidDelegate`
-- Description: Execute lockup lock and superfluid delegation in a single msg
-- Request: MsgLockAndSuperfluidDelegate
-- Response: MsgLockAndSuperfluidDelegateResponse
+
+Execute lockup lock and superfluid delegation in a single msg
+
+```ts
+import { lockAndSuperfluidDelegate } from 'outputicjs/osmosis/superfluid'
+import { useLockAndSuperfluidDelegate } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `lockAndSuperfluidDelegate` | [View source ↗](osmosis/superfluid/tx.rpc.func.ts) |
+| Hook | `useLockAndSuperfluidDelegate` | [View source ↗](osmosis/superfluid/tx.rpc.react.ts) |
+| Request | `MsgLockAndSuperfluidDelegate` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Response | `MsgLockAndSuperfluidDelegateResponse` | [View source ↗](osmosis/superfluid/tx.ts) |
+
+---
 
 **UnPoolWhitelistedPool**
-- Function: `unPoolWhitelistedPool`
-- Hook: `useUnPoolWhitelistedPool`
-- Request: MsgUnPoolWhitelistedPool
-- Response: MsgUnPoolWhitelistedPoolResponse
+
+```ts
+import { unPoolWhitelistedPool } from 'outputicjs/osmosis/superfluid'
+import { useUnPoolWhitelistedPool } from 'outputicjs/osmosis/superfluid'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `unPoolWhitelistedPool` | [View source ↗](osmosis/superfluid/tx.rpc.func.ts) |
+| Hook | `useUnPoolWhitelistedPool` | [View source ↗](osmosis/superfluid/tx.rpc.react.ts) |
+| Request | `MsgUnPoolWhitelistedPool` | [View source ↗](osmosis/superfluid/tx.ts) |
+| Response | `MsgUnPoolWhitelistedPoolResponse` | [View source ↗](osmosis/superfluid/tx.ts) |
 
 
 ## osmosis.tokenfactory.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `DenomAuthorityMetadata` | [View source ↗](osmosis/tokenfactory/v1beta1/authorityMetadata.ts) |
+| Type | `GenesisDenom` | [View source ↗](osmosis/tokenfactory/v1beta1/genesis.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `MsgBurn` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Type | `MsgBurnResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Type | `MsgChangeAdmin` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Type | `MsgChangeAdminResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Type | `MsgCreateDenom` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Type | `MsgCreateDenomResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Type | `MsgMint` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Type | `MsgMintResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Type | `MsgSetDenomMetadata` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Type | `MsgSetDenomMetadataResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Type | `OsmosisTokenfactoryV1beta1Params` | [View source ↗](osmosis/tokenfactory/v1beta1/params.ts) |
+| Type | `QueryDenomAuthorityMetadataRequest` | [View source ↗](osmosis/tokenfactory/v1beta1/query.ts) |
+| Type | `QueryDenomAuthorityMetadataResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/query.ts) |
+| Type | `QueryDenomsFromCreatorRequest` | [View source ↗](osmosis/tokenfactory/v1beta1/query.ts) |
+| Type | `QueryDenomsFromCreatorResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/query.ts) |
+| Type | `QueryParamsRequest` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+| Type | `QueryParamsResponse` | [View source ↗](cosmos/auth/v1beta1/query.ts) |
+
 ### Query Methods
 
 **Params**
-- Function: `getOsmosisTokenfactoryV1beta1Params`
-- Hook: `useGetOsmosisTokenfactoryV1beta1Params`
-- Description: Params defines a gRPC query method that returns the tokenfactory module's
- parameters.
-- Request: QueryParamsRequest
-- Response: QueryParamsResponse
+
+Params defines a gRPC query method that returns the tokenfactory module's parameters.
+
+```ts
+import { getOsmosisTokenfactoryV1beta1Params } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { useGetOsmosisTokenfactoryV1beta1Params } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getOsmosisTokenfactoryV1beta1Params` | [View source ↗](osmosis/tokenfactory/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetOsmosisTokenfactoryV1beta1Params` | [View source ↗](osmosis/tokenfactory/v1beta1/query.rpc.react.ts) |
+| Request | `QueryParamsRequest` | [View source ↗](osmosis/tokenfactory/v1beta1/query.ts) |
+| Response | `QueryParamsResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/query.ts) |
+
+---
 
 **DenomAuthorityMetadata**
-- Function: `getDenomAuthorityMetadata`
-- Hook: `useGetDenomAuthorityMetadata`
-- Description: DenomAuthorityMetadata defines a gRPC query method for fetching
- DenomAuthorityMetadata for a particular denom.
-- Request: QueryDenomAuthorityMetadataRequest
-- Response: QueryDenomAuthorityMetadataResponse
+
+DenomAuthorityMetadata defines a gRPC query method for fetching DenomAuthorityMetadata for a particular denom.
+
+```ts
+import { getDenomAuthorityMetadata } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { useGetDenomAuthorityMetadata } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDenomAuthorityMetadata` | [View source ↗](osmosis/tokenfactory/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDenomAuthorityMetadata` | [View source ↗](osmosis/tokenfactory/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDenomAuthorityMetadataRequest` | [View source ↗](osmosis/tokenfactory/v1beta1/query.ts) |
+| Response | `QueryDenomAuthorityMetadataResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/query.ts) |
+
+---
 
 **DenomsFromCreator**
-- Function: `getDenomsFromCreator`
-- Hook: `useGetDenomsFromCreator`
-- Description: DenomsFromCreator defines a gRPC query method for fetching all
- denominations created by a specific admin/creator.
-- Request: QueryDenomsFromCreatorRequest
-- Response: QueryDenomsFromCreatorResponse
+
+DenomsFromCreator defines a gRPC query method for fetching all denominations created by a specific admin/creator.
+
+```ts
+import { getDenomsFromCreator } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { useGetDenomsFromCreator } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDenomsFromCreator` | [View source ↗](osmosis/tokenfactory/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDenomsFromCreator` | [View source ↗](osmosis/tokenfactory/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDenomsFromCreatorRequest` | [View source ↗](osmosis/tokenfactory/v1beta1/query.ts) |
+| Response | `QueryDenomsFromCreatorResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/query.ts) |
 
 ### Transaction Methods
 
 **CreateDenom**
-- Function: `createDenom`
-- Hook: `useCreateDenom`
-- Request: MsgCreateDenom
-- Response: MsgCreateDenomResponse
+
+```ts
+import { createDenom } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { useCreateDenom } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `createDenom` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.rpc.func.ts) |
+| Hook | `useCreateDenom` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgCreateDenom` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Response | `MsgCreateDenomResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+
+---
 
 **Mint**
-- Function: `mint`
-- Hook: `useMint`
-- Request: MsgMint
-- Response: MsgMintResponse
+
+```ts
+import { mint } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { useMint } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `mint` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.rpc.func.ts) |
+| Hook | `useMint` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgMint` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Response | `MsgMintResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+
+---
 
 **Burn**
-- Function: `burn`
-- Hook: `useBurn`
-- Request: MsgBurn
-- Response: MsgBurnResponse
+
+```ts
+import { burn } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { useBurn } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `burn` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.rpc.func.ts) |
+| Hook | `useBurn` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgBurn` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Response | `MsgBurnResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+
+---
 
 **ChangeAdmin**
-- Function: `changeAdmin`
-- Hook: `useChangeAdmin`
-- Request: MsgChangeAdmin
-- Response: MsgChangeAdminResponse
+
+```ts
+import { changeAdmin } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { useChangeAdmin } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `changeAdmin` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.rpc.func.ts) |
+| Hook | `useChangeAdmin` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgChangeAdmin` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Response | `MsgChangeAdminResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+
+---
 
 **SetDenomMetadata**
-- Function: `setDenomMetadata`
-- Hook: `useSetDenomMetadata`
-- Request: MsgSetDenomMetadata
-- Response: MsgSetDenomMetadataResponse
+
+```ts
+import { setDenomMetadata } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { useSetDenomMetadata } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `setDenomMetadata` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.rpc.func.ts) |
+| Hook | `useSetDenomMetadata` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.rpc.react.ts) |
+| Request | `MsgSetDenomMetadata` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
+| Response | `MsgSetDenomMetadataResponse` | [View source ↗](osmosis/tokenfactory/v1beta1/tx.ts) |
 
 
 ## osmosis.twap.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `ArithmeticTwapRequest` | [View source ↗](osmosis/twap/v1beta1/query.ts) |
+| Type | `ArithmeticTwapResponse` | [View source ↗](osmosis/twap/v1beta1/query.ts) |
+| Type | `ArithmeticTwapToNowRequest` | [View source ↗](osmosis/twap/v1beta1/query.ts) |
+| Type | `ArithmeticTwapToNowResponse` | [View source ↗](osmosis/twap/v1beta1/query.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `OsmosisTwapV1beta1Params` | [View source ↗](osmosis/twap/v1beta1/genesis.ts) |
+| Type | `ParamsRequest` | [View source ↗](osmosis/twap/v1beta1/query.ts) |
+| Type | `ParamsResponse` | [View source ↗](osmosis/twap/v1beta1/query.ts) |
+| Type | `TwapRecord` | [View source ↗](osmosis/twap/v1beta1/twap_record.ts) |
+
 ### Query Methods
 
 **Params**
-- Function: `getOsmosisTwapV1beta1Params`
-- Hook: `useGetOsmosisTwapV1beta1Params`
-- Request: ParamsRequest
-- Response: ParamsResponse
+
+```ts
+import { getOsmosisTwapV1beta1Params } from 'outputicjs/osmosis/twap/v1beta1'
+import { useGetOsmosisTwapV1beta1Params } from 'outputicjs/osmosis/twap/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getOsmosisTwapV1beta1Params` | [View source ↗](osmosis/twap/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetOsmosisTwapV1beta1Params` | [View source ↗](osmosis/twap/v1beta1/query.rpc.react.ts) |
+| Request | `ParamsRequest` | [View source ↗](osmosis/twap/v1beta1/query.ts) |
+| Response | `ParamsResponse` | [View source ↗](osmosis/twap/v1beta1/query.ts) |
+
+---
 
 **ArithmeticTwap**
-- Function: `getArithmeticTwap`
-- Hook: `useGetArithmeticTwap`
-- Request: ArithmeticTwapRequest
-- Response: ArithmeticTwapResponse
+
+```ts
+import { getArithmeticTwap } from 'outputicjs/osmosis/twap/v1beta1'
+import { useGetArithmeticTwap } from 'outputicjs/osmosis/twap/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getArithmeticTwap` | [View source ↗](osmosis/twap/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetArithmeticTwap` | [View source ↗](osmosis/twap/v1beta1/query.rpc.react.ts) |
+| Request | `ArithmeticTwapRequest` | [View source ↗](osmosis/twap/v1beta1/query.ts) |
+| Response | `ArithmeticTwapResponse` | [View source ↗](osmosis/twap/v1beta1/query.ts) |
+
+---
 
 **ArithmeticTwapToNow**
-- Function: `getArithmeticTwapToNow`
-- Hook: `useGetArithmeticTwapToNow`
-- Request: ArithmeticTwapToNowRequest
-- Response: ArithmeticTwapToNowResponse
+
+```ts
+import { getArithmeticTwapToNow } from 'outputicjs/osmosis/twap/v1beta1'
+import { useGetArithmeticTwapToNow } from 'outputicjs/osmosis/twap/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getArithmeticTwapToNow` | [View source ↗](osmosis/twap/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetArithmeticTwapToNow` | [View source ↗](osmosis/twap/v1beta1/query.rpc.react.ts) |
+| Request | `ArithmeticTwapToNowRequest` | [View source ↗](osmosis/twap/v1beta1/query.ts) |
+| Response | `ArithmeticTwapToNowResponse` | [View source ↗](osmosis/twap/v1beta1/query.ts) |
 
 
 ## osmosis.txfees.v1beta1
 
+### Types
+
+| Type | Name | Source |
+| --- | --- | --- |
+| Type | `FeeToken` | [View source ↗](osmosis/txfees/v1beta1/feetoken.ts) |
+| Type | `GenesisState` | [View source ↗](akash/audit/v1beta2/genesis.ts) |
+| Type | `QueryBaseDenomRequest` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+| Type | `QueryBaseDenomResponse` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+| Type | `QueryDenomPoolIdRequest` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+| Type | `QueryDenomPoolIdResponse` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+| Type | `QueryDenomSpotPriceRequest` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+| Type | `QueryDenomSpotPriceResponse` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+| Type | `QueryFeeTokensRequest` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+| Type | `QueryFeeTokensResponse` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+| Type | `UpdateFeeTokenProposal` | [View source ↗](osmosis/txfees/v1beta1/gov.ts) |
+
 ### Query Methods
 
 **FeeTokens**
-- Function: `getFeeTokens`
-- Hook: `useGetFeeTokens`
-- Description: FeeTokens returns a list of all the whitelisted fee tokens and their
- corresponding pools. It does not include the BaseDenom, which has its own
- query endpoint
-- Request: QueryFeeTokensRequest
-- Response: QueryFeeTokensResponse
+
+FeeTokens returns a list of all the whitelisted fee tokens and their corresponding pools. It does not include the BaseDenom, which has its own query endpoint
+
+```ts
+import { getFeeTokens } from 'outputicjs/osmosis/txfees/v1beta1'
+import { useGetFeeTokens } from 'outputicjs/osmosis/txfees/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getFeeTokens` | [View source ↗](osmosis/txfees/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetFeeTokens` | [View source ↗](osmosis/txfees/v1beta1/query.rpc.react.ts) |
+| Request | `QueryFeeTokensRequest` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+| Response | `QueryFeeTokensResponse` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+
+---
 
 **DenomSpotPrice**
-- Function: `getDenomSpotPrice`
-- Hook: `useGetDenomSpotPrice`
-- Description: DenomSpotPrice returns all spot prices by each registered token denom.
-- Request: QueryDenomSpotPriceRequest
-- Response: QueryDenomSpotPriceResponse
+
+DenomSpotPrice returns all spot prices by each registered token denom.
+
+```ts
+import { getDenomSpotPrice } from 'outputicjs/osmosis/txfees/v1beta1'
+import { useGetDenomSpotPrice } from 'outputicjs/osmosis/txfees/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDenomSpotPrice` | [View source ↗](osmosis/txfees/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDenomSpotPrice` | [View source ↗](osmosis/txfees/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDenomSpotPriceRequest` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+| Response | `QueryDenomSpotPriceResponse` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+
+---
 
 **DenomPoolId**
-- Function: `getDenomPoolId`
-- Hook: `useGetDenomPoolId`
-- Description: Returns the poolID for a specified denom input.
-- Request: QueryDenomPoolIdRequest
-- Response: QueryDenomPoolIdResponse
+
+Returns the poolID for a specified denom input.
+
+```ts
+import { getDenomPoolId } from 'outputicjs/osmosis/txfees/v1beta1'
+import { useGetDenomPoolId } from 'outputicjs/osmosis/txfees/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getDenomPoolId` | [View source ↗](osmosis/txfees/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetDenomPoolId` | [View source ↗](osmosis/txfees/v1beta1/query.rpc.react.ts) |
+| Request | `QueryDenomPoolIdRequest` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+| Response | `QueryDenomPoolIdResponse` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+
+---
 
 **BaseDenom**
-- Function: `getBaseDenom`
-- Hook: `useGetBaseDenom`
-- Description: Returns a list of all base denom tokens and their corresponding pools.
-- Request: QueryBaseDenomRequest
-- Response: QueryBaseDenomResponse
 
+Returns a list of all base denom tokens and their corresponding pools.
 
-## tendermint.abci
+```ts
+import { getBaseDenom } from 'outputicjs/osmosis/txfees/v1beta1'
+import { useGetBaseDenom } from 'outputicjs/osmosis/txfees/v1beta1'
+```
+
+| Field | Value | Source |
+| --- | --- | --- |
+| Function | `getBaseDenom` | [View source ↗](osmosis/txfees/v1beta1/query.rpc.func.ts) |
+| Hook | `useGetBaseDenom` | [View source ↗](osmosis/txfees/v1beta1/query.rpc.react.ts) |
+| Request | `QueryBaseDenomRequest` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
+| Response | `QueryBaseDenomResponse` | [View source ↗](osmosis/txfees/v1beta1/query.ts) |
 
 

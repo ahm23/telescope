@@ -107,6 +107,14 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
               );
             helperCreatorNameList.push(helperCreatorName);
 
+            const genCustomHooksReact = c.proto.pluginValue(
+              "helperFunctions.hooks.react"
+            );
+
+            const genCustomHooksVue = c.proto.pluginValue(
+              "helperFunctions.hooks.vue"
+            );
+
             // Store the mapping in builder
             builder.addFunctionMapping(
               bundlerFile.package,
@@ -116,7 +124,10 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
               hookName,
               svc.methods[methodKey].comment,
               svc.methods[methodKey].requestType,
-              svc.methods[methodKey].responseType
+              svc.methods[methodKey].responseType,
+              localname,
+              genCustomHooksReact ? localnameReact : undefined,
+              bundler.getLocalFilename(c.ref)
             );
 
             // gen helper funcs
@@ -128,14 +139,6 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
                 methodKey,
                 helperCreatorName
               )
-            );
-
-            const genCustomHooksReact = c.proto.pluginValue(
-              "helperFunctions.hooks.react"
-            );
-
-            const genCustomHooksVue = c.proto.pluginValue(
-              "helperFunctions.hooks.vue"
             );
 
             if (genCustomHooksReact) {
@@ -205,7 +208,7 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
 
       bundler.writeAst(prog, filename);
       bundler.addExportObjToBundle(c.ref.proto.package, localname, exportedTypeNames, true);
-      if(reactAsts.length) {
+      if (reactAsts.length) {
         bundler.writeAst(progReact, filenameReact);
         bundler.addExportObjToBundle(c.ref.proto.package, localnameReact, exportedTypeNamesReact, true);
       }

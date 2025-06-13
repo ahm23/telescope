@@ -21,18 +21,24 @@ export declare class TelescopeBuilder {
         comment?: string;
         requestType: string;
         responseType: string;
+        sourceFilename?: string;
+        hookSourceFilename?: string;
+        typeSourceFilename?: string;
     }>>>;
     constructor({ protoDirs, outPath, store, options, }: TelescopeInput & {
         store?: ProtoStore;
     });
     context(ref: any): TelescopeParseContext;
-    addFunctionMapping(packageName: string, serviceName: string, methodName: string, functionName: string, hookName: string, comment?: string, requestType?: string, responseType?: string): void;
+    addFunctionMapping(packageName: string, serviceName: string, methodName: string, functionName: string, hookName: string, comment?: string, requestType?: string, responseType?: string, sourceFilename?: string, hookSourceFilename?: string, typeSourceFilename?: string): void;
     getFunctionMappings(): Record<string, Record<string, Record<string, {
         functionName: string;
         hookName: string;
         comment?: string;
         requestType: string;
         responseType: string;
+        sourceFilename?: string;
+        hookSourceFilename?: string;
+        typeSourceFilename?: string;
     }>>>;
     addStateManagers(type: string, files: BundlerFile[]): void;
     addRPCQueryClients(files: BundlerFile[]): void;

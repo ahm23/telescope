@@ -88,6 +88,9 @@ export class TelescopeBuilder {
     comment?: string;
     requestType: string;
     responseType: string;
+    sourceFilename?: string;
+    hookSourceFilename?: string;
+    typeSourceFilename?: string;
   }>>> = {};
 
   constructor({
@@ -122,7 +125,10 @@ export class TelescopeBuilder {
     hookName: string,
     comment?: string,
     requestType?: string,
-    responseType?: string
+    responseType?: string,
+    sourceFilename?: string,
+    hookSourceFilename?: string,
+    typeSourceFilename?: string
   ) {
     if (!this.functionMappings[packageName]) {
       this.functionMappings[packageName] = {};
@@ -136,7 +142,10 @@ export class TelescopeBuilder {
       hookName,
       comment,
       requestType,
-      responseType
+      responseType,
+      sourceFilename,
+      hookSourceFilename,
+      typeSourceFilename
     };
   }
 

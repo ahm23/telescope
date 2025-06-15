@@ -101,14 +101,6 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
               );
 
             helperCreatorNameList.push(helperCreatorName);
-            // gen helper funcs
-            asts.push(
-              createMsgHelperCreator(
-                ctx.generic,
-                svc.methods[methodKey],
-                helperCreatorName
-              )
-            );
 
             const genCustomHooks = c.proto.pluginValue(
               "helperFunctions.hooks.react"
@@ -116,6 +108,30 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
 
             const genCustomHooksVue = c.proto.pluginValue(
               "helperFunctions.hooks.vue"
+            );
+
+            // Store the mapping in builder
+            builder.addFunctionMapping(
+              bundlerFile.package,
+              svcKey,
+              methodKey,
+              helperCreatorName,
+              hookName,
+              svc.methods[methodKey].comment,
+              svc.methods[methodKey].requestType,
+              svc.methods[methodKey].responseType,
+              localname, // function source file
+              genCustomHooks ? localnameReact : undefined, // hook source file (React)
+              bundler.getLocalFilename(c.ref) // type source file (main types file)
+            );
+
+            // gen helper funcs
+            asts.push(
+              createMsgHelperCreator(
+                ctx.generic,
+                svc.methods[methodKey],
+                helperCreatorName
+              )
             );
 
             if (genCustomHooks) {
@@ -183,11 +199,11 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
 
       bundler.writeAst(prog, filename);
       bundler.addExportObjToBundle(c.ref.proto.package, localname, exportedTypeNames, true);
-      if(reactAsts.length) {
+      if (reactAsts.length) {
         bundler.writeAst(progReact, filenameReact);
         bundler.addExportObjToBundle(c.ref.proto.package, localnameReact, exportedTypeNamesReact, true);
       }
-      if(vueAsts.length) {
+      if (vueAsts.length) {
         bundler.writeAst(progVue, filenameVue);
         bundler.addExportObjToBundle(c.ref.proto.package, localnameVue, exportedTypeNamesVue, true);
       }

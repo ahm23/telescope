@@ -37,6 +37,7 @@ import { plugin as createPiniaStore } from './generators/create-pinia-store';
 import { plugin as createPiniaStoreBundle } from './generators/create-pinia-store-bundle';
 import { plugin as createRpcOpsBundle } from './generators/create-rpc-ops-bundle';
 import { plugin as customizeUtils } from './generators/customize-utils';
+import { plugin as createRootReadme } from './generators/create-root-readme';
 
 const sanitizeOptions = (options: TelescopeOptions): TelescopeOptions => {
   // If an element at the same key is present for both x and y, the value from y will appear in the result.
@@ -79,6 +80,19 @@ export class TelescopeBuilder {
   readonly rpcMsgClients: BundlerFile[] = [];
   readonly registries: BundlerFile[] = [];
   readonly stateManagers: Record<string, BundlerFile[]> = {};
+
+  // Function mapping storage: package -> service -> method -> functionName
+  readonly functionMappings: Record<string, Record<string, Record<string, {
+    functionName: string;
+    hookName: string;
+    comment?: string;
+    requestType: string;
+    responseType: string;
+    sourceFilename?: string;
+    hookSourceFilename?: string;
+    typeSourceFilename?: string;
+  }>>> = {};
+
   constructor({
     protoDirs,
     outPath,
@@ -101,6 +115,42 @@ export class TelescopeBuilder {
     const ctx = new TelescopeParseContext(ref, this.store, this.options);
     this.contexts.push(ctx);
     return ctx;
+  }
+
+  addFunctionMapping(
+    packageName: string,
+    serviceName: string,
+    methodName: string,
+    functionName: string,
+    hookName: string,
+    comment?: string,
+    requestType?: string,
+    responseType?: string,
+    sourceFilename?: string,
+    hookSourceFilename?: string,
+    typeSourceFilename?: string
+  ) {
+    if (!this.functionMappings[packageName]) {
+      this.functionMappings[packageName] = {};
+    }
+    if (!this.functionMappings[packageName][serviceName]) {
+      this.functionMappings[packageName][serviceName] = {};
+    }
+
+    this.functionMappings[packageName][serviceName][methodName] = {
+      functionName,
+      hookName,
+      comment,
+      requestType,
+      responseType,
+      sourceFilename,
+      hookSourceFilename,
+      typeSourceFilename
+    };
+  }
+
+  getFunctionMappings() {
+    return this.functionMappings;
   }
 
   addStateManagers(type: string, files: BundlerFile[]) {
@@ -217,7 +267,7 @@ export class TelescopeBuilder {
       createLCDClientsScoped(this, bundler);
       createRPCQueryClientsAll(this, bundler);
       createRPCQueryClientsScoped(this, bundler);
-      createRPCMsgClientsAll(this,bundler);
+      createRPCMsgClientsAll(this, bundler);
       createRPCMsgClientsScoped(this, bundler);
       createBundle(this, bundler);
     });
@@ -233,6 +283,7 @@ export class TelescopeBuilder {
 
     // finally, write one index file with all files, exported
     createIndex(this);
+    createRootReadme(this);
 
     console.log(`✨ files transpiled in '${this.outPath}'`);
   }

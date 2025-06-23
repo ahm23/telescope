@@ -21,8 +21,8 @@
 SignProviderAttributes defines a method that signs provider attributes
 
 ```ts
-import { signProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/audit/v1beta1'
-import { useSignProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/audit/v1beta1'
+import { signProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/bundle'
+import { useSignProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -39,8 +39,8 @@ import { useSignProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/aud
 DeleteProviderAttributes defines a method that deletes provider attributes
 
 ```ts
-import { deleteProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/audit/v1beta1'
-import { useDeleteProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/audit/v1beta1'
+import { deleteProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/bundle'
+import { useDeleteProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -80,8 +80,8 @@ import { useDeleteProviderAttributesAkashAuditV1beta1 } from 'outputicjs/akash/a
 AllProvidersAttributes queries all providers
 
 ```ts
-import { getAllProvidersAttributes } from 'outputicjs/akash/audit/v1beta2'
-import { useGetAllProvidersAttributes } from 'outputicjs/akash/audit/v1beta2'
+import { getAllProvidersAttributes } from 'outputicjs/akash/akash/audit/v1beta2/query.rpc.func'
+import { useGetAllProvidersAttributes } from 'outputicjs/akash/akash/audit/v1beta2/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -98,8 +98,8 @@ import { useGetAllProvidersAttributes } from 'outputicjs/akash/audit/v1beta2'
 ProviderAttributes queries all provider signed attributes
 
 ```ts
-import { getProviderAttributes } from 'outputicjs/akash/audit/v1beta2'
-import { useGetProviderAttributes } from 'outputicjs/akash/audit/v1beta2'
+import { getProviderAttributes } from 'outputicjs/akash/akash/audit/v1beta2/query.rpc.func'
+import { useGetProviderAttributes } from 'outputicjs/akash/akash/audit/v1beta2/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -116,8 +116,8 @@ import { useGetProviderAttributes } from 'outputicjs/akash/audit/v1beta2'
 ProviderAuditorAttributes queries provider signed attributes by specific auditor
 
 ```ts
-import { getProviderAuditorAttributes } from 'outputicjs/akash/audit/v1beta2'
-import { useGetProviderAuditorAttributes } from 'outputicjs/akash/audit/v1beta2'
+import { getProviderAuditorAttributes } from 'outputicjs/akash/akash/audit/v1beta2/query.rpc.func'
+import { useGetProviderAuditorAttributes } from 'outputicjs/akash/akash/audit/v1beta2/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -134,8 +134,8 @@ import { useGetProviderAuditorAttributes } from 'outputicjs/akash/audit/v1beta2'
 AuditorAttributes queries all providers signed by this auditor
 
 ```ts
-import { getAuditorAttributes } from 'outputicjs/akash/audit/v1beta2'
-import { useGetAuditorAttributes } from 'outputicjs/akash/audit/v1beta2'
+import { getAuditorAttributes } from 'outputicjs/akash/akash/audit/v1beta2/query.rpc.func'
+import { useGetAuditorAttributes } from 'outputicjs/akash/akash/audit/v1beta2/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -152,8 +152,8 @@ import { useGetAuditorAttributes } from 'outputicjs/akash/audit/v1beta2'
 SignProviderAttributes defines a method that signs provider attributes
 
 ```ts
-import { signProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/audit/v1beta2'
-import { useSignProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/audit/v1beta2'
+import { signProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/bundle'
+import { useSignProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -170,8 +170,8 @@ import { useSignProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/aud
 DeleteProviderAttributes defines a method that deletes provider attributes
 
 ```ts
-import { deleteProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/audit/v1beta2'
-import { useDeleteProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/audit/v1beta2'
+import { deleteProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/bundle'
+import { useDeleteProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -208,8 +208,8 @@ import { useDeleteProviderAttributesAkashAuditV1beta2 } from 'outputicjs/akash/a
 Certificates queries certificates
 
 ```ts
-import { getCertificates } from 'outputicjs/akash/cert/v1beta2'
-import { useGetCertificates } from 'outputicjs/akash/cert/v1beta2'
+import { getCertificates } from 'outputicjs/akash/akash/cert/v1beta2/query.rpc.func'
+import { useGetCertificates } from 'outputicjs/akash/akash/cert/v1beta2/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -226,8 +226,8 @@ import { useGetCertificates } from 'outputicjs/akash/cert/v1beta2'
 CreateCertificate defines a method to create new certificate given proper inputs.
 
 ```ts
-import { createCertificate } from 'outputicjs/akash/cert/v1beta2'
-import { useCreateCertificate } from 'outputicjs/akash/cert/v1beta2'
+import { createCertificate } from 'outputicjs/akash/akash/cert/v1beta2/cert.rpc.func'
+import { useCreateCertificate } from 'outputicjs/akash/akash/cert/v1beta2/cert.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -244,8 +244,8 @@ import { useCreateCertificate } from 'outputicjs/akash/cert/v1beta2'
 RevokeCertificate defines a method to revoke the certificate
 
 ```ts
-import { revokeCertificate } from 'outputicjs/akash/cert/v1beta2'
-import { useRevokeCertificate } from 'outputicjs/akash/cert/v1beta2'
+import { revokeCertificate } from 'outputicjs/akash/akash/cert/v1beta2/cert.rpc.func'
+import { useRevokeCertificate } from 'outputicjs/akash/akash/cert/v1beta2/cert.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -301,8 +301,8 @@ import { useRevokeCertificate } from 'outputicjs/akash/cert/v1beta2'
 Deployments queries deployments
 
 ```ts
-import { getDeploymentsAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
-import { useGetDeploymentsAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { getDeploymentsAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
+import { useGetDeploymentsAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -319,8 +319,8 @@ import { useGetDeploymentsAkashDeploymentV1beta1 } from 'outputicjs/akash/deploy
 Deployment queries deployment details
 
 ```ts
-import { getDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
-import { useGetDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { getDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
+import { useGetDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -337,8 +337,8 @@ import { useGetDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deploym
 Group queries group details
 
 ```ts
-import { getGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
-import { useGetGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { getGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
+import { useGetGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -355,8 +355,8 @@ import { useGetGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v
 CreateDeployment defines a method to create new deployment given proper inputs.
 
 ```ts
-import { createDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
-import { useCreateDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { createDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
+import { useCreateDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -373,8 +373,8 @@ import { useCreateDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/depl
 DepositDeployment deposits more funds into the deployment account
 
 ```ts
-import { depositDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
-import { useDepositDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { depositDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
+import { useDepositDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -391,8 +391,8 @@ import { useDepositDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/dep
 UpdateDeployment defines a method to update a deployment given proper inputs.
 
 ```ts
-import { updateDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
-import { useUpdateDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { updateDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
+import { useUpdateDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -409,8 +409,8 @@ import { useUpdateDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/depl
 CloseDeployment defines a method to close a deployment given proper inputs.
 
 ```ts
-import { closeDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
-import { useCloseDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { closeDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
+import { useCloseDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -427,8 +427,8 @@ import { useCloseDeploymentAkashDeploymentV1beta1 } from 'outputicjs/akash/deplo
 CloseGroup defines a method to close a group of a deployment given proper inputs.
 
 ```ts
-import { closeGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
-import { useCloseGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { closeGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
+import { useCloseGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -445,8 +445,8 @@ import { useCloseGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment
 PauseGroup defines a method to close a group of a deployment given proper inputs.
 
 ```ts
-import { pauseGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
-import { usePauseGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { pauseGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
+import { usePauseGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -463,8 +463,8 @@ import { usePauseGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment
 StartGroup defines a method to close a group of a deployment given proper inputs.
 
 ```ts
-import { startGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
-import { useStartGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment/v1beta1'
+import { startGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
+import { useStartGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -520,8 +520,8 @@ import { useStartGroupAkashDeploymentV1beta1 } from 'outputicjs/akash/deployment
 Deployments queries deployments
 
 ```ts
-import { getDeploymentsAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
-import { useGetDeploymentsAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { getDeploymentsAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
+import { useGetDeploymentsAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -538,8 +538,8 @@ import { useGetDeploymentsAkashDeploymentV1beta2 } from 'outputicjs/akash/deploy
 Deployment queries deployment details
 
 ```ts
-import { getDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
-import { useGetDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { getDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
+import { useGetDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -556,8 +556,8 @@ import { useGetDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deploym
 Group queries group details
 
 ```ts
-import { getGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
-import { useGetGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { getGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
+import { useGetGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -574,8 +574,8 @@ import { useGetGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v
 CreateDeployment defines a method to create new deployment given proper inputs.
 
 ```ts
-import { createDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
-import { useCreateDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { createDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
+import { useCreateDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -592,8 +592,8 @@ import { useCreateDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/depl
 DepositDeployment deposits more funds into the deployment account
 
 ```ts
-import { depositDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
-import { useDepositDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { depositDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
+import { useDepositDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -610,8 +610,8 @@ import { useDepositDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/dep
 UpdateDeployment defines a method to update a deployment given proper inputs.
 
 ```ts
-import { updateDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
-import { useUpdateDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { updateDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
+import { useUpdateDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -628,8 +628,8 @@ import { useUpdateDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/depl
 CloseDeployment defines a method to close a deployment given proper inputs.
 
 ```ts
-import { closeDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
-import { useCloseDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { closeDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
+import { useCloseDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -646,8 +646,8 @@ import { useCloseDeploymentAkashDeploymentV1beta2 } from 'outputicjs/akash/deplo
 CloseGroup defines a method to close a group of a deployment given proper inputs.
 
 ```ts
-import { closeGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
-import { useCloseGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { closeGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
+import { useCloseGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -664,8 +664,8 @@ import { useCloseGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment
 PauseGroup defines a method to close a group of a deployment given proper inputs.
 
 ```ts
-import { pauseGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
-import { usePauseGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { pauseGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
+import { usePauseGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -682,8 +682,8 @@ import { usePauseGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment
 StartGroup defines a method to close a group of a deployment given proper inputs.
 
 ```ts
-import { startGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
-import { useStartGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment/v1beta2'
+import { startGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
+import { useStartGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -716,8 +716,8 @@ import { useStartGroupAkashDeploymentV1beta2 } from 'outputicjs/akash/deployment
 Accounts queries all accounts
 
 ```ts
-import { getAccountsAkashEscrowV1beta1 } from 'outputicjs/akash/escrow/v1beta1'
-import { useGetAccountsAkashEscrowV1beta1 } from 'outputicjs/akash/escrow/v1beta1'
+import { getAccountsAkashEscrowV1beta1 } from 'outputicjs/akash/bundle'
+import { useGetAccountsAkashEscrowV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -734,8 +734,8 @@ import { useGetAccountsAkashEscrowV1beta1 } from 'outputicjs/akash/escrow/v1beta
 Payments queries all payments
 
 ```ts
-import { getPaymentsAkashEscrowV1beta1 } from 'outputicjs/akash/escrow/v1beta1'
-import { useGetPaymentsAkashEscrowV1beta1 } from 'outputicjs/akash/escrow/v1beta1'
+import { getPaymentsAkashEscrowV1beta1 } from 'outputicjs/akash/bundle'
+import { useGetPaymentsAkashEscrowV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -768,8 +768,8 @@ import { useGetPaymentsAkashEscrowV1beta1 } from 'outputicjs/akash/escrow/v1beta
 Accounts queries all accounts
 
 ```ts
-import { getAccountsAkashEscrowV1beta2 } from 'outputicjs/akash/escrow/v1beta2'
-import { useGetAccountsAkashEscrowV1beta2 } from 'outputicjs/akash/escrow/v1beta2'
+import { getAccountsAkashEscrowV1beta2 } from 'outputicjs/akash/bundle'
+import { useGetAccountsAkashEscrowV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -786,8 +786,8 @@ import { useGetAccountsAkashEscrowV1beta2 } from 'outputicjs/akash/escrow/v1beta
 Payments queries all payments
 
 ```ts
-import { getPaymentsAkashEscrowV1beta2 } from 'outputicjs/akash/escrow/v1beta2'
-import { useGetPaymentsAkashEscrowV1beta2 } from 'outputicjs/akash/escrow/v1beta2'
+import { getPaymentsAkashEscrowV1beta2 } from 'outputicjs/akash/bundle'
+import { useGetPaymentsAkashEscrowV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -845,8 +845,8 @@ import { useGetPaymentsAkashEscrowV1beta2 } from 'outputicjs/akash/escrow/v1beta
 Orders queries orders with filters
 
 ```ts
-import { getOrders } from 'outputicjs/akash/market/v1beta2'
-import { useGetOrders } from 'outputicjs/akash/market/v1beta2'
+import { getOrders } from 'outputicjs/akash/akash/market/v1beta2/query.rpc.func'
+import { useGetOrders } from 'outputicjs/akash/akash/market/v1beta2/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -863,8 +863,8 @@ import { useGetOrders } from 'outputicjs/akash/market/v1beta2'
 Order queries order details
 
 ```ts
-import { getOrder } from 'outputicjs/akash/market/v1beta2'
-import { useGetOrder } from 'outputicjs/akash/market/v1beta2'
+import { getOrder } from 'outputicjs/akash/akash/market/v1beta2/query.rpc.func'
+import { useGetOrder } from 'outputicjs/akash/akash/market/v1beta2/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -881,8 +881,8 @@ import { useGetOrder } from 'outputicjs/akash/market/v1beta2'
 Bids queries bids with filters
 
 ```ts
-import { getBids } from 'outputicjs/akash/market/v1beta2'
-import { useGetBids } from 'outputicjs/akash/market/v1beta2'
+import { getBids } from 'outputicjs/akash/akash/market/v1beta2/query.rpc.func'
+import { useGetBids } from 'outputicjs/akash/akash/market/v1beta2/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -899,8 +899,8 @@ import { useGetBids } from 'outputicjs/akash/market/v1beta2'
 Bid queries bid details
 
 ```ts
-import { getBid } from 'outputicjs/akash/market/v1beta2'
-import { useGetBid } from 'outputicjs/akash/market/v1beta2'
+import { getBid } from 'outputicjs/akash/akash/market/v1beta2/query.rpc.func'
+import { useGetBid } from 'outputicjs/akash/akash/market/v1beta2/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -917,8 +917,8 @@ import { useGetBid } from 'outputicjs/akash/market/v1beta2'
 Leases queries leases with filters
 
 ```ts
-import { getLeases } from 'outputicjs/akash/market/v1beta2'
-import { useGetLeases } from 'outputicjs/akash/market/v1beta2'
+import { getLeases } from 'outputicjs/akash/akash/market/v1beta2/query.rpc.func'
+import { useGetLeases } from 'outputicjs/akash/akash/market/v1beta2/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -935,8 +935,8 @@ import { useGetLeases } from 'outputicjs/akash/market/v1beta2'
 Lease queries lease details
 
 ```ts
-import { getLease } from 'outputicjs/akash/market/v1beta2'
-import { useGetLease } from 'outputicjs/akash/market/v1beta2'
+import { getLease } from 'outputicjs/akash/akash/market/v1beta2/query.rpc.func'
+import { useGetLease } from 'outputicjs/akash/akash/market/v1beta2/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -953,8 +953,8 @@ import { useGetLease } from 'outputicjs/akash/market/v1beta2'
 CreateBid defines a method to create a bid given proper inputs.
 
 ```ts
-import { createBid } from 'outputicjs/akash/market/v1beta2'
-import { useCreateBid } from 'outputicjs/akash/market/v1beta2'
+import { createBid } from 'outputicjs/akash/akash/market/v1beta2/service.rpc.func'
+import { useCreateBid } from 'outputicjs/akash/akash/market/v1beta2/service.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -971,8 +971,8 @@ import { useCreateBid } from 'outputicjs/akash/market/v1beta2'
 CloseBid defines a method to close a bid given proper inputs.
 
 ```ts
-import { closeBid } from 'outputicjs/akash/market/v1beta2'
-import { useCloseBid } from 'outputicjs/akash/market/v1beta2'
+import { closeBid } from 'outputicjs/akash/akash/market/v1beta2/service.rpc.func'
+import { useCloseBid } from 'outputicjs/akash/akash/market/v1beta2/service.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -989,8 +989,8 @@ import { useCloseBid } from 'outputicjs/akash/market/v1beta2'
 WithdrawLease withdraws accrued funds from the lease payment
 
 ```ts
-import { withdrawLease } from 'outputicjs/akash/market/v1beta2'
-import { useWithdrawLease } from 'outputicjs/akash/market/v1beta2'
+import { withdrawLease } from 'outputicjs/akash/akash/market/v1beta2/service.rpc.func'
+import { useWithdrawLease } from 'outputicjs/akash/akash/market/v1beta2/service.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1007,8 +1007,8 @@ import { useWithdrawLease } from 'outputicjs/akash/market/v1beta2'
 CreateLease creates a new lease
 
 ```ts
-import { createLease } from 'outputicjs/akash/market/v1beta2'
-import { useCreateLease } from 'outputicjs/akash/market/v1beta2'
+import { createLease } from 'outputicjs/akash/akash/market/v1beta2/service.rpc.func'
+import { useCreateLease } from 'outputicjs/akash/akash/market/v1beta2/service.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1025,8 +1025,8 @@ import { useCreateLease } from 'outputicjs/akash/market/v1beta2'
 CloseLease defines a method to close an order given proper inputs.
 
 ```ts
-import { closeLease } from 'outputicjs/akash/market/v1beta2'
-import { useCloseLease } from 'outputicjs/akash/market/v1beta2'
+import { closeLease } from 'outputicjs/akash/akash/market/v1beta2/service.rpc.func'
+import { useCloseLease } from 'outputicjs/akash/akash/market/v1beta2/service.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1059,8 +1059,8 @@ import { useCloseLease } from 'outputicjs/akash/market/v1beta2'
 CreateProvider defines a method that creates a provider given the proper inputs
 
 ```ts
-import { createProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider/v1beta1'
-import { useCreateProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider/v1beta1'
+import { createProviderAkashProviderV1beta1 } from 'outputicjs/akash/bundle'
+import { useCreateProviderAkashProviderV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -1077,8 +1077,8 @@ import { useCreateProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider
 UpdateProvider defines a method that updates a provider given the proper inputs
 
 ```ts
-import { updateProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider/v1beta1'
-import { useUpdateProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider/v1beta1'
+import { updateProviderAkashProviderV1beta1 } from 'outputicjs/akash/bundle'
+import { useUpdateProviderAkashProviderV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -1095,8 +1095,8 @@ import { useUpdateProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider
 DeleteProvider defines a method that deletes a provider given the proper inputs
 
 ```ts
-import { deleteProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider/v1beta1'
-import { useDeleteProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider/v1beta1'
+import { deleteProviderAkashProviderV1beta1 } from 'outputicjs/akash/bundle'
+import { useDeleteProviderAkashProviderV1beta1 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -1134,8 +1134,8 @@ import { useDeleteProviderAkashProviderV1beta1 } from 'outputicjs/akash/provider
 Providers queries providers
 
 ```ts
-import { getProviders } from 'outputicjs/akash/provider/v1beta2'
-import { useGetProviders } from 'outputicjs/akash/provider/v1beta2'
+import { getProviders } from 'outputicjs/akash/akash/provider/v1beta2/query.rpc.func'
+import { useGetProviders } from 'outputicjs/akash/akash/provider/v1beta2/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1152,8 +1152,8 @@ import { useGetProviders } from 'outputicjs/akash/provider/v1beta2'
 Provider queries provider details
 
 ```ts
-import { getProvider } from 'outputicjs/akash/provider/v1beta2'
-import { useGetProvider } from 'outputicjs/akash/provider/v1beta2'
+import { getProvider } from 'outputicjs/akash/akash/provider/v1beta2/query.rpc.func'
+import { useGetProvider } from 'outputicjs/akash/akash/provider/v1beta2/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1170,8 +1170,8 @@ import { useGetProvider } from 'outputicjs/akash/provider/v1beta2'
 CreateProvider defines a method that creates a provider given the proper inputs
 
 ```ts
-import { createProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider/v1beta2'
-import { useCreateProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider/v1beta2'
+import { createProviderAkashProviderV1beta2 } from 'outputicjs/akash/bundle'
+import { useCreateProviderAkashProviderV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -1188,8 +1188,8 @@ import { useCreateProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider
 UpdateProvider defines a method that updates a provider given the proper inputs
 
 ```ts
-import { updateProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider/v1beta2'
-import { useUpdateProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider/v1beta2'
+import { updateProviderAkashProviderV1beta2 } from 'outputicjs/akash/bundle'
+import { useUpdateProviderAkashProviderV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -1206,8 +1206,8 @@ import { useUpdateProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider
 DeleteProvider defines a method that deletes a provider given the proper inputs
 
 ```ts
-import { deleteProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider/v1beta2'
-import { useDeleteProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider/v1beta2'
+import { deleteProviderAkashProviderV1beta2 } from 'outputicjs/akash/bundle'
+import { useDeleteProviderAkashProviderV1beta2 } from 'outputicjs/akash/bundle'
 ```
 
 | Field | Value | Source |
@@ -1239,8 +1239,8 @@ import { useDeleteProviderAkashProviderV1beta2 } from 'outputicjs/akash/provider
 Config returns the current app config.
 
 ```ts
-import { getConfig } from 'outputicjs/cosmos/app/v1alpha1'
-import { useGetConfig } from 'outputicjs/cosmos/app/v1alpha1'
+import { getConfig } from 'outputicjs/cosmos/cosmos/app/v1alpha1/query.rpc.func'
+import { useGetConfig } from 'outputicjs/cosmos/cosmos/app/v1alpha1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1283,8 +1283,8 @@ import { useGetConfig } from 'outputicjs/cosmos/app/v1alpha1'
 Accounts returns all the existing accounts Since: cosmos-sdk 0.43
 
 ```ts
-import { getAccountsCosmosAuthV1beta1 } from 'outputicjs/cosmos/auth/v1beta1'
-import { useGetAccountsCosmosAuthV1beta1 } from 'outputicjs/cosmos/auth/v1beta1'
+import { getAccountsCosmosAuthV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetAccountsCosmosAuthV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -1301,8 +1301,8 @@ import { useGetAccountsCosmosAuthV1beta1 } from 'outputicjs/cosmos/auth/v1beta1'
 Account returns account details based on address.
 
 ```ts
-import { getAccount } from 'outputicjs/cosmos/auth/v1beta1'
-import { useGetAccount } from 'outputicjs/cosmos/auth/v1beta1'
+import { getAccount } from 'outputicjs/cosmos/cosmos/auth/v1beta1/query.rpc.func'
+import { useGetAccount } from 'outputicjs/cosmos/cosmos/auth/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1319,8 +1319,8 @@ import { useGetAccount } from 'outputicjs/cosmos/auth/v1beta1'
 Params queries all parameters.
 
 ```ts
-import { getCosmosAuthV1beta1Params } from 'outputicjs/cosmos/auth/v1beta1'
-import { useGetCosmosAuthV1beta1Params } from 'outputicjs/cosmos/auth/v1beta1'
+import { getCosmosAuthV1beta1Params } from 'outputicjs/cosmos/cosmos/auth/v1beta1/query.rpc.func'
+import { useGetCosmosAuthV1beta1Params } from 'outputicjs/cosmos/cosmos/auth/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1337,8 +1337,8 @@ import { useGetCosmosAuthV1beta1Params } from 'outputicjs/cosmos/auth/v1beta1'
 ModuleAccounts returns all the existing module accounts.
 
 ```ts
-import { getModuleAccounts } from 'outputicjs/cosmos/auth/v1beta1'
-import { useGetModuleAccounts } from 'outputicjs/cosmos/auth/v1beta1'
+import { getModuleAccounts } from 'outputicjs/cosmos/cosmos/auth/v1beta1/query.rpc.func'
+import { useGetModuleAccounts } from 'outputicjs/cosmos/cosmos/auth/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1355,8 +1355,8 @@ import { useGetModuleAccounts } from 'outputicjs/cosmos/auth/v1beta1'
 Bech32 queries bech32Prefix
 
 ```ts
-import { getBech32Prefix } from 'outputicjs/cosmos/auth/v1beta1'
-import { useGetBech32Prefix } from 'outputicjs/cosmos/auth/v1beta1'
+import { getBech32Prefix } from 'outputicjs/cosmos/cosmos/auth/v1beta1/query.rpc.func'
+import { useGetBech32Prefix } from 'outputicjs/cosmos/cosmos/auth/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1373,8 +1373,8 @@ import { useGetBech32Prefix } from 'outputicjs/cosmos/auth/v1beta1'
 AddressBytesToString converts Account Address bytes to string
 
 ```ts
-import { getAddressBytesToString } from 'outputicjs/cosmos/auth/v1beta1'
-import { useGetAddressBytesToString } from 'outputicjs/cosmos/auth/v1beta1'
+import { getAddressBytesToString } from 'outputicjs/cosmos/cosmos/auth/v1beta1/query.rpc.func'
+import { useGetAddressBytesToString } from 'outputicjs/cosmos/cosmos/auth/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1391,8 +1391,8 @@ import { useGetAddressBytesToString } from 'outputicjs/cosmos/auth/v1beta1'
 AddressStringToBytes converts Address string to bytes
 
 ```ts
-import { getAddressStringToBytes } from 'outputicjs/cosmos/auth/v1beta1'
-import { useGetAddressStringToBytes } from 'outputicjs/cosmos/auth/v1beta1'
+import { getAddressStringToBytes } from 'outputicjs/cosmos/cosmos/auth/v1beta1/query.rpc.func'
+import { useGetAddressStringToBytes } from 'outputicjs/cosmos/cosmos/auth/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1436,8 +1436,8 @@ import { useGetAddressStringToBytes } from 'outputicjs/cosmos/auth/v1beta1'
 Returns list of `Authorization`, granted to the grantee by the granter.
 
 ```ts
-import { getGrants } from 'outputicjs/cosmos/authz/v1beta1'
-import { useGetGrants } from 'outputicjs/cosmos/authz/v1beta1'
+import { getGrants } from 'outputicjs/cosmos/cosmos/authz/v1beta1/query.rpc.func'
+import { useGetGrants } from 'outputicjs/cosmos/cosmos/authz/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1454,8 +1454,8 @@ import { useGetGrants } from 'outputicjs/cosmos/authz/v1beta1'
 GranterGrants returns list of `GrantAuthorization`, granted by granter. Since: cosmos-sdk 0.46
 
 ```ts
-import { getGranterGrants } from 'outputicjs/cosmos/authz/v1beta1'
-import { useGetGranterGrants } from 'outputicjs/cosmos/authz/v1beta1'
+import { getGranterGrants } from 'outputicjs/cosmos/cosmos/authz/v1beta1/query.rpc.func'
+import { useGetGranterGrants } from 'outputicjs/cosmos/cosmos/authz/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1472,8 +1472,8 @@ import { useGetGranterGrants } from 'outputicjs/cosmos/authz/v1beta1'
 GranteeGrants returns a list of `GrantAuthorization` by grantee. Since: cosmos-sdk 0.46
 
 ```ts
-import { getGranteeGrants } from 'outputicjs/cosmos/authz/v1beta1'
-import { useGetGranteeGrants } from 'outputicjs/cosmos/authz/v1beta1'
+import { getGranteeGrants } from 'outputicjs/cosmos/cosmos/authz/v1beta1/query.rpc.func'
+import { useGetGranteeGrants } from 'outputicjs/cosmos/cosmos/authz/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1490,8 +1490,8 @@ import { useGetGranteeGrants } from 'outputicjs/cosmos/authz/v1beta1'
 Grant grants the provided authorization to the grantee on the granter's account with the provided expiration time. If there is already a grant for the given (granter, grantee, Authorization) triple, then the grant will be overwritten.
 
 ```ts
-import { grant } from 'outputicjs/cosmos/authz/v1beta1'
-import { useGrant } from 'outputicjs/cosmos/authz/v1beta1'
+import { grant } from 'outputicjs/cosmos/cosmos/authz/v1beta1/tx.rpc.func'
+import { useGrant } from 'outputicjs/cosmos/cosmos/authz/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1508,8 +1508,8 @@ import { useGrant } from 'outputicjs/cosmos/authz/v1beta1'
 Exec attempts to execute the provided messages using authorizations granted to the grantee. Each message should have only one signer corresponding to the granter of the authorization.
 
 ```ts
-import { execCosmosAuthzV1beta1 } from 'outputicjs/cosmos/authz/v1beta1'
-import { useExecCosmosAuthzV1beta1 } from 'outputicjs/cosmos/authz/v1beta1'
+import { execCosmosAuthzV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useExecCosmosAuthzV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -1526,8 +1526,8 @@ import { useExecCosmosAuthzV1beta1 } from 'outputicjs/cosmos/authz/v1beta1'
 Revoke revokes any authorization corresponding to the provided method name on the granter's account that has been granted to the grantee.
 
 ```ts
-import { revoke } from 'outputicjs/cosmos/authz/v1beta1'
-import { useRevoke } from 'outputicjs/cosmos/authz/v1beta1'
+import { revoke } from 'outputicjs/cosmos/cosmos/authz/v1beta1/tx.rpc.func'
+import { useRevoke } from 'outputicjs/cosmos/cosmos/authz/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1585,8 +1585,8 @@ import { useRevoke } from 'outputicjs/cosmos/authz/v1beta1'
 Balance queries the balance of a single coin for a single account.
 
 ```ts
-import { getBalanceCosmosBankV1beta1 } from 'outputicjs/cosmos/bank/v1beta1'
-import { useGetBalanceCosmosBankV1beta1 } from 'outputicjs/cosmos/bank/v1beta1'
+import { getBalanceCosmosBankV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetBalanceCosmosBankV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -1603,8 +1603,8 @@ import { useGetBalanceCosmosBankV1beta1 } from 'outputicjs/cosmos/bank/v1beta1'
 AllBalances queries the balance of all coins for a single account.
 
 ```ts
-import { getAllBalances } from 'outputicjs/cosmos/bank/v1beta1'
-import { useGetAllBalances } from 'outputicjs/cosmos/bank/v1beta1'
+import { getAllBalances } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.func'
+import { useGetAllBalances } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1621,8 +1621,8 @@ import { useGetAllBalances } from 'outputicjs/cosmos/bank/v1beta1'
 SpendableBalances queries the spenable balance of all coins for a single account.
 
 ```ts
-import { getSpendableBalances } from 'outputicjs/cosmos/bank/v1beta1'
-import { useGetSpendableBalances } from 'outputicjs/cosmos/bank/v1beta1'
+import { getSpendableBalances } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.func'
+import { useGetSpendableBalances } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1639,8 +1639,8 @@ import { useGetSpendableBalances } from 'outputicjs/cosmos/bank/v1beta1'
 TotalSupply queries the total supply of all coins.
 
 ```ts
-import { getTotalSupply } from 'outputicjs/cosmos/bank/v1beta1'
-import { useGetTotalSupply } from 'outputicjs/cosmos/bank/v1beta1'
+import { getTotalSupply } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.func'
+import { useGetTotalSupply } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1657,8 +1657,8 @@ import { useGetTotalSupply } from 'outputicjs/cosmos/bank/v1beta1'
 SupplyOf queries the supply of a single coin.
 
 ```ts
-import { getSupplyOf } from 'outputicjs/cosmos/bank/v1beta1'
-import { useGetSupplyOf } from 'outputicjs/cosmos/bank/v1beta1'
+import { getSupplyOf } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.func'
+import { useGetSupplyOf } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1675,8 +1675,8 @@ import { useGetSupplyOf } from 'outputicjs/cosmos/bank/v1beta1'
 Params queries the parameters of x/bank module.
 
 ```ts
-import { getCosmosBankV1beta1Params } from 'outputicjs/cosmos/bank/v1beta1'
-import { useGetCosmosBankV1beta1Params } from 'outputicjs/cosmos/bank/v1beta1'
+import { getCosmosBankV1beta1Params } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.func'
+import { useGetCosmosBankV1beta1Params } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1693,8 +1693,8 @@ import { useGetCosmosBankV1beta1Params } from 'outputicjs/cosmos/bank/v1beta1'
 DenomsMetadata queries the client metadata of a given coin denomination.
 
 ```ts
-import { getDenomMetadata } from 'outputicjs/cosmos/bank/v1beta1'
-import { useGetDenomMetadata } from 'outputicjs/cosmos/bank/v1beta1'
+import { getDenomMetadata } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.func'
+import { useGetDenomMetadata } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1711,8 +1711,8 @@ import { useGetDenomMetadata } from 'outputicjs/cosmos/bank/v1beta1'
 DenomsMetadata queries the client metadata for all registered coin denominations.
 
 ```ts
-import { getDenomsMetadata } from 'outputicjs/cosmos/bank/v1beta1'
-import { useGetDenomsMetadata } from 'outputicjs/cosmos/bank/v1beta1'
+import { getDenomsMetadata } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.func'
+import { useGetDenomsMetadata } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1729,8 +1729,8 @@ import { useGetDenomsMetadata } from 'outputicjs/cosmos/bank/v1beta1'
 DenomOwners queries for all account addresses that own a particular token denomination.
 
 ```ts
-import { getDenomOwners } from 'outputicjs/cosmos/bank/v1beta1'
-import { useGetDenomOwners } from 'outputicjs/cosmos/bank/v1beta1'
+import { getDenomOwners } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.func'
+import { useGetDenomOwners } from 'outputicjs/cosmos/cosmos/bank/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1747,8 +1747,8 @@ import { useGetDenomOwners } from 'outputicjs/cosmos/bank/v1beta1'
 Send defines a method for sending coins from one account to another account.
 
 ```ts
-import { sendCosmosBankV1beta1 } from 'outputicjs/cosmos/bank/v1beta1'
-import { useSendCosmosBankV1beta1 } from 'outputicjs/cosmos/bank/v1beta1'
+import { sendCosmosBankV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useSendCosmosBankV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -1765,8 +1765,8 @@ import { useSendCosmosBankV1beta1 } from 'outputicjs/cosmos/bank/v1beta1'
 MultiSend defines a method for sending coins from some accounts to other accounts.
 
 ```ts
-import { multiSend } from 'outputicjs/cosmos/bank/v1beta1'
-import { useMultiSend } from 'outputicjs/cosmos/bank/v1beta1'
+import { multiSend } from 'outputicjs/cosmos/cosmos/bank/v1beta1/tx.rpc.func'
+import { useMultiSend } from 'outputicjs/cosmos/cosmos/bank/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1794,8 +1794,8 @@ import { useMultiSend } from 'outputicjs/cosmos/bank/v1beta1'
 VerifyInvariant defines a method to verify a particular invariance.
 
 ```ts
-import { verifyInvariant } from 'outputicjs/cosmos/crisis/v1beta1'
-import { useVerifyInvariant } from 'outputicjs/cosmos/crisis/v1beta1'
+import { verifyInvariant } from 'outputicjs/cosmos/cosmos/crisis/v1beta1/tx.rpc.func'
+import { useVerifyInvariant } from 'outputicjs/cosmos/cosmos/crisis/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1866,8 +1866,8 @@ import { useVerifyInvariant } from 'outputicjs/cosmos/crisis/v1beta1'
 Params queries params of the distribution module.
 
 ```ts
-import { getCosmosDistributionV1beta1Params } from 'outputicjs/cosmos/distribution/v1beta1'
-import { useGetCosmosDistributionV1beta1Params } from 'outputicjs/cosmos/distribution/v1beta1'
+import { getCosmosDistributionV1beta1Params } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.func'
+import { useGetCosmosDistributionV1beta1Params } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1884,8 +1884,8 @@ import { useGetCosmosDistributionV1beta1Params } from 'outputicjs/cosmos/distrib
 ValidatorOutstandingRewards queries rewards of a validator address.
 
 ```ts
-import { getValidatorOutstandingRewards } from 'outputicjs/cosmos/distribution/v1beta1'
-import { useGetValidatorOutstandingRewards } from 'outputicjs/cosmos/distribution/v1beta1'
+import { getValidatorOutstandingRewards } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.func'
+import { useGetValidatorOutstandingRewards } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1902,8 +1902,8 @@ import { useGetValidatorOutstandingRewards } from 'outputicjs/cosmos/distributio
 ValidatorCommission queries accumulated commission for a validator.
 
 ```ts
-import { getValidatorCommission } from 'outputicjs/cosmos/distribution/v1beta1'
-import { useGetValidatorCommission } from 'outputicjs/cosmos/distribution/v1beta1'
+import { getValidatorCommission } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.func'
+import { useGetValidatorCommission } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1920,8 +1920,8 @@ import { useGetValidatorCommission } from 'outputicjs/cosmos/distribution/v1beta
 ValidatorSlashes queries slash events of a validator.
 
 ```ts
-import { getValidatorSlashes } from 'outputicjs/cosmos/distribution/v1beta1'
-import { useGetValidatorSlashes } from 'outputicjs/cosmos/distribution/v1beta1'
+import { getValidatorSlashes } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.func'
+import { useGetValidatorSlashes } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1938,8 +1938,8 @@ import { useGetValidatorSlashes } from 'outputicjs/cosmos/distribution/v1beta1'
 DelegationRewards queries the total rewards accrued by a delegation.
 
 ```ts
-import { getDelegationRewards } from 'outputicjs/cosmos/distribution/v1beta1'
-import { useGetDelegationRewards } from 'outputicjs/cosmos/distribution/v1beta1'
+import { getDelegationRewards } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.func'
+import { useGetDelegationRewards } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1956,8 +1956,8 @@ import { useGetDelegationRewards } from 'outputicjs/cosmos/distribution/v1beta1'
 DelegationTotalRewards queries the total rewards accrued by a each validator.
 
 ```ts
-import { getDelegationTotalRewards } from 'outputicjs/cosmos/distribution/v1beta1'
-import { useGetDelegationTotalRewards } from 'outputicjs/cosmos/distribution/v1beta1'
+import { getDelegationTotalRewards } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.func'
+import { useGetDelegationTotalRewards } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -1974,8 +1974,8 @@ import { useGetDelegationTotalRewards } from 'outputicjs/cosmos/distribution/v1b
 DelegatorValidators queries the validators of a delegator.
 
 ```ts
-import { getDelegatorValidatorsCosmosDistributionV1beta1 } from 'outputicjs/cosmos/distribution/v1beta1'
-import { useGetDelegatorValidatorsCosmosDistributionV1beta1 } from 'outputicjs/cosmos/distribution/v1beta1'
+import { getDelegatorValidatorsCosmosDistributionV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetDelegatorValidatorsCosmosDistributionV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -1992,8 +1992,8 @@ import { useGetDelegatorValidatorsCosmosDistributionV1beta1 } from 'outputicjs/c
 DelegatorWithdrawAddress queries withdraw address of a delegator.
 
 ```ts
-import { getDelegatorWithdrawAddress } from 'outputicjs/cosmos/distribution/v1beta1'
-import { useGetDelegatorWithdrawAddress } from 'outputicjs/cosmos/distribution/v1beta1'
+import { getDelegatorWithdrawAddress } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.func'
+import { useGetDelegatorWithdrawAddress } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2010,8 +2010,8 @@ import { useGetDelegatorWithdrawAddress } from 'outputicjs/cosmos/distribution/v
 CommunityPool queries the community pool coins.
 
 ```ts
-import { getCommunityPool } from 'outputicjs/cosmos/distribution/v1beta1'
-import { useGetCommunityPool } from 'outputicjs/cosmos/distribution/v1beta1'
+import { getCommunityPool } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.func'
+import { useGetCommunityPool } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2028,8 +2028,8 @@ import { useGetCommunityPool } from 'outputicjs/cosmos/distribution/v1beta1'
 SetWithdrawAddress defines a method to change the withdraw address for a delegator (or validator self-delegation).
 
 ```ts
-import { setWithdrawAddress } from 'outputicjs/cosmos/distribution/v1beta1'
-import { useSetWithdrawAddress } from 'outputicjs/cosmos/distribution/v1beta1'
+import { setWithdrawAddress } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/tx.rpc.func'
+import { useSetWithdrawAddress } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2046,8 +2046,8 @@ import { useSetWithdrawAddress } from 'outputicjs/cosmos/distribution/v1beta1'
 WithdrawDelegatorReward defines a method to withdraw rewards of delegator from a single validator.
 
 ```ts
-import { withdrawDelegatorReward } from 'outputicjs/cosmos/distribution/v1beta1'
-import { useWithdrawDelegatorReward } from 'outputicjs/cosmos/distribution/v1beta1'
+import { withdrawDelegatorReward } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/tx.rpc.func'
+import { useWithdrawDelegatorReward } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2064,8 +2064,8 @@ import { useWithdrawDelegatorReward } from 'outputicjs/cosmos/distribution/v1bet
 WithdrawValidatorCommission defines a method to withdraw the full commission to the validator address.
 
 ```ts
-import { withdrawValidatorCommission } from 'outputicjs/cosmos/distribution/v1beta1'
-import { useWithdrawValidatorCommission } from 'outputicjs/cosmos/distribution/v1beta1'
+import { withdrawValidatorCommission } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/tx.rpc.func'
+import { useWithdrawValidatorCommission } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2082,8 +2082,8 @@ import { useWithdrawValidatorCommission } from 'outputicjs/cosmos/distribution/v
 FundCommunityPool defines a method to allow an account to directly fund the community pool.
 
 ```ts
-import { fundCommunityPool } from 'outputicjs/cosmos/distribution/v1beta1'
-import { useFundCommunityPool } from 'outputicjs/cosmos/distribution/v1beta1'
+import { fundCommunityPool } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/tx.rpc.func'
+import { useFundCommunityPool } from 'outputicjs/cosmos/cosmos/distribution/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2116,8 +2116,8 @@ import { useFundCommunityPool } from 'outputicjs/cosmos/distribution/v1beta1'
 Evidence queries evidence based on evidence hash.
 
 ```ts
-import { getEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
-import { useGetEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
+import { getEvidence } from 'outputicjs/cosmos/cosmos/evidence/v1beta1/query.rpc.func'
+import { useGetEvidence } from 'outputicjs/cosmos/cosmos/evidence/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2134,8 +2134,8 @@ import { useGetEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
 AllEvidence queries all evidence.
 
 ```ts
-import { getAllEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
-import { useGetAllEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
+import { getAllEvidence } from 'outputicjs/cosmos/cosmos/evidence/v1beta1/query.rpc.func'
+import { useGetAllEvidence } from 'outputicjs/cosmos/cosmos/evidence/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2152,8 +2152,8 @@ import { useGetAllEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
 SubmitEvidence submits an arbitrary Evidence of misbehavior such as equivocation or counterfactual signing.
 
 ```ts
-import { submitEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
-import { useSubmitEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
+import { submitEvidence } from 'outputicjs/cosmos/cosmos/evidence/v1beta1/tx.rpc.func'
+import { useSubmitEvidence } from 'outputicjs/cosmos/cosmos/evidence/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2193,8 +2193,8 @@ import { useSubmitEvidence } from 'outputicjs/cosmos/evidence/v1beta1'
 Allowance returns fee granted to the grantee by the granter.
 
 ```ts
-import { getAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
-import { useGetAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
+import { getAllowance } from 'outputicjs/cosmos/cosmos/feegrant/v1beta1/query.rpc.func'
+import { useGetAllowance } from 'outputicjs/cosmos/cosmos/feegrant/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2211,8 +2211,8 @@ import { useGetAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
 Allowances returns all the grants for address.
 
 ```ts
-import { getAllowances } from 'outputicjs/cosmos/feegrant/v1beta1'
-import { useGetAllowances } from 'outputicjs/cosmos/feegrant/v1beta1'
+import { getAllowances } from 'outputicjs/cosmos/cosmos/feegrant/v1beta1/query.rpc.func'
+import { useGetAllowances } from 'outputicjs/cosmos/cosmos/feegrant/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2229,8 +2229,8 @@ import { useGetAllowances } from 'outputicjs/cosmos/feegrant/v1beta1'
 AllowancesByGranter returns all the grants given by an address Since v0.46
 
 ```ts
-import { getAllowancesByGranter } from 'outputicjs/cosmos/feegrant/v1beta1'
-import { useGetAllowancesByGranter } from 'outputicjs/cosmos/feegrant/v1beta1'
+import { getAllowancesByGranter } from 'outputicjs/cosmos/cosmos/feegrant/v1beta1/query.rpc.func'
+import { useGetAllowancesByGranter } from 'outputicjs/cosmos/cosmos/feegrant/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2247,8 +2247,8 @@ import { useGetAllowancesByGranter } from 'outputicjs/cosmos/feegrant/v1beta1'
 GrantAllowance grants fee allowance to the grantee on the granter's account with the provided expiration time.
 
 ```ts
-import { grantAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
-import { useGrantAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
+import { grantAllowance } from 'outputicjs/cosmos/cosmos/feegrant/v1beta1/tx.rpc.func'
+import { useGrantAllowance } from 'outputicjs/cosmos/cosmos/feegrant/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2265,8 +2265,8 @@ import { useGrantAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
 RevokeAllowance revokes any fee allowance of granter's account that has been granted to the grantee.
 
 ```ts
-import { revokeAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
-import { useRevokeAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
+import { revokeAllowance } from 'outputicjs/cosmos/cosmos/feegrant/v1beta1/tx.rpc.func'
+import { useRevokeAllowance } from 'outputicjs/cosmos/cosmos/feegrant/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2328,8 +2328,8 @@ import { useRevokeAllowance } from 'outputicjs/cosmos/feegrant/v1beta1'
 Proposal queries proposal details based on ProposalID.
 
 ```ts
-import { getProposalCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
-import { useGetProposalCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { getProposalCosmosGovV1 } from 'outputicjs/cosmos/bundle'
+import { useGetProposalCosmosGovV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2346,8 +2346,8 @@ import { useGetProposalCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
 Proposals queries all proposals based on given status.
 
 ```ts
-import { getProposalsCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
-import { useGetProposalsCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { getProposalsCosmosGovV1 } from 'outputicjs/cosmos/bundle'
+import { useGetProposalsCosmosGovV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2364,8 +2364,8 @@ import { useGetProposalsCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
 Vote queries voted information based on proposalID, voterAddr.
 
 ```ts
-import { getVoteCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
-import { useGetVoteCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { getVoteCosmosGovV1 } from 'outputicjs/cosmos/bundle'
+import { useGetVoteCosmosGovV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2382,8 +2382,8 @@ import { useGetVoteCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
 Votes queries votes of a given proposal.
 
 ```ts
-import { getVotesCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
-import { useGetVotesCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { getVotesCosmosGovV1 } from 'outputicjs/cosmos/bundle'
+import { useGetVotesCosmosGovV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2400,8 +2400,8 @@ import { useGetVotesCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
 Params queries all parameters of the gov module.
 
 ```ts
-import { getCosmosGovV1Params } from 'outputicjs/cosmos/gov/v1'
-import { useGetCosmosGovV1Params } from 'outputicjs/cosmos/gov/v1'
+import { getCosmosGovV1Params } from 'outputicjs/cosmos/cosmos/gov/v1/query.rpc.func'
+import { useGetCosmosGovV1Params } from 'outputicjs/cosmos/cosmos/gov/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2418,8 +2418,8 @@ import { useGetCosmosGovV1Params } from 'outputicjs/cosmos/gov/v1'
 Deposit queries single deposit information based proposalID, depositAddr.
 
 ```ts
-import { getDepositCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
-import { useGetDepositCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { getDepositCosmosGovV1 } from 'outputicjs/cosmos/bundle'
+import { useGetDepositCosmosGovV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2436,8 +2436,8 @@ import { useGetDepositCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
 Deposits queries all deposits of a single proposal.
 
 ```ts
-import { getDepositsCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
-import { useGetDepositsCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { getDepositsCosmosGovV1 } from 'outputicjs/cosmos/bundle'
+import { useGetDepositsCosmosGovV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2454,8 +2454,8 @@ import { useGetDepositsCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
 TallyResult queries the tally of a proposal vote.
 
 ```ts
-import { getTallyResultCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
-import { useGetTallyResultCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { getTallyResultCosmosGovV1 } from 'outputicjs/cosmos/bundle'
+import { useGetTallyResultCosmosGovV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2472,8 +2472,8 @@ import { useGetTallyResultCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
 SubmitProposal defines a method to create new proposal given a content.
 
 ```ts
-import { submitProposalCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
-import { useSubmitProposalCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { submitProposalCosmosGovV1 } from 'outputicjs/cosmos/bundle'
+import { useSubmitProposalCosmosGovV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2490,8 +2490,8 @@ import { useSubmitProposalCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
 ExecLegacyContent defines a Msg to be in included in a MsgSubmitProposal to execute a legacy content-based proposal.
 
 ```ts
-import { execLegacyContent } from 'outputicjs/cosmos/gov/v1'
-import { useExecLegacyContent } from 'outputicjs/cosmos/gov/v1'
+import { execLegacyContent } from 'outputicjs/cosmos/cosmos/gov/v1/tx.rpc.func'
+import { useExecLegacyContent } from 'outputicjs/cosmos/cosmos/gov/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2508,8 +2508,8 @@ import { useExecLegacyContent } from 'outputicjs/cosmos/gov/v1'
 Vote defines a method to add a vote on a specific proposal.
 
 ```ts
-import { voteCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
-import { useVoteCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { voteCosmosGovV1 } from 'outputicjs/cosmos/bundle'
+import { useVoteCosmosGovV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2526,8 +2526,8 @@ import { useVoteCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
 VoteWeighted defines a method to add a weighted vote on a specific proposal.
 
 ```ts
-import { voteWeightedCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
-import { useVoteWeightedCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { voteWeightedCosmosGovV1 } from 'outputicjs/cosmos/bundle'
+import { useVoteWeightedCosmosGovV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2544,8 +2544,8 @@ import { useVoteWeightedCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
 Deposit defines a method to add deposit on a specific proposal.
 
 ```ts
-import { depositCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
-import { useDepositCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
+import { depositCosmosGovV1 } from 'outputicjs/cosmos/bundle'
+import { useDepositCosmosGovV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2606,8 +2606,8 @@ import { useDepositCosmosGovV1 } from 'outputicjs/cosmos/gov/v1'
 Proposal queries proposal details based on ProposalID.
 
 ```ts
-import { getProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
-import { useGetProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { getProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2624,8 +2624,8 @@ import { useGetProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
 Proposals queries all proposals based on given status.
 
 ```ts
-import { getProposalsCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
-import { useGetProposalsCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { getProposalsCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetProposalsCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2642,8 +2642,8 @@ import { useGetProposalsCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
 Vote queries voted information based on proposalID, voterAddr.
 
 ```ts
-import { getVoteCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
-import { useGetVoteCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { getVoteCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetVoteCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2660,8 +2660,8 @@ import { useGetVoteCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
 Votes queries votes of a given proposal.
 
 ```ts
-import { getVotesCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
-import { useGetVotesCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { getVotesCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetVotesCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2678,8 +2678,8 @@ import { useGetVotesCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
 Params queries all parameters of the gov module.
 
 ```ts
-import { getCosmosGovV1beta1Params } from 'outputicjs/cosmos/gov/v1beta1'
-import { useGetCosmosGovV1beta1Params } from 'outputicjs/cosmos/gov/v1beta1'
+import { getCosmosGovV1beta1Params } from 'outputicjs/cosmos/cosmos/gov/v1beta1/query.rpc.func'
+import { useGetCosmosGovV1beta1Params } from 'outputicjs/cosmos/cosmos/gov/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2696,8 +2696,8 @@ import { useGetCosmosGovV1beta1Params } from 'outputicjs/cosmos/gov/v1beta1'
 Deposit queries single deposit information based proposalID, depositAddr.
 
 ```ts
-import { getDepositCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
-import { useGetDepositCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { getDepositCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetDepositCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2714,8 +2714,8 @@ import { useGetDepositCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
 Deposits queries all deposits of a single proposal.
 
 ```ts
-import { getDepositsCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
-import { useGetDepositsCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { getDepositsCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetDepositsCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2732,8 +2732,8 @@ import { useGetDepositsCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
 TallyResult queries the tally of a proposal vote.
 
 ```ts
-import { getTallyResultCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
-import { useGetTallyResultCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { getTallyResultCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetTallyResultCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2750,8 +2750,8 @@ import { useGetTallyResultCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1
 SubmitProposal defines a method to create new proposal given a content.
 
 ```ts
-import { submitProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
-import { useSubmitProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { submitProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useSubmitProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2768,8 +2768,8 @@ import { useSubmitProposalCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1
 Vote defines a method to add a vote on a specific proposal.
 
 ```ts
-import { voteCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
-import { useVoteCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { voteCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useVoteCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2786,8 +2786,8 @@ import { useVoteCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
 VoteWeighted defines a method to add a weighted vote on a specific proposal. Since: cosmos-sdk 0.43
 
 ```ts
-import { voteWeightedCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
-import { useVoteWeightedCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { voteWeightedCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useVoteWeightedCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2804,8 +2804,8 @@ import { useVoteWeightedCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
 Deposit defines a method to add deposit on a specific proposal.
 
 ```ts
-import { depositCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
-import { useDepositCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
+import { depositCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useDepositCosmosGovV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -2910,8 +2910,8 @@ import { useDepositCosmosGovV1beta1 } from 'outputicjs/cosmos/gov/v1beta1'
 GroupInfo queries group info based on group id.
 
 ```ts
-import { getGroupInfo } from 'outputicjs/cosmos/group/v1'
-import { useGetGroupInfo } from 'outputicjs/cosmos/group/v1'
+import { getGroupInfo } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.func'
+import { useGetGroupInfo } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2928,8 +2928,8 @@ import { useGetGroupInfo } from 'outputicjs/cosmos/group/v1'
 GroupPolicyInfo queries group policy info based on account address of group policy.
 
 ```ts
-import { getGroupPolicyInfo } from 'outputicjs/cosmos/group/v1'
-import { useGetGroupPolicyInfo } from 'outputicjs/cosmos/group/v1'
+import { getGroupPolicyInfo } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.func'
+import { useGetGroupPolicyInfo } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2946,8 +2946,8 @@ import { useGetGroupPolicyInfo } from 'outputicjs/cosmos/group/v1'
 GroupMembers queries members of a group
 
 ```ts
-import { getGroupMembers } from 'outputicjs/cosmos/group/v1'
-import { useGetGroupMembers } from 'outputicjs/cosmos/group/v1'
+import { getGroupMembers } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.func'
+import { useGetGroupMembers } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2964,8 +2964,8 @@ import { useGetGroupMembers } from 'outputicjs/cosmos/group/v1'
 GroupsByAdmin queries groups by admin address.
 
 ```ts
-import { getGroupsByAdmin } from 'outputicjs/cosmos/group/v1'
-import { useGetGroupsByAdmin } from 'outputicjs/cosmos/group/v1'
+import { getGroupsByAdmin } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.func'
+import { useGetGroupsByAdmin } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -2982,8 +2982,8 @@ import { useGetGroupsByAdmin } from 'outputicjs/cosmos/group/v1'
 GroupPoliciesByGroup queries group policies by group id.
 
 ```ts
-import { getGroupPoliciesByGroup } from 'outputicjs/cosmos/group/v1'
-import { useGetGroupPoliciesByGroup } from 'outputicjs/cosmos/group/v1'
+import { getGroupPoliciesByGroup } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.func'
+import { useGetGroupPoliciesByGroup } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3000,8 +3000,8 @@ import { useGetGroupPoliciesByGroup } from 'outputicjs/cosmos/group/v1'
 GroupsByAdmin queries group policies by admin address.
 
 ```ts
-import { getGroupPoliciesByAdmin } from 'outputicjs/cosmos/group/v1'
-import { useGetGroupPoliciesByAdmin } from 'outputicjs/cosmos/group/v1'
+import { getGroupPoliciesByAdmin } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.func'
+import { useGetGroupPoliciesByAdmin } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3018,8 +3018,8 @@ import { useGetGroupPoliciesByAdmin } from 'outputicjs/cosmos/group/v1'
 Proposal queries a proposal based on proposal id.
 
 ```ts
-import { getProposalCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
-import { useGetProposalCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+import { getProposalCosmosGroupV1 } from 'outputicjs/cosmos/bundle'
+import { useGetProposalCosmosGroupV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -3036,8 +3036,8 @@ import { useGetProposalCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
 ProposalsByGroupPolicy queries proposals based on account address of group policy.
 
 ```ts
-import { getProposalsByGroupPolicy } from 'outputicjs/cosmos/group/v1'
-import { useGetProposalsByGroupPolicy } from 'outputicjs/cosmos/group/v1'
+import { getProposalsByGroupPolicy } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.func'
+import { useGetProposalsByGroupPolicy } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3054,8 +3054,8 @@ import { useGetProposalsByGroupPolicy } from 'outputicjs/cosmos/group/v1'
 VoteByProposalVoter queries a vote by proposal id and voter.
 
 ```ts
-import { getVoteByProposalVoter } from 'outputicjs/cosmos/group/v1'
-import { useGetVoteByProposalVoter } from 'outputicjs/cosmos/group/v1'
+import { getVoteByProposalVoter } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.func'
+import { useGetVoteByProposalVoter } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3072,8 +3072,8 @@ import { useGetVoteByProposalVoter } from 'outputicjs/cosmos/group/v1'
 VotesByProposal queries a vote by proposal.
 
 ```ts
-import { getVotesByProposal } from 'outputicjs/cosmos/group/v1'
-import { useGetVotesByProposal } from 'outputicjs/cosmos/group/v1'
+import { getVotesByProposal } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.func'
+import { useGetVotesByProposal } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3090,8 +3090,8 @@ import { useGetVotesByProposal } from 'outputicjs/cosmos/group/v1'
 VotesByVoter queries a vote by voter.
 
 ```ts
-import { getVotesByVoter } from 'outputicjs/cosmos/group/v1'
-import { useGetVotesByVoter } from 'outputicjs/cosmos/group/v1'
+import { getVotesByVoter } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.func'
+import { useGetVotesByVoter } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3108,8 +3108,8 @@ import { useGetVotesByVoter } from 'outputicjs/cosmos/group/v1'
 GroupsByMember queries groups by member address.
 
 ```ts
-import { getGroupsByMember } from 'outputicjs/cosmos/group/v1'
-import { useGetGroupsByMember } from 'outputicjs/cosmos/group/v1'
+import { getGroupsByMember } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.func'
+import { useGetGroupsByMember } from 'outputicjs/cosmos/cosmos/group/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3126,8 +3126,8 @@ import { useGetGroupsByMember } from 'outputicjs/cosmos/group/v1'
 TallyResult queries the tally of a proposal votes.
 
 ```ts
-import { getTallyResultCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
-import { useGetTallyResultCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+import { getTallyResultCosmosGroupV1 } from 'outputicjs/cosmos/bundle'
+import { useGetTallyResultCosmosGroupV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -3144,8 +3144,8 @@ import { useGetTallyResultCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
 CreateGroup creates a new group with an admin account address, a list of members and some optional metadata.
 
 ```ts
-import { createGroup } from 'outputicjs/cosmos/group/v1'
-import { useCreateGroup } from 'outputicjs/cosmos/group/v1'
+import { createGroup } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.func'
+import { useCreateGroup } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3162,8 +3162,8 @@ import { useCreateGroup } from 'outputicjs/cosmos/group/v1'
 UpdateGroupMembers updates the group members with given group id and admin address.
 
 ```ts
-import { updateGroupMembers } from 'outputicjs/cosmos/group/v1'
-import { useUpdateGroupMembers } from 'outputicjs/cosmos/group/v1'
+import { updateGroupMembers } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.func'
+import { useUpdateGroupMembers } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3180,8 +3180,8 @@ import { useUpdateGroupMembers } from 'outputicjs/cosmos/group/v1'
 UpdateGroupAdmin updates the group admin with given group id and previous admin address.
 
 ```ts
-import { updateGroupAdmin } from 'outputicjs/cosmos/group/v1'
-import { useUpdateGroupAdmin } from 'outputicjs/cosmos/group/v1'
+import { updateGroupAdmin } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.func'
+import { useUpdateGroupAdmin } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3198,8 +3198,8 @@ import { useUpdateGroupAdmin } from 'outputicjs/cosmos/group/v1'
 UpdateGroupMetadata updates the group metadata with given group id and admin address.
 
 ```ts
-import { updateGroupMetadata } from 'outputicjs/cosmos/group/v1'
-import { useUpdateGroupMetadata } from 'outputicjs/cosmos/group/v1'
+import { updateGroupMetadata } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.func'
+import { useUpdateGroupMetadata } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3216,8 +3216,8 @@ import { useUpdateGroupMetadata } from 'outputicjs/cosmos/group/v1'
 CreateGroupPolicy creates a new group policy using given DecisionPolicy.
 
 ```ts
-import { createGroupPolicy } from 'outputicjs/cosmos/group/v1'
-import { useCreateGroupPolicy } from 'outputicjs/cosmos/group/v1'
+import { createGroupPolicy } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.func'
+import { useCreateGroupPolicy } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3234,8 +3234,8 @@ import { useCreateGroupPolicy } from 'outputicjs/cosmos/group/v1'
 CreateGroupWithPolicy creates a new group with policy.
 
 ```ts
-import { createGroupWithPolicy } from 'outputicjs/cosmos/group/v1'
-import { useCreateGroupWithPolicy } from 'outputicjs/cosmos/group/v1'
+import { createGroupWithPolicy } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.func'
+import { useCreateGroupWithPolicy } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3252,8 +3252,8 @@ import { useCreateGroupWithPolicy } from 'outputicjs/cosmos/group/v1'
 UpdateGroupPolicyAdmin updates a group policy admin.
 
 ```ts
-import { updateGroupPolicyAdmin } from 'outputicjs/cosmos/group/v1'
-import { useUpdateGroupPolicyAdmin } from 'outputicjs/cosmos/group/v1'
+import { updateGroupPolicyAdmin } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.func'
+import { useUpdateGroupPolicyAdmin } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3270,8 +3270,8 @@ import { useUpdateGroupPolicyAdmin } from 'outputicjs/cosmos/group/v1'
 UpdateGroupPolicyDecisionPolicy allows a group policy's decision policy to be updated.
 
 ```ts
-import { updateGroupPolicyDecisionPolicy } from 'outputicjs/cosmos/group/v1'
-import { useUpdateGroupPolicyDecisionPolicy } from 'outputicjs/cosmos/group/v1'
+import { updateGroupPolicyDecisionPolicy } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.func'
+import { useUpdateGroupPolicyDecisionPolicy } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3288,8 +3288,8 @@ import { useUpdateGroupPolicyDecisionPolicy } from 'outputicjs/cosmos/group/v1'
 UpdateGroupPolicyMetadata updates a group policy metadata.
 
 ```ts
-import { updateGroupPolicyMetadata } from 'outputicjs/cosmos/group/v1'
-import { useUpdateGroupPolicyMetadata } from 'outputicjs/cosmos/group/v1'
+import { updateGroupPolicyMetadata } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.func'
+import { useUpdateGroupPolicyMetadata } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3306,8 +3306,8 @@ import { useUpdateGroupPolicyMetadata } from 'outputicjs/cosmos/group/v1'
 SubmitProposal submits a new proposal.
 
 ```ts
-import { submitProposalCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
-import { useSubmitProposalCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+import { submitProposalCosmosGroupV1 } from 'outputicjs/cosmos/bundle'
+import { useSubmitProposalCosmosGroupV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -3324,8 +3324,8 @@ import { useSubmitProposalCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
 WithdrawProposal aborts a proposal.
 
 ```ts
-import { withdrawProposal } from 'outputicjs/cosmos/group/v1'
-import { useWithdrawProposal } from 'outputicjs/cosmos/group/v1'
+import { withdrawProposal } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.func'
+import { useWithdrawProposal } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3342,8 +3342,8 @@ import { useWithdrawProposal } from 'outputicjs/cosmos/group/v1'
 Vote allows a voter to vote on a proposal.
 
 ```ts
-import { voteCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
-import { useVoteCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+import { voteCosmosGroupV1 } from 'outputicjs/cosmos/bundle'
+import { useVoteCosmosGroupV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -3360,8 +3360,8 @@ import { useVoteCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
 Exec executes a proposal.
 
 ```ts
-import { execCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
-import { useExecCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
+import { execCosmosGroupV1 } from 'outputicjs/cosmos/bundle'
+import { useExecCosmosGroupV1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -3378,8 +3378,8 @@ import { useExecCosmosGroupV1 } from 'outputicjs/cosmos/group/v1'
 LeaveGroup allows a group member to leave the group.
 
 ```ts
-import { leaveGroup } from 'outputicjs/cosmos/group/v1'
-import { useLeaveGroup } from 'outputicjs/cosmos/group/v1'
+import { leaveGroup } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.func'
+import { useLeaveGroup } from 'outputicjs/cosmos/cosmos/group/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3413,8 +3413,8 @@ import { useLeaveGroup } from 'outputicjs/cosmos/group/v1'
 Params returns the total set of minting parameters.
 
 ```ts
-import { getCosmosMintV1beta1Params } from 'outputicjs/cosmos/mint/v1beta1'
-import { useGetCosmosMintV1beta1Params } from 'outputicjs/cosmos/mint/v1beta1'
+import { getCosmosMintV1beta1Params } from 'outputicjs/cosmos/cosmos/mint/v1beta1/query.rpc.func'
+import { useGetCosmosMintV1beta1Params } from 'outputicjs/cosmos/cosmos/mint/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3431,8 +3431,8 @@ import { useGetCosmosMintV1beta1Params } from 'outputicjs/cosmos/mint/v1beta1'
 Inflation returns the current minting inflation value.
 
 ```ts
-import { getInflation } from 'outputicjs/cosmos/mint/v1beta1'
-import { useGetInflation } from 'outputicjs/cosmos/mint/v1beta1'
+import { getInflation } from 'outputicjs/cosmos/cosmos/mint/v1beta1/query.rpc.func'
+import { useGetInflation } from 'outputicjs/cosmos/cosmos/mint/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3449,8 +3449,8 @@ import { useGetInflation } from 'outputicjs/cosmos/mint/v1beta1'
 AnnualProvisions current minting annual provisions value.
 
 ```ts
-import { getAnnualProvisions } from 'outputicjs/cosmos/mint/v1beta1'
-import { useGetAnnualProvisions } from 'outputicjs/cosmos/mint/v1beta1'
+import { getAnnualProvisions } from 'outputicjs/cosmos/cosmos/mint/v1beta1/query.rpc.func'
+import { useGetAnnualProvisions } from 'outputicjs/cosmos/cosmos/mint/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3498,8 +3498,8 @@ import { useGetAnnualProvisions } from 'outputicjs/cosmos/mint/v1beta1'
 Balance queries the number of NFTs of a given class owned by the owner, same as balanceOf in ERC721
 
 ```ts
-import { getBalanceCosmosNftV1beta1 } from 'outputicjs/cosmos/nft/v1beta1'
-import { useGetBalanceCosmosNftV1beta1 } from 'outputicjs/cosmos/nft/v1beta1'
+import { getBalanceCosmosNftV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetBalanceCosmosNftV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -3516,8 +3516,8 @@ import { useGetBalanceCosmosNftV1beta1 } from 'outputicjs/cosmos/nft/v1beta1'
 Owner queries the owner of the NFT based on its class and id, same as ownerOf in ERC721
 
 ```ts
-import { getOwner } from 'outputicjs/cosmos/nft/v1beta1'
-import { useGetOwner } from 'outputicjs/cosmos/nft/v1beta1'
+import { getOwner } from 'outputicjs/cosmos/cosmos/nft/v1beta1/query.rpc.func'
+import { useGetOwner } from 'outputicjs/cosmos/cosmos/nft/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3534,8 +3534,8 @@ import { useGetOwner } from 'outputicjs/cosmos/nft/v1beta1'
 Supply queries the number of NFTs from the given class, same as totalSupply of ERC721.
 
 ```ts
-import { getSupply } from 'outputicjs/cosmos/nft/v1beta1'
-import { useGetSupply } from 'outputicjs/cosmos/nft/v1beta1'
+import { getSupply } from 'outputicjs/cosmos/cosmos/nft/v1beta1/query.rpc.func'
+import { useGetSupply } from 'outputicjs/cosmos/cosmos/nft/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3552,8 +3552,8 @@ import { useGetSupply } from 'outputicjs/cosmos/nft/v1beta1'
 NFTs queries all NFTs of a given class or owner,choose at least one of the two, similar to tokenByIndex in ERC721Enumerable
 
 ```ts
-import { getNFTs } from 'outputicjs/cosmos/nft/v1beta1'
-import { useGetNFTs } from 'outputicjs/cosmos/nft/v1beta1'
+import { getNFTs } from 'outputicjs/cosmos/cosmos/nft/v1beta1/query.rpc.func'
+import { useGetNFTs } from 'outputicjs/cosmos/cosmos/nft/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3570,8 +3570,8 @@ import { useGetNFTs } from 'outputicjs/cosmos/nft/v1beta1'
 NFT queries an NFT based on its class and id.
 
 ```ts
-import { getNFT } from 'outputicjs/cosmos/nft/v1beta1'
-import { useGetNFT } from 'outputicjs/cosmos/nft/v1beta1'
+import { getNFT } from 'outputicjs/cosmos/cosmos/nft/v1beta1/query.rpc.func'
+import { useGetNFT } from 'outputicjs/cosmos/cosmos/nft/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3588,8 +3588,8 @@ import { useGetNFT } from 'outputicjs/cosmos/nft/v1beta1'
 Class queries an NFT class based on its id
 
 ```ts
-import { getClass } from 'outputicjs/cosmos/nft/v1beta1'
-import { useGetClass } from 'outputicjs/cosmos/nft/v1beta1'
+import { getClass } from 'outputicjs/cosmos/cosmos/nft/v1beta1/query.rpc.func'
+import { useGetClass } from 'outputicjs/cosmos/cosmos/nft/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3606,8 +3606,8 @@ import { useGetClass } from 'outputicjs/cosmos/nft/v1beta1'
 Classes queries all NFT classes
 
 ```ts
-import { getClasses } from 'outputicjs/cosmos/nft/v1beta1'
-import { useGetClasses } from 'outputicjs/cosmos/nft/v1beta1'
+import { getClasses } from 'outputicjs/cosmos/cosmos/nft/v1beta1/query.rpc.func'
+import { useGetClasses } from 'outputicjs/cosmos/cosmos/nft/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3624,8 +3624,8 @@ import { useGetClasses } from 'outputicjs/cosmos/nft/v1beta1'
 Send defines a method to send a nft from one account to another account.
 
 ```ts
-import { sendCosmosNftV1beta1 } from 'outputicjs/cosmos/nft/v1beta1'
-import { useSendCosmosNftV1beta1 } from 'outputicjs/cosmos/nft/v1beta1'
+import { sendCosmosNftV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useSendCosmosNftV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -3657,8 +3657,8 @@ import { useSendCosmosNftV1beta1 } from 'outputicjs/cosmos/nft/v1beta1'
 Params queries a specific parameter of a module, given its subspace and key.
 
 ```ts
-import { getCosmosParamsV1beta1Params } from 'outputicjs/cosmos/params/v1beta1'
-import { useGetCosmosParamsV1beta1Params } from 'outputicjs/cosmos/params/v1beta1'
+import { getCosmosParamsV1beta1Params } from 'outputicjs/cosmos/cosmos/params/v1beta1/query.rpc.func'
+import { useGetCosmosParamsV1beta1Params } from 'outputicjs/cosmos/cosmos/params/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3675,8 +3675,8 @@ import { useGetCosmosParamsV1beta1Params } from 'outputicjs/cosmos/params/v1beta
 Subspaces queries for all registered subspaces and all keys for a subspace.
 
 ```ts
-import { getSubspaces } from 'outputicjs/cosmos/params/v1beta1'
-import { useGetSubspaces } from 'outputicjs/cosmos/params/v1beta1'
+import { getSubspaces } from 'outputicjs/cosmos/cosmos/params/v1beta1/query.rpc.func'
+import { useGetSubspaces } from 'outputicjs/cosmos/cosmos/params/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3715,8 +3715,8 @@ import { useGetSubspaces } from 'outputicjs/cosmos/params/v1beta1'
 Params queries the parameters of slashing module
 
 ```ts
-import { getCosmosSlashingV1beta1Params } from 'outputicjs/cosmos/slashing/v1beta1'
-import { useGetCosmosSlashingV1beta1Params } from 'outputicjs/cosmos/slashing/v1beta1'
+import { getCosmosSlashingV1beta1Params } from 'outputicjs/cosmos/cosmos/slashing/v1beta1/query.rpc.func'
+import { useGetCosmosSlashingV1beta1Params } from 'outputicjs/cosmos/cosmos/slashing/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3733,8 +3733,8 @@ import { useGetCosmosSlashingV1beta1Params } from 'outputicjs/cosmos/slashing/v1
 SigningInfo queries the signing info of given cons address
 
 ```ts
-import { getSigningInfo } from 'outputicjs/cosmos/slashing/v1beta1'
-import { useGetSigningInfo } from 'outputicjs/cosmos/slashing/v1beta1'
+import { getSigningInfo } from 'outputicjs/cosmos/cosmos/slashing/v1beta1/query.rpc.func'
+import { useGetSigningInfo } from 'outputicjs/cosmos/cosmos/slashing/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3751,8 +3751,8 @@ import { useGetSigningInfo } from 'outputicjs/cosmos/slashing/v1beta1'
 SigningInfos queries signing info of all validators
 
 ```ts
-import { getSigningInfos } from 'outputicjs/cosmos/slashing/v1beta1'
-import { useGetSigningInfos } from 'outputicjs/cosmos/slashing/v1beta1'
+import { getSigningInfos } from 'outputicjs/cosmos/cosmos/slashing/v1beta1/query.rpc.func'
+import { useGetSigningInfos } from 'outputicjs/cosmos/cosmos/slashing/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3769,8 +3769,8 @@ import { useGetSigningInfos } from 'outputicjs/cosmos/slashing/v1beta1'
 Unjail defines a method for unjailing a jailed validator, thus returning them into the bonded validator set, so they can begin receiving provisions and rewards again.
 
 ```ts
-import { unjail } from 'outputicjs/cosmos/slashing/v1beta1'
-import { useUnjail } from 'outputicjs/cosmos/slashing/v1beta1'
+import { unjail } from 'outputicjs/cosmos/cosmos/slashing/v1beta1/tx.rpc.func'
+import { useUnjail } from 'outputicjs/cosmos/cosmos/slashing/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3858,8 +3858,8 @@ import { useUnjail } from 'outputicjs/cosmos/slashing/v1beta1'
 Validators queries all validators that match the given status.
 
 ```ts
-import { getValidators } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetValidators } from 'outputicjs/cosmos/staking/v1beta1'
+import { getValidators } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.func'
+import { useGetValidators } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3876,8 +3876,8 @@ import { useGetValidators } from 'outputicjs/cosmos/staking/v1beta1'
 Validator queries validator info for given validator address.
 
 ```ts
-import { getValidator } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetValidator } from 'outputicjs/cosmos/staking/v1beta1'
+import { getValidator } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.func'
+import { useGetValidator } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3894,8 +3894,8 @@ import { useGetValidator } from 'outputicjs/cosmos/staking/v1beta1'
 ValidatorDelegations queries delegate info for given validator.
 
 ```ts
-import { getValidatorDelegations } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetValidatorDelegations } from 'outputicjs/cosmos/staking/v1beta1'
+import { getValidatorDelegations } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.func'
+import { useGetValidatorDelegations } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3912,8 +3912,8 @@ import { useGetValidatorDelegations } from 'outputicjs/cosmos/staking/v1beta1'
 ValidatorUnbondingDelegations queries unbonding delegations of a validator.
 
 ```ts
-import { getValidatorUnbondingDelegations } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetValidatorUnbondingDelegations } from 'outputicjs/cosmos/staking/v1beta1'
+import { getValidatorUnbondingDelegations } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.func'
+import { useGetValidatorUnbondingDelegations } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3930,8 +3930,8 @@ import { useGetValidatorUnbondingDelegations } from 'outputicjs/cosmos/staking/v
 Delegation queries delegate info for given validator delegator pair.
 
 ```ts
-import { getDelegation } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetDelegation } from 'outputicjs/cosmos/staking/v1beta1'
+import { getDelegation } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.func'
+import { useGetDelegation } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3948,8 +3948,8 @@ import { useGetDelegation } from 'outputicjs/cosmos/staking/v1beta1'
 UnbondingDelegation queries unbonding info for given validator delegator pair.
 
 ```ts
-import { getUnbondingDelegation } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetUnbondingDelegation } from 'outputicjs/cosmos/staking/v1beta1'
+import { getUnbondingDelegation } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.func'
+import { useGetUnbondingDelegation } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3966,8 +3966,8 @@ import { useGetUnbondingDelegation } from 'outputicjs/cosmos/staking/v1beta1'
 DelegatorDelegations queries all delegations of a given delegator address.
 
 ```ts
-import { getDelegatorDelegations } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetDelegatorDelegations } from 'outputicjs/cosmos/staking/v1beta1'
+import { getDelegatorDelegations } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.func'
+import { useGetDelegatorDelegations } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -3984,8 +3984,8 @@ import { useGetDelegatorDelegations } from 'outputicjs/cosmos/staking/v1beta1'
 DelegatorUnbondingDelegations queries all unbonding delegations of a given delegator address.
 
 ```ts
-import { getDelegatorUnbondingDelegations } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetDelegatorUnbondingDelegations } from 'outputicjs/cosmos/staking/v1beta1'
+import { getDelegatorUnbondingDelegations } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.func'
+import { useGetDelegatorUnbondingDelegations } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4002,8 +4002,8 @@ import { useGetDelegatorUnbondingDelegations } from 'outputicjs/cosmos/staking/v
 Redelegations queries redelegations of given address.
 
 ```ts
-import { getRedelegations } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetRedelegations } from 'outputicjs/cosmos/staking/v1beta1'
+import { getRedelegations } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.func'
+import { useGetRedelegations } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4020,8 +4020,8 @@ import { useGetRedelegations } from 'outputicjs/cosmos/staking/v1beta1'
 DelegatorValidators queries all validators info for given delegator address.
 
 ```ts
-import { getDelegatorValidatorsCosmosStakingV1beta1 } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetDelegatorValidatorsCosmosStakingV1beta1 } from 'outputicjs/cosmos/staking/v1beta1'
+import { getDelegatorValidatorsCosmosStakingV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetDelegatorValidatorsCosmosStakingV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -4038,8 +4038,8 @@ import { useGetDelegatorValidatorsCosmosStakingV1beta1 } from 'outputicjs/cosmos
 DelegatorValidator queries validator info for given delegator validator pair.
 
 ```ts
-import { getDelegatorValidator } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetDelegatorValidator } from 'outputicjs/cosmos/staking/v1beta1'
+import { getDelegatorValidator } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.func'
+import { useGetDelegatorValidator } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4056,8 +4056,8 @@ import { useGetDelegatorValidator } from 'outputicjs/cosmos/staking/v1beta1'
 HistoricalInfo queries the historical info for given height.
 
 ```ts
-import { getHistoricalInfo } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetHistoricalInfo } from 'outputicjs/cosmos/staking/v1beta1'
+import { getHistoricalInfo } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.func'
+import { useGetHistoricalInfo } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4074,8 +4074,8 @@ import { useGetHistoricalInfo } from 'outputicjs/cosmos/staking/v1beta1'
 Pool queries the pool info.
 
 ```ts
-import { getPoolCosmosStakingV1beta1 } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetPoolCosmosStakingV1beta1 } from 'outputicjs/cosmos/staking/v1beta1'
+import { getPoolCosmosStakingV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetPoolCosmosStakingV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -4092,8 +4092,8 @@ import { useGetPoolCosmosStakingV1beta1 } from 'outputicjs/cosmos/staking/v1beta
 Parameters queries the staking parameters.
 
 ```ts
-import { getCosmosStakingV1beta1Params } from 'outputicjs/cosmos/staking/v1beta1'
-import { useGetCosmosStakingV1beta1Params } from 'outputicjs/cosmos/staking/v1beta1'
+import { getCosmosStakingV1beta1Params } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.func'
+import { useGetCosmosStakingV1beta1Params } from 'outputicjs/cosmos/cosmos/staking/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4110,8 +4110,8 @@ import { useGetCosmosStakingV1beta1Params } from 'outputicjs/cosmos/staking/v1be
 CreateValidator defines a method for creating a new validator.
 
 ```ts
-import { createValidator } from 'outputicjs/cosmos/staking/v1beta1'
-import { useCreateValidator } from 'outputicjs/cosmos/staking/v1beta1'
+import { createValidator } from 'outputicjs/cosmos/cosmos/staking/v1beta1/tx.rpc.func'
+import { useCreateValidator } from 'outputicjs/cosmos/cosmos/staking/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4128,8 +4128,8 @@ import { useCreateValidator } from 'outputicjs/cosmos/staking/v1beta1'
 EditValidator defines a method for editing an existing validator.
 
 ```ts
-import { editValidator } from 'outputicjs/cosmos/staking/v1beta1'
-import { useEditValidator } from 'outputicjs/cosmos/staking/v1beta1'
+import { editValidator } from 'outputicjs/cosmos/cosmos/staking/v1beta1/tx.rpc.func'
+import { useEditValidator } from 'outputicjs/cosmos/cosmos/staking/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4146,8 +4146,8 @@ import { useEditValidator } from 'outputicjs/cosmos/staking/v1beta1'
 Delegate defines a method for performing a delegation of coins from a delegator to a validator.
 
 ```ts
-import { delegate } from 'outputicjs/cosmos/staking/v1beta1'
-import { useDelegate } from 'outputicjs/cosmos/staking/v1beta1'
+import { delegate } from 'outputicjs/cosmos/cosmos/staking/v1beta1/tx.rpc.func'
+import { useDelegate } from 'outputicjs/cosmos/cosmos/staking/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4164,8 +4164,8 @@ import { useDelegate } from 'outputicjs/cosmos/staking/v1beta1'
 BeginRedelegate defines a method for performing a redelegation of coins from a delegator and source validator to a destination validator.
 
 ```ts
-import { beginRedelegate } from 'outputicjs/cosmos/staking/v1beta1'
-import { useBeginRedelegate } from 'outputicjs/cosmos/staking/v1beta1'
+import { beginRedelegate } from 'outputicjs/cosmos/cosmos/staking/v1beta1/tx.rpc.func'
+import { useBeginRedelegate } from 'outputicjs/cosmos/cosmos/staking/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4182,8 +4182,8 @@ import { useBeginRedelegate } from 'outputicjs/cosmos/staking/v1beta1'
 Undelegate defines a method for performing an undelegation from a delegate and a validator.
 
 ```ts
-import { undelegate } from 'outputicjs/cosmos/staking/v1beta1'
-import { useUndelegate } from 'outputicjs/cosmos/staking/v1beta1'
+import { undelegate } from 'outputicjs/cosmos/cosmos/staking/v1beta1/tx.rpc.func'
+import { useUndelegate } from 'outputicjs/cosmos/cosmos/staking/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4226,8 +4226,8 @@ import { useUndelegate } from 'outputicjs/cosmos/staking/v1beta1'
 CurrentPlan queries the current upgrade plan.
 
 ```ts
-import { getCurrentPlan } from 'outputicjs/cosmos/upgrade/v1beta1'
-import { useGetCurrentPlan } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { getCurrentPlan } from 'outputicjs/cosmos/cosmos/upgrade/v1beta1/query.rpc.func'
+import { useGetCurrentPlan } from 'outputicjs/cosmos/cosmos/upgrade/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4244,8 +4244,8 @@ import { useGetCurrentPlan } from 'outputicjs/cosmos/upgrade/v1beta1'
 AppliedPlan queries a previously applied upgrade plan by its name.
 
 ```ts
-import { getAppliedPlan } from 'outputicjs/cosmos/upgrade/v1beta1'
-import { useGetAppliedPlan } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { getAppliedPlan } from 'outputicjs/cosmos/cosmos/upgrade/v1beta1/query.rpc.func'
+import { useGetAppliedPlan } from 'outputicjs/cosmos/cosmos/upgrade/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4262,8 +4262,8 @@ import { useGetAppliedPlan } from 'outputicjs/cosmos/upgrade/v1beta1'
 UpgradedConsensusState queries the consensus state that will serve as a trusted kernel for the next version of this chain. It will only be stored at the last height of this chain. UpgradedConsensusState RPC not supported with legacy querier This rpc is deprecated now that IBC has its own replacement (https://github.com/cosmos/ibc-go/blob/2c880a22e9f9cc75f62b527ca94aa75ce1106001/proto/ibc/core/client/v1/query.proto#L54)
 
 ```ts
-import { getUpgradedConsensusStateCosmosUpgradeV1beta1 } from 'outputicjs/cosmos/upgrade/v1beta1'
-import { useGetUpgradedConsensusStateCosmosUpgradeV1beta1 } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { getUpgradedConsensusStateCosmosUpgradeV1beta1 } from 'outputicjs/cosmos/bundle'
+import { useGetUpgradedConsensusStateCosmosUpgradeV1beta1 } from 'outputicjs/cosmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -4280,8 +4280,8 @@ import { useGetUpgradedConsensusStateCosmosUpgradeV1beta1 } from 'outputicjs/cos
 ModuleVersions queries the list of module versions from state. Since: cosmos-sdk 0.43
 
 ```ts
-import { getModuleVersions } from 'outputicjs/cosmos/upgrade/v1beta1'
-import { useGetModuleVersions } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { getModuleVersions } from 'outputicjs/cosmos/cosmos/upgrade/v1beta1/query.rpc.func'
+import { useGetModuleVersions } from 'outputicjs/cosmos/cosmos/upgrade/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4298,8 +4298,8 @@ import { useGetModuleVersions } from 'outputicjs/cosmos/upgrade/v1beta1'
 Returns the account with authority to conduct upgrades
 
 ```ts
-import { getAuthority } from 'outputicjs/cosmos/upgrade/v1beta1'
-import { useGetAuthority } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { getAuthority } from 'outputicjs/cosmos/cosmos/upgrade/v1beta1/query.rpc.func'
+import { useGetAuthority } from 'outputicjs/cosmos/cosmos/upgrade/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4316,8 +4316,8 @@ import { useGetAuthority } from 'outputicjs/cosmos/upgrade/v1beta1'
 SoftwareUpgrade is a governance operation for initiating a software upgrade. Since: cosmos-sdk 0.46
 
 ```ts
-import { softwareUpgrade } from 'outputicjs/cosmos/upgrade/v1beta1'
-import { useSoftwareUpgrade } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { softwareUpgrade } from 'outputicjs/cosmos/cosmos/upgrade/v1beta1/tx.rpc.func'
+import { useSoftwareUpgrade } from 'outputicjs/cosmos/cosmos/upgrade/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4334,8 +4334,8 @@ import { useSoftwareUpgrade } from 'outputicjs/cosmos/upgrade/v1beta1'
 CancelUpgrade is a governance operation for cancelling a previously approvid software upgrade. Since: cosmos-sdk 0.46
 
 ```ts
-import { cancelUpgrade } from 'outputicjs/cosmos/upgrade/v1beta1'
-import { useCancelUpgrade } from 'outputicjs/cosmos/upgrade/v1beta1'
+import { cancelUpgrade } from 'outputicjs/cosmos/cosmos/upgrade/v1beta1/tx.rpc.func'
+import { useCancelUpgrade } from 'outputicjs/cosmos/cosmos/upgrade/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4372,8 +4372,8 @@ import { useCancelUpgrade } from 'outputicjs/cosmos/upgrade/v1beta1'
 CreateVestingAccount defines a method that enables creating a vesting account.
 
 ```ts
-import { createVestingAccount } from 'outputicjs/cosmos/vesting/v1beta1'
-import { useCreateVestingAccount } from 'outputicjs/cosmos/vesting/v1beta1'
+import { createVestingAccount } from 'outputicjs/cosmos/cosmos/vesting/v1beta1/tx.rpc.func'
+import { useCreateVestingAccount } from 'outputicjs/cosmos/cosmos/vesting/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4390,8 +4390,8 @@ import { useCreateVestingAccount } from 'outputicjs/cosmos/vesting/v1beta1'
 CreatePermanentLockedAccount defines a method that enables creating a permanent locked account.
 
 ```ts
-import { createPermanentLockedAccount } from 'outputicjs/cosmos/vesting/v1beta1'
-import { useCreatePermanentLockedAccount } from 'outputicjs/cosmos/vesting/v1beta1'
+import { createPermanentLockedAccount } from 'outputicjs/cosmos/cosmos/vesting/v1beta1/tx.rpc.func'
+import { useCreatePermanentLockedAccount } from 'outputicjs/cosmos/cosmos/vesting/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4408,8 +4408,8 @@ import { useCreatePermanentLockedAccount } from 'outputicjs/cosmos/vesting/v1bet
 CreatePeriodicVestingAccount defines a method that enables creating a periodic vesting account.
 
 ```ts
-import { createPeriodicVestingAccount } from 'outputicjs/cosmos/vesting/v1beta1'
-import { useCreatePeriodicVestingAccount } from 'outputicjs/cosmos/vesting/v1beta1'
+import { createPeriodicVestingAccount } from 'outputicjs/cosmos/cosmos/vesting/v1beta1/tx.rpc.func'
+import { useCreatePeriodicVestingAccount } from 'outputicjs/cosmos/cosmos/vesting/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4490,8 +4490,8 @@ import { useCreatePeriodicVestingAccount } from 'outputicjs/cosmos/vesting/v1bet
 ContractInfo gets the contract meta data
 
 ```ts
-import { getContractInfo } from 'outputicjs/cosmwasm/wasm/v1'
-import { useGetContractInfo } from 'outputicjs/cosmwasm/wasm/v1'
+import { getContractInfo } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.func'
+import { useGetContractInfo } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4508,8 +4508,8 @@ import { useGetContractInfo } from 'outputicjs/cosmwasm/wasm/v1'
 ContractHistory gets the contract code history
 
 ```ts
-import { getContractHistory } from 'outputicjs/cosmwasm/wasm/v1'
-import { useGetContractHistory } from 'outputicjs/cosmwasm/wasm/v1'
+import { getContractHistory } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.func'
+import { useGetContractHistory } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4526,8 +4526,8 @@ import { useGetContractHistory } from 'outputicjs/cosmwasm/wasm/v1'
 ContractsByCode lists all smart contracts for a code id
 
 ```ts
-import { getContractsByCode } from 'outputicjs/cosmwasm/wasm/v1'
-import { useGetContractsByCode } from 'outputicjs/cosmwasm/wasm/v1'
+import { getContractsByCode } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.func'
+import { useGetContractsByCode } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4544,8 +4544,8 @@ import { useGetContractsByCode } from 'outputicjs/cosmwasm/wasm/v1'
 AllContractState gets all raw store data for a single contract
 
 ```ts
-import { getAllContractState } from 'outputicjs/cosmwasm/wasm/v1'
-import { useGetAllContractState } from 'outputicjs/cosmwasm/wasm/v1'
+import { getAllContractState } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.func'
+import { useGetAllContractState } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4562,8 +4562,8 @@ import { useGetAllContractState } from 'outputicjs/cosmwasm/wasm/v1'
 RawContractState gets single key from the raw store data of a contract
 
 ```ts
-import { getRawContractState } from 'outputicjs/cosmwasm/wasm/v1'
-import { useGetRawContractState } from 'outputicjs/cosmwasm/wasm/v1'
+import { getRawContractState } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.func'
+import { useGetRawContractState } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4580,8 +4580,8 @@ import { useGetRawContractState } from 'outputicjs/cosmwasm/wasm/v1'
 SmartContractState get smart query result from the contract
 
 ```ts
-import { getSmartContractState } from 'outputicjs/cosmwasm/wasm/v1'
-import { useGetSmartContractState } from 'outputicjs/cosmwasm/wasm/v1'
+import { getSmartContractState } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.func'
+import { useGetSmartContractState } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4598,8 +4598,8 @@ import { useGetSmartContractState } from 'outputicjs/cosmwasm/wasm/v1'
 Code gets the binary code and metadata for a singe wasm code
 
 ```ts
-import { getCode } from 'outputicjs/cosmwasm/wasm/v1'
-import { useGetCode } from 'outputicjs/cosmwasm/wasm/v1'
+import { getCode } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.func'
+import { useGetCode } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4616,8 +4616,8 @@ import { useGetCode } from 'outputicjs/cosmwasm/wasm/v1'
 Codes gets the metadata for all stored wasm codes
 
 ```ts
-import { getCodes } from 'outputicjs/cosmwasm/wasm/v1'
-import { useGetCodes } from 'outputicjs/cosmwasm/wasm/v1'
+import { getCodes } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.func'
+import { useGetCodes } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4634,8 +4634,8 @@ import { useGetCodes } from 'outputicjs/cosmwasm/wasm/v1'
 PinnedCodes gets the pinned code ids
 
 ```ts
-import { getPinnedCodes } from 'outputicjs/cosmwasm/wasm/v1'
-import { useGetPinnedCodes } from 'outputicjs/cosmwasm/wasm/v1'
+import { getPinnedCodes } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.func'
+import { useGetPinnedCodes } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4652,8 +4652,8 @@ import { useGetPinnedCodes } from 'outputicjs/cosmwasm/wasm/v1'
 StoreCode to submit Wasm code to the system
 
 ```ts
-import { storeCode } from 'outputicjs/cosmwasm/wasm/v1'
-import { useStoreCode } from 'outputicjs/cosmwasm/wasm/v1'
+import { storeCode } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/tx.rpc.func'
+import { useStoreCode } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4670,8 +4670,8 @@ import { useStoreCode } from 'outputicjs/cosmwasm/wasm/v1'
 Instantiate creates a new smart contract instance for the given code id.
 
 ```ts
-import { instantiateContract } from 'outputicjs/cosmwasm/wasm/v1'
-import { useInstantiateContract } from 'outputicjs/cosmwasm/wasm/v1'
+import { instantiateContract } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/tx.rpc.func'
+import { useInstantiateContract } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4688,8 +4688,8 @@ import { useInstantiateContract } from 'outputicjs/cosmwasm/wasm/v1'
 Execute submits the given message data to a smart contract
 
 ```ts
-import { executeContract } from 'outputicjs/cosmwasm/wasm/v1'
-import { useExecuteContract } from 'outputicjs/cosmwasm/wasm/v1'
+import { executeContract } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/tx.rpc.func'
+import { useExecuteContract } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4706,8 +4706,8 @@ import { useExecuteContract } from 'outputicjs/cosmwasm/wasm/v1'
 Migrate runs a code upgrade/ downgrade for a smart contract
 
 ```ts
-import { migrateContract } from 'outputicjs/cosmwasm/wasm/v1'
-import { useMigrateContract } from 'outputicjs/cosmwasm/wasm/v1'
+import { migrateContract } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/tx.rpc.func'
+import { useMigrateContract } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4724,8 +4724,8 @@ import { useMigrateContract } from 'outputicjs/cosmwasm/wasm/v1'
 UpdateAdmin sets a new admin for a smart contract
 
 ```ts
-import { updateAdmin } from 'outputicjs/cosmwasm/wasm/v1'
-import { useUpdateAdmin } from 'outputicjs/cosmwasm/wasm/v1'
+import { updateAdmin } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/tx.rpc.func'
+import { useUpdateAdmin } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4742,8 +4742,8 @@ import { useUpdateAdmin } from 'outputicjs/cosmwasm/wasm/v1'
 ClearAdmin removes any admin stored for a smart contract
 
 ```ts
-import { clearAdmin } from 'outputicjs/cosmwasm/wasm/v1'
-import { useClearAdmin } from 'outputicjs/cosmwasm/wasm/v1'
+import { clearAdmin } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/tx.rpc.func'
+import { useClearAdmin } from 'outputicjs/cosmwasm/cosmwasm/wasm/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4782,8 +4782,8 @@ import { useClearAdmin } from 'outputicjs/cosmwasm/wasm/v1'
 TotalUnclaimed queries the total unclaimed tokens from the airdrop
 
 ```ts
-import { getTotalUnclaimed } from 'outputicjs/evmos/claims/v1'
-import { useGetTotalUnclaimed } from 'outputicjs/evmos/claims/v1'
+import { getTotalUnclaimed } from 'outputicjs/evmos/evmos/claims/v1/query.rpc.func'
+import { useGetTotalUnclaimed } from 'outputicjs/evmos/evmos/claims/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4800,8 +4800,8 @@ import { useGetTotalUnclaimed } from 'outputicjs/evmos/claims/v1'
 Params returns the claims module parameters
 
 ```ts
-import { getEvmosClaimsV1Params } from 'outputicjs/evmos/claims/v1'
-import { useGetEvmosClaimsV1Params } from 'outputicjs/evmos/claims/v1'
+import { getEvmosClaimsV1Params } from 'outputicjs/evmos/evmos/claims/v1/query.rpc.func'
+import { useGetEvmosClaimsV1Params } from 'outputicjs/evmos/evmos/claims/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4818,8 +4818,8 @@ import { useGetEvmosClaimsV1Params } from 'outputicjs/evmos/claims/v1'
 ClaimsRecords returns all claims records
 
 ```ts
-import { getClaimsRecords } from 'outputicjs/evmos/claims/v1'
-import { useGetClaimsRecords } from 'outputicjs/evmos/claims/v1'
+import { getClaimsRecords } from 'outputicjs/evmos/evmos/claims/v1/query.rpc.func'
+import { useGetClaimsRecords } from 'outputicjs/evmos/evmos/claims/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4836,8 +4836,8 @@ import { useGetClaimsRecords } from 'outputicjs/evmos/claims/v1'
 ClaimsRecord returns the claims record for a given address
 
 ```ts
-import { getClaimsRecord } from 'outputicjs/evmos/claims/v1'
-import { useGetClaimsRecord } from 'outputicjs/evmos/claims/v1'
+import { getClaimsRecord } from 'outputicjs/evmos/evmos/claims/v1/query.rpc.func'
+import { useGetClaimsRecord } from 'outputicjs/evmos/evmos/claims/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4868,8 +4868,8 @@ import { useGetClaimsRecord } from 'outputicjs/evmos/claims/v1'
 EpochInfos provide running epochInfos
 
 ```ts
-import { getEpochInfosEvmosEpochsV1 } from 'outputicjs/evmos/epochs/v1'
-import { useGetEpochInfosEvmosEpochsV1 } from 'outputicjs/evmos/epochs/v1'
+import { getEpochInfosEvmosEpochsV1 } from 'outputicjs/evmos/bundle'
+import { useGetEpochInfosEvmosEpochsV1 } from 'outputicjs/evmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -4886,8 +4886,8 @@ import { useGetEpochInfosEvmosEpochsV1 } from 'outputicjs/evmos/epochs/v1'
 CurrentEpoch provide current epoch of specified identifier
 
 ```ts
-import { getCurrentEpochEvmosEpochsV1 } from 'outputicjs/evmos/epochs/v1'
-import { useGetCurrentEpochEvmosEpochsV1 } from 'outputicjs/evmos/epochs/v1'
+import { getCurrentEpochEvmosEpochsV1 } from 'outputicjs/evmos/bundle'
+import { useGetCurrentEpochEvmosEpochsV1 } from 'outputicjs/evmos/bundle'
 ```
 
 | Field | Value | Source |
@@ -4929,8 +4929,8 @@ import { useGetCurrentEpochEvmosEpochsV1 } from 'outputicjs/evmos/epochs/v1'
 TokenPairs retrieves registered token pairs
 
 ```ts
-import { getTokenPairs } from 'outputicjs/evmos/erc20/v1'
-import { useGetTokenPairs } from 'outputicjs/evmos/erc20/v1'
+import { getTokenPairs } from 'outputicjs/evmos/evmos/erc20/v1/query.rpc.func'
+import { useGetTokenPairs } from 'outputicjs/evmos/evmos/erc20/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4947,8 +4947,8 @@ import { useGetTokenPairs } from 'outputicjs/evmos/erc20/v1'
 TokenPair retrieves a registered token pair
 
 ```ts
-import { getTokenPair } from 'outputicjs/evmos/erc20/v1'
-import { useGetTokenPair } from 'outputicjs/evmos/erc20/v1'
+import { getTokenPair } from 'outputicjs/evmos/evmos/erc20/v1/query.rpc.func'
+import { useGetTokenPair } from 'outputicjs/evmos/evmos/erc20/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4965,8 +4965,8 @@ import { useGetTokenPair } from 'outputicjs/evmos/erc20/v1'
 Params retrieves the erc20 module params
 
 ```ts
-import { getEvmosErc20V1Params } from 'outputicjs/evmos/erc20/v1'
-import { useGetEvmosErc20V1Params } from 'outputicjs/evmos/erc20/v1'
+import { getEvmosErc20V1Params } from 'outputicjs/evmos/evmos/erc20/v1/query.rpc.func'
+import { useGetEvmosErc20V1Params } from 'outputicjs/evmos/evmos/erc20/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -4983,8 +4983,8 @@ import { useGetEvmosErc20V1Params } from 'outputicjs/evmos/erc20/v1'
 ConvertCoin mints a ERC20 representation of the native Cosmos coin denom that is registered on the token mapping.
 
 ```ts
-import { convertCoin } from 'outputicjs/evmos/erc20/v1'
-import { useConvertCoin } from 'outputicjs/evmos/erc20/v1'
+import { convertCoin } from 'outputicjs/evmos/evmos/erc20/v1/tx.rpc.func'
+import { useConvertCoin } from 'outputicjs/evmos/evmos/erc20/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5001,8 +5001,8 @@ import { useConvertCoin } from 'outputicjs/evmos/erc20/v1'
 ConvertERC20 mints a native Cosmos coin representation of the ERC20 token contract that is registered on the token mapping.
 
 ```ts
-import { convertERC20 } from 'outputicjs/evmos/erc20/v1'
-import { useConvertERC20 } from 'outputicjs/evmos/erc20/v1'
+import { convertERC20 } from 'outputicjs/evmos/evmos/erc20/v1/tx.rpc.func'
+import { useConvertERC20 } from 'outputicjs/evmos/evmos/erc20/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5044,8 +5044,8 @@ import { useConvertERC20 } from 'outputicjs/evmos/erc20/v1'
 DevFeeInfos retrieves all registered contracts for fee distribution
 
 ```ts
-import { getDevFeeInfos } from 'outputicjs/evmos/fees/v1'
-import { useGetDevFeeInfos } from 'outputicjs/evmos/fees/v1'
+import { getDevFeeInfos } from 'outputicjs/evmos/evmos/fees/v1/query.rpc.func'
+import { useGetDevFeeInfos } from 'outputicjs/evmos/evmos/fees/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5062,8 +5062,8 @@ import { useGetDevFeeInfos } from 'outputicjs/evmos/fees/v1'
 DevFeeInfo retrieves a registered contract for fee distribution
 
 ```ts
-import { getDevFeeInfo } from 'outputicjs/evmos/fees/v1'
-import { useGetDevFeeInfo } from 'outputicjs/evmos/fees/v1'
+import { getDevFeeInfo } from 'outputicjs/evmos/evmos/fees/v1/query.rpc.func'
+import { useGetDevFeeInfo } from 'outputicjs/evmos/evmos/fees/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5080,8 +5080,8 @@ import { useGetDevFeeInfo } from 'outputicjs/evmos/fees/v1'
 Params retrieves the fees module params
 
 ```ts
-import { getEvmosFeesV1Params } from 'outputicjs/evmos/fees/v1'
-import { useGetEvmosFeesV1Params } from 'outputicjs/evmos/fees/v1'
+import { getEvmosFeesV1Params } from 'outputicjs/evmos/evmos/fees/v1/query.rpc.func'
+import { useGetEvmosFeesV1Params } from 'outputicjs/evmos/evmos/fees/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5098,8 +5098,8 @@ import { useGetEvmosFeesV1Params } from 'outputicjs/evmos/fees/v1'
 DevFeeInfosPerDeployer retrieves all contracts that a deployer has registered for fee distribution
 
 ```ts
-import { getDevFeeInfosPerDeployer } from 'outputicjs/evmos/fees/v1'
-import { useGetDevFeeInfosPerDeployer } from 'outputicjs/evmos/fees/v1'
+import { getDevFeeInfosPerDeployer } from 'outputicjs/evmos/evmos/fees/v1/query.rpc.func'
+import { useGetDevFeeInfosPerDeployer } from 'outputicjs/evmos/evmos/fees/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5116,8 +5116,8 @@ import { useGetDevFeeInfosPerDeployer } from 'outputicjs/evmos/fees/v1'
 RegisterDevFeeInfo is used by a deployer to register a new contract for receiving transaction fees
 
 ```ts
-import { registerDevFeeInfo } from 'outputicjs/evmos/fees/v1'
-import { useRegisterDevFeeInfo } from 'outputicjs/evmos/fees/v1'
+import { registerDevFeeInfo } from 'outputicjs/evmos/evmos/fees/v1/tx.rpc.func'
+import { useRegisterDevFeeInfo } from 'outputicjs/evmos/evmos/fees/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5134,8 +5134,8 @@ import { useRegisterDevFeeInfo } from 'outputicjs/evmos/fees/v1'
 CancelDevFeeInfo is used by a deployer to cancel a registered contract and stop receiving transaction fees
 
 ```ts
-import { cancelDevFeeInfo } from 'outputicjs/evmos/fees/v1'
-import { useCancelDevFeeInfo } from 'outputicjs/evmos/fees/v1'
+import { cancelDevFeeInfo } from 'outputicjs/evmos/evmos/fees/v1/tx.rpc.func'
+import { useCancelDevFeeInfo } from 'outputicjs/evmos/evmos/fees/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5152,8 +5152,8 @@ import { useCancelDevFeeInfo } from 'outputicjs/evmos/fees/v1'
 UpdateDevFeeInfo is used by a deployer to update the withdraw address
 
 ```ts
-import { updateDevFeeInfo } from 'outputicjs/evmos/fees/v1'
-import { useUpdateDevFeeInfo } from 'outputicjs/evmos/fees/v1'
+import { updateDevFeeInfo } from 'outputicjs/evmos/evmos/fees/v1/tx.rpc.func'
+import { useUpdateDevFeeInfo } from 'outputicjs/evmos/evmos/fees/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5198,8 +5198,8 @@ import { useUpdateDevFeeInfo } from 'outputicjs/evmos/fees/v1'
 Incentives retrieves registered incentives
 
 ```ts
-import { getIncentives } from 'outputicjs/evmos/incentives/v1'
-import { useGetIncentives } from 'outputicjs/evmos/incentives/v1'
+import { getIncentives } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.func'
+import { useGetIncentives } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5216,8 +5216,8 @@ import { useGetIncentives } from 'outputicjs/evmos/incentives/v1'
 Incentive retrieves a registered incentive
 
 ```ts
-import { getIncentive } from 'outputicjs/evmos/incentives/v1'
-import { useGetIncentive } from 'outputicjs/evmos/incentives/v1'
+import { getIncentive } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.func'
+import { useGetIncentive } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5234,8 +5234,8 @@ import { useGetIncentive } from 'outputicjs/evmos/incentives/v1'
 GasMeters retrieves active gas meters for a given contract
 
 ```ts
-import { getGasMeters } from 'outputicjs/evmos/incentives/v1'
-import { useGetGasMeters } from 'outputicjs/evmos/incentives/v1'
+import { getGasMeters } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.func'
+import { useGetGasMeters } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5252,8 +5252,8 @@ import { useGetGasMeters } from 'outputicjs/evmos/incentives/v1'
 GasMeter Retrieves a active gas meter
 
 ```ts
-import { getGasMeter } from 'outputicjs/evmos/incentives/v1'
-import { useGetGasMeter } from 'outputicjs/evmos/incentives/v1'
+import { getGasMeter } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.func'
+import { useGetGasMeter } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5270,8 +5270,8 @@ import { useGetGasMeter } from 'outputicjs/evmos/incentives/v1'
 AllocationMeters retrieves active allocation meters for a given denomination
 
 ```ts
-import { getAllocationMeters } from 'outputicjs/evmos/incentives/v1'
-import { useGetAllocationMeters } from 'outputicjs/evmos/incentives/v1'
+import { getAllocationMeters } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.func'
+import { useGetAllocationMeters } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5288,8 +5288,8 @@ import { useGetAllocationMeters } from 'outputicjs/evmos/incentives/v1'
 AllocationMeter Retrieves a active gas meter
 
 ```ts
-import { getAllocationMeter } from 'outputicjs/evmos/incentives/v1'
-import { useGetAllocationMeter } from 'outputicjs/evmos/incentives/v1'
+import { getAllocationMeter } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.func'
+import { useGetAllocationMeter } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5306,8 +5306,8 @@ import { useGetAllocationMeter } from 'outputicjs/evmos/incentives/v1'
 Params retrieves the incentives module params
 
 ```ts
-import { getEvmosIncentivesV1Params } from 'outputicjs/evmos/incentives/v1'
-import { useGetEvmosIncentivesV1Params } from 'outputicjs/evmos/incentives/v1'
+import { getEvmosIncentivesV1Params } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.func'
+import { useGetEvmosIncentivesV1Params } from 'outputicjs/evmos/evmos/incentives/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5348,8 +5348,8 @@ import { useGetEvmosIncentivesV1Params } from 'outputicjs/evmos/incentives/v1'
 Period retrieves current period.
 
 ```ts
-import { getPeriod } from 'outputicjs/evmos/inflation/v1'
-import { useGetPeriod } from 'outputicjs/evmos/inflation/v1'
+import { getPeriod } from 'outputicjs/evmos/evmos/inflation/v1/query.rpc.func'
+import { useGetPeriod } from 'outputicjs/evmos/evmos/inflation/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5366,8 +5366,8 @@ import { useGetPeriod } from 'outputicjs/evmos/inflation/v1'
 EpochMintProvision retrieves current minting epoch provision value.
 
 ```ts
-import { getEpochMintProvision } from 'outputicjs/evmos/inflation/v1'
-import { useGetEpochMintProvision } from 'outputicjs/evmos/inflation/v1'
+import { getEpochMintProvision } from 'outputicjs/evmos/evmos/inflation/v1/query.rpc.func'
+import { useGetEpochMintProvision } from 'outputicjs/evmos/evmos/inflation/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5384,8 +5384,8 @@ import { useGetEpochMintProvision } from 'outputicjs/evmos/inflation/v1'
 SkippedEpochs retrieves the total number of skipped epochs.
 
 ```ts
-import { getSkippedEpochs } from 'outputicjs/evmos/inflation/v1'
-import { useGetSkippedEpochs } from 'outputicjs/evmos/inflation/v1'
+import { getSkippedEpochs } from 'outputicjs/evmos/evmos/inflation/v1/query.rpc.func'
+import { useGetSkippedEpochs } from 'outputicjs/evmos/evmos/inflation/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5402,8 +5402,8 @@ import { useGetSkippedEpochs } from 'outputicjs/evmos/inflation/v1'
 CirculatingSupply retrieves the total number of tokens that are in circulation (i.e. excluding unvested tokens).
 
 ```ts
-import { getCirculatingSupply } from 'outputicjs/evmos/inflation/v1'
-import { useGetCirculatingSupply } from 'outputicjs/evmos/inflation/v1'
+import { getCirculatingSupply } from 'outputicjs/evmos/evmos/inflation/v1/query.rpc.func'
+import { useGetCirculatingSupply } from 'outputicjs/evmos/evmos/inflation/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5420,8 +5420,8 @@ import { useGetCirculatingSupply } from 'outputicjs/evmos/inflation/v1'
 InflationRate retrieves the inflation rate of the current period.
 
 ```ts
-import { getInflationRate } from 'outputicjs/evmos/inflation/v1'
-import { useGetInflationRate } from 'outputicjs/evmos/inflation/v1'
+import { getInflationRate } from 'outputicjs/evmos/evmos/inflation/v1/query.rpc.func'
+import { useGetInflationRate } from 'outputicjs/evmos/evmos/inflation/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5438,8 +5438,8 @@ import { useGetInflationRate } from 'outputicjs/evmos/inflation/v1'
 Params retrieves the total set of minting parameters.
 
 ```ts
-import { getEvmosInflationV1Params } from 'outputicjs/evmos/inflation/v1'
-import { useGetEvmosInflationV1Params } from 'outputicjs/evmos/inflation/v1'
+import { getEvmosInflationV1Params } from 'outputicjs/evmos/evmos/inflation/v1/query.rpc.func'
+import { useGetEvmosInflationV1Params } from 'outputicjs/evmos/evmos/inflation/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5468,8 +5468,8 @@ import { useGetEvmosInflationV1Params } from 'outputicjs/evmos/inflation/v1'
 Params retrieves the total set of recovery parameters.
 
 ```ts
-import { getEvmosRecoveryV1Params } from 'outputicjs/evmos/recovery/v1'
-import { useGetEvmosRecoveryV1Params } from 'outputicjs/evmos/recovery/v1'
+import { getEvmosRecoveryV1Params } from 'outputicjs/evmos/evmos/recovery/v1/query.rpc.func'
+import { useGetEvmosRecoveryV1Params } from 'outputicjs/evmos/evmos/recovery/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5501,8 +5501,8 @@ import { useGetEvmosRecoveryV1Params } from 'outputicjs/evmos/recovery/v1'
 Retrieves the unvested, vested and locked tokens for a vesting account
 
 ```ts
-import { getBalances } from 'outputicjs/evmos/vesting/v1'
-import { useGetBalances } from 'outputicjs/evmos/vesting/v1'
+import { getBalances } from 'outputicjs/evmos/evmos/vesting/v1/query.rpc.func'
+import { useGetBalances } from 'outputicjs/evmos/evmos/vesting/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5519,8 +5519,8 @@ import { useGetBalances } from 'outputicjs/evmos/vesting/v1'
 CreateClawbackVestingAccount creats a vesting account that is subject to clawback and the configuration of vesting and lockup schedules.
 
 ```ts
-import { createClawbackVestingAccount } from 'outputicjs/evmos/vesting/v1'
-import { useCreateClawbackVestingAccount } from 'outputicjs/evmos/vesting/v1'
+import { createClawbackVestingAccount } from 'outputicjs/evmos/evmos/vesting/v1/tx.rpc.func'
+import { useCreateClawbackVestingAccount } from 'outputicjs/evmos/evmos/vesting/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5537,8 +5537,8 @@ import { useCreateClawbackVestingAccount } from 'outputicjs/evmos/vesting/v1'
 Clawback removes the unvested tokens from a ClawbackVestingAccount.
 
 ```ts
-import { clawback } from 'outputicjs/evmos/vesting/v1'
-import { useClawback } from 'outputicjs/evmos/vesting/v1'
+import { clawback } from 'outputicjs/evmos/evmos/vesting/v1/tx.rpc.func'
+import { useClawback } from 'outputicjs/evmos/evmos/vesting/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5574,8 +5574,8 @@ import { useClawback } from 'outputicjs/evmos/vesting/v1'
 DenomTrace queries a denomination trace information.
 
 ```ts
-import { getDenomTrace } from 'outputicjs/ibc/applications/transfer/v1'
-import { useGetDenomTrace } from 'outputicjs/ibc/applications/transfer/v1'
+import { getDenomTrace } from 'outputicjs/ibc/ibc/applications/transfer/v1/query.rpc.func'
+import { useGetDenomTrace } from 'outputicjs/ibc/ibc/applications/transfer/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5592,8 +5592,8 @@ import { useGetDenomTrace } from 'outputicjs/ibc/applications/transfer/v1'
 DenomTraces queries all denomination traces.
 
 ```ts
-import { getDenomTraces } from 'outputicjs/ibc/applications/transfer/v1'
-import { useGetDenomTraces } from 'outputicjs/ibc/applications/transfer/v1'
+import { getDenomTraces } from 'outputicjs/ibc/ibc/applications/transfer/v1/query.rpc.func'
+import { useGetDenomTraces } from 'outputicjs/ibc/ibc/applications/transfer/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5610,8 +5610,8 @@ import { useGetDenomTraces } from 'outputicjs/ibc/applications/transfer/v1'
 Params queries all parameters of the ibc-transfer module.
 
 ```ts
-import { getIbcApplicationsTransferV1Params } from 'outputicjs/ibc/applications/transfer/v1'
-import { useGetIbcApplicationsTransferV1Params } from 'outputicjs/ibc/applications/transfer/v1'
+import { getIbcApplicationsTransferV1Params } from 'outputicjs/ibc/ibc/applications/transfer/v1/query.rpc.func'
+import { useGetIbcApplicationsTransferV1Params } from 'outputicjs/ibc/ibc/applications/transfer/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5628,8 +5628,8 @@ import { useGetIbcApplicationsTransferV1Params } from 'outputicjs/ibc/applicatio
 Transfer defines a rpc handler method for MsgTransfer.
 
 ```ts
-import { transfer } from 'outputicjs/ibc/applications/transfer/v1'
-import { useTransfer } from 'outputicjs/ibc/applications/transfer/v1'
+import { transfer } from 'outputicjs/ibc/ibc/applications/transfer/v1/tx.rpc.func'
+import { useTransfer } from 'outputicjs/ibc/ibc/applications/transfer/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5710,8 +5710,8 @@ import { useTransfer } from 'outputicjs/ibc/applications/transfer/v1'
 Channel queries an IBC Channel.
 
 ```ts
-import { getChannel } from 'outputicjs/ibc/core/channel/v1'
-import { useGetChannel } from 'outputicjs/ibc/core/channel/v1'
+import { getChannel } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.func'
+import { useGetChannel } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5728,8 +5728,8 @@ import { useGetChannel } from 'outputicjs/ibc/core/channel/v1'
 Channels queries all the IBC channels of a chain.
 
 ```ts
-import { getChannels } from 'outputicjs/ibc/core/channel/v1'
-import { useGetChannels } from 'outputicjs/ibc/core/channel/v1'
+import { getChannels } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.func'
+import { useGetChannels } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5746,8 +5746,8 @@ import { useGetChannels } from 'outputicjs/ibc/core/channel/v1'
 ConnectionChannels queries all the channels associated with a connection end.
 
 ```ts
-import { getConnectionChannels } from 'outputicjs/ibc/core/channel/v1'
-import { useGetConnectionChannels } from 'outputicjs/ibc/core/channel/v1'
+import { getConnectionChannels } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.func'
+import { useGetConnectionChannels } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5764,8 +5764,8 @@ import { useGetConnectionChannels } from 'outputicjs/ibc/core/channel/v1'
 ChannelClientState queries for the client state for the channel associated with the provided channel identifiers.
 
 ```ts
-import { getChannelClientState } from 'outputicjs/ibc/core/channel/v1'
-import { useGetChannelClientState } from 'outputicjs/ibc/core/channel/v1'
+import { getChannelClientState } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.func'
+import { useGetChannelClientState } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5782,8 +5782,8 @@ import { useGetChannelClientState } from 'outputicjs/ibc/core/channel/v1'
 ChannelConsensusState queries for the consensus state for the channel associated with the provided channel identifiers.
 
 ```ts
-import { getChannelConsensusState } from 'outputicjs/ibc/core/channel/v1'
-import { useGetChannelConsensusState } from 'outputicjs/ibc/core/channel/v1'
+import { getChannelConsensusState } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.func'
+import { useGetChannelConsensusState } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5800,8 +5800,8 @@ import { useGetChannelConsensusState } from 'outputicjs/ibc/core/channel/v1'
 PacketCommitment queries a stored packet commitment hash.
 
 ```ts
-import { getPacketCommitment } from 'outputicjs/ibc/core/channel/v1'
-import { useGetPacketCommitment } from 'outputicjs/ibc/core/channel/v1'
+import { getPacketCommitment } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.func'
+import { useGetPacketCommitment } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5818,8 +5818,8 @@ import { useGetPacketCommitment } from 'outputicjs/ibc/core/channel/v1'
 PacketCommitments returns all the packet commitments hashes associated with a channel.
 
 ```ts
-import { getPacketCommitments } from 'outputicjs/ibc/core/channel/v1'
-import { useGetPacketCommitments } from 'outputicjs/ibc/core/channel/v1'
+import { getPacketCommitments } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.func'
+import { useGetPacketCommitments } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5836,8 +5836,8 @@ import { useGetPacketCommitments } from 'outputicjs/ibc/core/channel/v1'
 PacketReceipt queries if a given packet sequence has been received on the queried chain
 
 ```ts
-import { getPacketReceipt } from 'outputicjs/ibc/core/channel/v1'
-import { useGetPacketReceipt } from 'outputicjs/ibc/core/channel/v1'
+import { getPacketReceipt } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.func'
+import { useGetPacketReceipt } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5854,8 +5854,8 @@ import { useGetPacketReceipt } from 'outputicjs/ibc/core/channel/v1'
 PacketAcknowledgement queries a stored packet acknowledgement hash.
 
 ```ts
-import { getPacketAcknowledgement } from 'outputicjs/ibc/core/channel/v1'
-import { useGetPacketAcknowledgement } from 'outputicjs/ibc/core/channel/v1'
+import { getPacketAcknowledgement } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.func'
+import { useGetPacketAcknowledgement } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5872,8 +5872,8 @@ import { useGetPacketAcknowledgement } from 'outputicjs/ibc/core/channel/v1'
 PacketAcknowledgements returns all the packet acknowledgements associated with a channel.
 
 ```ts
-import { getPacketAcknowledgements } from 'outputicjs/ibc/core/channel/v1'
-import { useGetPacketAcknowledgements } from 'outputicjs/ibc/core/channel/v1'
+import { getPacketAcknowledgements } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.func'
+import { useGetPacketAcknowledgements } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5890,8 +5890,8 @@ import { useGetPacketAcknowledgements } from 'outputicjs/ibc/core/channel/v1'
 UnreceivedPackets returns all the unreceived IBC packets associated with a channel and sequences.
 
 ```ts
-import { getUnreceivedPackets } from 'outputicjs/ibc/core/channel/v1'
-import { useGetUnreceivedPackets } from 'outputicjs/ibc/core/channel/v1'
+import { getUnreceivedPackets } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.func'
+import { useGetUnreceivedPackets } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5908,8 +5908,8 @@ import { useGetUnreceivedPackets } from 'outputicjs/ibc/core/channel/v1'
 UnreceivedAcks returns all the unreceived IBC acknowledgements associated with a channel and sequences.
 
 ```ts
-import { getUnreceivedAcks } from 'outputicjs/ibc/core/channel/v1'
-import { useGetUnreceivedAcks } from 'outputicjs/ibc/core/channel/v1'
+import { getUnreceivedAcks } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.func'
+import { useGetUnreceivedAcks } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5926,8 +5926,8 @@ import { useGetUnreceivedAcks } from 'outputicjs/ibc/core/channel/v1'
 NextSequenceReceive returns the next receive sequence for a given channel.
 
 ```ts
-import { getNextSequenceReceive } from 'outputicjs/ibc/core/channel/v1'
-import { useGetNextSequenceReceive } from 'outputicjs/ibc/core/channel/v1'
+import { getNextSequenceReceive } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.func'
+import { useGetNextSequenceReceive } from 'outputicjs/ibc/ibc/core/channel/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5944,8 +5944,8 @@ import { useGetNextSequenceReceive } from 'outputicjs/ibc/core/channel/v1'
 ChannelOpenInit defines a rpc handler method for MsgChannelOpenInit.
 
 ```ts
-import { channelOpenInit } from 'outputicjs/ibc/core/channel/v1'
-import { useChannelOpenInit } from 'outputicjs/ibc/core/channel/v1'
+import { channelOpenInit } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.func'
+import { useChannelOpenInit } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5962,8 +5962,8 @@ import { useChannelOpenInit } from 'outputicjs/ibc/core/channel/v1'
 ChannelOpenTry defines a rpc handler method for MsgChannelOpenTry.
 
 ```ts
-import { channelOpenTry } from 'outputicjs/ibc/core/channel/v1'
-import { useChannelOpenTry } from 'outputicjs/ibc/core/channel/v1'
+import { channelOpenTry } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.func'
+import { useChannelOpenTry } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5980,8 +5980,8 @@ import { useChannelOpenTry } from 'outputicjs/ibc/core/channel/v1'
 ChannelOpenAck defines a rpc handler method for MsgChannelOpenAck.
 
 ```ts
-import { channelOpenAck } from 'outputicjs/ibc/core/channel/v1'
-import { useChannelOpenAck } from 'outputicjs/ibc/core/channel/v1'
+import { channelOpenAck } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.func'
+import { useChannelOpenAck } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -5998,8 +5998,8 @@ import { useChannelOpenAck } from 'outputicjs/ibc/core/channel/v1'
 ChannelOpenConfirm defines a rpc handler method for MsgChannelOpenConfirm.
 
 ```ts
-import { channelOpenConfirm } from 'outputicjs/ibc/core/channel/v1'
-import { useChannelOpenConfirm } from 'outputicjs/ibc/core/channel/v1'
+import { channelOpenConfirm } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.func'
+import { useChannelOpenConfirm } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6016,8 +6016,8 @@ import { useChannelOpenConfirm } from 'outputicjs/ibc/core/channel/v1'
 ChannelCloseInit defines a rpc handler method for MsgChannelCloseInit.
 
 ```ts
-import { channelCloseInit } from 'outputicjs/ibc/core/channel/v1'
-import { useChannelCloseInit } from 'outputicjs/ibc/core/channel/v1'
+import { channelCloseInit } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.func'
+import { useChannelCloseInit } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6034,8 +6034,8 @@ import { useChannelCloseInit } from 'outputicjs/ibc/core/channel/v1'
 ChannelCloseConfirm defines a rpc handler method for MsgChannelCloseConfirm.
 
 ```ts
-import { channelCloseConfirm } from 'outputicjs/ibc/core/channel/v1'
-import { useChannelCloseConfirm } from 'outputicjs/ibc/core/channel/v1'
+import { channelCloseConfirm } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.func'
+import { useChannelCloseConfirm } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6052,8 +6052,8 @@ import { useChannelCloseConfirm } from 'outputicjs/ibc/core/channel/v1'
 RecvPacket defines a rpc handler method for MsgRecvPacket.
 
 ```ts
-import { recvPacket } from 'outputicjs/ibc/core/channel/v1'
-import { useRecvPacket } from 'outputicjs/ibc/core/channel/v1'
+import { recvPacket } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.func'
+import { useRecvPacket } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6070,8 +6070,8 @@ import { useRecvPacket } from 'outputicjs/ibc/core/channel/v1'
 Timeout defines a rpc handler method for MsgTimeout.
 
 ```ts
-import { timeout } from 'outputicjs/ibc/core/channel/v1'
-import { useTimeout } from 'outputicjs/ibc/core/channel/v1'
+import { timeout } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.func'
+import { useTimeout } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6088,8 +6088,8 @@ import { useTimeout } from 'outputicjs/ibc/core/channel/v1'
 TimeoutOnClose defines a rpc handler method for MsgTimeoutOnClose.
 
 ```ts
-import { timeoutOnClose } from 'outputicjs/ibc/core/channel/v1'
-import { useTimeoutOnClose } from 'outputicjs/ibc/core/channel/v1'
+import { timeoutOnClose } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.func'
+import { useTimeoutOnClose } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6106,8 +6106,8 @@ import { useTimeoutOnClose } from 'outputicjs/ibc/core/channel/v1'
 Acknowledgement defines a rpc handler method for MsgAcknowledgement.
 
 ```ts
-import { acknowledgement } from 'outputicjs/ibc/core/channel/v1'
-import { useAcknowledgement } from 'outputicjs/ibc/core/channel/v1'
+import { acknowledgement } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.func'
+import { useAcknowledgement } from 'outputicjs/ibc/ibc/core/channel/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6166,8 +6166,8 @@ import { useAcknowledgement } from 'outputicjs/ibc/core/channel/v1'
 ClientState queries an IBC light client.
 
 ```ts
-import { getClientState } from 'outputicjs/ibc/core/client/v1'
-import { useGetClientState } from 'outputicjs/ibc/core/client/v1'
+import { getClientState } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.func'
+import { useGetClientState } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6184,8 +6184,8 @@ import { useGetClientState } from 'outputicjs/ibc/core/client/v1'
 ClientStates queries all the IBC light clients of a chain.
 
 ```ts
-import { getClientStates } from 'outputicjs/ibc/core/client/v1'
-import { useGetClientStates } from 'outputicjs/ibc/core/client/v1'
+import { getClientStates } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.func'
+import { useGetClientStates } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6202,8 +6202,8 @@ import { useGetClientStates } from 'outputicjs/ibc/core/client/v1'
 ConsensusState queries a consensus state associated with a client state at a given height.
 
 ```ts
-import { getConsensusState } from 'outputicjs/ibc/core/client/v1'
-import { useGetConsensusState } from 'outputicjs/ibc/core/client/v1'
+import { getConsensusState } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.func'
+import { useGetConsensusState } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6220,8 +6220,8 @@ import { useGetConsensusState } from 'outputicjs/ibc/core/client/v1'
 ConsensusStates queries all the consensus state associated with a given client.
 
 ```ts
-import { getConsensusStates } from 'outputicjs/ibc/core/client/v1'
-import { useGetConsensusStates } from 'outputicjs/ibc/core/client/v1'
+import { getConsensusStates } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.func'
+import { useGetConsensusStates } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6238,8 +6238,8 @@ import { useGetConsensusStates } from 'outputicjs/ibc/core/client/v1'
 Status queries the status of an IBC client.
 
 ```ts
-import { getClientStatus } from 'outputicjs/ibc/core/client/v1'
-import { useGetClientStatus } from 'outputicjs/ibc/core/client/v1'
+import { getClientStatus } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.func'
+import { useGetClientStatus } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6256,8 +6256,8 @@ import { useGetClientStatus } from 'outputicjs/ibc/core/client/v1'
 ClientParams queries all parameters of the ibc client.
 
 ```ts
-import { getClientParams } from 'outputicjs/ibc/core/client/v1'
-import { useGetClientParams } from 'outputicjs/ibc/core/client/v1'
+import { getClientParams } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.func'
+import { useGetClientParams } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6274,8 +6274,8 @@ import { useGetClientParams } from 'outputicjs/ibc/core/client/v1'
 UpgradedClientState queries an Upgraded IBC light client.
 
 ```ts
-import { getUpgradedClientState } from 'outputicjs/ibc/core/client/v1'
-import { useGetUpgradedClientState } from 'outputicjs/ibc/core/client/v1'
+import { getUpgradedClientState } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.func'
+import { useGetUpgradedClientState } from 'outputicjs/ibc/ibc/core/client/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6292,8 +6292,8 @@ import { useGetUpgradedClientState } from 'outputicjs/ibc/core/client/v1'
 UpgradedConsensusState queries an Upgraded IBC consensus state.
 
 ```ts
-import { getUpgradedConsensusStateIbcCoreClientV1 } from 'outputicjs/ibc/core/client/v1'
-import { useGetUpgradedConsensusStateIbcCoreClientV1 } from 'outputicjs/ibc/core/client/v1'
+import { getUpgradedConsensusStateIbcCoreClientV1 } from 'outputicjs/ibc/bundle'
+import { useGetUpgradedConsensusStateIbcCoreClientV1 } from 'outputicjs/ibc/bundle'
 ```
 
 | Field | Value | Source |
@@ -6310,8 +6310,8 @@ import { useGetUpgradedConsensusStateIbcCoreClientV1 } from 'outputicjs/ibc/core
 CreateClient defines a rpc handler method for MsgCreateClient.
 
 ```ts
-import { createClient } from 'outputicjs/ibc/core/client/v1'
-import { useCreateClient } from 'outputicjs/ibc/core/client/v1'
+import { createClient } from 'outputicjs/ibc/ibc/core/client/v1/tx.rpc.func'
+import { useCreateClient } from 'outputicjs/ibc/ibc/core/client/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6328,8 +6328,8 @@ import { useCreateClient } from 'outputicjs/ibc/core/client/v1'
 UpdateClient defines a rpc handler method for MsgUpdateClient.
 
 ```ts
-import { updateClient } from 'outputicjs/ibc/core/client/v1'
-import { useUpdateClient } from 'outputicjs/ibc/core/client/v1'
+import { updateClient } from 'outputicjs/ibc/ibc/core/client/v1/tx.rpc.func'
+import { useUpdateClient } from 'outputicjs/ibc/ibc/core/client/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6346,8 +6346,8 @@ import { useUpdateClient } from 'outputicjs/ibc/core/client/v1'
 UpgradeClient defines a rpc handler method for MsgUpgradeClient.
 
 ```ts
-import { upgradeClient } from 'outputicjs/ibc/core/client/v1'
-import { useUpgradeClient } from 'outputicjs/ibc/core/client/v1'
+import { upgradeClient } from 'outputicjs/ibc/ibc/core/client/v1/tx.rpc.func'
+import { useUpgradeClient } from 'outputicjs/ibc/ibc/core/client/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6364,8 +6364,8 @@ import { useUpgradeClient } from 'outputicjs/ibc/core/client/v1'
 SubmitMisbehaviour defines a rpc handler method for MsgSubmitMisbehaviour.
 
 ```ts
-import { submitMisbehaviour } from 'outputicjs/ibc/core/client/v1'
-import { useSubmitMisbehaviour } from 'outputicjs/ibc/core/client/v1'
+import { submitMisbehaviour } from 'outputicjs/ibc/ibc/core/client/v1/tx.rpc.func'
+import { useSubmitMisbehaviour } from 'outputicjs/ibc/ibc/core/client/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6417,8 +6417,8 @@ import { useSubmitMisbehaviour } from 'outputicjs/ibc/core/client/v1'
 Connection queries an IBC connection end.
 
 ```ts
-import { getConnection } from 'outputicjs/ibc/core/connection/v1'
-import { useGetConnection } from 'outputicjs/ibc/core/connection/v1'
+import { getConnection } from 'outputicjs/ibc/ibc/core/connection/v1/query.rpc.func'
+import { useGetConnection } from 'outputicjs/ibc/ibc/core/connection/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6435,8 +6435,8 @@ import { useGetConnection } from 'outputicjs/ibc/core/connection/v1'
 Connections queries all the IBC connections of a chain.
 
 ```ts
-import { getConnections } from 'outputicjs/ibc/core/connection/v1'
-import { useGetConnections } from 'outputicjs/ibc/core/connection/v1'
+import { getConnections } from 'outputicjs/ibc/ibc/core/connection/v1/query.rpc.func'
+import { useGetConnections } from 'outputicjs/ibc/ibc/core/connection/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6453,8 +6453,8 @@ import { useGetConnections } from 'outputicjs/ibc/core/connection/v1'
 ClientConnections queries the connection paths associated with a client state.
 
 ```ts
-import { getClientConnections } from 'outputicjs/ibc/core/connection/v1'
-import { useGetClientConnections } from 'outputicjs/ibc/core/connection/v1'
+import { getClientConnections } from 'outputicjs/ibc/ibc/core/connection/v1/query.rpc.func'
+import { useGetClientConnections } from 'outputicjs/ibc/ibc/core/connection/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6471,8 +6471,8 @@ import { useGetClientConnections } from 'outputicjs/ibc/core/connection/v1'
 ConnectionClientState queries the client state associated with the connection.
 
 ```ts
-import { getConnectionClientState } from 'outputicjs/ibc/core/connection/v1'
-import { useGetConnectionClientState } from 'outputicjs/ibc/core/connection/v1'
+import { getConnectionClientState } from 'outputicjs/ibc/ibc/core/connection/v1/query.rpc.func'
+import { useGetConnectionClientState } from 'outputicjs/ibc/ibc/core/connection/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6489,8 +6489,8 @@ import { useGetConnectionClientState } from 'outputicjs/ibc/core/connection/v1'
 ConnectionConsensusState queries the consensus state associated with the connection.
 
 ```ts
-import { getConnectionConsensusState } from 'outputicjs/ibc/core/connection/v1'
-import { useGetConnectionConsensusState } from 'outputicjs/ibc/core/connection/v1'
+import { getConnectionConsensusState } from 'outputicjs/ibc/ibc/core/connection/v1/query.rpc.func'
+import { useGetConnectionConsensusState } from 'outputicjs/ibc/ibc/core/connection/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6507,8 +6507,8 @@ import { useGetConnectionConsensusState } from 'outputicjs/ibc/core/connection/v
 ConnectionOpenInit defines a rpc handler method for MsgConnectionOpenInit.
 
 ```ts
-import { connectionOpenInit } from 'outputicjs/ibc/core/connection/v1'
-import { useConnectionOpenInit } from 'outputicjs/ibc/core/connection/v1'
+import { connectionOpenInit } from 'outputicjs/ibc/ibc/core/connection/v1/tx.rpc.func'
+import { useConnectionOpenInit } from 'outputicjs/ibc/ibc/core/connection/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6525,8 +6525,8 @@ import { useConnectionOpenInit } from 'outputicjs/ibc/core/connection/v1'
 ConnectionOpenTry defines a rpc handler method for MsgConnectionOpenTry.
 
 ```ts
-import { connectionOpenTry } from 'outputicjs/ibc/core/connection/v1'
-import { useConnectionOpenTry } from 'outputicjs/ibc/core/connection/v1'
+import { connectionOpenTry } from 'outputicjs/ibc/ibc/core/connection/v1/tx.rpc.func'
+import { useConnectionOpenTry } from 'outputicjs/ibc/ibc/core/connection/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6543,8 +6543,8 @@ import { useConnectionOpenTry } from 'outputicjs/ibc/core/connection/v1'
 ConnectionOpenAck defines a rpc handler method for MsgConnectionOpenAck.
 
 ```ts
-import { connectionOpenAck } from 'outputicjs/ibc/core/connection/v1'
-import { useConnectionOpenAck } from 'outputicjs/ibc/core/connection/v1'
+import { connectionOpenAck } from 'outputicjs/ibc/ibc/core/connection/v1/tx.rpc.func'
+import { useConnectionOpenAck } from 'outputicjs/ibc/ibc/core/connection/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6561,8 +6561,8 @@ import { useConnectionOpenAck } from 'outputicjs/ibc/core/connection/v1'
 ConnectionOpenConfirm defines a rpc handler method for MsgConnectionOpenConfirm.
 
 ```ts
-import { connectionOpenConfirm } from 'outputicjs/ibc/core/connection/v1'
-import { useConnectionOpenConfirm } from 'outputicjs/ibc/core/connection/v1'
+import { connectionOpenConfirm } from 'outputicjs/ibc/ibc/core/connection/v1/tx.rpc.func'
+import { useConnectionOpenConfirm } from 'outputicjs/ibc/ibc/core/connection/v1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6589,8 +6589,8 @@ import { useConnectionOpenConfirm } from 'outputicjs/ibc/core/connection/v1'
 AppVersion queries an IBC Port and determines the appropriate application version to be used
 
 ```ts
-import { getAppVersion } from 'outputicjs/ibc/core/port/v1'
-import { useGetAppVersion } from 'outputicjs/ibc/core/port/v1'
+import { getAppVersion } from 'outputicjs/ibc/ibc/core/port/v1/query.rpc.func'
+import { useGetAppVersion } from 'outputicjs/ibc/ibc/core/port/v1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6627,8 +6627,8 @@ import { useGetAppVersion } from 'outputicjs/ibc/core/port/v1'
 **ModuleAccountBalance**
 
 ```ts
-import { getModuleAccountBalance } from 'outputicjs/osmosis/claim/v1beta1'
-import { useGetModuleAccountBalance } from 'outputicjs/osmosis/claim/v1beta1'
+import { getModuleAccountBalance } from 'outputicjs/osmosis/osmosis/claim/v1beta1/query.rpc.func'
+import { useGetModuleAccountBalance } from 'outputicjs/osmosis/osmosis/claim/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6643,8 +6643,8 @@ import { useGetModuleAccountBalance } from 'outputicjs/osmosis/claim/v1beta1'
 **Params**
 
 ```ts
-import { getOsmosisClaimV1beta1Params } from 'outputicjs/osmosis/claim/v1beta1'
-import { useGetOsmosisClaimV1beta1Params } from 'outputicjs/osmosis/claim/v1beta1'
+import { getOsmosisClaimV1beta1Params } from 'outputicjs/osmosis/osmosis/claim/v1beta1/query.rpc.func'
+import { useGetOsmosisClaimV1beta1Params } from 'outputicjs/osmosis/osmosis/claim/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6659,8 +6659,8 @@ import { useGetOsmosisClaimV1beta1Params } from 'outputicjs/osmosis/claim/v1beta
 **ClaimRecord**
 
 ```ts
-import { getClaimRecord } from 'outputicjs/osmosis/claim/v1beta1'
-import { useGetClaimRecord } from 'outputicjs/osmosis/claim/v1beta1'
+import { getClaimRecord } from 'outputicjs/osmosis/osmosis/claim/v1beta1/query.rpc.func'
+import { useGetClaimRecord } from 'outputicjs/osmosis/osmosis/claim/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6675,8 +6675,8 @@ import { useGetClaimRecord } from 'outputicjs/osmosis/claim/v1beta1'
 **ClaimableForAction**
 
 ```ts
-import { getClaimableForAction } from 'outputicjs/osmosis/claim/v1beta1'
-import { useGetClaimableForAction } from 'outputicjs/osmosis/claim/v1beta1'
+import { getClaimableForAction } from 'outputicjs/osmosis/osmosis/claim/v1beta1/query.rpc.func'
+import { useGetClaimableForAction } from 'outputicjs/osmosis/osmosis/claim/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6691,8 +6691,8 @@ import { useGetClaimableForAction } from 'outputicjs/osmosis/claim/v1beta1'
 **TotalClaimable**
 
 ```ts
-import { getTotalClaimable } from 'outputicjs/osmosis/claim/v1beta1'
-import { useGetTotalClaimable } from 'outputicjs/osmosis/claim/v1beta1'
+import { getTotalClaimable } from 'outputicjs/osmosis/osmosis/claim/v1beta1/query.rpc.func'
+import { useGetTotalClaimable } from 'outputicjs/osmosis/osmosis/claim/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6723,8 +6723,8 @@ import { useGetTotalClaimable } from 'outputicjs/osmosis/claim/v1beta1'
 EpochInfos provide running epochInfos
 
 ```ts
-import { getEpochInfosOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/epochs/v1beta1'
-import { useGetEpochInfosOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/epochs/v1beta1'
+import { getEpochInfosOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/bundle'
+import { useGetEpochInfosOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/bundle'
 ```
 
 | Field | Value | Source |
@@ -6741,8 +6741,8 @@ import { useGetEpochInfosOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/epochs/
 CurrentEpoch provide current epoch of specified identifier
 
 ```ts
-import { getCurrentEpochOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/epochs/v1beta1'
-import { useGetCurrentEpochOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/epochs/v1beta1'
+import { getCurrentEpochOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/bundle'
+import { useGetCurrentEpochOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/bundle'
 ```
 
 | Field | Value | Source |
@@ -6767,8 +6767,8 @@ import { useGetCurrentEpochOsmosisEpochsV1beta1 } from 'outputicjs/osmosis/epoch
 **CreateBalancerPool**
 
 ```ts
-import { createBalancerPool } from 'outputicjs/osmosis/gamm/poolmodels/balancer/v1beta1'
-import { useCreateBalancerPool } from 'outputicjs/osmosis/gamm/poolmodels/balancer/v1beta1'
+import { createBalancerPool } from 'outputicjs/osmosis/osmosis/gamm/pool-models/balancer/tx/tx.rpc.func'
+import { useCreateBalancerPool } from 'outputicjs/osmosis/osmosis/gamm/pool-models/balancer/tx/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6797,8 +6797,8 @@ import { useCreateBalancerPool } from 'outputicjs/osmosis/gamm/poolmodels/balanc
 **CreateStableswapPool**
 
 ```ts
-import { createStableswapPool } from 'outputicjs/osmosis/gamm/poolmodels/stableswap/v1beta1'
-import { useCreateStableswapPool } from 'outputicjs/osmosis/gamm/poolmodels/stableswap/v1beta1'
+import { createStableswapPool } from 'outputicjs/osmosis/osmosis/gamm/pool-models/stableswap/tx.rpc.func'
+import { useCreateStableswapPool } from 'outputicjs/osmosis/osmosis/gamm/pool-models/stableswap/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6813,8 +6813,8 @@ import { useCreateStableswapPool } from 'outputicjs/osmosis/gamm/poolmodels/stab
 **StableSwapAdjustScalingFactors**
 
 ```ts
-import { stableSwapAdjustScalingFactors } from 'outputicjs/osmosis/gamm/poolmodels/stableswap/v1beta1'
-import { useStableSwapAdjustScalingFactors } from 'outputicjs/osmosis/gamm/poolmodels/stableswap/v1beta1'
+import { stableSwapAdjustScalingFactors } from 'outputicjs/osmosis/osmosis/gamm/pool-models/stableswap/tx.rpc.func'
+import { useStableSwapAdjustScalingFactors } from 'outputicjs/osmosis/osmosis/gamm/pool-models/stableswap/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6891,8 +6891,8 @@ import { useStableSwapAdjustScalingFactors } from 'outputicjs/osmosis/gamm/poolm
 **Pools**
 
 ```ts
-import { getPools } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetPools } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getPools } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.func'
+import { useGetPools } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6907,8 +6907,8 @@ import { useGetPools } from 'outputicjs/osmosis/gamm/v1beta1'
 **NumPools**
 
 ```ts
-import { getNumPools } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetNumPools } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getNumPools } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.func'
+import { useGetNumPools } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6923,8 +6923,8 @@ import { useGetNumPools } from 'outputicjs/osmosis/gamm/v1beta1'
 **TotalLiquidity**
 
 ```ts
-import { getTotalLiquidity } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetTotalLiquidity } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getTotalLiquidity } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.func'
+import { useGetTotalLiquidity } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6941,8 +6941,8 @@ import { useGetTotalLiquidity } from 'outputicjs/osmosis/gamm/v1beta1'
 PoolsWithFilter allows you to query specific pools with requested parameters
 
 ```ts
-import { getPoolsWithFilter } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetPoolsWithFilter } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getPoolsWithFilter } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.func'
+import { useGetPoolsWithFilter } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6959,8 +6959,8 @@ import { useGetPoolsWithFilter } from 'outputicjs/osmosis/gamm/v1beta1'
 Per Pool gRPC Endpoints
 
 ```ts
-import { getPoolOsmosisGammV1beta1 } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetPoolOsmosisGammV1beta1 } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getPoolOsmosisGammV1beta1 } from 'outputicjs/osmosis/bundle'
+import { useGetPoolOsmosisGammV1beta1 } from 'outputicjs/osmosis/bundle'
 ```
 
 | Field | Value | Source |
@@ -6977,8 +6977,8 @@ import { useGetPoolOsmosisGammV1beta1 } from 'outputicjs/osmosis/gamm/v1beta1'
 PoolType returns the type of the pool. Returns "Balancer" as a string literal when the pool is a balancer pool. Errors if the pool is failed to be type caseted.
 
 ```ts
-import { getPoolType } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetPoolType } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getPoolType } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.func'
+import { useGetPoolType } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -6995,8 +6995,8 @@ import { useGetPoolType } from 'outputicjs/osmosis/gamm/v1beta1'
 Simulates joining pool without a swap. Returns the amount of shares you'd get and tokens needed to provide
 
 ```ts
-import { getCalcJoinPoolNoSwapShares } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetCalcJoinPoolNoSwapShares } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getCalcJoinPoolNoSwapShares } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.func'
+import { useGetCalcJoinPoolNoSwapShares } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7011,8 +7011,8 @@ import { useGetCalcJoinPoolNoSwapShares } from 'outputicjs/osmosis/gamm/v1beta1'
 **CalcJoinPoolShares**
 
 ```ts
-import { getCalcJoinPoolShares } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetCalcJoinPoolShares } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getCalcJoinPoolShares } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.func'
+import { useGetCalcJoinPoolShares } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7027,8 +7027,8 @@ import { useGetCalcJoinPoolShares } from 'outputicjs/osmosis/gamm/v1beta1'
 **CalcExitPoolCoinsFromShares**
 
 ```ts
-import { getCalcExitPoolCoinsFromShares } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetCalcExitPoolCoinsFromShares } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getCalcExitPoolCoinsFromShares } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.func'
+import { useGetCalcExitPoolCoinsFromShares } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7043,8 +7043,8 @@ import { useGetCalcExitPoolCoinsFromShares } from 'outputicjs/osmosis/gamm/v1bet
 **PoolParams**
 
 ```ts
-import { getPoolParams } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetPoolParams } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getPoolParams } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.func'
+import { useGetPoolParams } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7059,8 +7059,8 @@ import { useGetPoolParams } from 'outputicjs/osmosis/gamm/v1beta1'
 **TotalPoolLiquidity**
 
 ```ts
-import { getTotalPoolLiquidity } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetTotalPoolLiquidity } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getTotalPoolLiquidity } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.func'
+import { useGetTotalPoolLiquidity } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7075,8 +7075,8 @@ import { useGetTotalPoolLiquidity } from 'outputicjs/osmosis/gamm/v1beta1'
 **TotalShares**
 
 ```ts
-import { getTotalShares } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetTotalShares } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getTotalShares } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.func'
+import { useGetTotalShares } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7093,8 +7093,8 @@ import { useGetTotalShares } from 'outputicjs/osmosis/gamm/v1beta1'
 SpotPrice defines a gRPC query handler that returns the spot price given a base denomination and a quote denomination.
 
 ```ts
-import { getSpotPriceOsmosisGammV1beta1 } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetSpotPriceOsmosisGammV1beta1 } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getSpotPriceOsmosisGammV1beta1 } from 'outputicjs/osmosis/bundle'
+import { useGetSpotPriceOsmosisGammV1beta1 } from 'outputicjs/osmosis/bundle'
 ```
 
 | Field | Value | Source |
@@ -7111,8 +7111,8 @@ import { useGetSpotPriceOsmosisGammV1beta1 } from 'outputicjs/osmosis/gamm/v1bet
 Estimate the swap.
 
 ```ts
-import { getEstimateSwapExactAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetEstimateSwapExactAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getEstimateSwapExactAmountIn } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.func'
+import { useGetEstimateSwapExactAmountIn } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7127,8 +7127,8 @@ import { useGetEstimateSwapExactAmountIn } from 'outputicjs/osmosis/gamm/v1beta1
 **EstimateSwapExactAmountOut**
 
 ```ts
-import { getEstimateSwapExactAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useGetEstimateSwapExactAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
+import { getEstimateSwapExactAmountOut } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.func'
+import { useGetEstimateSwapExactAmountOut } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7143,8 +7143,8 @@ import { useGetEstimateSwapExactAmountOut } from 'outputicjs/osmosis/gamm/v1beta
 **JoinPool**
 
 ```ts
-import { joinPool } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useJoinPool } from 'outputicjs/osmosis/gamm/v1beta1'
+import { joinPool } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.func'
+import { useJoinPool } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7159,8 +7159,8 @@ import { useJoinPool } from 'outputicjs/osmosis/gamm/v1beta1'
 **ExitPool**
 
 ```ts
-import { exitPool } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useExitPool } from 'outputicjs/osmosis/gamm/v1beta1'
+import { exitPool } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.func'
+import { useExitPool } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7175,8 +7175,8 @@ import { useExitPool } from 'outputicjs/osmosis/gamm/v1beta1'
 **SwapExactAmountIn**
 
 ```ts
-import { swapExactAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useSwapExactAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
+import { swapExactAmountIn } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.func'
+import { useSwapExactAmountIn } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7191,8 +7191,8 @@ import { useSwapExactAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
 **SwapExactAmountOut**
 
 ```ts
-import { swapExactAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useSwapExactAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
+import { swapExactAmountOut } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.func'
+import { useSwapExactAmountOut } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7207,8 +7207,8 @@ import { useSwapExactAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
 **JoinSwapExternAmountIn**
 
 ```ts
-import { joinSwapExternAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useJoinSwapExternAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
+import { joinSwapExternAmountIn } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.func'
+import { useJoinSwapExternAmountIn } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7223,8 +7223,8 @@ import { useJoinSwapExternAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
 **JoinSwapShareAmountOut**
 
 ```ts
-import { joinSwapShareAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useJoinSwapShareAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
+import { joinSwapShareAmountOut } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.func'
+import { useJoinSwapShareAmountOut } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7239,8 +7239,8 @@ import { useJoinSwapShareAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
 **ExitSwapExternAmountOut**
 
 ```ts
-import { exitSwapExternAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useExitSwapExternAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
+import { exitSwapExternAmountOut } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.func'
+import { useExitSwapExternAmountOut } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7255,8 +7255,8 @@ import { useExitSwapExternAmountOut } from 'outputicjs/osmosis/gamm/v1beta1'
 **ExitSwapShareAmountIn**
 
 ```ts
-import { exitSwapShareAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
-import { useExitSwapShareAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
+import { exitSwapShareAmountIn } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.func'
+import { useExitSwapShareAmountIn } from 'outputicjs/osmosis/osmosis/gamm/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7283,8 +7283,8 @@ import { useExitSwapShareAmountIn } from 'outputicjs/osmosis/gamm/v1beta1'
 SpotPrice defines a gRPC query handler that returns the spot price given a base denomination and a quote denomination.
 
 ```ts
-import { getSpotPriceOsmosisGammV2 } from 'outputicjs/osmosis/gamm/v2'
-import { useGetSpotPriceOsmosisGammV2 } from 'outputicjs/osmosis/gamm/v2'
+import { getSpotPriceOsmosisGammV2 } from 'outputicjs/osmosis/bundle'
+import { useGetSpotPriceOsmosisGammV2 } from 'outputicjs/osmosis/bundle'
 ```
 
 | Field | Value | Source |
@@ -7312,8 +7312,8 @@ import { useGetSpotPriceOsmosisGammV2 } from 'outputicjs/osmosis/gamm/v2'
 Params defines a gRPC query method that returns the ibc-rate-limit module's parameters.
 
 ```ts
-import { getOsmosisIbcratelimitV1beta1Params } from 'outputicjs/osmosis/ibcratelimit/v1beta1'
-import { useGetOsmosisIbcratelimitV1beta1Params } from 'outputicjs/osmosis/ibcratelimit/v1beta1'
+import { getOsmosisIbcratelimitV1beta1Params } from 'outputicjs/osmosis/osmosis/ibc-rate-limit/v1beta1/query.rpc.func'
+import { useGetOsmosisIbcratelimitV1beta1Params } from 'outputicjs/osmosis/osmosis/ibc-rate-limit/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7364,8 +7364,8 @@ import { useGetOsmosisIbcratelimitV1beta1Params } from 'outputicjs/osmosis/ibcra
 ModuleToDistributeCoins returns coins that are going to be distributed
 
 ```ts
-import { getModuleToDistributeCoins } from 'outputicjs/osmosis/incentives'
-import { useGetModuleToDistributeCoins } from 'outputicjs/osmosis/incentives'
+import { getModuleToDistributeCoins } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.func'
+import { useGetModuleToDistributeCoins } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7382,8 +7382,8 @@ import { useGetModuleToDistributeCoins } from 'outputicjs/osmosis/incentives'
 GaugeByID returns gauges by their respective ID
 
 ```ts
-import { getGaugeByID } from 'outputicjs/osmosis/incentives'
-import { useGetGaugeByID } from 'outputicjs/osmosis/incentives'
+import { getGaugeByID } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.func'
+import { useGetGaugeByID } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7400,8 +7400,8 @@ import { useGetGaugeByID } from 'outputicjs/osmosis/incentives'
 Gauges returns both upcoming and active gauges
 
 ```ts
-import { getGauges } from 'outputicjs/osmosis/incentives'
-import { useGetGauges } from 'outputicjs/osmosis/incentives'
+import { getGauges } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.func'
+import { useGetGauges } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7418,8 +7418,8 @@ import { useGetGauges } from 'outputicjs/osmosis/incentives'
 ActiveGauges returns active gauges
 
 ```ts
-import { getActiveGauges } from 'outputicjs/osmosis/incentives'
-import { useGetActiveGauges } from 'outputicjs/osmosis/incentives'
+import { getActiveGauges } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.func'
+import { useGetActiveGauges } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7436,8 +7436,8 @@ import { useGetActiveGauges } from 'outputicjs/osmosis/incentives'
 ActiveGaugesPerDenom returns active gauges by denom
 
 ```ts
-import { getActiveGaugesPerDenom } from 'outputicjs/osmosis/incentives'
-import { useGetActiveGaugesPerDenom } from 'outputicjs/osmosis/incentives'
+import { getActiveGaugesPerDenom } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.func'
+import { useGetActiveGaugesPerDenom } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7454,8 +7454,8 @@ import { useGetActiveGaugesPerDenom } from 'outputicjs/osmosis/incentives'
 Returns scheduled gauges that have not yet occured
 
 ```ts
-import { getUpcomingGauges } from 'outputicjs/osmosis/incentives'
-import { useGetUpcomingGauges } from 'outputicjs/osmosis/incentives'
+import { getUpcomingGauges } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.func'
+import { useGetUpcomingGauges } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7472,8 +7472,8 @@ import { useGetUpcomingGauges } from 'outputicjs/osmosis/incentives'
 UpcomingGaugesPerDenom returns scheduled gauges that have not yet occured by denom
 
 ```ts
-import { getUpcomingGaugesPerDenom } from 'outputicjs/osmosis/incentives'
-import { useGetUpcomingGaugesPerDenom } from 'outputicjs/osmosis/incentives'
+import { getUpcomingGaugesPerDenom } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.func'
+import { useGetUpcomingGaugesPerDenom } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7490,8 +7490,8 @@ import { useGetUpcomingGaugesPerDenom } from 'outputicjs/osmosis/incentives'
 RewardsEst returns an estimate of the rewards from now until a specified time in the future The querier either provides an address or a set of locks for which they want to find the associated rewards
 
 ```ts
-import { getRewardsEst } from 'outputicjs/osmosis/incentives'
-import { useGetRewardsEst } from 'outputicjs/osmosis/incentives'
+import { getRewardsEst } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.func'
+import { useGetRewardsEst } from 'outputicjs/osmosis/osmosis/incentives/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7508,8 +7508,8 @@ import { useGetRewardsEst } from 'outputicjs/osmosis/incentives'
 LockableDurations returns lockable durations that are valid to distribute incentives for
 
 ```ts
-import { getLockableDurationsOsmosisIncentives } from 'outputicjs/osmosis/incentives'
-import { useGetLockableDurationsOsmosisIncentives } from 'outputicjs/osmosis/incentives'
+import { getLockableDurationsOsmosisIncentives } from 'outputicjs/osmosis/bundle'
+import { useGetLockableDurationsOsmosisIncentives } from 'outputicjs/osmosis/bundle'
 ```
 
 | Field | Value | Source |
@@ -7524,8 +7524,8 @@ import { useGetLockableDurationsOsmosisIncentives } from 'outputicjs/osmosis/inc
 **CreateGauge**
 
 ```ts
-import { createGauge } from 'outputicjs/osmosis/incentives'
-import { useCreateGauge } from 'outputicjs/osmosis/incentives'
+import { createGauge } from 'outputicjs/osmosis/osmosis/incentives/tx.rpc.func'
+import { useCreateGauge } from 'outputicjs/osmosis/osmosis/incentives/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7540,8 +7540,8 @@ import { useCreateGauge } from 'outputicjs/osmosis/incentives'
 **AddToGauge**
 
 ```ts
-import { addToGauge } from 'outputicjs/osmosis/incentives'
-import { useAddToGauge } from 'outputicjs/osmosis/incentives'
+import { addToGauge } from 'outputicjs/osmosis/osmosis/incentives/tx.rpc.func'
+import { useAddToGauge } from 'outputicjs/osmosis/osmosis/incentives/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7616,8 +7616,8 @@ import { useAddToGauge } from 'outputicjs/osmosis/incentives'
 Return full balance of the module
 
 ```ts
-import { getModuleBalance } from 'outputicjs/osmosis/lockup'
-import { useGetModuleBalance } from 'outputicjs/osmosis/lockup'
+import { getModuleBalance } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetModuleBalance } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7634,8 +7634,8 @@ import { useGetModuleBalance } from 'outputicjs/osmosis/lockup'
 Return locked balance of the module
 
 ```ts
-import { getModuleLockedAmount } from 'outputicjs/osmosis/lockup'
-import { useGetModuleLockedAmount } from 'outputicjs/osmosis/lockup'
+import { getModuleLockedAmount } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetModuleLockedAmount } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7652,8 +7652,8 @@ import { useGetModuleLockedAmount } from 'outputicjs/osmosis/lockup'
 Returns unlockable coins which are not withdrawn yet
 
 ```ts
-import { getAccountUnlockableCoins } from 'outputicjs/osmosis/lockup'
-import { useGetAccountUnlockableCoins } from 'outputicjs/osmosis/lockup'
+import { getAccountUnlockableCoins } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetAccountUnlockableCoins } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7670,8 +7670,8 @@ import { useGetAccountUnlockableCoins } from 'outputicjs/osmosis/lockup'
 Returns unlocking coins
 
 ```ts
-import { getAccountUnlockingCoins } from 'outputicjs/osmosis/lockup'
-import { useGetAccountUnlockingCoins } from 'outputicjs/osmosis/lockup'
+import { getAccountUnlockingCoins } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetAccountUnlockingCoins } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7688,8 +7688,8 @@ import { useGetAccountUnlockingCoins } from 'outputicjs/osmosis/lockup'
 Return a locked coins that can't be withdrawn
 
 ```ts
-import { getAccountLockedCoins } from 'outputicjs/osmosis/lockup'
-import { useGetAccountLockedCoins } from 'outputicjs/osmosis/lockup'
+import { getAccountLockedCoins } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetAccountLockedCoins } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7706,8 +7706,8 @@ import { useGetAccountLockedCoins } from 'outputicjs/osmosis/lockup'
 Returns locked records of an account with unlock time beyond timestamp
 
 ```ts
-import { getAccountLockedPastTime } from 'outputicjs/osmosis/lockup'
-import { useGetAccountLockedPastTime } from 'outputicjs/osmosis/lockup'
+import { getAccountLockedPastTime } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetAccountLockedPastTime } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7724,8 +7724,8 @@ import { useGetAccountLockedPastTime } from 'outputicjs/osmosis/lockup'
 Returns locked records of an account with unlock time beyond timestamp excluding tokens started unlocking
 
 ```ts
-import { getAccountLockedPastTimeNotUnlockingOnly } from 'outputicjs/osmosis/lockup'
-import { useGetAccountLockedPastTimeNotUnlockingOnly } from 'outputicjs/osmosis/lockup'
+import { getAccountLockedPastTimeNotUnlockingOnly } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetAccountLockedPastTimeNotUnlockingOnly } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7742,8 +7742,8 @@ import { useGetAccountLockedPastTimeNotUnlockingOnly } from 'outputicjs/osmosis/
 Returns unlocked records with unlock time before timestamp
 
 ```ts
-import { getAccountUnlockedBeforeTime } from 'outputicjs/osmosis/lockup'
-import { useGetAccountUnlockedBeforeTime } from 'outputicjs/osmosis/lockup'
+import { getAccountUnlockedBeforeTime } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetAccountUnlockedBeforeTime } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7760,8 +7760,8 @@ import { useGetAccountUnlockedBeforeTime } from 'outputicjs/osmosis/lockup'
 Returns lock records by address, timestamp, denom
 
 ```ts
-import { getAccountLockedPastTimeDenom } from 'outputicjs/osmosis/lockup'
-import { useGetAccountLockedPastTimeDenom } from 'outputicjs/osmosis/lockup'
+import { getAccountLockedPastTimeDenom } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetAccountLockedPastTimeDenom } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7778,8 +7778,8 @@ import { useGetAccountLockedPastTimeDenom } from 'outputicjs/osmosis/lockup'
 Returns total locked per denom with longer past given time
 
 ```ts
-import { getLockedDenom } from 'outputicjs/osmosis/lockup'
-import { useGetLockedDenom } from 'outputicjs/osmosis/lockup'
+import { getLockedDenom } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetLockedDenom } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7796,8 +7796,8 @@ import { useGetLockedDenom } from 'outputicjs/osmosis/lockup'
 Returns lock record by id
 
 ```ts
-import { getLockedByID } from 'outputicjs/osmosis/lockup'
-import { useGetLockedByID } from 'outputicjs/osmosis/lockup'
+import { getLockedByID } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetLockedByID } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7814,8 +7814,8 @@ import { useGetLockedByID } from 'outputicjs/osmosis/lockup'
 Returns synthetic lockups by native lockup id
 
 ```ts
-import { getSyntheticLockupsByLockupID } from 'outputicjs/osmosis/lockup'
-import { useGetSyntheticLockupsByLockupID } from 'outputicjs/osmosis/lockup'
+import { getSyntheticLockupsByLockupID } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetSyntheticLockupsByLockupID } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7832,8 +7832,8 @@ import { useGetSyntheticLockupsByLockupID } from 'outputicjs/osmosis/lockup'
 Returns account locked records with longer duration
 
 ```ts
-import { getAccountLockedLongerDuration } from 'outputicjs/osmosis/lockup'
-import { useGetAccountLockedLongerDuration } from 'outputicjs/osmosis/lockup'
+import { getAccountLockedLongerDuration } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetAccountLockedLongerDuration } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7850,8 +7850,8 @@ import { useGetAccountLockedLongerDuration } from 'outputicjs/osmosis/lockup'
 Returns account locked records with a specific duration
 
 ```ts
-import { getAccountLockedDuration } from 'outputicjs/osmosis/lockup'
-import { useGetAccountLockedDuration } from 'outputicjs/osmosis/lockup'
+import { getAccountLockedDuration } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetAccountLockedDuration } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7868,8 +7868,8 @@ import { useGetAccountLockedDuration } from 'outputicjs/osmosis/lockup'
 Returns account locked records with longer duration excluding tokens started unlocking
 
 ```ts
-import { getAccountLockedLongerDurationNotUnlockingOnly } from 'outputicjs/osmosis/lockup'
-import { useGetAccountLockedLongerDurationNotUnlockingOnly } from 'outputicjs/osmosis/lockup'
+import { getAccountLockedLongerDurationNotUnlockingOnly } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetAccountLockedLongerDurationNotUnlockingOnly } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7886,8 +7886,8 @@ import { useGetAccountLockedLongerDurationNotUnlockingOnly } from 'outputicjs/os
 Returns account's locked records for a denom with longer duration
 
 ```ts
-import { getAccountLockedLongerDurationDenom } from 'outputicjs/osmosis/lockup'
-import { useGetAccountLockedLongerDurationDenom } from 'outputicjs/osmosis/lockup'
+import { getAccountLockedLongerDurationDenom } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetAccountLockedLongerDurationDenom } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7904,8 +7904,8 @@ import { useGetAccountLockedLongerDurationDenom } from 'outputicjs/osmosis/locku
 Params returns lockup params.
 
 ```ts
-import { getOsmosisLockupParams } from 'outputicjs/osmosis/lockup'
-import { useGetOsmosisLockupParams } from 'outputicjs/osmosis/lockup'
+import { getOsmosisLockupParams } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.func'
+import { useGetOsmosisLockupParams } from 'outputicjs/osmosis/osmosis/lockup/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7922,8 +7922,8 @@ import { useGetOsmosisLockupParams } from 'outputicjs/osmosis/lockup'
 LockTokens lock tokens
 
 ```ts
-import { lockTokens } from 'outputicjs/osmosis/lockup'
-import { useLockTokens } from 'outputicjs/osmosis/lockup'
+import { lockTokens } from 'outputicjs/osmosis/osmosis/lockup/tx.rpc.func'
+import { useLockTokens } from 'outputicjs/osmosis/osmosis/lockup/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7940,8 +7940,8 @@ import { useLockTokens } from 'outputicjs/osmosis/lockup'
 BeginUnlockingAll begin unlocking all tokens
 
 ```ts
-import { beginUnlockingAll } from 'outputicjs/osmosis/lockup'
-import { useBeginUnlockingAll } from 'outputicjs/osmosis/lockup'
+import { beginUnlockingAll } from 'outputicjs/osmosis/osmosis/lockup/tx.rpc.func'
+import { useBeginUnlockingAll } from 'outputicjs/osmosis/osmosis/lockup/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7958,8 +7958,8 @@ import { useBeginUnlockingAll } from 'outputicjs/osmosis/lockup'
 MsgBeginUnlocking begins unlocking tokens by lock ID
 
 ```ts
-import { beginUnlocking } from 'outputicjs/osmosis/lockup'
-import { useBeginUnlocking } from 'outputicjs/osmosis/lockup'
+import { beginUnlocking } from 'outputicjs/osmosis/osmosis/lockup/tx.rpc.func'
+import { useBeginUnlocking } from 'outputicjs/osmosis/osmosis/lockup/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7976,8 +7976,8 @@ import { useBeginUnlocking } from 'outputicjs/osmosis/lockup'
 MsgEditLockup edits the existing lockups by lock ID
 
 ```ts
-import { extendLockup } from 'outputicjs/osmosis/lockup'
-import { useExtendLockup } from 'outputicjs/osmosis/lockup'
+import { extendLockup } from 'outputicjs/osmosis/osmosis/lockup/tx.rpc.func'
+import { useExtendLockup } from 'outputicjs/osmosis/osmosis/lockup/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -7992,8 +7992,8 @@ import { useExtendLockup } from 'outputicjs/osmosis/lockup'
 **ForceUnlock**
 
 ```ts
-import { forceUnlock } from 'outputicjs/osmosis/lockup'
-import { useForceUnlock } from 'outputicjs/osmosis/lockup'
+import { forceUnlock } from 'outputicjs/osmosis/osmosis/lockup/tx.rpc.func'
+import { useForceUnlock } from 'outputicjs/osmosis/osmosis/lockup/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8027,8 +8027,8 @@ import { useForceUnlock } from 'outputicjs/osmosis/lockup'
 Params returns the total set of minting parameters.
 
 ```ts
-import { getOsmosisMintV1beta1Params } from 'outputicjs/osmosis/mint/v1beta1'
-import { useGetOsmosisMintV1beta1Params } from 'outputicjs/osmosis/mint/v1beta1'
+import { getOsmosisMintV1beta1Params } from 'outputicjs/osmosis/osmosis/mint/v1beta1/query.rpc.func'
+import { useGetOsmosisMintV1beta1Params } from 'outputicjs/osmosis/osmosis/mint/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8045,8 +8045,8 @@ import { useGetOsmosisMintV1beta1Params } from 'outputicjs/osmosis/mint/v1beta1'
 EpochProvisions returns the current minting epoch provisions value.
 
 ```ts
-import { getEpochProvisions } from 'outputicjs/osmosis/mint/v1beta1'
-import { useGetEpochProvisions } from 'outputicjs/osmosis/mint/v1beta1'
+import { getEpochProvisions } from 'outputicjs/osmosis/osmosis/mint/v1beta1/query.rpc.func'
+import { useGetEpochProvisions } from 'outputicjs/osmosis/osmosis/mint/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8093,8 +8093,8 @@ import { useGetEpochProvisions } from 'outputicjs/osmosis/mint/v1beta1'
 GaugeIds takes the pool id and returns the matching gauge ids and durations
 
 ```ts
-import { getGaugeIds } from 'outputicjs/osmosis/poolincentives/v1beta1'
-import { useGetGaugeIds } from 'outputicjs/osmosis/poolincentives/v1beta1'
+import { getGaugeIds } from 'outputicjs/osmosis/osmosis/pool-incentives/v1beta1/query.rpc.func'
+import { useGetGaugeIds } from 'outputicjs/osmosis/osmosis/pool-incentives/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8111,8 +8111,8 @@ import { useGetGaugeIds } from 'outputicjs/osmosis/poolincentives/v1beta1'
 DistrInfo returns the pool's matching gauge ids and weights.
 
 ```ts
-import { getDistrInfo } from 'outputicjs/osmosis/poolincentives/v1beta1'
-import { useGetDistrInfo } from 'outputicjs/osmosis/poolincentives/v1beta1'
+import { getDistrInfo } from 'outputicjs/osmosis/osmosis/pool-incentives/v1beta1/query.rpc.func'
+import { useGetDistrInfo } from 'outputicjs/osmosis/osmosis/pool-incentives/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8129,8 +8129,8 @@ import { useGetDistrInfo } from 'outputicjs/osmosis/poolincentives/v1beta1'
 Params returns pool incentives params.
 
 ```ts
-import { getOsmosisPoolincentivesV1beta1Params } from 'outputicjs/osmosis/poolincentives/v1beta1'
-import { useGetOsmosisPoolincentivesV1beta1Params } from 'outputicjs/osmosis/poolincentives/v1beta1'
+import { getOsmosisPoolincentivesV1beta1Params } from 'outputicjs/osmosis/osmosis/pool-incentives/v1beta1/query.rpc.func'
+import { useGetOsmosisPoolincentivesV1beta1Params } from 'outputicjs/osmosis/osmosis/pool-incentives/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8147,8 +8147,8 @@ import { useGetOsmosisPoolincentivesV1beta1Params } from 'outputicjs/osmosis/poo
 LockableDurations returns lock durations for pools.
 
 ```ts
-import { getLockableDurationsOsmosisPoolincentivesV1beta1 } from 'outputicjs/osmosis/poolincentives/v1beta1'
-import { useGetLockableDurationsOsmosisPoolincentivesV1beta1 } from 'outputicjs/osmosis/poolincentives/v1beta1'
+import { getLockableDurationsOsmosisPoolincentivesV1beta1 } from 'outputicjs/osmosis/bundle'
+import { useGetLockableDurationsOsmosisPoolincentivesV1beta1 } from 'outputicjs/osmosis/bundle'
 ```
 
 | Field | Value | Source |
@@ -8165,8 +8165,8 @@ import { useGetLockableDurationsOsmosisPoolincentivesV1beta1 } from 'outputicjs/
 IncentivizedPools returns currently incentivized pools
 
 ```ts
-import { getIncentivizedPools } from 'outputicjs/osmosis/poolincentives/v1beta1'
-import { useGetIncentivizedPools } from 'outputicjs/osmosis/poolincentives/v1beta1'
+import { getIncentivizedPools } from 'outputicjs/osmosis/osmosis/pool-incentives/v1beta1/query.rpc.func'
+import { useGetIncentivizedPools } from 'outputicjs/osmosis/osmosis/pool-incentives/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8183,8 +8183,8 @@ import { useGetIncentivizedPools } from 'outputicjs/osmosis/poolincentives/v1bet
 ExternalIncentiveGauges returns external incentive gauges.
 
 ```ts
-import { getExternalIncentiveGauges } from 'outputicjs/osmosis/poolincentives/v1beta1'
-import { useGetExternalIncentiveGauges } from 'outputicjs/osmosis/poolincentives/v1beta1'
+import { getExternalIncentiveGauges } from 'outputicjs/osmosis/osmosis/pool-incentives/v1beta1/query.rpc.func'
+import { useGetExternalIncentiveGauges } from 'outputicjs/osmosis/osmosis/pool-incentives/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8260,8 +8260,8 @@ import { useGetExternalIncentiveGauges } from 'outputicjs/osmosis/poolincentives
 Params returns the total set of superfluid parameters.
 
 ```ts
-import { getOsmosisSuperfluidParams } from 'outputicjs/osmosis/superfluid'
-import { useGetOsmosisSuperfluidParams } from 'outputicjs/osmosis/superfluid'
+import { getOsmosisSuperfluidParams } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetOsmosisSuperfluidParams } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8278,8 +8278,8 @@ import { useGetOsmosisSuperfluidParams } from 'outputicjs/osmosis/superfluid'
 Returns superfluid asset type, whether if it's a native asset or an lp share.
 
 ```ts
-import { getAssetType } from 'outputicjs/osmosis/superfluid'
-import { useGetAssetType } from 'outputicjs/osmosis/superfluid'
+import { getAssetType } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetAssetType } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8296,8 +8296,8 @@ import { useGetAssetType } from 'outputicjs/osmosis/superfluid'
 Returns all registered superfluid assets.
 
 ```ts
-import { getAllAssets } from 'outputicjs/osmosis/superfluid'
-import { useGetAllAssets } from 'outputicjs/osmosis/superfluid'
+import { getAllAssets } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetAllAssets } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8314,8 +8314,8 @@ import { useGetAllAssets } from 'outputicjs/osmosis/superfluid'
 Returns the osmo equivalent multiplier used in the most recent epoch.
 
 ```ts
-import { getAssetMultiplier } from 'outputicjs/osmosis/superfluid'
-import { useGetAssetMultiplier } from 'outputicjs/osmosis/superfluid'
+import { getAssetMultiplier } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetAssetMultiplier } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8332,8 +8332,8 @@ import { useGetAssetMultiplier } from 'outputicjs/osmosis/superfluid'
 Returns all superfluid intermediary accounts.
 
 ```ts
-import { getAllIntermediaryAccounts } from 'outputicjs/osmosis/superfluid'
-import { useGetAllIntermediaryAccounts } from 'outputicjs/osmosis/superfluid'
+import { getAllIntermediaryAccounts } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetAllIntermediaryAccounts } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8350,8 +8350,8 @@ import { useGetAllIntermediaryAccounts } from 'outputicjs/osmosis/superfluid'
 Returns intermediary account connected to a superfluid staked lock by id
 
 ```ts
-import { getConnectedIntermediaryAccount } from 'outputicjs/osmosis/superfluid'
-import { useGetConnectedIntermediaryAccount } from 'outputicjs/osmosis/superfluid'
+import { getConnectedIntermediaryAccount } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetConnectedIntermediaryAccount } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8368,8 +8368,8 @@ import { useGetConnectedIntermediaryAccount } from 'outputicjs/osmosis/superflui
 Returns the amount of delegations of specific denom for all validators
 
 ```ts
-import { getTotalDelegationByValidatorForDenom } from 'outputicjs/osmosis/superfluid'
-import { useGetTotalDelegationByValidatorForDenom } from 'outputicjs/osmosis/superfluid'
+import { getTotalDelegationByValidatorForDenom } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetTotalDelegationByValidatorForDenom } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8386,8 +8386,8 @@ import { useGetTotalDelegationByValidatorForDenom } from 'outputicjs/osmosis/sup
 Returns the total amount of osmo superfluidly staked. Response is denominated in uosmo.
 
 ```ts
-import { getTotalSuperfluidDelegations } from 'outputicjs/osmosis/superfluid'
-import { useGetTotalSuperfluidDelegations } from 'outputicjs/osmosis/superfluid'
+import { getTotalSuperfluidDelegations } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetTotalSuperfluidDelegations } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8404,8 +8404,8 @@ import { useGetTotalSuperfluidDelegations } from 'outputicjs/osmosis/superfluid'
 Returns the coins superfluid delegated for the delegator, validator, denom triplet
 
 ```ts
-import { getSuperfluidDelegationAmount } from 'outputicjs/osmosis/superfluid'
-import { useGetSuperfluidDelegationAmount } from 'outputicjs/osmosis/superfluid'
+import { getSuperfluidDelegationAmount } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetSuperfluidDelegationAmount } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8422,8 +8422,8 @@ import { useGetSuperfluidDelegationAmount } from 'outputicjs/osmosis/superfluid'
 Returns all the delegated superfluid poistions for a specific delegator.
 
 ```ts
-import { getSuperfluidDelegationsByDelegator } from 'outputicjs/osmosis/superfluid'
-import { useGetSuperfluidDelegationsByDelegator } from 'outputicjs/osmosis/superfluid'
+import { getSuperfluidDelegationsByDelegator } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetSuperfluidDelegationsByDelegator } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8440,8 +8440,8 @@ import { useGetSuperfluidDelegationsByDelegator } from 'outputicjs/osmosis/super
 Returns all the undelegating superfluid poistions for a specific delegator.
 
 ```ts
-import { getSuperfluidUndelegationsByDelegator } from 'outputicjs/osmosis/superfluid'
-import { useGetSuperfluidUndelegationsByDelegator } from 'outputicjs/osmosis/superfluid'
+import { getSuperfluidUndelegationsByDelegator } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetSuperfluidUndelegationsByDelegator } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8458,8 +8458,8 @@ import { useGetSuperfluidUndelegationsByDelegator } from 'outputicjs/osmosis/sup
 Returns all the superfluid positions of a specific denom delegated to one validator
 
 ```ts
-import { getSuperfluidDelegationsByValidatorDenom } from 'outputicjs/osmosis/superfluid'
-import { useGetSuperfluidDelegationsByValidatorDenom } from 'outputicjs/osmosis/superfluid'
+import { getSuperfluidDelegationsByValidatorDenom } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetSuperfluidDelegationsByValidatorDenom } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8476,8 +8476,8 @@ import { useGetSuperfluidDelegationsByValidatorDenom } from 'outputicjs/osmosis/
 Returns the amount of a specific denom delegated to a specific validator This is labeled an estimate, because the way it calculates the amount can lead rounding errors from the true delegated amount
 
 ```ts
-import { getEstimateSuperfluidDelegatedAmountByValidatorDenom } from 'outputicjs/osmosis/superfluid'
-import { useGetEstimateSuperfluidDelegatedAmountByValidatorDenom } from 'outputicjs/osmosis/superfluid'
+import { getEstimateSuperfluidDelegatedAmountByValidatorDenom } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetEstimateSuperfluidDelegatedAmountByValidatorDenom } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8494,8 +8494,8 @@ import { useGetEstimateSuperfluidDelegatedAmountByValidatorDenom } from 'outputi
 Returns the specified delegations for a specific delegator
 
 ```ts
-import { getTotalDelegationByDelegator } from 'outputicjs/osmosis/superfluid'
-import { useGetTotalDelegationByDelegator } from 'outputicjs/osmosis/superfluid'
+import { getTotalDelegationByDelegator } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetTotalDelegationByDelegator } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8512,8 +8512,8 @@ import { useGetTotalDelegationByDelegator } from 'outputicjs/osmosis/superfluid'
 Returns a list of whitelisted pool ids to unpool.
 
 ```ts
-import { getUnpoolWhitelist } from 'outputicjs/osmosis/superfluid'
-import { useGetUnpoolWhitelist } from 'outputicjs/osmosis/superfluid'
+import { getUnpoolWhitelist } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.func'
+import { useGetUnpoolWhitelist } from 'outputicjs/osmosis/osmosis/superfluid/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8530,8 +8530,8 @@ import { useGetUnpoolWhitelist } from 'outputicjs/osmosis/superfluid'
 Execute superfluid delegation for a lockup
 
 ```ts
-import { superfluidDelegate } from 'outputicjs/osmosis/superfluid'
-import { useSuperfluidDelegate } from 'outputicjs/osmosis/superfluid'
+import { superfluidDelegate } from 'outputicjs/osmosis/osmosis/superfluid/tx.rpc.func'
+import { useSuperfluidDelegate } from 'outputicjs/osmosis/osmosis/superfluid/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8548,8 +8548,8 @@ import { useSuperfluidDelegate } from 'outputicjs/osmosis/superfluid'
 Execute superfluid undelegation for a lockup
 
 ```ts
-import { superfluidUndelegate } from 'outputicjs/osmosis/superfluid'
-import { useSuperfluidUndelegate } from 'outputicjs/osmosis/superfluid'
+import { superfluidUndelegate } from 'outputicjs/osmosis/osmosis/superfluid/tx.rpc.func'
+import { useSuperfluidUndelegate } from 'outputicjs/osmosis/osmosis/superfluid/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8566,8 +8566,8 @@ import { useSuperfluidUndelegate } from 'outputicjs/osmosis/superfluid'
 For a given lock that is being superfluidly undelegated, also unbond the underlying lock.
 
 ```ts
-import { superfluidUnbondLock } from 'outputicjs/osmosis/superfluid'
-import { useSuperfluidUnbondLock } from 'outputicjs/osmosis/superfluid'
+import { superfluidUnbondLock } from 'outputicjs/osmosis/osmosis/superfluid/tx.rpc.func'
+import { useSuperfluidUnbondLock } from 'outputicjs/osmosis/osmosis/superfluid/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8584,8 +8584,8 @@ import { useSuperfluidUnbondLock } from 'outputicjs/osmosis/superfluid'
 Execute lockup lock and superfluid delegation in a single msg
 
 ```ts
-import { lockAndSuperfluidDelegate } from 'outputicjs/osmosis/superfluid'
-import { useLockAndSuperfluidDelegate } from 'outputicjs/osmosis/superfluid'
+import { lockAndSuperfluidDelegate } from 'outputicjs/osmosis/osmosis/superfluid/tx.rpc.func'
+import { useLockAndSuperfluidDelegate } from 'outputicjs/osmosis/osmosis/superfluid/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8600,8 +8600,8 @@ import { useLockAndSuperfluidDelegate } from 'outputicjs/osmosis/superfluid'
 **UnPoolWhitelistedPool**
 
 ```ts
-import { unPoolWhitelistedPool } from 'outputicjs/osmosis/superfluid'
-import { useUnPoolWhitelistedPool } from 'outputicjs/osmosis/superfluid'
+import { unPoolWhitelistedPool } from 'outputicjs/osmosis/osmosis/superfluid/tx.rpc.func'
+import { useUnPoolWhitelistedPool } from 'outputicjs/osmosis/osmosis/superfluid/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8646,8 +8646,8 @@ import { useUnPoolWhitelistedPool } from 'outputicjs/osmosis/superfluid'
 Params defines a gRPC query method that returns the tokenfactory module's parameters.
 
 ```ts
-import { getOsmosisTokenfactoryV1beta1Params } from 'outputicjs/osmosis/tokenfactory/v1beta1'
-import { useGetOsmosisTokenfactoryV1beta1Params } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { getOsmosisTokenfactoryV1beta1Params } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/query.rpc.func'
+import { useGetOsmosisTokenfactoryV1beta1Params } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8664,8 +8664,8 @@ import { useGetOsmosisTokenfactoryV1beta1Params } from 'outputicjs/osmosis/token
 DenomAuthorityMetadata defines a gRPC query method for fetching DenomAuthorityMetadata for a particular denom.
 
 ```ts
-import { getDenomAuthorityMetadata } from 'outputicjs/osmosis/tokenfactory/v1beta1'
-import { useGetDenomAuthorityMetadata } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { getDenomAuthorityMetadata } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/query.rpc.func'
+import { useGetDenomAuthorityMetadata } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8682,8 +8682,8 @@ import { useGetDenomAuthorityMetadata } from 'outputicjs/osmosis/tokenfactory/v1
 DenomsFromCreator defines a gRPC query method for fetching all denominations created by a specific admin/creator.
 
 ```ts
-import { getDenomsFromCreator } from 'outputicjs/osmosis/tokenfactory/v1beta1'
-import { useGetDenomsFromCreator } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { getDenomsFromCreator } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/query.rpc.func'
+import { useGetDenomsFromCreator } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8698,8 +8698,8 @@ import { useGetDenomsFromCreator } from 'outputicjs/osmosis/tokenfactory/v1beta1
 **CreateDenom**
 
 ```ts
-import { createDenom } from 'outputicjs/osmosis/tokenfactory/v1beta1'
-import { useCreateDenom } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { createDenom } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/tx.rpc.func'
+import { useCreateDenom } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8714,8 +8714,8 @@ import { useCreateDenom } from 'outputicjs/osmosis/tokenfactory/v1beta1'
 **Mint**
 
 ```ts
-import { mint } from 'outputicjs/osmosis/tokenfactory/v1beta1'
-import { useMint } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { mint } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/tx.rpc.func'
+import { useMint } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8730,8 +8730,8 @@ import { useMint } from 'outputicjs/osmosis/tokenfactory/v1beta1'
 **Burn**
 
 ```ts
-import { burn } from 'outputicjs/osmosis/tokenfactory/v1beta1'
-import { useBurn } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { burn } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/tx.rpc.func'
+import { useBurn } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8746,8 +8746,8 @@ import { useBurn } from 'outputicjs/osmosis/tokenfactory/v1beta1'
 **ChangeAdmin**
 
 ```ts
-import { changeAdmin } from 'outputicjs/osmosis/tokenfactory/v1beta1'
-import { useChangeAdmin } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { changeAdmin } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/tx.rpc.func'
+import { useChangeAdmin } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8762,8 +8762,8 @@ import { useChangeAdmin } from 'outputicjs/osmosis/tokenfactory/v1beta1'
 **SetDenomMetadata**
 
 ```ts
-import { setDenomMetadata } from 'outputicjs/osmosis/tokenfactory/v1beta1'
-import { useSetDenomMetadata } from 'outputicjs/osmosis/tokenfactory/v1beta1'
+import { setDenomMetadata } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/tx.rpc.func'
+import { useSetDenomMetadata } from 'outputicjs/osmosis/osmosis/tokenfactory/v1beta1/tx.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8795,8 +8795,8 @@ import { useSetDenomMetadata } from 'outputicjs/osmosis/tokenfactory/v1beta1'
 **Params**
 
 ```ts
-import { getOsmosisTwapV1beta1Params } from 'outputicjs/osmosis/twap/v1beta1'
-import { useGetOsmosisTwapV1beta1Params } from 'outputicjs/osmosis/twap/v1beta1'
+import { getOsmosisTwapV1beta1Params } from 'outputicjs/osmosis/osmosis/twap/v1beta1/query.rpc.func'
+import { useGetOsmosisTwapV1beta1Params } from 'outputicjs/osmosis/osmosis/twap/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8811,8 +8811,8 @@ import { useGetOsmosisTwapV1beta1Params } from 'outputicjs/osmosis/twap/v1beta1'
 **ArithmeticTwap**
 
 ```ts
-import { getArithmeticTwap } from 'outputicjs/osmosis/twap/v1beta1'
-import { useGetArithmeticTwap } from 'outputicjs/osmosis/twap/v1beta1'
+import { getArithmeticTwap } from 'outputicjs/osmosis/osmosis/twap/v1beta1/query.rpc.func'
+import { useGetArithmeticTwap } from 'outputicjs/osmosis/osmosis/twap/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8827,8 +8827,8 @@ import { useGetArithmeticTwap } from 'outputicjs/osmosis/twap/v1beta1'
 **ArithmeticTwapToNow**
 
 ```ts
-import { getArithmeticTwapToNow } from 'outputicjs/osmosis/twap/v1beta1'
-import { useGetArithmeticTwapToNow } from 'outputicjs/osmosis/twap/v1beta1'
+import { getArithmeticTwapToNow } from 'outputicjs/osmosis/osmosis/twap/v1beta1/query.rpc.func'
+import { useGetArithmeticTwapToNow } from 'outputicjs/osmosis/osmosis/twap/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8864,8 +8864,8 @@ import { useGetArithmeticTwapToNow } from 'outputicjs/osmosis/twap/v1beta1'
 FeeTokens returns a list of all the whitelisted fee tokens and their corresponding pools. It does not include the BaseDenom, which has its own query endpoint
 
 ```ts
-import { getFeeTokens } from 'outputicjs/osmosis/txfees/v1beta1'
-import { useGetFeeTokens } from 'outputicjs/osmosis/txfees/v1beta1'
+import { getFeeTokens } from 'outputicjs/osmosis/osmosis/txfees/v1beta1/query.rpc.func'
+import { useGetFeeTokens } from 'outputicjs/osmosis/osmosis/txfees/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8882,8 +8882,8 @@ import { useGetFeeTokens } from 'outputicjs/osmosis/txfees/v1beta1'
 DenomSpotPrice returns all spot prices by each registered token denom.
 
 ```ts
-import { getDenomSpotPrice } from 'outputicjs/osmosis/txfees/v1beta1'
-import { useGetDenomSpotPrice } from 'outputicjs/osmosis/txfees/v1beta1'
+import { getDenomSpotPrice } from 'outputicjs/osmosis/osmosis/txfees/v1beta1/query.rpc.func'
+import { useGetDenomSpotPrice } from 'outputicjs/osmosis/osmosis/txfees/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8900,8 +8900,8 @@ import { useGetDenomSpotPrice } from 'outputicjs/osmosis/txfees/v1beta1'
 Returns the poolID for a specified denom input.
 
 ```ts
-import { getDenomPoolId } from 'outputicjs/osmosis/txfees/v1beta1'
-import { useGetDenomPoolId } from 'outputicjs/osmosis/txfees/v1beta1'
+import { getDenomPoolId } from 'outputicjs/osmosis/osmosis/txfees/v1beta1/query.rpc.func'
+import { useGetDenomPoolId } from 'outputicjs/osmosis/osmosis/txfees/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |
@@ -8918,8 +8918,8 @@ import { useGetDenomPoolId } from 'outputicjs/osmosis/txfees/v1beta1'
 Returns a list of all base denom tokens and their corresponding pools.
 
 ```ts
-import { getBaseDenom } from 'outputicjs/osmosis/txfees/v1beta1'
-import { useGetBaseDenom } from 'outputicjs/osmosis/txfees/v1beta1'
+import { getBaseDenom } from 'outputicjs/osmosis/osmosis/txfees/v1beta1/query.rpc.func'
+import { useGetBaseDenom } from 'outputicjs/osmosis/osmosis/txfees/v1beta1/query.rpc.react'
 ```
 
 | Field | Value | Source |

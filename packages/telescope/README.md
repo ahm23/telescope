@@ -123,7 +123,7 @@ Use the [`create-interchain-app`](https://github.com/hyperweb-io/create-intercha
 
 ```sh
 cia --boilerplate telescope
-
+```
 
 Then, you'll navigate into `./your-project/packages/telescope` package for the next steps.
 
@@ -212,6 +212,29 @@ Download with a config file:
 telescope download --config ./protod.config.json --out ./git-modules
 ```
 
+protod.config.json example:
+```json
+{
+  "repos": [
+    { "owner": "cosmos", "repo": "cosmos-sdk", "branch": "release/v0.50.x" },
+    { "owner": "cosmos", "repo": "ibc-go" },
+  ],
+  "protoDirMapping": {
+    "gogo/protobuf/master": ".",
+    "googleapis/googleapis/master": ".",
+    "protocolbuffers/protobuf/main": "src"
+  },
+  "outDir": "protos",
+  "ssh": true,
+  "tempRepoDir": "git-modules",
+  "targets": [
+    "cosmos/**/*.proto",
+    "cosmwasm/**/*.proto",
+    "ibc/**/*.proto",
+  ]
+}
+```
+
 Download from a specific repo:
 ```sh
 telescope download --git-repo owner/repository --targets cosmos/auth/v1beta1/auth.proto
@@ -225,7 +248,97 @@ telescope transpile
 
 Use customized telescope option:
 ```sh
-telescope transpile --config your-config.json
+telescope transpile --config telescope-config.json
+```
+
+telescope-config.json exmaple:
+```json
+{
+    "protoDirs": [
+        "./protos/"
+    ],
+    "outPath": "./codegen/",
+    "options": {
+        "classesUseArrowFunctions": true,
+        "env": "v-next",
+        "useInterchainJs": true,
+        "useSDKTypes": false,
+        "prototypes": {
+            "enableRegistryLoader": false,
+            "enableMessageComposer": false,
+            "enabled": true,
+            "parser": {
+                "keepCase": false
+            },
+            "methods": {
+                "fromJSON": false,
+                "toJSON": false,
+                "encode": true,
+                "decode": true,
+                "fromPartial": true,
+                "toAmino": true,
+                "fromAmino": true,
+                "fromProto": false,
+                "toProto": false,
+                "fromProtoMsg": false,
+                "toProtoMsg": false,
+                "toAminoMsg": true,
+                "fromAminoMsg": true
+            },
+            "addTypeUrlToDecoders": false,
+            "addTypeUrlToObjects": true,
+            "addAminoTypeToObjects": true,
+            "typingsFormat": {
+                "duration": "duration",
+                "timestamp": "date",
+                "useExact": false,
+                "useDeepPartial": true,
+                "num64": "bigint",
+                "customTypes": {
+                    "useCosmosSDKDec": true,
+                    "useEnhancedDecimal": false
+                },
+                "useTelescopeGeneratedType": true,
+                "autoFixUndefinedEnumDefault": true
+            }
+        },
+        "bundle": {
+            "enabled": false
+        },
+        "stargateClients": {
+            "enabled": false
+        },
+        "lcdClients": {
+            "enabled": false
+        },
+        "rpcClients": {
+            "enabled": false
+        },
+        "helperFunctions": {
+            "enabled": true,
+            "useGlobalDecoderRegistry": true,
+            "hooks": {
+              "react": true,
+              "vue": false
+            }
+        },
+        "interfaces": {
+            "enabled": true,
+            "useGlobalDecoderRegistry": true,
+            "registerAllDecodersToGlobal": false,
+            "useUnionTypes": true
+        },
+        "aminoEncoding": {
+            "enabled": true,
+            "useLegacyInlineEncoding": false,
+            "disableMsgTypes": false,
+            "useProtoOptionality": true,
+            "customTypes": {
+              "useCosmosSDKDec": true
+            }
+        }
+    }
+}
 ```
 
 ### CIA
@@ -1274,7 +1387,7 @@ The nameMappers object supports three service types: All, Query, and Msg. Each p
 ```js
 {
   "pattern": {
-    funcBody: (name: string) => string,    // Function to transform the method name
+    funcBody: (ctx: AliasNameMappersContext) => string,    // Function to transform the method name
     hookPrefix?: string                    // Prefix for the hook function (default: "use")
   }
 }
@@ -1294,24 +1407,18 @@ const options: TelescopeOptions = {
     nameMappers: {
       All: {
         "cosmos.gov.v1beta1.*Vote*": {
-          funcBody: (ctx: AliasNameMappersContext) => {
-            return `helper${ctx.name}`;
-          },
+          funcBody: (ctx) => `helper${ctx.name}`,
           hookPrefix: "use",
         },
       },
       Query: {
         "cosmos.gov.v1beta1.*Deposits*": {
-          funcBody: (ctx: AliasNameMappersContext) => {
-            return `goOver${ctx.name}`;
-          },
+          funcBody: (ctx) => `goOver${ctx.name}`,
         },
       },
       Msg: {
         "cosmos.gov.v1beta1.*VoteWeighted*": {
-          funcBody: (ctx: AliasNameMappersContext) => {
-            return `lets${ctx.name}`;
-          },
+          funcBody: (ctx) => `lets${ctx.name}`,
           hookPrefix: "useTx",
         },
       },

@@ -123,7 +123,7 @@ Use the [`create-interchain-app`](https://github.com/hyperweb-io/create-intercha
 
 ```sh
 cia --boilerplate telescope
-
+```
 
 Then, you'll navigate into `./your-project/packages/telescope` package for the next steps.
 

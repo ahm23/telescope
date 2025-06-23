@@ -52,6 +52,39 @@ function getProjectName(outPath: string): string {
 }
 
 /**
+ * Gets the appropriate import path for a function, considering bundle exports
+ */
+function getImportPath(builder: TelescopeBuilder, functionName: string, packageName: string, projectName: string, sourceFilename?: string): string {
+    const duplicatedHelperFuncs = builder.store.getHelperFuncsInMultipleFiles();
+    const isDuplicated = duplicatedHelperFuncs.includes(functionName);
+
+    // If the function is duplicated (and thus potentially aliased), it should be available in the bundle
+    if (isDuplicated) {
+        // Check the aliased function name to see if it would be different
+        const aliasedName = getAliasedFunctionName(builder, functionName, packageName);
+        if (aliasedName !== functionName) {
+            // Extract the top-level package name (e.g., 'akash' from 'akash.audit.v1beta2')
+            const topLevelPackage = packageName.split('.')[0];
+
+            // Function is aliased and should be available in bundle
+            return `${projectName}/${topLevelPackage}/bundle`;
+        }
+    }
+
+    // If we have source filename info, use the full file path
+    // This handles all functions with specific file locations
+    if (sourceFilename) {
+        const topLevelPackage = packageName.split('.')[0];
+        // Remove .ts extension and convert to proper import path
+        const filePath = sourceFilename.replace(/\.ts$/, '');
+        return `${projectName}/${topLevelPackage}/${filePath}`;
+    }
+
+    // Fallback: import from the specific package path
+    return `${projectName}/${packageName.replace(/\./g, '/')}`;
+}
+
+/**
  * Gets all types for a package by looking at export objects and filtering out extended forms
  */
 function getTypesForPackage(builder: TelescopeBuilder, packageName: string): Array<{ name: string, sourceFile: string }> {
@@ -159,11 +192,13 @@ export const plugin = (builder: TelescopeBuilder) => {
                 }
 
                 // Add import code block
-                const importPath = `${projectName}/${packageName.replace(/\./g, '/')}`;
+                const functionImportPath = getImportPath(builder, method.functionName, packageName, projectName, method.sourceFilename);
+                const hookImportPath = method.hookName ? getImportPath(builder, method.hookName, packageName, projectName, method.hookSourceFilename) : functionImportPath;
+
                 packageDocs += `\`\`\`ts\n`;
-                packageDocs += `import { ${aliasedFunctionName} } from '${importPath}'\n`;
+                packageDocs += `import { ${aliasedFunctionName} } from '${functionImportPath}'\n`;
                 if (method.hookName && aliasedHookName !== aliasedFunctionName) {
-                    packageDocs += `import { ${aliasedHookName} } from '${importPath}'\n`;
+                    packageDocs += `import { ${aliasedHookName} } from '${hookImportPath}'\n`;
                 }
                 packageDocs += `\`\`\`\n\n`;
 
@@ -221,11 +256,13 @@ export const plugin = (builder: TelescopeBuilder) => {
                 }
 
                 // Add import code block
-                const importPath = `${projectName}/${packageName.replace(/\./g, '/')}`;
+                const functionImportPath = getImportPath(builder, method.functionName, packageName, projectName, method.sourceFilename);
+                const hookImportPath = method.hookName ? getImportPath(builder, method.hookName, packageName, projectName, method.hookSourceFilename) : functionImportPath;
+
                 packageDocs += `\`\`\`ts\n`;
-                packageDocs += `import { ${aliasedFunctionName} } from '${importPath}'\n`;
+                packageDocs += `import { ${aliasedFunctionName} } from '${functionImportPath}'\n`;
                 if (method.hookName && aliasedHookName !== aliasedFunctionName) {
-                    packageDocs += `import { ${aliasedHookName} } from '${importPath}'\n`;
+                    packageDocs += `import { ${aliasedHookName} } from '${hookImportPath}'\n`;
                 }
                 packageDocs += `\`\`\`\n\n`;
 

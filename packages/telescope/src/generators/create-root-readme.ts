@@ -74,10 +74,9 @@ function getImportPath(builder: TelescopeBuilder, functionName: string, packageN
     // If we have source filename info, use the full file path
     // This handles all functions with specific file locations
     if (sourceFilename) {
-        const topLevelPackage = packageName.split('.')[0];
         // Remove .ts extension and convert to proper import path
         const filePath = sourceFilename.replace(/\.ts$/, '');
-        return `${projectName}/${topLevelPackage}/${filePath}`;
+        return `${projectName}/${filePath}`;
     }
 
     // Fallback: import from the specific package path

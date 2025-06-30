@@ -1,0 +1,1 @@
+{"version":3,"file":"telescope-loader.d.ts","sourceRoot":"","sources":["../src/telescope-loader.ts"],"names":[],"mappings":"AAOA;;;GAGG;AACH,qBAAa,eAAe;IAC1B,OAAO,CAAC,QAAQ,CAAS;;IAMzB;;OAEG;IACH,mBAAmB,IAAI,MAAM,EAAE;IAc/B;;OAEG;IACH,cAAc,CAAC,UAAU,EAAE,MAAM;IASjC;;OAEG;IACH,eAAe,CAAC,UAAU,EAAE,MAAM;;;;;;;CAUnC;AAED,eAAO,MAAM,eAAe,iBAAwB,CAAC"}

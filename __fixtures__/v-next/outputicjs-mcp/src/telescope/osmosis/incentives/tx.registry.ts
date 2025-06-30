@@ -1,0 +1,47 @@
+import { TelescopeGeneratedType } from "../../types";
+import { MsgCreateGauge, MsgAddToGauge } from "./tx";
+export const registry: ReadonlyArray<[string, TelescopeGeneratedType<any, any, any>]> = [["/osmosis.incentives.MsgCreateGauge", MsgCreateGauge], ["/osmosis.incentives.MsgAddToGauge", MsgAddToGauge]];
+export const MessageComposer = {
+  encoded: {
+    createGauge(value: MsgCreateGauge) {
+      return {
+        typeUrl: "/osmosis.incentives.MsgCreateGauge",
+        value: MsgCreateGauge.encode(value).finish()
+      };
+    },
+    addToGauge(value: MsgAddToGauge) {
+      return {
+        typeUrl: "/osmosis.incentives.MsgAddToGauge",
+        value: MsgAddToGauge.encode(value).finish()
+      };
+    }
+  },
+  withTypeUrl: {
+    createGauge(value: MsgCreateGauge) {
+      return {
+        typeUrl: "/osmosis.incentives.MsgCreateGauge",
+        value
+      };
+    },
+    addToGauge(value: MsgAddToGauge) {
+      return {
+        typeUrl: "/osmosis.incentives.MsgAddToGauge",
+        value
+      };
+    }
+  },
+  fromPartial: {
+    createGauge(value: MsgCreateGauge) {
+      return {
+        typeUrl: "/osmosis.incentives.MsgCreateGauge",
+        value: MsgCreateGauge.fromPartial(value)
+      };
+    },
+    addToGauge(value: MsgAddToGauge) {
+      return {
+        typeUrl: "/osmosis.incentives.MsgAddToGauge",
+        value: MsgAddToGauge.fromPartial(value)
+      };
+    }
+  }
+};

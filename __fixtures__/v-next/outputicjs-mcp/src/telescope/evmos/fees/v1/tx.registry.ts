@@ -1,0 +1,65 @@
+import { TelescopeGeneratedType } from "../../../types";
+import { MsgRegisterDevFeeInfo, MsgCancelDevFeeInfo, MsgUpdateDevFeeInfo } from "./tx";
+export const registry: ReadonlyArray<[string, TelescopeGeneratedType<any, any, any>]> = [["/evmos.fees.v1.MsgRegisterDevFeeInfo", MsgRegisterDevFeeInfo], ["/evmos.fees.v1.MsgCancelDevFeeInfo", MsgCancelDevFeeInfo], ["/evmos.fees.v1.MsgUpdateDevFeeInfo", MsgUpdateDevFeeInfo]];
+export const MessageComposer = {
+  encoded: {
+    registerDevFeeInfo(value: MsgRegisterDevFeeInfo) {
+      return {
+        typeUrl: "/evmos.fees.v1.MsgRegisterDevFeeInfo",
+        value: MsgRegisterDevFeeInfo.encode(value).finish()
+      };
+    },
+    cancelDevFeeInfo(value: MsgCancelDevFeeInfo) {
+      return {
+        typeUrl: "/evmos.fees.v1.MsgCancelDevFeeInfo",
+        value: MsgCancelDevFeeInfo.encode(value).finish()
+      };
+    },
+    updateDevFeeInfo(value: MsgUpdateDevFeeInfo) {
+      return {
+        typeUrl: "/evmos.fees.v1.MsgUpdateDevFeeInfo",
+        value: MsgUpdateDevFeeInfo.encode(value).finish()
+      };
+    }
+  },
+  withTypeUrl: {
+    registerDevFeeInfo(value: MsgRegisterDevFeeInfo) {
+      return {
+        typeUrl: "/evmos.fees.v1.MsgRegisterDevFeeInfo",
+        value
+      };
+    },
+    cancelDevFeeInfo(value: MsgCancelDevFeeInfo) {
+      return {
+        typeUrl: "/evmos.fees.v1.MsgCancelDevFeeInfo",
+        value
+      };
+    },
+    updateDevFeeInfo(value: MsgUpdateDevFeeInfo) {
+      return {
+        typeUrl: "/evmos.fees.v1.MsgUpdateDevFeeInfo",
+        value
+      };
+    }
+  },
+  fromPartial: {
+    registerDevFeeInfo(value: MsgRegisterDevFeeInfo) {
+      return {
+        typeUrl: "/evmos.fees.v1.MsgRegisterDevFeeInfo",
+        value: MsgRegisterDevFeeInfo.fromPartial(value)
+      };
+    },
+    cancelDevFeeInfo(value: MsgCancelDevFeeInfo) {
+      return {
+        typeUrl: "/evmos.fees.v1.MsgCancelDevFeeInfo",
+        value: MsgCancelDevFeeInfo.fromPartial(value)
+      };
+    },
+    updateDevFeeInfo(value: MsgUpdateDevFeeInfo) {
+      return {
+        typeUrl: "/evmos.fees.v1.MsgUpdateDevFeeInfo",
+        value: MsgUpdateDevFeeInfo.fromPartial(value)
+      };
+    }
+  }
+};

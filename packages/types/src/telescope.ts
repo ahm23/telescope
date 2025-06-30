@@ -378,6 +378,10 @@ export interface TelescopeOpts {
       protos?: string[];
     };
   };
+
+  mcpServer?: {
+    enabled: boolean;
+  };
 }
 interface TelescopePackageOpts {
   packages?: Record<string, any>;
@@ -541,6 +545,10 @@ export const defaultTelescopeOptions: TelescopeOptions = {
       packages: [],
       protos: [],
     },
+  },
+
+  mcpServer: {
+    enabled: false,
   },
 
   // packages

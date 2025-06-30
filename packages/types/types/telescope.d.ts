@@ -323,6 +323,14 @@ export interface TelescopeOpts {
             protos?: string[];
         };
     };
+    mcpServer?: {
+        enabled: boolean;
+        include?: {
+            packages?: string[];
+            protos?: string[];
+            patterns?: string[];
+        };
+    };
 }
 interface TelescopePackageOpts {
     packages?: Record<string, any>;

@@ -56,7 +56,7 @@ export const plugin = (builder: TelescopeBuilder) => {
       return obj;
     }, {});
 
-    console.log("types in multiple files:", JSON.stringify(typePackageMappingMap, null, 2));
+    // console.log("types in multiple files:", JSON.stringify(typePackageMappingMap, null, 2));
 
     const servicePackageMappingMap = servicePackageMapping.reduce(
       (obj, service) => {
@@ -67,6 +67,6 @@ export const plugin = (builder: TelescopeBuilder) => {
       {}
     );
 
-    console.log("services in multiple files:", JSON.stringify(servicePackageMappingMap, null, 2));
+    // console.log("services in multiple files:", JSON.stringify(servicePackageMappingMap, null, 2));
   }
 };

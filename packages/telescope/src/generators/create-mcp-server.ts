@@ -1,6 +1,6 @@
 import { TelescopeBuilder } from '../builder';
 import { Bundler } from '../bundler';
-import { writeFileSync, mkdirSync, cpSync, existsSync, rmSync } from 'fs';
+import { writeFileSync, mkdirSync, cpSync, existsSync } from 'fs';
 import { join, dirname, basename } from 'path';
 
 export const plugin = (
@@ -646,82 +646,31 @@ function copyTelescopeCodebase(builder: TelescopeBuilder, mcpServerPath: string,
 
   // Copy the entire telescope generated directory
   if (existsSync(sourcePath)) {
-    console.log(`Copying telescope codebase from ${sourcePath} to ${destPath}`);
-
-    // Remove destination if it exists with retry logic for Windows
+    // Skip copy if destination already exists (avoids Windows file permission issues)
     if (existsSync(destPath)) {
-      removeDirectoryWithRetry(destPath);
+      console.log(`Telescope codebase already exists at ${destPath}, skipping copy to avoid Windows file permission issues`);
+      return;
     }
+
+    console.log(`Copying telescope codebase from ${sourcePath} to ${destPath}`);
 
     // Ensure parent directory exists
     mkdirSync(dirname(destPath), { recursive: true });
 
-    // Copy with force option for Windows compatibility
+    // Copy without removing destination first
     try {
       cpSync(sourcePath, destPath, { recursive: true, force: true });
     } catch (error) {
-      console.error(`Error copying telescope codebase: ${error}`);
-      throw error;
+      console.warn(`Warning: Could not copy telescope codebase: ${error}`);
+      console.log('MCP server will still function, but AI agents will have limited code references');
+      // Don't throw error - let MCP server generation continue
     }
   } else {
     console.warn(`Source path ${sourcePath} does not exist, skipping telescope codebase copy`);
   }
 }
 
-function removeDirectoryWithRetry(dirPath: string, maxRetries: number = 3) {
-  for (let attempt = 1; attempt <= maxRetries; attempt++) {
-    try {
-      rmSync(dirPath, { recursive: true, force: true });
-      return; // Success, exit
-    } catch (error: any) {
-      console.warn(`Attempt ${attempt} to remove directory failed: ${error.message}`);
-
-      if (attempt === maxRetries) {
-        // Last attempt - try alternative cleanup methods
-        try {
-          // Try to manually clean up on Windows
-          if (process.platform === 'win32') {
-            console.log('Attempting manual cleanup for Windows...');
-            removeDirectoryManually(dirPath);
-          } else {
-            throw error; // Re-throw the original error
-          }
-        } catch (finalError) {
-          console.error(`Final cleanup attempt failed: ${finalError}`);
-          throw error; // Throw the original rmSync error
-        }
-      } else {
-        // Wait a bit before retrying (Windows file handle issue)
-        const delay = attempt * 100; // Increasing delay
-        console.log(`Waiting ${delay}ms before retry...`);
-        // Synchronous wait for simplicity
-        const start = Date.now();
-        while (Date.now() - start < delay) {
-          // Busy wait
-        }
-      }
-    }
-  }
-}
-
-function removeDirectoryManually(dirPath: string) {
-  const { execSync } = require('child_process');
-
-  try {
-    // Use Windows command to forcefully remove directory
-    execSync(`rmdir /s /q "${dirPath}"`, { stdio: 'ignore', timeout: 10000 });
-  } catch (cmdError) {
-    // If that fails, try PowerShell
-    try {
-      execSync(`powershell -Command "Remove-Item -Path '${dirPath}' -Recurse -Force"`, {
-        stdio: 'ignore',
-        timeout: 10000
-      });
-    } catch (psError) {
-      throw new Error(`Manual cleanup failed: ${cmdError} and ${psError}`);
-    }
-  }
-}
+// Removed retry logic - no longer needed since we skip copy if destination exists
 
 function generateTelescopeLoader(packageName: string) {
   return `import { readFileSync } from 'node:fs';

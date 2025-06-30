@@ -275,15 +275,6 @@ export class TelescopeBuilder {
       createBundle(this, bundler);
     });
 
-    // Generate MCP server once for the entire build (only for the primary bundle)
-    if (this.options.mcpServer?.enabled && bundles.length > 0) {
-      // Use the first bundle that has contexts (typically the main aggregated bundle)
-      const primaryBundle = bundles.find(bundler => bundler.contexts.length > 0);
-      if (primaryBundle) {
-        createMcpServer(this, primaryBundle);
-      }
-    }
-
     createRpcOpsBundle(this);
     createReactQueryBundle(this);
     createMobxBundle(this);
@@ -296,6 +287,15 @@ export class TelescopeBuilder {
     // finally, write one index file with all files, exported
     createIndex(this);
     createRootReadme(this);
+
+    // Generate MCP server at the very end after all files are written
+    if (this.options.mcpServer?.enabled && bundles.length > 0) {
+      // Use the first bundle that has contexts (typically the main aggregated bundle)
+      const primaryBundle = bundles.find(bundler => bundler.contexts.length > 0);
+      if (primaryBundle) {
+        createMcpServer(this, primaryBundle);
+      }
+    }
 
     console.log(`✨ files transpiled in '${this.outPath}'`);
   }

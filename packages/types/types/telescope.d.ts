@@ -325,11 +325,6 @@ export interface TelescopeOpts {
     };
     mcpServer?: {
         enabled: boolean;
-        include?: {
-            packages?: string[];
-            protos?: string[];
-            patterns?: string[];
-        };
     };
 }
 interface TelescopePackageOpts {

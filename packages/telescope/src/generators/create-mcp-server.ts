@@ -121,7 +121,7 @@ async function main() {
             'useAssets', 'useStakingData', 'useValidators', 'useVoting',
             'useVotingData', 'useContractInfo', 'useQueryContract',
             'useCodeDetails', 'useMyContracts', 'useGrants', 'useSendData',
-            'useTotalAssets', 'useBalanceInjective'
+            'useTotalAssets', 'useBalanceReact'
           ];
         }
         
@@ -279,8 +279,8 @@ function getRelevantExamples(task: string, availableExamples: string[]): string[
   // Balance-related tasks
   if (taskLower.includes('balance')) {
     relevantExamples.push('useBalance', 'useBalanceFunc', 'getBalance');
-    if (taskLower.includes('injective')) {
-      relevantExamples.push('useBalanceInjective');
+    if (taskLower.includes('react')) {
+      relevantExamples.push('useBalanceReact');
     }
   }
   
@@ -328,7 +328,7 @@ function getExampleDescription(example: string): string {
     'config-example': 'Chain configuration and RPC endpoints setup',
     'useBalance': 'React hook for querying account balance',
     'useBalanceFunc': 'Direct function for balance queries',
-    'useBalanceInjective': 'Injective-specific balance queries with BigNumber',
+    'useBalanceReact': 'React hook with BigNumber for balance queries',
     'getBalance': 'Basic balance query with transaction examples',
     'useAssets': 'Query all token balances for an account',
     'useStakingData': 'Comprehensive staking information (delegations, rewards, validators)',
@@ -1125,7 +1125,7 @@ export const useBalance = (
 `
     },
     {
-      name: 'useBalanceInjective.ts',
+      name: 'useBalanceReact.ts',
       content: `import { useGetBalance } from '${packageName}/cosmos/bank/v1beta1/query.rpc.react';
 import { defaultRpcEndpoint as rpcEndpoint } from '@/config';
 import BigNumber from 'bignumber.js';

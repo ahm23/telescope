@@ -38,6 +38,7 @@ import { plugin as createPiniaStoreBundle } from './generators/create-pinia-stor
 import { plugin as createRpcOpsBundle } from './generators/create-rpc-ops-bundle';
 import { plugin as customizeUtils } from './generators/customize-utils';
 import { plugin as createRootReadme } from './generators/create-root-readme';
+import { plugin as createMcpServer } from './generators/create-mcp-server';
 
 const sanitizeOptions = (options: TelescopeOptions): TelescopeOptions => {
   // If an element at the same key is present for both x and y, the value from y will appear in the result.
@@ -184,6 +185,8 @@ export class TelescopeBuilder {
   }
 
 
+
+
   async build() {
     // check warnings
     if (
@@ -284,6 +287,15 @@ export class TelescopeBuilder {
     // finally, write one index file with all files, exported
     createIndex(this);
     createRootReadme(this);
+
+    // Generate MCP server at the very end after all files are written
+    if (this.options.mcpServer?.enabled && bundles.length > 0) {
+      // Use the first bundle that has contexts (typically the main aggregated bundle)
+      const primaryBundle = bundles.find(bundler => bundler.contexts.length > 0);
+      if (primaryBundle) {
+        createMcpServer(this, primaryBundle);
+      }
+    }
 
     console.log(`✨ files transpiled in '${this.outPath}'`);
   }

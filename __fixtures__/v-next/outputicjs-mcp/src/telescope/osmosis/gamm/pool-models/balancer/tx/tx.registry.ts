@@ -1,0 +1,29 @@
+import { TelescopeGeneratedType } from "../../../../../types";
+import { MsgCreateBalancerPool } from "./tx";
+export const registry: ReadonlyArray<[string, TelescopeGeneratedType<any, any, any>]> = [["/osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool", MsgCreateBalancerPool]];
+export const MessageComposer = {
+  encoded: {
+    createBalancerPool(value: MsgCreateBalancerPool) {
+      return {
+        typeUrl: "/osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool",
+        value: MsgCreateBalancerPool.encode(value).finish()
+      };
+    }
+  },
+  withTypeUrl: {
+    createBalancerPool(value: MsgCreateBalancerPool) {
+      return {
+        typeUrl: "/osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool",
+        value
+      };
+    }
+  },
+  fromPartial: {
+    createBalancerPool(value: MsgCreateBalancerPool) {
+      return {
+        typeUrl: "/osmosis.gamm.poolmodels.balancer.v1beta1.MsgCreateBalancerPool",
+        value: MsgCreateBalancerPool.fromPartial(value)
+      };
+    }
+  }
+};

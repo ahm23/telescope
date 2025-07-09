@@ -1,0 +1,72 @@
+[
+  {
+    "$schema": "../chain.schema.json",
+    "chainName": "cosmos",
+    "status": "live",
+    "networkType": "mainnet",
+    "prettyName": "Cosmos Hub",
+    "chainId": "cosmoshub-4",
+    "bech32Prefix": "cosmos",
+    "daemonName": "gaiad",
+    "nodeHome": "$HOME/.gaia",
+    "slip44": 118,
+    "apis": {
+      "rpc": [
+        {
+          "address": "https://cosmos-rpc.quickapi.com:443"
+        }
+      ],
+      "rest": [
+        {
+          "address": "https://cosmos-rest.quickapi.com:443"
+        }
+      ]
+    }
+  },
+  {
+    "chainName": "osmosis",
+    "status": "live",
+    "networkType": "mainnet",
+    "prettyName": "Osmosis",
+    "chainId": "osmosis-1",
+    "bech32Prefix": "osmo",
+    "daemonName": "osmosisd",
+    "nodeHome": "$HOME/.osmosisd",
+    "slip44": 118,
+    "apis": {
+      "rpc": [
+        {
+          "address": "https://osmosis-rpc.quickapi.com:443"
+        }
+      ],
+      "rest": [
+        {
+          "address": "https://osmosis-rest.quickapi.com:443"
+        }
+      ]
+    }
+  },
+  {
+    "chainName": "injective",
+    "status": "live",
+    "networkType": "mainnet",
+    "prettyName": "Injective",
+    "chainId": "injective-1",
+    "bech32Prefix": "inj",
+    "daemonName": "injectived",
+    "nodeHome": "$HOME/.injectived",
+    "slip44": 60,
+    "apis": {
+      "rpc": [
+        {
+          "address": "https://injective-rpc.quickapi.com:443"
+        }
+      ],
+      "rest": [
+        {
+          "address": "https://injective-rest.quickapi.com:443"
+        }
+      ]
+    }
+  }
+]

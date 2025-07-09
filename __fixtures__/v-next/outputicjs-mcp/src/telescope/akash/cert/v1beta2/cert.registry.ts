@@ -1,0 +1,47 @@
+import { TelescopeGeneratedType } from "../../../types";
+import { MsgCreateCertificate, MsgRevokeCertificate } from "./cert";
+export const registry: ReadonlyArray<[string, TelescopeGeneratedType<any, any, any>]> = [["/akash.cert.v1beta2.MsgCreateCertificate", MsgCreateCertificate], ["/akash.cert.v1beta2.MsgRevokeCertificate", MsgRevokeCertificate]];
+export const MessageComposer = {
+  encoded: {
+    createCertificate(value: MsgCreateCertificate) {
+      return {
+        typeUrl: "/akash.cert.v1beta2.MsgCreateCertificate",
+        value: MsgCreateCertificate.encode(value).finish()
+      };
+    },
+    revokeCertificate(value: MsgRevokeCertificate) {
+      return {
+        typeUrl: "/akash.cert.v1beta2.MsgRevokeCertificate",
+        value: MsgRevokeCertificate.encode(value).finish()
+      };
+    }
+  },
+  withTypeUrl: {
+    createCertificate(value: MsgCreateCertificate) {
+      return {
+        typeUrl: "/akash.cert.v1beta2.MsgCreateCertificate",
+        value
+      };
+    },
+    revokeCertificate(value: MsgRevokeCertificate) {
+      return {
+        typeUrl: "/akash.cert.v1beta2.MsgRevokeCertificate",
+        value
+      };
+    }
+  },
+  fromPartial: {
+    createCertificate(value: MsgCreateCertificate) {
+      return {
+        typeUrl: "/akash.cert.v1beta2.MsgCreateCertificate",
+        value: MsgCreateCertificate.fromPartial(value)
+      };
+    },
+    revokeCertificate(value: MsgRevokeCertificate) {
+      return {
+        typeUrl: "/akash.cert.v1beta2.MsgRevokeCertificate",
+        value: MsgRevokeCertificate.fromPartial(value)
+      };
+    }
+  }
+};

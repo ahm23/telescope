@@ -1,0 +1,610 @@
+# MCP Integration for Telescope
+
+## Overview
+
+This document describes the Model Context Protocol (MCP) integration for Telescope, which generates MCP servers alongside the TypeScript client code for blockchain interactions.
+
+## Configuration
+
+Enable MCP server generation in your Telescope configuration:
+
+```typescript
+import { TelescopeOptions } from '@cosmology/telescope';
+
+const options: TelescopeOptions = {
+  mcpServer: {
+    enabled: true
+  },
+  // ... other options
+};
+```
+
+## Generated Structure
+
+When MCP server generation is enabled, Telescope creates a `{packageName}-mcp` directory alongside your generated code:
+
+```
+outputicjs-mcp/
+├── src/
+│   ├── telescope/           # 📚 Complete generated codebase (reference only)
+│   │   ├── cosmos/          # Full cosmos SDK modules
+│   │   ├── osmosis/         # Osmosis DEX functionality  
+│   │   ├── ibc/             # Inter-blockchain communication
+│   │   └── index.ts         # Main exports
+│   ├── telescope-examples/  # 📖 Usage examples and patterns
+│   │   ├── config-example.ts
+│   │   ├── useBalance.ts
+│   │   └── getBalance.ts
+│   ├── prompts/             # 🤖 Agent instruction files
+│   │   ├── codegen-usage.md
+│   │   └── agent-guidelines.md
+│   ├── tools/               # 🔧 MCP tool implementations
+│   │   ├── balance-tools.ts
+│   │   └── {service}-tools.ts
+│   ├── index.ts             # MCP server entry point
+│   └── telescope-loader.ts  # Utility for dynamic code loading
+├── dist/                    # Compiled output (excludes telescope/)
+├── package.json
+├── tsconfig.json
+└── README.md
+```
+
+## Key Features
+
+### 1. Complete Codebase Reference
+- The entire telescope-generated codebase is copied to `src/telescope/`
+- Excluded from TypeScript compilation but available for AI agents to reference
+- Provides full context for implementing blockchain functionality
+
+### 2. Comprehensive Usage Documentation
+- **codegen-usage.md**: Complete guide for using generated code
+  - Function categories (`.rpc.func` vs `.rpc.react`)
+  - Chain configuration setup
+  - Code examples with error handling
+  - Import patterns and best practices
+
+### 3. Agent Guidelines
+- **agent-guidelines.md**: Behavioral guidelines for MCP agents
+  - Safety principles (private key protection, validation)
+  - User-friendly communication patterns
+  - Data formatting standards
+  - Security guidelines
+
+### 4. Example Implementations
+- **telescope-examples/**: Real-world usage patterns
+  - Chain configuration setup
+  - Balance query implementations
+  - React hooks vs direct functions
+  - Transaction patterns
+
+### 5. Dynamic Tool Generation
+- Automatically generates MCP tools for each detected service
+- Balance query tools (getBalance, getAllBalances, getSpendableBalances)
+- Service-specific tools for each protocol module
+- Mock implementations with guidance for real integration
+
+### 6. Prompt Integration
+- Built-in prompts accessible to MCP agents
+- Dynamic loading of instruction content
+- Structured guidance for blockchain operations
+
+## Usage with AI Agents
+
+### Installation
+```bash
+cd {packageName}-mcp
+npm install
+npm run build
+```
+
+### MCP Configuration
+```json
+{
+  "mcpServers": {
+    "{packageName}-mcp-server": {
+      "command": "node",
+      "args": ["/path/to/{packageName}-mcp/dist/index.js"]
+    }
+  }
+}
+```
+
+### Available Tools
+- `getBalance` - Query specific token balance
+- `getAllBalances` - Get all token balances for an account
+- `getSpendableBalances` - Get spendable balances
+- Dynamic service tools based on your protocol buffers
+
+### Available Prompts
+- `codegen-usage` - Comprehensive usage guide
+- `agent-guidelines` - Best practices for blockchain interactions
+
+## Technical Implementation
+
+### Dynamic Naming
+The generator uses the output directory name as the package name, ensuring:
+- Consistent naming across all generated files
+- Proper import paths in examples
+- Dynamic package.json generation
+
+### Template System
+- String templates with proper escaping for generated code
+- Dynamic service detection from protocol buffers
+- Automatic tool registration for detected services
+
+### Build Exclusion
+- TypeScript configured to exclude `src/telescope/` from compilation
+- Preserves full codebase for AI reference while keeping build output clean
+- Examples and tools are compiled but telescope code remains reference-only
+
+## Development
+
+### Testing
+```bash
+npm run inspector  # Run MCP inspector for testing tools
+```
+
+### Adding Custom Tools
+Add new tools to the appropriate service tool files or create new ones following the established patterns.
+
+### Extending Prompts
+Add new markdown files to `src/prompts/` and register them in the main server file.
+
+## Integration Benefits
+
+1. **Complete Context**: AI agents have access to the full generated codebase
+2. **Guided Implementation**: Comprehensive documentation and examples
+3. **Safety**: Built-in guidelines for secure blockchain operations
+4. **Flexibility**: Both React hooks and direct functions supported
+5. **Extensibility**: Easy to add custom tools and prompts
+
+This integration makes telescope-generated code immediately usable by AI agents while providing the necessary context and safety guidelines for blockchain operations.
+
+# Telescope MCP Server Integration
+
+Telescope now supports generating MCP (Model Context Protocol) servers for each codegen output package. This allows AI agents to interact with blockchain functionality through a standardized interface while having access to the complete telescope-generated codebase for reference.
+
+## Overview
+
+When enabled, Telescope will generate a complete MCP server package alongside your regular TypeScript clients. This MCP server provides:
+
+- **Mock blockchain tools** for demonstration and development
+- **Complete telescope codebase reference** for AI agents to understand implementation patterns
+- **Self-contained package** with all necessary telescope code included
+- **Ready-to-extend structure** for implementing real blockchain functionality
+
+## Configuration
+
+Add the `mcpServer` option to your telescope configuration:
+
+```typescript
+const config = {
+  mcpServer: {
+    enabled: true
+  },
+  // ... other telescope options
+}
+```
+
+### Options
+
+- **`enabled`**: Boolean to enable/disable MCP server generation
+
+When enabled, Telescope will generate a complete MCP server package with the entire telescope codebase included for reference.
+
+## Generated Structure
+
+For each codegen package (e.g., `outputicjs`), telescope generates a companion MCP server:
+
+```
+outputicjs-mcp/
+├── package.json          # Ready-to-publish npm package
+├── tsconfig.json         # TypeScript configuration (excludes telescope/)
+├── README.md             # Usage instructions
+└── src/
+    ├── telescope/        # 📚 Complete telescope generated codebase (reference only)
+    │   ├── cosmos/       # Full cosmos SDK modules 
+    │   │   ├── bank/     # Balance queries, transfers
+    │   │   ├── staking/  # Validator operations
+    │   │   ├── gov/      # Governance functionality
+    │   │   └── ...       # Other cosmos modules
+    │   ├── osmosis/      # Osmosis DEX functionality
+    │   ├── ibc/          # Inter-blockchain communication
+    │   ├── akash/        # Akash provider services
+    │   ├── index.ts      # Main telescope exports
+    │   └── ...           # All generated telescope files
+    ├── tools/            # 🔧 MCP tool implementations (mock/demo)
+    │   ├── balance-tools.ts  # Balance query tools
+    │   ├── query-tools.ts    # General query service tools
+    │   ├── msg-tools.ts      # Message service tools
+    │   └── ...               # Additional service tools
+    ├── prompts/          # 📝 AI agent prompt templates
+    │   ├── query-prompt.md
+    │   ├── msg-prompt.md
+    │   └── ...
+    └── index.ts          # MCP server entry point
+```
+
+**Key Features:**
+- **Complete Reference**: The `src/telescope/` directory contains the entire telescope-generated codebase
+- **Build Exclusion**: Telescope code is excluded from TypeScript compilation to avoid dependency issues  
+- **Mock Implementation**: Current tools provide mock responses for demonstration
+- **AI Reference**: AI agents can read telescope code to understand implementation patterns
+
+## Usage
+
+### 1. Build and Install
+
+After generation, build and install the MCP server:
+
+```bash
+cd outputicjs-mcp
+npm install
+npm run build    # Compiles only the MCP server code (telescope/ is excluded)
+```
+
+### 2. Configure AI Agents
+
+Add the MCP server to your AI agent configuration:
+
+**For Cursor:**
+```json
+{
+  "mcpServers": {
+    "outputicjs-mcp-server": {
+      "command": "node",
+      "args": ["absolute-path/dist/index.js"]
+    }
+  }
+}
+```
+
+**For Claude Desktop:**
+```json
+{
+  "mcpServers": {
+    "outputicjs-mcp-server": {
+      "command": "node",
+      "args": ["absolute-path/dist/index.js"]
+    }
+  }
+}
+```
+
+### 3. AI Agent Interactions
+
+Once configured, AI agents can:
+
+```
+AI: "Query the balance for address cosmos1... in uatom"
+MCP Server: Returns mock balance data (for demo purposes)
+
+AI: "How can I implement real balance queries?"
+MCP Server: AI can read telescope/cosmos/bank/v1beta1/query.ts for implementation details
+
+AI: "Show me the structure of a MsgSend transaction"
+MCP Server: AI can reference telescope/cosmos/bank/v1beta1/tx.ts for message structures
+```
+
+**Current Implementation Status:**
+- ✅ **Mock tools** - Provide demo responses and error handling
+- ✅ **Complete telescope reference** - Full codebase available for AI understanding  
+- 🚧 **Real blockchain connectivity** - Ready for implementation using telescope code
+- 🚧 **Transaction signing** - Framework in place for wallet integration
+
+## Generated Tools
+
+The MCP server provides mock implementations with the complete telescope codebase as reference:
+
+### Mock Balance Tools
+- **`getBalance`**: Returns demo balance data for any address
+- **`getAllBalances`**: Shows multiple token balances  
+- **`getSpendableBalances`**: Lists available (non-locked) tokens
+
+### Mock Query Tools
+- **Governance**: Demo proposal and voting data
+- **Staking**: Sample validator and delegation information
+- **Supply**: Mock token supply information
+- **Distribution**: Demo reward and commission data
+
+### Mock Service Tools  
+- **Custom services**: Template implementations for blockchain-specific functionality
+- **Transaction building**: Framework for message composition
+- **Error handling**: Comprehensive error scenarios and responses
+
+### Reference Implementation
+- **Complete telescope codebase**: Available in `src/telescope/` for AI agents to understand real implementation patterns
+- **Type definitions**: All protobuf types and interfaces included
+- **Client examples**: Working examples of query and transaction clients
+
+## Error Handling
+
+All tools include comprehensive error handling:
+
+- **Network errors**: Connection issues with RPC endpoints
+- **Validation errors**: Invalid parameters or malformed requests  
+- **Blockchain errors**: Transaction failures, insufficient funds, etc.
+- **Type errors**: Mismatched data types or missing fields
+
+## Advanced Configuration
+
+### Custom RPC Endpoints
+
+Tools accept custom RPC endpoints:
+
+```typescript
+// AI can specify different endpoints
+await balanceTool({
+  address: "cosmos1...",
+  denom: "uatom", 
+  endpoint: "https://cosmos-rpc.example.com"
+})
+```
+
+### Package-Specific Options
+
+Configure MCP generation per package:
+
+```typescript
+const config = {
+  packages: {
+    cosmos: {
+      mcpServer: {
+        enabled: true,
+        customEndpoints: {
+          mainnet: "https://cosmos-rpc.polkachu.com",
+          testnet: "https://rpc.sentry-01.theta-testnet.polkadot.io"
+        }
+      }
+    }
+  }
+}
+```
+
+## Examples
+
+### Mock Balance Query Example
+
+```typescript
+// Current mock implementation
+server.tool(
+  'getBalance',
+  'Query account balance (mock implementation)',
+  {
+    inputSchema: {
+      type: 'object',
+      properties: {
+        address: { type: 'string', description: 'Account address' },
+        denom: { type: 'string', description: 'Token denomination', default: 'uatom' }
+      },
+      required: ['address']
+    }
+  },
+  async (args) => {
+    // Mock response - replace with real telescope implementation
+    return {
+      balance: {
+        denom: args.denom || 'uatom',
+        amount: '1000000' // Mock balance: 1 ATOM
+      }
+    };
+  }
+);
+```
+
+### Real Implementation Reference
+
+AI agents can reference the telescope codebase to understand real implementations:
+
+```typescript
+// From src/telescope/cosmos/bank/v1beta1/query.ts (reference only)
+export interface QueryBalanceRequest {
+  address: string;
+  denom: string;
+}
+
+export interface QueryBalanceResponse {
+  balance?: Coin;
+}
+
+// From src/telescope/cosmos/bank/v1beta1/tx.ts (reference only)  
+export interface MsgSend {
+  fromAddress: string;
+  toAddress: string;
+  amount: Coin[];
+}
+```
+
+### Implementation Guide
+
+To implement real blockchain functionality, AI agents can:
+
+1. **Study the telescope code structure** in `src/telescope/`
+2. **Use the type definitions** for proper message construction
+3. **Follow the client patterns** shown in telescope examples
+4. **Replace mock implementations** with actual RPC calls
+
+## Development and Testing
+
+### MCP Inspector
+
+Test your generated MCP server:
+
+```bash
+cd outputicjs-mcp
+npm run inspector
+```
+
+This opens the MCP Inspector for interactive testing of mock tools.
+
+### Implementing Real Functionality
+
+Replace mock implementations with real blockchain connectivity:
+
+```typescript
+// Example: Converting mock to real implementation
+// src/tools/balance-tools.ts
+
+import { StargateClient } from '@cosmjs/stargate';
+
+export function registerBalanceTools(server: McpServer) {
+  server.tool(
+    'getBalance',
+    'Query real account balance',
+    schema,
+    async (args) => {
+      // Replace mock with real implementation
+      const client = await StargateClient.connect(args.rpcEndpoint || 'https://cosmos-rpc.example.com');
+      const balance = await client.getBalance(args.address, args.denom);
+      return { balance };
+    }
+  );
+}
+```
+
+### Using Telescope Reference
+
+AI agents can read telescope code to understand implementation:
+
+```typescript
+// AI can read: src/telescope/cosmos/bank/v1beta1/query.rpc.Query.ts
+// To understand how to implement QueryClientImpl
+
+// AI can read: src/telescope/cosmos/bank/v1beta1/tx.rpc.msg.ts  
+// To understand how to implement MsgClientImpl
+```
+
+## Integration Examples
+
+### CosmWasm Reference
+
+When CosmWasm is enabled, telescope includes contract interaction types:
+
+```typescript
+// Available in src/telescope/cosmwasm/wasm/v1/tx.ts (reference only)
+export interface MsgExecuteContract {
+  sender: string;
+  contract: string;
+  msg: Uint8Array;
+  funds: Coin[];
+}
+
+// Current mock implementation
+server.tool(
+  'executeContract',
+  'Execute a smart contract (mock)',
+  schema,
+  async ({ contractAddress, msg }) => {
+    // Mock response - AI can use telescope reference to implement real version
+    return {
+      result: 'Mock contract execution successful',
+      events: [],
+      data: null
+    };
+  }
+);
+```
+
+### IBC Reference
+
+Cross-chain message types available in telescope:
+
+```typescript
+// Available in src/telescope/ibc/applications/transfer/v1/tx.ts (reference only)
+export interface MsgTransfer {
+  sourcePort: string;
+  sourceChannel: string;
+  token?: Coin;
+  sender: string;
+  receiver: string;
+  timeoutHeight?: Height;
+  timeoutTimestamp: bigint;
+}
+
+// Current mock implementation
+server.tool(
+  'ibcTransfer', 
+  'Transfer tokens across IBC channels (mock)',
+  schema,
+  async ({ sourcePort, sourceChannel, token, sender, receiver }) => {
+    // Mock response - AI can use telescope reference to implement real version
+    return {
+      result: 'Mock IBC transfer initiated',
+      sequence: 123
+    };
+  }
+);
+```
+
+## Best Practices
+
+1. **Start with mock tools**: Use the generated mock implementations to understand the MCP interface
+2. **Study telescope reference**: Read the complete telescope codebase in `src/telescope/` before implementing real functionality
+3. **Implement incrementally**: Replace mock tools one by one with real blockchain connectivity
+4. **Test thoroughly**: Use the MCP Inspector to validate both mock and real implementations
+5. **Handle errors gracefully**: Follow the error handling patterns shown in mock implementations
+6. **Document implementations**: Add clear descriptions for AI agent understanding
+7. **Version carefully**: Keep MCP servers in sync with telescope-generated packages
+
+## Troubleshooting
+
+### Common Issues
+
+**MCP server won't start:**
+- Check that all dependencies are installed (`npm install`)
+- Verify the build completed successfully (`npm run build`)
+- Ensure TypeScript compilation excluded telescope directory correctly
+
+**Mock tools not responding:**
+- Verify the MCP server is running (`node dist/index.js`)
+- Check that the server is properly configured in your AI agent
+- Confirm tool schemas match expected input format
+
+**Implementing real functionality:**
+- Study the telescope reference code in `src/telescope/` first
+- Ensure RPC endpoints are accessible and responsive
+- Add proper error handling for network failures
+- Validate input parameters match telescope type definitions
+
+**AI agent can't find telescope reference:**
+- Verify the telescope code was copied to `src/telescope/`
+- Check that the directory structure matches the original package
+- Ensure all telescope files are present and readable
+
+### Debug Mode
+
+Enable debug logging:
+
+```bash
+DEBUG=mcp:* node dist/index.js
+```
+
+## Roadmap
+
+### Current Status (v1.0)
+- ✅ **Mock MCP server generation**: Complete demo implementation
+- ✅ **Telescope codebase inclusion**: Full reference implementation available
+- ✅ **Build system**: Proper TypeScript exclusion and compilation
+- ✅ **Cross-platform compatibility**: Windows/Unix script support
+
+### Planned Enhancements (v1.1+)
+
+- **Real blockchain connectivity**: Replace mock implementations with actual RPC calls
+- **Wallet integration**: Support for key management and transaction signing
+- **Configuration management**: Runtime RPC endpoint and network selection
+- **Error handling**: Enhanced blockchain-specific error responses
+- **Performance optimization**: Connection pooling and query caching
+
+### Future Features (v2.0+)
+
+- **Resource support**: File and data resources for AI agents
+- **Streaming responses**: Real-time blockchain event streaming  
+- **Multi-chain tools**: Cross-chain operation support
+- **Smart contract tools**: Enhanced CosmWasm integration
+- **Governance automation**: Advanced proposal and voting workflows
+
+---
+
+Generated by [Telescope](https://github.com/hyperweb-io/telescope) 🔭
+
+For issues and feature requests, please visit the [Telescope GitHub repository](https://github.com/hyperweb-io/telescope/issues). 

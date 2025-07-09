@@ -97,6 +97,10 @@ const options: TelescopeOptions = {
     disableMsgTypes: false,
     useProtoOptionality: true,
   },
+
+  mcpServer: {
+    enabled: true,
+  },
 };
 
 const input: TelescopeInput = {

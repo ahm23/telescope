@@ -7,7 +7,7 @@ This document outlines all available methods to install and use Telescope.
 Install Telescope globally:
 
 ```sh
-npm install -g @cosmology/telescope
+npm install -g @hyperweb/telescope
 ```
 
 ### Generate a Package
@@ -242,7 +242,7 @@ yarn codegen
 Add Telescope to your project:
 
 ```sh
-yarn add --dev @cosmology/telescope
+yarn add --dev @hyperweb/telescope
 ```
 
 Install required dependencies:
@@ -263,14 +263,14 @@ npx telescope download
 First, add Telescope and dependencies:
 
 ```sh
-yarn add --dev @cosmology/telescope
+yarn add --dev @hyperweb/telescope
 yarn add @cosmjs/amino @cosmjs/proto-signing @cosmjs/stargate @cosmjs/tendermint-rpc
 ```
 
 ### Downloading Protos Programmatically
 
 ```js
-import downloadProtos from '@cosmology/telescope/main/commands/download'
+import downloadProtos from '@hyperweb/telescope/main/commands/download'
 
 const config = {
   repos: [
@@ -304,7 +304,7 @@ downloadProtos(config)
 
 ```js
 import { join } from 'path';
-import telescope from '@cosmology/telescope';
+import telescope from '@hyperweb/telescope';
 import { sync as rimraf } from 'rimraf';
 
 // Define input and output paths
@@ -365,7 +365,7 @@ telescope({
 ```js
 // scripts/codegen.js
 import { join } from 'path';
-import telescope from '@cosmology/telescope';
+import telescope from '@hyperweb/telescope';
 import { sync as rimraf } from 'rimraf';
 
 const protoDirs = [join(__dirname, '/../proto')];

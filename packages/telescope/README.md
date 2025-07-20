@@ -17,7 +17,7 @@
     <br />
    <a href="https://github.com/hyperweb-io/telescope/blob/main/LICENSE-MIT"><img height="20" src="https://img.shields.io/badge/license-MIT-blue.svg"/></a>
    <a href="https://github.com/hyperweb-io/telescope/blob/main/LICENSE-Apache"><img height="20" src="https://img.shields.io/badge/license-Apache-blue.svg"/></a>
-   <a href="https://www.npmjs.com/package/@cosmology/telescope"><img height="20" src="https://img.shields.io/github/package-json/v/hyperweb-io/telescope?filename=packages%2Ftelescope%2Fpackage.json"/></a>
+   <a href="https://www.npmjs.com/package/@hyperweb/telescope"><img height="20" src="https://img.shields.io/github/package-json/v/hyperweb-io/telescope?filename=packages%2Ftelescope%2Fpackage.json"/></a>
 </p>
 
 <p align="center">
@@ -173,7 +173,7 @@ The methods below are all the options you can use to install and use Telescope
 ### Telescope CLI
 Install telescope
 ```sh
-npm install -g @cosmology/telescope
+npm install -g @hyperweb/telescope
 ```
 The steps by order are: generate, download and transpile.
 
@@ -377,7 +377,7 @@ If you want to use telescope in your own project.
 
 Run the command in ./your-project
 ```sh
-yarn add --dev @cosmology/telescope
+yarn add --dev @hyperweb/telescope
 ```
 Install helpers and cosmjs [dependencies listed here](#dependencies)
 
@@ -391,14 +391,14 @@ To be noted for cli command, add 'npx' or 'yarn' prefix when you use it within y
 First add telescope to your `devDependencies`:
 
 ```sh
-yarn add --dev @cosmology/telescope
+yarn add --dev @hyperweb/telescope
 ```
 
 Install helpers and cosmjs [dependencies listed here](#dependencies)
 
 Download command example:
 ```js
-import downloadProtos from '@cosmology/telescope/main/commands/download'
+import downloadProtos from '@hyperweb/telescope/main/commands/download'
 
 const config = {
   repos: [
@@ -431,7 +431,7 @@ downloadProtos(config)
 Transpile command example:
 ```js
 import { join } from 'path';
-import telescope from '@cosmology/telescope';
+import telescope from '@hyperweb/telescope';
 import { sync as rimraf } from 'rimraf';
 
 const protoDirs = [join(__dirname, '/../proto')];

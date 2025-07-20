@@ -23,7 +23,7 @@ The Telescope CLI provides direct access to all Telescope functionality through 
 First, let's install Telescope globally:
 
 ```sh
-npm install -g @cosmology/telescope
+npm install -g @hyperweb/telescope
 ```
 
 This makes the `telescope` command available in your terminal.
@@ -290,7 +290,7 @@ If you're working with an existing project and want to integrate Telescope, manu
 ### Step 1: Add Telescope to Your Project
 
 ```sh
-yarn add --dev @cosmology/telescope
+yarn add --dev @hyperweb/telescope
 ```
 
 ### Step 2: Install Required Dependencies
@@ -317,7 +317,7 @@ For the most flexibility, you can integrate Telescope directly into your build p
 ### Step 1: Install Dependencies
 
 ```sh
-yarn add --dev @cosmology/telescope
+yarn add --dev @hyperweb/telescope
 yarn add @cosmjs/amino @cosmjs/proto-signing @cosmjs/stargate @cosmjs/tendermint-rpc
 ```
 
@@ -326,7 +326,7 @@ yarn add @cosmjs/amino @cosmjs/proto-signing @cosmjs/stargate @cosmjs/tendermint
 Create a file called `download-protos.js` with the following content:
 
 ```js
-import downloadProtos from '@cosmology/telescope/main/commands/download'
+import downloadProtos from '@hyperweb/telescope/main/commands/download'
 
 const config = {
   repos: [
@@ -362,7 +362,7 @@ Create a file called `codegen.js` with the following content:
 
 ```js
 import { join } from 'path';
-import telescope from '@cosmology/telescope';
+import telescope from '@hyperweb/telescope';
 import { sync as rimraf } from 'rimraf';
 
 // Define input and output paths
@@ -440,7 +440,7 @@ Here's a more complete example that includes additional configuration options:
 
 ```js
 import { join } from 'path';
-import telescope from '@cosmology/telescope';
+import telescope from '@hyperweb/telescope';
 import { sync as rimraf } from 'rimraf';
 
 const protoDirs = [join(__dirname, '/proto')];

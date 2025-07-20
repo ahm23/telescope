@@ -1,20 +1,4 @@
 {
-    "editor.formatOnSave": true,
-    "[javascriptreact]": {
-        "editor.formatOnSave": false
-    },
-    "[javascript]": {
-        "editor.formatOnSave": false
-    },
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
-    },
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact"
-    ],
-    "files.exclude": {
-        ".yarn/*": true
-    },
-    "files.eol": "\n",
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.startupEditor": "none"
 }

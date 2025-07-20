@@ -10,7 +10,7 @@ import { getTestProtoStore } from "../test-utils";
 import { TelescopeParseContext } from "../src/build";
 import { makeAliasName, makeServiceAliasName } from "@cosmology/utils";
 
-const outPath = __dirname + "/../../../__fixtures__/v-next/outputicjs";
+const outPath = __dirname + "/../../../__fixtures__/v-next/customchain-js";
 const store = getTestProtoStore();
 store.traverseAll();
 

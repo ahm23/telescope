@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.15.0 (2025-07-20)
+
+
+### Bug Fixes
+
+* exclude .registry from bundle ([8c2ff6f](https://github.com/hyperweb-io/telescope/commit/8c2ff6f39ecab9e3ee0bdc950701dccf17b9549a))
+* export DeliverTxResponse ([b2b7761](https://github.com/hyperweb-io/telescope/commit/b2b77613c2ca61653f7319700c5f0d947f76bb97))
+* fix ast export issue, add imports utils. ([a224606](https://github.com/hyperweb-io/telescope/commit/a2246062dda6a5f1ec3c2953263a5c7aff2bb71d))
+* flag names ([eed7fb3](https://github.com/hyperweb-io/telescope/commit/eed7fb3b6f726ff3590b7919f6445298f98f07da))
+* **JsonSafe:** handle nested structures and arrays ([5812e73](https://github.com/hyperweb-io/telescope/commit/5812e734a15bdc6e9659930069e945586218a1e0))
+* minor ast adjustments ([e38bbb6](https://github.com/hyperweb-io/telescope/commit/e38bbb610aeaf234602838d0f83368e6735a3eb2))
+* named of Endo base64 imports ([977d598](https://github.com/hyperweb-io/telescope/commit/977d5987364eb473cf76922e96a9e940f353ac31))
+* optional field default value ([1590b18](https://github.com/hyperweb-io/telescope/commit/1590b18a6d81fc2e767869ed366f6d0deaabad02))
+* pass in ProtoServiceMethod type, use SigningClientResolver type, remove type aliases. ([620568c](https://github.com/hyperweb-io/telescope/commit/620568c0e5d44b96d39c88a6293b16507a42ab9f))
+* refactor helper funcs ([f9c9bbf](https://github.com/hyperweb-io/telescope/commit/f9c9bbf80023fa48c0bef5f1c78e955469d7b3be))
+* registerExistingTypeUrl ([1c6e5cd](https://github.com/hyperweb-io/telescope/commit/1c6e5cd217958a1bb981987709a5cc055198d739))
+* remove unused code. ([40b4130](https://github.com/hyperweb-io/telescope/commit/40b4130db43f14c8ea938171de0be53b9a19fe3f))
+* **types:** handle Date in JsonSafe ([ae60a32](https://github.com/hyperweb-io/telescope/commit/ae60a32cc3dcd46bf84c3acfe49ba89ff328539c))
+* use correct var name for options ([f294fb9](https://github.com/hyperweb-io/telescope/commit/f294fb936e1688e30a8b884db756693a80f52407))
+
+
+### Features
+
+* add conditional logic to change UTILS.decimals value ([cf5279b](https://github.com/hyperweb-io/telescope/commit/cf5279bbc9afa52bae57cccb2961c945d64c9ad4))
+* add emit default and fix timestamp ([1c4296c](https://github.com/hyperweb-io/telescope/commit/1c4296c5eb5cb48b42b6c9ba7523f8faa8a8bcbe))
+* add endo base64 lib support ([197da9e](https://github.com/hyperweb-io/telescope/commit/197da9e3ea10c7dde76dcf31da4484be70498c6e))
+* add endo/base64 support ([a920d39](https://github.com/hyperweb-io/telescope/commit/a920d39802b3c9fc45c12710c719f82adbdee04e))
+* decimal supporting bigInt and options to use from cosmjs or agoric-sdk ([cc8dbb7](https://github.com/hyperweb-io/telescope/commit/cc8dbb7e7d96c1b53cd630fe9e987981389cf585))
+* ESM compatibility ([7901482](https://github.com/hyperweb-io/telescope/commit/79014823e2424594d4d4544b27000905e696a3f0))
+* fix omit empty handling ([3a8e76b](https://github.com/hyperweb-io/telescope/commit/3a8e76ba6a402cec7a64e4ec98e58133acf19f09))
+* partially add support for amino ([f9ae22c](https://github.com/hyperweb-io/telescope/commit/f9ae22c86665590b8caa6b3918738a903592c29b))
+* re-run tests and update snapshots ([ced5e43](https://github.com/hyperweb-io/telescope/commit/ced5e4313ff29a7e268dd0aee7aa2f492ac176a3))
+* use ast call expression for toEncoders&toConverters. ([471d866](https://github.com/hyperweb-io/telescope/commit/471d86645cde92a3dcb71ee00c1c8f529926c72a))
+
+
+### Reverts
+
+* Revert "RC versions ready" ([04081a9](https://github.com/hyperweb-io/telescope/commit/04081a9d1f80feb3ae664bce2d1364850b3daaca))
+* Revert "chore(release): publish" ([086a55f](https://github.com/hyperweb-io/telescope/commit/086a55f14c5ca33ee70a0e2121406dd37eb643f1))
+
+
+
+
+
 ## [1.12.21](https://github.com/hyperweb-io/telescope/compare/@hyperweb/telescope@1.12.20...@hyperweb/telescope@1.12.21) (2025-07-20)
 
 **Note:** Version bump only for package @hyperweb/telescope

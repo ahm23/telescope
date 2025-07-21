@@ -755,11 +755,10 @@ See [Helper Functions Configuration](#helper-functions-configuration) for more i
 | ------------------------------ | --------------------------------------------------------------  | ---------- |
 | `mcpServer.enabled`            | generate MCP (Model Context Protocol) servers alongside TypeScript clients for AI agent integration | `false`    |
 
-When enabled, Telescope generates a complete MCP server package (`{packageName}-mcp`) that includes:
-- Mock blockchain tools for demonstration and development
-- Complete telescope codebase reference for AI agents
-- Self-contained package with all necessary telescope code
-- Ready-to-extend structure for implementing real blockchain functionality
+When enabled, Telescope generates an MCP server package (`{packageName}-mcp`) that includes:
+- **Function generator tool** for creating custom blockchain functions
+- **Telescope examples** as reference patterns for implementation
+- **AI prompts** for usage guidelines and best practices
 
 See [MCP Integration](https://docs.hyperweb.io/telescope/developing/mcp-integration) for detailed documentation.
 

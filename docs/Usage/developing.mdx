@@ -1,0 +1,241 @@
+# Developing
+
+This document provides guidance for contributing to the Telescope project and developing with Telescope-generated code.
+
+## Setting Up the Development Environment
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (v14 or later)
+- Yarn (v1.x)
+- Git
+
+### Clone the Repository
+
+```sh
+git clone https://github.com/hyperweb-io/telescope.git
+cd telescope
+```
+
+### Install Dependencies
+
+```sh
+yarn install
+```
+
+### Build Packages
+
+Build all packages in the monorepo:
+
+```sh
+yarn build
+```
+
+### Run Tests
+
+```sh
+yarn test
+```
+
+## Project Structure
+
+Telescope is organized as a monorepo with several packages:
+
+| Package | Description |
+| ------- | ----------- |
+| `packages/telescope` | Main Telescope code generator package |
+| `packages/types` | TypeScript type definitions |
+| `packages/ast` | Abstract syntax tree utilities |
+| `packages/parser` | Protobuf parsing utilities |
+| `packages/utils` | Shared utility functions |
+| `packages/lcd` | LCD client utilities |
+| `packages/starship` | Testing and development utilities |
+
+## Making Changes
+
+### Development Workflow
+
+1. Create a new branch for your changes:
+
+```sh
+git checkout -b feature/your-feature-name
+```
+
+2. Make your changes to the codebase
+3. Add tests for your changes
+4. Run the tests to ensure they pass:
+
+```sh
+yarn test
+```
+
+5. Build the packages to ensure they compile correctly:
+
+```sh
+yarn build
+```
+
+6. Commit your changes with a descriptive commit message:
+
+```sh
+git commit -m "feat: add new feature"
+```
+
+7. Push your branch to GitHub:
+
+```sh
+git push origin feature/your-feature-name
+```
+
+8. Create a pull request on GitHub
+
+### Commit Message Convention
+
+Telescope follows the [Conventional Commits](https://www.conventionalcommits.org/) specification for commit messages:
+
+- `feat`: A new feature
+- `fix`: A bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting, etc.)
+- `refactor`: Code changes that neither fix a bug nor add a feature
+- `perf`: Performance improvements
+- `test`: Adding or fixing tests
+- `chore`: Changes to the build process or auxiliary tools
+
+Example:
+
+```
+feat(parser): add support for custom annotations
+```
+
+## Testing
+
+### Running Tests
+
+Run all tests:
+
+```sh
+yarn test
+```
+
+Run tests for a specific package:
+
+```sh
+yarn workspace @hyperweb/telescope test
+```
+
+Run a specific test:
+
+```sh
+yarn test -t "test name"
+```
+
+### Adding Tests
+
+When adding new features or fixing bugs, you should also add tests to ensure the functionality works as expected. Tests are located in the `__tests__` directory of each package.
+
+Example test:
+
+```typescript
+import { parseProto } from '../src/parser';
+
+describe('Parser', () => {
+  it('should parse a simple proto file', () => {
+    const proto = `
+      syntax = "proto3";
+      package example;
+      message Test {
+        string name = 1;
+      }
+    `;
+    
+    const result = parseProto(proto);
+    expect(result.package).toBe('example');
+    expect(result.messages.length).toBe(1);
+    expect(result.messages[0].name).toBe('Test');
+  });
+});
+```
+
+## Debugging
+
+### Debugging Telescope
+
+If you're developing Telescope itself, you can add debug logging to help understand what's happening:
+
+```typescript
+import { logger } from '@cosmology/utils';
+
+logger.debug('Some debug information', { data });
+```
+
+Set the log level to debug:
+
+```typescript
+import { setLogLevel } from '@cosmology/utils';
+
+setLogLevel('debug');
+```
+
+### Debugging Generated Code
+
+If you're developing with Telescope-generated code, you can use the standard TypeScript debugging tools, such as:
+
+- VS Code debugging
+- Chrome DevTools with source maps
+- `console.log` statements (temporarily)
+
+## Creating a New Release
+
+### Versioning
+
+Telescope follows [Semantic Versioning](https://semver.org/):
+
+- MAJOR version for incompatible API changes
+- MINOR version for adding functionality in a backward-compatible manner
+- PATCH version for backward-compatible bug fixes
+
+### Release Process
+
+1. Update the version numbers in package.json files
+2. Update the CHANGELOG.md files
+3. Create a new release with a tag matching the version number
+4. Publish to npm
+
+```sh
+yarn publish
+```
+
+## Best Practices
+
+### Code Style
+
+- Use TypeScript for type safety
+- Follow the existing code style in the codebase
+- Use prettier for code formatting
+- Add JSDoc comments for public APIs
+
+### Pull Requests
+
+- Keep PRs focused on a single topic
+- Add sufficient description of the changes
+- Reference related issues
+- Ensure all tests pass
+- Update documentation as needed
+
+### Documentation
+
+When making changes, update the relevant documentation:
+
+- Update READMEs if necessary
+- Add JSDoc comments to new functions
+- Update examples if API changes are made
+
+## Additional Resources
+
+- [Telescope GitHub Repository](https://github.com/hyperweb-io/telescope)
+- [Cosmos SDK Documentation](https://docs.cosmos.network/)
+- [CosmJS Documentation](https://cosmos.github.io/cosmjs/)
+- [Protobuf Documentation](https://developers.google.com/protocol-buffers/docs/overview) 

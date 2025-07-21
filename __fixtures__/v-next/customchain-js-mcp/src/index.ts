@@ -59,8 +59,8 @@ async function main() {
 
   // Register blockchain function generator tool
   server.tool(
-    'create-blockchain-function',
-    'Create custom blockchain functions by referencing telescope examples and generated code',
+    'use-customchain-js',
+    'Analyzes requests and provides step-by-step implementation guidance for custom blockchain functions using telescope examples as reference',
     {
       task: z.string().describe('The blockchain task to implement (e.g., "get balance", "check staking rewards", "query validators")').optional(),
       chainName: z.string().describe('The blockchain name (e.g., cosmos, osmosis, injective)').optional(),
@@ -72,7 +72,7 @@ async function main() {
         const { task = 'get account balance', chainName = 'cosmos', functionType = 'query', customRequirements } = args;
         
         // Read available examples
-        const examplesPath = resolve(__dirname, 'telescope-examples');
+        const examplesPath = resolve(__dirname, 'customchain-js-examples');
         let availableExamples: string[] = [];
         
         try {
@@ -111,7 +111,7 @@ async function main() {
           '## Instructions for Implementation',
           '',
           '### Step 1: Review Available Examples',
-          'The following example files are available in `src/telescope-examples/`:',
+          `The following example files are available in \`src/customchain-js-examples/\`:`,
           '',
           examplesList,
           '',
@@ -199,8 +199,8 @@ async function main() {
           '',
           '## Additional Resources',
           '',
-          '- **Full codebase reference**: `src/telescope/` directory contains all generated types and functions',
-          '- **Configuration examples**: `src/telescope-examples/config-example.ts`',
+          `- **Full codebase reference**: \`src/customchain-js/\` directory contains all generated types and functions`,
+          `- **Configuration examples**: \`src/customchain-js-examples/config-example.ts\``,
           '- **Chain registry data**: `src/prompts/chains.json`',
           '- **Usage guidelines**: Use the `codegen-usage` and `agent-guidelines` prompts for detailed instructions',
           '',
@@ -211,7 +211,7 @@ async function main() {
           '3. Test your implementation with proper error handling',
           '4. Ensure proper TypeScript types are used',
           '',
-          'The examples in `telescope-examples/` are production-ready patterns that you can adapt for any blockchain task.'
+          `The examples in \`customchain-js-examples/\` are production-ready patterns that you can adapt for any blockchain task.`
         ].filter(line => line !== '').join('\n');
 
         return {

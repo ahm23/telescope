@@ -21,7 +21,7 @@
   "exclude": [
     "node_modules",
     "dist",
-    "src/telescope/**/*",
-    "src/telescope-examples/**/*"
+    "src/customchain-js/**/*",
+    "src/customchain-js-examples/**/*"
   ]
 }

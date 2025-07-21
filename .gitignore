@@ -6,7 +6,9 @@ coverage
 packages/**/build
 packages/**/main
 packages/**/module
+**/dist
 launch.json
 .vscode/settings.json
 .idea/
+.vscode/
 __fixtures__/misc/proto-download/**

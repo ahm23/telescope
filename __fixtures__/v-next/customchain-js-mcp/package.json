@@ -1,11 +1,11 @@
 {
-  "name": "@customchain-js/mcp-server",
+  "name": "customchain-js-mcp",
   "version": "0.1.0",
   "description": "MCP server for customchain-js blockchain interactions",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
-    "@customchain-js/mcp-server": "./dist/index.js"
+    "customchain-js-mcp-server": "./dist/index.js"
   },
   "scripts": {
     "build": "rimraf dist && tsc",

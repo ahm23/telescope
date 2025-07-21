@@ -134,7 +134,7 @@ function getTypesForPackage(builder: TelescopeBuilder, packageName: string): Arr
 }
 
 export const plugin = (builder: TelescopeBuilder) => {
-    if (!builder.options.readme.enabled && !builder.options.mcpServer.enabled) {
+    if (!builder.options?.readme?.enabled && !builder.options?.mcpServer?.enabled) {
         return;
     }
 

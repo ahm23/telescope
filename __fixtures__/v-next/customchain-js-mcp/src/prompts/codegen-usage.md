@@ -1,106 +1,135 @@
 # Codegen Usage Guide
 
 ## Overview
-This guide provides instructions for MCP agents on how to use the telescope generated code in the customchain-js package.
+This guide provides instructions for MCP agents on how to use the telescope generated code when implementing the `use-customchain-js` tool.
 
-## Category of Functions
+## Understanding the Structure
 
-### 1. **.rpc.func** - Direct Function Calls
-These are direct async functions that make RPC calls to blockchain nodes. Use these for:
+### Primary Reference: `src/customchain-js/` Directory
+This is your **main reference** for understanding the complete telescope-generated codebase. It contains:
+
+- **Complete type definitions** for all blockchain modules
+- **Client implementations** for queries and transactions  
+- **Generated interfaces** from protobuf definitions
+- **All available methods** and their signatures
+
+**Key files to understand**:
+- `src/customchain-js/index.ts` - Main exports and available modules
+- `src/customchain-js/cosmos/` - Cosmos SDK modules (bank, staking, gov, etc.)
+- `src/customchain-js/osmosis/` - Osmosis-specific modules
+- `src/customchain-js/ibc/` - Inter-blockchain communication
+- `src/customchain-js/README.md` - Comprehensive documentation
+
+### Production Examples: `src/customchain-js-examples/` Directory  
+Use these as **implementation patterns** and **logic reference**:
+
+- **Real production code** showing how to use telescope functions
+- **Best practices** for error handling and data processing
+- **Complete workflows** for common blockchain operations
+
+**⚠️ Important**: These examples may contain import/compilation errors since they reference the main codebase. **Focus on the logic and patterns** rather than copying code directly.
+
+## Using the MCP Tool
+
+### Single Tool: `use-customchain-js`
+This MCP server provides one tool that generates implementation guidance by:
+
+1. **Analyzing your request** (task, chain, function type)
+2. **Finding relevant examples** from `customchain-js-examples/`
+3. **Providing step-by-step guidance** using telescope patterns
+4. **Showing proper imports** and configuration
+
+## Implementation Approach
+
+### Step 1: Understand Telescope Structure
+When implementing a function, first explore `src/customchain-js/` to understand:
+
+```typescript
+// Example: For balance queries, look at:
+// src/customchain-js/cosmos/bank/v1beta1/query.ts - Type definitions
+// src/customchain-js/cosmos/bank/v1beta1/query.rpc.Query.ts - Query client
+// src/customchain-js/cosmos/bank/v1beta1/query.rpc.func.ts - Direct functions
+// src/customchain-js/cosmos/bank/v1beta1/query.rpc.react.ts - React hooks
+```
+
+### Step 2: Reference Production Examples
+Look at `customchain-js-examples/` for implementation patterns:
+
+```typescript
+// Example: useBalance.ts shows the pattern for:
+// - Proper imports from telescope
+// - Error handling approaches  
+// - Data transformation logic
+// - Integration with React Query
+
+// Focus on UNDERSTANDING the logic:
+// - How RPC endpoints are configured
+// - How parameters are validated
+// - How responses are processed
+// - How errors are handled
+```
+
+### Step 3: Generate Your Implementation
+Use the patterns from both directories to create your function:
+
+```typescript
+// Your implementation should:
+// 1. Use proper imports from the telescope codebase
+// 2. Follow error handling patterns from examples
+// 3. Include proper TypeScript types
+// 4. Handle edge cases shown in examples
+```
+
+## Category of Functions in Telescope
+
+### 1. **query.rpc.func.ts** - Direct Function Calls
 - Server-side operations
-- Node.js scripts
-- Direct blockchain queries outside React
+- Node.js scripts  
+- Direct blockchain queries
 
-**Import Pattern**:
-```typescript
-import { getBalance } from 'customchain-js/cosmos/bank/v1beta1/query.rpc.func';
-import { send } from 'customchain-js/cosmos/bank/v1beta1/tx.rpc.func';
-```
-
-**Usage Examples**:
-
-**Query Balance**:
-```typescript
-import { getBalance } from 'customchain-js/cosmos/bank/v1beta1/query.rpc.func';
-
-// Basic balance query
-const { balance } = await getBalance(rpcEndpoint, {
-  address: "cosmos1...",
-  denom: "uatom"
-});
-
-// With error handling
-try {
-  const { balance } = await getBalance(rpcEndpoint, { address, denom });
-  const atomAmount = Number(balance?.amount || 0) / Math.pow(10, 6); // Convert uatom to ATOM
-  return atomAmount;
-} catch (error) {
-  console.error('Error fetching balance:', error);
-  return null;
-}
-```
-
-### 2. **.rpc.react** - React Hooks
-These are React hooks for frontend applications. They provide:
+### 2. **query.rpc.react.ts** - React Hooks
+- Frontend applications
 - Automatic caching and refetching
-- Loading states
-- Error handling
-- Integration with React Query
+- Loading states and error handling
 
-**Import Pattern**:
-```typescript
-import { useGetBalance } from 'customchain-js/cosmos/bank/v1beta1/query.rpc.react';
-import { useSend } from 'customchain-js/cosmos/bank/v1beta1/tx.rpc.react';
-```
+### 3. **tx.rpc.func.ts** - Transaction Functions
+- Broadcasting transactions
+- Message composition
 
-## Chain Configuration Setup
+### 4. **tx.rpc.react.ts** - Transaction Hooks
+- Transaction broadcasting in React
+- Transaction state management
 
-### Import Chain Registry Data
+## Chain Configuration Pattern
+
+Always reference `config-example.ts` for proper setup:
+
 ```typescript
 import { assetLists, chains } from "@chain-registry/v2";
+
+export const targetChainName = 'cosmos';
+export const rpcEndpoint = 'https://cosmos-rpc.quickapi.com:443';
+export const chain = chains.find((chain) => chain.chainName === targetChainName);
+export const assetList = assetLists.find((assetList) => assetList.chainName === targetChainName);
 ```
 
-### Basic Configuration
-```typescript
-// Define your target chain
-export const defaultChainName = 'cosmos';  // or 'osmosis', 'injective', etc.
+## Important Guidelines
 
-// Find chain info from registry
-export const defaultChain = chains.find((chain) => chain.chainName === defaultChainName);
+### When Using Examples
+- **Study the logic**, don't copy/paste directly
+- **Understand the patterns** for imports and usage
+- **Learn from error handling** approaches
+- **Adapt the structure** to your specific needs
 
-// Get RPC endpoint
-export const defaultRpcEndpoint = defaultChain?.apis?.rpc?.[0]?.address || 'http://localhost:26657';
-```
+### When Using Telescope Codebase
+- **Browse the generated files** to understand available methods
+- **Check type definitions** for proper parameter structures
+- **Look at client implementations** for usage patterns
+- **Reference documentation** in README.md files
 
-## Detailed Examples Reference
-
-### Using src/telescope-examples Directory
-When you need more specific implementation details or complex use cases, reference the example files in `src/telescope-examples/`. These are real-world examples for production usage.
-
-### Using src/tools Directory
-The `src/tools/` directory contains MCP tool implementations that demonstrate how to use the telescope-examples in MCP tools. These tools show patterns for:
-- Importing functions from telescope-examples
-- Handling errors and returning proper MCP responses
-- Working with blockchain data in MCP context
-
-Each tool in `src/tools/` corresponds to functionality in `src/telescope-examples/` and shows how to bridge the gap between React hooks/utility functions and MCP tool implementations.
-
-## Important Notes
-
-### Function Categories Usage
-- **Use .rpc.func** for: Server-side scripts, CLI tools, backend services
-- **Use .rpc.react** for: React applications, frontend components with state management
-
-### Error Handling Patterns
-```typescript
-// For .rpc.func
-try {
-  const result = await getBalance(rpcEndpoint, { address, denom });
-  return result;
-} catch (error) {
-  if (error.message.includes('not found')) {
-    return null; // Handle account not found
-  }
-  throw error; // Re-throw other errors
-}
-```
+### Best Practices
+1. Always include comprehensive error handling
+2. Validate input parameters before making calls
+3. Convert base units to human-readable amounts when needed
+4. Use proper TypeScript types from telescope
+5. Test your implementations thoroughly

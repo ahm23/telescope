@@ -22,7 +22,7 @@ export const plugin = (
   mkdirSync(mcpServerPath, { recursive: true });
   mkdirSync(join(mcpServerPath, 'src'), { recursive: true });
   mkdirSync(join(mcpServerPath, 'src', 'prompts'), { recursive: true });
-  mkdirSync(join(mcpServerPath, 'src', 'telescope-examples'), { recursive: true });
+  mkdirSync(join(mcpServerPath, 'src', `${packageName}-examples`), { recursive: true });
 
   // Generate package.json for MCP server
   const packageJson = generateMcpPackageJson(packageName);
@@ -93,8 +93,8 @@ async function main() {
 
   // Register blockchain function generator tool
   server.tool(
-    'create-blockchain-function',
-    'Create custom blockchain functions by referencing telescope examples and generated code',
+    'use-${packageName}',
+    'Analyzes requests and provides step-by-step implementation guidance for custom blockchain functions using telescope examples as reference',
     {
       task: z.string().describe('The blockchain task to implement (e.g., "get balance", "check staking rewards", "query validators")').optional(),
       chainName: z.string().describe('The blockchain name (e.g., cosmos, osmosis, injective)').optional(),
@@ -106,7 +106,7 @@ async function main() {
         const { task = 'get account balance', chainName = 'cosmos', functionType = 'query', customRequirements } = args;
         
         // Read available examples
-        const examplesPath = resolve(__dirname, 'telescope-examples');
+        const examplesPath = resolve(__dirname, '${packageName}-examples');
         let availableExamples: string[] = [];
         
         try {
@@ -145,7 +145,7 @@ async function main() {
           '## Instructions for Implementation',
           '',
           '### Step 1: Review Available Examples',
-          'The following example files are available in \`src/telescope-examples/\`:',
+          \`The following example files are available in \\\`src/${packageName}-examples/\\\`:\`,
           '',
           examplesList,
           '',
@@ -233,8 +233,8 @@ async function main() {
           '',
           '## Additional Resources',
           '',
-          '- **Full codebase reference**: \`src/telescope/\` directory contains all generated types and functions',
-          '- **Configuration examples**: \`src/telescope-examples/config-example.ts\`',
+          \`- **Full codebase reference**: \\\`src/${packageName}/\\\` directory contains all generated types and functions\`,
+          \`- **Configuration examples**: \\\`src/${packageName}-examples/config-example.ts\\\`\`,
           '- **Chain registry data**: \`src/prompts/chains.json\`',
           '- **Usage guidelines**: Use the \`codegen-usage\` and \`agent-guidelines\` prompts for detailed instructions',
           '',
@@ -245,7 +245,7 @@ async function main() {
           '3. Test your implementation with proper error handling',
           '4. Ensure proper TypeScript types are used',
           '',
-          'The examples in \`telescope-examples/\` are production-ready patterns that you can adapt for any blockchain task.'
+          \`The examples in \\\`${packageName}-examples/\\\` are production-ready patterns that you can adapt for any blockchain task.\`
         ].filter(line => line !== '').join('\\n');
 
         return {
@@ -358,15 +358,10 @@ main().catch((error) => {
     indexContent
   );
 
-  // Generate telescope loader utility
-  const telescopeLoaderCode = generateTelescopeLoader(packageName);
-  writeFileSync(
-    join(mcpServerPath, 'src', 'telescope-loader.ts'),
-    telescopeLoaderCode
-  );
+
 
   // Generate TypeScript configuration
-  const tsConfig = generateTsConfig();
+  const tsConfig = generateTsConfig(packageName);
   writeFileSync(
     join(mcpServerPath, 'tsconfig.json'),
     JSON.stringify(tsConfig, null, 2)
@@ -392,13 +387,13 @@ main().catch((error) => {
 function generateMcpPackageJson(packageName: string) {
 
   return {
-    name: `@${packageName}/mcp-server`,
+    name: `${packageName}-mcp`,
     version: "0.1.0",
     description: `MCP server for ${packageName} blockchain interactions`,
     main: "dist/index.js",
     type: "module",
     bin: {
-      [`@${packageName}/mcp-server`]: "./dist/index.js"
+      [`${packageName}-mcp-server`]: "./dist/index.js"
     },
     scripts: {
       build: "rimraf dist && tsc",
@@ -426,106 +421,8 @@ function generateMcpPackageJson(packageName: string) {
   };
 }
 
-function generateMcpServerCode(builder: TelescopeBuilder, bundler: Bundler) {
-  const outputDirName = basename(builder.outPath);
-  const packageName = outputDirName || bundler.bundle.base;
 
-  return `#!/usr/bin/env node
-
-import { readFileSync } from 'node:fs';
-import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
-import { z } from 'zod';
-
-// NOTE: Tool imports are commented out since they are excluded from build
-// Uncomment and modify these imports if you want to include tools in your build
-/*
-import { getBalanceTool } from './tools/getBalance.js';
-import { getBalanceReactTool } from './tools/useBalance.js';
-*/
-
-// Get package.json version
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const packageJson = JSON.parse(readFileSync(resolve(__dirname, '../package.json'), 'utf8'));
-const VERSION = packageJson.version;
-
-async function main() {
-  const server = new McpServer({
-    name: '${packageName} MCP Server',
-    version: VERSION,
-  });
-
-  // Add prompts for AI agents
-  server.prompt(
-    'codegen-usage',
-    'Guide for using telescope generated code',
-    async () => {
-      const promptPath = resolve(__dirname, 'prompts/codegen-usage.md');
-      const content = readFileSync(promptPath, 'utf-8');
-      return {
-        messages: [{
-          role: 'user',
-          content: {
-            type: 'text',
-            text: content
-          }
-        }]
-      };
-    }
-  );
-
-  server.prompt(
-    'agent-guidelines', 
-    'Guidelines for MCP agents using ${packageName}',
-    async () => {
-      const promptPath = resolve(__dirname, 'prompts/agent-guidelines.md');
-      const content = readFileSync(promptPath, 'utf-8');
-      return {
-        messages: [{
-          role: 'user',
-          content: {
-            type: 'text',
-            text: content
-          }
-        }]
-      };
-    }
-  );
-
-  // NOTE: Tool registrations are commented out since tool functions are not imported
-  // Uncomment and modify these registrations if you want to include tools in your build
-  /*
-  // Register tools
-  server.tool('get-balance', 'Get account balance for a specific token', {
-    address: z.string().describe('The account address'),
-    chainName: z.string().describe('The blockchain name (e.g., cosmos, osmosis)').optional(),
-    denom: z.string().describe('The token denomination (e.g., uatom, uosmo)').optional()
-  }, getBalanceTool);
-
-  server.tool('get-balance-react', 'Get balance using React hook pattern', {
-    address: z.string().describe('The account address'),
-    chainName: z.string().describe('The blockchain name').optional(),
-    displayDenom: z.string().describe('The display denomination').optional()
-  }, getBalanceReactTool);
-  */
-
-  const transport = new StdioServerTransport();
-  await server.connect(transport);
-  console.log('${packageName} MCP server started on stdio');
-}
-
-main().catch((error) => {
-  console.error('Fatal error in main()', error);
-  process.exit(1);
-});
-`;
-}
-
-function generateTsConfig() {
+function generateTsConfig(packageName: string) {
   return {
     compilerOptions: {
       target: "ES2022",
@@ -544,7 +441,7 @@ function generateTsConfig() {
       resolveJsonModule: true
     },
     include: ["src/**/*"],
-    exclude: ["node_modules", "dist", "src/telescope/**/*", "src/telescope-examples/**/*"]
+    exclude: ["node_modules", "dist", `src/${packageName}/**/*`, `src/${packageName}-examples/**/*`]
   };
 }
 
@@ -552,9 +449,7 @@ function generateReadme(packageName: string) {
 
   return `# ${packageName.charAt(0).toUpperCase() + packageName.slice(1)} MCP Server
 
-This MCP server provides AI agents with tools to interact with blockchain through generated TypeScript clients.
-
-**Note**: This MCP server contains a complete copy of the telescope generated codebase in \`src/telescope/\` for AI agents to reference, but uses mock implementations for demonstration. The telescope code is excluded from the build process.
+This MCP server provides AI agents with the \`use-${packageName}\` tool to create custom blockchain functions using telescope examples as reference.
 
 ## Installation
 
@@ -583,12 +478,19 @@ Add this configuration to your AI agent's MCP settings:
 
 This MCP server provides:
 
-- **Comprehensive Examples**: Reference implementations in \`src/telescope-examples/\`
-- **Function Generator Tool**: AI-powered tool that creates custom blockchain functions based on user requirements
-- **AI Guidance**: Prompt files to help AI agents understand blockchain development
-- **Complete Codebase**: Full telescope-generated code in \`src/telescope/\` for reference
+- **Function Generator Tool**: Single tool (\`use-${packageName}\`) that analyzes requests and provides step-by-step implementation guidance
+- **Telescope Codebase Reference**: Complete telescope-generated code in \`src/${packageName}/\` as primary reference
+- **Production Examples**: Reference implementations in \`src/${packageName}-examples/\` showing real-world patterns
+- **AI Guidance**: Contextual prompts to help agents understand blockchain development patterns
 
-**Note**: The MCP server uses a meta-tool approach - instead of predefined tools, it instructs agents to create custom functions by referencing the comprehensive examples.
+## How It Works
+
+The function generator tool:
+
+1. **Analyzes your request** (task, chain, function type, custom requirements)
+2. **Finds relevant examples** from \`${packageName}-examples/\` directory
+3. **Provides implementation patterns** using \`${packageName}/\` codebase as primary reference
+4. **Shows proper imports** and configuration with error handling
 
 ## Development
 
@@ -598,12 +500,16 @@ npm run inspector  # Run MCP inspector for testing
 npm run clean      # Clean dist directory
 \`\`\`
 
-  ## Directory Structure
+## Extending Examples
+
+You can enhance the AI agent's knowledge by adding more examples to the \`${packageName}-examples/\` directory. The function generator automatically scans this directory, so new examples are immediately available for reference.
+
+## Directory Structure
 
 \`\`\`
 ${packageName}-mcp/
 ├── src/
-│   ├── telescope/          # 📚 Telescope generated code (reference only, excluded from build)
+│   ├── ${packageName}/     # 📚 Telescope generated code (primary reference, excluded from build)
 │   │   ├── cosmos/         # Full cosmos SDK modules 
 │   │   │   ├── bank/       # Balance queries, transfers
 │   │   │   ├── staking/    # Validator operations
@@ -611,7 +517,7 @@ ${packageName}-mcp/
 │   │   ├── osmosis/        # Osmosis DEX functionality
 │   │   ├── ibc/            # Inter-blockchain communication
 │   │   └── index.ts        # Main exports
-│   ├── telescope-examples/ # 📖 Usage examples and patterns (excluded from build)
+│   ├── ${packageName}-examples/ # 📖 Production examples (excluded from build)
 │   │   ├── config-example.ts      # Chain configuration setup
 │   │   ├── useBalance.ts          # Balance query React hooks
 │   │   ├── useBalanceFunc.ts      # Direct balance functions
@@ -625,16 +531,19 @@ ${packageName}-mcp/
 │   │   ├── useGrants.ts           # Authorization grants
 │   │   └── useSendData.ts         # Transaction preparation
 │   ├── prompts/            # 🤖 Agent instruction files
-│   │   ├── codegen-usage.md       # Telescope usage guide
+│   │   ├── codegen-usage.md       # Implementation guide for agents
 │   │   ├── agent-guidelines.md    # Best practices for agents
 │   │   └── chains.json            # Chain registry data
-│   ├── index.ts            # MCP server with function generator tool
-│   └── telescope-loader.ts # Utility for dynamic code loading
-├── dist/                   # Compiled JavaScript (excludes telescope/ and telescope-examples/)
+│   └── index.ts            # MCP server with function generator tool
+├── dist/                   # Compiled JavaScript (excludes ${packageName}/ and ${packageName}-examples/)
 └── package.json
 \`\`\`
 
-The \`src/telescope/\` and \`src/telescope-examples/\` directories contain reference code for AI agents but are excluded from the TypeScript build process.
+**Key Points:**
+- \`src/${packageName}/\` contains the complete telescope-generated codebase as the **primary reference**
+- \`src/${packageName}-examples/\` contains **production examples** for patterns and logic reference
+- Both directories are excluded from TypeScript build but available for AI agents to read
+- Examples may contain compilation errors - focus on logic and patterns, not direct copying
 
 Generated by [Telescope](https://github.com/hyperweb-io/telescope) 🔭
 `;
@@ -642,7 +551,7 @@ Generated by [Telescope](https://github.com/hyperweb-io/telescope) 🔭
 
 function copyTelescopeCodebase(builder: TelescopeBuilder, mcpServerPath: string, packageName: string) {
   const sourcePath = builder.outPath;
-  const destPath = join(mcpServerPath, 'src', 'telescope');
+  const destPath = join(mcpServerPath, 'src', packageName);
 
   // Copy the entire telescope generated directory
   if (existsSync(sourcePath)) {
@@ -672,181 +581,145 @@ function copyTelescopeCodebase(builder: TelescopeBuilder, mcpServerPath: string,
 
 // Removed retry logic - no longer needed since we skip copy if destination exists
 
-function generateTelescopeLoader(packageName: string) {
-  return `import { readFileSync } from 'node:fs';
-import { resolve, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-/**
- * Load telescope generated modules dynamically
- * This utility helps MCP tools access the telescope codebase
- */
-export class TelescopeLoader {
-  private basePath: string;
-
-  constructor() {
-    this.basePath = resolve(__dirname, 'telescope');
-  }
-
-  /**
-   * Get available modules in the telescope codebase
-   */
-  getAvailableModules(): string[] {
-    // This would typically read the directory structure
-    // For now, return common cosmos modules
-    return [
-      'cosmos/bank/v1beta1',
-      'cosmos/staking/v1beta1', 
-      'cosmos/gov/v1beta1',
-      'cosmos/distribution/v1beta1',
-      'cosmwasm/wasm/v1',
-      'ibc/core/client/v1',
-      'osmosis/gamm/v1beta1'
-    ];
-  }
-
-  /**
-   * Load module documentation/examples
-   */
-  loadModuleInfo(modulePath: string) {
-    try {
-      const infoPath = resolve(this.basePath, modulePath, 'README.md');
-      return readFileSync(infoPath, 'utf-8');
-              } catch (error) {
-       return \`Module documentation not found for \${modulePath}\`;
-     }
-  }
-
-  /**
-   * Get module schema information
-   */
-  getModuleSchema(modulePath: string) {
-    // Return basic schema info for the module
-    return {
-      module: modulePath,
-      package: '${packageName}',
-      queries: ['getBalance', 'getAllBalances'],
-      mutations: ['send', 'delegate'],
-      types: ['Coin', 'MsgSend', 'MsgDelegate']
-    };
-  }
-}
-
-export const telescopeLoader = new TelescopeLoader();
-`;
-}
 
 function generateComprehensivePrompts(mcpServerPath: string, packageName: string) {
-  // Generate codegen-usage.md
+  // Generate codegen-usage.md with our updated content
   const codegenUsageContent = `# Codegen Usage Guide
 
 ## Overview
-This guide provides instructions for MCP agents on how to use the telescope generated code in the ${packageName} package.
+This guide provides instructions for MCP agents on how to use the telescope generated code when implementing the \`use-${packageName}\` tool.
 
-## Category of Functions
+## Understanding the Structure
 
-### 1. **.rpc.func** - Direct Function Calls
-These are direct async functions that make RPC calls to blockchain nodes. Use these for:
+### Primary Reference: \`src/${packageName}/\` Directory
+This is your **main reference** for understanding the complete telescope-generated codebase. It contains:
+
+- **Complete type definitions** for all blockchain modules
+- **Client implementations** for queries and transactions  
+- **Generated interfaces** from protobuf definitions
+- **All available methods** and their signatures
+
+**Key files to understand**:
+- \`src/${packageName}/index.ts\` - Main exports and available modules
+- \`src/${packageName}/cosmos/\` - Cosmos SDK modules (bank, staking, gov, etc.)
+- \`src/${packageName}/osmosis/\` - Osmosis-specific modules
+- \`src/${packageName}/ibc/\` - Inter-blockchain communication
+- \`src/${packageName}/README.md\` - Comprehensive documentation
+
+### Production Examples: \`src/${packageName}-examples/\` Directory  
+Use these as **implementation patterns** and **logic reference**:
+
+- **Real production code** showing how to use telescope functions
+- **Best practices** for error handling and data processing
+- **Complete workflows** for common blockchain operations
+
+**⚠️ Important**: These examples may contain import/compilation errors since they reference the main codebase. **Focus on the logic and patterns** rather than copying code directly.
+
+## Using the MCP Tool
+
+### Single Tool: \`use-${packageName}\`
+This MCP server provides one tool that generates implementation guidance by:
+
+1. **Analyzing your request** (task, chain, function type)
+2. **Finding relevant examples** from \`${packageName}-examples/\`
+3. **Providing step-by-step guidance** using telescope patterns
+4. **Showing proper imports** and configuration
+
+## Implementation Approach
+
+### Step 1: Understand Telescope Structure
+When implementing a function, first explore \`src/${packageName}/\` to understand:
+
+\`\`\`typescript
+// Example: For balance queries, look at:
+// src/${packageName}/cosmos/bank/v1beta1/query.ts - Type definitions
+// src/${packageName}/cosmos/bank/v1beta1/query.rpc.Query.ts - Query client
+// src/${packageName}/cosmos/bank/v1beta1/query.rpc.func.ts - Direct functions
+// src/${packageName}/cosmos/bank/v1beta1/query.rpc.react.ts - React hooks
+\`\`\`
+
+### Step 2: Reference Production Examples
+Look at \`${packageName}-examples/\` for implementation patterns:
+
+\`\`\`typescript
+// Example: useBalance.ts shows the pattern for:
+// - Proper imports from telescope
+// - Error handling approaches  
+// - Data transformation logic
+// - Integration with React Query
+
+// Focus on UNDERSTANDING the logic:
+// - How RPC endpoints are configured
+// - How parameters are validated
+// - How responses are processed
+// - How errors are handled
+\`\`\`
+
+### Step 3: Generate Your Implementation
+Use the patterns from both directories to create your function:
+
+\`\`\`typescript
+// Your implementation should:
+// 1. Use proper imports from the telescope codebase
+// 2. Follow error handling patterns from examples
+// 3. Include proper TypeScript types
+// 4. Handle edge cases shown in examples
+\`\`\`
+
+## Category of Functions in Telescope
+
+### 1. **query.rpc.func.ts** - Direct Function Calls
 - Server-side operations
-- Node.js scripts
-- Direct blockchain queries outside React
+- Node.js scripts  
+- Direct blockchain queries
 
-**Import Pattern**:
-\`\`\`typescript
-import { getBalance } from '${packageName}/cosmos/bank/v1beta1/query.rpc.func';
-import { send } from '${packageName}/cosmos/bank/v1beta1/tx.rpc.func';
-\`\`\`
-
-**Usage Examples**:
-
-**Query Balance**:
-\`\`\`typescript
-import { getBalance } from '${packageName}/cosmos/bank/v1beta1/query.rpc.func';
-
-// Basic balance query
-const { balance } = await getBalance(rpcEndpoint, {
-  address: "cosmos1...",
-  denom: "uatom"
-});
-
-// With error handling
-try {
-  const { balance } = await getBalance(rpcEndpoint, { address, denom });
-  const atomAmount = Number(balance?.amount || 0) / Math.pow(10, 6); // Convert uatom to ATOM
-  return atomAmount;
-} catch (error) {
-  console.error('Error fetching balance:', error);
-  return null;
-}
-\`\`\`
-
-### 2. **.rpc.react** - React Hooks
-These are React hooks for frontend applications. They provide:
+### 2. **query.rpc.react.ts** - React Hooks
+- Frontend applications
 - Automatic caching and refetching
-- Loading states
-- Error handling
-- Integration with React Query
+- Loading states and error handling
 
-**Import Pattern**:
-\`\`\`typescript
-import { useGetBalance } from '${packageName}/cosmos/bank/v1beta1/query.rpc.react';
-import { useSend } from '${packageName}/cosmos/bank/v1beta1/tx.rpc.react';
-\`\`\`
+### 3. **tx.rpc.func.ts** - Transaction Functions
+- Broadcasting transactions
+- Message composition
 
-## Chain Configuration Setup
+### 4. **tx.rpc.react.ts** - Transaction Hooks
+- Transaction broadcasting in React
+- Transaction state management
 
-### Import Chain Registry Data
+## Chain Configuration Pattern
+
+Always reference \`config-example.ts\` for proper setup:
+
 \`\`\`typescript
 import { assetLists, chains } from "@chain-registry/v2";
+
+export const targetChainName = 'cosmos';
+export const rpcEndpoint = 'https://cosmos-rpc.quickapi.com:443';
+export const chain = chains.find((chain) => chain.chainName === targetChainName);
+export const assetList = assetLists.find((assetList) => assetList.chainName === targetChainName);
 \`\`\`
 
-### Basic Configuration
-\`\`\`typescript
-// Define your target chain
-export const defaultChainName = 'cosmos';  // or 'osmosis', 'injective', etc.
+## Important Guidelines
 
-// Find chain info from registry
-export const defaultChain = chains.find((chain) => chain.chainName === defaultChainName);
+### When Using Examples
+- **Study the logic**, don't copy/paste directly
+- **Understand the patterns** for imports and usage
+- **Learn from error handling** approaches
+- **Adapt the structure** to your specific needs
 
-// Get RPC endpoint
-export const defaultRpcEndpoint = defaultChain?.apis?.rpc?.[0]?.address || 'http://localhost:26657';
-\`\`\`
+### When Using Telescope Codebase
+- **Browse the generated files** to understand available methods
+- **Check type definitions** for proper parameter structures
+- **Look at client implementations** for usage patterns
+- **Reference documentation** in README.md files
 
-## Detailed Examples Reference
-
-### Using src/telescope-examples Directory
-When you need more specific implementation details or complex use cases, reference the example files in \`src/telescope-examples/\`. These are real-world examples for production usage.
-
-### Using src/tools Directory
-The \`src/tools/\` directory contains MCP tool implementations that demonstrate how to use the telescope-examples in MCP tools. These tools show patterns for:
-- Importing functions from telescope-examples
-- Handling errors and returning proper MCP responses
-- Working with blockchain data in MCP context
-
-Each tool in \`src/tools/\` corresponds to functionality in \`src/telescope-examples/\` and shows how to bridge the gap between React hooks/utility functions and MCP tool implementations.
-
-## Important Notes
-
-### Function Categories Usage
-- **Use .rpc.func** for: Server-side scripts, CLI tools, backend services
-- **Use .rpc.react** for: React applications, frontend components with state management
-
-### Error Handling Patterns
-\`\`\`typescript
-// For .rpc.func
-try {
-  const result = await getBalance(rpcEndpoint, { address, denom });
-  return result;
-} catch (error) {
-  if (error.message.includes('not found')) {
-    return null; // Handle account not found
-  }
-  throw error; // Re-throw other errors
-}
-\`\`\`
+### Best Practices
+1. Always include comprehensive error handling
+2. Validate input parameters before making calls
+3. Convert base units to human-readable amounts when needed
+4. Use proper TypeScript types from telescope
+5. Test your implementations thoroughly
 `;
 
   writeFileSync(join(mcpServerPath, 'src', 'prompts', 'codegen-usage.md'), codegenUsageContent);
@@ -1014,17 +887,16 @@ function generateTelescopeExamples(mcpServerPath: string, packageName: string) {
       content: `import { assetLists, chains } from "@chain-registry/v2";
 
 /**
+ * Chain configuration example
  * mainnet: 'cosmos'
- * testnet: 'cosmoshub-testnet'
+ * testnet: 'cosmoshub-testnet' 
  * mainnet rpc: 'https://cosmos-rpc.quickapi.com:443'
  * testnet rpc: 'https://rpc.testnet.cosmos.network:443'
  */
-export const defaultChainName = 'cosmos'
-export const defaultRpcEndpoint = 'https://cosmos-rpc.quickapi.com:443'
-
-export const defaultChain = chains.find((chain) => chain.chainName === defaultChainName)
-
-export const defaultAssetList = assetLists.find((assetList) => assetList.chainName === defaultChainName)
+export const targetChainName = 'cosmos';
+export const rpcEndpoint = 'https://cosmos-rpc.quickapi.com:443';
+export const chain = chains.find((chain) => chain.chainName === targetChainName);
+export const assetList = assetLists.find((assetList) => assetList.chainName === targetChainName);
 `
     },
     {
@@ -1896,7 +1768,7 @@ export const useTotalAssets = (chainName: string) => {
 
   // Write all example files
   exampleFiles.forEach(({ name, content }) => {
-    writeFileSync(join(mcpServerPath, 'src', 'telescope-examples', name), content);
+    writeFileSync(join(mcpServerPath, 'src', `${packageName}-examples`, name), content);
   });
 }
 

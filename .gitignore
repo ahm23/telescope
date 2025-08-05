@@ -7,6 +7,6 @@ packages/**/build
 packages/**/main
 packages/**/module
 **/dist
-launch.json
 .idea/
 __fixtures__/misc/proto-download/**
+.vscode

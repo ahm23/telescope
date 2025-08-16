@@ -18,7 +18,6 @@ const options: TelescopeOptions = {
   classesUseArrowFunctions: true,
   env: "v-next",
   useInterchainJs: true,
-  isGeneratingCosmosTypes: true,
   useSDKTypes: false,
   readme: { enabled: true },
   prototypes: {

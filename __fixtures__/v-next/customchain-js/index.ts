@@ -14,7 +14,6 @@ export * from "./google/bundle";
 export * from "./ibc/bundle";
 export * from "./osmosis/bundle";
 export * from "./tendermint/bundle";
-export * from "./extern";
 export * from "./helper-func-types";
 export * from "./react-query";
 export * from "./varint";

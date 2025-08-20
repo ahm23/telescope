@@ -4,7 +4,7 @@
 * and run the transpile command or npm scripts command that is used to regenerate this bundle.
 */
 
-export { fromBase64 as bytesFromBase64, toBase64 as base64FromBytes } from '@interchainjs/encoding/base64';
+export { fromBase64 as bytesFromBase64, toBase64 as base64FromBytes } from '@interchainjs/encoding';
 
 export interface AminoHeight {
   readonly revision_number?: string;

@@ -5,7 +5,11 @@ import {
   exportTypesWithAlias,
   recursiveModuleBundle,
 } from "@cosmology/ast";
-import { duplicateImportPathsWithExt, makeAliasName, makeAliasNameWithPackageAtEnd } from "@cosmology/utils";
+import {
+  duplicateImportPathsWithExt,
+  makeAliasName,
+  makeAliasNameWithPackageAtEnd,
+} from "@cosmology/utils";
 
 export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
   if (!builder.options.bundle.enabled) {
@@ -56,29 +60,29 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
       );
       if (duplicatedTypeNames.length > 0) {
         // export each, some duplicated with alias
-        const typesWithAlias = exportObj.exportedIdentifiers.map((identifier) => {
-          const duplicatedType = duplicatedTypeNames.find((type) => type === identifier);
-          if (duplicatedType) {
-            let alias: string;
-            if (exportObj.isHelperFunc) {
-              const serialNumber = builder.store.getAndIncTypeSerialNumber(identifier);
-              if (serialNumber > 0) {
-                alias = makeAliasNameWithPackageAtEnd({ package: exportObj.pkg, name: identifier });
+        const typesWithAlias = exportObj.exportedIdentifiers.map(
+          (identifier) => {
+            const duplicatedType = duplicatedTypeNames.find(
+              (type) => type === identifier
+            );
+            if (duplicatedType) {
+              let alias: string;
+              if (exportObj.isHelperFunc) {
+                alias = makeAliasNameWithPackageAtEnd({
+                  package: exportObj.pkg,
+                  name: identifier,
+                });
               } else {
-                alias = identifier;
+                alias = makeAliasName({
+                  package: exportObj.pkg,
+                  name: identifier,
+                });
               }
-            } else {
-              const serialNumber = builder.store.getAndIncTypeSerialNumber(identifier);
-              if (serialNumber > 0) {
-                alias = makeAliasName({ package: exportObj.pkg, name: identifier });
-              } else {
-                alias = identifier;
-              }
+              return { name: identifier, alias: alias };
             }
-            return { name: identifier, alias: alias };
+            return { name: identifier, alias: identifier };
           }
-          return { name: identifier, alias: identifier };
-        });
+        );
         prog.push(exportTypesWithAlias(typesWithAlias, exportObj.relativePath));
       } else {
         // export *

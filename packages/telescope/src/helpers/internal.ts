@@ -14,7 +14,7 @@ if (_m0.util.Long !== Long) {
 export { Long };
 
 ${options.useInterchainJs ?
-    'export { fromBase64 as bytesFromBase64, toBase64 as base64FromBytes } from \'@interchainjs/encoding/base64\';' :
+    'export { fromBase64 as bytesFromBase64, toBase64 as base64FromBytes } from \'@interchainjs/encoding\';' :
     `declare var self: any | undefined;
 declare var window: any | undefined;
 declare var global: any | undefined;

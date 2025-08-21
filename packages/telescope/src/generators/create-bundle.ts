@@ -11,12 +11,47 @@ import {
   makeAliasNameWithPackageAtEnd,
 } from "@cosmology/utils";
 
+/**
+ * Process noAlias configuration to create a map of names to their first package
+ * This ensures that only the first occurrence of a name skips aliasing
+ */
+const processNoAliasConfig = (noAlias?: Array<{ package: string; name: string }>) => {
+  if (!noAlias || noAlias.length === 0) {
+    return new Map<string, string>();
+  }
+
+  const nameToFirstPackage = new Map<string, string>();
+
+  for (const entry of noAlias) {
+    if (!nameToFirstPackage.has(entry.name)) {
+      nameToFirstPackage.set(entry.name, entry.package);
+    }
+  }
+
+  return nameToFirstPackage;
+};
+
+/**
+ * Check if a package/name combination should skip aliasing
+ */
+const shouldSkipAlias = (
+  pkg: string,
+  name: string,
+  nameToFirstPackage: Map<string, string>
+): boolean => {
+  const firstPackage = nameToFirstPackage.get(name);
+  return firstPackage === pkg;
+};
+
 export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
   if (!builder.options.bundle.enabled) {
     return;
   }
 
   let prog = [];
+
+  // Process noAlias configuration once at the beginning
+  const nameToFirstPackage = processNoAliasConfig((builder.options.bundle as any).noAlias);
 
   if (builder.options.bundle.type === "namespace") {
     const importPaths = duplicateImportPathsWithExt(
@@ -67,16 +102,23 @@ export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
             );
             if (duplicatedType) {
               let alias: string;
-              if (exportObj.isHelperFunc) {
-                alias = makeAliasNameWithPackageAtEnd({
-                  package: exportObj.pkg,
-                  name: identifier,
-                });
+
+              // Check if this package/name combination should skip aliasing
+              if (shouldSkipAlias(exportObj.pkg, identifier, nameToFirstPackage)) {
+                alias = identifier; // Use original name, no alias
               } else {
-                alias = makeAliasName({
-                  package: exportObj.pkg,
-                  name: identifier,
-                });
+                // Generate alias as usual
+                if (exportObj.isHelperFunc) {
+                  alias = makeAliasNameWithPackageAtEnd({
+                    package: exportObj.pkg,
+                    name: identifier,
+                  });
+                } else {
+                  alias = makeAliasName({
+                    package: exportObj.pkg,
+                    name: identifier,
+                  });
+                }
               }
               return { name: identifier, alias: alias };
             }

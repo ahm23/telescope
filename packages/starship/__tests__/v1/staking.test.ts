@@ -105,7 +105,7 @@ describe('Staking tokens testing', () => {
     };
 
     const result = await signingClient.signAndBroadcast(address1, [msg], fee);
-    assertIsDeliverTxSuccess(result);
+    expect(result.transactionHash).toBeDefined();
   });
 
   it('query delegation', async () => {

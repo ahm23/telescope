@@ -4,7 +4,8 @@ import { DirectSecp256k1HdWallet } from '@cosmjs/proto-signing';
 import Long from 'long';
 import BigNumber from 'bignumber.js';
 
-import { cosmos, getSigningOsmosisClient } from '../../src/codegen';
+import { cosmos } from '../../src/codegen';
+import { getSigningOsmosisClient } from '../../src/codegen1';
 import { useChain } from 'starshipjs';
 import { waitUntil } from "../../src";
 import './setup.test';

@@ -2,7 +2,8 @@ import { assertIsDeliverTxSuccess } from '@cosmjs/stargate';
 import { DirectSecp256k1HdWallet } from '@cosmjs/proto-signing';
 import { BigNumber } from 'bignumber.js';
 
-import { cosmos, getSigningOsmosisClient } from '../../src/codegen';
+import { cosmos } from '../../src/codegen';
+import { getSigningOsmosisClient } from '../../src/codegen1';
 import { useChain, generateMnemonic } from 'starshipjs';
 import './setup.test';
 

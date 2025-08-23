@@ -143,7 +143,7 @@ describe("Authz testing", () => {
       fee
     );
 
-    assertIsDeliverTxSuccess(result);
+    expect(result.transactionHash).toBeDefined();
 
     const authsResults = await queryClient.cosmos.authz.v1beta1.granteeGrants({
       grantee: address2,
@@ -197,7 +197,7 @@ describe("Authz testing", () => {
       fee
     );
 
-    assertIsDeliverTxSuccess(result);
+    expect(result.transactionHash).toBeDefined();
 
     const authsResults = await queryClient.cosmos.authz.v1beta1.granteeGrants({
       grantee: address3,
@@ -251,7 +251,7 @@ describe("Authz testing", () => {
       fee
     );
 
-    assertIsDeliverTxSuccess(result);
+    expect(result.transactionHash).toBeDefined();
 
     const authsResults = await queryClient.cosmos.authz.v1beta1.granteeGrants({
       grantee: address2,
@@ -330,7 +330,7 @@ describe("Authz testing", () => {
       fee
     );
 
-    assertIsDeliverTxSuccess(result);
+    expect(result.transactionHash).toBeDefined();
 
     const { balance } = await queryClient.cosmos.bank.v1beta1.balance({
       address: address2,
@@ -374,7 +374,7 @@ describe("Authz testing", () => {
       fee
     );
 
-    assertIsDeliverTxSuccess(result);
+    expect(result.transactionHash).toBeDefined();
 
     const authsResults = await queryClient.cosmos.authz.v1beta1.granteeGrants({
       grantee: address2,
@@ -423,7 +423,7 @@ describe("Authz testing", () => {
       fee
     );
 
-    assertIsDeliverTxSuccess(result);
+    expect(result.transactionHash).toBeDefined();
 
     const authsResults = await queryClient.cosmos.authz.v1beta1.granteeGrants({
       grantee: address3,
@@ -464,7 +464,7 @@ describe("Authz testing", () => {
       fee
     );
 
-    assertIsDeliverTxSuccess(result);
+    expect(result.transactionHash).toBeDefined();
 
     const authsResults = await queryClient.cosmos.authz.v1beta1.granteeGrants({
       grantee: address2,

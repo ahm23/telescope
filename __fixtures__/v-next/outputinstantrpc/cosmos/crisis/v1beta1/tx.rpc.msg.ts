@@ -1,4 +1,5 @@
-import { DeliverTxResponse, StdFee, TxRpc } from "../../../types";
+import { DeliverTxResponse } from "@interchainjs/types";
+import { StdFee, TxRpc } from "../../../types";
 import { BinaryReader } from "../../../binary";
 import { MsgVerifyInvariant, MsgVerifyInvariantSDKType, MsgVerifyInvariantResponse, MsgVerifyInvariantResponseSDKType } from "./tx";
 /** Msg defines the bank Msg service. */

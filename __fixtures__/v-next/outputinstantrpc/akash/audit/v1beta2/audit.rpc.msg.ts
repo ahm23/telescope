@@ -1,5 +1,6 @@
 import { Attribute, AttributeSDKType } from "../../base/v1beta2/attribute";
-import { DeliverTxResponse, StdFee, TxRpc } from "../../../types";
+import { DeliverTxResponse } from "@interchainjs/types";
+import { StdFee, TxRpc } from "../../../types";
 import { BinaryReader } from "../../../binary";
 import { MsgSignProviderAttributes, MsgSignProviderAttributesSDKType, MsgSignProviderAttributesResponse, MsgSignProviderAttributesResponseSDKType, MsgDeleteProviderAttributes, MsgDeleteProviderAttributesSDKType, MsgDeleteProviderAttributesResponse, MsgDeleteProviderAttributesResponseSDKType } from "./audit";
 /** Msg defines the provider Msg service */

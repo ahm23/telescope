@@ -971,7 +971,8 @@ export type TelescopeOption = keyof TelescopeOpts;
 export const defaultTelescopeOptions: TelescopeOptions = {
   // global options (can be overridden through plugins)
 
-  env: "default",
+  env: "v-next",
+  useInterchainJs: true,
   removeUnusedImports: true,
   classesUseArrowFunctions: false,
   useSDKTypes: true,
@@ -981,10 +982,11 @@ export const defaultTelescopeOptions: TelescopeOptions = {
 
   interfaces: {
     enabled: true,
-    registerAllDecodersToGlobal: true,
+    useGlobalDecoderRegistry: true,
+    registerAllDecodersToGlobal: false,
     useByDefault: true,
     useByDefaultRpc: true,
-    useUnionTypes: false,
+    useUnionTypes: true,
   },
 
   prototypes: {
@@ -1018,7 +1020,7 @@ export const defaultTelescopeOptions: TelescopeOptions = {
     addAminoTypeToObjects: false,
     addTypeUrlToDecoders: true,
 
-    enableRegistryLoader: true,
+    enableRegistryLoader: false,
     enableMessageComposer: true,
 
     optionalQueryParams: false,
@@ -1035,7 +1037,7 @@ export const defaultTelescopeOptions: TelescopeOptions = {
       timestamp: "date",
       duration: "duration",
       updatedDuration: false,
-
+      useTelescopeGeneratedType: true,
       setDefaultEnumToUnrecognized: true,
       autoFixUndefinedEnumDefault: false,
     },
@@ -1063,14 +1065,15 @@ export const defaultTelescopeOptions: TelescopeOptions = {
   },
 
   stargateClients: {
-    enabled: true,
+    enabled: false,
     includeCosmosDefaultTypes: true,
   },
 
   aminoEncoding: {
     enabled: true,
+    useLegacyInlineEncoding: false,
     customTypes: {
-      useCosmosSDKDec: false,
+      useCosmosSDKDec: true,
     },
     omitEmptyTags: ["omitempty", "dont_omitempty"],
     casingFn: snake,
@@ -1080,7 +1083,7 @@ export const defaultTelescopeOptions: TelescopeOptions = {
   },
   lcdClients: {
     bundle: true,
-    enabled: true,
+    enabled: false,
     scopedIsExclusive: true,
   },
   rpcClients: {
@@ -1088,7 +1091,7 @@ export const defaultTelescopeOptions: TelescopeOptions = {
     clientStyle: {
       useUpdatedClientStyle: false,
     },
-    enabled: true,
+    enabled: false,
     extensions: true,
     inline: false,
     bundle: true,
@@ -1122,6 +1125,15 @@ export const defaultTelescopeOptions: TelescopeOptions = {
       packages: [],
       protos: [],
     },
+  },
+
+  helperFunctions: {
+    enabled: true,
+    useGlobalDecoderRegistry: true,
+    hooks: {
+      react: false,
+      vue: false
+    }
   },
 
   mcpServer: {

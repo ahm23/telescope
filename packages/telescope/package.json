@@ -1,6 +1,6 @@
 {
   "name": "@hyperweb/telescope",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A TypeScript Transpiler for Cosmos Protobufs",
   "author": "Dan Lynch <pyramation@gmail.com>",
   "homepage": "https://github.com/hyperweb-io/telescope/tree/master/packages/telescope#readme",

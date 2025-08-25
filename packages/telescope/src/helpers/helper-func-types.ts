@@ -3,12 +3,12 @@ import { TelescopeOptions } from "@cosmology/types";
 export const getHelperFuncTypes = (options: TelescopeOptions) => {
   return `
 import { HttpEndpoint } from "@interchainjs/types";
-import { BinaryReader, BinaryWriter } from "./binary${options.restoreImportExtension ?? ""}";${!options.isGeneratingCosmosTypes ? `
-import { getRpcClient } from "./extern${options.restoreImportExtension ?? ""}";` : ''}
-import { isRpc, Rpc } from "./helpers${options.restoreImportExtension ?? ""}";${!options.isGeneratingCosmosTypes ? `
-import { TelescopeGeneratedCodec, DeliverTxResponse, Message, StdFee } from "./types${options.restoreImportExtension ?? ""}";` : ''}${!options.isGeneratingCosmosTypes ? `
-import { toConverters, toEncoders } from "@interchainjs/cosmos";
-import { ISigningClient } from "@interchainjs/cosmos";` : ''}
+import { BinaryReader, BinaryWriter } from "./binary${options.restoreImportExtension ?? ""}";
+import { getRpcClient } from "./extern${options.restoreImportExtension ?? ""}";
+import { isRpc, Rpc } from "./helpers${options.restoreImportExtension ?? ""}";
+import { TelescopeGeneratedCodec, Message, StdFee } from "./types${options.restoreImportExtension ?? ""}";
+import { toConverters, toEncoders } from "@interchainjs/cosmos/utils";
+import { ISigningClient } from "@interchainjs/cosmos/types/signing-client${options.restoreImportExtension ?? ""}";
 
 export interface QueryBuilderOptions<TReq, TRes> {
   encode: (request: TReq, writer?: BinaryWriter) => BinaryWriter
@@ -53,7 +53,7 @@ export function buildTx<TMsg>(opts: TxBuilderOptions) {
     message: TMsg | TMsg[],
     fee: StdFee | 'auto',
     memo: string
-  ): Promise<DeliverTxResponse> => {
+  ): Promise<any> => {
     if (!client) throw new Error("SigningClient is not initialized");
 
     //register all related encoders and converters

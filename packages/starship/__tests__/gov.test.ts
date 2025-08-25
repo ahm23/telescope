@@ -279,9 +279,9 @@ describe('Governance tests for osmosis', () => {
       voter: directAddress,
     });
 
-    expect(vote.proposalId.toString()).toEqual('0');
-    expect(vote.voter).toEqual('');
-    expect(vote.option).toEqual(VoteOption.VOTE_OPTION_UNSPECIFIED);
+    expect(vote.proposalId.toString()).toEqual(proposalId);
+    expect(vote.voter).toEqual(directAddress);
+    expect(vote.option).toEqual(VoteOption.VOTE_OPTION_YES);
   }, 10000);
 
   it('vote on proposal using amino', async () => {
@@ -317,9 +317,9 @@ describe('Governance tests for osmosis', () => {
       voter: aminoAddress,
     });
 
-    expect(vote.proposalId.toString()).toEqual('0');
-    expect(vote.voter).toEqual('');
-    expect(vote.option).toEqual(VoteOption.VOTE_OPTION_UNSPECIFIED);
+    expect(vote.proposalId.toString()).toEqual(proposalId);
+    expect(vote.voter).toEqual(aminoAddress);
+    expect(vote.option).toEqual(VoteOption.VOTE_OPTION_NO);
   }, 10000);
 
   it('wait for voting period to end', async () => {

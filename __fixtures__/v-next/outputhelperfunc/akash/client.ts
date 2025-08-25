@@ -2,7 +2,6 @@ import { GeneratedType, Registry, OfflineSigner } from "@cosmjs/proto-signing";
 import { defaultRegistryTypes, AminoTypes, SigningStargateClient } from "@cosmjs/stargate";
 import { HttpEndpoint } from "@cosmjs/tendermint-rpc";
 import { createRpcClient } from "../extern";
-import { DeliverTxResponse } from "@interchainjs/types";
 import { EncodeObject, StdFee, TxRpc, SigningClientParams } from "../types";
 import * as akashAuditV1beta1AuditRegistry from "./audit/v1beta1/audit.registry";
 import * as akashAuditV1beta2AuditRegistry from "./audit/v1beta2/audit.registry";
@@ -76,7 +75,7 @@ export const getSigningAkashTxRpc = async ({
     signer
   });
   txRpc.signAndBroadcast = (signerAddress: string, messages: EncodeObject[], fee: number | StdFee | "auto", memo?: string) => {
-    return (signingClient.signAndBroadcast(signerAddress, messages, fee, memo) as Promise<DeliverTxResponse>);
+    return (signingClient.signAndBroadcast(signerAddress, messages, fee, memo) as Promise<any>);
   };
   return txRpc;
 };

@@ -24,7 +24,7 @@ export function buildQuery<TReq, TRes>(opts: QueryBuilderOptions<TReq, TRes>) {
       if(isRpc(client)) {
         rpc = client;
       } else {
-        rpc = client ? await getRpcClient(client) : undefined;
+        rpc = ${options.isGeneratingCosmosTypes ? 'undefined' : 'client ? await getRpcClient(client) : undefined'};
       }
 
       if (!rpc) throw new Error("Query Rpc is not initialized");
@@ -35,7 +35,7 @@ export function buildQuery<TReq, TRes>(opts: QueryBuilderOptions<TReq, TRes>) {
     };
 }
 
-export interface ITxArgs<TMsg> {
+${!options.isGeneratingCosmosTypes ? `export interface ITxArgs<TMsg> {
   signerAddress: string;
   message: TMsg | TMsg[];
   fee: StdFee | 'auto';
@@ -71,7 +71,7 @@ export function buildTx<TMsg>(opts: TxBuilderOptions) {
         }];
     return client.signAndBroadcast!(signerAddress, data, fee, memo);
   };
-}
+}` : ''}
 
 export interface Encoder {
   typeUrl: string;

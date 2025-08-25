@@ -57,43 +57,49 @@ export interface TelescopeOpts {
    * @default "default"
    */
   env?: "default" | "v-next";
-  
+
   /**
    * Use InterchainJS for signing clients instead of CosmJS
    * @default false
    */
   useInterchainJs?: boolean;
-  
+
+  /**
+   * Is generating InterchainJS Cosmos-Types
+   * @default false
+   */
+  isGeneratingCosmosTypes?: boolean;
+
   /**
    * Remove unused imports from generated files
    * @default true
    */
   removeUnusedImports?: boolean;
-  
+
   /**
    * Use arrow functions for class methods
    * @default false
    */
   classesUseArrowFunctions?: boolean;
-  
+
   /**
    * Use Cosmos SDK types (like Dec) instead of native types
    * @default true
    */
   useSDKTypes?: boolean;
-  
+
   /**
    * Include external helper functions
    * @default false
    */
   includeExternalHelpers?: boolean;
-  
+
   /**
    * Restore import extensions (e.g., '.js')
    * @default undefined
    */
   restoreImportExtension?: string;
-  
+
   /**
    * Generate README files
    * @default { enabled: false }
@@ -101,7 +107,7 @@ export interface TelescopeOpts {
   readme?: {
     enabled: boolean;
   };
-  
+
   /**
    * Logging level for code generation
    * @default TelescopeLogLevel.None
@@ -117,37 +123,37 @@ export interface TelescopeOpts {
      * @default true
      */
     enabled?: boolean;
-    
+
     /**
      * Enable GlobalDecoderRegistry and related functions
      * @default false
      */
     useGlobalDecoderRegistry?: boolean;
-    
+
     /**
      * Automatically register all decoders to the global registry
      * @default true
      */
     registerAllDecodersToGlobal?: boolean;
-    
+
     /**
      * Add useInterfaces argument to decode and toAmino functions
      * @default false
      */
     useUseInterfacesParams?: boolean;
-    
+
     /**
      * Use interface decoders by default
      * @default true
      */
     useByDefault?: boolean;
-    
+
     /**
      * Use interface decoders by default in RPC clients
      * @default true
      */
     useByDefaultRpc?: boolean;
-    
+
     /**
      * Generate Any type as union types instead of intersection types
      * @default false
@@ -164,12 +170,12 @@ export interface TelescopeOpts {
      * @default true
      */
     enabled?: boolean;
-    
+
     /**
      * Alias mapping for type names
      */
     alias?: AliasNameMappers;
-    
+
     /**
      * Protobuf parser options
      */
@@ -179,20 +185,20 @@ export interface TelescopeOpts {
        * @default false
        */
       keepCase?: boolean;
-      
+
       /**
        * Use alternate comment mode
        * @default true
        */
       alternateCommentMode?: boolean;
-      
+
       /**
        * Prefer trailing comments
        * @default false
        */
       preferTrailingComment?: boolean;
     };
-    
+
     /**
      * Methods to generate for each type
      */
@@ -225,55 +231,55 @@ export interface TelescopeOpts {
       /** Generate fromProto method */
       fromProto?: boolean;
     };
-    
+
     /**
      * Enable strict null checks for prototype methods
      * @default false
      */
     strictNullCheckForPrototypeMethods?: boolean;
-    
+
     /**
      * Set default values for pagination in fromPartial methods
      * @default false
      */
     paginationDefaultFromPartial?: boolean;
-    
+
     /**
      * Export a protoPackage variable to indicate package name
      * @default false
      */
     includePackageVar?: boolean;
-    
+
     /**
      * Set default optionality of fields
      * @default false
      */
     fieldDefaultIsOptional?: boolean;
-    
+
     /**
      * Use (gogoproto.nullable) values in determining optionality
      * @default true
      */
     useOptionalNullable?: boolean;
-    
+
     /**
      * Allow Types to be undefined
      * @default false
      */
     allowUndefinedTypes?: boolean;
-    
+
     /**
      * Allow encoders to encode default values of scalar types
      * @default false
      */
     allowEncodeDefaultScalars?: boolean;
-    
+
     /**
      * Determine whether scalar types are nullable by default
      * @default false
      */
     isScalarDefaultToNullable?: boolean;
-    
+
     /**
      * Enforce checking that required scalar fields are not null/undefined
      * @default false
@@ -285,7 +291,7 @@ export interface TelescopeOpts {
      * @default false
      */
     optionalQueryParams?: boolean;
-    
+
     /**
      * Make PageRequest fields optional
      * @default false
@@ -297,13 +303,13 @@ export interface TelescopeOpts {
      * @default true
      */
     addTypeUrlToObjects?: boolean;
-    
+
     /**
      * Add aminoType field to generated Decoders
      * @default false
      */
     addAminoTypeToObjects?: boolean;
-    
+
     /**
      * Add typeUrl field to generated Decoders
      * @default true
@@ -315,7 +321,7 @@ export interface TelescopeOpts {
      * @default true
      */
     enableRegistryLoader?: boolean;
-    
+
     /**
      * Generate MessageComposer in *.registry.ts files
      * @default true
@@ -333,7 +339,7 @@ export interface TelescopeOpts {
       /** Proto files to exclude (cannot be overridden) */
       hardProtos?: string[];
     };
-    
+
     /**
      * Include specific packages and protos in generation
      */
@@ -444,6 +450,18 @@ export interface TelescopeOpts {
      * @default "namespace"
      */
     type?: "namespace" | "module";
+
+    /**
+     * packages and names that should not be aliased
+     * if the package and the name match here, the name will not be aliased
+     * if there're duplicated names in different packages, the first one will not be aliased
+     * and the rest will still be aliased
+     * @default []
+     */
+    noAlias?: {
+      package: string;
+      name: string;
+    }[];
   };
 
   /**
@@ -498,7 +516,7 @@ export interface TelescopeOpts {
      * @default true
      */
     enabled: boolean;
-    
+
     /**
      * Custom type handling options
      */
@@ -509,36 +527,36 @@ export interface TelescopeOpts {
        */
       useCosmosSDKDec?: boolean;
     };
-    
+
     /**
      * Tags that determine field omission in JSON
      * @default ["omitempty", "dont_omitempty"]
      */
     omitEmptyTags?: ("omitempty" | "dont_omitempty")[];
-    
+
     /**
      * Use proto optionality for determining required fields
      * @default false
      */
     useProtoOptionality?: boolean;
-    
+
     /**
      * Disable generating AminoMsg types
      * @default false
      */
     disableMsgTypes?: boolean;
-    
+
     /**
      * Casing function for amino field names
      * @default snake
      */
     casingFn?: Function;
-    
+
     /**
      * Amino type name exceptions
      */
     exceptions?: AminoExceptions;
-    
+
     /**
      * Function to map type URLs to amino types
      */
@@ -550,7 +568,7 @@ export interface TelescopeOpts {
      * @default false
      */
     useLegacyInlineEncoding?: boolean;
-    
+
     /**
      * Legacy amino converter options
      */
@@ -571,19 +589,19 @@ export interface TelescopeOpts {
      * @default true
      */
     enabled: boolean;
-    
+
     /**
      * Make scoped clients exclusive
      * @default true
      */
     scopedIsExclusive?: boolean;
-    
+
     /**
      * Generate factory bundle aggregate
      * @default true
      */
     bundle?: boolean;
-    
+
     /**
      * Scoped LCD client configuration
      */
@@ -602,7 +620,7 @@ export interface TelescopeOpts {
       methodName?: string;
     }[];
   };
-  
+
   /**
    * RPC client generation options
    */
@@ -612,7 +630,7 @@ export interface TelescopeOpts {
      * @default "tendermint"
      */
     type?: "tendermint" | "grpc-web" | "grpc-gateway";
-    
+
     /**
      * Client style options
      */
@@ -622,12 +640,12 @@ export interface TelescopeOpts {
        * @default false
        */
       useUpdatedClientStyle?: boolean;
-      
+
       /**
        * Client types to generate
        */
       type?: ("all-client" | "sdk-module-client" | "custom-client")[];
-      
+
       /**
        * Custom client options
        */
@@ -641,61 +659,61 @@ export interface TelescopeOpts {
           patterns?: string[];
         };
       }[];
-      
+
       /**
        * SDK module client options
        */
       sdkModuleClientOption?: string[];
     };
-    
+
     /**
      * Enable RPC client generation
      * @default true
      */
     enabled: boolean;
-    
+
     /**
      * Inline all RPC methods into single file
      * @default false
      */
     inline?: boolean;
-    
+
     /**
      * Enable extensions
      * @default true
      */
     extensions?: boolean;
-    
+
     /**
      * Use camel case for method names
      * @default true
      */
     camelCase?: boolean;
-    
+
     /**
      * Make scoped clients exclusive
      * @default true
      */
     scopedIsExclusive?: boolean;
-    
+
     /**
      * Generate factory bundle aggregate
      * @default true
      */
     bundle?: boolean;
-    
+
     /**
      * Service implementation mapping
      */
     serviceImplement?: {
       [
-      key:
-        | "Msg"
-        | "Query"
-        | "Service"
-        | "ReflectionService"
-        | "ABCIApplication"
-        | string
+        key:
+          | "Msg"
+          | "Query"
+          | "Service"
+          | "ReflectionService"
+          | "ABCIApplication"
+          | string
       ]: {
         include?: {
           patterns?: string[];
@@ -703,7 +721,7 @@ export interface TelescopeOpts {
         type: "Query" | "Tx" | string;
       };
     };
-    
+
     /**
      * Enabled services
      * @default ["Msg", "Query", "Service"]
@@ -716,7 +734,7 @@ export interface TelescopeOpts {
       | "ABCIApplication"
       | string
     )[];
-    
+
     /**
      * Scoped RPC client configuration
      */
@@ -736,7 +754,7 @@ export interface TelescopeOpts {
       /** Method name for tx client */
       methodNameTx?: string;
     }[];
-    
+
     /**
      * Instant operations configuration
      */
@@ -763,13 +781,13 @@ export interface TelescopeOpts {
         };
       };
     }[];
-    
+
     /**
      * Use connectComet function
      * @default false
      */
     useConnectComet?: boolean;
-    
+
     /**
      * Allow custom query client resolver
      * @default false
@@ -785,13 +803,13 @@ export interface TelescopeOpts {
      * @default false
      */
     enabled: boolean;
-    
+
     /**
      * Use global decoder registry
      * @default false
      */
     useGlobalDecoderRegistry?: boolean;
-    
+
     /**
      * Hook generation options
      */
@@ -801,7 +819,7 @@ export interface TelescopeOpts {
       /** Generate Vue hooks */
       vue?: boolean;
     };
-    
+
     /**
      * Include configuration
      */
@@ -811,7 +829,7 @@ export interface TelescopeOpts {
       /** Pattern matching (case insensitive) */
       patterns?: string[];
     };
-    
+
     /**
      * Name mapping configuration
      */
@@ -835,7 +853,7 @@ export interface TelescopeOpts {
       Msg?: HelperFuncNameMappers;
     };
   };
-  
+
   /**
    * React Query generation options
    */
@@ -845,13 +863,13 @@ export interface TelescopeOpts {
      * @default false
      */
     enabled: boolean;
-    
+
     /**
      * Allow extra query key parameter
      * @default false
      */
     needExtraQueryKey?: boolean;
-    
+
     /**
      * Include configuration
      */
@@ -866,7 +884,7 @@ export interface TelescopeOpts {
       /** Proto files to include */
       protos?: string[];
     };
-    
+
     /**
      * Instant export configuration
      */
@@ -881,7 +899,7 @@ export interface TelescopeOpts {
       };
     };
   };
-  
+
   /**
    * MobX generation options
    */
@@ -891,7 +909,7 @@ export interface TelescopeOpts {
      * @default false
      */
     enabled: boolean;
-    
+
     /**
      * Include configuration
      */
@@ -907,7 +925,7 @@ export interface TelescopeOpts {
       protos?: string[];
     };
   };
-  
+
   /**
    * Pinia generation options
    */
@@ -917,7 +935,7 @@ export interface TelescopeOpts {
      * @default false
      */
     enabled: boolean;
-    
+
     /**
      * Include configuration
      */

@@ -170,7 +170,7 @@ describe("Token transfers", () => {
     const ibcBalance = balances.find((balance) => {
       return balance.denom.startsWith("ibc/");
     });
-    expect(ibcBalance?.amount).toEqual('10000000');
+    expect(ibcBalance?.amount).toEqual(token.amount);
     expect(ibcBalance?.denom).toContain("ibc/");
 
     // check ibc denom trace of the same

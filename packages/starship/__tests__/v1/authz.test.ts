@@ -464,7 +464,7 @@ describe("Authz testing", () => {
       fee
     );
 
-    expect(result.transactionHash).toBeDefined();
+    assertIsDeliverTxSuccess(result);
 
     const authsResults = await queryClient.cosmos.authz.v1beta1.granteeGrants({
       grantee: address2,

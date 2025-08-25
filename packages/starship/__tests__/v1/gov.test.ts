@@ -44,7 +44,7 @@ describe("Governance tests for osmosis", () => {
       denom,
     });
 
-    expect(balance?.amount).toEqual("10000000000");
+    expect(balance.amount).toEqual("10000000000");
   }, 200000);
 
   it("query validator address", async () => {
@@ -87,7 +87,7 @@ describe("Governance tests for osmosis", () => {
 
     // Stake half of the tokens
     // eslint-disable-next-line no-undef
-    const delegationAmount = (BigInt(balance?.amount || '0') / BigInt(2)).toString();
+    const delegationAmount = (BigInt(balance.amount) / BigInt(2)).toString();
 
     const fee = {
       amount: [
@@ -107,7 +107,7 @@ describe("Governance tests for osmosis", () => {
         validatorAddress: validatorAddress,
         amount: {
           amount: delegationAmount,
-          denom: balance?.denom || denom,
+          denom: balance.denom,
         },
       },
       fee

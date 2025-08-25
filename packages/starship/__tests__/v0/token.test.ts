@@ -2,8 +2,7 @@ import { generateMnemonic } from '@confio/relayer/build/lib/helpers';
 import { DirectSecp256k1HdWallet } from '@cosmjs/proto-signing';
 import {assertIsDeliverTxSuccess, StargateClient} from '@cosmjs/stargate';
 
-import { ibc } from '../../src/codegen';
-import { getSigningOsmosisClient } from '../../src/codegen1';
+import { ibc, getSigningOsmosisClient } from '../../src/codegen';
 import { useChain } from 'starshipjs';
 import './setup.test';
 

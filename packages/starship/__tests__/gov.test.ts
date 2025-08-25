@@ -281,7 +281,7 @@ describe('Governance tests for osmosis', () => {
 
     expect(vote.proposalId.toString()).toEqual(proposalId);
     expect(vote.voter).toEqual(directAddress);
-    expect(vote.option).toEqual(VoteOption.VOTE_OPTION_YES);
+    expect(vote.options[0]?.option).toEqual(VoteOption.VOTE_OPTION_YES);
   }, 10000);
 
   it('vote on proposal using amino', async () => {
@@ -319,7 +319,7 @@ describe('Governance tests for osmosis', () => {
 
     expect(vote.proposalId.toString()).toEqual(proposalId);
     expect(vote.voter).toEqual(aminoAddress);
-    expect(vote.option).toEqual(VoteOption.VOTE_OPTION_NO);
+    expect(vote.options[0]?.option).toEqual(VoteOption.VOTE_OPTION_NO);
   }, 10000);
 
   it('wait for voting period to end', async () => {

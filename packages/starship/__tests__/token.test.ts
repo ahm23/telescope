@@ -7,13 +7,26 @@ import { Asset } from '@chain-registry/types';
 import { generateMnemonic } from '../src/utils';
 import { ICosmosQueryClient, AminoSigner, DirectSigner, OfflineDirectSigner, createCosmosQueryClient, Secp256k1HDWallet } from '@interchainjs/cosmos';
 import { HDPath } from '@interchainjs/types';
-import { getBalance, send, MsgSend, getAllBalances, MsgTransfer, transfer } from 'interchainjs';
+import {
+  getBalance,
+  getAllBalances,
+} from '../src/codegen/cosmos/bank/v1beta1/query.rpc.func';
+import {
+  send,
+} from '../src/codegen/cosmos/bank/v1beta1/tx.rpc.func';
+import {
+  MsgSend,
+} from '../src/codegen/cosmos/bank/v1beta1/tx';
+import {
+  MsgTransfer,
+} from '../src/codegen/ibc/applications/transfer/v1/tx';
+import {
+  transfer
+} from '../src/codegen/ibc/applications/transfer/v1/tx.rpc.func';
 
 import { useChain } from 'starshipjs';
 // @ts-ignore
 import WebSocket from 'ws';
-
-const cosmosHdPath = "m/44'/118'/0'/0/0";
 
 describe('Token transfers', () => {
   let wallet: Secp256k1HDWallet;
@@ -350,7 +363,7 @@ describe('Token transfers', () => {
         }))
       }
     );
-    const cosmosAddress = (await cosmosWallet.getAccounts())[0].address;
+    const cosmosAddress = (await cosmosWallet.getAccounts())[0].address!;
 
     const ibcInfos = chainInfo.fetcher.getChainIbcData(
       chainInfo.chain.chain_name
@@ -397,7 +410,6 @@ describe('Token transfers', () => {
         receiver: cosmosAddress,
         timeoutHeight: undefined,
         timeoutTimestamp: BigInt(timeoutTime),
-        memo: 'test transfer',
       }),
       fee,
       ''
@@ -412,7 +424,6 @@ describe('Token transfers', () => {
 
     const { balances } = await getAllBalances(cosmosClient, {
       address: cosmosAddress,
-      resolveDenom: true,
     });
 
     // check balances

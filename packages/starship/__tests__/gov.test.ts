@@ -10,21 +10,36 @@ import {
   ProposalStatus,
   TextProposal,
   VoteOption,
-  BondStatus,
-  MsgDelegate,
+} from '../src/codegen/cosmos/gov/v1beta1/gov';
+import {
   MsgSubmitProposal,
   MsgVote,
-  getBalance,
+} from '../src/codegen/cosmos/gov/v1beta1/tx';
+import {
   getVote
-} from 'interchainjs';
+} from '../src/codegen/cosmos/gov/v1beta1/query.rpc.func';
+import {
+  MsgDelegate,
+} from '../src/codegen/cosmos/staking/v1beta1/tx';
+import {
+  getBalance,
+} from '../src/codegen/cosmos/bank/v1beta1/query.rpc.func';
 // Using built-in Buffer for base64 and utf8 conversion
 const fromBase64 = (str: string) => Buffer.from(str, 'base64');
-const toUtf8 = (data: Uint8Array) => Buffer.from(data).toString('utf8');
+const toUtf8 = (data: Uint8Array | Buffer) => {
+  if (Buffer.isBuffer(data)) {
+    return data.toString('utf8');
+  }
+  return Buffer.from(data).toString('utf8');
+};
 import { BigNumber } from 'bignumber.js';
 import { useChain } from 'starshipjs';
 
 import { waitUntil } from '../src';
-import { getProposal, getValidators, delegate, submitProposal, vote } from 'interchainjs';
+import { submitProposal, vote } from '../src/codegen/cosmos/gov/v1beta1/tx.rpc.func';
+import { getProposal } from '../src/codegen/cosmos/gov/v1beta1/query.rpc.func';
+import { getValidators } from '../src/codegen/cosmos/staking/v1beta1/query.rpc.func';
+import { delegate } from '../src/codegen/cosmos/staking/v1beta1/tx.rpc.func';
 
 const cosmosHdPath = "m/44'/118'/0'/0/0";
 

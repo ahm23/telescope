@@ -9,19 +9,19 @@ import { HDPath } from '@interchainjs/types';
 import {
   GenericAuthorization,
   Grant,
-} from "interchainjs";
+} from "../src/codegen/cosmos/authz/v1beta1/authz";
 import {
   MsgExec,
   MsgGrant,
   MsgRevoke,
-} from "interchainjs";
-import { SendAuthorization } from "interchainjs";
-import { MsgVote } from "interchainjs";
-import { MsgSend } from "interchainjs";
+} from "../src/codegen/cosmos/authz/v1beta1/tx";
+import { SendAuthorization } from "../src/codegen/cosmos/bank/v1beta1/authz";
+import { MsgVote } from "../src/codegen/cosmos/gov/v1beta1/tx";
+import { MsgSend } from "../src/codegen/cosmos/bank/v1beta1/tx";
 
-import { getBalance } from "@interchainjs/cosmos-types";
-import { getGranteeGrants } from "interchainjs";
-import { grant, exec, revoke } from "interchainjs";
+import { getBalance } from "../src/codegen/cosmos/bank/v1beta1/query.rpc.func";
+import { getGranteeGrants } from "../src/codegen/cosmos/authz/v1beta1/query.rpc.func";
+import { grant, exec, revoke } from "../src/codegen/cosmos/authz/v1beta1/tx.rpc.func";
 
 const cosmosHdPath = "m/44'/118'/0'/0/0";
 
@@ -53,7 +53,7 @@ describe("Authz testing", () => {
         hdPath: HDPath.cosmos().toString(),
       }]
     });
-    address1 = (await wallet1.getAccounts())[0].address;
+    address1 = (await wallet1.getAccounts())[0].address!;
 
     wallet2 = await Secp256k1HDWallet.fromMnemonic(generateMnemonic(), {
       derivations: [{
@@ -61,7 +61,7 @@ describe("Authz testing", () => {
         hdPath: HDPath.cosmos().toString(),
       }]
     });
-    address2 = (await wallet2.getAccounts())[0].address;
+    address2 = (await wallet2.getAccounts())[0].address!;
 
     wallet3 = await Secp256k1HDWallet.fromMnemonic(generateMnemonic(), {
       derivations: [{
@@ -69,7 +69,7 @@ describe("Authz testing", () => {
         hdPath: HDPath.cosmos().toString(),
       }]
     });
-    address3 = (await wallet3.getAccounts())[0].address;
+    address3 = (await wallet3.getAccounts())[0].address!;
 
     // Create signers
     signer1 = new DirectSigner(await wallet1.toOfflineDirectSigner(), {

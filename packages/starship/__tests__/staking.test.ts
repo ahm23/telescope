@@ -10,20 +10,19 @@ import { ICosmosQueryClient, DirectSigner, createCosmosQueryClient, Secp256k1HDW
 import { HDPath } from '@interchainjs/types';
 
 import {
-  BondStatus,
   MsgDelegate,
-  MsgUndelegate,
-  MsgBeginRedelegate,
+} from '../src/codegen/cosmos/staking/v1beta1/tx';
+import {
   getBalance,
+} from '../src/codegen/cosmos/bank/v1beta1/query.rpc.func';
+import {
   getValidators,
   getDelegation,
-  getUnbondingDelegation,
-  getRedelegations,
+} from '../src/codegen/cosmos/staking/v1beta1/query.rpc.func';
+import {
   delegate
-} from 'interchainjs';
+} from '../src/codegen/cosmos/staking/v1beta1/tx.rpc.func';
 import BigNumber from 'bignumber.js';
-
-const cosmosHdPath = "m/44'/118'/0'/0/0";
 
 describe('Staking tokens testing', () => {
   let wallet: Secp256k1HDWallet, denom: string, address: string;
@@ -58,7 +57,7 @@ describe('Staking tokens testing', () => {
         hdPath: HDPath.cosmos().toString(),
       }]
     });
-    address = (await wallet.getAccounts())[0].address;
+    address = (await wallet.getAccounts())[0].address!;
 
     // Create signer
     signer = new DirectSigner(await wallet.toOfflineDirectSigner(), {

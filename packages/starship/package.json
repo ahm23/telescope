@@ -94,6 +94,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "@chain-registry/v2": "^1.71.237",
     "@cosmjs/amino": "^0.32.0",
     "@cosmjs/proto-signing": "^0.32.0",
     "@cosmjs/stargate": "^0.32.0",

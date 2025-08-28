@@ -32,7 +32,7 @@ import { plugin as createSdkModuleStargateClients } from './generators/create-sd
 import { plugin as createBundle } from './generators/create-bundle';
 import { plugin as createIndex } from './generators/create-index';
 import { plugin as createHelpers } from './generators/create-helpers';
-import { plugin as createCosmWasmBundle } from './generators/create-cosmwasm-bundle';
+
 import { plugin as createPiniaStore } from './generators/create-pinia-store';
 import { plugin as createPiniaStoreBundle } from './generators/create-pinia-store-bundle';
 import { plugin as createRpcOpsBundle } from './generators/create-rpc-ops-bundle';
@@ -43,16 +43,7 @@ import { plugin as createMcpServer } from './generators/create-mcp-server';
 const sanitizeOptions = (options: TelescopeOptions): TelescopeOptions => {
   // If an element at the same key is present for both x and y, the value from y will appear in the result.
   options = deepmerge(defaultTelescopeOptions, options ?? {});
-  // correct the path for windows
-  if (options.cosmwasm) {
-    options.cosmwasm.outPath = toPosixPath(options.cosmwasm.outPath);
-    options.cosmwasm.contracts = options.cosmwasm.contracts.map(
-      (item: { name: string; dir: string }) => {
-        item.dir = toPosixPath(item.dir);
-        return item;
-      }
-    );
-  }
+
   // strip off leading slashes
   options.tsDisable.files = options.tsDisable.files.map((file) =>
     file.startsWith('/') ? file : file.replace(/^\//, '')
@@ -279,7 +270,6 @@ export class TelescopeBuilder {
     createReactQueryBundle(this);
     createMobxBundle(this);
     createAggregatedLCDClient(this);
-    await createCosmWasmBundle(this);
 
     createHelpers(this);
     createPiniaStoreBundle(this);

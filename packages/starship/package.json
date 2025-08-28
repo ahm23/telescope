@@ -51,13 +51,13 @@
   },
   "devDependencies": {
     "@confio/relayer": "0.7.0",
-    "@cosmjs/cosmwasm-stargate": "0.29.4",
+
     "@cosmjs/crypto": "0.29.4",
     "@hyperweb/telescope": "^2.0.1",
     "@protobufs/confio": "^0.0.6",
     "@protobufs/cosmos": "^0.0.11",
     "@protobufs/cosmos_proto": "^0.0.10",
-    "@protobufs/cosmwasm": "^0.0.11",
+
     "@protobufs/gogoproto": "^0.0.10",
     "@protobufs/google": "^0.0.10",
     "@protobufs/ibc": "^0.0.11",

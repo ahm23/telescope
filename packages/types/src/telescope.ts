@@ -1,4 +1,3 @@
-import { TSBuilderInput } from "@cosmwasm/ts-codegen";
 import { AminoExceptions, DEFAULT_AMINO_EXCEPTIONS } from "./aminos";
 import { snake, camel } from "case";
 import { Operation } from "fast-json-patch";
@@ -464,11 +463,7 @@ export interface TelescopeOpts {
     }[];
   };
 
-  /**
-   * CosmWasm code generation options
-   * See @cosmwasm/ts-codegen for documentation
-   */
-  cosmwasm?: TSBuilderInput;
+
 
   /**
    * Aggregated LCD client options

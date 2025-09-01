@@ -277,28 +277,6 @@ const { data, isLoading, error } = useBalance(
 </template>
 ```
 
-### CosmWasm Integration
-
-For projects working with CosmWasm smart contracts, Telescope integrates with @cosmwasm/ts-codegen to generate TypeScript clients:
-
-```typescript
-// Example of using a generated CosmWasm client
-import { CwCoin } from "./generated/CwCoin.client";
-
-async function sendCoins() {
-  // Create a client instance
-  const client = new CwCoin("your-contract-address", signingClient);
-  
-  // Call a contract method
-  const result = await client.send({
-    amount: "1000",
-    to: "recipient-address"
-  });
-  
-  console.log("Transaction hash:", result.transactionHash);
-}
-```
-
 ## Runtime Environment Considerations
 
 Telescope-generated code can run in different environments, each with its own considerations.
@@ -514,4 +492,4 @@ By leveraging Telescope's integrations with popular frameworks like React and Vu
 
 As you continue your journey with Telescope, remember that the community is a valuable resource. Don't hesitate to ask questions in the Cosmos Developer Discord or contribute to the project on GitHub.
 
-Happy building! 
+Happy building!

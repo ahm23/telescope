@@ -1,6 +1,5 @@
 import { prompt } from './prompt';
 import { Commands as commands } from './cmds';
-import { Contracts as contracts } from './cmds';
 import * as pkg from '../package.json';
 
 export const cli = async (argv) => {
@@ -9,26 +8,7 @@ export const cli = async (argv) => {
     return;
   }
 
-  if (argv.contract) {
-    const { cmd } = await prompt(
-      [
-        {
-          _: true,
-          type: 'fuzzy',
-          name: 'cmd',
-          message: 'what do you want to do?',
-          choices: Object.keys(contracts)
-        }
-      ],
-      argv
-    );
-    if (typeof contracts[cmd] === 'function') {
-      await contracts[cmd](argv);
-    } else {
-      console.log('command not found.');
-    }
-    return;
-  }
+
 
   console.log(`Telescope ${pkg.version}`);
   const { cmd } = await prompt(

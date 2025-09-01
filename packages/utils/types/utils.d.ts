@@ -90,7 +90,7 @@ export declare function convertPackageNameToNestedJSONPath(packageName: string):
  * @param options
  * @returns
  */
-export declare const crossGlob: (input: string, options?: object) => string[];
+export declare const crossGlob: (input: string, options?: object) => any;
 /**
  * Unify all the path to posixPath for windows support purpose
  * @param mixedPath

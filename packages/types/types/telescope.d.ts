@@ -1,4 +1,3 @@
-import { TSBuilderInput } from "@cosmwasm/ts-codegen";
 import { AminoExceptions } from "./aminos";
 import { Operation } from "fast-json-patch";
 /**
@@ -402,11 +401,6 @@ export interface TelescopeOpts {
             name: string;
         }[];
     };
-    /**
-     * CosmWasm code generation options
-     * See @cosmwasm/ts-codegen for documentation
-     */
-    cosmwasm?: TSBuilderInput;
     /**
      * Aggregated LCD client options
      */

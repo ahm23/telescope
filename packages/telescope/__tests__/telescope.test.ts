@@ -95,44 +95,6 @@ const options: TelescopeOptions = {
     enabled: true
   },
 
-  cosmwasm: {
-    contracts: [
-      {
-        name: 'SG721',
-        dir: join(contractsDir, 'sg721')
-      },
-      {
-        name: 'Minter',
-        dir: join(contractsDir, 'minter')
-      }
-    ],
-    outPath,
-    options: {
-      bundle: {
-        bundleFile: 'contracts.ts',
-        scope: 'contracts'
-      },
-      types: {
-        enabled: true
-      },
-      client: {
-        enabled: true
-      },
-      reactQuery: {
-        enabled: true,
-        optionalClient: true,
-        version: 'v4',
-        mutations: true
-      },
-      recoil: {
-        enabled: false
-      },
-      messageComposer: {
-        enabled: false
-      }
-    }
-  },
-
   stargateClients: {
     enabled: true,
     includeCosmosDefaultTypes: true

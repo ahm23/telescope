@@ -1431,31 +1431,8 @@ Here is how these patches can be defined within the prototypes configuration:
     }
 }
 ```
-
-
-## CosmWasm
-
-Generate TypeScript SDKs for your CosmWasm smart contracts by using the `cosmwasm` option on `TelescopeOptions`. The `cosmwasm` option is actually a direct reference to the `TSBuilderInput` object, for the most up-to-date documentation, visit [@cosmwasm/ts-codegen](https://github.com/CosmWasm/ts-codegen).
-
-```ts
-import { TSBuilderInput } from '@cosmwasm/ts-codegen';
-const options: TelescopeOptions = {
-  cosmwasm: {
-    contracts: [
-      {
-        name: 'SG721',
-        dir: './path/to/sg721/schema'
-      },
-      {
-        name: 'Minter',
-        dir: './path/to/Minter/schema'
-      }
-    ],
-    outPath: './path/to/code/src/'
-  }
-};
-```
-
+## Cosmwasm
+Cosmwasm option is deprecated. Please visit [@cosmwasm/ts-codegen](https://github.com/hyperweb-io/ts-codegen) for cosmwasm codegen. 
 
 ## Helper Functions Configuration
 The nameMappers object supports three service types: All, Query, and Msg. Each pattern within these categories can specify:

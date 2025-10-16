@@ -1,7 +1,7 @@
 {
   "name": "@cosmology/starship-test",
   "private": true,
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "E2E tests for telescope with Starship",
   "author": "Anmol1696 <anmol1696@gmail.com>",
   "homepage": "https://github.com/osmosis-labs/telescope#readme",
@@ -51,13 +51,11 @@
   },
   "devDependencies": {
     "@confio/relayer": "0.7.0",
-
     "@cosmjs/crypto": "0.29.4",
-    "@hyperweb/telescope": "^2.0.1",
+    "@hyperweb/telescope": "^2.0.2",
     "@protobufs/confio": "^0.0.6",
     "@protobufs/cosmos": "^0.0.11",
     "@protobufs/cosmos_proto": "^0.0.10",
-
     "@protobufs/gogoproto": "^0.0.10",
     "@protobufs/google": "^0.0.10",
     "@protobufs/ibc": "^0.0.11",

@@ -19,7 +19,7 @@ export { Long };
 declare var self: any | undefined;
 declare var window: any | undefined;
 declare var global: any | undefined;
-var globalThis: any = (() => {
+const _globalThis: any = (() => {
     if (typeof globalThis !== 'undefined') return globalThis;
     if (typeof self !== 'undefined') return self;
     if (typeof window !== 'undefined') return window;
@@ -28,7 +28,7 @@ var globalThis: any = (() => {
 })();
 
 const atob: (b64: string) => string =
-    globalThis.atob || ((b64) => globalThis.Buffer.from(b64, 'base64').toString('binary'));
+    _globalThis.atob || ((b64) => _globalThis.Buffer.from(b64, 'base64').toString('binary'));
 
 export function bytesFromBase64(b64: string): Uint8Array {
     const bin = atob(b64);
@@ -40,7 +40,7 @@ export function bytesFromBase64(b64: string): Uint8Array {
 }
 
 const btoa: (bin: string) => string =
-    globalThis.btoa || ((bin) => globalThis.Buffer.from(bin, 'binary').toString('base64'));
+    _globalThis.btoa || ((bin) => _globalThis.Buffer.from(bin, 'binary').toString('base64'));
 
 export function base64FromBytes(arr: Uint8Array): string {
     const bin: string[] = [];

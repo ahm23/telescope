@@ -3,21 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/hyperweb-io/telescope/compare/@cosmology/ast@2.0.2...@cosmology/ast@2.0.3) (2025-11-11)
+
+### Bug Fixes
+
+- prevent globalThis hoisting override in ESM ([d3d6944](https://github.com/hyperweb-io/telescope/commit/d3d6944a800e954c3a2998ae65d81b55933ec7cb))
+
 ## [2.0.2](https://github.com/hyperweb-io/telescope/compare/@cosmology/ast@2.0.1...@cosmology/ast@2.0.2) (2025-10-16)
 
 **Note:** Version bump only for package @cosmology/ast
 
-
-
-
-
 ## [2.0.1](https://github.com/hyperweb-io/telescope/compare/@cosmology/ast@2.0.0...@cosmology/ast@2.0.1) (2025-10-16)
 
 **Note:** Version bump only for package @cosmology/ast
-
-
-
-
 
 # [2.0.0](https://github.com/hyperweb-io/telescope/compare/@cosmology/ast@1.12.2...@cosmology/ast@2.0.0) (2025-08-25)
 

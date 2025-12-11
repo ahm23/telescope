@@ -2,9 +2,9 @@
   "name": "@cosmology/proto-parser",
   "version": "2.0.2",
   "description": "A Parser for Cosmos Protobufs",
-  "author": "Dan Lynch <pyramation@gmail.com>",
+  "author": "Constructive <developers@constructive.io>",
   "homepage": "https://github.com/hyperweb-io/telescope/tree/master/packages/parser#readme",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "main": "main/index.js",
   "typings": "types/index.d.ts",
   "directories": {

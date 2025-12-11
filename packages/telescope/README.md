@@ -11,11 +11,11 @@
   <a href="https://github.com/hyperweb-io/telescope/actions/workflows/run-tests.yaml">
     <img height="20" src="https://github.com/hyperweb-io/telescope/actions/workflows/run-tests.yaml/badge.svg" />
   </a>
-    <a href="https://github.com/hyperweb-io/lib-count">
-      <img height="20" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhyperweb-io%2Flib-count%2Fmain%2Foutput%2Fbadges%2Fproducts%2Ftelescope%2Ftotal.json"/>
+    <a href="https://github.com/constructive-io/lib-count">
+      <img height="20" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fconstructive-io%2Flib-count%2Fmain%2Foutput%2Fbadges%2Fproducts%2Ftelescope%2Ftotal.json"/>
     </a>
-    <a href="https://github.com/hyperweb-io/lib-count">
-      <img height="20" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhyperweb-io%2Flib-count%2Fmain%2Foutput%2Fbadges%2Fproducts%2Ftelescope%2Fmonthly.json"/>
+    <a href="https://github.com/constructive-io/lib-count">
+      <img height="20" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fconstructive-io%2Flib-count%2Fmain%2Foutput%2Fbadges%2Fproducts%2Ftelescope%2Fmonthly.json"/>
     </a>
     <br />
    <a href="https://github.com/hyperweb-io/telescope/blob/main/LICENSE-MIT"><img height="20" src="https://img.shields.io/badge/license-MIT-blue.svg"/></a>

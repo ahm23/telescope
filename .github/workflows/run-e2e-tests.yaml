@@ -15,19 +15,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout 🛎️
-        uses: actions/checkout@v2.3.1
-      - name: node
-        uses: actions/setup-node@v3
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: 18.4.0
+          version: 9
+      - name: node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
       - name: deps
-        run: yarn
-      - name: bootstrap
-        run: yarn bootstrap
+        run: pnpm install
       - name: build
-        run: yarn build
+        run: pnpm run build
       - name: codegen
-        run: cd ./packages/starship && yarn run codegen
+        run: pnpm --filter @cosmology/starship-test run codegen
       # Starship Infra setup
       # - Create a local kind cluster
       # - Creates a new namespace based on the name
@@ -41,4 +44,4 @@ jobs:
           config: packages/starship/configs/local-config.yaml
           cli-version: 3.0.0
       - name: e2e
-        run: cd ./packages/starship && yarn run starship:test
+        run: pnpm --filter @cosmology/starship-test run starship:test

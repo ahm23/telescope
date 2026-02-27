@@ -15,8 +15,6 @@ import {
   TraverseImportNames,
   TraversalSymbol,
 } from "@cosmology/types";
-import { getPluginValue } from "@cosmology/ast";
-
 import {
   Service,
   Type,
@@ -39,6 +37,7 @@ import {
   getEnumValues,
   getTypeNameByEnumObj,
   getAliasName,
+  getPluginValue,
 } from "@cosmology/utils";
 
 export interface TraverseContext {

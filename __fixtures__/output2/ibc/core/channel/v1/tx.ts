@@ -1001,7 +1001,7 @@ export const MsgRecvPacketResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.result = (reader.int32() as any);
+          message.result = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1071,7 +1071,7 @@ export const MsgTimeout = {
           message.proofHeight = Height.decode(reader, reader.uint32());
           break;
         case 4:
-          message.nextSequenceRecv = (reader.uint64() as Long);
+          message.nextSequenceRecv = reader.uint64() as Long;
           break;
         case 5:
           message.signer = reader.string();
@@ -1131,7 +1131,7 @@ export const MsgTimeoutResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.result = (reader.int32() as any);
+          message.result = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1208,7 +1208,7 @@ export const MsgTimeoutOnClose = {
           message.proofHeight = Height.decode(reader, reader.uint32());
           break;
         case 5:
-          message.nextSequenceRecv = (reader.uint64() as Long);
+          message.nextSequenceRecv = reader.uint64() as Long;
           break;
         case 6:
           message.signer = reader.string();
@@ -1271,7 +1271,7 @@ export const MsgTimeoutOnCloseResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.result = (reader.int32() as any);
+          message.result = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1401,7 +1401,7 @@ export const MsgAcknowledgementResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.result = (reader.int32() as any);
+          message.result = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

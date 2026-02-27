@@ -100,7 +100,7 @@ export const MsgCreateGauge = {
           message.startTime = Timestamp.decode(reader, reader.uint32());
           break;
         case 6:
-          message.numEpochsPaidOver = (reader.uint64() as Long);
+          message.numEpochsPaidOver = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -208,7 +208,7 @@ export const MsgAddToGauge = {
           message.owner = reader.string();
           break;
         case 2:
-          message.gaugeId = (reader.uint64() as Long);
+          message.gaugeId = reader.uint64() as Long;
           break;
         case 3:
           message.rewards.push(Coin.decode(reader, reader.uint32()));

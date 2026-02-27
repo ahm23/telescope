@@ -117,7 +117,7 @@ export const TwapRecord = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 2:
           message.asset0Denom = reader.string();
@@ -126,7 +126,7 @@ export const TwapRecord = {
           message.asset1Denom = reader.string();
           break;
         case 4:
-          message.height = (reader.int64() as Long);
+          message.height = reader.int64() as Long;
           break;
         case 5:
           message.time = fromTimestamp(Timestamp.decode(reader, reader.uint32()));

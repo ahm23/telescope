@@ -424,7 +424,7 @@ export const Type = {
           message.sourceContext = SourceContext.decode(reader, reader.uint32());
           break;
         case 6:
-          message.syntax = (reader.int32() as any);
+          message.syntax = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -564,10 +564,10 @@ export const Field = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.kind = (reader.int32() as any);
+          message.kind = reader.int32() as any;
           break;
         case 2:
-          message.cardinality = (reader.int32() as any);
+          message.cardinality = reader.int32() as any;
           break;
         case 3:
           message.number = reader.int32();
@@ -727,7 +727,7 @@ export const Enum = {
           message.sourceContext = SourceContext.decode(reader, reader.uint32());
           break;
         case 5:
-          message.syntax = (reader.int32() as any);
+          message.syntax = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

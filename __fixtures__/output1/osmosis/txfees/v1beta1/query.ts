@@ -243,7 +243,7 @@ export const QueryDenomSpotPriceResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolID = (reader.uint64() as Long);
+          message.poolID = reader.uint64() as Long;
           break;
         case 2:
           message.spotPrice = reader.string();
@@ -361,7 +361,7 @@ export const QueryDenomPoolIdResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolID = (reader.uint64() as Long);
+          message.poolID = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

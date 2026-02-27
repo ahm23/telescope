@@ -1506,7 +1506,7 @@ export const Vote = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.type = (reader.int32() as any);
+          message.type = reader.int32() as any;
           break;
         case 2:
           message.height = reader.int64();
@@ -1847,7 +1847,7 @@ export const CommitSig = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.blockIdFlag = (reader.int32() as any);
+          message.blockIdFlag = reader.int32() as any;
           break;
         case 2:
           message.validatorAddress = reader.bytes();
@@ -1994,7 +1994,7 @@ export const Proposal = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.type = (reader.int32() as any);
+          message.type = reader.int32() as any;
           break;
         case 2:
           message.height = reader.int64();

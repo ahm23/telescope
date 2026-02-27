@@ -117,7 +117,7 @@ export const Gauge = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.id = (reader.uint64() as Long);
+          message.id = reader.uint64() as Long;
           break;
         case 2:
           message.isPerpetual = reader.bool();
@@ -132,10 +132,10 @@ export const Gauge = {
           message.startTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 6:
-          message.numEpochsPaidOver = (reader.uint64() as Long);
+          message.numEpochsPaidOver = reader.uint64() as Long;
           break;
         case 7:
-          message.filledEpochs = (reader.uint64() as Long);
+          message.filledEpochs = reader.uint64() as Long;
           break;
         case 8:
           message.distributedCoins.push(Coin.decode(reader, reader.uint32()));

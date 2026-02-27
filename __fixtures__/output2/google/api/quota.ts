@@ -282,7 +282,7 @@ export const MetricRule_MetricCostsEntry = {
           message.key = reader.string();
           break;
         case 2:
-          message.value = (reader.int64() as Long);
+          message.value = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -323,7 +323,7 @@ export const MetricRule = {
     }
     Object.entries(message.metricCosts).forEach(([key, value]) => {
       MetricRule_MetricCostsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(16).fork()).ldelim();
     });
@@ -358,7 +358,7 @@ export const MetricRule = {
       metricCosts: isObject(object.metricCosts) ? Object.entries(object.metricCosts).reduce<{
         [key: string]: Long;
       }>((acc, [key, value]) => {
-        acc[key] = Long.fromValue((value as Long | string));
+        acc[key] = Long.fromValue(value as Long | string);
         return acc;
       }, {}) : {}
     };
@@ -415,7 +415,7 @@ export const QuotaLimit_ValuesEntry = {
           message.key = reader.string();
           break;
         case 2:
-          message.value = (reader.int64() as Long);
+          message.value = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -485,7 +485,7 @@ export const QuotaLimit = {
     }
     Object.entries(message.values).forEach(([key, value]) => {
       QuotaLimit_ValuesEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(80).fork()).ldelim();
     });
@@ -508,13 +508,13 @@ export const QuotaLimit = {
           message.description = reader.string();
           break;
         case 3:
-          message.defaultLimit = (reader.int64() as Long);
+          message.defaultLimit = reader.int64() as Long;
           break;
         case 4:
-          message.maxLimit = (reader.int64() as Long);
+          message.maxLimit = reader.int64() as Long;
           break;
         case 7:
-          message.freeTier = (reader.int64() as Long);
+          message.freeTier = reader.int64() as Long;
           break;
         case 5:
           message.duration = reader.string();
@@ -554,7 +554,7 @@ export const QuotaLimit = {
       values: isObject(object.values) ? Object.entries(object.values).reduce<{
         [key: string]: Long;
       }>((acc, [key, value]) => {
-        acc[key] = Long.fromValue((value as Long | string));
+        acc[key] = Long.fromValue(value as Long | string);
         return acc;
       }, {}) : {},
       displayName: isSet(object.displayName) ? String(object.displayName) : ""

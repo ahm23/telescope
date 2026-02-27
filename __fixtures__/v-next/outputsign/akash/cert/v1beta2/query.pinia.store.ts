@@ -8,7 +8,7 @@ import { LCDQueryClient } from "./query.lcd";
 export const usePiniaStore = defineStore('akash/cert/v1beta2/query.proto', {
   state: () => {
     return {
-      certificates: ({} as QueryCertificatesResponseSDKType)
+      certificates: {} as QueryCertificatesResponseSDKType
     };
   },
   getters: {

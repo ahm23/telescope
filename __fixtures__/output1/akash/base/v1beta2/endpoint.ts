@@ -77,7 +77,7 @@ export const Endpoint = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.kind = (reader.int32() as any);
+          message.kind = reader.int32() as any;
           break;
         case 2:
           message.sequenceNumber = reader.uint32();

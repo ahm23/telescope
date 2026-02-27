@@ -926,7 +926,7 @@ export const QueryPoolResponse = {
   aminoType: "osmosis/gamm/query-pool-response",
   encode(message: QueryPoolResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.pool !== undefined) {
-      Any.encode((message.pool as Any), writer.uint32(10).fork()).ldelim();
+      Any.encode(message.pool as Any, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
@@ -938,7 +938,7 @@ export const QueryPoolResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.pool = (PoolI_InterfaceDecoder(reader) as Any);
+          message.pool = PoolI_InterfaceDecoder(reader) as Any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -961,7 +961,7 @@ export const QueryPoolResponse = {
   },
   toAmino(message: QueryPoolResponse): QueryPoolResponseAmino {
     const obj: any = {};
-    obj.pool = message.pool ? PoolI_ToAmino((message.pool as Any)) : undefined;
+    obj.pool = message.pool ? PoolI_ToAmino(message.pool as Any) : undefined;
     return obj;
   },
   fromAminoMsg(object: QueryPoolResponseAminoMsg): QueryPoolResponse {
@@ -1078,7 +1078,7 @@ export const QueryPoolsResponse = {
   aminoType: "osmosis/gamm/query-pools-response",
   encode(message: QueryPoolsResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.pools) {
-      Any.encode((v! as Any), writer.uint32(10).fork()).ldelim();
+      Any.encode(v! as Any, writer.uint32(10).fork()).ldelim();
     }
     if (message.pagination !== undefined) {
       PageResponse.encode(message.pagination, writer.uint32(18).fork()).ldelim();
@@ -1093,7 +1093,7 @@ export const QueryPoolsResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.pools.push((Any.decode(reader, reader.uint32()) as Any));
+          message.pools.push(Any.decode(reader, reader.uint32()) as Any);
           break;
         case 2:
           message.pagination = PageResponse.decode(reader, reader.uint32());
@@ -1122,7 +1122,7 @@ export const QueryPoolsResponse = {
   toAmino(message: QueryPoolsResponse): QueryPoolsResponseAmino {
     const obj: any = {};
     if (message.pools) {
-      obj.pools = message.pools.map(e => e ? PoolI_ToAmino((e as Any)) : undefined);
+      obj.pools = message.pools.map(e => e ? PoolI_ToAmino(e as Any) : undefined);
     } else {
       obj.pools = message.pools;
     }
@@ -2637,7 +2637,7 @@ export const QueryPoolsWithFilterResponse = {
   aminoType: "osmosis/gamm/query-pools-with-filter-response",
   encode(message: QueryPoolsWithFilterResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.pools) {
-      Any.encode((v! as Any), writer.uint32(10).fork()).ldelim();
+      Any.encode(v! as Any, writer.uint32(10).fork()).ldelim();
     }
     if (message.pagination !== undefined) {
       PageResponse.encode(message.pagination, writer.uint32(18).fork()).ldelim();
@@ -2652,7 +2652,7 @@ export const QueryPoolsWithFilterResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.pools.push((Any.decode(reader, reader.uint32()) as Any));
+          message.pools.push(Any.decode(reader, reader.uint32()) as Any);
           break;
         case 2:
           message.pagination = PageResponse.decode(reader, reader.uint32());
@@ -2681,7 +2681,7 @@ export const QueryPoolsWithFilterResponse = {
   toAmino(message: QueryPoolsWithFilterResponse): QueryPoolsWithFilterResponseAmino {
     const obj: any = {};
     if (message.pools) {
-      obj.pools = message.pools.map(e => e ? PoolI_ToAmino((e as Any)) : undefined);
+      obj.pools = message.pools.map(e => e ? PoolI_ToAmino(e as Any) : undefined);
     } else {
       obj.pools = message.pools;
     }

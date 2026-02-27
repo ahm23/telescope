@@ -182,13 +182,13 @@ export const BlockParams = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.maxBytes = (reader.int64() as Long);
+          message.maxBytes = reader.int64() as Long;
           break;
         case 2:
-          message.maxGas = (reader.int64() as Long);
+          message.maxGas = reader.int64() as Long;
           break;
         case 3:
-          message.timeIotaMs = (reader.int64() as Long);
+          message.timeIotaMs = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -247,13 +247,13 @@ export const EvidenceParams = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.maxAgeNumBlocks = (reader.int64() as Long);
+          message.maxAgeNumBlocks = reader.int64() as Long;
           break;
         case 2:
           message.maxAgeDuration = Duration.decode(reader, reader.uint32());
           break;
         case 3:
-          message.maxBytes = (reader.int64() as Long);
+          message.maxBytes = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -353,7 +353,7 @@ export const VersionParams = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.appVersion = (reader.uint64() as Long);
+          message.appVersion = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -402,10 +402,10 @@ export const HashedParams = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.blockMaxBytes = (reader.int64() as Long);
+          message.blockMaxBytes = reader.int64() as Long;
           break;
         case 2:
-          message.blockMaxGas = (reader.int64() as Long);
+          message.blockMaxGas = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

@@ -249,7 +249,7 @@ export const Grant = {
   aminoType: "cosmos-sdk/Grant",
   encode(message: Grant, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.authorization !== undefined) {
-      Any.encode((message.authorization as Any), writer.uint32(10).fork()).ldelim();
+      Any.encode(message.authorization as Any, writer.uint32(10).fork()).ldelim();
     }
     if (message.expiration !== undefined) {
       Timestamp.encode(toTimestamp(message.expiration), writer.uint32(18).fork()).ldelim();
@@ -264,7 +264,7 @@ export const Grant = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.authorization = (Authorization_InterfaceDecoder(reader) as Any);
+          message.authorization = Authorization_InterfaceDecoder(reader) as Any;
           break;
         case 2:
           message.expiration = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
@@ -294,7 +294,7 @@ export const Grant = {
   },
   toAmino(message: Grant): GrantAmino {
     const obj: any = {};
-    obj.authorization = message.authorization ? Authorization_ToAmino((message.authorization as Any)) : undefined;
+    obj.authorization = message.authorization ? Authorization_ToAmino(message.authorization as Any) : undefined;
     obj.expiration = message.expiration ? Timestamp.toAmino(toTimestamp(message.expiration)) : undefined;
     return obj;
   },
@@ -346,7 +346,7 @@ export const GrantAuthorization = {
       writer.uint32(18).string(message.grantee);
     }
     if (message.authorization !== undefined) {
-      Any.encode((message.authorization as Any), writer.uint32(26).fork()).ldelim();
+      Any.encode(message.authorization as Any, writer.uint32(26).fork()).ldelim();
     }
     if (message.expiration !== undefined) {
       Timestamp.encode(toTimestamp(message.expiration), writer.uint32(34).fork()).ldelim();
@@ -367,7 +367,7 @@ export const GrantAuthorization = {
           message.grantee = reader.string();
           break;
         case 3:
-          message.authorization = (Authorization_InterfaceDecoder(reader) as Any);
+          message.authorization = Authorization_InterfaceDecoder(reader) as Any;
           break;
         case 4:
           message.expiration = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
@@ -407,7 +407,7 @@ export const GrantAuthorization = {
     const obj: any = {};
     obj.granter = message.granter === "" ? undefined : message.granter;
     obj.grantee = message.grantee === "" ? undefined : message.grantee;
-    obj.authorization = message.authorization ? Authorization_ToAmino((message.authorization as Any)) : undefined;
+    obj.authorization = message.authorization ? Authorization_ToAmino(message.authorization as Any) : undefined;
     obj.expiration = message.expiration ? Timestamp.toAmino(toTimestamp(message.expiration)) : undefined;
     return obj;
   },

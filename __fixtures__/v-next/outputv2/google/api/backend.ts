@@ -543,7 +543,7 @@ export const BackendRule = {
           message.operationDeadline = reader.double();
           break;
         case 6:
-          message.pathTranslation = (reader.int32() as any);
+          message.pathTranslation = reader.int32() as any;
           break;
         case 7:
           message.jwtAudience = reader.string();

@@ -56,7 +56,7 @@ export const GenesisState = {
           message.clientConnectionPaths.push(ConnectionPaths.decode(reader, reader.uint32()));
           break;
         case 3:
-          message.nextConnectionSequence = (reader.uint64() as Long);
+          message.nextConnectionSequence = reader.uint64() as Long;
           break;
         case 4:
           message.params = Params.decode(reader, reader.uint32());

@@ -279,7 +279,7 @@ export const ConfigChange = {
           message.newValue = reader.string();
           break;
         case 4:
-          message.changeType = (reader.int32() as any);
+          message.changeType = reader.int32() as any;
           break;
         case 5:
           message.advices.push(Advice.decode(reader, reader.uint32()));

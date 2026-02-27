@@ -39,7 +39,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.lastLockId = (reader.uint64() as Long);
+          message.lastLockId = reader.uint64() as Long;
           break;
         case 2:
           message.locks.push(PeriodLock.decode(reader, reader.uint32()));

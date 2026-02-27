@@ -558,13 +558,13 @@ export const CheckResponse_ConsumerInfo = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.projectNumber = (reader.int64() as Long);
+          message.projectNumber = reader.int64() as Long;
           break;
         case 2:
-          message.type = (reader.int32() as any);
+          message.type = reader.int32() as any;
           break;
         case 3:
-          message.consumerNumber = (reader.int64() as Long);
+          message.consumerNumber = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

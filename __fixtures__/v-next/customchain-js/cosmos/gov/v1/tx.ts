@@ -328,7 +328,7 @@ export const MsgSubmitProposal = {
   aminoType: "cosmos-sdk/v1/MsgSubmitProposal",
   encode(message: MsgSubmitProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.messages) {
-      Any.encode((v! as Any), writer.uint32(10).fork()).ldelim();
+      Any.encode(v! as Any, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.initialDeposit) {
       Coin.encode(v!, writer.uint32(18).fork()).ldelim();
@@ -349,7 +349,7 @@ export const MsgSubmitProposal = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.messages.push((Any.decode(reader, reader.uint32()) as Any));
+          message.messages.push(Any.decode(reader, reader.uint32()) as Any);
           break;
         case 2:
           message.initialDeposit.push(Coin.decode(reader, reader.uint32()));
@@ -390,7 +390,7 @@ export const MsgSubmitProposal = {
   toAmino(message: MsgSubmitProposal): MsgSubmitProposalAmino {
     const obj: any = {};
     if (message.messages) {
-      obj.messages = message.messages.map(e => e ? ProposalContentI_ToAmino((e as Any)) : undefined);
+      obj.messages = message.messages.map(e => e ? ProposalContentI_ToAmino(e as Any) : undefined);
     } else {
       obj.messages = message.messages;
     }
@@ -519,7 +519,7 @@ export const MsgExecLegacyContent = {
   aminoType: "cosmos-sdk/v1/MsgExecLegacyContent",
   encode(message: MsgExecLegacyContent, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.content !== undefined) {
-      Any.encode((message.content as Any), writer.uint32(10).fork()).ldelim();
+      Any.encode(message.content as Any, writer.uint32(10).fork()).ldelim();
     }
     if (message.authority !== "") {
       writer.uint32(18).string(message.authority);
@@ -534,7 +534,7 @@ export const MsgExecLegacyContent = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.content = (ProposalContentI_InterfaceDecoder(reader) as Any);
+          message.content = ProposalContentI_InterfaceDecoder(reader) as Any;
           break;
         case 2:
           message.authority = reader.string();
@@ -564,7 +564,7 @@ export const MsgExecLegacyContent = {
   },
   toAmino(message: MsgExecLegacyContent): MsgExecLegacyContentAmino {
     const obj: any = {};
-    obj.content = message.content ? ProposalContentI_ToAmino((message.content as Any)) : undefined;
+    obj.content = message.content ? ProposalContentI_ToAmino(message.content as Any) : undefined;
     obj.authority = message.authority === "" ? undefined : message.authority;
     return obj;
   },
@@ -699,7 +699,7 @@ export const MsgVote = {
           message.voter = reader.string();
           break;
         case 3:
-          message.option = (reader.int32() as any);
+          message.option = reader.int32() as any;
           break;
         case 4:
           message.metadata = reader.string();

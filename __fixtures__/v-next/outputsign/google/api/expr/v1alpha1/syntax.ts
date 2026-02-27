@@ -2245,7 +2245,7 @@ export const Constant = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.nullValue = (reader.int32() as any);
+          message.nullValue = reader.int32() as any;
           break;
         case 2:
           message.boolValue = reader.bool();
@@ -2540,13 +2540,13 @@ export const SourceInfo = {
     writer.ldelim();
     Object.entries(message.positions).forEach(([key, value]) => {
       SourceInfo_PositionsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(32).fork()).ldelim();
     });
     Object.entries(message.macroCalls).forEach(([key, value]) => {
       SourceInfo_MacroCallsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(42).fork()).ldelim();
     });

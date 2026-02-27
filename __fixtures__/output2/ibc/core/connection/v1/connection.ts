@@ -192,13 +192,13 @@ export const ConnectionEnd = {
           message.versions.push(Version.decode(reader, reader.uint32()));
           break;
         case 3:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         case 4:
           message.counterparty = Counterparty.decode(reader, reader.uint32());
           break;
         case 5:
-          message.delayPeriod = (reader.uint64() as Long);
+          message.delayPeriod = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -288,13 +288,13 @@ export const IdentifiedConnection = {
           message.versions.push(Version.decode(reader, reader.uint32()));
           break;
         case 4:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         case 5:
           message.counterparty = Counterparty.decode(reader, reader.uint32());
           break;
         case 6:
-          message.delayPeriod = (reader.uint64() as Long);
+          message.delayPeriod = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -590,7 +590,7 @@ export const Params = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.maxExpectedTimePerBlock = (reader.uint64() as Long);
+          message.maxExpectedTimePerBlock = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

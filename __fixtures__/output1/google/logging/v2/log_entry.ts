@@ -404,7 +404,7 @@ export const LogEntry = {
     }
     Object.entries(message.labels).forEach(([key, value]) => {
       LogEntry_LabelsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(90).fork()).ldelim();
     });
@@ -457,7 +457,7 @@ export const LogEntry = {
           message.receiveTimestamp = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 10:
-          message.severity = (reader.int32() as any);
+          message.severity = reader.int32() as any;
           break;
         case 4:
           message.insertId = reader.string();
@@ -751,7 +751,7 @@ export const LogEntrySourceLocation = {
           message.file = reader.string();
           break;
         case 2:
-          message.line = (reader.int64() as Long);
+          message.line = reader.int64() as Long;
           break;
         case 3:
           message.function = reader.string();

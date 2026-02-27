@@ -210,7 +210,7 @@ export const MsgLockTokensResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.iD = (reader.uint64() as Long);
+          message.iD = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -394,7 +394,7 @@ export const MsgBeginUnlocking = {
           message.owner = reader.string();
           break;
         case 2:
-          message.iD = (reader.uint64() as Long);
+          message.iD = reader.uint64() as Long;
           break;
         case 3:
           message.coins.push(Coin.decode(reader, reader.uint32()));
@@ -536,7 +536,7 @@ export const MsgExtendLockup = {
           message.owner = reader.string();
           break;
         case 2:
-          message.iD = (reader.uint64() as Long);
+          message.iD = reader.uint64() as Long;
           break;
         case 3:
           message.duration = Duration.decode(reader, reader.uint32());
@@ -670,7 +670,7 @@ export const MsgForceUnlock = {
           message.owner = reader.string();
           break;
         case 2:
-          message.iD = (reader.uint64() as Long);
+          message.iD = reader.uint64() as Long;
           break;
         case 3:
           message.coins.push(Coin.decode(reader, reader.uint32()));

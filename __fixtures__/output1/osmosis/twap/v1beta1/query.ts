@@ -86,7 +86,7 @@ export const ArithmeticTwapRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 2:
           message.baseAsset = reader.string();
@@ -240,7 +240,7 @@ export const ArithmeticTwapToNowRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 2:
           message.baseAsset = reader.string();

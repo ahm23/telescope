@@ -160,7 +160,7 @@ export const Params = {
           message.goalBonded = reader.string();
           break;
         case 6:
-          message.blocksPerYear = (reader.uint64() as Long);
+          message.blocksPerYear = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

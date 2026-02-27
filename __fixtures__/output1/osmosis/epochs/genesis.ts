@@ -136,7 +136,7 @@ export const EpochInfo = {
           message.duration = Duration.decode(reader, reader.uint32());
           break;
         case 4:
-          message.currentEpoch = (reader.int64() as Long);
+          message.currentEpoch = reader.int64() as Long;
           break;
         case 5:
           message.currentEpochStartTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
@@ -145,7 +145,7 @@ export const EpochInfo = {
           message.epochCountingStarted = reader.bool();
           break;
         case 8:
-          message.currentEpochStartHeight = (reader.int64() as Long);
+          message.currentEpochStartHeight = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

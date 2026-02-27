@@ -214,10 +214,10 @@ export const UpdateUnpoolWhiteListProposal = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.ids.push((reader.uint64() as Long));
+              message.ids.push(reader.uint64() as Long);
             }
           } else {
-            message.ids.push((reader.uint64() as Long));
+            message.ids.push(reader.uint64() as Long);
           }
           break;
         case 4:

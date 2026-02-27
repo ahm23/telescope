@@ -1640,7 +1640,7 @@ export const GroupPolicyInfo = {
       writer.uint32(40).uint64(message.version);
     }
     if (message.decisionPolicy !== undefined) {
-      Any.encode((message.decisionPolicy as Any), writer.uint32(50).fork()).ldelim();
+      Any.encode(message.decisionPolicy as Any, writer.uint32(50).fork()).ldelim();
     }
     if (message.createdAt !== undefined) {
       Timestamp.encode(toTimestamp(message.createdAt), writer.uint32(58).fork()).ldelim();
@@ -1670,7 +1670,7 @@ export const GroupPolicyInfo = {
           message.version = reader.uint64();
           break;
         case 6:
-          message.decisionPolicy = (DecisionPolicy_InterfaceDecoder(reader) as Any);
+          message.decisionPolicy = DecisionPolicy_InterfaceDecoder(reader) as Any;
           break;
         case 7:
           message.createdAt = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
@@ -1725,7 +1725,7 @@ export const GroupPolicyInfo = {
     obj.admin = message.admin === "" ? undefined : message.admin;
     obj.metadata = message.metadata === "" ? undefined : message.metadata;
     obj.version = message.version !== BigInt(0) ? message.version?.toString() : undefined;
-    obj.decision_policy = message.decisionPolicy ? DecisionPolicy_ToAmino((message.decisionPolicy as Any)) : undefined;
+    obj.decision_policy = message.decisionPolicy ? DecisionPolicy_ToAmino(message.decisionPolicy as Any) : undefined;
     obj.created_at = message.createdAt ? Timestamp.toAmino(toTimestamp(message.createdAt)) : undefined;
     return obj;
   },
@@ -1851,10 +1851,10 @@ export const Proposal = {
           message.groupPolicyVersion = reader.uint64();
           break;
         case 8:
-          message.status = (reader.int32() as any);
+          message.status = reader.int32() as any;
           break;
         case 9:
-          message.result = (reader.int32() as any);
+          message.result = reader.int32() as any;
           break;
         case 10:
           message.finalTallyResult = TallyResult.decode(reader, reader.uint32());
@@ -1863,7 +1863,7 @@ export const Proposal = {
           message.votingPeriodEnd = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 12:
-          message.executorResult = (reader.int32() as any);
+          message.executorResult = reader.int32() as any;
           break;
         case 13:
           message.messages.push(Any.decode(reader, reader.uint32()));
@@ -2140,7 +2140,7 @@ export const Vote = {
           message.voter = reader.string();
           break;
         case 3:
-          message.option = (reader.int32() as any);
+          message.option = reader.int32() as any;
           break;
         case 4:
           message.metadata = reader.string();

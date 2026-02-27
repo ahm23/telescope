@@ -395,7 +395,7 @@ export const Property = {
           message.name = reader.string();
           break;
         case 2:
-          message.type = (reader.int32() as any);
+          message.type = reader.int32() as any;
           break;
         case 3:
           message.description = reader.string();

@@ -113,7 +113,7 @@ export const Plan = {
           message.time = Timestamp.decode(reader, reader.uint32());
           break;
         case 3:
-          message.height = (reader.int64() as Long);
+          message.height = reader.int64() as Long;
           break;
         case 4:
           message.info = reader.string();
@@ -303,7 +303,7 @@ export const ModuleVersion = {
           message.name = reader.string();
           break;
         case 2:
-          message.version = (reader.uint64() as Long);
+          message.version = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

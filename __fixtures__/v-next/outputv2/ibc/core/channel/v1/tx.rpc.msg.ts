@@ -83,12 +83,12 @@ export const MsgChannelOpenInitDesc: UnaryMethodDefinitionish = {
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgChannelOpenInit.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgChannelOpenInitResponse.decode(data),
@@ -97,19 +97,19 @@ export const MsgChannelOpenInitDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgChannelOpenTryDesc: UnaryMethodDefinitionish = {
   methodName: "ChannelOpenTry",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgChannelOpenTry.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgChannelOpenTryResponse.decode(data),
@@ -118,19 +118,19 @@ export const MsgChannelOpenTryDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgChannelOpenAckDesc: UnaryMethodDefinitionish = {
   methodName: "ChannelOpenAck",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgChannelOpenAck.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgChannelOpenAckResponse.decode(data),
@@ -139,19 +139,19 @@ export const MsgChannelOpenAckDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgChannelOpenConfirmDesc: UnaryMethodDefinitionish = {
   methodName: "ChannelOpenConfirm",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgChannelOpenConfirm.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgChannelOpenConfirmResponse.decode(data),
@@ -160,19 +160,19 @@ export const MsgChannelOpenConfirmDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgChannelCloseInitDesc: UnaryMethodDefinitionish = {
   methodName: "ChannelCloseInit",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgChannelCloseInit.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgChannelCloseInitResponse.decode(data),
@@ -181,19 +181,19 @@ export const MsgChannelCloseInitDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgChannelCloseConfirmDesc: UnaryMethodDefinitionish = {
   methodName: "ChannelCloseConfirm",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgChannelCloseConfirm.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgChannelCloseConfirmResponse.decode(data),
@@ -202,19 +202,19 @@ export const MsgChannelCloseConfirmDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgRecvPacketDesc: UnaryMethodDefinitionish = {
   methodName: "RecvPacket",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgRecvPacket.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgRecvPacketResponse.decode(data),
@@ -223,19 +223,19 @@ export const MsgRecvPacketDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgTimeoutDesc: UnaryMethodDefinitionish = {
   methodName: "Timeout",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgTimeout.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgTimeoutResponse.decode(data),
@@ -244,19 +244,19 @@ export const MsgTimeoutDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgTimeoutOnCloseDesc: UnaryMethodDefinitionish = {
   methodName: "TimeoutOnClose",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgTimeoutOnClose.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgTimeoutOnCloseResponse.decode(data),
@@ -265,19 +265,19 @@ export const MsgTimeoutOnCloseDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgAcknowledgementDesc: UnaryMethodDefinitionish = {
   methodName: "Acknowledgement",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgAcknowledgement.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgAcknowledgementResponse.decode(data),
@@ -286,7 +286,7 @@ export const MsgAcknowledgementDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -326,7 +326,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

@@ -948,7 +948,7 @@ export const DisableServiceRequest = {
           message.disableDependentServices = reader.bool();
           break;
         case 3:
-          message.checkIfServiceHasUsage = (reader.int32() as any);
+          message.checkIfServiceHasUsage = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

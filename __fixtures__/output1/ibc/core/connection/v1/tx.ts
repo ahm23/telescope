@@ -205,7 +205,7 @@ export const MsgConnectionOpenInit = {
           message.version = Version.decode(reader, reader.uint32());
           break;
         case 4:
-          message.delayPeriod = (reader.uint64() as Long);
+          message.delayPeriod = reader.uint64() as Long;
           break;
         case 5:
           message.signer = reader.string();
@@ -379,7 +379,7 @@ export const MsgConnectionOpenTry = {
           message.counterparty = Counterparty.decode(reader, reader.uint32());
           break;
         case 5:
-          message.delayPeriod = (reader.uint64() as Long);
+          message.delayPeriod = reader.uint64() as Long;
           break;
         case 6:
           message.counterpartyVersions.push(Version.decode(reader, reader.uint32()));

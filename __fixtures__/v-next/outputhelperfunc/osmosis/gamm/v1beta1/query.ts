@@ -1530,7 +1530,7 @@ export const QueryPoolsResponse = {
   },
   fromPartial(object: DeepPartial<QueryPoolsResponse>): QueryPoolsResponse {
     const message = createBaseQueryPoolsResponse();
-    message.pools = object.pools?.map(e => (GlobalDecoderRegistry.fromPartial(e) as any)) || [];
+    message.pools = object.pools?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
     if (object.pagination !== undefined && object.pagination !== null) {
       message.pagination = PageResponse.fromPartial(object.pagination);
     }
@@ -3935,7 +3935,7 @@ export const QueryPoolsWithFilterResponse = {
   },
   fromPartial(object: DeepPartial<QueryPoolsWithFilterResponse>): QueryPoolsWithFilterResponse {
     const message = createBaseQueryPoolsWithFilterResponse();
-    message.pools = object.pools?.map(e => (GlobalDecoderRegistry.fromPartial(e) as any)) || [];
+    message.pools = object.pools?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
     if (object.pagination !== undefined && object.pagination !== null) {
       message.pagination = PageResponse.fromPartial(object.pagination);
     }

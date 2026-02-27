@@ -128,12 +128,12 @@ export const QueryModuleBalanceDesc: UnaryMethodDefinitionish = {
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return ModuleBalanceRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...ModuleBalanceResponse.decode(data),
@@ -142,19 +142,19 @@ export const QueryModuleBalanceDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryModuleLockedAmountDesc: UnaryMethodDefinitionish = {
   methodName: "ModuleLockedAmount",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return ModuleLockedAmountRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...ModuleLockedAmountResponse.decode(data),
@@ -163,19 +163,19 @@ export const QueryModuleLockedAmountDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAccountUnlockableCoinsDesc: UnaryMethodDefinitionish = {
   methodName: "AccountUnlockableCoins",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AccountUnlockableCoinsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AccountUnlockableCoinsResponse.decode(data),
@@ -184,19 +184,19 @@ export const QueryAccountUnlockableCoinsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAccountUnlockingCoinsDesc: UnaryMethodDefinitionish = {
   methodName: "AccountUnlockingCoins",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AccountUnlockingCoinsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AccountUnlockingCoinsResponse.decode(data),
@@ -205,19 +205,19 @@ export const QueryAccountUnlockingCoinsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAccountLockedCoinsDesc: UnaryMethodDefinitionish = {
   methodName: "AccountLockedCoins",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AccountLockedCoinsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AccountLockedCoinsResponse.decode(data),
@@ -226,19 +226,19 @@ export const QueryAccountLockedCoinsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAccountLockedPastTimeDesc: UnaryMethodDefinitionish = {
   methodName: "AccountLockedPastTime",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AccountLockedPastTimeRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AccountLockedPastTimeResponse.decode(data),
@@ -247,19 +247,19 @@ export const QueryAccountLockedPastTimeDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAccountLockedPastTimeNotUnlockingOnlyDesc: UnaryMethodDefinitionish = {
   methodName: "AccountLockedPastTimeNotUnlockingOnly",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AccountLockedPastTimeNotUnlockingOnlyRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AccountLockedPastTimeNotUnlockingOnlyResponse.decode(data),
@@ -268,19 +268,19 @@ export const QueryAccountLockedPastTimeNotUnlockingOnlyDesc: UnaryMethodDefiniti
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAccountUnlockedBeforeTimeDesc: UnaryMethodDefinitionish = {
   methodName: "AccountUnlockedBeforeTime",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AccountUnlockedBeforeTimeRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AccountUnlockedBeforeTimeResponse.decode(data),
@@ -289,19 +289,19 @@ export const QueryAccountUnlockedBeforeTimeDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAccountLockedPastTimeDenomDesc: UnaryMethodDefinitionish = {
   methodName: "AccountLockedPastTimeDenom",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AccountLockedPastTimeDenomRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AccountLockedPastTimeDenomResponse.decode(data),
@@ -310,19 +310,19 @@ export const QueryAccountLockedPastTimeDenomDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryLockedDenomDesc: UnaryMethodDefinitionish = {
   methodName: "LockedDenom",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return LockedDenomRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...LockedDenomResponse.decode(data),
@@ -331,19 +331,19 @@ export const QueryLockedDenomDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryLockedByIDDesc: UnaryMethodDefinitionish = {
   methodName: "LockedByID",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return LockedRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...LockedResponse.decode(data),
@@ -352,19 +352,19 @@ export const QueryLockedByIDDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QuerySyntheticLockupsByLockupIDDesc: UnaryMethodDefinitionish = {
   methodName: "SyntheticLockupsByLockupID",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return SyntheticLockupsByLockupIDRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...SyntheticLockupsByLockupIDResponse.decode(data),
@@ -373,19 +373,19 @@ export const QuerySyntheticLockupsByLockupIDDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAccountLockedLongerDurationDesc: UnaryMethodDefinitionish = {
   methodName: "AccountLockedLongerDuration",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AccountLockedLongerDurationRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AccountLockedLongerDurationResponse.decode(data),
@@ -394,19 +394,19 @@ export const QueryAccountLockedLongerDurationDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAccountLockedDurationDesc: UnaryMethodDefinitionish = {
   methodName: "AccountLockedDuration",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AccountLockedDurationRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AccountLockedDurationResponse.decode(data),
@@ -415,19 +415,19 @@ export const QueryAccountLockedDurationDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAccountLockedLongerDurationNotUnlockingOnlyDesc: UnaryMethodDefinitionish = {
   methodName: "AccountLockedLongerDurationNotUnlockingOnly",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AccountLockedLongerDurationNotUnlockingOnlyRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AccountLockedLongerDurationNotUnlockingOnlyResponse.decode(data),
@@ -436,19 +436,19 @@ export const QueryAccountLockedLongerDurationNotUnlockingOnlyDesc: UnaryMethodDe
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAccountLockedLongerDurationDenomDesc: UnaryMethodDefinitionish = {
   methodName: "AccountLockedLongerDurationDenom",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AccountLockedLongerDurationDenomRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AccountLockedLongerDurationDenomResponse.decode(data),
@@ -457,19 +457,19 @@ export const QueryAccountLockedLongerDurationDenomDesc: UnaryMethodDefinitionish
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryParamsDesc: UnaryMethodDefinitionish = {
   methodName: "Params",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryParamsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryParamsResponse.decode(data),
@@ -478,7 +478,7 @@ export const QueryParamsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -518,7 +518,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

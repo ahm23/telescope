@@ -1455,7 +1455,7 @@ export const GetServiceConfigRequest = {
           message.configId = reader.string();
           break;
         case 3:
-          message.view = (reader.int32() as any);
+          message.view = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

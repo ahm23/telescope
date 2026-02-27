@@ -167,7 +167,7 @@ export const GenesisState = {
   aminoType: "osmosis/gamm/genesis-state",
   encode(message: GenesisState, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     for (const v of message.pools) {
-      Any.encode((v! as Any), writer.uint32(10).fork()).ldelim();
+      Any.encode(v! as Any, writer.uint32(10).fork()).ldelim();
     }
     if (message.nextPoolNumber !== BigInt(0)) {
       writer.uint32(16).uint64(message.nextPoolNumber);
@@ -185,7 +185,7 @@ export const GenesisState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.pools.push((Any.decode(reader, reader.uint32()) as Any));
+          message.pools.push(Any.decode(reader, reader.uint32()) as Any);
           break;
         case 2:
           message.nextPoolNumber = reader.uint64();
@@ -221,7 +221,7 @@ export const GenesisState = {
   toAmino(message: GenesisState): GenesisStateAmino {
     const obj: any = {};
     if (message.pools) {
-      obj.pools = message.pools.map(e => e ? PoolI_ToAmino((e as Any)) : undefined);
+      obj.pools = message.pools.map(e => e ? PoolI_ToAmino(e as Any) : undefined);
     } else {
       obj.pools = message.pools;
     }

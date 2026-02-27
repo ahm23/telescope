@@ -56,12 +56,12 @@ export const MsgSetWithdrawAddressDesc: UnaryMethodDefinitionish = {
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgSetWithdrawAddress.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgSetWithdrawAddressResponse.decode(data),
@@ -70,19 +70,19 @@ export const MsgSetWithdrawAddressDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgWithdrawDelegatorRewardDesc: UnaryMethodDefinitionish = {
   methodName: "WithdrawDelegatorReward",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgWithdrawDelegatorReward.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgWithdrawDelegatorRewardResponse.decode(data),
@@ -91,19 +91,19 @@ export const MsgWithdrawDelegatorRewardDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgWithdrawValidatorCommissionDesc: UnaryMethodDefinitionish = {
   methodName: "WithdrawValidatorCommission",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgWithdrawValidatorCommission.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgWithdrawValidatorCommissionResponse.decode(data),
@@ -112,19 +112,19 @@ export const MsgWithdrawValidatorCommissionDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgFundCommunityPoolDesc: UnaryMethodDefinitionish = {
   methodName: "FundCommunityPool",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgFundCommunityPool.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgFundCommunityPoolResponse.decode(data),
@@ -133,7 +133,7 @@ export const MsgFundCommunityPoolDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -173,7 +173,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

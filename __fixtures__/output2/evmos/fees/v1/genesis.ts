@@ -138,7 +138,7 @@ export const Params = {
           message.validatorShares = reader.string();
           break;
         case 4:
-          message.addrDerivationCostCreate = (reader.uint64() as Long);
+          message.addrDerivationCostCreate = reader.uint64() as Long;
           break;
         case 5:
           message.minGasPrice = reader.string();

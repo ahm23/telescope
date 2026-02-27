@@ -3543,7 +3543,7 @@ export const RequestCheckTx = {
           message.tx = reader.bytes();
           break;
         case 2:
-          message.type = (reader.int32() as any);
+          message.type = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -6861,7 +6861,7 @@ export const ResponseOfferSnapshot = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.result = (reader.int32() as any);
+          message.result = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -7077,7 +7077,7 @@ export const ResponseApplySnapshotChunk = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.result = (reader.int32() as any);
+          message.result = reader.int32() as any;
           break;
         case 2:
           if ((tag & 7) === 2) {
@@ -8504,7 +8504,7 @@ export const Evidence = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.type = (reader.int32() as any);
+          message.type = reader.int32() as any;
           break;
         case 2:
           message.validator = Validator.decode(reader, reader.uint32());

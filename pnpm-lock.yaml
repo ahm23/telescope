@@ -124,6 +124,9 @@ importers:
       glob:
         specifier: 8.0.3
         version: 8.0.3
+      jest-in-case:
+        specifier: ^1.0.2
+        version: 1.0.2
       makage:
         specifier: ^0.1.12
         version: 0.1.12
@@ -173,6 +176,9 @@ importers:
       deepmerge:
         specifier: 4.3.1
         version: 4.3.1
+      jest-in-case:
+        specifier: ^1.0.2
+        version: 1.0.2
       long:
         specifier: ^5.2.1
         version: 5.3.2
@@ -454,6 +460,9 @@ importers:
         specifier: 5.1.0
         version: 5.1.0
     devDependencies:
+      jest-in-case:
+        specifier: ^1.0.2
+        version: 1.0.2
       makage:
         specifier: ^0.1.12
         version: 0.1.12
@@ -3148,6 +3157,10 @@ packages:
   jest-haste-map@29.7.0:
     resolution: {integrity: sha512-fP8u2pyfqx0K1rGn1R9pyE0/KTn+G7PxktWidOBTqFPLYX0b9ksaMFkhK5vrS3DVun09pckLdlx90QthlW7AmA==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+
+  jest-in-case@1.0.2:
+    resolution: {integrity: sha512-2DE6Gdwnh5jkCYTePWoQinF+zne3lCADibXoYJEt8PS84JaRug0CyAOrEgzMxbzln3YcSY2PBeru7ct4tbflYA==}
+    engines: {node: '>=4'}
 
   jest-leak-detector@29.7.0:
     resolution: {integrity: sha512-kYA8IJcSYtST2BY9I+SMC32nDpBT3J2NvWJx8+JCuCdl/CR1I4EKUJROiP8XtCcxqgTTBGJNdbB1A8XRKbTetw==}
@@ -8652,6 +8665,8 @@ snapshots:
       walker: 1.0.8
     optionalDependencies:
       fsevents: 2.3.3
+
+  jest-in-case@1.0.2: {}
 
   jest-leak-detector@29.7.0:
     dependencies:

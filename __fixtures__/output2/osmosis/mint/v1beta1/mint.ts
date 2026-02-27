@@ -314,7 +314,7 @@ export const Params = {
           message.epochIdentifier = reader.string();
           break;
         case 4:
-          message.reductionPeriodInEpochs = (reader.int64() as Long);
+          message.reductionPeriodInEpochs = reader.int64() as Long;
           break;
         case 5:
           message.reductionFactor = reader.string();
@@ -326,7 +326,7 @@ export const Params = {
           message.weightedDeveloperRewardsReceivers.push(WeightedAddress.decode(reader, reader.uint32()));
           break;
         case 8:
-          message.mintingRewardsDistributionStartEpoch = (reader.int64() as Long);
+          message.mintingRewardsDistributionStartEpoch = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

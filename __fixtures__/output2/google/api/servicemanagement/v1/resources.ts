@@ -600,7 +600,7 @@ export const OperationMetadata_Step = {
           message.description = reader.string();
           break;
         case 4:
-          message.status = (reader.int32() as any);
+          message.status = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -659,7 +659,7 @@ export const Diagnostic = {
           message.location = reader.string();
           break;
         case 2:
-          message.kind = (reader.int32() as any);
+          message.kind = reader.int32() as any;
           break;
         case 3:
           message.message = reader.string();
@@ -786,7 +786,7 @@ export const ConfigFile = {
           message.fileContents = reader.bytes();
           break;
         case 4:
-          message.fileType = (reader.int32() as any);
+          message.fileType = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -964,7 +964,7 @@ export const Rollout = {
           message.createdBy = reader.string();
           break;
         case 4:
-          message.status = (reader.int32() as any);
+          message.status = reader.int32() as any;
           break;
         case 5:
           message.trafficPercentStrategy = Rollout_TrafficPercentStrategy.decode(reader, reader.uint32());
@@ -1080,7 +1080,7 @@ export const Rollout_TrafficPercentStrategy = {
   encode(message: Rollout_TrafficPercentStrategy, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     Object.entries(message.percentages).forEach(([key, value]) => {
       Rollout_TrafficPercentStrategy_PercentagesEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(9).fork()).ldelim();
     });

@@ -548,7 +548,7 @@ export const CheckedExpr_ReferenceMapEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.key = (reader.int64() as Long);
+          message.key = reader.int64() as Long;
           break;
         case 2:
           message.value = Reference.decode(reader, reader.uint32());
@@ -615,7 +615,7 @@ export const CheckedExpr_TypeMapEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.key = (reader.int64() as Long);
+          message.key = reader.int64() as Long;
           break;
         case 2:
           message.value = Type.decode(reader, reader.uint32());
@@ -671,13 +671,13 @@ export const CheckedExpr = {
   encode(message: CheckedExpr, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     Object.entries(message.referenceMap).forEach(([key, value]) => {
       CheckedExpr_ReferenceMapEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(18).fork()).ldelim();
     });
     Object.entries(message.typeMap).forEach(([key, value]) => {
       CheckedExpr_TypeMapEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(26).fork()).ldelim();
     });
@@ -898,16 +898,16 @@ export const Type = {
           message.dyn = Empty.decode(reader, reader.uint32());
           break;
         case 2:
-          message.null = (reader.int32() as any);
+          message.null = reader.int32() as any;
           break;
         case 3:
-          message.primitive = (reader.int32() as any);
+          message.primitive = reader.int32() as any;
           break;
         case 4:
-          message.wrapper = (reader.int32() as any);
+          message.wrapper = reader.int32() as any;
           break;
         case 5:
-          message.wellKnown = (reader.int32() as any);
+          message.wellKnown = reader.int32() as any;
           break;
         case 6:
           message.listType = Type_ListType.decode(reader, reader.uint32());

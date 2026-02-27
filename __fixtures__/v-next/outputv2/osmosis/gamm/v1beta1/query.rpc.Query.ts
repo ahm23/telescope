@@ -119,12 +119,12 @@ export const QueryPoolsDesc: UnaryMethodDefinitionish = {
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryPoolsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryPoolsResponse.decode(data),
@@ -133,19 +133,19 @@ export const QueryPoolsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryNumPoolsDesc: UnaryMethodDefinitionish = {
   methodName: "NumPools",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryNumPoolsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryNumPoolsResponse.decode(data),
@@ -154,19 +154,19 @@ export const QueryNumPoolsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryTotalLiquidityDesc: UnaryMethodDefinitionish = {
   methodName: "TotalLiquidity",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryTotalLiquidityRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryTotalLiquidityResponse.decode(data),
@@ -175,19 +175,19 @@ export const QueryTotalLiquidityDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryPoolsWithFilterDesc: UnaryMethodDefinitionish = {
   methodName: "PoolsWithFilter",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryPoolsWithFilterRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryPoolsWithFilterResponse.decode(data),
@@ -196,19 +196,19 @@ export const QueryPoolsWithFilterDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryPoolDesc: UnaryMethodDefinitionish = {
   methodName: "Pool",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryPoolRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryPoolResponse.decode(data),
@@ -217,19 +217,19 @@ export const QueryPoolDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryPoolTypeDesc: UnaryMethodDefinitionish = {
   methodName: "PoolType",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryPoolTypeRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryPoolTypeResponse.decode(data),
@@ -238,19 +238,19 @@ export const QueryPoolTypeDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryCalcJoinPoolNoSwapSharesDesc: UnaryMethodDefinitionish = {
   methodName: "CalcJoinPoolNoSwapShares",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryCalcJoinPoolNoSwapSharesRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryCalcJoinPoolNoSwapSharesResponse.decode(data),
@@ -259,19 +259,19 @@ export const QueryCalcJoinPoolNoSwapSharesDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryCalcJoinPoolSharesDesc: UnaryMethodDefinitionish = {
   methodName: "CalcJoinPoolShares",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryCalcJoinPoolSharesRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryCalcJoinPoolSharesResponse.decode(data),
@@ -280,19 +280,19 @@ export const QueryCalcJoinPoolSharesDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryCalcExitPoolCoinsFromSharesDesc: UnaryMethodDefinitionish = {
   methodName: "CalcExitPoolCoinsFromShares",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryCalcExitPoolCoinsFromSharesRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryCalcExitPoolCoinsFromSharesResponse.decode(data),
@@ -301,19 +301,19 @@ export const QueryCalcExitPoolCoinsFromSharesDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryPoolParamsDesc: UnaryMethodDefinitionish = {
   methodName: "PoolParams",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryPoolParamsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryPoolParamsResponse.decode(data),
@@ -322,19 +322,19 @@ export const QueryPoolParamsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryTotalPoolLiquidityDesc: UnaryMethodDefinitionish = {
   methodName: "TotalPoolLiquidity",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryTotalPoolLiquidityRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryTotalPoolLiquidityResponse.decode(data),
@@ -343,19 +343,19 @@ export const QueryTotalPoolLiquidityDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryTotalSharesDesc: UnaryMethodDefinitionish = {
   methodName: "TotalShares",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryTotalSharesRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryTotalSharesResponse.decode(data),
@@ -364,19 +364,19 @@ export const QueryTotalSharesDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QuerySpotPriceDesc: UnaryMethodDefinitionish = {
   methodName: "SpotPrice",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QuerySpotPriceRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QuerySpotPriceResponse.decode(data),
@@ -385,19 +385,19 @@ export const QuerySpotPriceDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryEstimateSwapExactAmountInDesc: UnaryMethodDefinitionish = {
   methodName: "EstimateSwapExactAmountIn",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QuerySwapExactAmountInRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QuerySwapExactAmountInResponse.decode(data),
@@ -406,19 +406,19 @@ export const QueryEstimateSwapExactAmountInDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryEstimateSwapExactAmountOutDesc: UnaryMethodDefinitionish = {
   methodName: "EstimateSwapExactAmountOut",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QuerySwapExactAmountOutRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QuerySwapExactAmountOutResponse.decode(data),
@@ -427,7 +427,7 @@ export const QueryEstimateSwapExactAmountOutDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -467,7 +467,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

@@ -104,10 +104,10 @@ export const MsgCreateStableswapPool = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.scalingFactors.push((reader.uint64() as Long));
+              message.scalingFactors.push(reader.uint64() as Long);
             }
           } else {
-            message.scalingFactors.push((reader.uint64() as Long));
+            message.scalingFactors.push(reader.uint64() as Long);
           }
           break;
         case 5:
@@ -210,7 +210,7 @@ export const MsgCreateStableswapPoolResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -278,16 +278,16 @@ export const MsgStableSwapAdjustScalingFactors = {
           message.sender = reader.string();
           break;
         case 2:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 3:
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.scalingFactors.push((reader.uint64() as Long));
+              message.scalingFactors.push(reader.uint64() as Long);
             }
           } else {
-            message.scalingFactors.push((reader.uint64() as Long));
+            message.scalingFactors.push(reader.uint64() as Long);
           }
           break;
         default:

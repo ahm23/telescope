@@ -200,7 +200,7 @@ export const GaugeByIDRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.id = (reader.uint64() as Long);
+          message.id = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -846,14 +846,14 @@ export const RewardsEstRequest = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.lockIds.push((reader.uint64() as Long));
+              message.lockIds.push(reader.uint64() as Long);
             }
           } else {
-            message.lockIds.push((reader.uint64() as Long));
+            message.lockIds.push(reader.uint64() as Long);
           }
           break;
         case 3:
-          message.endEpoch = (reader.int64() as Long);
+          message.endEpoch = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

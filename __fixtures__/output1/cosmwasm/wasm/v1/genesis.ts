@@ -321,7 +321,7 @@ export const Code = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.codeId = (reader.uint64() as Long);
+          message.codeId = reader.uint64() as Long;
           break;
         case 2:
           message.codeInfo = CodeInfo.decode(reader, reader.uint32());
@@ -494,7 +494,7 @@ export const Sequence = {
           message.idKey = reader.bytes();
           break;
         case 2:
-          message.value = (reader.uint64() as Long);
+          message.value = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

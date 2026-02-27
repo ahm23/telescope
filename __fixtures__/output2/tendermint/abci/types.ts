@@ -775,10 +775,10 @@ export const RequestInfo = {
           message.version = reader.string();
           break;
         case 2:
-          message.blockVersion = (reader.uint64() as Long);
+          message.blockVersion = reader.uint64() as Long;
           break;
         case 3:
-          message.p2pVersion = (reader.uint64() as Long);
+          message.p2pVersion = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -919,7 +919,7 @@ export const RequestInitChain = {
           message.appStateBytes = reader.bytes();
           break;
         case 6:
-          message.initialHeight = (reader.int64() as Long);
+          message.initialHeight = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1001,7 +1001,7 @@ export const RequestQuery = {
           message.path = reader.string();
           break;
         case 3:
-          message.height = (reader.int64() as Long);
+          message.height = reader.int64() as Long;
           break;
         case 4:
           message.prove = reader.bool();
@@ -1144,7 +1144,7 @@ export const RequestCheckTx = {
           message.tx = reader.bytes();
           break;
         case 2:
-          message.type = (reader.int32() as any);
+          message.type = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1237,7 +1237,7 @@ export const RequestEndBlock = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.height = (reader.int64() as Long);
+          message.height = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1411,7 +1411,7 @@ export const RequestLoadSnapshotChunk = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.height = (reader.uint64() as Long);
+          message.height = reader.uint64() as Long;
           break;
         case 2:
           message.format = reader.uint32();
@@ -1873,10 +1873,10 @@ export const ResponseInfo = {
           message.version = reader.string();
           break;
         case 3:
-          message.appVersion = (reader.uint64() as Long);
+          message.appVersion = reader.uint64() as Long;
           break;
         case 4:
-          message.lastBlockHeight = (reader.int64() as Long);
+          message.lastBlockHeight = reader.int64() as Long;
           break;
         case 5:
           message.lastBlockAppHash = reader.bytes();
@@ -2111,7 +2111,7 @@ export const ResponseQuery = {
           message.info = reader.string();
           break;
         case 5:
-          message.index = (reader.int64() as Long);
+          message.index = reader.int64() as Long;
           break;
         case 6:
           message.key = reader.bytes();
@@ -2123,7 +2123,7 @@ export const ResponseQuery = {
           message.proofOps = ProofOps.decode(reader, reader.uint32());
           break;
         case 9:
-          message.height = (reader.int64() as Long);
+          message.height = reader.int64() as Long;
           break;
         case 10:
           message.codespace = reader.string();
@@ -2284,10 +2284,10 @@ export const ResponseCheckTx = {
           message.info = reader.string();
           break;
         case 5:
-          message.gasWanted = (reader.int64() as Long);
+          message.gasWanted = reader.int64() as Long;
           break;
         case 6:
-          message.gasUsed = (reader.int64() as Long);
+          message.gasUsed = reader.int64() as Long;
           break;
         case 7:
           message.events.push(Event.decode(reader, reader.uint32()));
@@ -2403,10 +2403,10 @@ export const ResponseDeliverTx = {
           message.info = reader.string();
           break;
         case 5:
-          message.gasWanted = (reader.int64() as Long);
+          message.gasWanted = reader.int64() as Long;
           break;
         case 6:
-          message.gasUsed = (reader.int64() as Long);
+          message.gasUsed = reader.int64() as Long;
           break;
         case 7:
           message.events.push(Event.decode(reader, reader.uint32()));
@@ -2562,7 +2562,7 @@ export const ResponseCommit = {
           message.data = reader.bytes();
           break;
         case 3:
-          message.retainHeight = (reader.int64() as Long);
+          message.retainHeight = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -2659,7 +2659,7 @@ export const ResponseOfferSnapshot = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.result = (reader.int32() as any);
+          message.result = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -2759,7 +2759,7 @@ export const ResponseApplySnapshotChunk = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.result = (reader.int32() as any);
+          message.result = reader.int32() as any;
           break;
         case 2:
           if ((tag & 7) === 2) {
@@ -2910,10 +2910,10 @@ export const BlockParams = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.maxBytes = (reader.int64() as Long);
+          message.maxBytes = reader.int64() as Long;
           break;
         case 2:
-          message.maxGas = (reader.int64() as Long);
+          message.maxGas = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -3156,7 +3156,7 @@ export const TxResult = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.height = (reader.int64() as Long);
+          message.height = reader.int64() as Long;
           break;
         case 2:
           message.index = reader.uint32();
@@ -3226,7 +3226,7 @@ export const Validator = {
           message.address = reader.bytes();
           break;
         case 3:
-          message.power = (reader.int64() as Long);
+          message.power = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -3281,7 +3281,7 @@ export const ValidatorUpdate = {
           message.pubKey = PublicKey.decode(reader, reader.uint32());
           break;
         case 2:
-          message.power = (reader.int64() as Long);
+          message.power = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -3400,19 +3400,19 @@ export const Evidence = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.type = (reader.int32() as any);
+          message.type = reader.int32() as any;
           break;
         case 2:
           message.validator = Validator.decode(reader, reader.uint32());
           break;
         case 3:
-          message.height = (reader.int64() as Long);
+          message.height = reader.int64() as Long;
           break;
         case 4:
           message.time = Timestamp.decode(reader, reader.uint32());
           break;
         case 5:
-          message.totalVotingPower = (reader.int64() as Long);
+          message.totalVotingPower = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -3485,7 +3485,7 @@ export const Snapshot = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.height = (reader.uint64() as Long);
+          message.height = reader.uint64() as Long;
           break;
         case 2:
           message.format = reader.uint32();

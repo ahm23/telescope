@@ -52,12 +52,12 @@ export const MsgSuperfluidDelegateDesc: UnaryMethodDefinitionish = {
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgSuperfluidDelegate.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgSuperfluidDelegateResponse.decode(data),
@@ -66,19 +66,19 @@ export const MsgSuperfluidDelegateDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgSuperfluidUndelegateDesc: UnaryMethodDefinitionish = {
   methodName: "SuperfluidUndelegate",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgSuperfluidUndelegate.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgSuperfluidUndelegateResponse.decode(data),
@@ -87,19 +87,19 @@ export const MsgSuperfluidUndelegateDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgSuperfluidUnbondLockDesc: UnaryMethodDefinitionish = {
   methodName: "SuperfluidUnbondLock",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgSuperfluidUnbondLock.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgSuperfluidUnbondLockResponse.decode(data),
@@ -108,19 +108,19 @@ export const MsgSuperfluidUnbondLockDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgLockAndSuperfluidDelegateDesc: UnaryMethodDefinitionish = {
   methodName: "LockAndSuperfluidDelegate",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgLockAndSuperfluidDelegate.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgLockAndSuperfluidDelegateResponse.decode(data),
@@ -129,19 +129,19 @@ export const MsgLockAndSuperfluidDelegateDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgUnPoolWhitelistedPoolDesc: UnaryMethodDefinitionish = {
   methodName: "UnPoolWhitelistedPool",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgUnPoolWhitelistedPool.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgUnPoolWhitelistedPoolResponse.decode(data),
@@ -150,7 +150,7 @@ export const MsgUnPoolWhitelistedPoolDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -190,7 +190,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

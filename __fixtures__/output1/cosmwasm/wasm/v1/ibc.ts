@@ -72,10 +72,10 @@ export const MsgIBCSend = {
           message.channel = reader.string();
           break;
         case 4:
-          message.timeoutHeight = (reader.uint64() as Long);
+          message.timeoutHeight = reader.uint64() as Long;
           break;
         case 5:
-          message.timeoutTimestamp = (reader.uint64() as Long);
+          message.timeoutTimestamp = reader.uint64() as Long;
           break;
         case 6:
           message.data = reader.bytes();

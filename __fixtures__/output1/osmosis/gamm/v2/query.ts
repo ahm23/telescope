@@ -63,7 +63,7 @@ export const QuerySpotPriceRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 2:
           message.baseAssetDenom = reader.string();

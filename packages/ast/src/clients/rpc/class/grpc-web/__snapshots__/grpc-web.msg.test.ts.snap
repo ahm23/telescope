@@ -57,12 +57,12 @@ exports[`test gRPC-web Msg Client 4`] = `
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgGrant.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgGrantResponse.decode(data),
@@ -71,7 +71,7 @@ exports[`test gRPC-web Msg Client 4`] = `
         }
       };
     }
-  } as any)
+  } as any
 };"
 `;
 
@@ -81,12 +81,12 @@ exports[`test gRPC-web Msg Client 5`] = `
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgExec.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgExecResponse.decode(data),
@@ -95,7 +95,7 @@ exports[`test gRPC-web Msg Client 5`] = `
         }
       };
     }
-  } as any)
+  } as any
 };"
 `;
 
@@ -105,12 +105,12 @@ exports[`test gRPC-web Msg Client 6`] = `
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgRevoke.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgRevokeResponse.decode(data),
@@ -119,7 +119,7 @@ exports[`test gRPC-web Msg Client 6`] = `
         }
       };
     }
-  } as any)
+  } as any
 };"
 `;
 
@@ -159,7 +159,7 @@ exports[`test gRPC-web Msg Client 7`] = `
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

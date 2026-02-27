@@ -115,7 +115,7 @@ export const GenesisState = {
           message.createLocalhost = reader.bool();
           break;
         case 6:
-          message.nextClientSequence = (reader.uint64() as Long);
+          message.nextClientSequence = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

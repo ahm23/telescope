@@ -80,7 +80,7 @@ export const GenesisDowntimeEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.duration = (reader.int32() as any);
+          message.duration = reader.int32() as any;
           break;
         case 2:
           message.lastDowntime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));

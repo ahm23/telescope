@@ -1490,7 +1490,7 @@ export const AttributeContext_Peer = {
     }
     Object.entries(message.labels).forEach(([key, value]) => {
       AttributeContext_Peer_LabelsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(50).fork()).ldelim();
     });
@@ -1946,7 +1946,7 @@ export const AttributeContext_Request = {
     }
     Object.entries(message.headers).forEach(([key, value]) => {
       AttributeContext_Request_HeadersEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(26).fork()).ldelim();
     });
@@ -2241,7 +2241,7 @@ export const AttributeContext_Response = {
     }
     Object.entries(message.headers).forEach(([key, value]) => {
       AttributeContext_Response_HeadersEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(26).fork()).ldelim();
     });
@@ -2545,7 +2545,7 @@ export const AttributeContext_Resource = {
     }
     Object.entries(message.labels).forEach(([key, value]) => {
       AttributeContext_Resource_LabelsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(34).fork()).ldelim();
     });
@@ -2554,7 +2554,7 @@ export const AttributeContext_Resource = {
     }
     Object.entries(message.annotations).forEach(([key, value]) => {
       AttributeContext_Resource_AnnotationsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(50).fork()).ldelim();
     });

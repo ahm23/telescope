@@ -128,7 +128,7 @@ export const MetricValue = {
   encode(message: MetricValue, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     Object.entries(message.labels).forEach(([key, value]) => {
       MetricValue_LabelsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(10).fork()).ldelim();
     });
@@ -178,7 +178,7 @@ export const MetricValue = {
           message.boolValue = reader.bool();
           break;
         case 5:
-          message.int64Value = (reader.int64() as Long);
+          message.int64Value = reader.int64() as Long;
           break;
         case 6:
           message.doubleValue = reader.double();

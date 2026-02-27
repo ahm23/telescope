@@ -347,7 +347,7 @@ export const Pool = {
           message.address = reader.string();
           break;
         case 2:
-          message.id = (reader.uint64() as Long);
+          message.id = reader.uint64() as Long;
           break;
         case 3:
           message.poolParams = PoolParams.decode(reader, reader.uint32());

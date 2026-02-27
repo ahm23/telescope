@@ -554,7 +554,7 @@ export const Service = {
           message.config = ServiceConfig.decode(reader, reader.uint32());
           break;
         case 4:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1070,7 +1070,7 @@ export const QuotaBucket = {
     }
     Object.entries(message.dimensions).forEach(([key, value]) => {
       QuotaBucket_DimensionsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(50).fork()).ldelim();
     });
@@ -1084,10 +1084,10 @@ export const QuotaBucket = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.effectiveLimit = (reader.int64() as Long);
+          message.effectiveLimit = reader.int64() as Long;
           break;
         case 2:
-          message.defaultLimit = (reader.int64() as Long);
+          message.defaultLimit = reader.int64() as Long;
           break;
         case 3:
           message.producerOverride = QuotaOverride.decode(reader, reader.uint32());
@@ -1234,7 +1234,7 @@ export const QuotaOverride = {
     }
     Object.entries(message.dimensions).forEach(([key, value]) => {
       QuotaOverride_DimensionsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(26).fork()).ldelim();
     });
@@ -1260,7 +1260,7 @@ export const QuotaOverride = {
           message.name = reader.string();
           break;
         case 2:
-          message.overrideValue = (reader.int64() as Long);
+          message.overrideValue = reader.int64() as Long;
           break;
         case 3:
           const entry3 = QuotaOverride_DimensionsEntry.decode(reader, reader.uint32());
@@ -1456,7 +1456,7 @@ export const AdminQuotaPolicy = {
     }
     Object.entries(message.dimensions).forEach(([key, value]) => {
       AdminQuotaPolicy_DimensionsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(26).fork()).ldelim();
     });
@@ -1482,7 +1482,7 @@ export const AdminQuotaPolicy = {
           message.name = reader.string();
           break;
         case 2:
-          message.policyValue = (reader.int64() as Long);
+          message.policyValue = reader.int64() as Long;
           break;
         case 3:
           const entry3 = AdminQuotaPolicy_DimensionsEntry.decode(reader, reader.uint32());

@@ -159,7 +159,7 @@ export const QueryPoolRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -386,7 +386,7 @@ export const QueryNumPoolsResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.numPools = (reader.uint64() as Long);
+          message.numPools = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -431,7 +431,7 @@ export const QueryPoolTypeRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -525,7 +525,7 @@ export const QueryCalcJoinPoolSharesRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 2:
           message.tokensIn.push(Coin.decode(reader, reader.uint32()));
@@ -643,7 +643,7 @@ export const QueryCalcExitPoolCoinsFromSharesRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 2:
           message.shareInAmount = reader.string();
@@ -743,7 +743,7 @@ export const QueryPoolParamsRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -833,7 +833,7 @@ export const QueryTotalPoolLiquidityRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -927,7 +927,7 @@ export const QueryTotalSharesRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1021,7 +1021,7 @@ export const QueryCalcJoinPoolNoSwapSharesRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 2:
           message.tokensIn.push(Coin.decode(reader, reader.uint32()));
@@ -1143,7 +1143,7 @@ export const QuerySpotPriceRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 2:
           message.baseAssetDenom = reader.string();
@@ -1388,7 +1388,7 @@ export const QuerySwapExactAmountInRequest = {
           message.sender = reader.string();
           break;
         case 2:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 3:
           message.tokenIn = reader.string();
@@ -1512,7 +1512,7 @@ export const QuerySwapExactAmountOutRequest = {
           message.sender = reader.string();
           break;
         case 2:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 3:
           message.routes.push(SwapAmountOutRoute.decode(reader, reader.uint32()));

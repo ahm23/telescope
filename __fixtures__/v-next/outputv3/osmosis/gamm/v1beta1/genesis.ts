@@ -259,7 +259,7 @@ export const GenesisState = {
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
-    message.pools = object.pools?.map(e => (GlobalDecoderRegistry.fromPartial(e) as any)) || [];
+    message.pools = object.pools?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
     if (object.nextPoolNumber !== undefined && object.nextPoolNumber !== null) {
       message.nextPoolNumber = BigInt(object.nextPoolNumber.toString());
     }

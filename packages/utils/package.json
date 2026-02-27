@@ -45,6 +45,7 @@
     "url": "https://github.com/hyperweb-io/telescope/issues"
   },
   "devDependencies": {
+    "jest-in-case": "^1.0.2",
     "makage": "^0.1.12"
   },
   "dependencies": {

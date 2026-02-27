@@ -174,7 +174,7 @@ export const SuperfluidAsset = {
           message.denom = reader.string();
           break;
         case 2:
-          message.assetType = (reader.int32() as any);
+          message.assetType = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -248,7 +248,7 @@ export const SuperfluidIntermediaryAccount = {
           message.valAddr = reader.string();
           break;
         case 3:
-          message.gaugeId = (reader.uint64() as Long);
+          message.gaugeId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -321,7 +321,7 @@ export const OsmoEquivalentMultiplierRecord = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.epochNumber = (reader.int64() as Long);
+          message.epochNumber = reader.int64() as Long;
           break;
         case 2:
           message.denom = reader.string();
@@ -487,7 +487,7 @@ export const LockIdIntermediaryAccountConnection = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.lockId = (reader.uint64() as Long);
+          message.lockId = reader.uint64() as Long;
           break;
         case 2:
           message.intermediaryAccount = reader.string();
@@ -555,10 +555,10 @@ export const UnpoolWhitelistedPools = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.ids.push((reader.uint64() as Long));
+              message.ids.push(reader.uint64() as Long);
             }
           } else {
-            message.ids.push((reader.uint64() as Long));
+            message.ids.push(reader.uint64() as Long);
           }
           break;
         default:

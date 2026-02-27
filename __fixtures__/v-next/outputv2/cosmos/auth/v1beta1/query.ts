@@ -732,7 +732,7 @@ export const QueryAccountsResponse = {
   },
   fromPartial(object: DeepPartial<QueryAccountsResponse>): QueryAccountsResponse {
     const message = createBaseQueryAccountsResponse();
-    message.accounts = object.accounts?.map(e => (GlobalDecoderRegistry.fromPartial(e) as any)) || [];
+    message.accounts = object.accounts?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
     if (object.pagination !== undefined && object.pagination !== null) {
       message.pagination = PageResponse.fromPartial(object.pagination);
     }
@@ -1371,7 +1371,7 @@ export const QueryModuleAccountsResponse = {
   },
   fromPartial(object: DeepPartial<QueryModuleAccountsResponse>): QueryModuleAccountsResponse {
     const message = createBaseQueryModuleAccountsResponse();
-    message.accounts = object.accounts?.map(e => (GlobalDecoderRegistry.fromPartial(e) as any)) || [];
+    message.accounts = object.accounts?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
     return message;
   },
   fromSDK(object: QueryModuleAccountsResponseSDKType): QueryModuleAccountsResponse {

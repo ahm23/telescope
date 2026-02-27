@@ -878,7 +878,7 @@ export const GroupInfo = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.id = (reader.uint64() as Long);
+          message.id = reader.uint64() as Long;
           break;
         case 2:
           message.admin = reader.string();
@@ -887,7 +887,7 @@ export const GroupInfo = {
           message.metadata = reader.string();
           break;
         case 4:
-          message.version = (reader.uint64() as Long);
+          message.version = reader.uint64() as Long;
           break;
         case 5:
           message.totalWeight = reader.string();
@@ -977,7 +977,7 @@ export const GroupMember = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.groupId = (reader.uint64() as Long);
+          message.groupId = reader.uint64() as Long;
           break;
         case 2:
           message.member = Member.decode(reader, reader.uint32());
@@ -1067,7 +1067,7 @@ export const GroupPolicyInfo = {
           message.address = reader.string();
           break;
         case 2:
-          message.groupId = (reader.uint64() as Long);
+          message.groupId = reader.uint64() as Long;
           break;
         case 3:
           message.admin = reader.string();
@@ -1076,7 +1076,7 @@ export const GroupPolicyInfo = {
           message.metadata = reader.string();
           break;
         case 5:
-          message.version = (reader.uint64() as Long);
+          message.version = reader.uint64() as Long;
           break;
         case 6:
           message.decisionPolicy = Any.decode(reader, reader.uint32());
@@ -1215,7 +1215,7 @@ export const Proposal = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.id = (reader.uint64() as Long);
+          message.id = reader.uint64() as Long;
           break;
         case 2:
           message.address = reader.string();
@@ -1230,16 +1230,16 @@ export const Proposal = {
           message.submitTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 6:
-          message.groupVersion = (reader.uint64() as Long);
+          message.groupVersion = reader.uint64() as Long;
           break;
         case 7:
-          message.groupPolicyVersion = (reader.uint64() as Long);
+          message.groupPolicyVersion = reader.uint64() as Long;
           break;
         case 8:
-          message.status = (reader.int32() as any);
+          message.status = reader.int32() as any;
           break;
         case 9:
-          message.result = (reader.int32() as any);
+          message.result = reader.int32() as any;
           break;
         case 10:
           message.finalTallyResult = TallyResult.decode(reader, reader.uint32());
@@ -1248,7 +1248,7 @@ export const Proposal = {
           message.votingPeriodEnd = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 12:
-          message.executorResult = (reader.int32() as any);
+          message.executorResult = reader.int32() as any;
           break;
         case 13:
           message.messages.push(Any.decode(reader, reader.uint32()));
@@ -1489,13 +1489,13 @@ export const Vote = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.proposalId = (reader.uint64() as Long);
+          message.proposalId = reader.uint64() as Long;
           break;
         case 2:
           message.voter = reader.string();
           break;
         case 3:
-          message.option = (reader.int32() as any);
+          message.option = reader.int32() as any;
           break;
         case 4:
           message.metadata = reader.string();

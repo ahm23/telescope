@@ -47,12 +47,12 @@ export const MsgConnectionOpenInitDesc: UnaryMethodDefinitionish = {
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgConnectionOpenInit.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgConnectionOpenInitResponse.decode(data),
@@ -61,19 +61,19 @@ export const MsgConnectionOpenInitDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgConnectionOpenTryDesc: UnaryMethodDefinitionish = {
   methodName: "ConnectionOpenTry",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgConnectionOpenTry.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgConnectionOpenTryResponse.decode(data),
@@ -82,19 +82,19 @@ export const MsgConnectionOpenTryDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgConnectionOpenAckDesc: UnaryMethodDefinitionish = {
   methodName: "ConnectionOpenAck",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgConnectionOpenAck.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgConnectionOpenAckResponse.decode(data),
@@ -103,19 +103,19 @@ export const MsgConnectionOpenAckDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgConnectionOpenConfirmDesc: UnaryMethodDefinitionish = {
   methodName: "ConnectionOpenConfirm",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgConnectionOpenConfirm.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgConnectionOpenConfirmResponse.decode(data),
@@ -124,7 +124,7 @@ export const MsgConnectionOpenConfirmDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -164,7 +164,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

@@ -195,7 +195,7 @@ export const Int64Value = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.value = (reader.int64() as Long);
+          message.value = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -240,7 +240,7 @@ export const UInt64Value = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.value = (reader.uint64() as Long);
+          message.value = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

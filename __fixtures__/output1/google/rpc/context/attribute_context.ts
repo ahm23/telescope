@@ -763,7 +763,7 @@ export const AttributeContext_Peer = {
     }
     Object.entries(message.labels).forEach(([key, value]) => {
       AttributeContext_Peer_LabelsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(50).fork()).ldelim();
     });
@@ -786,7 +786,7 @@ export const AttributeContext_Peer = {
           message.ip = reader.string();
           break;
         case 2:
-          message.port = (reader.int64() as Long);
+          message.port = reader.int64() as Long;
           break;
         case 6:
           const entry6 = AttributeContext_Peer_LabelsEntry.decode(reader, reader.uint32());
@@ -1183,7 +1183,7 @@ export const AttributeContext_Request = {
     }
     Object.entries(message.headers).forEach(([key, value]) => {
       AttributeContext_Request_HeadersEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(26).fork()).ldelim();
     });
@@ -1251,7 +1251,7 @@ export const AttributeContext_Request = {
           message.time = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 10:
-          message.size = (reader.int64() as Long);
+          message.size = reader.int64() as Long;
           break;
         case 11:
           message.protocol = reader.string();
@@ -1463,7 +1463,7 @@ export const AttributeContext_Response = {
     }
     Object.entries(message.headers).forEach(([key, value]) => {
       AttributeContext_Response_HeadersEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(26).fork()).ldelim();
     });
@@ -1483,10 +1483,10 @@ export const AttributeContext_Response = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.code = (reader.int64() as Long);
+          message.code = reader.int64() as Long;
           break;
         case 2:
-          message.size = (reader.int64() as Long);
+          message.size = reader.int64() as Long;
           break;
         case 3:
           const entry3 = AttributeContext_Response_HeadersEntry.decode(reader, reader.uint32());
@@ -1743,7 +1743,7 @@ export const AttributeContext_Resource = {
     }
     Object.entries(message.labels).forEach(([key, value]) => {
       AttributeContext_Resource_LabelsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(34).fork()).ldelim();
     });
@@ -1752,7 +1752,7 @@ export const AttributeContext_Resource = {
     }
     Object.entries(message.annotations).forEach(([key, value]) => {
       AttributeContext_Resource_AnnotationsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(50).fork()).ldelim();
     });

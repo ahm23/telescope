@@ -68,7 +68,7 @@ export const GenesisState = {
           message.lockableDurations.push(Duration.decode(reader, reader.uint32()));
           break;
         case 4:
-          message.lastGaugeId = (reader.uint64() as Long);
+          message.lastGaugeId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

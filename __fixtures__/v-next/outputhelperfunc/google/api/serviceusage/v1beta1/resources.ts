@@ -1370,7 +1370,7 @@ export const Service = {
           message.config = ServiceConfig.decode(reader, reader.uint32());
           break;
         case 4:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -2465,7 +2465,7 @@ export const QuotaBucket = {
     }
     Object.entries(message.dimensions).forEach(([key, value]) => {
       QuotaBucket_DimensionsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(50).fork()).ldelim();
     });
@@ -2812,7 +2812,7 @@ export const QuotaOverride = {
     }
     Object.entries(message.dimensions).forEach(([key, value]) => {
       QuotaOverride_DimensionsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(26).fork()).ldelim();
     });
@@ -3274,7 +3274,7 @@ export const AdminQuotaPolicy = {
     }
     Object.entries(message.dimensions).forEach(([key, value]) => {
       AdminQuotaPolicy_DimensionsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(26).fork()).ldelim();
     });

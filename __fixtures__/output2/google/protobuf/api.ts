@@ -227,7 +227,7 @@ export const Api = {
           message.mixins.push(Mixin.decode(reader, reader.uint32()));
           break;
         case 7:
-          message.syntax = (reader.int32() as any);
+          message.syntax = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -344,7 +344,7 @@ export const Method = {
           message.options.push(Option.decode(reader, reader.uint32()));
           break;
         case 7:
-          message.syntax = (reader.int32() as any);
+          message.syntax = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

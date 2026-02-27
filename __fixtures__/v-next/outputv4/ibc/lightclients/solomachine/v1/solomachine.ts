@@ -1238,7 +1238,7 @@ export const SignatureAndData = {
           message.signature = reader.bytes();
           break;
         case 2:
-          message.dataType = (reader.int32() as any);
+          message.dataType = reader.int32() as any;
           break;
         case 3:
           message.data = reader.bytes();
@@ -1521,7 +1521,7 @@ export const SignBytes = {
           message.diversifier = reader.string();
           break;
         case 4:
-          message.dataType = (reader.int32() as any);
+          message.dataType = reader.int32() as any;
           break;
         case 5:
           message.data = reader.bytes();

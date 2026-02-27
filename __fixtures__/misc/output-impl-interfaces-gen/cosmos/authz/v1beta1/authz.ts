@@ -477,7 +477,7 @@ export const Grant = {
           message.expiration = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 3:
-          message.opt = (reader.int32() as any);
+          message.opt = reader.int32() as any;
           break;
         case 4:
           message.singleMsg = Any.decode(reader, reader.uint32());
@@ -966,7 +966,7 @@ export const Grants = {
   },
   fromPartial(object: DeepPartial<Grants>): Grants {
     const message = createBaseGrants();
-    message.authorization = object.authorization?.map(e => (GlobalDecoderRegistry.fromPartial(e) as any)) || [];
+    message.authorization = object.authorization?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
     return message;
   },
   fromSDK(object: GrantsSDKType): Grants {

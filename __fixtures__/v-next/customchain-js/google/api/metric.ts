@@ -710,10 +710,10 @@ export const MetricDescriptor = {
           message.labels.push(LabelDescriptor.decode(reader, reader.uint32()));
           break;
         case 3:
-          message.metricKind = (reader.int32() as any);
+          message.metricKind = reader.int32() as any;
           break;
         case 4:
-          message.valueType = (reader.int32() as any);
+          message.valueType = reader.int32() as any;
           break;
         case 5:
           message.unit = reader.string();
@@ -728,7 +728,7 @@ export const MetricDescriptor = {
           message.metadata = MetricDescriptor_MetricDescriptorMetadata.decode(reader, reader.uint32());
           break;
         case 12:
-          message.launchStage = (reader.int32() as any);
+          message.launchStage = reader.int32() as any;
           break;
         case 13:
           message.monitoredResourceTypes.push(reader.string());
@@ -862,7 +862,7 @@ export const MetricDescriptor_MetricDescriptorMetadata = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.launchStage = (reader.int32() as any);
+          message.launchStage = reader.int32() as any;
           break;
         case 2:
           message.samplePeriod = Duration.decode(reader, reader.uint32());
@@ -1014,7 +1014,7 @@ export const Metric = {
     }
     Object.entries(message.labels).forEach(([key, value]) => {
       Metric_LabelsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(18).fork()).ldelim();
     });

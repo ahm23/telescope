@@ -478,7 +478,7 @@ export const MonitoredResourceDescriptor = {
           message.labels.push(LabelDescriptor.decode(reader, reader.uint32()));
           break;
         case 7:
-          message.launchStage = (reader.int32() as any);
+          message.launchStage = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -756,7 +756,7 @@ export const MonitoredResource = {
     }
     Object.entries(message.labels).forEach(([key, value]) => {
       MonitoredResource_LabelsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(18).fork()).ldelim();
     });
@@ -1034,7 +1034,7 @@ export const MonitoredResourceMetadata = {
     }
     Object.entries(message.userLabels).forEach(([key, value]) => {
       MonitoredResourceMetadata_UserLabelsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(18).fork()).ldelim();
     });

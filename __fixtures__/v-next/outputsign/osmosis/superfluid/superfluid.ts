@@ -366,7 +366,7 @@ export const SuperfluidAsset = {
           message.denom = reader.string();
           break;
         case 2:
-          message.assetType = (reader.int32() as any);
+          message.assetType = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

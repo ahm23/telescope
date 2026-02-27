@@ -51,7 +51,7 @@ export const getSigningIbcClient = async ({
     defaultTypes
   });
   const client = await SigningStargateClient.connectWithSigner(rpcEndpoint, signer, {
-    registry: (registry as any),
+    registry: registry as any,
     aminoTypes
   });
   return client;
@@ -60,13 +60,13 @@ export const getSigningIbcTxRpc = async ({
   rpcEndpoint,
   signer
 }: SigningClientParams) => {
-  let txRpc = (await createRpcClient(rpcEndpoint) as TxRpc);
+  let txRpc = (await createRpcClient(rpcEndpoint)) as TxRpc;
   const signingClient = await getSigningIbcClient({
     rpcEndpoint,
     signer
   });
   txRpc.signAndBroadcast = (signerAddress: string, messages: EncodeObject[], fee: number | StdFee | "auto", memo?: string) => {
-    return (signingClient.signAndBroadcast(signerAddress, messages, fee, memo) as Promise<any>);
+    return signingClient.signAndBroadcast(signerAddress, messages, fee, memo) as Promise<any>;
   };
   return txRpc;
 };

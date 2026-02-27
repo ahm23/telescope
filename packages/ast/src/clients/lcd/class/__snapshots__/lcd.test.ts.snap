@@ -160,8 +160,6 @@ exports[`cosmos fee LCDClient 1`] = `
 }"
 `;
 
-exports[`cosmos/app/v1alpha1/query.proto 1`] = `""`;
-
 exports[`cosmos/gov/v1beta1/query.proto 1`] = `
 "export class LCDQueryClient {
   req: LCDClient;

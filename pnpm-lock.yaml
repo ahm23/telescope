@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@chain-registry/client': 1.18.1
+
 importers:
 
   .:
@@ -663,17 +666,23 @@ packages:
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
 
-  '@chain-registry/client@2.0.162':
-    resolution: {integrity: sha512-+7lofQPWMh1KYzVRQGHOLMxryrsvvq1w2P80aNZ2x+s0E/YS7Xuhq1beAJ9lJpmwNdIsYQbOW4BPbtfAf1nQEA==}
+  '@chain-registry/client@1.18.1':
+    resolution: {integrity: sha512-8FG/RQ+hxM8XnN6xpAW2QzqMMFHky0/2BjjWteuvHtCJuEigw4JpVxScKZj7u8qWRd4jBuVNx4P+9FcMbgH9iw==}
 
   '@chain-registry/types@0.14.0':
     resolution: {integrity: sha512-TlIqc3CijT734no7RiYBfUvCG2fory0blwrBcK4XTYOCi2vANsxfDdiPLFQcaSETYDd14DdjhrdXwMocEeOnLQ==}
 
+  '@chain-registry/types@0.17.1':
+    resolution: {integrity: sha512-O0CgrtJgIlqXvZm1CqDZe/7jZz068O/uuCIoyDXCegFHK03rdHacKcDGwEIUuI0MNUf8YV3jdE4xHQMSAX+79w==}
+
+  '@chain-registry/types@0.50.312':
+    resolution: {integrity: sha512-cNlakLsaj5bHfP+6K8t2eTCFx+pfSZI2ZQtG9szxU7wX4DwCuSbSJWrBo+Igj3zcs1lQm+XpQ5Mi5SkgoZ6EDQ==}
+
   '@chain-registry/types@2.0.162':
     resolution: {integrity: sha512-C3vi6Etp5v8/08r39UBxOApuBJcLuE/y+qDMFJxnhD3jfwRghh5jCmjqDiP5Js/NnRUBGSt/XHiRViXx+TurFw==}
 
-  '@chain-registry/utils@2.0.162':
-    resolution: {integrity: sha512-xcft5B3HZks25u7j9GV5eNYZGODmBIsPxwELme1y4R4upY4Trs5z9A7bmyGnqyMEnByZPr2AAGyqO7cjHymXwA==}
+  '@chain-registry/utils@1.51.312':
+    resolution: {integrity: sha512-CVsHBTAWtUjG5ziB9oqJisZ7j+YfBpLKGcWp2jM4Vs5P6JNIOkaZIkvUjFTLasE6x0TWrDiW69UMJnEVHOXDLg==}
 
   '@chain-registry/v2-types@0.53.146':
     resolution: {integrity: sha512-GnqdNnEJ+ZTAc/0S9fQbwL5GpIvF3LZ/P3o6qh6EyITSiRA1Y55FXs59eSddltpPX5EgyWDwNpJjY+Q5uYlAkA==}
@@ -1936,9 +1945,6 @@ packages:
 
   chain-registry@1.10.0:
     resolution: {integrity: sha512-JfdJufFq2F5tRpw1PMO32pv199xnZvwoSLKpW/wlbVOdpyLka7s4GwxgqYK+CPOdfCj5v6GiaGfWTq7slUemXg==}
-
-  chain-registry@2.0.162:
-    resolution: {integrity: sha512-yQfEOqkyX+IAFLSd5tIxlg5BKoAXdmpYiNjmEoYkIONniOi50K3LMjCX/vYWRfMvoO+8r/hAT1eKYF+exd0NKQ==}
 
   chalk@1.1.3:
     resolution: {integrity: sha512-U3lRVLMSlsCfjqYPbLyVv11M9CPW4I728d6TCKMAOJueEeB9/8o+eSsMnxPJD+Q+K909sdESg7C+tIkoH6on1A==}
@@ -5186,10 +5192,11 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@chain-registry/client@2.0.162(encoding@0.1.13)':
+  '@chain-registry/client@1.18.1(encoding@0.1.13)':
     dependencies:
-      '@chain-registry/types': 2.0.162
-      '@chain-registry/utils': 2.0.162
+      '@babel/runtime': 7.28.6
+      '@chain-registry/types': 0.17.1
+      '@chain-registry/utils': 1.51.312
       bfs-path: 1.0.2
       cross-fetch: 3.2.0(encoding@0.1.13)
     transitivePeerDependencies:
@@ -5199,13 +5206,18 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.28.6
 
+  '@chain-registry/types@0.17.1':
+    dependencies:
+      '@babel/runtime': 7.28.6
+
+  '@chain-registry/types@0.50.312': {}
+
   '@chain-registry/types@2.0.162': {}
 
-  '@chain-registry/utils@2.0.162':
+  '@chain-registry/utils@1.51.312':
     dependencies:
-      '@chain-registry/types': 2.0.162
+      '@chain-registry/types': 0.50.312
       bignumber.js: 9.1.2
-      chain-registry: 2.0.162
       sha.js: 2.4.12
 
   '@chain-registry/v2-types@0.53.146': {}
@@ -7269,10 +7281,6 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.28.6
       '@chain-registry/types': 0.14.0
-
-  chain-registry@2.0.162:
-    dependencies:
-      '@chain-registry/types': 2.0.162
 
   chalk@1.1.3:
     dependencies:
@@ -10214,7 +10222,7 @@ snapshots:
 
   starshipjs@3.14.1(encoding@0.1.13):
     dependencies:
-      '@chain-registry/client': 2.0.162(encoding@0.1.13)
+      '@chain-registry/client': 1.18.1(encoding@0.1.13)
       '@starship-ci/types': 3.14.0
       bip39: 3.1.0
       js-yaml: 4.1.0

@@ -36,6 +36,9 @@
     ],
     "testPathIgnorePatterns": [
       "dist/"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/"
     ]
   },
   "keywords": [],

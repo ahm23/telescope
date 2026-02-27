@@ -20,13 +20,13 @@ export const EvalRequest = {
   encode(message: EvalRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     Object.entries(message.bindings).forEach(([key, value]) => {
       EvalRequest_BindingsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(10).fork()).ldelim();
     });
     Object.entries(message.refs).forEach(([key, value]) => {
       EvalRequest_RefsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(18).fork()).ldelim();
     });
@@ -106,7 +106,7 @@ export const EvalRequest = {
           message.testArray.push(reader.string());
           break;
         case 15:
-          message.opt = (reader.int32() as any);
+          message.opt = reader.int32() as any;
           break;
         case 16:
           message.graph = TestNest_Graph.decode(reader, reader.uint32());
@@ -400,13 +400,13 @@ export const EvalRequest = {
   encode(message: EvalRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     Object.entries(message.bindings).forEach(([key, value]) => {
       EvalRequest_BindingsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(10).fork()).ldelim();
     });
     Object.entries(message.refs).forEach(([key, value]) => {
       EvalRequest_RefsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(18).fork()).ldelim();
     });
@@ -486,7 +486,7 @@ export const EvalRequest = {
           message.testArray.push(reader.string());
           break;
         case 15:
-          message.opt = (reader.int32() as any);
+          message.opt = reader.int32() as any;
           break;
         case 16:
           message.graph = TestNest_Graph.decode(reader, reader.uint32());

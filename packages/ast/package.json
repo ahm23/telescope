@@ -39,7 +39,13 @@
     ],
     "testPathIgnorePatterns": [
       "dist/"
-    ]
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/"
+    ],
+    "moduleNameMapper": {
+      "^@cosmology/ast$": "<rootDir>/src"
+    }
   },
   "keywords": [],
   "bugs": {

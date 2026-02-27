@@ -48,6 +48,9 @@
     "testPathIgnorePatterns": [
       "dist/",
       "git-modules"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/"
     ]
   },
   "keywords": [],

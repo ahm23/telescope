@@ -777,10 +777,10 @@ export const QueryConnectionConsensusStateRequest = {
           message.connectionId = reader.string();
           break;
         case 2:
-          message.revisionNumber = (reader.uint64() as Long);
+          message.revisionNumber = reader.uint64() as Long;
           break;
         case 3:
-          message.revisionHeight = (reader.uint64() as Long);
+          message.revisionHeight = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

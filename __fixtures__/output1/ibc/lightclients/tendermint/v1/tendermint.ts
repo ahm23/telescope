@@ -624,10 +624,10 @@ export const Fraction = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.numerator = (reader.uint64() as Long);
+          message.numerator = reader.uint64() as Long;
           break;
         case 2:
-          message.denominator = (reader.uint64() as Long);
+          message.denominator = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

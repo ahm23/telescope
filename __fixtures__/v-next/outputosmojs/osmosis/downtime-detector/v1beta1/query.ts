@@ -82,7 +82,7 @@ export const RecoveredSinceDowntimeOfLengthRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.downtime = (reader.int32() as any);
+          message.downtime = reader.int32() as any;
           break;
         case 2:
           message.recovery = Duration.decode(reader, reader.uint32());

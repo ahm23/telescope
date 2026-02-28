@@ -806,7 +806,7 @@ export const CheckResponse = {
     }
     Object.entries(message.headers).forEach(([key, value]) => {
       CheckResponse_HeadersEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(18).fork()).ldelim();
     });

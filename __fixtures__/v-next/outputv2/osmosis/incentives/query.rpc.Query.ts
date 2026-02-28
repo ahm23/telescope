@@ -91,12 +91,12 @@ export const QueryModuleToDistributeCoinsDesc: UnaryMethodDefinitionish = {
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return ModuleToDistributeCoinsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...ModuleToDistributeCoinsResponse.decode(data),
@@ -105,19 +105,19 @@ export const QueryModuleToDistributeCoinsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryGaugeByIDDesc: UnaryMethodDefinitionish = {
   methodName: "GaugeByID",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return GaugeByIDRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...GaugeByIDResponse.decode(data),
@@ -126,19 +126,19 @@ export const QueryGaugeByIDDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryGaugesDesc: UnaryMethodDefinitionish = {
   methodName: "Gauges",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return GaugesRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...GaugesResponse.decode(data),
@@ -147,19 +147,19 @@ export const QueryGaugesDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryActiveGaugesDesc: UnaryMethodDefinitionish = {
   methodName: "ActiveGauges",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return ActiveGaugesRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...ActiveGaugesResponse.decode(data),
@@ -168,19 +168,19 @@ export const QueryActiveGaugesDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryActiveGaugesPerDenomDesc: UnaryMethodDefinitionish = {
   methodName: "ActiveGaugesPerDenom",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return ActiveGaugesPerDenomRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...ActiveGaugesPerDenomResponse.decode(data),
@@ -189,19 +189,19 @@ export const QueryActiveGaugesPerDenomDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryUpcomingGaugesDesc: UnaryMethodDefinitionish = {
   methodName: "UpcomingGauges",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return UpcomingGaugesRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...UpcomingGaugesResponse.decode(data),
@@ -210,19 +210,19 @@ export const QueryUpcomingGaugesDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryUpcomingGaugesPerDenomDesc: UnaryMethodDefinitionish = {
   methodName: "UpcomingGaugesPerDenom",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return UpcomingGaugesPerDenomRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...UpcomingGaugesPerDenomResponse.decode(data),
@@ -231,19 +231,19 @@ export const QueryUpcomingGaugesPerDenomDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryRewardsEstDesc: UnaryMethodDefinitionish = {
   methodName: "RewardsEst",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return RewardsEstRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...RewardsEstResponse.decode(data),
@@ -252,19 +252,19 @@ export const QueryRewardsEstDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryLockableDurationsDesc: UnaryMethodDefinitionish = {
   methodName: "LockableDurations",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryLockableDurationsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryLockableDurationsResponse.decode(data),
@@ -273,7 +273,7 @@ export const QueryLockableDurationsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -313,7 +313,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

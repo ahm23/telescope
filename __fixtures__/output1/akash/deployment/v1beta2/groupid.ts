@@ -45,7 +45,7 @@ export const GroupID = {
           message.owner = reader.string();
           break;
         case 2:
-          message.dseq = (reader.uint64() as Long);
+          message.dseq = reader.uint64() as Long;
           break;
         case 3:
           message.gseq = reader.uint32();

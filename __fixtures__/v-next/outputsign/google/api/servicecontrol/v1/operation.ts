@@ -417,7 +417,7 @@ export const Operation = {
     }
     Object.entries(message.labels).forEach(([key, value]) => {
       Operation_LabelsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(50).fork()).ldelim();
     });
@@ -470,7 +470,7 @@ export const Operation = {
           message.logEntries.push(LogEntry.decode(reader, reader.uint32()));
           break;
         case 11:
-          message.importance = (reader.int32() as any);
+          message.importance = reader.int32() as any;
           break;
         case 16:
           message.extensions.push(Any.decode(reader, reader.uint32()));

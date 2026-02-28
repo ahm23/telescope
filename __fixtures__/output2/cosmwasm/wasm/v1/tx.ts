@@ -188,7 +188,7 @@ export const MsgStoreCodeResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.codeId = (reader.uint64() as Long);
+          message.codeId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -259,7 +259,7 @@ export const MsgInstantiateContract = {
           message.admin = reader.string();
           break;
         case 3:
-          message.codeId = (reader.uint64() as Long);
+          message.codeId = reader.uint64() as Long;
           break;
         case 4:
           message.label = reader.string();
@@ -529,7 +529,7 @@ export const MsgMigrateContract = {
           message.contract = reader.string();
           break;
         case 3:
-          message.codeId = (reader.uint64() as Long);
+          message.codeId = reader.uint64() as Long;
           break;
         case 4:
           message.msg = reader.bytes();

@@ -13,20 +13,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout 🛎️
-        uses: actions/checkout@v2.3.1
-      - name: node
-        uses: actions/setup-node@v3
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: 16.14.0
+          version: 9
+      - name: node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
       - name: deps
-        run: yarn
-      - name: bootstrap
-        run: yarn bootstrap
+        run: pnpm install
       - name: build
-        run: yarn build
+        run: pnpm run build
       - name: ast
-        run: cd ./packages/ast && yarn test
+        run: pnpm --filter @cosmology/ast run test
       - name: parser
-        run: cd ./packages/parser && yarn test
+        run: pnpm --filter @cosmology/proto-parser run test
       - name: telescope
-        run: cd ./packages/telescope && yarn test
+        run: pnpm --filter @hyperweb/telescope run test

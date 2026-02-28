@@ -186,13 +186,13 @@ export const HttpRequest = {
           message.requestUrl = reader.string();
           break;
         case 3:
-          message.requestSize = (reader.int64() as Long);
+          message.requestSize = reader.int64() as Long;
           break;
         case 4:
           message.status = reader.int32();
           break;
         case 5:
-          message.responseSize = (reader.int64() as Long);
+          message.responseSize = reader.int64() as Long;
           break;
         case 6:
           message.userAgent = reader.string();
@@ -219,7 +219,7 @@ export const HttpRequest = {
           message.cacheValidatedWithOriginServer = reader.bool();
           break;
         case 12:
-          message.cacheFillBytes = (reader.int64() as Long);
+          message.cacheFillBytes = reader.int64() as Long;
           break;
         case 15:
           message.protocol = reader.string();

@@ -1290,7 +1290,7 @@ export const MsgTimeout = {
           message.proofHeight = Height.decode(reader, reader.uint32());
           break;
         case 4:
-          message.nextSequenceRecv = (reader.uint64() as Long);
+          message.nextSequenceRecv = reader.uint64() as Long;
           break;
         case 5:
           message.signer = reader.string();
@@ -1440,7 +1440,7 @@ export const MsgTimeoutOnClose = {
           message.proofHeight = Height.decode(reader, reader.uint32());
           break;
         case 5:
-          message.nextSequenceRecv = (reader.uint64() as Long);
+          message.nextSequenceRecv = reader.uint64() as Long;
           break;
         case 6:
           message.signer = reader.string();

@@ -38,12 +38,12 @@ export const MsgCreateProviderDesc: UnaryMethodDefinitionish = {
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgCreateProvider.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgCreateProviderResponse.decode(data),
@@ -52,19 +52,19 @@ export const MsgCreateProviderDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgUpdateProviderDesc: UnaryMethodDefinitionish = {
   methodName: "UpdateProvider",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgUpdateProvider.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgUpdateProviderResponse.decode(data),
@@ -73,19 +73,19 @@ export const MsgUpdateProviderDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgDeleteProviderDesc: UnaryMethodDefinitionish = {
   methodName: "DeleteProvider",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgDeleteProvider.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgDeleteProviderResponse.decode(data),
@@ -94,7 +94,7 @@ export const MsgDeleteProviderDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -134,7 +134,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

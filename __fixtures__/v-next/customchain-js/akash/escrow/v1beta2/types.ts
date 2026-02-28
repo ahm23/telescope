@@ -399,7 +399,7 @@ export const Account = {
           message.owner = reader.string();
           break;
         case 3:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         case 4:
           message.balance = DecCoin.decode(reader, reader.uint32());
@@ -551,7 +551,7 @@ export const FractionalPayment = {
           message.owner = reader.string();
           break;
         case 4:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         case 5:
           message.rate = DecCoin.decode(reader, reader.uint32());

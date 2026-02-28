@@ -59,12 +59,12 @@ export const GetNodeInfoDesc: UnaryMethodDefinitionish = {
   service: ServiceDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return GetNodeInfoRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...GetNodeInfoResponse.decode(data),
@@ -73,19 +73,19 @@ export const GetNodeInfoDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const GetSyncingDesc: UnaryMethodDefinitionish = {
   methodName: "GetSyncing",
   service: ServiceDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return GetSyncingRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...GetSyncingResponse.decode(data),
@@ -94,19 +94,19 @@ export const GetSyncingDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const GetLatestBlockDesc: UnaryMethodDefinitionish = {
   methodName: "GetLatestBlock",
   service: ServiceDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return GetLatestBlockRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...GetLatestBlockResponse.decode(data),
@@ -115,19 +115,19 @@ export const GetLatestBlockDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const GetBlockByHeightDesc: UnaryMethodDefinitionish = {
   methodName: "GetBlockByHeight",
   service: ServiceDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return GetBlockByHeightRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...GetBlockByHeightResponse.decode(data),
@@ -136,19 +136,19 @@ export const GetBlockByHeightDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const GetLatestValidatorSetDesc: UnaryMethodDefinitionish = {
   methodName: "GetLatestValidatorSet",
   service: ServiceDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return GetLatestValidatorSetRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...GetLatestValidatorSetResponse.decode(data),
@@ -157,19 +157,19 @@ export const GetLatestValidatorSetDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const GetValidatorSetByHeightDesc: UnaryMethodDefinitionish = {
   methodName: "GetValidatorSetByHeight",
   service: ServiceDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return GetValidatorSetByHeightRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...GetValidatorSetByHeightResponse.decode(data),
@@ -178,7 +178,7 @@ export const GetValidatorSetByHeightDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -218,7 +218,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

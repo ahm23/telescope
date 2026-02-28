@@ -259,7 +259,7 @@ export const MetricValue = {
   encode(message: MetricValue, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     Object.entries(message.labels).forEach(([key, value]) => {
       MetricValue_LabelsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(10).fork()).ldelim();
     });

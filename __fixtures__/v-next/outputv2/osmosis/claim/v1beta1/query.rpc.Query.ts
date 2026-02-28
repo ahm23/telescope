@@ -45,12 +45,12 @@ export const QueryModuleAccountBalanceDesc: UnaryMethodDefinitionish = {
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryModuleAccountBalanceRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryModuleAccountBalanceResponse.decode(data),
@@ -59,19 +59,19 @@ export const QueryModuleAccountBalanceDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryParamsDesc: UnaryMethodDefinitionish = {
   methodName: "Params",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryParamsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryParamsResponse.decode(data),
@@ -80,19 +80,19 @@ export const QueryParamsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryClaimRecordDesc: UnaryMethodDefinitionish = {
   methodName: "ClaimRecord",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryClaimRecordRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryClaimRecordResponse.decode(data),
@@ -101,19 +101,19 @@ export const QueryClaimRecordDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryClaimableForActionDesc: UnaryMethodDefinitionish = {
   methodName: "ClaimableForAction",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryClaimableForActionRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryClaimableForActionResponse.decode(data),
@@ -122,19 +122,19 @@ export const QueryClaimableForActionDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryTotalClaimableDesc: UnaryMethodDefinitionish = {
   methodName: "TotalClaimable",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryTotalClaimableRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryTotalClaimableResponse.decode(data),
@@ -143,7 +143,7 @@ export const QueryTotalClaimableDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -183,7 +183,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

@@ -161,7 +161,7 @@ export const PeriodLock = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.iD = (reader.uint64() as Long);
+          message.iD = reader.uint64() as Long;
           break;
         case 2:
           message.owner = reader.string();
@@ -246,7 +246,7 @@ export const QueryCondition = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.lockQueryType = (reader.int32() as any);
+          message.lockQueryType = reader.int32() as any;
           break;
         case 2:
           message.denom = reader.string();
@@ -321,7 +321,7 @@ export const SyntheticLock = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.underlyingLockId = (reader.uint64() as Long);
+          message.underlyingLockId = reader.uint64() as Long;
           break;
         case 2:
           message.synthDenom = reader.string();

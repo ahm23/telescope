@@ -232,7 +232,7 @@ export const MsgJoinPool = {
           message.sender = reader.string();
           break;
         case 2:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 3:
           message.shareOutAmount = reader.string();
@@ -406,7 +406,7 @@ export const MsgExitPool = {
           message.sender = reader.string();
           break;
         case 2:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 3:
           message.shareInAmount = reader.string();
@@ -557,7 +557,7 @@ export const SwapAmountInRoute = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 2:
           message.tokenOutDenom = reader.string();
@@ -778,7 +778,7 @@ export const SwapAmountOutRoute = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 2:
           message.tokenInDenom = reader.string();
@@ -1010,7 +1010,7 @@ export const MsgJoinSwapExternAmountIn = {
           message.sender = reader.string();
           break;
         case 2:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 3:
           message.tokenIn = Coin.decode(reader, reader.uint32());
@@ -1160,7 +1160,7 @@ export const MsgJoinSwapShareAmountOut = {
           message.sender = reader.string();
           break;
         case 2:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 3:
           message.tokenInDenom = reader.string();
@@ -1318,7 +1318,7 @@ export const MsgExitSwapShareAmountIn = {
           message.sender = reader.string();
           break;
         case 2:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 3:
           message.tokenOutDenom = reader.string();
@@ -1472,7 +1472,7 @@ export const MsgExitSwapExternAmountOut = {
           message.sender = reader.string();
           break;
         case 2:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 3:
           message.tokenOut = Coin.decode(reader, reader.uint32());

@@ -943,10 +943,10 @@ export const EncodingTestForDontOmit = {
           message.dOWasm = reader.bytes();
           break;
         case 19:
-          message.opt = (reader.int32() as any);
+          message.opt = reader.int32() as any;
           break;
         case 20:
-          message.dOOpt = (reader.int32() as any);
+          message.dOOpt = reader.int32() as any;
           break;
         case 21:
           message.period = Duration.decode(reader, reader.uint32());
@@ -1028,20 +1028,20 @@ export const EncodingTestForDontOmit = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.opts.push((reader.int32() as any));
+              message.opts.push(reader.int32() as any);
             }
           } else {
-            message.opts.push((reader.int32() as any));
+            message.opts.push(reader.int32() as any);
           }
           break;
         case 38:
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.dOOpts.push((reader.int32() as any));
+              message.dOOpts.push(reader.int32() as any);
             }
           } else {
-            message.dOOpts.push((reader.int32() as any));
+            message.dOOpts.push(reader.int32() as any);
           }
           break;
         case 39:
@@ -1329,8 +1329,8 @@ export const EncodingTestForDontOmit = {
     message.dOPeriods = object.dOPeriods?.map(e => Duration.fromPartial(e)) || [];
     message.protos = object.protos?.map(e => AccessConfig.fromPartial(e)) || [];
     message.dOProtos = object.dOProtos?.map(e => AccessConfig.fromPartial(e)) || [];
-    message.auths = object.auths?.map(e => (GlobalDecoderRegistry.fromPartial(e) as any)) || [];
-    message.dOAuths = object.dOAuths?.map(e => (GlobalDecoderRegistry.fromPartial(e) as any)) || [];
+    message.auths = object.auths?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
+    message.dOAuths = object.dOAuths?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
     message.dec = object.dec ?? "";
     message.dODec = object.dODec ?? "";
     message.decs = object.decs?.map(e => e) || [];
@@ -2122,10 +2122,10 @@ export const EncodingTestForOmit = {
           message.oWasm = reader.bytes();
           break;
         case 19:
-          message.opt = (reader.int32() as any);
+          message.opt = reader.int32() as any;
           break;
         case 20:
-          message.oOpt = (reader.int32() as any);
+          message.oOpt = reader.int32() as any;
           break;
         case 21:
           message.period = Duration.decode(reader, reader.uint32());
@@ -2207,20 +2207,20 @@ export const EncodingTestForOmit = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.opts.push((reader.int32() as any));
+              message.opts.push(reader.int32() as any);
             }
           } else {
-            message.opts.push((reader.int32() as any));
+            message.opts.push(reader.int32() as any);
           }
           break;
         case 38:
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.oOpts.push((reader.int32() as any));
+              message.oOpts.push(reader.int32() as any);
             }
           } else {
-            message.oOpts.push((reader.int32() as any));
+            message.oOpts.push(reader.int32() as any);
           }
           break;
         case 39:
@@ -2508,8 +2508,8 @@ export const EncodingTestForOmit = {
     message.oPeriods = object.oPeriods?.map(e => Duration.fromPartial(e)) || [];
     message.protos = object.protos?.map(e => AccessConfig.fromPartial(e)) || [];
     message.oProtos = object.oProtos?.map(e => AccessConfig.fromPartial(e)) || [];
-    message.auths = object.auths?.map(e => (GlobalDecoderRegistry.fromPartial(e) as any)) || [];
-    message.oAuths = object.oAuths?.map(e => (GlobalDecoderRegistry.fromPartial(e) as any)) || [];
+    message.auths = object.auths?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
+    message.oAuths = object.oAuths?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
     message.dec = object.dec ?? "";
     message.oDec = object.oDec ?? "";
     message.decs = object.decs?.map(e => e) || [];

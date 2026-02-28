@@ -53,12 +53,12 @@ export const MsgSubmitProposalDesc: UnaryMethodDefinitionish = {
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgSubmitProposal.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgSubmitProposalResponse.decode(data),
@@ -67,19 +67,19 @@ export const MsgSubmitProposalDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgExecLegacyContentDesc: UnaryMethodDefinitionish = {
   methodName: "ExecLegacyContent",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgExecLegacyContent.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgExecLegacyContentResponse.decode(data),
@@ -88,19 +88,19 @@ export const MsgExecLegacyContentDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgVoteDesc: UnaryMethodDefinitionish = {
   methodName: "Vote",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgVote.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgVoteResponse.decode(data),
@@ -109,19 +109,19 @@ export const MsgVoteDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgVoteWeightedDesc: UnaryMethodDefinitionish = {
   methodName: "VoteWeighted",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgVoteWeighted.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgVoteWeightedResponse.decode(data),
@@ -130,19 +130,19 @@ export const MsgVoteWeightedDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgDepositDesc: UnaryMethodDefinitionish = {
   methodName: "Deposit",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgDeposit.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgDepositResponse.decode(data),
@@ -151,7 +151,7 @@ export const MsgDepositDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -191,7 +191,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

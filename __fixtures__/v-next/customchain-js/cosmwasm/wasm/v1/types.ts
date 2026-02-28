@@ -473,7 +473,7 @@ export const AccessTypeParam = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.value = (reader.int32() as any);
+          message.value = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -553,7 +553,7 @@ export const AccessConfig = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.permission = (reader.int32() as any);
+          message.permission = reader.int32() as any;
           break;
         case 2:
           message.address = reader.string();
@@ -648,7 +648,7 @@ export const CosmwasmWasmV1Params = {
           message.codeUploadAccess = AccessConfig.decode(reader, reader.uint32());
           break;
         case 2:
-          message.instantiateDefaultPermission = (reader.int32() as any);
+          message.instantiateDefaultPermission = reader.int32() as any;
           break;
         case 3:
           message.maxWasmCodeSize = reader.uint64();
@@ -849,7 +849,7 @@ export const ContractInfo = {
       writer.uint32(50).string(message.ibcPortId);
     }
     if (message.extension !== undefined) {
-      Any.encode((message.extension as Any), writer.uint32(58).fork()).ldelim();
+      Any.encode(message.extension as Any, writer.uint32(58).fork()).ldelim();
     }
     return writer;
   },
@@ -879,7 +879,7 @@ export const ContractInfo = {
           message.ibcPortId = reader.string();
           break;
         case 7:
-          message.extension = (ContractInfoExtension_InterfaceDecoder(reader) as Any);
+          message.extension = ContractInfoExtension_InterfaceDecoder(reader) as Any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -932,7 +932,7 @@ export const ContractInfo = {
     obj.label = message.label === "" ? undefined : message.label;
     obj.created = message.created ? AbsoluteTxPosition.toAmino(message.created) : undefined;
     obj.ibc_port_id = message.ibcPortId === "" ? undefined : message.ibcPortId;
-    obj.extension = message.extension ? ContractInfoExtension_ToAmino((message.extension as Any)) : undefined;
+    obj.extension = message.extension ? ContractInfoExtension_ToAmino(message.extension as Any) : undefined;
     return obj;
   },
   fromAminoMsg(object: ContractInfoAminoMsg): ContractInfo {
@@ -997,7 +997,7 @@ export const ContractCodeHistoryEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.operation = (reader.int32() as any);
+          message.operation = reader.int32() as any;
           break;
         case 2:
           message.codeId = reader.uint64();

@@ -56,7 +56,8 @@ it('cosmos/app/v1alpha1/query.proto', () => {
     const service: ProtoService = getNestedProto(res).Query;
     const context = new GenericParseContext(ref, store, defaultTelescopeOptions);
     const ast = createLCDClient(context, service);
-    expectCode(ast);
+    // This service has no HTTP GET methods, so no LCD client is generated
+    expect(ast).toBeUndefined();
 });
 it('cosmos/group/v1/query.proto', () => {
     const ref = store.findProto('cosmos/group/v1/query.proto');

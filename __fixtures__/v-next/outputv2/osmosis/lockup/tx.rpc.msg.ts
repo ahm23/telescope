@@ -49,12 +49,12 @@ export const MsgLockTokensDesc: UnaryMethodDefinitionish = {
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgLockTokens.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgLockTokensResponse.decode(data),
@@ -63,19 +63,19 @@ export const MsgLockTokensDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgBeginUnlockingAllDesc: UnaryMethodDefinitionish = {
   methodName: "BeginUnlockingAll",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgBeginUnlockingAll.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgBeginUnlockingAllResponse.decode(data),
@@ -84,19 +84,19 @@ export const MsgBeginUnlockingAllDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgBeginUnlockingDesc: UnaryMethodDefinitionish = {
   methodName: "BeginUnlocking",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgBeginUnlocking.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgBeginUnlockingResponse.decode(data),
@@ -105,19 +105,19 @@ export const MsgBeginUnlockingDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgExtendLockupDesc: UnaryMethodDefinitionish = {
   methodName: "ExtendLockup",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgExtendLockup.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgExtendLockupResponse.decode(data),
@@ -126,19 +126,19 @@ export const MsgExtendLockupDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgForceUnlockDesc: UnaryMethodDefinitionish = {
   methodName: "ForceUnlock",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgForceUnlock.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgForceUnlockResponse.decode(data),
@@ -147,7 +147,7 @@ export const MsgForceUnlockDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -187,7 +187,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

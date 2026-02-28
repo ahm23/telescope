@@ -266,7 +266,7 @@ export const Account = {
           message.owner = reader.string();
           break;
         case 3:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         case 4:
           message.balance = Coin.decode(reader, reader.uint32());
@@ -275,7 +275,7 @@ export const Account = {
           message.transferred = Coin.decode(reader, reader.uint32());
           break;
         case 6:
-          message.settledAt = (reader.int64() as Long);
+          message.settledAt = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -388,7 +388,7 @@ export const Payment = {
           message.owner = reader.string();
           break;
         case 4:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         case 5:
           message.rate = Coin.decode(reader, reader.uint32());

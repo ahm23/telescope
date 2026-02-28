@@ -604,7 +604,7 @@ export const SignDoc = {
           message.chainId = reader.string();
           break;
         case 4:
-          message.accountNumber = (reader.uint64() as Long);
+          message.accountNumber = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -703,10 +703,10 @@ export const SignDocDirectAux = {
           message.chainId = reader.string();
           break;
         case 4:
-          message.accountNumber = (reader.uint64() as Long);
+          message.accountNumber = reader.uint64() as Long;
           break;
         case 5:
-          message.sequence = (reader.uint64() as Long);
+          message.sequence = reader.uint64() as Long;
           break;
         case 6:
           message.tip = Tip.decode(reader, reader.uint32());
@@ -811,7 +811,7 @@ export const TxBody = {
           message.memo = reader.string();
           break;
         case 3:
-          message.timeoutHeight = (reader.uint64() as Long);
+          message.timeoutHeight = reader.uint64() as Long;
           break;
         case 1023:
           message.extensionOptions.push(Any.decode(reader, reader.uint32()));
@@ -1017,7 +1017,7 @@ export const SignerInfo = {
           message.modeInfo = ModeInfo.decode(reader, reader.uint32());
           break;
         case 3:
-          message.sequence = (reader.uint64() as Long);
+          message.sequence = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1149,7 +1149,7 @@ export const ModeInfo_Single = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.mode = (reader.int32() as any);
+          message.mode = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1294,7 +1294,7 @@ export const Fee = {
           message.amount.push(Coin.decode(reader, reader.uint32()));
           break;
         case 2:
-          message.gasLimit = (reader.uint64() as Long);
+          message.gasLimit = reader.uint64() as Long;
           break;
         case 3:
           message.payer = reader.string();
@@ -1471,7 +1471,7 @@ export const AuxSignerData = {
           message.signDoc = SignDocDirectAux.decode(reader, reader.uint32());
           break;
         case 3:
-          message.mode = (reader.int32() as any);
+          message.mode = reader.int32() as any;
           break;
         case 4:
           message.sig = reader.bytes();

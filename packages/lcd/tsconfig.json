@@ -1,21 +1,9 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "esModuleInterop": true,
-    "declaration": true,
-    "declarationDir": "./types",
-    "isolatedModules": true,
-    "allowJs": true,
-
-    "baseUrl": ".",
-    "rootDir": "src",
-    "skipLibCheck": true,
-    "emitDeclarationOnly": false,
-    "target": "es2022",
-    "lib": ["es2022", "DOM"],
-    "downlevelIteration": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true
+    "outDir": "dist",
+    "rootDir": "src/"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/**/*.spec.ts", "src/__fixtures__/**/*"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist", "node_modules", "**/*.spec.*", "**/*.test.*"]
 }

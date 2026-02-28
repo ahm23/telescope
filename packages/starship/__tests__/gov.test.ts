@@ -66,7 +66,7 @@ describe('Governance tests for osmosis', () => {
     ({ chainInfo, getCoin, getRpcEndpoint, creditFromFaucet } =
       useChain('osmosis'));
     denom = (await getCoin()).base;
-    commonPrefix = chainInfo?.chain?.bech32_prefix;
+    commonPrefix = chainInfo?.chain?.bech32Prefix || chainInfo?.chain?.bech32_prefix;
 
     // Set up query client
     const rpcEndpoint = await getRpcEndpoint();

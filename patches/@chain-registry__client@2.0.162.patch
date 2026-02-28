@@ -1,0 +1,144 @@
+diff --git a/esm/fetcher.js b/esm/fetcher.js
+index c8b07d135eecef9800296031b44a3658df33ac85..2e1575f28ba38ec6ae5e15ae1cdb07453e2e954e 100644
+--- a/esm/fetcher.js
++++ b/esm/fetcher.js
+@@ -79,18 +79,18 @@ export class ChainRegistryFetcher {
+         return chainInfo;
+     }
+     upsertChain(data) {
++        const convertedData = keysToCamel(data);
+         const found = this._chains.find((chain) => {
+-            return (chain.chainName === data.chainName &&
+-                chain.networkType === data.networkType);
++            return (chain.chainName === convertedData.chainName &&
++                chain.networkType === convertedData.networkType);
+         });
+-        const convertedData = keysToCamel(data);
+         if (!found) {
+             this._chains.push(convertedData);
+             return;
+         }
+         this._chains = this._chains.map((chain) => {
+-            if (chain.chainName === data.chainName &&
+-                chain.networkType === data.networkType) {
++            if (chain.chainName === convertedData.chainName &&
++                chain.networkType === convertedData.networkType) {
+                 return convertedData;
+             }
+             else {
+@@ -99,16 +99,16 @@ export class ChainRegistryFetcher {
+         });
+     }
+     updateAssetList(data) {
++        const convertedData = keysToCamel(data);
+         const found = this._assetLists.find((list) => {
+-            return list.chainName === data.chainName;
++            return list.chainName === convertedData.chainName;
+         });
+-        const convertedData = keysToCamel(data);
+         if (!found) {
+             this._assetLists.push(convertedData);
+             return;
+         }
+         this._assetLists = this._assetLists.map((list) => {
+-            if (list.chainName === data.chainName) {
++            if (list.chainName === convertedData.chainName) {
+                 return convertedData;
+             }
+             else {
+@@ -117,18 +117,18 @@ export class ChainRegistryFetcher {
+         });
+     }
+     upsertIbcData(data) {
++        const convertedData = keysToCamel(data);
+         const found = this._ibcData.find((info) => {
+-            return (info.chain1.chainName === data.chain1.chainName &&
+-                info.chain2.chainName === data.chain2.chainName);
++            return (info.chain1.chainName === convertedData.chain1.chainName &&
++                info.chain2.chainName === convertedData.chain2.chainName);
+         });
+-        const convertedData = keysToCamel(data);
+         if (!found) {
+             this._ibcData.push(convertedData);
+             return;
+         }
+         this._ibcData = this._ibcData.map((info) => {
+-            if (info.chain1.chainName === data.chain1.chainName &&
+-                info.chain2.chainName === data.chain2.chainName) {
++            if (info.chain1.chainName === convertedData.chain1.chainName &&
++                info.chain2.chainName === convertedData.chain2.chainName) {
+                 return convertedData;
+             }
+             else {
+diff --git a/fetcher.js b/fetcher.js
+index bf3a04372547fbdc4a77f676fcf84270189c99c0..04c7779421f172b01059bb52540a99e116b594bf 100644
+--- a/fetcher.js
++++ b/fetcher.js
+@@ -85,18 +85,18 @@ class ChainRegistryFetcher {
+         return chainInfo;
+     }
+     upsertChain(data) {
++        const convertedData = keysToCamel(data);
+         const found = this._chains.find((chain) => {
+-            return (chain.chainName === data.chainName &&
+-                chain.networkType === data.networkType);
++            return (chain.chainName === convertedData.chainName &&
++                chain.networkType === convertedData.networkType);
+         });
+-        const convertedData = keysToCamel(data);
+         if (!found) {
+             this._chains.push(convertedData);
+             return;
+         }
+         this._chains = this._chains.map((chain) => {
+-            if (chain.chainName === data.chainName &&
+-                chain.networkType === data.networkType) {
++            if (chain.chainName === convertedData.chainName &&
++                chain.networkType === convertedData.networkType) {
+                 return convertedData;
+             }
+             else {
+@@ -105,16 +105,16 @@ class ChainRegistryFetcher {
+         });
+     }
+     updateAssetList(data) {
++        const convertedData = keysToCamel(data);
+         const found = this._assetLists.find((list) => {
+-            return list.chainName === data.chainName;
++            return list.chainName === convertedData.chainName;
+         });
+-        const convertedData = keysToCamel(data);
+         if (!found) {
+             this._assetLists.push(convertedData);
+             return;
+         }
+         this._assetLists = this._assetLists.map((list) => {
+-            if (list.chainName === data.chainName) {
++            if (list.chainName === convertedData.chainName) {
+                 return convertedData;
+             }
+             else {
+@@ -123,18 +123,18 @@ class ChainRegistryFetcher {
+         });
+     }
+     upsertIbcData(data) {
++        const convertedData = keysToCamel(data);
+         const found = this._ibcData.find((info) => {
+-            return (info.chain1.chainName === data.chain1.chainName &&
+-                info.chain2.chainName === data.chain2.chainName);
++            return (info.chain1.chainName === convertedData.chain1.chainName &&
++                info.chain2.chainName === convertedData.chain2.chainName);
+         });
+-        const convertedData = keysToCamel(data);
+         if (!found) {
+             this._ibcData.push(convertedData);
+             return;
+         }
+         this._ibcData = this._ibcData.map((info) => {
+-            if (info.chain1.chainName === data.chain1.chainName &&
+-                info.chain2.chainName === data.chain2.chainName) {
++            if (info.chain1.chainName === convertedData.chain1.chainName &&
++                info.chain2.chainName === convertedData.chain2.chainName) {
+                 return convertedData;
+             }
+             else {

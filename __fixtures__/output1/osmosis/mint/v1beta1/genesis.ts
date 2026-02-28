@@ -55,7 +55,7 @@ export const GenesisState = {
           message.params = Params.decode(reader, reader.uint32());
           break;
         case 3:
-          message.reductionStartedEpoch = (reader.int64() as Long);
+          message.reductionStartedEpoch = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

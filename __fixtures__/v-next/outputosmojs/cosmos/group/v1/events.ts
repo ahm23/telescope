@@ -972,7 +972,7 @@ export const EventExec = {
           message.proposalId = reader.uint64();
           break;
         case 2:
-          message.result = (reader.int32() as any);
+          message.result = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

@@ -29,12 +29,12 @@ export const MsgCreateStableswapPoolDesc: UnaryMethodDefinitionish = {
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgCreateStableswapPool.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgCreateStableswapPoolResponse.decode(data),
@@ -43,19 +43,19 @@ export const MsgCreateStableswapPoolDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgStableSwapAdjustScalingFactorsDesc: UnaryMethodDefinitionish = {
   methodName: "StableSwapAdjustScalingFactors",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgStableSwapAdjustScalingFactors.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgStableSwapAdjustScalingFactorsResponse.decode(data),
@@ -64,7 +64,7 @@ export const MsgStableSwapAdjustScalingFactorsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -104,7 +104,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

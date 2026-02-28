@@ -1239,7 +1239,7 @@ export const AssetTypeResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.assetType = (reader.int32() as any);
+          message.assetType = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

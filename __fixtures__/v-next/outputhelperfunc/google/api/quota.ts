@@ -903,7 +903,7 @@ export const MetricRule = {
     }
     Object.entries(message.metricCosts).forEach(([key, value]) => {
       MetricRule_MetricCostsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(16).fork()).ldelim();
     });
@@ -1209,7 +1209,7 @@ export const QuotaLimit = {
     }
     Object.entries(message.values).forEach(([key, value]) => {
       QuotaLimit_ValuesEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(80).fork()).ldelim();
     });

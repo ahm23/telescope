@@ -50,12 +50,12 @@ export const QueryDevFeeInfosDesc: UnaryMethodDefinitionish = {
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDevFeeInfosRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDevFeeInfosResponse.decode(data),
@@ -64,19 +64,19 @@ export const QueryDevFeeInfosDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDevFeeInfoDesc: UnaryMethodDefinitionish = {
   methodName: "DevFeeInfo",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDevFeeInfoRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDevFeeInfoResponse.decode(data),
@@ -85,19 +85,19 @@ export const QueryDevFeeInfoDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryParamsDesc: UnaryMethodDefinitionish = {
   methodName: "Params",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryParamsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryParamsResponse.decode(data),
@@ -106,19 +106,19 @@ export const QueryParamsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDevFeeInfosPerDeployerDesc: UnaryMethodDefinitionish = {
   methodName: "DevFeeInfosPerDeployer",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDevFeeInfosPerDeployerRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDevFeeInfosPerDeployerResponse.decode(data),
@@ -127,7 +127,7 @@ export const QueryDevFeeInfosPerDeployerDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -167,7 +167,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

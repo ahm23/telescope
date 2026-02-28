@@ -252,7 +252,7 @@ export const MsgSubmitProposal = {
   aminoType: "cosmos-sdk/MsgSubmitProposal",
   encode(message: MsgSubmitProposal, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.content !== undefined) {
-      Any.encode((message.content as Any), writer.uint32(10).fork()).ldelim();
+      Any.encode(message.content as Any, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.initialDeposit) {
       Coin.encode(v!, writer.uint32(18).fork()).ldelim();
@@ -270,7 +270,7 @@ export const MsgSubmitProposal = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.content = (ProposalContentI_InterfaceDecoder(reader) as Any);
+          message.content = ProposalContentI_InterfaceDecoder(reader) as Any;
           break;
         case 2:
           message.initialDeposit.push(Coin.decode(reader, reader.uint32()));
@@ -305,7 +305,7 @@ export const MsgSubmitProposal = {
   },
   toAmino(message: MsgSubmitProposal): MsgSubmitProposalAmino {
     const obj: any = {};
-    obj.content = message.content ? ProposalContentI_ToAmino((message.content as Any)) : undefined;
+    obj.content = message.content ? ProposalContentI_ToAmino(message.content as Any) : undefined;
     if (message.initialDeposit) {
       obj.initial_deposit = message.initialDeposit.map(e => e ? Coin.toAmino(e) : undefined);
     } else {
@@ -454,7 +454,7 @@ export const MsgVote = {
           message.voter = reader.string();
           break;
         case 3:
-          message.option = (reader.int32() as any);
+          message.option = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

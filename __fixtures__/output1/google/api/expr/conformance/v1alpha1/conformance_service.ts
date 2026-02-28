@@ -626,7 +626,7 @@ export const EvalRequest = {
     }
     Object.entries(message.bindings).forEach(([key, value]) => {
       EvalRequest_BindingsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(26).fork()).ldelim();
     });
@@ -835,13 +835,13 @@ export const IssueDetails = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.severity = (reader.int32() as any);
+          message.severity = reader.int32() as any;
           break;
         case 2:
           message.position = SourcePosition.decode(reader, reader.uint32());
           break;
         case 3:
-          message.id = (reader.int64() as Long);
+          message.id = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

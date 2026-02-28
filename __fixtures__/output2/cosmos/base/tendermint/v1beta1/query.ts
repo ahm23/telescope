@@ -115,7 +115,7 @@ export const GetValidatorSetByHeightRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.height = (reader.int64() as Long);
+          message.height = reader.int64() as Long;
           break;
         case 2:
           message.pagination = PageRequest.decode(reader, reader.uint32());
@@ -174,7 +174,7 @@ export const GetValidatorSetByHeightResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.blockHeight = (reader.int64() as Long);
+          message.blockHeight = reader.int64() as Long;
           break;
         case 2:
           message.validators.push(Validator.decode(reader, reader.uint32()));
@@ -288,7 +288,7 @@ export const GetLatestValidatorSetResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.blockHeight = (reader.int64() as Long);
+          message.blockHeight = reader.int64() as Long;
           break;
         case 2:
           message.validators.push(Validator.decode(reader, reader.uint32()));
@@ -367,10 +367,10 @@ export const Validator = {
           message.pubKey = Any.decode(reader, reader.uint32());
           break;
         case 3:
-          message.votingPower = (reader.int64() as Long);
+          message.votingPower = reader.int64() as Long;
           break;
         case 4:
-          message.proposerPriority = (reader.int64() as Long);
+          message.proposerPriority = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -424,7 +424,7 @@ export const GetBlockByHeightRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.height = (reader.int64() as Long);
+          message.height = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

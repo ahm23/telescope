@@ -92,12 +92,12 @@ export const QueryBalanceDesc: UnaryMethodDefinitionish = {
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryBalanceRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryBalanceResponse.decode(data),
@@ -106,19 +106,19 @@ export const QueryBalanceDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAllBalancesDesc: UnaryMethodDefinitionish = {
   methodName: "AllBalances",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryAllBalancesRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryAllBalancesResponse.decode(data),
@@ -127,19 +127,19 @@ export const QueryAllBalancesDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QuerySpendableBalancesDesc: UnaryMethodDefinitionish = {
   methodName: "SpendableBalances",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QuerySpendableBalancesRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QuerySpendableBalancesResponse.decode(data),
@@ -148,19 +148,19 @@ export const QuerySpendableBalancesDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryTotalSupplyDesc: UnaryMethodDefinitionish = {
   methodName: "TotalSupply",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryTotalSupplyRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryTotalSupplyResponse.decode(data),
@@ -169,19 +169,19 @@ export const QueryTotalSupplyDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QuerySupplyOfDesc: UnaryMethodDefinitionish = {
   methodName: "SupplyOf",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QuerySupplyOfRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QuerySupplyOfResponse.decode(data),
@@ -190,19 +190,19 @@ export const QuerySupplyOfDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryParamsDesc: UnaryMethodDefinitionish = {
   methodName: "Params",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryParamsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryParamsResponse.decode(data),
@@ -211,19 +211,19 @@ export const QueryParamsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDenomMetadataDesc: UnaryMethodDefinitionish = {
   methodName: "DenomMetadata",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDenomMetadataRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDenomMetadataResponse.decode(data),
@@ -232,19 +232,19 @@ export const QueryDenomMetadataDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDenomsMetadataDesc: UnaryMethodDefinitionish = {
   methodName: "DenomsMetadata",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDenomsMetadataRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDenomsMetadataResponse.decode(data),
@@ -253,19 +253,19 @@ export const QueryDenomsMetadataDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDenomOwnersDesc: UnaryMethodDefinitionish = {
   methodName: "DenomOwners",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDenomOwnersRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDenomOwnersResponse.decode(data),
@@ -274,7 +274,7 @@ export const QueryDenomOwnersDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -314,7 +314,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

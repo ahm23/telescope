@@ -523,7 +523,7 @@ export const WriteLogEntriesRequest = {
     }
     Object.entries(message.labels).forEach(([key, value]) => {
       WriteLogEntriesRequest_LabelsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(26).fork()).ldelim();
     });
@@ -722,7 +722,7 @@ export const WriteLogEntriesPartialErrors = {
   encode(message: WriteLogEntriesPartialErrors, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     Object.entries(message.logEntryErrors).forEach(([key, value]) => {
       WriteLogEntriesPartialErrors_LogEntryErrorsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(10).fork()).ldelim();
     });
@@ -1337,7 +1337,7 @@ export const TailLogEntriesResponse_SuppressionInfo = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.reason = (reader.int32() as any);
+          message.reason = reader.int32() as any;
           break;
         case 2:
           message.suppressedCount = reader.int32();

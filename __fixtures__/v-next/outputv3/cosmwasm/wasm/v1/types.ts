@@ -543,7 +543,7 @@ export const AccessTypeParam = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.value = (reader.int32() as any);
+          message.value = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -639,7 +639,7 @@ export const AccessConfig = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.permission = (reader.int32() as any);
+          message.permission = reader.int32() as any;
           break;
         case 2:
           message.address = reader.string();
@@ -753,7 +753,7 @@ export const Params = {
           message.codeUploadAccess = AccessConfig.decode(reader, reader.uint32(), useInterfaces);
           break;
         case 2:
-          message.instantiateDefaultPermission = (reader.int32() as any);
+          message.instantiateDefaultPermission = reader.int32() as any;
           break;
         case 3:
           message.maxWasmCodeSize = reader.uint64();
@@ -1202,7 +1202,7 @@ export const ContractCodeHistoryEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.operation = (reader.int32() as any);
+          message.operation = reader.int32() as any;
           break;
         case 2:
           message.codeId = reader.uint64();

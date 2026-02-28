@@ -5,7 +5,7 @@ import { getNestedProto } from '@cosmology/proto-parser';
 import { parse } from '../parse';
 import { TelescopeBuilder } from '../builder';
 import { camel, getQueryMethodNames, swapKeyValue } from '@cosmology/utils';
-import { BundlerFile } from 'src/types';
+import { BundlerFile } from '../types';
 
 export const plugin = (
     builder: TelescopeBuilder,

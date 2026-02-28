@@ -41,7 +41,7 @@ export const FeeToken = {
           message.denom = reader.string();
           break;
         case 2:
-          message.poolID = (reader.uint64() as Long);
+          message.poolID = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

@@ -87,7 +87,7 @@ export const MsgSubmitEvidence = {
       writer.uint32(10).string(message.submitter);
     }
     if (message.evidence !== undefined) {
-      Any.encode((message.evidence as Any), writer.uint32(18).fork()).ldelim();
+      Any.encode(message.evidence as Any, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
@@ -102,7 +102,7 @@ export const MsgSubmitEvidence = {
           message.submitter = reader.string();
           break;
         case 2:
-          message.evidence = (Evidence_InterfaceDecoder(reader) as Any);
+          message.evidence = Evidence_InterfaceDecoder(reader) as Any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -130,7 +130,7 @@ export const MsgSubmitEvidence = {
   toAmino(message: MsgSubmitEvidence): MsgSubmitEvidenceAmino {
     const obj: any = {};
     obj.submitter = message.submitter === "" ? undefined : message.submitter;
-    obj.evidence = message.evidence ? Evidence_ToAmino((message.evidence as Any)) : undefined;
+    obj.evidence = message.evidence ? Evidence_ToAmino(message.evidence as Any) : undefined;
     return obj;
   },
   fromAminoMsg(object: MsgSubmitEvidenceAminoMsg): MsgSubmitEvidence {

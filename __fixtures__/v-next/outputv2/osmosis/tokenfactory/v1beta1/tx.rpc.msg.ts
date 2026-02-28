@@ -46,12 +46,12 @@ export const MsgCreateDenomDesc: UnaryMethodDefinitionish = {
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgCreateDenom.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgCreateDenomResponse.decode(data),
@@ -60,19 +60,19 @@ export const MsgCreateDenomDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgMintDesc: UnaryMethodDefinitionish = {
   methodName: "Mint",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgMint.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgMintResponse.decode(data),
@@ -81,19 +81,19 @@ export const MsgMintDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgBurnDesc: UnaryMethodDefinitionish = {
   methodName: "Burn",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgBurn.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgBurnResponse.decode(data),
@@ -102,19 +102,19 @@ export const MsgBurnDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgChangeAdminDesc: UnaryMethodDefinitionish = {
   methodName: "ChangeAdmin",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgChangeAdmin.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgChangeAdminResponse.decode(data),
@@ -123,19 +123,19 @@ export const MsgChangeAdminDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgSetDenomMetadataDesc: UnaryMethodDefinitionish = {
   methodName: "SetDenomMetadata",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgSetDenomMetadata.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgSetDenomMetadataResponse.decode(data),
@@ -144,7 +144,7 @@ export const MsgSetDenomMetadataDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -184,7 +184,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

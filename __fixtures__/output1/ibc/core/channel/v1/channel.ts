@@ -315,10 +315,10 @@ export const Channel = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         case 2:
-          message.ordering = (reader.int32() as any);
+          message.ordering = reader.int32() as any;
           break;
         case 3:
           message.counterparty = Counterparty.decode(reader, reader.uint32());
@@ -434,10 +434,10 @@ export const IdentifiedChannel = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         case 2:
-          message.ordering = (reader.int32() as any);
+          message.ordering = reader.int32() as any;
           break;
         case 3:
           message.counterparty = Counterparty.decode(reader, reader.uint32());
@@ -640,7 +640,7 @@ export const Packet = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.sequence = (reader.uint64() as Long);
+          message.sequence = reader.uint64() as Long;
           break;
         case 2:
           message.sourcePort = reader.string();
@@ -661,7 +661,7 @@ export const Packet = {
           message.timeoutHeight = Height.decode(reader, reader.uint32());
           break;
         case 8:
-          message.timeoutTimestamp = (reader.uint64() as Long);
+          message.timeoutTimestamp = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -769,7 +769,7 @@ export const PacketState = {
           message.channelId = reader.string();
           break;
         case 3:
-          message.sequence = (reader.uint64() as Long);
+          message.sequence = reader.uint64() as Long;
           break;
         case 4:
           message.data = reader.bytes();

@@ -1108,7 +1108,7 @@ export const LockedRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.lockId = (reader.uint64() as Long);
+          message.lockId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1198,7 +1198,7 @@ export const SyntheticLockupsByLockupIDRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.lockId = (reader.uint64() as Long);
+          message.lockId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

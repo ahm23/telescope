@@ -399,10 +399,10 @@ export const QueryConsensusStateRequest = {
           message.clientId = reader.string();
           break;
         case 2:
-          message.revisionNumber = (reader.uint64() as Long);
+          message.revisionNumber = reader.uint64() as Long;
           break;
         case 3:
-          message.revisionHeight = (reader.uint64() as Long);
+          message.revisionHeight = reader.uint64() as Long;
           break;
         case 4:
           message.latestHeight = reader.bool();

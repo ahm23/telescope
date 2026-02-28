@@ -150,7 +150,7 @@ export const Struct = {
   encode(message: Struct, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
     Object.entries(message.fields).forEach(([key, value]) => {
       Struct_FieldsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(10).fork()).ldelim();
     });
@@ -249,7 +249,7 @@ export const Value = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.nullValue = (reader.int32() as any);
+          message.nullValue = reader.int32() as any;
           break;
         case 2:
           message.numberValue = reader.double();

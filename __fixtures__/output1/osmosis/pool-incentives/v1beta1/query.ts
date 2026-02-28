@@ -97,7 +97,7 @@ export const QueryGaugeIdsRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -223,7 +223,7 @@ export const QueryGaugeIdsResponse_GaugeIdWithDuration = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.gaugeId = (reader.uint64() as Long);
+          message.gaugeId = reader.uint64() as Long;
           break;
         case 2:
           message.duration = Duration.decode(reader, reader.uint32());
@@ -635,13 +635,13 @@ export const IncentivizedPool = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         case 2:
           message.lockableDuration = Duration.decode(reader, reader.uint32());
           break;
         case 3:
-          message.gaugeId = (reader.uint64() as Long);
+          message.gaugeId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

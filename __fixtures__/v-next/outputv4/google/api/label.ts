@@ -116,7 +116,7 @@ export const LabelDescriptor = {
           message.key = reader.string();
           break;
         case 2:
-          message.valueType = (reader.int32() as any);
+          message.valueType = reader.int32() as any;
           break;
         case 3:
           message.description = reader.string();

@@ -77,12 +77,12 @@ export const QueryParamsDesc: UnaryMethodDefinitionish = {
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryParamsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryParamsResponse.decode(data),
@@ -91,19 +91,19 @@ export const QueryParamsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryValidatorOutstandingRewardsDesc: UnaryMethodDefinitionish = {
   methodName: "ValidatorOutstandingRewards",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryValidatorOutstandingRewardsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryValidatorOutstandingRewardsResponse.decode(data),
@@ -112,19 +112,19 @@ export const QueryValidatorOutstandingRewardsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryValidatorCommissionDesc: UnaryMethodDefinitionish = {
   methodName: "ValidatorCommission",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryValidatorCommissionRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryValidatorCommissionResponse.decode(data),
@@ -133,19 +133,19 @@ export const QueryValidatorCommissionDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryValidatorSlashesDesc: UnaryMethodDefinitionish = {
   methodName: "ValidatorSlashes",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryValidatorSlashesRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryValidatorSlashesResponse.decode(data),
@@ -154,19 +154,19 @@ export const QueryValidatorSlashesDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDelegationRewardsDesc: UnaryMethodDefinitionish = {
   methodName: "DelegationRewards",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDelegationRewardsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDelegationRewardsResponse.decode(data),
@@ -175,19 +175,19 @@ export const QueryDelegationRewardsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDelegationTotalRewardsDesc: UnaryMethodDefinitionish = {
   methodName: "DelegationTotalRewards",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDelegationTotalRewardsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDelegationTotalRewardsResponse.decode(data),
@@ -196,19 +196,19 @@ export const QueryDelegationTotalRewardsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDelegatorValidatorsDesc: UnaryMethodDefinitionish = {
   methodName: "DelegatorValidators",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDelegatorValidatorsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDelegatorValidatorsResponse.decode(data),
@@ -217,19 +217,19 @@ export const QueryDelegatorValidatorsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDelegatorWithdrawAddressDesc: UnaryMethodDefinitionish = {
   methodName: "DelegatorWithdrawAddress",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDelegatorWithdrawAddressRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDelegatorWithdrawAddressResponse.decode(data),
@@ -238,19 +238,19 @@ export const QueryDelegatorWithdrawAddressDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryCommunityPoolDesc: UnaryMethodDefinitionish = {
   methodName: "CommunityPool",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryCommunityPoolRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryCommunityPoolResponse.decode(data),
@@ -259,7 +259,7 @@ export const QueryCommunityPoolDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -299,7 +299,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

@@ -9,9 +9,9 @@ import { LCDQueryClient } from "./query.lcd.js";
 export const usePiniaStore = defineStore('evmos/erc20/v1/query.proto', {
   state: () => {
     return {
-      tokenPairs: ({} as QueryTokenPairsResponseSDKType),
-      tokenPair: ({} as QueryTokenPairResponseSDKType),
-      params: ({} as QueryParamsResponseSDKType)
+      tokenPairs: {} as QueryTokenPairsResponseSDKType,
+      tokenPair: {} as QueryTokenPairResponseSDKType,
+      params: {} as QueryParamsResponseSDKType
     };
   },
   getters: {

@@ -40,24 +40,30 @@ export const transferIbcTokens = async (
 
   const { chainInfo: toChainInfo } = useChain(toChain);
 
-  const ibcInfos = registry.getChainIbcData(chainInfo.chain.chain_id);
+  const chainId = chainInfo.chain.chainId || chainInfo.chain.chain_id;
+  const toChainId = toChainInfo.chain.chainId || toChainInfo.chain.chain_id;
+  const ibcInfos = registry.getChainIbcData(chainId);
   const ibcInfo = ibcInfos.find(
-    (i) =>
-      i.chain_1.chain_name === chainInfo.chain.chain_id &&
-      i.chain_2.chain_name === toChainInfo.chain.chain_id
+    (i) => {
+      const c1 = i.chain1 || i.chain_1;
+      const c2 = i.chain2 || i.chain_2;
+      return (c1?.chainName || c1?.chain_name) === chainId &&
+        (c2?.chainName || c2?.chain_name) === toChainId;
+    }
   );
 
   if (!ibcInfo) {
     throw new Error('cannot find IBC info');
   }
 
-  const { port_id: sourcePort, channel_id: sourceChannel } =
-    ibcInfo.channels[0].chain_1;
+  const chain1Data = ibcInfo.channels[0].chain1 || ibcInfo.channels[0].chain_1;
+  const sourcePort = chain1Data?.portId || chain1Data?.port_id;
+  const sourceChannel = chain1Data?.channelId || chain1Data?.channel_id;
 
   // Create temp address on fromChain that will transfer the funds
   const wallet = await DirectSecp256k1HdWallet.fromMnemonic(
     generateMnemonic(),
-    { prefix: chainInfo.chain.bech32_prefix }
+    { prefix: chainInfo.chain.bech32Prefix || chainInfo.chain.bech32_prefix }
   );
   const fromAddress = (await wallet.getAccounts())[0].address;
 

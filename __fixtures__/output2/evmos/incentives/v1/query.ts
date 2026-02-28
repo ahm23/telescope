@@ -494,7 +494,7 @@ export const QueryGasMeterResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.gasMeter = (reader.uint64() as Long);
+          message.gasMeter = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

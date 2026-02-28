@@ -97,7 +97,7 @@ export const GenesisState = {
           message.pools.push(Any.decode(reader, reader.uint32()));
           break;
         case 2:
-          message.nextPoolNumber = (reader.uint64() as Long);
+          message.nextPoolNumber = reader.uint64() as Long;
           break;
         case 3:
           message.params = Params.decode(reader, reader.uint32());

@@ -177,7 +177,7 @@ export const Service = {
           message.config = ServiceConfig.decode(reader, reader.uint32());
           break;
         case 4:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

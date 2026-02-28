@@ -839,7 +839,7 @@ export const Validator = {
           message.jailed = reader.bool();
           break;
         case 4:
-          message.status = (reader.int32() as any);
+          message.status = reader.int32() as any;
           break;
         case 5:
           message.tokens = reader.string();
@@ -851,7 +851,7 @@ export const Validator = {
           message.description = Description.decode(reader, reader.uint32());
           break;
         case 8:
-          message.unbondingHeight = (reader.int64() as Long);
+          message.unbondingHeight = reader.int64() as Long;
           break;
         case 9:
           message.unbondingTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
@@ -1478,7 +1478,7 @@ export const UnbondingDelegationEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.creationHeight = (reader.int64() as Long);
+          message.creationHeight = reader.int64() as Long;
           break;
         case 2:
           message.completionTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
@@ -1569,7 +1569,7 @@ export const RedelegationEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.creationHeight = (reader.int64() as Long);
+          message.creationHeight = reader.int64() as Long;
           break;
         case 2:
           message.completionTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));

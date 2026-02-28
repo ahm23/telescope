@@ -374,7 +374,7 @@ export const InstantiateContractProposal = {
           message.admin = reader.string();
           break;
         case 5:
-          message.codeId = (reader.uint64() as Long);
+          message.codeId = reader.uint64() as Long;
           break;
         case 6:
           message.label = reader.string();
@@ -506,7 +506,7 @@ export const MigrateContractProposal = {
           message.contract = reader.string();
           break;
         case 5:
-          message.codeId = (reader.uint64() as Long);
+          message.codeId = reader.uint64() as Long;
           break;
         case 6:
           message.msg = reader.bytes();
@@ -987,10 +987,10 @@ export const PinCodesProposal = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.codeIds.push((reader.uint64() as Long));
+              message.codeIds.push(reader.uint64() as Long);
             }
           } else {
-            message.codeIds.push((reader.uint64() as Long));
+            message.codeIds.push(reader.uint64() as Long);
           }
           break;
         default:
@@ -1083,10 +1083,10 @@ export const UnpinCodesProposal = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.codeIds.push((reader.uint64() as Long));
+              message.codeIds.push(reader.uint64() as Long);
             }
           } else {
-            message.codeIds.push((reader.uint64() as Long));
+            message.codeIds.push(reader.uint64() as Long);
           }
           break;
         default:

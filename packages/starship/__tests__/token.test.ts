@@ -52,7 +52,7 @@ describe('Token transfers', () => {
     client = await createCosmosQueryClient(endpoint);
 
     denom = (await getCoin()).base;
-    commonPrefix = chainInfo?.chain?.bech32_prefix;
+    commonPrefix = chainInfo?.chain?.bech32Prefix || chainInfo?.chain?.bech32_prefix;
 
     const mnemonic = generateMnemonic();
     // Initialize wallet with 4 accounts for testing
@@ -348,7 +348,7 @@ describe('Token transfers', () => {
     const { chainInfo: cosmosChainInfo, getRpcEndpoint: getCosmosRpcEndpoint } =
       useChain('cosmoshub');
 
-    const cosmosPrefix = cosmosChainInfo?.chain?.bech32_prefix;
+    const cosmosPrefix = cosmosChainInfo?.chain?.bech32Prefix || cosmosChainInfo?.chain?.bech32_prefix;
     const cosmosRpcEndpoint = await getCosmosRpcEndpoint();
 
     const cosmosClient = await createCosmosQueryClient(cosmosRpcEndpoint);
@@ -365,19 +365,23 @@ describe('Token transfers', () => {
     );
     const cosmosAddress = (await cosmosWallet.getAccounts())[0].address!;
 
-    const ibcInfos = chainInfo.fetcher.getChainIbcData(
-      chainInfo.chain.chain_name
-    );
+    const chainName = chainInfo.chain.chainName || chainInfo.chain.chain_name;
+    const cosmosChainName = cosmosChainInfo.chain.chainName || cosmosChainInfo.chain.chain_name;
+    const ibcInfos = chainInfo.fetcher.getChainIbcData(chainName);
     const sourceIbcInfo = ibcInfos.find(
-      (i) =>
-        i.chain_1.chain_name === chainInfo.chain.chain_name &&
-        i.chain_2.chain_name === cosmosChainInfo.chain.chain_name
+      (i) => {
+        const c1 = i.chain1 || i.chain_1;
+        const c2 = i.chain2 || i.chain_2;
+        return (c1?.chainName || c1?.chain_name) === chainName &&
+          (c2?.chainName || c2?.chain_name) === cosmosChainName;
+      }
     );
 
     expect(sourceIbcInfo).toBeTruthy();
 
-    const { port_id: sourcePort, channel_id: sourceChannel } =
-      sourceIbcInfo!.channels[0].chain_1;
+    const chain1Channel = sourceIbcInfo!.channels[0].chain1 || sourceIbcInfo!.channels[0].chain_1;
+    const sourcePort = chain1Channel?.portId || chain1Channel?.port_id;
+    const sourceChannel = chain1Channel?.channelId || chain1Channel?.channel_id;
 
     // Transfer osmosis tokens via IBC to cosmos chain
     const currentTime = Math.floor(Date.now()) * 1000000;

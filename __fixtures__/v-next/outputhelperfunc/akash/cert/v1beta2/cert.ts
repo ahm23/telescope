@@ -472,7 +472,7 @@ export const Certificate = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 2:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         case 3:
           message.cert = reader.bytes();

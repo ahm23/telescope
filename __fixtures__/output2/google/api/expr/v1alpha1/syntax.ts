@@ -415,7 +415,7 @@ export const Expr = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 2:
-          message.id = (reader.int64() as Long);
+          message.id = reader.int64() as Long;
           break;
         case 3:
           message.constExpr = Constant.decode(reader, reader.uint32());
@@ -801,7 +801,7 @@ export const Expr_CreateStruct_Entry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.id = (reader.int64() as Long);
+          message.id = reader.int64() as Long;
           break;
         case 2:
           message.fieldKey = reader.string();
@@ -1001,16 +1001,16 @@ export const Constant = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.nullValue = (reader.int32() as any);
+          message.nullValue = reader.int32() as any;
           break;
         case 2:
           message.boolValue = reader.bool();
           break;
         case 3:
-          message.int64Value = (reader.int64() as Long);
+          message.int64Value = reader.int64() as Long;
           break;
         case 4:
-          message.uint64Value = (reader.uint64() as Long);
+          message.uint64Value = reader.uint64() as Long;
           break;
         case 5:
           message.doubleValue = reader.double();
@@ -1102,7 +1102,7 @@ export const SourceInfo_PositionsEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.key = (reader.int64() as Long);
+          message.key = reader.int64() as Long;
           break;
         case 2:
           message.value = reader.int32();
@@ -1157,7 +1157,7 @@ export const SourceInfo_MacroCallsEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.key = (reader.int64() as Long);
+          message.key = reader.int64() as Long;
           break;
         case 2:
           message.value = Expr.decode(reader, reader.uint32());
@@ -1212,13 +1212,13 @@ export const SourceInfo = {
     writer.ldelim();
     Object.entries(message.positions).forEach(([key, value]) => {
       SourceInfo_PositionsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(32).fork()).ldelim();
     });
     Object.entries(message.macroCalls).forEach(([key, value]) => {
       SourceInfo_MacroCallsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(42).fork()).ldelim();
     });

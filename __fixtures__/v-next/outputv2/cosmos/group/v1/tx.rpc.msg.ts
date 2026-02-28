@@ -104,12 +104,12 @@ export const MsgCreateGroupDesc: UnaryMethodDefinitionish = {
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgCreateGroup.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgCreateGroupResponse.decode(data),
@@ -118,19 +118,19 @@ export const MsgCreateGroupDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgUpdateGroupMembersDesc: UnaryMethodDefinitionish = {
   methodName: "UpdateGroupMembers",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgUpdateGroupMembers.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgUpdateGroupMembersResponse.decode(data),
@@ -139,19 +139,19 @@ export const MsgUpdateGroupMembersDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgUpdateGroupAdminDesc: UnaryMethodDefinitionish = {
   methodName: "UpdateGroupAdmin",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgUpdateGroupAdmin.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgUpdateGroupAdminResponse.decode(data),
@@ -160,19 +160,19 @@ export const MsgUpdateGroupAdminDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgUpdateGroupMetadataDesc: UnaryMethodDefinitionish = {
   methodName: "UpdateGroupMetadata",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgUpdateGroupMetadata.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgUpdateGroupMetadataResponse.decode(data),
@@ -181,19 +181,19 @@ export const MsgUpdateGroupMetadataDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgCreateGroupPolicyDesc: UnaryMethodDefinitionish = {
   methodName: "CreateGroupPolicy",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgCreateGroupPolicy.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgCreateGroupPolicyResponse.decode(data),
@@ -202,19 +202,19 @@ export const MsgCreateGroupPolicyDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgCreateGroupWithPolicyDesc: UnaryMethodDefinitionish = {
   methodName: "CreateGroupWithPolicy",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgCreateGroupWithPolicy.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgCreateGroupWithPolicyResponse.decode(data),
@@ -223,19 +223,19 @@ export const MsgCreateGroupWithPolicyDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgUpdateGroupPolicyAdminDesc: UnaryMethodDefinitionish = {
   methodName: "UpdateGroupPolicyAdmin",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgUpdateGroupPolicyAdmin.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgUpdateGroupPolicyAdminResponse.decode(data),
@@ -244,19 +244,19 @@ export const MsgUpdateGroupPolicyAdminDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgUpdateGroupPolicyDecisionPolicyDesc: UnaryMethodDefinitionish = {
   methodName: "UpdateGroupPolicyDecisionPolicy",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgUpdateGroupPolicyDecisionPolicy.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgUpdateGroupPolicyDecisionPolicyResponse.decode(data),
@@ -265,19 +265,19 @@ export const MsgUpdateGroupPolicyDecisionPolicyDesc: UnaryMethodDefinitionish = 
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgUpdateGroupPolicyMetadataDesc: UnaryMethodDefinitionish = {
   methodName: "UpdateGroupPolicyMetadata",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgUpdateGroupPolicyMetadata.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgUpdateGroupPolicyMetadataResponse.decode(data),
@@ -286,19 +286,19 @@ export const MsgUpdateGroupPolicyMetadataDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgSubmitProposalDesc: UnaryMethodDefinitionish = {
   methodName: "SubmitProposal",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgSubmitProposal.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgSubmitProposalResponse.decode(data),
@@ -307,19 +307,19 @@ export const MsgSubmitProposalDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgWithdrawProposalDesc: UnaryMethodDefinitionish = {
   methodName: "WithdrawProposal",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgWithdrawProposal.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgWithdrawProposalResponse.decode(data),
@@ -328,19 +328,19 @@ export const MsgWithdrawProposalDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgVoteDesc: UnaryMethodDefinitionish = {
   methodName: "Vote",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgVote.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgVoteResponse.decode(data),
@@ -349,19 +349,19 @@ export const MsgVoteDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgExecDesc: UnaryMethodDefinitionish = {
   methodName: "Exec",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgExec.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgExecResponse.decode(data),
@@ -370,19 +370,19 @@ export const MsgExecDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgLeaveGroupDesc: UnaryMethodDefinitionish = {
   methodName: "LeaveGroup",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgLeaveGroup.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgLeaveGroupResponse.decode(data),
@@ -391,7 +391,7 @@ export const MsgLeaveGroupDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -431,7 +431,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

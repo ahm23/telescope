@@ -74,7 +74,7 @@ export const EventCreateGroup = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.groupId = (reader.uint64() as Long);
+          message.groupId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -119,7 +119,7 @@ export const EventUpdateGroup = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.groupId = (reader.uint64() as Long);
+          message.groupId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -254,7 +254,7 @@ export const EventSubmitProposal = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.proposalId = (reader.uint64() as Long);
+          message.proposalId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -299,7 +299,7 @@ export const EventWithdrawProposal = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.proposalId = (reader.uint64() as Long);
+          message.proposalId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -344,7 +344,7 @@ export const EventVote = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.proposalId = (reader.uint64() as Long);
+          message.proposalId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -393,10 +393,10 @@ export const EventExec = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.proposalId = (reader.uint64() as Long);
+          message.proposalId = reader.uint64() as Long;
           break;
         case 2:
-          message.result = (reader.int32() as any);
+          message.result = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -448,7 +448,7 @@ export const EventLeaveGroup = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.groupId = (reader.uint64() as Long);
+          message.groupId = reader.uint64() as Long;
           break;
         case 2:
           message.address = reader.string();

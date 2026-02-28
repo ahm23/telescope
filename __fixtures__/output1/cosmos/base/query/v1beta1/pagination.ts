@@ -133,10 +133,10 @@ export const PageRequest = {
           message.key = reader.bytes();
           break;
         case 2:
-          message.offset = (reader.uint64() as Long);
+          message.offset = reader.uint64() as Long;
           break;
         case 3:
-          message.limit = (reader.uint64() as Long);
+          message.limit = reader.uint64() as Long;
           break;
         case 4:
           message.countTotal = reader.bool();
@@ -224,7 +224,7 @@ export const PageResponse = {
           message.nextKey = reader.bytes();
           break;
         case 2:
-          message.total = (reader.uint64() as Long);
+          message.total = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

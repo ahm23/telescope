@@ -6,7 +6,7 @@ import { LCDQueryClient } from "./query.lcd";
 export const usePiniaStore = defineStore('osmosis/gamm/v2/query.proto', {
   state: () => {
     return {
-      spotPrice: ({} as QuerySpotPriceResponseSDKType)
+      spotPrice: {} as QuerySpotPriceResponseSDKType
     };
   },
   getters: {

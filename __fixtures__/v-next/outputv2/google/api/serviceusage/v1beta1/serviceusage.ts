@@ -2907,7 +2907,7 @@ export const ListConsumerQuotaMetricsRequest = {
           message.pageToken = reader.string();
           break;
         case 4:
-          message.view = (reader.int32() as any);
+          message.view = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -3170,7 +3170,7 @@ export const GetConsumerQuotaMetricRequest = {
           message.name = reader.string();
           break;
         case 2:
-          message.view = (reader.int32() as any);
+          message.view = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -3285,7 +3285,7 @@ export const GetConsumerQuotaLimitRequest = {
           message.name = reader.string();
           break;
         case 2:
-          message.view = (reader.int32() as any);
+          message.view = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -3419,10 +3419,10 @@ export const CreateAdminOverrideRequest = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.forceOnly.push((reader.int32() as any));
+              message.forceOnly.push(reader.int32() as any);
             }
           } else {
-            message.forceOnly.push((reader.int32() as any));
+            message.forceOnly.push(reader.int32() as any);
           }
           break;
         default:
@@ -3599,10 +3599,10 @@ export const UpdateAdminOverrideRequest = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.forceOnly.push((reader.int32() as any));
+              message.forceOnly.push(reader.int32() as any);
             }
           } else {
-            message.forceOnly.push((reader.int32() as any));
+            message.forceOnly.push(reader.int32() as any);
           }
           break;
         default:
@@ -3777,10 +3777,10 @@ export const DeleteAdminOverrideRequest = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.forceOnly.push((reader.int32() as any));
+              message.forceOnly.push(reader.int32() as any);
             }
           } else {
-            message.forceOnly.push((reader.int32() as any));
+            message.forceOnly.push(reader.int32() as any);
           }
           break;
         default:
@@ -4309,10 +4309,10 @@ export const ImportAdminOverridesRequest = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.forceOnly.push((reader.int32() as any));
+              message.forceOnly.push(reader.int32() as any);
             }
           } else {
-            message.forceOnly.push((reader.int32() as any));
+            message.forceOnly.push(reader.int32() as any);
           }
           break;
         default:
@@ -4679,10 +4679,10 @@ export const CreateConsumerOverrideRequest = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.forceOnly.push((reader.int32() as any));
+              message.forceOnly.push(reader.int32() as any);
             }
           } else {
-            message.forceOnly.push((reader.int32() as any));
+            message.forceOnly.push(reader.int32() as any);
           }
           break;
         default:
@@ -4859,10 +4859,10 @@ export const UpdateConsumerOverrideRequest = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.forceOnly.push((reader.int32() as any));
+              message.forceOnly.push(reader.int32() as any);
             }
           } else {
-            message.forceOnly.push((reader.int32() as any));
+            message.forceOnly.push(reader.int32() as any);
           }
           break;
         default:
@@ -5037,10 +5037,10 @@ export const DeleteConsumerOverrideRequest = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.forceOnly.push((reader.int32() as any));
+              message.forceOnly.push(reader.int32() as any);
             }
           } else {
-            message.forceOnly.push((reader.int32() as any));
+            message.forceOnly.push(reader.int32() as any);
           }
           break;
         default:
@@ -5569,10 +5569,10 @@ export const ImportConsumerOverridesRequest = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.forceOnly.push((reader.int32() as any));
+              message.forceOnly.push(reader.int32() as any);
             }
           } else {
-            message.forceOnly.push((reader.int32() as any));
+            message.forceOnly.push(reader.int32() as any);
           }
           break;
         default:
@@ -6465,7 +6465,7 @@ export const GetServiceIdentityResponse = {
           message.identity = ServiceIdentity.decode(reader, reader.uint32());
           break;
         case 2:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

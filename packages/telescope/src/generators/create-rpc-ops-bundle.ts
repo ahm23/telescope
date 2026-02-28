@@ -15,7 +15,7 @@ import { camel, makeUseHookName, makeUsePkgHookName } from "@cosmology/utils";
 import { variableSlug } from "@cosmology/utils";
 import { swapKeyValue } from "@cosmology/utils";
 import { buildImports } from "@cosmology/utils";
-import { BundlerFile } from "src/types";
+import { BundlerFile } from "../types";
 
 export const plugin = (builder: TelescopeBuilder) => {
   if (

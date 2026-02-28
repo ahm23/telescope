@@ -578,7 +578,7 @@ export const QueryContractsByCodeRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.codeId = (reader.uint64() as Long);
+          message.codeId = reader.uint64() as Long;
           break;
         case 2:
           message.pagination = PageRequest.decode(reader, reader.uint32());
@@ -1102,7 +1102,7 @@ export const QueryCodeRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.codeId = (reader.uint64() as Long);
+          message.codeId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1165,7 +1165,7 @@ export const CodeInfoResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.codeId = (reader.uint64() as Long);
+          message.codeId = reader.uint64() as Long;
           break;
         case 2:
           message.creator = reader.string();
@@ -1497,10 +1497,10 @@ export const QueryPinnedCodesResponse = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.codeIds.push((reader.uint64() as Long));
+              message.codeIds.push(reader.uint64() as Long);
             }
           } else {
-            message.codeIds.push((reader.uint64() as Long));
+            message.codeIds.push(reader.uint64() as Long);
           }
           break;
         case 2:

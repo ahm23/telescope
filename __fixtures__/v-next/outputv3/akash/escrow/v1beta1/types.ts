@@ -434,7 +434,7 @@ export const Account = {
           message.owner = reader.string();
           break;
         case 3:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         case 4:
           message.balance = Coin.decode(reader, reader.uint32(), useInterfaces);
@@ -621,7 +621,7 @@ export const Payment = {
           message.owner = reader.string();
           break;
         case 4:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         case 5:
           message.rate = Coin.decode(reader, reader.uint32(), useInterfaces);

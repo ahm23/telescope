@@ -102,13 +102,13 @@ export const Group = {
           message.groupId = GroupID.decode(reader, reader.uint32());
           break;
         case 2:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         case 3:
           message.groupSpec = GroupSpec.decode(reader, reader.uint32());
           break;
         case 4:
-          message.createdAt = (reader.int64() as Long);
+          message.createdAt = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

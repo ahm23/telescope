@@ -1369,7 +1369,7 @@ export const LogBucket = {
           message.locked = reader.bool();
           break;
         case 12:
-          message.lifecycleState = (reader.int32() as any);
+          message.lifecycleState = reader.int32() as any;
           break;
         case 15:
           message.restrictedFields.push(reader.string());
@@ -1595,7 +1595,7 @@ export const LogSink = {
           message.exclusions.push(LogExclusion.decode(reader, reader.uint32()));
           break;
         case 6:
-          message.outputVersionFormat = (reader.int32() as any);
+          message.outputVersionFormat = reader.int32() as any;
           break;
         case 8:
           message.writerIdentity = reader.string();
@@ -3728,7 +3728,7 @@ export const CopyLogEntriesMetadata = {
           message.endTime = Timestamp.decode(reader, reader.uint32());
           break;
         case 3:
-          message.state = (reader.int32() as any);
+          message.state = reader.int32() as any;
           break;
         case 4:
           message.cancellationRequested = reader.bool();
@@ -3803,7 +3803,7 @@ export const CopyLogEntriesResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.logEntriesCopiedCount = (reader.int64() as Long);
+          message.logEntriesCopiedCount = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

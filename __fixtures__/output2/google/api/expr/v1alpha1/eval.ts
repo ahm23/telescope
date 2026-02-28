@@ -185,10 +185,10 @@ export const EvalState_Result = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.expr = (reader.int64() as Long);
+          message.expr = reader.int64() as Long;
           break;
         case 2:
-          message.value = (reader.int64() as Long);
+          message.value = reader.int64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -355,10 +355,10 @@ export const UnknownSet = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.exprs.push((reader.int64() as Long));
+              message.exprs.push(reader.int64() as Long);
             }
           } else {
-            message.exprs.push((reader.int64() as Long));
+            message.exprs.push(reader.int64() as Long);
           }
           break;
         default:

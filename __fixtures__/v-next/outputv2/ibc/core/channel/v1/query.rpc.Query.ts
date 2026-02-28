@@ -125,12 +125,12 @@ export const QueryChannelDesc: UnaryMethodDefinitionish = {
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryChannelRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryChannelResponse.decode(data),
@@ -139,19 +139,19 @@ export const QueryChannelDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryChannelsDesc: UnaryMethodDefinitionish = {
   methodName: "Channels",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryChannelsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryChannelsResponse.decode(data),
@@ -160,19 +160,19 @@ export const QueryChannelsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryConnectionChannelsDesc: UnaryMethodDefinitionish = {
   methodName: "ConnectionChannels",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryConnectionChannelsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryConnectionChannelsResponse.decode(data),
@@ -181,19 +181,19 @@ export const QueryConnectionChannelsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryChannelClientStateDesc: UnaryMethodDefinitionish = {
   methodName: "ChannelClientState",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryChannelClientStateRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryChannelClientStateResponse.decode(data),
@@ -202,19 +202,19 @@ export const QueryChannelClientStateDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryChannelConsensusStateDesc: UnaryMethodDefinitionish = {
   methodName: "ChannelConsensusState",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryChannelConsensusStateRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryChannelConsensusStateResponse.decode(data),
@@ -223,19 +223,19 @@ export const QueryChannelConsensusStateDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryPacketCommitmentDesc: UnaryMethodDefinitionish = {
   methodName: "PacketCommitment",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryPacketCommitmentRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryPacketCommitmentResponse.decode(data),
@@ -244,19 +244,19 @@ export const QueryPacketCommitmentDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryPacketCommitmentsDesc: UnaryMethodDefinitionish = {
   methodName: "PacketCommitments",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryPacketCommitmentsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryPacketCommitmentsResponse.decode(data),
@@ -265,19 +265,19 @@ export const QueryPacketCommitmentsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryPacketReceiptDesc: UnaryMethodDefinitionish = {
   methodName: "PacketReceipt",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryPacketReceiptRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryPacketReceiptResponse.decode(data),
@@ -286,19 +286,19 @@ export const QueryPacketReceiptDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryPacketAcknowledgementDesc: UnaryMethodDefinitionish = {
   methodName: "PacketAcknowledgement",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryPacketAcknowledgementRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryPacketAcknowledgementResponse.decode(data),
@@ -307,19 +307,19 @@ export const QueryPacketAcknowledgementDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryPacketAcknowledgementsDesc: UnaryMethodDefinitionish = {
   methodName: "PacketAcknowledgements",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryPacketAcknowledgementsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryPacketAcknowledgementsResponse.decode(data),
@@ -328,19 +328,19 @@ export const QueryPacketAcknowledgementsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryUnreceivedPacketsDesc: UnaryMethodDefinitionish = {
   methodName: "UnreceivedPackets",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryUnreceivedPacketsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryUnreceivedPacketsResponse.decode(data),
@@ -349,19 +349,19 @@ export const QueryUnreceivedPacketsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryUnreceivedAcksDesc: UnaryMethodDefinitionish = {
   methodName: "UnreceivedAcks",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryUnreceivedAcksRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryUnreceivedAcksResponse.decode(data),
@@ -370,19 +370,19 @@ export const QueryUnreceivedAcksDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryNextSequenceReceiveDesc: UnaryMethodDefinitionish = {
   methodName: "NextSequenceReceive",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryNextSequenceReceiveRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryNextSequenceReceiveResponse.decode(data),
@@ -391,7 +391,7 @@ export const QueryNextSequenceReceiveDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -431,7 +431,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

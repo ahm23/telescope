@@ -4,13 +4,13 @@ exports[`builds stores. 1`] = `
 "export const usePiniaStore = defineStore('cosmos/auth/v1beta1/query.proto', {
   state: () => {
     return {
-      accounts: ({} as QueryAccountsResponseSDKType),
-      account: ({} as QueryAccountResponseSDKType),
-      params: ({} as QueryParamsResponseSDKType),
-      moduleAccounts: ({} as QueryModuleAccountsResponseSDKType),
-      bech32Prefix: ({} as Bech32PrefixResponseSDKType),
-      addressBytesToString: ({} as AddressBytesToStringResponseSDKType),
-      addressStringToBytes: ({} as AddressStringToBytesResponseSDKType)
+      accounts: {} as QueryAccountsResponseSDKType,
+      account: {} as QueryAccountResponseSDKType,
+      params: {} as QueryParamsResponseSDKType,
+      moduleAccounts: {} as QueryModuleAccountsResponseSDKType,
+      bech32Prefix: {} as Bech32PrefixResponseSDKType,
+      addressBytesToString: {} as AddressBytesToStringResponseSDKType,
+      addressStringToBytes: {} as AddressStringToBytesResponseSDKType
     };
   },
   getters: {

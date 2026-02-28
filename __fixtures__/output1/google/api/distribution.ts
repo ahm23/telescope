@@ -350,7 +350,7 @@ export const Distribution = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.count = (reader.int64() as Long);
+          message.count = reader.int64() as Long;
           break;
         case 2:
           message.mean = reader.double();
@@ -368,10 +368,10 @@ export const Distribution = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.bucketCounts.push((reader.int64() as Long));
+              message.bucketCounts.push(reader.int64() as Long);
             }
           } else {
-            message.bucketCounts.push((reader.int64() as Long));
+            message.bucketCounts.push(reader.int64() as Long);
           }
           break;
         case 10:

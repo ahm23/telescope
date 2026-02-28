@@ -405,10 +405,10 @@ export const ClientState = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.sequence = (reader.uint64() as Long);
+          message.sequence = reader.uint64() as Long;
           break;
         case 2:
-          message.frozenSequence = (reader.uint64() as Long);
+          message.frozenSequence = reader.uint64() as Long;
           break;
         case 3:
           message.consensusState = ConsensusState.decode(reader, reader.uint32());
@@ -498,7 +498,7 @@ export const ConsensusState = {
           message.diversifier = reader.string();
           break;
         case 3:
-          message.timestamp = (reader.uint64() as Long);
+          message.timestamp = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -579,10 +579,10 @@ export const Header = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.sequence = (reader.uint64() as Long);
+          message.sequence = reader.uint64() as Long;
           break;
         case 2:
-          message.timestamp = (reader.uint64() as Long);
+          message.timestamp = reader.uint64() as Long;
           break;
         case 3:
           message.signature = reader.bytes();
@@ -681,7 +681,7 @@ export const Misbehaviour = {
           message.clientId = reader.string();
           break;
         case 2:
-          message.sequence = (reader.uint64() as Long);
+          message.sequence = reader.uint64() as Long;
           break;
         case 3:
           message.signatureOne = SignatureAndData.decode(reader, reader.uint32());
@@ -772,13 +772,13 @@ export const SignatureAndData = {
           message.signature = reader.bytes();
           break;
         case 2:
-          message.dataType = (reader.int32() as any);
+          message.dataType = reader.int32() as any;
           break;
         case 3:
           message.data = reader.bytes();
           break;
         case 4:
-          message.timestamp = (reader.uint64() as Long);
+          message.timestamp = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -855,7 +855,7 @@ export const TimestampedSignatureData = {
           message.signatureData = reader.bytes();
           break;
         case 2:
-          message.timestamp = (reader.uint64() as Long);
+          message.timestamp = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -931,16 +931,16 @@ export const SignBytes = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.sequence = (reader.uint64() as Long);
+          message.sequence = reader.uint64() as Long;
           break;
         case 2:
-          message.timestamp = (reader.uint64() as Long);
+          message.timestamp = reader.uint64() as Long;
           break;
         case 3:
           message.diversifier = reader.string();
           break;
         case 4:
-          message.dataType = (reader.int32() as any);
+          message.dataType = reader.int32() as any;
           break;
         case 5:
           message.data = reader.bytes();
@@ -1549,7 +1549,7 @@ export const NextSequenceRecvData = {
           message.path = reader.bytes();
           break;
         case 2:
-          message.nextSeqRecv = (reader.uint64() as Long);
+          message.nextSeqRecv = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

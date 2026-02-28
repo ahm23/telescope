@@ -1837,7 +1837,7 @@ export const MsgCreateGroupPolicy = {
       writer.uint32(26).string(message.metadata);
     }
     if (message.decisionPolicy !== undefined) {
-      Any.encode((message.decisionPolicy as Any), writer.uint32(34).fork()).ldelim();
+      Any.encode(message.decisionPolicy as Any, writer.uint32(34).fork()).ldelim();
     }
     return writer;
   },
@@ -1858,7 +1858,7 @@ export const MsgCreateGroupPolicy = {
           message.metadata = reader.string();
           break;
         case 4:
-          message.decisionPolicy = (DecisionPolicy_InterfaceDecoder(reader) as Any);
+          message.decisionPolicy = DecisionPolicy_InterfaceDecoder(reader) as Any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1896,7 +1896,7 @@ export const MsgCreateGroupPolicy = {
     obj.admin = message.admin === "" ? undefined : message.admin;
     obj.group_id = message.groupId !== BigInt(0) ? message.groupId?.toString() : undefined;
     obj.metadata = message.metadata === "" ? undefined : message.metadata;
-    obj.decision_policy = message.decisionPolicy ? DecisionPolicy_ToAmino((message.decisionPolicy as Any)) : undefined;
+    obj.decision_policy = message.decisionPolicy ? DecisionPolicy_ToAmino(message.decisionPolicy as Any) : undefined;
     return obj;
   },
   fromAminoMsg(object: MsgCreateGroupPolicyAminoMsg): MsgCreateGroupPolicy {
@@ -2133,7 +2133,7 @@ export const MsgCreateGroupWithPolicy = {
       writer.uint32(40).bool(message.groupPolicyAsAdmin);
     }
     if (message.decisionPolicy !== undefined) {
-      Any.encode((message.decisionPolicy as Any), writer.uint32(50).fork()).ldelim();
+      Any.encode(message.decisionPolicy as Any, writer.uint32(50).fork()).ldelim();
     }
     return writer;
   },
@@ -2160,7 +2160,7 @@ export const MsgCreateGroupWithPolicy = {
           message.groupPolicyAsAdmin = reader.bool();
           break;
         case 6:
-          message.decisionPolicy = (DecisionPolicy_InterfaceDecoder(reader) as Any);
+          message.decisionPolicy = DecisionPolicy_InterfaceDecoder(reader) as Any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -2210,7 +2210,7 @@ export const MsgCreateGroupWithPolicy = {
     obj.group_metadata = message.groupMetadata === "" ? undefined : message.groupMetadata;
     obj.group_policy_metadata = message.groupPolicyMetadata === "" ? undefined : message.groupPolicyMetadata;
     obj.group_policy_as_admin = message.groupPolicyAsAdmin === false ? undefined : message.groupPolicyAsAdmin;
-    obj.decision_policy = message.decisionPolicy ? DecisionPolicy_ToAmino((message.decisionPolicy as Any)) : undefined;
+    obj.decision_policy = message.decisionPolicy ? DecisionPolicy_ToAmino(message.decisionPolicy as Any) : undefined;
     return obj;
   },
   fromAminoMsg(object: MsgCreateGroupWithPolicyAminoMsg): MsgCreateGroupWithPolicy {
@@ -2410,7 +2410,7 @@ export const MsgUpdateGroupPolicyDecisionPolicy = {
       writer.uint32(18).string(message.address);
     }
     if (message.decisionPolicy !== undefined) {
-      Any.encode((message.decisionPolicy as Any), writer.uint32(26).fork()).ldelim();
+      Any.encode(message.decisionPolicy as Any, writer.uint32(26).fork()).ldelim();
     }
     return writer;
   },
@@ -2428,7 +2428,7 @@ export const MsgUpdateGroupPolicyDecisionPolicy = {
           message.address = reader.string();
           break;
         case 3:
-          message.decisionPolicy = (DecisionPolicy_InterfaceDecoder(reader) as Any);
+          message.decisionPolicy = DecisionPolicy_InterfaceDecoder(reader) as Any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -2461,7 +2461,7 @@ export const MsgUpdateGroupPolicyDecisionPolicy = {
     const obj: any = {};
     obj.admin = message.admin === "" ? undefined : message.admin;
     obj.address = message.address === "" ? undefined : message.address;
-    obj.decision_policy = message.decisionPolicy ? DecisionPolicy_ToAmino((message.decisionPolicy as Any)) : undefined;
+    obj.decision_policy = message.decisionPolicy ? DecisionPolicy_ToAmino(message.decisionPolicy as Any) : undefined;
     return obj;
   },
   fromAminoMsg(object: MsgUpdateGroupPolicyDecisionPolicyAminoMsg): MsgUpdateGroupPolicyDecisionPolicy {
@@ -2768,7 +2768,7 @@ export const MsgSubmitProposal = {
           message.messages.push(Any.decode(reader, reader.uint32()));
           break;
         case 5:
-          message.exec = (reader.int32() as any);
+          message.exec = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -3117,13 +3117,13 @@ export const MsgVote = {
           message.voter = reader.string();
           break;
         case 3:
-          message.option = (reader.int32() as any);
+          message.option = reader.int32() as any;
           break;
         case 4:
           message.metadata = reader.string();
           break;
         case 5:
-          message.exec = (reader.int32() as any);
+          message.exec = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

@@ -832,7 +832,7 @@ export const CheckResponse_ConsumerInfo = {
           message.projectNumber = reader.int64();
           break;
         case 2:
-          message.type = (reader.int32() as any);
+          message.type = reader.int32() as any;
           break;
         case 3:
           message.consumerNumber = reader.int64();

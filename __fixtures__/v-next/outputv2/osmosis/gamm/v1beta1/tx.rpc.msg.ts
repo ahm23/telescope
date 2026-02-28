@@ -59,12 +59,12 @@ export const MsgJoinPoolDesc: UnaryMethodDefinitionish = {
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgJoinPool.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgJoinPoolResponse.decode(data),
@@ -73,19 +73,19 @@ export const MsgJoinPoolDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgExitPoolDesc: UnaryMethodDefinitionish = {
   methodName: "ExitPool",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgExitPool.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgExitPoolResponse.decode(data),
@@ -94,19 +94,19 @@ export const MsgExitPoolDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgSwapExactAmountInDesc: UnaryMethodDefinitionish = {
   methodName: "SwapExactAmountIn",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgSwapExactAmountIn.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgSwapExactAmountInResponse.decode(data),
@@ -115,19 +115,19 @@ export const MsgSwapExactAmountInDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgSwapExactAmountOutDesc: UnaryMethodDefinitionish = {
   methodName: "SwapExactAmountOut",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgSwapExactAmountOut.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgSwapExactAmountOutResponse.decode(data),
@@ -136,19 +136,19 @@ export const MsgSwapExactAmountOutDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgJoinSwapExternAmountInDesc: UnaryMethodDefinitionish = {
   methodName: "JoinSwapExternAmountIn",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgJoinSwapExternAmountIn.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgJoinSwapExternAmountInResponse.decode(data),
@@ -157,19 +157,19 @@ export const MsgJoinSwapExternAmountInDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgJoinSwapShareAmountOutDesc: UnaryMethodDefinitionish = {
   methodName: "JoinSwapShareAmountOut",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgJoinSwapShareAmountOut.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgJoinSwapShareAmountOutResponse.decode(data),
@@ -178,19 +178,19 @@ export const MsgJoinSwapShareAmountOutDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgExitSwapExternAmountOutDesc: UnaryMethodDefinitionish = {
   methodName: "ExitSwapExternAmountOut",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgExitSwapExternAmountOut.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgExitSwapExternAmountOutResponse.decode(data),
@@ -199,19 +199,19 @@ export const MsgExitSwapExternAmountOutDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const MsgExitSwapShareAmountInDesc: UnaryMethodDefinitionish = {
   methodName: "ExitSwapShareAmountIn",
   service: MsgDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return MsgExitSwapShareAmountIn.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...MsgExitSwapShareAmountInResponse.decode(data),
@@ -220,7 +220,7 @@ export const MsgExitSwapShareAmountInDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -260,7 +260,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

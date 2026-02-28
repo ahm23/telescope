@@ -290,7 +290,7 @@ export const SourceInfo = {
     writer.ldelim();
     Object.entries(message.positions).forEach(([key, value]) => {
       SourceInfo_PositionsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(32).fork()).ldelim();
     });

@@ -894,7 +894,7 @@ export const LogMetric = {
     }
     Object.entries(message.labelExtractors).forEach(([key, value]) => {
       LogMetric_LabelExtractorsEntry.encode({
-        key: (key as any),
+        key: key as any,
         value
       }, writer.uint32(58).fork()).ldelim();
     });
@@ -953,7 +953,7 @@ export const LogMetric = {
           message.updateTime = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           break;
         case 4:
-          message.version = (reader.int32() as any);
+          message.version = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

@@ -129,12 +129,12 @@ export const QueryParamsDesc: UnaryMethodDefinitionish = {
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryParamsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryParamsResponse.decode(data),
@@ -143,19 +143,19 @@ export const QueryParamsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAssetTypeDesc: UnaryMethodDefinitionish = {
   methodName: "AssetType",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AssetTypeRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AssetTypeResponse.decode(data),
@@ -164,19 +164,19 @@ export const QueryAssetTypeDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAllAssetsDesc: UnaryMethodDefinitionish = {
   methodName: "AllAssets",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AllAssetsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AllAssetsResponse.decode(data),
@@ -185,19 +185,19 @@ export const QueryAllAssetsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAssetMultiplierDesc: UnaryMethodDefinitionish = {
   methodName: "AssetMultiplier",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AssetMultiplierRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AssetMultiplierResponse.decode(data),
@@ -206,19 +206,19 @@ export const QueryAssetMultiplierDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryAllIntermediaryAccountsDesc: UnaryMethodDefinitionish = {
   methodName: "AllIntermediaryAccounts",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return AllIntermediaryAccountsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...AllIntermediaryAccountsResponse.decode(data),
@@ -227,19 +227,19 @@ export const QueryAllIntermediaryAccountsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryConnectedIntermediaryAccountDesc: UnaryMethodDefinitionish = {
   methodName: "ConnectedIntermediaryAccount",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return ConnectedIntermediaryAccountRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...ConnectedIntermediaryAccountResponse.decode(data),
@@ -248,19 +248,19 @@ export const QueryConnectedIntermediaryAccountDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryTotalDelegationByValidatorForDenomDesc: UnaryMethodDefinitionish = {
   methodName: "TotalDelegationByValidatorForDenom",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryTotalDelegationByValidatorForDenomRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryTotalDelegationByValidatorForDenomResponse.decode(data),
@@ -269,19 +269,19 @@ export const QueryTotalDelegationByValidatorForDenomDesc: UnaryMethodDefinitioni
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryTotalSuperfluidDelegationsDesc: UnaryMethodDefinitionish = {
   methodName: "TotalSuperfluidDelegations",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return TotalSuperfluidDelegationsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...TotalSuperfluidDelegationsResponse.decode(data),
@@ -290,19 +290,19 @@ export const QueryTotalSuperfluidDelegationsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QuerySuperfluidDelegationAmountDesc: UnaryMethodDefinitionish = {
   methodName: "SuperfluidDelegationAmount",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return SuperfluidDelegationAmountRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...SuperfluidDelegationAmountResponse.decode(data),
@@ -311,19 +311,19 @@ export const QuerySuperfluidDelegationAmountDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QuerySuperfluidDelegationsByDelegatorDesc: UnaryMethodDefinitionish = {
   methodName: "SuperfluidDelegationsByDelegator",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return SuperfluidDelegationsByDelegatorRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...SuperfluidDelegationsByDelegatorResponse.decode(data),
@@ -332,19 +332,19 @@ export const QuerySuperfluidDelegationsByDelegatorDesc: UnaryMethodDefinitionish
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QuerySuperfluidUndelegationsByDelegatorDesc: UnaryMethodDefinitionish = {
   methodName: "SuperfluidUndelegationsByDelegator",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return SuperfluidUndelegationsByDelegatorRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...SuperfluidUndelegationsByDelegatorResponse.decode(data),
@@ -353,19 +353,19 @@ export const QuerySuperfluidUndelegationsByDelegatorDesc: UnaryMethodDefinitioni
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QuerySuperfluidDelegationsByValidatorDenomDesc: UnaryMethodDefinitionish = {
   methodName: "SuperfluidDelegationsByValidatorDenom",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return SuperfluidDelegationsByValidatorDenomRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...SuperfluidDelegationsByValidatorDenomResponse.decode(data),
@@ -374,19 +374,19 @@ export const QuerySuperfluidDelegationsByValidatorDenomDesc: UnaryMethodDefiniti
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryEstimateSuperfluidDelegatedAmountByValidatorDenomDesc: UnaryMethodDefinitionish = {
   methodName: "EstimateSuperfluidDelegatedAmountByValidatorDenom",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return EstimateSuperfluidDelegatedAmountByValidatorDenomRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...EstimateSuperfluidDelegatedAmountByValidatorDenomResponse.decode(data),
@@ -395,19 +395,19 @@ export const QueryEstimateSuperfluidDelegatedAmountByValidatorDenomDesc: UnaryMe
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryTotalDelegationByDelegatorDesc: UnaryMethodDefinitionish = {
   methodName: "TotalDelegationByDelegator",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryTotalDelegationByDelegatorRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryTotalDelegationByDelegatorResponse.decode(data),
@@ -416,19 +416,19 @@ export const QueryTotalDelegationByDelegatorDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryUnpoolWhitelistDesc: UnaryMethodDefinitionish = {
   methodName: "UnpoolWhitelist",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryUnpoolWhitelistRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryUnpoolWhitelistResponse.decode(data),
@@ -437,7 +437,7 @@ export const QueryUnpoolWhitelistDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -477,7 +477,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

@@ -580,7 +580,7 @@ export const ResourceDescriptor = {
           message.nameField = reader.string();
           break;
         case 4:
-          message.history = (reader.int32() as any);
+          message.history = reader.int32() as any;
           break;
         case 5:
           message.plural = reader.string();
@@ -592,10 +592,10 @@ export const ResourceDescriptor = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.style.push((reader.int32() as any));
+              message.style.push(reader.int32() as any);
             }
           } else {
-            message.style.push((reader.int32() as any));
+            message.style.push(reader.int32() as any);
           }
           break;
         default:

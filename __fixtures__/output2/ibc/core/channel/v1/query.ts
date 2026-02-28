@@ -819,10 +819,10 @@ export const QueryChannelConsensusStateRequest = {
           message.channelId = reader.string();
           break;
         case 3:
-          message.revisionNumber = (reader.uint64() as Long);
+          message.revisionNumber = reader.uint64() as Long;
           break;
         case 4:
-          message.revisionHeight = (reader.uint64() as Long);
+          message.revisionHeight = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -965,7 +965,7 @@ export const QueryPacketCommitmentRequest = {
           message.channelId = reader.string();
           break;
         case 3:
-          message.sequence = (reader.uint64() as Long);
+          message.sequence = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1229,7 +1229,7 @@ export const QueryPacketReceiptRequest = {
           message.channelId = reader.string();
           break;
         case 3:
-          message.sequence = (reader.uint64() as Long);
+          message.sequence = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1359,7 +1359,7 @@ export const QueryPacketAcknowledgementRequest = {
           message.channelId = reader.string();
           break;
         case 3:
-          message.sequence = (reader.uint64() as Long);
+          message.sequence = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1501,10 +1501,10 @@ export const QueryPacketAcknowledgementsRequest = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.packetCommitmentSequences.push((reader.uint64() as Long));
+              message.packetCommitmentSequences.push(reader.uint64() as Long);
             }
           } else {
-            message.packetCommitmentSequences.push((reader.uint64() as Long));
+            message.packetCommitmentSequences.push(reader.uint64() as Long);
           }
           break;
         default:
@@ -1651,10 +1651,10 @@ export const QueryUnreceivedPacketsRequest = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.packetCommitmentSequences.push((reader.uint64() as Long));
+              message.packetCommitmentSequences.push(reader.uint64() as Long);
             }
           } else {
-            message.packetCommitmentSequences.push((reader.uint64() as Long));
+            message.packetCommitmentSequences.push(reader.uint64() as Long);
           }
           break;
         default:
@@ -1719,10 +1719,10 @@ export const QueryUnreceivedPacketsResponse = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.sequences.push((reader.uint64() as Long));
+              message.sequences.push(reader.uint64() as Long);
             }
           } else {
-            message.sequences.push((reader.uint64() as Long));
+            message.sequences.push(reader.uint64() as Long);
           }
           break;
         case 2:
@@ -1797,10 +1797,10 @@ export const QueryUnreceivedAcksRequest = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.packetAckSequences.push((reader.uint64() as Long));
+              message.packetAckSequences.push(reader.uint64() as Long);
             }
           } else {
-            message.packetAckSequences.push((reader.uint64() as Long));
+            message.packetAckSequences.push(reader.uint64() as Long);
           }
           break;
         default:
@@ -1865,10 +1865,10 @@ export const QueryUnreceivedAcksResponse = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.sequences.push((reader.uint64() as Long));
+              message.sequences.push(reader.uint64() as Long);
             }
           } else {
-            message.sequences.push((reader.uint64() as Long));
+            message.sequences.push(reader.uint64() as Long);
           }
           break;
         case 2:
@@ -1987,7 +1987,7 @@ export const QueryNextSequenceReceiveResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.nextSequenceReceive = (reader.uint64() as Long);
+          message.nextSequenceReceive = reader.uint64() as Long;
           break;
         case 2:
           message.proof = reader.bytes();

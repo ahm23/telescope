@@ -246,7 +246,7 @@ export const AccessTypeParam = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.value = (reader.int32() as any);
+          message.value = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);
@@ -305,7 +305,7 @@ export const AccessConfig = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.permission = (reader.int32() as any);
+          message.permission = reader.int32() as any;
           break;
         case 2:
           message.address = reader.string();
@@ -379,10 +379,10 @@ export const Params = {
           message.codeUploadAccess = AccessConfig.decode(reader, reader.uint32());
           break;
         case 2:
-          message.instantiateDefaultPermission = (reader.int32() as any);
+          message.instantiateDefaultPermission = reader.int32() as any;
           break;
         case 3:
-          message.maxWasmCodeSize = (reader.uint64() as Long);
+          message.maxWasmCodeSize = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -550,7 +550,7 @@ export const ContractInfo = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.codeId = (reader.uint64() as Long);
+          message.codeId = reader.uint64() as Long;
           break;
         case 2:
           message.creator = reader.string();
@@ -665,10 +665,10 @@ export const ContractCodeHistoryEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.operation = (reader.int32() as any);
+          message.operation = reader.int32() as any;
           break;
         case 2:
-          message.codeId = (reader.uint64() as Long);
+          message.codeId = reader.uint64() as Long;
           break;
         case 3:
           message.updated = AbsoluteTxPosition.decode(reader, reader.uint32());
@@ -748,10 +748,10 @@ export const AbsoluteTxPosition = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.blockHeight = (reader.uint64() as Long);
+          message.blockHeight = reader.uint64() as Long;
           break;
         case 2:
-          message.txIndex = (reader.uint64() as Long);
+          message.txIndex = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

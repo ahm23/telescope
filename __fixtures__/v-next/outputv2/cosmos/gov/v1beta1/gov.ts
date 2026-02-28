@@ -660,7 +660,7 @@ export const WeightedVoteOption = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.option = (reader.int32() as any);
+          message.option = reader.int32() as any;
           break;
         case 2:
           message.weight = Decimal.fromAtomics(reader.string(), 18).toString();
@@ -1102,7 +1102,7 @@ export const Proposal = {
           message.content = GlobalDecoderRegistry.unwrapAny(reader);
           break;
         case 3:
-          message.status = (reader.int32() as any);
+          message.status = reader.int32() as any;
           break;
         case 4:
           message.finalTallyResult = TallyResult.decode(reader, reader.uint32());
@@ -1500,7 +1500,7 @@ export const Vote = {
           message.voter = reader.string();
           break;
         case 3:
-          message.option = (reader.int32() as any);
+          message.option = reader.int32() as any;
           break;
         case 4:
           message.options.push(WeightedVoteOption.decode(reader, reader.uint32()));

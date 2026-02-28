@@ -13,7 +13,7 @@ import {
   createRpcClientInterface,
   createRpcQueryExtension,
 } from "@cosmology/ast";
-import { BundlerFile } from "src/types";
+import { BundlerFile } from "../types";
 import { camel, getQueryMethodNames, swapKeyValue } from "@cosmology/utils";
 import { getExportedTypeNames } from "../utils/files";
 

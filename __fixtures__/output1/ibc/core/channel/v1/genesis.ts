@@ -113,7 +113,7 @@ export const GenesisState = {
           message.ackSequences.push(PacketSequence.decode(reader, reader.uint32()));
           break;
         case 8:
-          message.nextChannelSequence = (reader.uint64() as Long);
+          message.nextChannelSequence = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -273,7 +273,7 @@ export const PacketSequence = {
           message.channelId = reader.string();
           break;
         case 3:
-          message.sequence = (reader.uint64() as Long);
+          message.sequence = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

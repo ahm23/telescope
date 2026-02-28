@@ -10,21 +10,21 @@ import { LCDQueryClient } from "./query.lcd.js";
 export const usePiniaStore = defineStore('osmosis/gamm/v1beta1/query.proto', {
   state: () => {
     return {
-      pools: ({} as QueryPoolsResponseSDKType),
-      numPools: ({} as QueryNumPoolsResponseSDKType),
-      totalLiquidity: ({} as QueryTotalLiquidityResponseSDKType),
-      poolsWithFilter: ({} as QueryPoolsWithFilterResponseSDKType),
-      pool: ({} as QueryPoolResponseSDKType),
-      poolType: ({} as QueryPoolTypeResponseSDKType),
-      calcJoinPoolNoSwapShares: ({} as QueryCalcJoinPoolNoSwapSharesResponseSDKType),
-      calcJoinPoolShares: ({} as QueryCalcJoinPoolSharesResponseSDKType),
-      calcExitPoolCoinsFromShares: ({} as QueryCalcExitPoolCoinsFromSharesResponseSDKType),
-      poolParams: ({} as QueryPoolParamsResponseSDKType),
-      totalPoolLiquidity: ({} as QueryTotalPoolLiquidityResponseSDKType),
-      totalShares: ({} as QueryTotalSharesResponseSDKType),
-      spotPrice: ({} as QuerySpotPriceResponseSDKType),
-      estimateSwapExactAmountIn: ({} as QuerySwapExactAmountInResponseSDKType),
-      estimateSwapExactAmountOut: ({} as QuerySwapExactAmountOutResponseSDKType)
+      pools: {} as QueryPoolsResponseSDKType,
+      numPools: {} as QueryNumPoolsResponseSDKType,
+      totalLiquidity: {} as QueryTotalLiquidityResponseSDKType,
+      poolsWithFilter: {} as QueryPoolsWithFilterResponseSDKType,
+      pool: {} as QueryPoolResponseSDKType,
+      poolType: {} as QueryPoolTypeResponseSDKType,
+      calcJoinPoolNoSwapShares: {} as QueryCalcJoinPoolNoSwapSharesResponseSDKType,
+      calcJoinPoolShares: {} as QueryCalcJoinPoolSharesResponseSDKType,
+      calcExitPoolCoinsFromShares: {} as QueryCalcExitPoolCoinsFromSharesResponseSDKType,
+      poolParams: {} as QueryPoolParamsResponseSDKType,
+      totalPoolLiquidity: {} as QueryTotalPoolLiquidityResponseSDKType,
+      totalShares: {} as QueryTotalSharesResponseSDKType,
+      spotPrice: {} as QuerySpotPriceResponseSDKType,
+      estimateSwapExactAmountIn: {} as QuerySwapExactAmountInResponseSDKType,
+      estimateSwapExactAmountOut: {} as QuerySwapExactAmountOutResponseSDKType
     };
   },
   getters: {

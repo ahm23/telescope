@@ -116,12 +116,12 @@ export const QueryValidatorsDesc: UnaryMethodDefinitionish = {
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryValidatorsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryValidatorsResponse.decode(data),
@@ -130,19 +130,19 @@ export const QueryValidatorsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryValidatorDesc: UnaryMethodDefinitionish = {
   methodName: "Validator",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryValidatorRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryValidatorResponse.decode(data),
@@ -151,19 +151,19 @@ export const QueryValidatorDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryValidatorDelegationsDesc: UnaryMethodDefinitionish = {
   methodName: "ValidatorDelegations",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryValidatorDelegationsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryValidatorDelegationsResponse.decode(data),
@@ -172,19 +172,19 @@ export const QueryValidatorDelegationsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryValidatorUnbondingDelegationsDesc: UnaryMethodDefinitionish = {
   methodName: "ValidatorUnbondingDelegations",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryValidatorUnbondingDelegationsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryValidatorUnbondingDelegationsResponse.decode(data),
@@ -193,19 +193,19 @@ export const QueryValidatorUnbondingDelegationsDesc: UnaryMethodDefinitionish = 
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDelegationDesc: UnaryMethodDefinitionish = {
   methodName: "Delegation",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDelegationRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDelegationResponse.decode(data),
@@ -214,19 +214,19 @@ export const QueryDelegationDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryUnbondingDelegationDesc: UnaryMethodDefinitionish = {
   methodName: "UnbondingDelegation",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryUnbondingDelegationRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryUnbondingDelegationResponse.decode(data),
@@ -235,19 +235,19 @@ export const QueryUnbondingDelegationDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDelegatorDelegationsDesc: UnaryMethodDefinitionish = {
   methodName: "DelegatorDelegations",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDelegatorDelegationsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDelegatorDelegationsResponse.decode(data),
@@ -256,19 +256,19 @@ export const QueryDelegatorDelegationsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDelegatorUnbondingDelegationsDesc: UnaryMethodDefinitionish = {
   methodName: "DelegatorUnbondingDelegations",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDelegatorUnbondingDelegationsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDelegatorUnbondingDelegationsResponse.decode(data),
@@ -277,19 +277,19 @@ export const QueryDelegatorUnbondingDelegationsDesc: UnaryMethodDefinitionish = 
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryRedelegationsDesc: UnaryMethodDefinitionish = {
   methodName: "Redelegations",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryRedelegationsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryRedelegationsResponse.decode(data),
@@ -298,19 +298,19 @@ export const QueryRedelegationsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDelegatorValidatorsDesc: UnaryMethodDefinitionish = {
   methodName: "DelegatorValidators",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDelegatorValidatorsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDelegatorValidatorsResponse.decode(data),
@@ -319,19 +319,19 @@ export const QueryDelegatorValidatorsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryDelegatorValidatorDesc: UnaryMethodDefinitionish = {
   methodName: "DelegatorValidator",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryDelegatorValidatorRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryDelegatorValidatorResponse.decode(data),
@@ -340,19 +340,19 @@ export const QueryDelegatorValidatorDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryHistoricalInfoDesc: UnaryMethodDefinitionish = {
   methodName: "HistoricalInfo",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryHistoricalInfoRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryHistoricalInfoResponse.decode(data),
@@ -361,19 +361,19 @@ export const QueryHistoricalInfoDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryPoolDesc: UnaryMethodDefinitionish = {
   methodName: "Pool",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryPoolRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryPoolResponse.decode(data),
@@ -382,19 +382,19 @@ export const QueryPoolDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export const QueryParamsDesc: UnaryMethodDefinitionish = {
   methodName: "Params",
   service: QueryDesc,
   requestStream: false,
   responseStream: false,
-  requestType: ({
+  requestType: {
     serializeBinary() {
       return QueryParamsRequest.encode(this).finish();
     }
-  } as any),
-  responseType: ({
+  } as any,
+  responseType: {
     deserializeBinary(data: Uint8Array) {
       return {
         ...QueryParamsResponse.decode(data),
@@ -403,7 +403,7 @@ export const QueryParamsDesc: UnaryMethodDefinitionish = {
         }
       };
     }
-  } as any)
+  } as any
 };
 export interface Rpc {
   unary<T extends UnaryMethodDefinitionish>(methodDesc: T, request: any, metadata: grpc.Metadata | undefined): Promise<any>;
@@ -443,7 +443,7 @@ export class GrpcWebImpl {
           if (response.status === grpc.Code.OK) {
             resolve(response.message);
           } else {
-            const err = (new Error(response.statusMessage) as any);
+            const err = new Error(response.statusMessage) as any;
             err.code = response.status;
             err.metadata = response.trailers;
             reject(err);

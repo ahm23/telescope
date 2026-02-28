@@ -2964,10 +2964,10 @@ export const FieldDescriptorProto = {
           message.number = reader.int32();
           break;
         case 4:
-          message.label = (reader.int32() as any);
+          message.label = reader.int32() as any;
           break;
         case 5:
-          message.type = (reader.int32() as any);
+          message.type = reader.int32() as any;
           break;
         case 6:
           message.typeName = reader.string();
@@ -4139,7 +4139,7 @@ export const FileOptions = {
           message.javaStringCheckUtf8 = reader.bool();
           break;
         case 9:
-          message.optimizeFor = (reader.int32() as any);
+          message.optimizeFor = reader.int32() as any;
           break;
         case 11:
           message.goPackage = reader.string();
@@ -4682,13 +4682,13 @@ export const FieldOptions = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.ctype = (reader.int32() as any);
+          message.ctype = reader.int32() as any;
           break;
         case 2:
           message.packed = reader.bool();
           break;
         case 6:
-          message.jstype = (reader.int32() as any);
+          message.jstype = reader.int32() as any;
           break;
         case 5:
           message.lazy = reader.bool();
@@ -5354,7 +5354,7 @@ export const MethodOptions = {
           message.deprecated = reader.bool();
           break;
         case 34:
-          message.idempotencyLevel = (reader.int32() as any);
+          message.idempotencyLevel = reader.int32() as any;
           break;
         case 999:
           message.uninterpretedOption.push(UninterpretedOption.decode(reader, reader.uint32()));
@@ -6393,7 +6393,7 @@ export const FeatureSet = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 4:
-          message.utf8Validation = (reader.int32() as any);
+          message.utf8Validation = reader.int32() as any;
           break;
         default:
           reader.skipType(tag & 7);

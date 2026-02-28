@@ -95,7 +95,7 @@ export const QueryPoolsResponse = {
   },
   fromPartial(object: Partial<QueryPoolsResponse>): QueryPoolsResponse {
     const message = createBaseQueryPoolsResponse();
-    message.pools = object.pools?.map(e => (GlobalDecoderRegistry.fromPartial(e) as any)) || [];
+    message.pools = object.pools?.map(e => GlobalDecoderRegistry.fromPartial(e) as any) || [];
     message.pagination = object.pagination !== undefined && object.pagination !== null ? PageResponse.fromPartial(object.pagination) : undefined;
     return message;
   },

@@ -192,16 +192,16 @@ export const Value = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.nullValue = (reader.int32() as any);
+          message.nullValue = reader.int32() as any;
           break;
         case 2:
           message.boolValue = reader.bool();
           break;
         case 3:
-          message.int64Value = (reader.int64() as Long);
+          message.int64Value = reader.int64() as Long;
           break;
         case 4:
-          message.uint64Value = (reader.uint64() as Long);
+          message.uint64Value = reader.uint64() as Long;
           break;
         case 5:
           message.doubleValue = reader.double();

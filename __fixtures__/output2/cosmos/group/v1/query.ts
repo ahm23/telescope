@@ -190,7 +190,7 @@ export const QueryGroupInfoRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.groupId = (reader.uint64() as Long);
+          message.groupId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -374,7 +374,7 @@ export const QueryGroupMembersRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.groupId = (reader.uint64() as Long);
+          message.groupId = reader.uint64() as Long;
           break;
         case 2:
           message.pagination = PageRequest.decode(reader, reader.uint32());
@@ -602,7 +602,7 @@ export const QueryGroupPoliciesByGroupRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.groupId = (reader.uint64() as Long);
+          message.groupId = reader.uint64() as Long;
           break;
         case 2:
           message.pagination = PageRequest.decode(reader, reader.uint32());
@@ -826,7 +826,7 @@ export const QueryProposalRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.proposalId = (reader.uint64() as Long);
+          message.proposalId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -1034,7 +1034,7 @@ export const QueryVoteByProposalVoterRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.proposalId = (reader.uint64() as Long);
+          message.proposalId = reader.uint64() as Long;
           break;
         case 2:
           message.voter = reader.string();
@@ -1134,7 +1134,7 @@ export const QueryVotesByProposalRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.proposalId = (reader.uint64() as Long);
+          message.proposalId = reader.uint64() as Long;
           break;
         case 2:
           message.pagination = PageRequest.decode(reader, reader.uint32());
@@ -1472,7 +1472,7 @@ export const QueryTallyResultRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.proposalId = (reader.uint64() as Long);
+          message.proposalId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);

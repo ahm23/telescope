@@ -1,14 +1,7 @@
 {
-  "lerna": "3.4.2",
-  "conventionalCommits": true,
-  "npmClient": "yarn",
-  "npmClientArgs": [
-    "--no-lockfile"
-  ],
-  "packages": [
-    "packages/*"
-  ],
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "version": "independent",
+  "npmClient": "pnpm",
   "registry": "https://registry.npmjs.org",
   "command": {
     "create": {
@@ -16,9 +9,13 @@
       "license": "MIT",
       "access": "restricted"
     },
+    "version": {
+      "syncWorkspaceLock": true
+    },
     "publish": {
       "allowBranch": "main",
-      "message": "chore(release): publish"
+      "message": "chore(release): publish",
+      "conventionalCommits": true
     }
   }
 }

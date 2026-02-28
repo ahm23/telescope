@@ -82,7 +82,7 @@ export const Snapshot = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.height = (reader.uint64() as Long);
+          message.height = reader.uint64() as Long;
           break;
         case 2:
           message.format = reader.uint32();
@@ -338,7 +338,7 @@ export const SnapshotIAVLItem = {
           message.value = reader.bytes();
           break;
         case 3:
-          message.version = (reader.int64() as Long);
+          message.version = reader.int64() as Long;
           break;
         case 4:
           message.height = reader.int32();

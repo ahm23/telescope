@@ -82,7 +82,7 @@ export const MsgSuperfluidDelegate = {
           message.sender = reader.string();
           break;
         case 2:
-          message.lockId = (reader.uint64() as Long);
+          message.lockId = reader.uint64() as Long;
           break;
         case 3:
           message.valAddr = reader.string();
@@ -176,7 +176,7 @@ export const MsgSuperfluidUndelegate = {
           message.sender = reader.string();
           break;
         case 2:
-          message.lockId = (reader.uint64() as Long);
+          message.lockId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -264,7 +264,7 @@ export const MsgSuperfluidUnbondLock = {
           message.sender = reader.string();
           break;
         case 2:
-          message.lockId = (reader.uint64() as Long);
+          message.lockId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -414,7 +414,7 @@ export const MsgLockAndSuperfluidDelegateResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.iD = (reader.uint64() as Long);
+          message.iD = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -466,7 +466,7 @@ export const MsgUnPoolWhitelistedPool = {
           message.sender = reader.string();
           break;
         case 2:
-          message.poolId = (reader.uint64() as Long);
+          message.poolId = reader.uint64() as Long;
           break;
         default:
           reader.skipType(tag & 7);
@@ -519,10 +519,10 @@ export const MsgUnPoolWhitelistedPoolResponse = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.exitedLockIds.push((reader.uint64() as Long));
+              message.exitedLockIds.push(reader.uint64() as Long);
             }
           } else {
-            message.exitedLockIds.push((reader.uint64() as Long));
+            message.exitedLockIds.push(reader.uint64() as Long);
           }
           break;
         default:

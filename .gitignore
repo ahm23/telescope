@@ -10,3 +10,4 @@ packages/**/module
 .idea/
 __fixtures__/misc/proto-download/**
 .vscode
+pnpm-debug.log*

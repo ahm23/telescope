@@ -148,7 +148,7 @@ export const Pool = {
           message.address = reader.string();
           break;
         case 2:
-          message.id = (reader.uint64() as Long);
+          message.id = reader.uint64() as Long;
           break;
         case 3:
           message.poolParams = PoolParams.decode(reader, reader.uint32());
@@ -166,10 +166,10 @@ export const Pool = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.scalingFactors.push((reader.uint64() as Long));
+              message.scalingFactors.push(reader.uint64() as Long);
             }
           } else {
-            message.scalingFactors.push((reader.uint64() as Long));
+            message.scalingFactors.push(reader.uint64() as Long);
           }
           break;
         case 8:

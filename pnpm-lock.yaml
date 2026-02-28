@@ -9,7 +9,7 @@ overrides:
 
 patchedDependencies:
   '@chain-registry/client@2.0.162':
-    hash: igyrvcozmn7l7vbloj5n2uuze4
+    hash: 28d5be33d0b2a466f7eb6697e3715ed4a667f432a9dbd010b3eee78b6907cdb0
     path: patches/@chain-registry__client@2.0.162.patch
 
 importers:
@@ -5194,7 +5194,7 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@chain-registry/client@2.0.162(patch_hash=igyrvcozmn7l7vbloj5n2uuze4)(encoding@0.1.13)':
+  '@chain-registry/client@2.0.162(patch_hash=28d5be33d0b2a466f7eb6697e3715ed4a667f432a9dbd010b3eee78b6907cdb0)(encoding@0.1.13)':
     dependencies:
       '@chain-registry/types': 2.0.162
       '@chain-registry/utils': 2.0.162
@@ -10222,7 +10222,7 @@ snapshots:
 
   starshipjs@3.14.1(encoding@0.1.13):
     dependencies:
-      '@chain-registry/client': 2.0.162(patch_hash=igyrvcozmn7l7vbloj5n2uuze4)(encoding@0.1.13)
+      '@chain-registry/client': 2.0.162(patch_hash=28d5be33d0b2a466f7eb6697e3715ed4a667f432a9dbd010b3eee78b6907cdb0)(encoding@0.1.13)
       '@starship-ci/types': 3.14.0
       bip39: 3.1.0
       js-yaml: 4.1.0

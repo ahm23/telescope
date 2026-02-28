@@ -49,7 +49,10 @@
   },
   "pnpm": {
     "overrides": {
-      "@chain-registry/client": "1.18.1"
+      "@chain-registry/client": "2.0.162"
+    },
+    "patchedDependencies": {
+      "@chain-registry/client@2.0.162": "patches/@chain-registry__client@2.0.162.patch"
     }
   }
 }

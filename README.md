@@ -142,7 +142,7 @@ For detailed CLI `generate` commands, please refer to our documentation.
 You can download proto files using the `download-protos` command provided in the boilerplate:
 
 ```sh
-yarn download-protos
+pnpm download-protos
 ```
 
 After running this command, you'll see:
@@ -153,10 +153,10 @@ These proto files are downloaded based on your configuration. For detailed CLI `
 
 ### Transpile
 
-To generate TypeScript files for your chain, run the `yarn codegen` command:
+To generate TypeScript files for your chain, run the `pnpm codegen` command:
 
 ```sh
-yarn codegen
+pnpm codegen
 ```
 
 ### Build
@@ -164,8 +164,8 @@ yarn codegen
 Finally, build your package to generate JavaScript files and TypeScript definitions:
 
 ```sh
-yarn install
-yarn build
+pnpm install
+pnpm build
 ```
 
 ### Publishing
@@ -374,28 +374,28 @@ Next, navigate to the `./your-project/packages/telescope` directory.
 
 Install dependencies and download the proto files you need:
 ```sh
-yarn install
+pnpm install
 telescope download --config ./your.config.json
 ```
 
 Generate TypeScript files for your chain:
 
 ```sh
-yarn codegen
+pnpm codegen
 ```
 
 ### Manual Install
 
 To use Telescope in an existing project, run the following command in your project directory:
 ```sh
-yarn add --dev @hyperweb/telescope
+pnpm add --save-dev @hyperweb/telescope
 ```
 Also install the required helpers and CosmJS [dependencies listed here](#dependencies).
 
 We recommend using [Programmatic Usage](#programmatic-usage) for better integration.
 
-You can also use the [Telescope CLI](#telescope-cli). When using CLI commands within your project, prefix them with `npx` or `yarn`. For example:
-- `yarn telescope generate`
+You can also use the [Telescope CLI](#telescope-cli). When using CLI commands within your project, prefix them with `npx` or `pnpm`. For example:
+- `pnpm telescope generate`
 - `npx telescope download`
 
 ### Programmatic Usage
@@ -403,7 +403,7 @@ You can also use the [Telescope CLI](#telescope-cli). When using CLI commands wi
 First add telescope to your `devDependencies`:
 
 ```sh
-yarn add --dev @hyperweb/telescope
+pnpm add --save-dev @hyperweb/telescope
 ```
 
 Install the required helpers and CosmJS [dependencies listed here](#dependencies).
@@ -1504,7 +1504,7 @@ If you don't use the boilerplate, you will need to manually install
 * `@cosmjs/tendermint-rpc`
 
 ```sh
-yarn add @cosmjs/amino @cosmjs/proto-signing @cosmjs/stargate @cosmjs/tendermint-rpc
+pnpm add @cosmjs/amino @cosmjs/proto-signing @cosmjs/stargate @cosmjs/tendermint-rpc
 ```
 
 If you use the LCD Client generation, you'll need to add
@@ -1512,7 +1512,7 @@ If you use the LCD Client generation, you'll need to add
 * `@cosmology/lcd`
 
 ```sh
-yarn add @cosmology/lcd
+pnpm add @cosmology/lcd
 ```
 
 ## Troubleshooting

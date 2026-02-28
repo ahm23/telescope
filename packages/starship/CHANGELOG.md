@@ -3,13 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/hyperweb-io/telescope/compare/@cosmology/starship-test@2.1.0...@cosmology/starship-test@2.2.0) (2026-02-28)
+
+### Bug Fixes
+
+- add modulePathIgnorePatterns and moduleNameMapper for jest + dist/ compat ([1eb9e5a](https://github.com/hyperweb-io/telescope/commit/1eb9e5a371b44c6f6f42e3e2ca0deafdd98b8575))
+- update starship tests and utils for @chain-registry/client v2 camelCase API ([d5132b7](https://github.com/hyperweb-io/telescope/commit/d5132b75a46ab912278dbdbd365d29766d791b13))
+
 # [2.1.0](https://github.com/osmosis-labs/telescope/compare/@cosmology/starship-test@2.0.4...@cosmology/starship-test@2.1.0) (2025-12-11)
 
 **Note:** Version bump only for package @cosmology/starship-test
-
-
-
-
 
 ## [2.0.4](https://github.com/osmosis-labs/telescope/compare/@cosmology/starship-test@2.0.3...@cosmology/starship-test@2.0.4) (2025-11-11)
 

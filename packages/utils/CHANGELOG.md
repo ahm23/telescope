@@ -3,29 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/hyperweb-io/telescope/compare/@cosmology/utils@2.1.0...@cosmology/utils@2.2.0) (2026-02-28)
+
+### Bug Fixes
+
+- add modulePathIgnorePatterns and moduleNameMapper for jest + dist/ compat ([1eb9e5a](https://github.com/hyperweb-io/telescope/commit/1eb9e5a371b44c6f6f42e3e2ca0deafdd98b8575))
+- update snapshots and fixtures for @babel/generator 7.29, add jest-in-case ([c513eb1](https://github.com/hyperweb-io/telescope/commit/c513eb18ced38d1908dfaf4850baac7c139a1274))
+
 # [2.1.0](https://github.com/hyperweb-io/telescope/compare/@cosmology/utils@2.0.2...@cosmology/utils@2.1.0) (2025-12-11)
 
 **Note:** Version bump only for package @cosmology/utils
-
-
-
-
 
 ## [2.0.2](https://github.com/hyperweb-io/telescope/compare/@cosmology/utils@2.0.1...@cosmology/utils@2.0.2) (2025-10-16)
 
 **Note:** Version bump only for package @cosmology/utils
 
-
-
-
-
 ## [2.0.1](https://github.com/hyperweb-io/telescope/compare/@cosmology/utils@2.0.0...@cosmology/utils@2.0.1) (2025-10-16)
 
 **Note:** Version bump only for package @cosmology/utils
-
-
-
-
 
 # [2.0.0](https://github.com/hyperweb-io/telescope/compare/@cosmology/utils@1.11.2...@cosmology/utils@2.0.0) (2025-08-25)
 

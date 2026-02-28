@@ -3,21 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://github.com/hyperweb-io/telescope/compare/@cosmology/lcd@0.15.0...@cosmology/lcd@0.16.0) (2026-02-28)
+
+### Bug Fixes
+
+- add modulePathIgnorePatterns and moduleNameMapper for jest + dist/ compat ([1eb9e5a](https://github.com/hyperweb-io/telescope/commit/1eb9e5a371b44c6f6f42e3e2ca0deafdd98b8575))
+
 # [0.15.0](https://github.com/hyperweb-io/telescope/compare/@cosmology/lcd@0.14.5...@cosmology/lcd@0.15.0) (2025-12-11)
 
 **Note:** Version bump only for package @cosmology/lcd
 
-
-
-
-
 ## [0.14.5](https://github.com/hyperweb-io/telescope/compare/@cosmology/lcd@0.14.4...@cosmology/lcd@0.14.5) (2025-10-16)
 
 **Note:** Version bump only for package @cosmology/lcd
-
-
-
-
 
 ## [0.14.4](https://github.com/hyperweb-io/telescope/compare/@cosmology/lcd@0.14.3...@cosmology/lcd@0.14.4) (2025-03-13)
 

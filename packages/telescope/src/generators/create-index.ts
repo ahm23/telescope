@@ -4,10 +4,10 @@ import { mkdirp } from "mkdirp";
 import { TelescopeBuilder } from "../builder";
 import * as t from "@babel/types";
 import generate from "@babel/generator";
-//@ts-ignore
-import pkg from "../../package.json";
+import { findAndRequirePackageJson } from "find-and-require-package-json";
 import { writeContentToFile } from "../utils/files";
 
+const pkg = findAndRequirePackageJson(__dirname);
 const version = process.env.NODE_ENV === "test" ? "latest" : pkg.version;
 
 export const plugin = (builder: TelescopeBuilder) => {

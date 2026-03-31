@@ -1,15 +1,15 @@
 import { prompt } from './prompt';
 import { Commands as commands } from './cmds';
-import * as pkg from '../package.json';
+import { findAndRequirePackageJson } from 'find-and-require-package-json';
 import type { ParsedArgs } from 'minimist';
+
+const pkg = findAndRequirePackageJson(__dirname);
 
 export const cli = async (argv: ParsedArgs) => {
   if (argv.v || argv.version) {
     console.log(pkg.version);
     return;
   }
-
-
 
   console.log(`Telescope ${pkg.version}`);
   const { cmd } = await prompt(
@@ -19,8 +19,8 @@ export const cli = async (argv: ParsedArgs) => {
         type: 'fuzzy',
         name: 'cmd',
         message: 'what do you want to do?',
-        choices: Object.keys(commands)
-      }
+        choices: Object.keys(commands),
+      },
     ],
     argv
   );

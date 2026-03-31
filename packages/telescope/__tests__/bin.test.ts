@@ -9,4 +9,13 @@ describe('bin entry point', () => {
     const binPath = resolve(__dirname, '../dist', file);
     expect(existsSync(binPath)).toBe(true);
   });
+
+  it('telescope --version should print version', () => {
+    const binPath = resolve(__dirname, '../dist/telescope.js');
+    const output = require('child_process')
+      .execSync(`node ${binPath} --version`)
+      .toString()
+      .trim();
+    expect(output).toBe(pkg.version);
+  });
 });

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.3](https://github.com/hyperweb-io/telescope/compare/@hyperweb/telescope@2.2.2...@hyperweb/telescope@2.2.3) (2026-03-31)
+
+### Bug Fixes
+
+- use findAndRequirePackageJson to cli.ts ([e227147](https://github.com/hyperweb-io/telescope/commit/e2271475d6dfb1c828da4144201bd25f3256dabc))
+
 ## [2.2.2](https://github.com/hyperweb-io/telescope/compare/@hyperweb/telescope@2.2.1...@hyperweb/telescope@2.2.2) (2026-03-31)
 
 ### Bug Fixes

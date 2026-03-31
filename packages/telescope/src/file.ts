@@ -2,7 +2,9 @@
 import { prompt } from './prompt';
 import { cli } from './cli';
 import { readFileSync } from 'fs';
-const argv = require('minimist')(process.argv.slice(2));
+import minimist from 'minimist';
+
+const argv = minimist(process.argv.slice(2));
 
 const question = [
   {

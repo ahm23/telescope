@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2](https://github.com/hyperweb-io/telescope/compare/@hyperweb/telescope@2.2.1...@hyperweb/telescope@2.2.2) (2026-03-31)
+
+### Bug Fixes
+
+- include js files in tsconfig for cli.js (bin) to be shipped ([b70eaf7](https://github.com/hyperweb-io/telescope/commit/b70eaf77416d636c96bd93f6540f5fc4d6878959))
+
 ## [2.2.1](https://github.com/hyperweb-io/telescope/compare/@hyperweb/telescope@2.2.0...@hyperweb/telescope@2.2.1) (2026-03-04)
 
 **Note:** Version bump only for package @hyperweb/telescope

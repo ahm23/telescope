@@ -1,8 +1,8 @@
 import { filter } from 'fuzzy';
-import { prompt as inquirerer } from 'inquirerer';
+import { prompt as inquirerer, type InquirerQuestion } from 'inquirerer';
 
-export const getFuzzySearch = (list) => {
-  return (answers, input) => {
+export const getFuzzySearch = (list: string[]) => {
+  return (_answers: unknown, input?: string) => {
     input = input || '';
     return new Promise(function (resolve) {
       setTimeout(function () {
@@ -17,25 +17,35 @@ export const getFuzzySearch = (list) => {
   };
 };
 
-export const getFuzzySearchNames = (nameValueItemList) => {
-  const list = nameValueItemList.map(({ name, value }) => name);
-  return (answers, input) => {
+interface NameValueItem {
+  name: string;
+  value: unknown;
+}
+
+interface Question extends InquirerQuestion {
+  type?: string;
+  choices?: string[] | NameValueItem[];
+  source?: unknown;
+}
+
+export const getFuzzySearchNames = (nameValueItemList: NameValueItem[]) => {
+  const list = nameValueItemList.map(({ name }) => name);
+  return (_answers: unknown, input?: string) => {
     input = input || '';
     return new Promise(function (resolve) {
       setTimeout(function () {
         const fuzzyResult = filter(input, list);
         resolve(
           fuzzyResult.map(function (el) {
-            return nameValueItemList.find(
-              ({ name, value }) => el.original == name
-            );
+            return nameValueItemList.find(({ name }) => el.original == name);
           })
         );
       }, 25);
     });
   };
 };
-const transform = (questions) => {
+
+const transform = (questions: Question[]) => {
   return questions.map((q) => {
     if (q.type === 'fuzzy') {
       const choices = q.choices;
@@ -43,7 +53,7 @@ const transform = (questions) => {
       return {
         ...q,
         type: 'autocomplete',
-        source: getFuzzySearch(choices)
+        source: getFuzzySearch(choices as string[]),
       };
     } else if (q.type === 'fuzzy:objects') {
       const choices = q.choices;
@@ -51,7 +61,7 @@ const transform = (questions) => {
       return {
         ...q,
         type: 'autocomplete',
-        source: getFuzzySearchNames(choices)
+        source: getFuzzySearchNames(choices as NameValueItem[]),
       };
     } else {
       return q;
@@ -59,7 +69,10 @@ const transform = (questions) => {
   });
 };
 
-export const prompt = async (questions = [], argv = {}) => {
-  questions = transform(questions);
-  return await inquirerer(questions, argv);
+export const prompt = async (
+  questions: Question[] = [],
+  argv: unknown = {}
+) => {
+  const transformed = transform(questions);
+  return await inquirerer(transformed, argv);
 };

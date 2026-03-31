@@ -59,6 +59,7 @@
   },
   "devDependencies": {
     "@keplr-wallet/unit": "^0.12.53",
+    "@types/minimist": "^1.2.5",
     "ast-stringify": "0.1.0",
     "cross-env": "^7.0.2",
     "makage": "^0.1.12",

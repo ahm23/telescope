@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.4](https://github.com/hyperweb-io/telescope/compare/@hyperweb/telescope@2.2.3...@hyperweb/telescope@2.2.4) (2026-04-02)
+
+### Bug Fixes
+
+- restore DeliverTxResponse type in react-query mutation hooks ([e809102](https://github.com/hyperweb-io/telescope/commit/e8091023e64a1e6b2b6470dc2ea31a66a561aee1))
+
 ## [2.2.3](https://github.com/hyperweb-io/telescope/compare/@hyperweb/telescope@2.2.2...@hyperweb/telescope@2.2.3) (2026-03-31)
 
 ### Bug Fixes

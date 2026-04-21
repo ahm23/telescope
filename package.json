@@ -1,10 +1,10 @@
 {
-  "name": "telescope",
+  "name": "@atlas/telescope",
   "version": "0.0.1",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/hyperweb-io/telescope"
+    "url": "https://github.com/ahm23/telescope"
   },
   "license": "MIT",
   "publishConfig": {

@@ -1,7 +1,6 @@
 # Telescope 🔭
 
-> ⚠️ **Important**: Please upgrade to `@hyperweb/telescope` to leverage new features like generating MCP servers and agents for AI-powered blockchain interactions!
-**Update**: We have now updated '@hyperweb/telescope' to version 2.0 which now use interchainjs as the default dependency.
+> ⚠️ **Important**: This is a fork of `@hyperweb/telescope` intended to bring some non-standard features facilitating Web3.0 app development. An example of such would be providing the ability to generate int64 types as a standard Number and not a bigint or Long *(please don't do this for critical systems, just UI-related matters)*.
 
 <p align="center">
   <img width="280" src="https://user-images.githubusercontent.com/545047/175660665-5cbde84b-0928-4e59-ab56-be6adb2f3a7e.png"/>

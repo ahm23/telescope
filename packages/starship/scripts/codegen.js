@@ -1,5 +1,5 @@
 import { join } from 'path';
-import telescope from '@hyperweb/telescope';
+import telescope from '@ahm23/telescope';
 import { rimrafSync as rimraf } from 'rimraf';
 import { snake, camel } from "case";
 

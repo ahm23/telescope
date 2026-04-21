@@ -1,9 +1,9 @@
 {
-  "name": "@cosmology/proto-parser",
+  "name": "@ahm23/telescope-proto-parser",
   "version": "2.2.0",
   "description": "A Parser for Cosmos Protobufs",
   "author": "Constructive <developers@constructive.io>",
-  "homepage": "https://github.com/hyperweb-io/telescope",
+  "homepage": "https://github.com/ahm23/telescope",
   "license": "MIT",
   "main": "index.js",
   "module": "esm/index.js",
@@ -54,9 +54,9 @@
     "makage": "^0.1.12"
   },
   "dependencies": {
-    "@cosmology/protobufjs": "7.3.2",
-    "@cosmology/types": "workspace:*",
-    "@cosmology/utils": "workspace:*",
+    "@ahm23/telescope-protobufjs": "7.3.2",
+    "@ahm23/telescope-types": "workspace:*",
+    "@ahm23/telescope-utils": "workspace:*",
     "dotty": "0.1.2",
     "fast-json-patch": "3.1.1",
     "glob": "8.0.3",

@@ -1,9 +1,9 @@
 {
-  "name": "@cosmology/types",
+  "name": "@ahm23/telescope-types",
   "version": "2.2.0",
   "description": "Telescope types",
   "author": "Constructive <developers@constructive.io>",
-  "homepage": "https://github.com/hyperweb-io/telescope",
+  "homepage": "https://github.com/ahm23/telescope",
   "license": "MIT",
   "main": "index.js",
   "module": "esm/index.js",

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.1](https://github.com/ahm23/telescope/compare/@ahm23/telescope-lcd@0.17.0...@ahm23/telescope-lcd@0.17.1) (2026-04-22)
+
+**Note:** Version bump only for package @ahm23/telescope-lcd
+
 # 0.17.0 (2026-04-22)
 
 ### Bug Fixes

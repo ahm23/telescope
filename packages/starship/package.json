@@ -1,7 +1,7 @@
 {
   "name": "@ahm23/telescope-starship-test",
   "private": true,
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "E2E tests for telescope with Starship",
   "author": "Constructive <developers@constructive.io>",
   "homepage": "https://github.com/ahm23/telescope",

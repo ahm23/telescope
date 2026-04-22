@@ -1,6 +1,6 @@
 {
   "name": "@ahm23/telescope-proto-parser",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "A Parser for Cosmos Protobufs",
   "author": "Constructive <developers@constructive.io>",
   "homepage": "https://github.com/ahm23/telescope",

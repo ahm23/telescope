@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2026-04-22)
+
+### Bug Fixes
+
+- add modulePathIgnorePatterns and moduleNameMapper for jest + dist/ compat ([1eb9e5a](https://github.com/ahm23/telescope/commit/1eb9e5a371b44c6f6f42e3e2ca0deafdd98b8575))
+- flag names ([eed7fb3](https://github.com/ahm23/telescope/commit/eed7fb3b6f726ff3590b7919f6445298f98f07da))
+- refactor helper funcs ([f9c9bbf](https://github.com/ahm23/telescope/commit/f9c9bbf80023fa48c0bef5f1c78e955469d7b3be))
+- use correct var name for options ([f294fb9](https://github.com/ahm23/telescope/commit/f294fb936e1688e30a8b884db756693a80f52407))
+
+### Features
+
+- add conditional logic to change UTILS.decimals value ([cf5279b](https://github.com/ahm23/telescope/commit/cf5279bbc9afa52bae57cccb2961c945d64c9ad4))
+- add endo base64 lib support ([197da9e](https://github.com/ahm23/telescope/commit/197da9e3ea10c7dde76dcf31da4484be70498c6e))
+- add endo/base64 support ([a920d39](https://github.com/ahm23/telescope/commit/a920d39802b3c9fc45c12710c719f82adbdee04e))
+- add options to choose beteen cosmjs or agoric-sdk ([f4a4a6b](https://github.com/ahm23/telescope/commit/f4a4a6bc28ab413823dbf2c59caf5d8a28a14666))
+- num64 == "number" ([742de31](https://github.com/ahm23/telescope/commit/742de3102bc09b4e5d1aeb73b13fab82be1a1c05))
+
+### Reverts
+
+- Revert "RC versions ready" ([04081a9](https://github.com/ahm23/telescope/commit/04081a9d1f80feb3ae664bce2d1364850b3daaca))
+- Revert "chore(release): publish" ([086a55f](https://github.com/ahm23/telescope/commit/086a55f14c5ca33ee70a0e2121406dd37eb643f1))
+
 # [2.2.0](https://github.com/hyperweb-io/telescope/compare/@cosmology/types@2.1.0...@cosmology/types@2.2.0) (2026-02-28)
 
 ### Bug Fixes

@@ -1,7 +1,7 @@
 {
   "name": "@ahm23/telescope-starship-test",
   "private": true,
-  "version": "2.2.4",
+  "version": "2.2.5",
   "description": "E2E tests for telescope with Starship",
   "author": "Constructive <developers@constructive.io>",
   "homepage": "https://github.com/ahm23/telescope",
@@ -49,9 +49,9 @@
     "url": "https://github.com/hyperweb-io/telescope/issues"
   },
   "devDependencies": {
+    "@ahm23/telescope": "workspace:*",
     "@confio/relayer": "0.7.0",
     "@cosmjs/crypto": "0.29.4",
-    "@ahm23/telescope": "workspace:*",
     "@interchainjs/crypto": "1.17.1",
     "@protobufs/confio": "^0.0.6",
     "@protobufs/cosmos": "^0.0.11",
@@ -82,13 +82,13 @@
     "ts-node": "10.9.1"
   },
   "dependencies": {
+    "@ahm23/telescope-lcd": "workspace:*",
     "@chain-registry/v2": "^1.71.237",
     "@cosmjs/amino": "^0.32.0",
     "@cosmjs/proto-signing": "^0.32.0",
     "@cosmjs/stargate": "^0.32.0",
     "@cosmjs/tendermint-rpc": "^0.32.0",
     "@cosmology/core": "1.23.0",
-    "@ahm23/telescope-lcd": "workspace:*",
     "@keplr-wallet/unit": "0.11.56",
     "@tanstack/react-query": "4.29.1",
     "cosmjs-utils": "0.1.0",

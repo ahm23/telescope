@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.1 (2026-04-22)
+
+### Bug Fixes
+
+- add modulePathIgnorePatterns and moduleNameMapper for jest + dist/ compat ([1eb9e5a](https://github.com/ahm23/telescope/commit/1eb9e5a371b44c6f6f42e3e2ca0deafdd98b8575))
+- exclude .registry from bundle ([8c2ff6f](https://github.com/ahm23/telescope/commit/8c2ff6f39ecab9e3ee0bdc950701dccf17b9549a))
+- update snapshots and fixtures for @babel/generator 7.29, add jest-in-case ([c513eb1](https://github.com/ahm23/telescope/commit/c513eb18ced38d1908dfaf4850baac7c139a1274))
+
+### Reverts
+
+- Revert "RC versions ready" ([04081a9](https://github.com/ahm23/telescope/commit/04081a9d1f80feb3ae664bce2d1364850b3daaca))
+- Revert "chore(release): publish" ([086a55f](https://github.com/ahm23/telescope/commit/086a55f14c5ca33ee70a0e2121406dd37eb643f1))
+
 # [2.2.0](https://github.com/hyperweb-io/telescope/compare/@cosmology/proto-parser@2.1.0...@cosmology/proto-parser@2.2.0) (2026-02-28)
 
 ### Bug Fixes

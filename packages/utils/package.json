@@ -1,6 +1,6 @@
 {
   "name": "@ahm23/telescope-utils",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Telescope utils",
   "author": "Constructive <developers@constructive.io>",
   "homepage": "https://github.com/ahm23/telescope",
@@ -52,8 +52,8 @@
     "makage": "^0.1.12"
   },
   "dependencies": {
-    "@babel/types": "7.23.6",
     "@ahm23/telescope-types": "workspace:*",
+    "@babel/types": "7.23.6",
     "case": "1.6.3",
     "dotty": "0.1.2",
     "glob": "8.0.3",

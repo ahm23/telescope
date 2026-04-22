@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.5 (2026-04-22)
+
+### Bug Fixes
+
+- @cosmology/core dep ([bec6d6f](https://github.com/ahm23/telescope/commit/bec6d6f548480ca85cb14f56bbd7b6849aadaa73))
+- add modulePathIgnorePatterns and moduleNameMapper for jest + dist/ compat ([1eb9e5a](https://github.com/ahm23/telescope/commit/1eb9e5a371b44c6f6f42e3e2ca0deafdd98b8575))
+- update starship tests and utils for @chain-registry/client v2 camelCase API ([d5132b7](https://github.com/ahm23/telescope/commit/d5132b75a46ab912278dbdbd365d29766d791b13))
+
 ## [2.2.4](https://github.com/hyperweb-io/telescope/compare/@cosmology/starship-test@2.2.3...@cosmology/starship-test@2.2.4) (2026-04-02)
 
 **Note:** Version bump only for package @cosmology/starship-test

@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2026-04-22)
+
+### Bug Fixes
+
+- add modulePathIgnorePatterns and moduleNameMapper for jest + dist/ compat ([1eb9e5a](https://github.com/ahm23/telescope/commit/1eb9e5a371b44c6f6f42e3e2ca0deafdd98b8575))
+- amino enum handling ([0afc37b](https://github.com/ahm23/telescope/commit/0afc37b63a75cbb626602db2089de16325a300b1))
+- amino from-amino null handling ([9595e4b](https://github.com/ahm23/telescope/commit/9595e4bc75f58076584a86dcc299205aa4fae3b8))
+- amino omit empty ([d38a5c8](https://github.com/ahm23/telescope/commit/d38a5c81e014238461847bb95ca90477f4727170))
+- array fields ([45a6160](https://github.com/ahm23/telescope/commit/45a61606446381215666e5bb19a290a5d793c7c3))
+- decimal handling in amino ([36f37c3](https://github.com/ahm23/telescope/commit/36f37c3fe9f2e5d1428d48d6ffc08f2487ad837c))
+- fix ast export issue, add imports utils. ([a224606](https://github.com/ahm23/telescope/commit/a2246062dda6a5f1ec3c2953263a5c7aff2bb71d))
+- handle empty register stats ([2d775cc](https://github.com/ahm23/telescope/commit/2d775cc0cc784a24dc846bb1340d4b0ece2d74fb))
+- handle undefined ast in lcd.test.ts for cosmos/app/v1alpha1/query.proto ([662f4bc](https://github.com/ahm23/telescope/commit/662f4bcdac55c112aa64d59584a89bf294b80759))
+- minor ast adjustments ([e38bbb6](https://github.com/ahm23/telescope/commit/e38bbb610aeaf234602838d0f83368e6735a3eb2))
+- object empty check ([f7206f0](https://github.com/ahm23/telescope/commit/f7206f07d87a6da646435cf3244dfd8e731fa8d8))
+- optional field default value ([1590b18](https://github.com/ahm23/telescope/commit/1590b18a6d81fc2e767869ed366f6d0deaabad02))
+- optional field default value ([efc0dc7](https://github.com/ahm23/telescope/commit/efc0dc738e4df5fed65e8317acdaecef3906b746))
+- pass in ProtoServiceMethod type, use SigningClientResolver type, remove type aliases. ([620568c](https://github.com/ahm23/telescope/commit/620568c0e5d44b96d39c88a6293b16507a42ab9f))
+- prevent globalThis hoisting override in ESM ([d3d6944](https://github.com/ahm23/telescope/commit/d3d6944a800e954c3a2998ae65d81b55933ec7cb))
+- pubkey from amino functions ([fdcae94](https://github.com/ahm23/telescope/commit/fdcae94742e2a82a76fb0206b2357efc7a24a8c7))
+- refactor helper funcs ([f9c9bbf](https://github.com/ahm23/telescope/commit/f9c9bbf80023fa48c0bef5f1c78e955469d7b3be))
+- registerExistingTypeUrl ([7d75066](https://github.com/ahm23/telescope/commit/7d7506682df19929b5d6e31a5f92fb0f4501f8ef))
+- registerExistingTypeUrl ([1c6e5cd](https://github.com/ahm23/telescope/commit/1c6e5cd217958a1bb981987709a5cc055198d739))
+- registerTypeUrl no typeUrl bug ([b568a38](https://github.com/ahm23/telescope/commit/b568a38f9265bbb8d6d5aa3c5a7aeb820d078094))
+- remove type parameter angled brackets ([ede54cc](https://github.com/ahm23/telescope/commit/ede54ccd86a1e7d4aa5b7181255103a2930112f1))
+- type fix on typeUrl ([0b65248](https://github.com/ahm23/telescope/commit/0b65248ce87e6b61ddc222172610870d0a438e0a))
+- type reference for the customhook argument ([6d5c760](https://github.com/ahm23/telescope/commit/6d5c7604bf983304772320d0e57ca6e4dd66a678))
+- update encoder decoder identifiers. ([573b2e2](https://github.com/ahm23/telescope/commit/573b2e2e174487af5241e3f6eb0fd4d5aaa0c9b4))
+- update snapshots and fixtures for @babel/generator 7.29, add jest-in-case ([c513eb1](https://github.com/ahm23/telescope/commit/c513eb18ced38d1908dfaf4850baac7c139a1274))
+- use lower caps ([3d2a83e](https://github.com/ahm23/telescope/commit/3d2a83e593d8316bfdca4cce6482c2224b0523fa))
+
+### Features
+
+- add emit default and fix timestamp ([1c4296c](https://github.com/ahm23/telescope/commit/1c4296c5eb5cb48b42b6c9ba7523f8faa8a8bcbe))
+- add return type to arrow-functions ([94608ed](https://github.com/ahm23/telescope/commit/94608ed3024776b1e9d3a44839218572f32887a7))
+- ast generation code for msg funcs and helper funcs. ([2cad946](https://github.com/ahm23/telescope/commit/2cad946b890e2478370abddc6fce92165d5a360a))
+- fix omit empty handling ([3a8e76b](https://github.com/ahm23/telescope/commit/3a8e76ba6a402cec7a64e4ec98e58133acf19f09))
+- handle decimal paddings ([331f35d](https://github.com/ahm23/telescope/commit/331f35d8fea0fcdb2c0fea243c923ec60faf3d27))
+- num64 == "number" ([742de31](https://github.com/ahm23/telescope/commit/742de3102bc09b4e5d1aeb73b13fab82be1a1c05))
+- partially add support for amino ([f9ae22c](https://github.com/ahm23/telescope/commit/f9ae22c86665590b8caa6b3918738a903592c29b))
+- re-run tests and update snapshots ([ced5e43](https://github.com/ahm23/telescope/commit/ced5e4313ff29a7e268dd0aee7aa2f492ac176a3))
+- use ast call expression for toEncoders&toConverters. ([471d866](https://github.com/ahm23/telescope/commit/471d86645cde92a3dcb71ee00c1c8f529926c72a))
+
+### Reverts
+
+- Revert "RC versions ready" ([04081a9](https://github.com/ahm23/telescope/commit/04081a9d1f80feb3ae664bce2d1364850b3daaca))
+- Revert "chore(release): publish" ([086a55f](https://github.com/ahm23/telescope/commit/086a55f14c5ca33ee70a0e2121406dd37eb643f1))
+
 # [2.2.0](https://github.com/hyperweb-io/telescope/compare/@cosmology/ast@2.1.0...@cosmology/ast@2.2.0) (2026-02-28)
 
 ### Bug Fixes

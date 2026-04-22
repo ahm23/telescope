@@ -1,6 +1,6 @@
 {
   "name": "@ahm23/telescope-ast",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Cosmos TypeScript AST generation",
   "author": "Constructive <developers@constructive.io>",
   "homepage": "https://github.com/ahm23/telescope",
@@ -52,8 +52,8 @@
     "url": "https://github.com/hyperweb-io/telescope/issues"
   },
   "devDependencies": {
-    "@babel/parser": "^7.23.6",
     "@ahm23/telescope-proto-parser": "workspace:*",
+    "@babel/parser": "^7.23.6",
     "ast-stringify": "0.1.0",
     "cross-env": "^7.0.2",
     "deepmerge": "4.3.1",
@@ -63,10 +63,10 @@
     "mkdirp": "3.0.0"
   },
   "dependencies": {
-    "@babel/generator": "^7.23.6",
-    "@babel/types": "7.23.6",
     "@ahm23/telescope-types": "workspace:*",
     "@ahm23/telescope-utils": "workspace:*",
+    "@babel/generator": "^7.23.6",
+    "@babel/types": "7.23.6",
     "case": "1.6.3",
     "dotty": "0.1.2"
   }

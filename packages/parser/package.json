@@ -1,6 +1,6 @@
 {
   "name": "@ahm23/telescope-proto-parser",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "A Parser for Cosmos Protobufs",
   "author": "Constructive <developers@constructive.io>",
   "homepage": "https://github.com/ahm23/telescope",
@@ -54,9 +54,9 @@
     "makage": "^0.1.12"
   },
   "dependencies": {
-    "@cosmology/protobufjs": "7.3.2",
     "@ahm23/telescope-types": "workspace:*",
     "@ahm23/telescope-utils": "workspace:*",
+    "@cosmology/protobufjs": "7.3.2",
     "dotty": "0.1.2",
     "fast-json-patch": "3.1.1",
     "glob": "8.0.3",

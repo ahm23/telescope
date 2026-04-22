@@ -3,7 +3,7 @@ import { ProtoParseContext } from '../encoding';
 import { documentWithTypeUrl, documentWithTypeUrlReadme } from './with-type-url';
 import { documentRpcClients, documentRpcClientsReadme } from './rpc-clients';
 import * as t from '@babel/types';
-import { ServiceMutation } from '@cosmology/types';
+import { ServiceMutation } from '@ahm23/telescope-types';
 import { readme } from './base-readme';
 
 const store = getTestProtoStore();

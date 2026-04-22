@@ -1,5 +1,5 @@
-import { ProtoDep, ProtoRef, ProtoServiceMethod, TelescopeOptions } from "@cosmology/types";
-import { TraversalSymbol, IProtoStore } from "@cosmology/types";
+import { ProtoDep, ProtoRef, ProtoServiceMethod, TelescopeOptions } from "@ahm23/telescope-types";
+import { TraversalSymbol, IProtoStore } from "@ahm23/telescope-types";
 interface ParseProtoOptions {
     keepCase?: boolean;
     alternateCommentMode?: boolean;
@@ -51,9 +51,9 @@ export declare class ProtoStore implements IProtoStore {
     getDeps(): ProtoDep[];
     getDependencies(protos: ProtoRef[]): ProtoDep[];
     traverseAll(): void;
-    get(from: ProtoRef, name: string): import("@cosmology/types").Lookup;
-    getImportFromRef(ref: ProtoRef, name: string): import("@cosmology/types").Lookup;
-    getTypeUrlMap(ref: ProtoRef): import("@cosmology/types").InterfaceTypeUrlMap;
+    get(from: ProtoRef, name: string): import("@ahm23/telescope-types").Lookup;
+    getImportFromRef(ref: ProtoRef, name: string): import("@ahm23/telescope-types").Lookup;
+    getTypeUrlMap(ref: ProtoRef): import("@ahm23/telescope-types").InterfaceTypeUrlMap;
     getServices(myBase: string): Record<string, ProtoRef[]>;
     setEnumValues(pkg: string, name: string, protoSyntex: string, values: number[]): void;
     getDefaultOrExistingSmallestEnumValue(pkg: string, name: string): number;

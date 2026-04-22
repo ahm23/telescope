@@ -1,4 +1,4 @@
-import { ProtoRef, ProtoRoot, HelperFuncNameMappers, AliasNameMappers, AliasNameMappersContext } from "@cosmology/types";
+import { ProtoRef, ProtoRoot, HelperFuncNameMappers, AliasNameMappers, AliasNameMappersContext } from "@ahm23/telescope-types";
 export declare const getNestedProto: (root: ProtoRoot) => any;
 export declare const getNestedProtoGeneric: (root: ProtoRoot, path: string[]) => any;
 export declare const getNested: (root: ProtoRoot, path: string[]) => any;

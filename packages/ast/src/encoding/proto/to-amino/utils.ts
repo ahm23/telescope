@@ -1,5 +1,5 @@
 import * as t from "@babel/types";
-import { ProtoType } from "@cosmology/types";
+import { ProtoType } from "@ahm23/telescope-types";
 import { BILLION, identifier, TypeLong } from "../../../utils";
 import { ProtoParseContext } from "../../context";
 import {
@@ -9,7 +9,7 @@ import {
 } from "../../types";
 import { getInterfaceToAminoName } from "../implements";
 import { ToAminoJSONMethod } from "./index";
-import { shouldOmitEmpty } from "@cosmology/utils";
+import { shouldOmitEmpty } from "@ahm23/telescope-utils";
 
 const setValue = (
     args: ToAminoJSONMethod,

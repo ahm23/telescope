@@ -1,8 +1,8 @@
 import * as t from "@babel/types";
 import { identifier, objectMethod, objectPattern } from "../../../utils";
-import { ProtoService, ProtoServiceMethod } from "@cosmology/types";
+import { ProtoService, ProtoServiceMethod } from "@ahm23/telescope-types";
 import { GenericParseContext } from "../../../encoding";
-import { camel } from "@cosmology/utils";
+import { camel } from "@ahm23/telescope-utils";
 import { getRpcClassName } from "../class/tendermint";
 import { rpcFuncArguments } from "../scoped";
 

@@ -1,4 +1,4 @@
-import { ProtoField } from '@cosmology/types';
+import { ProtoField } from '@ahm23/telescope-types';
 
 interface ServiceOptions {
     "(google.api.http).get"?: string;

@@ -2,7 +2,7 @@ import * as t from '@babel/types';
 import { getFieldOptionality, getFieldOptionalityForDefaults, getOneOfs } from '..';
 import { identifier, objectMethod } from '../../../utils';
 import { ProtoParseContext } from '../../context';
-import { ProtoField, ProtoType } from '@cosmology/types';
+import { ProtoField, ProtoType } from '@ahm23/telescope-types';
 import { arrayTypes, toJSON } from './utils';
 
 const needsImplementation = (name: string, field: ProtoField) => {

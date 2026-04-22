@@ -1,5 +1,5 @@
 import * as t from '@babel/types';
-import { ProtoType, ProtoField } from '@cosmology/types';
+import { ProtoType, ProtoField } from '@ahm23/telescope-types';
 import { ProtoParseContext } from '../../context';
 export interface FromSDKMethod {
     context: ProtoParseContext;

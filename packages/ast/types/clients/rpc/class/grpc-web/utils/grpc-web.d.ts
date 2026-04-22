@@ -1,5 +1,5 @@
 import * as t from '@babel/types';
-import { ProtoService } from '@cosmology/types';
+import { ProtoService } from '@ahm23/telescope-types';
 export declare const metadata: t.Identifier;
 export declare const bindThis: (name: string) => t.ExpressionStatement;
 export declare const makeComment: (comment: string) => {

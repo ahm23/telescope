@@ -1,7 +1,7 @@
 import * as t from "@babel/types";
 import { bundlePackages, getPackagesBundled } from "../src/bundle";
 import generate from "@babel/generator";
-import { recursiveModuleBundle } from "@cosmology/ast";
+import { recursiveModuleBundle } from "@ahm23/telescope-ast";
 import { getTestProtoStore } from "../test-utils";
 import { getImportStatements } from "../src/imports";
 

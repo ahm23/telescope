@@ -1,6 +1,6 @@
 import { resolve, join, dirname, basename, extname } from 'path';
 import { mkdirp } from 'mkdirp';
-import { crossGlob as glob } from '@cosmology/utils';
+import { crossGlob as glob } from '@ahm23/telescope-utils';
 import { rimrafSync as rimraf } from 'rimraf';
 import { exec } from 'shelljs';
 import { prompt } from '../prompt';

@@ -1,6 +1,6 @@
 import { TelescopeInput } from "..";
 import { TelescopeBuilder } from "../builder";
-import { TelescopeOptions } from "@cosmology/types";
+import { TelescopeOptions } from "@ahm23/telescope-types";
 
 import { clone, cloneAll, extractProto } from "./recursive";
 import { removeFolder } from "./utils";

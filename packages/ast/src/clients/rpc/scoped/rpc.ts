@@ -5,7 +5,7 @@ import {
     objectProperty,
     tsPropertySignature,
 } from "../../../utils";
-import { restoreExtension } from "@cosmology/utils";
+import { restoreExtension } from "@ahm23/telescope-utils";
 
 export const rpcFuncArguments = (): t.ObjectPattern[] => {
     return [

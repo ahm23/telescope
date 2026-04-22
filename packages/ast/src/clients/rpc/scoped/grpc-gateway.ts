@@ -2,7 +2,7 @@ import * as t from '@babel/types';
 import { objectPattern } from '../../../utils';
 import { GenericParseContext } from '../../../encoding';
 import { grpcFuncArguments } from './grpc-web';
-import { restoreExtension } from '@cosmology/utils';
+import { restoreExtension } from '@ahm23/telescope-utils';
 
 // endpoint = endpoint.replace(/\/*$/g, "");
 export const grpcGatewayClientScaffold = (): t.Statement[] => {

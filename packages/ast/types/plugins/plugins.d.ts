@@ -1,1 +1,1 @@
-export { getPluginValue } from '@cosmology/utils';
+export { getPluginValue } from '@ahm23/telescope-utils';

@@ -1,5 +1,5 @@
 import * as t from '@babel/types';
-import { ProtoService } from '@cosmology/types';
+import { ProtoService } from '@ahm23/telescope-types';
 import { GenericParseContext } from '../../encoding';
 export declare const createRpcVueQueryHooks: (context: GenericParseContext, service: ProtoService) => t.ExportNamedDeclaration;
 /**

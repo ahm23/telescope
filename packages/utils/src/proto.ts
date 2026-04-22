@@ -9,7 +9,7 @@ import {
   HelperFuncNameMappersRule,
   AliasNameMappers,
   AliasNameMappersContext,
-} from "@cosmology/types";
+} from "@ahm23/telescope-types";
 import dotty from "dotty";
 
 export const getNestedProto = (root: ProtoRoot) => {

@@ -1,8 +1,8 @@
 import { TelescopeBuilder } from '../src/builder';
-import { TelescopeOptions } from '@cosmology/types';
+import { TelescopeOptions } from '@ahm23/telescope-types';
 import { TelescopeInput } from '../src';
 import deepmerge from 'deepmerge';
-import { makeAliasName } from '@cosmology/utils';
+import { makeAliasName } from '@ahm23/telescope-utils';
 
 const outPath = __dirname + '/../../../__fixtures__/misc/output';
 

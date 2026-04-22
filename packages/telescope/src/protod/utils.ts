@@ -2,7 +2,7 @@ import { exec as _exec } from "shelljs";
 import fs from "fs";
 import { bufInfo } from "./config";
 import { Repo } from "./types";
-import { crossGlob as glob } from '@cosmology/utils';
+import { crossGlob as glob } from '@ahm23/telescope-utils';
 
 export function exec(command: string, verbose = false) {
   const { code, stdout, stderr } = _exec(command);

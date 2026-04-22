@@ -1,4 +1,4 @@
-import { makeAliasName } from '@cosmology/utils';
+import { makeAliasName } from '@ahm23/telescope-utils';
 import { traverse } from '../../src';
 import { getNested } from '../../src'
 import { getTestProtoStore } from '../../test-utils';

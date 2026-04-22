@@ -1,5 +1,5 @@
 import * as ast from "@babel/types";
-import { ProtoServiceMethod } from "@cosmology/types";
+import { ProtoServiceMethod } from "@ahm23/telescope-types";
 import { GenericParseContext } from "../../encoding";
 /**
  *

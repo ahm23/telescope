@@ -1,10 +1,10 @@
 import generate from '@babel/generator';
-import { ProtoType, TelescopeOptions } from '@cosmology/types';
+import { ProtoType, TelescopeOptions } from '@ahm23/telescope-types';
 import { ProtoStore } from '@cosmology/proto-parser'
-import { getNestedProto, toPosixPath } from '@cosmology/utils'
+import { getNestedProto, toPosixPath } from '@ahm23/telescope-utils'
 import { AminoParseContext } from '../src/encoding/context';
 import { GenericParseContext } from '../src/encoding';
-import { defaultTelescopeOptions as teleDefaults } from '@cosmology/types';
+import { defaultTelescopeOptions as teleDefaults } from '@ahm23/telescope-types';
 import deepmerge from 'deepmerge';
 
 export const expectCode = (ast) => {

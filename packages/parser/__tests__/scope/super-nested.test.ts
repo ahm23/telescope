@@ -1,5 +1,5 @@
 import generate from '@babel/generator';
-import { ProtoRef } from '@cosmology/types'
+import { ProtoRef } from '@ahm23/telescope-types'
 import { ProtoStore, getNestedProtoGeneric, parseProto } from '../../src'
 
 /*

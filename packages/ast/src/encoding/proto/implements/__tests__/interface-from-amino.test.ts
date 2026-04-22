@@ -1,4 +1,4 @@
-import { InterfaceTypeUrlMap, TraverseTypeUrlRef } from '@cosmology/types';
+import { InterfaceTypeUrlMap, TraverseTypeUrlRef } from '@ahm23/telescope-types';
 import { expectCode, printCode, getTestProtoStore } from '../../../../../test-utils/'
 import { ProtoParseContext } from '../../../context';
 import { createInterfaceFromAminoHelper, createInterfaceFromAmino } from '../from-amino';

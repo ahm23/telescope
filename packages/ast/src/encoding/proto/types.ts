@@ -1,7 +1,7 @@
-import { ProtoType, ProtoField } from '@cosmology/types';
+import { ProtoType, ProtoField } from '@ahm23/telescope-types';
 import { pascal } from 'case';
 import { AminoParseContext, ProtoParseContext } from '../context';
-import { shouldOmitEmpty } from '@cosmology/utils';
+import { shouldOmitEmpty } from '@ahm23/telescope-utils';
 
 export const SCALAR_TYPES = [
     'string',

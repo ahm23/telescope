@@ -1,7 +1,7 @@
 import { buildAllImports, getDepsFromQueries } from "../imports";
 import { Bundler } from "../bundler";
-import { createMsgHelperCreator, createMsgHooks, createVueMsgHooks } from "@cosmology/ast";
-import { getNestedProto } from "@cosmology/proto-parser";
+import { createMsgHelperCreator, createMsgHooks, createVueMsgHooks } from "@ahm23/telescope-ast";
+import { getNestedProto } from "@ahm23/telescope-proto-parser";
 import { parse } from "../parse";
 import { TelescopeBuilder } from "../builder";
 import {
@@ -9,9 +9,9 @@ import {
   getHelperFuncName,
   getQueryMethodNames,
   swapKeyValue,
-} from "@cosmology/utils";
+} from "@ahm23/telescope-utils";
 import { BundlerFile } from "../types";
-import { ProtoService, TX_SVC_TYPES } from "@cosmology/types";
+import { ProtoService, TX_SVC_TYPES } from "@ahm23/telescope-types";
 import { getExportedTypeNames } from "../utils/files";
 
 export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {

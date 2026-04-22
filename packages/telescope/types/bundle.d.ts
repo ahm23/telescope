@@ -1,7 +1,7 @@
-import { ProtoStore } from '@cosmology/proto-parser';
+import { ProtoStore } from '@ahm23/telescope-proto-parser';
 import { TelescopeBuilder } from './index';
 import { TelescopeParseContext } from './build';
-import { TelescopeOptions } from '@cosmology/types';
+import { TelescopeOptions } from '@ahm23/telescope-types';
 export declare const getPackages: (store: ProtoStore) => {};
 export declare const getPackagesBundled: (store: ProtoStore) => {};
 export declare const bundlePackages: (store: ProtoStore) => {

@@ -3,10 +3,10 @@ import { resolve, join, dirname, relative, extname } from "path";
 import { TelescopeParseContext } from "./build";
 import { createFileBundle } from "./bundle";
 import { TelescopeBuilder } from "./builder";
-import { ProtoRef } from "@cosmology/types";
+import { ProtoRef } from "@ahm23/telescope-types";
 import { Bundle, BundlerFile } from "./types";
 import { writeAstToFile } from "./utils/files";
-import { toPosixPath } from "@cosmology/utils";
+import { toPosixPath } from "@ahm23/telescope-utils";
 
 export class Bundler {
   builder: TelescopeBuilder;

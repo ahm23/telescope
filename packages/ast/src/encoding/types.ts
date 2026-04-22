@@ -1,5 +1,5 @@
 import * as t from '@babel/types';
-import { ENUM_PROTO2_DEFAULT, ENUM_PROTO3_DEFAULT, ProtoField, TelescopeLogLevel, TraversalSymbol } from '@cosmology/types';
+import { ENUM_PROTO2_DEFAULT, ENUM_PROTO3_DEFAULT, ProtoField, TelescopeLogLevel, TraversalSymbol } from '@ahm23/telescope-types';
 import { getProtoFieldTypeName, TypeLong } from '../utils';
 import { GenericParseContext, ProtoParseContext } from './context';
 import { getFieldOptionalityForDefaults, GOOGLE_TYPES, SCALAR_TYPES } from './proto';

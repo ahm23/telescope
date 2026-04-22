@@ -1,5 +1,5 @@
 import { TelescopeBuilder } from "../src/builder";
-import { TelescopeOptions } from "@cosmology/types";
+import { TelescopeOptions } from "@ahm23/telescope-types";
 import {
   bundleBaseRegistries,
   bundleRegistries,
@@ -8,7 +8,7 @@ import {
 import { TelescopeInput } from "../src";
 import { getTestProtoStore } from "../test-utils";
 import { TelescopeParseContext } from "../src/build";
-import { makeAliasName, makeServiceAliasName } from "@cosmology/utils";
+import { makeAliasName, makeServiceAliasName } from "@ahm23/telescope-utils";
 
 const outPath = __dirname + "/../../../__fixtures__/v-next/customchain-js";
 const store = getTestProtoStore();

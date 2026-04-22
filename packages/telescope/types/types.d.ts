@@ -1,5 +1,5 @@
 import { ImportDeclaration } from '@babel/types';
-import { ProtoServiceMethod, TelescopeOptions } from '@cosmology/types';
+import { ProtoServiceMethod, TelescopeOptions } from '@ahm23/telescope-types';
 export interface ExportObj {
     pkg: string;
     localname: string;

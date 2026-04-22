@@ -1,5 +1,5 @@
-import { getNestedProto } from '@cosmology/utils';
-import { InterfaceTypeUrlMap } from '@cosmology/types';
+import { getNestedProto } from '@ahm23/telescope-utils';
+import { InterfaceTypeUrlMap } from '@ahm23/telescope-types';
 import { expectCode, getTestProtoStore } from '../../../../../test-utils/'
 import { ProtoParseContext } from '../../../context';
 import { createObjectWithMethods } from '../../../object';

@@ -1,4 +1,4 @@
-import { makeAliasName } from '@cosmology/utils';
+import { makeAliasName } from '@ahm23/telescope-utils';
 import { getTestProtoStore } from '../../test-utils';
 
 it('get all packages', () => {

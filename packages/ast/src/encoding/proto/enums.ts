@@ -1,9 +1,9 @@
 import * as t from '@babel/types';
 import { getEnumFromJsonName, getEnumToJsonName } from './types';
 import { identifier, tsEnumMember, functionDeclaration, makeCommentBlock, cleanComment } from '../../utils';
-import { ProtoEnum } from '@cosmology/types';
+import { ProtoEnum } from '@ahm23/telescope-types';
 import { ProtoParseContext } from '../context';
-import { EnumValue, getEnumValues } from '@cosmology/utils';
+import { EnumValue, getEnumValues } from '@ahm23/telescope-utils';
 
 const ensureOneSpace = (str) => {
     if (/^[\s\n\t]+/.test(str)) return str;

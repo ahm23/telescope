@@ -1,6 +1,6 @@
 import * as t from '@babel/types';
 import { ProtoParseContext } from '../../context';
-import { ProtoField, ProtoType } from '@cosmology/types';
+import { ProtoField, ProtoType } from '@ahm23/telescope-types';
 export interface ToAminoJSONMethod {
     context: ProtoParseContext;
     field: ProtoField;

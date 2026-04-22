@@ -1,7 +1,7 @@
 import { createLCDClient } from './lcd';
 import { traverse } from '@cosmology/proto-parser'
-import { getNestedProto } from '@cosmology/utils'
-import { ProtoService } from '@cosmology/types';
+import { getNestedProto } from '@ahm23/telescope-utils'
+import { ProtoService } from '@ahm23/telescope-types';
 import { GenericParseContext } from '../../../encoding';
 import { getTestProtoStore, expectCode } from '../../../../test-utils';
 const store = getTestProtoStore({

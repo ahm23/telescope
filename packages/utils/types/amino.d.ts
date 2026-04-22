@@ -1,4 +1,4 @@
-import { ProtoAny, ProtoRoot, ProtoType, ProtoRef, TelescopeOptions, IParseContext, ProtoField } from "@cosmology/types";
+import { ProtoAny, ProtoRoot, ProtoType, ProtoRef, TelescopeOptions, IParseContext, ProtoField } from "@ahm23/telescope-types";
 export declare const getTypeUrlWithPkgAndName: (pkg: string, name: string) => string;
 export declare const getTypeUrl: (root: ProtoRoot, proto: ProtoAny | ProtoType) => string;
 export declare const getAminoTypeName: (context: IParseContext, root: ProtoRoot, proto: ProtoType) => any;

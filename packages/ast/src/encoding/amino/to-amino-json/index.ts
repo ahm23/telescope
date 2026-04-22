@@ -1,11 +1,11 @@
 import * as t from '@babel/types';
 import { arrowFunctionExpression } from '../../../utils';
 import { AminoParseContext } from '../../context';
-import { ProtoType, ProtoField } from '@cosmology/types';
+import { ProtoType, ProtoField } from '@ahm23/telescope-types';
 import { protoFieldsToArray } from '../utils';
 import { arrayTypes, toAmino } from './utils';
 import { getFieldOptionality, getOneOfs } from '../../proto';
-import { shouldOmitEmpty } from '@cosmology/utils';
+import { shouldOmitEmpty } from '@ahm23/telescope-utils';
 
 const needsImplementation = (name: string, field: ProtoField) => {
     throw new Error(`need to implement toAmino (${field.type} rules[${field.rule}] name[${name}])`);

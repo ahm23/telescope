@@ -9,10 +9,10 @@ import {
     createStargateClientProtoRegistry,
     createStargateClientAminoRegistry,
     createGetTxRpc
-} from '@cosmology/ast';
-import { ProtoRef } from '@cosmology/types';
+} from '@ahm23/telescope-ast';
+import { ProtoRef } from '@ahm23/telescope-types';
 import { camel, pascal } from 'case';
-import { duplicateImportPathsWithExt, variableSlug, toPosixPath } from '@cosmology/utils';
+import { duplicateImportPathsWithExt, variableSlug, toPosixPath } from '@ahm23/telescope-utils';
 import { buildAllImportsFromGenericContext } from '../imports';
 
 export const plugin = (

@@ -8,7 +8,7 @@ import {
   TelescopeOptions,
   IParseContext,
   ProtoField,
-} from "@cosmology/types";
+} from "@ahm23/telescope-types";
 import { kebab } from "case";
 
 export const getTypeUrlWithPkgAndName = (pkg: string, name: string) => {

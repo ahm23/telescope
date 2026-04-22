@@ -1,5 +1,5 @@
 import * as t from '@babel/types';
-import { ProtoType, ProtoField, ProtoEnum } from '@cosmology/types';
+import { ProtoType, ProtoField, ProtoEnum } from '@ahm23/telescope-types';
 import { identifier, tsPropertySignature, CommentBlockBuilder } from '../../../utils';
 import { ProtoParseContext } from '../../context';
 

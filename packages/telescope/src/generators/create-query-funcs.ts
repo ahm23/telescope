@@ -1,16 +1,16 @@
 import { buildAllImports, getDepsFromQueries } from "../imports";
 import { Bundler } from "../bundler";
-import { createQueryHelperCreator, createQueryHooks, createVueQueryHooks } from "@cosmology/ast";
-import { getNestedProto, isRefIncluded } from "@cosmology/proto-parser";
+import { createQueryHelperCreator, createQueryHooks, createVueQueryHooks } from "@ahm23/telescope-ast";
+import { getNestedProto, isRefIncluded } from "@ahm23/telescope-proto-parser";
 import { parse } from "../parse";
 import { TelescopeBuilder } from "../builder";
-import { ProtoRoot, ProtoService, QUERY_SVC_TYPES } from "@cosmology/types";
+import { ProtoRoot, ProtoService, QUERY_SVC_TYPES } from "@ahm23/telescope-types";
 import {
   camel,
   getHelperFuncName,
   getQueryMethodNames,
   swapKeyValue,
-} from "@cosmology/utils";
+} from "@ahm23/telescope-utils";
 import { BundlerFile } from "../types";
 import { getExportedTypeNames } from "../utils/files";
 

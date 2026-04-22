@@ -6,7 +6,7 @@ import {
     createStargateClientProtoRegistry,
     createGetTxRpc
 } from './stargate';
-import { ProtoRef } from '@cosmology/types';
+import { ProtoRef } from '@ahm23/telescope-types';
 
 it('createStargateClient', async () => {
     const ref: ProtoRef = {

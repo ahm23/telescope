@@ -1,6 +1,6 @@
-import { ProtoStore } from '@cosmology/proto-parser';
+import { ProtoStore } from '@ahm23/telescope-proto-parser';
 import { TelescopeParseContext } from './build';
-import { TelescopeOptions } from '@cosmology/types';
+import { TelescopeOptions } from '@ahm23/telescope-types';
 import { BundlerFile, TelescopeInput } from './types';
 export declare class TelescopeBuilder {
     store: ProtoStore;

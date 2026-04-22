@@ -1,6 +1,6 @@
-import { TelescopeOptions, ProtoField, ProtoRef, TraversalSymbol, IParseContext, ImportUsage } from '@cosmology/types';
-import { IProtoStore } from '@cosmology/types';
-import { isRefExcluded, getObjectName } from '@cosmology/utils';
+import { TelescopeOptions, ProtoField, ProtoRef, TraversalSymbol, IParseContext, ImportUsage } from '@ahm23/telescope-types';
+import { IProtoStore } from '@ahm23/telescope-types';
+import { isRefExcluded, getObjectName } from '@ahm23/telescope-utils';
 import { getEnumFromJsonName, getEnumToJsonName, getFieldsTypeName } from './proto';
 import { getPluginValue } from '../plugins';
 import { TelescopeBaseTypes } from './types';

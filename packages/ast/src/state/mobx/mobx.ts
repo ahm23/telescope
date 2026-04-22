@@ -7,10 +7,10 @@ import {
   classDeclaration,
   newExpression
 } from '../../utils';
-import { ProtoService, ProtoServiceMethod } from '@cosmology/types';
-import { isRefIncluded } from '@cosmology/utils';
+import { ProtoService, ProtoServiceMethod } from '@ahm23/telescope-types';
+import { isRefIncluded } from '@ahm23/telescope-utils';
 import { GenericParseContext } from '../../encoding';
-import { camel } from '@cosmology/utils';
+import { camel } from '@ahm23/telescope-utils';
 import { pascal } from 'case';
 
 const makeQueryStoreName = (name: string) => {

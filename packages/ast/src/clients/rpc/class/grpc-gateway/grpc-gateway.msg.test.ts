@@ -1,6 +1,6 @@
 import { traverse } from '@cosmology/proto-parser'
-import { getNestedProto } from '@cosmology/utils'
-import { defaultTelescopeOptions, ProtoService } from '@cosmology/types';
+import { getNestedProto } from '@ahm23/telescope-utils'
+import { defaultTelescopeOptions, ProtoService } from '@ahm23/telescope-types';
 import { expectCode, getTestProtoStore, printCode } from '../../../../../test-utils';
 import { GenericParseContext } from '../../../../encoding';
 import { createGRPCGatewayMsgClass } from './grpc-gateway.msg';

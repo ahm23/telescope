@@ -1,12 +1,12 @@
 import { buildAllImports, getDepsFromQueries } from '../imports';
 import { Bundler } from '../bundler';
-import { getNestedProto } from '@cosmology/proto-parser';
+import { getNestedProto } from '@ahm23/telescope-proto-parser';
 import { parse } from '../parse';
 import { TelescopeBuilder } from '../builder';
 import {
     createLCDClient,
-} from '@cosmology/ast';
-import { ALLOWED_RPC_SERVICES } from '@cosmology/types';
+} from '@ahm23/telescope-ast';
+import { ALLOWED_RPC_SERVICES } from '@ahm23/telescope-types';
 
 export const plugin = (
     builder: TelescopeBuilder,

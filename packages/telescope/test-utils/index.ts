@@ -1,9 +1,9 @@
 import generate from '@babel/generator';
-import { ProtoType, TelescopeOptions } from '@cosmology/types';
-import { defaultTelescopeOptions as teleDefaults } from '@cosmology/types';
+import { ProtoType, TelescopeOptions } from '@ahm23/telescope-types';
+import { defaultTelescopeOptions as teleDefaults } from '@ahm23/telescope-types';
 import deepmerge from 'deepmerge';
-import { ProtoStore } from '@cosmology/proto-parser';
-import { toPosixPath } from '@cosmology/utils'
+import { ProtoStore } from '@ahm23/telescope-proto-parser';
+import { toPosixPath } from '@ahm23/telescope-utils'
 
 
 export const expectCode = (ast) => {

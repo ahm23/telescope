@@ -4,8 +4,8 @@ import {
   ProtoRef,
   TraverseTypeUrlRef,
   TypeUrlRef
-} from '@cosmology/types';
-import { slugify } from '@cosmology/utils';
+} from '@ahm23/telescope-types';
+import { slugify } from '@ahm23/telescope-utils';
 import { arrowFunctionExpression, identifier } from '../../../utils';
 import { ProtoParseContext } from '../../context';
 import { BinaryCoder } from '../../../utils/binary-coder-expression';

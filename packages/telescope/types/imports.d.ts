@@ -1,5 +1,5 @@
-import { GenericParseContext } from "@cosmology/ast";
-import { ServiceMutation } from "@cosmology/types";
+import { GenericParseContext } from "@ahm23/telescope-ast";
+import { ServiceMutation } from "@ahm23/telescope-types";
 import { ImportHash, ImportObj } from "./types";
 import { TelescopeParseContext } from "./build";
 export declare const getImportStatements: (filepath: string, list: ImportObj[], options?: {

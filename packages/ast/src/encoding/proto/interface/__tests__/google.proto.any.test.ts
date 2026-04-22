@@ -1,5 +1,5 @@
-import { getNestedProto } from '@cosmology/utils';
-import { defaultTelescopeOptions } from '@cosmology/types';
+import { getNestedProto } from '@ahm23/telescope-utils';
+import { defaultTelescopeOptions } from '@ahm23/telescope-types';
 import { expectCode, getTestProtoStore, printCode } from '../../../../../test-utils/'
 import { ProtoParseContext } from '../../../context';
 import { createSDKType, createProtoType } from '..';

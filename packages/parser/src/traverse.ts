@@ -14,7 +14,7 @@ import {
   TraverseLocalSymbol,
   TraverseImportNames,
   TraversalSymbol,
-} from "@cosmology/types";
+} from "@ahm23/telescope-types";
 import {
   Service,
   Type,
@@ -38,7 +38,7 @@ import {
   getTypeNameByEnumObj,
   getAliasName,
   getPluginValue,
-} from "@cosmology/utils";
+} from "@ahm23/telescope-utils";
 
 export interface TraverseContext {
   imports: TraverseImport;

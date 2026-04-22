@@ -1,7 +1,7 @@
 import * as shell from 'shelljs';
 import { prompt } from '../prompt';
 import dargs from 'dargs';
-import { crossGlob as glob } from '@cosmology/utils';
+import { crossGlob as glob } from '@ahm23/telescope-utils';
 
 const fs = require('fs');
 const path = require('path');

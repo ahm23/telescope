@@ -3,8 +3,8 @@ import {
     createLCDClient
 } from './lcd';
 import { traverse } from '@cosmology/proto-parser'
-import { getNestedProto } from '@cosmology/utils'
-import { defaultTelescopeOptions, ProtoService } from '@cosmology/types';
+import { getNestedProto } from '@ahm23/telescope-utils'
+import { defaultTelescopeOptions, ProtoService } from '@ahm23/telescope-types';
 import { GenericParseContext } from '../../../encoding';
 import { getTestProtoStore, expectCode } from '../../../../test-utils';
 const store = getTestProtoStore();

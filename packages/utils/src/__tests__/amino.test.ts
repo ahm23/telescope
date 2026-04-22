@@ -1,5 +1,5 @@
 import { shouldOmitEmpty } from "../amino";
-import { ProtoField } from "@cosmology/types";
+import { ProtoField } from "@ahm23/telescope-types";
 import cases from "jest-in-case";
 
 describe("shouldOmitEmpty", () => {

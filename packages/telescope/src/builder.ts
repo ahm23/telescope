@@ -1,7 +1,7 @@
-import { ProtoStore } from '@cosmology/proto-parser';
+import { ProtoStore } from '@ahm23/telescope-proto-parser';
 import { TelescopeParseContext } from './build';
-import { TelescopeOptions, defaultTelescopeOptions } from '@cosmology/types';
-import { toPosixPath } from '@cosmology/utils';
+import { TelescopeOptions, defaultTelescopeOptions } from '@ahm23/telescope-types';
+import { toPosixPath } from '@ahm23/telescope-utils';
 import { bundlePackages } from './bundle';
 import { BundlerFile, TelescopeInput } from './types';
 import { Bundler } from './bundler';

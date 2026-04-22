@@ -2,7 +2,7 @@ import fs from "fs";
 import { Repo } from "./types";
 import YAML from "yaml";
 import { isPathExist } from "./utils";
-import { crossGlob as glob } from '@cosmology/utils';
+import { crossGlob as glob } from '@ahm23/telescope-utils';
 
 export function parseBufLockFile(filePath: string): Repo[] {
   if (!isPathExist(filePath)) {

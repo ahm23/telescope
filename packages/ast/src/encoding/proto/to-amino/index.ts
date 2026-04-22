@@ -2,7 +2,7 @@ import * as t from '@babel/types';
 import { getFieldOptionalityForAmino, getOneOfs } from '..';
 import { identifier, objectMethod } from '../../../utils';
 import { ProtoParseContext } from '../../context';
-import { ProtoField, ProtoType } from '@cosmology/types';
+import { ProtoField, ProtoType } from '@ahm23/telescope-types';
 import { arrayTypes, toAminoJSON, toAminoMessages } from './utils';
 import { SymbolNames } from '../../types';
 import { getAminoTypeName } from '../../amino';

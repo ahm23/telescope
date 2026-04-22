@@ -1,7 +1,7 @@
 import { GenericParseContext } from '../../../../encoding';
-import { ProtoService, ProtoServiceMethod } from '@cosmology/types';
+import { ProtoService, ProtoServiceMethod } from '@ahm23/telescope-types';
 import { arrowFunctionExpression, classDeclaration, classMethod, classProperty, commentBlock, commentLine, identifier, tsMethodSignature } from '../../../../utils';
-import { camel } from '@cosmology/utils';
+import { camel } from '@ahm23/telescope-utils';
 import { optionalBool, returnReponseType } from '../utils/rpc';
 import { initRequest, getInitReqProperties } from './utils';
 import { processRpcComment } from '../utils';

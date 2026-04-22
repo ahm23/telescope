@@ -4,17 +4,17 @@ import { TelescopeBuilder } from "../builder";
 import {
   createInstantRpcInterface,
   createInstantRpcClass,
-} from "@cosmology/ast";
-import { ImportUsage, ProtoRef } from "@cosmology/types";
+} from "@ahm23/telescope-ast";
+import { ImportUsage, ProtoRef } from "@ahm23/telescope-types";
 import { TelescopeParseContext } from "../build";
 import { writeAstToFile } from "../utils/files";
 import { fixlocalpaths } from "../utils";
 import * as dotty from "dotty";
-import { createEmptyProtoRef } from "@cosmology/proto-parser";
-import { camel, makeUseHookName, makeUsePkgHookName } from "@cosmology/utils";
-import { variableSlug } from "@cosmology/utils";
-import { swapKeyValue } from "@cosmology/utils";
-import { buildImports } from "@cosmology/utils";
+import { createEmptyProtoRef } from "@ahm23/telescope-proto-parser";
+import { camel, makeUseHookName, makeUsePkgHookName } from "@ahm23/telescope-utils";
+import { variableSlug } from "@ahm23/telescope-utils";
+import { swapKeyValue } from "@ahm23/telescope-utils";
+import { buildImports } from "@ahm23/telescope-utils";
 import { BundlerFile } from "../types";
 
 export const plugin = (builder: TelescopeBuilder) => {

@@ -1,7 +1,7 @@
 import { createAminoConverter } from './index';
 import { ProtoStore, parseProto } from '@cosmology/proto-parser';
 import { prepareContext, expectCode } from '../../test-utils';
-import { camel } from '@cosmology/utils';
+import { camel } from '@ahm23/telescope-utils';
 
 const store = new ProtoStore();
 store.protos = [];

@@ -4,12 +4,12 @@ import {
   exportAllFromRelPath,
   exportTypesWithAlias,
   recursiveModuleBundle,
-} from "@cosmology/ast";
+} from "@ahm23/telescope-ast";
 import {
   duplicateImportPathsWithExt,
   makeAliasName,
   makeAliasNameWithPackageAtEnd,
-} from "@cosmology/utils";
+} from "@ahm23/telescope-utils";
 
 /**
  * Process noAlias configuration to create a map of names to their first package

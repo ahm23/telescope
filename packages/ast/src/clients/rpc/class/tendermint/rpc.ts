@@ -1,8 +1,8 @@
 import * as t from '@babel/types';
 import { arrowFunctionExpression, classDeclaration, classMethod, classProperty, commentBlock, identifier, tsMethodSignature } from '../../../../utils';
-import { ProtoService, ProtoServiceMethod } from '@cosmology/types';
+import { ProtoService, ProtoServiceMethod } from '@ahm23/telescope-types';
 import { GenericParseContext } from '../../../../encoding';
-import { camel, getServiceImplement } from '@cosmology/utils';
+import { camel, getServiceImplement } from '@ahm23/telescope-utils';
 import { processRpcComment, returnReponseType, cleanType, optionalBool } from '../utils/rpc';
 import { BinaryCoder } from '../../../../utils/binary-coder-expression';
 

@@ -8,7 +8,7 @@ import {
   TelescopeOptions,
   ENUM_PROTO2_DEFAULT,
   ENUM_PROTO3_DEFAULT,
-} from "@cosmology/types";
+} from "@ahm23/telescope-types";
 import {
   createTypeUrlTypeMap,
   getNestedProto,
@@ -27,7 +27,7 @@ import {
   TelescopeLogLevel,
   TraversalSymbol,
   IProtoStore,
-} from "@cosmology/types";
+} from "@ahm23/telescope-types";
 
 import google_any from "./native/any";
 import google_descriptor from "./native/descriptor";
@@ -43,7 +43,7 @@ import {
   convertPackageNameToNestedJSONPath,
   crossGlob as glob,
   toPosixPath,
-} from "@cosmology/utils";
+} from "@ahm23/telescope-utils";
 
 const GOOGLE_PROTOS = [
   ["google/protobuf/any.proto", google_any],

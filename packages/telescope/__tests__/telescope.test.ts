@@ -1,12 +1,12 @@
 import { TelescopeBuilder } from '../src/builder';
-import { TelescopeOptions } from '@cosmology/types';
+import { TelescopeOptions } from '@ahm23/telescope-types';
 import { bundleBaseRegistries, bundleRegistries, parseContextsForRegistry } from '../src/bundle'
 import { TelescopeInput } from '../src';
 import { kebab } from "case";
 import { join } from 'path';
 import { getTestProtoStore } from '../test-utils';
 import { TelescopeParseContext } from '../src/build';
-import { toPosixPath } from '@cosmology/utils'
+import { toPosixPath } from '@ahm23/telescope-utils'
 
 const outPath = __dirname + '/../../../__fixtures__/output1';
 const store = getTestProtoStore();

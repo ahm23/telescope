@@ -4,13 +4,13 @@ import {
   SymbolNames,
   TelescopeBaseTypes,
   importStmt,
-} from "@cosmology/ast";
-import { ServiceMutation } from "@cosmology/types";
+} from "@ahm23/telescope-ast";
+import { ServiceMutation } from "@ahm23/telescope-types";
 
 import { DerivedImportObj, ImportHash, ImportObj } from "./types";
 import { UTILS, getRelativePath, UTIL_HELPERS } from "./utils";
 import { TelescopeParseContext } from "./build";
-import { restoreExtension } from "@cosmology/utils";
+import { restoreExtension } from "@ahm23/telescope-utils";
 
 const importHashToArray = (hash: ImportHash): ImportObj[] => {
   return Object.entries(hash ?? {}).reduce((m, [path, names]) => {

@@ -1,7 +1,7 @@
 import * as t from "@babel/types";
 import { GenericParseContext } from "../../encoding";
 import { objectPattern } from "../../utils";
-import { restoreExtension, variableSlug } from "@cosmology/utils";
+import { restoreExtension, variableSlug } from "@ahm23/telescope-utils";
 import { buildExportCreators } from "../../utils";
 
 export const rpcHookFuncArguments = (): t.ObjectPattern[] => {

@@ -1,6 +1,6 @@
 import { TelescopeBuilder } from "../src/builder";
 import deepmerge from "deepmerge";
-import { TelescopeOptions } from "@cosmology/types";
+import { TelescopeOptions } from "@ahm23/telescope-types";
 
 const options: TelescopeOptions = {
   env: "v-next",

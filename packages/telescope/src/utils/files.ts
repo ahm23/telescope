@@ -1,6 +1,6 @@
 import * as t from "@babel/types";
 import { parse, ParserPlugin } from "@babel/parser";
-import { TelescopeOptions } from "@cosmology/types";
+import { TelescopeOptions } from "@ahm23/telescope-types";
 import { mkdirp } from "mkdirp";
 import { writeFileSync } from "fs";
 import { dirname } from "path";
@@ -8,7 +8,7 @@ import minimatch from "minimatch";
 import generate from "@babel/generator";
 import { unused } from "./unused";
 import traverse from "@babel/traverse";
-import { toPosixPath } from "@cosmology/utils";
+import { toPosixPath } from "@ahm23/telescope-utils";
 
 export function getExportedTypeNames(program: t.Statement[]): string[] {
   const exportedNames: string[] = [];

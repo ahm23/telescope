@@ -1,6 +1,6 @@
 import * as t from "@babel/types";
 import { ProtoParseContext } from "../../context";
-import { ProtoField, ProtoType } from "@cosmology/types";
+import { ProtoField, ProtoType } from "@ahm23/telescope-types";
 import {
   getAcceptedInterfacesTypes,
   identifier,
@@ -13,7 +13,7 @@ import {
 } from "../types";
 import { SymbolNames } from "../../types";
 import { type } from "case";
-import { getTypeUrl } from "@cosmology/utils";
+import { getTypeUrl } from "@ahm23/telescope-utils";
 
 const INPUT_PARAM = "o";
 

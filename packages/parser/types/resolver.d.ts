@@ -1,4 +1,4 @@
-import { ProtoDep } from '@cosmology/types';
+import { ProtoDep } from '@ahm23/telescope-types';
 export declare class ProtoResolver {
     deps: ProtoDep[];
     constructor(deps: any);

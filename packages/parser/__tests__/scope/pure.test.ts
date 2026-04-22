@@ -1,4 +1,4 @@
-import { ProtoRef } from '@cosmology/types';
+import { ProtoRef } from '@ahm23/telescope-types';
 import { ProtoStore, parseProto } from '../../src/index'
 import { traverse } from '../../src';
 

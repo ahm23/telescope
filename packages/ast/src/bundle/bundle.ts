@@ -1,6 +1,6 @@
 import { extname } from "path";
 import * as t from "@babel/types";
-import { TelescopeOptions } from "@cosmology/types";
+import { TelescopeOptions } from "@ahm23/telescope-types";
 
 export const recursiveModuleBundle = (options: TelescopeOptions, obj) => {
     return Object.keys(obj).map((key) => {

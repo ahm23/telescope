@@ -1,7 +1,7 @@
-import { ProtoRoot, ProtoRef } from '@cosmology/types';
+import { ProtoRoot, ProtoRef } from '@ahm23/telescope-types';
 import { relative, dirname, extname } from 'path';
 import { ImportObj, UtilValue } from '../types';
-import { restoreExtension, toPosixPath } from '@cosmology/utils';
+import { restoreExtension, toPosixPath } from '@ahm23/telescope-utils';
 
 export const getRoot = (ref: ProtoRef): ProtoRoot => {
   if (ref.traversed) return ref.traversed;

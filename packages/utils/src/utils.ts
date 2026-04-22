@@ -5,7 +5,7 @@ import {
   ProtoRef,
   ImportUsage,
   ProtoEnum,
-} from "@cosmology/types";
+} from "@ahm23/telescope-types";
 import { ImportDeclaration } from "@babel/types";
 import * as dotty from "dotty";
 import { sync as globSync } from 'glob';

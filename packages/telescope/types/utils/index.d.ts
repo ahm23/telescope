@@ -1,4 +1,4 @@
-import { ProtoRoot, ProtoRef } from '@cosmology/types';
+import { ProtoRoot, ProtoRef } from '@ahm23/telescope-types';
 import { ImportObj, UtilValue } from '../types';
 export declare const getRoot: (ref: ProtoRef) => ProtoRoot;
 export declare const UTILS: {

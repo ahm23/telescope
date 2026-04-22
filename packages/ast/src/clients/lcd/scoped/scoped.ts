@@ -1,7 +1,7 @@
 import * as t from '@babel/types';
 import { GenericParseContext } from '../../../encoding';
 import { objectPattern } from '../../../utils';
-import { restoreExtension } from '@cosmology/utils';
+import { restoreExtension } from '@ahm23/telescope-utils';
 
 export const lcdArguments = (): t.ObjectProperty[] => {
     return [

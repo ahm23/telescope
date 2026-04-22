@@ -5,8 +5,8 @@ import types from '../../../../../__fixtures__/proto-json/tendermint/abci/types.
 import types_tendermint from '../../../../../__fixtures__/proto-json/tendermint/types/types.json'
 
 import { traverse } from '@cosmology/proto-parser'
-import { getNestedProto } from '@cosmology/utils'
-import { defaultTelescopeOptions } from '@cosmology/types'
+import { getNestedProto } from '@ahm23/telescope-utils'
+import { defaultTelescopeOptions } from '@ahm23/telescope-types'
 import { ProtoParseContext } from '../context';
 import { getTestProtoStore,getMiscTestProtoStore, expectCode, printCode } from '../../../test-utils';
 import deepmerge from 'deepmerge';

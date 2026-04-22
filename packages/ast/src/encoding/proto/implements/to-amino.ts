@@ -1,6 +1,6 @@
 import * as t from '@babel/types';
-import { ProtoRef, TraverseTypeUrlRef, TypeUrlRef } from '@cosmology/types';
-import { slugify } from '@cosmology/utils';
+import { ProtoRef, TraverseTypeUrlRef, TypeUrlRef } from '@ahm23/telescope-types';
+import { slugify } from '@ahm23/telescope-utils';
 import { arrowFunctionExpression, identifier } from '../../../utils';
 import { ProtoParseContext } from "../../context";
 

@@ -1,9 +1,9 @@
 import * as dotty from 'dotty';
-import { createEmptyProtoRef, getNestedProto } from '@cosmology/proto-parser';
+import { createEmptyProtoRef, getNestedProto } from '@ahm23/telescope-proto-parser';
 import { join } from 'path';
 import { TelescopeBuilder } from '../builder';
-import { createScopedRpcFactory, createScopedGrpcWebMsgFactory, createRpcMsgExtension, importStmt } from '@cosmology/ast';
-import { ProtoRef } from '@cosmology/types';
+import { createScopedRpcFactory, createScopedGrpcWebMsgFactory, createRpcMsgExtension, importStmt } from '@ahm23/telescope-ast';
+import { ProtoRef } from '@ahm23/telescope-types';
 import { fixlocalpaths, getRelativePath } from '../utils';
 import { Bundler } from '../bundler';
 import { aggregateImports, getDepsFromQueries, getImportStatements } from '../imports';

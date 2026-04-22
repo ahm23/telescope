@@ -1,5 +1,5 @@
 import { arrowFunctionExpression, classDeclaration, classMethod, classProperty, cleanComment, commentBlock, identifier, tsMethodSignature } from '../../../../utils';
-import { ProtoService, ProtoServiceMethod } from '@cosmology/types';
+import { ProtoService, ProtoServiceMethod } from '@ahm23/telescope-types';
 import * as t from '@babel/types'
 
 const ensureOneSpaceEnd = (str) => {

@@ -1,6 +1,6 @@
 import { traverse } from '@cosmology/proto-parser'
-import { getNestedProto } from '@cosmology/utils'
-import { ProtoService } from '@cosmology/types';
+import { getNestedProto } from '@ahm23/telescope-utils'
+import { ProtoService } from '@ahm23/telescope-types';
 import { expectCode, getTestProtoStore, printCode } from '../../../../../test-utils';
 import { GenericParseContext } from '../../../../encoding';
 import { createRpcInterface, createRpcClientClass, createRpcClientInterface } from './rpc';

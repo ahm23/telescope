@@ -1,4 +1,4 @@
-import { getNestedProto } from '@cosmology/utils';
+import { getNestedProto } from '@ahm23/telescope-utils';
 import { ProtoParseContext } from '@cosmology/ast';
 import { expectCode, getTestProtoStore } from '../../../test-utils';
 import { createObjectWithMethods } from '../object';

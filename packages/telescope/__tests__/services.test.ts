@@ -1,5 +1,5 @@
-import { ProtoStore, parseProto } from '@cosmology/proto-parser';
-import { defaultTelescopeOptions } from '@cosmology/types';
+import { ProtoStore, parseProto } from '@ahm23/telescope-proto-parser';
+import { defaultTelescopeOptions } from '@ahm23/telescope-types';
 import { parse } from '../src/parse';
 import { TelescopeParseContext } from '../src/build';
 

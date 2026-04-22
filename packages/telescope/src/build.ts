@@ -1,5 +1,5 @@
-import { ProtoRef, TelescopeOptions } from '@cosmology/types';
-import { ProtoStore } from '@cosmology/proto-parser';
+import { ProtoRef, TelescopeOptions } from '@ahm23/telescope-types';
+import { ProtoStore } from '@ahm23/telescope-proto-parser';
 import {
     AminoParseContext,
     createAminoConverter,
@@ -29,8 +29,8 @@ import {
     createInterfaceFromAmino,
     createInterfaceToAmino,
     createRegisterAminoProtoMapping,
-} from '@cosmology/ast';
-import { ServiceMutation, ServiceQuery } from '@cosmology/types';
+} from '@ahm23/telescope-ast';
+import { ServiceMutation, ServiceQuery } from '@ahm23/telescope-types';
 
 export const getMutations = (mutations: ServiceMutation[]) => {
     return mutations.map((mutation: ServiceMutation) => {

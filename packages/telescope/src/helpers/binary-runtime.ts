@@ -1,4 +1,4 @@
-import { TelescopeOptions } from "@cosmology/types";
+import { TelescopeOptions } from "@ahm23/telescope-types";
 
 const restoreImportExtension = (options: TelescopeOptions) =>
   options.restoreImportExtension ?? "";

@@ -1,7 +1,7 @@
 import { TelescopeBuilder } from "../builder";
 import { writeContentToFile } from "../utils/files";
 import { join, basename } from "path";
-import { makeAliasNameWithPackageAtEnd } from "@cosmology/utils";
+import { makeAliasNameWithPackageAtEnd } from "@ahm23/telescope-utils";
 
 /**
  * Gets the aliased function name if it's duplicated across multiple files

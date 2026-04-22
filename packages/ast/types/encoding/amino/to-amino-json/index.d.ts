@@ -1,6 +1,6 @@
 import * as t from '@babel/types';
 import { AminoParseContext } from '../../context';
-import { ProtoType, ProtoField } from '@cosmology/types';
+import { ProtoType, ProtoField } from '@ahm23/telescope-types';
 export interface ToAminoParseField {
     context: AminoParseContext;
     field: ProtoField;

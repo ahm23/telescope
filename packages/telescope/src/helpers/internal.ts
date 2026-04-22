@@ -1,4 +1,4 @@
-import { TelescopeOptions } from "@cosmology/types";
+import { TelescopeOptions } from "@ahm23/telescope-types";
 
 export const getHelper = (options: TelescopeOptions) => {
   return `import * as _m0 from "protobufjs/minimal";

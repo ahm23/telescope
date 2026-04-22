@@ -1,11 +1,11 @@
-import { ProtoStore, isRefExcluded, createEmptyProtoRef } from '@cosmology/proto-parser';
-import { importNamespace } from '@cosmology/ast';
+import { ProtoStore, isRefExcluded, createEmptyProtoRef } from '@ahm23/telescope-proto-parser';
+import { importNamespace } from '@ahm23/telescope-ast';
 import * as dotty from 'dotty';
 import { TelescopeBuilder } from './index';
 import { join, relative, dirname } from 'path';
 import { TelescopeParseContext } from './build';
-import { TelescopeOptions } from '@cosmology/types';
-import { toPosixPath } from '@cosmology/utils';
+import { TelescopeOptions } from '@ahm23/telescope-types';
+import { toPosixPath } from '@ahm23/telescope-utils';
 
 // TODO move to store
 export const getPackages = (store: ProtoStore) => {

@@ -1,5 +1,5 @@
 import * as t from '@babel/types';
-import { ProtoEnum, ProtoType } from '@cosmology/types';
+import { ProtoEnum, ProtoType } from '@ahm23/telescope-types';
 import { ProtoParseContext } from '../../context';
 import { createProtoType } from './proto';
 import { SymbolNames } from '../../types';

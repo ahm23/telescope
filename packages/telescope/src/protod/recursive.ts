@@ -9,7 +9,7 @@ import {
 import { join, dirname, resolve, relative } from "path";
 import { getCorrespondingGit, makeDir, parseProtoFile } from "./utils";
 import fs from "fs";
-import { crossGlob as glob } from '@cosmology/utils';
+import { crossGlob as glob } from '@ahm23/telescope-utils';
 
 export async function cloneAll({
   repos,

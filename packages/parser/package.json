@@ -54,7 +54,7 @@
     "makage": "^0.1.12"
   },
   "dependencies": {
-    "@ahm23/telescope-protobufjs": "7.3.2",
+    "@cosmology/protobufjs": "7.3.2",
     "@ahm23/telescope-types": "workspace:*",
     "@ahm23/telescope-utils": "workspace:*",
     "dotty": "0.1.2",

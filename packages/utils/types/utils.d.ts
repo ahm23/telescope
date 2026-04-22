@@ -1,4 +1,4 @@
-import { TelescopeOptions, TelescopeOption, ImportUsage, ProtoEnum } from "@cosmology/types";
+import { TelescopeOptions, TelescopeOption, ImportUsage, ProtoEnum } from "@ahm23/telescope-types";
 import { ImportDeclaration } from "@babel/types";
 /**
  * swap the key and value of the input object

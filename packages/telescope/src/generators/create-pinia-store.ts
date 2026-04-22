@@ -7,9 +7,9 @@ import {
   getImportStatements
 } from '../imports';
 import { parse } from '../parse';
-import { getNestedProto, isRefIncluded } from '@cosmology/proto-parser';
+import { getNestedProto, isRefIncluded } from '@ahm23/telescope-proto-parser';
 
-import { createPiniaStore } from '@cosmology/ast';
+import { createPiniaStore } from '@ahm23/telescope-ast';
 
 export const plugin = (builder: TelescopeBuilder, bundler: Bundler) => {
   if (!builder.options.pinia?.enabled) {

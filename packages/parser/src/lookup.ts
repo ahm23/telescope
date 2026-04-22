@@ -1,9 +1,9 @@
 import { ProtoStore } from "./store";
-import { ProtoRef } from "@cosmology/types";
+import { ProtoRef } from "@ahm23/telescope-types";
 import { getNested, getNestedProto } from "./";
-import { Lookup } from "@cosmology/types";
+import { Lookup } from "@ahm23/telescope-types";
 
-export type { Lookup } from "@cosmology/types";
+export type { Lookup } from "@ahm23/telescope-types";
 
 export const getNestedMsgType = (
   name: string,

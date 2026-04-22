@@ -2,7 +2,7 @@ export {
   getNestedProto,
   getNestedProtoGeneric,
   getNested,
-} from "@cosmology/utils";
+} from "@ahm23/telescope-utils";
 
 export * from "./store";
 export * from "./resolver";

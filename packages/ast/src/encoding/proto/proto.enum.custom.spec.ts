@@ -5,7 +5,7 @@ import {
 } from "./enums";
 import {
     getNestedProto
-} from "@cosmology/utils";
+} from "@ahm23/telescope-utils";
 import { ProtoParseContext } from "@cosmology/ast";
 import {
     expectCode,

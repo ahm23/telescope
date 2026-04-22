@@ -1,6 +1,6 @@
 import * as t from '@babel/types';
 import { ProtoParseContext } from '../../context';
-import { ProtoType } from '@cosmology/types';
+import { ProtoType } from '@ahm23/telescope-types';
 import { getAminoTypeName, getTypeUrl } from '../../amino';
 
 export const createTypeUrlProperty = (

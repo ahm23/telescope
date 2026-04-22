@@ -1,5 +1,5 @@
 import { TelescopeBuilder } from "../src/builder";
-import { AliasNameMappersContext, TelescopeOptions } from "@cosmology/types";
+import { AliasNameMappersContext, TelescopeOptions } from "@ahm23/telescope-types";
 import {
   bundleBaseRegistries,
   bundleRegistries,

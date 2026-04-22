@@ -1,7 +1,7 @@
 import { prompt } from '../prompt';
 import telescope from '../index';
 import { writeFileSync, readFileSync } from 'fs';
-import { defaultTelescopeOptions } from '@cosmology/types';
+import { defaultTelescopeOptions } from '@ahm23/telescope-types';
 import * as path from 'path'
 import * as dotty from 'dotty';
 import deepmerge from 'deepmerge';

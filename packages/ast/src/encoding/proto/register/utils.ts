@@ -1,7 +1,7 @@
 import * as t from "@babel/types";
-import { ProtoType } from "@cosmology/types";
+import { ProtoType } from "@ahm23/telescope-types";
 import { ProtoParseContext } from "../../context";
-import { getAminoTypeName, getTypeUrl } from "@cosmology/utils";
+import { getAminoTypeName, getTypeUrl } from "@ahm23/telescope-utils";
 
 export const createRegisterObject = (
     context: ProtoParseContext,

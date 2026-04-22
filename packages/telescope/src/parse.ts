@@ -1,9 +1,9 @@
-import { ProtoRef, ProtoType, ServiceInfo, ALLOWED_RPC_SERVICES } from '@cosmology/types'
-import { getObjectName } from '@cosmology/proto-parser';
-import { getKeyTypeEntryName } from '@cosmology/ast';
+import { ProtoRef, ProtoType, ServiceInfo, ALLOWED_RPC_SERVICES } from '@ahm23/telescope-types'
+import { getObjectName } from '@ahm23/telescope-proto-parser';
+import { getKeyTypeEntryName } from '@ahm23/telescope-ast';
 import { getRoot } from './utils';
 import { TelescopeParseContext } from './build';
-import { getEnumValues } from '@cosmology/utils';
+import { getEnumValues } from '@ahm23/telescope-utils';
 
 export const parse = (
     context: TelescopeParseContext,

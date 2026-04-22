@@ -330,7 +330,6 @@ export const baseTypes = {
           );
 
         case 'Long':
-        default:
           return t.tsAsExpression(
               t.callExpression(
                   t.memberExpression(
@@ -343,6 +342,26 @@ export const baseTypes = {
                   TypeLong.getPropIdentifier(args.context)
               )
           );
+        case 'Number':
+        default:
+            return t.callExpression(
+                t.identifier('Number'),
+                [
+                t.callExpression(
+                    t.memberExpression(
+                    t.callExpression(
+                        t.memberExpression(
+                        t.identifier('reader'),
+                        t.identifier(type)
+                        ),
+                        []
+                    ),
+                    t.identifier('toString')
+                    ),
+                    []
+                )
+                ]
+            );
       }
     },
 

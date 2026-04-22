@@ -985,7 +985,6 @@ export const toAminoMessages = {
                     )
                 );
             case "Long":
-            default:
                 return t.returnStatement(
                     t.callExpression(
                         t.memberExpression(
@@ -1008,6 +1007,34 @@ export const toAminoMessages = {
                                 t.memberExpression(
                                     t.identifier("message"),
                                     t.identifier("nanos")
+                                )
+                            ),
+                            t.identifier("toString")
+                        ),
+                        []
+                    )
+                );
+                
+            case "Number":
+            default:
+                return t.returnStatement(
+                    t.callExpression(
+                        t.memberExpression(
+                            t.parenthesizedExpression(
+                                t.binaryExpression(
+                                    "+",
+                                    t.binaryExpression(
+                                        "*",
+                                        t.memberExpression(
+                                            t.identifier("message"),
+                                            t.identifier("seconds")
+                                        ),
+                                        BILLION
+                                    ),
+                                    t.memberExpression(
+                                        t.identifier("message"),
+                                        t.identifier("nanos")
+                                    )
                                 )
                             ),
                             t.identifier("toString")

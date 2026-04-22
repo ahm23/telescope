@@ -5,20 +5,24 @@ export const TypeLong = {
   propTypes: {
     bigint: "bigint",
     long: "Long",
+    number: "number",
   },
   propIdentifiers: {
     bigint: t.identifier("bigint"),
     long: t.identifier("Long"),
+    number: t.identifier("number"),
   },
 
   types: {
     bigint: "BigInt",
     long: "Long",
+    number: "Number",
   },
 
   identifiers: {
     bigint: t.identifier("BigInt"),
     long: t.identifier("Long"),
+    number: t.identifier("Number"),
   },
 
   fromStringArray: {
@@ -27,6 +31,7 @@ export const TypeLong = {
       t.memberExpression(t.identifier("Long"), t.identifier("fromString")),
       [t.identifier("e")]
     ),
+    number: t.callExpression(t.identifier("Number"), [t.identifier("e")]),
   },
 
   toStringArray: {
@@ -35,31 +40,40 @@ export const TypeLong = {
       []
     ),
     long: t.identifier("e"),
+    number: t.callExpression(
+      t.memberExpression(t.identifier("e"), t.identifier("toString")),
+      []
+    ),
   },
 
   uzeroExpressions: {
     bigint: t.callExpression(t.identifier("BigInt"), [t.numericLiteral(0)]),
     long: t.memberExpression(t.identifier("Long"), t.identifier("UZERO")),
+    number: t.numericLiteral(0),
   },
 
   zeroExpressions: {
     bigint: t.callExpression(t.identifier("BigInt"), [t.numericLiteral(0)]),
     long: t.memberExpression(t.identifier("Long"), t.identifier("ZERO")),
+    number: t.numericLiteral(0),
   },
 
   fromValueExpressions: {
     bigint: t.identifier("BigInt"),
     long: t.memberExpression(t.identifier("Long"), t.identifier("fromValue")),
+    number: t.identifier("Number"),
   },
 
   fromNumberExpressions: {
     bigint: t.identifier("BigInt"),
     long: t.memberExpression(t.identifier("Long"), t.identifier("fromNumber")),
+    number: t.identifier("Number"),
   },
 
   fromStringExpressions: {
     bigint: t.identifier("BigInt"),
     long: t.memberExpression(t.identifier("Long"), t.identifier("fromString")),
+    number: t.identifier("Number"),
   },
 
   addUtil: (ctx?: GenericParseContext) => {
@@ -119,18 +133,26 @@ export const TypeLong = {
     const longLib = ctx.pluginValue("prototypes.typingsFormat.num64");
     const args = [];
 
-    switch (longLib) {
-      case "bigint":
-        args.push(
-          t.callExpression(
-            t.memberExpression(arg, t.identifier("toString")),
-            []
-          )
-        );
-        break;
+      switch (longLib) {
+        case "bigint":
+          args.push(
+            t.callExpression(
+              t.memberExpression(arg, t.identifier("toString")),
+              []
+            )
+          );
+          break;
+        case "number":
+          args.push(
+            t.callExpression(
+              t.memberExpression(arg, t.identifier("toString")),
+              []
+            )
+          );
+          break;
 
-      case "long":
-        args.push(arg);
+        case "long":
+          args.push(arg);
       default:
     }
 
@@ -154,16 +176,22 @@ export const TypeLong = {
   getLongNotZero: (prop: string, ctx: GenericParseContext): t.Expression => {
     const longLib = ctx.pluginValue("prototypes.typingsFormat.num64");
 
-    switch (longLib) {
-      case "bigint":
-        return t.binaryExpression(
-          "!==",
-          t.memberExpression(t.identifier("message"), t.identifier(prop)),
-          t.callExpression(t.identifier("BigInt"), [t.numericLiteral(0)])
-        );
-      case "long":
-      default:
-        return t.unaryExpression(
+      switch (longLib) {
+        case "bigint":
+          return t.binaryExpression(
+            "!==",
+            t.memberExpression(t.identifier("message"), t.identifier(prop)),
+            t.callExpression(t.identifier("BigInt"), [t.numericLiteral(0)])
+          );
+        case "number":
+          return t.binaryExpression(
+            "!==",
+            t.memberExpression(t.identifier("message"), t.identifier(prop)),
+            t.numericLiteral(0)
+          );
+        case "long":
+        default:
+          return t.unaryExpression(
           "!",
           t.callExpression(
             t.memberExpression(

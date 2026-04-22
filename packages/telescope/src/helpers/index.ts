@@ -3,6 +3,7 @@ export * from './external-comet';
 export * from './external-icjs';
 export * from './internal';
 export * from './internal-for-bigint';
+export * from './internal-for-number';
 export * from './react-query';
 export * from './react-query-hooks';
 export * from './react-query-hooks-icjs';

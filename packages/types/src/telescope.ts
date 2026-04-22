@@ -366,7 +366,7 @@ export interface TelescopeOpts {
       };
 
       /** Format for 64-bit numbers */
-      num64?: "long" | "bigint";
+      num64?: "long" | "bigint" | "number";
       /** Use DeepPartial instead of Partial */
       useDeepPartial?: boolean;
       /** Use Exact TS type */

@@ -9,6 +9,7 @@ import {
   externalIcJs,
   getHelper,
   getHelperForBigint,
+  getHelperForNumber,
   getReactQueryHelper,
   getVueQueryHelperHooks,
   mobx,
@@ -58,6 +59,8 @@ export const plugin = (builder: TelescopeBuilder) => {
     "helpers.ts",
     builder.options.prototypes.typingsFormat.num64 === "bigint"
       ? getHelperForBigint(builder.options)
+      : builder.options.prototypes.typingsFormat.num64 === "number"
+        ? getHelperForNumber(builder.options)
       : getHelper(builder.options)
   );
 

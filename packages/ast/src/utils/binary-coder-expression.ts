@@ -12,6 +12,7 @@ export const BinaryCoder = {
 
     switch (longLib) {
       case 'long':
+      case 'number':
         ctx.addUtil('_m0');
         break;
       case 'bigint':
@@ -33,17 +34,23 @@ export const BinaryCoder = {
 
   readerMemberExp: {
     bigint: t.identifier('BinaryReader'),
-    long: t.memberExpression(t.identifier('_m0'), t.identifier('Reader'))
+    long: t.memberExpression(t.identifier('_m0'), t.identifier('Reader')),
+    number: t.memberExpression(t.identifier('_m0'), t.identifier('Reader'))
   },
 
   writerMemberExp: {
     bigint: t.identifier('BinaryWriter'),
-    long: t.memberExpression(t.identifier('_m0'), t.identifier('Writer'))
+    long: t.memberExpression(t.identifier('_m0'), t.identifier('Writer')),
+    number: t.memberExpression(t.identifier('_m0'), t.identifier('Writer'))
   },
 
   readerTypeRef: {
     bigint: t.tsTypeReference(t.identifier('BinaryReader')),
     long: t.tsTypeReference(
+      t.tsQualifiedName(t.identifier('_m0'), t.identifier('Reader')),
+      null
+    ),
+    number: t.tsTypeReference(
       t.tsQualifiedName(t.identifier('_m0'), t.identifier('Reader')),
       null
     )
@@ -52,6 +59,10 @@ export const BinaryCoder = {
   writerTypeRef: {
     bigint: t.tsTypeReference(t.identifier('BinaryWriter')),
     long: t.tsTypeReference(
+      t.tsQualifiedName(t.identifier('_m0'), t.identifier('Writer')),
+      null
+    ),
+    number: t.tsTypeReference(
       t.tsQualifiedName(t.identifier('_m0'), t.identifier('Writer')),
       null
     )

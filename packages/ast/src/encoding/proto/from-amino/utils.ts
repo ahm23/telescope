@@ -702,7 +702,6 @@ export const fromAminoMessages = {
         ];
 
       case "Long":
-      default:
         return [
           t.variableDeclaration("const", [
             t.variableDeclarator(
@@ -737,6 +736,40 @@ export const fromAminoMessages = {
             ])
           ),
         ];
+      
+      case "Number":
+      default:
+        return [
+          t.variableDeclaration("const", [
+            t.variableDeclarator(
+              t.identifier("value"),
+              t.callExpression(t.identifier("parseInt"), [
+                t.identifier("object"),
+              ])
+            ),
+          ]),
+          t.returnStatement(
+            t.objectExpression([
+              t.objectProperty(
+                t.identifier("seconds"),
+                t.callExpression(TypeLong.getFromNumber(context), [
+                  t.callExpression(
+                    t.memberExpression(
+                      t.identifier("Math"),
+                      t.identifier("floor")
+                    ),
+                    [t.binaryExpression("/", t.identifier("value"), BILLION)]
+                  ),
+                ])
+              ),
+              t.objectProperty(
+                t.identifier("nanos"),
+                t.binaryExpression("%", t.identifier("value"), BILLION)
+              ),
+            ])
+          ),
+        ];
+      
     }
   },
 };

@@ -306,7 +306,6 @@ export const toAmino = {
                     t.identifier("amount")
                 );
             case "Long":
-            default:
                 TypeLong.addUtil(args.context);
 
                 return t.callExpression(
@@ -317,6 +316,18 @@ export const toAmino = {
                                 t.identifier("amount")
                             ),
                         ]),
+                        t.identifier("toString")
+                    ),
+                    []
+                );
+            case "Number":
+            default:
+                return t.callExpression(
+                    t.memberExpression(
+                        t.memberExpression(
+                            memberExpressionOrIdentifier(args.scope),
+                            t.identifier("amount")
+                        ),
                         t.identifier("toString")
                     ),
                     []

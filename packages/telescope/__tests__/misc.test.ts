@@ -160,6 +160,22 @@ describe('misc', () => {
     await telescope.build();
   });
 
+  it('generates with num64 number', async () => {
+    const telescope = new TelescopeBuilder({
+      outPath: __dirname + '/../../../__fixtures__/misc/output-number',
+      protoDirs: [__dirname + '/../../../__fixtures__/misc/proto'],
+      options: deepmerge(options, {
+        prototypes: {
+          typingsFormat: {
+            num64: 'number',
+          },
+        },
+      }),
+    });
+
+    await telescope.build();
+  });
+
   it('generates without amino, no proto', async () => {
     const testFolder = '/output-proto-amino/no-amino-no-proto';
 

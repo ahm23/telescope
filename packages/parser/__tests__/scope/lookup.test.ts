@@ -1,7 +1,7 @@
 import { ProtoStore } from '../../src/index'
 import { getObjectName, lookupSymbolScopes, lookup, getPackageAndNestedFromStr } from '../../src';
 import { getTestProtoStore } from '../../test-utils';
-import { getMiscTestProtoStore } from '@cosmology/ast/test-utils';
+import { getMiscTestProtoStore } from '@ahm23/telescope-ast/test-utils';
 const store = getTestProtoStore();
 
 const miscStore = getMiscTestProtoStore({

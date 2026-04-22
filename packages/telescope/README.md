@@ -1509,10 +1509,10 @@ pnpm add @cosmjs/amino @cosmjs/proto-signing @cosmjs/stargate @cosmjs/tendermint
 
 If you use the LCD Client generation, you'll need to add
 
-* `@cosmology/lcd`
+* `@ahm23/telescope-lcd`
 
 ```sh
-pnpm add @cosmology/lcd
+pnpm add @ahm23/telescope-lcd
 ```
 
 ## Troubleshooting

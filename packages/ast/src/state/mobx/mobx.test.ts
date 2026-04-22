@@ -1,4 +1,4 @@
-import { traverse } from '@cosmology/proto-parser'
+import { traverse } from '@ahm23/telescope-proto-parser'
 import { getNestedProto } from '@ahm23/telescope-utils';
 import { defaultTelescopeOptions, ProtoService } from '@ahm23/telescope-types';
 import { expectCode, getTestProtoStore } from '../../../test-utils';

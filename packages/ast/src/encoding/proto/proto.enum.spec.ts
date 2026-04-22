@@ -5,7 +5,7 @@ import {
 } from "./enums";
 import struct from "../../../../../__fixtures__/proto-json/google/protobuf/struct.json";
 import { getNestedProto } from "@ahm23/telescope-utils";
-import { ProtoParseContext } from "@cosmology/ast";
+import { ProtoParseContext } from "@ahm23/telescope-ast";
 import { ProtoRoot } from "@ahm23/telescope-types";
 import {
   expectCode,

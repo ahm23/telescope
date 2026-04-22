@@ -1,6 +1,6 @@
 export const pinia = `
 import { defineStore } from "pinia";
-import type { LCDClient } from '@cosmology/lcd';
+import type { LCDClient } from '@ahm23/telescope-lcd';
 
 export const useEndpoint = defineStore('pinia.endpoint', {
     state: () => {

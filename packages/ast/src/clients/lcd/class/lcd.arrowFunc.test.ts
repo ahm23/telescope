@@ -1,5 +1,5 @@
 import { createLCDClient } from './lcd';
-import { traverse } from '@cosmology/proto-parser'
+import { traverse } from '@ahm23/telescope-proto-parser'
 import { getNestedProto } from '@ahm23/telescope-utils'
 import { ProtoService } from '@ahm23/telescope-types';
 import { GenericParseContext } from '../../../encoding';

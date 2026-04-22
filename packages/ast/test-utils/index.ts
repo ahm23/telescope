@@ -1,6 +1,6 @@
 import generate from '@babel/generator';
 import { ProtoType, TelescopeOptions } from '@ahm23/telescope-types';
-import { ProtoStore } from '@cosmology/proto-parser'
+import { ProtoStore } from '@ahm23/telescope-proto-parser'
 import { getNestedProto, toPosixPath } from '@ahm23/telescope-utils'
 import { AminoParseContext } from '../src/encoding/context';
 import { GenericParseContext } from '../src/encoding';

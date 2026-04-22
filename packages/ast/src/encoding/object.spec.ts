@@ -1,5 +1,5 @@
 import { createObjectWithMethods } from './object';
-import { traverse } from '@cosmology/proto-parser'
+import { traverse } from '@ahm23/telescope-proto-parser'
 import { getNestedProto } from '@ahm23/telescope-utils';
 import { ProtoParseContext } from './context';
 import { createProtoType } from './proto';

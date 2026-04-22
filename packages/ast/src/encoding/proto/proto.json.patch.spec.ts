@@ -7,7 +7,7 @@ import {
     getNestedProto,
     convertPackageNameToNestedJSONPath as convertPackage
 } from "@ahm23/telescope-utils";
-import { ProtoParseContext } from "@cosmology/ast";
+import { ProtoParseContext } from "@ahm23/telescope-ast";
 import {
     expectCode,
     getTestProtoStore

@@ -49,7 +49,7 @@ export const UTILS: { [key: string]: UtilValue } = {
   HttpEndpoint: '@cosmjs/tendermint-rpc',
   isObject: '__helpers__',
   isSet: '__helpers__',
-  LCDClient: '@cosmology/lcd',
+  LCDClient: '@ahm23/telescope-lcd',
   Long: '__helpers__',
   OfflineSigner: '@cosmjs/proto-signing',
   omitDefault: '__helpers__',

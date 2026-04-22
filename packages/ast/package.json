@@ -44,7 +44,7 @@
       "<rootDir>/dist/"
     ],
     "moduleNameMapper": {
-      "^@cosmology/ast$": "<rootDir>/src"
+      "^@ahm23/telescope-ast$": "<rootDir>/src"
     }
   },
   "keywords": [],

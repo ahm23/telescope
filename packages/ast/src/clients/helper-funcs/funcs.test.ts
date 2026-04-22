@@ -1,7 +1,7 @@
 import * as ast from "@babel/types";
 import { GenericParseContext } from "../../encoding";
 import { getNestedProto } from "@ahm23/telescope-utils";
-import { traverse } from "@cosmology/proto-parser";
+import { traverse } from "@ahm23/telescope-proto-parser";
 import { expectCode, getTestProtoStore, printCode } from "../../../test-utils";
 import { defaultTelescopeOptions, ProtoService } from "@ahm23/telescope-types";
 import { createMsgHelperCreator, createMsgHooks } from "./msg-funcs";

@@ -1,4 +1,4 @@
-# @cosmology/lcd
+# @ahm23/telescope-lcd
 
 LCDClient Helpers for Telescope, a TypeScript Transpiler for Cosmos Protobufs
 

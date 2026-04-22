@@ -1,4 +1,4 @@
-# @cosmology/types
+# @ahm23/telescope-types
 
 Types for Telescope, a TypeScript Transpiler for Cosmos Protobufs
 

@@ -62,7 +62,7 @@ export function omitDefault<T extends string | number | boolean>(input: T): T | 
         return input === 0 ? undefined : input;
     }
 
-    if (typeof input === "boolean"){
+    if (typeof input === "boolean") {
       return input === false ? undefined : input;
     }
 
@@ -158,6 +158,10 @@ export type Exact<P, I extends P> = P extends Builtin
 export interface Rpc {
     request(service: string, method: string, data: Uint8Array): Promise<Uint8Array>;
 };
+
+export function isRpc(rpc: unknown): rpc is Rpc {
+  return rpc !== null && rpc !== undefined && typeof (rpc as Rpc).request === 'function';
+}
 
 interface Timestamp {
     seconds: number;
